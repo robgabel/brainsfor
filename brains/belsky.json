@@ -1,0 +1,61 @@
+{
+  "brain_name": "Scott Belsky",
+  "brain_first_name": "Scott",
+  "brain_last_name": "Belsky",
+  "brain_slug": "belsky",
+  "brain_possessive": "his",
+  "brain_source_description": "\"Implications\" newsletter",
+  "brain_source_url": "implications.com",
+  "brain_source_detail": "77 editions of the Implications newsletter",
+  "brain_tagline": "a curated collection of his most strategic thinking on originality, organizational design, agentic commerce, and the future of work",
+  "brain_bio": "Scott Belsky is a legendary entrepreneur and strategic thinker who has shaped product and organizational thinking across the tech industry. His \"Implications\" newsletter is where he shares his latest thinking on originality, organizational design, AI, and the future of work.",
+  "topic_examples": "Superhumanity, originality, AI agents, organizational design, longevity, emergence, decision-making, scaling",
+  "example_topic": "emergence",
+  "edition_count": 77,
+  "date_range": "May 2014 — April 2026",
+  "quick_start_prompt": "I'm thinking about whether to focus my company on serving large enterprises or build a platform for creators. What would Scott think?",
+  "skill_examples": {
+    "advise": "Should I raise my Series A or stay bootstrapped?",
+    "debate": "Is remote work better for innovation?",
+    "apply": "How do I apply the originality framework to my product?",
+    "teach": "Explain agentic commerce to me.",
+    "deep_dive": "Deep dive into Scott's thinking on organizational design.",
+    "connect": "Connect originality to organizational structure.",
+    "brainfight": "Longevity vs. urgency — which should win?",
+    "mashup": "Mashup: originality + AI agents + organizational design.",
+    "evolve": "How does Scott's thinking on AI agents evolve?"
+  },
+  "workflow_examples": {
+    "learning": "New to originality? Teach → deep-dive → evolve to get the full picture.",
+    "research": "Writing about AI agents? Deep-dive the atoms → mashup a thesis → brainfight it."
+  },
+  "supabase": {
+    "project_id": "uzediwokyshjbsymevtp",
+    "atoms_table": "belsky_atoms",
+    "connections_table": "belsky_connections"
+  },
+  "clusters": {
+    "ai_agents": {"name": "AI Agents & Agentic Commerce", "description": "Scott anticipates three waves of agentic commerce and explores how AI agents will reshape consumer experience, decision-making, and autonomous commerce."},
+    "product_design": {"name": "Product Design & Strategy", "description": "Product excellence hinges on design discipline, radical simplification, and the ability to see what others miss."},
+    "leadership": {"name": "Leadership & Organizational Design", "description": "Organizations amplify or constrain leadership. Structure, clarity, decision-making norms, and culture shape whether good people can do great work."},
+    "craft_originality": {"name": "Craft, Originality & Taste", "description": "Taste is learnable. Originality comes from taste + deep attention to craft. In a world of templates and shortcuts, craft differentiates."},
+    "consumer_ai": {"name": "Consumer AI & Social", "description": "Beyond enterprise tools, how will AI reshape consumer experiences, social apps, dating, education, and daily life?"},
+    "competitive_moats": {"name": "Competitive Advantage & Moats", "description": "Sustainable competitive advantage requires defensible moats — often hidden in execution discipline, taste, brand trust, or network effects."},
+    "platform_strategy": {"name": "Platform Strategy & Network Effects", "description": "Platforms succeed when they internalize network effects and reduce friction for participants."},
+    "creator_economy": {"name": "Creator Economy & Brands", "description": "Personalization is the next frontier. As AI makes mass customization possible, creators and brands must decide: standardize for scale, or personalize for connection?"},
+    "memory_knowledge": {"name": "Memory, Learning & Knowledge", "description": "As information abundance increases, memory and context become competitive advantages."},
+    "superhumanity": {"name": "Superhumanity & Agency", "description": "Two possible futures: humans become less important (Wall-E) or more important (Superhumanity). Scott bets on humans as tastemakers, contrarians, and agents of audacious change."},
+    "future_of_work": {"name": "Future of Work & Talent", "description": "Remote work, async collaboration, and AI-augmented knowledge workers are redefining productivity, hiring, and organizational effectiveness."},
+    "commerce": {"name": "Commerce & Economic Models", "description": "Every product is ultimately a commerce play — direct transactions, attention, or data."},
+    "vibe_coding": {"name": "Vibe Coding & Software Abundance", "description": "Code generation is no longer constrained by human hours. Disposable software, bespoke solutions, and AI-native development transform what's possible."},
+    "enterprise_ai": {"name": "Enterprise AI & Internal Tools", "description": "IT becomes the most important team. Companies vibe-code tailor-made software and deploy agentic tools."},
+    "osint": {"name": "OSINT & Information Warfare", "description": "Citizen-driven intelligence, strategic data noise, and the democratization of surveillance reshape geopolitics and journalism."},
+    "longevity": {"name": "Longevity & Health", "description": "Health wearables, blood testing, preventative scans, and AI health coaches give humans materially more insight into their own biology."}
+  },
+  "cluster_order": [
+    "ai_agents", "product_design", "leadership", "craft_originality",
+    "consumer_ai", "competitive_moats", "platform_strategy", "creator_economy",
+    "memory_knowledge", "superhumanity", "future_of_work", "commerce",
+    "vibe_coding", "enterprise_ai", "osint", "longevity"
+  ]
+}

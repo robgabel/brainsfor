@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scott Belsky's Brain — Brainsforsale.com</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --surface-hover: #1a1a26;
+    --border: #2a2a3a;
+    --text: #e8e8ef;
+    --text-dim: #8888a0;
+    --accent: #6366f1;
+    --accent-glow: rgba(99, 102, 241, 0.3);
+    --green: #22c55e;
+    --amber: #f59e0b;
+    --rose: #f43f5e;
+    --cyan: #06b6d4;
+  }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .header {
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .logo span { color: var(--accent); }
+
+  .brain-score {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .score-bar {
+    width: 120px;
+    height: 6px;
+    background: var(--surface);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .score-fill {
+    height: 100%;
+    width: 23%;
+    background: linear-gradient(90deg, var(--accent), var(--cyan));
+    border-radius: 3px;
+    transition: width 1.5s ease-out;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 60px 32px 40px;
+    text-align: center;
+  }
+
+  .hero-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--text) 0%, var(--text-dim) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto 24px;
+    line-height: 1.5;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 32px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text);
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+  }
+
+  /* Graph Container */
+  .graph-section {
+    padding: 0 32px;
+    margin-bottom: 40px;
+  }
+
+  .graph-container {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .graph-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .graph-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dim);
+  }
+
+  .graph-legend {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  #graph-canvas {
+    width: 100%;
+    height: 500px;
+    cursor: grab;
+  }
+
+  #graph-canvas:active { cursor: grabbing; }
+
+  /* Tooltip */
+  .tooltip {
+    position: absolute;
+    display: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    max-width: 360px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    pointer-events: none;
+    z-index: 100;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .tooltip-source {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 8px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .tooltip-topics {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .topic-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--accent-glow);
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* Topic Sidebar */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 0;
+    padding: 0 32px 60px;
+  }
+
+  .sidebar {
+    border-right: 1px solid var(--border);
+    padding-right: 24px;
+  }
+
+  .sidebar h3 {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 16px;
+  }
+
+  .topic-list {
+    list-style: none;
+  }
+
+  .topic-item {
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-dim);
+    transition: all 0.15s;
+  }
+
+  .topic-item:hover {
+    background: var(--surface-hover);
+    color: var(--text);
+  }
+
+  .topic-item.active {
+    background: var(--accent-glow);
+    color: var(--accent);
+  }
+
+  .topic-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+  }
+
+  /* Atom Cards */
+  .atoms-panel {
+    padding-left: 24px;
+  }
+
+  .atoms-panel h3 {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 16px;
+  }
+
+  .atom-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 12px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .atom-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+  }
+
+  .atom-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  .atom-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  .atom-confidence {
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--green);
+  }
+
+  .atom-source {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+
+  .atom-source:hover { color: var(--accent); }
+
+  /* Skills bar */
+  .skills-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 12px 32px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 50;
+    backdrop-filter: blur(12px);
+  }
+
+  .skill-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .skill-btn:hover {
+    background: var(--accent-glow);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .skill-btn.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero { animation: fadeIn 0.8s ease-out; }
+  .graph-section { animation: fadeIn 0.8s ease-out 0.2s both; }
+  .content-grid { animation: fadeIn 0.8s ease-out 0.4s both; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo"><span>brains</span>forsale.com</div>
+  <div class="brain-score">
+    Brain Score: 23%
+    <div class="score-bar"><div class="score-fill"></div></div>
+    <span>104 atoms · 11/48 editions</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-label">Brain Pack</div>
+  <h1>Scott Belsky</h1>
+  <div class="hero-subtitle">
+    Product visionary, Adobe CPO, venture investor. 104 atomic ideas extracted from
+    Implications newsletter, books, and talks.
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-value">104</div>
+      <div class="stat-label">Knowledge Atoms</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">25</div>
+      <div class="stat-label">Topic Clusters</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">21</div>
+      <div class="stat-label">Cross-References</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">0.95</div>
+      <div class="stat-label">Avg Confidence</div>
+    </div>
+  </div>
+</div>
+
+<div class="graph-section">
+  <div class="graph-container">
+    <div class="graph-header">
+      <div class="graph-title">Knowledge Graph — Topic Clusters & Connections</div>
+      <div class="graph-legend">
+        <div class="legend-item"><div class="legend-dot" style="background: #6366f1"></div> Topic Node</div>
+        <div class="legend-item"><div class="legend-dot" style="background: #22c55e"></div> High Density (15+)</div>
+        <div class="legend-item"><div class="legend-dot" style="background: #f59e0b"></div> Medium (8-14)</div>
+        <div class="legend-item"><div class="legend-dot" style="background: #06b6d4"></div> Emerging (&lt;8)</div>
+      </div>
+    </div>
+    <canvas id="graph-canvas"></canvas>
+    <div class="tooltip" id="tooltip"></div>
+  </div>
+</div>
+
+<div class="content-grid">
+  <div class="sidebar">
+    <h3>Topic Clusters</h3>
+    <ul class="topic-list" id="topic-list"></ul>
+  </div>
+  <div class="atoms-panel">
+    <h3 id="atoms-title">All Atoms (sorted by confidence)</h3>
+    <div id="atoms-container"></div>
+  </div>
+</div>
+
+<div class="skills-bar">
+  <button class="skill-btn primary">/advise</button>
+  <button class="skill-btn">/teach</button>
+  <button class="skill-btn">/debate</button>
+  <button class="skill-btn">/connect</button>
+  <button class="skill-btn">/evolve</button>
+  <button class="skill-btn">/apply</button>
+  <button class="skill-btn">/deep-dive</button>
+  <button class="skill-btn">/surprise</button>
+  <button class="skill-btn">/mashup</button>
+  <button class="skill-btn">/brainfight</button>
+</div>
+
+<script>
+// Belsky brain data (real atoms from Supabase)
+const topics = [
+  { name: "consumer ai", count: 25, color: "#22c55e" },
+  { name: "ai agents", count: 17, color: "#22c55e" },
+  { name: "memory", count: 14, color: "#f59e0b" },
+  { name: "craft", count: 13, color: "#f59e0b" },
+  { name: "future of work", count: 12, color: "#f59e0b" },
+  { name: "leadership", count: 12, color: "#f59e0b" },
+  { name: "organizational design", count: 12, color: "#f59e0b" },
+  { name: "product design", count: 11, color: "#f59e0b" },
+  { name: "enterprise ai", count: 10, color: "#f59e0b" },
+  { name: "competitive strategy", count: 8, color: "#f59e0b" },
+  { name: "ai applications", count: 7, color: "#06b6d4" },
+  { name: "commerce", count: 7, color: "#06b6d4" },
+  { name: "personalization", count: 7, color: "#06b6d4" },
+  { name: "ambient ai", count: 6, color: "#06b6d4" },
+  { name: "authenticity", count: 6, color: "#06b6d4" },
+  { name: "investing", count: 6, color: "#06b6d4" },
+  { name: "superhumanity", count: 6, color: "#06b6d4" },
+  { name: "ai content", count: 5, color: "#06b6d4" },
+  { name: "creator economy", count: 5, color: "#06b6d4" },
+  { name: "originality", count: 5, color: "#06b6d4" },
+  { name: "platform shifts", count: 5, color: "#06b6d4" },
+  { name: "privacy", count: 5, color: "#06b6d4" },
+];
+
+const atoms = [
+  { content: "Small teams will gain superpowers once limited to the world's largest organizations — from marketing to inventory management — because AI-native tools no longer require growing headcount to scale ambition.", topics: ["future of work", "ai agents", "startups"], confidence: 0.95, source: "Scaling Without Growing" },
+  { content: "Taste as human moat in AI world: Three drivers. Inputs (experiences and knowledge you seek), Filters (what you actively block out), Discernment (choices you make). As AI commoditizes making things, value shifts to those with superior ability to choose.", topics: ["taste", "superhumanity", "competitive advantage"], confidence: 0.95, source: "What Are We Gonna Do Now" },
+  { content: "We are moving past the prompt-based era into the 'controls era.' Controls allow sophisticated modifications to creative work — unlocking 100x the terrain of possibility, much as Photoshop once did for physical paint brushes.", topics: ["craft", "product design", "ai applications"], confidence: 0.95, source: "Talent Density" },
+  { content: "Moats of graphs, security, coordination, and shared memory are underestimated. More code created means more important these underlying services become. If your service is source of truth for data, achieves the outcome, performs the labor, and enables agents to function — you win.", topics: ["moats", "competitive strategy", "saas"], confidence: 0.95, source: "Exponential Code" },
+  { content: "Word of Agent (WOA) marketing replaces word of mouth: Product stack decisions increasingly proposed and set up by AI agents. Companies need MCPs and agent-friendly gateways to become preferred option for agents.", topics: ["ai agents", "marketing", "developer tools"], confidence: 0.95, source: "Remembering Everything" },
+  { content: "Lack of change management is the ultimate advantage: During platform shifts, wisdom is evenly distributed but execution takes years. Teams without change management burden gain most advantage.", topics: ["change management", "leadership", "platform shifts"], confidence: 0.95, source: "12 Outlooks for 2026" },
+  { content: "'Creative risk' is the wild ideas we don't pursue because the cost is too much to bear. AI dramatically reduces the cost to explore and test far edges of imagination, building conviction in bold ideas that were once too risky.", topics: ["craft", "innovation", "competitive strategy"], confidence: 0.95, source: "Talent Density" },
+  { content: "Agency as human superpower: Naive belief that anything is possible despite odds. AI makes calculated decisions based on statistics. Humans possess miraculous potential to believe they are capable of anything, if only out of ignorance.", topics: ["agency", "superhumanity", "philosophy"], confidence: 0.95, source: "What Are We Gonna Do Now" },
+  { content: "A modern 'intent-driven' AI tech stack will replace the classic functional-driven stack. Instead of buying a sales tool and hiring proportionate sales people, companies will engage specialized AI oriented around intended outcomes.", topics: ["ai agents", "business models", "enterprise ai"], confidence: 0.95, source: "Scaling Without Growing" },
+  { content: "Revenue per employee as future metric: Moving from bragging about company size to bragging about how small it is. Resourcefulness outperforms resources.", topics: ["revenue per employee", "organizational design", "metrics"], confidence: 0.95, source: "Premium of Originality" },
+  { content: "Unsaid reasons for product usage are critical: People are not rational. Accounting product got more usage when users could put their name/logo on exports. Personal trainers valued for accountability, not workout instructions.", topics: ["product design", "user psychology"], confidence: 0.95, source: "Where Is Consumer AI" },
+  { content: "Every company will ultimately become a compute + data-centric 'cognico.' Organizational functions becoming 'nodes' rather than traditional departments — designed for cognition rather than helping people work together.", topics: ["organizational design", "enterprise ai", "future of work"], confidence: 0.95, source: "The Cognition Stack" },
+  { content: "The 'meaning economy' will supplant the creator economy. In a world of content abundance and zero-cost creation, meaning — the story, purpose, myths behind creators — will command a premium over content itself.", topics: ["creator economy", "branding", "authenticity"], confidence: 0.95, source: "Scaling Without Growing" },
+  { content: "'Feeling special, as a service' — AI enables luxury-grade personalized experiences at scale. Imagine every retailer knowing your shoe size, every restaurant knowing your favorite drink and allergies.", topics: ["consumer ai", "personalization", "commerce"], confidence: 0.95, source: "Talent Density" },
+  { content: "Successful consumer products provide ways for people to flex: creative flex, skills flex, wit flex, cultural flex, and social/status flex. The 'ego analytics' of a product drive engagement and retention.", topics: ["product design", "user psychology", "consumer ai"], confidence: 0.95, source: "Summarized Living" },
+];
+
+// Build topic sidebar
+const topicList = document.getElementById('topic-list');
+topics.forEach(t => {
+  const li = document.createElement('li');
+  li.className = 'topic-item';
+  li.innerHTML = `<span>${t.name}</span><span class="topic-count">${t.count}</span>`;
+  li.onclick = () => filterByTopic(t.name);
+  topicList.appendChild(li);
+});
+
+// Build atom cards
+function renderAtoms(filterTopic = null) {
+  const container = document.getElementById('atoms-container');
+  const title = document.getElementById('atoms-title');
+  container.innerHTML = '';
+
+  const filtered = filterTopic
+    ? atoms.filter(a => a.topics.includes(filterTopic))
+    : atoms;
+
+  title.textContent = filterTopic
+    ? `${filterTopic} (${filtered.length} atoms)`
+    : `All Atoms (${filtered.length} shown of 104)`;
+
+  filtered.forEach(atom => {
+    const card = document.createElement('div');
+    card.className = 'atom-card';
+    card.innerHTML = `
+      <div class="atom-content">${atom.content}</div>
+      <div class="atom-meta">
+        <span class="atom-confidence">confidence: ${atom.confidence}</span>
+        <span class="atom-source">${atom.source}</span>
+      </div>
+      <div class="tooltip-topics">
+        ${atom.topics.map(t => `<span class="topic-tag">${t}</span>`).join('')}
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function filterByTopic(name) {
+  document.querySelectorAll('.topic-item').forEach(el => {
+    el.classList.toggle('active', el.querySelector('span').textContent === name);
+  });
+  renderAtoms(name);
+}
+
+renderAtoms();
+
+// Force-directed graph visualization
+const canvas = document.getElementById('graph-canvas');
+const ctx = canvas.getContext('2d');
+const tooltip = document.getElementById('tooltip');
+
+function resizeCanvas() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = rect.width;
+  canvas.height = 500;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+// Create nodes from topics
+const nodes = topics.map((t, i) => ({
+  x: canvas.width / 2 + (Math.random() - 0.5) * 400,
+  y: canvas.height / 2 + (Math.random() - 0.5) * 300,
+  vx: 0, vy: 0,
+  radius: Math.max(12, Math.sqrt(t.count) * 8),
+  ...t
+}));
+
+// Create edges between topics that co-occur in atoms
+const edges = [];
+const edgeSet = new Set();
+atoms.forEach(atom => {
+  for (let i = 0; i < atom.topics.length; i++) {
+    for (let j = i + 1; j < atom.topics.length; j++) {
+      const a = topics.findIndex(t => t.name === atom.topics[i]);
+      const b = topics.findIndex(t => t.name === atom.topics[j]);
+      if (a >= 0 && b >= 0) {
+        const key = Math.min(a,b) + '-' + Math.max(a,b);
+        if (!edgeSet.has(key)) {
+          edgeSet.add(key);
+          edges.push({ source: a, target: b });
+        }
+      }
+    }
+  }
+});
+
+// Physics simulation
+function simulate() {
+  const cx = canvas.width / 2;
+  const cy = canvas.height / 2;
+
+  // Center gravity
+  nodes.forEach(n => {
+    n.vx += (cx - n.x) * 0.001;
+    n.vy += (cy - n.y) * 0.001;
+  });
+
+  // Repulsion
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      const dx = nodes[j].x - nodes[i].x;
+      const dy = nodes[j].y - nodes[i].y;
+      const dist = Math.max(Math.sqrt(dx*dx + dy*dy), 1);
+      const force = 2000 / (dist * dist);
+      nodes[i].vx -= dx / dist * force;
+      nodes[i].vy -= dy / dist * force;
+      nodes[j].vx += dx / dist * force;
+      nodes[j].vy += dy / dist * force;
+    }
+  }
+
+  // Edge attraction
+  edges.forEach(e => {
+    const s = nodes[e.source];
+    const t = nodes[e.target];
+    const dx = t.x - s.x;
+    const dy = t.y - s.y;
+    const dist = Math.sqrt(dx*dx + dy*dy);
+    const force = (dist - 120) * 0.003;
+    s.vx += dx / dist * force;
+    s.vy += dy / dist * force;
+    t.vx -= dx / dist * force;
+    t.vy -= dy / dist * force;
+  });
+
+  // Damping + update
+  nodes.forEach(n => {
+    n.vx *= 0.85;
+    n.vy *= 0.85;
+    n.x += n.vx;
+    n.y += n.vy;
+    n.x = Math.max(n.radius + 20, Math.min(canvas.width - n.radius - 20, n.x));
+    n.y = Math.max(n.radius + 20, Math.min(canvas.height - n.radius - 20, n.y));
+  });
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw edges
+  edges.forEach(e => {
+    const s = nodes[e.source];
+    const t = nodes[e.target];
+    ctx.beginPath();
+    ctx.moveTo(s.x, s.y);
+    ctx.lineTo(t.x, t.y);
+    ctx.strokeStyle = 'rgba(99, 102, 241, 0.12)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  });
+
+  // Draw nodes
+  nodes.forEach(n => {
+    // Glow
+    const gradient = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.radius * 2);
+    gradient.addColorStop(0, n.color + '30');
+    gradient.addColorStop(1, 'transparent');
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.radius * 2, 0, Math.PI * 2);
+    ctx.fillStyle = gradient;
+    ctx.fill();
+
+    // Node
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+    ctx.fillStyle = n.color + '40';
+    ctx.fill();
+    ctx.strokeStyle = n.color;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    // Label
+    ctx.fillStyle = '#e8e8ef';
+    ctx.font = '11px Space Grotesk';
+    ctx.textAlign = 'center';
+    ctx.fillText(n.name, n.x, n.y + n.radius + 16);
+
+    // Count
+    ctx.fillStyle = n.color;
+    ctx.font = '600 13px JetBrains Mono';
+    ctx.fillText(n.count, n.x, n.y + 4);
+  });
+}
+
+function animate() {
+  simulate();
+  draw();
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+// Hover tooltip
+canvas.addEventListener('mousemove', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+
+  let hovered = null;
+  nodes.forEach(n => {
+    const dx = mx - n.x;
+    const dy = my - n.y;
+    if (Math.sqrt(dx*dx + dy*dy) < n.radius + 4) {
+      hovered = n;
+    }
+  });
+
+  if (hovered) {
+    const related = atoms.filter(a => a.topics.includes(hovered.name)).slice(0, 2);
+    tooltip.style.display = 'block';
+    tooltip.style.left = (e.clientX - rect.left + 16) + 'px';
+    tooltip.style.top = (e.clientY - rect.top - 20) + 'px';
+    tooltip.innerHTML = `
+      <strong style="color: ${hovered.color}">${hovered.name}</strong> — ${hovered.count} atoms
+      ${related.map(a => `<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #2a2a3a; font-size: 12px; color: #8888a0;">"${a.content.substring(0, 120)}..."</div>`).join('')}
+    `;
+  } else {
+    tooltip.style.display = 'none';
+  }
+});
+</script>
+
+</body>
+</html>

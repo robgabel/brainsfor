@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brainsforsale.com — Load a genius into your AI</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #09090b;
+    --surface: #111114;
+    --surface-2: #18181b;
+    --border: #27272a;
+    --border-accent: #3f3f46;
+    --text: #fafafa;
+    --text-dim: #a1a1aa;
+    --text-muted: #71717a;
+    --accent: #818cf8;
+    --accent-bright: #a5b4fc;
+    --accent-glow: rgba(129, 140, 248, 0.15);
+    --green: #4ade80;
+    --green-dim: rgba(74, 222, 128, 0.15);
+    --amber: #fbbf24;
+    --cyan: #22d3ee;
+  }
+
+  body {
+    font-family: 'Space Grotesk', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Nav */
+  nav {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: rgba(9, 9, 11, 0.85);
+    backdrop-filter: blur(16px);
+    z-index: 100;
+  }
+
+  .nav-logo {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .nav-logo span { color: var(--accent); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    padding: 8px 20px;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .nav-cta:hover { background: var(--accent-bright); color: var(--bg); }
+
+  /* Hero */
+  .hero {
+    padding: 100px 40px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    background: var(--accent-glow);
+    border: 1px solid rgba(129, 140, 248, 0.25);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent-bright);
+    margin-bottom: 28px;
+    letter-spacing: 0.03em;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+    margin-bottom: 20px;
+  }
+
+  .hero-sub {
+    font-size: 20px;
+    color: var(--text-dim);
+    max-width: 620px;
+    margin: 0 auto 36px;
+    line-height: 1.5;
+  }
+
+  .hero-install {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    color: var(--green);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 12px;
+  }
+  .hero-install:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 24px rgba(74, 222, 128, 0.1);
+  }
+
+  .hero-install-label {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .copy-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+  }
+
+  /* Live Demo */
+  .demo-section {
+    max-width: 780px;
+    margin: 0 auto 100px;
+    padding: 0 40px;
+  }
+
+  .demo-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .demo-terminal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .demo-header {
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .demo-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-accent);
+  }
+
+  .demo-body {
+    padding: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .demo-prompt {
+    color: var(--green);
+    margin-bottom: 20px;
+  }
+
+  .demo-prompt .cmd { color: var(--accent-bright); }
+
+  .demo-response {
+    color: var(--text-dim);
+  }
+
+  .demo-brain-tag {
+    color: var(--amber);
+    font-weight: 500;
+  }
+
+  .demo-atom {
+    color: var(--text);
+    display: block;
+    margin: 12px 0;
+    padding-left: 16px;
+    border-left: 2px solid var(--accent);
+  }
+
+  .demo-sources {
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-top: 16px;
+  }
+
+  .demo-next {
+    color: var(--cyan);
+    margin-top: 16px;
+    font-size: 12px;
+  }
+
+  /* Skills Grid */
+  .skills-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .section-sub {
+    font-size: 16px;
+    color: var(--text-dim);
+    margin-bottom: 48px;
+    max-width: 560px;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+
+  .skill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.2s;
+    cursor: default;
+  }
+
+  .skill-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+    transform: translateY(-2px);
+  }
+
+  .skill-cmd {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent-bright);
+    margin-bottom: 8px;
+  }
+
+  .skill-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .skill-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Workflows */
+  .workflows {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .workflow-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .workflow-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--amber);
+    margin-bottom: 8px;
+  }
+
+  .workflow-chain {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+
+  .workflow-chain span { color: var(--accent-bright); }
+
+  /* Brains Catalog */
+  .catalog-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .brains-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .brain-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.2s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .brain-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 24px var(--accent-glow);
+    transform: translateY(-3px);
+  }
+
+  .brain-card.featured {
+    border-color: var(--green);
+    box-shadow: 0 0 24px var(--green-dim);
+  }
+
+  .brain-tier {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: var(--green-dim);
+    color: var(--green);
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .brain-tier.t2 {
+    background: rgba(251, 191, 36, 0.1);
+    color: var(--amber);
+  }
+
+  .brain-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .brain-role {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+
+  .brain-stats {
+    display: flex;
+    gap: 16px;
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+
+  .brain-stat-val {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .brain-score-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--surface-2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+
+  .brain-score-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--cyan));
+    border-radius: 2px;
+  }
+
+  .brain-score-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .brain-price {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .price-val {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .price-label {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .brain-buy {
+    padding: 6px 14px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .brain-buy:hover { background: var(--accent-bright); }
+
+  /* Pricing */
+  .pricing-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .price-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+  }
+
+  .price-card.popular {
+    border-color: var(--accent);
+    box-shadow: 0 0 32px var(--accent-glow);
+  }
+
+  .price-card-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+
+  .price-card-amount {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .price-card-amount span { font-size: 16px; color: var(--text-muted); font-weight: 400; }
+
+  .price-card-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  .price-features {
+    list-style: none;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .price-features li {
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .price-features li::before {
+    content: "✓";
+    color: var(--green);
+    font-weight: 600;
+  }
+
+  .price-btn {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .price-btn:hover { background: var(--surface-2); }
+  .price-btn.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+  }
+  .price-btn.primary:hover { background: var(--accent-bright); }
+
+  /* CTA / Request */
+  .request-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+
+  .request-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+
+  .request-section p {
+    color: var(--text-dim);
+    margin-bottom: 32px;
+  }
+
+  .request-input-row {
+    display: flex;
+    gap: 12px;
+  }
+
+  .request-input {
+    flex: 1;
+    padding: 14px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 14px;
+    font-family: 'Space Grotesk', sans-serif;
+    outline: none;
+  }
+  .request-input:focus { border-color: var(--accent); }
+  .request-input::placeholder { color: var(--text-muted); }
+
+  .request-btn {
+    padding: 14px 28px;
+    background: var(--accent);
+    border: none;
+    border-radius: 10px;
+    color: var(--bg);
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  footer a { color: var(--text-dim); text-decoration: none; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero h1 { font-size: 40px; }
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    .brains-grid { grid-template-columns: repeat(2, 1fr); }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .workflows { grid-template-columns: 1fr; }
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero { animation: fadeUp 0.7s ease-out; }
+  .demo-section { animation: fadeUp 0.7s ease-out 0.15s both; }
+  .skills-section { animation: fadeUp 0.7s ease-out 0.3s both; }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  .typing-line {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1.2s steps(50) 0.8s both;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><span>brains</span>forsale</div>
+  <div class="nav-links">
+    <a href="#skills">Skills</a>
+    <a href="#brains">Brains</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#request">Request a Brain</a>
+    <a href="#" class="nav-cta">Get a Brain</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">10 AI skills per brain · Works with Claude, Cursor, ChatGPT, Gemini</div>
+  <h1>Load a genius<br>into your AI.</h1>
+  <p class="hero-sub">Knowledge graphs of the world's best thinkers, packaged as AI skills you actually use. Think better in seconds.</p>
+  <div class="hero-install" onclick="navigator.clipboard.writeText('npx skills add brainsforsale/belsky')">
+    <span>$ npx skills add brainsforsale/belsky</span>
+    <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  </div>
+  <div class="hero-install-label">One command. Any AI tool. Instant expertise.</div>
+</section>
+
+<!-- LIVE DEMO -->
+<section class="demo-section">
+  <div class="demo-label">Live demo — Belsky Brain</div>
+  <div class="demo-terminal">
+    <div class="demo-header">
+      <div class="demo-dot"></div>
+      <div class="demo-dot"></div>
+      <div class="demo-dot"></div>
+    </div>
+    <div class="demo-body">
+      <div class="demo-prompt">
+        <span class="cmd">/advise</span> "Should I raise my Series A or stay bootstrapped?"
+      </div>
+      <div class="demo-response">
+        <span class="demo-brain-tag">🧠 Belsky Brain</span> · 3 relevant atoms · confidence: 0.95
+        <span class="demo-atom">Belsky would push you toward staying small. His core thesis is "revenue per employee" as the new status metric — he believes resourcefulness outperforms resources, and AI-native tools let small teams scale ambition without proportionate headcount growth.</span>
+        <span class="demo-atom">His "scaling without growing" framework argues that every function of an organization will be refactored to allow small teams to scale reach. Raising a Series A to hire people may be solving yesterday's problem.</span>
+        <span class="demo-atom" style="border-color: var(--amber);">Counterpoint from his own thinking: moats of graphs, security, coordination, and shared memory matter — and those sometimes require investment to build fast.</span>
+        <div class="demo-sources">Sources: "Scaling Without Growing" · "Premium of Originality" · "Exponential Code" — Implications newsletter</div>
+        <div class="demo-next">💡 Try <span style="color: var(--accent-bright)">/debate</span> to stress-test this · <span style="color: var(--accent-bright)">/apply</span> "revenue per employee" to model it for your business</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 SKILLS -->
+<section class="skills-section" id="skills">
+  <div class="section-label">What you get</div>
+  <div class="section-title">10 thinking skills per brain.</div>
+  <p class="section-sub">Not a chatbot. Not a PDF. A skill pack that turns a knowledge graph into a thinking partner. Skills chain together into workflows.</p>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cmd">/advise</div>
+      <div class="skill-name">Advisor</div>
+      <div class="skill-desc">Describe your situation. Get this thinker's synthesized perspective with cited sources.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cmd">/teach</div>
+      <div class="skill-name">Teacher</div>
+      <div class="skill-desc">Learn any concept explained through this person's own frameworks and language.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cmd">/debate</div>
+      <div class="skill-name">Debater</div>
+      <div class="skill-desc">Stress-test your ideas against this thinker's actual worldview and beliefs.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cmd">/connect</div>
+      <div class="skill-name">Connector</div>
+      <div class="skill-desc">Find unexpected links between this brain and whatever you're working on.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cmd">/evolve</div>
+      <div class="skill-name">Evolution</div>
+      <div class="skill-desc">See how this thinker's views on a topic changed over time.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cmd">/apply</div>
+      <div class="skill-name">Framework</div>
+      <div class="skill-desc">Apply a named mental model step-by-step to your specific situation.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cmd">/deep-dive</div>
+      <div class="skill-name">Deep Dive</div>
+      <div class="skill-desc">Everything this brain knows about a topic. Full cluster with connections.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cmd">/surprise</div>
+      <div class="skill-name">Serendipity</div>
+      <div class="skill-desc">Surface an unexpected high-confidence atom. Daily inspiration engine.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cmd">/mashup</div>
+      <div class="skill-name">Mashup</div>
+      <div class="skill-desc">Load 2+ brains. Get cross-perspectives and disagreements on your topic.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cmd">/brainfight</div>
+      <div class="skill-name">Brain Fight</div>
+      <div class="skill-desc">Head-to-head: Brain A vs Brain B. Agreements, contradictions, unique angles.</div>
+    </div>
+  </div>
+
+  <div class="workflows">
+    <div class="workflow-card">
+      <div class="workflow-name">Decision Workflow</div>
+      <div class="workflow-chain"><span>/advise</span> → <span>/debate</span> → <span>/apply</span> → decide</div>
+    </div>
+    <div class="workflow-card">
+      <div class="workflow-name">Learning Workflow</div>
+      <div class="workflow-chain"><span>/teach</span> → <span>/deep-dive</span> → <span>/evolve</span></div>
+    </div>
+    <div class="workflow-card">
+      <div class="workflow-name">Creative Workflow</div>
+      <div class="workflow-chain"><span>/surprise</span> → <span>/connect</span> → <span>/apply</span></div>
+    </div>
+    <div class="workflow-card">
+      <div class="workflow-name">Research Workflow</div>
+      <div class="workflow-chain"><span>/deep-dive</span> → <span>/mashup</span> → <span>/brainfight</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAINS CATALOG -->
+<section class="catalog-section" id="brains">
+  <div class="section-label">The catalog</div>
+  <div class="section-title">Brains for sale.</div>
+  <p class="section-sub">Each brain is built from public content — newsletters, podcasts, books, talks, interviews. New brains added monthly.</p>
+
+  <div class="brains-grid">
+    <div class="brain-card featured">
+      <div class="brain-tier">Available now</div>
+      <div class="brain-name">Scott Belsky</div>
+      <div class="brain-role">Adobe CPO · Implications newsletter · VC</div>
+      <div class="brain-stats">
+        <span><span class="brain-stat-val">104</span> atoms</span>
+        <span><span class="brain-stat-val">25</span> topics</span>
+        <span><span class="brain-stat-val">21</span> connections</span>
+      </div>
+      <div class="brain-score-bar"><div class="brain-score-fill" style="width: 23%"></div></div>
+      <div class="brain-score-label">Brain Score: 23% · 11/48 editions ingested</div>
+      <div class="brain-price">
+        <div><div class="price-val">$29</div><div class="price-label">standard</div></div>
+        <button class="brain-buy">Get Brain</button>
+      </div>
+    </div>
+
+    <div class="brain-card">
+      <div class="brain-tier t2">Coming soon</div>
+      <div class="brain-name">Scott Galloway</div>
+      <div class="brain-role">Prof G · No Mercy/No Malice · NYU</div>
+      <div class="brain-stats"><span>Newsletter + podcast + 5 books</span></div>
+      <div class="brain-price">
+        <div><div class="price-val">$29</div><div class="price-label">standard</div></div>
+        <button class="brain-buy" style="opacity: 0.5">Notify me</button>
+      </div>
+    </div>
+
+    <div class="brain-card">
+      <div class="brain-tier t2">Coming soon</div>
+      <div class="brain-name">Steven Bartlett</div>
+      <div class="brain-role">DOAC · 500+ episodes of distilled wisdom</div>
+      <div class="brain-stats"><span>World's #1 business podcast</span></div>
+      <div class="brain-price">
+        <div><div class="price-val">$29</div><div class="price-label">standard</div></div>
+        <button class="brain-buy" style="opacity: 0.5">Notify me</button>
+      </div>
+    </div>
+
+    <div class="brain-card">
+      <div class="brain-tier t2">Coming soon</div>
+      <div class="brain-name">Marc Andreessen</div>
+      <div class="brain-role">a16z · Techno-Optimist · pmarca blog</div>
+      <div class="brain-stats"><span>Blog archive + manifestos + interviews</span></div>
+      <div class="brain-price">
+        <div><div class="price-val">$29</div><div class="price-label">standard</div></div>
+        <button class="brain-buy" style="opacity: 0.5">Notify me</button>
+      </div>
+    </div>
+
+    <div class="brain-card">
+      <div class="brain-tier t2">Coming soon</div>
+      <div class="brain-name">Brené Brown</div>
+      <div class="brain-role">Leadership · Vulnerability · 6 books</div>
+      <div class="brain-stats"><span>TED + podcast + books + newsletter</span></div>
+      <div class="brain-price">
+        <div><div class="price-val">$29</div><div class="price-label">standard</div></div>
+        <button class="brain-buy" style="opacity: 0.5">Notify me</button>
+      </div>
+    </div>
+
+    <div class="brain-card">
+      <div class="brain-tier t2">Coming soon</div>
+      <div class="brain-name">Peter Attia</div>
+      <div class="brain-role">Longevity · The Drive · Outlive</div>
+      <div class="brain-stats"><span>300+ podcast episodes + book</span></div>
+      <div class="brain-price">
+        <div><div class="price-val">$29</div><div class="price-label">standard</div></div>
+        <button class="brain-buy" style="opacity: 0.5">Notify me</button>
+      </div>
+    </div>
+
+    <div class="brain-card">
+      <div class="brain-tier t2">Coming soon</div>
+      <div class="brain-name">Peter Thiel</div>
+      <div class="brain-role">Zero to One · Contrarian thinking</div>
+      <div class="brain-stats"><span>Books + lectures + essays</span></div>
+      <div class="brain-price">
+        <div><div class="price-val">$29</div><div class="price-label">standard</div></div>
+        <button class="brain-buy" style="opacity: 0.5">Notify me</button>
+      </div>
+    </div>
+
+    <div class="brain-card">
+      <div class="brain-tier t2">Coming soon</div>
+      <div class="brain-name">Kara Swisher</div>
+      <div class="brain-role">Tech's sharpest critic · Burn Book</div>
+      <div class="brain-stats"><span>2 podcasts + columns + book</span></div>
+      <div class="brain-price">
+        <div><div class="price-val">$29</div><div class="price-label">standard</div></div>
+        <button class="brain-buy" style="opacity: 0.5">Notify me</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="section-label">Pricing</div>
+  <div class="section-title">Simple. Per brain.</div>
+  <p class="section-sub">No subscriptions to start. Buy the brains you want. Combine them with /mashup.</p>
+
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-card-name">Standard</div>
+      <div class="price-card-amount">$29 <span>/ brain</span></div>
+      <div class="price-card-desc">Everything you need to think better.</div>
+      <ul class="price-features">
+        <li>10 AI skills (/advise, /teach, /debate...)</li>
+        <li>Full knowledge atom graph (JSON)</li>
+        <li>Brain context file (Markdown)</li>
+        <li>Interactive visual dashboard (HTML)</li>
+        <li>Topic lenses & mental model map</li>
+      </ul>
+      <button class="price-btn">Get Standard</button>
+    </div>
+
+    <div class="price-card popular">
+      <div class="price-card-name">Pro</div>
+      <div class="price-card-amount">$79 <span>/ brain</span></div>
+      <div class="price-card-desc">For builders who want the full stack.</div>
+      <ul class="price-features">
+        <li>Everything in Standard</li>
+        <li>Pre-computed 1536-dim embeddings</li>
+        <li>API access to brain data</li>
+        <li>Auto-updates when new content drops</li>
+        <li>Founding supporter credit (first 100)</li>
+      </ul>
+      <button class="price-btn primary">Get Pro</button>
+    </div>
+
+    <div class="price-card">
+      <div class="price-card-name">API</div>
+      <div class="price-card-amount">$199 <span>/ month</span></div>
+      <div class="price-card-desc">All brains. Programmatic access.</div>
+      <ul class="price-features">
+        <li>REST API to every brain in catalog</li>
+        <li>Semantic search across all atoms</li>
+        <li>Build "Ask [Expert]" features</li>
+        <li>New brains added automatically</li>
+        <li>Usage analytics dashboard</li>
+      </ul>
+      <button class="price-btn">Contact Us</button>
+    </div>
+  </div>
+</section>
+
+<!-- REQUEST A BRAIN -->
+<section class="request-section" id="request">
+  <div class="section-label">Don't see who you want?</div>
+  <h2>Request a brain.</h2>
+  <p>When a brain hits 50+ requests, we build it. Your vote shapes the catalog.</p>
+  <div class="request-input-row">
+    <input class="request-input" placeholder="Who should we clone? (e.g., Naval Ravikant)" />
+    <button class="request-btn">Request</button>
+  </div>
+</section>
+
+<footer>
+  <p>Brainsforsale.com · Knowledge graphs from public content · Not endorsed by brain subjects unless claimed</p>
+  <p style="margin-top: 8px"><a href="#">Claim your brain</a> · <a href="#">API docs</a> · <a href="#">This Week in Brains</a></p>
+</footer>
+
+</body>
+</html>
