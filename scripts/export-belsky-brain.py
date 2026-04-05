@@ -17,12 +17,21 @@ import os
 import sys
 from datetime import datetime, timezone
 from collections import defaultdict
+from pathlib import Path
 
 try:
     from supabase import create_client
 except ImportError:
     print("pip install supabase --break-system-packages")
     sys.exit(1)
+
+try:
+    from dotenv import load_dotenv
+    # Walk up from scripts/ to find .env at rob-ai root
+    _root = Path(__file__).resolve().parents[2]  # brainsforsale/../ = rob-ai/
+    load_dotenv(_root / ".env")
+except ImportError:
+    pass  # dotenv not installed — fall back to env vars
 
 # --- Config ---
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "https://uzediwokyshjbsymevtp.supabase.co")
