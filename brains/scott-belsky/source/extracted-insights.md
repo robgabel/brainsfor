@@ -280,4 +280,4 @@ Extracted April 2026 by Rob Gabel using a custom knowledge graph pipeline (Firec
 
 ---
 
-*11 of 48 editions processed. 37 remaining for future sessions. Extracted with the `blog-ingest` Cowork skill.*
+*All 77 Implications editions processed. 284 atoms in Supabase. This file contains the original extraction from the first 11 editions; subsequent editions were ingested directly to Supabase.*

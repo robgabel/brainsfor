@@ -60,10 +60,12 @@ brainsforsale/
 
 - **Supabase project:** `uzediwokyshjbsymevtp` (same as PAOS)
 - **Tables:**
-  - `belsky_atoms` — 359 atoms with `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
-  - `belsky_connections` — typed relationships (supports, contradicts, extends, related, inspired_by)
+  - `belsky_atoms` — 284 atoms from all 77 Implications editions, with `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
+  - `belsky_connections` — 430 typed relationships (supports, contradicts, extends, related)
   - `brain_metadata` — brain config record (1 row per brain, generic schema)
   - `cross_connections` — Rob ↔ Belsky cross-brain links
+  - `belsky_enrichment_log` — connection enrichment run history (mode, counts, duration, errors)
+- **Edge function:** `enrich-connections` — automated connection discovery (topic overlap + temporal + LLM). Runs daily at 11:30pm PT via pg_cron. Modes: `discover` (cron), `discover-llm` (manual), `stats`.
 - **Export scripts** require `SUPABASE_SERVICE_KEY` — set in `~/rob-ai/.env`
 - **Voice enrichment** requires `ANTHROPIC_API_KEY` env var
 

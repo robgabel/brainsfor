@@ -89,11 +89,11 @@ A **Brain Pack** is a downloadable bundle containing:
    - **Connector Mode:** "What does this brain say that relates to [topic I'm working on]?" → Semantic search across atoms for unexpected connections.
    - **Evolution Mode:** "How has this thinker's view on [topic] changed over time?" → Time-series analysis of atoms by source date.
 
-5. **Topic lenses** — Pre-built slices of the brain by topic cluster. "Belsky on Product Design" (11 atoms + connections), "Belsky on AI Agents" (17 atoms), etc. These serve as free samples AND as focused tools for specific decisions.
+5. **Topic lenses** — Pre-built slices of the brain by topic cluster. "Belsky on Product Design" (46 atoms + connections), "Belsky on AI Agents" (23 atoms), etc. These serve as free samples AND as focused tools for specific decisions.
 
 6. **Embeddings** (premium) — Pre-computed 1536-dim vectors for semantic search. For builders who want to wire a brain into their own RAG pipeline or app.
 
-7. **Brain Score** — Completeness metric. Belsky has 104 atoms from 11/48 newsletter editions (~23%). Every brain shows a completeness bar. Transparency builds trust. Updates become re-engagement events ("Belsky brain just hit 50%!").
+7. **Brain Score** — Completeness metric. Belsky has 284 atoms from all 77 Implications editions (100% newsletter coverage). Every brain shows a completeness bar. Transparency builds trust. Updates become re-engagement events. Voice enrichment (original_quote + implication) at 7% — next quality milestone.
 
 ### Brain mashups (multi-brain buyers)
 

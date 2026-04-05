@@ -6,9 +6,10 @@ Captured from expert critique panel (April 4, 2026): Calacanis, Bartlett, Hassid
 
 ## In Active Plan (see plan file)
 
-- [x] Voice recovery: add original_quote + implication fields, re-extract top 80 atoms
+- [x] Full corpus ingestion: all 77 Implications editions ingested (100% coverage, 284 atoms)
+- [ ] Voice recovery: original_quote + implication fields added, but only 20/284 atoms enriched (7%) — needs completion
 - [x] Context window optimization: cluster-level files + manifest + targeted loading
-- [x] Connection enrichment: 161 → 800+ connections, hunt contradictions
+- [x] Connection enrichment: 161 → 430 connections (273 related, 105 supports, 38 extends, 14 contradicts)
 - [x] Thin topic graceful degradation in all skills
 - [x] Skill template compression (1,317 → ~500 lines)
 - [x] Confidence simplification (numeric → high/medium/low tiers)
@@ -32,7 +33,7 @@ Captured from expert critique panel (April 4, 2026): Calacanis, Bartlett, Hassid
 
 ## Voice & Quality (Beyond Phase 1)
 
-- [ ] **Full corpus ingestion** — Only 11 of ~77 Implications editions ingested (~14%). Belsky has 12 years of content. The brain should cover at least 50% of editions.
+- [x] **Full corpus ingestion** — All 77 Implications editions ingested (100%). 284 atoms spanning May 2014 – April 2026.
 - [ ] **Story preservation** — Atoms stripped stories/examples. Belsky's persuasion comes from narrative, not just thesis statements. Consider a `story` or `example` field on atoms.
 - [ ] **Curation layer** — If/when Belsky claims his brain, he should be able to curate: "these 50 atoms are my best work." Editorial control, not just fact-check. (Belsky feedback)
 - [ ] **Contradiction mining** — Belsky contradicts himself constantly — that's the point. Tensions are the most interesting content. Target: every brain should have at minimum 15% "contradicts" connections.
@@ -61,7 +62,7 @@ Captured from expert critique panel (April 4, 2026): Calacanis, Bartlett, Hassid
 ## Ethics & Legal
 
 - [ ] **Ethics of building without consent** (Amodei) — "Fair use" is legal, not ethical. Consider asking first, not building-then-inviting. The power dynamic matters.
-- [ ] **Book content handling** — Copyright is clearer for direct quotes vs. extracted ideas. Establish guidelines before building book-sourced brains.
+- [ ] **Book content handling** — Will use discussion and reviews of books, NOT transcripts. Copyright is clearer for extracted ideas vs. direct quotes. Establish guidelines before building book-sourced brains.
 - [ ] **International brains** — Is there demand for non-English thinkers? (Yuval Noah Harari, etc.)
 
 ---
