@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* ─── BrainsForSale Design Tokens (from DESIGN.md) ─── */
+:root {
+  /* Primary */
+  --brain-indigo: #6366f1;
+  --deep-ink: #0f172a;
+  --pure-white: #ffffff;
+
+  /* Brand & Immersive */
+  --brand-deep: #312e81;
+  --brand-night: #1e1b4b;
+
+  /* Accent */
+  --indigo-light: #818cf8;
+  --indigo-mist: #e0e7ff;
+  --knowledge-gold: #d97706;
+  --gold-light: #fef3c7;
+
+  /* Interactive */
+  --indigo-hover: #4f46e5;
+  --indigo-deep: #3730a3;
+  --indigo-soft: #c7d2fe;
+
+  /* Neutral */
+  --color-heading: #0f172a;
+  --color-label: #334155;
+  --color-body: #64748b;
+  --color-muted: #94a3b8;
+  --color-success: #059669;
+
+  /* Surface & Border */
+  --warm-paper: #f8f7f4;
+  --cool-surface: #f1f5f9;
+  --border-default: #e2e8f0;
+  --border-indigo: #c7d2fe;
+  --border-whisper: rgba(0, 0, 0, 0.08);
+
+  /* Shadows */
+  --shadow-indigo: rgba(99, 102, 241, 0.15);
+  --shadow-deep: rgba(30, 27, 75, 0.12);
+  --shadow-neutral: rgba(0, 0, 0, 0.06);
+  --shadow-soft: rgba(0, 0, 0, 0.04);
+
+  /* Cluster Colors */
+  --cluster-product: #6366f1;
+  --cluster-ai: #0ea5e9;
+  --cluster-leadership: #d97706;
+  --cluster-creativity: #ec4899;
+  --cluster-business: #059669;
+  --cluster-culture: #8b5cf6;
+
+  /* Page */
+  --background: var(--pure-white);
+  --foreground: var(--deep-ink);
+}
+
+@theme inline {
+  /* Primary */
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-brain-indigo: #6366f1;
+  --color-deep-ink: #0f172a;
+
+  /* Interactive */
+  --color-indigo-hover: #4f46e5;
+  --color-indigo-deep: #3730a3;
+  --color-indigo-light: #818cf8;
+  --color-indigo-mist: #e0e7ff;
+  --color-indigo-soft: #c7d2fe;
+
+  /* Surfaces */
+  --color-warm-paper: #f8f7f4;
+  --color-cool-surface: #f1f5f9;
+  --color-brand-deep: #312e81;
+  --color-brand-night: #1e1b4b;
+
+  /* Accent */
+  --color-knowledge-gold: #d97706;
+  --color-gold-light: #fef3c7;
+
+  /* Text */
+  --color-heading: #0f172a;
+  --color-label: #334155;
+  --color-body: #64748b;
+  --color-muted: #94a3b8;
+  --color-success: #059669;
+
+  /* Borders */
+  --color-border-default: #e2e8f0;
+  --color-border-indigo: #c7d2fe;
+
+  /* Fonts — reference Next.js font CSS vars */
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+/* ─── Base ─── */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), -apple-system, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Design System Utilities ─── */
+
+/* Indigo-tinted shadow system */
+.shadow-brain {
+  box-shadow:
+    rgba(99, 102, 241, 0.08) 0px 8px 24px -4px,
+    rgba(0, 0, 0, 0.04) 0px 4px 12px -4px;
+}
+.shadow-brain-hover {
+  box-shadow:
+    rgba(99, 102, 241, 0.15) 0px 12px 32px -4px,
+    rgba(0, 0, 0, 0.06) 0px 6px 16px -4px;
+}
+.shadow-brain-elevated {
+  box-shadow:
+    rgba(99, 102, 241, 0.15) 0px 16px 40px -8px,
+    rgba(0, 0, 0, 0.06) 0px 8px 20px -4px;
+}
+.shadow-brain-deep {
+  box-shadow:
+    rgba(30, 27, 75, 0.20) 0px 24px 48px -12px,
+    rgba(0, 0, 0, 0.08) 0px 12px 24px -8px;
+}
+.shadow-brain-cta {
+  box-shadow: rgba(99, 102, 241, 0.25) 0px 4px 12px;
+}
+
+/* Brain identity stripe */
+.brain-stripe-top {
+  border-top: 4px solid var(--brain-indigo);
+}
+.brain-stripe-left {
+  border-left: 3px solid var(--brain-indigo);
+}
