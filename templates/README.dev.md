@@ -4,9 +4,16 @@
 
 ```
 brainsforsale/
-  brains/                    ← Brain configs (one per thinker)
-    belsky.json
-    {slug}.json
+  brains/                    ← One folder per thinker (first-last naming)
+    index.json               ← Registry of all brains
+    scott-belsky/
+      brain.json             ← Config (clusters, skill examples, Supabase refs)
+      synthesis.md           ← Brain DNA (first principles, thinking patterns)
+      source/                ← Raw inputs + brain-specific scripts
+      research/              ← Enrichment atoms (pipeline inputs)
+      data/                  ← Gitignored ephemeral
+      pack/                  ← Customer deliverable
+    {first-last}/            ← Same structure for each brain
   templates/                 ← Shared templates (never edit per-brain)
     SKILL.md.template
     README.md.template
@@ -16,7 +23,8 @@ brainsforsale/
       ... (10 total)
   scripts/
     export-brain.py          ← Generic export pipeline
-  brainsforsale-{slug}/      ← Rendered output (ships to customers)
+    enrich-connections.py    ← Generic connection enrichment
+    enrich-voice.py          ← Generic voice enrichment
 ```
 
 ## How It Works
@@ -28,7 +36,7 @@ brainsforsale/
 One command, any brain:
 
 ```bash
-python scripts/export-brain.py --brain belsky --from-files atoms.json connections.json
+python scripts/export-brain.py --brain scott-belsky --from-files atoms.json connections.json
 ```
 
 ## Template Variables
@@ -42,7 +50,7 @@ Templates use `{{variable}}` syntax. Nested keys use dots: `{{skill_examples.adv
 | `brain_name` | Scott Belsky | All files |
 | `brain_first_name` | Scott | All files |
 | `brain_last_name` | Belsky | All skill files |
-| `brain_slug` | belsky | SKILL.md, README.md |
+| `brain_slug` | scott-belsky | SKILL.md, README.md |
 | `brain_possessive` | his | SKILL.md |
 | `brain_source_description` | "Implications" newsletter | SKILL.md |
 | `brain_source_url` | implications.com | brain-context.md |
@@ -87,10 +95,10 @@ Templates use `{{variable}}` syntax. Nested keys use dots: `{{skill_examples.adv
 
 ### 1. Create brain config
 
-Copy `brains/belsky.json` as a starting point:
+Copy an existing brain config as a starting point:
 
 ```bash
-cp brains/belsky.json brains/{newslug}.json
+cp brains/scott-belsky/brain.json brains/{first-last}/brain.json
 ```
 
 Edit all values. The key authoring work is:
@@ -105,7 +113,7 @@ Edit all values. The key authoring work is:
 ### 2. Create Supabase tables
 
 ```sql
--- Atoms table (same schema as belsky_atoms)
+-- Atoms table (same schema as scott_belsky_atoms)
 CREATE TABLE {slug}_atoms (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   content text NOT NULL,

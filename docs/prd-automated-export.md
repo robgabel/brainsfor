@@ -36,7 +36,7 @@ That was the original plan (line 481-483 of the script says "not yet implemented
 
 **Implementation:**
 - Add `--supabase` flag to argparse
-- Use `httpx` or `requests` to call Supabase REST API: `GET /rest/v1/belsky_atoms?select=id,content,original_quote,implication,...` and `GET /rest/v1/belsky_connections?select=id,atom_id_1,atom_id_2,relationship,confidence`
+- Use `httpx` or `requests` to call Supabase REST API: `GET /rest/v1/scott_belsky_atoms?select=id,content,original_quote,implication,...` and `GET /rest/v1/scott_belsky_connections?select=id,atom_id_1,atom_id_2,relationship,confidence`
 - Pagination: Supabase REST defaults to 1000 rows, which covers 284 atoms and 430 connections with no pagination needed. Add Range header handling for future growth.
 - Everything else in the pipeline stays the same — just swap the data source.
 
@@ -53,7 +53,7 @@ export-brain.py --brain scott-belsky --supabase
 
 **Trigger options:**
 1. **pg_cron** — run daily at midnight PT (after `enrich-connections` at 11:30pm). Simplest.
-2. **Database trigger** — fire on INSERT/UPDATE to `belsky_atoms` or `belsky_connections`. More responsive but noisier (batch ingestion could trigger dozens of rebuilds).
+2. **Database trigger** — fire on INSERT/UPDATE to `scott_belsky_atoms` or `scott_belsky_connections`. More responsive but noisier (batch ingestion could trigger dozens of rebuilds).
 3. **Manual invoke** — `POST /functions/v1/export-pack?brain=scott-belsky`. Always available regardless of automation choice.
 
 **Recommendation:** pg_cron (daily) + manual invoke. Keep it simple. Daily is fresh enough — nobody needs real-time pack updates.

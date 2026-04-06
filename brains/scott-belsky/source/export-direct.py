@@ -2,11 +2,11 @@
 """
 Export Belsky Brain Pack from Supabase → flat files.
 
-Reads from: belsky_atoms, belsky_connections tables
-Writes to:  brains/belsky/pack/brain-atoms.json
-            brains/belsky/pack/brain-context.md
+Reads from: scott_belsky_atoms, scott_belsky_connections tables
+Writes to:  brains/scott-belsky/pack/brain-atoms.json
+            brains/scott-belsky/pack/brain-context.md
 
-Run: python brains/belsky/source/export-direct.py
+Run: python brains/scott-belsky/source/export-direct.py
 
 Requires: SUPABASE_URL and SUPABASE_SERVICE_KEY env vars
           pip install supabase
@@ -27,7 +27,7 @@ except ImportError:
 
 try:
     from dotenv import load_dotenv
-    # Walk up from brains/belsky/source/ to find .env at rob-ai root
+    # Walk up from brains/scott-belsky/source/ to find .env at rob-ai root
     _root = Path(__file__).resolve().parents[4]  # source/ → belsky/ → brains/ → brainsforsale/ → rob-ai/
     load_dotenv(_root / ".env")
 except ImportError:
@@ -118,13 +118,13 @@ CLUSTER_ORDER = [
 def fetch_data(supabase):
     """Fetch all Belsky atoms and connections from Supabase."""
     # Atoms
-    atoms_resp = supabase.table("belsky_atoms").select(
+    atoms_resp = supabase.table("scott_belsky_atoms").select(
         "id, content, source_type, source_ref, source_date, topics, cluster, confidence, confidence_tier, original_quote, implication"
     ).order("source_date", desc=True).execute()
     atoms = atoms_resp.data
 
     # Connections
-    conn_resp = supabase.table("belsky_connections").select(
+    conn_resp = supabase.table("scott_belsky_connections").select(
         "id, atom_id_1, atom_id_2, relationship, confidence"
     ).execute()
     connections = conn_resp.data
@@ -171,7 +171,7 @@ def export_json(atoms, connections, output_path):
     output = {
         "brain": {
             "name": "Scott Belsky",
-            "slug": "belsky",
+            "slug": "scott-belsky",
             "source": "Implications Newsletter (implications.com)",
             "atom_count": len(atoms),
             "connection_count": len(connections),

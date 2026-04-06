@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Voice enrichment for Belsky brain atoms.
+Voice enrichment for brain atoms.
 
-Fetches original newsletter content, extracts Belsky's actual voice/framing
+Fetches original source content, extracts the thinker's actual voice/framing
 and the "implication" (the "so what") for each atom.
 
 Usage:
-  python scripts/enrich-voice.py                    # Process top 80 atoms, output review JSON
-  python scripts/enrich-voice.py --limit 20         # Process top 20 atoms
-  python scripts/enrich-voice.py --apply review.json # Write approved enrichments to Supabase
-  python scripts/enrich-voice.py --dry-run           # Show what would be processed
+  python scripts/enrich-voice.py --brain scott-belsky                    # Process top 80 atoms
+  python scripts/enrich-voice.py --brain scott-belsky --limit 20         # Process top 20 atoms
+  python scripts/enrich-voice.py --brain scott-belsky --apply review.json
+  python scripts/enrich-voice.py --brain scott-belsky --dry-run
 
 Requires: ANTHROPIC_API_KEY, SUPABASE_URL + SUPABASE_SERVICE_KEY (in .env)
 """
@@ -39,46 +39,79 @@ except ImportError:
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "https://uzediwokyshjbsymevtp.supabase.co")
 SUPABASE_KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-OUTPUT_DIR = Path(__file__).parent.parent / "brains" / "belsky" / "data"
+
+# --- Paths ---
+SCRIPT_DIR = Path(__file__).parent
+ROOT_DIR = SCRIPT_DIR.parent
+BRAINS_DIR = ROOT_DIR / "brains"
 
 
-EXTRACTION_PROMPT = """You are extracting the original voice and implications from Scott Belsky's "Implications" newsletter.
+def load_brain_config(slug: str) -> dict:
+    """Load brain config from brains/{slug}/brain.json"""
+    config_path = BRAINS_DIR / slug / "brain.json"
+    if not config_path.exists():
+        print(f"ERROR: Brain config not found: {config_path}")
+        sys.exit(1)
+    with open(config_path) as f:
+        return json.load(f)
+
+
+def get_table_names(config: dict) -> tuple:
+    """Extract Supabase table names from brain config."""
+    sb = config.get("supabase", {})
+    atoms_table = sb.get("atoms_table")
+    connections_table = sb.get("connections_table")
+    if not atoms_table or not connections_table:
+        slug = config["brain_slug"].replace("-", "_")
+        atoms_table = atoms_table or f"{slug}_atoms"
+        connections_table = connections_table or f"{slug}_connections"
+    return atoms_table, connections_table
+
+
+def get_output_dir(config: dict) -> Path:
+    """Get data output directory for this brain."""
+    return BRAINS_DIR / config["brain_slug"] / "data"
+
+
+def build_extraction_prompt(brain_name: str, source_desc: str) -> str:
+    """Build the extraction prompt for a given brain."""
+    return f"""You are extracting the original voice and implications from {brain_name}'s {source_desc}.
 
 You will receive:
-1. An ATOM — a distilled insight previously extracted from Scott's writing
-2. The FULL TEXT of the newsletter edition where this atom came from
+1. An ATOM — a distilled insight previously extracted from {brain_name}'s writing
+2. The FULL TEXT of the source material where this atom came from
 
 Your job:
 
-**original_quote**: Find the passage in the newsletter that this atom was extracted from. Capture Scott's ACTUAL language — his provocative framing, specific metaphors, stories, examples, and emotional weight. This should be 1-3 sentences that preserve his voice. If you can find an exact quote, use it. If the idea spans multiple paragraphs, synthesize into his voice (not a neutral restatement). The quote should sound like SCOTT, not like a textbook.
+**original_quote**: Find the passage in the source that this atom was extracted from. Capture {brain_name}'s ACTUAL language — their provocative framing, specific metaphors, stories, examples, and emotional weight. This should be 1-3 sentences that preserve their voice. If you can find an exact quote, use it. If the idea spans multiple paragraphs, synthesize into their voice (not a neutral restatement). The quote should sound like {brain_name}, not like a textbook.
 
-**implication**: What is the "so what"? What does this insight MEAN for someone making decisions? This is the Implications newsletter — every insight has implications. Write 1-2 sentences in Scott's provocative style about what this means for builders, leaders, or companies. If Scott explicitly states the implication in the newsletter, use his words. If not, write one faithful to his voice and thinking patterns.
+**implication**: What is the "so what"? What does this insight MEAN for someone making decisions? Write 1-2 sentences in {brain_name}'s style about what this means for builders, leaders, or companies. If {brain_name} explicitly states the implication in the source, use their words. If not, write one faithful to their voice and thinking patterns.
 
 Return ONLY valid JSON:
-{
+{{
   "original_quote": "...",
   "implication": "..."
-}
+}}
 
-If you cannot find the relevant passage in the newsletter text, return:
-{
+If you cannot find the relevant passage in the source text, return:
+{{
   "original_quote": null,
   "implication": null,
   "reason": "Could not locate the source passage"
-}"""
+}}"""
 
 
-def fetch_top_atoms(supabase, limit: int = 80) -> list:
+def fetch_top_atoms(supabase, atoms_table: str, connections_table: str, limit: int = 80) -> list:
     """Fetch atoms most worth enriching: highest confidence + most connected."""
     # Get connection counts per atom
-    conn_resp = supabase.table("belsky_connections").select("atom_id_1, atom_id_2").execute()
+    conn_resp = supabase.table(connections_table).select("atom_id_1, atom_id_2").execute()
     conn_counts = defaultdict(int)
     for c in conn_resp.data:
         conn_counts[c["atom_id_1"]] += 1
         conn_counts[c["atom_id_2"]] += 1
 
     # Get atoms that don't already have original_quote
-    atoms_resp = supabase.table("belsky_atoms").select(
+    atoms_resp = supabase.table(atoms_table).select(
         "id, content, source_ref, source_date, cluster, confidence, confidence_tier, original_quote"
     ).is_("original_quote", "null").order("confidence", desc=True).execute()
 
@@ -94,7 +127,7 @@ def fetch_top_atoms(supabase, limit: int = 80) -> list:
 
 
 def fetch_newsletter_content(url: str) -> str:
-    """Fetch newsletter text from URL using httpx."""
+    """Fetch source text from URL using httpx."""
     import httpx
 
     try:
@@ -119,14 +152,14 @@ def fetch_newsletter_content(url: str) -> str:
         return f"ERROR: Could not fetch {url}: {e}"
 
 
-def extract_voice(client: anthropic.Anthropic, atom_content: str, newsletter_text: str) -> dict:
+def extract_voice(client: anthropic.Anthropic, atom_content: str, source_text: str, extraction_prompt: str) -> dict:
     """Use Claude to extract original voice + implication."""
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
         max_tokens=500,
         messages=[{
             "role": "user",
-            "content": f"{EXTRACTION_PROMPT}\n\n---\n\nATOM:\n{atom_content}\n\n---\n\nFULL NEWSLETTER TEXT:\n{newsletter_text}"
+            "content": f"{extraction_prompt}\n\n---\n\nATOM:\n{atom_content}\n\n---\n\nFULL SOURCE TEXT:\n{source_text}"
         }]
     )
 
@@ -140,11 +173,11 @@ def extract_voice(client: anthropic.Anthropic, atom_content: str, newsletter_tex
         return {"original_quote": None, "implication": None, "reason": f"Parse error: {message.content[0].text[:100]}"}
 
 
-def process_atoms(atoms: list, dry_run: bool = False) -> list:
+def process_atoms(atoms: list, extraction_prompt: str, dry_run: bool = False) -> list:
     """Process atoms: fetch source, extract voice, return enrichments."""
     client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
     results = []
-    url_cache = {}  # Cache newsletter content by URL
+    url_cache = {}  # Cache source content by URL
 
     for i, atom in enumerate(atoms):
         url = atom.get("source_ref", "")
@@ -174,25 +207,25 @@ def process_atoms(atoms: list, dry_run: bool = False) -> list:
             })
             continue
 
-        # Fetch newsletter content (cached)
+        # Fetch source content (cached)
         if url not in url_cache:
             print(f"  Fetching: {url}")
             url_cache[url] = fetch_newsletter_content(url)
             time.sleep(0.5)  # Rate limit
 
-        newsletter_text = url_cache[url]
-        if newsletter_text.startswith("ERROR:"):
+        source_text = url_cache[url]
+        if source_text.startswith("ERROR:"):
             results.append({
                 "id": atom_id,
                 "content": content,
                 "original_quote": None,
                 "implication": None,
-                "status": newsletter_text
+                "status": source_text
             })
             continue
 
         # Extract voice
-        extraction = extract_voice(client, content, newsletter_text)
+        extraction = extract_voice(client, content, source_text, extraction_prompt)
         results.append({
             "id": atom_id,
             "content": content,
@@ -209,7 +242,7 @@ def process_atoms(atoms: list, dry_run: bool = False) -> list:
     return results
 
 
-def apply_enrichments(supabase, filepath: str):
+def apply_enrichments(supabase, atoms_table: str, filepath: str):
     """Write approved enrichments from review JSON back to Supabase."""
     with open(filepath) as f:
         enrichments = json.load(f)
@@ -228,7 +261,7 @@ def apply_enrichments(supabase, filepath: str):
         if item.get("implication"):
             update["implication"] = item["implication"]
 
-        supabase.table("belsky_atoms").update(update).eq("id", item["id"]).execute()
+        supabase.table(atoms_table).update(update).eq("id", item["id"]).execute()
         applied += 1
         print(f"  Updated atom {item['id'][:8]}...")
 
@@ -236,7 +269,8 @@ def apply_enrichments(supabase, filepath: str):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Enrich Belsky atoms with original voice + implications")
+    parser = argparse.ArgumentParser(description="Enrich brain atoms with original voice + implications")
+    parser.add_argument("--brain", required=True, help="Brain slug (e.g. scott-belsky)")
     parser.add_argument("--limit", type=int, default=80, help="Number of atoms to process (default: 80)")
     parser.add_argument("--apply", metavar="FILE", help="Apply enrichments from review JSON to Supabase")
     parser.add_argument("--dry-run", action="store_true", help="Show what would be processed without fetching")
@@ -246,11 +280,20 @@ def main():
         print("ERROR: Set SUPABASE_SERVICE_KEY in .env")
         sys.exit(1)
 
+    config = load_brain_config(args.brain)
+    atoms_table, connections_table = get_table_names(config)
+    output_dir = get_output_dir(config)
+    brain_name = config["brain_name"]
+    source_desc = config.get("brain_source_description", "writings")
+
+    print(f"Brain: {brain_name} ({args.brain})")
+    print(f"Tables: {atoms_table}, {connections_table}")
+
     supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
     if args.apply:
         print(f"Applying enrichments from {args.apply}...")
-        apply_enrichments(supabase, args.apply)
+        apply_enrichments(supabase, atoms_table, args.apply)
         return
 
     if not ANTHROPIC_KEY and not args.dry_run:
@@ -258,7 +301,7 @@ def main():
         sys.exit(1)
 
     print(f"Fetching top {args.limit} atoms for voice enrichment...")
-    atoms = fetch_top_atoms(supabase, args.limit)
+    atoms = fetch_top_atoms(supabase, atoms_table, connections_table, args.limit)
     print(f"  Found {len(atoms)} atoms to enrich")
 
     if not atoms:
@@ -271,11 +314,12 @@ def main():
         urls[a.get("source_ref", "no_url")] += 1
     print(f"  Spanning {len(urls)} unique source URLs")
 
-    results = process_atoms(atoms, dry_run=args.dry_run)
+    extraction_prompt = build_extraction_prompt(brain_name, source_desc)
+    results = process_atoms(atoms, extraction_prompt, dry_run=args.dry_run)
 
     # Write review file
-    OUTPUT_DIR.mkdir(exist_ok=True)
-    output_file = OUTPUT_DIR / "voice-enrichment-review.json"
+    output_dir.mkdir(exist_ok=True)
+    output_file = output_dir / "voice-enrichment-review.json"
     with open(output_file, "w") as f:
         json.dump(results, f, indent=2)
 
@@ -284,7 +328,7 @@ def main():
     print(f"\nResults: {ok} enriched, {failed} failed")
     print(f"Review file: {output_file}")
     print(f"\nNext step: Review the JSON, then run:")
-    print(f"  python scripts/enrich-voice.py --apply {output_file}")
+    print(f"  python scripts/enrich-voice.py --brain {args.brain} --apply {output_file}")
 
 
 if __name__ == "__main__":

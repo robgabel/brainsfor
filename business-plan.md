@@ -154,22 +154,23 @@ A markdown file is a reference. A skill pack is a **workflow tool**. The differe
 Each skill is a `SKILL.md` file (Claude/Cowork format) — no code, just structured instructions that Claude reads and follows. Total skill pack is ~15 files:
 
 ```
-brainsforsale-belsky/
+brains/scott-belsky/pack/
   SKILL.md              ← brain-setup (meta skill, loads everything)
   brain-context.md      ← the full knowledge atom context file
   brain-atoms.json      ← structured atom data (topics, dates, sources, connections)
-  brain-visual.html     ← interactive D3.js knowledge graph visualization
+  explore.html          ← interactive knowledge graph visualization
+  README.md             ← quick start
   skills/
-    advise.md           ← /advise skill
-    teach.md            ← /teach skill
-    debate.md           ← /debate skill
-    connect.md          ← /connect skill
-    evolve.md           ← /evolve skill
-    apply.md            ← /apply skill
-    mashup.md           ← /mashup skill (cross-brain, works with any installed brain)
-    brainfight.md       ← /brainfight skill
-    deep-dive.md        ← /deep-dive skill
-    surprise.md         ← /surprise skill
+    advise/SKILL.md     ← /advise skill
+    teach/SKILL.md      ← /teach skill
+    debate/SKILL.md     ← /debate skill
+    connect/SKILL.md    ← /connect skill
+    evolve/SKILL.md     ← /evolve skill
+    apply/SKILL.md      ← /apply skill
+    mashup/SKILL.md     ← /mashup skill (cross-brain)
+    brainfight/SKILL.md ← /brainfight skill
+    deep-dive/SKILL.md  ← /deep-dive skill
+    surprise/SKILL.md   ← /surprise skill
   embeddings/           ← (Pro tier only)
     atoms-1536.json     ← pre-computed vectors
 ```
