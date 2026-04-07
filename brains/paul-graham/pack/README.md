@@ -1,7 +1,7 @@
 # Paul Graham Brain Pack
 
 > **182 knowledge atoms** · **498 typed connections** · **8 thinking skills**
-> From [brainsforsale.com](https://brainsforsale.com)
+> From [brainsfor.dev](https://brainsfor.dev)
 
 ## What This Is
 
@@ -72,10 +72,16 @@ Install multiple brain packs and they auto-discover each other:
 
 Paul Graham is a programmer, essayist, and co-founder of Y Combinator — the most successful startup accelerator in history. His essays on paulgraham.com have shaped how a generation of founders and programmers think about startups, ambition, wealth creation, and the craft of building things. He is one of the most cited thinkers in Silicon Valley.
 
+## Sources & Ethics
+
+This brain pack was built exclusively from **freely available, public sources** — Paul's free essays on paulgraham.com, public interviews, conference talks, podcasts, and tweets. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+
+Where book ideas appear in the knowledge graph (e.g., from *Hackers & Painters*), they are represented as they exist in the public discourse: book reviews, author interviews, and concepts Paul has shared freely in his essays and public appearances.
+
 ## Support
 
 - Full setup guide: `SKILL.md`
-- Website: [brainsforsale.com](https://brainsforsale.com)
+- Website: [brainsfor.dev](https://brainsfor.dev)
 
 ---
 

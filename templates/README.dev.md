@@ -1,6 +1,6 @@
 # Brain Pack Developer Guide
 
-How to build a new brain pack from scratch using the BrainsForSale pipeline.
+How to build a new brain pack from scratch using the BrainsFor pipeline.
 
 *Last updated: 2026-04-05*
 
@@ -362,7 +362,7 @@ Templates use `{{variable}}` syntax. Nested keys use dots: `{{skill_examples.adv
 ## Directory Structure
 
 ```
-brainsforsale/
+brainsfor/
   CLAUDE.md                          ← project instructions
   IMPROVEMENTS.md                    ← backlog
 

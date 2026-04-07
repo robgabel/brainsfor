@@ -1,5 +1,5 @@
 #!/bin/bash
-# install-brains.sh — Install/uninstall BrainsForSale brain packs into a target workspace
+# install-brains.sh — Install/uninstall BrainsFor brain packs into a target workspace
 #
 # Usage:
 #   ./scripts/install-brains.sh <target_dir> <slug1> [slug2 ...]     # Install brains
@@ -261,7 +261,7 @@ TARGET_DIR="$1"
 shift
 SLUGS=("$@")
 
-echo "=== BrainsForSale Installer ==="
+echo "=== BrainsFor Installer ==="
 echo "Brains dir: $BRAINS_DIR"
 echo "Target:     $TARGET_DIR/skills/"
 echo "Mode:       $MODE"

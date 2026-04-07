@@ -1,4 +1,4 @@
-# BrainsForSale — Improvement Backlog
+# BrainsFor — Improvement Backlog
 
 Captured from expert critique panel (April 4, 2026): Calacanis, Bartlett, Hassid, Amodei, Belsky, MrBeast.
 
@@ -21,7 +21,7 @@ Captured from expert critique panel (April 4, 2026): Calacanis, Bartlett, Hassid
 - [ ] **Launch with /advise + /surprise only** (MrBeast) — Ship 2 skills first, phase in rest. Reduce cognitive load. "No one is going to install 8 skills."
 - [ ] **Free sample brain** — Build Einstein or another public domain figure as a fully free brain. Eliminates purchase friction. Demonstrates the skill pack without risk.
 - [ ] **Working `npx skills add` command** — Currently specced but not built. Requires publishing to the skills registry. This IS the distribution channel.
-- [ ] **Naming review** — "brainsforsale" sounds like a zombie movie (MrBeast). Test alternatives. "Load a genius into your AI" is the only good copy.
+- [ ] **Naming review** — "brainsfor" sounds like a zombie movie (MrBeast). Test alternatives. "Load a genius into your AI" is the only good copy.
 - [ ] **Minimum atom threshold** — What's the minimum for a brain to feel "worth $29"? Hypothesis: 75-100 atoms with connections + working skills. Validate with beta users.
 
 ## Retention & Engagement

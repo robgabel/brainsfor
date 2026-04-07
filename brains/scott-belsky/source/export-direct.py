@@ -28,7 +28,7 @@ except ImportError:
 try:
     from dotenv import load_dotenv
     # Walk up from brains/belsky/source/ to find .env at rob-ai root
-    _root = Path(__file__).resolve().parents[4]  # source/ → belsky/ → brains/ → brainsforsale/ → rob-ai/
+    _root = Path(__file__).resolve().parents[4]  # source/ → belsky/ → brains/ → brainsfor/ → rob-ai/
     load_dotenv(_root / ".env")
 except ImportError:
     pass  # dotenv not installed — fall back to env vars

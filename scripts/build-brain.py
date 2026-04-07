@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build-brain.py — One-command brain pack builder for BrainsForSale.
+build-brain.py — One-command brain pack builder for BrainsFor.
 
 Takes a brain.json config and produces a complete, shippable brain pack.
 Chains all pipeline stages: atom generation, merging, synthesis, YouTube

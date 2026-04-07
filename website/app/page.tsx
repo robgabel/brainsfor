@@ -123,6 +123,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── Sources & Ethics ─── */}
+      <section className="px-6 py-12">
+        <div className="mx-auto max-w-[720px] rounded-xl border border-border-default bg-cool-surface p-6 text-center">
+          <h3 className="font-display text-lg font-normal tracking-tight text-deep-ink">
+            Built from public sources only
+          </h3>
+          <p className="mx-auto mt-2 max-w-[560px] text-sm leading-relaxed text-body">
+            Every brain is derived exclusively from freely available, public resources &mdash; interviews, podcasts,
+            free newsletters, talks, and blog posts. No commercial transcripts or paywalled content.
+            Where book ideas appear, they come from public discourse: reviews, author interviews, and press coverage.
+          </p>
+        </div>
+      </section>
+
       {/* ─── How It Works ─── */}
       <section className="bg-warm-paper px-6 py-20">
         <div className="mx-auto max-w-[1140px]">
@@ -141,7 +155,7 @@ export default function Home() {
                 step: "02",
                 title: "Install with one command",
                 desc: "One line in your terminal. Works with Claude Code, Cursor, Gemini CLI, and any AI tool that supports skills.",
-                code: "npx skills add brainsforsale/belsky",
+                code: "npx skills add brainsfor/belsky",
               },
               {
                 step: "03",

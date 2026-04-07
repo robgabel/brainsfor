@@ -9,15 +9,33 @@ import path from "path";
 const BRAINS_DIR = path.join(process.cwd(), "..", "brains");
 const PUBLIC_DIR = path.join(process.cwd(), "public", "brains");
 
-const index = JSON.parse(fs.readFileSync(path.join(BRAINS_DIR, "index.json"), "utf-8"));
+const indexPath = path.join(BRAINS_DIR, "index.json");
+if (!fs.existsSync(indexPath)) {
+  console.log("brains/index.json not found (expected on Vercel) — skipping sync.");
+  process.exit(0);
+}
+const index = JSON.parse(fs.readFileSync(indexPath, "utf-8"));
 
 const ASSETS = ["explore.html", "brain-atoms.json"];
 
 let synced = 0;
 
+// Copy index.json so lib/brains.ts can find it on Vercel
+fs.mkdirSync(PUBLIC_DIR, { recursive: true });
+fs.copyFileSync(indexPath, path.join(PUBLIC_DIR, "index.json"));
+synced++;
+
 for (const brain of index.brains) {
   const packDir = path.join(BRAINS_DIR, brain.slug, "pack");
   const destDir = path.join(PUBLIC_DIR, brain.slug);
+
+  // Copy brain.json config so lib/brains.ts can read it on Vercel
+  const configSrc = path.join(BRAINS_DIR, brain.slug, "brain.json");
+  if (fs.existsSync(configSrc)) {
+    fs.mkdirSync(destDir, { recursive: true });
+    fs.copyFileSync(configSrc, path.join(destDir, "brain.json"));
+    synced++;
+  }
 
   for (const file of ASSETS) {
     const src = path.join(packDir, file);

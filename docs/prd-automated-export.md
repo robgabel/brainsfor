@@ -107,9 +107,9 @@ create table brain_pack_versions (
 
 ### Component 4: Webhook for `npx skills add` distribution (future)
 
-**What:** When a new pack version is generated, POST to the skills registry to update the published artifact. This is the distribution trigger — ensures `npx skills add brainsforsale/belsky` always gets the latest pack.
+**What:** When a new pack version is generated, POST to the skills registry to update the published artifact. This is the distribution trigger — ensures `npx skills add brainsfor/belsky` always gets the latest pack.
 
-**Depends on:** Skills registry API existing and BrainsForSale being published there. Not built yet — park this until distribution is solved.
+**Depends on:** Skills registry API existing and BrainsFor being published there. Not built yet — park this until distribution is solved.
 
 ---
 

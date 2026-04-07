@@ -1,19 +1,19 @@
-# BrainsForSale — Project CLAUDE.md
+# BrainsFor — Project CLAUDE.md
 
 ## Canonical Location
 
-**All BrainsForSale work lives here: `~/rob-ai/brainsforsale/`**
+**All BrainsFor work lives here: `~/rob-ai/brainsfor/`**
 
-Do NOT create or save files to a standalone `Brainsforsale` Cowork mount, `~/.claude/`, or anywhere else. Everything goes in this directory under `~/rob-ai/` so it's version-controlled, backed up, and visible to all sessions that mount `rob-ai/`.
+Do NOT create or save files to a standalone `Brainsfor` Cowork mount, `~/.claude/`, or anywhere else. Everything goes in this directory under `~/rob-ai/` so it's version-controlled, backed up, and visible to all sessions that mount `rob-ai/`.
 
 ## What This Is
 
-BrainsForSale is a product: packaged "brain packs" — curated knowledge sets from notable thinkers (starting with Scott Belsky) that users install into AI assistants. Each brain ships with 8 thinking skills (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`).
+BrainsFor is a product: packaged "brain packs" — curated knowledge sets from notable thinkers (starting with Scott Belsky) that users install into AI assistants. Each brain ships with 8 thinking skills (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`).
 
 ## Directory Structure (v2)
 
 ```
-brainsforsale/
+brainsfor/
   CLAUDE.md                          ← this file
   DESIGN.md                          ← design system (Stripe-inspired, indigo-tinted premium knowledge aesthetic)
   BRAND.md                           ← brand style guide (voice, messaging, vocabulary, visual identity)
@@ -220,7 +220,7 @@ Zero structural decisions. Same pipeline, same templates, different config.
 
 ## Design System
 
-`DESIGN.md` in the project root defines BrainsForSale's visual identity. Based on the [awesome-design-md](https://github.com/VoltAgent/awesome-design-md) format (Google Stitch DESIGN.md standard). Any AI agent can read it and generate on-brand UI.
+`DESIGN.md` in the project root defines BrainsFor's visual identity. Based on the [awesome-design-md](https://github.com/VoltAgent/awesome-design-md) format (Google Stitch DESIGN.md standard). Any AI agent can read it and generate on-brand UI.
 
 **Design DNA:** Stripe-inspired premium knowledge aesthetic. Light-first with warm paper alternating sections. Space Grotesk weight-300 display type ("whispered authority"). Brain Indigo (`#6366f1`) as the singular accent. Indigo-tinted multi-layer shadows. Knowledge Gold (`#d97706`) reserved for premium moments only.
 

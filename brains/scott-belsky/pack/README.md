@@ -1,7 +1,7 @@
 # Scott Belsky Brain Pack
 
 > **284 knowledge atoms** · **430 typed connections** · **8 thinking skills**
-> From [brainsforsale.com](https://brainsforsale.com)
+> From [brainsfor.dev](https://brainsfor.dev)
 
 ## What This Is
 
@@ -72,10 +72,16 @@ Install multiple brain packs and they auto-discover each other:
 
 Scott Belsky is a legendary entrepreneur and strategic thinker who has shaped product and organizational thinking across the tech industry. His "Implications" newsletter is where he shares his latest thinking on originality, organizational design, AI, and the future of work.
 
+## Sources & Ethics
+
+This brain pack was built exclusively from **freely available, public sources** — Scott's free Implications newsletter, public interviews, conference talks, podcasts, and blog posts. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+
+Where book ideas appear in the knowledge graph (e.g., from *The Messy Middle*), they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, and widely discussed concepts that Scott has shared publicly.
+
 ## Support
 
 - Full setup guide: `SKILL.md`
-- Website: [brainsforsale.com](https://brainsforsale.com)
+- Website: [brainsfor.dev](https://brainsfor.dev)
 
 ---
 

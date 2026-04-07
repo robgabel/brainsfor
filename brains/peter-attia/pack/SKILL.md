@@ -5,7 +5,7 @@ description: "Load the Peter Attia brain and configure all 8 thinking skills. On
 
 # Peter Attia Brain Pack — Setup & Configuration
 
-Welcome to the **Attia Brain Pack** from [brainsforsale.com](https://brainsforsale.com). This is a premium knowledge asset extracted from Peter Attia's "The Drive" podcast and reviews of "Outlive" book — a curated collection of his most rigorous thinking on longevity, metabolic health, exercise physiology, and the Four Horsemen of chronic disease.
+Welcome to the **Attia Brain Pack** from [brainsfor.dev](https://brainsfor.dev). This is a premium knowledge asset extracted from Peter Attia's "The Drive" podcast and reviews of "Outlive" book — a curated collection of his most rigorous thinking on longevity, metabolic health, exercise physiology, and the Four Horsemen of chronic disease.
 
 ## What You're Getting
 
@@ -32,7 +32,7 @@ pack/
   └── README.md                ← quick reference
 ```
 
-If any files are missing, reinstall from [brainsforsale.com](https://brainsforsale.com).
+If any files are missing, reinstall from [brainsfor.dev](https://brainsfor.dev).
 
 ### Step 2: Detect Your AI Environment
 
@@ -183,9 +183,15 @@ Peter Attia is a physician and longevity expert who has reshaped how high-perfor
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
-**More:** Visit [brainsforsale.com](https://brainsforsale.com) for other brain packs, documentation, and community.
+**More:** Visit [brainsfor.dev](https://brainsfor.dev) for other brain packs, documentation, and community.
 
 ---
+
+## Sources & Ethics
+
+This brain was built exclusively from **freely available, public sources** — free podcast episodes of The Drive, public blog posts, interviews, conference talks, and publicly shared excerpts. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+
+Where book ideas appear in the knowledge graph (e.g., from *Outlive*), they are represented as they exist in the public discourse: book reviews, author interviews, press tour appearances, and widely discussed concepts that Peter has shared publicly.
 
 ## Support & Feedback
 
@@ -194,7 +200,7 @@ If you encounter issues or have feedback:
 1. Check `README.md` for quick answers
 2. Verify all files are present and readable
 3. Try a fresh load of `brain-context.md`
-4. Contact support via [brainsforsale.com](https://brainsforsale.com)
+4. Contact support via [brainsfor.dev](https://brainsfor.dev)
 
 ---
 

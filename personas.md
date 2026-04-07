@@ -1,4 +1,4 @@
-# BrainsForSale — Customer Personas
+# BrainsFor — Customer Personas
 
 *Created: 2026-04-05. Source: brainstorm session with Rob.*
 
@@ -11,7 +11,7 @@ Each persona follows the same structure designed for maximum product decision ut
 - **JTBD** — The progress they're trying to make (situation → motivation → outcome)
 - **Current workaround** — What they do today without brain packs
 - **Trigger moment** — The specific event that sends them looking for a solution
-- **Decision criteria** — What makes them choose BrainsForSale over alternatives
+- **Decision criteria** — What makes them choose BrainsFor over alternatives
 - **Objections** — The reason they almost don't buy (landing page + onboarding must address these)
 - **Channels** — Where they hang out, who they trust, what content resonates
 - **Willingness to pay** — Price sensitivity + budget source

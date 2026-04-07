@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Deep-research atom generation for BrainsForSale.
+Deep-research atom generation for BrainsFor.
 
 For subjects where direct content ingestion isn't possible (deceased figures,
 pre-blogging era thinkers), this script uses Claude with web search to generate
@@ -205,7 +205,7 @@ Return ONLY the JSON array."""
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Deep-research atom generation for BrainsForSale")
+    parser = argparse.ArgumentParser(description="Deep-research atom generation for BrainsFor")
     parser.add_argument("--brain", required=True, help="Target brain slug")
     parser.add_argument("--reference", default="scott-belsky",
                         help="Reference brain slug for exemplar atoms (default: scott-belsky)")

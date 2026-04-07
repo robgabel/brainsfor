@@ -1,4 +1,4 @@
-# BrainsForSale — Brand Style Guide
+# BrainsFor — Brand Style Guide
 
 ---
 
@@ -6,7 +6,7 @@
 
 ### What We Are
 
-BrainsForSale is a knowledge infrastructure company. We package the world's best thinkers into portable, structured knowledge packs that people install into their AI tools. We sell ownership of expert thinking, not access to a chatbot.
+BrainsFor is a knowledge infrastructure company. We package the world's best thinkers into portable, structured knowledge packs that people install into their AI tools. We sell ownership of expert thinking, not access to a chatbot.
 
 ### One-Line Positioning
 
@@ -80,7 +80,7 @@ Our copy should feel like our design — measured, precise, breathing room betwe
 
 ### Writing Cadence
 
-The BrainsForSale writing rhythm is: **short declarative sentence. Medium explanatory sentence. Then a payoff line that lands.**
+The BrainsFor writing rhythm is: **short declarative sentence. Medium explanatory sentence. Then a payoff line that lands.**
 
 > Knowledge graphs of the world's best thinkers, packaged as AI skills you actually use. Think better in seconds.
 
@@ -173,7 +173,7 @@ The BrainsForSale writing rhythm is: **short declarative sentence. Medium explan
 **Hook:** "Stop building context packs by hand."
 **Value prop:** Pre-structured knowledge graphs with embeddings, connections, and 8 skills. Saves you hours of prompt curation.
 **Proof point:** Show the JSON schema. Show the atom count. Show the install command.
-**CTA:** `npx skills add brainsforsale/belsky`
+**CTA:** `npx skills add brainsfor/belsky`
 
 ### Ambitious Operators (Revenue driver)
 
@@ -224,11 +224,11 @@ These are the responses that must show up on the landing page (via FAQ, inline c
 
 ### Logo Treatment
 
-**Wordmark:** `brainsforsale` in Space Grotesk, weight 600, `#0f172a`
+**Wordmark:** `brainsfor` in Space Grotesk, weight 600, `#0f172a`
 - `.com` suffix rendered in Brain Indigo (`#6366f1`)
 - On dark backgrounds: white text, `.com` in Indigo Light (`#818cf8`)
 - No icon/symbol at launch — the wordmark is the brand
-- Always lowercase. Never "BrainsForSale" or "BRAINSFORSALE" in the logo itself (though "BrainsForSale" is fine in body text references)
+- Always lowercase. Never "BrainsFor" or "BRAINSFOR" in the logo itself (though "BrainsFor" is fine in body text references)
 
 ### Color Palette
 
@@ -348,7 +348,7 @@ Weekly breakdown of one interesting insight from the catalog. Free content that 
 
 ## 10. Rules for AI-Generated Brand Content
 
-When using AI to generate BrainsForSale marketing copy:
+When using AI to generate BrainsFor marketing copy:
 
 1. **Always show, don't tell.** If the AI writes "powerful" or "comprehensive," replace it with a specific number or a demo screenshot.
 2. **Check for banned words.** Run generated copy against Section 4 ("Words We DON'T Use"). Kill anything that sounds like generic SaaS marketing.

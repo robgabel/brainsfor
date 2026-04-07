@@ -5,7 +5,7 @@ description: "Load the Steve Jobs brain and configure all 8 thinking skills. One
 
 # Steve Jobs Brain Pack — Setup & Configuration
 
-Welcome to the **Jobs Brain Pack** from [brainsforsale.com](https://brainsforsale.com). This is a premium knowledge asset extracted from Steve Jobs's speeches, interviews, keynotes, and public appearances — a curated collection of his most provocative thinking on product design, simplicity, taste, team-building, and the intersection of technology and liberal arts.
+Welcome to the **Jobs Brain Pack** from [brainsfor.dev](https://brainsfor.dev). This is a premium knowledge asset extracted from Steve Jobs's speeches, interviews, keynotes, and public appearances — a curated collection of his most provocative thinking on product design, simplicity, taste, team-building, and the intersection of technology and liberal arts.
 
 ## What You're Getting
 
@@ -32,7 +32,7 @@ pack/
   └── README.md                ← quick reference
 ```
 
-If any files are missing, reinstall from [brainsforsale.com](https://brainsforsale.com).
+If any files are missing, reinstall from [brainsfor.dev](https://brainsfor.dev).
 
 ### Step 2: Detect Your AI Environment
 
@@ -183,9 +183,15 @@ Steve Jobs co-founded Apple, led Pixar, built NeXT, and returned to transform Ap
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
-**More:** Visit [brainsforsale.com](https://brainsforsale.com) for other brain packs, documentation, and community.
+**More:** Visit [brainsfor.dev](https://brainsfor.dev) for other brain packs, documentation, and community.
 
 ---
+
+## Sources & Ethics
+
+This brain was built exclusively from **freely available, public sources** — keynote presentations, public interviews, commencement speeches, press conferences, product launches, and documented conversations. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled content were used to derive this brain.
+
+Where book ideas appear in the knowledge graph (e.g., from Walter Isaacson's biography), they are represented as they exist in the public discourse: book reviews, widely reported excerpts, press coverage, and publicly discussed anecdotes.
 
 ## Support & Feedback
 
@@ -194,7 +200,7 @@ If you encounter issues or have feedback:
 1. Check `README.md` for quick answers
 2. Verify all files are present and readable
 3. Try a fresh load of `brain-context.md`
-4. Contact support via [brainsforsale.com](https://brainsforsale.com)
+4. Contact support via [brainsfor.dev](https://brainsfor.dev)
 
 ---
 

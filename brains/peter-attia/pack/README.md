@@ -1,7 +1,7 @@
 # Peter Attia Brain Pack
 
 > **73 knowledge atoms** · **40 typed connections** · **8 thinking skills**
-> From [brainsforsale.com](https://brainsforsale.com)
+> From [brainsfor.dev](https://brainsfor.dev)
 
 ## What This Is
 
@@ -72,10 +72,16 @@ Install multiple brain packs and they auto-discover each other:
 
 Peter Attia is a physician and longevity expert who has reshaped how high-performers think about health across decades. His "Outlive" book and "The Drive" podcast are the primary source for evidence-based longevity strategy, blending mechanistic biochemistry with practical behavior change.
 
+## Sources & Ethics
+
+This brain pack was built exclusively from **freely available, public sources** — free podcast episodes of The Drive, public blog posts, interviews, conference talks, and publicly shared excerpts. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+
+Where book ideas appear in the knowledge graph (e.g., from *Outlive*), they are represented as they exist in the public discourse: book reviews, author interviews, press tour appearances, and widely discussed concepts that Peter has shared publicly.
+
 ## Support
 
 - Full setup guide: `SKILL.md`
-- Website: [brainsforsale.com](https://brainsforsale.com)
+- Website: [brainsfor.dev](https://brainsfor.dev)
 
 ---
 

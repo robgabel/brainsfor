@@ -5,7 +5,7 @@ description: "Load the Scott Belsky brain and configure all 8 thinking skills. O
 
 # Scott Belsky Brain Pack — Setup & Configuration
 
-Welcome to the **Belsky Brain Pack** from [brainsforsale.com](https://brainsforsale.com). This is a premium knowledge asset extracted from Scott Belsky's "Implications" newsletter — a curated collection of his most strategic thinking on originality, organizational design, agentic commerce, and the future of work.
+Welcome to the **Belsky Brain Pack** from [brainsfor.dev](https://brainsfor.dev). This is a premium knowledge asset extracted from Scott Belsky's "Implications" newsletter — a curated collection of his most strategic thinking on originality, organizational design, agentic commerce, and the future of work.
 
 ## What You're Getting
 
@@ -32,7 +32,7 @@ pack/
   └── README.md                ← quick reference
 ```
 
-If any files are missing, reinstall from [brainsforsale.com](https://brainsforsale.com).
+If any files are missing, reinstall from [brainsfor.dev](https://brainsfor.dev).
 
 ### Step 2: Detect Your AI Environment
 
@@ -183,9 +183,15 @@ Scott Belsky is a legendary entrepreneur and strategic thinker who has shaped pr
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
-**More:** Visit [brainsforsale.com](https://brainsforsale.com) for other brain packs, documentation, and community.
+**More:** Visit [brainsfor.dev](https://brainsfor.dev) for other brain packs, documentation, and community.
 
 ---
+
+## Sources & Ethics
+
+This brain was built exclusively from **freely available, public sources** — Scott's free Implications newsletter, public interviews, conference talks, podcasts, and blog posts. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+
+Where book ideas appear in the knowledge graph (e.g., from *The Messy Middle*), they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, and widely discussed concepts that Scott has shared publicly.
 
 ## Support & Feedback
 
@@ -194,7 +200,7 @@ If you encounter issues or have feedback:
 1. Check `README.md` for quick answers
 2. Verify all files are present and readable
 3. Try a fresh load of `brain-context.md`
-4. Contact support via [brainsforsale.com](https://brainsforsale.com)
+4. Contact support via [brainsfor.dev](https://brainsfor.dev)
 
 ---
 

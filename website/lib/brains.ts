@@ -41,7 +41,10 @@ interface BrainConfig {
   };
 }
 
-const BRAINS_DIR = path.join(process.cwd(), "..", "brains");
+// Try parent dir first (local dev), fall back to public/brains (Vercel)
+const BRAINS_DIR = fs.existsSync(path.join(process.cwd(), "..", "brains", "index.json"))
+  ? path.join(process.cwd(), "..", "brains")
+  : path.join(process.cwd(), "public", "brains");
 
 function loadBrains(): Brain[] {
   const indexPath = path.join(BRAINS_DIR, "index.json");
@@ -50,7 +53,9 @@ function loadBrains(): Brain[] {
   );
 
   return index.brains.map((entry) => {
-    const configPath = path.join(BRAINS_DIR, entry.slug, "brain.json");
+    const configPath = fs.existsSync(path.join(BRAINS_DIR, entry.slug, "brain.json"))
+      ? path.join(BRAINS_DIR, entry.slug, "brain.json")
+      : path.join(process.cwd(), "public", "brains", entry.slug, "brain.json");
     const config: BrainConfig = JSON.parse(
       fs.readFileSync(configPath, "utf-8"),
     );

@@ -1,4 +1,4 @@
-# Brainsforsale.com — 0-Person Business Plan
+# Brainsfor.com — 0-Person Business Plan
 
 *Written in the style of Greg Isenberg. April 4, 2026.*
 
@@ -22,7 +22,7 @@ Not a chatbot. Not a character you roleplay with. A **structured knowledge pack*
 
 **Line 3 (the how — one command):**
 ```
-npx skills add brainsforsale/belsky
+npx skills add brainsfor/belsky
 ```
 
 **Line 4 (the live demo — Jason's "show, don't tell"):**
@@ -105,7 +105,7 @@ When a buyer owns 2+ brains, the instruction file supports loading multiple brai
 
 Every brain ships with a **skill pack** — a set of installable Claude/Cursor/ChatGPT skills that give the buyer an interactive interface to the knowledge graph. Not just "here's a file" but "here are 8 commands that make this brain useful."
 
-Install: `npx skills add brainsforsale/belsky` (or download the skill pack manually)
+Install: `npx skills add brainsfor/belsky` (or download the skill pack manually)
 
 #### The 8 Brain Skills
 
@@ -152,7 +152,7 @@ A markdown file is a reference. A skill pack is a **workflow tool**. The differe
 Each skill is a `SKILL.md` file (Claude/Cowork format) — no code, just structured instructions that Claude reads and follows. Total skill pack is ~15 files:
 
 ```
-brainsforsale-belsky/
+brainsfor-belsky/
   SKILL.md              ← brain-setup (meta skill, loads everything)
   brain-context.md      ← the full knowledge atom context file
   brain-atoms.json      ← structured atom data (topics, dates, sources, connections)
@@ -401,7 +401,7 @@ Free weekly newsletter / social series. Each edition spotlights one insight from
 | OpenAI embeddings | ~$5-10 |
 | Claude API (atom extraction) | ~$10-20 |
 | Stripe fees (2.9% + $0.30) | Variable |
-| Domain (brainsforsale.com) | ~$12/yr |
+| Domain (brainsfor.dev) | ~$12/yr |
 | **Total fixed** | **~$75-95/mo** |
 
 **Margin: 95%+.** This is a digital goods business with near-zero COGS once the brain is built.
@@ -465,15 +465,15 @@ This auto-detects whether you're running Claude Code, Cursor, Gemini CLI, Codex 
 | VS Code Copilot / Antigravity | `.agents/skills/` |
 | Cowork | `~/.claude/skills/` (global mount) |
 
-### How Brainsforsale plugs in
+### How Brainsfor plugs in
 
 We publish each brain as a skill pack to the same registry:
 
 ```bash
 # Install a single brain
-npx skills add brainsforsale/belsky
-npx skills add brainsforsale/galloway
-npx skills add brainsforsale/attia
+npx skills add brainsfor/belsky
+npx skills add brainsfor/galloway
+npx skills add brainsfor/attia
 
 # Update all installed brains
 npx skills update
@@ -494,7 +494,7 @@ The **brain data** (atoms, connections, embeddings) is what costs money. On firs
 > /advise "Should I raise a Series A?"
 
 🧠 Brain Setup: No Belsky brain data found.
-   → Purchase at brainsforsale.com/belsky ($29)
+   → Purchase at brainsfor.dev/belsky ($29)
    → Enter license key: ________
 ```
 
@@ -505,7 +505,7 @@ Once the key is entered, the brain data downloads from our API and caches locall
 ### Package structure on the registry
 
 ```
-brainsforsale/belsky/
+brainsfor/belsky/
   package.json            ← npm-compatible metadata (name, version, description)
   SKILL.md                ← /brain-setup (meta skill, onboarding + license check)
   brain-visual.html       ← interactive knowledge graph dashboard (always free)
@@ -528,7 +528,7 @@ brainsforsale/belsky/
 
 ### Multi-brain discovery
 
-The `/connect` and `/debate` skills auto-discover other installed brains by scanning the skill directory for other `brainsforsale/*` packages. No config needed. If you have Belsky and Galloway installed, `/debate` automatically offers both for cross-brain comparisons.
+The `/connect` and `/debate` skills auto-discover other installed brains by scanning the skill directory for other `brainsfor/*` packages. No config needed. If you have Belsky and Galloway installed, `/debate` automatically offers both for cross-brain comparisons.
 
 ### Updates
 
@@ -541,7 +541,7 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 ### Day 1 (Saturday): Build the brains + storefront
 
 **Morning (3 hours):**
-- [x] Register brainsforsale.com ✅ (owned, already on Vercel)
+- [x] Register brainsfor.dev ✅ (owned, already on Vercel)
 - [ ] Run the `blog-ingest` skill on 3 Tier 1 brains (Belsky is done — pick 2 more)
 - [ ] For each brain: extract atoms, generate embeddings, create mental model map
 - [ ] Package each brain into Standard format (markdown + JSON)
@@ -644,7 +644,7 @@ The evolution path is: **knowledge pack → interactive advisor → platform** �
 
 ## TL;DR
 
-**What:** Brainsforsale.com — installable AI skill packs built from the world's most interesting minds. `npx skills add brainsforsale/belsky` gives you 8 thinking tools powered by a real knowledge graph.
+**What:** Brainsfor.com — installable AI skill packs built from the world's most interesting minds. `npx skills add brainsfor/belsky` gives you 8 thinking tools powered by a real knowledge graph.
 
 **Who:** Builders, founders, and AI power users who want expert-level context without hand-curating it.
 
@@ -733,7 +733,7 @@ From product to marketplace. From flat files to graph infrastructure.
 
 ## Open Questions
 
-- [x] ~~Is brainsforsale.com available?~~ ✅ Owned. Already on Vercel.
+- [x] ~~Is brainsfor.dev available?~~ ✅ Owned. Already on Vercel.
 - [x] ~~Is there a "brain comparison" feature?~~ ✅ Yes — `/debate` (head-to-head) and `/connect` (cross-brain synthesis) skills.
 - [x] ~~How do you handle contradictions within a brain?~~ ✅ `/evolve` skill shows thinking evolution over time.
 - [x] ~~Should brains have a "freshness" dimension?~~ ✅ Brain Score + auto-updates for Pro tier.

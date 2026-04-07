@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Video & web transcript extraction for BrainsForSale.
+Video & web transcript extraction for BrainsFor.
 
 Extracts transcripts from YouTube videos or web pages (via Firecrawl) and
 saves them as source material for atom generation. Works with the generic
@@ -305,7 +305,7 @@ Return ONLY the JSON array, no other text."""
 
 
 def main():
-    parser = argparse.ArgumentParser(description="YouTube transcript extraction for BrainsForSale")
+    parser = argparse.ArgumentParser(description="YouTube transcript extraction for BrainsFor")
     parser.add_argument("--brain", required=True, help="Brain slug (e.g., steve-jobs)")
     parser.add_argument("--url", help="Single YouTube URL or video ID")
     parser.add_argument("--url-file", help="File with one YouTube URL per line")

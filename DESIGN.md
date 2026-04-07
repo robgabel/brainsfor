@@ -1,14 +1,14 @@
-# Design System: BrainsForSale
+# Design System: BrainsFor
 
 ## 1. Visual Theme & Atmosphere
 
-BrainsForSale sells packaged intelligence — curated knowledge graphs of the world's best thinkers, installed into AI assistants. The design system must feel like a **rare bookshop designed by a type foundry**: intellectual, premium, warm enough to invite exploration, precise enough to signal "this data is structured and trustworthy." The product is not a chatbot, not a SaaS dashboard, not a dev tool. It's a knowledge artifact. The design should honor that.
+BrainsFor sells packaged intelligence — curated knowledge graphs of the world's best thinkers, installed into AI assistants. The design system must feel like a **rare bookshop designed by a type foundry**: intellectual, premium, warm enough to invite exploration, precise enough to signal "this data is structured and trustworthy." The product is not a chatbot, not a SaaS dashboard, not a dev tool. It's a knowledge artifact. The design should honor that.
 
 The page opens on a clean white canvas (`#ffffff`) with deep ink headings (`#0f172a`) — not pure black, but a blue-black that reads as thoughtful rather than harsh. The brand anchor is **Brain Indigo** (`#6366f1`), a saturated violet that signals depth, wisdom, and premium quality without corporate coldness. This isn't enterprise purple; it's the color of a thought you can't shake.
 
 The typography uses Space Grotesk — a geometric sans-serif with just enough personality to feel designed, not default. At display sizes (48-64px), it runs at weight 300 with tight negative letter-spacing, creating headlines that whisper with authority rather than shouting. The lightness says: "This knowledge is so good it doesn't need to be loud." At body sizes, Inter takes over for maximum readability in long-form content (atom descriptions, synthesis text, skill explanations).
 
-What distinguishes BrainsForSale's visual language is the **indigo-tinted shadow system** — borrowed from Stripe's approach but tuned to the brand palette. Multi-layer shadows using `rgba(99, 102, 241, 0.15)` create depth that feels brand-colored, like elements floating in a field of concentrated thought. Combined with warm alternating sections (`#f8f7f4`, a paper-toned off-white), the overall feel is: precision engineering meets intellectual warmth.
+What distinguishes BrainsFor's visual language is the **indigo-tinted shadow system** — borrowed from Stripe's approach but tuned to the brand palette. Multi-layer shadows using `rgba(99, 102, 241, 0.15)` create depth that feels brand-colored, like elements floating in a field of concentrated thought. Combined with warm alternating sections (`#f8f7f4`, a paper-toned off-white), the overall feel is: precision engineering meets intellectual warmth.
 
 **Key Characteristics:**
 - Space Grotesk at weight 300 for display, weight 500 for UI — lightness as intellectual confidence
@@ -95,7 +95,7 @@ What distinguishes BrainsForSale's visual language is the **indigo-tinted shadow
 | Micro | Inter | 11px (0.69rem) | 500 | 1.30 | 0.05em | Fine print, atom counts, timestamps |
 
 ### Principles
-- **Light weight as intellectual confidence**: Weight 300 at display sizes is BrainsForSale's typographic signature. The text is so confident in the knowledge it represents that it doesn't need weight to command attention.
+- **Light weight as intellectual confidence**: Weight 300 at display sizes is BrainsFor's typographic signature. The text is so confident in the knowledge it represents that it doesn't need weight to command attention.
 - **Two-font clarity**: Space Grotesk for personality (headings, brand moments), Inter for utility (body, UI, data). Never mix them within a single text block.
 - **Progressive tracking**: Letter-spacing tightens proportionally with size: -1.5px at 56px, -1.2px at 48px, -0.75px at 36px, normal at 16px and below.
 - **Generous line height for content**: Body text at 1.60 line-height because atom descriptions and synthesis text are meant to be read carefully, not scanned.
@@ -223,7 +223,7 @@ What distinguishes BrainsForSale's visual language is the **indigo-tinted shadow
 
 ### Navigation
 - Clean horizontal nav on white, sticky with `backdrop-filter: blur(12px)` and `rgba(255, 255, 255, 0.85)` background
-- Brand logotype: "brainsforsale" in Space Grotesk 16px weight 600, `#0f172a` with `.com` in `#6366f1`
+- Brand logotype: "brainsfor" in Space Grotesk 16px weight 600, `#0f172a` with `.com` in `#6366f1`
 - Links: Inter 15px weight 500, `#64748b` text, hover `#0f172a`
 - CTA: indigo button ("Get a brain") right-aligned
 - Border: `1px solid rgba(0, 0, 0, 0.06)` bottom
@@ -298,7 +298,7 @@ What distinguishes BrainsForSale's visual language is the **indigo-tinted shadow
 | Deep (Level 4) | `rgba(30, 27, 75, 0.20) 0px 24px 48px -12px, rgba(0, 0, 0, 0.08) 0px 12px 24px -8px` | Modals, floating panels, hero demo boxes |
 | Focus Ring | `0px 0px 0px 3px rgba(99, 102, 241, 0.2)` + `2px solid #6366f1` | Keyboard focus on all interactive elements |
 
-**Shadow Philosophy**: BrainsForSale's shadow system uses indigo-tinted primary shadows (`rgba(99, 102, 241, ...)`) paired with neutral secondary layers. This creates shadows that carry the brand color into the depth dimension — elements don't just float, they float in a field of concentrated thought. The negative spread values ensure shadows stay tight and controlled. On hover, shadows deepen rather than spread, creating a "drawn closer" effect rather than a "lifted away" one.
+**Shadow Philosophy**: BrainsFor's shadow system uses indigo-tinted primary shadows (`rgba(99, 102, 241, ...)`) paired with neutral secondary layers. This creates shadows that carry the brand color into the depth dimension — elements don't just float, they float in a field of concentrated thought. The negative spread values ensure shadows stay tight and controlled. On hover, shadows deepen rather than spread, creating a "drawn closer" effect rather than a "lifted away" one.
 
 ### Decorative Depth
 - Warm paper sections (`#f8f7f4`) create tonal depth through background contrast
@@ -389,7 +389,7 @@ What distinguishes BrainsForSale's visual language is the **indigo-tinted shadow
 - "Create a code block for install command: #0f172a background, 10px radius, 20px 24px padding. Code in JetBrains Mono 14px weight 400, #e2e8f0 text. Command keyword in #818cf8. Copy button top-right with rgba(255,255,255,0.1) background."
 - "Design an atom card: white background, 1px solid #e2e8f0 border, 8px radius, 3px solid left border in cluster color. Content at 16px Inter weight 400, line-height 1.60, #0f172a. Original quote in italic #334155. Source ref as 14px caption link in #6366f1."
 - "Design a dark immersive section: #1e1b4b background, white text. Headline 48px Space Grotesk weight 300, letter-spacing -1.2px. Body 18px Inter weight 400, rgba(255,255,255,0.7). Cards inside use rgba(255,255,255,0.06) background with 1px solid rgba(255,255,255,0.12) border, 10px radius, backdrop-filter blur(8px)."
-- "Create navigation: white sticky header with backdrop-filter blur(12px), rgba(255,255,255,0.85) background. Logo 'brainsforsale' in Space Grotesk 16px weight 600, #0f172a with '.com' in #6366f1. Links in Inter 15px weight 500, #64748b, hover #0f172a. Indigo CTA button right-aligned. Bottom border 1px solid rgba(0,0,0,0.06)."
+- "Create navigation: white sticky header with backdrop-filter blur(12px), rgba(255,255,255,0.85) background. Logo 'brainsfor' in Space Grotesk 16px weight 600, #0f172a with '.com' in #6366f1. Links in Inter 15px weight 500, #64748b, hover #0f172a. Indigo CTA button right-aligned. Bottom border 1px solid rgba(0,0,0,0.06)."
 
 ### Iteration Guide
 1. Display headlines always use Space Grotesk weight 300 with negative letter-spacing — this IS the brand
