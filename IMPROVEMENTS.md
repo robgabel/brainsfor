@@ -18,7 +18,7 @@ Captured from expert critique panel (April 4, 2026): Calacanis, Bartlett, Hassid
 
 ## Product & Packaging (Not Yet Started)
 
-- [ ] **Launch with /advise + /surprise only** (MrBeast) — Ship 2 skills first, phase in rest. Reduce cognitive load. "No one is going to install 10 skills."
+- [ ] **Launch with /advise + /surprise only** (MrBeast) — Ship 2 skills first, phase in rest. Reduce cognitive load. "No one is going to install 8 skills."
 - [ ] **Free sample brain** — Build Einstein or another public domain figure as a fully free brain. Eliminates purchase friction. Demonstrates the skill pack without risk.
 - [ ] **Working `npx skills add` command** — Currently specced but not built. Requires publishing to the skills registry. This IS the distribution channel.
 - [ ] **Naming review** — "brainsforsale" sounds like a zombie movie (MrBeast). Test alternatives. "Load a genius into your AI" is the only good copy.

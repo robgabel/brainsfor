@@ -16,18 +16,17 @@
   "quick_start_prompt": "I'm thinking about whether to focus my company on serving large enterprises or build a platform for creators. What would Scott think?",
   "skill_examples": {
     "advise": "Should I raise my Series A or stay bootstrapped?",
-    "debate": "Is remote work better for innovation?",
-    "apply": "How do I apply the originality framework to my product?",
     "teach": "Explain agentic commerce to me.",
-    "deep_dive": "Deep dive into Scott's thinking on organizational design.",
+    "debate": "Is remote work better for innovation?",
     "connect": "Connect originality to organizational structure.",
-    "brainfight": "Longevity vs. urgency — which should win?",
-    "mashup": "Mashup: originality + AI agents + organizational design.",
-    "evolve": "How does Scott's thinking on AI agents evolve?"
+    "evolve": "How does Scott's thinking on AI agents evolve?",
+    "surprise": "No input needed — just run it.",
+    "coach": "I'm deciding whether to pivot my product. What should I be asking myself?",
+    "predict": "What happens to SaaS if AI agents do most of the work?"
   },
   "workflow_examples": {
-    "learning": "New to originality? Teach → deep-dive → evolve to get the full picture.",
-    "research": "Writing about AI agents? Deep-dive the atoms → mashup a thesis → brainfight it."
+    "learning": "New to originality? Teach → evolve → coach to build deep understanding.",
+    "research": "Writing about AI agents? Predict the implications → debate the forecast → advise on action."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -135,14 +134,12 @@
     "skills": [
       {"name": "advise", "title": "Strategic Counsel", "desc": "Get advice on decisions grounded in this brain's frameworks.", "example": "/advise \"Should I raise my Series A or stay bootstrapped?\""},
       {"name": "teach", "title": "Learn Through Their Lens", "desc": "Explain a concept using this brain's actual vocabulary and mental models.", "example": "/teach \"Explain agentic commerce to me.\""},
-      {"name": "debate", "title": "Steel-Man Both Sides", "desc": "Present a position; brain argues against it using real counterarguments.", "example": "/debate \"Is remote work better for innovation?\""},
-      {"name": "connect", "title": "The Serendipity Engine", "desc": "Surface non-obvious connections between your topic and this brain's thinking.", "example": "/connect \"Connect originality to organizational structure.\""},
+      {"name": "debate", "title": "Steel-Man Both Sides", "desc": "Present a position or pit two ideas against each other; brain argues the counterpoint.", "example": "/debate \"Is remote work better for innovation?\""},
+      {"name": "connect", "title": "Bridge Ideas", "desc": "Find unexpected connections between concepts or synthesize multiple ideas into something new.", "example": "/connect \"Connect originality to organizational structure.\""},
       {"name": "evolve", "title": "Intellectual Evolution", "desc": "Trace how this brain's thinking on a topic developed over time.", "example": "/evolve \"How does their thinking on AI agents evolve?\""},
-      {"name": "apply", "title": "Actionable Frameworks", "desc": "Turn a framework into a step-by-step plan for your situation.", "example": "/apply \"How do I apply the originality framework to my product?\""},
-      {"name": "mashup", "title": "Synthesize & Combine", "desc": "Combine multiple ideas into a genuinely new thesis.", "example": "/mashup \"originality + AI agents + organizational design\""},
-      {"name": "brainfight", "title": "Ideas in Conflict", "desc": "Pit two ideas head-to-head. Find agreements, contradictions, conditional victories.", "example": "/brainfight \"Longevity vs. urgency — which should win?\""},
-      {"name": "deep-dive", "title": "Everything They Know", "desc": "Exhaustive analysis — pull ALL atoms, map connections, synthesize.", "example": "/deep-dive \"Their thinking on organizational design\""},
-      {"name": "surprise", "title": "Show Me Something Unexpected", "desc": "Random high-quality atom for daily inspiration.", "example": "/surprise"}
+      {"name": "surprise", "title": "Show Me Something Unexpected", "desc": "Random high-quality atom for daily inspiration.", "example": "/surprise"},
+      {"name": "coach", "title": "Socratic Questions", "desc": "No answers — just the questions this thinker would ask you.", "example": "/coach \"I'm deciding whether to pivot my product.\""},
+      {"name": "predict", "title": "Implication Chains", "desc": "Trace the second and third-order effects of a trend or decision.", "example": "/predict \"What happens to SaaS if AI agents do most of the work?\""}
     ]
   },
   "website": {

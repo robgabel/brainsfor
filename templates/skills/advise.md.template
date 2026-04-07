@@ -33,7 +33,7 @@ Load `clusters/manifest.json` to find relevant clusters. Load only those cluster
 ⚡ **What This Means For You**
 [1-2 actionable sentences]
 
-💡 **Try next:** `/debate` (stress-test) or `/apply` (execute)
+💡 **Try next:** `/debate` (stress-test) or `/coach` (question your assumptions)
 ```
 
 ## Rules

@@ -36,7 +36,7 @@ Load `brain-context.md` (full context needed for cross-cluster search). Or load 
 1. [Provocative question]
 2. [Provocative question]
 
-💡 **Try next:** `/deep-dive` (explore the connected topic) or `/apply` (use the insight)
+💡 **Try next:** `/predict` (trace implications) or `/advise` (get strategic counsel)
 ```
 
 ## Rules
@@ -48,6 +48,6 @@ Load `brain-context.md` (full context needed for cross-cluster search). Or load 
 
 ## Data
 
-- **atoms:** brain-atoms.json (182 atoms, 0 connections)
+- **atoms:** brain-atoms.json (182 atoms, 498 connections)
 - **clusters:** clusters/manifest.json + individual cluster .md files
 - **shared rules:** See "LLM Usage Rules" in brain-context.md

@@ -35,7 +35,7 @@ Load `clusters/manifest.json` to find the relevant cluster(s). Load those cluste
 💡 **Why This Matters**
 [Connection to broader themes + what makes his take unique]
 
-💡 **Try next:** `/deep-dive` (go deeper) or `/apply` (use the framework)
+💡 **Try next:** `/evolve` (see how it changed) or `/coach` (test your understanding)
 ```
 
 ## Rules

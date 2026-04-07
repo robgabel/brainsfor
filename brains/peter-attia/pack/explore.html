@@ -281,6 +281,50 @@
       padding: 8px 0;
     }
 
+    .atom-expand-hint {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 12px;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .atom-card:hover .atom-expand-hint {
+      opacity: 1;
+      color: var(--accent);
+    }
+    .atom-expand-hint svg {
+      transition: transform 0.2s;
+    }
+    .atom-card.expanded .atom-expand-hint svg {
+      transform: rotate(180deg);
+    }
+
+    .atom-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .atom-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+    .atom-meta-item a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .atom-meta-item a:hover {
+      text-decoration: underline;
+    }
+
     /* ===== MAIN AREA ===== */
     .main {
       flex: 1;
@@ -1180,9 +1224,9 @@
       <div class="topbar">
         <div class="tab-bar">
           <button class="tab active" data-tab="synthesis">How They Think</button>
-          <button class="tab" data-tab="graph">Graph</button>
           <button class="tab" data-tab="atoms">Atoms</button>
           <button class="tab" data-tab="skills">Skills</button>
+          <button class="tab" data-tab="graph">Visualize</button>
         </div>
       </div>
 
@@ -1198,13 +1242,17 @@
             <button class="graph-btn active" onclick="setGraphFilter(null, this)">All</button>
             <button class="graph-btn" onclick="setGraphFilter('supports', this)">Supports</button>
             <button class="graph-btn" onclick="setGraphFilter('extends', this)">Extends</button>
+            <button class="graph-btn" onclick="setGraphFilter('contradicts', this)">Contradicts</button>
+            <button class="graph-btn" onclick="setGraphFilter('inspired_by', this)">Inspired By</button>
             <button class="graph-btn" onclick="setGraphFilter('related', this)">Related</button>
+            <button class="graph-btn" style="margin-left: 8px; background: var(--accent); border-color: var(--accent); color: white;" onclick="surpriseGraph()">✨ Surprise</button>
           </div>
           <div class="graph-legend">
             <div class="legend-item"><div class="legend-dot" style="background: #6366f1;"></div> Supports</div>
             <div class="legend-item"><div class="legend-dot" style="background: #60a5fa;"></div> Extends</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #a855f7;"></div> Related</div>
             <div class="legend-item"><div class="legend-dot" style="background: #f87171;"></div> Contradicts</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #fbbf24;"></div> Inspired By</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #a855f7;"></div> Related</div>
           </div>
         </div>
 
@@ -1223,19 +1271,19 @@
             <div class="workflows-title">Workflows</div>
             <div class="workflow-chain">
               <div class="workflow-name">Decide</div>
-              <div class="workflow-path">/advise <span class="workflow-arrow">&rarr;</span> /debate <span class="workflow-arrow">&rarr;</span> /apply</div>
+              <div class="workflow-path">/advise <span class="workflow-arrow">&rarr;</span> /debate <span class="workflow-arrow">&rarr;</span> /coach</div>
             </div>
             <div class="workflow-chain">
               <div class="workflow-name">Learn</div>
-              <div class="workflow-path">/teach <span class="workflow-arrow">&rarr;</span> /deep-dive <span class="workflow-arrow">&rarr;</span> /evolve</div>
+              <div class="workflow-path">/teach <span class="workflow-arrow">&rarr;</span> /evolve <span class="workflow-arrow">&rarr;</span> /coach</div>
             </div>
             <div class="workflow-chain">
               <div class="workflow-name">Create</div>
-              <div class="workflow-path">/surprise <span class="workflow-arrow">&rarr;</span> /connect <span class="workflow-arrow">&rarr;</span> /mashup</div>
+              <div class="workflow-path">/surprise <span class="workflow-arrow">&rarr;</span> /connect <span class="workflow-arrow">&rarr;</span> /predict</div>
             </div>
             <div class="workflow-chain">
-              <div class="workflow-name">Research</div>
-              <div class="workflow-path">/deep-dive <span class="workflow-arrow">&rarr;</span> /mashup <span class="workflow-arrow">&rarr;</span> /brainfight</div>
+              <div class="workflow-name">Forecast</div>
+              <div class="workflow-path">/predict <span class="workflow-arrow">&rarr;</span> /debate <span class="workflow-arrow">&rarr;</span> /advise</div>
             </div>
           </div>
         </div>
@@ -1729,14 +1777,45 @@
 
         html += '</div>';
 
-        if (isExpanded) {
-          const connCount = getAtomConnections(atom).length;
+        // Expand/collapse hint with connection count
+        const connCount = getAtomConnections(atom).length;
+        const chevron = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
+        if (connCount > 0 || atom.source_ref || atom.source_date) {
           html += `
-            <div class="connections-panel">
-              <div class="connections-label">Connections (${connCount})</div>
-              ${renderConnections(atom)}
+            <div class="atom-expand-hint" onclick="toggleAtom('${atom.id}')">
+              ${chevron}
+              <span>${isExpanded ? 'Collapse' : connCount > 0 ? connCount + ' connection' + (connCount !== 1 ? 's' : '') + ' \u00b7 Click to expand' : 'Click to expand'}</span>
             </div>
           `;
+        }
+
+        if (isExpanded) {
+          // Date and source metadata
+          let metaHtml = '';
+          if (atom.source_date) {
+            const d = new Date(atom.source_date);
+            const dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+            metaHtml += `<div class="atom-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> ${dateStr}</div>`;
+          }
+          if (atom.source_ref) {
+            const url = atom.source_ref;
+            let domain = '';
+            try { domain = new URL(url).hostname.replace('www.', ''); } catch(e) { domain = url; }
+            metaHtml += `<div class="atom-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> <a href="${esc(url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${esc(domain)}</a></div>`;
+          }
+          if (metaHtml) {
+            html += `<div class="connections-panel"><div class="atom-meta">${metaHtml}</div>`;
+          } else {
+            html += `<div class="connections-panel">`;
+          }
+
+          if (connCount > 0) {
+            html += `
+              <div class="connections-label">Connections (${connCount})</div>
+              ${renderConnections(atom)}
+            `;
+          }
+          html += '</div>';
         }
 
         card.innerHTML = html;
@@ -1779,7 +1858,7 @@
       const skillsList = synthesisMeta.skills || [];
 
       if (skillsList.length === 0) {
-        // Fallback: default 10 skills
+        // Fallback: default 8 skills
         return;
       }
 
@@ -1863,13 +1942,25 @@
       const cx = graphWidth / 2;
       const cy = graphHeight / 2;
 
+      // Count atoms per cluster to position them near their cluster center
+      const clusterAtomIndex = {};
+      atomsData.forEach(a => { clusterAtomIndex[a.cluster] = (clusterAtomIndex[a.cluster] || 0) + 1; });
+      const clusterAtomSeen = {};
+
       graphNodes = atomsData.map((atom, i) => {
-        const angle = (i / atomsData.length) * Math.PI * 2;
-        const radius = 150 + Math.random() * 200;
+        // Position near the pre-computed fixed cluster center with jitter
+        const clusters = [...new Set(atomsData.map(a => a.cluster))];
+        const clusterIdx = clusters.indexOf(atom.cluster);
+        const clusterAngle = (clusterIdx / clusters.length) * Math.PI * 2 - Math.PI / 2;
+        const clusterR = Math.min(graphWidth, graphHeight) * 0.28;
+        const clusterCx = cx + Math.cos(clusterAngle) * clusterR;
+        const clusterCy = cy + Math.sin(clusterAngle) * clusterR;
+        const jitter = 60 + Math.random() * 80;
+        const jAngle = Math.random() * Math.PI * 2;
         return {
           id: atom.id,
-          x: cx + Math.cos(angle) * radius + (Math.random() - 0.5) * 100,
-          y: cy + Math.sin(angle) * radius + (Math.random() - 0.5) * 100,
+          x: clusterCx + Math.cos(jAngle) * jitter,
+          y: clusterCy + Math.sin(jAngle) * jitter,
           vx: 0,
           vy: 0,
           cluster: atom.cluster,
@@ -1977,86 +2068,112 @@
     }
 
     function runGraphSimulation() {
-      let alpha = 1;
-      const decay = 0.995;
+      // Pre-compute FIXED cluster anchor positions in a circle
+      const clusters = [...new Set(graphNodes.map(n => n.cluster))];
+      const cx = graphWidth / 2;
+      const cy = graphHeight / 2;
+      const clusterRadius = Math.min(graphWidth, graphHeight) * 0.3;
+      const clusterAnchors = {};
+      clusters.forEach((c, i) => {
+        const angle = (i / clusters.length) * Math.PI * 2 - Math.PI / 2;
+        clusterAnchors[c] = {
+          x: cx + Math.cos(angle) * clusterRadius,
+          y: cy + Math.sin(angle) * clusterRadius
+        };
+      });
+
+      // Phase 1: layout (forces active). Phase 2: settled (only drag reacts).
+      let settled = false;
+      let frame = 0;
+      const settleAt = 400;
 
       function tick() {
-        alpha *= decay;
-        if (alpha < 0.001) alpha = 0.001;
+        frame++;
 
-        // Center gravity
-        graphNodes.forEach(n => {
-          n.vx += (graphWidth / 2 - n.x) * 0.0003;
-          n.vy += (graphHeight / 2 - n.y) * 0.0003;
-        });
+        if (!settled) {
+          // Alpha decays but has a floor — repulsion NEVER goes to zero
+          const alpha = Math.max(0.05, 1 - (frame / settleAt));
 
-        // Cluster gravity — pull nodes toward cluster center
-        const clusterCenters = {};
-        const clusterCount = {};
-        graphNodes.forEach(n => {
-          if (!clusterCenters[n.cluster]) { clusterCenters[n.cluster] = { x: 0, y: 0 }; clusterCount[n.cluster] = 0; }
-          clusterCenters[n.cluster].x += n.x;
-          clusterCenters[n.cluster].y += n.y;
-          clusterCount[n.cluster]++;
-        });
-        Object.keys(clusterCenters).forEach(c => {
-          clusterCenters[c].x /= clusterCount[c];
-          clusterCenters[c].y /= clusterCount[c];
-        });
-        graphNodes.forEach(n => {
-          const cc = clusterCenters[n.cluster];
-          if (cc) {
-            n.vx += (cc.x - n.x) * 0.001 * alpha;
-            n.vy += (cc.y - n.y) * 0.001 * alpha;
+          // Cluster anchoring — pull toward fixed positions (strong early, fades)
+          const clusterPull = 0.003 * alpha;
+          graphNodes.forEach(n => {
+            const anchor = clusterAnchors[n.cluster];
+            if (anchor) {
+              n.vx += (anchor.x - n.x) * clusterPull;
+              n.vy += (anchor.y - n.y) * clusterPull;
+            }
+          });
+
+          // Very gentle center gravity — just keeps things from drifting off-screen
+          graphNodes.forEach(n => {
+            n.vx += (cx - n.x) * 0.00003;
+            n.vy += (cy - n.y) * 0.00003;
+          });
+
+          // Repulsion — constant strength, never decays
+          const repStr = 300;
+          for (let i = 0; i < graphNodes.length; i++) {
+            for (let j = i + 1; j < graphNodes.length; j++) {
+              const a = graphNodes[i];
+              const b = graphNodes[j];
+              let dx = b.x - a.x;
+              let dy = b.y - a.y;
+              let dist = Math.sqrt(dx * dx + dy * dy) || 1;
+              if (dist < 20) dist = 20;
+              const force = -repStr / (dist * dist);
+              const fx = (dx / dist) * force;
+              const fy = (dy / dist) * force;
+              a.vx -= fx; a.vy -= fy;
+              b.vx += fx; b.vy += fy;
+            }
           }
-        });
 
-        // Repulsion (Barnes-Hut would be better for perf, but N=182 is fine)
-        for (let i = 0; i < graphNodes.length; i++) {
-          for (let j = i + 1; j < graphNodes.length; j++) {
-            const a = graphNodes[i];
-            const b = graphNodes[j];
-            let dx = b.x - a.x;
-            let dy = b.y - a.y;
-            let dist = Math.sqrt(dx * dx + dy * dy) || 1;
-            if (dist < 20) dist = 20;
-            const force = -200 * alpha / (dist * dist);
+          // Spring forces — pull connected nodes together
+          const springStr = 0.005 * Math.max(alpha, 0.15);
+          graphEdges.forEach(e => {
+            if (graphFilter && e.type !== graphFilter) return;
+            const dx = e.target.x - e.source.x;
+            const dy = e.target.y - e.source.y;
+            const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+            const target = e.type === 'extends' ? 40 : 80;
+            const force = (dist - target) * springStr;
             const fx = (dx / dist) * force;
             const fy = (dy / dist) * force;
-            a.vx -= fx;
-            a.vy -= fy;
-            b.vx += fx;
-            b.vy += fy;
-          }
+            e.source.vx += fx; e.source.vy += fy;
+            e.target.vx -= fx; e.target.vy -= fy;
+          });
+
+          // Apply velocities with damping
+          const damping = 0.75 + 0.1 * (frame / settleAt);
+          graphNodes.forEach(n => {
+            if (n === graphDragNode) return;
+            n.vx *= Math.min(damping, 0.88);
+            n.vy *= Math.min(damping, 0.88);
+            n.x += n.vx;
+            n.y += n.vy;
+            const pad = 20;
+            n.x = Math.max(n.radius + pad, Math.min(graphWidth - n.radius - pad, n.x));
+            n.y = Math.max(n.radius + pad, Math.min(graphHeight - n.radius - pad, n.y));
+          });
+
+          if (frame >= settleAt) settled = true;
+        } else if (graphDragNode) {
+          // When dragging in settled state, nudge neighbors slightly for organic feel
+          graphEdges.forEach(e => {
+            if (e.source === graphDragNode || e.target === graphDragNode) {
+              const other = e.source === graphDragNode ? e.target : e.source;
+              const dx = graphDragNode.x - other.x;
+              const dy = graphDragNode.y - other.y;
+              const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+              other.vx += (dx / dist) * 0.3;
+              other.vy += (dy / dist) * 0.3;
+              other.x += other.vx;
+              other.y += other.vy;
+              other.vx *= 0.8;
+              other.vy *= 0.8;
+            }
+          });
         }
-
-        // Spring forces from edges
-        graphEdges.forEach(e => {
-          if (graphFilter && e.type !== graphFilter) return;
-          const dx = e.target.x - e.source.x;
-          const dy = e.target.y - e.source.y;
-          const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-          const targetDist = e.type === 'extends' ? 60 : 120;
-          const force = (dist - targetDist) * 0.002 * alpha;
-          const fx = (dx / dist) * force;
-          const fy = (dy / dist) * force;
-          e.source.vx += fx;
-          e.source.vy += fy;
-          e.target.vx -= fx;
-          e.target.vy -= fy;
-        });
-
-        // Apply velocities
-        graphNodes.forEach(n => {
-          if (n === graphDragNode) return;
-          n.vx *= 0.85;
-          n.vy *= 0.85;
-          n.x += n.vx;
-          n.y += n.vy;
-          // Keep in bounds
-          n.x = Math.max(n.radius, Math.min(graphWidth - n.radius, n.x));
-          n.y = Math.max(n.radius, Math.min(graphHeight - n.radius, n.y));
-        });
 
         drawGraph();
         graphAnimFrame = requestAnimationFrame(tick);
@@ -2086,7 +2203,7 @@
       graphEdges.forEach(e => {
         if (graphFilter && e.type !== graphFilter) return;
         const isHighlighted = hasHighlight && (highlightedNodes.has(e.source.id) && highlightedNodes.has(e.target.id));
-        const alpha = hasHighlight ? (isHighlighted ? 0.6 : 0.03) : 0.12;
+        const alpha = hasHighlight ? (isHighlighted ? 0.8 : 0.04) : 0.25;
         const color = EDGE_COLORS[e.type] || '#6366f1';
 
         graphCtx.beginPath();
@@ -2127,8 +2244,58 @@
 
     function setGraphFilter(filter, btn) {
       graphFilter = filter;
-      document.querySelectorAll('.graph-controls .graph-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.graph-controls .graph-btn').forEach(b => {
+        // Don't remove active from Surprise button
+        if (b.textContent.includes('Surprise')) return;
+        b.classList.remove('active');
+      });
       if (btn) btn.classList.add('active');
+    }
+
+    function surpriseGraph() {
+      // Zoom to a random high-confidence atom on the graph
+      const highConf = graphNodes.filter(n => n.confidence >= 0.7);
+      const pool = highConf.length > 0 ? highConf : graphNodes;
+      const node = pool[Math.floor(Math.random() * pool.length)];
+
+      // Select the node to highlight its connections
+      selectedNode = node;
+
+      // Smoothly animate to center on this node
+      const targetX = graphWidth / 2 - node.x;
+      const targetY = graphHeight / 2 - node.y;
+      const steps = 30;
+      let step = 0;
+
+      function animateToNode() {
+        step++;
+        const t = step / steps;
+        const ease = t * (2 - t); // ease-out
+        graphNodes.forEach(n => {
+          n.x += (targetX / steps) * ease * 0.5;
+          n.y += (targetY / steps) * ease * 0.5;
+        });
+        drawGraph();
+        if (step < steps) requestAnimationFrame(animateToNode);
+      }
+      animateToNode();
+
+      // Show tooltip for the surprised atom
+      const tt = document.getElementById('graphTooltip');
+      const preview = node.content.length > 200 ? node.content.slice(0, 200) + '...' : node.content;
+      let html = `<div class="tt-cluster">${esc(node.cluster)}</div>`;
+      html += `<div class="tt-content">${esc(preview)}</div>`;
+      if (node.original_quote) {
+        const q = node.original_quote.length > 150 ? node.original_quote.slice(0, 150) + '...' : node.original_quote;
+        html += `<div class="tt-quote">"${esc(q)}"</div>`;
+      }
+      // Show connection count
+      const connCount = graphEdges.filter(e => e.source.id === node.id || e.target.id === node.id).length;
+      html += `<div style="margin-top:8px;font-size:11px;color:var(--text-dim);">${connCount} connections · double-click to explore</div>`;
+      tt.innerHTML = html;
+      tt.style.display = 'block';
+      tt.style.left = (graphWidth / 2 + 20) + 'px';
+      tt.style.top = (graphHeight / 2 - 40) + 'px';
     }
 
     // ===== SURPRISE ME =====

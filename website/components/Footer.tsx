@@ -37,8 +37,8 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-muted">Community</h4>
             <ul className="mt-4 space-y-3">
-              <li><a href="https://github.com" className="text-sm text-body hover:text-deep-ink transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://x.com" className="text-sm text-body hover:text-deep-ink transition-colors" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+              <li><a href="https://github.com/robgabel/brainsforsale" className="text-sm text-body hover:text-deep-ink transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://x.com/robgabel" className="text-sm text-body hover:text-deep-ink transition-colors" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
             </ul>
           </div>
         </div>

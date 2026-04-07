@@ -348,6 +348,13 @@ def _call_llm_for_connections(client, prompt: str, atoms_list: list, existing: s
         if text.startswith("```"):
             text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
 
+        # Try to extract JSON array from response (handles prose wrappers)
+        import re
+        if not text.startswith("["):
+            match = re.search(r'\[[\s\S]*\]', text)
+            if match:
+                text = match.group(0)
+
         found = json.loads(text)
 
         # Deduplicate by atom pair within this batch

@@ -204,7 +204,7 @@ def export_context_md(atoms: list, connections: list, config: dict, output_dir: 
     lines.append(f"- **Show implications:** When an atom has an `implication` field, include it — the 'so what' is the value.")
     lines.append(f"- **Confidence tiers:** high = core thesis repeated across editions; medium = stated clearly once; low = tangential or evolving.")
     lines.append(f"- **Thin topics:** If fewer than 5 atoms exist on a topic, state this clearly and suggest exploring adjacent clusters.")
-    lines.append(f"- **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /apply to execute').\n")
+    lines.append(f"- **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /coach to question assumptions').\n")
     lines.append("---\n")
 
     # Inject synthesis sections if they exist for this brain

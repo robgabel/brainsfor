@@ -8,7 +8,7 @@ Do NOT create or save files to a standalone `Brainsforsale` Cowork mount, `~/.cl
 
 ## What This Is
 
-BrainsForSale is a product: packaged "brain packs" — curated knowledge sets from notable thinkers (starting with Scott Belsky) that users install into AI assistants. Each brain ships with 10 thinking skills (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/apply`, `/mashup`, `/brainfight`, `/deep-dive`, `/surprise`).
+BrainsForSale is a product: packaged "brain packs" — curated knowledge sets from notable thinkers (starting with Scott Belsky) that users install into AI assistants. Each brain ships with 8 thinking skills (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`).
 
 ## Directory Structure (v2)
 
@@ -34,7 +34,7 @@ brainsforsale/
     README.dev.md                    ← **START HERE** for building a new brain (full step-by-step guide)
     explore.html.template            ← data-driven human UI (reads brain-atoms.json)
     create-brain-tables.sql          ← Supabase table creation template
-    skills/                          ← 10 skill templates
+    skills/                          ← 8 skill templates
       advise.md.template, teach.md.template, etc.
 
   storefront/                        ← product-level assets
@@ -58,7 +58,7 @@ brainsforsale/
         brain-atoms.json             ← structured data (atoms + connections + index)
         explore.html                 ← THE human file (reads brain-atoms.json)
         README.md                    ← quick start
-        skills/                      ← 10 thin reasoning modes
+        skills/                      ← 8 reasoning modes
           advise/SKILL.md, teach/SKILL.md, etc.
 ```
 
@@ -152,9 +152,25 @@ scripts/enrich-connections.py --brain {slug} --stats                  # Quality 
 templates/create-brain-tables.sql   # sed 's/{{SLUG}}/peter_attia/g' | psql
 ```
 
-### Skill Design (v2 — thin, context-loaded)
+### Skill Design (v3 — 8 skills, zero overlap)
 
-- 10 skills, each ~15 lines in `skills/{name}/SKILL.md`
+8 skills, each a distinct reasoning mode with a unique output type:
+
+| # | Skill | Output Type | What It Does |
+|---|-------|-------------|--------------|
+| 1 | `/advise` | Recommendations | Strategic counsel from the thinker's frameworks |
+| 2 | `/teach` | Explanations | Explain concepts through the thinker's lens |
+| 3 | `/debate` | Counterarguments | Steel-man the other side (absorbs old `/brainfight`) |
+| 4 | `/connect` | Bridges | Find unexpected links between ideas (absorbs old `/mashup`) |
+| 5 | `/evolve` | Timeline of thought | Trace how thinking changed over time |
+| 6 | `/surprise` | Serendipity | Surface a high-quality atom you haven't seen |
+| 7 | `/coach` | Questions | Socratic questioning — no answers, just what to ask yourself |
+| 8 | `/predict` | Implication chains | Cascade second and third-order effects of a trend |
+
+**Cut from v2:** `/brainfight` (into `/debate`), `/mashup` (into `/connect`), `/deep-dive` (into `/advise`), `/apply` (into `/advise`).
+**Added in v3:** `/coach` (Socratic mode), `/predict` (implication chains — plays to thinkers who forecast).
+
+- Each skill ~15 lines in `skills/{name}/SKILL.md`
 - Each skill assumes `brain-context.md` is loaded — no manifest routing, no cluster discovery
 - Skill instructions also inline at bottom of `brain-context.md` for LLMs that load that file
 - All skills: voice-first (original_quote), thin-topic graceful degradation, suggest next skill

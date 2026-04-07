@@ -5,6 +5,10 @@ import { RequestBrainForm } from "@/components/RequestBrainForm";
 import Link from "next/link";
 
 export default function Home() {
+  const totalAtoms = BRAINS.reduce((sum, b) => sum + b.atomCount, 0);
+  const totalConnections = BRAINS.reduce((sum, b) => sum + b.connectionCount, 0);
+  const totalBrains = BRAINS.filter((b) => b.status === "live").length;
+
   return (
     <>
       {/* ─── Hero ─── */}
@@ -17,7 +21,7 @@ export default function Home() {
             Load a genius into your AI.
           </h1>
           <p className="mx-auto mt-5 max-w-[620px] text-lg leading-relaxed text-body">
-            Knowledge graphs of the world&apos;s best thinkers. 10 AI skills per brain.
+            Knowledge graphs of the world&apos;s best thinkers. 8 AI skills per brain.
             Install in seconds.
           </p>
 
@@ -45,8 +49,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Live Demo (side-by-side) ─── */}
+      {/* ─── Brain Catalog Preview ─── */}
       <section className="bg-warm-paper px-6 py-20">
+        <div className="mx-auto max-w-[1140px]">
+          <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
+            Available brains
+          </h2>
+          <p className="mx-auto mt-3 max-w-[640px] text-center text-base text-body">
+            Explore before you install. Every atom, connection, and insight &mdash; visible.
+          </p>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {BRAINS.map((brain) => (
+              <BrainCard key={brain.slug} brain={brain} />
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link href="/brains" className="text-sm font-semibold text-brain-indigo hover:underline">
+              View all brains &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Live Demo (side-by-side) ─── */}
+      <section className="px-6 py-20">
         <div className="mx-auto max-w-[1140px]">
           <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
             See the difference.
@@ -92,33 +120,9 @@ export default function Home() {
                 Sources: &quot;Scaling Without Growing&quot;, &quot;Premium of Originality&quot;, &quot;Exponential Code&quot;
               </div>
               <div className="mt-3 font-mono text-xs text-[#6366f1]">
-                Try /debate to stress-test &bull; /apply to model for your business
+                Try /debate to stress-test &bull; /coach to find your blind spots
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Brain Catalog Preview ─── */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-[1140px]">
-          <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
-            Available brains
-          </h2>
-          <p className="mx-auto mt-3 max-w-[640px] text-center text-base text-body">
-            Explore before you install. Every atom, connection, and insight &mdash; visible.
-          </p>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {BRAINS.map((brain) => (
-              <BrainCard key={brain.slug} brain={brain} />
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <Link href="/brains" className="text-sm font-semibold text-brain-indigo hover:underline">
-              View all brains &rarr;
-            </Link>
           </div>
         </div>
       </section>
@@ -145,7 +149,7 @@ export default function Home() {
               },
               {
                 step: "03",
-                title: "Use 10 thinking skills",
+                title: "Use 8 thinking skills",
                 desc: "From /advise for decisions to /surprise for daily inspiration. Chain skills into workflows.",
               },
             ].map((item) => (
@@ -168,7 +172,7 @@ export default function Home() {
       <section className="px-6 py-20">
         <div className="mx-auto max-w-[1140px]">
           <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
-            10 thinking skills per brain
+            8 thinking skills per brain
           </h2>
           <p className="mx-auto mt-3 max-w-[640px] text-center text-base text-body">
             Not just data. Interactive reasoning modes that chain into workflows.
@@ -196,11 +200,10 @@ export default function Home() {
       <section className="bg-warm-paper px-6 py-16">
         <div className="mx-auto flex max-w-[900px] flex-wrap items-center justify-center gap-12 text-center">
           {[
-            { value: "284", label: "Knowledge atoms" },
-            { value: "430", label: "Typed connections" },
-            { value: "77", label: "Source editions" },
-            { value: "16", label: "Topic clusters" },
-            { value: "10", label: "AI skills" },
+            { value: String(totalBrains), label: "Live brains" },
+            { value: totalAtoms.toLocaleString(), label: "Knowledge atoms" },
+            { value: totalConnections.toLocaleString(), label: "Typed connections" },
+            { value: "8", label: "AI skills per brain" },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="font-display text-3xl font-light tracking-tight text-deep-ink md:text-4xl">

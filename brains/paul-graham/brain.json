@@ -16,18 +16,17 @@
   "quick_start_prompt": "I'm a developer with a side project getting traction. Should I quit my job and go full-time on it?",
   "skill_examples": {
     "advise": "Should I drop out of college to work on my startup?",
-    "debate": "Is it better to build something a lot of people kind of want, or something a few people really want?",
-    "apply": "Apply the 'do things that don't scale' framework to my marketplace startup.",
     "teach": "Explain what makes a good startup idea using Paul's frameworks.",
-    "deep_dive": "Deep dive into Paul's thinking on wealth and economics.",
+    "debate": "Is it better to build something a lot of people kind of want, or something a few people really want?",
     "connect": "Connect Paul's ideas about taste to hiring decisions.",
-    "brainfight": "Move fast vs. do things right — which should win early on?",
-    "mashup": "Mashup: startups + writing + programming as craft.",
-    "evolve": "How has Paul's thinking on AI and programming evolved?"
+    "evolve": "How has Paul's thinking on AI and programming evolved?",
+    "surprise": "No input needed — just run it.",
+    "coach": "I'm trying to decide whether to pivot or persevere. What should I be asking myself?",
+    "predict": "What happens to programming as a profession as AI gets better at writing code?"
   },
   "workflow_examples": {
-    "learning": "New to startups? Teach → deep-dive → evolve to understand how PG's advice has matured.",
-    "research": "Fundraising soon? Deep-dive fundraising atoms → apply to your situation → debate your assumptions."
+    "learning": "New to startups? Teach → evolve → coach to build understanding.",
+    "research": "Fundraising soon? Predict the landscape → debate your assumptions → advise on strategy."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -119,16 +118,14 @@
     ],
 
     "skills": [
-      {"name": "advise", "title": "Advisor", "desc": "Strategic counsel grounded in PG's frameworks", "example": "Should I drop out to work on my startup?"},
-      {"name": "teach", "title": "Teacher", "desc": "Explain concepts through PG's mental models", "example": "What makes a good startup idea?"},
-      {"name": "debate", "title": "Debater", "desc": "Stress-test ideas against PG's worldview", "example": "Is remote work good for startups?"},
-      {"name": "connect", "title": "Connector", "desc": "Find unexpected links in PG's thinking", "example": "Connect taste to hiring."},
-      {"name": "evolve", "title": "Evolution", "desc": "Trace how PG's views changed over time", "example": "How has his view on AI evolved?"},
-      {"name": "apply", "title": "Framework", "desc": "Apply a PG framework step-by-step", "example": "Apply 'do things that don't scale' to my marketplace."},
-      {"name": "deep-dive", "title": "Deep Dive", "desc": "Everything PG thinks about a topic", "example": "Deep dive on fundraising."},
-      {"name": "surprise", "title": "Serendipity", "desc": "Surface an unexpected PG insight", "example": "Show me something I haven't read."},
-      {"name": "mashup", "title": "Mashup", "desc": "Cross-brain synthesis", "example": "PG + Belsky on taste."},
-      {"name": "brainfight", "title": "Brain Fight", "desc": "Head-to-head idea comparison", "example": "Growth vs. craft — which wins?"}
+      {"name": "advise", "title": "Advisor", "desc": "Strategic counsel grounded in PG's frameworks.", "example": "Should I drop out to work on my startup?"},
+      {"name": "teach", "title": "Teacher", "desc": "Explain concepts through PG's mental models.", "example": "What makes a good startup idea?"},
+      {"name": "debate", "title": "Debater", "desc": "Stress-test ideas or pit two positions against each other.", "example": "Is remote work good for startups?"},
+      {"name": "connect", "title": "Connector", "desc": "Find unexpected links or synthesize ideas.", "example": "Connect taste to hiring."},
+      {"name": "evolve", "title": "Evolution", "desc": "Trace how PG's views changed over time.", "example": "How has his view on AI evolved?"},
+      {"name": "surprise", "title": "Serendipity", "desc": "Surface an unexpected PG insight.", "example": "Show me something I haven't read."},
+      {"name": "coach", "title": "Socratic Questions", "desc": "No answers — just the questions PG would ask you.", "example": "I'm deciding whether to pivot. What should I ask myself?"},
+      {"name": "predict", "title": "Implication Chains", "desc": "Trace second and third-order effects of a trend.", "example": "What happens to programming as AI writes more code?"}
     ]
   },
   "website": {

@@ -15,7 +15,7 @@ Each persona follows the same structure designed for maximum product decision ut
 - **Objections** — The reason they almost don't buy (landing page + onboarding must address these)
 - **Channels** — Where they hang out, who they trust, what content resonates
 - **Willingness to pay** — Price sensitivity + budget source
-- **Killer features** — Which of the 10 skills matter most to this persona
+- **Killer features** — Which of the 8 skills matter most to this persona
 - **Success metric** — How THEY define "this was worth it"
 
 **Priority stack rank:** Power Users (beta) > Ambitious Operators (revenue) > Thinker's Audience (scale) > Content Creators (natural fit) > Builders (premium) > Students (volume) > Team Leads (enterprise)
@@ -82,7 +82,7 @@ Each persona follows the same structure designed for maximum product decision ut
 
 **Willingness to pay:** $29/brain is impulse purchase territory on personal card. Would pay $99/year for updates + multi-brain access. Company card if they have one.
 
-**Killer features:** `/advise` (core), `/debate` (stress-test), `/apply` (make it actionable for their situation)
+**Killer features:** `/advise` (core, includes actionable frameworks), `/debate` (stress-test), `/coach` (Socratic questions to sharpen thinking)
 
 **Success metric:** "I used `/advise` on a real decision and it changed my thinking or gave me confidence in my direction." One great advisory session = hooked.
 
@@ -115,7 +115,7 @@ Each persona follows the same structure designed for maximum product decision ut
 
 **Willingness to pay:** $29-49 per brain, personal card. Multi-brain bundles at $79-99 are the play here — mashups are the unique value. Would expense to business if they monetize content.
 
-**Killer features:** `/surprise` (daily inspiration), `/connect` (bridge to their topic), `/mashup` (cross-brain = unique angles), `/brainfight` (debate content)
+**Killer features:** `/surprise` (daily inspiration), `/connect` (bridge to their topic, cross-brain = unique angles), `/debate` (debate content)
 
 **Success metric:** "I got 3 post ideas in 10 minutes that I wouldn't have come up with on my own." Volume of usable ideas per session.
 
@@ -141,14 +141,14 @@ Each persona follows the same structure designed for maximum product decision ut
 
 **Objections:**
 - "$29 is a lot when I can read the blog for free" — The blog is linear; the brain is a queryable graph with connections, contradictions, and evolution. Different product.
-- "Is this actually educational or just a novelty?" — `/teach` + `/evolve` + `/deep-dive` create genuine learning workflows, not just lookup.
+- "Is this actually educational or just a novelty?" — `/teach` + `/evolve` + `/advise` create genuine learning workflows, not just lookup.
 - "I don't use Claude/Cursor" — Needs a zero-setup option (explore.html in browser, or hosted web UI in v2).
 
 **Channels:** Farnam Street audience, Ali Abdaal / Thomas Frank audiences, book summary app users, university AI clubs, MBA Slack groups, Reddit (r/productivity, r/selfimprovement, r/artificial)
 
 **Willingness to pay:** Price-sensitive. $14.99 might be the sweet spot for students. Free sample brain (Einstein, public domain figure) is the gateway. Parents or university might fund. Gift purchases are a real channel here.
 
-**Killer features:** `/teach` (explain like this thinker would), `/evolve` (how thinking changed), `/deep-dive` (full topic exploration), explore.html (visual unboxing)
+**Killer features:** `/teach` (explain like this thinker would), `/evolve` (how thinking changed), `/advise` (full topic depth), `/predict` (implication chains), explore.html (visual unboxing)
 
 **Success metric:** "I understand this person's thinking well enough to explain it to someone else and apply it to a new situation." Retained understanding, not just exposure.
 
@@ -214,7 +214,7 @@ Each persona follows the same structure designed for maximum product decision ut
 
 **Willingness to pay:** $29-49 enthusiastically. They buy the thinker's books, courses, and merch. This is cheaper than most alternatives. Gift purchases to other fans.
 
-**Killer features:** explore.html (visual brain), `/evolve` (how thinking changed), `/deep-dive` (full topic lens), `/brainfight` (vs. another thinker they follow)
+**Killer features:** explore.html (visual brain), `/evolve` (how thinking changed), `/advise` (full topic depth), `/debate` (vs. another thinker they follow), `/predict` (where their thinking leads next)
 
 **Success metric:** "I discovered a connection or contradiction in their thinking I'd never noticed despite reading them for years." The 'aha' of seeing familiar ideas as a network.
 
@@ -257,7 +257,7 @@ Each persona follows the same structure designed for maximum product decision ut
 
 **The side-by-side demo is everything.** Personas 1, 2, and 3 all need to see: "Here's what Claude says without the brain. Here's what it says WITH the brain." If the delta isn't obvious in 30 seconds, the product fails.
 
-**Multi-brain is the retention engine.** Single-brain buyers churn. Multi-brain buyers (personas 3, 6, 7) stick because mashups and brainfights create unique value that compounds. Pricing should incentivize the second brain purchase.
+**Multi-brain is the retention engine.** Single-brain buyers churn. Multi-brain buyers (personas 3, 6, 7) stick because cross-brain connections and debates create unique value that compounds. Pricing should incentivize the second brain purchase.
 
 **The thinker IS the distribution.** Every new brain unlocks a built-in audience (persona 6). Brain selection is a marketing decision as much as a product one. Prioritize thinkers with large, engaged, digitally-native audiences.
 

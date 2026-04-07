@@ -34,7 +34,7 @@ Load relevant cluster file(s) from `clusters/`. Source dates are critical — us
 ✨ **What This Shows**
 [What the intellectual journey reveals about the topic]
 
-💡 **Try next:** `/deep-dive` (full picture) or `/debate` (challenge current position)
+💡 **Try next:** `/predict` (where does this lead?) or `/debate` (challenge current position)
 ```
 
 ## Rules

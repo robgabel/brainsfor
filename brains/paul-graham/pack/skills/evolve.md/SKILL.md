@@ -34,7 +34,7 @@ Load relevant cluster file(s) from `clusters/`. Source dates are critical — us
 ✨ **What This Shows**
 [What the intellectual journey reveals about the topic]
 
-💡 **Try next:** `/deep-dive` (full picture) or `/debate` (challenge current position)
+💡 **Try next:** `/predict` (where does this lead?) or `/debate` (challenge current position)
 ```
 
 ## Rules
@@ -47,6 +47,6 @@ Load relevant cluster file(s) from `clusters/`. Source dates are critical — us
 
 ## Data
 
-- **atoms:** brain-atoms.json (182 atoms, 0 connections)
+- **atoms:** brain-atoms.json (182 atoms, 498 connections)
 - **clusters:** clusters/manifest.json + individual cluster .md files
 - **shared rules:** See "LLM Usage Rules" in brain-context.md

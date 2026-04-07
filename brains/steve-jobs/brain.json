@@ -16,18 +16,17 @@
   "quick_start_prompt": "I'm launching a new product and struggling to decide which features to cut. What would Steve think?",
   "skill_examples": {
     "advise": "Should I add more features or strip my product down to its essence?",
-    "debate": "Is design more important than engineering?",
-    "apply": "How do I apply Jobs' 'say no to 1,000 things' framework to my roadmap?",
     "teach": "Explain the intersection of technology and liberal arts.",
-    "deep_dive": "Deep dive into Steve's thinking on product simplicity.",
+    "debate": "Is design more important than engineering?",
     "connect": "Connect taste to hiring to product quality.",
-    "brainfight": "Perfection vs. shipping — which should win?",
-    "mashup": "Mashup: simplicity + marketing + team building.",
-    "evolve": "How did Steve's thinking on design evolve from Apple to NeXT to Apple's return?"
+    "evolve": "How did Steve's thinking on design evolve from Apple to NeXT to Apple's return?",
+    "surprise": "No input needed — just run it.",
+    "coach": "I'm launching a new product and can't decide what to cut. What should I be asking myself?",
+    "predict": "What happens to product design as AI generates interfaces on the fly?"
   },
   "workflow_examples": {
-    "learning": "New to Jobs' philosophy? Teach → deep-dive → evolve to understand the full arc.",
-    "research": "Building a product? Deep-dive simplicity → apply to your roadmap → brainfight your assumptions."
+    "learning": "New to Jobs' philosophy? Teach → evolve → coach to internalize the full arc.",
+    "research": "Building a product? Predict where your market is heading → debate your assumptions → advise on strategy."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -124,14 +123,12 @@
     "skills": [
       {"name": "advise", "title": "Strategic Counsel", "desc": "Get advice on decisions grounded in Jobs' frameworks.", "example": "/advise \"Should I add more features or strip my product down?\""},
       {"name": "teach", "title": "Learn Through His Lens", "desc": "Explain a concept using Jobs' actual vocabulary and mental models.", "example": "/teach \"Explain the intersection of technology and liberal arts.\""},
-      {"name": "debate", "title": "Steel-Man Both Sides", "desc": "Present a position; Jobs argues against it using real counterarguments.", "example": "/debate \"Is design more important than engineering?\""},
-      {"name": "connect", "title": "The Serendipity Engine", "desc": "Surface non-obvious connections between your topic and Jobs' thinking.", "example": "/connect \"Connect taste to hiring to product quality.\""},
+      {"name": "debate", "title": "Steel-Man Both Sides", "desc": "Present a position or pit two ideas against each other.", "example": "/debate \"Is design more important than engineering?\""},
+      {"name": "connect", "title": "Bridge Ideas", "desc": "Find unexpected connections between concepts or synthesize multiple ideas.", "example": "/connect \"Connect taste to hiring to product quality.\""},
       {"name": "evolve", "title": "Intellectual Evolution", "desc": "Trace how Jobs' thinking on a topic developed over time.", "example": "/evolve \"How did his thinking on design evolve from Apple to NeXT to Apple's return?\""},
-      {"name": "apply", "title": "Actionable Frameworks", "desc": "Turn a Jobs framework into a step-by-step plan for your situation.", "example": "/apply \"How do I apply 'say no to 1,000 things' to my roadmap?\""},
-      {"name": "mashup", "title": "Synthesize & Combine", "desc": "Combine multiple Jobs ideas into a genuinely new thesis.", "example": "/mashup \"simplicity + marketing + team building\""},
-      {"name": "brainfight", "title": "Ideas in Conflict", "desc": "Pit two ideas head-to-head. Find agreements, contradictions, conditional victories.", "example": "/brainfight \"Perfection vs. shipping — which should win?\""},
-      {"name": "deep-dive", "title": "Everything He Knew", "desc": "Exhaustive analysis — pull ALL atoms, map connections, synthesize.", "example": "/deep-dive \"His thinking on product simplicity\""},
-      {"name": "surprise", "title": "Show Me Something Unexpected", "desc": "Random high-quality atom for daily inspiration.", "example": "/surprise"}
+      {"name": "surprise", "title": "Show Me Something Unexpected", "desc": "Random high-quality atom for daily inspiration.", "example": "/surprise"},
+      {"name": "coach", "title": "Socratic Questions", "desc": "No answers — just the questions Jobs would ask you.", "example": "/coach \"I'm launching a product and can't decide what to cut.\""},
+      {"name": "predict", "title": "Implication Chains", "desc": "Trace second and third-order effects of a trend or decision.", "example": "/predict \"What happens to product design as AI generates interfaces on the fly?\""}
     ]
   },
   "website": {

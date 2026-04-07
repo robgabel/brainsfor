@@ -1,6 +1,6 @@
 # Paul Graham Brain Pack
 
-> **182 knowledge atoms** · **0 typed connections** · **10 thinking skills**
+> **182 knowledge atoms** · **498 typed connections** · **8 thinking skills**
 > From [brainsforsale.com](https://brainsforsale.com)
 
 ## What This Is
@@ -12,7 +12,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Paul'
 ## Quick Start
 
 1. Load `brain-context.md` into your AI tool's context window
-2. Run any of the 10 thinking skills:
+2. Run any of the 8 thinking skills:
 
 ```
 /advise "Should I drop out of college to work on my startup?"
@@ -26,7 +26,7 @@ You should get a response that cites specific atoms, synthesizes Paul's perspect
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (182 atoms, 0 connections)
+  ├── brain-atoms.json      ← Structured data (182 atoms, 498 connections)
   └── README.md             ← You are here
 ```
 
@@ -34,7 +34,7 @@ pack/
 
 **182 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**0 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**498 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
 **16 topic clusters** — startups, programming, writing, wealth, taste, ambition, fundraising, hackers, ideas, growth, education, design.
 
@@ -54,18 +54,18 @@ pack/
 
 Chain skills for deeper results:
 
-- **Decide:** `/advise` → `/debate` → `/apply`
-- **Learn:** `/teach` → `/deep-dive` → `/evolve`
-- **Create:** `/surprise` → `/connect` → `/mashup`
-- **Research:** `/deep-dive` → `/mashup` → `/brainfight`
+- **Decide:** `/advise` → `/debate` → `/coach`
+- **Learn:** `/teach` → `/evolve` → `/coach`
+- **Create:** `/surprise` → `/connect` → `/predict`
+- **Forecast:** `/predict` → `/debate` → `/advise`
 - **Daily ritual:** `/surprise` each morning
 
 ## Cross-Brain Features
 
 Install multiple brain packs and they auto-discover each other:
 
-- `/mashup` synthesizes across brains
-- `/brainfight` compares thinkers head-to-head
+- `/connect` synthesizes ideas across brains
+- `/debate` stress-tests using multiple thinkers' worldviews
 - No configuration needed — just install and go
 
 ## About Paul Graham

@@ -1,6 +1,6 @@
 # Scott Belsky Brain Pack
 
-> **284 knowledge atoms** · **430 typed connections** · **10 thinking skills**
+> **284 knowledge atoms** · **430 typed connections** · **8 thinking skills**
 > From [brainsforsale.com](https://brainsforsale.com)
 
 ## What This Is
@@ -12,7 +12,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Scott
 ## Quick Start
 
 1. Load `brain-context.md` into your AI tool's context window
-2. Run any of the 10 thinking skills:
+2. Run any of the 8 thinking skills:
 
 ```
 /advise "Should I raise my Series A or stay bootstrapped?"
@@ -54,18 +54,18 @@ pack/
 
 Chain skills for deeper results:
 
-- **Decide:** `/advise` → `/debate` → `/apply`
-- **Learn:** `/teach` → `/deep-dive` → `/evolve`
-- **Create:** `/surprise` → `/connect` → `/mashup`
-- **Research:** `/deep-dive` → `/mashup` → `/brainfight`
+- **Decide:** `/advise` → `/debate` → `/coach`
+- **Learn:** `/teach` → `/evolve` → `/coach`
+- **Create:** `/surprise` → `/connect` → `/predict`
+- **Forecast:** `/predict` → `/debate` → `/advise`
 - **Daily ritual:** `/surprise` each morning
 
 ## Cross-Brain Features
 
 Install multiple brain packs and they auto-discover each other:
 
-- `/mashup` synthesizes across brains
-- `/brainfight` compares thinkers head-to-head
+- `/connect` synthesizes ideas across brains
+- `/debate` stress-tests using multiple thinkers' worldviews
 - No configuration needed — just install and go
 
 ## About Scott Belsky

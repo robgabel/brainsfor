@@ -33,7 +33,7 @@ Load `clusters/manifest.json` to find relevant clusters. Load only those cluster
 ⚡ **What This Means For You**
 [1-2 actionable sentences]
 
-💡 **Try next:** `/debate` (stress-test) or `/apply` (execute)
+💡 **Try next:** `/debate` (stress-test) or `/coach` (question your assumptions)
 ```
 
 ## Rules
@@ -46,6 +46,6 @@ Load `clusters/manifest.json` to find relevant clusters. Load only those cluster
 
 ## Data
 
-- **atoms:** brain-atoms.json (182 atoms, 0 connections)
+- **atoms:** brain-atoms.json (182 atoms, 498 connections)
 - **clusters:** clusters/manifest.json + individual cluster .md files
 - **shared rules:** See "LLM Usage Rules" section in brain-context.md

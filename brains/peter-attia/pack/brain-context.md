@@ -1,6 +1,6 @@
-# Peter Attia's "The Drive" podcast and "Outlive" book — Extracted Insights
+# Peter Attia's "The Drive" podcast and reviews of "Outlive" book — Extracted Insights
 
-73 atomic ideas extracted from 400+ episodes of The Drive podcast, Outlive (2023), and detailed blog posts. Peter Attia is a physician and longevity expert who has reshaped how high-performers think about health across decades. His "Outlive" book and "The Drive" podcast are the primary source for evidence-based longevity strategy, blending mechanistic biochemistry with practical behavior change.
+73 atomic ideas extracted from 400+ episodes of The Drive podcast, reviews of Outlive (2023), and detailed blog posts. Peter Attia is a physician and longevity expert who has reshaped how high-performers think about health across decades. His "Outlive" book and "The Drive" podcast are the primary source for evidence-based longevity strategy, blending mechanistic biochemistry with practical behavior change.
 
 Extracted by Rob Gabel using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
@@ -13,7 +13,7 @@ When using this brain as context, follow these rules:
 - **Show implications:** When an atom has an `implication` field, include it — the 'so what' is the value.
 - **Confidence tiers:** high = core thesis repeated across editions; medium = stated clearly once; low = tangential or evolving.
 - **Thin topics:** If fewer than 5 atoms exist on a topic, state this clearly and suggest exploring adjacent clusters.
-- **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /apply to execute').
+- **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /coach to question assumptions').
 
 ---
 
@@ -328,4 +328,4 @@ Attia's career arc is itself a demonstration of Medicine 3.0 thinking — the sh
 
 ---
 
-*73 atoms · 15 clusters · 40 connections · Generated 2026-04-06*
+*73 atoms · 15 clusters · 40 connections · Generated 2026-04-07*

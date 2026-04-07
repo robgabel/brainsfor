@@ -142,7 +142,7 @@ Replace ALL values. Required fields:
 - `cluster_order` — display order array
 
 **Skill examples:**
-- `skill_examples.{advise,debate,apply,teach,deep_dive,connect,brainfight,mashup,evolve}` — one-liner per skill
+- `skill_examples.{advise,teach,debate,connect,evolve,surprise,coach,predict}` — one-liner per skill
 - `workflow_examples.{learning,research}` — workflow narratives
 - `quick_start_prompt`, `example_topic`, `topic_examples`
 
@@ -303,7 +303,7 @@ One command generates the entire customer-facing pack in `brains/{slug}/pack/`:
 | `explore.html` | THE human file (data-driven UI) | Shared template (reads brain-atoms.json) |
 | `SKILL.md` | Brain setup skill | Template + brain.json |
 | `README.md` | Quick start guide | Template + brain.json |
-| `skills/*/SKILL.md` | 10 thinking skills | Templates + brain.json |
+| `skills/*/SKILL.md` | 8 thinking skills | Templates + brain.json |
 
 #### 12. Register in index.json
 
@@ -380,7 +380,7 @@ brainsforsale/
     README.dev.md                    ← THIS FILE
     explore.html.template            ← data-driven human UI
     create-brain-tables.sql          ← Supabase table template
-    skills/                          ← 10 skill templates
+    skills/                          ← 8 skill templates
       advise.md.template, teach.md.template, etc.
 
   brains/

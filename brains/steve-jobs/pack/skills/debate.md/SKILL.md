@@ -35,7 +35,7 @@ Load `clusters/manifest.json` → relevant cluster files. For broad positions, l
 
 ⚡ **The Tension:** [Name the core disagreement]
 
-💡 **Try next:** `/brainfight` (full head-to-head) or `/apply` (act on the nuance)
+💡 **Try next:** `/coach` (question your assumptions) or `/advise` (act on the nuance)
 ```
 
 ## Rules

@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export function InstallCommand({
-  command = "npx skills add brainsforsale/belsky",
+  command = "npx skills add brainsforsale/steve-jobs",
   size = "lg",
 }: {
   command?: string;

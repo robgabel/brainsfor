@@ -35,7 +35,7 @@ Load `clusters/manifest.json` → relevant cluster files. For broad positions, l
 
 ⚡ **The Tension:** [Name the core disagreement]
 
-💡 **Try next:** `/brainfight` (full head-to-head) or `/apply` (act on the nuance)
+💡 **Try next:** `/coach` (question your assumptions) or `/advise` (act on the nuance)
 ```
 
 ## Rules
@@ -47,6 +47,6 @@ Load `clusters/manifest.json` → relevant cluster files. For broad positions, l
 
 ## Data
 
-- **atoms:** brain-atoms.json (182 atoms, 0 connections)
+- **atoms:** brain-atoms.json (182 atoms, 498 connections)
 - **clusters:** clusters/manifest.json + individual cluster .md files
 - **shared rules:** See "LLM Usage Rules" in brain-context.md

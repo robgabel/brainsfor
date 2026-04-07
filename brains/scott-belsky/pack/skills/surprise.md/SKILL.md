@@ -36,7 +36,7 @@ Load `brain-context.md` or a random cluster file for variety.
 🤔 **Question to Sit With**
 [Provocative question that the atom raises]
 
-💡 **Explore:** `/teach` (understand deeply) or `/deep-dive` (full context)
+💡 **Explore:** `/teach` (understand deeply) or `/connect` (find bridges)
 ```
 
 ## Rules

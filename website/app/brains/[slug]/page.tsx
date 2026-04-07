@@ -98,7 +98,7 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
               )}
 
               <div className="mt-4 space-y-2 text-xs text-body">
-                <p>10 AI skills included</p>
+                <p>8 AI skills included</p>
                 <p>Works with Claude, Cursor, Gemini CLI</p>
                 <p>Full knowledge graph access</p>
               </div>
@@ -133,10 +133,10 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
       <section className="px-6 py-16">
         <div className="mx-auto max-w-[1140px]">
           <h2 className="mb-2 font-display text-2xl font-normal tracking-[-0.5px] text-deep-ink">
-            10 thinking skills included
+            8 thinking skills included
           </h2>
           <p className="mb-8 text-sm text-body">
-            Chain skills into workflows: Decision (/advise &rarr; /debate &rarr; /apply), Learning (/teach &rarr; /deep-dive &rarr; /evolve), Creative (/surprise &rarr; /connect &rarr; /mashup).
+            Chain skills into workflows: Decision (/advise &rarr; /debate &rarr; /coach), Learning (/teach &rarr; /evolve &rarr; /coach), Creative (/surprise &rarr; /connect &rarr; /predict).
           </p>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">

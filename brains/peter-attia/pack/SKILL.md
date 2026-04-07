@@ -1,17 +1,17 @@
 ---
 name: brain-setup
-description: "Load the Peter Attia brain and configure all 10 thinking skills. One-time setup that detects your AI tool, loads brain context, and verifies everything works."
+description: "Load the Peter Attia brain and configure all 8 thinking skills. One-time setup that detects your AI tool, loads brain context, and verifies everything works."
 ---
 
 # Peter Attia Brain Pack — Setup & Configuration
 
-Welcome to the **Attia Brain Pack** from [brainsforsale.com](https://brainsforsale.com). This is a premium knowledge asset extracted from Peter Attia's "The Drive" podcast and "Outlive" book — a curated collection of his most rigorous thinking on longevity, metabolic health, exercise physiology, and the Four Horsemen of chronic disease.
+Welcome to the **Attia Brain Pack** from [brainsforsale.com](https://brainsforsale.com). This is a premium knowledge asset extracted from Peter Attia's "The Drive" podcast and reviews of "Outlive" book — a curated collection of his most rigorous thinking on longevity, metabolic health, exercise physiology, and the Four Horsemen of chronic disease.
 
 ## What You're Getting
 
-- **73 knowledge atoms** — Core insights, frameworks, and strategic principles from 400+ episodes of The Drive podcast, Outlive (2023), and detailed blog posts
+- **73 knowledge atoms** — Core insights, frameworks, and strategic principles from 400+ episodes of The Drive podcast, reviews of Outlive (2023), and detailed blog posts
 - **40 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
-- **10 specialized thinking skills** — Each designed to activate different modes of reasoning
+- **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Zone 2 training, VO2 max, Four Horsemen, metabolic health, cardiovascular prevention, cancer screening, emotional resilience, sleep, pharmacology, muscle, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
@@ -58,8 +58,8 @@ The brain operates in three layers:
    - Ideal for: Deep reasoning, strategy sessions, comprehensive understanding
    - Load this file when: Starting a session that requires brain-informed thinking
 
-3. **Layer 3 — Thinking Skills** (the 10 skills below)
-   - Each skill is a reasoning mode that activates specific parts of the brain
+3. **Layer 3 — Thinking Skills** (the 8 skills below)
+   - Each skill is a reasoning mode that produces a distinct type of output
    - Ideal for: Targeted analysis, creative workflows, decision-making
    - Use when: You have a specific type of problem to solve
 
@@ -71,49 +71,41 @@ Test your setup with the Quick Start prompt below. You should get a thoughtful r
 
 ---
 
-## The 10 Thinking Skills
+## The 8 Thinking Skills
 
-Each skill is a specialized reasoning mode. Use them in combination for more powerful thinking.
+Each skill produces a distinct type of output. Use them in combination for more powerful thinking.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Peter's frameworks. Best for: career moves, company decisions, strategy choices.
 *Example: "I'm 55, overweight, and sedentary. What's my first move?"*
 
-### 🔥 **2. /debate** — Steel-Man Both Sides
-Present a position; brain argues both for and against it. Best for: understanding tradeoffs, challenging assumptions.
-*Example: "Is muscle or cardio more important for longevity?"*
-
-### 🎯 **3. /apply** — Actionable Frameworks
-Get concrete steps to apply an idea to your situation. Best for: implementation, execution, tactical work.
-*Example: "How do I structure my week to optimize Zone 2 training, strength, and recovery?"*
-
-### 📚 **4. /teach** — Explain Like I'm Learning
+### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Peter sees it. Best for: understanding unfamiliar ideas, building mental models.
 *Example: "Explain the Four Horsemen and why they matter."*
 
-### 🔍 **5. /deep-dive** — Exhaustive Analysis
-Explore a topic across all connected atoms and frameworks. Best for: research, comprehensive understanding, thesis writing.
-*Example: "Peter's complete framework for preventing cardiovascular disease."*
+### 🔥 **3. /debate** — Steel-Man Both Sides
+Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
+*Example: "Is muscle or cardio more important for longevity?"*
 
-### 🎨 **6. /surprise** — Unexpected Connections
-Get a random connection or counterintuitive insight you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration.
-*Example: No input needed — just run it.*
-
-### 🔗 **7. /connect** — Bridge Ideas
-Find unexpected connections between two concepts. Best for: synthesis, innovation, cross-domain thinking.
+### 🔗 **4. /connect** — Bridge Ideas
+Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
 *Example: "How does continuous glucose monitoring inform training strategy?"*
 
-### ⚔️ **8. /brainfight** — Ideas in Conflict
-Pit two ideas against each other. Best for: understanding nuance, avoiding false consensus, strategic clarity.
-*Example: "Longevity vs. living now — where's the balance?"*
-
-### 🔄 **9. /mashup** — Synthesize Atoms
-Combine multiple ideas into a new framework or thesis. Best for: original thinking, writing, strategy synthesis.
-*Example: "Mashup: Zone 2 + emotional resilience + metabolic health for the perfect decade."*
-
-### 📈 **10. /evolve** — How Ideas Build On Each Other
+### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
 *Example: "How has Peter's thinking on statins and pharmacology evolved?"*
+
+### 🎨 **6. /surprise** — Unexpected Insights
+Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
+*Example: No input needed — just run it.*
+
+### 🪞 **7. /coach** — Socratic Questions
+No answers — just the questions Peter would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
+*Example: "I'm 40 and want to start optimizing for longevity. What should I be asking myself?"*
+
+### 🔮 **8. /predict** — Implication Chains
+Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
+*Example: "What happens to healthcare if everyone has continuous biomarker monitoring?"*
 
 ---
 
@@ -122,24 +114,24 @@ Trace how a concept develops and changes across the brain. Best for: historical 
 Use these skill combinations for better results:
 
 ### 🎯 Decision Workflow
-→ `/advise` (get perspective) → `/debate` (stress-test) → `/apply` (make it real)
+→ `/advise` (get perspective) → `/debate` (stress-test) → `/coach` (check your blind spots)
 
-*Example: Deciding on a hire? Ask for advice, debate the tradeoffs, then map out decision criteria.*
+*Example: Deciding on a hire? Get advice, challenge the reasoning, then surface what you're not asking.*
 
 ### 📚 Learning Workflow
-→ `/teach` (understand) → `/deep-dive` (go deeper) → `/evolve` (see how it develops)
+→ `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to longevity? Teach the Four Horsemen → deep-dive exercise → evolve pharmacology.*
+*Example: New to longevity? Teach the Four Horsemen → evolve pharmacology → coach yourself on priorities.*
 
 ### 💡 Creative Workflow
-→ `/surprise` (get inspired) → `/connect` (build bridges) → `/apply` (make it work)
+→ `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
 
 *Example: Stuck on a problem? Surprise + connect often surface unexpected angles.*
 
-### 🔬 Research Workflow
-→ `/deep-dive` (understand the landscape) → `/mashup` (synthesize) → `/brainfight` (sharpen)
+### 🔮 Forecast Workflow
+→ `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Planning your health stack? Deep-dive biomarkers → mashup exercise + nutrition → brainfight tradeoffs.*
+*Example: Planning your health stack? Predict where health tech is going → debate the tradeoffs → advise on your protocol.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -172,13 +164,13 @@ If you get that, you're all set.
 → Make sure `brain-context.md` is loaded in your session. If using Claude Code, check that the file is in your working directory.
 
 **Q: I want to search the brain for a specific topic.**
-→ Use `/deep-dive` with a keyword: `"Deep dive: Peter's thinking on VO2 max"` → The brain will pull all relevant atoms.
+→ Use `/advise` with a keyword: `"What does Peter think about VO2 max?"` → The brain will pull all relevant atoms.
 
 **Q: Can I combine skills?**
-→ Absolutely. Chain them: `"First /advise on whether to pivot, then /debate the tradeoffs, then /apply the decision framework."`
+→ Absolutely. Chain them: `"First /advise on whether to pivot, then /debate the tradeoffs, then /coach me on what I'm missing."`
 
 **Q: What if a skill doesn't feel relevant to my question?**
-→ Try a different one. `/brainfight` often works when you're stuck; `/mashup` when you need something original; `/surprise` when you need inspiration.
+→ Try a different one. `/coach` often works when you're stuck; `/connect` when you need something original; `/surprise` when you need inspiration.
 
 **Q: How often should I reload the brain?**
 → Once per session is sufficient. Brain context doesn't expire, and atoms don't change. But if you're switching between different projects, fresh context load = sharper thinking.

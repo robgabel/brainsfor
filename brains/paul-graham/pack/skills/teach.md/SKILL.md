@@ -35,7 +35,7 @@ Load `clusters/manifest.json` to find the relevant cluster(s). Load those cluste
 💡 **Why This Matters**
 [Connection to broader themes + what makes his take unique]
 
-💡 **Try next:** `/deep-dive` (go deeper) or `/apply` (use the framework)
+💡 **Try next:** `/evolve` (see how it changed) or `/coach` (test your understanding)
 ```
 
 ## Rules
@@ -47,6 +47,6 @@ Load `clusters/manifest.json` to find the relevant cluster(s). Load those cluste
 
 ## Data
 
-- **atoms:** brain-atoms.json (182 atoms, 0 connections)
+- **atoms:** brain-atoms.json (182 atoms, 498 connections)
 - **clusters:** clusters/manifest.json + individual cluster .md files
 - **shared rules:** See "LLM Usage Rules" section in brain-context.md

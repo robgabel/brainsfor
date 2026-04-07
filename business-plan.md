@@ -18,7 +18,7 @@ Not a chatbot. Not a character you roleplay with. A **structured knowledge pack*
 
 **Line 1 (emotional hook):** "Load a genius into your AI."
 
-**Line 2 (clarity + payoff):** "Knowledge graphs of the world's best thinkers, packaged as 10 AI skills you actually use. Think better in seconds."
+**Line 2 (clarity + payoff):** "Knowledge graphs of the world's best thinkers, packaged as 8 AI skills you actually use. Think better in seconds."
 
 **Line 3 (the how — one command):**
 ```
@@ -48,8 +48,8 @@ require investment to build fast.
 Sources: "Scaling Without Growing" (Implications), "Premium of
 Originality" (Implications), "Exponential Code" (Implications)
 
-💡 Try /debate to stress-test this advice, or /apply "revenue
-per employee" to model it for your specific business.
+💡 Try /debate to stress-test this advice, or /coach to explore
+what questions Belsky would ask about your specific business.
 ```
 
 **That demo IS the landing page.** Everything else is supporting evidence.
@@ -101,38 +101,36 @@ When a buyer owns 2+ brains, the instruction file supports loading multiple brai
 
 ### 🧠 Brain Skills Pack — The Impeccable Model Applied to Thinking
 
-*Inspired by [impeccable.style](https://impeccable.style) — Paul Bakaus built 20 design skills that chain together. We build 10 thinking skills that chain together. The skills ARE the product. The atoms are just the fuel.*
+*Inspired by [impeccable.style](https://impeccable.style) — Paul Bakaus built 20 design skills that chain together. We build 8 thinking skills that chain together. The skills ARE the product. The atoms are just the fuel.*
 
-Every brain ships with a **skill pack** — a set of installable Claude/Cursor/ChatGPT skills that give the buyer an interactive interface to the knowledge graph. Not just "here's a file" but "here are 10 commands that make this brain useful."
+Every brain ships with a **skill pack** — a set of installable Claude/Cursor/ChatGPT skills that give the buyer an interactive interface to the knowledge graph. Not just "here's a file" but "here are 8 commands that make this brain useful."
 
 Install: `npx skills add brainsforsale/belsky` (or download the skill pack manually)
 
-#### The 10 Brain Skills
+#### The 8 Brain Skills
 
 | # | Skill | Command | What It Does |
 |---|-------|---------|-------------|
-| 1 | **Advise** | `/advise` | "I'm facing [decision]." → Pulls relevant atoms, synthesizes this thinker's perspective, cites sources, flags confidence level. The core use case. |
+| 1 | **Advise** | `/advise` | "I'm facing [decision]." → Pulls relevant atoms, synthesizes this thinker's perspective, cites sources, flags confidence level. Includes deep-dive depth and actionable frameworks. The core use case. |
 | 2 | **Teach** | `/teach` | "Explain [concept] using this brain." → Builds explanation using the person's own language, frameworks, and mental models. Like having them tutor you. |
-| 3 | **Debate** | `/debate` | "Argue against [my position]." → Stress-tests your thinking from this thinker's worldview. Uses their actual beliefs, not generic counterarguments. |
-| 4 | **Connect** | `/connect` | "What does this brain say about [my topic]?" → Semantic search across atoms for unexpected connections to whatever you're working on. The serendipity engine. |
+| 3 | **Debate** | `/debate` | "Argue against [my position]." → Stress-tests your thinking from this thinker's worldview. Uses their actual beliefs, not generic counterarguments. Supports head-to-head brain comparisons. |
+| 4 | **Connect** | `/connect` | "What does this brain say about [my topic]?" → Semantic search across atoms for unexpected connections to whatever you're working on. Supports cross-brain synthesis when 2+ brains are loaded. |
 | 5 | **Evolve** | `/evolve` | "How has this thinker's view on [topic] changed?" → Time-series analysis of atoms by source date. Shows intellectual evolution, not just latest take. |
-| 6 | **Apply** | `/apply` | "Apply [framework] to [my situation]." → Takes a named mental model (e.g., Belsky's "five types of flex") and walks you through applying it to YOUR specific context. Step-by-step. |
-| 7 | **Mashup** | `/mashup` | "What would [Brain A] and [Brain B] disagree about here?" → Cross-brain analysis. Requires 2+ installed brains. Finds topic overlaps and synthesizes the debate. |
-| 8 | **Brainfight** | `/brainfight` | "Compare [Brain A] vs [Brain B] on [topic]." → Head-to-head comparison. Pulls atoms from both, identifies agreements, contradictions, and unique angles. Outputs a shareable debate summary. |
-| 9 | **Deep-dive** | `/deep-dive` | "Everything this brain knows about [topic]." → Full topic lens. Pulls all atoms in a topic cluster, shows connections, highlights the strongest/most-cited ideas. |
-| 10 | **Surprise** | `/surprise` | "Show me something unexpected." → Random serendipity. Surfaces a high-confidence atom you probably haven't seen. Great for daily inspiration or breaking out of tunnel vision. |
+| 6 | **Surprise** | `/surprise` | "Show me something unexpected." → Random serendipity. Surfaces a high-confidence atom you probably haven't seen. Great for daily inspiration or breaking out of tunnel vision. |
+| 7 | **Coach** | `/coach` | "Help me think through [problem]." → Socratic questioning from the thinker's perspective. Asks the questions they would ask to sharpen your thinking, rather than giving you answers directly. |
+| 8 | **Predict** | `/predict` | "Where does this thinking lead?" → Extrapolates the thinker's logic forward. Builds implication chains from their frameworks to show likely consequences and second-order effects. |
 
 **Meta skill:**
-| | **Brain Setup** | `/brain-setup` | One-time setup. Detects your AI tool (Claude, Cursor, ChatGPT), loads the brain context, configures the 10 skills, and verifies everything works. Like Impeccable's `/teach-impeccable`. |
+| | **Brain Setup** | `/brain-setup` | One-time setup. Detects your AI tool (Claude, Cursor, ChatGPT), loads the brain context, configures the 8 skills, and verifies everything works. Like Impeccable's `/teach-impeccable`. |
 
 #### Skill chaining (the Impeccable pattern)
 
 Skills aren't isolated — they chain into workflows:
 
-- **Decision workflow:** `/advise` → `/debate` (stress-test) → `/apply` (use framework) → decide
-- **Learning workflow:** `/teach` → `/deep-dive` (go deeper) → `/evolve` (see how thinking changed)
-- **Creative workflow:** `/surprise` (inspiration) → `/connect` (link to your work) → `/apply` (use it)
-- **Research workflow:** `/deep-dive` → `/mashup` (cross-brain) → `/brainfight` (find disagreements)
+- **Decision workflow:** `/advise` → `/debate` (stress-test) → `/coach` (sharpen your thinking) → decide
+- **Learning workflow:** `/teach` → `/advise` (go deeper) → `/evolve` (see how thinking changed)
+- **Creative workflow:** `/surprise` (inspiration) → `/connect` (link to your work) → `/predict` (follow implications)
+- **Research workflow:** `/advise` (deep topic lens) → `/connect` (cross-brain synthesis) → `/debate` (find disagreements)
 - **Daily ritual:** `/surprise` each morning → 1 unexpected atom to start the day
 
 #### Why skills > static files
@@ -143,7 +141,7 @@ A markdown file is a reference. A skill pack is a **workflow tool**. The differe
 |-------------|-----------|
 | Read and search manually | Interactive commands |
 | One-time use, then forgotten | Daily utility — `/surprise` alone creates a habit |
-| Hard to combine with other brains | `/mashup` and `/brainfight` built-in |
+| Hard to combine with other brains | `/connect` and `/debate` support cross-brain |
 | No guidance on how to use | `/brain-setup` onboards you |
 | Same experience for everyone | Skills adapt to YOUR context |
 
@@ -165,11 +163,9 @@ brainsforsale-belsky/
     debate.md           ← /debate skill
     connect.md          ← /connect skill
     evolve.md           ← /evolve skill
-    apply.md            ← /apply skill
-    mashup.md           ← /mashup skill (cross-brain, works with any installed brain)
-    brainfight.md       ← /brainfight skill
-    deep-dive.md        ← /deep-dive skill
     surprise.md         ← /surprise skill
+    coach.md            ← /coach skill
+    predict.md          ← /predict skill
   embeddings/           ← (Pro tier only)
     atoms-1536.json     ← pre-computed vectors
 ```
@@ -190,7 +186,7 @@ This is the Greg Isenberg play: **don't build a marketplace — plug into an exi
 
 | Tier | What You Get | Price |
 |------|-------------|-------|
-| **Standard** | Full skill pack (10 skills) + knowledge atoms (JSON) + brain context (MD) + visual dashboard (HTML) + mental model map | $29/brain |
+| **Standard** | Full skill pack (8 skills) + knowledge atoms (JSON) + brain context (MD) + visual dashboard (HTML) + mental model map | $29/brain |
 | **Pro** | Everything in Standard + embeddings + API access + auto-updates when new content is ingested | $79/brain |
 | **API** | Programmatic access to any brain. For companies building products. | $199/mo (all brains) |
 
@@ -519,11 +515,9 @@ brainsforsale/belsky/
     debate.md             ← /debate
     connect.md            ← /connect
     evolve.md             ← /evolve
-    apply.md              ← /apply
-    mashup.md             ← /mashup (cross-brain — auto-discovers other installed brains)
-    brainfight.md         ← /brainfight
-    deep-dive.md          ← /deep-dive
     surprise.md           ← /surprise
+    coach.md              ← /coach
+    predict.md            ← /predict
   data/                   ← downloaded after purchase (not in registry)
     brain-context.md      ← full knowledge atom context file
     brain-atoms.json      ← structured atom data
@@ -534,7 +528,7 @@ brainsforsale/belsky/
 
 ### Multi-brain discovery
 
-The `/mashup` and `/brainfight` skills auto-discover other installed brains by scanning the skill directory for other `brainsforsale/*` packages. No config needed. If you have Belsky and Galloway installed, `/mashup` automatically offers both.
+The `/connect` and `/debate` skills auto-discover other installed brains by scanning the skill directory for other `brainsforsale/*` packages. No config needed. If you have Belsky and Galloway installed, `/debate` automatically offers both for cross-brain comparisons.
 
 ### Updates
 
@@ -650,13 +644,13 @@ The evolution path is: **knowledge pack → interactive advisor → platform** �
 
 ## TL;DR
 
-**What:** Brainsforsale.com — installable AI skill packs built from the world's most interesting minds. `npx skills add brainsforsale/belsky` gives you 10 thinking tools powered by a real knowledge graph.
+**What:** Brainsforsale.com — installable AI skill packs built from the world's most interesting minds. `npx skills add brainsforsale/belsky` gives you 8 thinking tools powered by a real knowledge graph.
 
 **Who:** Builders, founders, and AI power users who want expert-level context without hand-curating it.
 
 **How much:** $29 (standard — full skill pack) / $79 (pro + embeddings + auto-updates) / $199/mo (API).
 
-**Product:** Not a chatbot. Not a PDF. A 10-skill thinking partner: `/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/apply`, `/mashup`, `/brainfight`, `/deep-dive`, `/surprise`. Skills chain into workflows. Works with Claude Code, Cursor, Cowork, Gemini CLI, Codex CLI.
+**Product:** Not a chatbot. Not a PDF. An 8-skill thinking partner: `/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`. Skills chain into workflows. Works with Claude Code, Cursor, Cowork, Gemini CLI, Codex CLI.
 
 **Moat:** "Claim your brain" rev-share turns subjects into distribution partners. `npx skills` ecosystem is the distribution channel. Community of curated minds that can't be copied.
 
@@ -684,11 +678,11 @@ Core product. The skill pack IS the product. The atoms are the fuel.
 
 | # | Feature | Source | Status |
 |---|---------|--------|--------|
-| 1 | **Brain Skills Pack** — 10 installable skills: `/advise`, `/debate`, `/teach`, `/connect`, `/evolve`, `/apply`, `/mashup`, `/brainfight`, `/deep-dive`, `/surprise`. THE product differentiator. | Rob × Impeccable | Architecture complete |
+| 1 | **Brain Skills Pack** — 8 installable skills: `/advise`, `/debate`, `/teach`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`. THE product differentiator. | Rob × Impeccable | Architecture complete |
 | 2 | **BRAIN-INSTRUCTIONS.md** — 5-mode LLM instruction file (Advise, Teach, Debate, Connect, Evolve) | Greg | Design complete |
 | 3 | **Topic Lenses** — Pre-built slices by topic cluster ("Belsky on Product Design") | Greg | Design complete |
 | 4 | **"What Would X Say?" Decision Mode** — Built into `/advise` skill | Greg | Design complete |
-| 5 | **Brain Mashups** — Load 2+ brains, cross-perspectives. Built into `/mashup` + `/brainfight` | Greg | Design complete |
+| 5 | **Brain Mashups** — Load 2+ brains, cross-perspectives. Built into `/connect` + `/debate` | Greg | Design complete |
 | 6 | **Visual Brain Dashboard** — Interactive HTML/D3.js knowledge graph. THE unboxing moment. THE screenshot people share. | MrBeast | Design complete |
 | 7 | **Brain Score** — Completeness meter (Belsky: 23%). Transparency + re-engagement hook ("just hit 50%!") | MrBeast | Design complete |
 | 8 | **First 100 Founding Supporters** — Name embedded in brain pack. Free updates forever. Vote on next brain. | MrBeast | Ready to implement |
@@ -705,7 +699,7 @@ Fixes identified from reviewing the actual Belsky brain pack files vs. the Supab
 | # | Feature | Source | Status |
 |---|---------|--------|--------|
 | 14 | **Ship the 161 Belsky connections in brain-atoms.json** — The connections graph already exists in Supabase (supports: 103, related: 29, extends: 22, contradicts: 7). The shipped brain pack has zero. Single biggest gap between promise and delivery. | Review | Supabase data ready |
-| 15 | **Fix atom count discrepancy** — SKILL.md and all 10 skill files reference "104 atoms." Actual count is 284. | Review | Fix required |
+| 15 | **Fix atom count discrepancy** — SKILL.md and all 8 skill files reference "104 atoms." Actual count is 284. | Review | Fix required |
 | 16 | **Fix the "Other & Miscellaneous" cluster** — 110 of 284 atoms (39%) in the catch-all. Reclassify into: Superhumanity, Vibe Coding, OSINT, Longevity, Philosophy. | Review | Reclassification needed |
 | 17 | **Include people graph in export** — 97 people with 368 atom-person links exist in Supabase. Powers "who does Belsky reference most?" | Review | Supabase data ready |
 | 18 | **Eliminate atom duplication in brain-context.md** — Some atoms appear in multiple topic sections, wasting LLM context tokens. | Review | Fix required |
@@ -740,7 +734,7 @@ From product to marketplace. From flat files to graph infrastructure.
 ## Open Questions
 
 - [x] ~~Is brainsforsale.com available?~~ ✅ Owned. Already on Vercel.
-- [x] ~~Is there a "brain comparison" feature?~~ ✅ Yes — `/brainfight` and `/mashup` skills.
+- [x] ~~Is there a "brain comparison" feature?~~ ✅ Yes — `/debate` (head-to-head) and `/connect` (cross-brain synthesis) skills.
 - [x] ~~How do you handle contradictions within a brain?~~ ✅ `/evolve` skill shows thinking evolution over time.
 - [x] ~~Should brains have a "freshness" dimension?~~ ✅ Brain Score + auto-updates for Pro tier.
 - [ ] Should book content be handled differently than blog/newsletter content? (Copyright is clearer for direct quotes vs. extracted ideas)

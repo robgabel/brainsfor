@@ -16,18 +16,17 @@
   "quick_start_prompt": "I'm 45 and want to maximize my chances of being healthy at 85. Where do I start?",
   "skill_examples": {
     "advise": "I'm 55, overweight, and sedentary. What's my first move?",
-    "debate": "Is muscle or cardio more important for longevity?",
-    "apply": "How do I structure my week to optimize Zone 2 training, strength, and recovery?",
     "teach": "Explain the Four Horsemen and why they matter.",
-    "deep_dive": "Peter's complete framework for preventing cardiovascular disease.",
+    "debate": "Is muscle or cardio more important for longevity?",
     "connect": "How does continuous glucose monitoring inform training strategy?",
-    "brainfight": "Longevity vs. living now — where's the balance?",
-    "mashup": "Mashup: Zone 2 + emotional resilience + metabolic health for the perfect decade.",
-    "evolve": "How has Peter's thinking on statins and pharmacology evolved?"
+    "evolve": "How has Peter's thinking on statins and pharmacology evolved?",
+    "surprise": "No input needed — just run it.",
+    "coach": "I'm 40 and want to start optimizing for longevity. What should I be asking myself?",
+    "predict": "What happens to healthcare if everyone has continuous biomarker monitoring?"
   },
   "workflow_examples": {
-    "learning": "New to longevity? Teach the Four Horsemen → deep-dive exercise → evolve pharmacology.",
-    "research": "Planning your health stack? Deep-dive biomarkers → mashup exercise + nutrition → brainfight tradeoffs."
+    "learning": "New to longevity? Teach the Four Horsemen → evolve pharmacology → coach yourself on priorities.",
+    "research": "Planning your health stack? Predict where health tech is going → debate the tradeoffs → advise on your protocol."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -142,14 +141,12 @@
     "skills": [
       {"name": "advise", "title": "Strategic Counsel", "desc": "Get advice on health decisions grounded in this brain's frameworks.", "example": "/advise \"I'm 55, overweight, and sedentary. What's my first move?\""},
       {"name": "teach", "title": "Learn Through Their Lens", "desc": "Explain a health concept using this brain's actual vocabulary and mental models.", "example": "/teach \"Explain the Four Horsemen and why they matter.\""},
-      {"name": "debate", "title": "Steel-Man Both Sides", "desc": "Present a health position; brain argues against it using real counterarguments.", "example": "/debate \"Is muscle or cardio more important for longevity?\""},
-      {"name": "connect", "title": "The Serendipity Engine", "desc": "Surface non-obvious connections between your topic and this brain's thinking.", "example": "/connect \"How does continuous glucose monitoring inform training strategy?\""},
+      {"name": "debate", "title": "Steel-Man Both Sides", "desc": "Present a health position or pit two ideas against each other.", "example": "/debate \"Is muscle or cardio more important for longevity?\""},
+      {"name": "connect", "title": "Bridge Ideas", "desc": "Find unexpected connections between health topics or synthesize multiple ideas.", "example": "/connect \"How does continuous glucose monitoring inform training strategy?\""},
       {"name": "evolve", "title": "Intellectual Evolution", "desc": "Trace how this brain's thinking on a topic developed over time.", "example": "/evolve \"How has Peter's thinking on statins and pharmacology evolved?\""},
-      {"name": "apply", "title": "Actionable Frameworks", "desc": "Turn a framework into a step-by-step plan for your situation.", "example": "/apply \"How do I structure my week for Zone 2, strength, and recovery?\""},
-      {"name": "mashup", "title": "Synthesize & Combine", "desc": "Combine multiple health ideas into a genuinely new thesis.", "example": "/mashup \"Zone 2 + emotional resilience + metabolic health\""},
-      {"name": "brainfight", "title": "Ideas in Conflict", "desc": "Pit two health ideas head-to-head. Find agreements, contradictions, conditional victories.", "example": "/brainfight \"Longevity vs. living now — where's the balance?\""},
-      {"name": "deep-dive", "title": "Everything They Know", "desc": "Exhaustive analysis — pull ALL atoms, map connections, synthesize.", "example": "/deep-dive \"Peter's complete framework for cardiovascular disease prevention\""},
-      {"name": "surprise", "title": "Show Me Something Unexpected", "desc": "Random high-quality atom for daily inspiration.", "example": "/surprise"}
+      {"name": "surprise", "title": "Show Me Something Unexpected", "desc": "Random high-quality atom for daily inspiration.", "example": "/surprise"},
+      {"name": "coach", "title": "Socratic Questions", "desc": "No answers — just the questions Peter would ask you about your health.", "example": "/coach \"I'm 40 and want to start optimizing for longevity.\""},
+      {"name": "predict", "title": "Implication Chains", "desc": "Trace the second and third-order effects of a health trend.", "example": "/predict \"What happens to healthcare if everyone has continuous biomarker monitoring?\""}
     ]
   },
   "website": {

@@ -19,7 +19,7 @@ export default function PricingPage() {
             Simple pricing
           </h1>
           <p className="mx-auto mt-4 max-w-[540px] text-lg text-body">
-            Every brain comes with 10 AI skills, full knowledge graph access, and a visual explorer.
+            Every brain comes with 8 AI skills, full knowledge graph access, and a visual explorer.
             Currently free while we build.
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function PricingPage() {
             {[
               {
                 q: "How is this better than just asking ChatGPT what Belsky would say?",
-                a: "Structured atoms with typed connections and confidence scores produce fundamentally different output than an LLM guessing from training data. You get specific frameworks, cited sources, intellectual evolution over time, and cross-brain mashups. It's the difference between asking someone who read the Wikipedia summary and someone who has the entire corpus indexed.",
+                a: "Structured atoms with typed connections and confidence scores produce fundamentally different output than an LLM guessing from training data. You get specific frameworks, cited sources, intellectual evolution over time, and cross-brain synthesis. It's the difference between asking someone who read the Wikipedia summary and someone who has the entire corpus indexed.",
               },
               {
                 q: "I can build this myself.",
@@ -107,7 +107,7 @@ export default function PricingPage() {
               },
               {
                 q: "Context windows are getting huge. Why not just paste the raw content?",
-                a: "Connections, evolution tracking, cross-brain mashups, and skills are the value — not pre-chunking. A 2M token window full of raw newsletters still won't give you /debate, /evolve, or /brainfight.",
+                a: "Connections, evolution tracking, and skills are the value — not pre-chunking. A 2M token window full of raw newsletters still won't give you /debate, /evolve, or /predict.",
               },
               {
                 q: "What happens when beta ends?",

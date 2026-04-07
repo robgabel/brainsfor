@@ -13,7 +13,7 @@ When using this brain as context, follow these rules:
 - **Show implications:** When an atom has an `implication` field, include it — the 'so what' is the value.
 - **Confidence tiers:** high = core thesis repeated across editions; medium = stated clearly once; low = tangential or evolving.
 - **Thin topics:** If fewer than 5 atoms exist on a topic, state this clearly and suggest exploring adjacent clusters.
-- **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /apply to execute').
+- **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /coach to question assumptions').
 
 ---
 
@@ -125,8 +125,6 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"We learned quickly that the most important quality in startup founders is determination."*
 
-**Treating early work as too precious — refusing to share it, refusing to get feedback, refusing to let it be imperfect — is a form of procrastination disguised as quality control. Ship early, iterate often.** ([source](https://paulgraham.com/early.html))
-
 **Startups are deeply counterintuitive.** Your instincts will be wrong about most things. The first step is knowing this, so you can at least pause before making mistakes. ([source](https://paulgraham.com/before.html))
 
 > *"Startups are so weird that if you trust your instincts, you'll make a lot of mistakes."*
@@ -157,15 +155,7 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Friendship between co-founders is an underrated predictor of startup success.** Startups are so stressful that co-founders who don't genuinely like each other will crack under pressure. The relationship quality of the founding team matters enormously. ([source](https://paulgraham.com/founders.html))
 
-**The best founders combine determination with flexibility — they're persistent about the destination but constantly adapting the route. The worst founders are obstinate: they confuse changing tactics with giving up.** ([source](https://paulgraham.com/do.html))
-
-**Meanness and startup success are inversely correlated.** Being mean makes you stupid because fights are not sufficiently general — your brain goes fast but you get nowhere, like a car spinning its wheels. ([source](https://paulgraham.com/mean.html))
-
-> *"Being mean makes you stupid. That's why I hate fights. You never do your best work in a fight, because fights are not sufficiently general."*
-
-**Startups win by transcending, not by attacking.** Mean founders can't attract the best people, and the best people have other options. The founders who keep going past acquisition offers are driven by wanting to improve the world, not by money. ([source](https://paulgraham.com/mean.html))
-
-> *"Startups don't win by attacking. They win by transcending."*
+**Treating early work as too precious — refusing to share it, refusing to get feedback, refusing to let it be imperfect — is a form of procrastination disguised as quality control. Ship early, iterate often.** ([source](https://paulgraham.com/early.html))
 
 **The most dangerous mistake is building something nobody wants.** The way to avoid that is to make something you yourself want. You're at least one data point of demand. ([source](https://paulgraham.com/startupideas.html))
 
@@ -178,6 +168,16 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 **Schlep blindness is one of the most common reasons good startup ideas go unnoticed.** People instinctively shy away from ideas that involve tedious, complex, or unpleasant work, even when that's where the real value is. ([source](https://paulgraham.com/startupideas.html))
 
 > *"Schlep blindness: unconsciously flinching away from problems that involve messy, tedious work."*
+
+**Meanness and startup success are inversely correlated.** Being mean makes you stupid because fights are not sufficiently general — your brain goes fast but you get nowhere, like a car spinning its wheels. ([source](https://paulgraham.com/mean.html))
+
+> *"Being mean makes you stupid. That's why I hate fights. You never do your best work in a fight, because fights are not sufficiently general."*
+
+**Startups win by transcending, not by attacking.** Mean founders can't attract the best people, and the best people have other options. The founders who keep going past acquisition offers are driven by wanting to improve the world, not by money. ([source](https://paulgraham.com/mean.html))
+
+> *"Startups don't win by attacking. They win by transcending."*
+
+**The best founders combine determination with flexibility — they're persistent about the destination but constantly adapting the route. The worst founders are obstinate: they confuse changing tactics with giving up.** ([source](https://paulgraham.com/do.html))
 
 **The biggest startup ideas are terrifying — they seem to threaten your identity.** This means they're invisible to most people who try to think of startup ideas, because their subconscious filters them out. Even the most ambitious people are probably best off approaching them obliquely. ([source](https://paulgraham.com/ambitious.html))
 
@@ -495,25 +495,21 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"If you do anything well enough, you'll make it prestigious."*
 
-**If you're not occasionally feeling like a noob, you're probably not learning enough.** The willingness to feel stupid is a prerequisite for growth. People who refuse to feel like beginners have implicitly decided to stop growing. ([source](https://paulgraham.com/noob.html))
-
 **The best career heuristic.** if something that seems like work to other people doesn't seem like work to you, that's something you're well suited for. The stranger your tastes seem to other people, the stronger evidence they are of what you should do. ([source](https://paulgraham.com/work.html))
 
 > *"If something that seems like work to other people doesn't seem like work to you, that's something you're well suited for."*
+
+**If you're not occasionally feeling like a noob, you're probably not learning enough.** The willingness to feel stupid is a prerequisite for growth. People who refuse to feel like beginners have implicitly decided to stop growing. ([source](https://paulgraham.com/noob.html))
 
 ---
 
 ## Ideas & Creativity
 
-**The best creators have a two-track mind.** one part that generates ideas freely without judgment, and another that evaluates critically. The mistake is letting the critical part dominate too early, which prevents anything from being created in the first place. ([source](https://paulgraham.com/early.html))
-
 **The way to get startup ideas is not to try to think of startup ideas.** Turn your mind into the type that startup ideas form in without conscious effort. The best startups started as side projects — Apple, Yahoo, Google, Facebook were none of them meant to be companies at first. ([source](https://paulgraham.com/before.html))
 
 > *"If you make a conscious effort to think of startup ideas, the ideas you come up with will not merely be bad, but bad and plausible-sounding."*
 
-**Curiosity is the most reliable driver of independent thinking.** Curious people are less susceptible to conformity because they care more about what's true than what others think. Curiosity is the best shield against conventional thinking. ([source](https://paulgraham.com/think.html))
-
-> *"Curiosity is the best guide. Your curiosity never lies."*
+**The best creators have a two-track mind.** one part that generates ideas freely without judgment, and another that evaluates critically. The mistake is letting the critical part dominate too early, which prevents anything from being created in the first place. ([source](https://paulgraham.com/early.html))
 
 **The best startup ideas come from noticing problems you have yourself, not from sitting down and trying to think of startup ideas. The verb should be 'notice' not 'think of.' The best ideas are already there, waiting to be noticed by someone living at the intersection of the problem and the capability.** ([source](https://paulgraham.com/startupideas.html))
 
@@ -531,11 +527,15 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"If you're at the leading edge of a rapidly changing field, you don't have to look for ideas. They find you."*
 
-**The advantages of being a noob.** you see things with fresh eyes, you ask questions experts stopped asking, you're not constrained by conventions, and your ignorance lets you try approaches that experts know 'don't work' but occasionally do. ([source](https://paulgraham.com/noob.html))
+**Curiosity is the most reliable driver of independent thinking.** Curious people are less susceptible to conformity because they care more about what's true than what others think. Curiosity is the best shield against conventional thinking. ([source](https://paulgraham.com/think.html))
+
+> *"Curiosity is the best guide. Your curiosity never lies."*
 
 **The best antidote to schlep blindness is to ask 'what problem do I wish someone else would solve for me?' instead of 'what problem should I solve?' This reframe bypasses your unconscious filters.** ([source](https://paulgraham.com/schlep.html))
 
 > *"Instead of asking 'what problem should I solve?' ask 'what problem do I wish someone else would solve for me?'"*
+
+**The advantages of being a noob.** you see things with fresh eyes, you ask questions experts stopped asking, you're not constrained by conventions, and your ignorance lets you try approaches that experts know 'don't work' but occasionally do. ([source](https://paulgraham.com/noob.html))
 
 ---
 
@@ -689,13 +689,13 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 ## Philosophy & Life
 
-**You can detect obstinacy in yourself by examining whether your continued pursuit of a strategy is based on evidence or on ego. If you'd be embarrassed to change course, that's a sign you're being obstinate rather than persistent.** ([source](https://paulgraham.com/do.html))
-
-**The aggressively conventional-minded are dangerous because they want to coerce others into agreeing with them.** They're the enforcers of orthodoxy in every era. The independently-minded are their natural opponents. ([source](https://paulgraham.com/think.html))
-
 **The world is shifting from zero-sum games (where meanness was an advantage) to positive-sum games (where new ideas and building new things win). The games played by intellectuals are leaking into the real world.** ([source](https://paulgraham.com/mean.html))
 
 > *"Increasingly you win not by fighting to get control of a scarce resource, but by having new ideas and building new things."*
+
+**The aggressively conventional-minded are dangerous because they want to coerce others into agreeing with them.** They're the enforcers of orthodoxy in every era. The independently-minded are their natural opponents. ([source](https://paulgraham.com/think.html))
+
+**You can detect obstinacy in yourself by examining whether your continued pursuit of a strategy is based on evidence or on ego. If you'd be embarrassed to change course, that's a sign you're being obstinate rather than persistent.** ([source](https://paulgraham.com/do.html))
 
 **The most dangerous way to lose time is not through spending it on fun, but through activities that feel like work but aren't actually productive. The worst time sinks are things that seem virtuous or important.** ([source](https://paulgraham.com/selfindulgence.html))
 
@@ -704,20 +704,6 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 **Compounding works in both directions.** Small, unnoticed losses of time accumulate just like small, unnoticed losses of money. The insidiousness is that each individual loss seems trivial. ([source](https://paulgraham.com/selfindulgence.html))
 
 **People's instinct to avoid spending leads them to hold onto depreciating assets or time-wasting commitments.** The sunk cost fallacy applies to time just as it does to money. ([source](https://paulgraham.com/selfindulgence.html))
-
-**Being a noob — a beginner — is uncomfortable but it's actually one of the most valuable states to be in.** Noobs see things that experts have become blind to. The discomfort of being a beginner is the feeling of potential learning. ([source](https://paulgraham.com/noob.html))
-
-> *"The feeling of being a noob is inversely correlated with actual danger."*
-
-**Many people organize their entire lives to avoid being a noob.** They stick with what they know, avoid new domains, and optimize for competence over learning. This is a recipe for stagnation — the most interesting things happen when you're a beginner. ([source](https://paulgraham.com/noob.html))
-
-**Life is actually short, not just finite.** Having kids proves this by converting the continuous quantity of time into discrete quantities: you only get 52 weekends with your 2-year-old. Eight is not a lot of something. ([source](https://paulgraham.com/vb.html))
-
-> *"You only get 52 weekends with your 2 year old. If Christmas-as-magic lasts from say ages 3 to 10, you only get to watch your child experience it 8 times."*
-
-**Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have.** Bullshit is the junk food of experience — it has a distinctive fakeness. Cultivate a habit of impatience about the things you most want to do. ([source](https://paulgraham.com/vb.html))
-
-> *"Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have. That's what you do when life is short."*
 
 **Every era has moral fashions — beliefs that feel like truth but are actually arbitrary.** If you believe everything you're supposed to, you probably didn't arrive at those beliefs independently. The conformist test: if you have no opinions you'd be reluctant to share, you're probably just thinking what you're told. ([source](https://paulgraham.com/say.html))
 
@@ -730,6 +716,20 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 **The most important thing is to be able to think what you want, not to say what you want.** Draw a sharp line between your thoughts and your speech. Inside your head, anything should be allowed. ([source](https://paulgraham.com/say.html))
 
 > *"The most important thing is to be able to think what you want, not to say what you want."*
+
+**Life is actually short, not just finite.** Having kids proves this by converting the continuous quantity of time into discrete quantities: you only get 52 weekends with your 2-year-old. Eight is not a lot of something. ([source](https://paulgraham.com/vb.html))
+
+> *"You only get 52 weekends with your 2 year old. If Christmas-as-magic lasts from say ages 3 to 10, you only get to watch your child experience it 8 times."*
+
+**Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have.** Bullshit is the junk food of experience — it has a distinctive fakeness. Cultivate a habit of impatience about the things you most want to do. ([source](https://paulgraham.com/vb.html))
+
+> *"Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have. That's what you do when life is short."*
+
+**Being a noob — a beginner — is uncomfortable but it's actually one of the most valuable states to be in.** Noobs see things that experts have become blind to. The discomfort of being a beginner is the feeling of potential learning. ([source](https://paulgraham.com/noob.html))
+
+> *"The feeling of being a noob is inversely correlated with actual danger."*
+
+**Many people organize their entire lives to avoid being a noob.** They stick with what they know, avoid new domains, and optimize for competence over learning. This is a recipe for stagnation — the most interesting things happen when you're a beginner. ([source](https://paulgraham.com/noob.html))
 
 **People can never have productive discussions about topics that are part of their identity.** The moment something becomes part of how you define yourself, you lose the ability to think clearly about it. Identity makes you stupid about the things you identify with most strongly. ([source](https://paulgraham.com/identity.html))
 
@@ -771,4 +771,4 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 ---
 
-*182 atoms · 12 clusters · 0 connections · Generated 2026-04-06*
+*182 atoms · 12 clusters · 498 connections · Generated 2026-04-07*

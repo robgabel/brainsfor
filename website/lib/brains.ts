@@ -93,14 +93,12 @@ export function getLiveBrains(): Brain[] {
 export const SKILLS = [
   { name: "advise", title: "Advise", desc: "Strategic counsel on your decisions", icon: "\u{1F9ED}", workflow: "Decision" },
   { name: "teach", title: "Teach", desc: "Learn concepts through their lens", icon: "\u{1F4D6}", workflow: "Learning" },
-  { name: "debate", title: "Debate", desc: "Stress-test your thinking", icon: "\u2694\uFE0F", workflow: "Decision" },
-  { name: "connect", title: "Connect", desc: "Find unexpected bridges to your work", icon: "\u{1F517}", workflow: "Creative" },
+  { name: "debate", title: "Debate", desc: "Stress-test ideas or pit positions head-to-head", icon: "\u2694\uFE0F", workflow: "Decision" },
+  { name: "connect", title: "Connect", desc: "Find unexpected bridges or synthesize ideas", icon: "\u{1F517}", workflow: "Creative" },
   { name: "evolve", title: "Evolve", desc: "Track how their thinking changed over time", icon: "\u{1F4C8}", workflow: "Learning" },
-  { name: "apply", title: "Apply", desc: "Turn frameworks into step-by-step action", icon: "\u{1F6E0}\uFE0F", workflow: "Decision" },
-  { name: "mashup", title: "Mashup", desc: "Synthesize ideas across multiple brains", icon: "\u{1F9EC}", workflow: "Creative" },
-  { name: "brainfight", title: "Brainfight", desc: "Pit two brains head-to-head on a topic", icon: "\u{1F94A}", workflow: "Research" },
-  { name: "deep-dive", title: "Deep Dive", desc: "Everything a brain knows about one topic", icon: "\u{1F52C}", workflow: "Research" },
   { name: "surprise", title: "Surprise", desc: "Surface an unexpected insight", icon: "\u2728", workflow: "Creative" },
+  { name: "coach", title: "Coach", desc: "No answers \u2014 just the questions they\u2019d ask you", icon: "\u{1FA9E}", workflow: "Decision" },
+  { name: "predict", title: "Predict", desc: "Trace second and third-order effects", icon: "\u{1F52E}", workflow: "Forecast" },
 ];
 
 export const TIERS = [
@@ -109,7 +107,7 @@ export const TIERS = [
     price: 29,
     period: "per brain",
     features: [
-      "Full skill pack (10 AI skills)",
+      "Full skill pack (8 AI skills)",
       "Knowledge atoms (JSON)",
       "Brain context file (MD)",
       "Visual brain explorer (HTML)",

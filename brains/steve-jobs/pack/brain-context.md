@@ -13,7 +13,7 @@ When using this brain as context, follow these rules:
 - **Show implications:** When an atom has an `implication` field, include it — the 'so what' is the value.
 - **Confidence tiers:** high = core thesis repeated across editions; medium = stated clearly once; low = tangential or evolving.
 - **Thin topics:** If fewer than 5 atoms exist on a topic, state this clearly and suggest exploring adjacent clusters.
-- **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /apply to execute').
+- **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /coach to question assumptions').
 
 ---
 

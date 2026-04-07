@@ -67,7 +67,7 @@ We write like a sharp friend who just finished a great book and wants to tell yo
 Don't say we're good. Show an `/advise` output. The terminal screenshot is worth more than any tagline. "That demo IS the landing page."
 
 **2. Use specifics, not superlatives.**
-Replace "comprehensive" with "284 atoms from all 77 Implications editions." Replace "powerful" with "10 skills that chain into 4 workflows." Numbers are more persuasive than adjectives.
+Replace "comprehensive" with "284 atoms from all 77 Implications editions." Replace "powerful" with "8 skills that chain into 4 workflows." Numbers are more persuasive than adjectives.
 
 **3. Talk to builders, not buyers.**
 Our audience is people who make things. They want to know how it works, not just what it does. Show the file structure. Show the JSON schema. Show the install command.
@@ -99,7 +99,7 @@ The BrainsForSale writing rhythm is: **short declarative sentence. Medium explan
 | **Brain** / **brain pack** | The product. Always lowercase "brain" unless starting a sentence. |
 | **Atoms** | The unit of knowledge. An atomic idea — one insight, one framework, one principle. |
 | **Connections** | Typed relationships between atoms (supports, contradicts, extends, related). |
-| **Skills** | The 10 interactive commands (/advise, /teach, /debate, etc.). |
+| **Skills** | The 8 interactive commands (/advise, /teach, /debate, etc.). |
 | **Load** | How you install a brain. "Load a genius into your AI." Not "install" in marketing (though "install" is fine in docs). |
 | **Thinker** | The person whose brain we've packaged. Not "thought leader," not "expert," not "influencer." |
 | **Knowledge graph** | The structured network of atoms + connections. Use when talking to technical audience. |
@@ -107,8 +107,7 @@ The BrainsForSale writing rhythm is: **short declarative sentence. Medium explan
 | **Think better** | The outcome we promise. Not "be smarter" (condescending) or "unlock insights" (generic). |
 | **Structured thinking** | What we sell. Not summarized content — structured, connected, queryable thinking. |
 | **Brain score** | Completeness metric. Transparency builds trust. |
-| **Mashup** | Loading 2+ brains for cross-perspectives. The retention play. |
-| **Brain fight** | Head-to-head comparison between two brains. Content format and skill. |
+| **Cross-brain** | Loading 2+ brains for cross-perspectives via `/connect`. The retention play. |
 | **Claim your brain** | When the real thinker wants to verify/endorse their brain pack. |
 | **Founding supporters** | First 100 buyers per brain. Not "early adopters" or "beta users." |
 
@@ -140,7 +139,7 @@ The BrainsForSale writing rhythm is: **short declarative sentence. Medium explan
 **Pattern 1: Declarative. (Our default.)**
 - "Load a genius into your AI."
 - "Brains for sale."
-- "10 thinking skills per brain."
+- "8 thinking skills per brain."
 - "Simple. Per brain."
 
 **Pattern 2: Not X. Not Y. Z.**
@@ -148,7 +147,7 @@ The BrainsForSale writing rhythm is: **short declarative sentence. Medium explan
 - "Not summaries. Not quotes. Structured thinking."
 
 **Pattern 3: Specific number + benefit.**
-- "284 atoms. 430 connections. 10 skills."
+- "284 atoms. 430 connections. 8 skills."
 - "One command. Any AI tool. Instant expertise."
 
 **Pattern 4: Provocative question.**
@@ -172,7 +171,7 @@ The BrainsForSale writing rhythm is: **short declarative sentence. Medium explan
 ### AI Power Users (Primary)
 
 **Hook:** "Stop building context packs by hand."
-**Value prop:** Pre-structured knowledge graphs with embeddings, connections, and 10 skills. Saves you hours of prompt curation.
+**Value prop:** Pre-structured knowledge graphs with embeddings, connections, and 8 skills. Saves you hours of prompt curation.
 **Proof point:** Show the JSON schema. Show the atom count. Show the install command.
 **CTA:** `npx skills add brainsforsale/belsky`
 
@@ -213,7 +212,7 @@ These are the responses that must show up on the landing page (via FAQ, inline c
 | Objection | Our Response |
 |-----------|-------------|
 | "I can just ask Claude 'what would Belsky say'" | Claude guesses from training data. We give it 284 sourced atoms with connections and confidence scores. The output is fundamentally different. **Show the side-by-side.** |
-| "I can build this myself" | You can. But will you? And will it have typed connections, confidence tiers, voice-enriched quotes, and 10 chained skills? Your time is worth more than $29. |
+| "I can build this myself" | You can. But will you? And will it have typed connections, confidence tiers, voice-enriched quotes, and 8 chained skills? Your time is worth more than $29. |
 | "Context windows are huge now, I'll just paste the newsletter" | Raw text isn't structured knowledge. You lose connections, evolution tracking, contradiction detection, and the skill interface. Pasting text is like reading a dictionary instead of speaking a language. |
 | "Is this ethical?" | Everything is sourced from public content with full attribution. If a thinker objects, their brain gets pulled immediately. We also offer "Claim Your Brain" — thinkers can verify, endorse, and share revenue. Ethics-first. |
 | "Is 284 atoms enough?" | Belsky's brain covers all 77 editions of Implications at 100% coverage. Each atom is a discrete insight with source links, not a sentence fragment. And the connections between atoms multiply the value exponentially. |
