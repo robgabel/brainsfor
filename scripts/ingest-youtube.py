@@ -64,7 +64,8 @@ def fetch_transcript(video_id: str) -> dict:
         sys.exit(1)
 
     try:
-        transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+        ytt = YouTubeTranscriptApi()
+        transcript_list = ytt.list(video_id)
 
         # Prefer manual captions over auto-generated
         transcript = None
