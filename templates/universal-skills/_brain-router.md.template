@@ -5,10 +5,10 @@ This skill works across all installed brain packs. Specify which brain to consul
 ### Usage
 
 ```
-/{{skill_name}} --scott-belsky "Your question here"
-/{{skill_name}} --paul-graham "Your question here"
-/{{skill_name}} --scott-belsky --paul-graham "Your question here"   # multi-brain
-/{{skill_name}} "Your question here"                                 # uses default brain
+/<skill> --scott-belsky "Your question here"
+/<skill> --paul-graham "Your question here"
+/<skill> --scott-belsky --paul-graham "Your question here"   # multi-brain
+/<skill> "Your question here"                                 # uses default brain
 ```
 
 ### How Brain Routing Works

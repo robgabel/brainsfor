@@ -396,7 +396,8 @@ def export_skill_files(config: dict, atom_count: int, connection_count: int, out
         for template_file in sorted(skills_template_dir.glob("*.template")):
             with open(template_file) as f:
                 rendered = render_template(f.read(), config, extra_vars)
-            skill_name = template_file.stem  # e.g., "advise" from "advise.md"
+            # advise.md.template -> stem is "advise.md" -> strip .md to get "advise"
+            skill_name = template_file.stem.removesuffix(".md")
             skill_dir = skills_output_dir / skill_name
             skill_dir.mkdir(parents=True, exist_ok=True)
             output_file = skill_dir / "SKILL.md"
@@ -467,7 +468,8 @@ def export_universal_skills():
         # Inline the brain router where {{_brain-router}} appears
         content = content.replace("{{_brain-router}}", router_with_brains)
 
-        skill_name = template_file.stem  # e.g., "advise" from "advise.md"
+        # advise.md.template -> stem is "advise.md" -> strip .md to get "advise"
+        skill_name = template_file.stem.removesuffix(".md")
         skill_dir = output_dir / skill_name
         skill_dir.mkdir(parents=True, exist_ok=True)
         output_file = skill_dir / "SKILL.md"
