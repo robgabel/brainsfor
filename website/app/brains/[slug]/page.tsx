@@ -80,8 +80,7 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
             {/* CTA card */}
             <div className="w-full rounded-xl border border-border-indigo bg-white p-6 shadow-brain-elevated md:w-[320px]">
               <div className="mb-4">
-                <span className="text-2xl font-light text-muted line-through">${brain.price}</span>
-                <span className="ml-3 rounded-full bg-indigo-mist px-3 py-1 text-sm font-semibold text-indigo-deep">
+                <span className="rounded-full bg-indigo-mist px-3 py-1 text-sm font-semibold text-indigo-deep">
                   Free in Beta
                 </span>
               </div>
