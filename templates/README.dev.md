@@ -23,7 +23,81 @@ The system is **config-driven**. `brain.json` is the single source of truth. Tem
 
 ---
 
-## Step-by-Step: Building a New Brain
+## Environment Setup
+
+Before running any scripts, set these environment variables:
+
+```bash
+# Required for atom generation, voice enrichment, connection discovery, transcript decomposition
+export ANTHROPIC_API_KEY=sk-ant-...
+
+# Required for Supabase operations (table creation, atom loading, enrichment apply)
+export SUPABASE_SERVICE_KEY=eyJ...
+export SUPABASE_URL=https://uzediwokyshjbsymevtp.supabase.co
+
+# Optional — for YouTube transcript ingestion via web scraping fallback
+export FIRECRAWL_API_KEY=fc-...
+```
+
+**Recommended:** Add these to `~/rob-ai/.env` and source before running:
+
+```bash
+# Add once:
+cat >> ~/rob-ai/.env << 'EOF'
+ANTHROPIC_API_KEY=sk-ant-...
+SUPABASE_SERVICE_KEY=eyJ...
+SUPABASE_URL=https://uzediwokyshjbsymevtp.supabase.co
+EOF
+
+# Then before any pipeline work:
+source ~/rob-ai/.env
+```
+
+**Python dependencies:**
+```bash
+pip install anthropic youtube-transcript-api httpx
+```
+
+---
+
+## Quick Start: One-Command Build
+
+The fastest way to build a brain from an existing `brain.json`:
+
+```bash
+# Full build — generates atoms, merges, creates synthesis, exports pack, updates registry
+python scripts/build-brain.py --brain {slug}
+
+# With YouTube transcripts + connection enrichment
+python scripts/build-brain.py --brain {slug} --all
+
+# Skip atom generation (use existing research files)
+python scripts/build-brain.py --brain {slug} --skip-generate
+
+# Just rebuild the pack from existing atoms
+python scripts/build-brain.py --brain {slug} --stages merge,synthesis,export,index
+
+# Preview what would happen
+python scripts/build-brain.py --brain {slug} --dry-run
+```
+
+**Stages (in order):**
+| Stage | What it does | Requires |
+|-------|-------------|----------|
+| `generate` | Deep-research atom generation via Claude (15-25 atoms per cluster) | `ANTHROPIC_API_KEY` |
+| `youtube` | Fetch YouTube transcripts + decompose into atoms | `youtube-transcript-api` + `ANTHROPIC_API_KEY` |
+| `merge` | Combine all `research/*-atoms.json` → `all-atoms.json` with UUIDs | — |
+| `synthesis` | Generate `synthesis.md` from `brain.json` synthesis section | — |
+| `connections` | Discover topic-overlap + LLM connections between atoms | `ANTHROPIC_API_KEY` (optional) |
+| `export` | Generate complete pack (brain-atoms.json, brain-context.md, skills, explore.html) | — |
+| `index` | Update `brains/index.json` registry with atom count and status | — |
+
+Default stages: `generate → merge → synthesis → export → index`
+Add `--youtube` or `--connections` to include those stages, or `--all` for everything.
+
+---
+
+## Step-by-Step: Building a New Brain (Manual)
 
 ### Phase 1: Setup (~30 min)
 
@@ -273,7 +347,10 @@ brainsforsale/
   IMPROVEMENTS.md                    ← backlog
 
   scripts/                           ← SHARED pipeline (brain-agnostic)
+    build-brain.py                   ← ONE-COMMAND BUILD: chains all stages below
     export-brain.py                  ← generic: --brain {slug}
+    generate-atoms-research.py       ← deep-research atom generation via Claude
+    ingest-youtube.py                ← YouTube transcript extraction + decomposition
     enrich-voice.py                  ← generic: --brain {slug}
     enrich-connections.py            ← generic: --brain {slug}
 
