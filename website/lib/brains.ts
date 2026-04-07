@@ -1,3 +1,6 @@
+import fs from "fs";
+import path from "path";
+
 export interface Brain {
   slug: string;
   name: string;
@@ -14,53 +17,70 @@ export interface Brain {
   packPath: string;
 }
 
-export const BRAINS: Brain[] = [
-  {
-    slug: "scott-belsky",
-    name: "Scott Belsky",
-    source: "Implications newsletter",
-    tagline: "Product intuition, creative leadership, Adobe/VC lens",
-    bio: "Chief Strategy Officer at Adobe, founder of Behance, early investor in Uber, Pinterest, and Perplexity. Author of The Messy Middle. Writes Implications, a newsletter on product, design, and the future of creative tools.",
-    atomCount: 284,
-    connectionCount: 430,
-    editionCount: 77,
-    clusterCount: 16,
-    status: "live",
-    price: 29,
-    topics: ["Product & Design", "AI & Technology", "Leadership", "Creativity", "Business Models", "Culture & Teams"],
-    packPath: "brains/scott-belsky/pack/",
-  },
-  {
-    slug: "paul-graham",
-    name: "Paul Graham",
-    source: "paulgraham.com essays (220+)",
-    tagline: "Startup wisdom, essays on thinking, Y Combinator founder",
-    bio: "Co-founder of Y Combinator, creator of Hacker News, Lisp programmer, essayist. His essays on startups, programming, and independent thinking have shaped a generation of founders.",
-    atomCount: 182,
-    connectionCount: 498,
-    editionCount: 220,
-    clusterCount: 12,
-    status: "live",
-    price: 29,
-    topics: ["Startups", "Programming", "Writing", "Independent Thinking"],
-    packPath: "brains/paul-graham/pack/",
-  },
-  {
-    slug: "peter-attia",
-    name: "Peter Attia",
-    source: "The Drive podcast + Outlive",
-    tagline: "Longevity science, health optimization, evidence-based medicine",
-    bio: "Physician focused on the applied science of longevity. Host of The Drive podcast (300+ episodes), author of Outlive: The Science and Art of Longevity. Translates complex medical research into actionable frameworks.",
-    atomCount: 0,
-    connectionCount: 0,
-    editionCount: 300,
-    clusterCount: 0,
-    status: "scaffolded",
-    price: 29,
-    topics: ["Longevity", "Exercise", "Nutrition", "Sleep", "Mental Health"],
-    packPath: "brains/peter-attia/pack/",
-  },
-];
+interface IndexEntry {
+  slug: string;
+  name: string;
+  source: string;
+  atom_count: number;
+  connection_count: number;
+  status: string;
+  pack_path: string;
+}
+
+interface BrainConfig {
+  brain_name: string;
+  brain_source_description: string;
+  brain_tagline?: string;
+  edition_count?: number;
+  clusters?: Record<string, unknown>;
+  website?: {
+    tagline?: string;
+    bio?: string;
+    topics?: string[];
+    price?: number;
+  };
+}
+
+const BRAINS_DIR = path.join(process.cwd(), "..", "brains");
+
+function loadBrains(): Brain[] {
+  const indexPath = path.join(BRAINS_DIR, "index.json");
+  const index: { brains: IndexEntry[] } = JSON.parse(
+    fs.readFileSync(indexPath, "utf-8"),
+  );
+
+  return index.brains.map((entry) => {
+    const configPath = path.join(BRAINS_DIR, entry.slug, "brain.json");
+    const config: BrainConfig = JSON.parse(
+      fs.readFileSync(configPath, "utf-8"),
+    );
+
+    const statusMap: Record<string, Brain["status"]> = {
+      live: "live",
+      ingesting: "scaffolded",
+      scaffolded: "scaffolded",
+      requested: "requested",
+    };
+
+    return {
+      slug: entry.slug,
+      name: config.brain_name,
+      source: config.brain_source_description,
+      tagline: config.website?.tagline ?? config.brain_tagline ?? "",
+      bio: config.website?.bio ?? "",
+      atomCount: entry.atom_count,
+      connectionCount: entry.connection_count,
+      editionCount: config.edition_count ?? 0,
+      clusterCount: Object.keys(config.clusters ?? {}).length,
+      status: statusMap[entry.status] ?? "scaffolded",
+      price: config.website?.price ?? 29,
+      topics: config.website?.topics ?? [],
+      packPath: entry.pack_path,
+    };
+  });
+}
+
+export const BRAINS: Brain[] = loadBrains();
 
 export function getBrain(slug: string): Brain | undefined {
   return BRAINS.find((b) => b.slug === slug);
@@ -71,16 +91,16 @@ export function getLiveBrains(): Brain[] {
 }
 
 export const SKILLS = [
-  { name: "advise", title: "Advise", desc: "Strategic counsel on your decisions", icon: "🧭", workflow: "Decision" },
-  { name: "teach", title: "Teach", desc: "Learn concepts through their lens", icon: "📖", workflow: "Learning" },
-  { name: "debate", title: "Debate", desc: "Stress-test your thinking", icon: "⚔️", workflow: "Decision" },
-  { name: "connect", title: "Connect", desc: "Find unexpected bridges to your work", icon: "🔗", workflow: "Creative" },
-  { name: "evolve", title: "Evolve", desc: "Track how their thinking changed over time", icon: "📈", workflow: "Learning" },
-  { name: "apply", title: "Apply", desc: "Turn frameworks into step-by-step action", icon: "🛠️", workflow: "Decision" },
-  { name: "mashup", title: "Mashup", desc: "Synthesize ideas across multiple brains", icon: "🧬", workflow: "Creative" },
-  { name: "brainfight", title: "Brainfight", desc: "Pit two brains head-to-head on a topic", icon: "🥊", workflow: "Research" },
-  { name: "deep-dive", title: "Deep Dive", desc: "Everything a brain knows about one topic", icon: "🔬", workflow: "Research" },
-  { name: "surprise", title: "Surprise", desc: "Surface an unexpected insight", icon: "✨", workflow: "Creative" },
+  { name: "advise", title: "Advise", desc: "Strategic counsel on your decisions", icon: "\u{1F9ED}", workflow: "Decision" },
+  { name: "teach", title: "Teach", desc: "Learn concepts through their lens", icon: "\u{1F4D6}", workflow: "Learning" },
+  { name: "debate", title: "Debate", desc: "Stress-test your thinking", icon: "\u2694\uFE0F", workflow: "Decision" },
+  { name: "connect", title: "Connect", desc: "Find unexpected bridges to your work", icon: "\u{1F517}", workflow: "Creative" },
+  { name: "evolve", title: "Evolve", desc: "Track how their thinking changed over time", icon: "\u{1F4C8}", workflow: "Learning" },
+  { name: "apply", title: "Apply", desc: "Turn frameworks into step-by-step action", icon: "\u{1F6E0}\uFE0F", workflow: "Decision" },
+  { name: "mashup", title: "Mashup", desc: "Synthesize ideas across multiple brains", icon: "\u{1F9EC}", workflow: "Creative" },
+  { name: "brainfight", title: "Brainfight", desc: "Pit two brains head-to-head on a topic", icon: "\u{1F94A}", workflow: "Research" },
+  { name: "deep-dive", title: "Deep Dive", desc: "Everything a brain knows about one topic", icon: "\u{1F52C}", workflow: "Research" },
+  { name: "surprise", title: "Surprise", desc: "Surface an unexpected insight", icon: "\u2728", workflow: "Creative" },
 ];
 
 export const TIERS = [

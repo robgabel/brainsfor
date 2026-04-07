@@ -4,9 +4,9 @@
   "brain_last_name": "Attia",
   "brain_slug": "peter-attia",
   "brain_possessive": "his",
-  "brain_source_description": "\"The Drive\" podcast and \"Outlive\" book",
+  "brain_source_description": "\"The Drive\" podcast and reviews of \"Outlive\" book",
   "brain_source_url": "peterattiamd.com",
-  "brain_source_detail": "400+ episodes of The Drive podcast, Outlive (2023), and detailed blog posts",
+  "brain_source_detail": "400+ episodes of The Drive podcast, reviews of Outlive (2023), and detailed blog posts",
   "brain_tagline": "a curated collection of his most rigorous thinking on longevity, metabolic health, exercise physiology, and the Four Horsemen of chronic disease",
   "brain_bio": "Peter Attia is a physician and longevity expert who has reshaped how high-performers think about health across decades. His \"Outlive\" book and \"The Drive\" podcast are the primary source for evidence-based longevity strategy, blending mechanistic biochemistry with practical behavior change.",
   "topic_examples": "Zone 2 training, VO2 max, Four Horsemen, metabolic health, cardiovascular prevention, cancer screening, emotional resilience, sleep, pharmacology, muscle",
@@ -57,6 +57,19 @@
     "cancer_screening", "sleep_circadian", "emotional_health", "cognitive_decline",
     "pharmacology", "biomarkers_testing", "lifespan_management"
   ],
+
+  "youtube_sources": {
+    "source_type": "podcast-transcript",
+    "default_language": "en",
+    "videos": [
+      "https://www.youtube.com/watch?v=jN0pRAqiUJU",
+      "https://www.youtube.com/watch?v=ufsIA5NARIo",
+      "https://www.youtube.com/watch?v=vdhJqOKUmXI",
+      "https://www.youtube.com/watch?v=CXYOARL7nbg",
+      "https://www.youtube.com/watch?v=KYoMPxSfBGs"
+    ],
+    "exclude_videos": []
+  },
 
   "synthesis": {
     "hero_tagline": "Medicine 3.0, the Four Horsemen, and the science of living longer and better",
@@ -138,5 +151,11 @@
       {"name": "deep-dive", "title": "Everything They Know", "desc": "Exhaustive analysis — pull ALL atoms, map connections, synthesize.", "example": "/deep-dive \"Peter's complete framework for cardiovascular disease prevention\""},
       {"name": "surprise", "title": "Show Me Something Unexpected", "desc": "Random high-quality atom for daily inspiration.", "example": "/surprise"}
     ]
+  },
+  "website": {
+    "tagline": "Longevity science, health optimization, evidence-based medicine",
+    "bio": "Physician focused on the applied science of longevity. Host of The Drive podcast (300+ episodes), author of Outlive. Translates complex medical research into actionable frameworks.",
+    "topics": ["Longevity", "Exercise", "Nutrition", "Sleep", "Mental Health"],
+    "price": 29
   }
 }
