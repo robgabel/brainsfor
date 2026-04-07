@@ -51,6 +51,6 @@ Load relevant cluster files for both sides. For cross-brain fights, load both br
 
 ## Data
 
-- **atoms:** brain-atoms.json (170 atoms, 32 connections)
+- **atoms:** brain-atoms.json (170 atoms, 792 connections)
 - **clusters:** clusters/manifest.json + individual cluster .md files
 - **shared rules:** See "LLM Usage Rules" in brain-context.md

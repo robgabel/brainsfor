@@ -1869,7 +1869,8 @@
 
       graphNodes = atomsData.map((atom, i) => {
         const angle = (i / atomsData.length) * Math.PI * 2;
-        const radius = 150 + Math.random() * 200;
+        const maxSpread = Math.min(graphWidth, graphHeight) * 0.35;
+        const radius = maxSpread * 0.4 + Math.random() * maxSpread * 0.6;
         return {
           id: atom.id,
           x: cx + Math.cos(angle) * radius + (Math.random() - 0.5) * 100,
@@ -1982,16 +1983,24 @@
 
     function runGraphSimulation() {
       let alpha = 1;
-      const decay = 0.995;
+      const decay = 0.997;
+      const alphaMin = 0.005;
+      // Repulsion floor: never let repulsion drop below this fraction of full strength
+      const repulsionFloor = 0.15;
+      // Scale repulsion up for sparse graphs (fewer connections = less structural support)
+      const connectionRatio = graphEdges.length / Math.max(graphNodes.length, 1);
+      const repulsionStrength = connectionRatio < 1 ? 300 : 200;
 
       function tick() {
         alpha *= decay;
-        if (alpha < 0.001) alpha = 0.001;
+        if (alpha < alphaMin) alpha = alphaMin;
+        const repulsionAlpha = Math.max(alpha, repulsionFloor);
 
-        // Center gravity
+        // Center gravity — very gentle, scales down as layout settles
+        const centerGravity = 0.0002 * alpha;
         graphNodes.forEach(n => {
-          n.vx += (graphWidth / 2 - n.x) * 0.0003;
-          n.vy += (graphHeight / 2 - n.y) * 0.0003;
+          n.vx += (graphWidth / 2 - n.x) * centerGravity;
+          n.vy += (graphHeight / 2 - n.y) * centerGravity;
         });
 
         // Cluster gravity — pull nodes toward cluster center
@@ -2010,12 +2019,12 @@
         graphNodes.forEach(n => {
           const cc = clusterCenters[n.cluster];
           if (cc) {
-            n.vx += (cc.x - n.x) * 0.001 * alpha;
-            n.vy += (cc.y - n.y) * 0.001 * alpha;
+            n.vx += (cc.x - n.x) * 0.0008 * alpha;
+            n.vy += (cc.y - n.y) * 0.0008 * alpha;
           }
         });
 
-        // Repulsion (Barnes-Hut would be better for perf, but N=182 is fine)
+        // Repulsion — structural force, stays active to prevent collapse
         for (let i = 0; i < graphNodes.length; i++) {
           for (let j = i + 1; j < graphNodes.length; j++) {
             const a = graphNodes[i];
@@ -2024,7 +2033,7 @@
             let dy = b.y - a.y;
             let dist = Math.sqrt(dx * dx + dy * dy) || 1;
             if (dist < 20) dist = 20;
-            const force = -200 * alpha / (dist * dist);
+            const force = -repulsionStrength * repulsionAlpha / (dist * dist);
             const fx = (dx / dist) * force;
             const fy = (dy / dist) * force;
             a.vx -= fx;
@@ -2050,16 +2059,17 @@
           e.target.vy -= fy;
         });
 
-        // Apply velocities
+        // Apply velocities with damping
         graphNodes.forEach(n => {
           if (n === graphDragNode) return;
-          n.vx *= 0.85;
-          n.vy *= 0.85;
+          n.vx *= 0.82;
+          n.vy *= 0.82;
           n.x += n.vx;
           n.y += n.vy;
-          // Keep in bounds
-          n.x = Math.max(n.radius, Math.min(graphWidth - n.radius, n.x));
-          n.y = Math.max(n.radius, Math.min(graphHeight - n.radius, n.y));
+          // Keep in bounds with padding
+          const pad = 20;
+          n.x = Math.max(n.radius + pad, Math.min(graphWidth - n.radius - pad, n.x));
+          n.y = Math.max(n.radius + pad, Math.min(graphHeight - n.radius - pad, n.y));
         });
 
         drawGraph();

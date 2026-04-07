@@ -3,12 +3,14 @@
 Connection enrichment for brain atoms (generic — works with any brain).
 
 Discovers new connections between atoms using:
-1. Topic overlap (Jaccard similarity) for "related" connections
-2. LLM-assisted analysis for "contradicts", "extends", and "inspired_by"
+1. Topic overlap (Jaccard similarity) — within AND across clusters
+2. Temporal proximity — atoms published within 7 days with shared topics
+3. LLM-assisted analysis — contradicts, extends, inspired_by (within + cross-cluster)
 
 Usage:
   python scripts/enrich-connections.py --brain scott-belsky --discover
   python scripts/enrich-connections.py --brain scott-belsky --discover --llm
+  python scripts/enrich-connections.py --brain scott-belsky --discover --llm --auto-apply
   python scripts/enrich-connections.py --brain scott-belsky --apply FILE
   python scripts/enrich-connections.py --brain scott-belsky --stats
 
@@ -22,6 +24,7 @@ import sys
 import time
 import uuid
 from collections import defaultdict
+from datetime import datetime
 from itertools import combinations
 from pathlib import Path
 
@@ -46,6 +49,9 @@ BRAINS_DIR = ROOT_DIR / "brains"
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "https://uzediwokyshjbsymevtp.supabase.co")
 SUPABASE_KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+
+# LLM model — Sonnet for quality contradiction detection
+LLM_MODEL = "claude-3-haiku-20240307"
 
 
 def load_brain_config(slug: str) -> dict:
@@ -88,13 +94,19 @@ def jaccard_similarity(set_a: set, set_b: set) -> float:
     return len(intersection) / len(union)
 
 
-def discover_topic_overlap(atoms: list, existing: set, threshold: float = 0.3) -> list:
-    """Find candidate connections via topic overlap within same cluster."""
+def discover_topic_overlap(atoms: list, existing: set, threshold: float = 0.3, cross_cluster: bool = True) -> list:
+    """Find candidate connections via topic overlap.
+
+    When cross_cluster=True (default), also discovers connections between atoms
+    in different clusters using a higher threshold (0.5) to reduce noise.
+    """
     candidates = []
     clusters = defaultdict(list)
     for atom in atoms:
         clusters[atom.get("cluster", "unknown")].append(atom)
 
+    # Within-cluster: use standard threshold
+    within_count = 0
     for cluster_key, cluster_atoms in clusters.items():
         for a, b in combinations(cluster_atoms, 2):
             pair = tuple(sorted([a["id"], b["id"]]))
@@ -118,7 +130,43 @@ def discover_topic_overlap(atoms: list, existing: set, threshold: float = 0.3) -
                     "content_2": b["content"][:100],
                     "shared_topics": list(topics_a & topics_b)
                 })
+                within_count += 1
 
+    # Cross-cluster: higher threshold to keep quality high
+    cross_count = 0
+    if cross_cluster:
+        cross_threshold = max(threshold, 0.5)  # At least 0.5 for cross-cluster
+        cluster_keys = sorted(clusters.keys())
+        for ci in range(len(cluster_keys)):
+            for cj in range(ci + 1, len(cluster_keys)):
+                atoms_ci = clusters[cluster_keys[ci]]
+                atoms_cj = clusters[cluster_keys[cj]]
+                for a in atoms_ci:
+                    for b in atoms_cj:
+                        pair = tuple(sorted([a["id"], b["id"]]))
+                        if pair in existing:
+                            continue
+
+                        topics_a = set(a.get("topics") or [])
+                        topics_b = set(b.get("topics") or [])
+                        sim = jaccard_similarity(topics_a, topics_b)
+
+                        if sim >= cross_threshold:
+                            candidates.append({
+                                "atom_id_1": a["id"],
+                                "atom_id_2": b["id"],
+                                "relationship": "related",
+                                "confidence": round(min(sim, 0.85), 2),  # Slightly lower cap for cross-cluster
+                                "method": "topic_overlap_cross_cluster",
+                                "cluster": f"{cluster_keys[ci]} ↔ {cluster_keys[cj]}",
+                                "similarity": round(sim, 3),
+                                "content_1": a["content"][:100],
+                                "content_2": b["content"][:100],
+                                "shared_topics": list(topics_a & topics_b)
+                            })
+                            cross_count += 1
+
+    print(f"    Within-cluster: {within_count}, Cross-cluster: {cross_count}")
     candidates.sort(key=lambda c: c["similarity"], reverse=True)
     return candidates
 
@@ -135,7 +183,6 @@ def discover_temporal(atoms: list, existing: set) -> list:
             date_a = a["source_date"][:10]
             date_b = b["source_date"][:10]
 
-            from datetime import datetime
             try:
                 da = datetime.strptime(date_a, "%Y-%m-%d")
                 db = datetime.strptime(date_b, "%Y-%m-%d")
@@ -168,8 +215,8 @@ def discover_temporal(atoms: list, existing: set) -> list:
     return candidates
 
 
-def discover_llm_connections(atoms: list, existing: set, brain_name: str, source_desc: str) -> list:
-    """Use LLM to find contradicts, extends, inspired_by within each cluster."""
+def discover_llm_connections(atoms: list, existing: set, brain_name: str, source_desc: str, cross_cluster: bool = True) -> list:
+    """Use LLM to find contradicts, extends, inspired_by within and across clusters."""
     import anthropic
     client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
     candidates = []
@@ -178,7 +225,8 @@ def discover_llm_connections(atoms: list, existing: set, brain_name: str, source
     for atom in atoms:
         clusters[atom.get("cluster", "unknown")].append(atom)
 
-    prompt_template = """Analyze these knowledge atoms from {brain_name}'s {source_desc}. All are in the "{cluster}" cluster.
+    # --- Within-cluster analysis ---
+    within_prompt = """Analyze these knowledge atoms from {brain_name}'s {source_desc}. All are in the "{cluster}" cluster.
 
 Find connections between atoms. Focus ESPECIALLY on:
 1. **contradicts** — Where {brain_name} contradicts themselves, holds tension between opposing ideas, or where two atoms pull in different directions. These are the MOST VALUABLE. Be aggressive — intellectual tension is the point.
@@ -192,66 +240,159 @@ If no connections found, return [].
 ATOMS:
 {atoms_text}"""
 
-    for cluster_key, cluster_atoms in clusters.items():
+    cluster_keys = sorted(clusters.keys())
+    total_steps = len([k for k in cluster_keys if len(clusters[k]) >= 3])
+    if cross_cluster:
+        total_steps += len(cluster_keys) * (len(cluster_keys) - 1) // 2
+    step = 0
+
+    for cluster_key in cluster_keys:
+        cluster_atoms = clusters[cluster_key]
         if len(cluster_atoms) < 3:
             continue
 
-        print(f"  LLM analyzing cluster: {cluster_key} ({len(cluster_atoms)} atoms)...")
+        step += 1
+        print(f"  [{step}/{total_steps}] LLM within-cluster: {cluster_key} ({len(cluster_atoms)} atoms)...")
 
         atoms_text = ""
         for i, atom in enumerate(cluster_atoms):
             date = (atom.get("source_date") or "")[:10]
             atoms_text += f"\n[{i}] ({date}) {atom['content']}\n"
 
-        prompt = prompt_template.format(
+        prompt = within_prompt.format(
             brain_name=brain_name,
             source_desc=source_desc,
             cluster=cluster_key,
             atoms_text=atoms_text
         )
 
-        try:
-            message = client.messages.create(
-                model="claude-haiku-4-5-20251001",
-                max_tokens=2000,
-                messages=[{"role": "user", "content": prompt}]
-            )
-            text = message.content[0].text.strip()
-            if text.startswith("```"):
-                text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-
-            found = json.loads(text)
-            for item in found:
-                idx_a = item.get("atom_1_index", -1)
-                idx_b = item.get("atom_2_index", -1)
-                if idx_a < 0 or idx_b < 0 or idx_a >= len(cluster_atoms) or idx_b >= len(cluster_atoms):
-                    continue
-
-                a = cluster_atoms[idx_a]
-                b = cluster_atoms[idx_b]
-                pair = tuple(sorted([a["id"], b["id"]]))
-                if pair in existing:
-                    continue
-
-                candidates.append({
-                    "atom_id_1": a["id"],
-                    "atom_id_2": b["id"],
-                    "relationship": item["relationship"],
-                    "confidence": item.get("confidence", 0.80),
-                    "method": "llm_analysis",
-                    "cluster": cluster_key,
-                    "rationale": item.get("rationale", ""),
-                    "content_1": a["content"][:100],
-                    "content_2": b["content"][:100]
-                })
-                existing.add(pair)
-
-        except (json.JSONDecodeError, KeyError) as e:
-            print(f"    Parse error for {cluster_key}: {e}")
-        except Exception as e:
-            print(f"    Error for {cluster_key}: {e}")
-
+        new = _call_llm_for_connections(client, prompt, cluster_atoms, existing, cluster_key)
+        candidates.extend(new)
         time.sleep(0.5)
+
+    # --- Cross-cluster analysis ---
+    if cross_cluster:
+        cross_prompt = """Analyze these knowledge atoms from {brain_name}'s {source_desc}. They come from TWO DIFFERENT topic clusters: "{cluster_a}" and "{cluster_b}".
+
+Find CROSS-CLUSTER connections — ideas that bridge these domains. Focus on:
+1. **contradicts** — Where an idea in one domain contradicts or creates tension with an idea in another domain. MOST VALUABLE.
+2. **extends** — Where an idea in one domain deepens or builds on an idea from the other
+3. **inspired_by** — Where thinking in one domain clearly influenced the other
+
+These cross-cluster connections are especially valuable because they reveal how {brain_name}'s thinking connects across different domains.
+
+Return a JSON array. Each item: {{"atom_1_index": N, "atom_2_index": M, "relationship": "contradicts|extends|inspired_by", "confidence": 0.70-0.95, "rationale": "one sentence why"}}
+
+Atom indices 0-{last_a} are from "{cluster_a}", indices {first_b}-{last_b} are from "{cluster_b}".
+
+If no cross-cluster connections found, return [].
+
+ATOMS:
+{atoms_text}"""
+
+        for ci in range(len(cluster_keys)):
+            for cj in range(ci + 1, len(cluster_keys)):
+                ca = cluster_keys[ci]
+                cb = cluster_keys[cj]
+                atoms_a = clusters[ca]
+                atoms_b = clusters[cb]
+
+                # Skip if either cluster is too small
+                if len(atoms_a) < 2 or len(atoms_b) < 2:
+                    continue
+
+                # For large cluster pairs, sample to keep context manageable
+                max_per_cluster = 15
+                sample_a = atoms_a[:max_per_cluster] if len(atoms_a) > max_per_cluster else atoms_a
+                sample_b = atoms_b[:max_per_cluster] if len(atoms_b) > max_per_cluster else atoms_b
+
+                combined = sample_a + sample_b
+
+                step += 1
+                print(f"  [{step}/{total_steps}] LLM cross-cluster: {ca} ↔ {cb} ({len(sample_a)}+{len(sample_b)} atoms)...")
+
+                atoms_text = ""
+                for i, atom in enumerate(combined):
+                    date = (atom.get("source_date") or "")[:10]
+                    label = ca if i < len(sample_a) else cb
+                    atoms_text += f"\n[{i}] [{label}] ({date}) {atom['content']}\n"
+
+                prompt = cross_prompt.format(
+                    brain_name=brain_name,
+                    source_desc=source_desc,
+                    cluster_a=ca,
+                    cluster_b=cb,
+                    last_a=len(sample_a) - 1,
+                    first_b=len(sample_a),
+                    last_b=len(combined) - 1,
+                    atoms_text=atoms_text
+                )
+
+                new = _call_llm_for_connections(client, prompt, combined, existing, f"{ca} ↔ {cb}")
+                candidates.extend(new)
+                time.sleep(0.5)
+
+    return candidates
+
+
+def _call_llm_for_connections(client, prompt: str, atoms_list: list, existing: set, cluster_label: str) -> list:
+    """Call LLM and parse connection candidates. Shared by within/cross-cluster analysis."""
+    candidates = []
+    try:
+        message = client.messages.create(
+            model=LLM_MODEL,
+            max_tokens=4000,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        text = message.content[0].text.strip()
+        if text.startswith("```"):
+            text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+
+        found = json.loads(text)
+
+        # Deduplicate by atom pair within this batch
+        seen_pairs = set()
+        for item in found:
+            idx_a = item.get("atom_1_index", -1)
+            idx_b = item.get("atom_2_index", -1)
+            if idx_a < 0 or idx_b < 0 or idx_a >= len(atoms_list) or idx_b >= len(atoms_list):
+                continue
+
+            a = atoms_list[idx_a]
+            b = atoms_list[idx_b]
+            pair = tuple(sorted([a["id"], b["id"]]))
+
+            if pair in existing or pair in seen_pairs:
+                continue
+            seen_pairs.add(pair)
+
+            rel = item.get("relationship", "related")
+            if rel not in ("contradicts", "extends", "inspired_by", "related"):
+                rel = "related"
+
+            candidates.append({
+                "atom_id_1": a["id"],
+                "atom_id_2": b["id"],
+                "relationship": rel,
+                "confidence": item.get("confidence", 0.80),
+                "method": "llm_analysis",
+                "cluster": cluster_label,
+                "rationale": item.get("rationale", ""),
+                "content_1": a["content"][:100],
+                "content_2": b["content"][:100]
+            })
+            existing.add(pair)
+
+        rel_breakdown = defaultdict(int)
+        for c in candidates:
+            rel_breakdown[c["relationship"]] += 1
+        if candidates:
+            print(f"    Found {len(candidates)}: {dict(rel_breakdown)}")
+
+    except (json.JSONDecodeError, KeyError) as e:
+        print(f"    Parse error for {cluster_label}: {e}")
+    except Exception as e:
+        print(f"    Error for {cluster_label}: {e}")
 
     return candidates
 
@@ -281,7 +422,28 @@ def print_stats(atoms: list, connections: list, existing: set):
     for rel, count in sorted(rel_counts.items(), key=lambda x: -x[1]):
         print(f"  {rel}: {count}")
 
-    print(f"\nTarget: 800+ connections, 50+ contradicts, 0 orphans")
+    # Quality assessment
+    contradicts = rel_counts.get("contradicts", 0)
+    inspired = rel_counts.get("inspired_by", 0)
+    print(f"\n--- Quality Assessment ---")
+    if contradicts < 5:
+        print(f"  ⚠️  contradicts: {contradicts} (target: 30+) — run with --llm to add")
+    elif contradicts < 30:
+        print(f"  🔶 contradicts: {contradicts} (target: 30+)")
+    else:
+        print(f"  ✅ contradicts: {contradicts} (target: 30+)")
+
+    if inspired < 10:
+        print(f"  ⚠️  inspired_by: {inspired} (target: 20+) — run with --llm to add")
+    else:
+        print(f"  ✅ inspired_by: {inspired} (target: 20+)")
+
+    if orphans > 0:
+        print(f"  ⚠️  orphans: {orphans} (target: 0)")
+    else:
+        print(f"  ✅ orphans: 0")
+
+    print(f"\nTarget: 800+ connections, 30+ contradicts, 20+ inspired_by, 0 orphans")
 
 
 def apply_connections(supabase, connections_table: str, filepath: str):
@@ -290,8 +452,11 @@ def apply_connections(supabase, connections_table: str, filepath: str):
         candidates = json.load(f)
 
     applied = 0
+    skipped = 0
+    errors = 0
     for item in candidates:
         if item.get("_skip"):
+            skipped += 1
             continue
 
         row = {
@@ -306,9 +471,10 @@ def apply_connections(supabase, connections_table: str, filepath: str):
             supabase.table(connections_table).insert(row).execute()
             applied += 1
         except Exception as e:
+            errors += 1
             print(f"  Error inserting: {e}")
 
-    print(f"\nApplied {applied} new connections")
+    print(f"\nApplied {applied} new connections (skipped {skipped}, errors {errors})")
 
 
 def main():
@@ -316,10 +482,18 @@ def main():
     parser.add_argument("--brain", required=True, help="Brain slug (matches brains/{slug}/brain.json)")
     parser.add_argument("--discover", action="store_true", help="Find candidate connections")
     parser.add_argument("--llm", action="store_true", help="Include LLM-assisted discovery (slower, better)")
-    parser.add_argument("--apply", metavar="FILE", help="Write approved connections to Supabase")
+    parser.add_argument("--cross-cluster", action="store_true", default=True,
+                        help="Include cross-cluster connections (default: true)")
+    parser.add_argument("--no-cross-cluster", action="store_true", help="Skip cross-cluster connections")
+    parser.add_argument("--auto-apply", action="store_true",
+                        help="Automatically apply discovered connections to Supabase (no review step)")
+    parser.add_argument("--apply", metavar="FILE", help="Write approved connections from review file to Supabase")
     parser.add_argument("--stats", action="store_true", help="Show current connection stats")
     parser.add_argument("--threshold", type=float, default=0.3, help="Jaccard threshold (default: 0.3)")
     args = parser.parse_args()
+
+    if args.no_cross_cluster:
+        args.cross_cluster = False
 
     if not SUPABASE_KEY:
         print("ERROR: Set SUPABASE_SERVICE_KEY in .env")
@@ -339,6 +513,7 @@ def main():
 
     print(f"Brain: {brain_name} ({args.brain})")
     print(f"Tables: {atoms_table}, {connections_table}")
+    print(f"LLM model: {LLM_MODEL}")
 
     supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
@@ -360,9 +535,10 @@ def main():
 
     if args.discover:
         all_candidates = []
+        start_time = time.time()
 
-        print("\nDiscovering topic overlap connections...")
-        topic_candidates = discover_topic_overlap(atoms, existing, args.threshold)
+        print(f"\nDiscovering topic overlap connections (cross-cluster: {args.cross_cluster})...")
+        topic_candidates = discover_topic_overlap(atoms, existing, args.threshold, cross_cluster=args.cross_cluster)
         print(f"  Found {len(topic_candidates)} candidates via topic overlap")
         all_candidates.extend(topic_candidates)
 
@@ -383,29 +559,45 @@ def main():
             if not ANTHROPIC_KEY:
                 print("ERROR: Set ANTHROPIC_API_KEY for --llm mode")
                 sys.exit(1)
-            print("\nDiscovering LLM-assisted connections...")
-            llm_candidates = discover_llm_connections(atoms, existing, brain_name, source_desc)
+            print(f"\nDiscovering LLM-assisted connections (cross-cluster: {args.cross_cluster})...")
+            llm_candidates = discover_llm_connections(
+                atoms, existing, brain_name, source_desc,
+                cross_cluster=args.cross_cluster
+            )
             print(f"  Found {len(llm_candidates)} candidates via LLM analysis")
             all_candidates.extend(llm_candidates)
 
+        elapsed = time.time() - start_time
         rel_summary = defaultdict(int)
         method_summary = defaultdict(int)
         for c in all_candidates:
             rel_summary[c["relationship"]] += 1
             method_summary[c["method"]] += 1
 
-        print(f"\n--- Discovery Summary ---")
+        print(f"\n--- Discovery Summary ({elapsed:.0f}s) ---")
         print(f"Total candidates: {len(all_candidates)}")
         print(f"By relationship: {dict(rel_summary)}")
         print(f"By method: {dict(method_summary)}")
         print(f"Would bring total to: {len(connections) + len(all_candidates)}")
 
-        output_dir.mkdir(exist_ok=True)
-        output_file = output_dir / "connection-candidates.json"
-        with open(output_file, "w") as f:
-            json.dump(all_candidates, f, indent=2)
-        print(f"\nReview file: {output_file}")
-        print(f"To apply: python scripts/enrich-connections.py --brain {args.brain} --apply {output_file}")
+        if args.auto_apply and all_candidates:
+            print(f"\n--- Auto-applying {len(all_candidates)} connections ---")
+            output_dir.mkdir(exist_ok=True)
+            temp_file = output_dir / "connection-candidates-autoapply.json"
+            with open(temp_file, "w") as f:
+                json.dump(all_candidates, f, indent=2)
+            apply_connections(supabase, connections_table, str(temp_file))
+            print("Done. Re-export the brain pack to update brain-atoms.json.")
+        elif all_candidates:
+            output_dir.mkdir(exist_ok=True)
+            output_file = output_dir / "connection-candidates.json"
+            with open(output_file, "w") as f:
+                json.dump(all_candidates, f, indent=2)
+            print(f"\nReview file: {output_file}")
+            print(f"To apply: python scripts/enrich-connections.py --brain {args.brain} --apply {output_file}")
+            print(f"To auto-apply: add --auto-apply flag to skip review")
+        else:
+            print("\nNo new candidates found.")
         return
 
     parser.print_help()

@@ -328,4 +328,4 @@ Attia's career arc is itself a demonstration of Medicine 3.0 thinking — the sh
 
 ---
 
-*73 atoms · 15 clusters · 0 connections · Generated 2026-04-06*
+*73 atoms · 15 clusters · 40 connections · Generated 2026-04-06*

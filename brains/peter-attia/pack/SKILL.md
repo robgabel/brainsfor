@@ -10,7 +10,7 @@ Welcome to the **Attia Brain Pack** from [brainsforsale.com](https://brainsforsa
 ## What You're Getting
 
 - **73 knowledge atoms** — Core insights, frameworks, and strategic principles from 400+ episodes of The Drive podcast, Outlive (2023), and detailed blog posts
-- **0 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **40 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **10 specialized thinking skills** — Each designed to activate different modes of reasoning
 - **Cross-referenced topics** — Zone 2 training, VO2 max, Four Horsemen, metabolic health, cardiovascular prevention, cancer screening, emotional resilience, sleep, pharmacology, muscle, and more
 

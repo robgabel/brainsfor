@@ -51,6 +51,6 @@ Load relevant cluster file(s) from `clusters/`. If the framework spans clusters,
 
 ## Data
 
-- **atoms:** brain-atoms.json (73 atoms, 0 connections)
+- **atoms:** brain-atoms.json (73 atoms, 40 connections)
 - **clusters:** clusters/manifest.json + individual cluster .md files
 - **shared rules:** See "LLM Usage Rules" in brain-context.md

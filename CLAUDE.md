@@ -22,9 +22,11 @@ brainsforsale/
   .gitignore
 
   scripts/                           ← SHARED pipeline (brain-agnostic)
+    audit-brains.py                  ← QA validator: structural + data quality checks across all brains
     export-brain.py                  ← generic: --brain scott-belsky
     enrich-voice.py                  ← generic: --brain scott-belsky
     enrich-connections.py            ← generic: --brain scott-belsky
+    ingest-youtube.py                ← generic: --brain peter-attia (download + extract)
 
   templates/                         ← SHARED templates
     SKILL.md.template                ← brain-setup template
@@ -108,68 +110,40 @@ This data is exported into brain-atoms.json's `synthesis` key and rendered by ex
 | source_ref | text | URL to original newsletter edition |
 | source_date | timestamp | Publication date |
 
-### Environment Setup
-
-```bash
-# Add to ~/rob-ai/.env (one time):
-export ANTHROPIC_API_KEY=sk-ant-...       # Required for atom generation, connections, voice enrichment
-export SUPABASE_SERVICE_KEY=eyJ...        # Required for Supabase operations
-export SUPABASE_URL=https://uzediwokyshjbsymevtp.supabase.co
-export FIRECRAWL_API_KEY=fc-...           # Optional, for web scraping fallback
-
-# Source before any pipeline work:
-source ~/rob-ai/.env
-
-# Python deps:
-pip install anthropic youtube-transcript-api httpx
-```
-
-### Build Pipeline (one command)
-
-```bash
-# Build a brain from scratch (generates atoms, merges, exports, everything):
-source ~/rob-ai/.env && python scripts/build-brain.py --brain {slug}
-
-# With YouTube transcripts + connection enrichment:
-source ~/rob-ai/.env && python scripts/build-brain.py --brain {slug} --all
-
-# Rebuild pack from existing atoms (skip generation):
-source ~/rob-ai/.env && python scripts/build-brain.py --brain {slug} --skip-generate --connections
-
-# Dry run — preview what would happen:
-python scripts/build-brain.py --brain {slug} --dry-run
-```
-
-**Stages:** `generate → youtube → merge → synthesis → connections → export → index`
-
-### Adding a New Brain (3 steps)
-
-```bash
-# 1. Scaffold directory + copy brain.json template
-mkdir -p brains/{slug}/{source,research,data,pack}
-cp brains/steve-jobs/brain.json brains/{slug}/brain.json
-
-# 2. Edit brain.json — replace ALL values
-#    (name, bio, clusters, synthesis, skill examples — this is the creative work, ~1-2 hours)
-
-# 3. Build everything
-source ~/rob-ai/.env && python scripts/build-brain.py --brain {slug} --connections
-```
-
-That's it. The pipeline generates atoms, creates synthesis.md, discovers connections, exports the full pack, and updates the registry.
-
-For **living figures** with YouTube content: add `source/sources.json` with youtube_id entries, then use `--all`.
-For **deceased/pre-blogging figures**: deep-research generation handles it (no YouTube needed).
-
-### Individual Scripts (for manual control)
+### Export Pipeline
 
 ```
-scripts/build-brain.py                   ← ONE-COMMAND BUILD (chains all below)
-scripts/generate-atoms-research.py       ← deep-research atom generation via Claude
-scripts/ingest-youtube.py                ← YouTube transcript extraction + decomposition
-scripts/export-brain.py                  ← generic pack export: --brain {slug}
-scripts/enrich-voice.py                  ← extract original voice from source URLs
-scripts/enrich-connections.py            ← topic overlap + temporal + LLM connections
+brains/{slug}/brain.json (config) + Supabase data
+  → scripts/export-brain.py --brain {slug}
+    → brains/{slug}/pack/brain-atoms.json (structured data + synthesis)
+    → brains/{slug}/pack/brain-context.md (full narrative + skills)
+    → brains/{slug}/pack/explore.html (copied from templates/, reads brain-atoms.json)
+    → brains/{slug}/pack/skills/{name}/SKILL.md (thin reasoning modes)
+    → brains/{slug}/pack/SKILL.md, README.md (from templates)
+```
+
+### YouTube Transcript Ingestion (generic — `--brain {slug}`)
+
+```
+scripts/ingest-youtube.py --brain {slug} --download                   # Download transcripts from youtube_sources in brain.json
+scripts/ingest-youtube.py --brain {slug} --extract                    # Extract atoms from transcripts using Claude Haiku
+scripts/ingest-youtube.py --brain {slug} --download --extract         # Both phases
+scripts/ingest-youtube.py --brain {slug} --download --video VIDEO_ID  # Single video
+scripts/ingest-youtube.py --brain {slug} --extract --limit 5          # Limit to N transcripts
+scripts/ingest-youtube.py --brain {slug} --stats                      # Show download/extraction stats
+scripts/ingest-youtube.py --brain {slug} --dry-run                    # Preview without writing
+```
+
+Requires `youtube-transcript-api` (`pip install youtube-transcript-api`). Configure videos in brain.json `youtube_sources.videos`. Output: `brains/{slug}/research/youtube-atoms.json`.
+
+### Enrichment Scripts (generic — all accept `--brain {slug}`)
+
+```
+scripts/enrich-voice.py --brain {slug}                                # Extract original voice from source URLs
+scripts/enrich-connections.py --brain {slug} --discover               # Topic overlap + temporal (within + cross-cluster)
+scripts/enrich-connections.py --brain {slug} --discover --llm         # + Sonnet LLM analysis (within + cross-cluster)
+scripts/enrich-connections.py --brain {slug} --discover --llm --auto-apply  # Autonomous: discover + apply, no review step
+scripts/enrich-connections.py --brain {slug} --stats                  # Quality assessment with targets
 ```
 
 ### SQL Table Template
@@ -185,6 +159,48 @@ templates/create-brain-tables.sql   # sed 's/{{SLUG}}/peter_attia/g' | psql
 - Skill instructions also inline at bottom of `brain-context.md` for LLMs that load that file
 - All skills: voice-first (original_quote), thin-topic graceful degradation, suggest next skill
 - Template variables: `{{brain_name}}`, `{{brain_first_name}}`, `{{atom_count}}`, etc.
+
+### QA / Audit
+
+**Script:** `scripts/audit-brains.py` — deterministic validator, zero API calls, runs in <2s. Produces a **0-100 completeness score** per brain across 6 weighted criteria.
+
+```
+python3 scripts/audit-brains.py                       # Audit all brains (scores + issues)
+python3 scripts/audit-brains.py --brain scott-belsky   # Audit one brain
+python3 scripts/audit-brains.py --json                 # Machine-readable output
+python3 scripts/audit-brains.py --fix-hints            # Include remediation hints
+python3 scripts/audit-brains.py --remediate            # Generate runnable fix script
+```
+
+**Scoring criteria (6, weighted to 100):**
+| Criterion | Weight | What 100% Looks Like |
+|-----------|--------|---------------------|
+| Structure & Files | /20 | All files, canonical paths, zero duplicates |
+| Schema Completeness | /15 | All brain.json keys filled, all synthesis sections |
+| Atom Volume | /15 | 200+ atoms |
+| Connection Density | /15 | <15% orphans, all atoms linked |
+| Voice Enrichment | /20 | 100% original_quote + implication coverage |
+| Synthesis Depth | /15 | 1500+ words, all sections, synthesis in export |
+
+**Remediation:** `--remediate` generates a shell script ordered by impact (structural cleanup → re-export → enrichment). Each issue maps to a specific pipeline command.
+
+**Cowork skill:** `/brain-audit` — runs the script (Phase 1), presents scores, generates remediation plan (Phase 2), optionally does LLM-powered semantic review (Phase 3: voice quality spot-check, synthesis coherence, connection quality, cross-brain consistency).
+
+**When to run:** After any export, before deploy, after adding a new brain.
+
+### Adding Brain #2 (Checklist)
+
+1. **Create directory:** `brains/{slug}/` with `brain.json`, `synthesis.md`, `source/`, `research/`, `data/`, `pack/`
+2. **Create Supabase tables:** `sed 's/{{SLUG}}/{slug}/g; s/{{NAME}}/{Name}/g' templates/create-brain-tables.sql | psql`
+3. **Fill brain.json:** Copy from scott-belsky, replace all values (name, source, clusters, skill examples, synthesis)
+4. **Write synthesis.md:** First principles, thinking patterns, contrarian positions (manual research, 4-8 hours)
+5. **Ingest atoms:** Load source content into `{slug}_atoms` table
+6. **Run enrichment:** `python scripts/enrich-voice.py --brain {slug}` and `python scripts/enrich-connections.py --brain {slug} --discover --llm`
+7. **Export pack:** `python scripts/export-brain.py --brain {slug} --from-files atoms.json connections.json`
+8. **Register:** Add entry to `brains/index.json`
+9. **Verify:** Open `pack/explore.html` in browser, check all tabs render correctly
+
+Zero structural decisions. Same pipeline, same templates, different config.
 
 ## Design System
 

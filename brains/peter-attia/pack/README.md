@@ -1,6 +1,6 @@
 # Peter Attia Brain Pack
 
-> **73 knowledge atoms** · **0 typed connections** · **10 thinking skills**
+> **73 knowledge atoms** · **40 typed connections** · **10 thinking skills**
 > From [brainsforsale.com](https://brainsforsale.com)
 
 ## What This Is
@@ -26,7 +26,7 @@ You should get a response that cites specific atoms, synthesizes Peter's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (73 atoms, 0 connections)
+  ├── brain-atoms.json      ← Structured data (73 atoms, 40 connections)
   └── README.md             ← You are here
 ```
 
@@ -34,7 +34,7 @@ pack/
 
 **73 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**0 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**40 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
 **16 topic clusters** — Zone 2 training, VO2 max, Four Horsemen, metabolic health, cardiovascular prevention, cancer screening, emotional resilience, sleep, pharmacology, muscle.
 

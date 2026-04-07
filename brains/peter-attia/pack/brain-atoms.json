@@ -4,10 +4,13 @@
     "slug": "peter-attia",
     "source": "\"The Drive\" podcast and \"Outlive\" book (peterattiamd.com)",
     "atom_count": 73,
-    "connection_count": 0,
+    "connection_count": 40,
     "cluster_count": 15,
     "topic_count": 227,
-    "connection_types": {},
+    "connection_types": {
+      "extends": 34,
+      "related": 6
+    },
     "last_updated": "2026-04-06",
     "coverage": "400+ episodes of The Drive podcast, Outlive (2023), and detailed blog posts",
     "bio": "Peter Attia is a physician and longevity expert who has reshaped how high-performers think about health across decades. His \"Outlive\" book and \"The Drive\" podcast are the primary source for evidence-based longevity strategy, blending mechanistic biochemistry with practical behavior change.",
@@ -27,7 +30,14 @@
       "source_ref": "https://peterattiamd.com/ama81",
       "source_date": "2026-03-09",
       "confidence": 0.8,
-      "confidence_tier": "medium"
+      "confidence_tier": "medium",
+      "connections": [
+        {
+          "target_id": "59d55be7-9b39-4379-8ca4-858f9b2cfef9",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "3e7681f6-1e32-4df7-b50d-737fa2c7ac94",
@@ -89,7 +99,14 @@
       "source_ref": "https://peterattiamd.com/ama80",
       "source_date": "2026-03-02",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "59d55be7-9b39-4379-8ca4-858f9b2cfef9",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "59d55be7-9b39-4379-8ca4-858f9b2cfef9",
@@ -104,7 +121,24 @@
       "source_ref": "https://peterattiamd.com/ama80",
       "source_date": "2026-03-02",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "4cd65878-9e5a-4854-be9c-7b2b8186c55b",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "4a84384e-f3ed-46be-95b2-acde78065650",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "eadf6ad8-48b1-473a-b8f0-c02c45548e85",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "4cd65878-9e5a-4854-be9c-7b2b8186c55b",
@@ -119,7 +153,14 @@
       "source_ref": "https://peterattiamd.com/peter-faq",
       "source_date": "2023-10-23",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "59d55be7-9b39-4379-8ca4-858f9b2cfef9",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "d1d7084a-29a3-4f9e-a6f6-159c677c2222",
@@ -179,7 +220,14 @@
       "source_ref": "https://peterattiamd.com/peter-faq",
       "source_date": "2023-10-23",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "b99301cc-e6b7-4df3-b441-4e7cb6a5e917",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "b99301cc-e6b7-4df3-b441-4e7cb6a5e917",
@@ -195,7 +243,14 @@
       "source_ref": "https://peterattiamd.com/peter-faq",
       "source_date": "2023-10-23",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "ef2ecbb7-e9c4-4ad5-aa2b-cca7d4e7e394",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "75ce31ac-2cbb-4663-96bc-b26c193c9cee",
@@ -227,7 +282,14 @@
       "source_ref": "https://peterattiamd.com/ama80",
       "source_date": "2026-03-02",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "8d960448-ecf8-4ad2-8451-be7206a63cc7",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "b5bd3daf-7107-47c9-aa5e-959160abee64",
@@ -242,7 +304,14 @@
       "source_ref": "https://peterattiamd.com/agingwell",
       "source_date": "2025-03-31",
       "confidence": 0.8,
-      "confidence_tier": "medium"
+      "confidence_tier": "medium",
+      "connections": [
+        {
+          "target_id": "23f55155-e82d-46f9-85e4-b28d2ed050cb",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "8d960448-ecf8-4ad2-8451-be7206a63cc7",
@@ -258,7 +327,19 @@
       "source_ref": "https://peterattiamd.com/agingwell",
       "source_date": "2025-03-31",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "09670d43-ec20-456a-8f22-a79cddc8875d",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "23f55155-e82d-46f9-85e4-b28d2ed050cb",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "23f55155-e82d-46f9-85e4-b28d2ed050cb",
@@ -274,7 +355,19 @@
       "source_ref": "https://peterattiamd.com/exerciseforagingpeople",
       "source_date": "2024-06-24",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "8d960448-ecf8-4ad2-8451-be7206a63cc7",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "b5bd3daf-7107-47c9-aa5e-959160abee64",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "3bdeec56-e34e-4627-a4d6-6f7c5a064d57",
@@ -290,7 +383,14 @@
       "source_ref": "https://peterattiamd.com/qps5",
       "source_date": "2025-05-05",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "905252a3-cccc-40d7-92ac-6c747861f994",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "905252a3-cccc-40d7-92ac-6c747861f994",
@@ -306,7 +406,19 @@
       "source_ref": "https://peterattiamd.com/qps5",
       "source_date": "2025-05-05",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "3bdeec56-e34e-4627-a4d6-6f7c5a064d57",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "4a7114ec-b4cf-4076-919d-553065de0e38",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "4a7114ec-b4cf-4076-919d-553065de0e38",
@@ -321,7 +433,14 @@
       "source_ref": "https://peterattiamd.com/agingwell",
       "source_date": "2025-03-31",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "905252a3-cccc-40d7-92ac-6c747861f994",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "c2e72650-29e7-4c77-b2fe-6ac746b24c70",
@@ -337,7 +456,24 @@
       "source_ref": "https://peterattiamd.com/ama80",
       "source_date": "2026-03-02",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "9d6c6b33-4c2f-4ed9-b0aa-ee4582d541da",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "16f9099e-0b95-4ea0-97e3-2c1625b33f26",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "0cbd52cf-8f9b-492b-8500-f9e42bc4d7fe",
+          "relationship": "related",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "id": "914a08c3-b486-4795-86f1-07205758d2d2",
@@ -352,7 +488,24 @@
       "source_ref": "https://peterattiamd.com/agingwell",
       "source_date": "2025-03-31",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "5af45870-761f-49c5-8107-058960262078",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "f6741bd1-6a8e-486d-941b-02c6c0316fee",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "9d6c6b33-4c2f-4ed9-b0aa-ee4582d541da",
+          "relationship": "related",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "id": "f6741bd1-6a8e-486d-941b-02c6c0316fee",
@@ -367,7 +520,24 @@
       "source_ref": "https://peterattiamd.com/agingwell",
       "source_date": "2025-03-31",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "5af45870-761f-49c5-8107-058960262078",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "9d6c6b33-4c2f-4ed9-b0aa-ee4582d541da",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "914a08c3-b486-4795-86f1-07205758d2d2",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "9d6c6b33-4c2f-4ed9-b0aa-ee4582d541da",
@@ -383,7 +553,29 @@
       "source_ref": "https://peterattiamd.com/agingwell",
       "source_date": "2025-03-31",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "5af45870-761f-49c5-8107-058960262078",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "f6741bd1-6a8e-486d-941b-02c6c0316fee",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "c2e72650-29e7-4c77-b2fe-6ac746b24c70",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "914a08c3-b486-4795-86f1-07205758d2d2",
+          "relationship": "related",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "id": "3c3e246c-7551-4275-ac1f-5b343b06cf6c",
@@ -400,7 +592,14 @@
       "source_ref": "https://peterattiamd.com/exerciseforagingpeople",
       "source_date": "2024-06-24",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "c74075b1-fded-44b9-8bf4-f08836d992f7",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "c74075b1-fded-44b9-8bf4-f08836d992f7",
@@ -415,7 +614,14 @@
       "source_ref": "https://peterattiamd.com/exerciseforagingpeople",
       "source_date": "2024-06-24",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "3c3e246c-7551-4275-ac1f-5b343b06cf6c",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "0cbd52cf-8f9b-492b-8500-f9e42bc4d7fe",
@@ -430,7 +636,19 @@
       "source_ref": "https://peterattiamd.com/exerciseforagingpeople",
       "source_date": "2024-06-24",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "16f9099e-0b95-4ea0-97e3-2c1625b33f26",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "c2e72650-29e7-4c77-b2fe-6ac746b24c70",
+          "relationship": "related",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "id": "5af45870-761f-49c5-8107-058960262078",
@@ -445,7 +663,29 @@
       "source_ref": "https://peterattiamd.com/exerciseforagingpeople",
       "source_date": "2024-06-24",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "f6741bd1-6a8e-486d-941b-02c6c0316fee",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "9d6c6b33-4c2f-4ed9-b0aa-ee4582d541da",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "914a08c3-b486-4795-86f1-07205758d2d2",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "16f9099e-0b95-4ea0-97e3-2c1625b33f26",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "16f9099e-0b95-4ea0-97e3-2c1625b33f26",
@@ -460,7 +700,24 @@
       "source_ref": "https://peterattiamd.com/qps1",
       "source_date": "2024-06-03",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "5af45870-761f-49c5-8107-058960262078",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "c2e72650-29e7-4c77-b2fe-6ac746b24c70",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "0cbd52cf-8f9b-492b-8500-f9e42bc4d7fe",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "25ea656b-c3c1-4086-9289-edcdc8202cda",
@@ -537,7 +794,19 @@
       "source_ref": "https://peterattiamd.com/agingwell",
       "source_date": "2025-03-31",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "019a8402-e06e-437d-b69a-ecb07899c0c4",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "50200928-e6a8-44f0-98f2-aeefacb36eb8",
+          "relationship": "related",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "id": "50200928-e6a8-44f0-98f2-aeefacb36eb8",
@@ -552,7 +821,19 @@
       "source_ref": "https://peterattiamd.com/peter-faq",
       "source_date": "2023-10-23",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "019a8402-e06e-437d-b69a-ecb07899c0c4",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "ee392547-a99b-4087-81ea-25b34f90cf55",
+          "relationship": "related",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "id": "ee76af52-c4bc-45ec-ade4-30dadccddc54",
@@ -582,7 +863,19 @@
       "source_ref": "https://peterattiamd.com/peter-faq",
       "source_date": "2023-10-23",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "ee392547-a99b-4087-81ea-25b34f90cf55",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "50200928-e6a8-44f0-98f2-aeefacb36eb8",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "6461db8e-d42a-40f0-b46b-24a185bad0ce",
@@ -616,7 +909,14 @@
       "source_ref": "https://peterattiamd.com/agingwell",
       "source_date": "2025-03-31",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "8491ea45-ac38-46d4-9af6-264493b0c7e9",
+          "relationship": "related",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "id": "ad3a8cc6-0945-471e-a726-fe1c1a139565",
@@ -646,7 +946,14 @@
       "source_ref": "https://peterattiamd.com/peter-faq",
       "source_date": "2023-10-23",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "f748d0e8-3d12-4fa8-9599-7383a273bc21",
+          "relationship": "related",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "id": "f748d0e8-3d12-4fa8-9599-7383a273bc21",
@@ -661,7 +968,14 @@
       "source_ref": "https://peterattiamd.com/peter-faq",
       "source_date": "2023-10-23",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "83b874e7-b031-4718-9570-8670dc219dc5",
+          "relationship": "related",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "id": "a6a4c2b9-f895-4a42-ba52-27a6f868b0f9",
@@ -676,7 +990,14 @@
       "source_ref": "https://peterattiamd.com/peter-faq",
       "source_date": "2023-10-23",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "912637e2-7346-4b29-b02a-ccd1a9b87f2e",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "912637e2-7346-4b29-b02a-ccd1a9b87f2e",
@@ -691,7 +1012,14 @@
       "source_ref": "https://peterattiamd.com/strong-convictions-loosely-held",
       "source_date": "2020-04-06",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "a6a4c2b9-f895-4a42-ba52-27a6f868b0f9",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "8940facd-8a5e-41ca-8dd6-41aca689df6d",
@@ -706,7 +1034,14 @@
       "source_ref": "https://peterattiamd.com/ama81",
       "source_date": "2026-03-09",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "42afb753-96ce-4f7a-9274-75f6e938eb53",
+          "relationship": "related",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "id": "6b7fd23d-949c-453d-9561-9ed9094d152d",
@@ -751,7 +1086,14 @@
       "source_ref": "https://peterattiamd.com/ama80",
       "source_date": "2026-03-02",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "8940facd-8a5e-41ca-8dd6-41aca689df6d",
+          "relationship": "related",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "id": "8f455615-f300-4c9e-83ef-80d673bca0f3",
@@ -797,7 +1139,14 @@
       "source_ref": "https://peterattiamd.com/exerciseforagingpeople",
       "source_date": "2024-06-24",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "ce2b389f-cf30-4c43-855a-ea494c26fed5",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "ce2b389f-cf30-4c43-855a-ea494c26fed5",
@@ -813,7 +1162,19 @@
       "source_ref": "https://peterattiamd.com/exerciseforagingpeople",
       "source_date": "2024-06-24",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "fc633209-6bb9-455b-afb9-32ff3f40e578",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "86817166-8234-46ec-8ad5-b0d3a6f2a701",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "fc633209-6bb9-455b-afb9-32ff3f40e578",
@@ -828,7 +1189,14 @@
       "source_ref": "https://peterattiamd.com/peter-faq",
       "source_date": "2023-10-23",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "ce2b389f-cf30-4c43-855a-ea494c26fed5",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "05139ff5-df44-4141-8262-0d40ebaf32c3",
@@ -858,7 +1226,14 @@
       "source_ref": "https://peterattiamd.com/ama81",
       "source_date": "2026-03-09",
       "confidence": 0.8,
-      "confidence_tier": "medium"
+      "confidence_tier": "medium",
+      "connections": [
+        {
+          "target_id": "ed3bb46a-a5a4-43da-bd4b-a7a33b850282",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "17819a7d-0011-42af-9b86-a8e24b5679ad",
@@ -918,7 +1293,14 @@
       "source_ref": "https://peterattiamd.com/peter-faq",
       "source_date": "2023-10-23",
       "confidence": 0.8,
-      "confidence_tier": "medium"
+      "confidence_tier": "medium",
+      "connections": [
+        {
+          "target_id": "397625e4-f523-4243-9f51-6eb597c47245",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "a1d40418-a999-4dd8-83f5-c04a757ed068",
@@ -948,7 +1330,19 @@
       "source_ref": "https://peterattiamd.com/ama80",
       "source_date": "2026-03-02",
       "confidence": 0.8,
-      "confidence_tier": "medium"
+      "confidence_tier": "medium",
+      "connections": [
+        {
+          "target_id": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "3bc578e4-34d8-4314-aa40-c4f71f9a2720",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "4d4699cd-ff2f-4bac-bb00-b373829d61de",
@@ -993,7 +1387,19 @@
       "source_ref": "https://peterattiamd.com/peter-faq",
       "source_date": "2023-10-23",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "c1411b65-9613-4452-a004-fe1c4b15d038",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "c1411b65-9613-4452-a004-fe1c4b15d038",
@@ -1008,7 +1414,19 @@
       "source_ref": "https://peterattiamd.com/strong-convictions-loosely-held",
       "source_date": "2020-04-06",
       "confidence": 0.8,
-      "confidence_tier": "medium"
+      "confidence_tier": "medium",
+      "connections": [
+        {
+          "target_id": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "d2568dd3-d819-4b1f-adcc-8ab0b1ab2507",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
@@ -1023,7 +1441,29 @@
       "source_ref": "https://peterattiamd.com/strong-convictions-loosely-held",
       "source_date": "2020-04-06",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "d2568dd3-d819-4b1f-adcc-8ab0b1ab2507",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "82b79650-9b38-49d8-8b39-818c759b6ac2",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "c1411b65-9613-4452-a004-fe1c4b15d038",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "3bc578e4-34d8-4314-aa40-c4f71f9a2720",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "3bc578e4-34d8-4314-aa40-c4f71f9a2720",
@@ -1038,7 +1478,19 @@
       "source_ref": "https://peterattiamd.com/strong-convictions-loosely-held",
       "source_date": "2020-04-06",
       "confidence": 0.8,
-      "confidence_tier": "medium"
+      "confidence_tier": "medium",
+      "connections": [
+        {
+          "target_id": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "82b79650-9b38-49d8-8b39-818c759b6ac2",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "23dd887b-c4dc-4c77-a05e-c043577bd8a9",
@@ -1054,7 +1506,19 @@
       "source_ref": "https://peterattiamd.com/ama80",
       "source_date": "2026-03-02",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "f3d84bf5-e78d-4917-ad33-76d6f87b3698",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "8491ea45-ac38-46d4-9af6-264493b0c7e9",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "f3d84bf5-e78d-4917-ad33-76d6f87b3698",
@@ -1070,7 +1534,14 @@
       "source_ref": "https://peterattiamd.com/ama80",
       "source_date": "2026-03-02",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "23dd887b-c4dc-4c77-a05e-c043577bd8a9",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "8491ea45-ac38-46d4-9af6-264493b0c7e9",
@@ -1086,7 +1557,19 @@
       "source_ref": "https://peterattiamd.com/ama80",
       "source_date": "2026-03-02",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "23dd887b-c4dc-4c77-a05e-c043577bd8a9",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "186fd179-df42-4e33-9bf7-d4dfd0645e31",
+          "relationship": "related",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "id": "a897543d-c10c-47a2-803c-d282a64a3962",
@@ -1116,7 +1599,14 @@
       "source_ref": "https://peterattiamd.com/strong-convictions-loosely-held",
       "source_date": "2020-04-06",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "fa69e064-e36e-4618-9701-1b0b0c408e32",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "id": "fa69e064-e36e-4618-9701-1b0b0c408e32",
@@ -1130,10 +1620,298 @@
       "source_ref": "https://peterattiamd.com/strong-convictions-loosely-held",
       "source_date": "2020-04-06",
       "confidence": 0.8,
-      "confidence_tier": "high"
+      "confidence_tier": "high",
+      "connections": [
+        {
+          "target_id": "40e0637e-f2fc-410e-b5b9-3d2a78534dfa",
+          "relationship": "extends",
+          "confidence": 0.65
+        }
+      ]
     }
   ],
-  "connections": [],
+  "connections": [
+    {
+      "id": "a6ec9527-d2bf-4439-b660-088949140b96",
+      "atom_id_1": "019a8402-e06e-437d-b69a-ecb07899c0c4",
+      "atom_id_2": "ee392547-a99b-4087-81ea-25b34f90cf55",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "3e826305-cea3-48a1-a91b-81f909803973",
+      "atom_id_1": "019a8402-e06e-437d-b69a-ecb07899c0c4",
+      "atom_id_2": "50200928-e6a8-44f0-98f2-aeefacb36eb8",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "3ee15ca7-7c1c-4328-848c-2da06a2cdf42",
+      "atom_id_1": "b99301cc-e6b7-4df3-b441-4e7cb6a5e917",
+      "atom_id_2": "ef2ecbb7-e9c4-4ad5-aa2b-cca7d4e7e394",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "fc128b8d-6451-4ecc-a3b4-f8ddb6b75a27",
+      "atom_id_1": "5af45870-761f-49c5-8107-058960262078",
+      "atom_id_2": "f6741bd1-6a8e-486d-941b-02c6c0316fee",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "2f358872-2588-4d53-88d8-8b3ab0b743ea",
+      "atom_id_1": "5af45870-761f-49c5-8107-058960262078",
+      "atom_id_2": "9d6c6b33-4c2f-4ed9-b0aa-ee4582d541da",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "7f273bcd-42e4-470a-b553-92e6913ea5ee",
+      "atom_id_1": "5af45870-761f-49c5-8107-058960262078",
+      "atom_id_2": "914a08c3-b486-4795-86f1-07205758d2d2",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "36490cf4-5593-42ed-8771-d666d984b237",
+      "atom_id_1": "09670d43-ec20-456a-8f22-a79cddc8875d",
+      "atom_id_2": "8d960448-ecf8-4ad2-8451-be7206a63cc7",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "d0bf7d53-2ef6-4146-a95e-9bad35285714",
+      "atom_id_1": "3c3e246c-7551-4275-ac1f-5b343b06cf6c",
+      "atom_id_2": "c74075b1-fded-44b9-8bf4-f08836d992f7",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "5fb8d7a3-6676-407d-9666-84d050cde8ca",
+      "atom_id_1": "9d6c6b33-4c2f-4ed9-b0aa-ee4582d541da",
+      "atom_id_2": "f6741bd1-6a8e-486d-941b-02c6c0316fee",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "cf083030-9f79-465e-8f12-d435c3a7c740",
+      "atom_id_1": "9d6c6b33-4c2f-4ed9-b0aa-ee4582d541da",
+      "atom_id_2": "c2e72650-29e7-4c77-b2fe-6ac746b24c70",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "26f074e8-c1a3-4ead-ae9e-f07254463a84",
+      "atom_id_1": "914a08c3-b486-4795-86f1-07205758d2d2",
+      "atom_id_2": "f6741bd1-6a8e-486d-941b-02c6c0316fee",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "41377f6b-63a4-442d-aa87-dabd1e715832",
+      "atom_id_1": "40e0637e-f2fc-410e-b5b9-3d2a78534dfa",
+      "atom_id_2": "fa69e064-e36e-4618-9701-1b0b0c408e32",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "55eb2c11-d031-4d7b-b1ba-dad7a8bc4f04",
+      "atom_id_1": "16f9099e-0b95-4ea0-97e3-2c1625b33f26",
+      "atom_id_2": "5af45870-761f-49c5-8107-058960262078",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "9a99fd05-123b-47f5-b919-b4fde7050a7c",
+      "atom_id_1": "16f9099e-0b95-4ea0-97e3-2c1625b33f26",
+      "atom_id_2": "c2e72650-29e7-4c77-b2fe-6ac746b24c70",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "ff577ea5-3b84-4a37-9031-b14aad20dbc7",
+      "atom_id_1": "0cbd52cf-8f9b-492b-8500-f9e42bc4d7fe",
+      "atom_id_2": "16f9099e-0b95-4ea0-97e3-2c1625b33f26",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "e6ab568c-4f60-4358-872b-2a247e57fc86",
+      "atom_id_1": "ce2b389f-cf30-4c43-855a-ea494c26fed5",
+      "atom_id_2": "fc633209-6bb9-455b-afb9-32ff3f40e578",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "16fcb77f-b488-4c26-9d0a-409e5a3a1b3c",
+      "atom_id_1": "23dd887b-c4dc-4c77-a05e-c043577bd8a9",
+      "atom_id_2": "f3d84bf5-e78d-4917-ad33-76d6f87b3698",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "d6cbcae5-e18f-4a9b-90d7-f80f67f697a9",
+      "atom_id_1": "23dd887b-c4dc-4c77-a05e-c043577bd8a9",
+      "atom_id_2": "8491ea45-ac38-46d4-9af6-264493b0c7e9",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "1c0dcfc2-59c4-412e-beba-e838a6701419",
+      "atom_id_1": "3bdeec56-e34e-4627-a4d6-6f7c5a064d57",
+      "atom_id_2": "905252a3-cccc-40d7-92ac-6c747861f994",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "e25096af-2d2e-4dc8-b85d-107c8308df7a",
+      "atom_id_1": "4a7114ec-b4cf-4076-919d-553065de0e38",
+      "atom_id_2": "905252a3-cccc-40d7-92ac-6c747861f994",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "762a554f-7e9b-4b6a-85f3-a9240f4340a9",
+      "atom_id_1": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
+      "atom_id_2": "d2568dd3-d819-4b1f-adcc-8ab0b1ab2507",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "5f1417ba-a782-40e5-af2f-bff305c2b619",
+      "atom_id_1": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
+      "atom_id_2": "82b79650-9b38-49d8-8b39-818c759b6ac2",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "8670a831-2346-4ae4-861a-cba7ecd2637b",
+      "atom_id_1": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
+      "atom_id_2": "c1411b65-9613-4452-a004-fe1c4b15d038",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "2d3ec048-e57c-4d61-b619-7327588e9ce2",
+      "atom_id_1": "c1411b65-9613-4452-a004-fe1c4b15d038",
+      "atom_id_2": "d2568dd3-d819-4b1f-adcc-8ab0b1ab2507",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "196ba5fc-c7f7-47dc-89b8-1022736e2afb",
+      "atom_id_1": "4cd65878-9e5a-4854-be9c-7b2b8186c55b",
+      "atom_id_2": "59d55be7-9b39-4379-8ca4-858f9b2cfef9",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "43efb95f-88d8-414e-98cf-34dd5510a364",
+      "atom_id_1": "4a84384e-f3ed-46be-95b2-acde78065650",
+      "atom_id_2": "59d55be7-9b39-4379-8ca4-858f9b2cfef9",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "4cb64aed-f4c0-4be9-a29f-82f1840d72bf",
+      "atom_id_1": "23f55155-e82d-46f9-85e4-b28d2ed050cb",
+      "atom_id_2": "8d960448-ecf8-4ad2-8451-be7206a63cc7",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "ff3972b9-16cb-4a03-a59a-deb254c97906",
+      "atom_id_1": "23f55155-e82d-46f9-85e4-b28d2ed050cb",
+      "atom_id_2": "b5bd3daf-7107-47c9-aa5e-959160abee64",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "128bbefe-a0d1-4108-b0b4-98d198f558f4",
+      "atom_id_1": "912637e2-7346-4b29-b02a-ccd1a9b87f2e",
+      "atom_id_2": "a6a4c2b9-f895-4a42-ba52-27a6f868b0f9",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "cce06175-2a1a-4c3c-8f6a-8d613277c413",
+      "atom_id_1": "397625e4-f523-4243-9f51-6eb597c47245",
+      "atom_id_2": "ed3bb46a-a5a4-43da-bd4b-a7a33b850282",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "27c4fe9b-1a1a-4576-91ac-86f80b1e9ebe",
+      "atom_id_1": "86817166-8234-46ec-8ad5-b0d3a6f2a701",
+      "atom_id_2": "ce2b389f-cf30-4c43-855a-ea494c26fed5",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "7c27dbc1-2a5a-4400-9f7c-9cc961160750",
+      "atom_id_1": "59d55be7-9b39-4379-8ca4-858f9b2cfef9",
+      "atom_id_2": "eadf6ad8-48b1-473a-b8f0-c02c45548e85",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "c4bbc945-a54e-413d-9608-60d46bda2fd9",
+      "atom_id_1": "3bc578e4-34d8-4314-aa40-c4f71f9a2720",
+      "atom_id_2": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "2659ff3d-45f7-4520-87ed-39c9d210c44c",
+      "atom_id_1": "3bc578e4-34d8-4314-aa40-c4f71f9a2720",
+      "atom_id_2": "82b79650-9b38-49d8-8b39-818c759b6ac2",
+      "relationship": "extends",
+      "confidence": 0.65
+    },
+    {
+      "id": "8bb19188-acc6-4300-8089-b7f1da753130",
+      "atom_id_1": "186fd179-df42-4e33-9bf7-d4dfd0645e31",
+      "atom_id_2": "8491ea45-ac38-46d4-9af6-264493b0c7e9",
+      "relationship": "related",
+      "confidence": 0.85
+    },
+    {
+      "id": "52372b2d-73bc-4c73-9821-2bdf5d8a93ee",
+      "atom_id_1": "50200928-e6a8-44f0-98f2-aeefacb36eb8",
+      "atom_id_2": "ee392547-a99b-4087-81ea-25b34f90cf55",
+      "relationship": "related",
+      "confidence": 0.7
+    },
+    {
+      "id": "61839ae1-1696-4e64-a596-0cb789858f1b",
+      "atom_id_1": "83b874e7-b031-4718-9570-8670dc219dc5",
+      "atom_id_2": "f748d0e8-3d12-4fa8-9599-7383a273bc21",
+      "relationship": "related",
+      "confidence": 0.7
+    },
+    {
+      "id": "8ab90433-ef0a-4e43-8a9c-62953de2c08f",
+      "atom_id_1": "914a08c3-b486-4795-86f1-07205758d2d2",
+      "atom_id_2": "9d6c6b33-4c2f-4ed9-b0aa-ee4582d541da",
+      "relationship": "related",
+      "confidence": 0.7
+    },
+    {
+      "id": "c486c7a5-d4b0-43e4-83c6-b21a339b56ee",
+      "atom_id_1": "0cbd52cf-8f9b-492b-8500-f9e42bc4d7fe",
+      "atom_id_2": "c2e72650-29e7-4c77-b2fe-6ac746b24c70",
+      "relationship": "related",
+      "confidence": 0.7
+    },
+    {
+      "id": "f1b64760-7d6d-4b9c-8770-daa9768646ec",
+      "atom_id_1": "42afb753-96ce-4f7a-9274-75f6e938eb53",
+      "atom_id_2": "8940facd-8a5e-41ca-8dd6-41aca689df6d",
+      "relationship": "related",
+      "confidence": 0.7
+    }
+  ],
   "topic_index": {
     "AI": [
       "6461db8e-d42a-40f0-b46b-24a185bad0ce"

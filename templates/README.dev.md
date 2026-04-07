@@ -201,6 +201,20 @@ This is the intellectual heavy lift — requires reading/watching the person's w
 Brain-specific. Examples:
 - **Belsky**: 77 Implications newsletter editions (scraped via Firecrawl)
 - **Attia**: Outlive chapters, Drive podcast transcripts, blog posts
+- **YouTube/podcast sources**: Add video URLs to `youtube_sources.videos` in brain.json, then:
+
+```bash
+# Download transcripts
+python scripts/ingest-youtube.py --brain {slug} --download
+
+# Extract atoms (uses Claude Haiku — ~$0.001/chunk)
+python scripts/ingest-youtube.py --brain {slug} --extract
+
+# Or both at once
+python scripts/ingest-youtube.py --brain {slug} --download --extract
+```
+
+Output goes to `brains/{slug}/research/youtube-atoms.json`. Requires `pip install youtube-transcript-api`.
 
 Store raw inputs in `brains/{slug}/source/`.
 
@@ -245,20 +259,26 @@ python scripts/enrich-voice.py --brain {slug} --apply brains/{slug}/data/voice-e
 #### 9. Connection discovery
 
 ```bash
-python scripts/enrich-connections.py --brain {slug} --discover         # topic + temporal
-python scripts/enrich-connections.py --brain {slug} --discover --llm   # + LLM analysis
-python scripts/enrich-connections.py --brain {slug} --stats            # check progress
+python scripts/enrich-connections.py --brain {slug} --discover                    # topic + temporal (within + cross-cluster)
+python scripts/enrich-connections.py --brain {slug} --discover --llm              # + LLM analysis (within + cross-cluster)
+python scripts/enrich-connections.py --brain {slug} --discover --llm --auto-apply # discover + apply in one step
+python scripts/enrich-connections.py --brain {slug} --no-cross-cluster --discover # within-cluster only
+python scripts/enrich-connections.py --brain {slug} --stats                       # check progress + quality assessment
 ```
 
-Three discovery methods:
-1. **Topic overlap** — Jaccard similarity between atoms' topic tags within same cluster → `related`
-2. **Temporal proximity** — Atoms published within 7 days with 2+ shared topics → `extends`
-3. **LLM analysis** — Haiku analyzes each cluster for `contradicts`, `extends`, `inspired_by` (highest value)
+Five discovery methods:
+1. **Topic overlap (within-cluster)** — Jaccard similarity (≥0.3) between atoms' topic tags in same cluster → `related`
+2. **Topic overlap (cross-cluster)** — Jaccard similarity (≥0.5) between atoms in different clusters → `related` (bridges domains)
+3. **Temporal proximity** — Atoms published within 7 days with 2+ shared topics → `extends`
+4. **LLM within-cluster** — Sonnet analyzes each cluster for `contradicts`, `extends`, `inspired_by`
+5. **LLM cross-cluster** — Sonnet analyzes pairs of clusters for cross-domain connections (highest value)
 
 To apply after review:
 ```bash
 python scripts/enrich-connections.py --brain {slug} --apply brains/{slug}/data/connection-candidates.json
 ```
+
+For autonomous brain creation, use `--auto-apply` to skip the review step.
 
 #### 10. Generate embeddings (optional for v1)
 
