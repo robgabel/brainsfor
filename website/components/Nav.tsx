@@ -24,7 +24,7 @@ export function Nav() {
     <nav className="sticky top-0 z-50 border-b border-[var(--border-whisper)] bg-white/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1140px] items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link href="/" className="font-display text-base font-semibold tracking-tight text-deep-ink">
+        <Link href="/" className="font-display text-xl font-semibold tracking-tight text-deep-ink">
           brainsfor<span className="text-brain-indigo">.dev</span>
         </Link>
 
