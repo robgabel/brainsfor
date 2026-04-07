@@ -46,6 +46,6 @@ Load `clusters/manifest.json` to find relevant clusters. Load only those cluster
 
 ## Data
 
-- **atoms:** brain-atoms.json (170 atoms, 0 connections)
+- **atoms:** brain-atoms.json (170 atoms, 7 connections)
 - **clusters:** clusters/manifest.json + individual cluster .md files
 - **shared rules:** See "LLM Usage Rules" section in brain-context.md

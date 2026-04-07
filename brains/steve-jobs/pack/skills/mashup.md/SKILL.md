@@ -48,6 +48,6 @@ Load `brain-context.md` for broad synthesis. For cross-brain mashups, auto-disco
 
 ## Data
 
-- **atoms:** brain-atoms.json (170 atoms, 0 connections)
+- **atoms:** brain-atoms.json (170 atoms, 7 connections)
 - **clusters:** clusters/manifest.json + individual cluster .md files
 - **shared rules:** See "LLM Usage Rules" in brain-context.md
