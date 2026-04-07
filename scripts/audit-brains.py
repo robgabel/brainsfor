@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-audit-brains.py — Deterministic QA for BrainsForSale brain packs.
+audit-brains.py — Deterministic QA for BrainsFor brain packs.
 
 Checks every brain registered in brains/index.json for structural completeness,
 schema validity, data quality, and unresolved template variables. Produces a
@@ -40,8 +40,8 @@ REQUIRED_BRAIN_JSON_KEYS = {
 }
 
 REQUIRED_SKILL_EXAMPLES = [
-    "advise", "debate", "apply", "teach", "deep_dive",
-    "connect", "brainfight", "mashup", "evolve", "surprise",
+    "advise", "teach", "debate", "connect",
+    "evolve", "surprise", "coach", "predict",
 ]
 
 REQUIRED_SYNTHESIS_KEYS = [
@@ -59,8 +59,8 @@ REQUIRED_PACK_FILES = [
 ]
 
 REQUIRED_SKILLS = [
-    "advise", "apply", "brainfight", "connect", "debate",
-    "deep-dive", "evolve", "mashup", "surprise", "teach",
+    "advise", "coach", "connect", "debate",
+    "evolve", "predict", "surprise", "teach",
 ]
 
 TEMPLATE_VAR_PATTERN = re.compile(r"\{\{[a-z_]+\}\}")
@@ -602,7 +602,7 @@ def print_report(audits: list[BrainAudit], show_hints: bool = False):
 
     print()
     print("=" * 65)
-    print("  BRAINSFORSALE — BRAIN PACK AUDIT")
+    print("  BRAINSFOR — BRAIN PACK AUDIT")
     print("=" * 65)
     print()
 
@@ -727,7 +727,7 @@ def print_remediation(audits: list[BrainAudit]):
     print("#!/usr/bin/env bash")
     print("# Auto-generated remediation script from audit-brains.py --remediate")
     print(f"# Generated: $(date)")
-    print(f"# Run from: brainsforsale/ directory")
+    print(f"# Run from: brainsfor/ directory")
     print()
     print("set -e")
     print(f"cd {BRAINS_DIR.parent}")
@@ -787,7 +787,7 @@ def print_remediation(audits: list[BrainAudit]):
 # ---------------------------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="Audit BrainsForSale brain packs")
+    parser = argparse.ArgumentParser(description="Audit BrainsFor brain packs")
     parser.add_argument("--brain", help="Audit a specific brain by slug")
     parser.add_argument("--json", action="store_true", help="JSON output")
     parser.add_argument("--fix-hints", action="store_true", help="Include remediation hints")
@@ -795,7 +795,7 @@ def main():
     args = parser.parse_args()
 
     if not INDEX_FILE.exists():
-        print(f"ERROR: {INDEX_FILE} not found. Run from the brainsforsale/ directory.", file=sys.stderr)
+        print(f"ERROR: {INDEX_FILE} not found. Run from the brainsfor/ directory.", file=sys.stderr)
         sys.exit(1)
 
     with open(INDEX_FILE) as f:
