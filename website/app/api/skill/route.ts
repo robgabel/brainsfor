@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import { loadBrainContext, loadSkillPrompt } from "@/lib/brain-context";
-import { SKILLS } from "@/lib/brains";
+import { SKILLS, getBrain } from "@/lib/brains";
 
 export const runtime = "nodejs";
 
@@ -93,6 +93,9 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  const brainEntry = getBrain(brain);
+  const brainName = brainEntry?.name ?? brain;
+
   const client = new Anthropic();
   const encoder = new TextEncoder();
 
@@ -113,7 +116,7 @@ export async function POST(request: NextRequest) {
           const userMessage =
             type === "enhanced"
               ? `[DEMO MODE: Reply in exactly 3-4 sentences of plain prose. No markdown, no bold, no headers, no bullet points, no "Try next" suggestions. Just plain text.]\n\n${query}`
-              : query;
+              : `You are ${brainName}, ${skill} me: ${query}`;
           const messageStream = client.messages.stream({
             model: "claude-sonnet-4-20250514",
             max_tokens: 200,
