@@ -27,13 +27,42 @@ interface SkillsPlaygroundProps {
 const DEFAULT_DEMO_LIMIT = process.env.NODE_ENV === "development" ? 999 : 10;
 const STORAGE_KEY = "bf-demo-count";
 
-/** Split text into sentences and render each as its own paragraph */
+/** Split text into sentences, respecting quotes and abbreviations */
+function splitSentences(text: string): string[] {
+  const results: string[] = [];
+  let current = "";
+  let inQuote = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (ch === '"' || ch === '\u201C' || ch === '\u201D') inQuote = !inQuote;
+    current += ch;
+
+    // Only split on sentence-ending punctuation followed by a space + uppercase (or end)
+    if (!inQuote && (ch === '.' || ch === '!' || ch === '?')) {
+      const next = text[i + 1];
+      const afterNext = text[i + 2];
+      // End of string, or space followed by uppercase letter or quote
+      if (
+        i === text.length - 1 ||
+        (next === ' ' && afterNext && (/[A-Z"\u201C]/.test(afterNext)))
+      ) {
+        results.push(current.trim());
+        current = "";
+        i++; // skip the space
+      }
+    }
+  }
+  if (current.trim()) results.push(current.trim());
+  return results.length > 0 ? results : [text];
+}
+
 function SentenceParagraphs({ text, className }: { text: string; className?: string }) {
-  const sentences = text.match(/[^.!?]+[.!?]+(?:\s+|$)/g) || [text];
+  const sentences = splitSentences(text);
   return (
     <div className={className}>
       {sentences.map((s, i) => (
-        <p key={i} className={i > 0 ? "mt-3" : ""}>{s.trim()}</p>
+        <p key={i} className={i > 0 ? "mt-3" : ""}>{s}</p>
       ))}
     </div>
   );
