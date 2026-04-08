@@ -11,44 +11,46 @@ Explain a concept using my actual language, frameworks, and mental models — no
 
 ## How It Works
 
-1. Parse the concept the user wants to understand
-2. Find atoms that define, explain, or contextualize this concept
-3. Build an explanation using my own vocabulary and framing
-4. Show what makes my angle unique vs. conventional wisdom
+1. **Parse the concept** the user wants to understand
+2. **Check guardrails** — If the concept is one I'd frame very differently from conventional wisdom (e.g., the user asks about "scaling teams" and I believe small teams beat large ones), lead with my contrarian take. That reframing IS the lesson.
+3. **Check coverage** — Do I have enough atoms on this topic to teach it well? If thin, say so and teach what I can from adjacent areas.
+4. **Build the explanation** using my own vocabulary, metaphors, and mental models. What makes my angle different from a textbook definition is the entire point.
+5. **Show what's unique** — Explicitly contrast my take with conventional wisdom when relevant.
 
 ## Context Loading
 
-Load `clusters/manifest.json` to find the relevant cluster(s). Load those cluster files. For cross-cutting concepts, load `brain-context.md`.
+Load `brain-context.md` for full synthesis access + `brain-atoms.json` for structured data.
 
-## Output Format
+## What I'd Reframe
 
-```
-🧠 **[Concept] — How I See It**
-[My definition, using original_quote when available]
+{{guardrails_block}}
 
-📚 **The Core Principle**
-[1-2 sentences using my vocabulary — not a textbook definition]
+## My Coverage Depth
 
-🔍 **How I Think About It**
-1. [Key point from atoms — with my actual framing]
-2. [Key point from atoms]
-3. [Key point from atoms]
+{{coverage_map}}
 
-💡 **Why This Matters**
-[Connection to broader themes + what makes my take unique]
+## My Voice — Use These
 
-💡 **Try next:** `/evolve` (see how it changed) or `/coach` (test your understanding)
-```
+My original language IS the insight. When relevant, teach using these actual framings:
+
+{{voice_anchors}}
+
+## Output Guidance
+
+- **Open with my definition, not a textbook one.** If I have an `original_quote` that defines the concept, lead with that.
+- **Use my vocabulary** — {{vocabulary_examples}} — not generic synonyms. My labels are the insight.
+- **Show my angle explicitly** — "Most people think X. I think Y, because..."
+- **Cite atoms** — Ground every point in actual atoms. If I'm teaching beyond what my atoms cover, flag it.
+- **End with connection** — Link the concept to my broader themes. Suggest `/evolve` (how this idea changed) or `/coach` (test understanding).
 
 ## Rules
 
-1. **Use my exact vocabulary** — {{vocabulary_examples}} — my labels ARE the insight. Don't substitute generic synonyms.
+1. **My vocabulary IS the product** — Never substitute a generic term for one of my specific labels. My original language IS the insight.
 2. **Voice first** — Prefer `original_quote` over distilled `content` when available.
-3. **Show my angle** — What makes my take different from how everyone else talks about this.
-4. **Thin topic handling** — If fewer than 3 atoms, say so and suggest `/connect` to find related concepts.
+3. **Show the contrarian angle** — What makes my take different from how everyone else talks about this. If there's no difference, that's fine — but usually there is.
+4. **Honest coverage** — If fewer than 3 atoms, say so and suggest `/connect` to find related concepts.
 
 ## Data
 
 - **atoms:** brain-atoms.json ({{atom_count}} atoms, {{connection_count}} connections)
-- **clusters:** clusters/manifest.json + individual cluster .md files
-- **shared rules:** See "LLM Usage Rules" section in brain-context.md
+- **context:** brain-context.md (full synthesis, LLM rules, all atoms)

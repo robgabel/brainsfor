@@ -371,13 +371,263 @@ def export_cluster_files(atoms: list, connections: list, config: dict, output_di
     print(f"  clusters/: {len(manifest['clusters'])} cluster files + manifest.json ({len(manifest['thin_clusters'])} thin)")
 
 
-def export_skill_files(config: dict, atom_count: int, connection_count: int, output_dir: Path):
-    """Render SKILL.md, README.md, and all skill templates."""
+def _to_first_person(text: str, last_name: str = "") -> str:
+    """Convert third-person references to first person for skill persona consistency.
+
+    Handles common patterns like 'He believes' -> 'I believe',
+    'Belsky argues' -> 'I argue', etc.
+    """
+    import re as _re
+
+    def _deconj(verb):
+        """Convert third-person singular verb to first-person."""
+        verb_map = {
+            "believes": "believe", "argues": "argue", "warns": "warn",
+            "insists": "insist", "thinks": "think", "says": "say",
+            "advocates": "advocate", "emphasizes": "emphasize",
+        }
+        return verb_map.get(verb, verb.rstrip("s") if verb.endswith("s") and not verb.endswith("ss") else verb)
+
+    def _fix_pronoun_verb(m):
+        word = m.group(1)
+        # Check if this is an adverb (ends in -ly) followed by a verb
+        rest = m.string[m.end():]
+        adv_match = _re.match(r"^(\w+ly)\s+(\w+)", word + rest) if word.endswith("ly") else None
+        if adv_match and word.endswith("ly"):
+            # "He actively argues" -> need to also fix the next word
+            # But regex already consumed; handle via second pass below
+            pass
+        return f"I {_deconj(word.lower())}"
+
+    # "He's" / "She's" -> "I'm"
+    text = _re.sub(r"\bHe's\b", "I'm", text)
+    text = _re.sub(r"\bShe's\b", "I'm", text)
+    # "He verb" / "She verb" patterns
+    text = _re.sub(r"\bHe (\w+)", _fix_pronoun_verb, text)
+    text = _re.sub(r"\bShe (\w+)", _fix_pronoun_verb, text)
+    # Brain last name references (e.g., "Belsky believes" -> "I believe")
+    if last_name:
+        text = _re.sub(rf"\b{re.escape(last_name)}'s\b", "my", text)
+        text = _re.sub(rf"\b{re.escape(last_name)} (\w+)", _fix_pronoun_verb, text)
+    # Second pass: fix "I adverb verb-s" patterns (e.g., "I actively argues" -> "I actively argue")
+    def _fix_adverb_verb(m):
+        adv, verb = m.group(1), m.group(2)
+        return f"I {adv} {_deconj(verb.lower())}"
+    text = _re.sub(r"\bI (\w+ly) (\w+s)\b", _fix_adverb_verb, text)
+    return text
+
+
+def compute_skill_variables(atoms: list, connections: list, config: dict) -> dict:
+    """Pre-compute template variables for skill files from brain data.
+
+    Returns a dict of template variables that skills can reference via {{name}}.
+    Each variable is a pre-rendered markdown block ready for inline insertion.
+    """
+    synthesis = config.get("synthesis", {})
+    cluster_meta = config.get("clusters", {})
+    last_name = config.get("brain_last_name", "")
+    vars = {}
+
+    # --- Guardrails block (for advise, teach, coach, predict) ---
+    guardrail_lines = []
+    does_not = synthesis.get("does_not_believe", [])
+    if does_not:
+        guardrail_lines.append("If the user's question assumes any of these, I disagree — lead with my actual position:\n")
+        for item in does_not:
+            guardrail_lines.append(f"- **{item['title']}** {item['desc']}")
+    would_not = synthesis.get("would_not_say", [])
+    if would_not:
+        guardrail_lines.append("\nThings I would never say:\n")
+        for item in would_not:
+            guardrail_lines.append(f"- **{item['title']}** {item['desc']}")
+    vars["guardrails_block"] = _to_first_person("\n".join(guardrail_lines), last_name) if guardrail_lines else ""
+
+    # --- Coverage map (for advise, teach) ---
+    cluster_counts = defaultdict(int)
+    for atom in atoms:
+        cluster_counts[atom.get("cluster", "uncategorized")] += 1
+    deep, moderate, thin = [], [], []
+    for key, count in sorted(cluster_counts.items(), key=lambda x: -x[1]):
+        name = cluster_meta.get(key, {}).get("name", key)
+        entry = f"- {name} ({count} atoms)"
+        if count >= 20:
+            deep.append(entry)
+        elif count >= 10:
+            moderate.append(entry)
+        else:
+            thin.append(entry)
+    coverage_lines = []
+    if deep:
+        coverage_lines.append("I have deep expertise here (20+ atoms):\n" + "\n".join(deep))
+    if moderate:
+        coverage_lines.append("\nI've explored these (10-19 atoms):\n" + "\n".join(moderate))
+    if thin:
+        coverage_lines.append("\nI have less to say here (<10 atoms):\n" + "\n".join(thin))
+    coverage_lines.append("\nIf the topic falls in a thin area, say so honestly. Bridge from adjacent deep areas if possible. Never fake depth I don't have.")
+    vars["coverage_map"] = "\n".join(coverage_lines)
+
+    # --- Voice anchors (for advise, teach, debate, coach, predict) ---
+    # High-confidence atoms with original_quote, grouped by cluster
+    voice_candidates = [
+        a for a in atoms
+        if a.get("original_quote") and a.get("confidence_tier") in ("high", "medium")
+    ]
+    # Sort: high confidence first, then by quote length (prefer punchy quotes)
+    voice_candidates.sort(key=lambda a: (
+        0 if a.get("confidence_tier") == "high" else 1,
+        len(a.get("original_quote", ""))
+    ))
+    # Take up to 10, spread across clusters
+    voice_lines = []
+    cluster_used = defaultdict(int)
+    for a in voice_candidates:
+        cl = a.get("cluster", "uncategorized")
+        if cluster_used[cl] >= 2:
+            continue
+        quote = a["original_quote"]
+        if len(quote) > 200:
+            quote = quote[:197] + "..."
+        cl_name = cluster_meta.get(cl, {}).get("name", cl)
+        voice_lines.append(f"- \"{quote}\" — *{cl_name}*")
+        cluster_used[cl] += 1
+        if len(voice_lines) >= 10:
+            break
+    vars["voice_anchors"] = "\n".join(voice_lines) if voice_lines else "Use the vocabulary and framing from brain-context.md."
+
+    # --- Debate positions (for debate — guardrails reframed as ammunition) ---
+    debate_lines = []
+    contrarian = synthesis.get("contrarian_positions", [])
+    if contrarian:
+        debate_lines.append("Positions I hold strongly and will argue for:\n")
+        for item in contrarian:
+            debate_lines.append(f"- **{item['title']}** {item['desc']}")
+    if does_not:
+        debate_lines.append("\nPositions I reject — if the user argues FOR these, push back hard:\n")
+        for item in does_not:
+            debate_lines.append(f"- **{item['title']}** {item['desc']}")
+    if would_not:
+        debate_lines.append("\nEven when steel-manning the other side, never put these words in my mouth:\n")
+        for item in would_not:
+            debate_lines.append(f"- {item['title']}")
+    vars["debate_positions"] = _to_first_person("\n".join(debate_lines), last_name)
+
+    # --- Temporal map (for evolve) ---
+    cluster_dates = defaultdict(list)
+    for atom in atoms:
+        date = atom.get("source_date")
+        if date:
+            cluster_dates[atom.get("cluster", "uncategorized")].append(str(date)[:10])
+    good_evo, snapshot = [], []
+    for cluster, dates in sorted(cluster_dates.items(), key=lambda x: -len(x[1])):
+        name = cluster_meta.get(cluster, {}).get("name", cluster)
+        dates_sorted = sorted(dates)
+        if len(dates) >= 3:
+            earliest, latest = dates_sorted[0][:4], dates_sorted[-1][:4]
+            try:
+                span = int(latest) - int(earliest)
+            except ValueError:
+                span = 0
+            if span >= 2:
+                good_evo.append(f"- {name}: {len(dates)} atoms spanning {earliest}-{latest} ({span}+ years)")
+            else:
+                snapshot.append(f"- {name}: {len(dates)} atoms, mostly from {earliest}")
+        elif dates:
+            snapshot.append(f"- {name}: only {len(dates)} dated atom(s)")
+    temporal_lines = []
+    if good_evo:
+        temporal_lines.append("Topics where I can trace real evolution (multi-year span):\n" + "\n".join(good_evo))
+    if snapshot:
+        temporal_lines.append("\nTopics where I only have a snapshot (limited evolution tracking):\n" + "\n".join(snapshot))
+    temporal_lines.append("\nFor snapshot topics, be honest: \"I can share my current position, but I don't have enough dated material to show how it evolved.\"")
+    vars["temporal_map"] = "\n".join(temporal_lines)
+
+    # --- Highlight reel (for surprise — top atoms ranked by richness) ---
+    def atom_richness(atom):
+        s = 0
+        if atom.get("confidence_tier") == "high":
+            s += 3
+        elif atom.get("confidence_tier") == "medium":
+            s += 1
+        if atom.get("original_quote"):
+            s += 2
+        if atom.get("implication"):
+            s += 1
+        return s
+    ranked = sorted(atoms, key=atom_richness, reverse=True)
+    highlight_lines = []
+    for i, atom in enumerate(ranked[:25], 1):
+        quote = atom.get("original_quote", atom["content"])
+        if len(quote) > 200:
+            quote = quote[:197] + "..."
+        cl = atom.get("cluster", "uncategorized")
+        cl_name = cluster_meta.get(cl, {}).get("name", cl)
+        tier = atom.get("confidence_tier", "medium")
+        highlight_lines.append(f"{i}. \"{quote}\" — *{cl_name}, {tier}*")
+    vars["highlight_reel"] = "\n".join(highlight_lines)
+
+    # --- Bridge examples (for connect — cross-cluster connections) ---
+    atom_map = {a["id"]: a for a in atoms}
+    cross_cluster = []
+    for c in connections:
+        a1 = atom_map.get(c.get("atom_id_1"))
+        a2 = atom_map.get(c.get("atom_id_2"))
+        if a1 and a2 and a1.get("cluster") != a2.get("cluster"):
+            cross_cluster.append({
+                "c1": cluster_meta.get(a1.get("cluster", ""), {}).get("name", a1.get("cluster", "")),
+                "c2": cluster_meta.get(a2.get("cluster", ""), {}).get("name", a2.get("cluster", "")),
+                "s1": a1["content"][:100],
+                "s2": a2["content"][:100],
+                "rel": c.get("relationship", "related"),
+            })
+    # Prioritize contradicts and extends over supports/related
+    rel_priority = {"contradicts": 3, "extends": 2, "related": 1, "supports": 0}
+    cross_cluster.sort(key=lambda x: rel_priority.get(x["rel"], 0), reverse=True)
+    bridge_lines = []
+    seen_pairs = set()
+    for cc in cross_cluster:
+        pair = tuple(sorted([cc["c1"], cc["c2"]]))
+        if pair in seen_pairs:
+            continue
+        seen_pairs.add(pair)
+        bridge_lines.append(f"- **{cc['c1']} <> {cc['c2']}** ({cc['rel']}): \"{cc['s1']}\" connects to \"{cc['s2']}\"")
+        if len(bridge_lines) >= 8:
+            break
+    vars["bridge_examples"] = "\n".join(bridge_lines) if bridge_lines else "No cross-cluster connections available yet."
+
+    # --- Chain examples (for predict — atoms showing cascading logic) ---
+    chain_atoms = [
+        a for a in atoms
+        if a.get("confidence_tier") in ("high", "medium")
+        and any(marker in (a.get("content", "") + a.get("original_quote", ""))
+                for marker in ["\u2192", "leads to", "which means", "second-order", "third-order", "cascade"])
+    ]
+    chain_lines = []
+    patterns = synthesis.get("thinking_patterns", [])
+    chain_pattern = next((p for p in patterns if "chain" in p.get("name", "").lower()
+                          or "implication" in p.get("name", "").lower()), None)
+    if chain_pattern:
+        chain_lines.append(f"My signature move: {chain_pattern['desc']}\n")
+    if chain_atoms:
+        chain_lines.append("Examples of my cascading logic (match this style):\n")
+        for a in chain_atoms[:5]:
+            quote = a.get("original_quote", a["content"])
+            if len(quote) > 250:
+                quote = quote[:247] + "..."
+            chain_lines.append(f"- \"{quote}\"")
+    vars["chain_examples"] = "\n".join(chain_lines) if chain_lines else ""
+
+    return vars
+
+
+def export_skill_files(config: dict, atoms: list, connections: list, output_dir: Path):
+    """Render SKILL.md, README.md, and all skill templates with pre-computed variables."""
+    skill_vars = compute_skill_variables(atoms, connections, config)
     extra_vars = {
-        "atom_count": str(atom_count),
-        "connection_count": str(connection_count),
+        "atom_count": str(len(atoms)),
+        "connection_count": str(len(connections)),
         "vocabulary_examples": config.get("vocabulary_examples", "specific terms, frameworks, and labels"),
     }
+    extra_vars.update(skill_vars)
 
     # Render top-level templates (SKILL.md, README.md)
     for template_name in ["SKILL.md.template", "README.md.template"]:
@@ -505,7 +755,7 @@ def main():
     # Export skill files
     if not args.skip_skills:
         print("\nRendering skill templates...")
-        export_skill_files(config, atom_count, connection_count, output_dir)
+        export_skill_files(config, atoms, connections, output_dir)
 
     # Copy explore.html template
     explore_template = TEMPLATES_DIR / "explore.html.template"

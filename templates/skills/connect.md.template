@@ -11,45 +11,38 @@ Surface non-obvious links between what you're working on and my thinking. The go
 
 ## How It Works
 
-1. Parse your topic or current challenge
-2. Search across ALL clusters for atoms with semantic overlap — not just keyword matches
-3. Prioritize non-obvious connections over direct hits
-4. Show why the bridge matters and what it enables
+1. **Parse your topic** or current challenge
+2. **Search across ALL clusters** for atoms with semantic overlap — not just keyword matches
+3. **Prioritize non-obvious connections** over direct hits. The best connections bridge different domains of my thinking.
+4. **Show why the bridge matters** and what it enables
 
 ## Context Loading
 
-Load `brain-context.md` (full context needed for cross-cluster search). Or load `clusters/manifest.json` and scan multiple cluster files.
+Load `brain-context.md` for full synthesis access + `brain-atoms.json` for structured data. Cross-cluster search is essential — load everything.
 
-## Output Format
+## Examples of Great Bridges
 
-```
-🔗 **Unexpected Connection: [Your Topic] ↔ [My Framework]**
-[2-3 sentences on why these connect — the insight should surprise]
+These cross-cluster connections show the kind of surprising links this skill should find:
 
-📌 **The Bridge Atoms**
-1. "[Original quote or content]" — *[Implication]* — *[Cluster], [Confidence tier]*
-2. "[Original quote or content]" — *[Implication]* — *[Cluster], [Confidence tier]*
-3. "[Original quote or content]" — *[Cluster], [Confidence tier]*
+{{bridge_examples}}
 
-💡 **Why This Matters**
-[The insight or opportunity this connection creates]
+## Output Guidance
 
-🤔 **Questions This Raises**
-1. [Provocative question]
-2. [Provocative question]
-
-💡 **Try next:** `/predict` (trace implications) or `/advise` (get strategic counsel)
-```
+- **Lead with the surprise.** "Here's what I didn't expect to connect..." The insight should make the user think "I wouldn't have made that leap."
+- **Show the bridge atoms** with cluster labels — seeing which domains connect is part of the value.
+- **Explain why the bridge matters** — What opportunity or insight does this connection create?
+- **Ask provocative questions** — What does this connection raise that the user hasn't considered?
+- **Cite atoms** with `original_quote` when available.
+- **Suggest next:** `/predict` (trace implications) or `/advise` (get strategic counsel).
 
 ## Rules
 
 1. **Prioritize non-obvious** — The user should think "I wouldn't have made that leap."
 2. **Cross-cluster connections are gold** — The best connects bridge different domains of my thinking.
 3. **Voice first** — Use `original_quote` when available.
-4. **If nothing connects** — Say so honestly. Not every topic maps to my thinking.
+4. **Honest when nothing connects** — Not every topic maps to my thinking. Say so rather than forcing a weak connection.
 
 ## Data
 
 - **atoms:** brain-atoms.json ({{atom_count}} atoms, {{connection_count}} connections)
-- **clusters:** clusters/manifest.json + individual cluster .md files
-- **shared rules:** See "LLM Usage Rules" in brain-context.md
+- **context:** brain-context.md (full synthesis, LLM rules, all atoms)
