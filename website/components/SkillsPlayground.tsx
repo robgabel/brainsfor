@@ -27,6 +27,18 @@ interface SkillsPlaygroundProps {
 const DEFAULT_DEMO_LIMIT = process.env.NODE_ENV === "development" ? 999 : 10;
 const STORAGE_KEY = "bf-demo-count";
 
+/** Split text into sentences and render each as its own paragraph */
+function SentenceParagraphs({ text, className }: { text: string; className?: string }) {
+  const sentences = text.match(/[^.!?]+[.!?]+(?:\s+|$)/g) || [text];
+  return (
+    <div className={className}>
+      {sentences.map((s, i) => (
+        <p key={i} className={i > 0 ? "mt-3" : ""}>{s.trim()}</p>
+      ))}
+    </div>
+  );
+}
+
 export function SkillsPlayground({
   brains,
   skills,
@@ -339,14 +351,18 @@ export function SkillsPlayground({
               {brainName}, {selectedSkill} me: {query.trim()}
             </p>
             <div className="mt-4 font-mono text-sm leading-relaxed text-[#cbd5e1]">
-              {genericText || (
+              {genericText ? (
+                <>
+                  <SentenceParagraphs text={genericText} />
+                  {isStreaming && (
+                    <span className="ml-0.5 inline-block animate-pulse text-[#94a3b8]">
+                      |
+                    </span>
+                  )}
+                </>
+              ) : (
                 <span className="animate-pulse text-[#475569]">
                   Generating...
-                </span>
-              )}
-              {isStreaming && genericText && (
-                <span className="ml-0.5 inline-block animate-pulse text-[#94a3b8]">
-                  |
                 </span>
               )}
             </div>
@@ -372,14 +388,18 @@ export function SkillsPlayground({
               --{brainName} {query.trim()}
             </p>
             <div className="mt-4 font-mono text-sm leading-relaxed text-[#c7d2fe]">
-              {enhancedText || (
+              {enhancedText ? (
+                <>
+                  <SentenceParagraphs text={enhancedText} />
+                  {isStreaming && (
+                    <span className="ml-0.5 inline-block animate-pulse text-brain-indigo">
+                      |
+                    </span>
+                  )}
+                </>
+              ) : (
                 <span className="animate-pulse text-[#818cf8]">
                   Loading brain context...
-                </span>
-              )}
-              {isStreaming && enhancedText && (
-                <span className="ml-0.5 inline-block animate-pulse text-brain-indigo">
-                  |
                 </span>
               )}
             </div>
@@ -411,9 +431,7 @@ export function SkillsPlayground({
                 ? "Show me something interesting..."
                 : demo.prompt}
             </p>
-            <div className="mt-4 font-mono text-sm leading-relaxed text-[#cbd5e1]">
-              {demo.generic}
-            </div>
+            <SentenceParagraphs text={demo.generic} className="mt-4 font-mono text-sm leading-relaxed text-[#cbd5e1]" />
             <p className="mt-4 font-mono text-xs text-[#475569]">
               Claude Sonnet — no brain loaded. Generic. No frameworks.
             </p>
@@ -433,9 +451,7 @@ export function SkillsPlayground({
               --{brainName}{" "}
               {selectedSkill !== "surprise" && demo.prompt}
             </p>
-            <div className="mt-4 font-mono text-sm leading-relaxed text-[#c7d2fe]">
-              {demo.enhanced.response}
-            </div>
+            <SentenceParagraphs text={demo.enhanced.response} className="mt-4 font-mono text-sm leading-relaxed text-[#c7d2fe]" />
             <div className="mt-3 font-mono text-xs text-[#818cf8]">
               Sources:{" "}
               {demo.enhanced.atoms.map((a, i) => (
