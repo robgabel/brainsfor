@@ -15,6 +15,7 @@ export interface Brain {
   price: number; // in dollars
   topics: string[];
   packPath: string;
+  badge?: string;
 }
 
 interface IndexEntry {
@@ -31,6 +32,7 @@ interface BrainConfig {
   brain_name: string;
   brain_source_description: string;
   brain_tagline?: string;
+  badge?: string;
   edition_count?: number;
   clusters?: Record<string, unknown>;
   website?: {
@@ -81,6 +83,7 @@ function loadBrains(): Brain[] {
       price: config.website?.price ?? 29,
       topics: config.website?.topics ?? [],
       packPath: entry.pack_path,
+      badge: config.badge,
     };
   });
 }

@@ -48,6 +48,11 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
                 >
                   {isLive ? "Live" : "Building"}
                 </span>
+                {brain.badge && (
+                  <span className="inline-flex items-center rounded-full bg-gradient-to-r from-brain-indigo to-[#8b5cf6] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">
+                    {brain.badge}
+                  </span>
+                )}
               </div>
               <p className="mt-1 font-mono text-sm text-muted">{brain.source}</p>
               <p className="mt-4 text-base leading-relaxed text-body">{brain.bio}</p>

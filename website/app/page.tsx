@@ -100,7 +100,7 @@ export default function Home() {
             <div className="rounded-xl border border-border-indigo bg-deep-ink p-6">
               <div className="mb-4 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-success" />
-                <span className="font-mono text-xs text-success">Belsky Brain loaded (3 atoms, confidence: 0.95)</span>
+                <span className="font-mono text-xs text-success">Belsky Brain V2 loaded (3 atoms, confidence: 0.95)</span>
               </div>
               <p className="font-mono text-sm leading-relaxed text-[#e2e8f0]">
                 &gt; /advise &quot;Should I raise my Series A or stay bootstrapped?&quot;

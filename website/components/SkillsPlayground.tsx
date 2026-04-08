@@ -6,6 +6,7 @@ import type { SkillDemo } from "@/lib/skill-demos";
 interface BrainOption {
   slug: string;
   name: string;
+  badge?: string;
 }
 
 interface SkillOption {
@@ -265,13 +266,18 @@ export function SkillsPlayground({
             <button
               key={brain.slug}
               onClick={() => handleBrainChange(brain.slug)}
-              className={`rounded-lg border px-4 py-2 text-[14px] font-medium transition-all ${
+              className={`flex items-center gap-1.5 rounded-lg border px-4 py-2 text-[14px] font-medium transition-all ${
                 selectedBrain === brain.slug
                   ? "border-brain-indigo bg-brain-indigo/5 text-brain-indigo shadow-sm"
                   : "border-border-default bg-white text-body hover:border-border-indigo hover:text-deep-ink"
               }`}
             >
               {brain.name}
+              {brain.badge && (
+                <span className="inline-flex items-center rounded-full bg-gradient-to-r from-brain-indigo to-[#8b5cf6] px-1.5 py-0.5 text-[9px] font-bold uppercase leading-none tracking-wider text-white">
+                  {brain.badge}
+                </span>
+              )}
             </button>
           ))}
         </div>
@@ -284,7 +290,7 @@ export function SkillsPlayground({
         >
           {brains.map((brain) => (
             <option key={brain.slug} value={brain.slug}>
-              {brain.name}
+              {brain.name}{brain.badge ? ` ✦ ${brain.badge}` : ""}
             </option>
           ))}
         </select>

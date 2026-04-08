@@ -13,6 +13,7 @@ export default function SkillsPage() {
   const liveBrains = getLiveBrains().map((b) => ({
     slug: b.slug,
     name: b.name,
+    badge: b.badge,
   }));
   const demos = getAllDemos();
   const defaultDemo = getDefaultDemo();
