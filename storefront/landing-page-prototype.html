@@ -242,69 +242,171 @@
     grid-template-columns: 1fr 1fr;
     gap: 24px;
     margin-top: 48px;
+    align-items: start;
   }
 
-  .demo-card {
+  .demo-terminal {
     background: var(--deep-ink);
     border-radius: 12px;
-    padding: 24px;
-  }
-  .demo-card.with-brain {
-    border: 1px solid var(--indigo-soft);
+    overflow: hidden;
   }
 
-  .demo-card-label {
+  .demo-terminal.with-brain {
+    border: 1px solid rgba(99, 102, 241, 0.3);
+  }
+
+  .demo-terminal-header {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 16px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
   }
-  .demo-card-label .dot {
+
+  .demo-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .demo-dots span {
     width: 10px;
     height: 10px;
     border-radius: 50%;
   }
-  .demo-card-label.without .dot { background: var(--muted); }
-  .demo-card-label.without { color: var(--muted); }
-  .demo-card-label.with .dot { background: var(--success); }
-  .demo-card-label.with { color: var(--success); }
 
-  .demo-prompt {
+  .demo-dots span:nth-child(1) { background: #ef4444; }
+  .demo-dots span:nth-child(2) { background: #eab308; }
+  .demo-dots span:nth-child(3) { background: #22c55e; }
+
+  .demo-terminal-title {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
+    font-size: 11px;
+    color: var(--muted);
+    margin-left: 8px;
+  }
+
+  .demo-terminal-body {
+    padding: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 360px;
+  }
+
+  .demo-line {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-bottom: 2px;
+  }
+
+  .demo-line.visible {
+    opacity: 1;
+  }
+
+  .demo-line.prompt {
     color: #e2e8f0;
     margin-bottom: 16px;
   }
 
-  .demo-response {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    line-height: 1.7;
+  .demo-line .chevron {
+    color: var(--muted);
+  }
+
+  .demo-terminal.with-brain .demo-line .chevron {
+    color: var(--indigo-light);
+  }
+
+  .demo-line.response {
     color: var(--body);
   }
-  .demo-card.with-brain .demo-response { color: var(--indigo-soft); }
 
-  .demo-sources {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+  .demo-terminal.with-brain .demo-line.response {
+    color: var(--indigo-soft);
+  }
+
+  .demo-line.question {
     color: var(--indigo-light);
-    margin-top: 12px;
+    padding-left: 4px;
   }
 
-  .demo-next {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: var(--indigo);
-    margin-top: 12px;
+  .demo-line.heading {
+    color: #e2e8f0;
+    font-weight: 500;
+    margin-top: 14px;
+    margin-bottom: 6px;
   }
 
-  .demo-verdict {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
+  .demo-terminal.with-brain .demo-line.heading {
+    color: var(--indigo-light);
+  }
+
+  .demo-line.verdict {
     color: #475569;
     margin-top: 16px;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 12px;
+  }
+
+  .demo-line.sources {
+    color: var(--indigo-light);
+    font-size: 11px;
+    margin-top: 14px;
+    opacity: 0.8;
+  }
+  .demo-line.sources.visible { opacity: 0.8; }
+
+  .demo-line.next {
+    color: var(--indigo);
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .demo-line.spacer {
+    height: 8px;
+  }
+  .demo-line.spacer.visible { opacity: 1; }
+
+  .demo-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background: var(--muted);
+    vertical-align: text-bottom;
+    margin-left: 2px;
+    animation: demo-blink 1s step-end infinite;
+  }
+
+  .demo-terminal.with-brain .demo-cursor {
+    background: var(--indigo-light);
+  }
+
+  @keyframes demo-blink {
+    50% { opacity: 0; }
+  }
+
+  .demo-replay {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .demo-replay button {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--indigo);
+    background: none;
+    border: 1px solid var(--indigo);
+    border-radius: 6px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .demo-replay button:hover {
+    background: var(--indigo);
+    color: white;
   }
 
   /* --- BRAINS CATALOG --- */
@@ -767,6 +869,7 @@
     .founding-section h2 { font-size: 28px; }
 
     .demo-grid { grid-template-columns: 1fr; }
+    .demo-terminal-body { min-height: 280px; }
     .how-grid { grid-template-columns: 1fr; }
     .skills-grid { grid-template-columns: 1fr; }
     .brains-grid { grid-template-columns: 1fr; }
@@ -820,20 +923,25 @@
     <p class="section-desc">The same question, with and without a brain loaded.</p>
 
     <div class="demo-grid">
-      <div class="demo-card">
-        <div class="demo-card-label without"><span class="dot"></span>Without a brain</div>
-        <div class="demo-prompt">&gt; Should I raise my Series A or stay bootstrapped?</div>
-        <div class="demo-response">It depends on your situation. Consider factors like your runway, growth rate, market opportunity, and personal goals. Both paths have trade-offs. Raising can accelerate growth but dilutes ownership. Bootstrapping preserves control but may limit speed...</div>
-        <div class="demo-verdict">Generic. No frameworks. No evidence.</div>
+      <div class="demo-terminal" id="demo-without">
+        <div class="demo-terminal-header">
+          <div class="demo-dots"><span></span><span></span><span></span></div>
+          <div class="demo-terminal-title">claude &mdash; sonnet</div>
+        </div>
+        <div class="demo-terminal-body"></div>
       </div>
 
-      <div class="demo-card with-brain">
-        <div class="demo-card-label with"><span class="dot"></span>Belsky Brain loaded (3 atoms, confidence: 0.95)</div>
-        <div class="demo-prompt">&gt; /advise "Should I raise my Series A or stay bootstrapped?"</div>
-        <div class="demo-response">Belsky would push you toward staying small. His core thesis is "revenue per employee" as the new status metric &mdash; he believes resourcefulness outperforms resources, and AI-native tools let small teams scale ambition without proportionate headcount.</div>
-        <div class="demo-sources">Sources: "Scaling Without Growing", "Premium of Originality", "Exponential Code"</div>
-        <div class="demo-next">Try /debate to stress-test &bull; /coach to find your blind spots</div>
+      <div class="demo-terminal with-brain" id="demo-with">
+        <div class="demo-terminal-header">
+          <div class="demo-dots"><span></span><span></span><span></span></div>
+          <div class="demo-terminal-title">claude &mdash; sonnet + belsky brain (284 atoms)</div>
+        </div>
+        <div class="demo-terminal-body"></div>
       </div>
+    </div>
+
+    <div class="demo-replay" style="display:none" id="demo-replay">
+      <button onclick="replayDemo()">Replay demo</button>
     </div>
   </div>
 </section>
@@ -1137,5 +1245,154 @@
   </div>
 </footer>
 
+<script>
+(function() {
+  // --- Demo content ---
+  var LEFT = [
+    { a:'type', text:'You are Scott Belsky. I want you to advise me: Should I raise my Series A or stay bootstrapped?', cls:'prompt', ms:20, post:900 },
+    { a:'line', text:'It depends on your situation. Consider factors like your runway, growth rate, market opportunity, and personal goals.', cls:'response', ms:350 },
+    { a:'space', ms:80 },
+    { a:'line', text:'Both paths have trade-offs. Raising can accelerate growth but dilutes ownership. Bootstrapping preserves control but may limit speed.', cls:'response', ms:350 },
+    { a:'space', ms:80 },
+    { a:'line', text:'You should weigh the pros and cons carefully based on your specific circumstances and long-term vision.', cls:'response', ms:500 },
+    { a:'line', text:'Generic. No frameworks. No follow-up.', cls:'verdict', ms:0 }
+  ];
+
+  var RIGHT = [
+    { a:'type', text:'/advise Should I raise my Series A or stay bootstrapped?', cls:'prompt', ms:20, post:900 },
+    { a:'line', text:'Belsky would push you toward staying small. His core thesis: \u201Crevenue per employee\u201D is the new status metric \u2014 he believes resourcefulness outperforms resources.', cls:'response', ms:350 },
+    { a:'space', ms:80 },
+    { a:'line', text:'AI-native tools let small teams scale ambition without proportionate headcount. The old playbook of \u201Craise and hire\u201D is dead.', cls:'response', ms:350 },
+    { a:'space', ms:80 },
+    { a:'line', text:'But if you\u2019ve found genuine product-market pull, raising can buy the right kind of speed \u2014 distribution speed, not hiring speed.', cls:'response', ms:400 },
+    { a:'space', ms:80 },
+    { a:'line', text:'\u201CThe best companies now are the ones that do more with less. Not because they have to \u2014 because the tools finally let them.\u201D', cls:'question', ms:400 },
+    { a:'line', text:'Sources: \u201CScaling Without Growing\u201D #71, \u201CPremium of Originality\u201D #45, \u201CExponential Code\u201D #62', cls:'sources', ms:250 },
+    { a:'line', text:'Try /debate to stress-test \u00B7 /coach for blind spots', cls:'next', ms:0 }
+  ];
+
+  var running = false;
+
+  function sleep(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
+
+  function getBody(id) {
+    return document.querySelector('#' + id + ' .demo-terminal-body');
+  }
+
+  // Type a prompt line character by character
+  function typeLine(body, text, cls, charMs, postMs) {
+    return new Promise(function(resolve) {
+      var line = document.createElement('div');
+      line.className = 'demo-line ' + cls + ' visible';
+      var chevron = document.createElement('span');
+      chevron.className = 'chevron';
+      chevron.textContent = '> ';
+      line.appendChild(chevron);
+      var span = document.createElement('span');
+      line.appendChild(span);
+      var cursor = document.createElement('span');
+      cursor.className = 'demo-cursor';
+      line.appendChild(cursor);
+      body.appendChild(line);
+
+      var i = 0;
+      var iv = setInterval(function() {
+        i++;
+        span.textContent = text.slice(0, i);
+        if (i >= text.length) {
+          clearInterval(iv);
+          cursor.remove();
+          setTimeout(resolve, postMs);
+        }
+      }, charMs);
+    });
+  }
+
+  // Reveal a line instantly with fade-in
+  function addLine(body, text, cls, ms) {
+    return new Promise(function(resolve) {
+      var line = document.createElement('div');
+      line.className = 'demo-line ' + cls;
+      line.textContent = text;
+      body.appendChild(line);
+      // Force reflow then fade in
+      void line.offsetHeight;
+      line.classList.add('visible');
+      setTimeout(resolve, ms);
+    });
+  }
+
+  // Add a spacer
+  function addSpace(body, ms) {
+    return new Promise(function(resolve) {
+      var line = document.createElement('div');
+      line.className = 'demo-line spacer visible';
+      body.appendChild(line);
+      setTimeout(resolve, ms);
+    });
+  }
+
+  // Add a blinking cursor at the end
+  function addFinalCursor(body) {
+    var cursor = document.createElement('span');
+    cursor.className = 'demo-cursor';
+    cursor.style.display = 'block';
+    cursor.style.marginTop = '8px';
+    body.appendChild(cursor);
+  }
+
+  // Run one terminal's sequence
+  function runSeq(id, steps) {
+    var body = getBody(id);
+    var chain = Promise.resolve();
+    steps.forEach(function(step) {
+      chain = chain.then(function() {
+        if (step.a === 'type') return typeLine(body, step.text, step.cls, step.ms, step.post);
+        if (step.a === 'space') return addSpace(body, step.ms);
+        return addLine(body, step.text, step.cls, step.ms);
+      });
+    });
+    chain = chain.then(function() { addFinalCursor(body); });
+    return chain;
+  }
+
+  function startDemo() {
+    if (running) return;
+    running = true;
+    document.getElementById('demo-replay').style.display = 'none';
+
+    // Clear
+    getBody('demo-without').innerHTML = '';
+    getBody('demo-with').innerHTML = '';
+
+    // Run both in parallel
+    Promise.all([
+      runSeq('demo-without', LEFT),
+      runSeq('demo-with', RIGHT)
+    ]).then(function() {
+      running = false;
+      document.getElementById('demo-replay').style.display = 'flex';
+    });
+  }
+
+  window.replayDemo = startDemo;
+
+  // Auto-play when scrolled into view
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          startDemo();
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    obs.observe(document.getElementById('demo'));
+  } else {
+    // Fallback for older browsers
+    startDemo();
+  }
+})();
+</script>
 </body>
 </html>
