@@ -27,14 +27,22 @@ export function Nav() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="rounded-lg p-2 text-body hover:text-deep-ink md:hidden"
-          aria-label="Toggle menu"
+          className="flex h-11 w-11 items-center justify-center rounded-lg border border-[var(--border-default)] text-body hover:text-deep-ink md:hidden"
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
         >
-          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
             {mobileOpen ? (
-              <path d="M6 6l12 12M6 18L18 6" />
+              <>
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </>
             ) : (
-              <path d="M4 8h16M4 16h16" />
+              <>
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </>
             )}
           </svg>
         </button>
@@ -42,13 +50,28 @@ export function Nav() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-[var(--border-default)] bg-white px-6 py-4 md:hidden">
-          <div className="flex flex-col gap-4">
-            <Link href="/brains" className="text-[15px] font-medium text-body" onClick={() => setMobileOpen(false)}>
+        <div className="border-t border-[var(--border-default)] bg-white/98 backdrop-blur-xl px-6 py-4 md:hidden">
+          <div className="flex flex-col gap-2">
+            <Link
+              href="/brains"
+              className="rounded-lg px-4 py-3 text-base font-medium text-body hover:bg-brain-indigo/5 min-h-[44px]"
+              onClick={() => setMobileOpen(false)}
+            >
               Brains
             </Link>
-            <Link href="/skills" className="text-[15px] font-medium text-body" onClick={() => setMobileOpen(false)}>
+            <Link
+              href="/skills"
+              className="rounded-lg px-4 py-3 text-base font-medium text-body hover:bg-brain-indigo/5 min-h-[44px]"
+              onClick={() => setMobileOpen(false)}
+            >
               Skills
+            </Link>
+            <Link
+              href="/brains"
+              className="mt-2 rounded-lg bg-brain-indigo px-4 py-3 text-center text-[15px] font-semibold text-white shadow-brain-cta min-h-[44px]"
+              onClick={() => setMobileOpen(false)}
+            >
+              Browse Brains
             </Link>
           </div>
         </div>

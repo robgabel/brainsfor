@@ -31,6 +31,9 @@ export const metadata: Metadata = {
       "Knowledge graphs of the world's best thinkers, packaged as 8 AI skills you actually use.",
     siteName: "BrainsFor.Dev",
   },
+  other: {
+    "theme-color": "#ffffff",
+  },
 };
 
 export default function RootLayout({
