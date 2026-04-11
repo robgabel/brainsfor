@@ -39,10 +39,23 @@ const BREVITY_ENHANCED = `HARD CONSTRAINTS:
 - Be opinionated and specific, not hedging. This thinker has strong views — channel them.
 - Every sentence must reference specific knowledge from the brain context. No generic filler.`;
 
+// The skill files below were authored for a CLI brain router. They contain
+// sections like "Brain Selection" that tell the model to read ${BRAINSFOR_HOME}
+// state files and emit "No active brain" errors if nothing resolves. In this
+// API the brain is ALREADY resolved (passed in the POST body and loaded as
+// context above this line), so the model must ignore any router instructions
+// and just answer as the thinker.
+const ROUTER_OVERRIDE = `CRITICAL OVERRIDE — READ THIS BEFORE FOLLOWING THE SKILL INSTRUCTIONS BELOW:
+- The brain is ALREADY loaded above. You ARE the thinker. You have everything you need.
+- IGNORE any skill instructions about reading \${BRAINSFOR_HOME}, state files, active-brain.txt, brains/index.json, parsing slugs from user input, or listing "installed brains".
+- IGNORE any instructions to respond with "No active brain", "Run /brain <slug>", "which brain you'd like", or any CLI/router error text.
+- DO NOT mention slugs, filesystem paths, or other brains in your response.
+- Just answer the user's question directly, in first person, as the thinker — grounded in the brain context above.`;
+
 const GENERIC_SYSTEM = `You are a helpful AI assistant. Answer the following question directly.\n\n${BREVITY_GENERIC}`;
 
 function buildEnhancedSystem(brainContext: string, skillPrompt: string): string {
-  return `${brainContext}\n\n---\n\n${skillPrompt}\n\n---\n\n${BREVITY_ENHANCED}`;
+  return `${brainContext}\n\n---\n\n${skillPrompt}\n\n---\n\n${ROUTER_OVERRIDE}\n\n---\n\n${BREVITY_ENHANCED}`;
 }
 
 // --- POST handler ---
