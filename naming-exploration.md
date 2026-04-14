@@ -141,6 +141,15 @@ Group by directional bet. Each has a live ".com or near-com" note to confirm.
 14. **Borrow** — literal to the value prop, provocative
 15. **Pantheon** — collective of immortal thinkers
 
+### Bucket 5: Polarizing wordmarks (Impossible Foods zone)
+_Promoted from the playful tier. These are names half the room will love and half will recoil from — exactly what Placek says to chase. Score them head-to-head with Mentra and Sagent, not as novelties._
+
+16. **BrainsForSale** — literal, irreverent, verb-able. A dare. Stress-test: can you tell the founding story with a straight face?
+17. **Borrowed** — past-tense variant of #14. Softer, more poetic. "Borrowed from the greatest operators alive."
+18. **Cribsheet** — legendary-thinker's notes, distilled. Self-deprecating honesty as positioning.
+19. **Heirloom** — inherited wisdom, reframed as precious. Warm where BrainsForSale is hot.
+20. **Mooch** — worst-case honest. "Mooch off the best minds in the world." Almost certainly kill-this-in-Phase-4, but include it for calibration.
+
 ---
 
 ## Scoring Framework
@@ -164,6 +173,11 @@ Fill in after one-on-one tests with 10–15 people. Ask *"what does this make yo
 | Vantage | | | | | | /50 | |
 | Borrow | | | | | | /50 | |
 | Pantheon | | | | | | /50 | |
+| **BrainsForSale** | | | | | | /50 | Polarizing; stress-test with founding-story recital |
+| Borrowed | | | | | | /50 | Softer sibling of BrainsForSale |
+| Cribsheet | | | | | | /50 | Self-deprecating wedge |
+| Heirloom | | | | | | /50 | Warm counter to BrainsForSale's heat |
+| Mooch | | | | | | /50 | Calibration only — probably Phase-4 cut |
 
 **Remember Placek's rule:** the winner is usually the 9/10 on *distinctive* + *energy* that scores a 6 on something else — not the balanced 8s across the board.
 
@@ -183,3 +197,15 @@ Fill in after one-on-one tests with 10–15 people. Ask *"what does this make yo
 - **Sagent** is riding the agent wave — which is an asset *today* and a risk in 3–5 years if "agent" becomes the "cloud" of the 2020s (ubiquitous and invisible). It also tells people what it is a little too clearly, flirting with the invisible zone.
 
 If forced to pick one for Day 1: **Mentra**. If optimizing for "Product Hunt launches in the next 12 months recognize this instantly": **Sagent**.
+
+## The three-way stress test
+
+The real decision isn't "which of 15." It's whether you want to occupy **Poetry**, **Category**, or **Provocation**.
+
+| Wordmark | Occupies | Risk | Ceiling |
+|---|---|---|---|
+| **Mentra** | Poetry — invented, aspirational, premium | Forgettable without a strong visual/story | Very high. Can become a verb. |
+| **Sagent** | Category — "the agent for sages" | Rides the agent wave; could date quickly | High, but tethered to a trend |
+| **BrainsForSale** | Provocation — irreverent, memetic | Cheapens the thinkers; scares enterprise buyers | Polarizing ceiling: cult following OR shrug |
+
+The playbook says: run all three through one-on-one reactions. The one that generates the *strongest* reaction — not the most favorable — is the right bet.
