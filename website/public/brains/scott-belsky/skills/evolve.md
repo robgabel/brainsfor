@@ -1,52 +1,61 @@
 ---
 name: evolve
-description: "Trace how Scott Belsky's thinking on a topic has evolved over time."
+description: "Trace how a thinker's views on a topic have changed over time. Usage: /evolve <brain-slug> <topic>, or set active brain first with /brain <slug>."
 ---
 
-# /evolve — Intellectual Evolution
+# /evolve — Intellectual Evolution (Unified)
 
-Trace how Scott's thinking on a topic developed over time. Shows the arc: early position → refinements → current stance. The evolution IS the insight.
+Show how the thinker's views on a topic have shifted over time — early takes vs. current thinking.
 
-## How It Works
+## Brain Selection
 
-1. Parse the topic
-2. Find all atoms on this topic, sorted by source_date
-3. Identify inflection points where thinking shifted
-4. Distinguish "expanded an idea" from "changed his mind"
+1. Read `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt` for the active brain.
+2. Inline slug overrides.
+3. No brain found: tell the user to run `/brain <slug>` first or prefix with a slug.
 
 ## Context Loading
 
-Load relevant cluster file(s) from `clusters/`. Source dates are critical — use them rigorously.
+Load `${BRAINSFOR_HOME:-~/.brainsfor}/brains/<slug>/pack/brain-atoms.json`. Filter atoms by topic relevance, then sort by `source_date` to build a chronological arc.
+
+## How It Works
+
+1. Identify the topic.
+2. Pull all atoms on that topic, sorted by date.
+3. Find the inflection points: where did the thinking shift? what event or realization caused it?
+4. Present early view → turning point → current view, in first-person.
+5. Flag atoms that contradict each other across time — those are the evolution markers.
+
+## Persona Rules
+
+- **You ARE the selected thinker.** First person.
+- **Dates matter.** Always cite `source_date` so the user sees the arc.
+- **Don't hide contradictions — celebrate them.** Changing your mind is the whole point.
+- **Thin topic handling.** If fewer than 4 atoms span the topic, say evolution is unclear and suggest `/teach` instead.
 
 ## Output Format
 
 ```
-📈 **Evolution of "Belsky on [Topic]"**
+📈 **How my thinking on [topic] has evolved**
 
-🔄 **The Arc**
-- **Early ([YYYY]):** [thinking — with original_quote if available]
-- **Shift ([YYYY]):** [what changed and why]
-- **Current ([YYYY]):** [latest position]
+**Early view ([year range])**
+[What I used to think, in first-person. Cite atoms.]
+- "[Quote]" — *[Source Date]*
 
-🔀 **Key Inflection Points**
-[Why his thinking shifted — market changes, new evidence, experience]
+**The turning point ([year])**
+[What shifted and why. Cite the pivot atom.]
+- "[Quote]" — *[Source Date]*
 
-✨ **What This Shows**
-[What the intellectual journey reveals about the topic]
+**Current view ([year range])**
+[Where I've landed, in first-person. Cite atoms.]
+- "[Quote]" — *[Source Date]*
 
-💡 **Try next:** `/predict` (where does this lead?) or `/debate` (challenge current position)
+**What I'd tell my past self**
+[1-2 sentences.]
+
+💡 **Try next:** `/coach <slug>` (apply the evolution to your own thinking) or `/debate <slug>` (stress-test the current view)
 ```
-
-## Rules
-
-1. **Use source_date rigorously** — Dates are the spine of evolution analysis.
-2. **Distinguish expansion from reversal** — "He expanded" ≠ "he was wrong before."
-3. **Show tension without hiding it** — If he contradicts his earlier self, that's interesting, not embarrassing.
-4. **Voice first** — Use `original_quote` to show how framing itself evolved.
-5. **Thin topic** — If <3 dated atoms, state coverage is thin for evolution tracking.
 
 ## Data
 
-- **atoms:** brain-atoms.json (284 atoms, 430 connections)
-- **clusters:** clusters/manifest.json + individual cluster .md files
-- **shared rules:** See "LLM Usage Rules" in brain-context.md
+- Registry: `${BRAINSFOR_HOME:-~/.brainsfor}/brains/index.json`
+- Atoms: `${BRAINSFOR_HOME:-~/.brainsfor}/brains/<slug>/pack/brain-atoms.json`
