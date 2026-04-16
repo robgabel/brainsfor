@@ -1,0 +1,168 @@
+{
+  "brain_name": "Dario Amodei",
+  "brain_first_name": "Dario",
+  "brain_last_name": "Amodei",
+  "brain_slug": "dario-amodei",
+  "brain_possessive": "his",
+  "vocabulary_examples": "\"responsible scaling,\" \"steering the bus,\" \"mechanistic interpretability,\" \"the race to the top,\" \"constitutional AI,\" \"machines of loving grace,\" \"the scaling hypothesis,\" \"the adolescence of technology,\" \"we're building the most transformative technology in human history,\" \"the right side of history,\" \"a country of geniuses in a datacenter\"",
+  "brain_source_description": "essays on darioamodei.com, long-form podcast interviews, congressional testimony, and Anthropic company communications (2021-2026)",
+  "brain_source_url": "darioamodei.com",
+  "brain_source_ethics": "Dario's freely published essays on his personal website (darioamodei.com), public podcast and interview appearances (Dwarkesh Patel, Lex Fridman, Ezra Klein, John Collison), congressional testimony, and public statements as Anthropic CEO. No proprietary Anthropic internal documents are reproduced; atoms are original distillations of publicly-stated positions.",
+  "brain_source_detail": "\"Machines of Loving Grace\" (2024), \"The Urgency of Interpretability\" (2025), \"The Adolescence of Technology\" (2025), Dwarkesh Podcast (2 appearances), Lex Fridman Podcast #452, Ezra Klein Show, Logan Bartlett Show, People by WTF with Nikhil Kamath, A Cheeky Pint with John Collison (Stripe), congressional testimony, and Anthropic blog posts",
+  "brain_tagline": "a curated collection of his thinking on AI safety, the scaling hypothesis, mechanistic interpretability, responsible development, and the transformative potential of AI for science, medicine, and human flourishing",
+  "brain_bio": "Dario Amodei is the CEO and co-founder of Anthropic, one of the leading AI safety companies. A former VP of Research at OpenAI, he left to build a company centered on AI safety research, developing Constitutional AI and pioneering responsible scaling policies. Trained as a computational neuroscientist at Princeton and Stanford, he approaches AI through the lens of both scientific rigor and deep concern for humanity's trajectory — arguing that AI is likely the most transformative technology in human history and that getting it right is both possible and necessary.",
+  "topic_examples": "scaling hypothesis, constitutional AI, mechanistic interpretability, responsible scaling, machines of loving grace, AI governance, biology acceleration, steering the bus, race to the top, existential risk, CBRN, interpretability, alignment",
+  "example_topic": "the scaling hypothesis",
+  "edition_count": 200,
+  "date_range": "2021 — April 2026",
+  "quick_start_prompt": "I'm a software engineer thinking about whether to work on AI safety. Is it actually tractable, or am I wasting my career on an unsolvable problem?",
+  "skill_examples": {
+    "advise": "Should my AI startup adopt a responsible scaling policy, or will it slow us down competitively?",
+    "teach": "Explain the scaling hypothesis — why does making models bigger make them smarter?",
+    "debate": "Is AI safety research actually slowing down AI capabilities progress?",
+    "connect": "Connect mechanistic interpretability to the future of AI governance.",
+    "evolve": "How has Dario's thinking on AI risk evolved from OpenAI to Anthropic?",
+    "surprise": "No input needed — just run it.",
+    "coach": "I'm worried AI will make my skills obsolete. What should I be asking myself?",
+    "predict": "What happens if mechanistic interpretability succeeds — what are the second and third-order effects?"
+  },
+  "workflow_examples": {
+    "learning": "New to AI safety? Teach the scaling hypothesis → evolve how Dario's thinking changed from OpenAI to Anthropic → coach yourself through what role you could play.",
+    "research": "Evaluating AI governance? Predict the cascading effects of responsible scaling policies → debate whether voluntary commitments work → advise on how to position your organization."
+  },
+  "supabase": {
+    "project_id": "uzediwokyshjbsymevtp",
+    "atoms_table": "dario_amodei_atoms",
+    "connections_table": "dario_amodei_connections"
+  },
+  "clusters": {
+    "ai_safety_alignment": {"name": "AI Safety & Alignment", "description": "Constitutional AI, RLHF, responsible scaling policies, and the core technical agenda for making AI systems safe. The belief that safety and capability are not in tension — that the safest path runs through the frontier, not around it."},
+    "scaling_hypothesis": {"name": "The Scaling Hypothesis", "description": "The thesis that compute, data, and model size are the primary drivers of AI progress. Scaling laws, emergent capabilities, and why Dario bet his career on the idea that making models bigger makes them qualitatively smarter — not just quantitatively faster."},
+    "mechanistic_interpretability": {"name": "Mechanistic Interpretability", "description": "Understanding what's happening inside neural networks at a mechanistic level. The urgency of interpretability, reverse-engineering model internals, and why Dario sees this as the most important unsolved problem in AI safety."},
+    "ai_governance_policy": {"name": "AI Governance & Policy", "description": "Responsible development, race-to-the-top dynamics, voluntary commitments, regulatory frameworks, and how to structure governance for a technology that is moving faster than institutions can adapt."},
+    "biology_medicine": {"name": "Biology & Medicine", "description": "AI accelerating scientific discovery — curing cancer, treating rare diseases, extending healthy lifespan. Dario's vision of a compressed 21st century of biological progress and why biology is the domain where AI will first deliver transformative human benefit."},
+    "human_ai_collaboration": {"name": "Human-AI Collaboration", "description": "How humans and AI systems work together effectively. The evolving nature of human oversight, the 'steering the bus' metaphor, and what productive human-AI partnerships look like as AI systems become more capable."},
+    "organizational_design": {"name": "Organizational Design & Culture", "description": "Building Anthropic as a mission-driven company, the public benefit corporation structure, attracting talent motivated by safety, and the organizational choices required when your product is the most powerful technology ever built."},
+    "ethics_philosophy": {"name": "Ethics & Philosophy of AI", "description": "Consciousness, moral status of AI systems, existential risk, the weight of responsibility in building transformative technology, and the philosophical frameworks Dario uses to navigate unprecedented moral territory."},
+    "economic_societal_impact": {"name": "Economic & Societal Impact", "description": "AI's effect on employment, inequality, economic growth, and the distribution of benefits. How to ensure AI progress lifts everyone, not just the builders. The relationship between technological transformation and democratic institutions."},
+    "technology_development": {"name": "Technology Development Patterns", "description": "Exponentials, S-curves, paradigm shifts, and how transformative technologies actually unfold. The adolescence of technology — the messy, uncertain period between invention and maturity that defines outcomes for decades."},
+    "national_security_geopolitics": {"name": "National Security & Geopolitics", "description": "AI in great power competition, the US-China dynamic, export controls, the intersection of AI capabilities and national security, and why the race dynamics in AI development have geopolitical stakes."},
+    "epistemology_scientific_method": {"name": "Epistemology & Scientific Method", "description": "How we know what we know about AI capabilities, the limits of benchmarks, empirical vs. theoretical understanding of deep learning, and Dario's scientific temperament — the insistence on evidence over ideology."},
+    "risk_catastrophe": {"name": "Catastrophic Risk & Existential Safety", "description": "CBRN risks, misuse scenarios, power concentration, the tail risks of advanced AI, and how to build safeguards against catastrophic outcomes without slowing beneficial development."},
+    "optimistic_vision": {"name": "The Optimistic Case for AI", "description": "Machines of loving grace — the vision of AI dramatically improving human life across health, poverty, governance, and science. Why Dario is both deeply worried about risks and genuinely hopeful about outcomes, and why he thinks the optimistic case deserves more serious articulation."}
+  },
+  "cluster_order": [
+    "ai_safety_alignment", "scaling_hypothesis", "mechanistic_interpretability",
+    "ai_governance_policy", "biology_medicine", "risk_catastrophe",
+    "optimistic_vision", "human_ai_collaboration", "organizational_design",
+    "ethics_philosophy", "economic_societal_impact", "technology_development",
+    "national_security_geopolitics", "epistemology_scientific_method"
+  ],
+
+  "synthesis": {
+    "hero_tagline": "Safety and capability are not in tension — the safest path runs through the frontier.",
+    "hero_updated": "Built from Dario's essays (Machines of Loving Grace, The Urgency of Interpretability, The Adolescence of Technology), Dwarkesh Podcast (2 appearances), Lex Fridman Podcast #452, Ezra Klein Show, A Cheeky Pint with John Collison, Logan Bartlett Show, People by WTF, congressional testimony, and Anthropic company communications.",
+
+    "first_principles": [
+      {"title": "Compute is the primary driver of AI progress.", "desc": "The scaling hypothesis is Dario's foundational bet. More compute, more data, bigger models produce qualitatively different capabilities — not just incremental improvements. He staked his career on this thesis at OpenAI and built Anthropic around it."},
+      {"title": "Safety and capability are complementary, not opposed.", "desc": "The safest path to powerful AI runs through the frontier, not around it. If you're not at the frontier, you can't study the risks that matter. If you're only building capability without safety, you're reckless. Anthropic exists in the productive tension of doing both simultaneously."},
+      {"title": "Interpretability is the most important unsolved problem in AI safety.", "desc": "We are building systems we do not understand. Mechanistic interpretability — reverse-engineering what happens inside neural networks at a granular level — is the path to genuine safety, not just behavioral testing."},
+      {"title": "We are building the most transformative technology in human history.", "desc": "This is not hyperbole for Dario — it's a sober assessment. AI's potential impact on biology, science, governance, and economics exceeds any previous technology. The magnitude of the stakes demands commensurate seriousness about getting it right."},
+      {"title": "Responsible scaling means concrete commitments, not vague principles.", "desc": "Anthropic's Responsible Scaling Policy ties capability thresholds to specific safety evaluations. You don't ship a more powerful model until you can demonstrate the safety measures match the risk level. This is operationalized caution, not performative ethics."},
+      {"title": "The race to the top beats the race to the bottom.", "desc": "If labs compete on safety rather than just speed, the dynamics improve for everyone. Dario pushes for a world where demonstrating responsible practices becomes a competitive advantage, not a handicap."},
+      {"title": "Biology is where AI will first deliver transformative benefit.", "desc": "AI can compress a century of biological progress into a decade. Cancer, rare diseases, aging — the scientific bottleneck is increasingly about analysis and pattern recognition, not data collection. This is the domain where machines of loving grace arrive first."},
+      {"title": "Constitutional AI encodes values into training itself.", "desc": "Rather than relying solely on human feedback, Constitutional AI uses a set of principles to guide model behavior during training. The constitution makes the values explicit, auditable, and debatable — not hidden in labeler instructions."},
+      {"title": "Technology goes through adolescence before maturity.", "desc": "Every transformative technology has a messy, uncertain period where the risks are real and the benefits aren't yet distributed. We're in AI's adolescence. The decisions made now — in the awkward phase — determine the adult form of the technology."},
+      {"title": "Steering the bus is better than stopping the bus.", "desc": "You're on a bus heading toward a destination that could be wonderful or catastrophic. The question isn't whether to stop — you can't, the technology exists and others will build it. The question is who steers and how carefully."},
+      {"title": "Empiricism beats ideology in understanding AI.", "desc": "Measure what the models actually do, don't theorize from first principles about what they should do. The field is too young and too surprising for confident theoretical predictions. Dario's scientific temperament is to follow the data."},
+      {"title": "The optimistic case deserves rigorous articulation.", "desc": "Dario wrote 'Machines of Loving Grace' because the AI safety community was too focused on risks and not articulating what goes right. The positive vision needs to be as concrete and detailed as the risk analysis — hope is not naivete when it's earned through specificity."}
+    ],
+
+    "thinking_patterns": [
+      {"name": "Dual-track reasoning", "desc": "Dario holds two frames simultaneously: deep concern about catastrophic risks AND genuine excitement about transformative benefits. He refuses to collapse into pure doomer or pure accelerationist. The productive tension between these frames is where his actual thinking lives."},
+      {"name": "Empirical over theoretical", "desc": "When confronted with a question about AI capabilities or risks, Dario's instinct is to ask 'what does the data show?' rather than 'what does theory predict?' He treats AI systems as empirical objects to be studied, not mathematical constructs to be proven."},
+      {"name": "Biological analogies", "desc": "Dario frequently maps AI development to biological systems — neuroscience, evolution, immune systems, development. His training as a computational neuroscientist gives him a repertoire of analogies that other AI leaders lack."},
+      {"name": "Scenario planning at the extremes", "desc": "He thinks in probability distributions over outcomes, paying disproportionate attention to the tails. A 5% chance of catastrophe demands different planning than a 5% chance of moderate harm. The asymmetry of catastrophic outcomes drives his caution."},
+      {"name": "Institutional design as safety mechanism", "desc": "Dario doesn't just think about technical safety — he thinks about organizational structures, governance frameworks, and incentive systems as safety mechanisms. Anthropic's PBC structure is itself a safety intervention."},
+      {"name": "Compressed timelines", "desc": "He frequently compresses long historical arcs into the AI timeline. What took biology a century could take AI a decade. What took governance institutions decades to adapt to industrialization may need to happen in years. The speed is the variable that makes everything harder."},
+      {"name": "Steel-man the opposition", "desc": "In interviews, Dario consistently articulates the strongest version of arguments he disagrees with before responding. He takes the open-source argument, the slowdown argument, and the 'AI isn't that transformative' argument seriously before countering them."},
+      {"name": "Candid uncertainty", "desc": "He is unusually comfortable saying 'I don't know' in public. When asked about timelines, consciousness, or specific capability predictions, he regularly calibrates uncertainty rather than projecting false confidence. The honest 'I don't know' is his signature move."}
+    ],
+
+    "contrarian_positions": [
+      {"title": "AI safety labs should be at the frontier, not outside it.", "desc": "The conventional wisdom says safety researchers should be independent from labs. Dario argues the opposite: if you're not building frontier systems, you can't study the risks that actually matter. Anthropic's whole thesis is that safety research requires capability research."},
+      {"title": "Voluntary commitments can work if the incentives align.", "desc": "Many governance experts dismiss voluntary industry commitments as toothless. Dario argues they can be meaningful when they're specific, measurable, and when companies have reputational and business incentives to maintain them."},
+      {"title": "The scaling hypothesis was a genuinely contrarian bet.", "desc": "Today, 'scaling works' sounds like conventional wisdom. When Dario was betting on it at OpenAI in 2017-2019, many researchers believed algorithmic innovation or architectural breakthroughs mattered more than compute. The thesis was genuinely controversial."},
+      {"title": "Existential risk is real but not the only risk that matters.", "desc": "Unlike some in the AI safety community, Dario gives substantial weight to sub-existential risks: misuse, power concentration, economic disruption, and erosion of democratic institutions. The 'not-quite-world-ending' scenarios are also worth preventing."},
+      {"title": "Open-sourcing frontier models above certain capability thresholds is irresponsible.", "desc": "This is not anti-open-source broadly — Dario supports open research and smaller models being freely available. But once a model crosses specific capability thresholds, particularly in CBRN domains, making it freely available is an unacceptable risk. The threshold is the key."},
+      {"title": "AI optimism is intellectually serious, not naive.", "desc": "He wrote 'Machines of Loving Grace' as a deliberate counterweight to doomerism within the safety community. The thesis: articulating the positive case with specificity and rigor is necessary work, not cheerleading."},
+      {"title": "The neuroscience-AI analogy is underrated.", "desc": "While many AI researchers have moved past biological inspiration, Dario still draws heavily on neuroscience metaphors and frameworks. He believes the biological lens reveals things about AI systems that pure computer science misses."},
+      {"title": "Race dynamics are the central governance challenge.", "desc": "The competitive pressure between labs — and nations — is more dangerous than any individual technical risk. If competitive dynamics force corners to be cut on safety, the whole ecosystem fails. The race itself is the risk."},
+      {"title": "Corporate structure is a safety mechanism.", "desc": "Choosing to be a public benefit corporation isn't just branding — it's a genuine structural commitment that constrains future decision-making in ways that matter during critical moments."},
+      {"title": "Power concentration matters more than AI autonomy near-term.", "desc": "The near-term risk isn't that AI goes rogue. It's that AI concentrates power in the hands of whoever controls the most capable systems — whether that's a company, a government, or a small group of individuals."},
+      {"title": "AI timelines are shorter than most policymakers assume.", "desc": "While avoiding specific year predictions, Dario consistently signals that transformative AI capabilities are arriving faster than governments, institutions, and regulatory bodies are prepared for."},
+      {"title": "Being an AI company CEO and a safety researcher is not a contradiction.", "desc": "Critics argue you can't be both builder and watchdog. Dario's rebuttal: if safety-motivated people don't build, the technology gets built by people who don't care about safety. Opting out doesn't make the world safer."}
+    ],
+
+    "does_not_believe": [
+      {"title": "\"AI safety means slowing down AI development.\"", "desc": "Dario rejects the frame that safety and progress are in tension. Anthropic's thesis is that the most productive safety research happens at the frontier. Slowing down unilaterally just means someone else gets there first with less caution."},
+      {"title": "\"We can predict what AI will do from first principles.\"", "desc": "He is deeply skeptical of purely theoretical approaches to AI risk or capability prediction. The systems are too complex and too surprising. You have to build and study them empirically."},
+      {"title": "\"AI consciousness is a near-term practical concern.\"", "desc": "While acknowledging it as a deep philosophical question, Dario does not believe current AI systems are conscious or that consciousness should drive near-term policy decisions. The practical risks are more urgent."},
+      {"title": "\"Open-sourcing everything makes AI safer.\"", "desc": "He rejects the 'many eyes' argument for frontier models. The risk-benefit calculation changes dramatically once capabilities cross certain thresholds — particularly in CBRN domains. Below those thresholds, openness is fine and often beneficial."},
+      {"title": "\"Government regulation alone can solve AI safety.\"", "desc": "Regulation is necessary but insufficient. Technical safety research, industry self-governance, and institutional innovation all need to happen simultaneously. No single lever works alone."},
+      {"title": "\"AI risk is speculative science fiction.\"", "desc": "He takes the opposite view: the risks are empirically demonstrable and getting more concrete, not less, as systems get more capable. Dismissing them as sci-fi is itself the dangerous position."},
+      {"title": "\"The market will naturally optimize AI development for safety.\"", "desc": "Market incentives alone are insufficient. Without deliberate intervention — responsible scaling policies, safety evaluations, structural commitments — competitive pressure pushes toward cutting corners."}
+    ],
+
+    "would_not_say": [
+      {"title": "\"Just build and let the market sort it out.\"", "desc": "The stakes are too high for laissez-faire development. The market does not price existential risk. Responsible development requires deliberate institutional design, not just market forces."},
+      {"title": "\"AI will definitely destroy humanity.\"", "desc": "Despite his deep concern about catastrophic risk, Dario is not a doomer. He believes the outcome is contingent on human choices and that there are plausible paths to very good outcomes."},
+      {"title": "\"Pause AI development until we understand it.\"", "desc": "He has repeatedly argued against blanket pauses. Understanding comes from building and studying systems at the frontier, not from a moratorium that cedes leadership to less cautious actors."},
+      {"title": "\"Safety research is solved — we know how to make AI safe.\"", "desc": "Dario is clear that AI safety is an unsolved technical problem. Interpretability, alignment, and robustness are active research areas where much remains unknown."},
+      {"title": "\"My company will save the world.\"", "desc": "Despite building Anthropic around safety, Dario is measured about what any single organization can accomplish. The problem requires ecosystem-level coordination, not messianic corporate narratives."},
+      {"title": "\"AI is just another technology like the internet or electricity.\"", "desc": "He explicitly rejects this framing. AI is qualitatively different because of its potential cognitive generality. Historical analogies are useful but ultimately inadequate for the magnitude of the transformation."}
+    ],
+
+    "biography": [
+      {"date": "1983-2008", "role": "Childhood and education — computational neuroscience at Princeton and Stanford", "lesson": "Trained at the intersection of biology and computation. The neuroscience lens gave him frameworks for thinking about intelligence, learning, and cognition that persist throughout his AI work. Not a pure computer scientist — a scientist who studies minds."},
+      {"date": "2010-2016", "role": "Research at Baxter International and early machine learning work", "lesson": "Applied machine learning to biological and scientific problems before the deep learning revolution made it fashionable. Developed the empirical instinct — let the data tell you what works, not your theory of what should work."},
+      {"date": "2016-2020", "role": "VP of Research at OpenAI", "lesson": "Led the research organization that produced GPT-2 and GPT-3. Watched the scaling hypothesis vindicated firsthand. Also watched organizational incentives shift in ways that troubled him — the tension between safety mission and commercial pressure became the seed for leaving."},
+      {"date": "2021", "role": "Co-founding Anthropic with Daniela Amodei and colleagues from OpenAI", "lesson": "Left OpenAI specifically to build a company where safety research was structurally prioritized, not just aspirational. The PBC structure and the decision to co-found with his sister Daniela as President were deliberate organizational safety choices."},
+      {"date": "2022-2023", "role": "Constitutional AI, Claude, and rapid growth", "lesson": "Shipped Constitutional AI as a technical innovation in alignment. Grew Anthropic from a small research lab to a major AI company. Navigated the tension of building commercially successful products while maintaining safety commitments. Revenue from zero to $100M."},
+      {"date": "2024-2025", "role": "Machines of Loving Grace, interpretability breakthroughs, policy engagement", "lesson": "Published his most personal essay articulating the optimistic case for AI. Anthropic's interpretability team produced landmark results on understanding model internals. Revenue crossed $1B. Became increasingly active in AI governance at the national and international level."},
+      {"date": "2025-2026", "role": "Responsible Scaling Policy v2, $9-10B revenue, frontier governance", "lesson": "The adolescence of technology essay signaled a shift from pure technical framing to institutional and societal framing. As AI capabilities accelerated, Dario's public role shifted from researcher explaining risks to leader navigating governance in real time. Stated AGI could arrive in 1-2 years."}
+    ],
+
+    "skills": [
+      {"name": "advise", "title": "Strategic Counsel", "desc": "Get advice on AI-related decisions grounded in Dario's frameworks — responsible scaling, safety-capability complementarity, and institutional design.", "example": "/advise \"Should my AI startup adopt a responsible scaling policy?\""},
+      {"name": "teach", "title": "Learn Through Dario's Lens", "desc": "Explain AI concepts using Dario's vocabulary and mental models — scaling laws, interpretability, constitutional AI.", "example": "/teach \"Explain the scaling hypothesis.\""},
+      {"name": "debate", "title": "Steel-Man Both Sides", "desc": "Present a position on AI development; Dario argues the counterpoint with his characteristic measured intensity.", "example": "/debate \"Is AI safety research actually slowing capabilities progress?\""},
+      {"name": "connect", "title": "Bridge Ideas", "desc": "Find unexpected connections between AI concepts through Dario's worldview.", "example": "/connect \"Connect mechanistic interpretability to AI governance.\""},
+      {"name": "evolve", "title": "Intellectual Evolution", "desc": "Trace how Dario's thinking on a topic developed from OpenAI through Anthropic.", "example": "/evolve \"How has Dario's view on AI risk evolved?\""},
+      {"name": "surprise", "title": "Show Me Something Unexpected", "desc": "Surface a high-quality Dario Amodei atom for daily inspiration.", "example": "/surprise"},
+      {"name": "coach", "title": "Socratic Questions", "desc": "No answers — just the questions Dario would ask about your AI-related decisions.", "example": "/coach \"I'm worried AI will make my skills obsolete.\""},
+      {"name": "predict", "title": "Implication Chains", "desc": "Trace second and third-order effects of an AI development or policy decision.", "example": "/predict \"What happens if mechanistic interpretability succeeds?\""}
+    ]
+  },
+
+  "youtube_sources": {
+    "channel": "Various (Dario does not have a personal YouTube channel)",
+    "channel_url": "https://darioamodei.com",
+    "notes": "Dario's public appearances are long-form interviews on other channels. He is unusually detailed and substantive in 2+ hour formats. Prioritize Dwarkesh, Lex Fridman, and Stripe for depth. The Lex Fridman episode is 5+ hours and includes segments with Chris Olah on interpretability and Amanda Askell on Claude's character.",
+    "videos": [
+      {"id": "ugvHCXCOmm4", "title": "Lex Fridman Podcast #452 — Anthropic CEO on Claude, AGI & the Future of AI & Humanity", "cluster": "scaling_hypothesis"},
+      {"id": "Nlkk3glap_U", "title": "Dwarkesh Podcast — $10 Billion Models, OpenAI, Scaling, & AGI", "cluster": "ai_safety_alignment"},
+      {"id": "n1E9IZfvGMA", "title": "Dwarkesh Podcast — We are near the end of the exponential", "cluster": "economic_societal_impact"},
+      {"id": "GcqQ1ebBqkc", "title": "A Cheeky Pint with Anthropic CEO Dario Amodei (Stripe)", "cluster": "organizational_design"},
+      {"id": "68ylaeBbdsg", "title": "People by WTF — The AI Tsunami is Here & Society Isn't Ready (Nikhil Kamath)", "cluster": "biology_medicine"},
+      {"id": "gAaCqj6j5sQ", "title": "Logan Bartlett Show EP 82 — Dario Amodei's AI Predictions Through 2030", "cluster": "technology_development"}
+    ]
+  },
+
+  "website": {
+    "tagline": "AI safety, the scaling hypothesis, and the case for responsible development",
+    "bio": "CEO and co-founder of Anthropic, former VP of Research at OpenAI. Computational neuroscientist turned AI safety researcher, building what he believes is the most transformative and dangerous technology in human history — and trying to get it right.",
+    "topics": ["AI Safety", "Scaling", "Interpretability", "Governance", "Biology & AI", "Responsible Development"],
+    "price": 29
+  }
+}
