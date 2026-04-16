@@ -2,7 +2,7 @@ import { BRAINS } from "@/lib/brains";
 import { BrainCard } from "@/components/BrainCard";
 
 export const metadata = {
-  title: "Brains — BrainsForFree",
+  title: "Brains — brainsforfree",
   description: "Browse and explore knowledge graphs of the world's best thinkers.",
 };
 

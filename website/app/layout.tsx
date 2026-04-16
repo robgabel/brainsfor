@@ -22,14 +22,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BrainsForFree — Load a genius into your AI",
+  title: "brainsforfree — Load a genius into your AI",
   description:
     "Knowledge graphs of the world's best thinkers, packaged as 8 AI skills you actually use. Think better in seconds.",
   openGraph: {
-    title: "BrainsForFree — Load a genius into your AI",
+    title: "brainsforfree — Load a genius into your AI",
     description:
       "Knowledge graphs of the world's best thinkers, packaged as 8 AI skills you actually use.",
-    siteName: "BrainsForFree",
+    siteName: "brainsforfree",
   },
   other: {
     "theme-color": "#ffffff",
