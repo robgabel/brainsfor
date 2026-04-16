@@ -134,7 +134,7 @@ export default async function DashboardPage() {
                   <p className="mt-1 text-xs text-body">{brain.tagline}</p>
                   <div className="mt-3">
                     <span className="rounded-full bg-indigo-mist px-2 py-0.5 text-[10px] font-semibold text-indigo-deep">
-                      Free in Beta
+                      Free
                     </span>
                   </div>
                   <Link

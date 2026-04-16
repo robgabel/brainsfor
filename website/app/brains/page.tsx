@@ -20,7 +20,6 @@ export default function BrainsPage() {
           </h1>
           <p className="mt-3 max-w-[600px] text-lg text-body">
             Explore every brain before you install. All atoms, connections, and insights are visible.
-            All brains are free during beta.
           </p>
         </div>
       </section>

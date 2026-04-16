@@ -23,7 +23,7 @@ export function BrainCard({ brain }: { brain: Brain }) {
             {isLive ? "Live" : "Building"}
           </span>
           <span className="rounded-full bg-indigo-mist px-2 py-0.5 text-xs font-semibold text-indigo-deep">
-            Free in Beta
+            Free
           </span>
         </div>
 

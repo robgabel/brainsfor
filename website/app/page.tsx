@@ -10,9 +10,6 @@ export default function Home() {
       {/* ─── Hero ─── */}
       <section className="px-6 pb-20 pt-20 md:pt-28">
         <div className="mx-auto max-w-[900px] text-center">
-          <div className="mb-6 inline-flex items-center rounded-full border border-border-indigo bg-indigo-mist/50 px-3.5 py-1 text-xs font-semibold text-indigo-deep tracking-wide">
-            Beta &mdash; All brains free
-          </div>
           <h1 className="font-display text-4xl font-light leading-[1.05] tracking-[-1.5px] text-deep-ink md:text-[56px]">
             Load a genius into your AI.
           </h1>

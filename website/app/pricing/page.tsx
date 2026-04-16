@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Pricing — BrainsForFree",
-  description: "Knowledge brain packs for AI tools. Free during beta.",
+  description: "Knowledge brain packs for AI tools. Free.",
 };
 
 export default function PricingPage() {
@@ -12,15 +12,12 @@ export default function PricingPage() {
       {/* Header */}
       <section className="px-6 pb-12 pt-16 md:pt-20">
         <div className="mx-auto max-w-[900px] text-center">
-          <div className="mb-4 inline-flex items-center rounded-full border border-border-indigo bg-indigo-mist/50 px-3.5 py-1 text-xs font-semibold text-indigo-deep tracking-wide">
-            All tiers free during beta
-          </div>
           <h1 className="font-display text-4xl font-light tracking-[-1.2px] text-deep-ink md:text-5xl">
             Simple pricing
           </h1>
           <p className="mx-auto mt-4 max-w-[540px] text-lg text-body">
             Every brain comes with 8 AI skills, full knowledge graph access, and a visual explorer.
-            Currently free while we build.
+            All brains are free.
           </p>
         </div>
       </section>
@@ -40,11 +37,8 @@ export default function PricingPage() {
               <h3 className="font-display text-xl font-normal tracking-tight text-deep-ink">{tier.name}</h3>
 
               <div className="mt-4">
-                <span className="text-3xl font-light text-muted line-through">${tier.price}</span>
-                <span className="ml-3 text-2xl font-display font-light text-deep-ink">$0</span>
-                <span className="ml-1 text-sm text-muted">/{tier.period}</span>
+                <span className="text-2xl font-display font-light text-deep-ink">Free</span>
               </div>
-              <p className="mt-1 text-xs text-brain-indigo font-semibold">Free during beta</p>
 
               <ul className="mt-6 space-y-3">
                 {tier.features.map((f) => (
@@ -83,7 +77,7 @@ export default function PricingPage() {
             One subscription, 10 seats.
           </p>
           <p className="mt-2 text-sm text-muted">
-            Expected pricing: <span className="line-through">$199/team/month</span> &mdash; free during beta.
+            Pricing details coming soon.
           </p>
         </div>
       </section>
@@ -110,8 +104,8 @@ export default function PricingPage() {
                 a: "Connections, evolution tracking, and skills are the value — not pre-chunking. A 2M token window full of raw newsletters still won't give you /debate, /evolve, or /predict.",
               },
               {
-                q: "What happens when beta ends?",
-                a: "Founding supporters (first 100 per brain) keep free access forever. Everyone else moves to the pricing shown above. We'll give plenty of notice.",
+                q: "Will this always be free?",
+                a: "All brains are free right now. We'll add premium features later, but the core brain packs will always be accessible.",
               },
               {
                 q: "Can I use this commercially?",
