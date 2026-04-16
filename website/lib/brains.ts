@@ -126,7 +126,7 @@ export const TIERS = [
       "Mental model map",
       "All topic lenses",
     ],
-    cta: "Get this brain",
+    cta: "Get this brain — free",
     highlighted: true,
   },
   {

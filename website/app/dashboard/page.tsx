@@ -141,7 +141,7 @@ export default async function DashboardPage() {
                     href={`/brains/${brain.slug}`}
                     className="mt-4 block rounded-lg bg-brain-indigo py-2.5 text-center text-sm font-semibold text-white shadow-brain-cta transition-all hover:bg-indigo-hover"
                   >
-                    Get this brain
+                    Get this brain — free
                   </Link>
                 </div>
               ))}
