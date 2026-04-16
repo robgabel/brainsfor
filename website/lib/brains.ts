@@ -54,7 +54,7 @@ function loadBrains(): Brain[] {
     fs.readFileSync(indexPath, "utf-8"),
   );
 
-  return index.brains.map((entry) => {
+  return index.brains.filter((entry) => entry.status !== "hidden").map((entry) => {
     const configPath = fs.existsSync(path.join(BRAINS_DIR, entry.slug, "brain.json"))
       ? path.join(BRAINS_DIR, entry.slug, "brain.json")
       : path.join(process.cwd(), "public", "brains", entry.slug, "brain.json");
