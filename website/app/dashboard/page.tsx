@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { SignOutButton } from "@/components/SignOutButton";
 
 export const metadata = {
-  title: "Dashboard — BrainsFor.Dev",
+  title: "Dashboard — BrainsForFree",
 };
 
 export default async function DashboardPage() {

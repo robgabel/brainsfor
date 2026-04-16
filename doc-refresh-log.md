@@ -27,7 +27,7 @@
   - Unresolved `{{brain_source_ethics}}` template var in scott-belsky + peter-attia pack/SKILL.md — re-run `export-brain.py`
   - Peter Attia voice enrichment at 0%, orphan rate 36%
   - Belsky voice enrichment still at 7% (no change in 24hrs)
-  - Live site brainsforsale.com renders all 7 brains ✓ — but local `storefront/landing-page-prototype.html` only has 5 (missing John Green + Hank Green). Prototype has drifted from production; either update the prototype or retire it.
+  - Live site brainsforfree.com renders all 7 brains ✓ — but local `storefront/landing-page-prototype.html` only has 5 (missing John Green + Hank Green). Prototype has drifted from production; either update the prototype or retire it.
   - Cowork skills registered for only 2/7 brains (scott-belsky + paul-graham); peter-attia, steve-jobs, john-green, sun-tzu, hank-green not symlinked into `~/rob-ai/skills/`
   - `brain_requests` table still 0 rows (form unwired — matches Ship Plan status)
 

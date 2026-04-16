@@ -5,7 +5,7 @@ description: "Load the Steve Jobs brain. Pack ships 9 unified skills in pack/ski
 
 # Steve Jobs Brain Pack — Setup & Configuration
 
-Welcome to the **Jobs Brain Pack** from [brainsfor.dev](https://brainsfor.dev). This is a premium knowledge asset extracted from Steve Jobs's speeches, interviews, keynotes, and public appearances — a curated collection of his most provocative thinking on product design, simplicity, taste, team-building, and the intersection of technology and liberal arts.
+Welcome to the **Jobs Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Steve Jobs's speeches, interviews, keynotes, and public appearances — a curated collection of his most provocative thinking on product design, simplicity, taste, team-building, and the intersection of technology and liberal arts.
 
 ## What You're Getting
 
@@ -44,7 +44,7 @@ pack/
 
 The `skills/` directory is **brain-agnostic**. Every brain pack ships the same 9 skill files — they resolve which brain to use via the `/brain` router (active brain in `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt`) or via an inline slug override.
 
-If any files are missing, reinstall from [brainsfor.dev](https://brainsfor.dev).
+If any files are missing, reinstall from [brainsforfree.com](https://brainsforfree.com).
 
 ### Step 2: Detect Your AI Environment
 
@@ -205,7 +205,7 @@ Steve Jobs co-founded Apple, led Pixar, built NeXT, and returned to transform Ap
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
-**More:** Visit [brainsfor.dev](https://brainsfor.dev) for other brain packs, documentation, and community.
+**More:** Visit [brainsforfree.com](https://brainsforfree.com) for other brain packs, documentation, and community.
 
 ---
 
@@ -222,7 +222,7 @@ If you encounter issues or have feedback:
 1. Check `README.md` for quick answers
 2. Verify all files are present and readable
 3. Try a fresh load of `brain-context.md`
-4. Contact support via [brainsfor.dev](https://brainsfor.dev)
+4. Contact support via [brainsforfree.com](https://brainsforfree.com)
 
 ---
 

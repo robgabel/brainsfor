@@ -425,7 +425,7 @@ The consumer business funds operations. The platform licensing business is where
 | OpenAI embeddings | ~$5-10 |
 | Claude API (atom extraction) | ~$10-20 |
 | Stripe fees (2.9% + $0.30) | Variable |
-| Domain (brainsfor.dev) | ~$12/yr |
+| Domain (brainsforfree.com) | ~$12/yr |
 | **Total fixed** | **~$75-95/mo** |
 
 **Margin: 95%+.** This is a digital goods business with near-zero COGS once the brain is built.
@@ -563,7 +563,7 @@ The **brain data** (atoms, connections, embeddings) is what costs money. On firs
 > /advise "Should I raise a Series A?"
 
 🧠 Brain Setup: No Belsky brain data found.
-   → Purchase at brainsfor.dev/belsky ($29)
+   → Purchase at brainsforfree.com/belsky ($29)
    → Enter license key: ________
 ```
 
@@ -609,7 +609,7 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 
 ### What's DONE ✅
 
-- [x] Register brainsfor.dev (owned, on Vercel)
+- [x] Register brainsforfree.com (owned, on Vercel)
 - [x] Build brain pipeline (`build-brain.py` — one command, 7 stages)
 - [x] Build 7 brains: Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green
 - [x] 1,374 atoms + 2,799 connections in Supabase
@@ -819,7 +819,7 @@ From product to marketplace. From flat files to graph infrastructure.
 
 ## Open Questions
 
-- [x] ~~Is brainsfor.dev available?~~ ✅ Owned. Already on Vercel.
+- [x] ~~Is brainsforfree.com available?~~ ✅ Owned. Already on Vercel.
 - [x] ~~Is there a "brain comparison" feature?~~ ✅ Yes — `/debate` (head-to-head) and `/connect` (cross-brain synthesis) skills.
 - [x] ~~How do you handle contradictions within a brain?~~ ✅ `/evolve` skill shows thinking evolution over time.
 - [x] ~~Should brains have a "freshness" dimension?~~ ✅ Brain Score + auto-updates for Pro tier.

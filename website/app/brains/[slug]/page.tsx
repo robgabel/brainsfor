@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const brain = getBrain(slug);
   if (!brain) return { title: "Brain not found" };
   return {
-    title: `${brain.name} Brain — BrainsFor.Dev`,
+    title: `${brain.name} Brain — BrainsForFree`,
     description: brain.tagline,
   };
 }

@@ -81,5 +81,5 @@ CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 git push origin "$CURRENT_BRANCH"
 
 echo
-echo "✓ deployed — Vercel will rebuild brainsforsale.com from commit $(git rev-parse --short HEAD)"
+echo "✓ deployed — Vercel will rebuild brainsforfree.com from commit $(git rev-parse --short HEAD)"
 echo "  watch: https://vercel.com/dashboard"

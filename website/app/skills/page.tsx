@@ -4,7 +4,7 @@ import { SkillsPlayground } from "@/components/SkillsPlayground";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Skills \u2014 brainsfor.dev",
+  title: "Skills \u2014 BrainsForFree",
   description:
     "Try 8 AI thinking skills powered by the world\u2019s best thinkers. See the difference structured knowledge makes.",
 };

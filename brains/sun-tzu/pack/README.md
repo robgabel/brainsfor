@@ -1,7 +1,7 @@
 # Sun Tzu Brain Pack
 
 > **207 knowledge atoms** · **377 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
-> From [brainsfor.dev](https://brainsfor.dev)
+> From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
@@ -106,7 +106,7 @@ Where a thinker's book ideas appear in the knowledge graph, they are represented
 ## Support
 
 - Full setup guide: `SKILL.md`
-- Website: [brainsfor.dev](https://brainsfor.dev)
+- Website: [brainsforfree.com](https://brainsforfree.com)
 
 ---
 

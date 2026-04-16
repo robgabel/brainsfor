@@ -2,7 +2,7 @@ import { TIERS } from "@/lib/brains";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Pricing — BrainsFor.Dev",
+  title: "Pricing — BrainsForFree",
   description: "Knowledge brain packs for AI tools. Free during beta.",
 };
 
