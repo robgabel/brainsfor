@@ -16,6 +16,11 @@ __pycache__/
 # Build artifacts
 test-*-output/
 
+# Auto-build pipeline artifacts (regenerate via scripts/auto-build-brain.py)
+brains/**/build-progress.json
+brains/.*-build.log
+brains/*-build.log
+
 # Large generated files (keep in repo for now, revisit with LFS later)
 # brain-atoms.json
 # brain-context.md
