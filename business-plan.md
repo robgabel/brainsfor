@@ -93,7 +93,7 @@ A **Brain Pack** is a downloadable bundle containing:
 
 6. **Embeddings** (premium) — Pre-computed 1536-dim vectors for semantic search. For builders who want to wire a brain into their own RAG pipeline or app.
 
-7. **Brain Score** — Completeness metric. Belsky has 284 atoms from all 77 Implications editions (100% newsletter coverage). Every brain shows a completeness bar. Transparency builds trust. Updates become re-engagement events. Voice enrichment (original_quote + implication) at 7% — next quality milestone.
+7. **Brain Score** — Completeness metric. Belsky has 284 atoms from all 77 Implications editions (100% newsletter coverage). Every brain shows a completeness bar. Transparency builds trust. Updates become re-engagement events. Voice enrichment (original_quote + implication) at 85% — 44 atoms remaining.
 
 ### Brain mashups (multi-brain buyers)
 
@@ -202,20 +202,26 @@ $199/mo API is for the lazy-but-smart company that wants to offer "Ask [Expert]"
 
 ## The Brains (Current Inventory — April 2026)
 
-### Live — 7 brains built, packaged, and in Supabase
+### Live — 13 brains built, packaged, and in Supabase
 
 | Brain | Atoms | Connections | Content Sources | Why Buyers Want This |
 |-------|-------|-------------|-----------------|---------------------|
+| **Dario Amodei** | 353 | 502 | darioamodei.com essays (Machines of Loving Grace, The Urgency of Interpretability), Dwarkesh, Lex Fridman #452, Ezra Klein, Logan Bartlett, Anthropic communications | AI safety thesis, interpretability, mechanistic thinking |
+| **Peter Zeihan** | 362 | 308 | The Accidental Superpower, The Absent Superpower, Disunited Nations, The End of the World Is Just the Beginning, Zeihan on Geopolitics YouTube, long-form interviews | Geopolitics, demographics, energy, supply chains, deglobalization |
 | **Scott Belsky** | 284 | 430 | All 77 Implications newsletter editions, books, talks | Product intuition, creative leadership, Adobe/VC lens |
+| **Jensen Huang** | 253 | 220 | Lex Fridman #494, Acquired Podcast NVIDIA, Joe Rogan #2422, Computer History Museum, Stanford GSB, GTC 2024/2025 keynotes, 60 Minutes, Stripe Sessions, All-In, Dwarkesh, Hoover Institution | Compute, strategy, long-horizon product vision |
+| **Elon Musk** | 247 | 202 | Tweets, interviews, earnings calls, and public presentations | First-principles engineering, manufacturing scale, risk tolerance |
+| **Gary Vaynerchuk** | 246 | 505 | Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, keynotes | Content strategy, personal branding, entrepreneurial hustle |
 | **Hank Green** | 222 | 366 | 600+ SciShow episodes, 18yr Vlogbrothers, Crash Course, Dear Hank & John, TikTok (7M+), TED talks, 2 novels | Science communication, creator business, internet culture |
+| **Charlie Munger** | 218 | 200 | Poor Charlie's Almanack, Berkshire/Wesco/Daily Journal meetings | Mental models, investment thinking, multidisciplinary wisdom |
 | **Paul Graham** | 213 | 409 | 220+ paulgraham.com essays | Startup wisdom, essay-form thinking, YC founder lens |
 | **Sun Tzu** | 207 | 377 | 13 chapters of The Art of War + centuries of attributed commentary | Strategy, competition, decision-making under uncertainty |
 | **John Green** | 205 | 385 | Anthropocene Reviewed (podcast + book), Everything is Tuberculosis, Vlogbrothers, TED talks | Humanist perspective, storytelling, reviewing the world |
 | **Steve Jobs** | 170 | 792 | Speeches, interviews, keynotes & public appearances (1976–2011) | Product taste, reality distortion field, design philosophy |
-| **Peter Attia** | 73 | 40 | The Drive podcast, Outlive book reviews | Longevity science, health optimization frameworks |
-| **TOTAL** | **1,374** | **2,799** | | **+ 17 cross-brain connections** |
+| **Peter Attia** | 153 | 433 | The Drive podcast, Outlive book reviews | Longevity science, health optimization frameworks |
+| **TOTAL** | **3,133** | **5,129** | | **+ 17 cross-brain connections** |
 
-**Infrastructure stats:** 7 `brain_metadata` records in Supabase. Full export pipeline operational (`build-brain.py` → one command, 7 stages). All 7 brains have complete pack/ directories with brain-context.md, brain-atoms.json, explore.html, README.md, and 8 skill SKILL.md files. Design system (DESIGN.md) and brand guide (BRAND.md) documented and agent-readable. Landing page prototype exists (5/7 brains rendered — John Green and Hank Green not yet added). `install-brains.sh` handles local installation with symlinks. `audit-brains.py` validates structure + quality scoring.
+**Infrastructure stats:** 13 `brain_metadata` records in Supabase. Full export pipeline operational (`auto-build-brain.py` → one command, 6 phases, ~$23 per brain). All 13 brains have complete pack/ directories with brain-context.md, brain-atoms.json, explore.html, README.md, and 8 skill SKILL.md files. Design system (DESIGN.md) and brand guide (BRAND.md) documented and agent-readable. Landing page prototype exists. `install-brains.sh` handles local installation with symlinks. `audit-brains.py` validates structure + quality scoring (avg score 97/100 across 13 brains).
 
 ### Next Wave — High-demand candidates
 
@@ -290,7 +296,7 @@ Take one topic — say "will brands die?" — and pull one brain's atom against 
 
 ### Channel 8: Atom-level micro-content (Gary Vee play)
 
-Every brain has 100+ atoms. Each atom is a self-contained social post. One Belsky atom = one LinkedIn carousel slide, one X post, one short-form video clip with 10 seconds of commentary. With 7 brains today, that's already 1,374 micro-content pieces. At 20 brains × 200 atoms avg = 4,000+. You will never run out of content. And every piece sells the product with a CTA: "This is 1 of 284 atoms in the Belsky brain. Get the full brain for $29."
+Every brain has 100+ atoms. Each atom is a self-contained social post. One Belsky atom = one LinkedIn carousel slide, one X post, one short-form video clip with 10 seconds of commentary. With 13 brains today, that's already 3,133 micro-content pieces. At 20 brains × 200 atoms avg = 4,000+. You will never run out of content. And every piece sells the product with a CTA: "This is 1 of 284 atoms in the Belsky brain. Get the full brain for $29."
 
 ### Channel 9: Leaderboard as social proof
 
@@ -610,20 +616,22 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 ### What's DONE ✅
 
 - [x] Register brainsforfree.com (owned, on Vercel)
-- [x] Build brain pipeline (`build-brain.py` — one command, 7 stages)
-- [x] Build 7 brains: Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green
-- [x] 1,374 atoms + 2,799 connections in Supabase
-- [x] Complete pack/ for all 7 (brain-context.md, brain-atoms.json, explore.html, 8 skills each)
+- [x] Build brain pipeline (`auto-build-brain.py` — one command, 6 phases, ~$23 per brain)
+- [x] Build 13 brains: Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Dario Amodei, Elon Musk, Jensen Huang
+- [x] 3,133 atoms + 5,129 connections in Supabase
+- [x] Complete pack/ for all 13 (brain-context.md, brain-atoms.json, explore.html, 8 skills each)
 - [x] Design system (DESIGN.md) + brand guide (BRAND.md)
-- [x] Landing page prototype (5/7 brains rendered)
+- [x] Landing page prototype (13/13 brains rendered)
 - [x] `install-brains.sh` for local distribution
 - [x] `audit-brains.py` for quality validation
 - [x] Supabase tables: `brain_metadata`, `brain_requests`, `brain_request_votes`, `brain_access`
+- [x] `@brainsfor/mcp` server (6 tools, registered via `.mcp.json`, 19x context reduction vs. full brain-context.md)
+- [x] `/board` skill — multi-brain sub-agent orchestrator (Board of Advisors)
 
 ### What's LEFT to ship v1
 
 **Storefront (1 day):**
-- [ ] Add John Green + Hank Green to landing page (or make catalog dynamic from index.json)
+- [x] Add missing brains to landing page (13/13 brains now rendered)
 - [ ] Wire Stripe checkout (3 products: Standard $29, Pro $79, API $199/mo)
 - [ ] Build delivery edge function (Stripe webhook → email download link)
 - [ ] Wire "Request a Brain" form to `brain_requests` table
@@ -633,7 +641,7 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 - [ ] Register brain packs in skills ecosystem
 
 **Quality (1 day):**
-- [ ] Voice enrichment: currently 7% (20/284 Belsky atoms have original_quote). Target: 100% across all brains.
+- [ ] Voice enrichment: currently 85% (240/284 Belsky atoms have original_quote). Target: 100% across all brains.
 - [ ] Reclassify Belsky's "Other & Miscellaneous" cluster (110/284 atoms = 39% in catch-all)
 - [ ] Fix atom count references in skill files (some still say "104 atoms" — actual is 284 for Belsky)
 
@@ -668,7 +676,7 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 ## Success Metrics
 
 ### Week 1 (launch week)
-- [x] 7 brains built and packaged ✅ (done pre-launch)
+- [x] 13 brains built and packaged ✅ (done pre-launch)
 - [ ] Storefront live with checkout
 - [ ] 100+ site visitors
 - [ ] 10+ purchases (any tier)
@@ -704,7 +712,7 @@ This isn't a random idea. Rob has **unfair advantages** that make this a 4-5 on 
 
 1. **The pipeline already exists.** `build-brain.py` is a one-command, 7-stage pipeline (generate → merge → synthesize → YouTube → connections → export → validate). `export-brain.py`, `enrich-connections.py`, `enrich-voice.py`, `ingest-youtube.py`, `audit-brains.py` — all operational. Most people would need 3 months just to build the infrastructure.
 
-2. **Proof of concept is done — seven times over.** 7 brains live with 1,374 atoms and 2,799 connections across Supabase. Each has a complete pack (brain-context.md, brain-atoms.json, explore.html, 8 skills). That's not a concept — that's a catalog.
+2. **Proof of concept is done — thirteen times over.** 13 brains live with 3,133 atoms and 5,129 connections across Supabase. Each has a complete pack (brain-context.md, brain-atoms.json, explore.html, 8 skills). That's not a concept — that's a catalog.
 
 3. **Creator economy expertise.** Rob understands the creator-as-business model from Tubular, TubeBuddy, and Spotter. The "claim your brain" rev-share model is natural for someone who's spent a decade in creator monetization.
 
@@ -730,7 +738,7 @@ The evolution path is: **knowledge pack → interactive advisor → platform** �
 
 **What:** Brainsfor.com — installable AI skill packs built from the world's most interesting minds. `npx skills add brainsfor/belsky` gives you 8 thinking tools powered by a real knowledge graph.
 
-**Current state (April 2026):** 7 brains live (Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green). 1,374 atoms, 2,799 connections. Full build pipeline, design system, brand guide, landing page prototype. Storefront and checkout not yet wired.
+**Current state (April 2026):** 13 brains live (Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Dario Amodei, Elon Musk, Jensen Huang). 3,133 atoms, 5,129 connections. Full build pipeline, design system, brand guide, landing page prototype with all 13 brains. Storefront and checkout not yet wired.
 
 **Who:** Three audiences: (1) Builders/founders who want expert-level context without hand-curating it ($29-79). (2) Professionals prepping for high-stakes interactions — sales teams brain-ing a target customer, founders brain-ing board members, creators studying competitors ($500-2K custom). (3) AI platforms who want premium knowledge content for their users (licensing deals).
 

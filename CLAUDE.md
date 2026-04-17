@@ -18,11 +18,15 @@ brainsfor/
   DESIGN.md                          ← design system (Stripe-inspired, indigo-tinted premium knowledge aesthetic)
   BRAND.md                           ← brand style guide (voice, messaging, vocabulary, visual identity)
   IMPROVEMENTS.md                    ← improvement backlog
+  BACKLOG.md                         ← **BRAIN CANDIDATE BACKLOG** — next brains to build (8 women thinkers queued)
   business-plan.md                   ← strategy doc
   .gitignore
 
   scripts/                           ← SHARED pipeline (brain-agnostic)
+    auto-build-brain.py              ← **FULL AUTOMATION** — person name in, brain pack out (~$23, ~60-90 min)
+    auto_build_config.py             ← config/utilities for auto-build (cost tables, prompts, Claude wrapper)
     audit-brains.py                  ← QA validator: structural + data quality checks across all brains
+    build-brain.py                   ← staged builder (generate → merge → synthesis → export)
     export-brain.py                  ← generic: --brain scott-belsky
     enrich-voice.py                  ← generic: --brain scott-belsky
     enrich-connections.py            ← generic: --brain scott-belsky
@@ -37,8 +41,17 @@ brainsfor/
     skills/                          ← 8 skill templates
       advise.md.template, teach.md.template, etc.
 
+  packages/                           ← npm packages
+    brainsfor-mcp/                   ← @brainsfor/mcp — MCP server for selective atom retrieval
+      src/                           ← TypeScript source (index.ts, types.ts, loaders/, tools/)
+      dist/                          ← compiled JS (ready to run)
+      package.json
+
   storefront/                        ← product-level assets
     landing-page-prototype.html
+
+  .mcp.json                          ← MCP server registration (auto-loaded by Claude Code)
+  HANDOFF-MCP-BOARD.md               ← handoff doc for MCP server + /board skill build
 
   brains/
     index.json                       ← registry: all brains, slugs, status
@@ -77,6 +90,38 @@ brainsfor/
 
 ## Architecture
 
+### MCP Server (`packages/brainsfor-mcp/`)
+
+A stdio-based Model Context Protocol server for selective atom retrieval. Gives AI agents access to brain data without loading full 290KB brain-context.md files (~15KB per brain, 19x reduction).
+
+**Package:** `@brainsfor/mcp` v0.1.0 — TypeScript, `@modelcontextprotocol/sdk` ^1.29.0, Zod.
+
+**6 tools:**
+
+| Tool | Purpose |
+|------|---------|
+| `list_brains` | All installed brains with slug, name, source, atom/connection counts |
+| `get_synthesis` | Thinker's intellectual OS (~4KB): first principles, thinking patterns, contrarian positions, does_not_believe, would_not_say |
+| `query_atoms` | Filter atoms by topics (union), cluster, confidence_min, limit |
+| `search_atoms` | Weighted full-text search (content 3x, quote 2x, implication 1x, topics 1x, confidence boost) |
+| `get_connections` | Typed connections for an atom, supports depth=2 graph traversal |
+| `get_atom` | Full atom by ID |
+
+**Registration:** `.mcp.json` at project root (auto-loaded by Claude Code on launch):
+```json
+{
+  "brainsfor": {
+    "command": "/opt/homebrew/bin/node",
+    "args": ["/Users/robgabel/rob-ai/brainsfor/packages/brainsfor-mcp/dist/index.js"],
+    "env": { "BRAINSFOR_HOME": "/Users/robgabel/rob-ai/brainsfor" }
+  }
+}
+```
+
+**Build:** `cd packages/brainsfor-mcp && npm run build` — compiles to `dist/`.
+
+**Key design:** In-memory indexes (atomsById, atomsByTopic, atomsByCluster) built on first load per brain, then cached. Weighted full-text search, not vector (keeps MCP self-contained — no API keys needed). Supabase semantic search is the future upgrade path for a hosted API.
+
 ### Two Audiences, Two Paths
 
 - **LLMs** load `brain-context.md` — the single file with everything: synthesis, LLM rules, all atoms, and skill instructions
@@ -109,6 +154,27 @@ This data is exported into brain-atoms.json's `synthesis` key and rendered by ex
 | embedding | vector(1536) | For semantic search |
 | source_ref | text | URL to original newsletter edition |
 | source_date | timestamp | Publication date |
+
+### Fully Automated Pipeline (NEW — April 2026)
+
+```
+scripts/auto-build-brain.py --person "Jensen Huang"             # Full end-to-end build (~$23, ~60-90 min)
+scripts/auto-build-brain.py --person "Annie Duke" --dry-run     # Cost estimate only
+scripts/auto-build-brain.py --person "Jensen Huang" --resume    # Resume from last completed phase
+scripts/auto-build-brain.py --person "Jensen Huang" --resume-from 3  # Resume from specific phase
+```
+
+Takes a person's name and produces a complete, shippable brain pack with ZERO manual approval gates. 6 phases:
+- **Phase 0:** Source discovery (web search via Firecrawl → sources.json)
+- **Phase 1:** Scaffolding (dirs, brain.json via LLM, Supabase tables, index.json)
+- **Phase 2:** Content ingestion (YouTube transcripts + deep research atoms → Supabase)
+- **Phase 3:** Synthesis (LLM-generated synthesis.md + brain.json synthesis section)
+- **Phase 4:** Enrichment (connections via topic overlap + LLM, auto-applied)
+- **Phase 5:** Export & QA (pack generation + audit scoring + remediation loop)
+
+Supports `--skip-phase N`, `--resume`, `--resume-from N`, `--max-sources`, `--target-atoms`, `--model`, `--synthesis-model`. Progress tracked in `brains/{slug}/build-progress.json`.
+
+Config module: `scripts/auto_build_config.py` (shared constants, cost tables, Claude API wrapper with retry logic, prompt templates).
 
 ### Export Pipeline
 
@@ -164,6 +230,23 @@ Why this design: installing 7+ brain packs naively creates 63+ prefixed skills (
 
 Customer deliverable (`brains/<slug>/pack/skills/`) still ships the per-brain skill files for users who install a single brain pack — those are templates for solo use. The PAOS install flattens them into one generic set because PAOS runs all 8 brains simultaneously.
 
+### /board — Board of Advisors (Multi-Brain Orchestrator)
+
+**Skill:** `~/rob-ai/skills/board/SKILL.md` — orchestrates N independent sub-agents, one per brain, to answer a single question without serial autoregressive contamination.
+
+**Why sub-agents:** When generating 4 persona opinions sequentially in one context window, each output conditions on all prior outputs. By person 3, you get consensus mush. Sub-agents enforce real independence — each brain NEVER reads the other brains' output.
+
+**Commands:** `/board <question>`, `/board set <slug1> <slug2> ...`, `/board list`, `/board clear`.
+**State:** `~/.claude/state/board.json`
+**Depends on:** `brainsfor` MCP server (selective retrieval) + Claude Code Agent tool (parallel sub-agents).
+
+### MCP-First Skill Loading (all 8 skills)
+
+All 8 reasoning skills (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) now support two context loading paths:
+
+1. **MCP-first (preferred):** `get_synthesis` → `query_atoms` → `search_atoms` → `get_connections` — ~15KB per brain
+2. **File fallback:** brain-atoms.json → brain-context.md (when MCP server unavailable)
+
 ### Skill Design (v3 — 8 skills, zero overlap)
 
 8 skills, each a distinct reasoning mode with a unique output type:
@@ -216,8 +299,18 @@ python3 scripts/audit-brains.py --remediate            # Generate runnable fix s
 
 **When to run:** After any export, before deploy, after adding a new brain.
 
-### Adding Brain #2 (Checklist)
+### Adding a New Brain
 
+**Automated (recommended):** One command, zero babysitting:
+```bash
+cd ~/rob-ai/brainsfor
+python3 scripts/auto-build-brain.py --person "Annie Duke"
+```
+This runs all 6 phases (source discovery → scaffolding → ingestion → synthesis → enrichment → export + QA) end-to-end. Cost: ~$23. Time: ~60-90 min. See "Fully Automated Pipeline" section above for flags and details.
+
+**Or via Cowork skill:** `/brain-build Annie Duke` — routes to the same automated pipeline.
+
+**Manual fallback** (if automation fails or you want fine-grained control):
 1. **Create directory:** `brains/{slug}/` with `brain.json`, `synthesis.md`, `source/`, `research/`, `data/`, `pack/`
 2. **Create Supabase tables:** `sed 's/{{SLUG}}/{slug}/g; s/{{NAME}}/{Name}/g' templates/create-brain-tables.sql | psql`
 3. **Fill brain.json:** Copy from scott-belsky, replace all values (name, source, clusters, skill examples, synthesis)
@@ -227,8 +320,6 @@ python3 scripts/audit-brains.py --remediate            # Generate runnable fix s
 7. **Export pack:** `python scripts/export-brain.py --brain {slug} --from-files atoms.json connections.json`
 8. **Register:** Add entry to `brains/index.json`
 9. **Verify:** Open `pack/explore.html` in browser, check all tabs render correctly
-
-Zero structural decisions. Same pipeline, same templates, different config.
 
 ## Design System
 
@@ -242,6 +333,7 @@ Zero structural decisions. Same pipeline, same templates, different config.
 
 ## Key Documents
 
+- **`BACKLOG.md`** — **Brain candidate backlog.** 8 women thinkers queued for future brain packs, with source richness ratings, rationale, cross-brain potential, and build priority. **Start here when deciding what brain to build next.**
 - `personas.md` — 7 customer personas with JTBD, objections, channels, WTP, killer features. Stack-ranked by priority.
 - `IMPROVEMENTS.md` — Full improvement backlog from April 2026 critique panel.
 - `business-plan.md` — Strategy doc (Greg Isenberg style).
@@ -250,7 +342,7 @@ Zero structural decisions. Same pipeline, same templates, different config.
 
 - [ ] Pricing model — subscription vs. one-time purchase vs. freemium?
 - [ ] Distribution: working `npx skills add` command pointing to `brains/{slug}/pack/`
-- [ ] Next brain pack after Belsky?
+- [x] Next brain pack after Belsky? → See `BACKLOG.md` — 8 candidates queued, top 3: Brené Brown, Annie Duke, Kara Swisher
 - [ ] Legal/licensing framework for packaging a person's published thinking?
 - [ ] Supabase schema migration to generic `brain_atoms` table (Phase 7)
 

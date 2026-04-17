@@ -4,15 +4,47 @@ Captured from expert critique panel (April 4, 2026): Calacanis, Bartlett, Hassid
 
 ---
 
+## 📌 Next Up for First Users (Pinned)
+
+These are the items that define the offering for BrainsFor's first paying customers. Everything else in this file is downstream of getting these three tiers shipped.
+
+### 1. Free brain pack (1 brain, local install) — the jab
+- Pick the strongest brain (Belsky or Graham) as the free demo
+- Ship full quality: all atoms, explore.html, synthesis
+- Distribute via npm (`@brainsfor/mcp`) + hosted JSON files (GitHub Releases or S3)
+- Install flow: `npx @brainsfor/install belsky` → adds to `.mcp.json` → done
+- **Owner:** Rob | **Depends on:** npm publish of `@brainsfor/mcp`
+
+### 2. Paid brain catalog ($29 one-time, per brain) — the revenue base
+- Remaining 9 brains priced at $29 each
+- Same local-install architecture as free tier
+- License key check at install time (simple Supabase endpoint — 100 req/day even at launch)
+- Stripe checkout, email delivers download link + license key
+- **Owner:** Rob | **Depends on:** landing page, Stripe, license validation endpoint
+
+### 3. Pro subscription ($15-25/mo, hosted MCP) — the moat *(don't build yet, pin for future)*
+- **Status:** Design documented, build deferred — see `ideas/OPPORTUNITIES.md` entry dated 2026-04-17
+- Hosted MCP server as Supabase Edge Function at `https://<project>.supabase.co/functions/v1/mcp-pro`
+- Unlocks `/board`, semantic search (pgvector), cross-brain connections, personalization memory, ChatGPT connector compatibility
+- Users add one connector URL to Claude Code / Claude Desktop / ChatGPT — no local files
+- **Why this is the moat:** paywall-enforceable at the protocol level (free/paid tiers ship files — unenforceable). Also unlocks features that keyword-search local MCP can't deliver.
+- **Kill criterion:** <10 Pro subscribers within 90 days of launch → pivot to volume pricing on per-brain purchases
+- **Owner:** Rob | **Depends on:** free + paid tiers shipping first, measurable demand signal
+
+---
+
 ## In Active Plan (see plan file)
 
 - [x] Full corpus ingestion: all 77 Implications editions ingested (100% coverage, 284 atoms)
-- [ ] Voice recovery: original_quote + implication fields added, but only 20/284 atoms enriched (7%) — needs completion
+- [ ] Voice recovery: original_quote + implication fields added, 240/284 atoms enriched (85%) — nearing completion, 44 atoms remaining
 - [x] Context window optimization: cluster-level files + manifest + targeted loading
 - [x] Connection enrichment: 161 → 430 connections (273 related, 105 supports, 38 extends, 14 contradicts)
 - [x] Thin topic graceful degradation in all skills
 - [x] Skill template compression (1,317 → ~500 lines)
 - [x] Confidence simplification (numeric → high/medium/low tiers)
+- [x] MCP server for selective atom retrieval — 6 tools (list_brains, get_synthesis, query_atoms, search_atoms, get_connections, get_atom). 19x context reduction vs full brain-context.md. Registered via `.mcp.json`. (2026-04-15)
+- [x] MCP-first context loading in all 8 skills — `/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict` now use MCP tools when available, file fallback when not. (2026-04-15)
+- [x] `/board` — Board of Advisors skill — multi-brain orchestrator. Fan out to N independent sub-agents (one per brain), converge with agreement/disagreement/confidence analysis. Solves autoregressive contamination from sequential role-play. (2026-04-15)
 
 ---
 
@@ -41,9 +73,10 @@ Captured from expert critique panel (April 4, 2026): Calacanis, Bartlett, Hassid
 ## Architecture & Distribution
 
 - [x] **Multi-brain skill collision — README promises `/advise`, install gave `/scott-belsky-advise`** — RESOLVED 2026-04-11. Refactored PAOS install to unified skill architecture: 8 generic reasoning skills (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain <slug>` that writes active brain to `~/.claude/state/active-brain.txt`). Each skill resolves brain via: inline first-token override → active state file → error. Cross-brain mode works for `/debate` and `/connect` via two inline slugs. Deleted 63 prefixed brain skill dirs. Matches README UX. Customer deliverable at `brains/<slug>/pack/skills/` still ships per-brain versions for single-brain installs. **Still TODO on the customer side:** the README's "install multiple brain packs and they auto-discover each other" promise needs the same unified router treatment in the installer, or the README language needs to change.
+- [x] **MCP server for selective retrieval** — `@brainsfor/mcp` v0.1.0. stdio-based, 6 tools, in-memory indexes, weighted full-text search. Registered via `.mcp.json`. (2026-04-15)
 - [ ] **SQLite brain format** — Portable SQLite with sqlite-vec for embeddings, connections, people. Solves "flat files can't carry a graph." (v2 roadmap item)
-- [ ] **Hosted semantic search API** — Brain stays in Supabase. Skills call edge function for vector search + graph traversal. Real-time updates + usage tracking built in.
-- [ ] **Hybrid delivery** — Flat files for offline context + API key for semantic search online. Best of both.
+- [ ] **Hosted semantic search API** — Brain stays in Supabase. Skills call edge function for vector search + graph traversal. Real-time updates + usage tracking built in. (MCP server is the local-first version of this; hosted API is the cloud version.)
+- [ ] **Hybrid delivery** — Flat files for offline context + API key for semantic search online. Best of both. (MCP server is step 1 — local selective retrieval. Step 2 is adding a Supabase-backed remote mode.)
 - [ ] **Cowork plugin packaging** — Should brain packs also be `.claude-plugin` format for the Anthropic plugin marketplace?
 
 ## Cross-Brain Features
@@ -68,4 +101,4 @@ Captured from expert critique panel (April 4, 2026): Calacanis, Bartlett, Hassid
 
 ---
 
-*Last updated: 2026-04-11 — refactored PAOS install to unified skill architecture; marked multi-brain skill collision item resolved*
+*Last updated: 2026-04-17 (run 4) — Catalog now at 13 brains / 3,133 atoms / 5,129 connections (added Dario Amodei 353/502, Elon Musk 247/202, Jensen Huang 253/220 in packs). Charlie Munger DB now populated (218/200). Peter Zeihan DB populated with 362/308 (pack still shows 460 atoms — re-export pending). Peter Attia DB fully enriched at 153/433. Belsky voice enrichment at 85% (240/284). `@brainsfor/mcp` server (v0.1.0, 6 tools) and `/board` skill remain live. Open flag: jensen_huang Supabase tables empty (0/0) despite shipped pack having 253 atoms — data either lost or exported from a staging location; needs investigation before relying on Supabase for Jensen queries.*
