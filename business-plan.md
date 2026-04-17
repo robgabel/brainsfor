@@ -207,7 +207,7 @@ $199/mo API is for the lazy-but-smart company that wants to offer "Ask [Expert]"
 | Brain | Atoms | Connections | Content Sources | Why Buyers Want This |
 |-------|-------|-------------|-----------------|---------------------|
 | **Dario Amodei** | 353 | 502 | darioamodei.com essays (Machines of Loving Grace, The Urgency of Interpretability), Dwarkesh, Lex Fridman #452, Ezra Klein, Logan Bartlett, Anthropic communications | AI safety thesis, interpretability, mechanistic thinking |
-| **Peter Zeihan** | 362 | 308 | The Accidental Superpower, The Absent Superpower, Disunited Nations, The End of the World Is Just the Beginning, Zeihan on Geopolitics YouTube, long-form interviews | Geopolitics, demographics, energy, supply chains, deglobalization |
+| **Peter Zeihan** | 460 | 308 | The Accidental Superpower, The Absent Superpower, Disunited Nations, The End of the World Is Just the Beginning, Zeihan on Geopolitics YouTube, long-form interviews | Geopolitics, demographics, energy, supply chains, deglobalization |
 | **Scott Belsky** | 284 | 430 | All 77 Implications newsletter editions, books, talks | Product intuition, creative leadership, Adobe/VC lens |
 | **Jensen Huang** | 253 | 220 | Lex Fridman #494, Acquired Podcast NVIDIA, Joe Rogan #2422, Computer History Museum, Stanford GSB, GTC 2024/2025 keynotes, 60 Minutes, Stripe Sessions, All-In, Dwarkesh, Hoover Institution | Compute, strategy, long-horizon product vision |
 | **Elon Musk** | 247 | 202 | Tweets, interviews, earnings calls, and public presentations | First-principles engineering, manufacturing scale, risk tolerance |
@@ -219,9 +219,9 @@ $199/mo API is for the lazy-but-smart company that wants to offer "Ask [Expert]"
 | **John Green** | 205 | 385 | Anthropocene Reviewed (podcast + book), Everything is Tuberculosis, Vlogbrothers, TED talks | Humanist perspective, storytelling, reviewing the world |
 | **Steve Jobs** | 170 | 792 | Speeches, interviews, keynotes & public appearances (1976–2011) | Product taste, reality distortion field, design philosophy |
 | **Peter Attia** | 153 | 433 | The Drive podcast, Outlive book reviews | Longevity science, health optimization frameworks |
-| **TOTAL** | **3,133** | **5,129** | | **+ 17 cross-brain connections** |
+| **TOTAL** | **3,231** | **5,129** | | **+ 17 cross-brain connections** |
 
-**Infrastructure stats:** 13 `brain_metadata` records in Supabase. Full export pipeline operational (`auto-build-brain.py` → one command, 6 phases, ~$23 per brain). All 13 brains have complete pack/ directories with brain-context.md, brain-atoms.json, explore.html, README.md, and 8 skill SKILL.md files. Design system (DESIGN.md) and brand guide (BRAND.md) documented and agent-readable. Landing page prototype exists. `install-brains.sh` handles local installation with symlinks. `audit-brains.py` validates structure + quality scoring (avg score 97/100 across 13 brains).
+**Infrastructure stats:** 13 `brain_metadata` records in Supabase. Full export pipeline operational (`auto-build-brain.py` → one command, 6 phases, ~$23 per brain). All 13 brains have complete pack/ directories with brain-context.md, brain-atoms.json, explore.html, README.md, and 8 skill SKILL.md files. Design system (DESIGN.md) and brand guide (BRAND.md) documented and agent-readable. **brainsforfree.com is live** (Next.js app in `website/`, deployed to Vercel, auto-deploy from `main`). `install-brains.sh` handles local installation with symlinks. `audit-brains.py` validates structure + quality scoring (avg score 97/100 across 13 brains).
 
 ### Next Wave — High-demand candidates
 

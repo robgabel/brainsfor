@@ -47,11 +47,20 @@ brainsfor/
       dist/                          ← compiled JS (ready to run)
       package.json
 
-  storefront/                        ← product-level assets
-    landing-page-prototype.html
+  website/                           ← **LIVE SITE** — brainsforfree.com (Next.js app on Vercel, auto-deploy from main)
+    AGENTS.md                        ← ⚠️ "This is NOT the Next.js you know" — check node_modules/next/dist/docs/ before writing code
+    app/                             ← app router pages (brains/[slug], pricing, dashboard, auth, api)
+    lib/                             ← brains.ts (reads brains/index.json as source of truth for atomCount/connectionCount)
+    public/brains/                   ← per-brain static assets: brain-atoms.json, brain-context.md, explore.html, SKILL.md, <slug>-brain-pack.zip
+    next.config.ts                   ← **X-Frame-Options: SAMEORIGIN** (DENY would break the Brain Explorer iframe)
+
+  storefront/                        ← DEPRECATED — pre-production prototype. Superseded by website/.
 
   .mcp.json                          ← MCP server registration (auto-loaded by Claude Code)
   HANDOFF-MCP-BOARD.md               ← handoff doc for MCP server + /board skill build
+  PRD-site-overhaul.md               ← PRD for website overhaul work
+  naming-exploration.md              ← brand naming exploration
+  doc-refresh-log.md                 ← audit trail of every /doc-refresh run
 
   brains/
     index.json                       ← registry: all brains, slugs, status
@@ -78,12 +87,14 @@ brainsfor/
 ## Key Dependencies
 
 - **Supabase project:** `uzediwokyshjbsymevtp` (same as PAOS)
-- **Tables:**
-  - `belsky_atoms` — 284 atoms from all 77 Implications editions, with `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
-  - `belsky_connections` — 430 typed relationships (supports, contradicts, extends, related)
-  - `brain_metadata` — brain config record (1 row per brain, generic schema)
-  - `cross_connections` — Rob ↔ Belsky cross-brain links
-  - `belsky_enrichment_log` — connection enrichment run history (mode, counts, duration, errors)
+- **Tables (13 brains live, per-brain schema):**
+  - `<slug>_atoms` — e.g. `scott_belsky_atoms` (284 atoms), `dario_amodei_atoms` (353), `peter_zeihan_atoms` (362 in DB / 460 in pack — see note below), `paul_graham_atoms` (213), `steve_jobs_atoms` (170), etc. Columns: `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
+  - `<slug>_connections` — typed relationships (supports, contradicts, extends, related). Largest: `steve_jobs_connections` (792), `gary_vee_connections` (505), `dario_amodei_connections` (502), `scott_belsky_connections` (430)
+  - `brain_metadata` — 13 rows, one per brain
+  - `cross_connections` — 17 rows, Rob ↔ brain cross-brain links
+  - `rob_atoms` / `rob_connections` — Rob's personal knowledge graph (225 / 162)
+  - `scott_belsky_enrichment_log` — connection enrichment run history (mode, counts, duration, errors). Legacy `belsky_enrichment_log` table still exists from pre-rename but is unused.
+  - **Known data drift:** `jensen_huang_atoms` / `jensen_huang_connections` are empty (0/0) despite the shipped pack having 253 atoms and 220 connections. Pack data is authoritative; Supabase needs re-ingestion. `peter_zeihan_atoms` in DB is 362 while the pack has 460 — pack is authoritative, re-ingestion pending.
 - **Edge function:** `enrich-connections` — automated connection discovery (topic overlap + temporal + LLM). Runs daily at 11:30pm PT via pg_cron. Modes: `discover` (cron), `discover-llm` (manual), `stats`.
 - **Export scripts** require `SUPABASE_SERVICE_KEY` — set in `~/rob-ai/.env`
 - **Voice enrichment** requires `ANTHROPIC_API_KEY` env var

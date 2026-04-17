@@ -1,5 +1,55 @@
 # BrainsFor Doc Refresh Log
 
+## Doc Refresh — 2026-04-17 (run 5)
+
+### Context
+Follow-up run after a live debugging session: user reported broken "Explore this brain" preview on brainsforfree.com. Diagnosis: `next.config.ts` was sending `X-Frame-Options: DENY` on every URL, which blocked the page at `/brains/<slug>` from iframing `/brains/<slug>/explore.html`. Fixed to `SAMEORIGIN` and pushed. Run 4 log entry noted that Peter Zeihan pack (460 atoms) disagreed with index.json (362) — user noticed the site was showing 362, so we synced index.json + website/public/brains/index.json up to 460 (pack was re-exported, docs had lagged).
+
+### Changes Applied
+
+**website/next.config.ts** (prod bug fix — commit 364fa75):
+- `X-Frame-Options: DENY` → `SAMEORIGIN` — unblocks same-origin iframe for brain Explorer. Was breaking every brain page.
+
+**brains/index.json + website/public/brains/index.json** (commit 4e1c432):
+- peter-zeihan `atom_count` 362 → 460 (pack was authoritative; indices had lagged)
+
+**Deleted** (commit fb44bbf):
+- `storefront/landing-page-prototype.html` — obsolete, superseded by live `website/` Next.js app
+
+**business-plan.md**:
+- Peter Zeihan inventory row: 362 → 460 atoms
+- TOTAL row: 3,133 → 3,231 atoms (connections unchanged at 5,129)
+- Infrastructure stats: landing page prototype sentence → **"brainsforfree.com is live"** (Next.js app in `website/`, Vercel auto-deploy from `main`)
+
+**brainsfor/CLAUDE.md** (major revision):
+- Tables section rewritten: `belsky_atoms` → `scott_belsky_atoms`, `belsky_connections` → `scott_belsky_connections`, `belsky_enrichment_log` → `scott_belsky_enrichment_log` (legacy `belsky_enrichment_log` still exists, noted). Listed 13 brains with actual DB counts.
+- Added Known Data Drift block: `jensen_huang_*` empty (0/0), `peter_zeihan_atoms` in DB (362) vs pack (460) — pack authoritative
+- Added `rob_atoms` / `rob_connections` (225 / 162) to table list
+- Directory Structure: added `website/` tree (full — app/, lib/, public/brains/, AGENTS.md with warning, next.config.ts SAMEORIGIN note); marked `storefront/` DEPRECATED; added `PRD-site-overhaul.md`, `naming-exploration.md`, `doc-refresh-log.md` to top-level entries
+
+**IMPROVEMENTS.md**:
+- Last-updated footer: run 4 → run 5 entry. Notes catalog at 3,231 atoms, brainsforfree.com live, the SAMEORIGIN prod fix, landing-page-prototype deletion, `/coach` 3-mode uplevel.
+
+### No Changes Needed
+- `brains/<slug>/pack/brain-atoms.json` files — all in sync with website/public/brains/
+- `audit-brains.py` scores — same as run 4 (avg 97/100)
+- Cross-connections — still 17
+
+### Quality Scores (audit-brains.py) — avg 97/100
+Same as run 4 — no new brain builds since then. Highlights:
+- jensen-huang: 100 (pack quality high despite Supabase being empty)
+- dario-amodei: 98 (orphan 22%, still flagged)
+- elon-musk: 99 (template var `{{brain_source_ethics}}` still unresolved in pack/SKILL.md)
+
+### Flagged for Human Review
+- **jensen-huang Supabase tables still empty** (0/0) — not touched this run. Action unchanged: re-seed.
+- **peter-zeihan pack (460) > Supabase (362)** — docs now consistent at 460 (site displays 460, pack says 460), but Supabase is out of sync with both. Action: `python3 scripts/enrich-voice.py --brain peter-zeihan` or re-ingest into Supabase.
+- **dario-amodei orphan rate 22%** — still open: `python3 scripts/enrich-connections.py --brain dario-amodei --discover --llm --auto-apply`
+- **`{{brain_source_ethics}}` template var** — still unresolved in several `pack/SKILL.md` files. Fix: re-run `export-brain.py` for affected brains.
+- **Legacy `belsky_enrichment_log` table** — safe to drop after confirming `scott_belsky_enrichment_log` is the only consumer.
+
+---
+
 ## Doc Refresh — 2026-04-17
 
 ### Changes Applied
