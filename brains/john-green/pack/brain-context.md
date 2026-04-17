@@ -2,7 +2,7 @@
 
 205 atomic ideas extracted from 36 episodes of The Anthropocene Reviewed podcast, 44 book essays, 7 novels, 2 nonfiction books, 2 TED talks, multiple commencement addresses, and 18+ years of Vlogbrothers videos (2007–present). John Green is a novelist, essayist, and one half of the Vlogbrothers YouTube channel (with his brother Hank). He wrote The Fault in Our Stars, Looking for Alaska, and Turtles All the Way Down. His nonfiction — The Anthropocene Reviewed and Everything is Tuberculosis — reveals a thinker obsessed with how humans find meaning in a world that doesn't inherently provide it. He lives with OCD, co-founded Crash Course and the Project for Awesome, and has spent two decades thinking publicly about hope, suffering, attention, and the beauty of ordinary things. Note: This brain covers John Green's thinking only, not his brother Hank Green's, despite their shared projects.
 
-Extracted by Rob Gabel using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

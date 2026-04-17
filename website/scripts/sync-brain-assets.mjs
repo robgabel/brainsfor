@@ -40,13 +40,9 @@ for (const brain of index.brains) {
   const packDir = path.join(BRAINS_DIR, brain.slug, "pack");
   const destDir = path.join(PUBLIC_DIR, brain.slug);
 
-  // Copy brain.json config so lib/brains.ts can read it on Vercel
-  const configSrc = path.join(BRAINS_DIR, brain.slug, "brain.json");
-  if (fs.existsSync(configSrc)) {
-    fs.mkdirSync(destDir, { recursive: true });
-    fs.copyFileSync(configSrc, path.join(destDir, "brain.json"));
-    synced++;
-  }
+  // NOTE: brain.json is deliberately NOT copied to public/ — it contains
+  // internal config (Supabase table names, cluster definitions) that should
+  // not ship to customers. Server-side code reads it from ../brains/.
 
   for (const file of ASSETS) {
     const src = path.join(packDir, file);
@@ -85,6 +81,9 @@ for (const brain of index.brains) {
 
   function addDir(dirPath, zipFolder) {
     for (const entry of fs.readdirSync(dirPath, { withFileTypes: true })) {
+      // Never embed previously-built zips inside the new zip — otherwise
+      // each build nests the prior zip, ballooning file size on every run.
+      if (entry.name.endsWith(".zip")) continue;
       const full = path.join(dirPath, entry.name);
       if (entry.isDirectory()) {
         addDir(full, zipFolder.folder(entry.name));

@@ -2,7 +2,7 @@
 
 213 atomic ideas extracted from 220+ essays spanning 2001-2025, plus interviews, talks, and tweets. Paul Graham is a programmer, essayist, and co-founder of Y Combinator — the most successful startup accelerator in history. His essays on paulgraham.com have shaped how a generation of founders and programmers think about startups, ambition, wealth creation, and the craft of building things. He is one of the most cited thinkers in Silicon Valley.
 
-Extracted by Rob Gabel using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

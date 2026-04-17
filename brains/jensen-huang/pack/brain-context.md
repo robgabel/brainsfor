@@ -2,7 +2,7 @@
 
 253 atomic ideas extracted from Lex Fridman Podcast #494, Acquired Podcast NVIDIA episode, Joe Rogan Experience #2422, Computer History Museum Oral History, Stanford GSB View From The Top, GTC 2024/2025 Keynotes, 60 Minutes profile, Stripe Sessions with Patrick Collison, All-In Podcast, Dwarkesh Patel interview, Stanford SIEPR Economic Summit, and Hoover Institution interview. Jensen Huang is the co-founder and CEO of NVIDIA, which he has led since its founding at a Denny's restaurant in 1993. Under his leadership, NVIDIA invented the GPU, created the CUDA programming platform, and transformed from a gaming graphics company into the engine behind the AI revolution — becoming one of the most valuable companies in the world. He is known for first-principles thinking, an unusually flat organizational structure with 50+ direct reports, and the conviction to bet the entire company on markets that don't yet exist.
 
-Extracted by Rob Gabel using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

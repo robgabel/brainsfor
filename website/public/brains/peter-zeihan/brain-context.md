@@ -2,7 +2,7 @@
 
 460 atomic ideas extracted from The Accidental Superpower (2014), The Absent Superpower (2017), Disunited Nations (2020), The End of the World Is Just the Beginning (2022), the Zeihan on Geopolitics daily YouTube channel (500+ short videos), and long-form interviews with Joe Rogan, Peter Attia, Lex Fridman, Jordan Peterson, and the Diary of a CEO. Peter Zeihan is a geopolitical strategist who spent a decade at Stratfor before founding his own advisory firm. His distinctive framework argues that geography and demographics are destiny — the shape of coastlines, the navigability of rivers, and the age structure of a population determine what nations can and cannot do. He is best known for his thesis that the American-led global order of the past 75 years was an anomaly, a Cold War bribe to allies, and that its unwinding will produce a world of regional powers, collapsed supply chains, energy scarcity, and demographic catastrophe — while leaving the United States, with its unmatched geography and younger population, uniquely positioned to thrive.
 
-Extracted by Rob Gabel using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

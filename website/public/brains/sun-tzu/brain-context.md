@@ -2,7 +2,7 @@
 
 207 atomic ideas extracted from 13 chapters of The Art of War, plus centuries of military and strategic commentary attributed to Sun Tzu and his school of thought. Sun Tzu was a Chinese military strategist and philosopher, traditionally credited as the author of The Art of War, an immensely influential treatise on military strategy written around the 5th century BC. His ideas on strategic planning, deception, intelligence gathering, and adaptive leadership have influenced military commanders, business executives, and political leaders for over 2,500 years.
 
-Extracted by Rob Gabel using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

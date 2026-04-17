@@ -2,7 +2,7 @@
 
 284 atomic ideas extracted from 77 editions of the Implications newsletter. Scott Belsky is a legendary entrepreneur and strategic thinker who has shaped product and organizational thinking across the tech industry. His "Implications" newsletter is where he shares his latest thinking on originality, organizational design, AI, and the future of work.
 
-Extracted by Rob Gabel using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

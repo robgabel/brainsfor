@@ -1,5 +1,7 @@
 import { NextRequest } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
 import { loadBrainContext, loadSkillPrompt } from "@/lib/brain-context";
 import { SKILLS, getBrain } from "@/lib/brains";
 
@@ -7,37 +9,83 @@ export const runtime = "nodejs";
 
 const VALID_SKILLS = SKILLS.map((s) => s.name);
 
-// --- Rate limiting (in-memory, per-instance) ---
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
-const LIMIT = process.env.NODE_ENV === "development" ? 999 : 10;
-const WINDOW_MS = 24 * 60 * 60 * 1000;
+// --- CORS ---
+// Exact-string allowlist. Requests without a matching Origin get no CORS
+// headers (same-origin fetches still work; cross-origin fetches from other
+// hosts get blocked by the browser).
+const CORS_ALLOWED_ORIGINS = new Set([
+  "https://brainsforfree.com",
+  "https://www.brainsforfree.com",
+]);
 
-function checkRateLimit(ip: string): {
-  allowed: boolean;
-  remaining: number;
-} {
-  const now = Date.now();
-  const entry = rateLimitMap.get(ip);
-  if (!entry || now > entry.resetAt) {
-    rateLimitMap.set(ip, { count: 1, resetAt: now + WINDOW_MS });
-    return { allowed: true, remaining: LIMIT - 1 };
+function corsHeaders(request: NextRequest): Record<string, string> {
+  const origin = request.headers.get("origin");
+  if (origin && CORS_ALLOWED_ORIGINS.has(origin)) {
+    return {
+      "Access-Control-Allow-Origin": origin,
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+      Vary: "Origin",
+    };
   }
-  if (entry.count >= LIMIT) {
+  return {};
+}
+
+export async function OPTIONS(request: NextRequest) {
+  return new Response(null, { status: 204, headers: corsHeaders(request) });
+}
+
+// --- Rate limiting (Upstash Redis, durable across Vercel instances) ---
+const LIMIT = process.env.NODE_ENV === "development" ? 999 : 10;
+const WINDOW = "24 h" as const;
+
+// Lazily initialize — fail closed (no limiter = no requests served in prod)
+// only if the envs are missing. In dev we fall back to an always-allow limiter.
+let limiter: Ratelimit | null = null;
+function getLimiter(): Ratelimit | null {
+  if (limiter) return limiter;
+  const url = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!url || !token) return null;
+  limiter = new Ratelimit({
+    redis: new Redis({ url, token }),
+    limiter: Ratelimit.slidingWindow(LIMIT, WINDOW),
+    analytics: false,
+    prefix: "bff:skill",
+  });
+  return limiter;
+}
+
+async function checkRateLimit(
+  ip: string,
+): Promise<{ allowed: boolean; remaining: number }> {
+  // Dev bypass: always allow
+  if (process.env.NODE_ENV === "development") {
+    return { allowed: true, remaining: LIMIT };
+  }
+  const rl = getLimiter();
+  if (!rl) {
+    // Fail closed in prod when envs are missing — surfaces config errors fast.
+    console.error(
+      "[api/skill] Upstash envs missing — rate limiter unavailable",
+    );
     return { allowed: false, remaining: 0 };
   }
-  entry.count++;
-  return { allowed: true, remaining: LIMIT - entry.count };
+  const { success, remaining } = await rl.limit(ip);
+  return { allowed: success, remaining };
 }
 
 // --- System prompts ---
 const BREVITY_GENERIC = `HARD CONSTRAINT: Respond in exactly 4-5 sentences of plain prose. No markdown, no bold, no headers, no bullet points. Plain text only.`;
 
-const BREVITY_ENHANCED = `HARD CONSTRAINTS:
-- Respond in exactly 4-5 sentences of plain prose. No markdown, no bold, no headers, no bullet points. Plain text only.
-- OPEN with a direct quote from the thinker (use their original_quote verbatim if available). Format: "quote" — then your insight.
-- Name the specific framework, principle, or concept by name (e.g., "The Messy Middle", "First Principles Thinking", "Via Negativa").
-- Be opinionated and specific, not hedging. This thinker has strong views — channel them.
-- Every sentence must reference specific knowledge from the brain context. No generic filler.`;
+const BREVITY_ENHANCED = `HARD CONSTRAINTS — FORMAT:
+- Output ONE short answer (1 sentence, 25 words max) in first person as the thinker, followed by EXACTLY 3 direct quotes.
+- Each quote MUST be verbatim from an atom's original_quote in the brain context above. Never fabricate or paraphrase.
+- Pick the 3 quotes MOST RELEVANT to the user's question, not the most famous ones.
+- Cite each quote in this exact format: "quote text here" — Source Name, Year.
+- Separate the answer and each quote with a period and a space so they render as distinct paragraphs.
+- No markdown, no bold, no headers, no bullet points, no numbering. Plain text only.
+- The answer sentence must be opinionated and specific, channeling the thinker's actual worldview — no hedging, no generic filler.`;
 
 // The skill files below were authored for a CLI brain router. They contain
 // sections like "Brain Selection" that tell the model to read ${BRAINSFOR_HOME}
@@ -60,12 +108,17 @@ function buildEnhancedSystem(brainContext: string, skillPrompt: string): string 
 
 // --- POST handler ---
 export async function POST(request: NextRequest) {
+  const cors = corsHeaders(request);
+
   // Parse body
   let body: { brain?: string; skill?: string; query?: string };
   try {
     body = await request.json();
   } catch {
-    return Response.json({ error: "Invalid JSON" }, { status: 400 });
+    return Response.json(
+      { error: "Invalid JSON" },
+      { status: 400, headers: cors },
+    );
   }
 
   const { brain, skill, query } = body;
@@ -74,30 +127,30 @@ export async function POST(request: NextRequest) {
   if (!brain || !skill || !query) {
     return Response.json(
       { error: "Missing brain, skill, or query" },
-      { status: 400 },
+      { status: 400, headers: cors },
     );
   }
   if (typeof query !== "string" || query.length > 500) {
     return Response.json(
       { error: "Query must be under 500 characters" },
-      { status: 400 },
+      { status: 400, headers: cors },
     );
   }
   if (!VALID_SKILLS.includes(skill)) {
-    return Response.json({ error: "Invalid skill" }, { status: 400 });
+    return Response.json(
+      { error: "Invalid skill" },
+      { status: 400, headers: cors },
+    );
   }
 
-  // Rate limit (bypass with beast mode header)
-  const isBeast = request.headers.get("x-beast-mode") === "1";
+  // Rate limit — Upstash Redis, keyed on client IP. No header bypasses.
   const ip =
     request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-  const { allowed, remaining } = isBeast
-    ? { allowed: true, remaining: 999 }
-    : checkRateLimit(ip);
+  const { allowed, remaining } = await checkRateLimit(ip);
   if (!allowed) {
     return Response.json(
       { error: "limit", remaining: 0 },
-      { status: 429 },
+      { status: 429, headers: cors },
     );
   }
 
@@ -110,7 +163,7 @@ export async function POST(request: NextRequest) {
   } catch {
     return Response.json(
       { error: "Brain or skill not found" },
-      { status: 404 },
+      { status: 404, headers: cors },
     );
   }
 
@@ -136,11 +189,11 @@ export async function POST(request: NextRequest) {
         try {
           const userMessage =
             type === "enhanced"
-              ? `[DEMO MODE: Open with a direct quote from the thinker, then give 3-4 sentences of specific, opinionated insight grounded in their frameworks. Plain prose only — no markdown, no bold, no headers, no bullet points.]\n\n${query}`
+              ? `[DEMO MODE: Answer in ONE short sentence (25 words max) in first person as the thinker, then quote the 3 atoms most relevant to this question verbatim. Each quote followed by "— Source, Year." Plain text only, no markdown.]\n\n${query}`
               : `You are ${brainName}, ${skill} me: ${query}`;
           const messageStream = client.messages.stream({
             model: "claude-sonnet-4-20250514",
-            max_tokens: 350,
+            max_tokens: 700,
             system: systemPrompt,
             messages: [{ role: "user", content: userMessage }],
           });
@@ -179,6 +232,7 @@ export async function POST(request: NextRequest) {
       "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "no-cache",
       "X-Demos-Remaining": String(remaining),
+      ...cors,
     },
   });
 }

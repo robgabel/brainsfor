@@ -9,8 +9,8 @@ Welcome to the **Attia Brain Pack** from [brainsforfree.com](https://brainsforfr
 
 ## What You're Getting
 
-- **73 knowledge atoms** — Core insights, frameworks, and strategic principles from 400+ episodes of The Drive podcast, reviews of Outlive (2023), and detailed blog posts
-- **40 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **153 knowledge atoms** — Core insights, frameworks, and strategic principles from 400+ episodes of The Drive podcast, reviews of Outlive (2023), and detailed blog posts
+- **433 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Zone 2 training, VO2 max, Four Horsemen, metabolic health, cardiovascular prevention, cancer screening, emotional resilience, sleep, pharmacology, muscle, and more
 
@@ -28,7 +28,7 @@ Your Attia Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (73 insights)
+  ├── brain-atoms.json         ← structured atoms (153 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 73 atoms with titles, summaries, connections
+   - JSON structure of 153 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 

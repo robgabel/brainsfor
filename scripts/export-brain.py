@@ -28,6 +28,7 @@ from pathlib import Path
 
 try:
     from dotenv import load_dotenv
+    load_dotenv(Path(__file__).resolve().parent.parent / "website" / ".env.local", override=True)
     load_dotenv(Path(__file__).resolve().parents[2] / ".env", override=True)
 except ImportError:
     pass
@@ -213,7 +214,7 @@ def export_context_md(atoms: list, connections: list, config: dict, output_dir: 
         f"{config.get('brain_bio', '')}\n"
     )
     lines.append(
-        f"Extracted by Rob Gabel using a custom knowledge graph pipeline "
+        f"Extracted by brainsforfree using a custom knowledge graph pipeline "
         f"(Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.\n"
     )
     # Shared LLM rules header
@@ -453,10 +454,12 @@ def fetch_from_supabase(config: dict) -> tuple:
         print("       Or use --from-files to load from local JSON dumps.")
         sys.exit(1)
 
-    url = os.environ.get("SUPABASE_URL")
-    key = os.environ.get("SUPABASE_SERVICE_KEY")
+    url = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL")
+    _svc = os.environ.get("SUPABASE_SERVICE_KEY", "")
+    _anon = os.environ.get("NEXT_PUBLIC_SUPABASE_ANON_KEY", "")
+    key = _svc if _svc.count(".") == 2 else _anon
     if not url or not key:
-        print("ERROR: SUPABASE_URL and SUPABASE_SERVICE_KEY must be set in env or ../../.env")
+        print("ERROR: SUPABASE_URL and SUPABASE_SERVICE_KEY (or NEXT_PUBLIC_SUPABASE_ANON_KEY) must be set")
         print("       Or use --from-files to load from local JSON dumps.")
         sys.exit(1)
 
