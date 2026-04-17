@@ -28,8 +28,18 @@ interface SkillsPlaygroundProps {
 const DEFAULT_DEMO_LIMIT = process.env.NODE_ENV === "development" ? 999 : 10;
 const STORAGE_KEY = "bf-demo-count";
 
-/** Split text into sentences, respecting quotes and abbreviations */
+/** Split text into sentences, respecting quotes and abbreviations.
+ *  Also splits on hard newline breaks (\n\n or \n) which the model uses for paragraphs. */
 function splitSentences(text: string): string[] {
+  // Pre-pass: split on hard newline boundaries first, then sentence-split each chunk.
+  const chunks = text
+    .split(/\n{1,}/)
+    .map((c) => c.trim())
+    .filter(Boolean);
+  if (chunks.length > 1) {
+    return chunks.flatMap((c) => splitSentences(c));
+  }
+
   const results: string[] = [];
   let current = "";
   let inQuote = false;
