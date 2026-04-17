@@ -30,7 +30,9 @@ from pathlib import Path
 
 try:
     from dotenv import load_dotenv
-    load_dotenv(Path(__file__).resolve().parents[2] / ".env")
+    # Try website env first (has working anon key), then root env
+    load_dotenv(Path(__file__).resolve().parent.parent / "website" / ".env.local", override=True)
+    load_dotenv(Path(__file__).resolve().parents[2] / ".env", override=True)
 except ImportError:
     pass
 
@@ -46,8 +48,12 @@ ROOT_DIR = SCRIPT_DIR.parent
 BRAINS_DIR = ROOT_DIR / "brains"
 
 # --- Config ---
-SUPABASE_URL = os.environ.get("SUPABASE_URL", "https://uzediwokyshjbsymevtp.supabase.co")
-SUPABASE_KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
+SUPABASE_URL = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL", "https://uzediwokyshjbsymevtp.supabase.co")
+
+# Prefer service key if it looks valid (3-part JWT), else fall back to anon key
+_svc = os.environ.get("SUPABASE_SERVICE_KEY", "")
+_anon = os.environ.get("NEXT_PUBLIC_SUPABASE_ANON_KEY", "")
+SUPABASE_KEY = _svc if _svc.count(".") == 2 else _anon
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 # LLM model — Sonnet for quality contradiction detection
