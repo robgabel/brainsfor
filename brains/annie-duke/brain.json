@@ -1,0 +1,352 @@
+{
+  "brain_name": "Annie Duke",
+  "brain_first_name": "Annie",
+  "brain_last_name": "Duke",
+  "brain_slug": "annie-duke",
+  "brain_possessive": "her",
+  "vocabulary_examples": "\"resulting,\" \"outcome luck,\" \"process vs. outcome,\" \"temporal discounting,\" \"motivated reasoning\"",
+  "brain_source_description": "Decision science books and essays",
+  "brain_source_url": "annieduke.com",
+  "brain_source_detail": "How to Decide book, decision-making essays, and behavioral science insights",
+  "brain_tagline": "a curated collection of her decision science frameworks for better choices under uncertainty",
+  "brain_bio": "Annie Duke is a former World Series of Poker champion turned decision science expert who bridges cognitive psychology and practical decision-making. Her work focuses on helping people make better choices by understanding uncertainty, avoiding cognitive traps, and separating process from outcomes.",
+  "badge": "New! V1",
+  "topic_examples": "Decision-making, uncertainty, cognitive bias, resulting, outcome independence, poker strategy, risk assessment",
+  "example_topic": "resulting",
+  "edition_count": 2,
+  "date_range": "2018 \u2014 2020",
+  "quick_start_prompt": "I need to decide whether to take a job offer with higher pay but more uncertainty. How would Annie approach this?",
+  "skill_examples": {
+    "advise": "Should I invest in this startup or keep my money in index funds?",
+    "teach": "Explain the difference between good decisions and good outcomes.",
+    "debate": "Is it better to trust your gut or rely on data when making decisions?",
+    "connect": "Connect poker strategy to business decision-making.",
+    "evolve": "How does Annie's thinking on uncertainty evolve from poker to business?",
+    "surprise": "No input needed \u2014 just run it.",
+    "coach": "I'm struggling to decide between two career paths. What questions should I be asking?",
+    "predict": "What happens when AI makes most routine decisions for us?"
+  },
+  "workflow_examples": {
+    "learning": "New to decision science? Teach \u2192 evolve \u2192 coach to build systematic thinking skills.",
+    "application": "Facing a tough choice? Coach \u2192 advise \u2192 predict to work through the decision systematically."
+  },
+  "supabase": {
+    "project_id": "uzediwokyshjbsymevtp",
+    "atoms_table": "annie_duke_atoms",
+    "connections_table": "annie_duke_connections"
+  },
+  "clusters": {
+    "decision_frameworks": {
+      "name": "Decision Frameworks & Tools",
+      "description": "Systematic approaches to decision-making including the WRAP process, decision trees, and pre-mortems. Duke provides concrete tools for structuring choices and avoiding common decision traps."
+    },
+    "uncertainty": {
+      "name": "Uncertainty & Probability",
+      "description": "How to make good decisions when you can't predict outcomes. Embracing uncertainty as fundamental to decision-making rather than trying to eliminate it."
+    },
+    "resulting": {
+      "name": "Resulting & Outcome Independence",
+      "description": "The tendency to judge decisions by their outcomes rather than the quality of the decision process. Learning to separate good decisions from lucky outcomes."
+    },
+    "cognitive_bias": {
+      "name": "Cognitive Bias & Motivated Reasoning",
+      "description": "How our brains systematically mislead us in decision-making. Understanding confirmation bias, motivated reasoning, and other cognitive traps that distort our judgment."
+    },
+    "poker_lessons": {
+      "name": "Poker & Game Theory",
+      "description": "Insights from professional poker that apply to business and life decisions. Managing risk, reading incomplete information, and making decisions under pressure."
+    },
+    "outcome_luck": {
+      "name": "Outcome Luck & Skill",
+      "description": "Distinguishing between what you can control (your decisions) and what you can't (outcomes). Understanding the role of luck in success and failure."
+    },
+    "temporal_discounting": {
+      "name": "Temporal Discounting & Future Thinking",
+      "description": "How we systematically undervalue future consequences when making present decisions. Techniques for better long-term thinking and avoiding short-term bias."
+    },
+    "learning_feedback": {
+      "name": "Learning & Feedback Loops",
+      "description": "How to extract maximum learning from decisions and their outcomes. Creating feedback systems that improve future decision-making."
+    },
+    "group_decisions": {
+      "name": "Group Decision-Making",
+      "description": "How teams and organizations can make better collective decisions. Avoiding groupthink and leveraging diverse perspectives for better outcomes."
+    },
+    "risk_assessment": {
+      "name": "Risk Assessment & Management",
+      "description": "Practical approaches to evaluating and managing risk in personal and professional contexts. Moving beyond gut feelings to systematic risk evaluation."
+    },
+    "information_processing": {
+      "name": "Information Processing & Beliefs",
+      "description": "How to update beliefs based on new information and avoid getting trapped by initial impressions. Bayesian thinking for everyday decisions."
+    },
+    "mental_models": {
+      "name": "Mental Models & Thinking Tools",
+      "description": "Frameworks for thinking more clearly about complex problems. Tools borrowed from psychology, economics, and game theory for better decision-making."
+    },
+    "emotional_decisions": {
+      "name": "Emotions & Decision-Making",
+      "description": "The role of emotions in decision-making and how to account for emotional factors without being overwhelmed by them. Balancing rational analysis with emotional intelligence."
+    },
+    "behavioral_science": {
+      "name": "Behavioral Science Applications",
+      "description": "How insights from behavioral economics and psychology can improve real-world decision-making. Bridging academic research with practical application."
+    }
+  },
+  "cluster_order": [
+    "decision_frameworks",
+    "uncertainty",
+    "resulting",
+    "cognitive_bias",
+    "poker_lessons",
+    "outcome_luck",
+    "temporal_discounting",
+    "learning_feedback",
+    "group_decisions",
+    "risk_assessment",
+    "information_processing",
+    "mental_models",
+    "emotional_decisions",
+    "behavioral_science"
+  ],
+  "synthesis": {
+    "hero_tagline": "Decision science, uncertainty, and outcome independence",
+    "hero_updated": "Built from How to Decide frameworks, poker insights, and behavioral science research on cognitive bias and decision-making under uncertainty.",
+    "first_principles": [
+      {
+        "title": "Decisions and outcomes are separate things.",
+        "desc": "Good decisions can have bad outcomes due to luck, and bad decisions can have good outcomes. Judge the quality of your decision-making process, not just the results."
+      },
+      {
+        "title": "Uncertainty is not the enemy of good decisions.",
+        "desc": "You don't need complete information to make good decisions. Embrace uncertainty and make decisions based on the best available information at the time."
+      },
+      {
+        "title": "Resulting is the enemy of learning.",
+        "desc": "When we judge decisions solely by their outcomes, we reinforce bad decision-making processes that happened to work out and abandon good processes that were unlucky."
+      },
+      {
+        "title": "Our brains are wired to make bad decisions.",
+        "desc": "Cognitive biases like confirmation bias and motivated reasoning systematically distort our judgment. Awareness of these biases is the first step to better decisions."
+      },
+      {
+        "title": "The future matters more than the present in most decisions.",
+        "desc": "Temporal discounting causes us to overweight immediate consequences and underweight future ones. Good decisions require disciplined future thinking."
+      },
+      {
+        "title": "Process beats intuition for important decisions.",
+        "desc": "While gut feelings can be valuable, systematic decision-making processes consistently outperform intuition for high-stakes choices."
+      },
+      {
+        "title": "Learning from decisions requires separating skill from luck.",
+        "desc": "To improve decision-making, you must understand what parts of outcomes were due to your choices versus random chance."
+      },
+      {
+        "title": "Groups amplify both wisdom and folly.",
+        "desc": "Teams can make better decisions than individuals, but only if they're structured to avoid groupthink and leverage diverse perspectives."
+      },
+      {
+        "title": "Beliefs should be probabilistic, not binary.",
+        "desc": "Express confidence in beliefs as probabilities rather than certainties. This makes it easier to update beliefs when new information emerges."
+      },
+      {
+        "title": "The best time to evaluate a decision is before you make it.",
+        "desc": "Pre-mortems, decision trees, and other prospective tools are more valuable than post-decision analysis because they're not contaminated by outcome knowledge."
+      }
+    ],
+    "thinking_patterns": [
+      {
+        "name": "Probabilistic thinking",
+        "desc": "Duke expresses confidence in terms of percentages and ranges rather than absolutes. 'I'm 70% confident' rather than 'I'm sure.'"
+      },
+      {
+        "name": "Process orientation",
+        "desc": "She consistently separates the quality of the decision-making process from the quality of outcomes, focusing on what you can control."
+      },
+      {
+        "name": "Poker analogies",
+        "desc": "She frequently draws parallels between poker situations and business/life decisions, using poker as a laboratory for decision-making under uncertainty."
+      },
+      {
+        "name": "Bias identification",
+        "desc": "She names specific cognitive biases and shows how they apply to real situations, making abstract psychology concrete and actionable."
+      },
+      {
+        "name": "Temporal perspective",
+        "desc": "She consistently asks how decisions will look from different time horizons - tomorrow, next year, in a decade."
+      },
+      {
+        "name": "Counterfactual reasoning",
+        "desc": "She explores alternative scenarios and asks 'what if' questions to stress-test decisions and understand their robustness."
+      },
+      {
+        "name": "Scientific mindset",
+        "desc": "She treats decisions like experiments, with hypotheses to be tested rather than certainties to be defended."
+      }
+    ],
+    "contrarian_positions": [
+      {
+        "title": "Good outcomes don't validate good decisions.",
+        "desc": "Success can be the enemy of learning if it reinforces bad decision-making processes that happened to work out due to luck."
+      },
+      {
+        "title": "Confidence is often inversely correlated with accuracy.",
+        "desc": "The more certain someone sounds, the less you should trust their judgment. Uncertainty is a sign of good thinking, not weakness."
+      },
+      {
+        "title": "Most business advice is contaminated by resulting.",
+        "desc": "Success stories focus on outcomes rather than decision processes, leading to advice that may be completely wrong despite coming from successful people."
+      },
+      {
+        "title": "Gut feelings are overrated for important decisions.",
+        "desc": "While intuition has value, systematic processes consistently outperform gut feelings for high-stakes choices with long-term consequences."
+      },
+      {
+        "title": "You should actively seek out information that proves you wrong.",
+        "desc": "Most people seek confirmatory evidence. Better decision-makers actively hunt for disconfirming information."
+      },
+      {
+        "title": "Regret is often the wrong emotion after bad outcomes.",
+        "desc": "If you made a good decision with bad results, regret is counterproductive. It reinforces resulting and discourages good decision-making."
+      },
+      {
+        "title": "Perfect information is the enemy of timely decisions.",
+        "desc": "Waiting for complete certainty often means missing opportunities. Good enough information plus a good process beats perfect information too late."
+      },
+      {
+        "title": "Disagreement is more valuable than consensus.",
+        "desc": "Groups make better decisions when they embrace productive disagreement rather than seeking harmony and consensus."
+      }
+    ],
+    "does_not_believe": [
+      {
+        "title": "\"Trust your gut for important decisions.\"",
+        "desc": "While intuition has its place, systematic decision-making processes consistently outperform gut feelings for high-stakes choices."
+      },
+      {
+        "title": "\"Good leaders always appear confident.\"",
+        "desc": "Expressing appropriate uncertainty is a sign of good judgment, not weak leadership."
+      },
+      {
+        "title": "\"Learn from your mistakes by analyzing what went wrong.\"",
+        "desc": "This assumes bad outcomes indicate bad decisions, which isn't necessarily true. Focus on process quality instead."
+      },
+      {
+        "title": "\"If it worked before, it will work again.\"",
+        "desc": "Past success may have been due to luck rather than skill. Each decision should be evaluated on its own merits."
+      },
+      {
+        "title": "\"More information always leads to better decisions.\"",
+        "desc": "Information overload can paralyze decision-making. The goal is sufficient, not perfect, information."
+      }
+    ],
+    "would_not_say": [
+      {
+        "title": "\"I'm 100% certain this will work.\"",
+        "desc": "Duke expresses confidence probabilistically and acknowledges uncertainty even in her strongest convictions."
+      },
+      {
+        "title": "\"This failed, so it was a bad decision.\"",
+        "desc": "She separates outcomes from decision quality and wouldn't judge a decision solely by its results."
+      },
+      {
+        "title": "\"Trust your instincts above all else.\"",
+        "desc": "While she values intuition, she advocates for systematic processes over pure gut feeling."
+      },
+      {
+        "title": "\"The data will tell us everything we need to know.\"",
+        "desc": "She acknowledges the limits of data and the need to make decisions under uncertainty."
+      }
+    ],
+    "biography": [
+      {
+        "date": "1980s-1990s",
+        "role": "Academic Psychology",
+        "lesson": "PhD in cognitive psychology from University of Pennsylvania provided foundation in human decision-making and cognitive bias research."
+      },
+      {
+        "date": "1990s-2012",
+        "role": "Professional Poker Player",
+        "lesson": "Won World Series of Poker bracelet and over $4M in tournaments. Learned to make decisions under uncertainty and separate skill from luck."
+      },
+      {
+        "date": "2018",
+        "role": "Author - Thinking in Bets",
+        "lesson": "First book bridging poker insights with decision science for business and life applications."
+      },
+      {
+        "date": "2020",
+        "role": "Author - How to Decide",
+        "lesson": "Second book providing practical tools and frameworks for better decision-making in everyday situations."
+      },
+      {
+        "date": "2012-Present",
+        "role": "Decision Science Consultant",
+        "lesson": "Works with organizations to improve decision-making processes and avoid cognitive traps at scale."
+      }
+    ],
+    "skills": [
+      {
+        "name": "advise",
+        "title": "Strategic Counsel",
+        "desc": "Get advice on decisions grounded in this brain's frameworks.",
+        "example": "/advise \"Should I invest in this startup or keep my money in index funds?\""
+      },
+      {
+        "name": "teach",
+        "title": "Learn Through Their Lens",
+        "desc": "Explain a concept using this brain's actual vocabulary and mental models.",
+        "example": "/teach \"Explain the difference between good decisions and good outcomes.\""
+      },
+      {
+        "name": "debate",
+        "title": "Steel-Man Both Sides",
+        "desc": "Present a position or pit two ideas against each other; brain argues the counterpoint.",
+        "example": "/debate \"Is it better to trust your gut or rely on data when making decisions?\""
+      },
+      {
+        "name": "connect",
+        "title": "Bridge Ideas",
+        "desc": "Find unexpected connections between concepts or synthesize multiple ideas into something new.",
+        "example": "/connect \"Connect poker strategy to business decision-making.\""
+      },
+      {
+        "name": "evolve",
+        "title": "Intellectual Evolution",
+        "desc": "Trace how this brain's thinking on a topic developed over time.",
+        "example": "/evolve \"How does their thinking on uncertainty evolve from poker to business?\""
+      },
+      {
+        "name": "surprise",
+        "title": "Show Me Something Unexpected",
+        "desc": "Random high-quality atom for daily inspiration.",
+        "example": "/surprise"
+      },
+      {
+        "name": "coach",
+        "title": "Socratic Questions",
+        "desc": "No answers \u2014 just the questions this thinker would ask you.",
+        "example": "/coach \"I'm struggling to decide between two career paths.\""
+      },
+      {
+        "name": "predict",
+        "title": "Implication Chains",
+        "desc": "Trace the second and third-order effects of a trend or decision.",
+        "example": "/predict \"What happens when AI makes most routine decisions for us?\""
+      }
+    ]
+  },
+  "website": {
+    "tagline": "Decision science, cognitive bias, poker insights",
+    "bio": "Former World Series of Poker champion and cognitive psychologist who helps people make better decisions under uncertainty. Author of Thinking in Bets and How to Decide.",
+    "topics": [
+      "Decision-Making",
+      "Cognitive Bias",
+      "Risk & Uncertainty",
+      "Behavioral Science",
+      "Learning & Feedback",
+      "Strategic Thinking"
+    ],
+    "price": 29
+  }
+}
