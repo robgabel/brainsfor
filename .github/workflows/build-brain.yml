@@ -1,0 +1,155 @@
+name: Build brain pack
+
+on:
+  workflow_dispatch:
+    inputs:
+      person:
+        description: Full name of the thinker (e.g. "Annie Duke")
+        required: true
+        type: string
+      slug:
+        description: Optional brain slug override (default derived from name)
+        required: false
+        type: string
+      target_atoms:
+        description: Target atom count
+        required: false
+        default: "250"
+        type: string
+      max_sources:
+        description: Max sources for phase 0 discovery
+        required: false
+        default: "15"
+        type: string
+      model:
+        description: Override generation model
+        required: false
+        type: string
+      synthesis_model:
+        description: Override synthesis model
+        required: false
+        type: string
+      resume:
+        description: Resume from last completed phase
+        required: false
+        default: false
+        type: boolean
+      confirm_cost:
+        description: Must equal "yes-23" to authorize the ~$23 spend
+        required: true
+        type: string
+
+concurrency:
+  group: brain-build-${{ inputs.slug || inputs.person }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Validate confirm_cost
+        env:
+          CONFIRM: ${{ inputs.confirm_cost }}
+        run: |
+          if [ "$CONFIRM" != "yes-23" ]; then
+            echo "::error::confirm_cost must equal 'yes-23' to authorize the ~\$23 spend. Got: '$CONFIRM'"
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Derive slug
+        id: slug
+        env:
+          PERSON: ${{ inputs.person }}
+          SLUG_INPUT: ${{ inputs.slug }}
+        run: |
+          if [ -n "$SLUG_INPUT" ]; then
+            SLUG="$SLUG_INPUT"
+          else
+            SLUG=$(python3 -c "
+          import os, re
+          s = os.environ['PERSON'].lower().strip()
+          s = re.sub(r'[^\w\s-]', '', s)
+          s = re.sub(r'[\s_]+', '-', s)
+          print(s.strip('-'))
+          ")
+          fi
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+          echo "Resolved slug: $SLUG"
+
+      - name: Run auto-build-brain pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          SLACK_BUILD_WEBHOOK: ${{ secrets.SLACK_BUILD_WEBHOOK }}
+          IN_PERSON: ${{ inputs.person }}
+          IN_SLUG: ${{ inputs.slug }}
+          IN_TARGET_ATOMS: ${{ inputs.target_atoms }}
+          IN_MAX_SOURCES: ${{ inputs.max_sources }}
+          IN_MODEL: ${{ inputs.model }}
+          IN_SYNTHESIS_MODEL: ${{ inputs.synthesis_model }}
+          IN_RESUME: ${{ inputs.resume }}
+          OUT_SLUG: ${{ steps.slug.outputs.slug }}
+        run: |
+          set -eo pipefail
+          ARGS=(--person "$IN_PERSON")
+          if [ -n "$IN_SLUG" ]; then ARGS+=(--slug "$IN_SLUG"); fi
+          if [ -n "$IN_TARGET_ATOMS" ]; then ARGS+=(--target-atoms "$IN_TARGET_ATOMS"); fi
+          if [ -n "$IN_MAX_SOURCES" ]; then ARGS+=(--max-sources "$IN_MAX_SOURCES"); fi
+          if [ -n "$IN_MODEL" ]; then ARGS+=(--model "$IN_MODEL"); fi
+          if [ -n "$IN_SYNTHESIS_MODEL" ]; then ARGS+=(--synthesis-model "$IN_SYNTHESIS_MODEL"); fi
+          if [ "$IN_RESUME" = "true" ]; then ARGS+=(--resume); fi
+          echo "Running: python3 scripts/auto-build-brain.py ${ARGS[*]}"
+          python3 scripts/auto-build-brain.py "${ARGS[@]}" 2>&1 | tee "brains/${OUT_SLUG}-build.log"
+
+      - name: Upload build log and progress (any outcome)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-${{ steps.slug.outputs.slug }}-${{ github.run_id }}
+          path: |
+            brains/${{ steps.slug.outputs.slug }}/build-progress.json
+            brains/${{ steps.slug.outputs.slug }}-build.log
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Commit pack back to main
+        if: success()
+        env:
+          SLUG: ${{ steps.slug.outputs.slug }}
+          PERSON: ${{ inputs.person }}
+        run: |
+          set -eo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add "brains/${SLUG}/" "brains/index.json" 2>/dev/null || true
+
+          if git diff --staged --quiet; then
+            echo "No tracked changes to commit (pipeline may have been skip-only)."
+            exit 0
+          fi
+
+          git commit -m "feat(brain): auto-build ${PERSON} (${SLUG}) — run ${GITHUB_RUN_ID}"
+          git push origin HEAD:main

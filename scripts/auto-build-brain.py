@@ -87,6 +87,32 @@ except ImportError:
 
 
 # =============================================================================
+# SLACK NOTIFICATIONS (no-op if SLACK_BUILD_WEBHOOK unset)
+# =============================================================================
+
+def _gh_run_url() -> str:
+    server = os.environ.get("GITHUB_SERVER_URL", "")
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    run_id = os.environ.get("GITHUB_RUN_ID", "")
+    if server and repo and run_id:
+        return f"{server}/{repo}/actions/runs/{run_id}"
+    return ""
+
+
+def post_slack(text: str, emoji: str = None):
+    webhook = os.environ.get("SLACK_BUILD_WEBHOOK")
+    if not webhook or not HAS_HTTPX:
+        return
+    try:
+        run_url = _gh_run_url()
+        suffix = f" · <{run_url}|run log>" if run_url else ""
+        body = f"{emoji} {text}{suffix}" if emoji else f"{text}{suffix}"
+        httpx.post(webhook, json={"text": body}, timeout=5.0)
+    except Exception:
+        pass
+
+
+# =============================================================================
 # PROGRESS TRACKING
 # =============================================================================
 
@@ -1104,6 +1130,10 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
     else:
         progress = init_progress(args.person, slug)
 
+    # --- Notify build start ---
+    start_label = f"resume from Phase {start_phase}" if start_phase > 0 else "fresh build"
+    post_slack(f"Starting brain build: *{args.person}* (`{slug}`) — {start_label}", ":brain:")
+
     # --- Execute phases ---
     brain_json = None
     sources_data = {}
@@ -1122,6 +1152,7 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
 
         mark_phase(progress, phase_num, "running")
         save_progress(brain_dir, progress)
+        post_slack(f"`{slug}` · Phase {phase_num}: {PHASE_NAMES[phase_num]} — running")
 
         try:
             if phase_num == 0:
@@ -1209,6 +1240,7 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
             traceback.print_exc()
             mark_phase(progress, phase_num, "failed", error=str(e))
             save_progress(brain_dir, progress)
+            post_slack(f"`{slug}` · FAILED at Phase {phase_num}: {e}", ":x:")
             warn("Use --resume to retry from this phase.")
             sys.exit(1)
 
@@ -1247,6 +1279,14 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
     print(f"    2. Try: /brain {slug} then /advise or /surprise")
     print(f"    3. Run: python scripts/audit-brains.py --brain {slug}")
     print()
+
+    # Final Slack ping with audit score if Phase 5 ran
+    audit_score = progress["phases"].get("5", {}).get("audit_score")
+    score_note = f" · audit {audit_score}" if audit_score is not None else ""
+    post_slack(
+        f"`{slug}` · Build complete — {args.person}{score_note} · {cost_tracker.summary()} · {mins}m {secs}s",
+        ":white_check_mark:",
+    )
 
 
 if __name__ == "__main__":

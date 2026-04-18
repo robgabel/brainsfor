@@ -312,14 +312,25 @@ python3 scripts/audit-brains.py --remediate            # Generate runnable fix s
 
 ### Adding a New Brain
 
-**Automated (recommended):** One command, zero babysitting:
+**Automated (recommended):** One command, zero babysitting.
+
+**Local** (at desktop, uses `~/rob-ai/.env`):
 ```bash
 cd ~/rob-ai/brainsfor
 python3 scripts/auto-build-brain.py --person "Annie Duke"
 ```
-This runs all 6 phases (source discovery → scaffolding → ingestion → synthesis → enrichment → export + QA) end-to-end. Cost: ~$23. Time: ~60-90 min. See "Fully Automated Pipeline" section above for flags and details.
 
-**Or via Cowork skill:** `/brain-build Annie Duke` — routes to the same automated pipeline.
+**Remote** (mobile, or walk-away — runs as GitHub Action, 180-min timeout, auto-commits pack to `main` on success → Vercel auto-deploys to brainsforfree.com):
+```bash
+gh workflow run build-brain.yml --repo robgabel/brainsfor \
+  -f person="Annie Duke" -f confirm_cost=yes-23
+gh run watch --repo robgabel/brainsfor
+```
+Workflow: `.github/workflows/build-brain.yml`. Required repo secrets: `ANTHROPIC_API_KEY`, `SUPABASE_SERVICE_KEY`, `SUPABASE_URL`. Optional: `FIRECRAWL_API_KEY` (degrades phase 0), `SLACK_BUILD_WEBHOOK` (phase pings silent if unset). Resume with `-f resume=true`.
+
+Both paths run the same 6 phases (source discovery → scaffolding → ingestion → synthesis → enrichment → export + QA) end-to-end. Cost: ~$23. Time: ~60-90 min. See "Fully Automated Pipeline" section above for flags and details.
+
+**Or via Cowork skill:** `/brain-build Annie Duke` — auto-picks local or remote based on whether `~/rob-ai/.env` is present.
 
 **Manual fallback** (if automation fails or you want fine-grained control):
 1. **Create directory:** `brains/{slug}/` with `brain.json`, `synthesis.md`, `source/`, `research/`, `data/`, `pack/`
