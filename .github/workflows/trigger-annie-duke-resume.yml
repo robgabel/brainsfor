@@ -1,0 +1,32 @@
+name: Dispatch Annie Duke resume
+
+on:
+  push:
+    branches:
+      - claude/annie-duke-remote-brain-YnOMP
+    paths:
+      - .github/workflows/trigger-annie-duke-resume.yml
+
+permissions:
+  contents: read
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch build-brain.yml with resume=true
+        env:
+          GH_TOKEN: ${{ secrets.WORKFLOW_DISPATCH_PAT }}
+        run: |
+          set -eo pipefail
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::WORKFLOW_DISPATCH_PAT secret is not set on this repo. Add a PAT with 'workflow' scope and retry."
+            exit 1
+          fi
+          gh workflow run build-brain.yml \
+            --repo robgabel/brainsfor \
+            --ref main \
+            -f person="Annie Duke" \
+            -f confirm_cost=yes-23 \
+            -f resume=true
+          echo "Dispatched build-brain.yml for Annie Duke (resume=true)."
