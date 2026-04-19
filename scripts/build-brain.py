@@ -231,6 +231,8 @@ def stage_generate(brain_json, brain_dir, reference_slug, model, dry_run=False):
     clusters = brain_json.get("clusters", {})
     print(f"  Generating atoms for {len(clusters)} clusters using {model}...\n")
 
+    successes = 0
+    failures = []
     for i, (cluster_key, cluster_info) in enumerate(clusters.items()):
         print(f"  [{i + 1}/{len(clusters)}] {cluster_info['name']}...", end=" ", flush=True)
 
@@ -244,10 +246,18 @@ def stage_generate(brain_json, brain_dir, reference_slug, model, dry_run=False):
             with open(output_path, "w") as f:
                 json.dump(atoms, f, indent=2)
             print(f"{len(atoms)} atoms")
+            successes += 1
             if i < len(clusters) - 1:
                 time.sleep(2)  # Rate limiting
         except Exception as e:
             print(f"ERROR: {e}")
+            failures.append((cluster_key, str(e)))
+
+    if not dry_run and successes == 0 and clusters:
+        print(f"  FATAL: 0/{len(clusters)} clusters produced atoms")
+        for cluster_key, err in failures[:5]:
+            print(f"    {cluster_key}: {err}")
+        return False
 
     return True
 

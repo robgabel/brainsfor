@@ -560,7 +560,11 @@ def phase_2_ingest(
         if gen_result:
             success("Deep research atoms generated")
         else:
-            warn("Atom generation had issues")
+            raise RuntimeError(
+                "Deep research atom generation failed for every cluster. "
+                "Check ANTHROPIC_API_KEY, model availability, and rate limits. "
+                "No atoms were produced — aborting Phase 2."
+            )
     else:
         clusters = brain_json.get("clusters", {})
         step(f"[DRY RUN] Would generate atoms for {len(clusters)} clusters")
@@ -569,6 +573,11 @@ def phase_2_ingest(
     step("Merging all atoms...")
     if not dry_run:
         merge_result = build_brain.stage_merge(brain_json, brain_dir, dry_run=dry_run)
+        if not merge_result:
+            raise RuntimeError(
+                "Atom merge failed — no atom files found in research/. "
+                "YouTube ingestion and deep research both produced zero output."
+            )
     else:
         step("[DRY RUN] Would merge all atom files")
 
@@ -667,6 +676,12 @@ def phase_2_ingest(
         step(f"Total atoms: {atom_count} (target: {target_atoms})")
     else:
         atom_count = 0
+
+    if not dry_run and atom_count == 0:
+        raise RuntimeError(
+            "Phase 2 completed but zero atoms were produced. "
+            "Cannot proceed to synthesis/enrichment/export on empty corpus."
+        )
 
     return {"atom_count": atom_count}
 
