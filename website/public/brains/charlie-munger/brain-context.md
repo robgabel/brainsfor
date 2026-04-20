@@ -412,17 +412,17 @@ When using this brain as context, follow these rules:
 
 **Implication:** Design your decision-making process to optimize for good long-term results rather than avoiding all mistakes. Accept that individual decisions will often be wrong, but focus on the overall portfolio of decisions.
 
-**In decision-making, Munger emphasizes the power of saying 'too hard' and moving on.** Many people feel compelled to have opinions on everything, but recognizing the limits of your understanding and declining to decide is often the wisest choice. ([source](Fortune magazine))
-
-> *"You have to have the knowledge to enable you to make a very general one-minute decision and know that you're probably going to be right."*
-
-**Implication:** Develop the discipline to pass on opportunities outside your expertise. Most mistakes come from operating beyond your competence, not from missing opportunities within it.
-
 **Munger argues that the best decisions often feel uncomfortable at the time because they require acting against social proof or short-term pressure. The ability to tolerate this discomfort is crucial for long-term success.** ([source](Breakfast meeting with fund managers))
 
 > *"The iron rule of nature is: you get what you reward for. If you want ants to come, you put sugar on the floor."*
 
 **Implication:** Expect good decisions to feel uncomfortable, especially when they go against popular opinion or immediate gratification. Build systems that reward long-term thinking over short-term comfort.
+
+**In decision-making, Munger emphasizes the power of saying 'too hard' and moving on.** Many people feel compelled to have opinions on everything, but recognizing the limits of your understanding and declining to decide is often the wisest choice. ([source](Fortune magazine))
+
+> *"You have to have the knowledge to enable you to make a very general one-minute decision and know that you're probably going to be right."*
+
+**Implication:** Develop the discipline to pass on opportunities outside your expertise. Most mistakes come from operating beyond your competence, not from missing opportunities within it.
 
 **According to Munger, most people overcomplicate decisions by seeking precision where approximation is sufficient.** The goal isn't to be exactly right but to be roughly right and avoid being precisely wrong. Simple heuristics often beat complex models. ([source](Berkshire Hathaway annual meeting))
 
@@ -1138,17 +1138,17 @@ When using this brain as context, follow these rules:
 
 **Implication:** Organizations must take a long-term view of talent development, investing years in building employees' cross-disciplinary knowledge rather than expecting immediate returns from training programs. The most valuable insights often take time to develop and integrate.
 
-**Munger criticizes the modern tendency toward extreme specialization, arguing that while some specialization is necessary, excessive focus on narrow domains creates blind spots and missed opportunities. The most valuable insights often come from the intersections between traditionally separate fields of study.** ([source](Harvard-Westlake School speech))
-
-> *"In academia there is only the old academic tendency toward extreme specialization, with its adverse effects. I think the right way to think is the way Zeckhauser plays bridge. It's just that simple."*
-
-**Implication:** Companies should resist the temptation to create overly narrow job descriptions and departmental silos. The most innovative solutions often emerge when generalists with broad knowledge collaborate across traditional organizational boundaries.
-
 **Charlie emphasizes that learning from the failures and mistakes documented in history and biographies is more valuable than studying successes. Failures have clear signatures and teachable causes, while successes often involve luck and timing that can't be easily replicated in different contexts.** ([source](Harvard School speech))
 
 > *"All I want to know is where I'm going to die, so I'll never go there. I think that's a marvelous way to think... Invert, always invert."*
 
 **Implication:** Organizations should systematically study and document failures—both their own and those of competitors—rather than focusing exclusively on best practices and success stories. Understanding what doesn't work is often more instructive than understanding what does.
+
+**Munger criticizes the modern tendency toward extreme specialization, arguing that while some specialization is necessary, excessive focus on narrow domains creates blind spots and missed opportunities. The most valuable insights often come from the intersections between traditionally separate fields of study.** ([source](Harvard-Westlake School speech))
+
+> *"In academia there is only the old academic tendency toward extreme specialization, with its adverse effects. I think the right way to think is the way Zeckhauser plays bridge. It's just that simple."*
+
+**Implication:** Companies should resist the temptation to create overly narrow job descriptions and departmental silos. The most innovative solutions often emerge when generalists with broad knowledge collaborate across traditional organizational boundaries.
 
 **Charlie distinguishes between intelligence and wisdom, arguing that intelligence is processing power while wisdom is having the right models and knowing when to apply them. Many highly intelligent people make poor decisions because they lack the broad framework that comes from multidisciplinary learning.** ([source](Harvard-Westlake School))
 
@@ -1344,17 +1344,17 @@ When using this brain as context, follow these rules:
 
 **Implication:** Make 'I don't understand this well enough to have an opinion' a standard response in your toolkit, especially in high-stakes situations where everyone else is pretending to have expertise they lack.
 
-**The most powerful business principles are embarrassingly simple.** buy wonderful businesses, hold them forever, treat customers fairly, hire good people, don't overpay. The challenge isn't discovering these principles but maintaining the discipline to follow them when everyone else is chasing more exciting opportunities. ([source](Outstanding Investor Digest))
-
-> *"Our investment philosophy borders on lethargy."*
-
-**Implication:** Build your core strategy around 3-5 principles so simple they sound boring, then create organizational systems and personal habits that prevent you from abandoning them during periods of excitement or stress.
-
 **Waiting is a simple activity that most people find unbearably difficult in competitive environments.** The ability to do nothing when nothing should be done—to wait for the right opportunity, the right price, the right moment—is both elementary and extraordinarily rare in practice. ([source](Outstanding Investor Digest))
 
 > *"The big money is not in the buying and selling, but in the waiting."*
 
 **Implication:** Engineer your professional life to reward patience rather than activity—structure your compensation, metrics, and team incentives to make waiting feel productive rather than lazy.
+
+**The most powerful business principles are embarrassingly simple.** buy wonderful businesses, hold them forever, treat customers fairly, hire good people, don't overpay. The challenge isn't discovering these principles but maintaining the discipline to follow them when everyone else is chasing more exciting opportunities. ([source](Outstanding Investor Digest))
+
+> *"Our investment philosophy borders on lethargy."*
+
+**Implication:** Build your core strategy around 3-5 principles so simple they sound boring, then create organizational systems and personal habits that prevent you from abandoning them during periods of excitement or stress.
 
 **Common sense is the rarest kind of sense precisely because it's not common at all.** What appears obvious to a rational observer becomes invisible to most people when their emotions, incentives, or social pressures are engaged. The ability to see and act on simple truths when others cannot is a sustainable competitive advantage. ([source](Various interviews and speeches))
 
@@ -1488,4 +1488,4 @@ When using this brain as context, follow these rules:
 
 ---
 
-*218 atoms · 12 clusters · 200 connections · Generated 2026-04-16*
+*218 atoms · 12 clusters · 1000 connections · Generated 2026-04-20*

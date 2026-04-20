@@ -122,87 +122,41 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 ## Startups & Founding
 
-**The key variable in productivity is not hours worked but the absence of constraints that prevent you from doing your best work. Big companies impose layers of constraint -- meetings, approvals, politics -- that have nothing to do with the actual work.** ([source](https://paulgraham.com/boss.html))
-
-> *"The world has become more addictive. And unless the forms of technological progress that produced these things are subject to different laws than technological progress in general, the world will get more addictive in the next 40 years than it did in the last 40."*
-
-**Implication:** Productivity isn't about working more hours—it's about removing obstacles to doing your best work. Big companies are productivity killers because they layer constraint upon constraint. Focus on eliminating friction, not adding hours.
-
 **Startups are more natural than big companies.** A startup is a return to the small group of people working hard on something they care about. This is why startups produce disproportionate innovation -- the structure matches human psychology. ([source](https://paulgraham.com/boss.html))
 
 > *"A startup is just a small company trying to grow fast. But implicitly it's also a company trying to do something hard. Which means the sort of company meant to be a startup has to have a quality that doesn't just fit the pattern abc, but transcends it."*
 
 **Implication:** The startup structure isn't an artificial invention—it's a return to humans' natural working state. Small teams working intensely on something they care about is how humans have always done their best work. This explains why startups consistently out-innovate large organizations.
 
-**Stripe is the canonical example of schlep blindness.** ([source](https://paulgraham.com/schlep.html))
+**The key variable in productivity is not hours worked but the absence of constraints that prevent you from doing your best work. Big companies impose layers of constraint -- meetings, approvals, politics -- that have nothing to do with the actual work.** ([source](https://paulgraham.com/boss.html))
 
-> *"Thousands of people must have known about this problem."*
+> *"The world has become more addictive. And unless the forms of technological progress that produced these things are subject to different laws than technological progress in general, the world will get more addictive in the next 40 years than it did in the last 40."*
 
-**Ambitious ideas are undervalued stocks — less competition.** ([source](https://paulgraham.com/schlep.html))
+**Implication:** Productivity isn't about working more hours—it's about removing obstacles to doing your best work. Big companies are productivity killers because they layer constraint upon constraint. Focus on eliminating friction, not adding hours.
 
-> *"That scariness makes ambitious ideas doubly valuable."*
+**The most common unscalable thing founders have to do at the start is recruit users manually.** You can't wait for users to come to you. You have to go out and get them. ([source](https://paulgraham.com/ds.html))
 
-**The biggest ideas seem to threaten your identity.** ([source](https://paulgraham.com/ambitious.html))
+> *"The most common unscalable thing founders have to do at the start is recruit users manually."*
 
-> *"You wonder if you'd have enough ambition to carry them through."*
+**Startups take off because the founders make them take off.** ([source](https://paulgraham.com/ds.html))
 
-**Great founders are obsessed with their product and their users, not with being founders.** The ones who love the identity of being a startup CEO but don't love the actual work tend to fail. Genuine curiosity about the problem domain matters more than startup ambition. ([source](https://paulgraham.com/founders.html))
-
-> *"The founders who are most successful are usually those who care most about what they're building. This is not a coincidence."*
-
-**Implication:** Genuine passion for solving a problem beats generic startup ambition. If you love the identity of being a 'founder' more than you love the actual work of building something useful, you'll struggle. Deep curiosity about your domain matters more than entrepreneurial credentials.
+> *"Startups take off because the founders make them take off."*
 
 **The feedback loop from manual engagement with users is the most valuable thing a startup has in its early days.** ([source](https://paulgraham.com/ds.html))
 
 > *"Your attention to users will be rewarded with a product that exactly meets their needs."*
 
-**The best founders have a quality of flexible determination -- they're relentlessly committed to succeeding but flexible about how. They're like water flowing downhill: the destination is fixed but the path adapts to obstacles.** ([source](https://paulgraham.com/founders.html))
+**It's better to start with something a small number of people want a large amount.** ([source](https://paulgraham.com/startupideas.html))
 
-> *"You need three things to create a successful startup: to start with good people, to make something customers actually want, and to spend as little money as possible. Most startups that fail do it because they fail at one of these. A startup that does all three will probably succeed."*
+> *"It's better to have a hundred people who love you than a million who sort of like you."*
 
-**Implication:** Great founders are like water flowing downhill—absolutely determined about the destination but completely flexible about the path. Rigid adherence to a specific plan is different from unwavering commitment to success. Adapt your tactics while holding firm to your vision.
+**Determination matters more than intelligence in startup success.** ([source](https://paulgraham.com/determination.html))
 
-**Don't die — most startup failures could have been avoided by simply not giving up.** ([source](https://paulgraham.com/die.html))
-
-> *"So many startups fail for easily preventable reasons."*
-
-**Don't let your startup die of inattention.** The slow drift -- taking a consulting gig, spending too long on a feature, not talking to users -- is more lethal than any dramatic failure. Startups don't die in explosions; they die in whimpers. ([source](https://paulgraham.com/die.html))
-
-> *"The number one thing not to do is other things. If you find yourself saying a sentence that ends with 'but we're going to keep working on the startup,' you are in big trouble. Bob's going to graduate school, but we're going to keep working on the startup. We're moving back to Minnesota, but we're going to keep working on the startup. We're taking on some consulting projects, but we're going to keep working on the startup."*
-
-**Implication:** Startups rarely die from dramatic failures—they die from slow drift and divided attention. Guard against the gradual erosion of focus. Every 'but we're going to keep working on the startup' sentence is a warning sign that you're letting your company die by a thousand cuts.
-
-**Cofounders who are friends work better than cofounders who are just business partners.** ([source](https://paulgraham.com/founders.html))
-
-> *"The best cofounder relationships are those that started as friendships."*
-
-**Imagination in founders means seeing possibilities others miss.** ([source](https://paulgraham.com/founders.html))
-
-> *"Imagination: the ability to see beyond what exists to what could exist."*
-
-**Friendship between co-founders is an underrated predictor of startup success.** Startups are so stressful that co-founders who don't genuinely like each other will crack under pressure. The relationship quality of the founding team matters enormously. ([source](https://paulgraham.com/founders.html))
-
-> *"The advantage of having good relationships among the founders is that it makes everything easier. And since a startup is hard enough already, you really want to avoid the kind of problems that come from founder disputes."*
-
-**Implication:** Co-founder relationships are stress-tested under extreme pressure. Choose co-founders you genuinely like and respect, not just people with complementary skills. When the inevitable crises hit, personal affection and trust will be what holds the team together.
-
-**Flexibility in founders is crucial — the ability to pivot when evidence demands it.** ([source](https://paulgraham.com/founders.html))
-
-> *"Flexibility is important because it's hard to know in advance which startup ideas will succeed."*
-
-**The best founders are slightly naughty — willing to break rules.** ([source](https://paulgraham.com/founders.html))
-
-> *"Naughty: willing to break rules, to question authority, to take risks others won't."*
+> *"We learned quickly that the most important quality in startup founders is determination."*
 
 **Relentlessly resourceful is the best description of a good founder.** ([source](https://paulgraham.com/relres.html))
 
 > *"I finally got being a good startup founder down to two words: relentlessly resourceful."*
-
-**The best founders combine determination with flexibility — they're persistent about the destination but constantly adapting the route. The worst founders are obstinate: they confuse changing tactics with giving up.** ([source](https://paulgraham.com/do.html))
-
-> *"If you're determined to live in San Francisco, that also solves the problem of choosing the right startups to join. You automatically filter for startups that have done well enough to afford to pay people to live in San Francisco."*
-
-**Implication:** True determination combines persistence with adaptability. Be stubborn about your goals but flexible about your methods. The founders who succeed are those who treat obstacles as puzzles to solve rather than walls to break through with force.
 
 **Startups are counterintuitive — your instincts will be wrong.** ([source](https://paulgraham.com/before.html))
 
@@ -220,6 +174,26 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"Startups don't win by attacking. They win by transcending."*
 
+**Schlep blindness hides the best startup ideas behind tedious work.** ([source](https://paulgraham.com/schlep.html))
+
+> *"Your unconscious won't even let you see ideas that involve painful schleps."*
+
+**Stripe is the canonical example of schlep blindness.** ([source](https://paulgraham.com/schlep.html))
+
+> *"Thousands of people must have known about this problem."*
+
+**Ambitious ideas are undervalued stocks — less competition.** ([source](https://paulgraham.com/schlep.html))
+
+> *"That scariness makes ambitious ideas doubly valuable."*
+
+**Ignorance is an advantage for young founders — two mistakes cancel out.** ([source](https://paulgraham.com/schlep.html))
+
+> *"They don't know how much they can grow, but also don't know how much they'll need to."*
+
+**Trust your instincts about people even when you can't trust them about ideas.** ([source](https://paulgraham.com/before.html))
+
+> *"If someone seems slippery, or bogus, or a jerk, don't ignore it."*
+
 **Don't start a startup in college — breadth-first search at 20.** ([source](https://paulgraham.com/before.html))
 
 > *"Starting a startup is like a brutally fast depth-first search."*
@@ -228,17 +202,13 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"The biggest ideas seem to threaten your identity."*
 
-**Schlep blindness hides the best startup ideas behind tedious work.** ([source](https://paulgraham.com/schlep.html))
+**The popular image of a visionary has a clear view of the future — but a blurry one may be better.** ([source](https://paulgraham.com/ambitious.html))
 
-> *"Your unconscious won't even let you see ideas that involve painful schleps."*
+> *"The popular image of the visionary is someone with a clear view of the future, but empirically it may be better to have a blurry one."*
 
 **Humans weren't meant to work for large organizations — small groups are our natural scale.** ([source](https://paulgraham.com/boss.html))
 
 > *"The average person feels unease working for a large company because humans were not designed for it."*
-
-**The popular image of a visionary has a clear view of the future — but a blurry one may be better.** ([source](https://paulgraham.com/ambitious.html))
-
-> *"The popular image of the visionary is someone with a clear view of the future, but empirically it may be better to have a blurry one."*
 
 **The most dangerous thing about not being profitable is that it puts you at the mercy of investors.** ([source](https://paulgraham.com/die.html))
 
@@ -248,37 +218,71 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"What we look for above all is determination."*
 
-**Launch fast — the sooner you launch, the sooner you learn what users actually want.** ([source](https://paulgraham.com/die.html))
+**Earnest stubbornness beats strategic stubbornness.** ([source](https://paulgraham.com/do.html))
 
-> *"If you haven't launched yet, launch now."*
+> *"The best founders are earnestly stubborn."*
 
-**Determination matters more than intelligence in startup success.** ([source](https://paulgraham.com/determination.html))
+**The biggest ideas seem to threaten your identity.** ([source](https://paulgraham.com/ambitious.html))
 
-> *"We learned quickly that the most important quality in startup founders is determination."*
-
-**Doing things that don't scale teaches you what to build at scale.** ([source](https://paulgraham.com/ds.html))
-
-> *"The manual things you do will teach you what to automate."*
-
-**Ignorance is an advantage for young founders — two mistakes cancel out.** ([source](https://paulgraham.com/schlep.html))
-
-> *"They don't know how much they can grow, but also don't know how much they'll need to."*
+> *"You wonder if you'd have enough ambition to carry them through."*
 
 **A startup is just a small company solving a hard technical problem.** ([source](https://paulgraham.com/wealth.html))
 
 > *"A startup is a small company that takes on a hard technical problem."*
 
-**The most common unscalable thing founders have to do at the start is recruit users manually.** You can't wait for users to come to you. You have to go out and get them. ([source](https://paulgraham.com/ds.html))
+**The best founders are slightly naughty — willing to break rules.** ([source](https://paulgraham.com/founders.html))
 
-> *"The most common unscalable thing founders have to do at the start is recruit users manually."*
+> *"Naughty: willing to break rules, to question authority, to take risks others won't."*
 
-**It's better to start with something a small number of people want a large amount.** ([source](https://paulgraham.com/startupideas.html))
+**Flexibility in founders is crucial — the ability to pivot when evidence demands it.** ([source](https://paulgraham.com/founders.html))
 
-> *"It's better to have a hundred people who love you than a million who sort of like you."*
+> *"Flexibility is important because it's hard to know in advance which startup ideas will succeed."*
+
+**Imagination in founders means seeing possibilities others miss.** ([source](https://paulgraham.com/founders.html))
+
+> *"Imagination: the ability to see beyond what exists to what could exist."*
+
+**Cofounders who are friends work better than cofounders who are just business partners.** ([source](https://paulgraham.com/founders.html))
+
+> *"The best cofounder relationships are those that started as friendships."*
+
+**Don't die — most startup failures could have been avoided by simply not giving up.** ([source](https://paulgraham.com/die.html))
+
+> *"So many startups fail for easily preventable reasons."*
 
 **Morale is everything in the early days — if founders lose hope, the company dies.** ([source](https://paulgraham.com/die.html))
 
 > *"The most important predictor of whether a startup will survive is the morale of the founders."*
+
+**Launch fast — the sooner you launch, the sooner you learn what users actually want.** ([source](https://paulgraham.com/die.html))
+
+> *"If you haven't launched yet, launch now."*
+
+**Speed of iteration is the key advantage small companies have over large ones.** ([source](https://paulgraham.com/die.html))
+
+> *"The key advantage startups have is speed."*
+
+**Doing things that don't scale teaches you what to build at scale.** ([source](https://paulgraham.com/ds.html))
+
+> *"The manual things you do will teach you what to automate."*
+
+**Don't let your startup die of inattention.** The slow drift -- taking a consulting gig, spending too long on a feature, not talking to users -- is more lethal than any dramatic failure. Startups don't die in explosions; they die in whimpers. ([source](https://paulgraham.com/die.html))
+
+> *"The number one thing not to do is other things. If you find yourself saying a sentence that ends with 'but we're going to keep working on the startup,' you are in big trouble. Bob's going to graduate school, but we're going to keep working on the startup. We're moving back to Minnesota, but we're going to keep working on the startup. We're taking on some consulting projects, but we're going to keep working on the startup."*
+
+**Implication:** Startups rarely die from dramatic failures—they die from slow drift and divided attention. Guard against the gradual erosion of focus. Every 'but we're going to keep working on the startup' sentence is a warning sign that you're letting your company die by a thousand cuts.
+
+**Friendship between co-founders is an underrated predictor of startup success.** Startups are so stressful that co-founders who don't genuinely like each other will crack under pressure. The relationship quality of the founding team matters enormously. ([source](https://paulgraham.com/founders.html))
+
+> *"The advantage of having good relationships among the founders is that it makes everything easier. And since a startup is hard enough already, you really want to avoid the kind of problems that come from founder disputes."*
+
+**Implication:** Co-founder relationships are stress-tested under extreme pressure. Choose co-founders you genuinely like and respect, not just people with complementary skills. When the inevitable crises hit, personal affection and trust will be what holds the team together.
+
+**The best founders combine determination with flexibility — they're persistent about the destination but constantly adapting the route. The worst founders are obstinate: they confuse changing tactics with giving up.** ([source](https://paulgraham.com/do.html))
+
+> *"If you're determined to live in San Francisco, that also solves the problem of choosing the right startups to join. You automatically filter for startups that have done well enough to afford to pay people to live in San Francisco."*
+
+**Implication:** True determination combines persistence with adaptability. Be stubborn about your goals but flexible about your methods. The founders who succeed are those who treat obstacles as puzzles to solve rather than walls to break through with force.
 
 **Treating early work as too precious — refusing to share it, refusing to get feedback, refusing to let it be imperfect — is a form of procrastination disguised as quality control. Ship early, iterate often.** ([source](https://paulgraham.com/early.html))
 
@@ -286,31 +290,21 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Get user feedback early and often, even when your product feels embarrassingly rough. Users are the water that helps early-stage products grow. Perfectionism disguised as quality control will kill your startup faster than critical feedback ever will.
 
-**Speed of iteration is the key advantage small companies have over large ones.** ([source](https://paulgraham.com/die.html))
+**Great founders are obsessed with their product and their users, not with being founders.** The ones who love the identity of being a startup CEO but don't love the actual work tend to fail. Genuine curiosity about the problem domain matters more than startup ambition. ([source](https://paulgraham.com/founders.html))
 
-> *"The key advantage startups have is speed."*
+> *"The founders who are most successful are usually those who care most about what they're building. This is not a coincidence."*
 
-**Startups take off because the founders make them take off.** ([source](https://paulgraham.com/ds.html))
+**Implication:** Genuine passion for solving a problem beats generic startup ambition. If you love the identity of being a 'founder' more than you love the actual work of building something useful, you'll struggle. Deep curiosity about your domain matters more than entrepreneurial credentials.
 
-> *"Startups take off because the founders make them take off."*
+**The best founders have a quality of flexible determination -- they're relentlessly committed to succeeding but flexible about how. They're like water flowing downhill: the destination is fixed but the path adapts to obstacles.** ([source](https://paulgraham.com/founders.html))
 
-**Earnest stubbornness beats strategic stubbornness.** ([source](https://paulgraham.com/do.html))
+> *"You need three things to create a successful startup: to start with good people, to make something customers actually want, and to spend as little money as possible. Most startups that fail do it because they fail at one of these. A startup that does all three will probably succeed."*
 
-> *"The best founders are earnestly stubborn."*
-
-**Trust your instincts about people even when you can't trust them about ideas.** ([source](https://paulgraham.com/before.html))
-
-> *"If someone seems slippery, or bogus, or a jerk, don't ignore it."*
+**Implication:** Great founders are like water flowing downhill—absolutely determined about the destination but completely flexible about the path. Rigid adherence to a specific plan is different from unwavering commitment to success. Adapt your tactics while holding firm to your vision.
 
 ---
 
 ## Programming & Hackers
-
-**Hackability -- the ability to build things quickly and iterate -- is more important for a language's success than formal correctness or theoretical purity. Languages that let you prototype fast win because they match the actual rhythm of creation.** ([source](https://paulgraham.com/top.html))
-
-> *"In programming languages, as in so many other areas, the popular choice is not always the best choice. But it's not always the worst choice either. Sometimes popularity is a sign of merit."*
-
-**Implication:** Optimize your tools for rapid iteration and experimentation rather than formal correctness or theoretical elegance. The ability to build, test, and modify quickly often matters more than getting it perfectly right the first time. Match your tools to your actual creative process.
 
 **A programming language is a tool for thinking, not just for instructing computers.** The best languages shape how programmers think about problems. This is why language choice matters far beyond mere syntax -- it determines the solution space you can see. ([source](https://paulgraham.com/top.html))
 
@@ -318,11 +312,11 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Your choice of tools shapes what solutions you can conceive. This applies beyond programming—the frameworks you use for thinking about problems determine what kinds of solutions you'll discover. Choose tools that expand rather than constrain your solution space.
 
-**Libraries and ecosystem matter more than language features for adoption.** A mediocre language with great libraries will beat a great language with no libraries every time. The network effects of an ecosystem create a moat around established languages. ([source](https://paulgraham.com/top.html))
+**Hackability -- the ability to build things quickly and iterate -- is more important for a language's success than formal correctness or theoretical purity. Languages that let you prototype fast win because they match the actual rhythm of creation.** ([source](https://paulgraham.com/top.html))
 
-> *"So the language probably has to be designed by a single person, or a very small group, and it has to be something developed for their own use. That may not be how languages are supposed to be designed, but it seems to be how the good ones actually get designed."*
+> *"In programming languages, as in so many other areas, the popular choice is not always the best choice. But it's not always the worst choice either. Sometimes popularity is a sign of merit."*
 
-**Implication:** Ecosystem and network effects matter more than pure technical merit. When choosing technologies, consider not just the tool itself but the community, libraries, and resources around it. A mediocre tool with great support often beats a great tool in isolation.
+**Implication:** Optimize your tools for rapid iteration and experimentation rather than formal correctness or theoretical elegance. The ability to build, test, and modify quickly often matters more than getting it perfectly right the first time. Match your tools to your actual creative process.
 
 **Programming languages succeed not by being the best designed but by being the best suited for a particular use case that lots of people have. Popularity in languages is driven by practical utility in a specific domain, not by theoretical elegance.** ([source](https://paulgraham.com/top.html))
 
@@ -330,43 +324,17 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Language adoption is driven by practical utility in solving real problems, not by theoretical elegance. If you're designing tools (whether programming languages or products), optimize for the use cases that matter most to your users, not for abstract perfection.
 
+**Libraries and ecosystem matter more than language features for adoption.** A mediocre language with great libraries will beat a great language with no libraries every time. The network effects of an ecosystem create a moat around established languages. ([source](https://paulgraham.com/top.html))
+
+> *"So the language probably has to be designed by a single person, or a very small group, and it has to be something developed for their own use. That may not be how languages are supposed to be designed, but it seems to be how the good ones actually get designed."*
+
+**Implication:** Ecosystem and network effects matter more than pure technical merit. When choosing technologies, consider not just the tool itself but the community, libraries, and resources around it. A mediocre tool with great support often beats a great tool in isolation.
+
 **Macros are the defining feature that separates the most powerful programming languages from the rest.** The ability to write code that writes code -- to extend the language itself -- is a qualitative leap in expressiveness, not just a quantitative one. ([source](https://paulgraham.com/avg.html))
 
 > *"So if Lisp is so great, why doesn't everyone use it? I think the answer is that programming languages are not just technologies, but habits of thought. And it's hard to get people to change their habits of thought."*
 
 **Implication:** The ability to extend and modify your tools at the fundamental level—whether programming languages or business processes—gives you a qualitative advantage over those using fixed tools. Look for opportunities to build 'meta-capabilities' that let you adapt faster than competitors.
-
-**Lisp is worth learning for the profound enlightenment you will get.** ([source](https://paulgraham.com/avg.html))
-
-> *"Lisp is worth learning for the profound enlightenment experience you will get."*
-
-**Great software is made through successive refinement, not upfront planning.** ([source](https://paulgraham.com/hp.html))
-
-> *"You should figure out the program as you're writing it."*
-
-**The Blub paradox.** programmers can't see the power of languages above their current one. ([source](https://paulgraham.com/avg.html))
-
-> *"The Blub paradox is that you can only see downward."*
-
-**Popular languages converge toward Lisp features over time.** ([source](https://paulgraham.com/avg.html))
-
-> *"Popular languages are converging toward Lisp."*
-
-**Using a more powerful programming language lets a small team outperform a large one.** ([source](https://paulgraham.com/avg.html))
-
-> *"A small team writing in Lisp could outperform a large team of Java developers."*
-
-**The Blub paradox.** programmers stuck in an average language can only look down, not up. ([source](https://paulgraham.com/avg.html))
-
-> *"You can only see downward from the Blub programmer perspective."*
-
-**Languages vary in power — this is the most controversial idea in programming.** ([source](https://paulgraham.com/avg.html))
-
-> *"Programmers get very attached to their favorite languages."*
-
-**Programmer time is more valuable than computer time — optimize for humans, not machines.** ([source](https://paulgraham.com/avg.html))
-
-> *"Programmer time is more valuable than computer time."*
 
 **Hacking and painting are more alike than hacking and computer science.** ([source](https://paulgraham.com/hp.html))
 
@@ -376,43 +344,73 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"Our secret weapon was Lisp."*
 
-**Practice matters more than theory for makers.** ([source](https://paulgraham.com/hp.html))
+**Using a more powerful programming language lets a small team outperform a large one.** ([source](https://paulgraham.com/avg.html))
 
-> *"The way to learn to paint is to paint."*
+> *"A small team writing in Lisp could outperform a large team of Java developers."*
+
+**The Blub paradox.** programmers can't see the power of languages above their current one. ([source](https://paulgraham.com/avg.html))
+
+> *"The Blub paradox is that you can only see downward."*
+
+**Great software is made through successive refinement, not upfront planning.** ([source](https://paulgraham.com/hp.html))
+
+> *"You should figure out the program as you're writing it."*
+
+**Lisp is worth learning for the profound enlightenment you will get.** ([source](https://paulgraham.com/avg.html))
+
+> *"Lisp is worth learning for the profound enlightenment experience you will get."*
+
+**Languages vary in power — this is the most controversial idea in programming.** ([source](https://paulgraham.com/avg.html))
+
+> *"Programmers get very attached to their favorite languages."*
+
+**The Blub paradox.** programmers stuck in an average language can only look down, not up. ([source](https://paulgraham.com/avg.html))
+
+> *"You can only see downward from the Blub programmer perspective."*
+
+**Popular languages converge toward Lisp features over time.** ([source](https://paulgraham.com/avg.html))
+
+> *"Popular languages are converging toward Lisp."*
 
 **Hackers are like artists — they should work from the bottom up, not from specs.** ([source](https://paulgraham.com/hp.html))
 
 > *"Hackers should be like painters, not like engineers."*
 
+**Practice matters more than theory for makers.** ([source](https://paulgraham.com/hp.html))
+
+> *"The way to learn to paint is to paint."*
+
+**Programmer time is more valuable than computer time — optimize for humans, not machines.** ([source](https://paulgraham.com/avg.html))
+
+> *"Programmer time is more valuable than computer time."*
+
 ---
 
 ## Writing & Thinking
 
-**The way to get novelty in writing is to write about things you've thought about a lot, from your own experience.** Anyone who has deep domain experience has novel things to say -- they just don't realize it because the knowledge feels obvious to them. ([source](https://paulgraham.com/useful.html))
+**An essay is an exploration, not a persuasive argument.** ([source](https://paulgraham.com/essay.html))
 
-> *"The way to get novelty is to write about things you've thought about. Especially things you've thought about a lot. Then you're not just describing events, but the ideas that events triggered in someone with a lot of experience in this domain."*
-
-**Implication:** Your deep domain knowledge contains insights that seem obvious to you but are novel to others. Don't dismiss your expertise as 'common knowledge'—what feels trivial to an expert is often profound to everyone else. Mine your own experience for writing material.
-
-**Written language diverged from spoken language because of historical accident — the printing press froze conventions that spoken language kept evolving past. The gap between written and spoken English is artificial, not necessary.** ([source](https://paulgraham.com/goodwriting.html))
-
-> *"I think the reason I've become a better writer is that I've become a better person. And the reason I've become a better person is that I've paid closer attention to what I think and why I think it."*
-
-**Implication:** Written language doesn't need to be stuffy and formal—that's just historical accident. Writing that sounds like natural speech is often more clear and engaging. Don't artificially elevate your language; focus on communicating ideas clearly and directly.
-
-**Cultivate independent thinking by surrounding yourself with independent-minded people, reading history to see how ideas once considered heretical became accepted, and actively noticing when you're being pressured to agree with something.** ([source](https://paulgraham.com/think.html))
-
-> *"The way to get a big idea to appear in your head is not to hunt for big ideas, but to put in a lot of time on work that interests you, and in the process keep your eyes open for weird anomalies. Work on hard problems, driven mainly by curiosity, but have a second self watching over your shoulder, taking note of gaps and anomalies."*
-
-**Implication:** Independent thinking isn't about contrarianism for its own sake—it's about genuinely curious investigation. Study history to see how yesterday's heresies became today's orthodoxies, surround yourself with other independent thinkers, and trust your own observations over social pressure.
-
-**Write like you talk — if you wouldn't say it in conversation, don't write it.** ([source](https://paulgraham.com/goodwriting.html))
-
-> *"Write like you talk."*
+> *"An essay is something you write to try to figure something out."*
 
 **Writing is a way of thinking, not just communicating.** ([source](https://paulgraham.com/essay.html))
 
 > *"The essay is a tool for thinking."*
+
+**There is a hierarchy of disagreement from name-calling to refuting the central point.** ([source](https://paulgraham.com/disagree.html))
+
+> *"The most convincing form of disagreement is refutation."*
+
+**Useful writing tells people something true and important that they didn't already know, stated unambiguously.** ([source](https://paulgraham.com/useful.html))
+
+> *"Useful writing tells people something true and important that they didn't already know, and tells them as unambiguously as possible."*
+
+**Novelty is the most valuable ingredient in useful writing — say something new.** ([source](https://paulgraham.com/useful.html))
+
+> *"Of the four components of useful writing, novelty is the most important."*
+
+**Write like you talk — if you wouldn't say it in conversation, don't write it.** ([source](https://paulgraham.com/goodwriting.html))
+
+> *"Write like you talk."*
 
 **Written language should be conversational — formality is a disease.** ([source](https://paulgraham.com/goodwriting.html))
 
@@ -422,11 +420,13 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"Read your writing aloud and fix anything that sounds wrong."*
 
-**Most bad writing comes from trying to sound impressive rather than trying to be clear.** Academic and corporate prose is terrible because the writers are optimizing for status, not communication. ([source](https://paulgraham.com/goodwriting.html))
+**Arguments from authority are weak — the question is whether the statement is true.** ([source](https://paulgraham.com/disagree.html))
 
-> *"Write like you talk. Most writers' first mistake is trying to sound important. The result is pretentious prose that's hard to read and harder to understand."*
+> *"Saying that an author lacks the authority to write about a topic is a variant of ad hominem."*
 
-**Implication:** Clear communication beats impressive-sounding communication every time. This applies to pitches, product descriptions, and team communication. If users or investors can't understand what you're saying, nothing else matters.
+**Moving up the disagreement hierarchy makes you both more effective and happier.** ([source](https://paulgraham.com/disagree.html))
+
+> *"You don't have to be mean when you have a real point to make."*
 
 **The most persuasive writing feels like a conversation with a smart friend.** The reader feels they're being talked to, not lectured at. Conversational tone is not dumbing down — it's the highest form of clarity. ([source](https://paulgraham.com/goodwriting.html))
 
@@ -434,25 +434,17 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Great communication disappears into its message. When explaining your startup, users should remember the value proposition, not how cleverly you explained it. Remove yourself from the equation and let the ideas speak.
 
-**Novelty is the most valuable ingredient in useful writing — say something new.** ([source](https://paulgraham.com/useful.html))
+**Cultivate independent thinking by surrounding yourself with independent-minded people, reading history to see how ideas once considered heretical became accepted, and actively noticing when you're being pressured to agree with something.** ([source](https://paulgraham.com/think.html))
 
-> *"Of the four components of useful writing, novelty is the most important."*
+> *"The way to get a big idea to appear in your head is not to hunt for big ideas, but to put in a lot of time on work that interests you, and in the process keep your eyes open for weird anomalies. Work on hard problems, driven mainly by curiosity, but have a second self watching over your shoulder, taking note of gaps and anomalies."*
 
-**Useful writing tells people something true and important that they didn't already know, stated unambiguously.** ([source](https://paulgraham.com/useful.html))
+**Implication:** Independent thinking isn't about contrarianism for its own sake—it's about genuinely curious investigation. Study history to see how yesterday's heresies became today's orthodoxies, surround yourself with other independent thinkers, and trust your own observations over social pressure.
 
-> *"Useful writing tells people something true and important that they didn't already know, and tells them as unambiguously as possible."*
+**The way to get novelty in writing is to write about things you've thought about a lot, from your own experience.** Anyone who has deep domain experience has novel things to say -- they just don't realize it because the knowledge feels obvious to them. ([source](https://paulgraham.com/useful.html))
 
-**There is a hierarchy of disagreement from name-calling to refuting the central point.** ([source](https://paulgraham.com/disagree.html))
+> *"The way to get novelty is to write about things you've thought about. Especially things you've thought about a lot. Then you're not just describing events, but the ideas that events triggered in someone with a lot of experience in this domain."*
 
-> *"The most convincing form of disagreement is refutation."*
-
-**Moving up the disagreement hierarchy makes you both more effective and happier.** ([source](https://paulgraham.com/disagree.html))
-
-> *"You don't have to be mean when you have a real point to make."*
-
-**An essay is an exploration, not a persuasive argument.** ([source](https://paulgraham.com/essay.html))
-
-> *"An essay is something you write to try to figure something out."*
+**Implication:** Your deep domain knowledge contains insights that seem obvious to you but are novel to others. Don't dismiss your expertise as 'common knowledge'—what feels trivial to an expert is often profound to everyone else. Mine your own experience for writing material.
 
 **Correctness matters but is overweighted by cautious writers.** Making slightly wrong but interesting claims is more useful than making perfectly correct but boring ones. The goal is to maximize the product of all four factors, not any single one. ([source](https://paulgraham.com/useful.html))
 
@@ -460,9 +452,17 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Perfect accuracy isn't the goal—useful insight is. It's better to be roughly right and provocative than precisely correct and boring. Aim to maximize the overall usefulness of your ideas, not just their technical accuracy. Take intellectual risks.
 
-**Arguments from authority are weak — the question is whether the statement is true.** ([source](https://paulgraham.com/disagree.html))
+**Written language diverged from spoken language because of historical accident — the printing press froze conventions that spoken language kept evolving past. The gap between written and spoken English is artificial, not necessary.** ([source](https://paulgraham.com/goodwriting.html))
 
-> *"Saying that an author lacks the authority to write about a topic is a variant of ad hominem."*
+> *"I think the reason I've become a better writer is that I've become a better person. And the reason I've become a better person is that I've paid closer attention to what I think and why I think it."*
+
+**Implication:** Written language doesn't need to be stuffy and formal—that's just historical accident. Writing that sounds like natural speech is often more clear and engaging. Don't artificially elevate your language; focus on communicating ideas clearly and directly.
+
+**Most bad writing comes from trying to sound impressive rather than trying to be clear.** Academic and corporate prose is terrible because the writers are optimizing for status, not communication. ([source](https://paulgraham.com/goodwriting.html))
+
+> *"Write like you talk. Most writers' first mistake is trying to sound important. The result is pretentious prose that's hard to read and harder to understand."*
+
+**Implication:** Clear communication beats impressive-sounding communication every time. This applies to pitches, product descriptions, and team communication. If users or investors can't understand what you're saying, nothing else matters.
 
 ---
 
@@ -486,127 +486,53 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Focus on building something that creates genuine value rather than extracting value from existing systems. The age of grinding your way up corporate ladders is being replaced by the age of building exponentially scalable solutions to real problems.
 
-**Startups compress your working life into a few intense years.** ([source](https://paulgraham.com/wealth.html))
+**Wealth is not the same as money.** Wealth is stuff people want. ([source](https://paulgraham.com/wealth.html))
 
-> *"Startups allow you to compress your whole working life into a few years."*
-
-**The way to get rich is to create technology, not to manage it.** ([source](https://paulgraham.com/wealth.html))
-
-> *"Wealth can be created, and creating it is what tech companies do."*
-
-**Technology provides leverage — one programmer can create something used by millions.** ([source](https://paulgraham.com/wealth.html))
-
-> *"Technology should increase the pie."*
+> *"Wealth is not money. Wealth is stuff."*
 
 **Measurement and leverage are the two components of creating wealth.** ([source](https://paulgraham.com/wealth.html))
 
 > *"To get rich you need measurement and leverage."*
 
-**Wealth is not the same as money.** Wealth is stuff people want. ([source](https://paulgraham.com/wealth.html))
+**Technology provides leverage — one programmer can create something used by millions.** ([source](https://paulgraham.com/wealth.html))
 
-> *"Wealth is not money. Wealth is stuff."*
-
-**The way rich people get rich has changed fundamentally — it's now through creating value.** ([source](https://paulgraham.com/own.html))
-
-> *"Rich people have gone from exploiting economies to creating new ones."*
-
-**Technology has democratized wealth creation — you don't need capital to start.** ([source](https://paulgraham.com/own.html))
-
-> *"It's easier than ever to start a company, and you don't need as much money."*
-
-**The biggest source of new fortunes is starting companies.** ([source](https://paulgraham.com/own.html))
-
-> *"In the past, to get rich you had to inherit or exploit. Now you start a company."*
-
-**Wealth creation is not zero-sum — one person getting richer doesn't make another poorer.** ([source](https://paulgraham.com/wealth.html))
-
-> *"If you want to create wealth, you have to understand it's not a zero-sum game."*
-
-**How people get rich now.** by starting companies, not by inheriting or climbing. ([source](https://paulgraham.com/own.html))
-
-> *"The biggest source of new fortunes now is starting companies."*
+> *"Technology should increase the pie."*
 
 **How to lose money.** spend on things that feel like investments but are actually indulgences. ([source](https://paulgraham.com/selfindulgence.html))
 
 > *"Spending money is dangerous because it tends to change the way you think."*
 
+**How people get rich now.** by starting companies, not by inheriting or climbing. ([source](https://paulgraham.com/own.html))
+
+> *"The biggest source of new fortunes now is starting companies."*
+
+**Wealth creation is not zero-sum — one person getting richer doesn't make another poorer.** ([source](https://paulgraham.com/wealth.html))
+
+> *"If you want to create wealth, you have to understand it's not a zero-sum game."*
+
+**Startups compress your working life into a few intense years.** ([source](https://paulgraham.com/wealth.html))
+
+> *"Startups allow you to compress your whole working life into a few years."*
+
+**The biggest source of new fortunes is starting companies.** ([source](https://paulgraham.com/own.html))
+
+> *"In the past, to get rich you had to inherit or exploit. Now you start a company."*
+
+**Technology has democratized wealth creation — you don't need capital to start.** ([source](https://paulgraham.com/own.html))
+
+> *"It's easier than ever to start a company, and you don't need as much money."*
+
+**The way rich people get rich has changed fundamentally — it's now through creating value.** ([source](https://paulgraham.com/own.html))
+
+> *"Rich people have gone from exploiting economies to creating new ones."*
+
+**The way to get rich is to create technology, not to manage it.** ([source](https://paulgraham.com/wealth.html))
+
+> *"Wealth can be created, and creating it is what tech companies do."*
+
 ---
 
 ## Ambition & Doing Great Work
-
-**Superlinear returns mean small differences in performance yield enormous differences in outcome.** ([source](https://paulgraham.com/superlinear.html))
-
-> *"In a world with superlinear returns, it's not enough to be good."*
-
-**If you're not occasionally feeling like a noob, you're probably not learning enough.** The willingness to feel stupid is a prerequisite for growth. People who refuse to feel like beginners have implicitly decided to stop growing. ([source](https://paulgraham.com/noob.html))
-
-> *"If it doesn't hurt a little to be a noob at something, you're probably not learning fast enough."*
-
-**Implication:** Embrace the discomfort of not knowing what you're doing - it's a sign you're pushing into new territory where innovation happens. If you're always confident and comfortable, you're probably not taking big enough risks or learning fast enough.
-
-**Obstinacy is often disguised as conviction.** From the outside, a persistent person and an obstinate one can look identical — both refuse to quit. The difference only becomes visible in how they respond to new information. ([source](https://paulgraham.com/do.html))
-
-> *"The persistent and the obstinate will both tell you they never give up. The difference is what they never give up on."*
-
-**Implication:** Stay committed to solving the problem, not to your current solution. Pivot when data demands it, but don't abandon the mission. Investors and customers can sense the difference between principled persistence and stubborn denial.
-
-**The best test of stubbornness is whether you can tell the difference between obstacles and dead ends.** ([source](https://paulgraham.com/do.html))
-
-> *"Good stubbornness means knowing when to persist and when to pivot."*
-
-**Persistence on goals with flexibility on methods is the recipe for achievement.** ([source](https://paulgraham.com/do.html))
-
-> *"Be persistent about your goals but flexible about how to achieve them."*
-
-**Willfulness is not stubbornness — willful people are flexible about methods.** ([source](https://paulgraham.com/determination.html))
-
-> *"Willful and stubborn are not the same thing."*
-
-**Don't optimize for the wrong things — working hard on the wrong problem is still failure.** ([source](https://paulgraham.com/greatwork.html))
-
-> *"It matters not just how hard you try but what you try hard at."*
-
-**Tolerance for bad early work is essential — perfectionism kills beginnings.** ([source](https://paulgraham.com/early.html))
-
-> *"The most important kind of tolerance is tolerance for early work being bad."*
-
-**Early work is supposed to be bad — the key is to push through the initial crap.** ([source](https://paulgraham.com/early.html))
-
-> *"You can't be sure what's going to work and what isn't."*
-
-**Being a noob gives you a superpower.** you ask questions experts have stopped asking. ([source](https://paulgraham.com/noob.html))
-
-> *"Being a noob is an advantage if you use it right."*
-
-**The right kind of stubborn is persistent about goals but flexible about methods.** ([source](https://paulgraham.com/do.html))
-
-> *"The right kind of stubborn is obstinate about goals but flexible about how to achieve them."*
-
-**Exponential growth plus a threshold creates superlinear returns — learning compounds.** ([source](https://paulgraham.com/superlinear.html))
-
-> *"The key to superlinear returns is to do work that compounds."*
-
-**If something that seems like work to others doesn't seem like work to you, that's your calling.** ([source](https://paulgraham.com/work.html))
-
-> *"If something that seems like work to other people doesn't seem like work to you, that's something you're well suited for."*
-
-**The secret that experienced creators know is that ALL early work is bad.** The difference between someone who does great work and someone who doesn't is not the quality of their early work — it's their willingness to push through the bad early stage. ([source](https://paulgraham.com/early.html))
-
-> *"The secret every successful person knows is that their early work was terrible. The difference is they kept going."*
-
-**Implication:** Expect your early attempts to be bad and plan accordingly. Success isn't about avoiding failure - it's about failing fast, learning quickly, and persisting through the inevitable rough early stages. Your willingness to ship terrible first versions predicts your eventual success.
-
-**Many people who could do great work never start because they compare their imagined first attempt to other people's finished work. The comparison is wildly unfair — you're comparing your Chapter 1 to someone else's Chapter 20.** ([source](https://paulgraham.com/early.html))
-
-> *"The reason so many people never get started is that they compare their inside with other people's outside. They see other people's finished work and think: I could never do that."*
-
-**Implication:** Don't let polished competitors intimidate you into not starting. Everyone's first version was terrible - you're just not seeing it. Focus on getting started and improving rapidly rather than achieving perfection before you ship.
-
-**Early work needs to be treated differently from finished work.** Judging early-stage work by the standards of mature work kills it. The key is to lower the bar for getting started and raise it gradually as the work develops. ([source](https://paulgraham.com/early.html))
-
-> *"You can't judge a startup by looking at their first version any more than you can judge a sculptor by looking at a block of marble."*
-
-**Implication:** Launch early and iterate based on feedback rather than trying to build the perfect product in stealth. Your first version is raw material, not a final statement. The real work happens after launch when you start learning from users.
 
 **Great work happens at the intersection of aptitude, deep interest, and opportunity.** ([source](https://paulgraham.com/greatwork.html))
 
@@ -620,75 +546,137 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"Earnestness is essential for doing great work."*
 
+**If something that seems like work to others doesn't seem like work to you, that's your calling.** ([source](https://paulgraham.com/work.html))
+
+> *"If something that seems like work to other people doesn't seem like work to you, that's something you're well suited for."*
+
+**Superlinear returns mean small differences in performance yield enormous differences in outcome.** ([source](https://paulgraham.com/superlinear.html))
+
+> *"In a world with superlinear returns, it's not enough to be good."*
+
+**Exponential growth plus a threshold creates superlinear returns — learning compounds.** ([source](https://paulgraham.com/superlinear.html))
+
+> *"The key to superlinear returns is to do work that compounds."*
+
+**The right kind of stubborn is persistent about goals but flexible about methods.** ([source](https://paulgraham.com/do.html))
+
+> *"The right kind of stubborn is obstinate about goals but flexible about how to achieve them."*
+
+**Being a noob gives you a superpower.** you ask questions experts have stopped asking. ([source](https://paulgraham.com/noob.html))
+
+> *"Being a noob is an advantage if you use it right."*
+
+**Early work is supposed to be bad — the key is to push through the initial crap.** ([source](https://paulgraham.com/early.html))
+
+> *"You can't be sure what's going to work and what isn't."*
+
+**Tolerance for bad early work is essential — perfectionism kills beginnings.** ([source](https://paulgraham.com/early.html))
+
+> *"The most important kind of tolerance is tolerance for early work being bad."*
+
+**Don't optimize for the wrong things — working hard on the wrong problem is still failure.** ([source](https://paulgraham.com/greatwork.html))
+
+> *"It matters not just how hard you try but what you try hard at."*
+
+**Willfulness is not stubbornness — willful people are flexible about methods.** ([source](https://paulgraham.com/determination.html))
+
+> *"Willful and stubborn are not the same thing."*
+
+**Persistence on goals with flexibility on methods is the recipe for achievement.** ([source](https://paulgraham.com/do.html))
+
+> *"Be persistent about your goals but flexible about how to achieve them."*
+
+**The best test of stubbornness is whether you can tell the difference between obstacles and dead ends.** ([source](https://paulgraham.com/do.html))
+
+> *"Good stubbornness means knowing when to persist and when to pivot."*
+
+**Being a beginner gives you fresh eyes — use them before they close.** ([source](https://paulgraham.com/noob.html))
+
+> *"The main advantage of being a noob is that you ask questions."*
+
+**Experts stop seeing what's obvious because familiarity breeds blindness.** ([source](https://paulgraham.com/noob.html))
+
+> *"Experts have internalized so many assumptions that they can't see them."*
+
+**Early work needs to be judged by different standards — you're searching, not executing.** ([source](https://paulgraham.com/early.html))
+
+> *"Judge early work by momentum and potential, not quality."*
+
+**The worst thing you can do with early work is judge it too harshly.** ([source](https://paulgraham.com/early.html))
+
+> *"People who do great things often began with what seemed like foolish ideas."*
+
+**Superlinear returns reward compounding effort — small early advantages snowball.** ([source](https://paulgraham.com/superlinear.html))
+
+> *"In fields with superlinear returns, being even slightly better can be much more rewarding."*
+
+**Two sources of superlinear returns.** exponential growth and thresholds. ([source](https://paulgraham.com/superlinear.html))
+
+> *"Superlinear returns come from two forces: exponential growth and thresholds."*
+
+**Avoid pretentiousness — it guides you away from good work.** ([source](https://paulgraham.com/greatwork.html))
+
+> *"Pretentiousness is your guide away from good work."*
+
+**Great work often starts as play — follow your curiosity, not a plan.** ([source](https://paulgraham.com/greatwork.html))
+
+> *"Great work usually starts with curiosity about something, not a plan to produce it."*
+
+**The most important thing in science is to work on important problems.** ([source](https://paulgraham.com/greatwork.html))
+
+> *"If you're working on the wrong problem, no amount of effort will save you."*
+
+**The best test of whether something is worth doing.** would you do it for free? ([source](https://paulgraham.com/work.html))
+
+> *"If you wouldn't do it for free, it might not be worth doing at all."*
+
 **The best test of whether you're being persistent or obstinate is to ask.** am I solving the same problem or pursuing the same solution? Persistence means you keep attacking the problem from new angles. Obstinacy means you keep trying the same approach that isn't working. ([source](https://paulgraham.com/do.html))
 
 > *"If you're determined to succeed at something, you don't give up. But you give up on particular tactics. You change strategies but not destinations."*
 
 **Implication:** Build hypothesis-testing into your DNA. Be ruthless about killing features, strategies, or approaches that aren't working, but maintain unwavering commitment to the core problem you're solving. Flexibility in tactics, rigidity in vision.
 
-**The best test of whether something is worth doing.** would you do it for free? ([source](https://paulgraham.com/work.html))
+**Early work needs to be treated differently from finished work.** Judging early-stage work by the standards of mature work kills it. The key is to lower the bar for getting started and raise it gradually as the work develops. ([source](https://paulgraham.com/early.html))
 
-> *"If you wouldn't do it for free, it might not be worth doing at all."*
+> *"You can't judge a startup by looking at their first version any more than you can judge a sculptor by looking at a block of marble."*
 
-**The most important thing in science is to work on important problems.** ([source](https://paulgraham.com/greatwork.html))
+**Implication:** Launch early and iterate based on feedback rather than trying to build the perfect product in stealth. Your first version is raw material, not a final statement. The real work happens after launch when you start learning from users.
 
-> *"If you're working on the wrong problem, no amount of effort will save you."*
+**Many people who could do great work never start because they compare their imagined first attempt to other people's finished work. The comparison is wildly unfair — you're comparing your Chapter 1 to someone else's Chapter 20.** ([source](https://paulgraham.com/early.html))
 
-**Great work often starts as play — follow your curiosity, not a plan.** ([source](https://paulgraham.com/greatwork.html))
+> *"The reason so many people never get started is that they compare their inside with other people's outside. They see other people's finished work and think: I could never do that."*
 
-> *"Great work usually starts with curiosity about something, not a plan to produce it."*
+**Implication:** Don't let polished competitors intimidate you into not starting. Everyone's first version was terrible - you're just not seeing it. Focus on getting started and improving rapidly rather than achieving perfection before you ship.
 
-**Avoid pretentiousness — it guides you away from good work.** ([source](https://paulgraham.com/greatwork.html))
+**The secret that experienced creators know is that ALL early work is bad.** The difference between someone who does great work and someone who doesn't is not the quality of their early work — it's their willingness to push through the bad early stage. ([source](https://paulgraham.com/early.html))
 
-> *"Pretentiousness is your guide away from good work."*
+> *"The secret every successful person knows is that their early work was terrible. The difference is they kept going."*
 
-**Two sources of superlinear returns.** exponential growth and thresholds. ([source](https://paulgraham.com/superlinear.html))
+**Implication:** Expect your early attempts to be bad and plan accordingly. Success isn't about avoiding failure - it's about failing fast, learning quickly, and persisting through the inevitable rough early stages. Your willingness to ship terrible first versions predicts your eventual success.
 
-> *"Superlinear returns come from two forces: exponential growth and thresholds."*
+**Obstinacy is often disguised as conviction.** From the outside, a persistent person and an obstinate one can look identical — both refuse to quit. The difference only becomes visible in how they respond to new information. ([source](https://paulgraham.com/do.html))
 
-**Superlinear returns reward compounding effort — small early advantages snowball.** ([source](https://paulgraham.com/superlinear.html))
+> *"The persistent and the obstinate will both tell you they never give up. The difference is what they never give up on."*
 
-> *"In fields with superlinear returns, being even slightly better can be much more rewarding."*
+**Implication:** Stay committed to solving the problem, not to your current solution. Pivot when data demands it, but don't abandon the mission. Investors and customers can sense the difference between principled persistence and stubborn denial.
 
-**The worst thing you can do with early work is judge it too harshly.** ([source](https://paulgraham.com/early.html))
+**If you're not occasionally feeling like a noob, you're probably not learning enough.** The willingness to feel stupid is a prerequisite for growth. People who refuse to feel like beginners have implicitly decided to stop growing. ([source](https://paulgraham.com/noob.html))
 
-> *"People who do great things often began with what seemed like foolish ideas."*
+> *"If it doesn't hurt a little to be a noob at something, you're probably not learning fast enough."*
 
-**Early work needs to be judged by different standards — you're searching, not executing.** ([source](https://paulgraham.com/early.html))
-
-> *"Judge early work by momentum and potential, not quality."*
-
-**Experts stop seeing what's obvious because familiarity breeds blindness.** ([source](https://paulgraham.com/noob.html))
-
-> *"Experts have internalized so many assumptions that they can't see them."*
-
-**Being a beginner gives you fresh eyes — use them before they close.** ([source](https://paulgraham.com/noob.html))
-
-> *"The main advantage of being a noob is that you ask questions."*
+**Implication:** Embrace the discomfort of not knowing what you're doing - it's a sign you're pushing into new territory where innovation happens. If you're always confident and comfortable, you're probably not taking big enough risks or learning fast enough.
 
 ---
 
 ## Ideas & Creativity
 
-**The best creators have a two-track mind.** one part that generates ideas freely without judgment, and another that evaluates critically. The mistake is letting the critical part dominate too early, which prevents anything from being created in the first place. ([source](https://paulgraham.com/early.html))
+**The best startup ideas come from noticing problems you have yourself.** ([source](https://paulgraham.com/startupideas.html))
 
-> *"When you're generating ideas, you want to turn down the editor in your head. When you're evaluating them, you want to turn it back up. Most people get this backwards."*
+> *"The verb you want to use with startup ideas is not think up but notice."*
 
-**Implication:** Separate your creative and critical thinking processes. When brainstorming solutions or features, suspend judgment to explore broadly. When it's time to prioritize and ship, be ruthlessly critical. Don't let premature criticism kill potentially great ideas.
+**Live in the future, then build what's missing.** ([source](https://paulgraham.com/startupideas.html))
 
-**The advantages of being a noob.** you see things with fresh eyes, you ask questions experts stopped asking, you're not constrained by conventions, and your ignorance lets you try approaches that experts know 'don't work' but occasionally do. ([source](https://paulgraham.com/noob.html))
-
-> *"The advantage of being new at something is that you don't know what's supposed to be hard. Sometimes that's more important than experience."*
-
-**Implication:** Don't be afraid to enter industries where you lack deep experience. Your outsider perspective might reveal solutions that experts have been conditioned to overlook. Some of the best startups come from founders who didn't know their ideas were 'impossible.'
-
-**You can't tell in advance which ideas will be big — just follow what's interesting.** ([source](https://paulgraham.com/greatwork.html))
-
-> *"You can't tell in advance which ideas will turn out to be important."*
-
-**Don't try to think of startup ideas — turn your mind into the type that ideas form in.** ([source](https://paulgraham.com/before.html))
-
-> *"If you make a conscious effort to think of startup ideas, the ideas you come up with will not merely be bad, but bad and plausible-sounding."*
+> *"Live in the future, then build what's missing."*
 
 **The best ideas look like bad ideas to most people.** ([source](https://paulgraham.com/startupideas.html))
 
@@ -698,25 +686,49 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"Instead of asking what problem should I solve, ask what problem do I wish someone else would solve."*
 
-**The best startup ideas come from noticing problems you have yourself.** ([source](https://paulgraham.com/startupideas.html))
+**Don't try to think of startup ideas — turn your mind into the type that ideas form in.** ([source](https://paulgraham.com/before.html))
 
-> *"The verb you want to use with startup ideas is not think up but notice."*
+> *"If you make a conscious effort to think of startup ideas, the ideas you come up with will not merely be bad, but bad and plausible-sounding."*
+
+**You can't tell in advance which ideas will be big — just follow what's interesting.** ([source](https://paulgraham.com/greatwork.html))
+
+> *"You can't tell in advance which ideas will turn out to be important."*
 
 **The most reliable way to have good ideas is to have many ideas and filter.** ([source](https://paulgraham.com/startupideas.html))
 
 > *"The way to get good ideas is to get lots of ideas and throw the bad ones away."*
 
-**Live in the future, then build what's missing.** ([source](https://paulgraham.com/startupideas.html))
+**The advantages of being a noob.** you see things with fresh eyes, you ask questions experts stopped asking, you're not constrained by conventions, and your ignorance lets you try approaches that experts know 'don't work' but occasionally do. ([source](https://paulgraham.com/noob.html))
 
-> *"Live in the future, then build what's missing."*
+> *"The advantage of being new at something is that you don't know what's supposed to be hard. Sometimes that's more important than experience."*
+
+**Implication:** Don't be afraid to enter industries where you lack deep experience. Your outsider perspective might reveal solutions that experts have been conditioned to overlook. Some of the best startups come from founders who didn't know their ideas were 'impossible.'
+
+**The best creators have a two-track mind.** one part that generates ideas freely without judgment, and another that evaluates critically. The mistake is letting the critical part dominate too early, which prevents anything from being created in the first place. ([source](https://paulgraham.com/early.html))
+
+> *"When you're generating ideas, you want to turn down the editor in your head. When you're evaluating them, you want to turn it back up. Most people get this backwards."*
+
+**Implication:** Separate your creative and critical thinking processes. When brainstorming solutions or features, suspend judgment to explore broadly. When it's time to prioritize and ship, be ruthlessly critical. Don't let premature criticism kill potentially great ideas.
 
 ---
 
 ## Growth & Scale
 
+**A startup is a company designed to grow fast.** ([source](https://paulgraham.com/growth.html))
+
+> *"A startup is a company designed to grow fast."*
+
+**The way to do really big things is to start with deceptively small things.** ([source](https://paulgraham.com/ambitious.html))
+
+> *"Empirically, the way to do really big things seems to be to start with deceptively small things."*
+
 **Growth rate is the compass — 5-7% per week at YC.** ([source](https://paulgraham.com/growth.html))
 
 > *"A good growth rate during YC is 5-7% a week."*
+
+**Startups can only be built on ideas with large markets.** ([source](https://paulgraham.com/growth.html))
+
+> *"For a company to grow really big, it must make something lots of people want."*
 
 **Optimize for growth rate, not absolute revenue.** ([source](https://paulgraham.com/growth.html))
 
@@ -728,18 +740,6 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** When you're close to a threshold that matters—whether it's getting into YC, raising a Series A, or hitting product-market fit—you should invest disproportionately more effort. The difference between 'almost there' and 'there' can be exponential in outcomes.
 
-**A startup is a company designed to grow fast.** ([source](https://paulgraham.com/growth.html))
-
-> *"A startup is a company designed to grow fast."*
-
-**The way to do really big things is to start with deceptively small things.** ([source](https://paulgraham.com/ambitious.html))
-
-> *"Empirically, the way to do really big things seems to be to start with deceptively small things."*
-
-**Startups can only be built on ideas with large markets.** ([source](https://paulgraham.com/growth.html))
-
-> *"For a company to grow really big, it must make something lots of people want."*
-
 ---
 
 ## Fundraising & Investors
@@ -750,27 +750,63 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Understand that fundraising is a tool for accelerating growth, not validation of your idea. The entire funding ecosystem exists to identify and resource people who can create new value at scale. Use it strategically to build faster, not to feel successful.
 
+**Fundraising is a distraction — minimize time spent on it.** ([source](https://paulgraham.com/fr.html))
+
+> *"Fundraising is not what will make your company successful. Building a great product is."*
+
+**Raise money when you can, not when you need to.** ([source](https://paulgraham.com/fr.html))
+
+> *"Raise money when you can, not when you need to."*
+
+**Don't raise too much — it changes your psychology and your spending.** ([source](https://paulgraham.com/fr.html))
+
+> *"Raising too much can be almost as bad as raising too little."*
+
+**Investors are convinced by growth, not by pitches.** ([source](https://paulgraham.com/convince.html))
+
+> *"The way to convince investors is to make something users want."*
+
+**How to convince investors.** don't try to seem impressive — be impressive. ([source](https://paulgraham.com/convince.html))
+
+> *"The way to convince investors is to be the sort of person who succeeds."*
+
+**Fundraising is a process of momentum — early yeses create later yeses.** ([source](https://paulgraham.com/fr.html))
+
+> *"Fundraising is driven by momentum."*
+
+**Raising money is not a sign of success — it's a sign of needing money.** ([source](https://paulgraham.com/fr.html))
+
+> *"Don't treat fundraising as a win. It's not revenue."*
+
+**Investors decide in the first few minutes — make your opening count.** ([source](https://paulgraham.com/convince.html))
+
+> *"Investors decide quickly. Lead with your strongest point."*
+
 **The most important investors are the ones who say yes first — they set the pace.** ([source](https://paulgraham.com/fr.html))
 
 > *"Get the first yes and momentum follows."*
 
-**Fundraising is a distraction — minimize time spent on it.** ([source](https://paulgraham.com/fr.html))
+**A demo is worth a thousand words — show investors your product working.** ([source](https://paulgraham.com/convince.html))
 
-> *"Fundraising is not what will make your company successful. Building a great product is."*
+> *"Show, don't tell. A working demo is worth more than any pitch deck."*
+
+**Never let fundraising drag on.** Set a deadline, create urgency, and force decisions. A drawn-out fundraise is demoralizing, distracting, and signals to later investors that earlier ones passed. Speed is your friend. ([source](https://paulgraham.com/fr.html))
+
+> *"Don't take too long raising money. Some startups could raise money in a day if they wanted to; if it takes you several months, that's not a good sign. The right way to do it is to get a deal done fast."*
+
+**Implication:** Time kills deals and momentum. Set artificial deadlines, create urgency, and force investor decisions. A prolonged fundraise sends negative signals to the market and distracts you from building your actual business. Speed in fundraising is a competitive advantage.
+
+**The most convincing evidence for investors is not a pitch deck but a product with real users showing real growth.** If you have that, the pitch almost doesn't matter. If you don't, the best pitch in the world won't save you. ([source](https://paulgraham.com/convince.html))
+
+> *"The most convincing thing you can do is show them the thing you've made. The second most convincing thing you can do is to show them impressed users."*
+
+**Implication:** Demo beats deck every time. Real users showing genuine enthusiasm is worth more than the most polished presentation. If you don't have compelling product traction yet, focus on building that before you focus on fundraising.
 
 **The best way to raise money is to have a company investors want to invest in.** All fundraising advice is secondary to this. Traction, growth, and a compelling product are the real persuasion -- everything else is marginal optimization. ([source](https://paulgraham.com/fr.html))
 
 > *"The best way to convince investors is to make a good company. Then the pitch becomes just a way of describing what you've made."*
 
 **Implication:** Focus on building something great first, fundraising second. Traction and growth speak louder than any pitch deck. All the fundraising tactics in the world can't substitute for having a company that investors actually want to bet on.
-
-**Investors decide in the first few minutes — make your opening count.** ([source](https://paulgraham.com/convince.html))
-
-> *"Investors decide quickly. Lead with your strongest point."*
-
-**Raising money is not a sign of success — it's a sign of needing money.** ([source](https://paulgraham.com/fr.html))
-
-> *"Don't treat fundraising as a win. It's not revenue."*
 
 **Be upfront about what's going wrong.** Investors who discover problems later feel deceived. Investors who hear about problems early and see you handling them feel confident. Transparency about weakness is paradoxically a strength signal. ([source](https://paulgraham.com/fr.html))
 
@@ -784,47 +820,11 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Understanding investor psychology is crucial. They pattern-match against successful companies they've seen before. Looking competent, moving fast, and demonstrating deep domain expertise all trigger positive associations. Study what successful founders in your space looked like at your stage.
 
-**Fundraising is a process of momentum — early yeses create later yeses.** ([source](https://paulgraham.com/fr.html))
-
-> *"Fundraising is driven by momentum."*
-
 **Don't try to seem like something you're not.** The best founders convince investors by being genuinely impressive, not by performing impressiveness. Authenticity is detectable and its absence is a red flag for experienced investors. ([source](https://paulgraham.com/convince.html))
 
 > *"Don't try to seem impressive. You can't fool investors for long on this point. If you don't seem impressive, the problem is not your pitch. The problem is that you're not actually impressive yet. Fix that."*
 
 **Implication:** Authenticity is detectable and its absence is a red flag. Instead of trying to seem more impressive than you are, focus on actually becoming more impressive. Experienced investors can spot performance versus substance, and substance always wins in the long run.
-
-**How to convince investors.** don't try to seem impressive — be impressive. ([source](https://paulgraham.com/convince.html))
-
-> *"The way to convince investors is to be the sort of person who succeeds."*
-
-**Never let fundraising drag on.** Set a deadline, create urgency, and force decisions. A drawn-out fundraise is demoralizing, distracting, and signals to later investors that earlier ones passed. Speed is your friend. ([source](https://paulgraham.com/fr.html))
-
-> *"Don't take too long raising money. Some startups could raise money in a day if they wanted to; if it takes you several months, that's not a good sign. The right way to do it is to get a deal done fast."*
-
-**Implication:** Time kills deals and momentum. Set artificial deadlines, create urgency, and force investor decisions. A prolonged fundraise sends negative signals to the market and distracts you from building your actual business. Speed in fundraising is a competitive advantage.
-
-**A demo is worth a thousand words — show investors your product working.** ([source](https://paulgraham.com/convince.html))
-
-> *"Show, don't tell. A working demo is worth more than any pitch deck."*
-
-**The most convincing evidence for investors is not a pitch deck but a product with real users showing real growth.** If you have that, the pitch almost doesn't matter. If you don't, the best pitch in the world won't save you. ([source](https://paulgraham.com/convince.html))
-
-> *"The most convincing thing you can do is show them the thing you've made. The second most convincing thing you can do is to show them impressed users."*
-
-**Implication:** Demo beats deck every time. Real users showing genuine enthusiasm is worth more than the most polished presentation. If you don't have compelling product traction yet, focus on building that before you focus on fundraising.
-
-**Investors are convinced by growth, not by pitches.** ([source](https://paulgraham.com/convince.html))
-
-> *"The way to convince investors is to make something users want."*
-
-**Raise money when you can, not when you need to.** ([source](https://paulgraham.com/fr.html))
-
-> *"Raise money when you can, not when you need to."*
-
-**Don't raise too much — it changes your psychology and your spending.** ([source](https://paulgraham.com/fr.html))
-
-> *"Raising too much can be almost as bad as raising too little."*
 
 ---
 
@@ -836,26 +836,6 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Simplicity is power, whether in code, design, or communication. The goal isn't to show off how much you can do—it's to accomplish your objective with the minimum necessary complexity. Constraints force elegance and often reveal better solutions.
 
-**Wild animals are beautiful because they have hard lives — form follows function under pressure.** ([source](https://paulgraham.com/taste.html))
-
-> *"Wild animals are beautiful because they have hard lives."*
-
-**The idea that taste is subjective prevents people from getting better at design.** ([source](https://paulgraham.com/taste.html))
-
-> *"Saying taste is subjective is a good way to prevent disputes. The trouble is, it's not true."*
-
-**When you're forced to be simple, you're forced to face the real problem.** ([source](https://paulgraham.com/taste.html))
-
-> *"When you can't deliver ornament, you have to deliver substance."*
-
-**Design is not just how it looks — it's how it works.** ([source](https://paulgraham.com/taste.html))
-
-> *"Simplicity is the ultimate sophistication."*
-
-**Good design is redesign — it's rare to get things right the first time.** ([source](https://paulgraham.com/taste.html))
-
-> *"Cultivate dissatisfaction."*
-
 **Good design has universal principles across all fields.** ([source](https://paulgraham.com/taste.html))
 
 > *"It's surprising how much different fields ideas of beauty have in common."*
@@ -864,23 +844,37 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"Poof goes the axiom that taste can't be wrong."*
 
-**The only style worth having is the one you can't help — don't try to be original.** ([source](https://paulgraham.com/taste.html))
+**When you're forced to be simple, you're forced to face the real problem.** ([source](https://paulgraham.com/taste.html))
 
-> *"The only style worth having is the one you can't help."*
+> *"When you can't deliver ornament, you have to deliver substance."*
+
+**Good design is redesign — it's rare to get things right the first time.** ([source](https://paulgraham.com/taste.html))
+
+> *"Cultivate dissatisfaction."*
+
+**Design is not just how it looks — it's how it works.** ([source](https://paulgraham.com/taste.html))
+
+> *"Simplicity is the ultimate sophistication."*
+
+**The idea that taste is subjective prevents people from getting better at design.** ([source](https://paulgraham.com/taste.html))
+
+> *"Saying taste is subjective is a good way to prevent disputes. The trouble is, it's not true."*
+
+**Wild animals are beautiful because they have hard lives — form follows function under pressure.** ([source](https://paulgraham.com/taste.html))
+
+> *"Wild animals are beautiful because they have hard lives."*
 
 **Good design is often slightly funny — humor is related to strength.** ([source](https://paulgraham.com/taste.html))
 
 > *"I think humor is related to strength."*
 
+**The only style worth having is the one you can't help — don't try to be original.** ([source](https://paulgraham.com/taste.html))
+
+> *"The only style worth having is the one you can't help."*
+
 ---
 
 ## Education & Learning
-
-**The skill of figuring out what the teacher wants and giving it to them is actively harmful in the real world.** In school, there's always someone defining what success looks like. In life, you have to figure that out yourself. ([source](https://paulgraham.com/lesson.html))
-
-> *"The test-taking mentality is the enemy of real learning. Instead of trying to figure out what the teacher wants, try to figure out what's true."*
-
-**Implication:** Stop optimizing for external validation and start optimizing for truth and value creation. In the real world, there's no teacher with predetermined answers. Success comes from solving actual problems, not from figuring out what evaluators want to hear.
 
 **School teaches you that the way to do well is to hack the test.** ([source](https://paulgraham.com/lesson.html))
 
@@ -920,21 +914,15 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Focus on building something genuinely valuable rather than gaming metrics or optimizing for superficial success markers. Users and markets can't be hacked the way school systems can - they reward real value creation over clever gaming.
 
+**The skill of figuring out what the teacher wants and giving it to them is actively harmful in the real world.** In school, there's always someone defining what success looks like. In life, you have to figure that out yourself. ([source](https://paulgraham.com/lesson.html))
+
+> *"The test-taking mentality is the enemy of real learning. Instead of trying to figure out what the teacher wants, try to figure out what's true."*
+
+**Implication:** Stop optimizing for external validation and start optimizing for truth and value creation. In the real world, there's no teacher with predetermined answers. Success comes from solving actual problems, not from figuring out what evaluators want to hear.
+
 ---
 
 ## Silicon Valley & Culture
-
-**Universities are the most reliable seed for startup hubs because they concentrate young, technically ambitious people.** The path to building a startup hub runs through making the local university a magnet for top CS talent. ([source](https://paulgraham.com/newcity.html))
-
-> *"Universities are to startup hubs what rivers were to cities in medieval times. You can't have a hub without one, but having one doesn't guarantee you'll have a hub."*
-
-**Implication:** If you're choosing where to build your startup, proximity to top technical talent matters more than government incentives or flashy innovation districts. Go where the smart people are learning and graduating, not where politicians are promising startup-friendly policies.
-
-**What kills most aspiring startup hubs is that the graduates of their good universities leave.** The problem isn't producing talent — it's retaining it. You need to make the city a place where ambitious 25-year-olds actually want to live. ([source](https://paulgraham.com/newcity.html))
-
-> *"The first requirement for a flourishing startup hub is a large population of technical people. So the first thing a city needs is a good university. Preferably a good research university."*
-
-**Implication:** Brain drain kills startup ecosystems before they can form. It's not enough to educate talented people—you need to give them compelling reasons to stay local. This means creating an environment where ambitious young people want to build their careers and lives.
 
 **The key ingredient for a startup hub is not money, office space, or tax incentives — it's a critical mass of ambitious, technical people who want to start companies. Everything else follows from having the right people concentrated in one place.** ([source](https://paulgraham.com/newcity.html))
 
@@ -954,17 +942,21 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Focus on what actually helps startups thrive: affordable workspace, density of other founders, access to talent, and organic community. Avoid locations that prioritize bureaucratic approval over founder needs, even if they offer more official 'support.'
 
+**What kills most aspiring startup hubs is that the graduates of their good universities leave.** The problem isn't producing talent — it's retaining it. You need to make the city a place where ambitious 25-year-olds actually want to live. ([source](https://paulgraham.com/newcity.html))
+
+> *"The first requirement for a flourishing startup hub is a large population of technical people. So the first thing a city needs is a good university. Preferably a good research university."*
+
+**Implication:** Brain drain kills startup ecosystems before they can form. It's not enough to educate talented people—you need to give them compelling reasons to stay local. This means creating an environment where ambitious young people want to build their careers and lives.
+
+**Universities are the most reliable seed for startup hubs because they concentrate young, technically ambitious people.** The path to building a startup hub runs through making the local university a magnet for top CS talent. ([source](https://paulgraham.com/newcity.html))
+
+> *"Universities are to startup hubs what rivers were to cities in medieval times. You can't have a hub without one, but having one doesn't guarantee you'll have a hub."*
+
+**Implication:** If you're choosing where to build your startup, proximity to top technical talent matters more than government incentives or flashy innovation districts. Go where the smart people are learning and graduating, not where politicians are promising startup-friendly policies.
+
 **Great work in clusters — Florence, Bauhaus, Manhattan Project, Xerox PARC.** ([source](https://paulgraham.com/taste.html))
 
 > *"Nothing is more powerful than a community of talented people working on related problems."*
-
-**Startup hubs form because talent clusters and the ambient message of the city matters.** ([source](https://paulgraham.com/newcity.html))
-
-> *"You need the encouragement of feeling that people around you care about the kind of work you do."*
-
-**Great cities attract ambitious people — the effect compounds.** ([source](https://paulgraham.com/cities.html))
-
-> *"Great cities attract ambitious people. You can sense it when you walk around one."*
 
 **Cities send messages about what kind of ambition matters.** ([source](https://paulgraham.com/cities.html))
 
@@ -978,9 +970,29 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"The Impressionists were born all over France but what defined them were the years they spent together in Paris."*
 
+**Startup hubs form because talent clusters and the ambient message of the city matters.** ([source](https://paulgraham.com/newcity.html))
+
+> *"You need the encouragement of feeling that people around you care about the kind of work you do."*
+
+**Great cities attract ambitious people — the effect compounds.** ([source](https://paulgraham.com/cities.html))
+
+> *"Great cities attract ambitious people. You can sense it when you walk around one."*
+
 ---
 
 ## Philosophy & Life
+
+**The test for whether you're an independent thinker is not whether you hold contrarian views, but whether you'd be willing to express them in public even when there are social consequences for doing so.** ([source](https://paulgraham.com/heresy.html))
+
+> *"The statements that make people maddest are those they worry might be believed. I suspect the statements that make people maddest are those they worry might be true."*
+
+**Implication:** Real independent thinking requires courage, not just contrarian opinions. It's easy to hold unpopular views privately; it's hard to express them when there are social or professional consequences. The willingness to speak up when it matters is what separates true independent thinkers from mere contrarians.
+
+**Heresy and courage are linked.** The reason most people don't think independently isn't that they can't — it's that they don't want to deal with the social consequences. Independent thinking is more a matter of character than intelligence. ([source](https://paulgraham.com/heresy.html))
+
+> *"The problem with not thinking for yourself isn't just that you'll be wrong, but that you'll be timid. When you let other people do your thinking, you also let them do your choosing."*
+
+**Implication:** Independent thinking isn't just an intellectual luxury - it's a competitive advantage. Founders who can't think past conventional wisdom will only build conventional companies. The biggest returns come from being right when everyone else is wrong.
 
 **You can map the intellectual freedom of a society by counting its heresies.** A society with many heresies — many things you can't say — is one where independent thinking is constrained. The healthiest intellectual cultures minimize the number of forbidden questions. ([source](https://paulgraham.com/heresy.html))
 
@@ -994,17 +1006,11 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** The biggest startup opportunities often lie in areas where conventional wisdom is not just wrong but actively defended. Look for domains where asking obvious questions makes experts uncomfortable - that's where breakthrough innovations hide.
 
-**Heresy and courage are linked.** The reason most people don't think independently isn't that they can't — it's that they don't want to deal with the social consequences. Independent thinking is more a matter of character than intelligence. ([source](https://paulgraham.com/heresy.html))
+**People's instinct to avoid spending leads them to hold onto depreciating assets or time-wasting commitments.** The sunk cost fallacy applies to time just as it does to money. ([source](https://paulgraham.com/selfindulgence.html))
 
-> *"The problem with not thinking for yourself isn't just that you'll be wrong, but that you'll be timid. When you let other people do your thinking, you also let them do your choosing."*
+> *"The reason I don't spend money on stuff is that I don't want stuff. And the reason I don't want stuff is that it would make my life more complicated."*
 
-**Implication:** Independent thinking isn't just an intellectual luxury - it's a competitive advantage. Founders who can't think past conventional wisdom will only build conventional companies. The biggest returns come from being right when everyone else is wrong.
-
-**The test for whether you're an independent thinker is not whether you hold contrarian views, but whether you'd be willing to express them in public even when there are social consequences for doing so.** ([source](https://paulgraham.com/heresy.html))
-
-> *"The statements that make people maddest are those they worry might be believed. I suspect the statements that make people maddest are those they worry might be true."*
-
-**Implication:** Real independent thinking requires courage, not just contrarian opinions. It's easy to hold unpopular views privately; it's hard to express them when there are social or professional consequences. The willingness to speak up when it matters is what separates true independent thinkers from mere contrarians.
+**Implication:** Apply the sunk cost fallacy to time as rigorously as you do to money. Just because you've already invested time in something doesn't mean you should continue. Cut your losses quickly when something isn't working, whether it's a project, relationship, or commitment.
 
 **Compounding works in both directions.** Small, unnoticed losses of time accumulate just like small, unnoticed losses of money. The insidiousness is that each individual loss seems trivial. ([source](https://paulgraham.com/selfindulgence.html))
 
@@ -1012,19 +1018,9 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Small time-wasters compound just like small financial leaks. Each individual distraction or inefficiency seems harmless, but together they create massive drag on your productivity and progress. Audit your time as carefully as you would audit your finances.
 
-**People's instinct to avoid spending leads them to hold onto depreciating assets or time-wasting commitments.** The sunk cost fallacy applies to time just as it does to money. ([source](https://paulgraham.com/selfindulgence.html))
+**People can never have productive discussions about topics that are part of their identity.** ([source](https://paulgraham.com/identity.html))
 
-> *"The reason I don't spend money on stuff is that I don't want stuff. And the reason I don't want stuff is that it would make my life more complicated."*
-
-**Implication:** Apply the sunk cost fallacy to time as rigorously as you do to money. Just because you've already invested time in something doesn't mean you should continue. Cut your losses quickly when something isn't working, whether it's a project, relationship, or commitment.
-
-**Learn something from every person you meet — everyone knows something you don't.** ([source](https://paulgraham.com/noob.html))
-
-> *"Everyone has something to teach you if you pay attention."*
-
-**Fake work is more dangerous than no work — it gives you the illusion of productivity.** ([source](https://paulgraham.com/selfindulgence.html))
-
-> *"The most dangerous way to lose time is not to spend it having fun, but to spend it doing fake work."*
+> *"People can never have a fruitful argument about something that's part of their identity."*
 
 **Keep your identity small — fewer labels means clearer thinking.** ([source](https://paulgraham.com/identity.html))
 
@@ -1034,9 +1030,25 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"Increasingly you win not by fighting but by having new ideas and building new things."*
 
+**Every era has moral fashions — beliefs that feel like truth but are arbitrary.** ([source](https://paulgraham.com/say.html))
+
+> *"Almost certainly, there is something wrong with you if you don't think things you don't dare say out loud."*
+
+**Training yourself to think unthinkable thoughts is valuable — like stretching before running.** ([source](https://paulgraham.com/say.html))
+
+> *"If you can think things so outside the box that they'd make people's hair stand on end, you'll have no trouble with small trips outside the box."*
+
+**The most important thing is to be able to think what you want, not to say what you want.** ([source](https://paulgraham.com/say.html))
+
+> *"The most important thing is to be able to think what you want, not to say what you want."*
+
 **Life is actually short — 52 weekends with your 2-year-old.** ([source](https://paulgraham.com/vb.html))
 
 > *"You only get 52 weekends with your 2 year old."*
+
+**Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have.** ([source](https://paulgraham.com/vb.html))
+
+> *"Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have."*
 
 **Independent-mindedness has three components.** fastidiousness about truth, resistance to being told what to think, and curiosity. ([source](https://paulgraham.com/think.html))
 
@@ -1046,24 +1058,6 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"The independent-minded are not merely smarter — they have a different relationship with ideas."*
 
-**Every era has moral fashions — beliefs that feel like truth but are arbitrary.** ([source](https://paulgraham.com/say.html))
-
-> *"Almost certainly, there is something wrong with you if you don't think things you don't dare say out loud."*
-
-**The most important thing is to be able to think what you want, not to say what you want.** ([source](https://paulgraham.com/say.html))
-
-> *"The most important thing is to be able to think what you want, not to say what you want."*
-
-**Training yourself to think unthinkable thoughts is valuable — like stretching before running.** ([source](https://paulgraham.com/say.html))
-
-> *"If you can think things so outside the box that they'd make people's hair stand on end, you'll have no trouble with small trips outside the box."*
-
-**The reason people who don't have kids can't understand what it's like is that there's no frame of reference available before you have them. It's not that having kids is better or worse than expected — it's that the experience is qualitatively different from anything else.** ([source](https://paulgraham.com/kids.html))
-
-> *"Before you have kids, you're like someone trying to understand the color blue by having it described in words."*
-
-**Implication:** Some experiences can't be understood intellectually - they must be lived. Founders often face similar discontinuities when scaling from 10 to 100 to 1000 employees. Stop trying to plan for experiences you can't imagine and focus on being adaptable when they arrive.
-
 **How to lose time.** be tricked by activities that feel like work but aren't productive. ([source](https://paulgraham.com/selfindulgence.html))
 
 > *"The most dangerous way to lose time is not to spend it having fun, but to spend it doing fake work."*
@@ -1071,30 +1065,6 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 **Having kids restructures your priorities — they push out less important things.** ([source](https://paulgraham.com/kids.html))
 
 > *"Having kids changes how you think about time."*
-
-**You can detect obstinacy in yourself by examining whether your continued pursuit of a strategy is based on evidence or on ego. If you'd be embarrassed to change course, that's a sign you're being obstinate rather than persistent.** ([source](https://paulgraham.com/do.html))
-
-> *"The way to distinguish determination from obstinacy is that the determined person is driven by commitment to a goal and flexible about tactics. The obstinate person is driven by a commitment to a particular tactic."*
-
-**Implication:** Check your motivations regularly: are you continuing because the evidence supports it, or because changing course would be embarrassing? Ego-driven persistence is different from evidence-driven persistence. Be honest about which one is driving your decisions.
-
-**Having kids makes you more empathetic and less selfish, not through moral effort but through forced exposure.** You simply can't remain as self-centered when another human is completely dependent on you. ([source](https://paulgraham.com/kids.html))
-
-> *"Having kids showed me a way of helping people I hadn't seen before. Not just the specific things you do for your own children, but the fact that having kids makes you stop being completely self-centered."*
-
-**Implication:** Parenthood naturally develops empathy and perspective-taking skills that benefit all areas of life. The forced consideration of another person's needs and viewpoint makes you a better leader, teammate, and human. It's leadership training through necessity.
-
-**Many adults are still unconsciously hacking tests — seeking external validation, optimizing for metrics that don't matter, doing what looks impressive rather than what's actually valuable. Recognizing this pattern is the first step to breaking it.** ([source](https://paulgraham.com/lesson.html))
-
-> *"Most people never realize they're still optimizing for the wrong thing. They keep trying to get good grades from a teacher who doesn't exist."*
-
-**Implication:** Regularly audit what you're actually optimizing for. Are you building features users want or features that look impressive to investors? Are you solving real problems or problems that sound important? The market is the only teacher that matters.
-
-**Many people organize their entire lives to avoid being a noob.** They stick with what they know, avoid new domains, and optimize for competence over learning. This is a recipe for stagnation — the most interesting things happen when you're a beginner. ([source](https://paulgraham.com/noob.html))
-
-> *"Most adults avoid being beginners. But the price of never being a noob is never learning anything new. And in our time especially, that's dangerous."*
-
-**Implication:** Stay curious and willing to start from zero in new domains. The founders who thrive long-term are those who can repeatedly become beginners as technology and markets evolve. Competence in yesterday's game won't win tomorrow's.
 
 **Having kids gives you unconditional love and grounds you in what matters.** ([source](https://paulgraham.com/kids.html))
 
@@ -1108,12 +1078,6 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"Having kids is not as expensive or as disruptive as you think."*
 
-**One of the biggest surprises of having kids is how much you like them as people.** The love isn't just biological obligation — you genuinely enjoy their company and find them interesting. ([source](https://paulgraham.com/kids.html))
-
-> *"It turns out the biggest surprise about having kids is liking them. I mean, you expect to love them. Love is involuntary. But liking them is not, and yet you do, a lot."*
-
-**Implication:** Genuine relationships - with co-founders, employees, even users - go beyond duty or biological/economic obligation. The best teams are built on people who actually enjoy working together, not just people who are professionally compatible.
-
 **Heresy is often a sign you're onto something true that others aren't ready to accept.** ([source](https://paulgraham.com/say.html))
 
 > *"When people get mad at you for saying something, that's a sign it might be true."*
@@ -1122,11 +1086,13 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 > *"Scientists go looking for trouble."*
 
-**The fear that kids will destroy your productivity is overblown.** Having kids forces you to be more efficient with the time you do have. The constraint on your time actually increases your output per hour. ([source](https://paulgraham.com/kids.html))
+**Fake work is more dangerous than no work — it gives you the illusion of productivity.** ([source](https://paulgraham.com/selfindulgence.html))
 
-> *"Having kids may slow you down, but which would you rather be: a fast 25 year old or a smart 35 year old? I'd take the 35 year old."*
+> *"The most dangerous way to lose time is not to spend it having fun, but to spend it doing fake work."*
 
-**Implication:** Constraints often force efficiency and better prioritization. When your time becomes more limited, you naturally focus on what matters most and eliminate low-value activities. Sometimes artificial constraints can improve your productivity even without kids.
+**Learn something from every person you meet — everyone knows something you don't.** ([source](https://paulgraham.com/noob.html))
+
+> *"Everyone has something to teach you if you pay attention."*
 
 **The aggressively conventional-minded are dangerous because they want to coerce others into agreeing with them.** They're the enforcers of orthodoxy in every era. The independently-minded are their natural opponents. ([source](https://paulgraham.com/think.html))
 
@@ -1134,14 +1100,48 @@ Each phase built on the last: programming skill enabled Viaweb, Viaweb experienc
 
 **Implication:** Expect resistance when you challenge established thinking. The people most threatened by new ideas will fight hardest against them. This resistance is often a signal that you're onto something important—orthodoxy doesn't defend itself so aggressively against trivial challenges.
 
-**People can never have productive discussions about topics that are part of their identity.** ([source](https://paulgraham.com/identity.html))
+**The fear that kids will destroy your productivity is overblown.** Having kids forces you to be more efficient with the time you do have. The constraint on your time actually increases your output per hour. ([source](https://paulgraham.com/kids.html))
 
-> *"People can never have a fruitful argument about something that's part of their identity."*
+> *"Having kids may slow you down, but which would you rather be: a fast 25 year old or a smart 35 year old? I'd take the 35 year old."*
 
-**Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have.** ([source](https://paulgraham.com/vb.html))
+**Implication:** Constraints often force efficiency and better prioritization. When your time becomes more limited, you naturally focus on what matters most and eliminate low-value activities. Sometimes artificial constraints can improve your productivity even without kids.
 
-> *"Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have."*
+**One of the biggest surprises of having kids is how much you like them as people.** The love isn't just biological obligation — you genuinely enjoy their company and find them interesting. ([source](https://paulgraham.com/kids.html))
+
+> *"It turns out the biggest surprise about having kids is liking them. I mean, you expect to love them. Love is involuntary. But liking them is not, and yet you do, a lot."*
+
+**Implication:** Genuine relationships - with co-founders, employees, even users - go beyond duty or biological/economic obligation. The best teams are built on people who actually enjoy working together, not just people who are professionally compatible.
+
+**Many people organize their entire lives to avoid being a noob.** They stick with what they know, avoid new domains, and optimize for competence over learning. This is a recipe for stagnation — the most interesting things happen when you're a beginner. ([source](https://paulgraham.com/noob.html))
+
+> *"Most adults avoid being beginners. But the price of never being a noob is never learning anything new. And in our time especially, that's dangerous."*
+
+**Implication:** Stay curious and willing to start from zero in new domains. The founders who thrive long-term are those who can repeatedly become beginners as technology and markets evolve. Competence in yesterday's game won't win tomorrow's.
+
+**Many adults are still unconsciously hacking tests — seeking external validation, optimizing for metrics that don't matter, doing what looks impressive rather than what's actually valuable. Recognizing this pattern is the first step to breaking it.** ([source](https://paulgraham.com/lesson.html))
+
+> *"Most people never realize they're still optimizing for the wrong thing. They keep trying to get good grades from a teacher who doesn't exist."*
+
+**Implication:** Regularly audit what you're actually optimizing for. Are you building features users want or features that look impressive to investors? Are you solving real problems or problems that sound important? The market is the only teacher that matters.
+
+**Having kids makes you more empathetic and less selfish, not through moral effort but through forced exposure.** You simply can't remain as self-centered when another human is completely dependent on you. ([source](https://paulgraham.com/kids.html))
+
+> *"Having kids showed me a way of helping people I hadn't seen before. Not just the specific things you do for your own children, but the fact that having kids makes you stop being completely self-centered."*
+
+**Implication:** Parenthood naturally develops empathy and perspective-taking skills that benefit all areas of life. The forced consideration of another person's needs and viewpoint makes you a better leader, teammate, and human. It's leadership training through necessity.
+
+**You can detect obstinacy in yourself by examining whether your continued pursuit of a strategy is based on evidence or on ego. If you'd be embarrassed to change course, that's a sign you're being obstinate rather than persistent.** ([source](https://paulgraham.com/do.html))
+
+> *"The way to distinguish determination from obstinacy is that the determined person is driven by commitment to a goal and flexible about tactics. The obstinate person is driven by a commitment to a particular tactic."*
+
+**Implication:** Check your motivations regularly: are you continuing because the evidence supports it, or because changing course would be embarrassing? Ego-driven persistence is different from evidence-driven persistence. Be honest about which one is driving your decisions.
+
+**The reason people who don't have kids can't understand what it's like is that there's no frame of reference available before you have them. It's not that having kids is better or worse than expected — it's that the experience is qualitatively different from anything else.** ([source](https://paulgraham.com/kids.html))
+
+> *"Before you have kids, you're like someone trying to understand the color blue by having it described in words."*
+
+**Implication:** Some experiences can't be understood intellectually - they must be lived. Founders often face similar discontinuities when scaling from 10 to 100 to 1000 employees. Stop trying to plan for experiences you can't imagine and focus on being adaptable when they arrive.
 
 ---
 
-*213 atoms · 12 clusters · 409 connections · Generated 2026-04-08*
+*213 atoms · 12 clusters · 975 connections · Generated 2026-04-20*
