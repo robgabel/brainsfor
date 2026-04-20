@@ -15,20 +15,20 @@ ROOT_DIR = SCRIPT_DIR.parent
 BRAINS_DIR = ROOT_DIR / "brains"
 TEMPLATES_DIR = ROOT_DIR / "templates"
 
-# --- Models ---
-DEFAULT_MODEL = "claude-sonnet-4-20250514"
-SYNTHESIS_MODEL = "claude-opus-4-20250514"
+# --- Models (canonical — all BrainsFor scripts import from here) ---
+DEFAULT_MODEL = "claude-sonnet-4-6"
+SYNTHESIS_MODEL = "claude-opus-4-7"
 FAST_MODEL = "claude-haiku-4-5-20251001"
 
 # --- Cost per 1K tokens (USD) ---
 COST_INPUT = {
-    "claude-opus-4-20250514": 0.015,
-    "claude-sonnet-4-20250514": 0.003,
+    "claude-opus-4-7": 0.015,
+    "claude-sonnet-4-6": 0.003,
     "claude-haiku-4-5-20251001": 0.0008,
 }
 COST_OUTPUT = {
-    "claude-opus-4-20250514": 0.075,
-    "claude-sonnet-4-20250514": 0.015,
+    "claude-opus-4-7": 0.075,
+    "claude-sonnet-4-6": 0.015,
     "claude-haiku-4-5-20251001": 0.004,
 }
 

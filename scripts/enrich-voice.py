@@ -41,6 +41,10 @@ SCRIPT_DIR = Path(__file__).parent
 ROOT_DIR = SCRIPT_DIR.parent
 BRAINS_DIR = ROOT_DIR / "brains"
 
+# Canonical model strings — source of truth is auto_build_config.py
+sys.path.insert(0, str(SCRIPT_DIR))
+from auto_build_config import FAST_MODEL
+
 # --- Config ---
 SUPABASE_URL = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL", "https://uzediwokyshjbsymevtp.supabase.co")
 _svc = os.environ.get("SUPABASE_SERVICE_KEY", "")
@@ -135,7 +139,7 @@ def fetch_source_content(url: str) -> str:
 def extract_voice(client: anthropic.Anthropic, atom_content: str, source_text: str, prompt: str) -> dict:
     """Use Claude to extract original voice + implication."""
     message = client.messages.create(
-        model="claude-haiku-4-5-20251001",
+        model=FAST_MODEL,
         max_tokens=500,
         messages=[{
             "role": "user",

@@ -37,6 +37,10 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+# Canonical model strings — source of truth is auto_build_config.py
+sys.path.insert(0, str(Path(__file__).parent))
+from auto_build_config import DEFAULT_MODEL
+
 # Optional imports (graceful degradation)
 try:
     from youtube_transcript_api import YouTubeTranscriptApi
@@ -289,7 +293,7 @@ Return ONLY the JSON array, no other text."""
 
     client = anthropic.Anthropic(api_key=api_key)
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model=DEFAULT_MODEL,
         max_tokens=8000,
         messages=[{"role": "user", "content": prompt}]
     )

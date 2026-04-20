@@ -24,7 +24,7 @@ Usage:
     python scripts/generate-atoms-research.py --brain steve-jobs --reference scott-belsky --dry-run
 
     # Use a specific model
-    python scripts/generate-atoms-research.py --brain steve-jobs --reference scott-belsky --model claude-sonnet-4-20250514
+    python scripts/generate-atoms-research.py --brain steve-jobs --reference scott-belsky --model claude-sonnet-4-6
 """
 
 import argparse
@@ -34,6 +34,10 @@ import re
 import sys
 import time
 from pathlib import Path
+
+# Canonical model strings — source of truth is auto_build_config.py
+sys.path.insert(0, str(Path(__file__).parent))
+from auto_build_config import DEFAULT_MODEL
 
 try:
     import anthropic
@@ -87,7 +91,7 @@ def generate_cluster_atoms(
     cluster_info: dict,
     exemplar_atoms: list,
     sources_json: dict,
-    model: str = "claude-sonnet-4-20250514",
+    model: str = DEFAULT_MODEL,
 ) -> list:
     """Generate atoms for a single cluster using Claude."""
     if not HAS_ANTHROPIC:
@@ -210,7 +214,7 @@ def main():
     parser.add_argument("--reference", default="scott-belsky",
                         help="Reference brain slug for exemplar atoms (default: scott-belsky)")
     parser.add_argument("--clusters", nargs="+", help="Specific clusters to generate (default: all)")
-    parser.add_argument("--model", default="claude-sonnet-4-20250514", help="Claude model to use")
+    parser.add_argument("--model", default=DEFAULT_MODEL, help="Claude model to use")
     parser.add_argument("--dry-run", action="store_true", help="Show what would be done")
     parser.add_argument("--atoms-per-cluster", type=int, default=20,
                         help="Target atoms per cluster (guidance, not enforced)")

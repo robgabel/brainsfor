@@ -47,6 +47,10 @@ SCRIPT_DIR = Path(__file__).parent
 ROOT_DIR = SCRIPT_DIR.parent
 BRAINS_DIR = ROOT_DIR / "brains"
 
+# Canonical model strings — source of truth is auto_build_config.py
+sys.path.insert(0, str(SCRIPT_DIR))
+from auto_build_config import FAST_MODEL
+
 # --- Config ---
 SUPABASE_URL = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL", "https://uzediwokyshjbsymevtp.supabase.co")
 
@@ -56,8 +60,8 @@ _anon = os.environ.get("NEXT_PUBLIC_SUPABASE_ANON_KEY", "")
 SUPABASE_KEY = _svc if _svc.count(".") == 2 else _anon
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
-# LLM model — Sonnet for quality contradiction detection
-LLM_MODEL = "claude-3-haiku-20240307"
+# LLM model — Haiku 4.5 for fast, high-quality contradiction/extends detection
+LLM_MODEL = FAST_MODEL
 
 
 def load_brain_config(slug: str) -> dict:

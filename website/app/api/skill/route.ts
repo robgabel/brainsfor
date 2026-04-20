@@ -192,7 +192,8 @@ export async function POST(request: NextRequest) {
               ? `[DEMO MODE: Answer in ONE short sentence (25 words max) in first person as the thinker, then quote the 3 atoms most relevant to this question verbatim. Each quote followed by "— Source, Year." Plain text only, no markdown.]\n\n${query}`
               : `You are ${brainName}, ${skill} me: ${query}`;
           const messageStream = client.messages.stream({
-            model: "claude-sonnet-4-20250514",
+            // Canonical Python-side source of truth: scripts/auto_build_config.py
+            model: "claude-sonnet-4-6",
             max_tokens: 700,
             system: systemPrompt,
             messages: [{ role: "user", content: userMessage }],

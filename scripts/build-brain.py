@@ -26,7 +26,7 @@ Usage:
     python scripts/build-brain.py --brain steve-jobs --dry-run
 
     # Use a specific model for generation
-    python scripts/build-brain.py --brain steve-jobs --model claude-sonnet-4-20250514
+    python scripts/build-brain.py --brain steve-jobs --model claude-sonnet-4-6
 
     # Specify a reference brain for exemplar atoms
     python scripts/build-brain.py --brain steve-jobs --reference scott-belsky
@@ -49,6 +49,10 @@ SCRIPT_DIR = Path(__file__).parent
 ROOT_DIR = SCRIPT_DIR.parent
 BRAINS_DIR = ROOT_DIR / "brains"
 TEMPLATES_DIR = ROOT_DIR / "templates"
+
+# Canonical model strings — source of truth is auto_build_config.py
+sys.path.insert(0, str(SCRIPT_DIR))
+from auto_build_config import DEFAULT_MODEL
 
 # Optional imports
 try:
@@ -953,7 +957,7 @@ Add --youtube for YouTube ingestion, --connections for enrichment
     )
     parser.add_argument("--brain", required=True, help="Brain slug (e.g., steve-jobs)")
     parser.add_argument("--reference", default="scott-belsky", help="Reference brain for exemplars (default: scott-belsky)")
-    parser.add_argument("--model", default="claude-sonnet-4-20250514", help="Claude model for generation")
+    parser.add_argument("--model", default=DEFAULT_MODEL, help="Claude model for generation")
     parser.add_argument("--stages", help="Comma-separated stages to run (default: generate,merge,synthesis,export,index)")
     parser.add_argument("--skip-generate", action="store_true", help="Skip atom generation (use existing research files)")
     parser.add_argument("--youtube", action="store_true", help="Include YouTube transcript ingestion stage")
