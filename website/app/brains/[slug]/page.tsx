@@ -118,7 +118,7 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
 
             <div className="overflow-hidden rounded-xl border border-border-default bg-white shadow-brain-elevated">
               <iframe
-                src={`/brains/${brain.slug}/explore.html`}
+                src={`/brains/${brain.slug}/explore.html?v=${process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 8) ?? "dev"}`}
                 className="h-[700px] w-full border-0"
                 title={`${brain.name} Brain Explorer`}
               />
