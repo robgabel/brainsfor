@@ -440,6 +440,79 @@
       ]
     },
     {
+      "id": "ed3bb46a-a5a4-43da-bd4b-a7a33b850282",
+      "content": "Peter stopped doing prolonged fasts. His thinking on fasting evolved significantly after examining the evidence more carefully, particularly around muscle preservation and the actual vs. theoretical benefits.",
+      "cluster": "nutrition_biochemistry",
+      "topics": [
+        "fasting",
+        "changed mind",
+        "muscle preservation",
+        "evidence"
+      ],
+      "source_ref": "https://peterattiamd.com/peter-faq",
+      "source_date": "2023-10-23",
+      "confidence": 0.8,
+      "confidence_tier": "medium",
+      "original_quote": "Why nutritional research is so challenging, some general principles of nutrition, and why Peter stopped doing prolonged fasts [50:45]",
+      "connections": [
+        {
+          "target_id": "397625e4-f523-4243-9f51-6eb597c47245",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "a1d40418-a999-4dd8-83f5-c04a757ed068",
+          "relationship": "contradicts",
+          "confidence": 0.9
+        },
+        {
+          "target_id": "d1d7084a-29a3-4f9e-a6f6-159c677c2222",
+          "relationship": "extends",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "0f800ef9-9719-4e6d-95d4-8b097c4a048c",
+          "relationship": "inspired_by",
+          "confidence": 0.75
+        },
+        {
+          "target_id": "912637e2-7346-4b29-b02a-ccd1a9b87f2e",
+          "relationship": "inspired_by",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
+          "relationship": "inspired_by",
+          "confidence": 0.85
+        },
+        {
+          "target_id": "77d0dba4-4cb5-4ea8-9608-f429336b81b7",
+          "relationship": "extends",
+          "confidence": 0.88
+        },
+        {
+          "target_id": "d39f6dc5-d4d1-4d6a-8a25-58778e27b296",
+          "relationship": "inspired_by",
+          "confidence": 0.72
+        },
+        {
+          "target_id": "ee76af52-c4bc-45ec-ade4-30dadccddc54",
+          "relationship": "extends",
+          "confidence": 0.75
+        },
+        {
+          "target_id": "17819a7d-0011-42af-9b86-a8e24b5679ad",
+          "relationship": "inspired_by",
+          "confidence": 0.81
+        },
+        {
+          "target_id": "4cd65878-9e5a-4854-be9c-7b2b8186c55b",
+          "relationship": "extends",
+          "confidence": 0.88
+        }
+      ]
+    },
+    {
       "id": "c2e72650-29e7-4c77-b2fe-6ac746b24c70",
       "content": "VO2 max targets should reflect planning for the life you ultimately want to live (backcasting from late-life physical goals) rather than overly aggressive goals. Account for predictable age-related fitness decline.",
       "cluster": "exercise_physiology",
@@ -454,6 +527,8 @@
       "source_date": "2026-03-02",
       "confidence": 0.8,
       "confidence_tier": "high",
+      "original_quote": "VO\u2082 max targets reflect planning for the life you ultimately want to live rather than overly aggressive goals... backcasting from late-life physical goals and planning for predictable age-related fitness decline.",
+      "implication": "Stop chasing arbitrary VO\u2082 max numbers and instead reverse-engineer from the physical capabilities you'll actually need at 80 or 90\u2014then build a sustainable training plan that accounts for the reality that fitness declines with age, so you're not constantly chasing a moving target that biology has already decided against you.",
       "connections": [
         {
           "target_id": "0cbd52cf-8f9b-492b-8500-f9e42bc4d7fe",
@@ -581,78 +656,6 @@
           "target_id": "7aa053c6-1953-4f7b-90b8-11aba93af6f0",
           "relationship": "inspired_by",
           "confidence": 0.81
-        }
-      ]
-    },
-    {
-      "id": "ed3bb46a-a5a4-43da-bd4b-a7a33b850282",
-      "content": "Peter stopped doing prolonged fasts. His thinking on fasting evolved significantly after examining the evidence more carefully, particularly around muscle preservation and the actual vs. theoretical benefits.",
-      "cluster": "nutrition_biochemistry",
-      "topics": [
-        "fasting",
-        "changed mind",
-        "muscle preservation",
-        "evidence"
-      ],
-      "source_ref": "https://peterattiamd.com/peter-faq",
-      "source_date": "2023-10-23",
-      "confidence": 0.8,
-      "confidence_tier": "medium",
-      "connections": [
-        {
-          "target_id": "397625e4-f523-4243-9f51-6eb597c47245",
-          "relationship": "extends",
-          "confidence": 0.65
-        },
-        {
-          "target_id": "a1d40418-a999-4dd8-83f5-c04a757ed068",
-          "relationship": "contradicts",
-          "confidence": 0.9
-        },
-        {
-          "target_id": "d1d7084a-29a3-4f9e-a6f6-159c677c2222",
-          "relationship": "extends",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "0f800ef9-9719-4e6d-95d4-8b097c4a048c",
-          "relationship": "inspired_by",
-          "confidence": 0.75
-        },
-        {
-          "target_id": "912637e2-7346-4b29-b02a-ccd1a9b87f2e",
-          "relationship": "inspired_by",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
-          "relationship": "inspired_by",
-          "confidence": 0.85
-        },
-        {
-          "target_id": "77d0dba4-4cb5-4ea8-9608-f429336b81b7",
-          "relationship": "extends",
-          "confidence": 0.88
-        },
-        {
-          "target_id": "d39f6dc5-d4d1-4d6a-8a25-58778e27b296",
-          "relationship": "inspired_by",
-          "confidence": 0.72
-        },
-        {
-          "target_id": "ee76af52-c4bc-45ec-ade4-30dadccddc54",
-          "relationship": "extends",
-          "confidence": 0.75
-        },
-        {
-          "target_id": "17819a7d-0011-42af-9b86-a8e24b5679ad",
-          "relationship": "inspired_by",
-          "confidence": 0.81
-        },
-        {
-          "target_id": "4cd65878-9e5a-4854-be9c-7b2b8186c55b",
-          "relationship": "extends",
-          "confidence": 0.88
         }
       ]
     },
@@ -1774,123 +1777,6 @@
       ]
     },
     {
-      "id": "fa69e064-e36e-4618-9701-1b0b0c408e32",
-      "content": "Zone 2 training became a big component of Attias exercise regimen after studying the evidence. It is one of the clearest examples of how his thinking evolved through preparing for and conducting podcast interviews.",
-      "cluster": "zone_2_training",
-      "topics": [
-        "zone 2",
-        "training evolution",
-        "evidence-based"
-      ],
-      "source_ref": "https://peterattiamd.com/strong-convictions-loosely-held",
-      "source_date": "2020-04-06",
-      "confidence": 0.8,
-      "confidence_tier": "high",
-      "original_quote": "Zone 2 training\u2014Why Peter has made it a big component of his exercise regimen [37:30]",
-      "implication": "Your exercise strategy should evolve as evidence accumulates\u2014what you thought was peripheral can become foundational once you've actually engaged with the research and heard from experts who understand the mechanism. The willingness to reorganize your practice around better data is what separates reactive health decisions from truly optimized ones.",
-      "connections": [
-        {
-          "target_id": "40e0637e-f2fc-410e-b5b9-3d2a78534dfa",
-          "relationship": "extends",
-          "confidence": 0.65
-        },
-        {
-          "target_id": "33636b29-af93-45b5-bb8e-bc040ce389f1",
-          "relationship": "extends",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "905252a3-cccc-40d7-92ac-6c747861f994",
-          "relationship": "inspired_by",
-          "confidence": 0.75
-        },
-        {
-          "target_id": "ee76af52-c4bc-45ec-ade4-30dadccddc54",
-          "relationship": "inspired_by",
-          "confidence": 0.85
-        },
-        {
-          "target_id": "912637e2-7346-4b29-b02a-ccd1a9b87f2e",
-          "relationship": "inspired_by",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "42afb753-96ce-4f7a-9274-75f6e938eb53",
-          "relationship": "inspired_by",
-          "confidence": 0.75
-        },
-        {
-          "target_id": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
-          "relationship": "inspired_by",
-          "confidence": 0.85
-        },
-        {
-          "target_id": "a897543d-c10c-47a2-803c-d282a64a3962",
-          "relationship": "inspired_by",
-          "confidence": 0.9
-        },
-        {
-          "target_id": "ecef0233-792f-40b3-8b8c-59b9b3de9be5",
-          "relationship": "contradicts",
-          "confidence": 0.78
-        },
-        {
-          "target_id": "186fd179-df42-4e33-9bf7-d4dfd0645e31",
-          "relationship": "extends",
-          "confidence": 0.9
-        },
-        {
-          "target_id": "d438b1b4-2c8e-42b0-ba03-fc11cfd47d72",
-          "relationship": "extends",
-          "confidence": 0.75
-        },
-        {
-          "target_id": "ad3a8cc6-0945-471e-a726-fe1c1a139565",
-          "relationship": "inspired_by",
-          "confidence": 0.92
-        }
-      ]
-    },
-    {
-      "id": "397625e4-f523-4243-9f51-6eb597c47245",
-      "content": "Seed oils in modest quantities: Attia is still waiting for someone to present a convincing case that there is anything wrong with them beyond caloric effects. This is an example of separating dietary quality from ingredient fear.",
-      "cluster": "nutrition_biochemistry",
-      "topics": [
-        "seed oils",
-        "evidence",
-        "dietary fear",
-        "contrarian"
-      ],
-      "source_ref": "https://peterattiamd.com/ama81",
-      "source_date": "2026-03-09",
-      "confidence": 0.8,
-      "confidence_tier": "medium",
-      "original_quote": "If there was anything wrong with seed oils in modest quantities (again beyond the caloric effects of any oil), I'm still waiting for someone to present a convincing case for that.",
-      "implication": "The burden of proof should be on those making the claim, not on you to avoid every ingredient that sounds suspicious\u2014this is how you avoid being trapped by dietary fear-mongering and can actually focus on what matters for your metabolic health.",
-      "connections": [
-        {
-          "target_id": "ed3bb46a-a5a4-43da-bd4b-a7a33b850282",
-          "relationship": "extends",
-          "confidence": 0.65
-        },
-        {
-          "target_id": "a1d40418-a999-4dd8-83f5-c04a757ed068",
-          "relationship": "contradicts",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "911f7683-49be-4e88-9281-8eb41cba7097",
-          "relationship": "extends",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "5c50a1c7-dcbe-4445-b497-86b404a119cb",
-          "relationship": "extends",
-          "confidence": 0.81
-        }
-      ]
-    },
-    {
       "id": "afbdd00d-5e87-4267-a9ee-522d1d018e73",
       "content": "Cancer is extraordinarily difficult to treat with drugs because of its heterogeneity and evolution. Immunotherapy represents the most promising systemic approach, but the long-term hope is combining multiple modalities.",
       "cluster": "cancer_screening",
@@ -1904,6 +1790,8 @@
       "source_date": "2025-05-05",
       "confidence": 0.8,
       "confidence_tier": "medium",
+      "original_quote": "Cancer is so difficult to treat with drugs because of its heterogeneity and evolution. Immunotherapy represents the most promising systemic approach, but the long-term hope is combining multiple modalities.",
+      "implication": "You can't solve cancer with a single mechanism\u2014the disease outsmarps single-agent drugs through its ability to adapt and change. This means the future of cancer care isn't about finding the one magic bullet, but orchestrating combinations of approaches that hit the problem from multiple angles simultaneously.",
       "connections": [
         {
           "target_id": "59d55be7-9b39-4379-8ca4-858f9b2cfef9",
@@ -2018,6 +1906,182 @@
       ]
     },
     {
+      "id": "fa69e064-e36e-4618-9701-1b0b0c408e32",
+      "content": "Zone 2 training became a big component of Attias exercise regimen after studying the evidence. It is one of the clearest examples of how his thinking evolved through preparing for and conducting podcast interviews.",
+      "cluster": "zone_2_training",
+      "topics": [
+        "zone 2",
+        "training evolution",
+        "evidence-based"
+      ],
+      "source_ref": "https://peterattiamd.com/strong-convictions-loosely-held",
+      "source_date": "2020-04-06",
+      "confidence": 0.8,
+      "confidence_tier": "high",
+      "original_quote": "Zone 2 training\u2014Why Peter has made it a big component of his exercise regimen [37:30]",
+      "implication": "Your exercise strategy should evolve as evidence accumulates\u2014what you thought was peripheral can become foundational once you've actually engaged with the research and heard from experts who understand the mechanism. The willingness to reorganize your practice around better data is what separates reactive health decisions from truly optimized ones.",
+      "connections": [
+        {
+          "target_id": "40e0637e-f2fc-410e-b5b9-3d2a78534dfa",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "33636b29-af93-45b5-bb8e-bc040ce389f1",
+          "relationship": "extends",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "905252a3-cccc-40d7-92ac-6c747861f994",
+          "relationship": "inspired_by",
+          "confidence": 0.75
+        },
+        {
+          "target_id": "ee76af52-c4bc-45ec-ade4-30dadccddc54",
+          "relationship": "inspired_by",
+          "confidence": 0.85
+        },
+        {
+          "target_id": "912637e2-7346-4b29-b02a-ccd1a9b87f2e",
+          "relationship": "inspired_by",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "42afb753-96ce-4f7a-9274-75f6e938eb53",
+          "relationship": "inspired_by",
+          "confidence": 0.75
+        },
+        {
+          "target_id": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
+          "relationship": "inspired_by",
+          "confidence": 0.85
+        },
+        {
+          "target_id": "a897543d-c10c-47a2-803c-d282a64a3962",
+          "relationship": "inspired_by",
+          "confidence": 0.9
+        },
+        {
+          "target_id": "ecef0233-792f-40b3-8b8c-59b9b3de9be5",
+          "relationship": "contradicts",
+          "confidence": 0.78
+        },
+        {
+          "target_id": "186fd179-df42-4e33-9bf7-d4dfd0645e31",
+          "relationship": "extends",
+          "confidence": 0.9
+        },
+        {
+          "target_id": "d438b1b4-2c8e-42b0-ba03-fc11cfd47d72",
+          "relationship": "extends",
+          "confidence": 0.75
+        },
+        {
+          "target_id": "ad3a8cc6-0945-471e-a726-fe1c1a139565",
+          "relationship": "inspired_by",
+          "confidence": 0.92
+        }
+      ]
+    },
+    {
+      "id": "716f7cb3-6984-4fa5-a2ef-f5820765eef0",
+      "content": "Gut bacteria balance and probiotics, particularly Akkermansia, represent an emerging area of therapeutic potential. The gut microbiome influences metabolic health, immune function, and possibly longevity.",
+      "cluster": "nutrition_biochemistry",
+      "topics": [
+        "gut health",
+        "probiotics",
+        "Akkermansia",
+        "microbiome"
+      ],
+      "source_ref": "https://peterattiamd.com/qps1",
+      "source_date": "2024-06-03",
+      "confidence": 0.8,
+      "confidence_tier": "medium",
+      "original_quote": "Colleen Cutcliffe episode: the importance of gut bacteria balance, and the potential therapeutic uses of probiotics, particularly Akkermansia",
+      "implication": "Understanding your microbiome composition\u2014and specifically optimizing bacteria like Akkermansia\u2014is a tractable lever you can pull to influence metabolic health and immune function, making gut health a practical focus area within your longevity toolkit rather than an abstract concept.",
+      "connections": [
+        {
+          "target_id": "a1d40418-a999-4dd8-83f5-c04a757ed068",
+          "relationship": "extends",
+          "confidence": 0.9
+        },
+        {
+          "target_id": "33636b29-af93-45b5-bb8e-bc040ce389f1",
+          "relationship": "extends",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "b5bd3daf-7107-47c9-aa5e-959160abee64",
+          "relationship": "extends",
+          "confidence": 0.9
+        },
+        {
+          "target_id": "6b7fd23d-949c-453d-9561-9ed9094d152d",
+          "relationship": "inspired_by",
+          "confidence": 0.75
+        },
+        {
+          "target_id": "82b79650-9b38-49d8-8b39-818c759b6ac2",
+          "relationship": "extends",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "0bbc67d7-f4b4-4b03-bf35-5bbfc222352a",
+          "relationship": "extends",
+          "confidence": 0.79
+        },
+        {
+          "target_id": "42afb753-96ce-4f7a-9274-75f6e938eb53",
+          "relationship": "extends",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "7ee2d482-e15f-41e1-a8f4-8bba6843d362",
+          "relationship": "extends",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "id": "397625e4-f523-4243-9f51-6eb597c47245",
+      "content": "Seed oils in modest quantities: Attia is still waiting for someone to present a convincing case that there is anything wrong with them beyond caloric effects. This is an example of separating dietary quality from ingredient fear.",
+      "cluster": "nutrition_biochemistry",
+      "topics": [
+        "seed oils",
+        "evidence",
+        "dietary fear",
+        "contrarian"
+      ],
+      "source_ref": "https://peterattiamd.com/ama81",
+      "source_date": "2026-03-09",
+      "confidence": 0.8,
+      "confidence_tier": "medium",
+      "original_quote": "If there was anything wrong with seed oils in modest quantities (again beyond the caloric effects of any oil), I'm still waiting for someone to present a convincing case for that.",
+      "implication": "The burden of proof should be on those making the claim, not on you to avoid every ingredient that sounds suspicious\u2014this is how you avoid being trapped by dietary fear-mongering and can actually focus on what matters for your metabolic health.",
+      "connections": [
+        {
+          "target_id": "ed3bb46a-a5a4-43da-bd4b-a7a33b850282",
+          "relationship": "extends",
+          "confidence": 0.65
+        },
+        {
+          "target_id": "a1d40418-a999-4dd8-83f5-c04a757ed068",
+          "relationship": "contradicts",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "911f7683-49be-4e88-9281-8eb41cba7097",
+          "relationship": "extends",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "5c50a1c7-dcbe-4445-b497-86b404a119cb",
+          "relationship": "extends",
+          "confidence": 0.81
+        }
+      ]
+    },
+    {
       "id": "86817166-8234-46ec-8ad5-b0d3a6f2a701",
       "content": "Bone mineral density can be improved through resistance training at any age. This is critical for older adults as osteoporosis dramatically increases fracture risk and cascading decline.",
       "cluster": "muscle_strength",
@@ -2061,63 +2125,6 @@
           "target_id": "40e0637e-f2fc-410e-b5b9-3d2a78534dfa",
           "relationship": "inspired_by",
           "confidence": 0.78
-        }
-      ]
-    },
-    {
-      "id": "716f7cb3-6984-4fa5-a2ef-f5820765eef0",
-      "content": "Gut bacteria balance and probiotics, particularly Akkermansia, represent an emerging area of therapeutic potential. The gut microbiome influences metabolic health, immune function, and possibly longevity.",
-      "cluster": "nutrition_biochemistry",
-      "topics": [
-        "gut health",
-        "probiotics",
-        "Akkermansia",
-        "microbiome"
-      ],
-      "source_ref": "https://peterattiamd.com/qps1",
-      "source_date": "2024-06-03",
-      "confidence": 0.8,
-      "confidence_tier": "medium",
-      "connections": [
-        {
-          "target_id": "a1d40418-a999-4dd8-83f5-c04a757ed068",
-          "relationship": "extends",
-          "confidence": 0.9
-        },
-        {
-          "target_id": "33636b29-af93-45b5-bb8e-bc040ce389f1",
-          "relationship": "extends",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "b5bd3daf-7107-47c9-aa5e-959160abee64",
-          "relationship": "extends",
-          "confidence": 0.9
-        },
-        {
-          "target_id": "6b7fd23d-949c-453d-9561-9ed9094d152d",
-          "relationship": "inspired_by",
-          "confidence": 0.75
-        },
-        {
-          "target_id": "82b79650-9b38-49d8-8b39-818c759b6ac2",
-          "relationship": "extends",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "0bbc67d7-f4b4-4b03-bf35-5bbfc222352a",
-          "relationship": "extends",
-          "confidence": 0.79
-        },
-        {
-          "target_id": "42afb753-96ce-4f7a-9274-75f6e938eb53",
-          "relationship": "extends",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "7ee2d482-e15f-41e1-a8f4-8bba6843d362",
-          "relationship": "extends",
-          "confidence": 0.75
         }
       ]
     },
@@ -4102,6 +4109,61 @@
       ]
     },
     {
+      "id": "6461db8e-d42a-40f0-b46b-24a185bad0ce",
+      "content": "AI has the potential to improve medicine through advancements in drug development, biomarker discovery, and training models on private clinical data. The intersection of AI and medicine is one of the most exciting areas of development.",
+      "cluster": "medicine_3_0",
+      "topics": [
+        "AI",
+        "medicine",
+        "drug development",
+        "biomarkers",
+        "clinical data"
+      ],
+      "source_ref": "https://peterattiamd.com/qps5",
+      "source_date": "2025-05-05",
+      "confidence": 0.8,
+      "confidence_tier": "medium",
+      "original_quote": "AI is revolutionizing medicine through advancements in drug development, biomarker discovery, and the potential of training models on private clinical data.",
+      "implication": "The convergence of AI and medicine represents one of the highest-leverage opportunities to accelerate drug development and improve diagnostic precision\u2014but only if we can solve the data problem by training these models on real clinical data, not just academic datasets.",
+      "connections": [
+        {
+          "target_id": "f748d0e8-3d12-4fa8-9599-7383a273bc21",
+          "relationship": "extends",
+          "confidence": 0.9
+        },
+        {
+          "target_id": "d1d7084a-29a3-4f9e-a6f6-159c677c2222",
+          "relationship": "inspired_by",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "afbdd00d-5e87-4267-a9ee-522d1d018e73",
+          "relationship": "extends",
+          "confidence": 0.85
+        },
+        {
+          "target_id": "b5bd3daf-7107-47c9-aa5e-959160abee64",
+          "relationship": "extends",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "83b874e7-b031-4718-9570-8670dc219dc5",
+          "relationship": "contradicts",
+          "confidence": 0.85
+        },
+        {
+          "target_id": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
+          "relationship": "contradicts",
+          "confidence": 0.75
+        },
+        {
+          "target_id": "a6a4c2b9-f895-4a42-ba52-27a6f868b0f9",
+          "relationship": "contradicts",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
       "id": "ee392547-a99b-4087-81ea-25b34f90cf55",
       "content": "Longevity means maximizing both the length of life (lifespan) and the quality of life (healthspan). Healthspan breaks into three components: physical capability, cognitive sharpness, and emotional wellbeing including purpose and social connection.",
       "cluster": "lifespan_management",
@@ -4534,59 +4596,6 @@
           "target_id": "42afb753-96ce-4f7a-9274-75f6e938eb53",
           "relationship": "extends",
           "confidence": 0.92
-        }
-      ]
-    },
-    {
-      "id": "6461db8e-d42a-40f0-b46b-24a185bad0ce",
-      "content": "AI has the potential to improve medicine through advancements in drug development, biomarker discovery, and training models on private clinical data. The intersection of AI and medicine is one of the most exciting areas of development.",
-      "cluster": "medicine_3_0",
-      "topics": [
-        "AI",
-        "medicine",
-        "drug development",
-        "biomarkers",
-        "clinical data"
-      ],
-      "source_ref": "https://peterattiamd.com/qps5",
-      "source_date": "2025-05-05",
-      "confidence": 0.8,
-      "confidence_tier": "medium",
-      "connections": [
-        {
-          "target_id": "f748d0e8-3d12-4fa8-9599-7383a273bc21",
-          "relationship": "extends",
-          "confidence": 0.9
-        },
-        {
-          "target_id": "d1d7084a-29a3-4f9e-a6f6-159c677c2222",
-          "relationship": "inspired_by",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "afbdd00d-5e87-4267-a9ee-522d1d018e73",
-          "relationship": "extends",
-          "confidence": 0.85
-        },
-        {
-          "target_id": "b5bd3daf-7107-47c9-aa5e-959160abee64",
-          "relationship": "extends",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "83b874e7-b031-4718-9570-8670dc219dc5",
-          "relationship": "contradicts",
-          "confidence": 0.85
-        },
-        {
-          "target_id": "3f499aaf-d8b2-465b-a6c7-155f31e7d4b5",
-          "relationship": "contradicts",
-          "confidence": 0.75
-        },
-        {
-          "target_id": "a6a4c2b9-f895-4a42-ba52-27a6f868b0f9",
-          "relationship": "contradicts",
-          "confidence": 0.8
         }
       ]
     },
@@ -7246,54 +7255,6 @@
       ]
     },
     {
-      "id": "75ce31ac-2cbb-4663-96bc-b26c193c9cee",
-      "content": "Omega-3 fatty acids (EPA and DHA) \u2014 Attias long-held views changed after deeper examination. His positions on many supplements evolved through rigorous evidence review, not ideology.",
-      "cluster": "cardiovascular_health",
-      "topics": [
-        "omega-3",
-        "EPA",
-        "DHA",
-        "changed mind",
-        "supplements"
-      ],
-      "source_ref": "https://peterattiamd.com/strong-convictions-loosely-held",
-      "source_date": "2020-04-06",
-      "confidence": 0.8,
-      "confidence_tier": "medium",
-      "connections": [
-        {
-          "target_id": "b99301cc-e6b7-4df3-b441-4e7cb6a5e917",
-          "relationship": "contradicts",
-          "confidence": 0.8
-        },
-        {
-          "target_id": "912637e2-7346-4b29-b02a-ccd1a9b87f2e",
-          "relationship": "extends",
-          "confidence": 0.9
-        },
-        {
-          "target_id": "c1411b65-9613-4452-a004-fe1c4b15d038",
-          "relationship": "contradicts",
-          "confidence": 0.9
-        },
-        {
-          "target_id": "ef2ecbb7-e9c4-4ad5-aa2b-cca7d4e7e394",
-          "relationship": "extends",
-          "confidence": 0.78
-        },
-        {
-          "target_id": "911f7683-49be-4e88-9281-8eb41cba7097",
-          "relationship": "inspired_by",
-          "confidence": 0.73
-        },
-        {
-          "target_id": "c71b0005-895e-4f79-8edb-f5c75330479e",
-          "relationship": "inspired_by",
-          "confidence": 0.89
-        }
-      ]
-    },
-    {
       "id": "b5bd3daf-7107-47c9-aa5e-959160abee64",
       "content": "Klotho is a potential therapy for improving cognitive function and combating aging-related cognitive decline. It represents one of the more interesting emerging interventions in the longevity space.",
       "cluster": "cognitive_decline",
@@ -7307,6 +7268,7 @@
       "source_date": "2025-03-31",
       "confidence": 0.8,
       "confidence_tier": "medium",
+      "original_quote": "The potential of klotho as a therapy for improving cognitive function and combating aging-related cognitive decline",
       "connections": [
         {
           "target_id": "23f55155-e82d-46f9-85e4-b28d2ed050cb",
@@ -7416,6 +7378,77 @@
       ]
     },
     {
+      "id": "75ce31ac-2cbb-4663-96bc-b26c193c9cee",
+      "content": "Omega-3 fatty acids (EPA and DHA) \u2014 Attias long-held views changed after deeper examination. His positions on many supplements evolved through rigorous evidence review, not ideology.",
+      "cluster": "cardiovascular_health",
+      "topics": [
+        "omega-3",
+        "EPA",
+        "DHA",
+        "changed mind",
+        "supplements"
+      ],
+      "source_ref": "https://peterattiamd.com/strong-convictions-loosely-held",
+      "source_date": "2020-04-06",
+      "confidence": 0.8,
+      "confidence_tier": "medium",
+      "connections": [
+        {
+          "target_id": "b99301cc-e6b7-4df3-b441-4e7cb6a5e917",
+          "relationship": "contradicts",
+          "confidence": 0.8
+        },
+        {
+          "target_id": "912637e2-7346-4b29-b02a-ccd1a9b87f2e",
+          "relationship": "extends",
+          "confidence": 0.9
+        },
+        {
+          "target_id": "c1411b65-9613-4452-a004-fe1c4b15d038",
+          "relationship": "contradicts",
+          "confidence": 0.9
+        },
+        {
+          "target_id": "ef2ecbb7-e9c4-4ad5-aa2b-cca7d4e7e394",
+          "relationship": "extends",
+          "confidence": 0.78
+        },
+        {
+          "target_id": "911f7683-49be-4e88-9281-8eb41cba7097",
+          "relationship": "inspired_by",
+          "confidence": 0.73
+        },
+        {
+          "target_id": "c71b0005-895e-4f79-8edb-f5c75330479e",
+          "relationship": "inspired_by",
+          "confidence": 0.89
+        }
+      ]
+    },
+    {
+      "id": "b176d94e-d1b0-44e1-91be-96f2b53137f2",
+      "content": "Blue Zones are under scrutiny: statistical outliers, data reliability concerns, genetics, and the difficulty of separating longevity correlation from causation. Attia does not put much stock in them.",
+      "cluster": "lifespan_management",
+      "topics": [
+        "blue zones",
+        "skepticism",
+        "data reliability",
+        "correlation vs causation"
+      ],
+      "source_ref": "https://peterattiamd.com/ama81",
+      "source_date": "2026-03-09",
+      "confidence": 0.8,
+      "confidence_tier": "medium",
+      "original_quote": "explains why he doesn't put much stock in \"blue zones,\"",
+      "connections": [
+        {
+          "target_id": "790a408a-03c5-4cf5-80b9-4c9081c38e81",
+          "relationship": "contradicts",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
       "id": "25ea656b-c3c1-4086-9289-edcdc8202cda",
       "content": "Toe strength matters for longevity. Dedicated foot training, lower leg strength, and ankle mobility are critical for fall prevention and maintaining independence. This insight came from podiatrist Courtney Conley.",
       "cluster": "exercise_physiology",
@@ -7434,28 +7467,6 @@
           "target_id": "c74075b1-fded-44b9-8bf4-f08836d992f7",
           "relationship": "extends",
           "confidence": 0.85
-        }
-      ]
-    },
-    {
-      "id": "b176d94e-d1b0-44e1-91be-96f2b53137f2",
-      "content": "Blue Zones are under scrutiny: statistical outliers, data reliability concerns, genetics, and the difficulty of separating longevity correlation from causation. Attia does not put much stock in them.",
-      "cluster": "lifespan_management",
-      "topics": [
-        "blue zones",
-        "skepticism",
-        "data reliability",
-        "correlation vs causation"
-      ],
-      "source_ref": "https://peterattiamd.com/ama81",
-      "source_date": "2026-03-09",
-      "confidence": 0.8,
-      "confidence_tier": "medium",
-      "connections": [
-        {
-          "target_id": "790a408a-03c5-4cf5-80b9-4c9081c38e81",
-          "relationship": "contradicts",
-          "confidence": 0.9
         }
       ]
     },

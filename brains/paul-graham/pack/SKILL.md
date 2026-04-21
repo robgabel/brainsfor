@@ -10,7 +10,7 @@ Welcome to the **Graham Brain Pack** from [brainsforfree.com](https://brainsforf
 ## What You're Getting
 
 - **213 knowledge atoms** — Core insights, frameworks, and strategic principles from 220+ essays spanning 2001-2025, plus interviews, talks, and tweets
-- **409 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **975 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — startups, programming, writing, wealth, taste, ambition, fundraising, hackers, ideas, growth, education, design, and more
 
