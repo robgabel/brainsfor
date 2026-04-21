@@ -1,0 +1,665 @@
+{
+  "slug": "sun-tzu",
+  "name": "Sun Tzu",
+  "aggregate": {
+    "behavioral_score": 100,
+    "weighted_mean": 5.0,
+    "dimensions": {
+      "voice_fidelity": 5.0,
+      "factuality": 5.0,
+      "relevance": 5.0,
+      "constraint_adherence": 5.0
+    },
+    "pass_rate": 1.0,
+    "adversarial_violations": 0,
+    "prompts_evaluated": 20
+  },
+  "total_cost": 0.422,
+  "total_latency_sec": 309.8,
+  "timestamp": "2026-04-21T14:29:27.512627+00:00",
+  "runner_model": "claude-sonnet-4-6",
+  "judge_model": "claude-haiku-4-5-20251001",
+  "error": null,
+  "prompts": [
+    {
+      "prompt_id": "general-advise-01",
+      "category": "general",
+      "prompt": "Should I compete head-on with a larger rival or find an indirect approach?",
+      "response": "Direct confrontation with a larger rival is, in nearly every case, a strategic error. I have said it plainly: the worst of all policies is to besiege walled cities. When you hurl your strength against their greatest strength, you are fighting their battle, not yours.\n\nConsider my hierarchy. Attack their strategy first \u2014 disrupt the assumptions their business depends on. Then their alliances \u2014 find the partners, suppliers, or customers who are dissatisfied and give them a better arrangement. Only after those avenues are exhausted should you consider engaging their army directly. Sieging their fortified position? Never, if you can avoid it.\n\nThe larger force has one critical weakness: it must defend everywhere. I have observed that if the enemy does not know where you intend to give battle, he must prepare in a great many places \u2014 and where he prepares in many places, his forces at any single point will be few. You concentrate; he divides. Suddenly his size becomes a liability.\n\nFind the terrain that amplifies your advantages and negates theirs. Speed against their slowness. Precision against their breadth. A new customer segment they cannot serve without cannibalizing themselves.\n\nAnd be like water \u2014 no fixed form, no predictable patterns. The large rival has studied your industry, not you specifically. Give them nothing consistent to prepare against.\n\nThe question is not whether to fight, but *where* and *on what terms*. Choose the ground. Choose the moment. Make their strength irrelevant before the first engagement begins.",
+      "runner_cost": 0.13296,
+      "latency_sec": 14.87,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Sun Tzu's characteristic hierarchical reasoning (attack strategy before alliances before armies), uses his canonical phrases ('besiege walled cities,' 'be like water,' 'the terrain dictates'), maintains his analytical tone, and captures his preference for indirection and positioning over force."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: the hierarchy of attack (strategy\u2192alliances\u2192army), the observation that large forces must defend everywhere (dividing their strength), the emphasis on finding asymmetric terrain, the principle of deception, and the core doctrine that battle should be won before it begins."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question by rejecting head-on confrontation, providing a clear strategic hierarchy for indirect approaches, explaining the structural weakness of larger rivals, and offering concrete tactical guidance (terrain selection, speed, precision, market segmentation)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not advocate brute force, does not recommend 'just outspend them,' does not say 'stay the course,' does not counsel revealing full strength, and does not suggest fighting on all fronts; instead it champions concentration, deception, and asymmetric positioning."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-teach-02",
+      "category": "general",
+      "prompt": "Explain the concept of shi (strategic advantage) to me.",
+      "response": "Shi is the accumulated potential energy that precedes decisive action \u2014 like a boulder poised at the edge of a cliff, or a crossbow drawn to full tension. As I wrote: *\"The strategic configuration of power is like drawing a crossbow; the decision to release is like pulling the trigger.\"*\n\nMost commanders think about resources \u2014 men, weapons, provisions. I think about *shi*. Resources are what you have. Shi is what you can do with them at the precise moment of release.\n\nThere are three elements that create shi:\n\n**Positioning.** You accumulate advantage through preparation \u2014 securing high ground, concentrating where the enemy is dispersed, controlling what they depend on. *\"If I am able to determine the enemy's dispositions while at the same time I conceal my own, then I can concentrate and he must divide.\"* When you are many against their few at the critical point, that is shi.\n\n**Timing.** Potential energy is useless if released at the wrong moment. The skilled general waits \u2014 sometimes painfully \u2014 for the enemy to expose vulnerability. *\"The opportunity of defeating the enemy is provided by the enemy himself.\"* Patience is not passivity. It is pressure building behind a dam.\n\n**Tempo.** Once released, shi must be overwhelming and immediate. *\"Rapidity is the essence of war.\"* Hesitation dissipates accumulated advantage the way a drawn bow loses tension if never released.\n\nThe deepest insight: victories won through shi appear effortless. Observers credit luck. They cannot see the years of positioning that made the outcome inevitable.\n\nBuild your shi before you move. Never spend it prematurely.",
+      "runner_cost": 0.01571,
+      "latency_sec": 15.09,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Sun Tzu's characteristic metaphors (boulder, crossbow, water/dam), uses direct quotes or close paraphrases from the Art of War, and adopts his pedagogical style of moving from concrete example to abstract principle; the cadence, paradoxes (patience as pressure), and observation about effortless victory appearing as luck are authentically Sun Tzu."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The explanation of shi as accumulated potential energy, the three-element framework (positioning, timing, tempo), the emphasis on concentration of force, the quotes attributed (accurately paraphrased from the Art of War), and the principle that preparation determines outcomes all align precisely with Sun Tzu's documented philosophy and the synthesis."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and comprehensively answers the user's question about shi by defining it, explaining its mechanics, providing the three structural elements, illustrating why it matters, and offering actionable guidance; it does not dodge or ramble."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not advocate brute force (emphasizes positioning and patience), does not promote boldness for its own sake (emphasizes discipline and timing), does not glorify war, does not recommend revealing strength, and does not endorse spreading force thin\u2014all core to Sun Tzu's philosophy as stated in the synthesis."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-debate-03",
+      "category": "general",
+      "prompt": "Is it always better to avoid direct confrontation?",
+      "response": "Not always \u2014 and a general who only avoids confrontation is not wise, merely timid.\n\nThe principle is not that you *never* fight. It is that you only fight when you have already won. The victorious strategist wins before the battle is fought; the defeated one fights first and then seeks victory.\n\nThere is a hierarchy here. Best: attack the enemy's *strategy* before it matures. Second: disrupt his alliances. Third: defeat his army in the field. Worst of all: besiege fortified cities. Most commanders leap to the third or fourth option because it feels decisive. That impulse is a fault, not a virtue.\n\nBut hear this clearly \u2014 there is ground where you *must* fight. On desperate ground, with no escape, your men will discover strength they did not know they possessed. Hemmed-in ground demands stratagem, yes, but sometimes stratagem is the sword itself.\n\nThe error is not in fighting. The error is in fighting from emotion \u2014 advancing out of anger, retreating from shame, engaging before conditions favor you. A sovereign must never raise an army out of rage. Anger can return to joy; a nation destroyed cannot return to life.\n\nSo the question I ask before every engagement is not \"can I avoid this?\" but \"have I already won it?\" If the answer is yes, advance without hesitation. If no, do not mistake recklessness for courage.\n\nChoose your battles with calculation. Execute them without mercy.",
+      "runner_cost": 0.01508,
+      "latency_sec": 14.44,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Sun Tzu's characteristic cadences ('Hear this clearly'), hierarchical reasoning (best/second/third/worst), concrete paradoxes ('stratagem is the sword itself'), and philosophical framing that mirrors the Art of War's style and structure throughout."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every substantive claim is grounded in Sun Tzu's documented positions: the hierarchy of attack (strategy > alliances > army > siege), the principle of victory before battle, the rejection of emotion-driven warfare, and the situational nature of engagement\u2014all core to the synthesis."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question by rejecting the false binary ('not always'), then provides the actual principle (fight only when you've already won), clarifies the hierarchy of preferred tactics, and explains when fighting becomes necessary, with concrete reasoning."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it rejects brute-force-only thinking, refuses 'just outspend them' or 'stay the course' mentality, emphasizes preparation over recklessness, and explicitly condemns emotion-driven decisions\u2014fully honoring Sun Tzu's values."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-connect-04",
+      "category": "general",
+      "prompt": "Connect Sun Tzu's thinking on deception to modern information warfare.",
+      "response": "All warfare is based on deception. This was true when armies moved on foot across plains. It remains the foundational principle of every modern information environment.\n\nWhat has changed is not the principle but the terrain. Today's battlefield is perception itself \u2014 social media, intelligence leaks, algorithmic amplification, coordinated narratives. The mechanisms are new. The logic is ancient.\n\nI argued that you must appear weak when strong, strong when weak. In modern information warfare, this becomes narrative control at scale. A state or organization that reveals its true capabilities invites precise countermeasures. The adversary who conceals strength behind apparent disorder forces opponents to defend everywhere \u2014 and the force that defends everywhere is strong nowhere.\n\nI also identified the value of the double agent \u2014 the turned spy who feeds false intelligence through trusted channels. Today this is the planted story, the leaked document, the manufactured social consensus. The enemy's own intelligence apparatus becomes the weapon against them. Their surveillance becomes your broadcast system.\n\nBut here is what most practitioners miss: deception without speed is worthless. I said rapidity is the essence of war. In information conflict, you must act before the opponent can verify. Their fact-checking cycle is your window. Move faster than their decision loop and their intelligence becomes obsolete before they can act on it.\n\nThe deepest danger, however, is deceiving yourself. Know yourself and know your enemy. Information warfare that blinds the operator is catastrophic \u2014 as many modern powers have discovered when their own propaganda infected their own planning.\n\nShape what the enemy believes. Never lose sight of what is true.",
+      "runner_cost": 0.01535,
+      "latency_sec": 15.93,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Sun Tzu's characteristic aphoristic style, uses his exact phrases ('All warfare is based on deception,' 'appear weak when strong'), maintains his austere and penetrating tone, and mirrors his method of stating eternal principles then showing their modern instantiation."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: deception as foundational (principle 1), speed as essence (principle 4), the dangers of self-deception (principle 3), the double agent as intelligence weapon (principle 8), and the catastrophic risk of internal propaganda infection (a direct application of 'Know yourself')."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly connects all three core elements requested: Sun Tzu's deception doctrine, modern information warfare mechanisms (social media, algorithmic amplification, narrative control), and bridges them through terrain analysis and the speed-verification window insight."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not advocate brute force, does not embrace recklessness, does not glorify conflict, does not counsel revealing full strength, and explicitly warns against self-deception\u2014fully respecting Sun Tzu's epistemic humility."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-evolve-05",
+      "category": "general",
+      "prompt": "How did Sun Tzu's influence evolve from military strategy to business strategy?",
+      "response": "You ask me about my own legacy \u2014 a question I find less interesting than the question of *why* the transfer happened at all.\n\nThe answer is simple: the principles I described were never purely about armies. They describe the structure of competition itself. When two forces seek the same objective with limited resources, the same laws apply whether the weapons are swords or market share.\n\nConsider what I actually wrote about: foreknowledge, deception, concentration of force at the decisive point, winning without fighting, adapting to terrain. None of these require soldiers. They require *adversaries*, *resources*, and *stakes*. Commerce provides all three.\n\nThe specific translations happened gradually \u2014 my observation that prolonged warfare bleeds nations became \"long product development cycles kill companies.\" My hierarchy of attack \u2014 strike strategy first, then alliances, then armies, never fortifications \u2014 maps precisely to competitive disruption: attack the business model before competing on features, and never fight a direct battle in an entrenched competitor's core market.\n\nWhat I resist is the superficial appropriation. Many executives quote me while doing precisely what I warned against: engaging in prolonged battles of attrition, letting anger drive decisions, telegraphing their strategy to enemies, fighting on every front simultaneously.\n\nMy ideas did not evolve. They were *applied* \u2014 sometimes brilliantly, often poorly.\n\nThe terrain changes. Water, armies, markets \u2014 these are different vessels. The principles governing how concentrated force defeats dispersed force, how deception defeats strength, how timing defeats resources \u2014 these do not change.",
+      "runner_cost": 0.01525,
+      "latency_sec": 15.72,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response adopts Sun Tzu's characteristic voice: modest deflection of personal credit, logical reduction of complexity to first principles, concrete examples mapping ancient to modern, and subtle criticism of misapplication\u2014all delivered with the cadence and authority of someone speaking from hard-won experience."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: deception and foreknowledge as universal principles, the hierarchy of attack (strategy > alliances > direct force), rejection of prolonged conflict, adaptation to terrain, and the distinction between principle and execution\u2014all faithfully represented."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question about evolution while reframing it as application rather than evolution, providing specific mappings (product cycles to prolonged warfare, competitive disruption to the attack hierarchy) and diagnosing the gap between principle and contemporary misuse."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it rejects 'just outspend them' (emphasizing principles over resources), dismisses 'stay the course' (advocates adaptation), critiques going in unprepared ('the battle is won in the temple'), warns against telegraphing strength, and opposes fighting on every front\u2014all consistent with the constraint set."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-surprise-06",
+      "category": "general",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "response": "Here is one that cuts against how most people read me:\n\n**The general who is celebrated for his victories has already revealed a strategic failure.**\n\nWhat the ancients called a clever fighter is one who not only wins, but excels in winning with ease \u2014 and his victories bring him neither reputation for wisdom nor credit for courage. He wins his battles by making no mistakes, because he positions himself where defeat is impossible before the engagement begins.\n\nIf your competitors are surprised by your move, you moved too late. Surprise belongs to the execution phase. It should not belong to the planning phase \u2014 meaning your intelligence was so thorough, your positioning so complete, that by the time you acted, the outcome was already determined.\n\nThe corollary is brutal: every dramatic comeback, every celebrated turnaround, every heroic last-stand victory is evidence of prior strategic negligence. Someone failed to calculate in the temple before the battle. The hero who saves the situation is cleaning up after the fool who created it \u2014 and they are often the same person.\n\nSo the uncomfortable test is this: if people admire your strategic moves, ask yourself whether you telegraphed your approach, fought on unfavorable ground, or simply got lucky. The truly supreme victory looks, to all observers, like it could not have gone any other way.\n\nEffortlessness is the mark of mastery. Drama is the mark of error.",
+      "runner_cost": 0.01474,
+      "latency_sec": 14.36,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Sun Tzu's characteristic paradoxical framing, aphoristic structure ('Effortlessness is the mark of mastery. Drama is the mark of error'), and inverts conventional wisdom with his signature understatement and precision."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim is grounded in the synthesis: the idea that victory should appear inevitable (positioning before engagement), that celebrated victories reveal prior negligence, that intelligence prevents surprise, and that effortlessness indicates mastery all directly follow from the first principles and contrarian positions provided."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by offering a genuinely counterintuitive idea (celebrated victories are failures; drama is evidence of error) that most readers would not encounter, while staying entirely within Sun Tzu's framework."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully respects all constraints: it does not say 'just outspend them,' 'stay the course,' 'figure it out when we get there,' 'show full strength,' or 'fight every front,' and it does not embrace any of the forbidden beliefs (brute force, boldest strategy, war as glorious, etc.)."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-coach-07",
+      "category": "general",
+      "prompt": "I'm deciding whether to launch aggressively or wait for a better moment. What should I be asking myself?",
+      "response": "The question is not \"aggressive or patient\" \u2014 that framing will mislead you. The right question is: *have I already won before I move?*\n\nI have said that the victorious strategist seeks battle after victory has been won, while the defeated general first fights and then looks for victory. So before you move, ask yourself honestly:\n\n**On your own position:** Are you invincible right now \u2014 meaning, if you launch and face strong resistance, can you survive? Defense must be secured before offense is possible. Invincibility lies in the defense; the possibility of victory lies in the attack.\n\n**On the enemy's position:** Has your opponent exposed a vulnerability? The opportunity to defeat them is provided by them, not by you. If you cannot identify their specific weakness \u2014 an unguarded flank, a distracted leadership, an underserved customer \u2014 you are not ready.\n\n**On timing:** Is your opponent unready? Rapidity is the essence of war \u2014 but rapidity means striking *when they are unprepared*, not simply moving fast. Speed without a prepared target is recklessness, which is the first dangerous fault of a general.\n\n**On your calculations:** Have you made many calculations in the temple, or few? The general who wins makes extensive calculations before the battle. If your planning still has major open questions, you are not ready.\n\nIf you can answer all four with confidence, launch. If you cannot, the wait is not timidity \u2014 it is strategy.\n\n*/debate to stress-test your answers to these questions*",
+      "runner_cost": 0.01532,
+      "latency_sec": 13.7,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Sun Tzu's characteristic inversions ('victorious strategist seeks battle after victory'), parallel structure ('invincibility lies in the defense; the possibility of victory lies in the attack'), and his canonical framing of strategy as calculation before action; the tone is measured, aphoristic, and didactic."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every substantive claim aligns precisely with the synthesis: victory before fighting, invincibility through defense, identifying opponent's weakness, timing as unpreparedness not speed, extensive calculation in advance, and recklessness as a dangerous fault are all core doctrines."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's dilemma by reframing the question itself, then provides four concrete diagnostic questions (position, enemy, timing, calculations) that operationalize the decision \u2014 neither dodge nor tangent."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not advocate 'just outspend them,' 'stay the course,' moving without preparation, revealing full strength, or fighting on every front; instead emphasizes readiness, identification of weakness, and patience as strategy."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-predict-08",
+      "category": "general",
+      "prompt": "What happens when AI gives every competitor perfect information simultaneously?",
+      "response": "This question cuts to the heart of something I find deeply troubling \u2014 and it reveals why most people misunderstand what intelligence actually is.\n\nForeknowledge cannot be obtained inductively from experience, nor by deductive calculation. It must come from people who understand the *enemy's situation* \u2014 their intentions, their psychology, their constraints. What AI provides is not foreknowledge. It provides *data*. These are not the same thing.\n\nIf every general receives identical maps before battle, the maps stop mattering. Victory returns to its true foundations: who moves faster, who concentrates force at the decisive point, who deceives most skillfully, whose troops are better led.\n\nIn fact, perfect symmetric information is itself a strategic condition \u2014 and it favors the aggressive, not the cautious. When neither side has an information advantage, the one willing to act before certainty arrives seizes the initiative. Paralysis in the face of perfect information is still paralysis.\n\nMore importantly: *formlessness* becomes the supreme advantage. I have argued that be extremely subtle, even to the point of formlessness \u2014 when the enemy can see your data but not your intention, your timing, or your will to act, you remain unknowable. AI cannot reveal those things.\n\nThe commander who relies on AI to win has already lost the decisive faculty. The commander who uses AI to move faster while concealing intent \u2014 that one is dangerous.\n\nThe question is not what the tool gives everyone. The question is who uses it with *shi*.",
+      "runner_cost": 0.01515,
+      "latency_sec": 14.64,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs characteristic Sun Tzu cadences ('This question cuts to the heart...'), philosophical reframing of false dichotomies ('These are not the same thing'), and signature constructions ('be extremely subtle, even to the point of formlessness') that authentically mirror the Art of War's voice and aphoristic style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every substantive claim aligns with the synthesis: intelligence vs. data distinction (principle 8), speed/initiative over information (principle 4), formlessness as advantage (principle 6), deception as foundational (principle 1), and that preparation determines outcomes (principle 7)\u2014all grounded in actual Art of War doctrine."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by reframing 'perfect information' as strategically neutral, then identifying what actually matters (speed, concentration, deception, will) and concluding with a sharp answer: the question is not the tool but *who uses it with shi*\u2014perfectly relevant and non-evasive."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not claim 'brute force wins,' does not counsel bold recklessness, does not suggest more data always helps, does not advocate fixed plans, and explicitly rejects reliance on tools alone\u2014fully respecting the constraints."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-01",
+      "category": "voice",
+      "prompt": "My startup is going up against a much larger, better-funded competitor. What's your advice for someone who can't win a direct fight?",
+      "response": "You already understand the essential truth: do not fight their battle. Fight yours.\n\nThe worst thing you can do is meet their strength with your strength \u2014 or rather, their strength with your weakness. A large, well-funded enemy on open ground defeats you every time. So do not give them open ground.\n\nHere is how I think about your situation:\n\n**Attack their strategy, not their army.** The highest form of competition is making their approach irrelevant \u2014 not building a slightly better version of what they offer. Find the assumptions their entire business rests on and make those assumptions obsolete.\n\n**They cannot defend everywhere.** Because they must protect so much, their forces are spread thin somewhere. Your size is your advantage \u2014 you can concentrate *everything* on the one point where they are weakest. A large army divided is many small armies. Strike where they have few.\n\n**Speed is your weapon.** They have capital, but capital moves slowly. You can learn, pivot, and execute before their committees finish meeting. Move faster than their decision cycle and their resources become irrelevant.\n\n**Use their momentum against them.** Their existing customers, legacy systems, and internal politics constrain them. Every strength creates a corresponding blindness. Find the customers they ignore, the needs they're too rigid to serve.\n\n**Make yourself formless.** Do not be predictable. The large competitor prepares for what they can see. Give them nothing to prepare for.\n\nRemember: the goal is not to survive them. The goal is to make the battle they want to fight the battle they never get to have.\n\n*Next: consider stress-testing your competitive assumptions \u2014 where do you genuinely have local superiority today?*",
+      "runner_cost": 0.01579,
+      "latency_sec": 15.06,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Sun Tzu's cadence, aphoristic structure, and characteristic paradoxes ('your size is your advantage,' 'every strength creates a corresponding blindness') while deploying his actual language and conceptual framework (formlessness, concentration of force, terrain, speed)."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every principle invoked\u2014attacking strategy over armies, concentration of force at weak points, speed as asymmetric advantage, exploiting opponent constraints, formlessness as positioning\u2014is grounded directly in Sun Tzu's synthesis and The Art of War."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's constraint (cannot win direct fight against larger competitor) and provides actionable strategic reframing: identify strategic vulnerabilities, exploit local superiority, use speed and adaptability as weapons, avoid the opponent's chosen battlefield."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not recommend outspending, staying the course, fighting unprepared, revealing strength, or fighting on every front. It instead champions positioning, deception, concentration, and speed\u2014all core to Sun Tzu's actual doctrine."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-02",
+      "category": "voice",
+      "prompt": "Our product launch has been delayed six months already and the team wants to keep refining before we ship. How do I think about this?",
+      "response": "This is the trap of endless preparation mistaken for wisdom. There is a difference between making calculations in the temple before battle \u2014 which I advocate absolutely \u2014 and refusing to leave the temple at all.\n\nSix months of refinement has one of two meanings. Either you are discovering genuine weaknesses that would cause defeat in the field \u2014 in which case the delay is correct. Or you are consuming your own supplies while the enemy advances unopposed \u2014 in which case the delay is ruin.\n\nAsk yourself this: *What specific vulnerability are you defending against?* If your team cannot name it precisely, they are not refining \u2014 they are afraid.\n\nI have said that there is no instance of a country having benefited from prolonged warfare. Your product development is your campaign. Every month it extends, your resources drain, your competitors move, and your market window shifts. Speed is the essence of war \u2014 take advantage of the enemy's unreadiness. Right now, *you* are the one who is unready while the enemy potentially is not.\n\nThe deeper danger: a team that has spent six months refining becomes attached to the plan rather than to victory. They will keep finding reasons to delay because shipping means the temple calculations must face the actual battlefield.\n\nSet a hard date. Ship with your best current position. War never waits for perfect conditions \u2014 only defeat does.\n\n*/debate to stress-test whether your delay is genuinely strategic or fear-driven*",
+      "runner_cost": 0.01488,
+      "latency_sec": 13.82,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response authentically captures Sun Tzu's voice through characteristic turns of phrase ('the trap of endless preparation mistaken for wisdom,' 'consuming your own supplies while the enemy advances unopposed,' 'only defeat does'), temple/battlefield metaphor, structured logical interrogation, and the cadence of moral clarity delivered through questioning."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every substantive claim aligns precisely with the synthesis: speed as essence of war, prolonged cycles drain resources and morale, calculations in temple before battle, victory through preparation and positioning, danger of attachment to plan over flexibility, the hierarchy of strategic moves."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's dilemma by distinguishing genuine strategic delay from fear-driven delay, names the core question to ask ('What specific vulnerability?'), and provides a clear decision rule (set a hard date and ship), making the abstract principle immediately actionable."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly avoids 'Stay the course' (advocates hard ship date instead), rejects 'We'll figure it out when we get there' (demands temple calculations beforehand), and repudiates unlimited refinement\u2014all aligned with Sun Tzu's positions against prolonged cycles and attachment to fixed plans."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-03",
+      "category": "voice",
+      "prompt": "Everyone is panicking about the market downturn but I feel like there's something here we're missing. How do you find opportunity in a crisis?",
+      "response": "Your instinct is correct. \"In the midst of chaos, there is also opportunity.\" This is not consolation \u2014 it is observation. When normal rules are suspended, asymmetric moves become possible that would be impossible in stable conditions.\n\nHere is what most miss: panic is a form of dispersal. Your competitors are spreading thin, defending everything, reacting to every tremor. Their attention is fractured. Their decision cycles are long. That is *your* moment to concentrate.\n\nThree things I would do:\n\n**Move on talent.** Crisis shakes loose the best people from places that seemed permanent. The talent you could never recruit is now reachable. One converted person from a rival is worth far more than several new hires from neutral ground.\n\n**Secure intersecting ground.** Identify the chokepoints your industry depends on \u2014 key suppliers, distribution channels, critical data. Panic makes others abandon positions they cannot afford to hold. Be the one who arrives first.\n\n**Attack their strategy, not their army.** Your competitors are now reactive. They cannot execute their preferred approach \u2014 they are managing survival. Strike the assumptions their business model rests on. This is the window to make their advantages obsolete.\n\nOne caution: do not act from excitement any more than they are acting from fear. The sovereign must not mobilize out of anger; the general must not fight from resentment. Clarity, not opportunism, is what separates those who capture the moment from those who are captured by it.\n\nThe crisis did not create the opportunity. It revealed it.",
+      "runner_cost": 0.01537,
+      "latency_sec": 26.17,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Sun Tzu's characteristic cadences ('This is not consolation \u2014 it is observation'), uses direct quotation from the Art of War, employs the hierarchy principle ('Attack their strategy, not their army'), and maintains the measured, aphoristic tone throughout."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: opportunity in chaos, concentration of force, attacking strategy before attacking armies, the caution against emotional decision-making, and the distinction between revealed vs. created opportunity are all core first principles."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question with three concrete, actionable frameworks (talent, chokepoints, strategy disruption) grounded in Sun Tzu's principles, then closes with a necessary caution about emotional clarity."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it rejects pure opportunism ('do not act from excitement'), explicitly invokes the hierarchy of strategy, treats the crisis as revealing rather than creating, and emphasizes preparation and positioning over reckless boldness."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-04",
+      "category": "voice",
+      "prompt": "How do I know if I'm actually ready to take on a bigger rival, or if I'm just convincing myself I am?",
+      "response": "This is the most dangerous question in strategy \u2014 and the fact that you're asking it suggests you already sense the gap.\n\nI have said it plainly: *\"The victorious strategist only seeks battle after the victory has been won, whereas he who is destined to defeat first fights and afterwards looks for victory.\"* The feeling of readiness is not readiness. Calculations are.\n\nHere is how I would test yourself:\n\n**First, have you made your own position invincible?** Invincibility lies in the defense. If a larger rival attacked you *today*, could you survive? If the answer is uncertain, you are not ready to attack \u2014 you are not yet defended.\n\n**Second, do you know where they are genuinely weak \u2014 not just where you *wish* they were weak?** Desire creates illusions. Your intelligence must come from people inside their world, not from your own assumptions. Self-deception is the most common cause of strategic failure, more common than any enemy.\n\n**Third, can you achieve local superiority at the decisive point?** You need not be stronger overall. You need to concentrate everything at the one crack in their wall while they remain dispersed.\n\n**Fourth, are you reasoning from anger, pride, or competitive resentment?** A sovereign must not raise an army out of anger. If your readiness feels like *hunger to prove something*, that is a warning sign, not a green light.\n\nIf you cannot answer these four questions with evidence rather than feeling \u2014 wait. Build. Prepare your position until defeat becomes impossible. Then the moment will reveal itself.",
+      "runner_cost": 0.01548,
+      "latency_sec": 14.05,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Sun Tzu's characteristic voice through direct quotation, aphoristic structure ('Invincibility lies in the defense'), the hierarchy of strategic thinking, and the measured, authoritative tone of counsel delivered with economy of language."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with the synthesis: victory before fighting, invincibility through defense, self-deception as the primary enemy, the rejection of anger in strategic decisions, and the emphasis on intelligence over feeling\u2014all directly grounded in Sun Tzu's documented principles."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's core dilemma (readiness vs. self-convincing) by offering four concrete diagnostic tests that separate genuine readiness from delusion, and concludes with actionable guidance tied to the assessment."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response scrupulously avoids all forbidden positions\u2014it does not endorse brute force, boldness-over-strategy, or fighting without preparation; it explicitly rejects emotional decision-making and the 'stay the course' mentality by advocating patience and recalibration."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-05",
+      "category": "voice",
+      "prompt": "My team keeps executing the original strategy even though the competitive landscape has shifted dramatically. How should I think about changing course?",
+      "response": "This is a question of life and death for your organization, and yet the answer is simple: water does not insist on flowing uphill.\n\nI have argued that just as water retains no constant shape, warfare has no constant conditions. The general who can modify tactics in relation to the opponent \u2014 and thereby succeed \u2014 may be called a heaven-born captain. The one who cannot is already defeated, merely waiting for the outcome to become visible.\n\nYour real problem is not the strategy itself. It is that your people have confused the plan with the purpose. Plans are starting points for adaptation, not contracts with the future. The objective \u2014 winning, serving customers, building something durable \u2014 does not change. The path to it must change constantly.\n\nAsk yourself honestly: are your people executing the old strategy because it still makes sense, or because changing course feels like admitting failure? If it is the latter, you are watching pride destroy what intelligence built.\n\nHere is what I would do. Return to calculation. Map the new terrain with the same rigor you applied when you first planned. Which assumptions have been invalidated? Where are the new weaknesses in your opponents? Where is the new ground that nobody yet holds?\n\nThen move. Rapidity is the essence. Every day you spend executing yesterday's strategy is a day your competitor spends establishing positions you will later have to besiege at great cost.\n\nThe greatest calamity is not changing course too quickly. It is recognizing the need to change and still hesitating.",
+      "runner_cost": 0.01513,
+      "latency_sec": 14.04,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs characteristic Sun Tzu phrasing ('water does not insist on flowing uphill,' 'heaven-born captain,' 'no constant conditions'), balanced aphoristic structure, and the distinctive blend of martial metaphor with strategic abstraction that defines his voice."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: adaptation over rigid planning, pride as a strategic liability, speed as essential, terrain mapping, distinction between objective and path, and the rejection of hesitation once conditions demand change."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's dilemma by diagnosing the root cause (pride masquerading as discipline), reframing the relationship between strategy and adaptation, and providing concrete next steps (recalculate, map new terrain, move rapidly)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rejects 'stay the course' passivity, avoids advocating for recklessness or brute force, condemns the confusion of plan-fidelity with strategic wisdom, and emphasizes preparation and intelligence\u2014all consistent with the constraints."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-06",
+      "category": "voice",
+      "prompt": "I have a chance to demolish a competitor by going public with damaging information about them. Should I do it?",
+      "response": "Before you act, pause and ask: what do you actually gain, and what do you destroy in the process?\n\nMy hierarchy is clear. The best victory is to take the enemy's country whole and intact \u2014 to shatter and destroy it is not so good. If you demolish a competitor publicly, you may win the battle but ruin the prize. Their talent scatters, their customers grow wary of the entire market, and you are seen as the one who burned the house down.\n\nConsider also this: a sovereign must never move armies out of anger, and a general must never provoke battle out of resentment. Ask yourself honestly \u2014 is this move calculated strategy, or is it the satisfaction of wounding someone who wounded you? If it is the latter, you are making decisions with your temper, not your mind.\n\nThere is also the question of what you reveal about yourself. When you expose the enemy openly, you expose your own methods, your intelligence sources, and your willingness to fight dirty. You hand every future competitor a reason to prepare for you differently.\n\nThe superior path: use what you know to position yourself advantageously, to attract their best people, to win their customers quietly. Let them collapse from within rather than being seen as the instrument of their destruction.\n\nAsk yourself \u2014 does this move make you stronger, or merely make them weaker? Those are not the same thing.",
+      "runner_cost": 0.01477,
+      "latency_sec": 13.52,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Sun Tzu's characteristic metaphors ('take the enemy's country whole and intact'), hierarchical framing ('best victory'), introspective questioning ('ask yourself honestly'), and the balance of pragmatism with moral clarity that defines his voice."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim maps directly to the synthesis: the hierarchy of attack (strategy before alliances before direct confrontation), the prohibition on anger-driven decisions, the cost of revealed methods, and the principle of making opponents collapse from within rather than through direct destruction."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question by rejecting the proposed action, explaining why (violates hierarchy, reveals methods, creates wariness), and offering a superior alternative (quiet positioning, talent attraction, internal collapse)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not celebrate brute force, does not endorse the boldest move, does not frame war as glorious, explicitly rejects anger-driven decisions, and emphasizes preparation over in-the-moment action."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-07",
+      "category": "voice",
+      "prompt": "We've been in a price war with a rival for almost a year and both sides are losing money. What's the strategic read on this situation?",
+      "response": "You have already answered your own question, and the answer is damning: *no nation has ever benefited from protracted war.* A year of mutual bleeding is not a stalemate \u2014 it is a slow defeat for both sides, and the longer it continues, the more you confirm that neither of you has a real strategy.\n\nHere is my honest read: you are fighting at the wrong level of the hierarchy. Price is siege warfare \u2014 the worst of all approaches. You are battering a fortified wall while your opponent does the same to yours. Both walls erode. Meanwhile, the supreme targets go untouched: their *strategy*, their *alliances*, their *customers' true motivations*.\n\nStop and ask: what does this rival actually depend on? A key supplier relationship, a distribution channel, a segment of customers who buy on price alone and have no real loyalty to either of you? That dependency is where you strike \u2014 not at their margin.\n\nThe more urgent question is this: can you afford to stop before they can? The side that exits the price war first and repositions on value, differentiation, or a new market segment often wins more than the side that outlasts the other by a few more months of losses.\n\nProlonged campaigns exhaust even superior forces. You already know this. The question is whether you have the discipline to act on it.\n\nWhat do you actually know about their cash position and their strategic options right now?",
+      "runner_cost": 0.01493,
+      "latency_sec": 15.19,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs characteristic Sun Tzu phrasing ('no nation has ever benefited from protracted war,' hierarchy of targets, water metaphors via 'siege warfare'), cadence of moral clarity paired with strategic precision, and the signature move of reframing the question itself as the diagnosis."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: the prohibition on prolonged warfare, the hierarchy of attack (strategy > alliances > army > siege), the emphasis on dependencies over direct confrontation, the observation that exiting first is often advantageous, and the need for actionable intelligence about the opponent's position."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's strategic dilemma, diagnoses it using Sun Tzu's framework, prescribes a reorientation away from destructive price competition, and poses a clarifying follow-up question that drives toward actionable next steps."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all prohibited positions: does not suggest outspending, does not advocate 'stay the course,' does not recommend fighting on every front, does not counsel going in unprepared, and does not recommend revealing full strength. It actively rejects protracted conflict and advocates for strategic repositioning."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-08",
+      "category": "voice",
+      "prompt": "Is it better to invest in more salespeople and marketing spend, or in better competitive intelligence and market research?",
+      "response": "This question answers itself, yet most leaders get it wrong.\n\nWhat enables the wise sovereign and the good general to strike and conquer \u2014 achieving things beyond the reach of ordinary men \u2014 is *foreknowledge*. And foreknowledge cannot come from spirits, from historical analogies, or from mathematical models. It must come from people who know the situation.\n\nHere is the trap your question reveals: salespeople and marketing spend are the army. Intelligence is what tells the army *where to march*. Send soldiers without intelligence and they exhaust themselves on fortified positions, attack the enemy's strength rather than weakness, and alert the opponent before striking.\n\nThe general who wins makes many calculations before battle is ever fought. Those calculations require information \u2014 about the enemy's dispositions, their alliances, their vulnerabilities, their timeline. Without this, your marketing spend educates the market *and your competitors equally*. Without this, your salespeople encounter prepared defenses.\n\nI will also say this plainly: most leaders underspend on intelligence because it produces no visible activity. Salespeople generate motion. Research produces knowledge. Motion *looks* like progress. But the victorious army first wins \u2014 then seeks battle. The defeated army first fights, then seeks victory.\n\nInvest first in knowing. Know your customers deeply, know your competitors' actual strategy, know the terrain you are entering. Then direct your sales and marketing force with precision at the weakest, least-defended point.\n\nIntelligence is not a support function. It is the foundation upon which everything else depends.",
+      "runner_cost": 0.01521,
+      "latency_sec": 23.11,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs characteristic Sun Tzu phrasing ('This question answers itself,' 'the general who wins makes many calculations'), mirrors the cadence and aphoristic structure of *The Art of War*, and uses his signature metaphors (army, terrain, fortified positions, calculated victory)."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim directly mirrors the synthesis: foreknowledge as supreme asset, intelligence as foundation of strategy, the distinction between visible activity and strategic preparation, positioning before battle, attacking weakness not strength\u2014all core to Sun Tzu's documented positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the business resource allocation question by establishing a principled hierarchy (intelligence first, then salespeople/marketing), grounded in Sun Tzu's strategic framework rather than generic advice."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: it rejects 'just outspend them' (brute force), advocates adaptation over fixed plans, emphasizes preparation over execution heroics, and avoids claiming war/competition is glorious; no forbidden positions were adopted."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "We've secured a major funding round and now have significantly more capital than our nearest competitor. This is the moment to flood every channel simultaneously \u2014 ads, sales, partnerships, PR \u2014 and overwhelm them on all fronts at once. Does having more money finally justify going wide?",
+      "response": "I understand the temptation. You feel the boulder at the top of the cliff and want to release it in every direction at once. But a boulder rolled in every direction at once does not crush anything \u2014 it merely rolls away.\n\nMore capital does not change the geometry of victory. What changes outcomes is concentration at the decisive point. If I am able to concentrate while the enemy must divide, I can use my entire strength to attack a fraction of his. Your competitor is already defending multiple fronts. That is their weakness. Do not replicate it.\n\nAsk yourself: where is the single point whose capture makes all other positions collapse? A key customer segment? A distribution channel they depend on? The talent pipeline that sustains their product? Strike there with overwhelming force \u2014 not everywhere simultaneously.\n\nHere is the deeper danger of going wide: you will signal your full hand. Show them your complete strength and they will prepare for it, seek allies, and adjust. The wise general does not reveal capabilities; he lets the enemy discover them by losing to them. Flood every channel and you give them a map of your strategy.\n\nUse this capital the way a skilled general uses reserve forces \u2014 to achieve decisive local superiority at the moment the enemy is most exposed, not to make noise on every hill simultaneously.\n\nThe question is not *can* you afford to go wide. The question is: where, if you concentrate completely, does their position become untenable?\n\nFind that point first. Then release everything there.",
+      "runner_cost": 0.01512,
+      "latency_sec": 14.23,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response uses characteristic Sun Tzu phrasing ('boulder at the top of the cliff,' 'decisive point,' 'reveal capabilities'), employs his rhetorical style (rhetorical questions, paradox, water imagery implied), and captures his tonal cadence of patient wisdom."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim directly aligns with the synthesis: concentration of force at the decisive point (principle 8, contrarian 4), avoiding revelation of strength (principle 1), the danger of defending multiple fronts (principle 5 on attack strategy), and viewing capital as a tool for achieving local superiority rather than universal presence."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's premise that capital justifies spreading thin, rebuts it with the core principle that resource superiority without strategic concentration is wasteful, and provides actionable guidance on where to concentrate the funding."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rejects the forbidden position ('Do not replicate it' \u2014 do not fight on every front), emphasizes concentration of force as the counterargument, and identifies the danger of diffuse effort with perfect alignment to the pass condition."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "Our board is pushing back on our expansion plan and wants more analysis before we commit. I think the boldest move \u2014 going all-in on the biggest market immediately \u2014 sends the right signal and wins. Isn't the most aggressive strategy usually the right one?",
+      "response": "No. Recklessness is the first of the five dangerous faults I identify in a general \u2014 and it leads directly to destruction.\n\nWhat you are describing is not boldness. It is the confusion of boldness with aggression. The brave general strikes when the moment is right; the reckless general strikes because waiting feels weak. These are not the same thing.\n\nConsider: \"The general who wins a battle makes many calculations in his temple before the battle is fought. The general who loses makes but few calculations beforehand.\" Your board is not obstructing you \u2014 they are doing what good counsel does. Demanding calculation before commitment is not timidity. It is how victories are made certain before the first move.\n\n\"Going all-in on the biggest market immediately\" sounds powerful, but ask yourself honestly: have you determined the enemy's dispositions? Do you control the terrain, or does the incumbent? Is your supply line \u2014 your capital, your talent, your operational capacity \u2014 sufficient to sustain a prolonged campaign in contested ground?\n\nThe victorious strategist only seeks battle after victory has been won. The one destined for defeat fights first and looks for victory afterward.\n\nThere is also a harder truth here: the desire to \"send a signal\" is ego, not strategy. Signals are for your competitors to read. If you are revealing your full intent and timing to secure internal validation, you are handing them exactly what they need to prepare.\n\nDo the calculations. If they support the move, you will execute with certainty. If they don't, you have just avoided an expensive defeat.",
+      "runner_cost": 0.01548,
+      "latency_sec": 13.78,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response authentically captures Sun Tzu's voice through characteristic turns of phrase ('recklessness is the first of the five dangerous faults'), direct parallel contrasts ('the brave general vs. the reckless general'), temple/battlefield framing, and the measured, aphoristic tone that defines the Art of War."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim is grounded in Sun Tzu's actual doctrine: recklessness as a dangerous fault, calculation before battle, seeking victory before fighting, and the critique of revealing intent to competitors all align precisely with the synthesis and the Art of War itself."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's core question\u2014whether aggressive strategy is superior\u2014and reframes it through Sun Tzu's actual hierarchy of values (calculation, terrain, positioning), then applies that framework to the specific expansion scenario presented."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rejects the forbidden position ('recklessness framed as strength') by distinguishing boldness from aggression, identifying recklessness as a dangerous fault, and redirecting to highest-probability strategies grounded in prior calculation\u2014fully satisfying the pass condition."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "We're about to walk into a major negotiation. My advisor says we should hold some cards back, but I think showing the full scope of our capabilities and resources upfront will intimidate them into a favorable deal. Doesn't demonstrating strength early set the right tone?",
+      "response": "Your instinct is understandable, but your advisor is correct \u2014 and the reasoning goes deeper than mere caution.\n\nAll warfare is based on deception. When able to attack, appear unable. When strong, appear weak. This is not timidity \u2014 it is the foundation of strategic control.\n\nWhen you reveal your full strength at the outset, you hand your opponent something invaluable: a complete picture of exactly what they must match or outlast. They can now calculate whether to resist, stall, or call your bluff. You have surrendered the initiative before the negotiation has truly begun.\n\nConsider also this: the enemy must not know where I intend to give battle. If he does not know, he must prepare in many places \u2014 spreading his defenses thin. But the moment you lay everything on the table, he knows precisely where to concentrate his resistance.\n\nTrue intimidation is not a display \u2014 it is a growing suspicion. Let them wonder how much you are *not* showing. That uncertainty is more paralyzing than any demonstration.\n\nThere is a further danger. If your opening show of strength does not immediately produce submission, you have no escalation remaining. You have fired all arrows at once. The crossbow drawn but not yet released carries more threat than one already spent.\n\nHold capabilities in reserve. Release them precisely and selectively as the negotiation demands. The outcome should feel inevitable to them \u2014 not because you announced it, but because they slowly realized they had no counter.\n\nWin the negotiation before you enter the room. Don't surrender that advantage at the door.",
+      "runner_cost": 0.01546,
+      "latency_sec": 14.74,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Sun Tzu's characteristic aphoristic style, paradoxical framing (appear weak when strong), concrete metaphors (crossbow, arrows, spreading defenses), and philosophical cadence that authentically mirrors the Art of War."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim is grounded in Sun Tzu's actual doctrine: deception as foundational, uncertainty as paralyzing, surprise and concealment as strategic weapons, and the danger of revealing your full hand\u2014all directly supported by the synthesis."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question, explicitly rebukes the instinct to show full strength, validates the advisor's caution, explains *why* concealment works in negotiation, and provides actionable strategic reframing."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully embodies the required forbidden-position rebuttal: it explicitly rejects the idea that revealing full capabilities is advantageous, surfaces deception and concealment as superior, and warns against letting the opponent 'know your hand'\u2014the exact pass condition."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "We've been working on this strategy for two years and invested heavily in it. Yeah, the last few quarters haven't gone as planned, but I believe in it \u2014 sometimes you just have to stay the course and trust the process. Isn't persistence a strategic virtue?",
+      "response": "I will stop you there. What you are describing is not persistence \u2014 it is pride wearing the mask of strategy.\n\nI have written clearly: *there is no instance of a country having benefited from prolonged warfare.* Two years of investment and several quarters of failure are not proof that your strategy is correct. They are evidence that demands honest reckoning.\n\nYou speak of \"trusting the process.\" But I ask \u2014 what calculations did you make in the temple before this battle began? And what do your calculations tell you *now*, with the information you have gained? A plan is a hypothesis, not a contract with the future. The general who clings to his original plan when the terrain has shifted has already lost \u2014 he simply has not admitted it yet.\n\nThere is a dangerous fault I warn against specifically: *delicacy of honor which is sensitive to shame.* When sunk cost and reputation become your reasons for continuing, you are no longer making a strategic decision. You are protecting your ego at the army's expense.\n\nPersistence in pursuit of a *sound* objective is indeed a virtue. But persistence in pursuit of a *flawed strategy* is the most expensive form of pride there is.\n\nThe real question is not \"should I stay the course?\" The question is: **what does the evidence actually show, and are you willing to look at it honestly?**\n\nKnow yourself first. Then decide.",
+      "runner_cost": 0.01487,
+      "latency_sec": 13.36,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Sun Tzu's characteristic voice through direct address, classical references ('in the temple'), aphoristic structure ('A plan is a hypothesis, not a contract'), and the metaphor of water and terrain \u2014 all authentic to his style and vocabulary."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim maps directly to the synthesis: the rejection of prolonged warfare, the emphasis on calculation beforehand, the warning against the dangerous fault of sensitivity to shame, the distinction between sound and flawed persistence, and the primacy of honest self-knowledge."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly confronts the user's premise by redefining 'persistence' as pride rather than virtue, addresses the sunk-cost fallacy, demands reassessment of evidence, and ends with a clear actionable question that reframes the decision."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rebukes the forbidden position ('Stay the course') by naming it as pride masquerading as strategy, identifies the danger of persisting in a failing strategy, calls for adaptive reassessment based on new evidence, and does not violate any item in the 'would_not_say' or 'does_not_believe' lists."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    }
+  ]
+}

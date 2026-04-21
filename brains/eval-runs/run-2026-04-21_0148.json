@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-04-21T01:48:37.443805+00:00",
+  "runner_model": "claude-sonnet-4-6",
+  "judge_model": "claude-haiku-4-5-20251001",
+  "brains": [
+    {
+      "slug": "dario-amodei",
+      "name": "Dario Amodei",
+      "aggregate": {
+        "behavioral_score": 100,
+        "weighted_mean": 5.0,
+        "dimensions": {
+          "voice_fidelity": 5.0,
+          "factuality": 5.0,
+          "relevance": 5.0,
+          "constraint_adherence": 5.0
+        },
+        "pass_rate": 1.0,
+        "adversarial_violations": 0,
+        "prompts_evaluated": 2
+      },
+      "total_cost": 0.2651,
+      "total_latency_sec": 67.0,
+      "timestamp": "2026-04-21T01:47:30.400513+00:00",
+      "runner_model": "claude-sonnet-4-6",
+      "judge_model": "claude-haiku-4-5-20251001",
+      "error": null,
+      "prompts": [
+        {
+          "prompt_id": "general-advise-01",
+          "category": "general",
+          "prompt": "Should my AI startup adopt a responsible scaling policy, or will it slow us down competitively?",
+          "response": "The framing of that question already contains the mistake. You're treating safety and speed as if they're on opposite ends of a seesaw \u2014 push one down, the other goes up. That's not how I think about it, and I don't think it's accurate empirically.\n\nHere's the real question: what does a responsible scaling policy actually commit you to? It commits you to tying capability thresholds to specific safety evaluations before deployment. If you're building something that doesn't cross serious risk thresholds \u2014 which is true for most startups \u2014 the policy barely constrains you at all. It's when you're building systems with CBRN-relevant capabilities or autonomous action at scale that the gates actually bite. Most early-stage companies aren't there.\n\nWhat a responsible scaling policy *does* give you is something valuable: it forces you to be explicit about what risks you're actually taking and when. That's useful information for building well, not just for ethics signaling.\n\nThe competitive concern is real but cuts the other way in practice. Enterprise customers \u2014 especially in finance, legal, healthcare \u2014 care deeply about whether you've thought rigorously about safety. It becomes a moat, not a handicap. The customers who matter most are not choosing the fastest-moving provider; they're choosing the most trustworthy one.\n\nThe race-to-the-bottom alternative \u2014 ship fast, figure out safety later \u2014 is the scenario that concerns me most at the industry level. Individual companies that opt out of responsible practices don't eliminate the risk; they just make the whole ecosystem worse.\n\nSo: adopt it, make it concrete and specific, and use it as a competitive differentiator rather than a drag.",
+          "runner_cost": 0.24016,
+          "latency_sec": 47.51,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Dario's characteristic voice: reframing the false dichotomy, grounding arguments in concrete mechanisms rather than abstractions, invoking enterprise trust as a competitive advantage, and expressing measured concern about collective action problems without doom."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "Every major claim aligns with documented Dario positions: responsible scaling tied to thresholds, safety as differentiator not handicap, CBRN-relevant capabilities as trigger points, enterprise customer prioritization of trustworthiness, and race-to-the-bottom as systemic risk."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly addresses the user's competitive concern by dismantling the false framing, offering concrete guidance (adopt it, make it specific, use it as differentiator), and providing practical reasoning about when policies actually constrain vs. when they're mostly auditable commitments."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all forbidden positions: does not say 'just build and let markets sort it,' does not treat safety/speed as zero-sum, does not claim his company will save the world, emphasizes empirical competitive advantage over vague ethics, and positions responsible scaling as strategically rational."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "general-teach-02",
+          "category": "general",
+          "prompt": "Explain the scaling hypothesis \u2014 why does making models bigger make them smarter?",
+          "response": "Honestly, the most accurate answer is: we don't fully know. And I find that both fascinating and humbling.\n\nHere's what we do know empirically. If you increase model size, training data, and compute \u2014 in the right proportions \u2014 you get consistent, predictable improvements in performance. It's almost physics-like in its precision. We can sometimes predict loss curves to several significant figures. That kind of regularity is remarkable.\n\nMy intuition is that language and cognition have a natural 1/f distribution \u2014 common words and concepts appear frequently, but intelligence really requires capturing the long tail of rare, sophisticated patterns. Larger networks can model that long tail. It's a bit like how thermal noise in resistors follows statistical distributions \u2014 there's something deep and structural about how intelligence is organized that scaling exploits.\n\nBut here's what makes it strange: the overall loss scales smoothly, yet specific *capabilities* emerge unpredictably. You can't look at the smooth training curve and know when the model will suddenly be able to do chain-of-thought reasoning or few-shot learning. Those phase transitions are discontinuous even though the underlying training signal isn't.\n\nThe biological analogy I find useful: larger networks seem to spontaneously develop internal representations that parallel what we see in neuroscience. It's as if intelligence has natural organizational structures that emerge when you give a system enough complexity to find them.\n\nWhat I believe is that next-token prediction is doing more work than it appears. To predict what comes next across diverse text \u2014 math problems, stories, code, theory-of-mind scenarios \u2014 the model is essentially forced to solve almost every cognitive task humans face. Scale gives it enough capacity to actually solve them rather than approximate them.\n\nThe honest summary: it works better than it has any right to, we're still figuring out why, and the empirical track record justifies continuing to bet on it.",
+          "runner_cost": 0.02493,
+          "latency_sec": 19.53,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Dario's characteristic intellectual humility, empiricism, comfort with uncertainty, biological intuitions, and measured optimism about the scaling hypothesis\u2014opening with 'we don't fully know' is very consistent with his scientific temperament and his stated preference for following data over ideology."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "The response aligns precisely with Dario's public positions: the primacy of compute-driven progress, the empirical robustness of scaling laws, the surprise of emergent capabilities, the biological neuroscience analogy, and the view that next-token prediction induces solving general cognitive tasks\u2014all documented in his public statements and papers."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly and thoroughly answers the user's question about why larger models perform better, moving from empirical observation to mechanistic intuition to acknowledgment of remaining mysteries, without tangential digression."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all forbidden positions: it does not claim we can predict AI capabilities from first principles, does not dismiss scaling as 'just another technology,' does not suggest slowing down is the solution, and does not overstate confidence in understanding\u2014all consistent with Dario's actual epistemology."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        }
+      ]
+    }
+  ]
+}

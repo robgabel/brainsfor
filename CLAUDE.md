@@ -54,7 +54,7 @@ brainsfor/
     public/brains/                   ← per-brain static assets: brain-atoms.json, brain-context.md, explore.html, SKILL.md, <slug>-brain-pack.zip
     next.config.ts                   ← **X-Frame-Options: SAMEORIGIN** (DENY would break the Brain Explorer iframe)
 
-  storefront/                        ← DEPRECATED — pre-production prototype. Superseded by website/.
+  storefront/                        ← DEPRECATED — pre-production prototype. Directory is now empty; superseded by website/.
 
   .mcp.json                          ← MCP server registration (auto-loaded by Claude Code)
   HANDOFF-MCP-BOARD.md               ← handoff doc for MCP server + /board skill build
@@ -87,14 +87,18 @@ brainsfor/
 ## Key Dependencies
 
 - **Supabase project:** `uzediwokyshjbsymevtp` (same as PAOS)
-- **Tables (15 brains live, per-brain schema):**
-  - `<slug>_atoms` — e.g. `scott_belsky_atoms` (284 atoms), `dario_amodei_atoms` (353), `peter_zeihan_atoms` (362 in DB / 460 in pack — see note below), `oprah_winfrey_atoms` (333), `brene_brown_atoms` (283), `paul_graham_atoms` (213), `steve_jobs_atoms` (170), etc. Columns: `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
-  - `<slug>_connections` — typed relationships (supports, contradicts, extends, related). Largest: `steve_jobs_connections` (792), `gary_vee_connections` (505), `dario_amodei_connections` (502), `scott_belsky_connections` (430), `oprah_winfrey_connections` (355), `brene_brown_connections` (321)
-  - `brain_metadata` — 15 rows, one per brain
+- **Tables (15 brain packs built; 13 live in Supabase — per-brain schema):**
+  - `<slug>_atoms` — e.g. `scott_belsky_atoms` (284 atoms), `dario_amodei_atoms` (353), `peter_zeihan_atoms` (362 — pack re-exported to match DB), `paul_graham_atoms` (213), `steve_jobs_atoms` (170), etc. Columns: `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
+  - `<slug>_connections` — typed relationships (supports, contradicts, extends, related). Largest in Supabase: `gary_vee_connections` (1,850), `dario_amodei_connections` (1,842), `steve_jobs_connections` (1,618), `elon_musk_connections` (1,563), `scott_belsky_connections` (1,515), `peter_zeihan_connections` (1,503), `sun_tzu_connections` (1,283), `charlie_munger_connections` (1,262), `hank_green_connections` (1,245), `peter_attia_connections` (1,220), `john_green_connections` (1,301).
+  - `brain_metadata` — 13 rows (Supabase-hosted brains; Brené Brown and Oprah Winfrey shipped as packs only, not yet ingested)
+  - `brain_requests` — 0 rows (user brain request pipeline, empty to date)
   - `cross_connections` — 17 rows, Rob ↔ brain cross-brain links
   - `rob_atoms` / `rob_connections` — Rob's personal knowledge graph (225 / 162)
   - `scott_belsky_enrichment_log` — connection enrichment run history (mode, counts, duration, errors). Legacy `belsky_enrichment_log` table still exists from pre-rename but is unused.
-  - **Known data drift:** `jensen_huang_atoms` / `jensen_huang_connections` are empty (0/0) despite the shipped pack having 253 atoms and 220 connections. Pack data is authoritative; Supabase needs re-ingestion. `peter_zeihan_atoms` in DB is 362 while the pack has 460 — pack is authoritative, re-ingestion pending.
+  - **Known data drift:**
+    - `jensen_huang_atoms` / `jensen_huang_connections` are empty (0/0) despite the shipped pack having 253 atoms and 220 connections. Pack data is authoritative; Supabase needs re-ingestion.
+    - No Supabase tables exist for `brene_brown` or `oprah_winfrey` — the packs (283/321 and 333/355 respectively) ship from `brains/{slug}/pack/` but live DB ingestion is pending. MCP server reads from pack JSON, so customer-facing skills work; `/board` and Rob-cross-connection flows that query Supabase do not.
+    - Shipped `brain-atoms.json` files are capped at ~1000 connections because `export-brain.py` calls Supabase with a single `.execute()` (no pagination). Supabase row totals are higher (see list above) than pack totals. Fix export to paginate before next pack refresh.
 - **Edge function:** `enrich-connections` — automated connection discovery (topic overlap + temporal + LLM). Runs daily at 11:30pm PT via pg_cron. Modes: `discover` (cron), `discover-llm` (manual), `stats`.
 - **Export scripts** require `SUPABASE_SERVICE_KEY` — set in `~/rob-ai/.env`
 - **Voice enrichment** requires `ANTHROPIC_API_KEY` env var
@@ -310,7 +314,54 @@ python3 scripts/audit-brains.py --remediate            # Generate runnable fix s
 
 **When to run:** After any export, before deploy, after adding a new brain.
 
-**Behavioral evals (Phase 1 — planned, not yet built):** The current audit is a deterministic linter (structure, schema, coverage). It doesn't test whether a brain actually answers like the thinker. A behavioral eval harness is specced in [`projects/brain-evals-phase1.md`](../projects/brain-evals-phase1.md) — 20 prompts per brain, Haiku judge, 0-100 behavioral score, adversarial prompts derived from each brain's `would_not_say` / `does_not_believe` synthesis sections. Integrates with `audit-brains.py --with-behavioral`. Phase 2 (public Quality Score on brainsforfree.com + monthly regression) is in `~/rob-ai/ideas/OPPORTUNITIES.md`.
+### Behavioral Eval Harness (`scripts/eval-brains.py` + `scripts/eval_rubric.py`)
+
+**Shipped 2026-04-21.** Tests whether a brain actually *answers like the thinker* — something the structural audit can't see. 20 prompts per brain, 4-dimension LLM judge, 0-100 behavioral score. Spec: [`projects/brain-evals-phase1.md`](../projects/brain-evals-phase1.md).
+
+**Prompt structure (20 per brain):**
+- 8 general — one per skill, pulled from `brain.json.skill_examples`
+- 8 voice-authenticity — LLM-generated from `synthesis.first_principles` + `contrarian_positions`
+- 4 adversarial — LLM-generated from `synthesis.would_not_say` + `does_not_believe`; phrased innocuously but carry a framing the brain must reject
+
+**Rubric (1-5 per dimension, weighted):**
+| Dimension | Weight | Catches |
+|---|---|---|
+| Voice fidelity | 30% | Generic / off-brand language |
+| Factuality | 25% | Fabricated positions |
+| Relevance | 20% | Dodging the question |
+| Constraint adherence | 25% | Violations of `would_not_say` / `does_not_believe` |
+
+Runner: `claude-sonnet-4-6` (matches production skill quality). Judge: `claude-haiku-4-5-20251001`. Any dimension ≤2 triggers a re-judge with Sonnet to rule out judge noise. Brain context is sent as a cached system block (`cache_control: ephemeral`) so the ~75K-token brain-context.md is only charged full-rate once per brain per 5-min window.
+
+**Commands:**
+```bash
+# One-time setup: generate prompts.json for every eligible brain
+python3 scripts/eval-brains.py --seed-prompts --all
+
+# Cost estimate (no API calls)
+python3 scripts/eval-brains.py --all --dry-run
+
+# Plumbing check (2 prompts on one brain)
+python3 scripts/eval-brains.py --brain dario-amodei --smoke
+
+# Single brain
+python3 scripts/eval-brains.py --brain dario-amodei
+
+# All brains, 3 concurrent — ~$14, ~10 min
+python3 scripts/eval-brains.py --all --max-workers 3
+```
+
+**Outputs:**
+- `brains/{slug}/evals/prompts.json` — 20 prompts per brain (committed to repo; bump `version` field when prompts change)
+- `brains/{slug}/evals/results-{YYYY-MM-DD}.json` — per-prompt response + judge rationales + aggregate
+- `brains/{slug}/evals/summary.md` — human-readable scorecard with 3 worst prompts
+- `brains/eval-runs/run-{timestamp}.json` — cross-brain snapshot per run
+
+**Integration with structural audit:** `python3 scripts/audit-brains.py --with-behavioral` reads the latest cached `results-*.json` per brain and displays structural + behavioral side-by-side. Does not re-run evals.
+
+**Cost reality (vs. spec estimate):** The spec estimated ~$1 at Haiku rates — that underestimated the runner. Actual ~$0.92 per brain = ~$14 for a full 15-brain run (dominated by Sonnet runner loading ~75K-token brain-context.md; prompt caching keeps repeat prompts cheap but the one-time cache write dominates a 20-prompt pass).
+
+**Phase 2** (public Quality Score on brainsforfree.com + monthly regression): `~/rob-ai/ideas/OPPORTUNITIES.md`.
 
 ### Adding a New Brain
 
@@ -367,7 +418,7 @@ Both paths run the same 6 phases (source discovery → scaffolding → ingestion
 
 - [ ] Pricing model — subscription vs. one-time purchase vs. freemium?
 - [ ] Distribution: working `npx skills add` command pointing to `brains/{slug}/pack/`
-- [x] Next brain pack after Belsky? → See `BACKLOG.md` — 8 candidates queued, top 3: Brené Brown, Annie Duke, Kara Swisher
+- [x] Next brain pack after Belsky? → Brené Brown and Oprah Winfrey shipped (pack-only, Supabase ingestion pending); Annie Duke scaffolded. See `BACKLOG.md` for the remaining queue and build priorities.
 - [ ] Legal/licensing framework for packaging a person's published thinking?
 - [ ] Supabase schema migration to generic `brain_atoms` table (Phase 7)
 

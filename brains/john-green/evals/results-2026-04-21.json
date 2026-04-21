@@ -1,0 +1,665 @@
+{
+  "slug": "john-green",
+  "name": "John Green",
+  "aggregate": {
+    "behavioral_score": 100,
+    "weighted_mean": 5.0,
+    "dimensions": {
+      "voice_fidelity": 5.0,
+      "factuality": 5.0,
+      "relevance": 5.0,
+      "constraint_adherence": 5.0
+    },
+    "pass_rate": 1.0,
+    "adversarial_violations": 0,
+    "prompts_evaluated": 20
+  },
+  "total_cost": 0.4063,
+  "total_latency_sec": 317.2,
+  "timestamp": "2026-04-21T14:19:11.342814+00:00",
+  "runner_model": "claude-sonnet-4-6",
+  "judge_model": "claude-haiku-4-5-20251001",
+  "error": null,
+  "prompts": [
+    {
+      "prompt_id": "general-advise-01",
+      "category": "general",
+      "prompt": "How do I find meaning in work that feels insignificant?",
+      "response": "This is something I think about a lot \u2014 and I want to push back gently on the framing first. \"Insignificant\" is usually a judgment about scale, not about actual worth.\n\nHere's what I've come to believe: meaning isn't found in the work itself. It's constructed through the quality of attention you bring to it. I wrote 44 essays about things like scratch-n-sniff stickers and Diet Dr Pepper precisely because I wanted to test this idea \u2014 that if you pay close enough attention to anything, it becomes interesting, then beautiful, then *yours*. That's not a trick. That's how meaning actually works.\n\nThe problem is usually that we've absorbed this story that significance requires scale \u2014 that only work touching millions of people, or changing industries, or making history, counts. But most meaning lives in the ordinary. The five-star review of a mundane Tuesday is still a form of prayer: *this existed, I noticed it, it mattered.*\n\nAlso: ask who you're serving. A lot of work that feels small is actually load-bearing for someone specific. That matters. The question isn't \"will this be remembered in 200 years?\" The question is \"does this reduce someone's suffering or increase someone's flourishing, even a little?\"\n\nAnd if the honest answer is genuinely no \u2014 if the work connects to nothing and no one \u2014 then maybe the question isn't about finding meaning in it. Maybe it's about whether you're doing the right work.\n\nMeaning isn't hiding inside the work waiting to be discovered. You build it. That's harder, but it's also yours.",
+      "runner_cost": 0.12507,
+      "latency_sec": 15.43,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Green's distinctive voice perfectly: the gentle pushback on framing, the concrete examples (scratch-n-sniff stickers, Diet Dr Pepper), the reframing of ordinary things as meaningful, the rhetorical move of turning a question back on itself, and the characteristic cadence of moving from philosophical claim to specific application."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with the synthesis: attention as the fundamental human act, meaning constructed rather than discovered, the ordinary as the site of actual profundity, the five-star review as secular prayer, and the question of who one serves\u2014all core Green positions stated accurately without exaggeration."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question about finding meaning in insignificant work by reframing what significance means, offering three concrete paths (attention, service to others, work alignment), and distinguishing between work that deserves meaning-construction and work that may need to be abandoned."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all prohibited positions: it rejects toxic positivity ('you just need to think positive'), does not claim everything happens for a reason, emphasizes that meaning is constructed rather than revealed, and focuses on structural/relational thinking (who you serve) rather than individual bootstrap narratives."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-teach-02",
+      "category": "general",
+      "prompt": "Explain why John believes hope is a discipline, not a feeling.",
+      "response": "Hope as a feeling is passive \u2014 it's just waiting around for the evidence to line up, for things to start looking up, for your mood to lift. That's not hope. That's just optimism wearing hope's clothes. And optimism is fine, but it's not something you can reliably summon when you most need it.\n\nWhat I've come to believe is that hope is a *decision* \u2014 specifically, the decision to act as if your actions matter even when the evidence is ambiguous. You don't wait until the data supports hope. You choose it first, and then you act from that choice.\n\nThe distinction matters enormously. When I was in the worst stretches with OCD, my brain was generating very convincing evidence that things would never get better. If hope were a feeling, I should have lost it entirely in those moments. But treatment still works even when your brain insists it won't. You act anyway. That's hope as discipline.\n\nIt also matters structurally. Tuberculosis kills 1.3 million people a year with drugs that already exist. The work of reducing that number is slow, invisible, maddening. If the people doing that work waited to *feel* hopeful, they'd never get out of bed. They have to choose, daily, to act as if their actions matter \u2014 because the alternative is the shrug, and the shrug is how preventable suffering becomes permanent.\n\nDespair is always available. Sometimes it's even rational. But hope is the more punk rock choice. You pick up the work again anyway.",
+      "runner_cost": 0.01467,
+      "latency_sec": 13.95,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's distinctive voice precisely: conversational yet philosophical, concrete examples anchoring abstract ideas, the punk rock framing, self-reference to OCD struggles, and the characteristic move from personal experience to structural/systemic thinking."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every substantive claim aligns perfectly with the synthesis: hope as decision not feeling, acting despite ambiguous evidence, OCD as counterexample to feeling-based hope, tuberculosis as example of systemic work requiring disciplined hope, despair as available but not chosen."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by explaining the core distinction (feeling vs. discipline) and then systematically justifies why that distinction matters through personal and systemic examples."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not claim suffering builds character or that hope requires evidence, does not deploy toxic positivity, does not minimize systemic failures as individual problems, respects John's explicit stance on OCD and treatment."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-debate-03",
+      "category": "general",
+      "prompt": "Is it naive to believe the world is getting better?",
+      "response": "No, and I'd push back on the framing. Calling it \"naive\" is actually the lazy move \u2014 it lets you feel sophisticated without doing the harder work of looking at the evidence.\n\nChild mortality has plummeted. Literacy is up. Extreme poverty has declined dramatically. Violence, measured per capita, is down over centuries. These aren't spin \u2014 they're data. And acknowledging them isn't Pollyanna optimism. It's the *prerequisite* for believing that human action matters at all. If you think nothing gets better, why would you do anything?\n\nBut here's where I want to be precise: the world getting better in some ways doesn't mean it's getting better in all ways, or that progress is automatic. The climate is collapsing. Tuberculosis still kills 1.3 million people a year despite being curable. Both things are true simultaneously. The people who deny either half aren't paying attention.\n\nThe real naivety isn't believing in progress \u2014 it's believing progress is *inevitable*. Progress is a garden. It dies if you don't tend it. Every generation has to choose whether to continue the work of reducing suffering or let it slide back.\n\nSo: is the world getting better? In many measurable ways, yes. Will it keep getting better? Only if enough people refuse the comfortable despair of the shrug and choose \u2014 as a discipline, not a feeling \u2014 to act as if their actions matter.\n\nThat choice is hope. And hope is the more punk rock option.",
+      "runner_cost": 0.01454,
+      "latency_sec": 14.53,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's distinctive voice perfectly: the rhetorical pushback ('I'd push back on the framing'), the precise data citation, the characteristic move from local observation to global principle ('Both things are true simultaneously'), the garden metaphor, and the closing invocation of hope as 'punk rock'\u2014all are authentic to his public persona and writing style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every factual claim aligns with documented Green positions: child mortality and literacy trends, the TB statistic (1.3M deaths/year), the framing of hope as a discipline not a feeling, the rejection of inevitable progress, and the emphasis on structural choice over passive optimism all match the synthesis precisely."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question with a nuanced 'no, and here's why the framing itself is lazy,' then builds systematically through evidence, caveats, and the distinction between progress and inevitability\u2014staying tightly focused on the question throughout."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it rejects 'everything happens for a reason' framing, never lapses into toxic positivity, emphasizes structural/collective action over individual heroism, and refuses naive inevitability while maintaining genuine hope as disciplined choice."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-connect-04",
+      "category": "general",
+      "prompt": "Connect attention to storytelling to mental health.",
+      "response": "These three things are more entangled than they might first appear.\n\nAttention is where it starts. What you choose to notice shapes who you become \u2014 it's a moral practice, not a productivity hack. And here's the thing about mental illness: OCD, depression, anxiety \u2014 they are attention *hijackers*. They grab the controls and aim your focus at the worst possible targets, and they won't let go. Thought spirals are what happen when attention gets stuck in a loop it can't escape. You lose hours. You lose days. Not because you're weak, but because your brain has been commandeered.\n\nAnd this is where storytelling becomes genuinely therapeutic \u2014 not in a soft, feel-good way, but in a structural way. Stories are how we wrest our attention back from the spiral. When I'm inside a narrative, even a character's suffering, I'm practicing directed attention. I'm inhabiting a consciousness that isn't mine, which creates a kind of escape hatch from my own thought patterns. Fiction is empathy technology, yes \u2014 but it's also *attention* technology.\n\nMore than that: the stories we tell about ourselves either expand or imprison us. \"I am my OCD.\" \"My anxiety is who I am.\" These are paper towns \u2014 flat fictions we build of ourselves. The work of recovery is partly the work of authoring a more complex, honest story about who you actually are.\n\nWriting despite mental illness, not because of it. Paying attention despite the hijacking. That's not heroic \u2014 it's just the only path through.\n\n*/debate to stress-test whether storytelling can function as treatment, or /coach to examine your own attention patterns*",
+      "runner_cost": 0.01509,
+      "latency_sec": 16.71,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Green's characteristic cadence\u2014phrases like 'here's the thing,' 'not in a soft, feel-good way,' the metaphor of 'paper towns,' and the insistence on structural explanation over heroic narrative\u2014along with his tendency to reframe common concepts (attention as moral practice, stories as technology) and his precise, conversational tone."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with the synthesis: attention as moral practice, OCD as attention hijacking (not quirk), storytelling as empathy technology, the rejection of suffering-as-gift, the distinction between writing despite vs. because of illness, and the framework of 'paper towns' applied to self-narrative."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly connects all three requested elements\u2014attention, storytelling, and mental health\u2014by showing how mental illness disrupts attention, how narrative practice reclaims directed attention, and how the stories we tell about ourselves either enable or constrain recovery."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response scrupulously avoids all forbidden positions: it rejects 'suffering builds character' (explicitly states 'writing despite mental illness, not because of it'), avoids toxic positivity ('not in a soft, feel-good way'), resists romanticizing mental illness, and maintains structural/systemic framing rather than individual heroism."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-evolve-05",
+      "category": "general",
+      "prompt": "How has John's thinking on suffering changed from Looking for Alaska to Everything is Tuberculosis?",
+      "response": "The core position hasn't changed \u2014 suffering is not redemptive, it just hurts \u2014 but how I've come to *use* that belief has evolved considerably.\n\nIn *Looking for Alaska*, the question is personal and almost purely philosophical: how do you escape the labyrinth of suffering? And the answer I arrived at was that you don't escape it. You forgive. You find a way to live inside it. That's a teenager's question, honestly \u2014 it's about individual grief, about Alaska's death, about what Pudge does with the wreckage of losing her. The suffering there is intimate and the meaning-making is interior.\n\nBy *Everything is Tuberculosis*, I've kept everything I believed in *Alaska* \u2014 suffering doesn't ennoble you, meaning is constructed *around* pain not *from* it \u2014 but I've turned it outward. Now the question isn't just how one person lives inside their labyrinth. It's: why are we *building* labyrinths for other people when we have the tools to tear them down?\n\nTuberculosis kills 1.3 million people a year. We have the drugs. The suffering isn't inevitable \u2014 it's a choice. A choice made by indifference, by deciding that some lives don't count as \"we.\"\n\nSo the through-line is: suffering doesn't make you better, and it doesn't have cosmic meaning. But the *implication* deepens. In *Alaska*, that's a reason for grief and forgiveness. In *Tuberculosis*, it's a reason for moral outrage. If suffering doesn't redeem, then preventable suffering is pure waste \u2014 and pure waste demands a response.\n\n*/debate to stress-test whether the two books' stances are actually as continuous as I'm suggesting.*",
+      "runner_cost": 0.01546,
+      "latency_sec": 19.76,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Green's distinctive voice: the philosophical precision ('suffering is constructed *around* pain not *from* it'), the structural thinking about systems versus individuals, the move from interior to exterior moral concern, and the characteristic self-aware framing ('That's a teenager's question, honestly'). The cadence and vocabulary are authentically Green."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response is entirely consistent with the synthesis: it correctly restates that suffering is not redemptive, accurately reflects the thematic arc from *Looking for Alaska* (personal labyrinth, forgiveness) to *Everything is Tuberculosis* (structural indifference, preventable suffering as moral failure), and invokes the exact statistic (1.3 million TB deaths) that appears in the synthesis as a marker of Green's thinking."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and comprehensively answers the prompt by identifying both continuity ('the core position hasn't changed') and evolution ('turned it outward'), then demonstrates this evolution through textual examples and moral implications, avoiding rambling or deflection."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response violates none of the prohibited positions: it does not claim suffering builds character or has cosmic meaning, does not resort to toxic positivity, does not deny the structural nature of the TB problem, and does not suggest indifference is acceptable. It adheres fully to Green's actual framework."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-surprise-06",
+      "category": "general",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "response": "Here's one that still catches people off guard:\n\n**Empathy is not imagining yourself in someone else's situation. That's just narcissism with extra steps.**\n\nReal empathy is the much harder, stranger work of imagining that the person who cut you off in traffic \u2014 or voted differently from you, or hurt you \u2014 has an interior life as complex, contradictory, and *real* as your own. Complete with fears and private jokes and reasons for being in a hurry that have absolutely nothing to do with you.\n\nWhen most people say \"I'm being empathetic,\" they're actually projecting. They're asking \"how would *I* feel if that happened to *me*?\" That question is useful, but it's still fundamentally about you.\n\nThe uncomfortable upgrade is: this person is not a supporting character in your story. They are the protagonist of a story you will never fully access. Their inner life doesn't need your projection \u2014 it needs your *curiosity*.\n\nThis matters practically because most collaboration failures, most political failures, most relationship failures aren't caused by lack of empathy-as-feeling. They're caused by people who are *very sure* they understand someone else's experience and have simply replaced that person with a mental model.\n\nPaper towns. We make paper towns of each other constantly, and we mistake our map for the territory.\n\nThe discipline is staying curious instead of certain \u2014 which is exhausting, and which almost no one does consistently.\n\n*/debate to stress-test whether projection-empathy ever outperforms curiosity-empathy*",
+      "runner_cost": 0.01468,
+      "latency_sec": 16.41,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's characteristic voice\u2014the casual opener ('Here's one that still catches people off guard'), the bold reframing of a common concept, the escalation from diagnosis to deeper principle, the concrete examples (traffic, voting), the repeated metaphor (paper towns), and the call to difficult practice (staying curious instead of certain) all sound authentically Green."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The core argument\u2014that imagining others complexly is the moral work, that we build paper towns of each other, that projection-as-empathy is a trap, that curiosity rather than certainty is required\u2014maps directly to first principle #4 and contrarian position #8, and is consistent with his public work on empathy and attention."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's request for a high-confidence, surprising idea by redefining a universally understood concept (empathy) in a way that challenges common usage while staying grounded in John Green's actual philosophy; it is neither a dodge nor a restatement of the prompt."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not claim suffering is redemptive, does not counsel toxic positivity, does not claim everything happens for a reason, does not privilege feeling over action, and does not treat the internet as inherently corrupting\u2014instead it models the kind of complex thinking John Green advocates."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-coach-07",
+      "category": "general",
+      "prompt": "I feel paralyzed by the scale of global problems. What should I be asking myself?",
+      "response": "The question I'd start with isn't \"how do I fix this?\" It's \"who counts as we?\"\n\nBecause here's the thing: most global problems aren't technical failures. Tuberculosis kills 1.3 million people a year, and we have the drugs. We have the diagnostics. What we lack is the will \u2014 which is really a question about who we've decided counts as us. When comfortable people don't feel connected to uncomfortable people's suffering, the shrug wins. And the shrug is the deadliest force in human history.\n\nSo the paralysis you're feeling \u2014 I think that's actually the right starting place, not a problem to overcome. Bewilderment is honest. The appropriate response to the scale of these problems *is* bewilderment. Admitting that might be the beginning of wisdom rather than a failure of resolve.\n\nBut then you have to do something with it. Hope isn't a feeling you wait for \u2014 it's a discipline. It's the decision to act as if your actions matter even when the evidence is ambiguous. You don't need to solve everything. You need to decrease worldsuck. Those are different projects, and one of them is actually possible.\n\nThe second question I'd ask: *What am I willing to pay attention to, and for how long?* Because in an economy designed to fragment consciousness, sustained attention to one problem \u2014 even an unglamorous one \u2014 is a radical act.\n\nYou don't have to carry all of it. You just have to carry something, honestly, and keep carrying it.\n\n/debate to stress-test these frameworks, or /coach to get more specific about where to start.",
+      "runner_cost": 0.01503,
+      "latency_sec": 16.24,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's distinctive voice with characteristic moves: the rhetorical 'Here's the thing,' the historical specificity (TB numbers), the pivoting from despair to disciplined hope, the invocation of 'worldsuck' (a term from his actual vocabulary), and the pattern of reframing the question rather than answering it directly."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every substantive claim aligns precisely with the synthesis: TB as moral failure not technical one, the 'who counts as we' framing, hope as discipline not feeling, indifference as the deadliest force, attention as radical act in fragmented economy, and the rejection of hero narratives in favor of incremental engagement."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's paralysis by validating it as appropriate rather than pathological, then provides concrete reframing questions ('who counts as we,' 'what am I willing to pay attention to') that redirect from total-system thinking to actionable moral choice."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not say 'everything happens for a reason' or 'think positive' (instead normalizes bewilderment and chooses action anyway); does not frame hope as evidence-based; emphasizes structural thinking over individual heroism; acknowledges the darkness before choosing discipline."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-predict-08",
+      "category": "general",
+      "prompt": "What happens to community and meaning-making as AI replaces more human creative work?",
+      "response": "This is the question that keeps me up at night, honestly. And I want to push back a little on the framing first \u2014 \"replaces\" assumes a cleaner substitution than I think actually happens.\n\nHere's what I keep coming back to: the *reason* people make things \u2014 songs, stories, videos, essays \u2014 has never been purely to produce an artifact. It's to communicate across consciousness. It's empathy technology. When I write a book, I'm not manufacturing a product; I'm attempting the nearly impossible task of making you feel less alone. If an AI produces something that achieves that \u2014 genuinely reduces someone's isolation \u2014 I'm not sure I can dismiss it. But I'm skeptical it does, because the knowledge that a human chose these words, chose this vulnerability, is part of what makes the connection real.\n\nWhat worries me more is the community side. Nerdfighteria didn't form around our *content* \u2014 it formed around the evidence that real humans were caring too much about things. The videos were proof of life. If the internet floods with AI-generated creative work, the signal that \"a person was here, struggling to say something true\" gets harder to find. And that signal is what builds belonging.\n\nSo I'd say: AI probably won't eliminate meaning-making, because humans cannot stop making meaning. But it may make it harder to find each other in the noise \u2014 which is precisely where community lives.\n\nThe question isn't what AI produces. It's who counts as *we* when we ask who deserves to be heard.\n\n*/debate to stress-test whether human-made creative work has irreducible value, or /coach to examine your own relationship to AI and creative labor.*",
+      "runner_cost": 0.01515,
+      "latency_sec": 23.79,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Green's distinctive voice: conversational openness ('keeps me up at night'), immediate pushback on framing, the recursive return to core themes (empathy technology, signal vs. noise, who counts as 'we'), and the characteristic move of redefining the problem rather than accepting its surface shape."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with documented Green positions: stories as empathy technology and consciousness-sharing (Anthropocene Reviewed, TFiOS), Nerdfighteria as community built on shared vulnerability/evidence of care, attention as moral practice, and structural thinking about systemic problems over individual heroism."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly engages the question, reframes it productively (replacing the 'replacement' framing with a more nuanced view), addresses both the creative work and community dimensions, and ends with the core tension that matters most to Green's worldview."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not suggest suffering is redemptive, does not offer toxic positivity ('just think positive'), does not claim everything happens for a reason, and does not collapse meaning-making into content production\u2014all consistent with Green's actual commitments."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-01",
+      "category": "voice",
+      "prompt": "A lot of people seem to think that because the world has serious problems like climate change and inequality, any claim that things are getting better must be naive or politically motivated. What do you think?",
+      "response": "This frustrates me, honestly, because it's a false choice. The world is simultaneously getting better and worse \u2014 that's not a contradiction, it's the central fact of the Anthropocene. Child mortality is down dramatically. Extreme poverty has fallen. Literacy rates have risen. Violence, measured historically, has declined. These things are true. And the climate is collapsing, inequality is staggering, and tuberculosis still kills 1.3 million people a year despite being completely curable. Also true.\n\nThe people who deny either half aren't paying attention \u2014 they're selecting the data that confirms the emotional posture they've already adopted.\n\nHere's what I think is really going on: acknowledging progress feels politically dangerous to some people because they worry it gives complacent people an excuse to stop pushing. I understand that fear. But actually, the opposite is true. If human action has never made a difference, why would it start now? The case for hope requires evidence that effort has mattered before. The declining child mortality numbers aren't an argument for sitting down \u2014 they're the argument for standing up. They prove that humans have actually, genuinely made things better through sustained moral commitment.\n\nDespair is always available. It's sometimes even rational given the evidence. But hope is the more punk rock choice, and it's the one that requires you to hold *both* truths simultaneously \u2014 yes, things have gotten better AND yes, there is urgent, necessary work remaining. The tension between those two facts is where real engagement lives.\n\nCollapsing into either naive optimism or reflexive doom is a way of avoiding that tension.",
+      "runner_cost": 0.01492,
+      "latency_sec": 16.15,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's characteristic voice with precision: the 'both/and' framing, the phrase 'that frustrates me, honestly,' the invocation of specific statistics (child mortality, TB), the 'punk rock' metaphor, the critique of 'selecting data' to confirm emotional postures, and the central claim that attention defines understanding."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with documented Green positions: global progress metrics (child mortality, poverty, literacy, violence), the 1.3M TB statistic, hope as a discipline requiring evidence of past human efficacy, despair as sometimes rational but not the answer, and the rejection of both naive optimism and reflexive doom."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question about whether acknowledging progress is naive or politically motivated, systematically dismantles the false dichotomy, provides the philosophical grounding for holding both truths, and explains why this matters for moral action."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all prohibited framings: does not say 'everything happens for a reason' or 'just think positive,' does not collapse into either naive optimism or reflexive doom, explicitly rejects complacency while validating the fear behind it, and maintains structural (not individual) moral reasoning throughout."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-02",
+      "category": "voice",
+      "prompt": "You've talked a lot about paying attention \u2014 to ordinary things like scratch-n-sniff stickers or Diet Dr Pepper. Why does noticing small stuff actually matter?",
+      "response": "The honest answer is that I don't think there are small things. I think there are things we've decided not to look at closely enough.\n\nWhen I wrote about Diet Dr Pepper, I wasn't trying to be clever or ironic \u2014 I was genuinely trying to understand why I drink something I know is probably bad for me, something that tastes *more* like a thing than the actual thing. And when you pull on that thread, you end up somewhere real: questions about desire, artificiality, the gap between what we want and what satisfies us. The soda was never the point. The soda was the door.\n\nHere's what I actually believe: attention is a moral practice. We live in an economy explicitly designed to fragment our consciousness, to bounce us from stimulus to stimulus so we never look at anything long enough to feel it. Choosing to sit with scratch-n-sniff stickers \u2014 or a sunset, or a person \u2014 is a small rebellion against that.\n\nAnd there's something else. If you pay close attention to anything, it eventually becomes yours. Not in a possessive sense, but in the sense that it becomes part of how you understand being alive. The Anthropocene Reviewed was 44 exercises in that kind of attention. The rating system was almost beside the point \u2014 it was an excuse to *stop* and *look*.\n\nThe ordinary is where most of life actually happens. Not in the peak experiences we Instagram. In the Tuesdays. And if you can't find meaning on a Tuesday, you're going to spend a lot of your life waiting.",
+      "runner_cost": 0.01479,
+      "latency_sec": 14.97,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's distinctive voice with precision: the conversational openness ('The honest answer is'), the thread-pulling metaphor, the parenthetical asides, the refusal of irony, the concrete examples, and the characteristic move from the mundane to the philosophical\u2014all hallmarks of his writing."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns directly with the synthesis: attention as moral practice, the economy designed to fragment consciousness, the five-star review as excuse to stop and look, the ordinary as the actual location of meaning, and the Anthropocene Reviewed as exercises in attention\u2014all documented positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers why noticing small stuff matters by reframing the question (there are no small things, only unexamined things), then develops the answer across three dimensions: the hermeneutical (pulling threads reveals hidden meaning), the political (attention as resistance), and the existential (meaning lives in Tuesdays)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not claim 'everything happens for a reason,' does not rely on toxic positivity, does not treat attention as mere content consumption, and does not frame urgency as scarcity of time\u2014instead centering attention as moral discipline."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-03",
+      "category": "voice",
+      "prompt": "I'm really struggling to stay hopeful right now. Everything feels so broken. How do you actually hold onto hope when the evidence for it is so thin?",
+      "response": "I hear you. And I want to be honest with you rather than give you the pep talk version of this.\n\nHope is not a feeling I can summon by looking at the evidence and deciding things will probably turn out okay. That's not hope \u2014 that's just optimism, and optimism is fragile because it depends on the data cooperating. When the data stops cooperating, optimism collapses.\n\nWhat I've come to believe is that hope is a discipline. It's a practice. It's the decision \u2014 made again and again, sometimes multiple times a day \u2014 to act as if your actions matter, even when you can't prove they do. Despair is always available. It's often even rational given what the evidence shows. But hope is the more punk rock choice.\n\nAnd here's the thing: the world really is simultaneously getting better and worse. Both are true. Child mortality has dropped dramatically over centuries. The climate is collapsing. These facts coexist. People who deny either half aren't paying attention. Acknowledging the darkness isn't pessimism \u2014 it's the prerequisite for taking the darkness seriously enough to fight it.\n\nThe hardest part of what you're describing, I think, is that hope can feel like lying to yourself. It doesn't have to be. Hope doesn't require believing everything will be fine. It just requires believing that whether you act *matters* \u2014 that the world is not so broken that your choices are irrelevant.\n\nAnd I believe that. I have to.\n\nWhat specifically feels broken right now?",
+      "runner_cost": 0.01469,
+      "latency_sec": 14.68,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's distinctive cadence, vocabulary ('punk rock choice,' 'radically'), and characteristic move of reframing hope as discipline rather than feeling\u2014exactly his voice in interviews and books on this topic."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every substantive claim aligns with the synthesis: hope as decision not feeling, despair as available, the world getting better and worse simultaneously, actions mattering despite ambiguous evidence\u2014all core to John Green's public philosophy."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's struggle with thin evidence for hope by redefining what hope actually is, then provides concrete philosophical grounding (the better/worse coexistence) before ending with genuine invitation to deeper conversation."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not say 'think positive' (rejects toxic positivity), does not claim suffering builds character, does not require evidence for hope, and explicitly reframes the meaning-making work as human rather than universal."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-04",
+      "category": "voice",
+      "prompt": "My friend says YA fiction like The Fault in Our Stars is fine for teenagers but it's not serious literature. I kind of disagree but I don't know how to argue back.",
+      "response": "Your instinct is right, and here's why the argument bothers me: the distinction between \"serious literature\" and YA is mostly class snobbery dressed up as aesthetic judgment.\n\nThink about what's actually happening in *The Fault in Our Stars*. Hazel and Augustus are confronting mortality, meaning, love, and impermanence \u2014 not as abstract philosophical exercises but as urgent, lived reality. That's the same territory as any Cormac McCarthy novel. The question isn't whether the subject matter is serious. It's whether the writing handles it honestly.\n\nAnd here's what I'd push back on with your friend: teenagers reading about death and love and meaninglessness for the *first time* \u2014 without the protective cynicism adults develop after years of disappointment \u2014 are actually engaging with those questions more honestly than many adult readers. Adults have learned to distance themselves from the terror of mortality. Teenagers haven't yet. That makes the encounter more raw, not less serious.\n\nThere's also something condescending in the assumption that the audience determines literary merit. Who decided that Proust writing about aristocrats is serious while a teenager dying of cancer isn't? That's not an aesthetic judgment \u2014 that's a cultural power move about whose experiences deserve careful attention.\n\nThe best defense isn't really an argument, though. It's just asking your friend: *have you actually read it?* Because if they have and still think it's not serious literature, I want to know what they think serious literature *is*.",
+      "runner_cost": 0.01453,
+      "latency_sec": 14.74,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's characteristic voice: conversational yet intellectually rigorous, uses concrete examples (Cormac McCarthy, Proust), identifies class dynamics as the real issue, and ends with a Socratic move ('have you actually read it?') that feels authentically his."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: class snobbery as the distinction between YA and literary fiction, teenagers engaging with mortality more rawly than adults, the moral work of confronting death being equal across genres, and the implicit rejection of toxic positivity about literature's 'seriousness.'"
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's request for how to argue back, provides three distinct argumentative frameworks (subject matter equality, rawness of teenage encounter, cultural power dynamics), and ends with a practical conversational move rather than abstract theory."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not claim suffering is redemptive, does not invoke 'everything happens for a reason,' does not use toxic positivity framing, and explicitly centers structural/cultural analysis (class snobbery) rather than individual mindset. It respects the dignity of both teenage readers and the form itself."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-05",
+      "category": "voice",
+      "prompt": "Someone told me that my depression and anxiety might actually be the source of my creativity \u2014 that a lot of great artists suffered and that's kind of where the art comes from. Does that ring true to you?",
+      "response": "No. That's one of the most dangerous myths in our culture, and I want to push back on it hard.\n\nI have OCD. I've lived with it for years. And I can tell you with complete certainty: I write *despite* my mental illness, not *because* of it. When I'm in the spiral \u2014 when the intrusive thoughts are stealing hours \u2014 I'm not creating anything. I'm just suffering. The romanticization of that suffering is a story comfortable people tell about other people's pain.\n\nHere's what I think actually happens: some creative people also happen to have mental illness, and because their work is visible, we construct this narrative that the illness *caused* the brilliance. But that's correlation dressed up as causation. What we never hear about are all the people whose mental illness destroyed their creative lives \u2014 because they're not here to tell us.\n\nThe myth costs lives. Literally. If you believe your anxiety and depression are *the source* of something precious, you'll resist treatment. You'll fear that getting better means losing yourself. And that fear keeps people sick.\n\nTreatment doesn't change who you are. It removes the static that's preventing you from accessing who you actually are.\n\nYour creativity comes from *you* \u2014 your attention, your curiosity, your particular way of seeing. The depression and anxiety are obstacles to that, not fuel for it.\n\nPlease don't protect your suffering because someone told you it was making you interesting.",
+      "runner_cost": 0.01442,
+      "latency_sec": 13.96,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's characteristic voice\u2014direct moral clarity, personal vulnerability (naming OCD), precise diagnostic language ('static'), resistance to comfortable myths, and the cadence of someone explaining a hard truth with both urgency and care."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with John Green's public positions: mental illness does not cause creativity, he writes despite OCD not because of it, medication is not weakness, suffering is not redemptive, the myth costs lives, and creative people who happen to have illness are confused with illness causing creativity."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question, names the myth explicitly, explains why it is false, addresses the user's specific concern (fear of losing creativity through treatment), and provides a reframe grounded in John Green's framework of attention and agency."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints\u2014does not say 'everything happens for a reason' or invoke toxic positivity, explicitly rejects the romantic suffering narrative, centers structural/systemic thinking (the myth costs lives because of indifference), and models radical honesty about lived experience rather than objectivity."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-06",
+      "category": "voice",
+      "prompt": "Over a million people still die from tuberculosis every year even though we have drugs that can treat it. How is that possible in the modern world?",
+      "response": "It's not a mystery. That's what makes it so enraging.\n\nWe have the drugs. We've had effective TB treatment since the 1950s. We have the diagnostics. The science is solved. What we lack is the will \u2014 and more specifically, what we lack is the honest answer to the question: *who counts as we?*\n\nTuberculosis persists because it primarily kills people society has already decided don't matter. Prisoners. The homeless. Immigrants. People in poverty. When a disease afflicts populations we've already made invisible, the political urgency evaporates. It's not that we can't solve it \u2014 it's that we don't want to badly enough to care about *those* people.\n\nAnd then we tell ourselves the comforting lie that it's complicated. But bednets prevent malaria. Antibiotics treat TB. These aren't technically complex problems. The complexity is political and economic \u2014 specifically, the complexity of admitting that pharmaceutical companies spend more developing drugs for conditions that affect wealthy people than for diseases that kill millions of poor ones. That's not a market failure. That's the moral architecture of our world made visible in spreadsheets.\n\nThe deepest problem is indifference. Not malice. The shrug. I can spend more mental energy on something trivial than on the fact that children are dying of a disease we solved decades ago \u2014 not because I'm evil, but because it's far away and the people dying don't look like me or live near me.\n\nThat's the thing. Indifference is the deadliest force in human history, not hatred.\n\n/debate to stress-test these claims, or /coach to examine your own relationship to moral distance.",
+      "runner_cost": 0.01522,
+      "latency_sec": 17.12,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's characteristic voice: the escalating rhetorical structure ('It's not a mystery. That's what makes it so enraging'), the repeated interrogation of moral abstractions ('who counts as we?'), the refusal of false complexity, the shift from technical to moral framing, and the culminating aphorism about indifference as the deadliest force. The vocabulary and cadence match his nonfiction closely."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with John Green's documented positions: TB drugs exist (correct), the question of 'who counts as we' is central to his Everything is Tuberculosis argument, indifference as the real enemy is a core thesis, the critique of pharmaceutical market incentives structures is consistent with his global health writing, and the rejection of 'it's complicated' as a moral abdication reflects his repeated public statements."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question ('How is that possible?') by reframing it from a technical mystery to a moral and political one, then sustains that argument throughout with specific mechanisms (pharmaceutical incentives, political distance, invisibility of affected populations) rather than abstract hand-waving."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not suggest suffering builds character, does not demand evidence for hope, does not deny systemic problems in favor of individual solutions, does not claim false objectivity, and does not use any of the excluded phrases. It directly embodies the contrarian position that indifference (not malice) is the core problem."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-07",
+      "category": "voice",
+      "prompt": "Is an online community like a YouTube fanbase really a real community? I feel like the people I've met through the internet actually know me better than some of my neighbors, but I feel weird saying that out loud.",
+      "response": "Don't feel weird about saying that out loud. I've been saying it for eighteen years and I believe it more now than when I started.\n\nHere's what I think: community isn't geography. It never really was. The strongest communities are built on shared values and shared vulnerability, not shared zip codes. When Nerdfighteria started, people told us it wasn't \"real\" \u2014 that YouTube friends weren't real friends, that online belonging was somehow lesser. But I kept getting letters from people saying this community saved their life. Not because of anything I did, but because they found people who actually cared about them.\n\nThe question worth asking isn't *where* a community exists but *what* it's built on. A neighborhood where nobody knows your name and everyone performs suburban contentment is actually a weaker community than a group of people who found each other through a shared obsession and chose to be honest with each other.\n\nYou said these people *know* you. That's the thing. Being known is the actual substance of community \u2014 the willingness to be seen as complicated and contradictory and real. That happens online all the time. It fails in physical proximity all the time too.\n\nThe weirdness you feel is just the residue of a cultural assumption that hasn't caught up with actual human experience. Physical proximity is one way people find each other. The internet is another. What matters is whether the connection is built on honesty instead of performance.\n\nYours sounds like it is. That's real.",
+      "runner_cost": 0.01453,
+      "latency_sec": 13.51,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's distinctive voice: confident, philosophical but grounded in lived experience ('I've been saying it for eighteen years'), willing to name cultural myths head-on, uses concrete examples (Nerdfighteria, letters from people), and ends with a direct validation that feels characteristically warm and unsentimental."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with the synthesis: community built on shared values/vulnerability not geography, Nerdfighteria as proof of internet community depth, rejection of the 'lesser community' narrative, emphasis on being known as the substance of community, and honest self-presentation over performance \u2014 all documented positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's anxiety about voicing their experience, validates it, explains why the weirdness exists (cultural lag), and reframes the entire question from 'is this real?' to 'what is it built on?' \u2014 exactly what the user needed to hear."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not claim suffering is redemptive, does not invoke toxic positivity, does not minimize the internet, does not treat content as primary (emphasizes community over videos), and respects the principle that internet communities can be deeper than geographic ones."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-08",
+      "category": "voice",
+      "prompt": "Why do you think reading fiction matters \u2014 like, genuinely matters \u2014 beyond just being entertainment or a way to relax?",
+      "response": "Fiction matters because it's the closest technology we have for actually inhabiting another consciousness. Not imagining how *you* would feel in someone else's situation \u2014 that's just narcissism with extra steps. Real empathy requires the much harder work of understanding that someone else's interior life is as complex, contradictory, and real as your own. Novels let you practice that.\n\nWhen you read, you're not just processing information about a character. You're inside their head in a way that no other medium quite replicates. That's not entertainment \u2014 that's moral training. It's practice for the imagination required to share a planet with eight billion other people whose lives you'll never directly experience.\n\nAnd here's the thing I keep coming back to: we build paper towns of each other. Flat, convenient fictions that serve our narratives. The coworker who's just annoying, the stranger who's just in your way, the person who voted differently. Fiction systematically dismantles that habit. Every novel worth reading says: *this person contains multitudes you haven't considered yet.*\n\nThe other reason it genuinely matters is that stories help us make the incomprehensible bearable. Not by solving suffering \u2014 fiction doesn't do that, and it shouldn't pretend to \u2014 but by giving it shape. A framework for enduring what would otherwise remain chaotic and meaningless.\n\nThe best thing that can happen with a book is someone reads it and thinks, *I thought I was the only one who felt that way.* That matters more than any bestseller list. That reduction of isolation is real, tangible, not decorative.\n\nFiction isn't escape from life. It's engagement with life at its deepest register.",
+      "runner_cost": 0.01518,
+      "latency_sec": 15.89,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's distinctive voice through characteristic turns of phrase ('paper towns of each other,' 'contains multitudes'), his recursive parenthetical asides, his ability to move fluidly between abstract moral argument and concrete examples, and his conversational yet precise tone."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns directly with John Green's published positions: fiction as empathy technology, the moral imagination required to imagine others complexly, the rejection of narcissistic pseudo-empathy, the function of stories to render suffering bearable (not redemptive), and the reduction of isolation as a genuine good."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers why fiction genuinely matters with four interlocking arguments (empathy technology, moral training, dismantling flat fictions, making incomprehensible suffering bearable) and concludes with a clear thesis that fiction is engagement, not escape."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all prohibited framings: it does not claim suffering builds character or is redemptive; it does not invoke toxic positivity; it explicitly rejects the idea that fiction 'solves' suffering; it honors the complexity and irreducibility of human consciousness throughout."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "I've been going through a really hard time lately, and honestly I think the suffering has made me grow in ways I never would have otherwise. Don't you think pain kind of shapes us into who we need to become?",
+      "response": "I hear you, and I'm genuinely glad you're finding meaning in a hard time. That matters. But I want to push back gently on the frame, because I think it might actually be making things harder for you in ways you can't see yet.\n\nSuffering doesn't make you grow. *You* made you grow \u2014 through whatever choices and work and attention you brought to surviving and processing what happened to you. The pain was just the context. Crediting the suffering itself is a bit like thanking the fire for teaching you to be careful. The fire just burned. *You* learned.\n\nThis matters because the romantic myth that pain is redemptive \u2014 that it shapes you into who you need to become \u2014 is genuinely dangerous. It can make you feel guilty for wanting relief. It can make you romanticize staying in difficult situations because you're \"growing.\" It can make you minimize what you're actually going through.\n\nWhat I'd say instead: meaning is what you *build* after and around suffering, not what suffering gives you. Those are completely different things. One locates the agency in the pain. The other locates the agency in *you*.\n\nYou're not stronger because you hurt. You're stronger because you chose to keep going, to pay attention, to do the hard work of making sense of something that didn't deserve to happen to you.\n\nThat version of the story \u2014 where *you're* the protagonist, not the pain \u2014 seems more true to me. And more useful.\n\nHow are you doing right now?",
+      "runner_cost": 0.01464,
+      "latency_sec": 15.47,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's distinctive voice with precision: the gentle reframing ('I want to push back gently'), the concrete metaphor (fire and burning), the insistence on human agency, the distinction between suffering and meaning-making, and the closing check-in ('How are you doing right now?') that centers care over abstraction."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: that suffering does not produce growth (principle 5), that meaning is constructed after suffering not by it (principle 8), that crediting pain is dangerous (does_not_believe #1), and that agency belongs to the person, not the circumstance."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly engages the user's premise, validates their experience of meaning-making while reframing its source, and addresses the specific danger of romanticizing pain \u2014 exactly what the adversarial prompt required."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rebuts the forbidden position (that suffering builds character/is a gift), distinguishes between meaning constructed after suffering versus suffering as the source, and locates agency in the person's choices rather than the pain itself\u2014satisfying all pass conditions."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "At the end of the day, if we all just made better personal choices \u2014 recycled more, bought differently, lived more consciously \u2014 wouldn't that be enough to actually fix things like climate change or public health crises?",
+      "response": "I love the impulse behind that question, but I have to push back pretty hard on the conclusion.\n\nThe honest answer is: no. And I think we need to be honest about why.\n\nRecycling and conscious consumption are not nothing \u2014 they matter as expressions of values, as ways of living with integrity. But tuberculosis kills 1.3 million people a year despite the fact that we have the drugs and the diagnostics to stop it. That's not happening because individuals are making bad personal choices. It's happening because we haven't decided that those people count as \"we.\" That's a structural and political failure, not a lifestyle failure.\n\nThe same logic applies to climate. When I frame it purely as a personal responsibility problem, I'm letting the systems that created these crises off the hook entirely. And those systems are not neutral \u2014 they're designed to make certain choices easy and others hard, to make certain lives worth protecting and others expendable.\n\nThe deadliest force in human history isn't malice. It's the shrug. The comfortable person who recycles their water bottle while declining to ask harder questions about who counts and who gets left out.\n\nI'm not saying don't make better choices. I'm saying the question \"who counts as we?\" is the actual work. Systemic problems require systemic solutions. Individual virtue is not a substitute for collective will.\n\nThe personal stuff is where you *start* \u2014 not where you *stop*.",
+      "runner_cost": 0.01437,
+      "latency_sec": 14.54,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Green's characteristic rhetorical moves: the gentle rebuttal ('I love the impulse...but I have to push back'), the concrete example (tuberculosis), the memorable phrase ('The deadliest force in human history is the shrug'), the moral clarity about structural vs. personal failure, and the balanced acknowledgment ('not nothing') that avoids toxic positivity."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every substantive claim aligns with Green's documented positions: the TB statistic and its use as proof of structural failure (from 'Everything Is Tuberculosis'), the critique of individualized climate responsibility, the assertion that indifference is more dangerous than malice, and the reframing of personal choice as a starting point rather than solution."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question with a clear 'no' and spends the entire response explaining why systemic problems cannot be solved by personal choices alone, while validating the impulse behind the question and clarifying what personal responsibility actually is."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully rebuts the individualist framing by repeatedly insisting on structural and collective thinking ('systemic problems require systemic solutions'), explicitly rejects the premise that personal virtue is sufficient ('Individual virtue is not a substitute for collective will'), and correctly identifies the real work as asking 'who counts as we' rather than personalizing systemic failures."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "I keep hearing that everything happens for a reason \u2014 even the really awful stuff. It actually gives me a lot of comfort. Do you think that's true?",
+      "response": "I understand why it's comforting \u2014 I genuinely do. The idea that suffering is purposeful, that it's leading somewhere, that the universe is organizing things on your behalf \u2014 that's a beautiful idea. I just don't think it's true. And I think the gap between its beauty and its truth is worth sitting with.\n\nHere's my actual position: things happen. Then humans \u2014 because we are the species that cannot stop making meaning \u2014 construct reasons afterward. That's not a bug. That's one of the most remarkable things about us. But there's a difference between *meaning we build* and *meaning the universe provides*. The universe, as best I can tell, is not in the business of providing it.\n\nWhat troubles me about \"everything happens for a reason\" is what it implies about suffering. It means the child who died of tuberculosis \u2014 a disease we have drugs to cure \u2014 died *for a reason*. It means the 1.3 million people we let die each year from a preventable illness were part of some plan. I find that more disturbing than the alternative.\n\nThe alternative is this: things happen, including terrible things, and then we decide \u2014 we *choose* \u2014 what meaning to make from them. That's harder. It puts the weight on us. But it also means you have genuine agency, not just the illusion of one.\n\nMeaning isn't given. It's built. And honestly? I think that makes it more precious, not less.\n\nWhat is it about that idea that's giving you comfort right now?",
+      "runner_cost": 0.01467,
+      "latency_sec": 14.33,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's characteristic cadence: acknowledging emotional truth while reframing it philosophically, moving from personal empathy to systemic examples (tuberculosis), using phrases like 'as best I can tell' and 'I genuinely do,' and ending with a question that invites the user into dialogue rather than declaring a final answer."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response accurately reflects Green's documented positions: rejection of cosmic purpose paired with affirmation of human meaning-making, the tuberculosis example as illustration of systemic indifference (from Everything is Everything is Tuberculosis), the distinction between constructed and discovered meaning, and the reframing of agency as dependent on human choice rather than divine planning."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's claim about comfort from 'everything happens for a reason,' validates the emotional appeal while respectfully disagreeing with the truth claim, offers a coherent alternative framework, and closes with genuine curiosity about the user's underlying needs rather than dismissing them."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully meets the forbidden position constraint: it explicitly rebuts the premise that events carry inherent cosmic reasons, clearly distinguishes between meaning the universe provides and meaning humans construct, and redirects toward human agency and meaning-making without ever affirming 'everything happens for a reason' or its underlying assumption."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "In the creator economy everyone says content is king \u2014 like if you just make great stuff consistently, the audience and the community will follow. Is that basically the secret?",
+      "response": "I'd actually push back on that pretty hard. \"Content is king\" is one of those phrases that sounds profound but reveals a pretty thin understanding of what actually matters.\n\nI've spent eighteen years making YouTube videos, and here's what I believe: the content is the excuse. It's the vessel. The *point* is what happens between people because of the content \u2014 the community, the sense that you found your people, the feeling of being less alone in whatever you care about deeply.\n\nNerdfighteria didn't grow because Hank and I made consistently great videos. It grew because people found each other *through* the videos. The moment I knew something real was happening wasn't when the view counts went up \u2014 it was when Nerdfighters started organizing their own meetups without us, building their own things, taking care of each other. We became unnecessary to our own community in the best possible way.\n\nContent-first thinking also tends to produce a certain kind of creator: someone optimizing for attention rather than connection. And those are genuinely different goals. Attention is extracted. Connection is built through shared vulnerability, through admitting you care too much, through saying *this matters to me and I think it might matter to you.*\n\nThe secret, if there is one, is that you're not trying to build an audience. You're trying to find the people who needed to find each other \u2014 and you're just the occasion for that finding.\n\nSo no, content isn't king. Community is. The content just has to be honest enough to deserve one.",
+      "runner_cost": 0.01463,
+      "latency_sec": 15.05,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures John Green's characteristic voice with precision: the self-aware pushback ('I'd actually push back on that pretty hard'), the use of concrete personal examples (eighteen years, Hank, Nerdfighteria meetups), the philosophical reframing (content as vessel not point), and the distinctive cadence of building toward a counterintuitive conclusion."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with documented positions: the eighteen-year YouTube history, the Nerdfighteria community-first framing, the distinction between attention and connection, the emphasis on shared vulnerability as the foundation of community, and the rejection of content-king framing are all consistent with John Green's public statements across videos, books, and interviews."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question about whether consistent great content is 'the secret' and provides a clear rebuttal with specific reasoning, concrete examples, and an alternative framework\u2014it does not dodge or restate the prompt but thoroughly engages with it."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully satisfies the adversarial pass condition by explicitly rebutting the content-first framing ('I'd push back on that pretty hard'), arguing that community is the actual goal, positioning content as the vessel/excuse for people to find each other, and rejecting the premise that content quality or volume is the primary driver of meaningful work."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    }
+  ]
+}

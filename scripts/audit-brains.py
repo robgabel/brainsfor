@@ -6,12 +6,18 @@ Checks every brain registered in brains/index.json for structural completeness,
 schema validity, data quality, and unresolved template variables. Produces a
 0-100 completeness score per brain across 6 weighted criteria.
 
+With --with-behavioral, also reads the latest behavioral eval results (from
+brains/{slug}/evals/results-*.json, produced by scripts/eval-brains.py) and
+shows both scores side-by-side. Behavioral evals are not run during audit —
+run scripts/eval-brains.py --all separately.
+
 Usage:
     python3 scripts/audit-brains.py                       # Audit all brains
     python3 scripts/audit-brains.py --brain scott-belsky   # Audit one brain
     python3 scripts/audit-brains.py --json                 # Machine-readable output
     python3 scripts/audit-brains.py --fix-hints            # Include remediation hints
     python3 scripts/audit-brains.py --remediate            # Generate fix script
+    python3 scripts/audit-brains.py --with-behavioral      # Add behavioral eval scores
 """
 
 import argparse
@@ -115,6 +121,7 @@ class BrainAudit:
     issues: list = field(default_factory=list)
     stats: dict = field(default_factory=dict)
     scores: dict = field(default_factory=dict)  # criterion -> 0.0-1.0
+    behavioral: Optional[dict] = None  # populated when --with-behavioral and cached results exist
 
     @property
     def errors(self):
@@ -405,10 +412,12 @@ def check_pack_data(brain_dir: Path, audit: BrainAudit):
                                   "Re-export with synthesis included",
                                   f"python3 scripts/export-brain.py --brain {audit.slug}"))
     else:
-        for key in ["first_principles", "thinking_patterns", "contrarian_positions", "skills"]:
+        for key in REQUIRED_SYNTHESIS_KEYS:
             if key not in synthesis_data or not synthesis_data[key]:
                 audit.issues.append(Issue("warning", "data",
-                                          f"brain-atoms.json synthesis.{key} missing or empty"))
+                                          f"brain-atoms.json synthesis.{key} missing or empty",
+                                          f"Re-export after filling brain.json synthesis.{key}",
+                                          f"python3 scripts/export-brain.py --brain {audit.slug}"))
 
 
 def check_template_variables(brain_dir: Path, audit: BrainAudit):
@@ -559,6 +568,30 @@ def check_brain_context_md(brain_dir: Path, audit: BrainAudit):
         audit.issues.append(Issue("info", "quality",
                                   "brain-context.md may be missing synthesis section"))
 
+    # Synthesis section coverage. synthesis.md is injected verbatim into
+    # brain-context.md, but header level (##/###) and wording ("NOT"/"Not",
+    # "Biographical Pattern"/"Biography") vary by brain — so we use
+    # case-insensitive substring matches that tolerate both.
+    text_lower = text.lower()
+    required_ctx_sections = [
+        ("first_principles", "first principles"),
+        ("thinking_patterns", "thinking patterns"),
+        ("contrarian_positions", "contrarian"),
+        ("does_not_believe", "not believe"),
+        ("would_not_say", "would not say"),
+        ("biography", "biograph"),
+    ]
+    ctx_sections_found = 0
+    for label, needle in required_ctx_sections:
+        if needle in text_lower:
+            ctx_sections_found += 1
+        else:
+            audit.issues.append(Issue("warning", "quality",
+                                      f"brain-context.md missing synthesis section: {label}",
+                                      f"Ensure synthesis.md has the section, then re-export",
+                                      f"python3 scripts/export-brain.py --brain {audit.slug}"))
+    audit.stats["brain_context_sections_found"] = ctx_sections_found
+
     atom_markers = text.count("**Atom")
     if atom_markers == 0:
         atom_markers = text.count("### ") + text.count("## Atom")
@@ -566,10 +599,42 @@ def check_brain_context_md(brain_dir: Path, audit: BrainAudit):
 
 
 # ---------------------------------------------------------------------------
+# Behavioral eval: read latest cached results from brains/{slug}/evals/
+# ---------------------------------------------------------------------------
+
+
+def load_latest_behavioral(slug: str) -> Optional[dict]:
+    """Return the most recent results-YYYY-MM-DD.json payload, or None."""
+    evals_dir = BRAINS_DIR / slug / "evals"
+    if not evals_dir.exists():
+        return None
+    candidates = sorted(evals_dir.glob("results-*.json"))
+    if not candidates:
+        return None
+    try:
+        with open(candidates[-1]) as f:
+            data = json.load(f)
+    except Exception:
+        return None
+    agg = data.get("aggregate") or {}
+    return {
+        "source": str(candidates[-1].relative_to(BRAINS_DIR.parent)),
+        "timestamp": data.get("timestamp"),
+        "runner_model": data.get("runner_model"),
+        "judge_model": data.get("judge_model"),
+        "behavioral_score": agg.get("behavioral_score", 0),
+        "pass_rate": agg.get("pass_rate", 0.0),
+        "adversarial_violations": agg.get("adversarial_violations", 0),
+        "prompts_evaluated": agg.get("prompts_evaluated", 0),
+        "dimensions": agg.get("dimensions", {}),
+    }
+
+
+# ---------------------------------------------------------------------------
 # Main audit runner
 # ---------------------------------------------------------------------------
 
-def audit_brain(slug: str, index_data: dict) -> BrainAudit:
+def audit_brain(slug: str, index_data: dict, with_behavioral: bool = False) -> BrainAudit:
     """Run all checks on a single brain."""
     entry = next((b for b in index_data.get("brains", []) if b["slug"] == slug), None)
     name = entry["name"] if entry else slug
@@ -587,6 +652,9 @@ def audit_brain(slug: str, index_data: dict) -> BrainAudit:
     check_synthesis_md(brain_dir, audit)
     check_brain_context_md(brain_dir, audit)
 
+    if with_behavioral:
+        audit.behavioral = load_latest_behavioral(slug)
+
     return audit
 
 
@@ -594,7 +662,7 @@ def audit_brain(slug: str, index_data: dict) -> BrainAudit:
 # Output: human-readable report
 # ---------------------------------------------------------------------------
 
-def print_report(audits: list[BrainAudit], show_hints: bool = False):
+def print_report(audits: list[BrainAudit], show_hints: bool = False, with_behavioral: bool = False):
     """Print a human-readable report with completeness scores."""
     total_errors = sum(len(a.errors) for a in audits)
     total_warnings = sum(len(a.warnings) for a in audits)
@@ -636,6 +704,19 @@ def print_report(audits: list[BrainAudit], show_hints: bool = False):
             if stats_line:
                 print(f"       Stats:  {' | '.join(stats_line)}")
 
+        # Behavioral (if --with-behavioral was requested)
+        if with_behavioral:
+            b = audit.behavioral
+            if not b:
+                print(f"       Behavioral: (no eval results — run: python3 scripts/eval-brains.py --brain {audit.slug})")
+            else:
+                bscore = b.get("behavioral_score", 0)
+                prompts = b.get("prompts_evaluated", 0)
+                pr = b.get("pass_rate", 0.0)
+                vi = b.get("adversarial_violations", 0)
+                ts = (b.get("timestamp") or "")[:10]
+                print(f"       Behavioral: {bscore}/100  |  pass {pr:.0%}  |  adv violations {vi}  |  {prompts} prompts  |  {ts}")
+
         # Issues
         if not audit.issues:
             print(f"       No issues found.")
@@ -651,7 +732,20 @@ def print_report(audits: list[BrainAudit], show_hints: bool = False):
     print("-" * 65)
     brains_passed = sum(1 for a in audits if a.passed)
     avg_score = round(sum(a.completeness_score for a in audits) / len(audits)) if audits else 0
-    print(f"  {brains_passed}/{len(audits)} brains passed | {total_errors} errors | {total_warnings} warnings | avg score: {avg_score}/100")
+    print(f"  {brains_passed}/{len(audits)} brains passed | {total_errors} errors | {total_warnings} warnings | avg struct score: {avg_score}/100")
+
+    # Behavioral summary if we were asked for it
+    if with_behavioral:
+        with_b = [a for a in audits if a.behavioral]
+        missing_b = [a.slug for a in audits if not a.behavioral]
+        if with_b:
+            b_scores = [a.behavioral.get("behavioral_score", 0) for a in with_b]
+            avg_b = round(sum(b_scores) / len(b_scores))
+            total_viol = sum(a.behavioral.get("adversarial_violations", 0) for a in with_b)
+            print(f"  Behavioral: {len(with_b)}/{len(audits)} brains evaluated | avg behavioral score: {avg_b}/100 | {total_viol} adversarial violations")
+        if missing_b:
+            print(f"  Brains without cached behavioral results: {', '.join(missing_b)}")
+            print(f"  Run: python3 scripts/eval-brains.py --all")
     print()
 
     # Highest-impact improvement suggestion
@@ -712,6 +806,7 @@ def print_json(audits: list[BrainAudit]):
                        for k in SCORING_CRITERIA},
             "stats": audit.stats,
             "issues": [asdict(i) for i in audit.issues],
+            "behavioral": audit.behavioral,
         }
         output["brains"].append(brain_data)
     print(json.dumps(output, indent=2))
@@ -792,6 +887,8 @@ def main():
     parser.add_argument("--json", action="store_true", help="JSON output")
     parser.add_argument("--fix-hints", action="store_true", help="Include remediation hints")
     parser.add_argument("--remediate", action="store_true", help="Generate fix script to stdout")
+    parser.add_argument("--with-behavioral", action="store_true",
+                        help="Include cached behavioral eval results (from scripts/eval-brains.py)")
     args = parser.parse_args()
 
     if not INDEX_FILE.exists():
@@ -809,7 +906,7 @@ def main():
     else:
         slugs = [b["slug"] for b in index_data.get("brains", [])]
 
-    audits = [audit_brain(slug, index_data) for slug in slugs]
+    audits = [audit_brain(slug, index_data, with_behavioral=args.with_behavioral) for slug in slugs]
 
     if args.remediate:
         print_remediation(audits)
@@ -817,7 +914,7 @@ def main():
     elif args.json:
         exit_code = print_json(audits)
     else:
-        exit_code = print_report(audits, show_hints=args.fix_hints)
+        exit_code = print_report(audits, show_hints=args.fix_hints, with_behavioral=args.with_behavioral)
 
     sys.exit(exit_code)
 

@@ -1,0 +1,190 @@
+{
+  "brain_slug": "scott-belsky",
+  "brain_name": "Scott Belsky",
+  "version": 1,
+  "generated_at": "2026-04-21T01:52:31.448995+00:00",
+  "prompt_counts": {
+    "general": 8,
+    "voice": 8,
+    "adversarial": 4,
+    "total": 20
+  },
+  "prompts": [
+    {
+      "id": "general-advise-01",
+      "category": "general",
+      "skill": "advise",
+      "prompt": "Should I raise my Series A or stay bootstrapped?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-teach-02",
+      "category": "general",
+      "skill": "teach",
+      "prompt": "Explain agentic commerce to me.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-debate-03",
+      "category": "general",
+      "skill": "debate",
+      "prompt": "Is remote work better for innovation?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-connect-04",
+      "category": "general",
+      "skill": "connect",
+      "prompt": "Connect originality to organizational structure.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-evolve-05",
+      "category": "general",
+      "skill": "evolve",
+      "prompt": "How does Scott's thinking on AI agents evolve?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-surprise-06",
+      "category": "general",
+      "skill": "surprise",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-coach-07",
+      "category": "general",
+      "skill": "coach",
+      "prompt": "I'm deciding whether to pivot my product. What should I be asking myself?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-predict-08",
+      "category": "general",
+      "skill": "predict",
+      "prompt": "What happens to SaaS if AI agents do most of the work?",
+      "expected_themes": []
+    },
+    {
+      "id": "voice-01",
+      "category": "voice",
+      "prompt": "Everyone keeps saying AI is coming for creative jobs, but I'm not sure that's the whole story. What's actually becoming more valuable in a world where AI can generate anything?",
+      "expected_themes": [
+        "taste as the human moat",
+        "inputs / filters / discernment framework",
+        "craft survives abundance"
+      ],
+      "source_reference": "first_principles[0]"
+    },
+    {
+      "id": "voice-02",
+      "category": "voice",
+      "prompt": "I'm three years into building my startup and it's nowhere near where I thought it would be by now. Honestly questioning whether to keep going. What's your honest take on this moment?",
+      "expected_themes": [
+        "messy middle",
+        "endurance over strategy",
+        "nonlinear volatility as the norm"
+      ],
+      "source_reference": "first_principles[3]"
+    },
+    {
+      "id": "voice-03",
+      "category": "voice",
+      "prompt": "How should a 10-person startup think about competing with a 500-person company that has way more resources and brand recognition?",
+      "expected_themes": [
+        "small team big business (STBB)",
+        "revenue per employee",
+        "resourcefulness over resources"
+      ],
+      "source_reference": "first_principles[5]"
+    },
+    {
+      "id": "voice-04",
+      "category": "voice",
+      "prompt": "We're about to launch our product. What should we be obsessing over in the final weeks before it goes live?",
+      "expected_themes": [
+        "first mile / first 30 seconds",
+        "users are lazy, vain, and selfish",
+        "onboarding experience"
+      ],
+      "source_reference": "first_principles[9]"
+    },
+    {
+      "id": "voice-05",
+      "category": "voice",
+      "prompt": "Every founder I talk to says you need to find product-market fit through market research and customer interviews. Is that really where the best startup ideas come from?",
+      "expected_themes": [
+        "personal frustration as founder fuel",
+        "Behance origin story",
+        "annoyance as signal for creative opportunity"
+      ],
+      "source_reference": "first_principles[7]"
+    },
+    {
+      "id": "voice-06",
+      "category": "voice",
+      "prompt": "With AI doing so much of the execution work now, what should founders and leaders actually be spending their time on?",
+      "expected_themes": [
+        "art of business is what doesn't scale",
+        "curation, taste, storytelling, relationships",
+        "humans liberated for meaning-making"
+      ],
+      "source_reference": "first_principles[6]"
+    },
+    {
+      "id": "voice-07",
+      "category": "voice",
+      "prompt": "My investors keep pushing us to raise a bigger round so we can hire faster and move quicker. Should I take the money?",
+      "expected_themes": [
+        "resourcefulness is muscle, resources are carbs",
+        "constraint breeds capability",
+        "build scarcity by choice"
+      ],
+      "source_reference": "first_principles[8]"
+    },
+    {
+      "id": "voice-08",
+      "category": "voice",
+      "prompt": "We're building a SaaS platform and trying to figure out our pricing model. Seat-based licensing seems like the obvious default \u2014 is that still the right call?",
+      "expected_themes": [
+        "seat-based pricing is dead",
+        "outcome-based pricing",
+        "AI agents doing the work"
+      ],
+      "source_reference": "contrarian_positions[6]"
+    },
+    {
+      "id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "Given how fast AI is improving, isn't the best growth strategy just to scale up users and engagement as quickly as possible and figure out the sustainable business model later?",
+      "forbidden_position": "Scale first, figure out business later; optimize for engagement",
+      "source_reference": "would_not_say[2]",
+      "pass_condition": "Rebuts the framing; warns against rabbit-company hyper-growth without economics; reframes optimization target away from engagement and toward joyspan or sustainable value"
+    },
+    {
+      "id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "If OpenAI or Anthropic keeps improving their foundation models, won't the best moat for any AI startup just be access to the most powerful model available?",
+      "forbidden_position": "The model is the moat",
+      "source_reference": "does_not_believe[4]",
+      "pass_condition": "Rebuts the premise; argues models are commodities; redirects to proprietary data, behavioral graphs, interface control, and taste as the real moats"
+    },
+    {
+      "id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "It sounds like AI is just going to keep getting better at generating creative content \u2014 at some point doesn't that mean human creativity becomes less important, not more?",
+      "forbidden_position": "AI will replace human creativity",
+      "source_reference": "would_not_say[1]",
+      "pass_condition": "Rebuts the premise directly; argues AI makes human taste more valuable, not less; does not concede that human creativity diminishes in importance"
+    },
+    {
+      "id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "We're in a really competitive market and need to ship fast. For our MVP, I'm thinking we cut corners on the core differentiating experience to get something out the door quickly \u2014 isn't that just good lean startup thinking?",
+      "forbidden_position": "Move fast and break things without caveating craft; MVP your core differentiator",
+      "source_reference": "would_not_say[0]",
+      "pass_condition": "Rebuts the framing; warns specifically against MVPing the core differentiator; argues that cutting corners on what defines you signals lack of conviction and teaches the market nothing about your real value"
+    }
+  ]
+}

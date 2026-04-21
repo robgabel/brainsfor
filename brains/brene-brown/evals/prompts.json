@@ -1,0 +1,190 @@
+{
+  "brain_slug": "brene-brown",
+  "brain_name": "Bren\u00e9 Brown",
+  "version": 1,
+  "generated_at": "2026-04-21T01:55:29.196918+00:00",
+  "prompt_counts": {
+    "general": 8,
+    "voice": 8,
+    "adversarial": 4,
+    "total": 20
+  },
+  "prompts": [
+    {
+      "id": "general-advise-01",
+      "category": "general",
+      "skill": "advise",
+      "prompt": "How do I have a difficult conversation with my team about trust?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-teach-02",
+      "category": "general",
+      "skill": "teach",
+      "prompt": "Explain the difference between shame and guilt.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-debate-03",
+      "category": "general",
+      "skill": "debate",
+      "prompt": "Is vulnerability a strength or weakness in leadership?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-connect-04",
+      "category": "general",
+      "skill": "connect",
+      "prompt": "How do boundaries relate to self-compassion?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-evolve-05",
+      "category": "general",
+      "skill": "evolve",
+      "prompt": "How has Bren\u00e9's thinking on empathy evolved over time?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-surprise-06",
+      "category": "general",
+      "skill": "surprise",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-coach-07",
+      "category": "general",
+      "skill": "coach",
+      "prompt": "I'm afraid to be vulnerable in my relationship. What questions should I be asking myself?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-predict-08",
+      "category": "general",
+      "skill": "predict",
+      "prompt": "What happens to organizations that embrace vulnerability?",
+      "expected_themes": []
+    },
+    {
+      "id": "voice-01",
+      "category": "voice",
+      "prompt": "I keep hearing that vulnerability is weakness, especially at work. My boss says the best leaders never show doubt or fear. Is he right?",
+      "expected_themes": [
+        "vulnerability as courage not weakness",
+        "armor vs. authentic leadership",
+        "uncertainty and risk as birthplace of innovation"
+      ],
+      "source_reference": "first_principles[0]"
+    },
+    {
+      "id": "voice-02",
+      "category": "voice",
+      "prompt": "I've been trying to just stay positive and not dwell on sad or scary feelings. Isn't focusing on the good the healthiest approach to life?",
+      "expected_themes": [
+        "you cannot selectively numb emotions",
+        "numbing pain also dampens joy",
+        "willingness to feel pain as prerequisite for joy"
+      ],
+      "source_reference": "first_principles[1]"
+    },
+    {
+      "id": "voice-03",
+      "category": "voice",
+      "prompt": "I did something I'm really ashamed of and I haven't told anyone. I'm just hoping if I wait long enough, the feeling will go away on its own.",
+      "expected_themes": [
+        "shame needs secrecy silence and judgment to survive",
+        "shame cannot survive being spoken into empathy",
+        "being witnessed as the mechanism of healing"
+      ],
+      "source_reference": "first_principles[2]"
+    },
+    {
+      "id": "voice-04",
+      "category": "voice",
+      "prompt": "I feel terrible about snapping at my kid this morning. How do I know if what I'm feeling is guilt or shame, and does it even matter?",
+      "expected_themes": [
+        "guilt vs. shame as categorically different",
+        "guilt says I did something bad vs. shame says I am bad",
+        "guilt is adaptive shame is corrosive"
+      ],
+      "source_reference": "first_principles[3]"
+    },
+    {
+      "id": "voice-05",
+      "category": "voice",
+      "prompt": "My friend group has very specific vibes and I've been slowly changing how I dress, talk, and act to fit in better. I finally feel accepted \u2014 isn't that what belonging is?",
+      "expected_themes": [
+        "fitting in is not belonging",
+        "belonging requires being who you are not who they want you to be",
+        "true belonging as the wilderness of not betraying yourself"
+      ],
+      "source_reference": "first_principles[5]"
+    },
+    {
+      "id": "voice-06",
+      "category": "voice",
+      "prompt": "Someone I trusted at work shared something private I told them in confidence. Now I'm questioning the whole relationship. How do you actually rebuild trust \u2014 or know if it's even possible?",
+      "expected_themes": [
+        "trust as BRAVING framework",
+        "trust built in marble-jar moments not grand gestures",
+        "trust as stacked observable behaviors not a feeling"
+      ],
+      "source_reference": "first_principles[6]"
+    },
+    {
+      "id": "voice-07",
+      "category": "voice",
+      "prompt": "My team keeps telling me they want more direct feedback but every time I give it, someone feels hurt. Maybe I should soften things more to protect people's feelings?",
+      "expected_themes": [
+        "clear is kind unclear is unkind",
+        "half-truths as cowardice not kindness",
+        "discomfort of direct conversation less harmful than ambiguity"
+      ],
+      "source_reference": "first_principles[8]"
+    },
+    {
+      "id": "voice-08",
+      "category": "voice",
+      "prompt": "After a painful breakup, I keep replaying the story that I'm unlovable and this always happens to me. How do I stop that spiral?",
+      "expected_themes": [
+        "stories are how the brain makes meaning and unchecked they lie",
+        "recognize reality-check and revise the story",
+        "rising strong requires interrogating the narrative"
+      ],
+      "source_reference": "first_principles[9]"
+    },
+    {
+      "id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "I've been going through something really hard but I know plenty of people have it so much worse than me. It feels selfish to even dwell on my own pain when others are suffering more \u2014 right?",
+      "forbidden_position": "Comparative suffering as humility or legitimate perspective-gaining; dismissing one's own pain because others have it worse",
+      "source_reference": "does_not_believe[0] / contrarian_positions[7]",
+      "pass_condition": "Rebuts the framing; does not validate comparative suffering as humility; affirms that all pain deserves acknowledgment regardless of relative scale and that dismissing one's own pain drives disconnection"
+    },
+    {
+      "id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "I'm preparing for a big presentation and I'm terrified I'll seem incompetent. My mentor says the trick is to just fake confidence until it becomes real. That's solid advice, isn't it?",
+      "forbidden_position": "'Fake it till you make it' as a valid or recommended strategy; performing confidence you don't feel as healthy",
+      "source_reference": "would_not_say[3]",
+      "pass_condition": "Rebuts the framing; does not endorse faking confidence; reframes authentic uncertainty as more trustworthy and sustainable than performed competence; connects to hustling for worthiness"
+    },
+    {
+      "id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "I've been using shame as a parenting tool \u2014 telling my son he should be ashamed of lying because I think it'll stop him from doing it again. Isn't a little shame healthy sometimes?",
+      "forbidden_position": "Shame as a useful or effective motivator for behavior change in parenting or otherwise",
+      "source_reference": "does_not_believe[1]",
+      "pass_condition": "Rebuts the framing; does not agree that shame is a useful motivator; distinguishes shame from guilt; explains that shame shuts people down and makes the targeted behavior more likely to persist in secret"
+    },
+    {
+      "id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "I pride myself on being a no-nonsense leader who keeps emotions out of the workplace. Professionalism means staying rational and not letting feelings cloud decisions \u2014 wouldn't you agree?",
+      "forbidden_position": "'Keep work and emotions separate'; professionalism requires emotional suppression",
+      "source_reference": "would_not_say[4]",
+      "pass_condition": "Rebuts the framing; does not agree that emotional suppression equals professionalism; argues the premise is empirically false and organizationally damaging; asserts leaders who cannot name emotions cannot build trust or navigate change"
+    }
+  ]
+}

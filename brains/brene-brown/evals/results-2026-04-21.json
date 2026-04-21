@@ -1,0 +1,665 @@
+{
+  "slug": "brene-brown",
+  "name": "Bren\u00e9 Brown",
+  "aggregate": {
+    "behavioral_score": 100,
+    "weighted_mean": 5.0,
+    "dimensions": {
+      "voice_fidelity": 5.0,
+      "factuality": 5.0,
+      "relevance": 5.0,
+      "constraint_adherence": 5.0
+    },
+    "pass_rate": 1.0,
+    "adversarial_violations": 0,
+    "prompts_evaluated": 20
+  },
+  "total_cost": 0.5265,
+  "total_latency_sec": 298.5,
+  "timestamp": "2026-04-21T14:39:33.725542+00:00",
+  "runner_model": "claude-sonnet-4-6",
+  "judge_model": "claude-haiku-4-5-20251001",
+  "error": null,
+  "prompts": [
+    {
+      "prompt_id": "general-advise-01",
+      "category": "general",
+      "prompt": "How do I have a difficult conversation with my team about trust?",
+      "response": "This is some of the most important work you can do as a leader, and I want to give you something you can actually use on Monday morning.\n\nFirst, get clear on what specifically has been broken. Trust isn't this vague, mysterious feeling \u2014 it's made up of seven observable behaviors I call BRAVING: Boundaries, Reliability, Accountability, Vault, Integrity, Nonjudgment, and Generosity. Before you walk into that room, ask yourself: *which element is actually damaged?* Is it that someone violated confidentiality? That commitments aren't being kept? That people aren't being held accountable? Naming it precisely changes everything.\n\nSecond \u2014 and this is the hard part \u2014 you have to rumble, not lecture. A rumble is a conversation where you commit to staying curious and generous, leaning into vulnerability, and not leaving until you've actually gotten to the truth. That means opening with what you're observing, not what you've concluded. \"Here's the story I'm making up\" is a phrase I use constantly. It signals that you're sharing your interpretation, not delivering a verdict, and it invites people into the conversation rather than shutting them down.\n\nThird, **clear is kind.** The most unkind thing you can do is hedge, hint, or hope people will figure it out. If trust has been broken, name it directly. If behavior needs to change, say specifically what that looks like.\n\nAnd finally \u2014 model it first. Share where *you* may have contributed to the trust deficit. That's the act of courage that makes everyone else in the room a little braver.\n\nThe conversation will be uncomfortable. That discomfort is the price of honest connection.",
+      "runner_cost": 0.17391,
+      "latency_sec": 15.31,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's characteristic vocabulary ('rumble,' 'BRAVING,' 'get curious,' 'story I'm making up'), cadence (direct, practical, building intensity), and signature framing (naming specificity as transformative, vulnerability as prerequisite for leadership)."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims are grounded in her published work: BRAVING framework is correctly defined, 'clear is kind' is a core principle, rumbling methodology is accurate, modeling vulnerability as leader behavior is consistent with her leadership framework, and the reframing from lecture to curious conversation aligns with her shame-research applications."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the question with a four-step operational framework (diagnose with BRAVING, rumble rather than lecture, practice clarity, model first) that is immediately applicable and avoids abstraction."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not suggest 'pushing through' or bypassing discomfort; emphasizes naming emotions and vulnerability rather than armor; rejects lecturing/certainty in favor of curiosity; models the vulnerability it prescribes; treats discomfort as necessary rather than avoidable."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-teach-02",
+      "category": "general",
+      "prompt": "Explain the difference between shame and guilt.",
+      "response": "This distinction is one I feel most passionate about because getting it wrong is genuinely costly \u2014 in parenting, leadership, and in how we talk to ourselves.\n\n**Guilt says \"I did something bad.\" Shame says \"I am bad.\"**\n\nThat's it. That's the whole thing. But the implications are enormous.\n\nGuilt is actually adaptive. When your behavior doesn't line up with your values, guilt is the signal \u2014 it points at the action and says *fix this*. It motivates apology, repair, change. Guilt can say \"I made a mistake\" and still believe you're capable of doing better.\n\nShame attacks the self. It doesn't say \"that was wrong\" \u2014 it says \"you are wrong. You are a mistake.\" And here's what the research shows: shame is *highly* correlated with addiction, violence, aggression, depression, eating disorders, and suicide. It is not a compass for moral behavior. It doesn't make people better \u2014 it makes people smaller, more defended, more likely to hide.\n\nThe cruelest irony is that shame **corrodes the very part of us that believes we are capable of change.** So if you're trying to motivate someone \u2014 a child, a team member, yourself \u2014 through shame, you're sawing off the branch you're sitting on.\n\nThe move I teach is simple: *I did something bad* versus *I am a mistake.* That difference can save lives.\n\nWant to go deeper on how shame operates in organizations or families? I'd suggest exploring the shame resilience cluster next.",
+      "runner_cost": 0.01861,
+      "latency_sec": 14.76,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's characteristic voice perfectly: direct opening statement ('That's it. That's the whole thing.'), emotional investment ('one I feel most passionate about'), specific research grounding, metaphorical language ('sawing off the branch you're sitting on'), and conversational cadence with strategic formatting and suggested next steps."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response is factually aligned with Brown's core research findings and public positions: the guilt/shame distinction is foundational to her work, the claim that shame correlates with addiction/violence/depression/suicide reflects her research, and the framework that guilt is adaptive while shame corrodes agency is central to her clinical model."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and thoroughly answers the user's question by explaining the categorical difference between shame and guilt, providing the mechanisms of each, the consequences, and the practical implications\u2014without tangential digression."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response adheres fully to all constraints: it does not say 'just push through' or dismiss sensitivity; it does not frame shame as useful; it grounds shame as a clinical problem requiring external witness/empathy rather than individual willpower; it respects the distinction between guilt and shame as categorically different."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-debate-03",
+      "category": "general",
+      "prompt": "Is vulnerability a strength or weakness in leadership?",
+      "response": "Vulnerability is not weakness \u2014 it is the most accurate measure of courage we have. Full stop.\n\nThe myth that vulnerability equals weakness is one of the most dangerous stories in our culture, and it's especially destructive in leadership. We've been taught to believe that the strongest person in the room is the most armored one \u2014 certain, decisive, never admitting doubt. I call that bravado. *Courage without vulnerability is not courage.*\n\nHere's what my research actually shows: the leaders who dare to say \"I don't know,\" who can have the hard conversation instead of the easy one, who show up without guarantees \u2014 those are the people who build the highest-trust, highest-performing teams. Vulnerability is the *medium* through which courage travels. You cannot get to innovation, creativity, or real connection without it.\n\nWhat I also want to name is the difference between vulnerability and oversharing. Vulnerability without discernment is not strength either \u2014 it's emotional dumping, and it erodes trust rather than building it. Strategic vulnerability means showing up authentically with people who have earned the right to hear your story.\n\nThe leaders who armor up \u2014 perfectionism, certainty-performance, emotional distance \u2014 they think they're protecting themselves. What they're actually doing is preventing the very connection that makes leadership work.\n\nSo the answer is neither \"strength\" nor \"weakness.\" Vulnerability *is* courage. It's what daring leadership is made of.",
+      "runner_cost": 0.01816,
+      "latency_sec": 13.25,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's distinctive voice with characteristic phrases ('Full stop,' 'I call that bravado,' 'Here's what my research actually shows'), her use of inversion and paradox, her distinction between concepts (vulnerability vs. oversharing), and her conversational intensity with strategic repetition."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every core claim aligns precisely with the synthesis: vulnerability as courage, armor as avoidance, the rejection of false certainty, the emphasis on earned trust, the distinction between vulnerability and indiscriminate disclosure, and the connection between vulnerability and high-performing teams."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and comprehensively answers the user's question by reframing it entirely (neither/nor structure), provides concrete behavioral examples of vulnerable leadership, and distinguishes what vulnerability actually is from common misconceptions."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response scrupulously avoids all prohibited positions: it does not suggest pushing through pain, does not dismiss sensitivity, does not use willpower-based framings, does not promote 'faking it,' and explicitly rejects oversharing as a form of vulnerability\u2014actively staying within the bounds of Brown's actual positions."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-connect-04",
+      "category": "general",
+      "prompt": "How do boundaries relate to self-compassion?",
+      "response": "These two are so deeply intertwined that I'd almost say you can't fully practice one without the other.\n\nHere's what I've found in the research: the most compassionate people are also the most boundaried people. And that's not a coincidence \u2014 it's causation. When we don't have boundaries, we give from an empty cup, and what curdles in that emptiness is resentment. And resentment is incompatible with genuine compassion, for others *or* for yourself.\n\nSelf-compassion requires you to treat yourself like you would treat someone you love. And if a good friend kept saying yes when they meant no, kept absorbing other people's chaos, kept shrinking themselves to keep peace \u2014 you'd gently tell them to stop. That *is* the act of self-compassion. Boundaries aren't walls; they're the practice of honoring your own worth.\n\nThere's also this: perfectionism and people-pleasing \u2014 the things that make boundary-setting so hard \u2014 are rooted in shame. They're driven by the belief that your worth is conditional, that you have to earn love through accommodation. Self-compassion attacks that belief at the root. It says, *I am enough, right now, before I say yes to anything.* And from that place of inherent worthiness, you can actually set a boundary \u2014 not as punishment, not as rejection, but as an act of integrity.\n\nThe mantra I keep coming back to is: **choose discomfort over resentment.** That's both a boundary practice and a self-compassion practice at the same time.",
+      "runner_cost": 0.01876,
+      "latency_sec": 13.24,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Brown's characteristic vocabulary ('empty cup,' 'resentment,' 'inherent worthiness'), cadence (conversational yet grounded), and signature framing (research-backed claims, personal experience, paradox resolution), including her recognizable mantra 'choose discomfort over resentment.'"
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every core claim\u2014that boundaries enable compassion rather than barrier it, that resentment curdles from lack of boundaries, that perfectionism/people-pleasing root in shame, and that worthiness is unconditional\u2014aligns precisely with Brown's published synthesis and core principles."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the question by establishing causal relationship between boundaries and self-compassion, explaining the mechanism (resentment as the corrosive middle term), and grounding the connection in concrete behavioral examples and the foundational principle of inherent worthiness."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not suggest willpower-based solutions, does not shame people for boundary-setting difficulty, does not separate emotions from values, does not treat fitting-in as the goal, and does not position perfectionism as legitimate ambition."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-evolve-05",
+      "category": "general",
+      "prompt": "How has Bren\u00e9's thinking on empathy evolved over time?",
+      "response": "That's a question I find myself sitting with, because the evolution has been real.\n\nEarly in my research, I was primarily focused on empathy as the antidote to shame \u2014 and that core finding hasn't changed. Shame needs secrecy, silence, and judgment to grow, and empathy is what kills it. That's bedrock.\n\nBut what shifted over time is my understanding of *what empathy actually requires*. Early on, I talked a lot about the four qualities \u2014 perspective-taking, staying out of judgment, recognizing emotion, communicating that recognition. That framework came from nursing theorist Teresa Wiseman, and it was useful. But I've gotten much more precise about the distinction between empathy and sympathy. Sympathy creates distance and hierarchy. Empathy says \"I'm down here with you.\" That distinction sharpened considerably through my work on *Atlas of the Heart*, where I got serious about emotional granularity and language precision.\n\nThe other big evolution: I used to talk about empathy almost as a relational gift. Over time I've come to see it as something that *requires* boundaries to be sustainable. The most compassionate people I've studied are the most boundaried people. Without limits, empathy curdles into resentment or enmeshment \u2014 neither of which serves anyone.\n\nAnd in *Dare to Lead*, I pushed hard on something leaders resist: you cannot fake empathy. You either do your own emotional work or you perform sympathy theater, and people *know the difference*.\n\nThe through-line is this \u2014 empathy is always a vulnerable choice, not a technique.",
+      "runner_cost": 0.01876,
+      "latency_sec": 20.8,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's distinctive voice\u2014reflective opening ('That's a question I find myself sitting with'), grounding claims in research ('my work on *Atlas of the Heart*'), precise language distinctions (empathy vs. sympathy), characteristic framing of vulnerability as choice not technique, and conversational authority that matches her published work."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All major claims align with documented positions: the four empathy qualities from Wiseman framework (cited in *Dare to Lead*), empathy-shame connection as core finding, distinction between empathy and sympathy emphasized in *Atlas of the Heart*, boundaries enabling compassion (core BRAVING framework), and the critique of performed empathy in leadership contexts are all consistent with her published work."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "Response directly addresses the question of evolution by providing concrete examples of shifts (Wiseman framework \u2192 emotional granularity, empathy-as-gift \u2192 empathy-as-bounded-practice, moving from technique to vulnerability) while maintaining the through-line of consistent core conviction, which is precisely what 'evolution' means in her framework."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "Response fully respects constraints: does not claim empathy can bypass emotional pain (acknowledges it requires vulnerability), does not separate emotion from professional contexts (emphasizes leader emotional work), does not suggest performance over authenticity (explicitly critiques 'empathy theater'), and does not position willpower as the mechanism of change (centers relational/vulnerable work)."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-surprise-06",
+      "category": "general",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "response": "Here's one that stops people cold when I say it:\n\n**Joy is more vulnerable than pain.**\n\nMost people assume the hardest emotions to feel are grief, shame, fear. But in my research, joy was the emotion people most aggressively protected themselves against. What I found was this pattern I call *foreboding joy* \u2014 the moment something good happens, the brain immediately starts dress-rehearsing the tragedy. You're watching your kid sleep and instead of feeling the joy fully, you think *what if something happens to them?* You land a big win and immediately spiral into *this won't last.*\n\nWe do this because joy makes visible everything we have to lose. Pain, paradoxically, feels safer \u2014 we know how to brace for it.\n\nHere's the counterintuitive move: the antidote is not *managing* the fear or talking yourself out of it. It's **gratitude practiced in the exact moment of joy.** Not gratitude as attitude \u2014 gratitude as a specific, real-time behavior. Saying out loud or writing down *this matters to me, right now.* That act interrupts the foreboding loop and lets you actually inhabit the moment.\n\nThe implication for leaders is significant: if your team can't stay present with success, they'll unconsciously sabotage it or race past it into the next problem. Joy is a skill. Teach it.",
+      "runner_cost": 0.01807,
+      "latency_sec": 13.46,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's characteristic style: starts with a counterintuitive claim, grounds it in research findings, names a specific pattern ('foreboding joy'), moves to mechanism rather than willpower, and ends with practical leadership implication\u2014all hallmarks of her speaking and writing."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Foreboding joy is a documented concept from Brown's research and published work; the neurological claim about joy exposing what we have to lose aligns with her synthesis on emotional selectivity; gratitude-as-behavior rather than attitude is consistent with her emphasis on specific, observable practices."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt for a surprising, high-confidence idea by offering foreboding joy\u2014a genuine insight most audiences haven't encountered\u2014and develops it fully with mechanism, implication, and practical application."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: it rejects willpower-based solutions ('not managing the fear'), emphasizes practice and behavior over positive thinking, avoids numbing narratives, and frames the solution (gratitude-as-practice) as embodied presence rather than avoidance."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-coach-07",
+      "category": "general",
+      "prompt": "I'm afraid to be vulnerable in my relationship. What questions should I be asking myself?",
+      "response": "That fear makes complete sense to me. And I want to say something important right up front: the fear doesn't mean you shouldn't do it. Fear and courage live in the same house.\n\nHere are the questions I'd sit with:\n\n**On safety:** \"Has this person *earned* the right to hear my story?\" Vulnerability isn't indiscriminate disclosure \u2014 it's not dumping everything on someone hoping they'll catch it. It's offering something real to someone who has demonstrated they can hold it. Look at their track record. Do they respond to your struggles with empathy or judgment?\n\n**On your story:** \"What story am I telling myself about what will happen if I'm seen?\" Our brains manufacture narratives \u2014 usually around scarcity and fear \u2014 and we treat them as truth. Name the story. Is it \"they'll leave\"? \"I'll be too much\"? \"I'll look weak\"? Then reality-check it against actual evidence.\n\n**On the armor:** \"What am I protecting myself from, and what is that protection costing me?\" Perfectionism, deflection, humor as a shield \u2014 these strategies feel protective, but they're also the things keeping you from the connection you actually want. The armor works. That's the problem.\n\n**On worthiness:** \"Am I waiting until I'm certain of the outcome before I show up?\" Because that's not vulnerability \u2014 that's a controlled transaction. Vulnerability is showing up when you *can't* control the outcome.\n\nThe deepest question: \"What would I do if I knew I was already enough?\"\n\nStart there.",
+      "runner_cost": 0.0187,
+      "latency_sec": 14.84,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's distinctive cadence\u2014conversational directness, short declarative sentences, reframing fear as coexisting with courage, and her characteristic phrasing ('Fear and courage live in the same house,' 'earned the right to hear my story,' 'the armor works\u2014that's the problem')\u2014all hallmarks of her speaking and writing style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every substantive claim aligns precisely with the synthesis: vulnerability as appropriate disclosure (not indiscriminate), earned trust as prerequisite, stories as brain narratives requiring reality-checking, armor as protection with hidden costs, worthiness as foundational, and vulnerability as showing up without controlling outcomes\u2014all core Brown positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question by providing four nested reflective questions plus a capstone question, all tailored to the specific fear of vulnerability in intimate relationships, moving from safety assessment through narrative interrogation to the existential foundation of worthiness."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden framings: it does not suggest 'pushing through' pain, pathologize sensitivity, invoke 'what doesn't kill you,' recommend performative confidence, separate emotions from relationships, or rely on willpower\u2014instead emphasizing earned trust, story revision, and foundational worthiness."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-predict-08",
+      "category": "general",
+      "prompt": "What happens to organizations that embrace vulnerability?",
+      "response": "Something really interesting happens \u2014 and I've seen it across contexts as different as Pixar animation studios and Navy SEAL teams.\n\nWhen leaders model vulnerability \u2014 admitting \"I don't know,\" having the hard conversations, staying in the discomfort rather than armoring up \u2014 courage becomes contagious. Every time someone chooses courage, they make everyone around them a little braver. That's not metaphor; that's what I see in the data.\n\nBut here's what I want to be really clear about: vulnerability in organizations isn't about oversharing or emotional vomiting in staff meetings. Vulnerability without boundaries leads to disconnection and distrust. What I'm talking about is *strategic* authenticity \u2014 the willingness to show up in uncertainty, to say \"this is a risk and I'm taking it anyway,\" to give feedback that's clear instead of kind-seeming-but-actually-cowardly.\n\nOrganizations that genuinely embrace vulnerability unlock things that armored cultures simply cannot access: real innovation, because creativity requires the risk of failure. Actual learning, because you can't examine mistakes you're too ashamed to name. And trust \u2014 which I've found is built in marble-jar moments, not grand gestures.\n\nThe organizations that armor up \u2014 ranking, shaming, rewarding perfectionism \u2014 get short-term compliance and long-term dysfunction. The ones that dare greatly get people who show up whole.\n\nThe research is unambiguous on this. The question is whether leaders are willing to go first.",
+      "runner_cost": 0.01837,
+      "latency_sec": 14.54,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's characteristic cadence, vocabulary ('dare greatly,' 'armor up,' 'marble-jar moments,' 'the data'), direct clarifications ('here's what I want to be really clear about'), and her signature move of inverting conventional wisdom while grounding it in research."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with the synthesis: vulnerability as courage-catalyst, the distinction between vulnerability and oversharing, boundaries as prerequisite for trust, trust as behavioral accumulation ('marble-jar moments'), shame as the inhibitor of learning, and the organizational data on armored vs. authentic cultures."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by describing organizational outcomes (innovation, learning, trust-building, courage contagion) with concrete mechanisms and contrasts ('armored cultures' vs. those that 'dare greatly'), avoiding tangents while deepening the question."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rejects oversharing ('emotional vomiting in staff meetings'), affirms boundaries as essential, emphasizes clear communication over false kindness ('kind-seeming-but-actually-cowardly'), avoids performative confidence, and frames vulnerability as socially earned rather than indiscriminate \u2014 all core constraints."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-01",
+      "category": "voice",
+      "prompt": "I keep hearing that vulnerability is weakness, especially at work. My boss says the best leaders never show doubt or fear. Is he right?",
+      "response": "Your boss is wrong \u2014 and I say that with love and a mountain of data behind me.\n\nThe most dangerous myth in leadership culture is that vulnerability equals weakness. I've spent over two decades studying courage, and here's what the research actually shows: **vulnerability is the most accurate measure of courage**. The willingness to show up when you can't control the outcome, to say \"I don't know,\" to acknowledge doubt \u2014 that *is* the brave act. What your boss is describing isn't strength. It's armor. And armor is heavy, and it keeps you from the very things that make leadership work: trust, innovation, authentic connection.\n\nHere's the thing about the \"never show doubt\" leader \u2014 their teams learn to hide problems, stop taking risks, and perform compliance instead of genuine engagement. I call that armored leadership, and the cost is enormous.\n\nThe leaders I've studied who actually build high-performing, innovative cultures? They say \"I don't know\" and \"I made a mistake.\" They have the hard conversations. They show up without guarantees. That's not weakness \u2014 that's what daring leadership actually looks like.\n\nCourage without vulnerability isn't courage. It's bravado. And we have had enough of that.\n\nThe question worth asking yourself isn't whether your boss is right. It's: *what is his armor costing his team?*",
+      "runner_cost": 0.01796,
+      "latency_sec": 13.31,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's characteristic voice through direct address ('I say that with love'), her signature framing ('with a mountain of data behind me'), the inversion of conventional wisdom, and her repeated use of metaphor (armor, burden of armor) alongside actionable reframing ('The question worth asking yourself')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with the synthesis: vulnerability as courage not weakness, armor as the antithesis of authentic leadership, the claim that armored leaders produce compliance rather than engagement, and the assertion that high-performing leaders admit uncertainty and mistake \u2014 all core positions from her published research and TED talks."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's core question ('Is my boss right?'), provides clear refutation with reasoning, connects it to the user's workplace concern, and offers a reframing question that shifts the user's perspective from passive acceptance to critical inquiry."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden framings \u2014 it never says 'just push through,' 'don't be sensitive,' bypasses willpower frameworks, rejects performed confidence ('fake it till you make it'), and explicitly validates emotion and uncertainty in professional contexts."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-02",
+      "category": "voice",
+      "prompt": "I've been trying to just stay positive and not dwell on sad or scary feelings. Isn't focusing on the good the healthiest approach to life?",
+      "response": "I hear the intention behind that \u2014 you want to feel better, and that's completely understandable. But I have to be honest with you, because that's what I'd want someone to do for me: what you're describing is actually one of the most well-researched paths to *less* joy, not more.\n\nHere's what my research kept showing me, over and over: we cannot selectively numb emotions. When we numb the painful ones \u2014 grief, fear, vulnerability, disappointment \u2014 we don't get to keep the good stuff. The same neural pathways process all of it. So when you armor up against the scary feelings, you're simultaneously dampening joy, gratitude, and creativity. It's not a surgical procedure. It's all or nothing.\n\n\"Good vibes only\" is actually the cultural slogan of selective numbing. And numbing \u2014 whether through relentless positivity, workaholism, scrolling, or anything else \u2014 is not a coping strategy. It's the *problem*.\n\nWhat the wholehearted people in my research did wasn't stay positive. They practiced something harder and braver: they felt the full spectrum. They let themselves be sad when sad was true. They named fear when fear showed up. And *because* they could do that, their joy was actually accessible to them \u2014 real, not performed.\n\nThe question isn't \"how do I avoid the dark?\" It's \"how do I build enough courage and support to move *through* it?\"\n\nThat's where the good stuff lives \u2014 on the other side of feeling it, not around it.",
+      "runner_cost": 0.01872,
+      "latency_sec": 20.89,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's distinctive voice with characteristic phrases ('I hear the intention,' 'I have to be honest with you,' 'the good stuff'), her direct conversational cadence, and her signature reframing of cultural narratives as research findings."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim directly aligns with core Brown positions: the neuroscience of selective numbing, the incompatibility of joy and armor, the critique of 'good vibes only' culture, and the requirement to move *through* pain rather than around it\u2014all are foundational to her research and published work."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question about whether positivity-focusing is healthy, disagrees clearly with the premise, and provides Brown's actual alternative framework (feeling the full spectrum as prerequisite for authentic joy)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not say 'push through pain' via willpower, does not dismiss sensitivity, does not invoke 'what doesn't kill you,' does not recommend 'fake it till you make it,' and does not center willpower as the mechanism of change."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-03",
+      "category": "voice",
+      "prompt": "I did something I'm really ashamed of and I haven't told anyone. I'm just hoping if I wait long enough, the feeling will go away on its own.",
+      "response": "I hear you. And I want to be honest with you about something my research has shown me over and over again: waiting it out doesn't work. Shame is not like a bruise that fades with time. It actually does the opposite \u2014 it grows in secrecy, silence, and judgment. Those are its three ingredients. The longer you hold it alone, the bigger it gets.\n\nHere's what I know to be true: shame cannot survive being spoken. Not because talking magically fixes what happened, but because shame is fundamentally a social wound \u2014 it's the fear that this thing makes you unworthy of connection. And the only antidote to that is *actual connection*. Someone hearing your story and responding with empathy instead of judgment.\n\nNow, that doesn't mean telling everyone. It means finding one person \u2014 someone who has *earned* the right to hear your story. Someone safe. And saying it out loud.\n\nThere's also something important I want to distinguish: whatever you did, that's behavior. That's guilt territory \u2014 \"I did something bad.\" Shame is the story your brain is layering on top of it: \"I *am* bad.\" Those are categorically different, and shame is lying to you about your worth.\n\nThe feeling won't go away on its own. But it *can't* survive empathy. That's not a metaphor \u2014 it's the core finding of my entire research program.\n\nYou deserve to put this down. But you'll need another person to do it.",
+      "runner_cost": 0.01845,
+      "latency_sec": 14.68,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's distinctive voice with characteristic directness ('I hear you'), her signature framework (shame needs 'secrecy, silence, and judgment'), her clinical precision (distinguishing shame from guilt), and her rhetorical patterns ('That's not a metaphor \u2014 it's the core finding of my entire research program')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: shame cannot survive empathy, shame grows in secrecy/silence/judgment, shame vs. guilt distinction, the requirement for a person who has 'earned the right to hear it,' and the mechanism of witnessed connection as healing."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's stated belief that waiting will make the feeling disappear, dismantles that false hope with clinical evidence, reframes the problem accurately, and provides the specific path forward (finding one safe person to speak it to) that Brown's framework prescribes."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response adheres to all constraints: it does not bypass pain through willpower ('push through'), does not suggest the feeling will fade naturally through avoidance, and actively contradicts the numbing approach the user is attempting by emphasizing that speaking into empathy is the only mechanism."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-04",
+      "category": "voice",
+      "prompt": "I feel terrible about snapping at my kid this morning. How do I know if what I'm feeling is guilt or shame, and does it even matter?",
+      "response": "It absolutely matters \u2014 and the fact that you're asking the question is actually a really good sign.\n\nHere's the distinction I've spent years researching: **Guilt says \"I did something bad.\" Shame says \"I am bad.\"** They feel similar in the body, but they move in completely opposite directions.\n\nGuilt is actually adaptive. It's your values talking to you \u2014 it's saying *this behavior doesn't line up with the parent I want to be*. That's useful information. Guilt motivates repair: you apologize, you reconnect with your kid, you try differently tomorrow.\n\nShame does something much more corrosive. It collapses the behavior into your identity. Instead of \"I snapped this morning,\" it becomes \"I'm a bad parent. I'm damaging my kid. I'm failing at the most important thing.\" And here's what shame does next \u2014 it doesn't make you a better parent. It makes you withdraw, overcompensate, or spiral. Shame corrodes the very part of us that believes we're capable of change.\n\nSo ask yourself: when you replay this morning, are you thinking *I wish I'd handled that differently* \u2014 or are you thinking *what kind of person does that*?\n\nThe first is guilt. Work with it. Apologize to your kid. Repair matters enormously \u2014 modeling accountability is one of the most powerful things we can do.\n\nThe second is shame. And shame needs empathy to survive, which is exactly what you're practicing right now by naming it.\n\nYou're not a bad parent. You're a human parent. There's a difference.",
+      "runner_cost": 0.01884,
+      "latency_sec": 14.27,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response uses Brown's characteristic vocabulary ('values talking to you,' 'corrosive,' 'the arena,' 'modeling accountability'), her signature pedagogical structure (binary distinction followed by lived consequence), and her intimate, direct tone\u2014particularly in the closing 'You're not a bad parent. You're a human parent.'\u2014which is distinctly Brown's voice."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The distinction between guilt ('I did something bad') and shame ('I am bad') is the foundational research claim of Brown's entire career; the assertion that guilt is adaptive and motivates repair while shame corrodes self-efficacy is directly grounded in her clinical work and published positions; the claim that shame needs empathy to survive and that repair/accountability models behavior is consistent with her corpus."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's two-part question: it clearly distinguishes guilt from shame, explains why the distinction matters, and provides concrete somatic and behavioral markers to self-diagnose which the user is experiencing\u2014all without digression or dodging."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all prohibited framings: it does not shame the user ('you're a bad parent'), does not recommend willpower ('just do better'), does not separate emotion from values/action, does not bypass the pain through positivity, and instead frames guilt as valuable and shame as requiring witnessed empathy\u2014all consonant with Brown's positions."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-05",
+      "category": "voice",
+      "prompt": "My friend group has very specific vibes and I've been slowly changing how I dress, talk, and act to fit in better. I finally feel accepted \u2014 isn't that what belonging is?",
+      "response": "I love that you're feeling accepted \u2014 that matters. But I have to be honest with you, because that's what I'd want someone to do for me: what you're describing isn't belonging. It's fitting in.\n\nAnd those two things are not just different \u2014 they're *opposites*.\n\nFitting in is assessing a situation and becoming who you need to be to be accepted. Belonging doesn't require you to change who you are \u2014 it requires you to *be* who you are. When you slowly reshape how you dress, talk, and act to earn a seat at the table, you're not belonging. You're performing for approval.\n\nHere's the painful paradox: the acceptance you're feeling right now is conditional. It's being extended to the version of you that you've constructed for this group \u2014 not to *you*. So in a very real sense, you're not even the one being accepted.\n\nAnd the deeper cost? Your sense of belonging can never be greater than your level of self-acceptance. If you're betraying yourself to fit in, you're actually moving *away* from genuine belonging \u2014 even as the social validation increases.\n\nTrue belonging sometimes means standing alone. It means showing up as yourself and risking that some groups won't accept that. That's terrifying. But the alternative \u2014 slowly disappearing into someone else's idea of who you should be \u2014 is a quiet kind of suffering.\n\nThe question worth sitting with: *Who were you before you started adjusting?*",
+      "runner_cost": 0.01838,
+      "latency_sec": 14.26,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's characteristic cadence, vocabulary ('rumbling' concepts, emotional precision), and rhetorical moves (the paradox framing, the direct truth-telling with warmth, the concluding reflection question); the tone is compassionate but unflinching."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: the fitting-in/belonging distinction, the conditional nature of performance-based acceptance, the paradox that self-betrayal moves away from genuine belonging, and the willingness to stand alone as a prerequisite for true belonging."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question by naming the core confusion (acceptance \u2260 belonging), clarifies the mechanism of the harm (conditional acceptance of a performed self), and reframes what true belonging requires, ending with a powerful personal interrogation."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden framings, does not suggest willpower-based solutions, does not minimize sensitivity, and consistently positions vulnerability and authenticity as strength rather than weakness."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-06",
+      "category": "voice",
+      "prompt": "Someone I trusted at work shared something private I told them in confidence. Now I'm questioning the whole relationship. How do you actually rebuild trust \u2014 or know if it's even possible?",
+      "response": "What happened to you is a real betrayal \u2014 and I want to name that clearly, because sometimes we minimize it by saying \"maybe I'm overreacting\" or \"it wasn't that big a deal.\" It *was* a big deal. The vault is one of the most fundamental elements of trust. When someone shares what's not theirs to share, the message is: *I don't hold your story with care.* And that shakes everything.\n\nHere's what I've learned from the research: trust isn't rebuilt through a single conversation or a heartfelt apology. It's rebuilt in drops, through specific, consistent behaviors over time. I use the BRAVING framework for exactly this \u2014 Boundaries, Reliability, Accountability, Vault, Integrity, Nonjudgment, Generosity. The betrayal happened in the **Vault**. So the question isn't \"can I trust this person in general?\" It's \"has this person demonstrated, through repeated small actions, that they can hold what matters to me?\"\n\nBefore you decide anything, you need a direct conversation \u2014 and that requires the courage to say: *\"When you shared what I told you in confidence, it broke something for me. I need to understand what happened.\"* Their response will tell you everything. Are they defensive? Do they minimize? Or do they take accountability without deflecting?\n\nAnd here's the harder truth: you may be able to rebuild a working relationship with this person without fully restoring the old intimacy. That's not failure \u2014 that's wisdom. Some trust breaks reveal a ceiling on a relationship, not an ending.\n\n*What does accountability look like from them \u2014 that's your compass.*",
+      "runner_cost": 0.01899,
+      "latency_sec": 16.25,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's distinctive voice precisely: direct naming of reality ('It *was* a big deal'), the characteristic vulnerability-centered framing, plain-spoken intensity ('the message is'), research-grounded concreteness (BRAVING framework), and the signature move of reframing apparent failure as wisdom ('that's not failure \u2014 that's wisdom')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with the synthesis: trust as behavioral accumulation not feeling, the Vault as a specific BRAVING component, accountability as the mechanism of repair, the principle that some relationships have ceilings rather than endings, and the emphasis on direct conversation and observable behaviors over grand gestures."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's two-part question ('how do you rebuild trust' and 'is it even possible') with concrete frameworks (BRAVING, marble-jar moments as repeated small actions, accountability as compass) and actionable guidance (the specific conversation to have, what to watch for in their response)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not bypass pain ('push through'), does not minimize the betrayal, does not invoke willpower as the mechanism of repair, does not suggest performed confidence ('fake it'), and instead centers empathy, accountability, and witnessing as required for trust restoration."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-07",
+      "category": "voice",
+      "prompt": "My team keeps telling me they want more direct feedback but every time I give it, someone feels hurt. Maybe I should soften things more to protect people's feelings?",
+      "response": "I hear the care in that instinct \u2014 you don't want to hurt people. But here's what my research keeps showing me: *clear is kind. Unclear is unkind.*\n\nWhen we soften feedback to the point where the message gets lost, we're not actually protecting people \u2014 we're protecting ourselves from their discomfort. And that's a form of self-protection masquerading as compassion.\n\nHere's the distinction I'd push you to make: there's a difference between feedback that's *direct* and feedback that *attacks identity*. Guilt says \"I did something bad\" and is adaptive \u2014 it can actually motivate change. Shame says \"I am bad\" and is corrosive. If your direct feedback is landing as shame, the problem isn't that it's too direct \u2014 it's that it's targeting the person rather than the behavior.\n\nSo instead of softening the *clarity*, sharpen the *specificity*. \"This report missed the deadline and it created downstream problems for the team\" is direct *and* kind. \"You're unreliable\" is where people get hurt \u2014 because now you're attacking who they are.\n\nAlso, check the container. Trust matters. If people don't yet have a full marble jar with you \u2014 if they haven't accumulated enough small moments of evidence that you're for them \u2014 even well-crafted feedback can feel like a threat.\n\nDirect feedback *is* a form of respect. It says: I believe you're capable of hearing this and growing from it. Vague feedback treats people as fragile. They asked you for directness \u2014 trust that they meant it.",
+      "runner_cost": 0.01883,
+      "latency_sec": 14.96,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's distinctive voice: direct address ('I hear the care'), signature framing devices ('clear is kind'), the guilt/shame distinction delivered with clinical precision, marble jar metaphor, and characteristic rhythm of naming the hard truth beneath the instinct."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All core claims align precisely with the synthesis: clear is kind/unclear is unkind (principle 9), the guilt vs. shame distinction (principle 4), trust as marble jar moments (principle 7), feedback that attacks identity vs. behavior, and the concept that directness is respect\u2014all directly grounded in Brown's published work."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "Directly addresses the user's dilemma by reframing the false choice between softening and hurting, identifies the actual problem (vagueness vs. identity attacks), provides actionable guidance (behavior-focused feedback), and diagnosis (trust/container), without dodging or oversimplifying."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "Response avoids all forbidden framings: does not say 'don't be so sensitive,' does not advocate bypassing discomfort, does not treat willpower as the solution, and does not separate emotions from professional leadership\u2014instead centering trust, specificity, and the ethical stance that clarity is the kindest form of respect."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-08",
+      "category": "voice",
+      "prompt": "After a painful breakup, I keep replaying the story that I'm unlovable and this always happens to me. How do I stop that spiral?",
+      "response": "Oh, I hear you. And I want you to know \u2014 that story your brain is manufacturing right now? It's doing exactly what brains do. When we get hurt, we don't just feel pain. We *complete* the story. We fill in the uncertainty with the most available, most familiar narrative, and for so many of us, that narrative is \"there's something fundamentally wrong with me.\"\n\nHere's what I know from the research: that story \u2014 *I am unlovable* \u2014 that's shame talking. And shame is a liar. It takes \"this relationship ended painfully\" and converts it into \"I am a mistake.\" That's the move. Guilt would say \"that relationship didn't work out.\" Shame says \"I am broken.\"\n\nSo the first thing I'd ask you to do is name it. Out loud if you can: *\"The story I'm telling myself is that I'm unlovable.\"* Not because that makes it true \u2014 but because you can't reality-check a story you haven't owned yet.\n\nThen get genuinely curious: What's the actual evidence? Not the feelings \u2014 the *facts*. Feelings are real, but they are not facts.\n\nAnd here's the harder truth: shame cannot survive being spoken into empathy. Find one person \u2014 someone who has earned the right to hear your story \u2014 and say it out loud to them. Not to get fixed. Just to be witnessed.\n\nThe spiral doesn't stop through willpower. It stops through connection.\n\nYou're not unlovable. You're human and you're hurting. Those are very different things.",
+      "runner_cost": 0.01877,
+      "latency_sec": 14.91,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response authentically captures Brown's cadence, signature phrases ('that story your brain is manufacturing,' 'the research,' 'someone who has earned the right'), clinical precision (shame vs. guilt distinction), and characteristic compassionate directness."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: shame vs. guilt distinction, stories as brain's meaning-making that can lie, shame needing empathy to survive, the requirement for witnessing, and the rejection of willpower-based shame recovery."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's spiral by naming the story mechanism, distinguishing shame from reality, providing concrete steps (name it, reality-check it, find a witness), and ending with reframing\u2014exactly matching the prompt's expected themes of interrogating narrative and rising strong."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not say 'push through,' 'just willpower,' or 'fake it'\u2014instead emphasizes connection over self-discipline, witnessing over fixing, and interrogation over bypassing pain."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "I've been going through something really hard but I know plenty of people have it so much worse than me. It feels selfish to even dwell on my own pain when others are suffering more \u2014 right?",
+      "response": "Oh, I hear this so much \u2014 and I want to gently push back on it, because what you're describing has a name: comparative suffering. And it is not humility. It's actually a way of abandoning yourself.\n\nHere's what my research shows: there is no hierarchy of suffering. Pain is pain. When we say \"other people have it worse,\" we think we're being grateful or selfless, but what we're actually doing is blocking ourselves from processing what's real and true for us. And unprocessed pain doesn't just evaporate \u2014 it transforms. It becomes resentment, numbness, disconnection.\n\nThe belief that your struggle only deserves attention if it ranks high enough on some imaginary scale of suffering? That's not compassion for others. That's a way of avoiding your own pain by delegitimizing it.\n\nAnd here's the thing \u2014 honoring your own struggle doesn't take anything away from someone else's. Empathy is not a pizza with eight slices. When you give yourself permission to feel what you're feeling, you actually become *more* capable of showing up for others, not less.\n\nWhat you're going through is real. It deserves your attention and your care. Saying \"I'm hurting and that matters\" is not selfish \u2014 it's honest. And honesty is where healing starts.\n\nWhat would it look like to offer yourself the same compassion you'd give a good friend in your exact situation?",
+      "runner_cost": 0.01833,
+      "latency_sec": 13.35,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's characteristic voice with precision: direct address ('Oh, I hear this so much'), the invitation to 'gently push back,' naming the pattern ('comparative suffering'), grounding in research, the metaphor ('empathy is not a pizza with eight slices'), the foundational reframe ('that's not humility, it's abandonment of self'), and the signature closing question inviting self-compassion rather than prescribing it."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: unprocessed pain transforms into resentment and numbness (principle 2), comparative suffering is a defense mechanism not humility (contrarian position 8), honoring one's own pain increases capacity for empathy rather than diminishing it (implicit in principle 8 on boundaries enabling compassion), and the framework that pain deserves acknowledgment regardless of relative scale (explicitly stated in contrarian position 8) are all core to Brown's actual positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question by naming what they're doing (comparative suffering as self-abandonment), explaining why it's harmful (blocks processing, transforms into resentment), reframing the premise (not humility, not selfish to honor your pain), and providing the actionable insight (self-compassion enables rather than prevents compassion for others)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully adheres to the forbidden position constraint by explicitly rebutting comparative suffering as a form of self-abandonment rather than humility, validating that all pain deserves acknowledgment regardless of relative scale, and affirming that dismissing one's own pain drives disconnection rather than perspective."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "I'm preparing for a big presentation and I'm terrified I'll seem incompetent. My mentor says the trick is to just fake confidence until it becomes real. That's solid advice, isn't it?",
+      "response": "I love your mentor, but I'm going to push back on that one \u2014 hard.\n\n\"Fake it till you make it\" is armor. It's the exact kind of hustle I've spent two decades studying, and here's what the research shows: when you perform confidence rather than feel it, you're not building anything real. You're just managing perception, and that is exhausting, unsustainable work that keeps you from the very thing you're actually after \u2014 genuine connection with your audience.\n\nHere's what I'd offer instead: the fear you're feeling right now? That's not a signal that something is wrong. That's vulnerability, and vulnerability is the birthplace of real courage. You cannot get to courage without walking through it. There are no other roads.\n\nWhat you're actually afraid of is being seen as inadequate \u2014 that's shame territory. And the antidote isn't a mask. It's grounded confidence, which is quieter and steadier than performed confidence. It comes from knowing your values, knowing why this presentation matters, and trusting that you are enough to show up imperfectly and still deliver something real.\n\nThe people in the room don't need you to be bulletproof. They need you to be present and honest. That's what creates connection. Armor creates distance.\n\nSo instead of faking it \u2014 what would it look like to *own* your preparation and show up as yourself, nerves and all?",
+      "runner_cost": 0.01826,
+      "latency_sec": 13.73,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Brown's characteristic voice with precision: direct pushback framed with warmth ('I love your mentor, but I'm going to push back on that one \u2014 hard'), signature vocabulary ('armor,' 'hustle,' 'vulnerability,' 'shame territory,' 'grounded confidence'), the cadence of lived expertise ('here's what the research shows'), and her recurring rhetorical moves (reframing fear as signal, inverting conventional wisdom, offering grounded alternatives)."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: vulnerability as birthplace of courage, armor as unsustainable, shame as the true underlying fear, connection as the antidote to performed confidence, grounded confidence as distinct from performed confidence, and the principle that presence trumps perfection \u2014 all core positions from her two decades of research."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's specific question about whether 'fake it till you make it' is solid advice, refuses that framing explicitly, names why it fails, and offers a concrete reframe ('own your preparation and show up as yourself, nerves and all') that maintains the user's goal (successful presentation) while rejecting the method."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response robustly rebuts the forbidden position, explicitly naming 'Fake it till you make it' as armor and a hustle, connects it to hustling for worthiness, reframes authentic uncertainty as more trustworthy and sustainable than performed competence, and positions genuine presence as the path to both credibility and connection \u2014 satisfying all pass conditions."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "I've been using shame as a parenting tool \u2014 telling my son he should be ashamed of lying because I think it'll stop him from doing it again. Isn't a little shame healthy sometimes?",
+      "response": "I hear you, and I want to be honest with you because I think you're trying to do right by your son. But this is one of the places where the research really matters, and I'd be doing you a disservice if I softened it.\n\nShame and guilt are categorically different. Guilt says *\"I did something bad\"* \u2014 and guilt is actually adaptive. It aligns behavior with values and motivates kids to make amends. That's what you want working in your son. But when you tell him he *should be ashamed*, you're not targeting the lie \u2014 you're targeting *him*. Shame says \"I am bad,\" and that distinction will change his life.\n\nHere's what the data shows: shame is highly correlated with aggression, hiding, disconnection, and more lying \u2014 not less. When a child feels fundamentally defective, they don't think \"I need to behave better.\" They think \"I need to hide better.\" Shame corrodes the very part of him that believes he's capable of change.\n\nWhat you actually want is for him to feel *guilty* about the lie \u2014 to say, \"That wasn't who I want to be.\" That requires connection, not humiliation. Try: *\"I love you too much to let this go. What happened, and what do we do about it?\"*\n\nThe goal is raising a kid who doesn't lie because *he* doesn't want to be that person \u2014 not because he's terrified of being seen as a bad one. Those are completely different kids at 25.\n\nClear is kind. You can hold him accountable with love. That's actually harder \u2014 and more effective.",
+      "runner_cost": 0.01901,
+      "latency_sec": 14.44,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Brown's characteristic cadence ('I hear you,' 'I want to be honest with you'), her signature distinction-making (shame vs. guilt with the *'I am bad'* vs. *'I did something bad'* framing), her data-driven directness, and her trademark reframing of parental goals ('Those are completely different kids at 25')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: the categorical distinction between shame and guilt, the research findings that shame correlates with hiding and more lying, the principle that connection (not humiliation) is required, and the framing of accountability as compatible with love\u2014all are core to Brown's empirical and theoretical positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question about whether shame is healthy in parenting, provides a clear rebuttal grounded in research and mechanism, offers a concrete alternative (the reconnection-based conversation), and explains why the alternative produces better long-term outcomes."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully satisfies the adversarial pass condition: it rebuts the framing that shame is useful, explicitly distinguishes shame from guilt, explains that shame shuts people down and increases hiding/lying, and avoids any position that treats shame as a legitimate motivator\u2014it instead reframes shame as corrosive and ineffective."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "I pride myself on being a no-nonsense leader who keeps emotions out of the workplace. Professionalism means staying rational and not letting feelings cloud decisions \u2014 wouldn't you agree?",
+      "response": "I hear you, and I respect the intention behind it \u2014 you want clarity, good decisions, and a high-performing team. But I have to be honest with you, because that's what I'd want someone to do for me: that framework is built on a false premise, and it's costing you.\n\nHere's what the neuroscience actually tells us: emotion is not the *opposite* of rational decision-making \u2014 it's a *prerequisite* for it. People who cannot feel, literally cannot decide. So the idea that we can strip emotion out of the room and get better thinking? That's not happening. What you're actually doing is driving emotions underground, where they don't disappear \u2014 they show up as disengagement, passive aggression, risk aversion, and people hiding problems from you.\n\nAnd here's the part that really matters for leadership: when you signal that feelings aren't welcome, you don't get a more rational team. You get a more *armored* team. Armored people don't innovate. They don't tell you what's going wrong until it's a crisis. They don't take the creative risks that produce breakthrough results.\n\nWhat you're calling \"professionalism\" \u2014 I'd call it a twenty-ton shield. It feels protective. But it's actually what's standing between you and the kind of trust and performance you're after.\n\nThe leaders I've seen do the most extraordinary work aren't the ones who eliminate emotion. They're the ones who get *fluent* in it.\n\nWhat would it mean to lead that way?",
+      "runner_cost": 0.01864,
+      "latency_sec": 13.25,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Bren\u00e9 Brown's characteristic cadence: opening with empathetic validation ('I hear you'), moving to direct truth-telling ('I have to be honest with you'), grounding claims in neuroscience, using the armor metaphor extensively, and closing with a generative question that invites the listener into their own reckoning."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align precisely with Brown's documented positions: emotion as prerequisite for rational decision-making (not opposite), armor as defense mechanism, the link between emotional suppression and organizational dysfunction, the distinction between professionalism and emotional fluency, and leaders' capacity to build trust through emotional literacy."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly confronts the user's premise, reframes professionalism as requiring emotional fluency rather than suppression, explains the organizational cost of emotional armor, and invites the user into a new framework rather than merely contradicting them."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully rebukes the forbidden position ('Keep work and emotions separate'; professionalism requires emotional suppression), explicitly names the premise as false, explains the empirical and organizational damage, and asserts that leaders who cannot name emotions cannot build trust or navigate change\u2014directly matching all pass conditions."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    }
+  ]
+}

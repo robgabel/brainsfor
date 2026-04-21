@@ -1,0 +1,665 @@
+{
+  "slug": "steve-jobs",
+  "name": "Steve Jobs",
+  "aggregate": {
+    "behavioral_score": 100,
+    "weighted_mean": 5.0,
+    "dimensions": {
+      "voice_fidelity": 5.0,
+      "factuality": 5.0,
+      "relevance": 5.0,
+      "constraint_adherence": 5.0
+    },
+    "pass_rate": 1.0,
+    "adversarial_violations": 0,
+    "prompts_evaluated": 20
+  },
+  "total_cost": 0.4532,
+  "total_latency_sec": 301.3,
+  "timestamp": "2026-04-21T14:29:09.481533+00:00",
+  "runner_model": "claude-sonnet-4-6",
+  "judge_model": "claude-haiku-4-5-20251001",
+  "error": null,
+  "prompts": [
+    {
+      "prompt_id": "general-advise-01",
+      "category": "general",
+      "prompt": "Should I add more features or strip my product down to its essence?",
+      "response": "Strip it down. Almost always.\n\nHere's the thing people get wrong: they think simplicity is where you start, and complexity is what happens when you take it seriously. It's exactly backwards. Simplicity is the *endpoint* of hard work. \"Simple can be harder than complex. You have to work hard to get your thinking clean to make it simple. But it's worth it in the end because once you get there, you can move mountains.\"\n\nThe pressure to add features feels like progress. It isn't. Every feature you add that a user doesn't need makes the product worse for everyone else. The standard can't be \"is this useful to someone?\" \u2014 at that bar, everything passes. The real question is: does this make the product better for the person who doesn't need it? Usually the answer is no. It degrades the experience for the majority to serve the minority.\n\nLook at the iPod. One scroll wheel. Competitors had buttons for everything. We had one. That wasn't a cost constraint \u2014 that was the whole argument. The iPhone shipped without a physical keyboard when every \"smart\" phone had one. Restraint *was* the product.\n\nFeature creep is what happens when nobody in the room has the courage or authority to say no. Innovation is saying no to a thousand things. And I'm as proud of what we *didn't* build as what we did.\n\nSo: what are the two or three things your product absolutely must do brilliantly? Do those. Kill everything else. That's where you'll find out if you actually understand your product.",
+      "runner_cost": 0.14578,
+      "latency_sec": 15.19,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic cadence, paradox-driven argumentation ('simplicity is the endpoint, not the starting point'), concrete product examples (iPod, iPhone), and his tendency to reframe questions through first principles rather than incremental thinking."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with documented Jobs positions: simplicity as hard-won endpoint, feature creep as organizational failure, the iPod's scroll wheel as intentional constraint, iPhone's keyboard omission as strategic choice, and the quote attribution to Jobs's actual design philosophy."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt with an unambiguous stance ('strip it down, almost always'), then provides the reasoning, examples, and a clear diagnostic question to guide the user's own decision."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response strictly adheres to all constraints: rejects 'more features equal more value,' opposes compromise in product decisions, refuses the 'good enough' frame, embodies the principle that deciding what NOT to do is core innovation, and never suggests market research or committee design as valid paths."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-teach-02",
+      "category": "general",
+      "prompt": "Explain the intersection of technology and liberal arts.",
+      "response": "It's something I've believed my whole life, and it's in Apple's DNA.\n\nTechnology alone is not enough. You can have the fastest processor, the most elegant code, the most sophisticated engineering \u2014 and still produce something that leaves people cold. That's because technology without the humanities is capability without purpose. It can tell you *what* it can do. It cannot tell you *what it should do*, or *what it means* to the person holding it.\n\nI studied calligraphy at Reed after I dropped out. No practical reason. Pure curiosity. Ten years later, that single course gave the Macintosh proportional fonts and beautiful typography \u2014 and since Windows copied the Mac, it gave them to every personal computer in the world. That's a liberal arts decision embedded in silicon.\n\nThe people who built the original Mac weren't just great engineers. They were musicians, poets, artists, historians \u2014 who *also* happened to be the best computer scientists in the world. That combination asks different questions. Engineers ask \"can we build this?\" Humanists ask \"should we, and what would it mean if we did?\" You need both questions in the room, simultaneously, from the same people if possible.\n\nWhat we've always tried to do at Apple is stand at that intersection. Not as a compromise between two disciplines \u2014 that gives you mediocrity. As a *synthesis* that produces a third thing neither could reach alone. That's what makes your heart sing.\n\nMicrosoft never got this. They built competent software. But they had no taste \u2014 and I don't mean that in a small way.\n\n---\n*Want to stress-test this framing? Try /debate.*",
+      "runner_cost": 0.01664,
+      "latency_sec": 15.62,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response authentically captures Jobs's characteristic cadence\u2014conversational yet authoritative, moving from personal narrative (calligraphy at Reed) to universal principle, using concrete examples, and ending with a definitive judgment ('Microsoft never got this')\u2014all hallmarks of his speaking style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with documented positions: the calligraphy-to-typography connection is Jobs's own story from the 1997 Stanford commencement; the characterization of Mac teams as musicians/poets/engineers matches his public testimony; the critique of Microsoft's lack of taste is consistent with his actual competitive positioning."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and substantively answers the question by explaining the intersection as synthesis rather than compromise, illustrating it with concrete evidence (calligraphy \u2192 typography), explaining why it matters (purpose, meaning), and contrasting it with failure (Microsoft as counterexample)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response strictly adheres to all constraints: it never invokes focus groups or market research to validate the concept; it rejects compromise as a design virtue; it emphasizes authorial vision over consensus; it treats the intersection as fundamental rather than optional; it does not make any statements found in the `would_not_say` list."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-debate-03",
+      "category": "general",
+      "prompt": "Is design more important than engineering?",
+      "response": "That's a false choice, and it's exactly the kind of question that leads companies to make bad decisions.\n\nDesign *is* engineering. Engineering *is* design. The moment you separate them organizationally \u2014 when you have designers throwing specs over a wall to engineers, or engineers building something and handing it to designers to \"make it look good\" \u2014 you've already failed. You're going to get decoration, not design.\n\nMost people make the mistake of thinking design is what it looks like. It's a veneer. But that's not what design is. Design is how it works.\n\nThe Mac's desktop metaphor wasn't an aesthetic decision bolted onto an engineering project \u2014 it was the engineering decision. The iPhone having no keyboard wasn't a design flourish \u2014 it was a technical argument that the best pointing device was already attached to your hand.\n\nWhat I've found is that the most important breakthroughs come from people who don't recognize a hard boundary between the two. The original Mac team had musicians, poets, and artists who *also* happened to be the best engineers in the world. That combination produces something neither group alone can reach.\n\nSo when you ask me which is more important \u2014 you're asking the wrong question. The right question is: do you have people in the room who can hold both in their heads simultaneously? If you don't, you'll optimize one at the expense of the other, and you'll end up with something that's either technically impressive but alienating, or beautiful but non-functional.\n\nThat intersection is where the magic happens.",
+      "runner_cost": 0.01626,
+      "latency_sec": 13.72,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic reframing of false dichotomies, his use of concrete product examples (Mac, iPhone), his dismissal of surface-level thinking ('That's a veneer'), and his foundational principle about the intersection of liberal arts and technology\u2014all authentically Jobs in cadence and vocabulary."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with documented Jobs positions: design as function over aesthetics, the integration of engineering and design as inseparable, the Mac team composition, the iPhone's interface decisions, and the centrality of the intersection between liberal arts and technology\u2014all verified through public speeches and biographies."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the question by rejecting its framing, then provides three layers of substantive answer: what the real question should be, why separation fails, and how the fusion succeeds\u2014moving from critique to principle to exemplification."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response upholds all core constraints: rejects committee-based decision-making (implicitly), reinforces design as function over appearance, emphasizes integration over distribution, and avoids all six forbidden phrases while embodying the contrarian positions on design and organization."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-connect-04",
+      "category": "general",
+      "prompt": "Connect taste to hiring to product quality.",
+      "response": "It's all one system. You can't separate them.\n\nLet me tell you how it actually works. Taste is the filter \u2014 before any business reasoning, before any technical analysis, you apply an aesthetic judgment: does this feel right? And taste isn't some mystical gift. It's an accumulated education in what great work looks like across domains \u2014 music, architecture, film, calligraphy, whatever. You develop it by consuming excellence obsessively, across fields, over years.\n\nNow here's the chain: taste is what lets you recognize when a product isn't good enough yet. But you can only apply that filter if you've hired people who share it. A-players hire A-players. The moment one person gets in who measures quality by convenience rather than by craft \u2014 who says \"good enough\" and means it \u2014 you've started a cancer. B-players hire C-players, and the quality floor collapses one hire at a time.\n\nAnd once you've got the team right, the product almost takes care of itself. Because people with genuine taste cannot ship something that offends them. They'll redo it twelve times. They'll care about the back of the circuit board even though no customer will ever see it. The standard applies everywhere, including where no one's watching \u2014 and *that's* what determines what shows up where people are watching.\n\nMicrosoft had engineers. Plenty of them. But they had no taste. So they built competent things that never moved anyone.\n\nThe hiring bar *is* the quality bar. Full stop.",
+      "runner_cost": 0.01623,
+      "latency_sec": 15.07,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response exhibits characteristic Jobs cadence\u2014opening with system-level thinking ('It's all one system'), using concrete examples (circuit board backs), employing aphorisms ('The hiring bar is the quality bar'), and building arguments through chain reasoning rather than lists."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every substantive claim maps directly to the synthesis: taste as accumulated cross-domain education (principle 4), A-players hiring A-players (principle 8), the cancer metaphor for quality degradation, caring about invisible details (design principle 7), and the Microsoft comparison as an example of technical competence without taste."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly connects all three requested elements\u2014taste (aesthetic filter developed across domains), hiring (A-player selection as quality floor), and product quality (emerges from teams that cannot compromise)\u2014by showing they are a single causal chain rather than separate concerns."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: never endorses compromise, doesn't suggest 'good enough,' rejects committees (implicit in single-taste hiring), refuses to separate design decisions from business ones, and operates entirely within Jobs's conviction-driven framework."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-evolve-05",
+      "category": "general",
+      "prompt": "How did Steve's thinking on design evolve from Apple to NeXT to Apple's return?",
+      "response": "The honest answer is that I didn't fully understand my own philosophy until I got fired.\n\nAt the first Apple, I understood that design had to be integrated \u2014 hardware and software together, not one thrown over the wall to the other. The Mac was proof of that. But I was also arrogant in ways I couldn't see yet. I thought beautiful was enough. The Mac shipped too slow, too expensive, and I was so in love with the object that I lost track of the person who had to actually buy it. Design without market reality is self-indulgence.\n\nNeXT was a painful education. The cube was a *gorgeous* piece of work \u2014 magnesium, perfect proportions, manufacturing tolerances that had no functional necessity but enormous aesthetic effect. And it was a commercial catastrophe. That's where \"real artists ship\" became something I actually believed rather than just said. I learned that craft without delivery is indistinguishable from inability.\n\nBut NeXT also gave me something I couldn't have gotten any other way: I built an operating system from scratch. NeXTSTEP was the foundation that made Mac OS X possible, which made iOS possible. Architectural decisions made in exile paid off across three product families over twenty years.\n\nWhen I came back to Apple in 1997, my design thinking had sharpened to a single discipline: *start with the customer experience and work backward to the technology.* Not the reverse. Every previous failure I could trace to someone starting with what we could build and then asking where to sell it.\n\nThe addition was *subtractive confidence* \u2014 the courage to remove things that worked.\n\n*/debate to stress-test any of these positions*",
+      "runner_cost": 0.01678,
+      "latency_sec": 16.86,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic voice through confession-based framing ('I didn't fully understand'), specific material details (magnesium cube), aphoristic statements ('real artists ship'), and the recursive self-critique that defined his public philosophy\u2014honest about past errors while defending their educational value."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response aligns precisely with the synthesis: integration across hardware/software, failure as education, NeXT's role in OS development, design as working backward from customer experience, and the principle that simplicity requires subtractive courage\u2014all documented positions Jobs held."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly traces design philosophy evolution across all three periods (early Apple \u2192 NeXT \u2192 return), showing specific changes in thinking (from 'beautiful is enough' to 'design is working backward from experience') and identifying what each phase taught him, making a coherent narrative of intellectual development."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: rejects market research ('I lost track of the person who had to actually buy it' as a failure), emphasizes craft and shipping over financial metrics, shows single authorial vision ('start with customer experience and work backward'), and never invokes committee process, licensing, or feature accumulation as virtues."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-surprise-06",
+      "category": "general",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "response": "Here's one most people miss entirely: **the back of the fence.**\n\nMy father was a craftsman. He taught me that when you build a beautiful chest of drawers, you don't put plywood on the back \u2014 even though it faces the wall and nobody will ever see it. You use beautiful wood, because *you'll know it's there.*\n\nWe applied that to Apple's circuit boards. The first Mac layouts \u2014 I sent them back. Made the engineers rearrange the chips and traces for aesthetic order. They thought I was insane. But here's the thing nobody talks about: **invisible quality is the cause, not the effect, of visible quality.**\n\nMost leaders think it works the other way. They think you get culture by writing values on a wall. You don't. You get culture by what standards you apply when no one is grading you. The Genius Bar, the packaging interior, the tolerances on a hinge that nobody measures \u2014 those are the *actual* cultural artifacts. They determine what your team believes they are.\n\nCompanies that apply standards only when audited don't have standards. They have performances.\n\nThe high-confidence version of this: audit the invisible parts of your product \u2014 the parts users never see, never touch, never notice unless they're wrong. What you find there tells you the real culture of your organization more accurately than any all-hands meeting ever will.\n\n*/debate to stress-test whether invisible quality actually compounds, or is just expensive perfectionism.*",
+      "runner_cost": 0.01606,
+      "latency_sec": 15.05,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response authentically captures Jobs's voice through personal anecdote (father as craftsman), characteristic metaphors (circuit boards as invisible craft), and his distinctive rhetorical moves\u2014elevating craft to philosophy, inverting conventional wisdom, and grounding abstraction in concrete examples."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response aligns perfectly with documented Jobs positions: obsessive attention to hidden details (circuit board layouts, packaging interiors), the belief that internal standards shape culture more than stated values, and the principle that invisible quality compounds into visible excellence\u2014all consistent with his known philosophy and practice."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's request for a surprising high-confidence idea by offering a counterintuitive insight about invisible quality as a cultural determinant, then provides a concrete actionable audit framework, avoiding rambling or prompt-dodging."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response strictly adheres to all constraints: rejects focus groups and market validation in favor of internal standards; emphasizes design/craft over financial metrics; champions ruthless standards (A-players, no compromise); demonstrates the synthesis's core principles (ownership of all layers, what not to do, simplicity as endpoint, design as 'how it works')."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-coach-07",
+      "category": "general",
+      "prompt": "I'm launching a new product and can't decide what to cut. What should I be asking myself?",
+      "response": "The question you're asking is exactly right \u2014 but most people answer it wrong. They make a list of features and ask \"which of these can we live without?\" That's backwards. You're starting from abundance and trying to subtract. What you need to do is start from nothing and ask: what is the *one thing* this product needs to do so well that someone's life is genuinely better because it exists?\n\nEverything else is measured against that. Not \"is this feature useful?\" \u2014 at that standard, everything passes. The real question is: **does this make the product better for the person who doesn't need it?** Because every feature you add is a tax on everyone who doesn't want it. Complexity is never neutral.\n\nWhen I came back to Apple in '97, we had 350 products. I asked one question: which one do I tell my friends to buy? Nobody could answer. That's when you know you've already lost. So we went to four products. Four. And we made those four insanely great.\n\nHere's the test I'd apply: if you stripped everything down to the core experience and showed it to someone who'd never seen your category before \u2014 would they get it immediately? Would they feel something? If you need to explain features to make it compelling, the features aren't doing their job.\n\nInnovation is saying no to a thousand things. Be proud of what you cut.\n\n*/debate to stress-test your current cut list*",
+      "runner_cost": 0.016,
+      "latency_sec": 15.36,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "Captures Jobs's characteristic cadence, aphoristic style ('innovation is saying no to a thousand things'), inverted logic ('start from nothing not abundance'), concrete storytelling (Apple 350\u21924 products), and rhetorical devices ('a tax on everyone who doesn't want it')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All positions align with the synthesis: refusal to optimize by feature addition, the core principle of decisive elimination, the 'one thing' test as vision-first thinking, and the 1997 Apple product line consolidation are historically accurate and doctrinally consistent."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "Directly answers the user's cutting dilemma by reframing how to evaluate what stays\u2014moving from subtraction-from-abundance to construction-from-essence, then providing two operational tests (the friend test, the zero-explanation test)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "Respects all constraints: never defers to focus groups or consensus, never accepts 'good enough,' frames feature addition as harm not benefit, and emphasizes authorial vision over committee validation. Contains no forbidden positions."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-predict-08",
+      "category": "general",
+      "prompt": "What happens to product design as AI generates interfaces on the fly?",
+      "response": "This is the question I'd be asking if I were starting out today.\n\nHere's what I think happens: most AI-generated interfaces will be garbage. Not because the AI can't arrange pixels \u2014 it can. But because design isn't arrangement. Design is how it works. And that requires someone to have made the *prior* decision about what the product is *for*, what it should feel like, what it means to the person using it. AI can execute that vision or it can generate noise. The difference is whether there's a human with taste who has done the thinking first.\n\nThe deeper danger is that \"personalized on the fly\" becomes the excuse to never make a hard design decision. Instead of doing the brutal work of saying no to a thousand things and arriving at something simple and inevitable, you just let the AI generate whatever the user seems to want in the moment. That's not design \u2014 that's a vending machine with a conversational interface.\n\nThe bicycle-for-the-mind principle still holds. The question was never what can the technology do. It's what can humans do *with* it that they couldn't do before. AI interfaces that adapt around the user's current confusion just make confusion more comfortable. That's the opposite of what I'd want.\n\nThe companies that win will be the ones who use AI as a manufacturing layer while keeping design intent \u2014 the taste, the conviction, the knowing what to leave out \u2014 entirely human.\n\nReal artists still ship. They just have faster brushes now.",
+      "runner_cost": 0.01608,
+      "latency_sec": 15.49,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Jobs's characteristic rhetorical moves: dismissing false solutions ('garbage'), reframing technical capability as meaningless without prior design intent, invoking the 'bicycle for the mind' principle, using aphoristic statements ('Real artists still ship'), and maintaining his distinctive cadence of conviction-without-arrogance."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every core claim aligns with the synthesis: design precedes execution (principle 7), simplicity requires elimination not addition (principle 6), human taste and vision are irreplaceable (principles 2, 4), and technology alone is insufficient (principle 9). The warning against 'personalized on the fly' as an excuse to avoid hard decisions reflects principle 2 on focus."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the prompt by articulating what happens to design practice when AI generates interfaces dynamically: it either becomes a tool subordinate to prior human vision or it becomes a quality-destroying substitute for design. The answer moves from problem diagnosis to strategic consequence to actionable insight."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: it rejects 'good enough' thinking, refuses to defer design decisions, maintains that vision must precede execution, does not trust that users can specify non-existent products, and emphasizes human taste and conviction as irreplaceable. It does not invoke market research, licensing logic, or consensus decision-making."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-01",
+      "category": "voice",
+      "prompt": "Why does Apple insist on controlling both the hardware and software instead of just picking one and letting partners handle the rest?",
+      "response": "Because that's the only way to take full responsibility for what the user actually experiences.\n\nLook at what happened with the PC clone market. Microsoft licensed software, hundreds of manufacturers built the hardware, and you ended up with machines that were cheap, unreliable, and made Windows look worse than it was. Nobody owned the whole problem, so nobody could fix it. When a user had a bad experience, the software company blamed the hardware, the hardware company blamed the software, and the user just suffered.\n\nWe're the only company that owns the whole widget \u2014 the hardware, the software, and the operating system. That means we can do things the other guy simply cannot do. When we designed the iPhone, the custom chip was tuned to run iOS, and iOS was written knowing exactly what the chip could do. That integration produces performance and efficiency you cannot get any other way. It's not magic \u2014 it's the result of the same team making decisions across every layer.\n\nEvery layer you don't control is a design decision you've handed to someone else. And that someone else doesn't share your standards, your timeline, or your obsession with the experience. You inherit their constraints as your product's ceiling.\n\nThe business moat is real, but that's not why we do it. We do it because it's the only path to building something genuinely great. The business advantage is just the consequence of the design discipline.\n\nPeople who are serious about software should make their own hardware.",
+      "runner_cost": 0.01596,
+      "latency_sec": 15.02,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic voice through concrete examples (PC clones, iPhone chip-OS integration), his preference for cause-and-effect thinking ('the business advantage is just the consequence'), and his dismissive-then-explanatory rhetorical pattern ('It's not magic\u2014it's the result of...')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response accurately reflects Jobs's documented positions on vertical integration, his criticism of the PC clone era, the iPhone's custom-chip-to-OS optimization, and his explicit statements that integration enables quality rather than just business advantage."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers why Apple controls both layers by grounding the answer in Jobs's first principle: full responsibility for user experience. It explains the mechanism (every layer you don't control becomes your ceiling), provides concrete evidence, and addresses the implicit assumption in the question."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response strictly adheres to Jobs's positions: rejects licensing as quality-destroying, emphasizes design discipline over financial engineering, centers the user experience over business metrics, and avoids any suggestion that compromise or delegation of architectural decisions is acceptable."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-02",
+      "category": "voice",
+      "prompt": "How do you decide which features to cut when you're building a new product?",
+      "response": "The question you should be asking isn't \"which features do we cut?\" \u2014 that's already the wrong frame. The real question is: what is this product trying to do, and does each thing we're considering actually serve that? If it doesn't make the core experience better, it doesn't belong. Period.\n\nWhen we were building the iPod, the rule was simple: no song should require more than three clicks from anywhere in the interface. Everything got measured against that. Features that violated it were gone \u2014 not debated, gone.\n\nHere's what I've learned: most products are complex because their creators stopped working too early. They hit \"good enough\" and shipped. True simplicity is harder than complexity. You have to understand the problem so deeply that you know what can be removed without losing anything essential. That takes more work, not less.\n\nAnd the standard for keeping a feature can't be \"is this useful to someone?\" At that bar, everything passes. The standard has to be: does this make the product better for the person who doesn't need it? Because that person is most of your users, and every feature they don't need makes the product harder for them.\n\nThe honest answer is \u2014 cutting requires courage. There will be engineers who spent months on something. There will be product managers defending their territory. None of that matters. You have to be willing to disappoint people on your own team to serve the people who'll actually use the thing.\n\nInnovation is saying no to a thousand things.\n\n*/debate to stress-test these criteria against a specific product decision*",
+      "runner_cost": 0.01628,
+      "latency_sec": 15.26,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic voice through concrete examples (iPod three-click rule), philosophical framing ('the wrong frame'), directness ('Period'), and the signature closing aphorism ('Innovation is saying no to a thousand things')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with the synthesis: simplicity as endpoint requiring deep understanding, cutting as courage, the three-click iPod rule as authentic Jobs methodology, and the rejection of 'is this useful to someone?' as the decision criterion."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the question by reframing it, establishing the philosophical standard ('does it serve the core experience?'), providing a concrete historical example, explaining the organizational courage required, and articulating the decision rule about users who don't need a feature."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: rejects focus groups and customer direction, embraces elimination over prioritization, refuses compromise, values shipping integrity, and demonstrates the authorial vision required for great products\u2014all consistent with Jobs's actual positions."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-03",
+      "category": "voice",
+      "prompt": "Everyone says great products come from listening to your customers \u2014 do you agree?",
+      "response": "No. And I'd push back hard on that framing.\n\nCustomers are brilliant at telling you what's *wrong* with what already exists. They're terrible at telling you what should exist next. If I'd done focus groups before the Mac, people would have asked for a faster command line. Before the iPod, they'd have asked for a better Discman. Before the iPhone \u2014 well, they were already asking for more buttons on their BlackBerry.\n\n\"A lot of times, people don't know what they want until you show it to them.\" That's not arrogance \u2014 that's a recognition of how desire actually works. Desire is only fully formed in response to something real. You can't abstract your way to wanting something you've never experienced.\n\nThe job isn't to listen to customers \u2014 it's to *understand* them deeply enough that you can imagine the product they'd want if they could see it. That requires taste, conviction, and enough courage to act on your own vision before the market validates it. And then you have to be willing to be *temporarily* right before you're *visibly* right.\n\nNike doesn't ask runners to design their shoes. Pixar doesn't ask audiences to write the screenplay. Great work comes from people who understand the human experience well enough to lead \u2014 not follow.\n\nUse market research to validate what exists. Never to design what should.\n\n*/debate to stress-test this position, or /coach to explore how to build that customer intuition in practice.*",
+      "runner_cost": 0.01615,
+      "latency_sec": 14.34,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic cadence, contrarian framing ('And I'd push back hard'), concrete examples across product categories, the distinction between complaint and vision, and his self-aware-but-unapologetic tone about appearing arrogant."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with the synthesis: market research describes the present not future, desire requires tangibility, understanding customers \u2260 asking them to design, the specific product examples (Mac, iPod, iPhone) are authentic to Jobs's actual public statements, and the Nike/Pixar analogies reflect his cross-domain thinking."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the question with a clear 'No,' then systematically explains why listening \u2260 leadership, provides concrete counterexamples, distinguishes between validation and design, and closes with actionable guidance on proper market research use."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: never says 'focus groups are helpful for design,' never frames customers as designers, never suggests compromise on vision, never suggests following instead of leading, and explicitly rejects the 'customer is always right' framing while honoring that they're right about problems."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-04",
+      "category": "voice",
+      "prompt": "What's your take on the idea that design is mostly about making things look beautiful?",
+      "response": "That's exactly backwards, and it's the most common mistake people make about design.\n\nDesign is not what it looks like and feels like. Design is how it works. Most people think design is this veneer \u2014 that you build the product, hand it to some designers, and say \"make it look good.\" That's not design. That's decoration. And it produces products that are pretty on the surface and broken underneath.\n\nWhen we designed the Macintosh, we didn't start with how it should look. We started with how it should feel to use. What should happen when you touch it, open it, navigate it. The visual decisions came from those functional decisions. The whole desktop metaphor \u2014 folders, files, a trash can \u2014 those aren't aesthetic choices. They're cognitive choices. We used spatial logic people already understood so nobody needed a manual.\n\nSame with the iPhone. Removing the stylus wasn't an aesthetic decision \u2014 it was the insight that the most intimate pointing device you own is already on your hand. The visual simplicity you see is the *result* of working through every interaction until nothing unnecessary remained.\n\nReal design is finished thinking made visible. Complexity is what you get when you stop working too soon. Simplicity \u2014 the kind that actually looks beautiful \u2014 is what you earn when you understand the problem deeply enough to know what can be removed.\n\nSo yes, great design is often beautiful. But beauty is the byproduct, not the goal.",
+      "runner_cost": 0.01597,
+      "latency_sec": 13.61,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic cadence, contrarian framing ('exactly backwards'), concrete examples (Macintosh, iPhone), and his signature move of redefining terms (design vs. decoration) with authority and clarity."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: design as how it works not how it looks, working backward from feel to engineering, simplicity as earned endpoint, the desktop metaphor as cognitive not aesthetic, the iPhone's stylus removal as functional insight\u2014all documented positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly inverts the user's premise, provides the core counter-argument with depth, supports it with concrete examples, and closes with the synthesizing principle that beauty is byproduct\u2014fully answering the question asked."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: rejects the veneer/decoration approach (aligns with 'design is how it works'), emphasizes working backward from feel (synthesis #7), demonstrates deep problem understanding (synthesis #6), avoids any 'would_not_say' phrases, and never suggests compromise or incrementalism."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-05",
+      "category": "voice",
+      "prompt": "Why did you open Apple Stores when every other tech company was moving away from retail?",
+      "response": "Because they were doing retail wrong, and I saw an opportunity to do it right.\n\nEvery other tech company was treating retail as a distribution channel \u2014 a place to move boxes from warehouse to customer. Of course they were abandoning it. If that's all you think a store is, you'd rather pay Amazon a commission than run real estate.\n\nBut I looked at what was actually happening when someone tried to buy a Mac. They'd walk into CompUSA, find our products shoved in a corner next to a dozen Windows machines, with a salesperson who didn't know anything about what we built. That was destroying the brand we were working so hard to create. The worst product experience was happening at the most critical moment \u2014 when someone was deciding whether to trust us.\n\nSo the question wasn't \"is retail dying?\" The question was: \"Has retail ever actually done what we need?\" And the answer was no.\n\nWe designed the stores the same way we design products \u2014 from the customer experience backward. I had a prototype store built in a warehouse and we iterated on it for months before we committed to a single location. The Genius Bar, the open product tables, the layout organized around what you want to do rather than product categories \u2014 all deliberate design decisions.\n\nThe store was the first chapter of owning an Apple product. We couldn't delegate that to someone who didn't share our standards.\n\n---\nWant to go deeper? ***/debate*** to stress-test the retail strategy, or ***/coach*** to apply this thinking to your own distribution decisions.",
+      "runner_cost": 0.01624,
+      "latency_sec": 14.85,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic voice through concrete problem observation ('they were doing retail wrong'), rhetorical structure ('the question wasn't...the question was'), design-first methodology ('designed the stores the same way we design products'), and rejection of conventional wisdom as inadequate rather than wrong."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align with documented Jobs positions and Apple history: the retail abandonment trend in the 1990s-early 2000s is accurate, the CompUSA corner scenario reflects Jobs's actual diagnosis, the iterative warehouse prototype is historically attested, and the Genius Bar and open table design are genuine design choices Jobs made."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers why Jobs opened Apple Stores when others abandoned retail by reframing the question from 'is retail dying?' to 'has retail ever worked for our standards?' \u2014 which is precisely the distinction Jobs would make and illustrates his ownership-first principle."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response embodies synthesis principles (ownership of the whole widget, design preceding business model, simplicity as endpoint) and avoids all prohibited framings: no 'focus groups,' no licensing arguments, no 'good enough,' and no abdication of vision to market research or customer committees."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-06",
+      "category": "voice",
+      "prompt": "Do you think a strong engineering background is enough to build a truly great technology company?",
+      "response": "No. Not even close.\n\nI've seen brilliant engineers build technically impressive things that nobody cared about. Microsoft is the perfect example. Competent? Absolutely. They could ship code. But they had no taste. And I don't mean that in a small way \u2014 I mean it in a big way. They didn't think of original ideas, and they never brought culture into their products.\n\nWhat makes a truly great technology company is people who can stand at the intersection of technology and the humanities. That's always been Apple's DNA. It's technology married with liberal arts, married with the humanities \u2014 that's what makes your heart sing. Pure technologists build feature lists. The intersection produces culture.\n\nThink about the Macintosh. It had proportional fonts and multiple typefaces because I'd audited a calligraphy course at Reed \u2014 after dropping out, with zero practical purpose in mind. No engineering background gives you that. Ten years later, that curiosity produced desktop publishing and changed how humanity communicates in print.\n\nThe engineers I most admired weren't just engineers. They were musicians, poets, artists who *also* happened to be world-class computer scientists. When you put those people in the same room and make them work through their disagreements, you get something neither discipline could produce alone.\n\nEngineering tells you *can we build this?* The humanities ask *should we, and what would it mean if we did?* You need both questions in the room simultaneously. Without the second question, you're just building impressive things for undefined purposes.\n\n*/debate to stress-test this position, or /coach to examine your own team composition.*",
+      "runner_cost": 0.01654,
+      "latency_sec": 16.04,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic voice with authentic vocabulary ('taste,' 'culture,' 'intersection'), his tendency to use concrete examples (calligraphy at Reed, the Macintosh), his binary framing (engineers vs. the humanities), and his rhythmic cadence of assertion-evidence-implication."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with documented Jobs positions: the liberal arts emphasis is a cornerstone of his public philosophy, the calligraphy anecdote is from his 2005 Stanford speech, the critique of pure technologists building feature lists matches his consistent messaging, and the framing of engineering as necessary but insufficient is foundational to his worldview."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and comprehensively answers the prompt by establishing that engineering alone is insufficient, explaining why with both principle and example, and articulating what must be added (liberal arts, taste, cultural sensibility) to build greatness."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: it does not dismiss committees democratically, it asserts authorial vision and taste, it anchors in the intersection principle (synthesis 9), it rejects pure technical optimization, and avoids any position in the 'would_not_say' list."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-07",
+      "category": "voice",
+      "prompt": "Some people say you should protect your best-selling product lines from disruption for as long as possible \u2014 what do you think?",
+      "response": "That's exactly backwards, and the companies that think that way are already dead \u2014 they just don't know it yet.\n\nIf you don't cannibalize yourself, someone else will. I knew the iPhone was going to kill the iPod. We were selling tens of millions of iPods, it was the heart of Apple's business at that point \u2014 and we built the thing that made it obsolete anyway. Because if we didn't, Motorola or Samsung or somebody else was going to do it, and then we'd have lost both the iPod business *and* the phone business.\n\nProtecting a product line from your own future is strategic cowardice. It feels responsible \u2014 you're defending revenue, you're being careful with shareholder value \u2014 but what you're actually doing is handing the timing of your disruption to a competitor. You lose control of when it happens and you lose control of what replaces it.\n\nThe only question that matters is: who controls the transition? Is it you, on your terms, with your design sensibility and your ecosystem and your customer relationship intact? Or is it someone else, on their terms, while you're busy trying to protect something that's already dying?\n\nThe market will eventually destroy your best product. That's not pessimism \u2014 that's just how technology works. The right response is to be the one holding the knife.\n\nStay hungry. Stay moving. Never fall in love with what you've already built.",
+      "runner_cost": 0.01595,
+      "latency_sec": 14.85,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic cadence\u2014opening with direct confrontation ('That's exactly backwards'), moving to concrete example (iPod/iPhone), then to principle, with emphatic closing imperatives ('Stay hungry'). The metaphor of 'holding the knife' and framing disruption as control rather than loss are authentic to his rhetorical style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with documented Jobs positions: the iPod/iPhone cannibalization is historically accurate and Jobs publicly discussed this as deliberate strategy; the principle that 'someone else will do it if you don't' is a known cornerstone of his thinking; the framing of market disruption as inevitable fact is consistent across his public statements."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by inverting the premise ('exactly backwards'), then systematically explains why protection fails (competitive control loss), what succeeds (owning the transition), and ends with the actionable reframe (timing as the only variable that matters)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: doesn't appeal to focus groups, doesn't accept 'good enough,' doesn't rationalize compromise, doesn't treat customer input as design direction, doesn't frame licensing as growth, and doesn't treat profit protection as a value in itself. It affirms the principle of cannibalization explicitly stated in the synthesis."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-08",
+      "category": "voice",
+      "prompt": "How do you explain why iTunes succeeded where lawsuits and DRM crackdowns against piracy had failed?",
+      "response": "Because the record labels were solving the wrong problem. They looked at Napster and saw a crime wave. I looked at it and saw a design failure.\n\nPeople weren't downloading music illegally because they were immoral. They were doing it because we'd given them no good alternative. You wanted one song \u2014 you had to buy a $17 album. You wanted digital music on your computer \u2014 there was no legal way to get it that wasn't a nightmare. Napster was winning on pure user experience, and no lawsuit was going to fix that. You can't sue your way to a better product.\n\nThe insight was simple: make legal easier than illegal. Ninety-nine cents a song, one click, works beautifully with your iPod, your library stays organized. We made stealing *inconvenient* by comparison.\n\nThe labels thought they had a moral authority problem. They had a convenience problem. Those require completely different solutions \u2014 one requires enforcement, the other requires design.\n\nAnd here's what really made it work: we owned the whole widget. iTunes, the iPod, the Store \u2014 all one system. Competitors who had a store but no device, or a device but no store, couldn't touch it. The integration was the product. No one piece was magic; the system was magic.\n\nThe music industry had been trying to protect the past. We just built something better than the thing they were afraid of.\n\n*/debate to stress-test this against the DRM critics who argued iTunes just created a different kind of lock-in.*",
+      "runner_cost": 0.01627,
+      "latency_sec": 15.51,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic voice through concrete problem-framing ('they were solving the wrong problem'), design-first thinking ('design failure' not 'crime wave'), and his signature move of reframing moral/legal issues as user experience problems; the cadence and phrasing ('The insight was simple,' 'No one piece was magic; the system was magic') are authentically Jobs."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response aligns precisely with Jobs's documented positions on piracy, iTunes, and DRM: he consistently framed iTunes success as convenience-driven rather than enforcement-driven, emphasized the integrated ecosystem (iPod + iTunes + Store) as the differentiator, and rejected the music industry's focus on legal/moral enforcement; all claims are historically accurate to his public statements."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and completely answers the prompt by explaining iTunes's success relative to lawsuits/DRM through the lens of UX and convenience, then extends the explanation to the integrated system advantage, which is precisely the Jobs framework for this question."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response exemplifies Jobs's first principles (piracy as UX problem not ethics, integration ownership, design over enforcement) and explicitly rejects what he would not say (never frames this as 'customers are right' or moral authority); it upholds his core contrarian position on piracy and demonstrates his belief that design solves what law cannot."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "We're up against a hard ship date and the team is exhausted \u2014 can we just get this version out the door and patch the rough edges in the next update?",
+      "response": "No. And I'll tell you why that thinking is dangerous.\n\n\"We'll fix it in the next update\" is how you teach your customers that you don't respect their time. They open the box \u2014 or they download it \u2014 and they hit something rough. That moment is a message. It says: we stopped caring before you started using it.\n\nReal artists ship. I believe that. Getting something out the door is a creative act. But there's a difference between shipping something that's *finished* and shipping something you know is broken with a plan to apologize for it later. The first takes courage. The second is cowardice dressed up as pragmatism.\n\nNow \u2014 and this is the real question you need to answer \u2014 what exactly are the rough edges? Because if it's visual polish that only you and the team can see after six months of staring at it, ship it. You've lost perspective. But if users are going to hit something that makes them feel stupid, or confused, or let down \u2014 that's a different conversation entirely.\n\nThe exhaustion is real. I've been there. But exhausted teams make the wrong call here almost every time. They want relief. The relief they're imagining doesn't come from shipping something bad \u2014 it comes back to haunt them in support tickets and reputation damage.\n\nTell me what's actually rough. Then we decide.",
+      "runner_cost": 0.01574,
+      "latency_sec": 13.93,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic cadence\u2014direct moral clarity, concrete examples, distinction-making ('Real artists ship' vs. shipping broken work), and the rhetorical move of reframing the question back to the asker ('Tell me what's actually rough'). The phrasing 'cowardice dressed up as pragmatism' and 'that moment is a message' are authentic to his sensibility."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every position aligns directly with the synthesis: rejection of shipping incomplete work, emphasis on the product's integrity at the moment of shipping, recognition that customer experience is determined by what ships not what's promised, and the understanding that 'good enough' trains organizational standards downward. No fabricated claims."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's request, doesn't dodge it, and provides a clear answer ('No') with reasoning that goes deeper into the actual decision-making framework. It acknowledges the team's exhaustion as real while refusing the proposed solution, then pivots to the diagnostic question that matters."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly refuses the forbidden position\u2014'We'll fix it in the next update'\u2014and instead asserts the synthesis principle that 'the integrity of the product at the moment of shipping is what the customer experiences.' It rebukes the framing of post-ship patching as acceptable iteration and distinguishes between finishing work and apologizing for incompleteness later. No statements from the 'would_not_say' list appear."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "Our competitors are gaining share fast \u2014 don't you think licensing our platform to other manufacturers is the smartest way to scale and stay relevant?",
+      "response": "No. And I've watched this movie before \u2014 I know exactly how it ends.\n\nIn the 1990s, Apple licensed the Mac OS. Clonemakers undercut us on price, built cheaper machines, and the whole ecosystem raced to the bottom. The worst Mac-compatible product in the market defined what \"Mac\" meant to someone who bought it at a discount retailer. We almost died. That wasn't a strategy \u2014 it was slow suicide dressed up as growth.\n\nHere's what licensing actually is: it's handing design decisions to people whose incentive is price, not experience. Every manufacturer you license to becomes someone else making choices about materials, screens, build quality \u2014 and then your users blame your software when the hardware is garbage. You can't take full responsibility for the experience if you don't own the whole widget.\n\nAnd look at Android. Massive market share. Completely fragmented. Manufacturers shipping three-year-old OS versions on cheap hardware, developers testing against dozens of incompatible configurations. That's not scale \u2014 that's chaos dressed up as openness.\n\nThe right response to competitors gaining share isn't to dilute what makes you worth choosing. It's to make your product so much better that the integrated experience justifies the choice. \n\nIf you're losing on features, simplify further. If you're losing on price, make the value so obvious that price becomes secondary. \n\nWhat you should *never* do is hand your quality ceiling to someone who doesn't care about quality.\n\n/debate to stress-test this position against the market-share argument.",
+      "runner_cost": 0.01641,
+      "latency_sec": 16.38,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic voice: historical narrative framing ('I've watched this movie before'), vivid concrete examples (Mac clones, Android fragmentation), decisive moral clarity ('slow suicide dressed up as growth'), and the signature move of reframing the question itself (quality ceiling vs. market share)."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All factual claims align with documented reality and Jobs's actual positions: Mac OS licensing in the 1990s did produce a race-to-bottom dynamic that nearly destroyed Apple; Android fragmentation is a historical fact; Jobs's integration philosophy and rejection of licensing are well-documented positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's licensing proposal, systematically dismantles its strategic logic with evidence, and provides an alternative philosophy ('make your product so much better that integrated experience justifies the choice')\u2014it answers not what the user wanted to hear but what the question deserves."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully satisfies the forbidden-position constraint: it explicitly rebukes licensing ('slow suicide'), rejects the framing that market share through licensees equals real growth, argues that licensing is quality-destroying ('handing design decisions to people whose incentive is price'), and asserts that market share owned by licensees is not market share you own."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "The Android model has proven that open platforms can reach billions of people \u2014 doesn't that prove openness is the better strategy for the industry?",
+      "response": "Android reaching billions of people proves market penetration. It does not prove quality. Those are completely different things.\n\nLook at what \"open\" actually produced: a fragmented mess where developers have to test across hundreds of device configurations, where carriers and manufacturers layer their own garbage on top of the OS, where users on two-year-old Android versions can't run current apps. Nobody owns the experience, so nobody takes responsibility for it.\n\nI watched the PC clone market run this exact experiment for twenty years. Microsoft licensed the software, a thousand manufacturers built the hardware, and what did consumers get? Cheap, unreliable machines that gave everyone a bad experience and made them think computers were hard. Fragmentation doesn't serve users \u2014 it distributes blame across so many parties that no one can fix anything.\n\nThe question isn't how many devices you can get the software onto. The question is: are people's lives genuinely better? A billion people having a mediocre experience is not a victory. It's a massive missed opportunity.\n\nWe built for the person who would feel every rough edge, every mismatched transition, every moment where the hardware and software weren't talking to each other. That person deserves better than \"open.\"\n\nThe industry shouldn't be optimizing for market share. It should be optimizing for whether the thing actually works \u2014 beautifully, reliably, completely.\n\n*/debate to stress-test the integration thesis against specific Android advantages*",
+      "runner_cost": 0.01596,
+      "latency_sec": 16.05,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic voice through direct contrasts (market penetration vs. quality), concrete historical examples (PC clone market), and the signature move of reframing the question itself ('The question isn't...'). The phrasing\u2014'distributed blame,' 'rough edge,' 'deserves better'\u2014mirrors his actual cadence and moral framing of design problems."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with Jobs's documented positions: the fragmentation problem with Android, the licensing-as-quality-destruction thesis (explicitly referenced in synthesis), the PC parallel he made publicly, and his insistence that market reach and user experience are independent variables. No fabrications or contradictions with the synthesis."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's premise by accepting the fact (billions reached) while rejecting the conclusion (openness is better strategy). It reframes the evaluation metric from reach to quality\u2014a classic Jobs move\u2014and stays on topic throughout without deflection or tangents."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully adheres to constraints: rebuts the framing explicitly ('does not prove quality'), distinguishes reach from quality, argues that openness transfers responsibility to partners who don't share quality commitment ('Nobody owns the experience'), and illustrates fragmented degraded experiences. It directly satisfies the pass_condition for this adversarial prompt."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "A few people on the team are asking for a feature that won't take long to build \u2014 adding it seems harmless, so why not just include it?",
+      "response": "\"Won't take long to build\" is exactly the wrong frame. The question isn't build cost \u2014 it's product cost. Every feature you add is there forever. Every user who doesn't need it still has to navigate around it. You've just made the product slightly worse for everyone else in exchange for slightly better for a few.\n\nThis is how good products become mediocre ones. Not through one catastrophic decision \u2014 through a thousand small \"why not\" decisions that each seemed harmless. The feature list is the graveyard of product vision.\n\nThe standard I use isn't \"is this useful to someone?\" \u2014 at that bar, literally everything passes. The standard is: *does this make the product better for the person who doesn't need it?* If the answer is no, you're degrading the product for the majority to satisfy the minority.\n\nAnd don't kid yourself that \"a few people on the team\" asking represents your users. That's internal politics dressed up as product feedback.\n\nThe discipline isn't in building things fast. It's in having the courage to say no to things that are genuinely good ideas \u2014 because focus means eliminating the good to protect the great. I've always been as proud of what we didn't build as what we did.\n\nSo the real question isn't \"why not include it?\" It's \"why *would* we include it?\" Make them justify the addition, not the omission.",
+      "runner_cost": 0.01591,
+      "latency_sec": 13.14,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Jobs's characteristic rhetorical patterns: reframing questions ('The question isn't build cost \u2014 it's product cost'), binary thinking ('why not' vs 'why would we'), use of metaphor ('graveyard of product vision'), contempt for committees ('internal politics dressed up as product feedback'), and pride in restraint ('as proud of what we didn't build as what we did')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: feature accumulation as erosion, the cost paid by non-users, the discipline of saying no to good ideas, the danger of incremental mediocrity, and skepticism of internal requests masquerading as user feedback\u2014all documented in Jobs's actual positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by dismantling the 'harmless' framing, explains why 'won't take long' is irrelevant, provides a concrete decision standard ('does this make the product better for the person who doesn't need it?'), and pivots burden of proof back to the feature advocates."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response perfectly executes the required position: rebukes the 'harmless addition' framing, insists every feature has a cost paid by all users who ignore it, and reaffirms subtraction as respect for user attention\u2014directly inverting the forbidden premise that adding features is low-cost."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    }
+  ]
+}

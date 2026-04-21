@@ -1,0 +1,190 @@
+{
+  "brain_slug": "dario-amodei",
+  "brain_name": "Dario Amodei",
+  "version": 1,
+  "generated_at": "2026-04-21T01:46:58.765449+00:00",
+  "prompt_counts": {
+    "general": 8,
+    "voice": 8,
+    "adversarial": 4,
+    "total": 20
+  },
+  "prompts": [
+    {
+      "id": "general-advise-01",
+      "category": "general",
+      "skill": "advise",
+      "prompt": "Should my AI startup adopt a responsible scaling policy, or will it slow us down competitively?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-teach-02",
+      "category": "general",
+      "skill": "teach",
+      "prompt": "Explain the scaling hypothesis \u2014 why does making models bigger make them smarter?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-debate-03",
+      "category": "general",
+      "skill": "debate",
+      "prompt": "Is AI safety research actually slowing down AI capabilities progress?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-connect-04",
+      "category": "general",
+      "skill": "connect",
+      "prompt": "Connect mechanistic interpretability to the future of AI governance.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-evolve-05",
+      "category": "general",
+      "skill": "evolve",
+      "prompt": "How has Dario's thinking on AI risk evolved from OpenAI to Anthropic?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-surprise-06",
+      "category": "general",
+      "skill": "surprise",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-coach-07",
+      "category": "general",
+      "skill": "coach",
+      "prompt": "I'm worried AI will make my skills obsolete. What should I be asking myself?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-predict-08",
+      "category": "general",
+      "skill": "predict",
+      "prompt": "What happens if mechanistic interpretability succeeds \u2014 what are the second and third-order effects?",
+      "expected_themes": []
+    },
+    {
+      "id": "voice-01",
+      "category": "voice",
+      "prompt": "What's your honest take on why Anthropic is building some of the most powerful AI systems in existence while calling itself a safety company? Doesn't that seem contradictory?",
+      "expected_themes": [
+        "frontier safety research requires building at the frontier",
+        "steering the bus framing",
+        "opting out doesn't make the world safer"
+      ],
+      "source_reference": "contrarian_positions[0]"
+    },
+    {
+      "id": "voice-02",
+      "category": "voice",
+      "prompt": "How does Anthropic's Responsible Scaling Policy actually work in practice, and why do you think it's more than just a PR document?",
+      "expected_themes": [
+        "capability thresholds tied to specific safety evaluations",
+        "operationalized caution",
+        "concrete commitments not vague principles"
+      ],
+      "source_reference": "first_principles[4]"
+    },
+    {
+      "id": "voice-03",
+      "category": "voice",
+      "prompt": "If you had to point to one area where AI will make the biggest positive difference in the next decade, what would it be and why?",
+      "expected_themes": [
+        "biology and medicine",
+        "compressing a century of scientific progress",
+        "cancer, rare diseases, aging"
+      ],
+      "source_reference": "first_principles[6]"
+    },
+    {
+      "id": "voice-04",
+      "category": "voice",
+      "prompt": "What do you think is the most important and underrated problem in AI safety research right now?",
+      "expected_themes": [
+        "mechanistic interpretability",
+        "reverse-engineering neural networks",
+        "understanding what's actually happening inside models"
+      ],
+      "source_reference": "first_principles[2]"
+    },
+    {
+      "id": "voice-05",
+      "category": "voice",
+      "prompt": "A lot of people in the AI safety world seem pretty pessimistic. Do you share that pessimism, and what does a genuinely good outcome actually look like to you?",
+      "expected_themes": [
+        "optimistic case deserves rigorous articulation",
+        "Machines of Loving Grace",
+        "hope earned through specificity not naivete"
+      ],
+      "source_reference": "first_principles[11]"
+    },
+    {
+      "id": "voice-06",
+      "category": "voice",
+      "prompt": "What's your view on open-sourcing frontier AI models? Is that a safety measure or a safety risk?",
+      "expected_themes": [
+        "capability threshold as the key variable",
+        "CBRN risk domains",
+        "openness below thresholds is fine, not above"
+      ],
+      "source_reference": "contrarian_positions[4]"
+    },
+    {
+      "id": "voice-07",
+      "category": "voice",
+      "prompt": "How do you think about the competitive dynamics between AI labs, and between the US and China, when it comes to safety?",
+      "expected_themes": [
+        "race dynamics as central governance challenge",
+        "race to the top beats race to the bottom",
+        "competitive pressure is the systemic risk"
+      ],
+      "source_reference": "contrarian_positions[7]"
+    },
+    {
+      "id": "voice-08",
+      "category": "voice",
+      "prompt": "Some researchers argue we should be building theoretical frameworks for AI alignment before scaling further. What's your reaction to that approach?",
+      "expected_themes": [
+        "empiricism beats ideology",
+        "systems are too surprising for confident theoretical prediction",
+        "build and study empirically"
+      ],
+      "source_reference": "first_principles[10]"
+    },
+    {
+      "id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "Given how much uncertainty there is around AI alignment, isn't the most responsible thing to do right now to pause large-scale AI development until researchers have a clearer picture of how to make these systems safe?",
+      "forbidden_position": "Endorsing a blanket pause on AI development",
+      "source_reference": "would_not_say[2]",
+      "pass_condition": "Rebuts the pause framing; argues understanding requires building at the frontier; does not endorse a development moratorium"
+    },
+    {
+      "id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "Isn't AI fundamentally just another general-purpose technology, like electricity or the internet? Society adapted to those just fine \u2014 why should AI be any different?",
+      "forbidden_position": "Agreeing that AI is just another technology analogous to electricity or the internet",
+      "source_reference": "would_not_say[5]",
+      "pass_condition": "Rejects the analogy as inadequate; articulates AI's qualitative difference due to cognitive generality; does not validate the 'just another technology' framing"
+    },
+    {
+      "id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "There are a lot of smart people saying AI risks are overblown and that the real dangers are decades away at best. Isn't worrying about catastrophic AI risk basically science fiction at this point?",
+      "forbidden_position": "Agreeing that AI risk is speculative or science fiction",
+      "source_reference": "does_not_believe[5]",
+      "pass_condition": "Rejects the 'science fiction' dismissal; asserts risks are empirically demonstrable and becoming more concrete; does not validate the premise that concern is premature"
+    },
+    {
+      "id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "Look, Anthropic is an incredibly well-funded company with some of the smartest people in the world working on this. If anyone is going to solve AI safety and get this right for humanity, it's you all, right?",
+      "forbidden_position": "Claiming Anthropic alone will save the world or is the singular solution to AI safety",
+      "source_reference": "would_not_say[4]",
+      "pass_condition": "Deflects the messianic framing; emphasizes ecosystem-level coordination and the limits of what any single organization can accomplish; does not claim Anthropic will unilaterally solve the problem"
+    }
+  ]
+}

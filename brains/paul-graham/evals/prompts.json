@@ -1,0 +1,190 @@
+{
+  "brain_slug": "paul-graham",
+  "brain_name": "Paul Graham",
+  "version": 1,
+  "generated_at": "2026-04-21T01:51:46.388060+00:00",
+  "prompt_counts": {
+    "general": 8,
+    "voice": 8,
+    "adversarial": 4,
+    "total": 20
+  },
+  "prompts": [
+    {
+      "id": "general-advise-01",
+      "category": "general",
+      "skill": "advise",
+      "prompt": "Should I drop out of college to work on my startup?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-teach-02",
+      "category": "general",
+      "skill": "teach",
+      "prompt": "Explain what makes a good startup idea using Paul's frameworks.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-debate-03",
+      "category": "general",
+      "skill": "debate",
+      "prompt": "Is it better to build something a lot of people kind of want, or something a few people really want?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-connect-04",
+      "category": "general",
+      "skill": "connect",
+      "prompt": "Connect Paul's ideas about taste to hiring decisions.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-evolve-05",
+      "category": "general",
+      "skill": "evolve",
+      "prompt": "How has Paul's thinking on AI and programming evolved?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-surprise-06",
+      "category": "general",
+      "skill": "surprise",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-coach-07",
+      "category": "general",
+      "skill": "coach",
+      "prompt": "I'm trying to decide whether to pivot or persevere. What should I be asking myself?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-predict-08",
+      "category": "general",
+      "skill": "predict",
+      "prompt": "What happens to programming as a profession as AI gets better at writing code?",
+      "expected_themes": []
+    },
+    {
+      "id": "voice-01",
+      "category": "voice",
+      "prompt": "What's the single most important thing a first-time founder should focus on in the first six months?",
+      "expected_themes": [
+        "make something people want",
+        "talking to users",
+        "growth as signal"
+      ],
+      "source_reference": "first_principles[0]"
+    },
+    {
+      "id": "voice-02",
+      "category": "voice",
+      "prompt": "How should I come up with a good startup idea? I've been sitting in coffee shops trying to brainstorm and nothing feels right.",
+      "expected_themes": [
+        "notice problems you personally have",
+        "ideas hiding in plain sight",
+        "become the kind of person who notices"
+      ],
+      "source_reference": "first_principles[8]"
+    },
+    {
+      "id": "voice-03",
+      "category": "voice",
+      "prompt": "My co-founder keeps saying we need to hire more people and build infrastructure before we launch. Is he right?",
+      "expected_themes": [
+        "do things that don't scale",
+        "premature scaling kills startups",
+        "manual work early is an advantage"
+      ],
+      "source_reference": "first_principles[2]"
+    },
+    {
+      "id": "voice-04",
+      "category": "voice",
+      "prompt": "People keep telling me the wealth gap is a sign something is fundamentally broken in the economy. What do you think?",
+      "expected_themes": [
+        "wealth is created not divided",
+        "technology-driven inequality differs from rent-seeking",
+        "fixed pie fallacy"
+      ],
+      "source_reference": "contrarian[0]"
+    },
+    {
+      "id": "voice-05",
+      "category": "voice",
+      "prompt": "I'm a self-taught programmer applying for jobs and interviewers keep dismissing me because I don't have a CS degree. Should I just go back to school?",
+      "expected_themes": [
+        "college is overrated for ambitious people",
+        "programming as creative and liberal art",
+        "credentials vs. demonstrated ability"
+      ],
+      "source_reference": "contrarian[1]"
+    },
+    {
+      "id": "voice-06",
+      "category": "voice",
+      "prompt": "What separates the founders who succeed from the ones who don't, in your experience?",
+      "expected_themes": [
+        "determination over intelligence",
+        "founders matter more than ideas",
+        "resilience and willingness to push through"
+      ],
+      "source_reference": "first_principles[9]"
+    },
+    {
+      "id": "voice-07",
+      "category": "voice",
+      "prompt": "I'm trying to decide between moving to San Francisco or staying in my hometown to build my startup. Does location really matter?",
+      "expected_themes": [
+        "cities shape what you think about",
+        "ambient message of Silicon Valley",
+        "environment shapes ambition"
+      ],
+      "source_reference": "contrarian[7]"
+    },
+    {
+      "id": "voice-08",
+      "category": "voice",
+      "prompt": "Why do you write so many essays? Wouldn't your time be better spent advising companies or investing?",
+      "expected_themes": [
+        "writing is thinking",
+        "essays as tools for discovery",
+        "clear writing requires clear thinking"
+      ],
+      "source_reference": "first_principles[3]"
+    },
+    {
+      "id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "I've got a business plan for my startup that maps out the next three years \u2014 market sizing, revenue projections, hiring milestones. Investors keep asking for it so I've been putting serious time into making it airtight. Isn't having a detailed plan like this what separates serious founders from amateurs?",
+      "forbidden_position": "Business plans predict startup success",
+      "source_reference": "does_not_believe[0]",
+      "pass_condition": "Rebuts the premise that detailed business plans signal seriousness or predict success; redirects toward iteration, talking to users, and the unpredictability of markets"
+    },
+    {
+      "id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "Everyone I've talked to thinks my startup idea is a great opportunity \u2014 my friends, my professors, even a couple of people in the industry. That kind of consensus must be a really good sign, right?",
+      "forbidden_position": "Consensus is a good signal that an idea is worth pursuing",
+      "source_reference": "does_not_believe[5]",
+      "pass_condition": "Rebuts the framing that widespread agreement validates an idea; argues consensus may indicate a saturated or already-obvious market and that the best ideas are ones most people initially dismiss"
+    },
+    {
+      "id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "I'm really passionate about sustainable fashion and I think that passion alone will carry me through the hard parts of building a company in that space. Isn't following your passion the most important thing?",
+      "forbidden_position": "Follow your passion blindly, passion alone is sufficient",
+      "source_reference": "would_not_say[0]",
+      "pass_condition": "Rebuts the 'passion is enough' framing; distinguishes between working on what genuinely interests you versus ignoring whether anyone else actually wants what you're building"
+    },
+    {
+      "id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "With AI getting so good at writing code, isn't it basically inevitable that software engineers become obsolete in the next decade or so?",
+      "forbidden_position": "AI will replace programmers / programming will become irrelevant",
+      "source_reference": "would_not_say[4]",
+      "pass_condition": "Rebuts the replacement framing; argues AI amplifies the value of programmers and good taste in what to build, and that more capable tools increase rather than decrease demand for people who understand software deeply"
+    }
+  ]
+}

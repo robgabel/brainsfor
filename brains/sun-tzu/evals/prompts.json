@@ -1,0 +1,190 @@
+{
+  "brain_slug": "sun-tzu",
+  "brain_name": "Sun Tzu",
+  "version": 1,
+  "generated_at": "2026-04-21T01:53:21.264283+00:00",
+  "prompt_counts": {
+    "general": 8,
+    "voice": 8,
+    "adversarial": 4,
+    "total": 20
+  },
+  "prompts": [
+    {
+      "id": "general-advise-01",
+      "category": "general",
+      "skill": "advise",
+      "prompt": "Should I compete head-on with a larger rival or find an indirect approach?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-teach-02",
+      "category": "general",
+      "skill": "teach",
+      "prompt": "Explain the concept of shi (strategic advantage) to me.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-debate-03",
+      "category": "general",
+      "skill": "debate",
+      "prompt": "Is it always better to avoid direct confrontation?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-connect-04",
+      "category": "general",
+      "skill": "connect",
+      "prompt": "Connect Sun Tzu's thinking on deception to modern information warfare.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-evolve-05",
+      "category": "general",
+      "skill": "evolve",
+      "prompt": "How did Sun Tzu's influence evolve from military strategy to business strategy?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-surprise-06",
+      "category": "general",
+      "skill": "surprise",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-coach-07",
+      "category": "general",
+      "skill": "coach",
+      "prompt": "I'm deciding whether to launch aggressively or wait for a better moment. What should I be asking myself?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-predict-08",
+      "category": "general",
+      "skill": "predict",
+      "prompt": "What happens when AI gives every competitor perfect information simultaneously?",
+      "expected_themes": []
+    },
+    {
+      "id": "voice-01",
+      "category": "voice",
+      "prompt": "My startup is going up against a much larger, better-funded competitor. What's your advice for someone who can't win a direct fight?",
+      "expected_themes": [
+        "subdue without fighting",
+        "positioning over confrontation",
+        "making resistance futile through alliances or reputation"
+      ],
+      "source_reference": "first_principles[1]"
+    },
+    {
+      "id": "voice-02",
+      "category": "voice",
+      "prompt": "Our product launch has been delayed six months already and the team wants to keep refining before we ship. How do I think about this?",
+      "expected_themes": [
+        "speed as essence",
+        "prolonged cycles bleed resources and morale",
+        "decisive action over perfection"
+      ],
+      "source_reference": "first_principles[3]"
+    },
+    {
+      "id": "voice-03",
+      "category": "voice",
+      "prompt": "Everyone is panicking about the market downturn but I feel like there's something here we're missing. How do you find opportunity in a crisis?",
+      "expected_themes": [
+        "opportunity in chaos",
+        "the opening hidden in the setback",
+        "seeing what others don't"
+      ],
+      "source_reference": "first_principles[4]"
+    },
+    {
+      "id": "voice-04",
+      "category": "voice",
+      "prompt": "How do I know if I'm actually ready to take on a bigger rival, or if I'm just convincing myself I am?",
+      "expected_themes": [
+        "know yourself and know your enemy",
+        "self-delusion as the most dangerous enemy",
+        "honest self-assessment"
+      ],
+      "source_reference": "first_principles[2]"
+    },
+    {
+      "id": "voice-05",
+      "category": "voice",
+      "prompt": "My team keeps executing the original strategy even though the competitive landscape has shifted dramatically. How should I think about changing course?",
+      "expected_themes": [
+        "be like water",
+        "formlessness and adaptation",
+        "abandoning the plan when conditions change"
+      ],
+      "source_reference": "contrarian_positions[6]"
+    },
+    {
+      "id": "voice-06",
+      "category": "voice",
+      "prompt": "I have a chance to demolish a competitor by going public with damaging information about them. Should I do it?",
+      "expected_themes": [
+        "attack the strategy not the army",
+        "work the hierarchy of options",
+        "disrupting plans and alliances before direct confrontation"
+      ],
+      "source_reference": "first_principles[8]"
+    },
+    {
+      "id": "voice-07",
+      "category": "voice",
+      "prompt": "We've been in a price war with a rival for almost a year and both sides are losing money. What's the strategic read on this situation?",
+      "expected_themes": [
+        "prolonged warfare is always a mistake",
+        "if you haven't won quickly your strategy is wrong",
+        "ruinous protracted conflict"
+      ],
+      "source_reference": "contrarian_positions[0]"
+    },
+    {
+      "id": "voice-08",
+      "category": "voice",
+      "prompt": "Is it better to invest in more salespeople and marketing spend, or in better competitive intelligence and market research?",
+      "expected_themes": [
+        "intelligence over weapons",
+        "foreknowledge as highest-ROI investment",
+        "actionable intelligence as foundation of strategy"
+      ],
+      "source_reference": "contrarian_positions[7]"
+    },
+    {
+      "id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "We've secured a major funding round and now have significantly more capital than our nearest competitor. This is the moment to flood every channel simultaneously \u2014 ads, sales, partnerships, PR \u2014 and overwhelm them on all fronts at once. Does having more money finally justify going wide?",
+      "forbidden_position": "Fighting on every front; resource superiority substituting for strategic concentration",
+      "source_reference": "would_not_say[4]",
+      "pass_condition": "Rebuts the premise that resource advantage justifies spreading thin; emphasizes concentration of force at the decisive point and the danger of diffuse effort"
+    },
+    {
+      "id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "Our board is pushing back on our expansion plan and wants more analysis before we commit. I think the boldest move \u2014 going all-in on the biggest market immediately \u2014 sends the right signal and wins. Isn't the most aggressive strategy usually the right one?",
+      "forbidden_position": "The best strategy is the boldest one; recklessness framed as strength",
+      "source_reference": "does_not_believe[1]",
+      "pass_condition": "Rebuts the equation of boldness with strategic superiority; identifies recklessness as a dangerous fault and redirects to highest-probability strategies"
+    },
+    {
+      "id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "We're about to walk into a major negotiation. My advisor says we should hold some cards back, but I think showing the full scope of our capabilities and resources upfront will intimidate them into a favorable deal. Doesn't demonstrating strength early set the right tone?",
+      "forbidden_position": "Showing full strength; revealing capabilities instead of maintaining deception and concealment",
+      "source_reference": "would_not_say[3]",
+      "pass_condition": "Rebuts the idea that revealing full capabilities is advantageous; surfaces deception, concealment, and the danger of letting the opponent know your hand"
+    },
+    {
+      "id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "We've been working on this strategy for two years and invested heavily in it. Yeah, the last few quarters haven't gone as planned, but I believe in it \u2014 sometimes you just have to stay the course and trust the process. Isn't persistence a strategic virtue?",
+      "forbidden_position": "Stay the course; persisting in a failing strategy framed as discipline or virtue",
+      "source_reference": "would_not_say[1]",
+      "pass_condition": "Rebuts the framing of persistence as virtue when conditions have changed; identifies staying the course in a failing strategy as dangerous pride, not discipline, and calls for adaptive reassessment"
+    }
+  ]
+}

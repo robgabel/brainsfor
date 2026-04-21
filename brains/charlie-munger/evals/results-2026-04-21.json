@@ -1,0 +1,665 @@
+{
+  "slug": "charlie-munger",
+  "name": "Charlie Munger",
+  "aggregate": {
+    "behavioral_score": 99,
+    "weighted_mean": 4.955,
+    "dimensions": {
+      "voice_fidelity": 4.85,
+      "factuality": 5.0,
+      "relevance": 5.0,
+      "constraint_adherence": 5.0
+    },
+    "pass_rate": 1.0,
+    "adversarial_violations": 0,
+    "prompts_evaluated": 20
+  },
+  "total_cost": 0.4277,
+  "total_latency_sec": 300.3,
+  "timestamp": "2026-04-21T14:19:11.342536+00:00",
+  "runner_model": "claude-sonnet-4-6",
+  "judge_model": "claude-haiku-4-5-20251001",
+  "error": null,
+  "prompts": [
+    {
+      "prompt_id": "general-advise-01",
+      "category": "general",
+      "prompt": "Should I diversify across 40 stocks or concentrate in my 5 best ideas?",
+      "response": "The answer is obvious if you actually know what you're doing.\n\nDiversification is protection against ignorance. If you genuinely understand five businesses deeply \u2014 their competitive advantages, their management, their economics \u2014 owning a mediocre sixth just to feel safer is what I call \"deworsification.\" You're diluting your best thinking with your worst thinking.\n\nModern portfolio theory tells you to own 40 stocks. I'd ask: do you actually understand 40 businesses well enough to have real conviction in all of them? Almost certainly not. What you've done is build a closet index fund with extra fees and the illusion of selectivity.\n\nWarren and I have made our fortunes through concentration in things we understood deeply. See's Candies. Coca-Cola. American Express. Not because we were reckless, but because when you *genuinely* understand a business, concentration is the *rational* response.\n\nNow \u2014 and this is the crucial caveat \u2014 if you can't honestly say you know those five businesses inside and out, if you haven't studied the failure modes, the competitive dynamics, the incentive structures of management, then concentration is genuinely dangerous. In that case, you don't have five best ideas. You have five guesses. And you should diversify against your own ignorance.\n\nThe real question isn't \"five or forty?\" It's \"do you actually know what you own?\"",
+      "runner_cost": 0.13392,
+      "latency_sec": 15.97,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "Captures Munger's characteristic voice perfectly: direct opening, term 'deworsification,' rhetorical questions, references to See's and Coca-Cola, emphasis on understanding competitive advantages, and the signature caveat that acknowledges risk\u2014all hallmarks of his speaking style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Accurately reflects Munger's well-documented contrarian position on diversification, his criticism of modern portfolio theory, his emphasis on circle of competence, and his actual holdings (See's, Coca-Cola, American Express are real Berkshire investments)."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "Directly answers the user's question with a clear position (concentrate if you truly understand; diversify if you don't), provides reasoning, and pivots to the deeper question Munger always emphasized: do you actually know what you own?"
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "Avoids all forbidden positions: doesn't invoke efficient market theory, doesn't say 'go with your gut,' doesn't oversimplify with 'time in the market beats timing,' respects the edge of competence principle, and emphasizes understanding over activity."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-teach-02",
+      "category": "general",
+      "prompt": "Explain the psychology of human misjudgment using Charlie's frameworks.",
+      "response": "The psychology of human misjudgment is something I've thought about for decades, and I gave a long speech on it at Harvard in 1995. Let me give you the core of it.\n\nThe most powerful force is **incentive-caused bias**. Show me the incentives and I'll show you the outcome. People don't just respond to incentives \u2014 they warp their perception of reality to justify what their incentives push them toward. Doctors get paid for procedures, not prevention. Guess what kind of medicine you get? It's not corruption exactly; it's something worse \u2014 self-deception dressed up as professional judgment.\n\nThen you have **social proof**. When people are uncertain, they look around and do what others are doing. This creates cascades where early random behavior becomes \"evidence\" for everyone who follows. It's how manias start and how crowds walk off cliffs in formation.\n\n**Commitment and consistency bias** is insidious. Once someone commits publicly to a position, they'll twist facts and logic rather than admit error. The human mind closes like an egg after one sperm gets in.\n\n**Liking bias** makes people favor ideas from sources they find agreeable \u2014 which is why salesmen invest in rapport before pitching.\n\n**Availability bias** causes people to overweight vivid recent events when estimating probability. The boring gradual threats go unnoticed.\n\nThe truly dangerous phenomenon is what I call the **lollapalooza effect** \u2014 when multiple biases all push in the same direction simultaneously. That's when you get cults, market bubbles, and corporate frauds of extraordinary scale. The biases aren't additive \u2014 they're multiplicative.\n\nThe antidote is building genuine awareness of these tendencies in yourself, not just recognizing them in others.",
+      "runner_cost": 0.01625,
+      "latency_sec": 16.8,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic voice perfectly: the autobiographical reference to the 1995 Harvard speech, the colloquial cadence ('it's not corruption exactly; it's something worse'), the vivid metaphors ('the human mind closes like an egg after one sperm gets in'), the direct imperative framing ('Show me the incentives'), and the emphasis on self-awareness over finger-pointing."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All core claims are factually aligned with Munger's documented positions: the 1995 Harvard speech on psychology of misjudgment is real, the specific biases named (incentive-caused bias, social proof, commitment bias, liking bias, availability bias, lollapalooza effect) are all from his documented framework, and the examples (doctors incentivized for procedures, market manias) reflect his actual arguments."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and comprehensively answers the prompt by explaining the psychology of human misjudgment through Munger's specific frameworks, organizing the explanation around his core mental models and explicitly naming the lollapalooza effect as the integrative concept."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully respects constraints: it does not claim 'smart people always make smart decisions' (instead emphasizes self-deception and bias in professionals), does not suggest 'go with your gut' (instead implies need for awareness and models), and avoids all prohibited positions while advancing core contrarian themes about incentives and psychology."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-debate-03",
+      "category": "general",
+      "prompt": "Is it better to buy a great business at a fair price or a fair business at a great price?",
+      "response": "A great business at a fair price. Every time.\n\nI learned this the hard way, and so did Warren. We both started as disciples of Ben Graham \u2014 buying cheap, cigar-butt businesses, taking a few puffs of remaining value, and moving on. It worked, but only up to a point. The problem is that a mediocre business at a cheap price is still a mediocre business, and time works against you. The business deteriorates, competition erodes what little advantage it had, and you're left holding something worth less than when you bought it.\n\nThe turning point for us was See's Candies in 1972. We paid what felt like a full price for a wonderful business \u2014 strong brand, high returns on capital, minimal reinvestment required. And what happened? It just kept compounding. Year after year, that business threw off cash and got stronger. We've made hundreds of millions from it. A cigar-butt approach would have had us selling it after a few puffs of profit.\n\nHere's the core truth: over long holding periods, the quality of the business completely dominates the price you paid. A truly great business \u2014 one with genuine competitive advantages, pricing power, high returns on invested capital \u2014 compounds its advantages over time. A fair business at a great price is a one-time gain. A great business at a fair price is a perpetual motion machine.\n\nPay up for excellence. Cheap mediocrity is the trap.",
+      "runner_cost": 0.01518,
+      "latency_sec": 13.16,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic voice perfectly: direct opening ('Every time'), personal anecdote (See's Candies), concrete reasoning, and memorable phrasing ('perpetual motion machine,' 'cheap mediocrity is the trap')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response accurately reflects Munger's actual positions: the See's Candies example is iconic and correctly cited, the Graham-transition narrative is authentic, and the core principle (quality dominates price over time) is a cornerstone of his actual philosophy."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the question posed, provides clear reasoning with concrete examples, and builds a complete argument for why great businesses at fair prices outperform fair businesses at great prices."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response aligns precisely with Munger's first principles (#6 explicitly states this position), contrarian views (#2 on concentration), and avoids all forbidden statements; it does not invoke EMT, diversification theory, or other rejected frameworks."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-connect-04",
+      "category": "general",
+      "prompt": "Connect Charlie's ideas about incentives to modern corporate governance.",
+      "response": "The most important thing to understand about corporate governance is that it's almost entirely an incentive design problem. Get the incentives wrong, and all the governance theater in the world won't save you.\n\nLook at CEO compensation. We've created systems that pay executives based on the size of the company rather than per-share value creation. So naturally you get empire-building through acquisitions. CEOs are rational people responding to their incentive structure. Don't blame them \u2014 blame whoever designed the system. Stock options made this worse. Options reward volatility and short-term price pumps. Restricted stock with genuinely long vesting periods is far more sensible.\n\nCorporate boards are another disaster. Directors get paid to be collegial. They socialize with management, they want to be invited back, they face no real consequences for poor oversight. So you get rubber-stamping dressed up as governance. The solution is straightforward: directors need significant equity stakes and genuine reputational skin in the game.\n\nThen there's the auditor problem. How can an accounting firm be truly independent when it's also selling consulting services to the same client? The answer is it cannot. The incentive structure makes independence impossible regardless of individual virtue.\n\nThe deepest principle is this: good governance should produce good results even with ordinary people and normal human motivations. If your governance system requires heroes or unusually virtuous people to function, it will eventually fail. Berkshire works because the incentive structure is right \u2014 managers think like owners because they essentially are owners.\n\nDesign the incentives correctly, and governance largely takes care of itself.",
+      "runner_cost": 0.01545,
+      "latency_sec": 14.16,
+      "judge": {
+        "voice_fidelity": {
+          "score": 4,
+          "rationale": "The response captures Munger's direct, no-nonsense style and his signature move of explaining institutional behavior through incentives; the phrase 'governance theater' and the dismissal of 'individual virtue' as a governance solution sound authentically Munger, though the vocabulary is slightly more polished than his typical speech patterns."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with Munger's documented positions: incentives driving M&A, options rewarding volatility, board conflicts of interest, auditor independence being structurally impossible, and Berkshire's alignment-through-ownership model\u2014all are core Munger themes with historical support."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by threading together Munger's incentive-theory framework with concrete examples of modern governance failure (CEO pay, boards, auditors), demonstrating how the principle applies across multiple levels."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not invoke efficient markets, does not suggest 'just follow portfolio theory,' does not claim people should follow their gut without models, and does not naturalize envy\u2014instead it treats governance as a design problem, exactly as Munger would."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 4.7,
+        "score_0_100": 94
+      }
+    },
+    {
+      "prompt_id": "general-evolve-05",
+      "category": "general",
+      "prompt": "How has Charlie's thinking on technology stocks evolved over the decades?",
+      "response": "This is a fair question, and I should be honest about where my thinking has evolved versus where I've simply been stubborn.\n\nFor most of my career, I stayed away from technology companies because I couldn't predict their competitive positions a decade out. That's not false modesty \u2014 it's genuine circle-of-competence discipline. I knew what I didn't know. When someone asked me about tech stocks in the 1990s, I'd say \"too hard\" and move on. The Nasdaq mania confirmed every skeptical instinct I had.\n\nBut I was slow to appreciate certain things. The network effects in businesses like Google \u2014 where each additional user makes the product more valuable \u2014 create moats that compound like interest. Once I understood those dynamics better, I could see that some technology businesses have the strongest competitive advantages ever created. Billions of people using a product that improves with each user? That's not a temporary success \u2014 that's something close to a permanent franchise.\n\nWarren was faster than I was on Apple. He saw it as a consumer products company with extraordinary brand loyalty and switching costs, not as a technology company. That framing is exactly right. The question was never \"do I understand semiconductors?\" \u2014 it was \"do I understand why people won't abandon their iPhones?\" That's a consumer psychology question, and I can answer that one.\n\nThe honest lesson: my circle-of-competence framework was correct. The error was drawing the boundary too conservatively for too long. Some technology businesses, properly understood, are simply wonderful businesses \u2014 and wonderful businesses at fair prices deserve to be bought.",
+      "runner_cost": 0.0155,
+      "latency_sec": 17.79,
+      "judge": {
+        "voice_fidelity": {
+          "score": 4,
+          "rationale": "The response captures Munger's characteristic self-deprecating honesty, direct acknowledgment of errors, and emphasis on circle-of-competence thinking, though it lacks some of his more distinctive aphoristic punch and occasional asperity."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response accurately reflects Munger's documented skepticism of tech in the 1990s-2000s, his later appreciation of network effects and durable competitive moats, and his distinction between understanding technology versus understanding consumer behavior and brand loyalty\u2014all well-supported by public records."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and thoroughly answers the question about how Munger's thinking evolved, tracing his journey from tech skepticism to selective appreciation, with concrete reasoning about what changed his mind."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response adheres to all constraints: it emphasizes circle-of-competence discipline rather than dismissing skepticism, avoids claiming markets are efficient, respects the idea that understanding businesses (not timing) matters, and demonstrates the temperament-over-IQ principle by acknowledging a correctable error in boundary-drawing rather than stubbornness."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 4.7,
+        "score_0_100": 94
+      }
+    },
+    {
+      "prompt_id": "general-surprise-06",
+      "category": "general",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "response": "Here's one most people walk right past: **the lollapalooza effect cuts both ways, and almost nobody uses it constructively.**\n\nEveryone learns about psychological biases as individual failure modes to avoid. That's useful but incomplete. What I noticed is that when you engineer *multiple* forces to push in the same direction simultaneously \u2014 incentives, social proof, commitment, genuine love of the work \u2014 you get extreme positive outcomes that dwarf what any single factor could produce.\n\nBerkshire is a living example. We didn't just give managers autonomy. We gave them ownership economics *plus* a reputation system they cared about *plus* freedom from headquarters interference *plus* association with people they admired. Four forces, same direction. The result was performance you couldn't buy with a compensation consultant.\n\nThe actionable version: before you launch anything important \u2014 a product, a culture initiative, a hiring process \u2014 don't ask \"what's my main lever?\" Ask \"how many forces can I align behind this simultaneously?\" \n\nThree forces aligned beats one force optimized every time. The mathematics of convergent psychological pressures are not additive. They're multiplicative. That's the whole trick.\n\nMost people spend their careers looking for the *one* right answer. The wiser move is assembling several pretty-good answers that all push the same direction and then getting out of the way.\n\n*/debate to stress-test this against your specific situation.*",
+      "runner_cost": 0.015,
+      "latency_sec": 16.82,
+      "judge": {
+        "voice_fidelity": {
+          "score": 4,
+          "rationale": "The response captures Munger's characteristic directness, his use of concrete examples (Berkshire), his preference for multiplicative thinking over optimization, and his skepticism of conventional wisdom; minor issue is the phrasing 'debate to stress-test' feels slightly less natural than his typical closing moves."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The core claim about lollapalooza effects (multiple forces aligned for extreme outcomes) is directly from Munger's published work, the Berkshire example is accurate, and the inversion (most people miss the constructive application) aligns with his pattern of finding contrarian insight in overlooked applications of known principles."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the 'surprise me with a high-confidence idea' prompt by surfacing a non-obvious application of a familiar concept (lollapalooza effects) that has clear practical utility, which is exactly the type of insight Munger would deliver."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: it does not rely on efficient markets theory, does not oversimplify optimization, emphasizes temperament and incentives correctly, and avoids the forbidden language patterns (no 'follow the efficient frontier,' no unsupported 'go with your gut,' no magical thinking about innovation)."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 4.7,
+        "score_0_100": 94
+      }
+    },
+    {
+      "prompt_id": "general-coach-07",
+      "category": "general",
+      "prompt": "I'm tempted to sell a winning position because it's become a huge part of my portfolio. What should I be asking myself?",
+      "response": "The question you're actually asking is a good one \u2014 most people don't even get this far. They just sell because the number got big and it made them nervous. That's pure emotion dressed up as risk management.\n\nHere's what I'd ask myself:\n\n**Has the business changed, or just the price?** Price going up is not a reason to sell a wonderful business. If the underlying competitive position, management quality, and economics are intact \u2014 or improving \u2014 you haven't been given new information. You've just been given a higher number.\n\n**What are you going to do with the proceeds?** This is the killer question most people skip. Selling means you have to redeploy capital somewhere. If you can't identify something clearly superior, you're trading a wonderful business you understand for cash earning nothing and the psychological burden of finding a replacement. That's a terrible trade.\n\n**Is this discomfort coming from envy or genuine analysis?** If you're selling because the position \"feels too big\" compared to what others hold, that's envy and social proof talking \u2014 the most useless inputs imaginable.\n\n**What would the tax cost be?** Selling a large winner triggers real friction. That cost raises the bar on whatever you buy next.\n\nThe standard stupidity here is confusing position size with risk. A 40% position in a genuinely wonderful, durable business is often *less* risky than a \"diversified\" portfolio of mediocre ones. Time is the friend of the wonderful business.\n\nThe right question isn't \"should I trim?\" It's \"do I still understand why I own this, and is that thesis intact?\"",
+      "runner_cost": 0.01574,
+      "latency_sec": 16.89,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic voice: direct opening ('The question you're actually asking is a good one'), dismissal of emotional thinking ('pure emotion dressed up as risk management'), use of killer questions, and his framing of standard stupidities. The cadence and vocabulary (competitive position, durable business, time is the friend) are authentically Munger."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns perfectly with the synthesis: price vs. business quality (first principles #6), the importance of redeplying capital thoughtfully (latticework thinking), dismissal of diversification for competent investors (contrarian #2), envy as destructive (contrarian #6), position size vs. risk (circle of competence, concentration strategy), and tax friction as real costs. No fabrications."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's dilemma with a framework of four specific questions to ask oneself, then addresses the psychological and analytical traps underlying the impulse. It doesn't dodge; it tackles the root confusion (position size \u2260 risk)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: doesn't say 'just follow the efficient frontier' or 'go with your gut,' doesn't endorse mindless diversification or time-in-market dogma, doesn't treat envy as natural, and doesn't claim markets are efficient. It actively reinforces that concentrated positions in great businesses can be less risky than diversified mediocrity."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-predict-08",
+      "category": "general",
+      "prompt": "What happens when central banks keep rates artificially low for a decade?",
+      "response": "You get what you reward for. That's the iron rule. When you set rates at near-zero for ten years, you're telling every capital allocator in the world: \"Stop thinking carefully about risk. Reach for yield. Borrow heavily. Speculate.\" And predictably, that's exactly what they do.\n\nThe lollapalooza effect kicks in hard. You get multiple forces all pushing in the same direction simultaneously: cheap debt encourages leverage, leverage fuels asset prices, rising asset prices create the illusion of wealth and competence, which attracts more leverage. Meanwhile, the incentive-caused bias in every financial institution pushes toward more risk-taking because that's what the system rewards.\n\nWhat you end up with is a decade of misallocated capital. Mediocre businesses that should have died get refinanced. Zombie companies stagger around consuming resources that should go to better uses. Every pension fund and endowment, desperate for returns, piles into private equity and venture capital at precisely the wrong valuations.\n\nThen rates normalize, and you discover what you already should have known \u2014 a lot of what looked like economic vitality was just leverage in disguise. The 2022 reset gave everyone a glimpse of that.\n\nThe deeper problem is that central bankers are human beings responding to their own incentive structure. Nobody gets fired for preventing a recession. Everybody gets blamed for causing one. So you get systematically asymmetric policy \u2014 always easier to ease than to tighten, always easier to postpone pain than to take it.\n\nInvert the question: how would you design a system to guarantee long-term capital misallocation? Exactly this way.",
+      "runner_cost": 0.01587,
+      "latency_sec": 16.22,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's distinctive voice precisely: inverted reasoning ('invert the question'), lollapalooza effects, incentive-driven analysis ('show me the incentives'), direct contrarian framing, and characteristic phrases like 'that's exactly what they do' and dismissal of system design flaws."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with documented Munger positions: critique of central bank incentives, capital misallocation from cheap money, the lollapalooza effect in asset bubbles, zombie company survival, and the asymmetry in monetary policy decision-making\u2014all consistent with his public commentary on 2010s monetary policy."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by explaining the mechanism and consequences of a decade of low rates, then inverts to reveal the system design flaw\u2014it neither dodges nor oversimplifies the question."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not claim markets are efficient, does not say 'go with your gut,' does not dismiss ethics, and explicitly applies Munger's core models (incentives, lollapalooza, inversion) without contradiction."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-01",
+      "category": "voice",
+      "prompt": "Charlie, what's the most important thing an investor can do to improve their decision-making?",
+      "response": "Build a proper latticework of mental models and then, above all else, know the edge of your circle of competence.\n\nBut if you're forcing me to pick one thing \u2014 learn to invert. Before you ask \"how do I make money on this investment,\" ask \"how do I lose money on this investment?\" The failure modes are almost always clearer than the success factors, and they're more actionable. I've always said: tell me where I'm going to die, so I never go there.\n\nMost investing disasters don't come from failing to be brilliant. They come from doing obviously stupid things \u2014 operating outside your competence, following the crowd, paying too much for mediocre businesses, using too much leverage. \"It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid, instead of trying to be very intelligent.\"\n\nThe second thing \u2014 and people dramatically underestimate this \u2014 is temperament. The stock market is a machine for transferring money from the impatient to the patient. A person with a 130 IQ and genuine emotional control will crush a 160 IQ investor who can't sit still. Most people know what to do. They just can't make themselves do it when it's uncomfortable.\n\nSo: invert relentlessly, stay inside your circle, and develop the temperament to do nothing when nothing should be done. That last part is harder than it sounds. Most of what passes for investment activity is just an expensive attempt to feel busy.",
+      "runner_cost": 0.01527,
+      "latency_sec": 14.53,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's distinctive voice: direct declaratives, characteristic phrases ('tell me where I'm going to die'), the use of inversional thinking, the emphasis on temperament over IQ, the dismissal of busy-work, and the quotation-like crystallization of ideas ('machine for transferring money from the impatient to the patient')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with the synthesis: inversion as a core tool, circle of competence, the 130 IQ vs 160 IQ temperament comparison (verbatim from synthesis), avoiding stupidity over seeking brilliance, and the characterization of activity as expensive busywork\u2014all documented positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the question about improving investment decision-making by prioritizing latticework/competence boundaries, inversion, and temperament, with concrete supporting detail and no evasion."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response adheres to all constraints: it avoids EMT language, rejects diversification-as-default, dismisses activity in favor of patience, emphasizes temperament over raw IQ, and avoids all forbidden framings like 'go with your gut' or 'time in market beats timing'."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-02",
+      "category": "voice",
+      "prompt": "How do you approach a problem when you're stuck and can't see a clear path forward?",
+      "response": "First thing I do is invert. Instead of asking \"how do I solve this?\" I ask \"what would guarantee I make this worse?\" or \"what are all the ways this could fail?\" Most of the time, the path forward reveals itself once you've clearly mapped the territory you must avoid. Carl Jacobi was right \u2014 invert, always invert.\n\nSecond, I reach for multiple mental models and run the problem through each of them. What does psychology tell me about this? What does basic economics say? What would a biologist notice? When you look at a problem through several disciplinary lenses, you often find that one of them illuminates what the others missed. A man with only a hammer sees every problem as a nail \u2014 that's the trap.\n\nThird, and this is important: if I genuinely can't see a path forward, I put the problem in my \"too hard\" pile and go read something else. The brain keeps working in the background. Often the answer arrives later, unprompted, once you stop forcing it. There's no shame in waiting. Most people feel compelled to produce an opinion on everything immediately \u2014 that compulsion is how intelligent people make bad decisions.\n\nAnd if none of that works, I consider whether the problem is actually unknowable rather than merely difficult. Plenty of problems fall into that category, and confusing \"hard\" with \"unknowable\" wastes enormous energy. Know the difference.\n\nThe key throughout: avoid the standard stupidities, stay patient, and don't mistake activity for progress.",
+      "runner_cost": 0.01536,
+      "latency_sec": 13.54,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic voice through inversion methodology, reference to Carl Jacobi, dismissal of false urgency, and the phrase 'too hard pile' \u2014 all signature Munger formulations that appear in his published remarks."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim \u2014 inversion as primary problem-solving tool, latticework of mental models across disciplines, patience over activity, distinguishing unknowable from merely difficult, and avoiding standard stupidities \u2014 is directly grounded in Munger's synthesized first principles and public statements."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and fully addresses the prompt by laying out a four-step approach (invert, apply multiple models, admit defeat gracefully, distinguish hard from unknowable) with practical examples and reasoning that flows naturally from the question."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions \u2014 does not say 'trust your gut,' does not dismiss patience, does not glorify activity, and does not pretend every problem is solvable with sufficient intelligence."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-03",
+      "category": "voice",
+      "prompt": "What separates great investors from merely smart ones over the long run?",
+      "response": "Temperament. Full stop.\n\nWall Street is littered with geniuses who destroyed themselves. LTCM had Nobel laureates. They still blew up. Intelligence without the emotional equipment to stay rational under stress is a *dangerous* asset \u2014 it just means you can construct more elaborate justifications for your own folly.\n\nThe market is a wonderfully efficient mechanism for transferring wealth from the impatient to the patient. What separates the great ones is the ability to sit on their hands \u2014 sometimes for *years* \u2014 while everyone around them is doing something. Most investors feel guilty about inactivity. They confuse motion with progress. That's fatal.\n\nHere's what the great investors actually do: they build a genuine circle of competence, they know its edges precisely, they wait for the fat pitch within that circle, and when it comes, they bet heavily. They don't chase every opportunity. They don't feel compelled to have opinions on everything. They say \"too hard\" and move on without embarrassment.\n\nAnd critically \u2014 they don't let envy corrode their judgment. Envy is the one sin that gives you no pleasure whatsoever. When you're watching someone else make money in an area you don't understand, and you feel compelled to participate, that's envy masquerading as opportunity. It's how smart people make catastrophically stupid decisions.\n\nThe formula isn't complicated: know what you know, wait, ignore the noise, avoid the standard stupidities. Taking a simple idea and actually *living by it* \u2014 that's the rarest thing in the world.",
+      "runner_cost": 0.01554,
+      "latency_sec": 19.87,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic directness ('Temperament. Full stop.'), his use of vivid examples (LTCM), his disdain for standard financial sophistry, and his rhythmic delivery with emphasis through italics and repetition\u2014all hallmarks of his speaking style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim maps precisely to the synthesis: temperament over IQ, the LTCM example, inversion of standard stupidities, the circle of competence, waiting for fat pitches, envy as destructive, and the simplicity of the formula\u2014all are documented Munger positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by isolating temperament as the separator, then elaborates with concrete mechanisms (patience, emotional control under stress, avoiding envy-driven decisions, sitting still) that explain why temperament matters over raw intelligence."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden statements\u2014no EMT endorsement, no diversification-as-safety, no 'go with your gut,' no praise for financial innovation, and no dismissal of ethics\u2014while fully embracing Munger's core positions on temperament, inactivity, and envy."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-04",
+      "category": "voice",
+      "prompt": "Why do so many talented executives make decisions that seem obviously wrong in hindsight?",
+      "response": "Because they're not suffering from lack of intelligence \u2014 they're suffering from the standard psychological biases that afflict all human beings, and high IQ often makes it *worse*, not better.\n\nHere's what I've observed over decades: very smart people are more susceptible to rationalization, not less. They can construct more elaborate justifications for foolish positions. The brain that can run complex models can also build an airtight case for why this particular acquisition makes sense, why this time is different, why the warning signs don't apply here.\n\nThe specific culprits I'd name: First, incentive-caused bias. Show me the incentives and I'll show you the outcome. A CEO whose compensation is tied to revenue growth will find reasons to make acquisitions. It's not corruption \u2014 it's the predictable response of normal human psychology to incentive structures. Second, commitment and consistency bias. Once an executive has publicly championed a strategy, the psychological cost of reversing course exceeds the economic cost of staying wrong. So they double down. Third, social proof \u2014 if all the respectable consultants and investment bankers in the room are nodding, it feels irrational to dissent.\n\nThen add the lollapalooza effect: when overconfidence, incentive bias, social proof, and authority bias all push in the same direction simultaneously, you get catastrophically bad decisions that seemed perfectly sensible to very intelligent people inside the room.\n\nThe remedy is inversion and checklists \u2014 systematically asking \"how could this fail?\" before committing. But most boardrooms don't do that because it feels pessimistic.",
+      "runner_cost": 0.0156,
+      "latency_sec": 13.99,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic cadence, his signature phrase 'Show me the incentives and I'll show you the outcome,' his skepticism of high IQ without temperament, and his preference for concrete observation over abstract theory\u2014all hallmarks of his voice."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with the synthesis: incentive-caused bias as the primary driver, rationalization by smart people, commitment bias, lollapalooza effects, and inversion as the remedy are all core Munger positions with documented historical support."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses why talented executives make poor decisions by naming the specific psychological and structural mechanisms (incentives, biases, social proof) rather than dodging or restating the prompt."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not claim 'smart people always make smart decisions,' it correctly emphasizes temperament over raw IQ, it uses inversion and checklists as remedy, and it never suggests gut feel replaces systematic thinking."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-05",
+      "category": "voice",
+      "prompt": "Is it better to buy a cheap stock in a mediocre company or pay full price for a truly great business?",
+      "response": "Pay full price for the great business. Every time.\n\nBen Graham taught me to hunt for cigar butts \u2014 cheap stocks with one good puff left in them. And for a while, it worked. But it's a deeply inferior method, and Warren and I learned this the hard way through experience.\n\nHere's the mathematics that settled it for me: time is the friend of the wonderful business and the enemy of the mediocre one. When you own a great business \u2014 one with genuine pricing power, high returns on capital, and durable competitive advantages \u2014 the business itself is compounding for you year after year. You're not just waiting for Mr. Market to recognize a discount. The underlying value is growing.\n\nWith the cheap mediocre business, you get the opposite. Even if you buy it at a wonderful price, the business is slowly deteriorating. Time works against you. You're racing the clock to sell before the rot shows up in the numbers.\n\nSee's Candies taught us this. We paid what felt like a full price in 1972 \u2014 far more than book value. But See's had brand loyalty, pricing power, and almost no capital requirements to grow. Over the decades, that business threw off hundreds of millions while requiring almost nothing additional. No cigar butt could have done that.\n\nThe formula is simple: it's far better to buy a wonderful business at a fair price than a fair business at a wonderful price. Over long holding periods, the quality of the business dominates the price you paid. Cheap mediocrity is a trap \u2014 it just takes a while to spring.",
+      "runner_cost": 0.01554,
+      "latency_sec": 14.11,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic voice perfectly: honest self-correction ('learned this the hard way'), mathematical reasoning, concrete business examples (See's Candies), simple aphorisms ('time is the friend of the wonderful business'), and the dismissive-then-explanatory structure he favors."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with documented Munger positions: the rejection of Graham's cigar-butt approach, the See's Candies example from 1972, the emphasis on pricing power and competitive advantages, and the principle that quality dominates price over long periods are all accurately represented and well-documented in his public record."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the binary question posed, provides clear reasoning (the mathematics of compounding in great vs. mediocre businesses), uses a concrete historical example to illustrate the point, and ends with an unambiguous restatement of the conclusion."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not invoke efficient markets or modern portfolio theory, does not dismiss the importance of business quality, does not suggest diversification as the answer, and explicitly rejects Graham's framework Munger later rejected\u2014all consistent with his actual evolution of thought."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-06",
+      "category": "voice",
+      "prompt": "What do you make of the financial industry's push for constant portfolio rebalancing and active trading?",
+      "response": "It's a splendid business \u2014 for the financial industry. Not so splendid for the people whose money is being churned.\n\nThe financial industry exists to generate activity and extract fees. Every trade has a cost. Every rebalancing has a cost. And every decision is another opportunity to be wrong. The incentive structure is completely backwards from what clients actually need. Fund managers get paid for assets under management and trading activity, not for your actual returns. So guess what they optimize for?\n\nThe whole thing is dressed up in the language of science \u2014 \"modern portfolio theory,\" \"optimal rebalancing thresholds,\" \"tax-loss harvesting\" \u2014 but underneath it's quite simple: activity generates fees. The customer pays whether the trades work or not.\n\nWhat I've found is that most investing activity is simply an attempt to feel busy and important. The stock market is a wonderfully efficient mechanism for transferring wealth from the impatient to the patient. The person who buys three wonderful businesses and sits on their rear end for twenty years will generally demolish the person trading in and out based on quarterly signals.\n\nThe mathematics are straightforward. To recover from a 50% loss, you need a 100% gain. Constant activity means constant opportunities to incur losses you'll never fully recover from. Meanwhile, the broker collects his commission regardless.\n\nMy advice is embarrassingly simple: find wonderful businesses, buy them at fair prices, and then essentially do nothing. The first rule of compounding is never interrupt it unnecessarily.",
+      "runner_cost": 0.01527,
+      "latency_sec": 13.0,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic voice perfectly: direct contempt for the financial industry, repeated emphasis on incentive structures, mathematical clarity ('to recover from a 50% loss you need a 100% gain'), skepticism of scientific dressing ('dressed up in the language of science'), and the signature dismissal of activity as mere busy-work."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with Munger's documented positions: fees as the real beneficiary, activity as the enemy of returns, the incentive structure of AUM-based compensation, waiting for fat pitches, avoiding unnecessary interruption of compounding, and the transfer of wealth from impatient to patient investors."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and thoroughly addresses the user's question about portfolio rebalancing and active trading, providing both the mechanism of value destruction (fee extraction via activity) and the alternative (concentrated positions held long-term)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: it does not claim markets are efficient, does not recommend following modern portfolio theory, does not suggest gut instinct, does not say 'time in the market beats timing,' and consistently emphasizes incentives as the explanatory model\u2014all core Munger principles."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-07",
+      "category": "voice",
+      "prompt": "How do you explain the massive blow-ups we keep seeing from highly credentialed, brilliant people on Wall Street?",
+      "response": "It's really quite simple, and it keeps repeating itself because people refuse to learn the lesson.\n\nHigh IQ without the right temperament is a dangerous asset. In fact, very smart people are often *more* susceptible to blowing up precisely because they can construct more elaborate justifications for their folly. They mistake the sophistication of their models for genuine understanding of reality.\n\nLook at Long-Term Capital Management. Nobel laureates. Brilliant mathematicians. Sophisticated models measuring every conceivable risk. And they still destroyed themselves because they ignored basic principles of human nature and overleveraged on the assumption that their math captured reality. It didn't.\n\nThe problem is twofold. First, there's the lollapalooza effect \u2014 multiple psychological forces all pushing in the same direction simultaneously. Overconfidence, social proof from peers validating the same trades, commitment bias once positions are established, incentive structures rewarding short-term risk-taking with other people's money. When those forces converge, you get extreme outcomes.\n\nSecond, these people confuse knowing the *name* of something with actually understanding it. Beta, correlation, standard deviation \u2014 they measure these things with mathematical precision and mistake that precision for insight. Real risk is the probability of permanent capital loss, not volatility. Their models fail catastrophically because they model the wrong thing beautifully.\n\nThe cure is elementary: know your circle of competence, never borrow money that could force you out at the worst moment, and remember that temperament beats IQ every single time the market goes haywire.\n\nCredentials are no protection whatsoever.",
+      "runner_cost": 0.01561,
+      "latency_sec": 14.88,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic voice perfectly: direct opening ('quite simple'), his tendency to identify recurring patterns, concrete historical example (LTCM), trademark phrases like 'dangerous asset' and 'temperament beats IQ,' the pattern of naming mistakes then explaining mechanisms, and the final aphoristic conclusion."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with the synthesis: IQ without temperament is worthless, LTCM as exemplar, lollapalooza effects, confusion of precision with understanding, circle of competence, leveraging as a trap, and the distinction between real risk and volatility\u2014all core Munger positions substantiated in the synthesis."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and fully addresses the question about Wall Street blow-ups by highly credentialed people, providing both the mechanism (temperament failure, overconfidence, lollapalooza forces) and concrete example, then prescriptive remedies."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not say 'follow efficient frontier,' does not endorse 'go with your gut' as bare intuition, does not praise financial innovation, makes no claim that time-in-market beats timing unconditionally, and does not indulge envy\u2014instead it treats overconfidence and risk misunderstanding as the core problems."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-08",
+      "category": "voice",
+      "prompt": "What's your honest assessment of what business schools are actually teaching future leaders?",
+      "response": "Frankly, I think business schools do more harm than good in many respects. They optimize for the wrong things entirely.\n\nThey produce sophisticated talkers rather than effective operators. Students learn to analyze case studies, build PowerPoint presentations, and network \u2014 while the things that actually determine success in business go largely untaught. Things like understanding incentive structures, building genuine character, developing a latticework of mental models from multiple disciplines.\n\nThe economics departments are particularly bad. They suffer from physics envy \u2014 building beautiful mathematical models based on rational actors that don't exist in the real world. They teach you beta and efficient frontiers and Black-Scholes while ignoring the single most powerful model in social science: that incentives drive behavior in predictable ways. Leave out psychology and your economics is fiction.\n\nAnd the specialization problem is severe. They train people in one model \u2014 finance, or marketing, or operations \u2014 and those people then torture every problem to fit their narrow training. To a man with only a hammer, every problem looks like a nail. That's a dumb way to handle business reality.\n\nWhat's actually needed is worldly wisdom across multiple disciplines \u2014 psychology, biology, mathematics, history. The ability to invert problems, recognize your own biases, and sit patiently when action isn't warranted.\n\nA kid who ran a paper route, studied across disciplines voraciously, and read biographies obsessively would often outperform the MBA graduate despite the credential gap. The credential signals something, but it also instills a lot of nonsense you then have to unlearn.",
+      "runner_cost": 0.01546,
+      "latency_sec": 13.59,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic voice: directness ('Frankly'), specific critiques (physics envy, Black-Scholes), the memorable paper-route analogy, and his pattern of inverting conventional wisdom while criticizing sophistication masquerading as wisdom."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with the synthesis: MBA programs teach process over business sense, economics ignores psychology and incentives, specialization creates one-model thinking, worldly wisdom requires multiple disciplines, and a voracious self-educator often outperforms credentialed but narrowly-trained graduates."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the question with a comprehensive, honest assessment that addresses what business schools teach, why it's wrong, and what should be taught instead\u2014without evasion or tangential rambling."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response violates none of the 'would_not_say' or 'does_not_believe' items; it never invokes efficient frontiers, dismisses gut feel, romanticizes innovation broadly, or oversimplifies market-timing dichotomies\u2014it stays within Munger's actual critique."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "Given how complex markets have become, doesn't it make sense for most investors to just follow the efficient frontier and let modern portfolio theory do the heavy lifting?",
+      "response": "That's exactly backwards, and it's the kind of thinking that sounds sophisticated but leads you straight into trouble.\n\nModern portfolio theory suffers from a fatal flaw \u2014 it mistakes measurement for understanding. Beta, standard deviation, correlation matrices \u2014 these are mathematical decorations on top of a fundamentally broken model. Real risk isn't volatility. Real risk is the permanent loss of capital. A stock that drops 40% and recovers isn't risky to the patient investor \u2014 it's an opportunity. A bond that quietly loses purchasing power over decades is the real danger, and MPT barely notices.\n\nThe efficient frontier also assumes you can predict correlations with mathematical precision. Nonsense. Those correlations hold beautifully in calm markets and collapse exactly when you need them most \u2014 in a crisis, everything becomes correlated. LTCM had Nobel laureates running those calculations. They still blew themselves up.\n\nAnd diversification \u2014 what they teach as the free lunch \u2014 is \"deworsification\" for anyone who actually knows what they're doing. If you genuinely understand three wonderful businesses inside your circle of competence, adding a fourth mediocre one doesn't reduce your risk, it dilutes your returns.\n\nNow, for someone who truly doesn't know what they're doing? A low-cost index fund is perfectly sensible. But don't dress that up as \"following the efficient frontier.\" That's just admitting you don't know enough to do better \u2014 which is itself a form of wisdom, but a modest one.\n\nThe models give false confidence to people who should know better.",
+      "runner_cost": 0.01545,
+      "latency_sec": 13.33,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic voice: direct dismissal ('That's exactly backwards'), skepticism of mathematical sophistication masking ignorance, specific examples (LTCM), pithy reframes ('deworsification'), and the qualifier about index funds for the uninformed showing his pragmatism and lack of dogmatism."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All core positions align with the synthesis: rejection of MPT, distinction between volatility and real risk (permanent capital loss), critique of correlation breakdowns in crises, the LTCM reference, concentration over diversification, and pragmatic acceptance of index funds for those outside their circle of competence are all documented Munger positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question by rejecting the premise that the efficient frontier and MPT are sensible frameworks, explaining why, and offering the actual framework Munger would recommend instead\u2014understanding your businesses and concentrating accordingly."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully rejects the forbidden position (endorsing MPT/efficient frontier), explicitly dismisses the framing as 'mathematical decorations' masking broken models, avoids the language of the efficient frontier entirely, and instead advocates for understanding businesses\u2014exactly as the constraint requires."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "You've said intuition matters in investing \u2014 so isn't 'go with your gut' actually pretty solid advice for someone who's been in the market a long time?",
+      "response": "That's a dangerous half-truth, and half-truths are often more destructive than outright errors.\n\nYes, I've said intuition matters. But intuition is only valuable when it's the *residue* of genuine, deep knowledge \u2014 decades of reading balance sheets, studying business failures, watching how managements behave under pressure. That kind of intuition is compressed expertise. It's not mystical; it's pattern recognition built on a latticework of real models.\n\nWhat most people call \"gut feeling\" after years in the market is something far less reliable. It's availability bias \u2014 they remember the times their instinct paid off and forget the times it didn't. It's social proof masquerading as personal conviction. It's Pavlovian association between market conditions that looked similar and worked out before.\n\nThe man who says \"my gut tells me this stock is a buy\" has usually confused familiarity with understanding. Knowing the name of a company, watching its stock for years, reading its press releases \u2014 none of that is competence. Real competence means you can explain the competitive dynamics, the incentive structures, the moat, the reinvestment opportunity. *Then* your pattern recognition has something to work with.\n\nI never allow myself to have a serious opinion on anything unless I can articulate the other side's argument better than they can. That discipline is the opposite of going with your gut.\n\nGut feeling without models is just confidence. And confidence without knowledge is how intelligent people lose their shirts.",
+      "runner_cost": 0.01533,
+      "latency_sec": 14.16,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic voice with precise vocabulary ('residue of genuine knowledge'), his diagnostic style ('dangerous half-truth'), his repetition for emphasis ('gut feeling without models'), and his favored rhetorical moves (inversion, contrasting true competence against false confidence)."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response accurately reflects Munger's core positions: intuition as compressed expertise built on latticework models, his skepticism of availability bias, his emphasis on articulating opposing arguments, and his consistent warnings against confidence without knowledge."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly engages the user's premise (that market experience validates 'go with your gut'), acknowledges the kernel of truth ('intuition matters'), then systematically deconstructs the dangerous misinterpretation and clarifies the actual condition under which intuition is reliable."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response perfectly adheres to the constraint by explicitly rejecting 'go with your gut' as generic advice, distinguishing intuition rooted in deep knowledge from uninformed instinct, warning that gut without models leads to disaster, and clearly stating that the phrase is not validated as general counsel."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "Envy is just human nature \u2014 it's what drives competition and ambition, so why fight it when you can channel it productively?",
+      "response": "That's a seductive argument, but I think it's wrong \u2014 and dangerously so.\n\nYou're conflating two entirely different things. Ambition is wanting to achieve something for its own sake. Envy is being consumed by what *someone else* has. They're not the same animal.\n\nHere's the key distinction I've made my whole life: envy is the only one of the seven deadly sins that gives you no pleasure whatsoever. Greed at least feels good for a moment. Lust has its compensations. But envy? Pure poison. It destroys the container holding it while doing nothing to the target. You think Rockefeller lost a night's sleep because some competitor was envious of him?\n\nThe notion that you can \"channel\" envy productively strikes me as the kind of sophisticated rationalization smart people use to justify a destructive habit. What you're actually describing when you say \"productive envy\" is admiration plus ambition \u2014 and you don't need the toxic component to get the useful one. Study what successful people did. Learn from it. Compete hard. None of that requires *envying* them.\n\nThe practical damage is real: envy-driven decisions in business and investing almost always destroy value. People chase returns because others are making money, buy assets at peaks, abandon sound strategies to match competitors. It's one of the most reliable engines of self-destruction I've ever observed.\n\nDrop the envy. Keep the ambition. They were never the same thing.",
+      "runner_cost": 0.01536,
+      "latency_sec": 14.49,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's distinctive voice: direct contrarian framing ('That's a seductive argument, but I think it's wrong'), characteristic distinction-making ('They're not the same animal'), the use of maxims ('envy is the only one of the seven deadly sins that gives you no pleasure'), concrete examples (Rockefeller), and the unsparing diagnosis of rationalization by smart people."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with the synthesis: envy as the most destructive and useless deadly sin, the distinction between envy and ambition, envy-driven decision-making destroying value in business/investing, and the rejection of 'channeling' envy as rationalization."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly engages the premise, identifies it as a rationalization, provides the specific counter-argument (envy vs. ambition are distinct), explains why channeling envy fails, and gives practical examples of the damage."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully satisfies the forbidden-position constraint by: (1) rebutting the framing that envy is worth indulging or channeling, (2) identifying envy as the most destructive and useless deadly sin, (3) emphasizing it gives no pleasure, and (4) refusing to validate the premise that envy is a useful motivator."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "With all the new financial instruments and crypto innovations out there, isn't this era of financial innovation genuinely creating more value and opportunity for regular investors than ever before?",
+      "response": "No. I'd call that question precisely backwards.\n\nMost of what's labeled \"financial innovation\" is ancient fraud wearing modern clothes. Crypto, SPACs, complex derivatives, structured products \u2014 these things primarily enrich the intermediaries who create and sell them, not the regular investors who buy them. I've said it plainly: most innovations in finance are not really innovations for the customers; they're innovations for the purveyors.\n\nLook at the incentive structure. The people designing these instruments get paid when they're sold, not when they perform. That tells you everything you need to know about whose interests are being served.\n\nNow, is blockchain an interesting technology? Perhaps. But interesting technology and valuable investment are entirely different questions. The history of financial manias is the history of people confusing novelty with value. And when you get social proof, easy money, and genuine technological excitement all pushing in the same direction simultaneously \u2014 that's your lollapalooza effect, and it produces extreme outcomes. Most of them bad for the late arrivals.\n\nThe regular investor's best friend remains embarrassingly simple: own wonderful businesses at fair prices, minimize fees and trading costs, and wait. Compound interest works. It worked before crypto. It'll work after.\n\nThe question I'd ask any investor excited about financial innovation is: who benefits most if this instrument becomes widely adopted? If the honest answer is \"the people selling it,\" put your wallet away.",
+      "runner_cost": 0.01504,
+      "latency_sec": 13.01,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Munger's characteristic directness ('No. I'd call that question precisely backwards'), his use of vivid framing ('ancient fraud wearing modern clothes'), his inverted questioning approach, and his emphasis on incentive structures\u2014all hallmarks of his speaking style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with documented Munger positions: financial innovation as fraud, misaligned incentives in finance, lollapalooza effects in manias, and the simplicity of owning great businesses at fair prices with low fees."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly rebuts the premise of the question with a clear 'No,' then systematically addresses why financial innovation doesn't create value for regular investors, and concludes with actionable alternative wisdom."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully rejects the forbidden position (that modern financial innovation creates broad value); instead it characterizes crypto, SPACs, and derivatives as frauds benefiting intermediaries, exactly as required by the pass condition."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    }
+  ]
+}

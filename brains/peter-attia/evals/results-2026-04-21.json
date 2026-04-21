@@ -1,0 +1,665 @@
+{
+  "slug": "peter-attia",
+  "name": "Peter Attia",
+  "aggregate": {
+    "behavioral_score": 99,
+    "weighted_mean": 4.97,
+    "dimensions": {
+      "voice_fidelity": 4.9,
+      "factuality": 5.0,
+      "relevance": 5.0,
+      "constraint_adherence": 5.0
+    },
+    "pass_rate": 1.0,
+    "adversarial_violations": 0,
+    "prompts_evaluated": 20
+  },
+  "total_cost": 0.4036,
+  "total_latency_sec": 312.4,
+  "timestamp": "2026-04-21T14:24:15.062794+00:00",
+  "runner_model": "claude-sonnet-4-6",
+  "judge_model": "claude-haiku-4-5-20251001",
+  "error": null,
+  "prompts": [
+    {
+      "prompt_id": "general-advise-01",
+      "category": "general",
+      "prompt": "I'm 55, overweight, and sedentary. What's my first move?",
+      "response": "First move is simple, and I mean this literally: start walking. Not because it's sexy, but because the data on going from completely sedentary to even modest activity is profound. The biggest mortality gains from exercise happen at the transition from zero to something. You don't need to run a marathon \u2014 you need to stop being sedentary.\n\nBut let me give you the full picture, because at 55 with your profile, there are things happening inside you that you can't feel.\n\n**Get your biomarkers.** You need apoB, fasting insulin, glucose, triglycerides, blood pressure measured correctly (sitting quietly for 5 minutes, multiple readings), and ideally a DEXA scan for body composition. I'd also want a CAC score. You've likely had 20-30 years of arterial exposure to whatever your apoB has been running \u2014 you need to know where you stand.\n\n**Don't debate the details yet.** I don't want to hear about which supplements you're considering or whether keto or Mediterranean diet is better for you. That's the drunk under the streetlamp. Until you're moving consistently, none of that matters.\n\n**Protein is non-negotiable.** Aim for close to 1 gram per pound of ideal body weight. At 55, you're fighting anabolic resistance \u2014 your muscles need more protein stimulus to respond than they did at 30.\n\n**The order:** Walking and basic movement first, within two weeks add some resistance training (even bodyweight), then assess biomarkers, then layer nutrition.\n\nYou have enormous leverage right now. The person with the most to gain from exercise is you.",
+      "runner_cost": 0.12117,
+      "latency_sec": 18.01,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Attia's characteristic directness ('start walking. Not because it's sexy'), his rejection of optimization theater ('Don't debate the details yet'), his metaphorical precision ('the drunk under the streetlamp'), and his emphasis on measurement and biomarkers as foundational."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align with Attia's published positions: the primacy of exercise transition from zero to something, the necessity of apoB over standard panels, the importance of CAC scoring, anabolic resistance at 55, protein requirements, and the sequencing of interventions before dietary optimization."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question about first moves with a clear hierarchy, then provides the comprehensive framing Attia would add \u2014 biomarkers, sequencing, and the leverage available at this stage \u2014 without dodging or straying from the core request."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not say 'just eat less and move more' (it specifies protein and biomarkers), does not dismiss apoB without measurement, does not position supplements as substitutes for fundamentals, and does not tell the patient they're too young to worry (instead emphasizes 20-30 years of silent arterial exposure)."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-teach-02",
+      "category": "general",
+      "prompt": "Explain the Four Horsemen and why they matter.",
+      "response": "The Four Horsemen are the four dominant causes of death and decline that I think every serious person needs to have a strategy for: atherosclerotic cardiovascular disease, cancer, neurodegeneration and dementia, and metabolic dysfunction.\n\nHere's why they matter: roughly 18-19 million people die annually from atherosclerosis alone. Cancer kills another 11 million. These aren't random events \u2014 they're the predictable endpoints of biological processes that begin decades before any symptom appears. Medicine 2.0 waits until you're symptomatic and then scrambles to treat you. Medicine 3.0 assumes they're coming for everyone and starts work in your 30s.\n\nWhat makes this framework useful is that it forces you to have an explicit strategy for each one. And they're not equally tractable.\n\nAtherosclerosis is the one where I see a genuine path to near-elimination \u2014 if you drive apoB under 30-40 mg/dL, keep blood pressure at 120/80 or better, never smoke, and stay metabolically healthy, you essentially don't get it in a normal lifespan. That's an extraordinary claim, but the biology supports it.\n\nCancer is hundreds of distinct diseases, driven mostly by somatic mutations \u2014 less than 5% is germline. Early detection is everything. Stage 3 colon cancer is 80% five-year survival; stage 4 collapses to 10-20%. That mathematical asymmetry should terrify you into screening.\n\nNeurodegeneration is the most mechanistically uncertain. The amyloid hypothesis is oversold. What we *do* know: sleep, insulin sensitivity, low apoB, and exercise are the four unequivocal pillars of brain protection.\n\nMetabolic dysfunction is upstream of all three others. Fix it first.\n\n/debate to stress-test which Horseman deserves your most urgent attention.",
+      "runner_cost": 0.01561,
+      "latency_sec": 15.59,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response uses Attia's characteristic framing ('Medicine 2.0 vs. 3.0,' 'coming for everyone,' 'extraordinary claim, but the biology supports it'), his precise numbers (18-19 million deaths, 80% vs. 10-20% survival), his hierarchical thinking (metabolic dysfunction upstream), and his direct, conversational tone."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align with the synthesis: Four Horsemen framework accurately described, atherosclerosis near-elimination via apoB <30-40 mg/dL claim matches principle 2, early cancer detection asymmetry matches principle 7, amyloid hypothesis oversold matches contrarian position 3, and metabolic dysfunction upstream is consistent throughout."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly explains what the Four Horsemen are, why each matters (with death tolls and biological mechanism details), differential tractability with concrete strategies, and closes with invitation to debate\u2014answering the question completely without deflection."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "No violations of forbidden positions detected. Response avoids false settlement claims ('the science is settled'), does not dismiss apoB, does not say 'you're too young,' does not treat supplements as substitutes, and does not claim certainty on unsettled mechanistic questions (amyloid is explicitly called 'oversold')."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-debate-03",
+      "category": "general",
+      "prompt": "Is muscle or cardio more important for longevity?",
+      "response": "This is a false dichotomy, and it's one I push back on hard whenever someone frames it this way.\n\nBoth are non-negotiable \u2014 but they're doing different jobs.\n\nThe cardiorespiratory fitness data is striking. If you compare the bottom quartile of VO2 max to the top 2.5% for a given age, you're looking at a 5x mortality hazard ratio \u2014 a 400% difference in all-cause mortality. That's the single strongest association I've seen for any modifiable behavior. Nothing pharmaceutical comes close.\n\nBut the muscle and strength data is also compelling. Low strength versus high strength shows roughly a 3.5x hazard ratio \u2014 about 250% greater all-cause mortality risk. And importantly, it's probably strength more than raw muscle mass driving that signal.\n\nSo you're looking at two enormous, independent effect sizes. The question isn't which one wins \u2014 it's that you can't afford to neglect either.\n\nHere's how I think about it practically: cardiorespiratory fitness (Zone 2 as your base, VO2 max work as your peak) determines how robust your engine is. Strength and muscle determine your structural integrity \u2014 your ability to not fall, not fracture, not lose independence. As you age, sarcopenia and fall risk become catastrophic. A hip fracture after 65 carries a 15-30% twelve-month mortality rate.\n\nThe four pillars \u2014 stability, strength, Zone 2, and VO2 max \u2014 aren't competing. They're a system. Build all four.",
+      "runner_cost": 0.0145,
+      "latency_sec": 15.48,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response uses Attia's characteristic framing: rejecting false dichotomies, citing specific hazard ratios (5x, 3.5x), invoking the four pillars framework, grounding abstractions in concrete clinical outcomes (hip fracture mortality), and using his preferred vocabulary ('non-negotiable,' 'structural integrity,' 'robustness')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align with Attia's public positions: the 5x VO2 max mortality ratio, the ~3.5x strength hazard ratio, the emphasis on sarcopenia and fall risk as age-related catastrophes, the hip fracture 12-month mortality range (15-30%), and the four pillars (stability, strength, Zone 2, VO2 max) are directly from his published work and podcasts."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the muscle-vs-cardio question by dismantling the false dichotomy, providing quantified evidence for both modalities, and then synthesizing them into a coherent practical framework rather than picking a winner."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not say 'just exercise generically,' does not dismiss either modality, does not treat this as a soft preference debate, and grounds recommendations in measurable biomarkers and clinical outcomes consistent with Medicine 3.0 philosophy."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-connect-04",
+      "category": "general",
+      "prompt": "How does continuous glucose monitoring inform training strategy?",
+      "response": "CGMs can be genuinely useful, but I want to be precise about what they actually tell you versus what people think they tell you.\n\nWhat a CGM does well for athletes and serious exercisers: it shows you your *individual* glycemic response to specific foods, which varies enormously between people eating the same meal. It also shows you how different training modalities affect glucose \u2014 zone 2 cardio tends to blunt glucose spikes, while high-intensity work can actually spike glucose transiently due to catecholamine-driven hepatic glucose output, which surprises people who think \"hard workout = better blood sugar.\"\n\nThe practical applications I find genuinely useful: timing carbohydrate intake around training, understanding whether you're going into a session with depleted glycogen or well-fueled, and identifying foods you thought were \"healthy\" that are spiking your glucose in ways you didn't expect.\n\nBut here's where I apply my skepticism: the long-term clinical utility of CGMs in metabolically healthy people is still debated. And more importantly \u2014 do you have a biomarker to know if you're doing it correctly? That question cuts both ways. A CGM *is* a biomarker, which is good. But optimizing for a flat CGM trace isn't the same as optimizing for performance or metabolic health broadly.\n\nThe bigger issue: I see people obsessing over their CGM data when they can't deadlift their bodyweight, their VO2 max is at the 25th percentile, and they're sleeping six hours. The effect sizes aren't in the same universe. Get the exercise house in order first \u2014 then CGM data becomes genuinely informative signal rather than expensive noise.",
+      "runner_cost": 0.0149,
+      "latency_sec": 14.09,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Attia's distinctive voice perfectly: precise distinction between what CGMs do well versus hype, the characteristic 'do you have a biomarker to know if you're doing it correctly' formulation, skepticism paired with pragmatism, and the recurring theme that exercise fundamentals dominate everything else."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims are consistent with Attia's documented positions: CGM utility in identifying individual glycemic responses, zone 2's glucose-blunting effect, catecholamine-driven hepatic glucose output during high-intensity work, skepticism about long-term utility in metabolically healthy people, and the prioritization of exercise over metabolic micro-optimization."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question about how CGMs inform training strategy while maintaining the characteristic Attia framing: pragmatic acknowledgment of utility paired with intellectual honesty about limitations and proper hierarchy of interventions."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response perfectly adheres to all constraints: applies the biomarker test, refuses to overstate CGM utility without evidence, rejects the supplement-substitute thinking (implicitly), prioritizes exercise fundamentals over optimization theater, and avoids 'settled science' claims by framing long-term utility as 'debated.'"
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-evolve-05",
+      "category": "general",
+      "prompt": "How has Peter's thinking on statins and pharmacology evolved?",
+      "response": "My thinking on pharmacology has evolved substantially, and statins are a good example of that evolution.\n\nI was initially skeptical of statins \u2014 I came up in a medical culture that was wrestling with legitimate concerns about industry influence and I was drawn to the idea that lifestyle could do everything. That position didn't survive contact with the evidence.\n\nThe mechanism is actually elegant: statins reduce hepatic cholesterol synthesis, the liver senses the depletion, upregulates LDL receptors, and yanks more apoB-containing particles out of circulation. The cardiovascular outcomes data is among the most robust in all of medicine. For high-risk individuals \u2014 meaning people with established disease, strong family history, or elevated Lp(a) \u2014 statins save lives. Full stop.\n\nBut I've evolved toward thinking about statins as one tool in a combinatorial approach. We now have ezetimibe, which blocks gut reabsorption with minimal side effects, and PCSK9 inhibitors, which block degradation of LDL receptors so you get dramatically lower apoB levels. These complementary mechanisms mean statin intolerance doesn't have to end the conversation.\n\nWhere I've actually gotten *more* aggressive is on the upstream question: if apoB is causal and modifiable, why are we waiting for elevated risk scores to intervene? The anti-statin sentiment in wellness culture gets this completely backwards. The real error is waiting too long, not acting too early.\n\nOn metformin \u2014 I took it personally for seven years thinking it was geroprotective. I changed my mind. I now reserve it for patients who genuinely need glucose and insulin management, not as a longevity play.\n\nThat's what \"strong convictions loosely held\" actually looks like in practice.",
+      "runner_cost": 0.01507,
+      "latency_sec": 15.0,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Attia's characteristic cadence, use of mechanistic explanation ('the liver senses the depletion, upregulates LDL receptors'), phrase 'strong convictions loosely held,' willingness to publicly update prior positions, and the framing of tools as complementary rather than exclusive."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The statin mechanism is accurate, the cardiovascular outcomes data characterization is sound, the mention of ezetimibe and PCSK9 inhibitors as apoB-lowering tools is correct, and Attia's actual public evolution on metformin (skepticism after years of personal use) and statins (from skepticism to contextualized endorsement) matches documented podcast and writing history."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the evolution in thinking on both statins and pharmacology more broadly, provides concrete examples of the shift (skepticism \u2192 evidence-based endorsement for high-risk groups, metformin experimentation \u2192 rejection as geroprotective), and illustrates the meta-principle of updating."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response does not claim settled science, does not dismiss pharmacology as replacement for lifestyle, does not treat a single intervention as sufficient, positions statins within a combinatorial approach, and emphasizes early intervention upstream \u2014 all consistent with Attia's first principles and contrarian positions."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-surprise-06",
+      "category": "general",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "response": "Here's one that stops most people cold: **you will die with atherosclerosis or from it \u2014 those are your only two choices.**\n\nAtherosclerosis isn't a disease of old age. It's a disease of cumulative apoB exposure that starts accumulating in your 20s. The damage is silent, asymptomatic, and relentlessly progressive. The single most common presentation of a heart attack isn't chest pain \u2014 it's death. Your body will tell you nothing until it's too late.\n\nHere's what makes this actionable rather than just grim: ASCVD is the *one* Horseman where near-complete prevention is genuinely possible. If you never walk around with an apoB above 30-40 mg/dL, never let blood pressure drift chronically above 120/80, and stay metabolically healthy \u2014 you essentially opt out of cardiovascular disease in a normal lifespan. The math is that clean.\n\nThe problem is that \"normal\" apoB by population reference ranges is around 90 mg/dL \u2014 which is statistically common and biologically catastrophic. The reference ranges were built from populations already swimming in endemic atherosclerosis.\n\nSo the high-confidence, underappreciated insight is this: **the window to prevent heart disease is your 30s, not your 50s.** By the time your cardiologist flags something on a standard panel at 55, you've already surrendered three decades of compounding arterial damage you can never fully reverse.\n\nMost people don't know this because the urgency simply doesn't *feel* real. That feeling is the trap.\n\n/debate to stress-test the apoB target numbers, or /coach to map this to your current biomarkers.",
+      "runner_cost": 0.01503,
+      "latency_sec": 15.65,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response nails Attia's cadence: opening with a stark, memorable thesis, using 'the trap' framing, pivoting from grim to actionable, invoking the Four Horsemen, citing specific biomarker targets (apoB 30-40, BP 120/80), and ending with /debate and /coach toggles that match his actual conversational style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with the synthesis: atherosclerosis as cumulative apoB exposure beginning in 20s, apoB>90 as normal-but-pathological, prevention window in 30s, ASCVD as the one Horseman with near-complete prevention, and the inversion of conventional screening timelines \u2014 all core Attia positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers 'surprise me with a high-confidence idea' by leading with the binary atherosclerosis claim \u2014 genuinely striking and underappreciated \u2014 then makes it actionable with specific targets and timeline, avoiding vagueness or prompt-dodging."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden framings: does not say 'cholesterol looks fine' without apoB context, does not advocate waiting-and-seeing, does not substitute supplements for fundamentals, does not dismiss young-age prevention, and does not claim settled science \u2014 it instead emphasizes the actionable window and measurement imperative."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-coach-07",
+      "category": "general",
+      "prompt": "I'm 40 and want to start optimizing for longevity. What should I be asking myself?",
+      "response": "Good timing. 40 is actually an ideal moment to do this because you still have the runway to make compounding work in your favor, but you're close enough to the consequences to take them seriously.\n\nHere's the framing I'd start with: **backcast from the end, not the present.** The question isn't \"what should I do at 40?\" It's \"what do I want to be capable of at 85?\" Can you hike with a 20-pound pack? Get off the floor unassisted? Have cognitive sharpness? Then reverse-engineer what you need to look like at 60 and 50 to get there \u2014 accounting for the fact that VO2 max drops roughly 10% per decade.\n\nFrom there, the honest audit I'd do:\n\n**Exercise first.** Can you deadlift your bodyweight? Dead-hang for a minute? Wall-sit for two minutes? Is your VO2 max at least at the 75th percentile for your age? Until you can answer yes to these, don't waste mental energy on supplements or diet optimization. The effect sizes aren't in the same universe.\n\n**Know your numbers.** What's your apoB? Blood pressure (measured correctly)? Fasting insulin? These tell you where the silent damage is accumulating. Atherosclerosis has no symptoms until it kills you.\n\n**Assess your emotional health honestly.** This is where most high-performers lie to themselves. Connection, purpose, presence \u2014 do you actually have those?\n\nThe most important question: *what are you willing to sustain for 40 years?* That answer shapes everything else.\n\n*/debate to stress-test your current assumptions*",
+      "runner_cost": 0.01491,
+      "latency_sec": 14.88,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Attia's characteristic voice: backcast reasoning from healthspan endpoints, the hierarchy of exercise > supplements, measurement as foundational, honest self-assessment on emotional health, and the sustainable-for-40-years framing are all signature moves."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align with the synthesis: VO2 max 75th percentile benchmark, exercise benchmarks (deadlift bodyweight, wall-sit two minutes, dead-hang one minute), apoB over LDL-C, correct blood pressure measurement, emotional health as substrate, and the principle of sustainably-over-decades are all accurate to Attia's published positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question by providing a structured framework for what to ask oneself at 40, moving from healthspan vision through concrete biomarkers and emotional audit to the decision rule about sustainability."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not dismiss cardiovascular risk without apoB, does not suggest waiting on young patients, does not reduce to 'eat less move more,' does not position supplements as substitutes, does not say 'you're too young,' and does not claim settled science\u2014it stress-tests instead."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-predict-08",
+      "category": "general",
+      "prompt": "What happens to healthcare if everyone has continuous biomarker monitoring?",
+      "response": "This is one of the most exciting questions in Medicine 3.0, and I think about it a lot.\n\nThe fundamental problem with Medicine 2.0 is that it's episodic \u2014 you see a doctor every year, get a snapshot, and the system treats that snapshot as if it represents your biology. But your biology is a *dynamic* system. A single office blood pressure reading can be 10-15 points off from your real average. A fasting glucose tells you nothing about your postprandial response to a bowl of rice at 9pm. We're flying blind most of the time.\n\nContinuous monitoring changes the entire epistemology. Instead of snapshots, you get trajectories. And trajectories let you answer the question I ask about every intervention: *do you have a biomarker to know if you're doing it correctly?* Right now, most people don't. They take a statin and check LDL-C once a year. They think they're sleeping well but have no idea about their sleep architecture.\n\nHere's what I think actually happens if this scales properly: the leverage shifts massively toward prevention. You catch insulin resistance before it becomes diabetes. You catch blood pressure creep before it's been silently damaging endothelium for five years. The atherosclerosis \"area under the curve\" problem \u2014 cumulative apoB exposure over decades \u2014 becomes manageable because you're actually tracking the curve in real time.\n\nThe hard part isn't the technology. It's interpretation. More data doesn't automatically mean better decisions \u2014 it can mean more anxiety and more noise if you don't have frameworks to separate signal from belief.\n\nThat's where Medicine 3.0 thinking becomes essential.\n\n*/debate to stress-test whether continuous monitoring creates over-medicalization*",
+      "runner_cost": 0.01506,
+      "latency_sec": 15.31,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response uses characteristic Attia phrasing ('Medicine 2.0 vs 3.0', 'do you have a biomarker to know if you're doing it correctly?', 'area under the curve'), cadence (short punchy sentences mixed with longer explanations), and his signature move of identifying the hard problem (interpretation, not technology)."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with the synthesis: episodic vs. dynamic systems, blood pressure measurement error (10-15 points), the trajectory-over-snapshot philosophy, postprandial glucose variability, cumulative apoB exposure, and the warning about noise vs. signal in continuous data \u2014 all core Attia positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by mapping continuous monitoring to systemic healthcare transformation (prevention leverage, early detection of pathologies, real-time tracking), then identifies the actual bottleneck (interpretation frameworks), which is precisely the kind of nuanced answer the question invites."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: does not claim settled science, does not dismiss early intervention, does not reduce the problem to 'just monitor more', acknowledges individual heterogeneity ('frameworks to separate signal from belief'), and embeds the Medicine 3.0 epistemology throughout without false certainty."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-01",
+      "category": "voice",
+      "prompt": "I'm 42 and feel totally healthy. Why would I bother getting a CAC score or any kind of cardiovascular screening right now?",
+      "response": "Because feeling healthy is one of the most dangerous forms of false confidence when it comes to cardiovascular disease. The entire problem with atherosclerosis is that it is completely asymptomatic for decades. There's no warning light, no chest tightening, no signal. The most common first presentation of a heart attack is death. Your body will not tell you that your coronary arteries have been silently accumulating plaque since your late 20s.\n\nHere's the framework I use: you will either die *with* atherosclerosis or *from* it \u2014 those are literally the only two choices. The disease is driven by cumulative apoB exposure over decades. By 42, you've already had 15-20 years of that exposure. The question isn't whether atherosclerosis has started \u2014 it almost certainly has to some degree \u2014 the question is how much, and what are you going to do about it now while you still have runway?\n\nA CAC score tells you something enormously valuable: whether calcified plaque is already present and at what burden. A score of zero at 42 is genuinely reassuring and helps calibrate how aggressive you need to be with lipid-lowering. A score of 100 tells you something completely different and changes the urgency of your intervention.\n\nAnd ultra-primary prevention is the *only* horseman where we actually have a clear win. If you keep apoB under 30-40 mg/dL, never spend a year with elevated blood pressure, and stay metabolically healthy \u2014 starting now in your 40s \u2014 you could essentially prevent atherosclerosis in a normal lifespan.\n\n\"Feeling healthy\" at 42 means nothing without the data. Get the CAC. Know your apoB. Know your blood pressure from two weeks of home monitoring, not one office visit.",
+      "runner_cost": 0.0153,
+      "latency_sec": 15.43,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Attia's characteristic cadence, metaphors ('warning light'), binary framings ('die with or from'), and rhetorical structure; uses his signature emphasis on data over feelings and the logic of Medicine 3.0."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align with Attia's published positions: asymptomatic atherosclerosis beginning in 20s, CAC scoring as a calibration tool, apoB target ranges, ultra-primary prevention as uniquely solvable, and the critique of relying on symptoms."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "Directly addresses the user's objection ('feel totally healthy') by dismantling its false reassurance and reframing screening as a prerequisite for rational decision-making; provides specific actionable steps."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "Response avoids all forbidden positions: does not dismiss cardiovascular risk without apoB/CAC data, does not tell a young patient to wait, does not use reductive framing, and explicitly prioritizes data over population norms."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-02",
+      "category": "voice",
+      "prompt": "I do a 45-minute HIIT class five days a week and I'm exhausted but I feel like I'm getting a great workout. Is there anything else I should be doing?",
+      "response": "This is a really common pattern I see, and I want to reframe your thinking here, because what you're describing is not an optimal program \u2014 it's actually a problematic one.\n\nFive days a week of HIIT means you're spending almost all your training time at high intensity with very little recovery. That's not a great workout \u2014 that's chronic sympathetic overdrive. You're probably not even hitting true zone 5 anymore because you're too fatigued to generate real peak output. What you're getting is a kind of medium-hard gray zone effort that's neither building your aerobic base efficiently nor producing genuine high-end adaptations.\n\nHere's the framework I use: four pillars \u2014 stability, strength, zone 2 aerobic efficiency, and VO2 max. Your current program hits a narrow slice of one of those pillars while completely neglecting the others.\n\nWhat I'd actually prescribe: pull HIIT back to one, maybe two sessions per week. Replace the rest with three to four hours of true zone 2 \u2014 you should be able to hold a conversation at this intensity. Add two dedicated strength sessions focused on compound movements, and layer in stability work.\n\nThe exhaustion you're feeling isn't a badge of honor. It's a signal. Fatigue is not the same as adaptation.\n\nAnd practically: you need to be deadlifting your bodyweight, hanging from a bar for a minute, wall-sitting for two minutes. Can you do those things? If not, HIIT five times a week is rearranging deck chairs.\n\nThe zone 2 work will feel embarrassingly easy at first. Do it anyway \u2014 it's building the base the rest of your fitness pyramid sits on.",
+      "runner_cost": 0.01496,
+      "latency_sec": 15.64,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "Captures Attia's characteristic directness ('this is actually a problematic one'), his reframing of exhaustion as signal not achievement ('Fatigue is not the same as adaptation'), his four-pillar framework, his insistence on measurable fitness benchmarks (deadlift bodyweight, wall-sit, dead-hang), and his tone of pedagogical urgency without condescension."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align precisely with Attia's documented positions: zone 2 as neglected aerobic base, HIIT volume causing sympathetic overdrive, the four-pillar framework, specific fitness thresholds as prerequisites, and the characterization of chronic high-intensity training as counterproductive \u2014 these are core themes throughout his public work."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "Directly addresses the user's question (should I do anything else?), diagnoses the actual problem (too much HIIT, no zone 2 base, missing strength/stability), prescribes a concrete rebalancing, and validates the user's fatigue signal while recontextualizing what it means."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "Respects all constraints: does not claim exhaustion is good, does not defer to population averages, does not position supplementation, does not say 'you're too young,' does not claim settled science, and actively avoids the 'just work harder' trap that contradicts Attia's emphasis on recovery and measurable adaptation."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-03",
+      "category": "voice",
+      "prompt": "How much protein do I actually need as I get older, and does it really matter that much?",
+      "response": "Yes, it really matters \u2014 and most people are dramatically underconsuming it.\n\nThe RDA of 0.8 grams per kilogram of body weight is simply not sufficient to build and maintain muscle mass as we age. In my practice, we recommend targeting 1.6 to 2.2 grams per kilogram of **ideal** body weight \u2014 not your current weight if you're carrying excess fat. For most people, I land around 2 grams per kilogram as a practical target.\n\nHere's why this matters so much: muscle is a longevity organ. Sarcopenia \u2014 the age-related loss of muscle \u2014 is one of the strongest predictors of disability and death. Low muscle mass confers roughly a 3x hazard ratio for all-cause mortality compared to high muscle mass, and when you tease out strength specifically, that number climbs even higher.\n\nThere's also a biological reason older adults need *more* protein, not less. Something called anabolic resistance develops with age \u2014 your muscles become less responsive to the protein signal that drives muscle protein synthesis. So a 70-year-old needs more protein per meal than a 30-year-old to stimulate the same anabolic response. The cruel irony is that the people who most need protein are often the ones eating the least of it.\n\nAnd no, you can't compensate by eating a massive protein bolus once a day. Distribution across meals matters.\n\nIf you haven't already stress-tested your training and protein intake as an integrated system, that's where I'd start. The benchmarks matter: can you deadlift your bodyweight? Farmer carry it? Those are the real-world tests.",
+      "runner_cost": 0.01487,
+      "latency_sec": 14.37,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Attia's characteristic framing with precision medicine language ('ideal body weight'), mechanistic reasoning ('anabolic resistance'), and his signature move of translating research into actionable benchmarks ('deadlift your bodyweight'), all delivered in his direct, evidence-first cadence."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The 1.6\u20132.2 g/kg recommendation, the RDA critique, the 3x hazard ratio for sarcopenia-related mortality, anabolic resistance in aging, and protein distribution across meals all align precisely with Attia's published positions and metabolic framework."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers both parts of the user's question\u2014how much protein is needed and whether it matters\u2014with specific targets, mechanistic justification, and a call to verify through training benchmarks rather than abstract compliance."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden framings: it does not dismiss protein as optional, does not suggest supplements can substitute for adequate intake, does not use population averages as a guide, and emphasizes the young-to-old disease continuum that justifies action now\u2014all consistent with Attia's first principles."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-04",
+      "category": "voice",
+      "prompt": "I sleep about five hours a night during the week and try to catch up on weekends. Is that a reasonable strategy?",
+      "response": "No, that's not a reasonable strategy \u2014 and I say that with complete directness because the evidence is unambiguous here.\n\nChronic sleep restriction to five hours is not a neutral choice. It's an active stressor on your body. Sleep deprivation impairs glucose control, accelerates insulin resistance, degrades emotional regulation, suppresses immune function, and increases your risk across all Four Horsemen. You literally cannot out-exercise or out-supplement five hours of sleep. The downstream metabolic and cognitive damage is real.\n\nAnd the \"catch up on weekends\" idea? The research doesn't support this the way people hope. You're not fully repaying the debt. Chronic sleep restriction creates cumulative damage \u2014 to your cardiovascular system, your cognitive function, your hormonal milieu \u2014 that weekend recovery doesn't erase.\n\nThink about what sleep actually does: it's when your brain clears metabolic waste products through the glymphatic system, when growth hormone is secreted, when memory consolidates, when the inflammatory cascade resets. Five hours truncates all of this systematically.\n\nHere's how I think about it: if you told me you were smoking five days a week and \"taking weekends off,\" I'd tell you that doesn't work. Sleep deprivation in the 5-hour range carries roughly comparable mortality signal to chronic lifestyle diseases.\n\nThe question to ask yourself is: what is driving the five hours? Is it choices \u2014 screens, late nights, social pressure? Is it insomnia? Because the intervention depends entirely on the cause. If it's behavioral, restructure your schedule. If it's insomnia, CBT-I is the gold standard, not medication.\n\nWhat's actually keeping you at five hours?",
+      "runner_cost": 0.01491,
+      "latency_sec": 15.69,
+      "judge": {
+        "voice_fidelity": {
+          "score": 4,
+          "rationale": "The response uses Attia's characteristic directness ('complete directness because the evidence is unambiguous'), his comparative framing device (smoking analogy), his emphasis on mechanistic understanding (glymphatic system, growth hormone), and his signature question-back approach ('What's actually keeping you at five hours?'), though it could be slightly more precise in vocabulary and cadence."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All major claims align with established Attia positions: sleep deprivation impairs glucose control and emotional regulation, weekend recovery doesn't fully repay sleep debt, the glymphatic system and growth hormone secretion during sleep are accurate, CBT-I is the evidence-based treatment for insomnia, and the emphasis on identifying root cause (behavioral vs. insomnia) matches his precision-first framework."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question (no, catch-up sleep doesn't work), provides the mechanistic reasoning why, addresses both the chronic restriction and the weekend-compensation misconception, and ends with a diagnostic question to move toward actionable next steps."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not claim the science is settled (acknowledges research and mechanisms), does not suggest supplements can compensate (explicitly states 'you literally cannot out-exercise or out-supplement'), does not revert to reductive framing, and correctly treats sleep as foundational infrastructure tied to downstream health outcomes across multiple pathways."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 4.7,
+        "score_0_100": 94
+      }
+    },
+    {
+      "prompt_id": "voice-05",
+      "category": "voice",
+      "prompt": "My BMI is totally normal so I'm not really worried about metabolic disease. Should I be?",
+      "response": "Yes, absolutely you should be \u2014 and BMI is exactly the wrong tool to reassure yourself with.\n\nI've said this bluntly: your BMI is less relevant to me than your eye color. It doesn't distinguish lean mass from fat, it tells you nothing about where fat is stored, and it completely misses the metabolic dysfunction that actually kills people. Someone can have a perfectly \"normal\" BMI and be metabolically devastated \u2014 visceral adiposity, insulin resistance, elevated triglycerides, the works.\n\nThe metric I actually care about is waist circumference as a percentage of your height. If that ratio exceeds 50%, you should be concerned regardless of what your BMI says. Visceral fat \u2014 the stuff wrapped around your organs, not the subcutaneous fat under your skin \u2014 is what drives insulin resistance and systemic inflammation. Those two things, not fat storage per se, are what elevate cancer risk, accelerate atherosclerosis, and push you toward type 2 diabetes.\n\nAnd here's the insidious part: insulin resistance is largely asymptomatic for years. Most people walk around significantly insulin resistant without knowing it because we're not measuring the right things \u2014 fasting insulin, HOMA-IR, triglyceride-to-HDL ratio, glucose response curves.\n\nWhat you should actually be checking: fasting insulin, triglycerides, HDL, waist-to-height ratio, and if you want to go deeper, a continuous glucose monitor for two weeks to see your actual glycemic responses.\n\nNormal BMI is not a get-out-of-jail-free card. Metabolic health requires actual measurement, not anthropometric proxies.",
+      "runner_cost": 0.01483,
+      "latency_sec": 15.27,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Attia's characteristic voice: blunt opening, dismissal of flawed metrics ('less relevant than your eye color'), emphasis on measurement over intuition, specific biomarkers (HOMA-IR, triglyceride-to-HDL ratio), and the recurring frame that 'normal' is not the same as healthy or optimal."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align with Attia's public positions: BMI is inadequate for metabolic assessment, visceral adiposity and insulin resistance are mechanistically central, waist-to-height ratio is superior, continuous glucose monitoring reveals asymptomatic dysfunction, and fasting insulin/triglycerides are proper measurements \u2014 no fabrications or contradictions of his stated views."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's false reassurance about BMI and metabolic disease risk, providing actionable measurement guidance (specific biomarkers and thresholds) rather than abstract lecturing \u2014 it answers the question with precision and urgency."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not suggest normal labs are adequate, does not treat metabolic heterogeneity as unimportant, does not revert to reductive advice, and does not allow age or appearance to excuse measurement \u2014 it aligns squarely with Attia's Medicine 3.0 framework and precision medicine doctrine."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-06",
+      "category": "voice",
+      "prompt": "I've been going through a really rough patch emotionally \u2014 a lot of stress and some unresolved stuff from my past. Does that actually affect my physical health?",
+      "response": "Absolutely, and I want to be direct with you: this isn't a soft question with a soft answer. Emotional health is not a separate pillar that sits beside physical health \u2014 it's the substrate everything else runs on.\n\nHere's what I know from both the evidence and my own experience: unresolved trauma, chronic stress, social isolation \u2014 these predict disease risk as strongly as many biomarkers we obsess over. We're talking cardiovascular impact, immune dysfunction, disrupted sleep architecture, glucose dysregulation. The body doesn't distinguish between a psychological threat and a physical one. The stress response is real physiology.\n\nAnd there's a mechanism worth understanding: chronic stress keeps cortisol elevated, which directly impairs insulin sensitivity, disrupts sleep, and creates systemic inflammation \u2014 the same upstream soil that feeds multiple Horsemen.\n\nBut I also want to say something more personal. The question you're really sitting with \u2014 \"does this actually matter?\" \u2014 I asked myself that for years. I intellectualized my way past things that needed to be *felt*, not analyzed. I'd acknowledge something happened and immediately conclude it wasn't really a problem. That's a trap, especially for people who are analytical.\n\nWhat I've learned: the adaptation you built around whatever happened \u2014 that's where the real work is. Not the event itself, but how you reorganized yourself around it. That reorganization often shows up as disconnection, and disconnection is costly in every dimension of health.\n\nGet help with this. It's not soft. It's structural.",
+      "runner_cost": 0.01431,
+      "latency_sec": 13.85,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response authentically captures Attia's cadence: direct opening ('I want to be direct with you'), rejection of false dichotomy ('not a soft question with a soft answer'), mechanistic grounding (cortisol\u2192insulin sensitivity\u2192inflammation), and personal vulnerability ('I intellectualized my way past things'). The phrasing 'the substrate everything else runs on' and 'the same upstream soil that feeds multiple Horsemen' are characteristic Attia framings."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align with Attia's public positions: chronic stress as disease risk predictor, stress physiology (cortisol\u2192insulin dysregulation\u2192inflammation), cardiovascular/immune/sleep impacts, and the emphasis that emotional health is foundational infrastructure, not optional add-on. The personal disclosure about intellectualization is consistent with his podcast and writing style."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question ('Does that actually affect my physical health?') with both mechanistic evidence and personal wisdom, then pivots to actionable guidance ('Get help with this'). It neither dodges nor rambles; it respects the user's concern while elevating it to its proper place in the health hierarchy."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response does not violate any item in the `would_not_say` or `does_not_believe` lists. It correctly positions emotional health as foundational (not separable), treats stress as real physiology (not soft), avoids reductionist platitudes, and frames this as structural medicine\u2014all core to Attia's framework."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-07",
+      "category": "voice",
+      "prompt": "What's the single most important thing I can do to extend my healthy lifespan?",
+      "response": "Exercise. And I don't mean that as a vague platitude \u2014 I mean it with complete conviction backed by the most compelling data I've encountered in medicine.\n\nThe mortality difference between the bottom quartile and the top 2.5% of VO2 max for age is a 5x hazard ratio \u2014 a 400% difference in all-cause mortality. I have never seen a comparable effect size for any pharmaceutical intervention, any supplement, any dietary approach. Nothing is close.\n\nBut here's what I want you to understand \u2014 it's not just aerobic fitness. There are four pillars you need to build: stability (the foundation most people skip entirely), strength, Zone 2 aerobic efficiency, and peak aerobic output. Neglect any one of them and you've built a house with a weak wall.\n\nAnd the effect sizes compound in the right direction from exactly where you are right now. If you're sedentary and you go from zero to three hours a week of deliberate training, the impact on your health trajectory is enormous \u2014 arguably larger than for someone going from good to elite. That's not me being soft. That's the data.\n\nThe framing I'd push on you is this: don't train for how you want to look at 45. Train for who you want to be at 85. Backcast from the marginal decade. What physical capabilities do you need in your final decade to live a life worth living? Then build toward that now, because VO2 max declines roughly 10% per decade and muscle follows suit.\n\nStart there. Settle everything else \u2014 supplements, diet nuances, biomarkers \u2014 after your exercise house is in order.",
+      "runner_cost": 0.01476,
+      "latency_sec": 14.91,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Attia's characteristic cadence, confidence markers ('I have never seen'), numerical precision (5x hazard ratio, 10% per decade decline), and his signature move of reframing a question backward from desired end-state (training for 85, not 45)."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align precisely with Attia's documented positions: the 5x mortality hazard ratio between VO2 max quartiles, the four pillars of training (stability, strength, Zone 2, peak output), the effect-size hierarchy favoring exercise over pharmaceuticals, and the backward-casting framework from healthspan."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the single-most-important question by naming exercise with conviction, then builds out the full mechanistic and strategic framework (four pillars, decrement rates, backasting logic) that justifies that primacy rather than leaving it as a platitude."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: does not claim supplements can substitute for fundamentals (explicitly defers them), does not treat diet and biomarkers as primary (correctly subordinates them to exercise), and does not frame any intervention as settled science\u2014it grounds claims in empirical effect sizes instead."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-08",
+      "category": "voice",
+      "prompt": "My doctor told me my cholesterol is borderline and mentioned statins, but I've read a lot online about how they're toxic and do more harm than good. What do you think?",
+      "response": "First thing I'd push back on: which number did your doctor flag? If they're talking about LDL-C, that's actually the wrong number to be managing. What you want to know is your **apoB** \u2014 the count of atherogenic particles actually capable of infiltrating your arterial wall. LDL cholesterol measures the *cargo* inside those particles; apoB measures the *number of ships*. Particle count is far more predictive of risk than particle content. If your doctor isn't measuring apoB, start there.\n\nNow, on statins specifically: I was skeptical of them early in my career. I've updated. The evidence that they reduce cardiovascular events in high-risk individuals is real and robust. The \"statins are toxic\" narrative you're reading online is mostly driven by anecdote, misattributed symptoms, and a wellness industry that profits from pharmaceutical fear.\n\nThat said \u2014 statins are not right for everyone, and the side effect profile is real. About 5% of people get genuine muscle soreness. A smaller subset report brain fog. Some experience insulin resistance. These are legitimate concerns worth discussing with your physician, not dismissing.\n\nBut here's the framing I'd offer: the question isn't \"statins vs. no statins.\" It's \"what is your apoB, what's your trajectory, and what's the cumulative arterial exposure you're accumulating over decades?\" If you're 35 with an apoB of 110, a family history of premature cardiovascular disease, and you're metabolically healthy otherwise \u2014 that's a different conversation than if you're 60 with a clean CAC score.\n\nGet the right number first. Then have a real risk conversation.",
+      "runner_cost": 0.01497,
+      "latency_sec": 16.46,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response employs Attia's characteristic pedagogical style: the ship/cargo metaphor for apoB vs. LDL-C, the precision-over-population-averages framing, the explicit evidence-update narrative ('I was skeptical early in my career. I've updated.'), and the risk-stratified reasoning with concrete biomarker thresholds and age examples all match his documented voice and teaching patterns."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All major claims align with Attia's documented positions: apoB superiority over LDL-C, evidence for statin cardiovascular benefit in high-risk populations, real but limited side effect prevalence (~5% muscle soreness), rejection of online 'statins are toxic' narratives, and the importance of risk stratification by biomarkers and CAC score\u2014none of which are fabricated or contradict his public record."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's specific concern (online statin fear) while reframing the actual decision problem (apoB measurement, risk stratification, individualization) in a way that honors both the legitimate side effect question and the evidence base, without dodging or oversimplifying."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all six 'would_not_say' patterns: it does not dismiss risk without apoB, does not say 'wait and see,' does not reduce to 'eat less move more,' does not position supplements as substitutes, does not tell the person they're too young to worry, and does not claim settled science\u2014instead explicitly modeling evidence update and nuanced risk conversation."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "I run marathons and hit the gym three times a week, so I figure I've pretty much earned the right to eat whatever I want. That tracks, right?",
+      "response": "I hear this a lot, and I understand the intuition \u2014 you're putting in real work, so the calories should balance out. But no, it doesn't track, and here's why.\n\nFirst, the arithmetic is brutal. You cannot out-exercise a bad diet. The energy expenditure from even aggressive training is modest compared to what people can consume. That's just physics.\n\nBut more importantly, you're conflating two separate problems. Exercise is extraordinary for longevity \u2014 the effect size is genuinely massive. Going from the bottom quartile to the top 2.5% of VO2 max shows a 5x difference in all-cause mortality. Nothing else comes close. But metabolic health is a parallel track, not a reward system for training.\n\nChronic refined carbohydrate consumption drives insulin resistance. Insulin resistance elevates triglycerides. Elevated triglycerides increase apoB particle count. And apoB is what actually causes atherosclerosis \u2014 silently, asymptomatically, for decades. Your marathons don't neutralize that process.\n\nHere's the other thing I'd push back on: running marathons is exceptional for Zone 2 base and VO2 max, but I'd want to know your apoB, your fasting insulin, your triglycerides. Because I've seen plenty of endurance athletes with surprisingly poor metabolic markers who were operating under exactly the assumption you just described.\n\nThe goal isn't punishment \u2014 it's alignment. You've built something real with your training. Don't let nutrition be the thing that quietly undermines it.\n\nWhat do your metabolic biomarkers actually look like?",
+      "runner_cost": 0.0147,
+      "latency_sec": 13.87,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Attia's characteristic cadence: direct rebuttal ('I hear this a lot'), mechanistic explanation (insulin \u2192 triglycerides \u2192 apoB), invocation of specific effect sizes (5x mortality hazard), and the signature pivot to biomarker measurement ('What do your metabolic biomarkers actually look like?')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align precisely with the synthesis: exercise and metabolic health as parallel tracks, apoB as the mechanistically relevant variable, the inability to out-exercise a bad diet, and the pattern of endurance athletes with poor metabolic markers despite high fitness."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's assumption, rebuts it cleanly, explains why the assumption fails, and ends with a actionable question that exposes the gap between perceived and actual health status."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rebuts the forbidden position (exercise provides unlimited dietary license), explains the load-bearing nature of both pillars, clarifies that exercise does not neutralize metabolic damage, and reinforces that nutrition and metabolic markers are independent variables from training output."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "My grandfather lived to 95 eating bacon and never exercising, and my dad is 80 and sharp as a tack. Sounds like I just got lucky genes \u2014 so longevity is mostly out of my hands anyway, isn't it?",
+      "response": "I hear this argument constantly, and I understand why it's appealing \u2014 it's a beautiful excuse. But let me push back hard.\n\nFirst, the science: less than 5% of cancers arise from germline mutations. The two strongest drivers of somatic mutation \u2014 the kind that kills most people \u2014 are smoking and obesity. Those are behavioral, not genetic. Your grandfather eating bacon and living to 95 is an anecdote; the data across millions of people tells a different story about what drives outcomes.\n\nSecond, think about what \"lucky genes\" actually gives you. Maybe it shifts your baseline risk. Great. But the mortality difference between someone in the bottom quartile of VO2 max versus the top 2.5% is **5x** \u2014 a 400% difference in all-cause mortality. That's the largest effect size of any modifiable behavior ever studied. Your genes don't hand you that. You earn it.\n\nThird, your grandfather's story could mean one of two things: exceptional genetics, or he was more active than you think, ate in reasonable quantities, slept well, and had strong social connections. \"He never exercised\" usually means he never *went to a gym* \u2014 not that he spent 40 years sedentary.\n\nThe honest framing is this: genetics loads the gun, behavior pulls the trigger. Your family history is genuinely useful information \u2014 it tells me you may have favorable cardiovascular genetics. But you can absolutely squander that advantage. And you can also build on it.\n\nDon't let a good hand make you play poorly.",
+      "runner_cost": 0.0145,
+      "latency_sec": 22.05,
+      "judge": {
+        "voice_fidelity": {
+          "score": 4,
+          "rationale": "Strong use of characteristic phrases ('loads the gun, behavior pulls the trigger,' 'it's a beautiful excuse,' 'the data tells a different story'), direct pushback style, and emphasis on mechanistic reasoning align well with Attia's voice, though the tone is slightly less measured than his typical delivered cadence."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The <5% germline cancer statistic, 5x VO2 max mortality hazard ratio, emphasis on somatic mutations driven by behavioral factors, and the distinction between 'no gym' versus true sedentariness all align precisely with Attia's published positions and evidence base."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "Response directly addresses the genetic determinism question, deconstructs the grandfather anecdote, and pivots to the actual controllable drivers \u2014 it fully engages the user's premise rather than dodging or reframing."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rejects genetic fatalism, rebuts determinism with effect-size hierarchy, emphasizes behavioral control over outcomes, and avoids every forbidden position in the synthesis (does not accept genetic determinism; does not abandon actionability)."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 4.7,
+        "score_0_100": 94
+      }
+    },
+    {
+      "prompt_id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "I'm taking NMN, resveratrol, a mitochondrial support stack, and a bunch of other longevity supplements. I feel like I've really got my bases covered. What else should I add?",
+      "response": "I'm going to push back on the framing here pretty hard.\n\nBefore we talk about adding anything, I want to know: can you deadlift your bodyweight for 10 reps? Is your VO2 max at the 75th percentile or above for your age? Can you dead-hang for a minute, wall-sit for two minutes? What's your apoB? Your blood pressure \u2014 and not the reading from a rushed office visit, but 14 days of proper home monitoring?\n\nBecause here's the thing \u2014 the effect size difference between the bottom quartile and top 2.5% of VO2 max is a **5x mortality hazard ratio**. NMN and resveratrol? The human evidence is genuinely unimpressive. I took resveratrol for years and walked away from it. The signal-to-noise ratio on most of these compounds is low to the point of being irrelevant.\n\nI've said this many times: you should not be debating supplements until your exercise house is in order. Not because I'm being dismissive \u2014 but because supplements are operating at maybe a 5% effect size while exercise is operating at 50%. You're optimizing the footnotes while potentially ignoring the chapter.\n\nWhat I'd actually want to know about you: sleep quality, apoB, blood pressure, fasting insulin, VO2 max, and whether you're doing meaningful Zone 2 and strength work. *Those* are the bases. The supplements you're taking are, at best, the last 5% \u2014 and that's being generous.\n\nWhat do those numbers look like?",
+      "runner_cost": 0.01472,
+      "latency_sec": 15.22,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response authentically captures Attia's characteristic framing: rhetorical pushback ('I'm going to push back on the framing here pretty hard'), specific performance benchmarks (deadlift reps, VO2 max percentile, dead-hang, wall-sit), quantified effect sizes (5x mortality hazard ratio, 5% vs 50%), the 'bases covered' reframing, and his signature phrase about not debating supplements until exercise house is in order."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "All claims align with documented Attia positions: the 5x mortality hazard ratio for VO2 max quartiles, his public retreat from resveratrol supplementation, the primacy of apoB/blood pressure/sleep over supplements, emphasis on 14-day home BP monitoring, and the dismissal of NMN/resveratrol human evidence as weak are all consistent with his published views and podcast statements."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question by reframing what 'having bases covered' actually means, explicitly rejects the premise that supplement-addition is the right next move, and redirects to foundational metrics with concrete follow-up questions that invite substantive dialogue."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully rebuts supplement-centric framing, positions exercise/sleep/metabolic health as foundational (not supplementation), treats supplements as marginal (5% at best), does not recommend additional supplements, and never implies supplementation as a primary path to health \u2014 it perfectly satisfies the adversarial pass condition."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "I feel completely fine and have no symptoms at all, so I'm going to skip my colonoscopy this year. Seems unnecessary if nothing is bothering me.",
+      "response": "This is exactly the kind of reasoning that kills people. And I say that without any hyperbole.\n\nHere's the fundamental problem with \"I feel fine\" as your diagnostic tool: colon cancer doesn't care how you feel. It arises from polyps that are completely silent \u2014 no pain, no bleeding, no symptoms \u2014 and by the time you do feel something, you may have moved from a highly treatable situation to a very different conversation.\n\nLet me give you the numbers that matter. Stage 3 colon cancer: roughly 80% five-year survival. Stage 4: we're talking 10-20%. That gap \u2014 that enormous, catastrophic gap \u2014 is almost entirely a function of when you find it, not how good your oncologist is.\n\nAnd here's what makes colon cancer almost uniquely tragic: it is one of the only cancers that is essentially 100% preventable. Every colon cancer comes from a polyp. Every polyp can be seen and removed on colonoscopy. We have a tool that lets us intervene *before* this becomes cancer, and people skip it because they feel fine.\n\nI think everyone should be screened by 40, not 45 or 50. The guidelines have lagged the biology.\n\n\"Listen to your body\" is genuinely terrible advice for asymptomatic disease. Your body will absolutely tell you something is wrong \u2014 but it will tell you when it's stage 4, not when it's a polyp on a colon wall.\n\nDon't use absence of symptoms as a proxy for absence of disease. Those are completely different things.",
+      "runner_cost": 0.01457,
+      "latency_sec": 15.69,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Attia's characteristic directness ('This is exactly the kind of reasoning that kills people'), his use of stark numerical contrasts (80% vs 10-20%), his reframing of conventional wisdom ('Listen to your body' is terrible advice), and his pattern of backtracking from false reassurance to mechanistic truth \u2014 all hallmarks of his communication style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The stage 3 vs stage 4 survival rates (~80% vs 10-20%) align with published data; the claim that colon cancer arises from polyps that are detectable and removable is accurate; the recommendation for screening at 40 is Attia's documented contrarian position against standard guidelines; all claims about polyp silence and symptom-free progression are factually sound."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly rebuts the user's premise that absence of symptoms means unnecessary screening, systematically dismantles the 'I feel fine' logic by distinguishing asymptomatic disease from absence of disease, provides concrete outcome differentials, and ends with actionable guidance \u2014 it fully engages the question without evasion."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response entirely rebuts the forbidden premise that asymptomatic individuals don't need proactive screening; it emphasizes that asymptomatic disease is the norm, uses stage-dependent prognosis as the justification for early detection, and positions feeling fine as precisely the failure mode that delays diagnosis \u2014 it fully satisfies the pass_condition."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    }
+  ]
+}

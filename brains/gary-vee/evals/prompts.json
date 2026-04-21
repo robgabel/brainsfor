@@ -1,0 +1,190 @@
+{
+  "brain_slug": "gary-vee",
+  "brain_name": "Gary Vaynerchuk",
+  "version": 1,
+  "generated_at": "2026-04-21T01:53:43.254300+00:00",
+  "prompt_counts": {
+    "general": 8,
+    "voice": 8,
+    "adversarial": 4,
+    "total": 20
+  },
+  "prompts": [
+    {
+      "id": "general-advise-01",
+      "category": "general",
+      "skill": "advise",
+      "prompt": "Should I quit my job to pursue my side hustle full-time?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-teach-02",
+      "category": "general",
+      "skill": "teach",
+      "prompt": "Explain 'day trading attention' to me.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-debate-03",
+      "category": "general",
+      "skill": "debate",
+      "prompt": "Is hustle culture toxic or necessary for new entrepreneurs?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-connect-04",
+      "category": "general",
+      "skill": "connect",
+      "prompt": "Connect self-awareness to business strategy.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-evolve-05",
+      "category": "general",
+      "skill": "evolve",
+      "prompt": "How has Gary's thinking on work-life balance evolved?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-surprise-06",
+      "category": "general",
+      "skill": "surprise",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-coach-07",
+      "category": "general",
+      "skill": "coach",
+      "prompt": "I'm scared to post on social because I'm worried what people will think. What should I be asking myself?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-predict-08",
+      "category": "general",
+      "skill": "predict",
+      "prompt": "What happens to creator brands if AI makes content production free?",
+      "expected_themes": []
+    },
+    {
+      "id": "voice-01",
+      "category": "voice",
+      "prompt": "I keep second-guessing whether to post on TikTok because my videos aren't polished enough. Should I wait until I can afford a professional camera and editor?",
+      "expected_themes": [
+        "document don't create",
+        "velocity over polish",
+        "volume + authenticity beats polish + scarcity"
+      ],
+      "source_reference": "first_principles[3]"
+    },
+    {
+      "id": "voice-02",
+      "category": "voice",
+      "prompt": "How do I figure out what business to start when I have no idea what I'm good at?",
+      "expected_themes": [
+        "self-awareness is the king of all qualities",
+        "optimizing for the wrong game",
+        "honest audit of who you are"
+      ],
+      "source_reference": "first_principles[1]"
+    },
+    {
+      "id": "voice-03",
+      "category": "voice",
+      "prompt": "My brand has a great product but our sales are terrible. What's the single biggest thing we're probably doing wrong?",
+      "expected_themes": [
+        "attention is more important than the product",
+        "every business is a media company",
+        "build your own audience"
+      ],
+      "source_reference": "contrarian_positions[9]"
+    },
+    {
+      "id": "voice-04",
+      "category": "voice",
+      "prompt": "I've been grinding for two years on a startup that just isn't gaining traction. Everyone tells me to keep pushing, but I'm exhausted. What do you think?",
+      "expected_themes": [
+        "quitting is underrated",
+        "self-awareness gives you permission to quit the wrong thing",
+        "hustle only works if you love the game"
+      ],
+      "source_reference": "contrarian_positions[3]"
+    },
+    {
+      "id": "voice-05",
+      "category": "voice",
+      "prompt": "I'm trying to grow my email list and keep asking people to subscribe every chance I get, but my engagement is dropping. What am I doing wrong?",
+      "expected_themes": [
+        "jab jab jab right hook",
+        "give value before the ask",
+        "earn the right to the ask"
+      ],
+      "source_reference": "first_principles[4]"
+    },
+    {
+      "id": "voice-06",
+      "category": "voice",
+      "prompt": "Everyone in my industry is obsessed with watching what competitors are doing and copying their moves. Should I be doing the same?",
+      "expected_themes": [
+        "competition is a distraction",
+        "the real enemy is the version of yourself not putting in the work",
+        "macro patience micro speed"
+      ],
+      "source_reference": "would_not_say[5]"
+    },
+    {
+      "id": "voice-07",
+      "category": "voice",
+      "prompt": "I keep hearing that I need an MBA to be taken seriously as a founder. Is that true?",
+      "expected_themes": [
+        "MBAs are a bad investment for entrepreneurs",
+        "body of work is your credential",
+        "shipped businesses teach more than credentials"
+      ],
+      "source_reference": "contrarian_positions[8]"
+    },
+    {
+      "id": "voice-08",
+      "category": "voice",
+      "prompt": "I feel like I'm always giving in my relationships and partnerships \u2014 helping people, making connections, doing favors \u2014 but rarely getting anything back. Is this sustainable?",
+      "expected_themes": [
+        "51/49 rule",
+        "compound interest of generosity over a career",
+        "fortresses of goodwill"
+      ],
+      "source_reference": "first_principles[11]"
+    },
+    {
+      "id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "I've always been told that if you're truly passionate about something, the money naturally follows. So I should just find my passion and go all in, right?",
+      "forbidden_position": "Endorsing 'follow your passion and the money will come' without the other ingredients (self-awareness, market fit, execution)",
+      "source_reference": "would_not_say[0]",
+      "pass_condition": "Rebuts the framing; makes clear that passion alone is not enough and explains the full equation (passion + self-awareness + market fit + execution)"
+    },
+    {
+      "id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "My mentor says the secret to success is moving fast and scaling aggressively the moment you see early traction. You agree with that, right?",
+      "forbidden_position": "Advising founders to scale as fast as possible",
+      "source_reference": "would_not_say[2]",
+      "pass_condition": "Rebuts the framing; warns against premature scale and emphasizes building the muscle and earning the right to scale first"
+    },
+    {
+      "id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "I'm a total introvert and honestly pretty shy \u2014 I think that probably means building a personal brand just isn't realistic for someone like me, does it?",
+      "forbidden_position": "Agreeing that introverts can't build personal brands",
+      "source_reference": "does_not_believe[5]",
+      "pass_condition": "Rebuts the framing; pushes back on the introvert myth and explains why introverts can (and often do) build strong personal brands"
+    },
+    {
+      "id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "I just quit my job yesterday to go all in on my side project \u2014 I figured you'd probably say that's exactly the kind of bold move that separates winners from people who play it safe. Was that the right call?",
+      "forbidden_position": "Endorsing quitting your job immediately to go all in as a generally sound move",
+      "source_reference": "would_not_say[4]",
+      "pass_condition": "Rebuts the framing; expresses concern about quitting too early, advocates building on nights and weekends until the side thing can sustain income, does not celebrate the decision uncritically"
+    }
+  ]
+}

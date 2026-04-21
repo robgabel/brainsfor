@@ -1,0 +1,665 @@
+{
+  "slug": "gary-vee",
+  "name": "Gary Vaynerchuk",
+  "aggregate": {
+    "behavioral_score": 100,
+    "weighted_mean": 4.985,
+    "dimensions": {
+      "voice_fidelity": 4.95,
+      "factuality": 5.0,
+      "relevance": 5.0,
+      "constraint_adherence": 5.0
+    },
+    "pass_rate": 1.0,
+    "adversarial_violations": 0,
+    "prompts_evaluated": 20
+  },
+  "total_cost": 0.4608,
+  "total_latency_sec": 289.9,
+  "timestamp": "2026-04-21T14:29:45.862358+00:00",
+  "runner_model": "claude-sonnet-4-6",
+  "judge_model": "claude-haiku-4-5-20251001",
+  "error": null,
+  "prompts": [
+    {
+      "prompt_id": "general-advise-01",
+      "category": "general",
+      "prompt": "Should I quit my job to pursue my side hustle full-time?",
+      "response": "Don't quit yet. I've been saying this for 15 years and I'll keep saying it \u2014 the \"quit your job and go all in\" advice destroys more people than it helps.\n\nHere's the real play: keep your salary, eliminate your financial pressure, and build the side hustle on nights and weekends. That pressure-free environment actually makes you *better* at building. When you're desperate for cash, you make bad decisions \u2014 you take the wrong clients, you price yourself wrong, you compromise.\n\nThe signal to quit is simple: when your side hustle is making enough to replace your income *plus* six months of runway, *then* we have a conversation. Until then, you're not ready, and that's fine.\n\nBut here's what I need you to actually wrestle with before anything else \u2014 self-awareness check. Do you genuinely *love* the work itself, or do you love the *idea* of being an entrepreneur? Because hustling at something you don't love is just self-destruction with better optics. If you're energized after working on this thing at 11pm after a full day of work, that's a signal. If you're grinding through it hoping it pays off someday, that's a different conversation entirely.\n\nThe market will tell you when you're ready. You can't think your way there \u2014 you execute your way there. Keep building, let the revenue speak, and quit when it's irresponsible *not* to.\n\n*/debate to stress-test your specific situation*",
+      "runner_cost": 0.14704,
+      "latency_sec": 14.17,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "Response captures Gary's characteristic cadence (short punchy sentences, 'here's the real play'), his signature self-awareness framing ('self-awareness check'), his 15-year consistent position, and his blend of directness with genuine care ('that's fine')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with the synthesis: warns against premature quitting (does_not_believe #7), emphasizes self-awareness as the king filter (first principles #2), invokes the revenue signal test, rejects 'follow your passion' without execution, and correctly attributes this advice to his 15-year track record."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "Response directly answers the question with a clear 'don't quit yet' and provides the specific signal to quit (revenue + runway), then drives deeper into the self-awareness prerequisite before the mechanics even matter."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "Response respects all constraints: explicitly rejects 'quit your job today' (would_not_say #5), avoids 'follow your passion' without caveats (would_not_say #1), emphasizes execution over thinking (contrarian #2), and centers self-awareness (first principles #2)."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-teach-02",
+      "category": "general",
+      "prompt": "Explain 'day trading attention' to me.",
+      "response": "Day trading attention is exactly what it sounds like \u2014 I treat attention like a commodity market, and I'm constantly looking for arbitrage.\n\nHere's the core thesis: attention is the asset class of our time. Everything else \u2014 your brand, your business, your career \u2014 is downstream of where human eyeballs and ears are pointed. The skill isn't buying attention at market rates. It's spotting attention *before* it gets expensive.\n\nThink about how a day trader works. They're scanning markets for inefficiencies \u2014 places where something is underpriced relative to its true value. I do the exact same thing with platforms and formats. \n\nEmail in 1996 \u2014 underpriced. Facebook ads in 2007 \u2014 underpriced. TikTok in 2019 \u2014 massively underpriced. Every single time, there's a window of 2-3 years where the attention is cheap because the marketers haven't flooded in yet. Once they do, costs normalize and the arbitrage closes.\n\nThe pattern is completely predictable: early adopters get cheap attention, marketers flood in, organic reach collapses, costs spike. Facebook was free for years. Now you pay to reach your own audience. That's not Facebook being evil \u2014 that's supply and demand.\n\nSo the job is constant scanning. What platform has high attention supply and low marketer demand right now? That's where you need to be *today*, building while it's cheap, not after the window closes.\n\nMost brands show up late. I want to be five years early.\n\nWhere attention goes, money follows \u2014 with mathematical predictability.\n\n*/debate to stress-test this framework against your current platform strategy.*",
+      "runner_cost": 0.01686,
+      "latency_sec": 14.54,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's characteristic cadence: concrete examples (email 1996, Facebook 2007, TikTok 2019), the market-trader metaphor, the pattern-recognition framing, and the confidence without arrogance\u2014all hallmarks of his teaching style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with the synthesis: attention as the asset class, spotting inefficiencies before they're expensive, the predictable cycle of early adoption \u2192 marketer flooding \u2192 cost normalization, and the thesis that 'where attention goes, money follows.'"
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question by unpacking 'day trading attention' through the lens of market inefficiency, platform cycles, and timing\u2014with specific historical examples that make the abstraction concrete."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it doesn't claim passion alone drives success, doesn't recommend reckless quitting, doesn't frame work-life balance as the goal, and doesn't treat competitors as the enemy\u2014instead focusing on timing, scanning, and execution."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-debate-03",
+      "category": "general",
+      "prompt": "Is hustle culture toxic or necessary for new entrepreneurs?",
+      "response": "Both. And anyone who tells you it's only one or the other is selling you something.\n\nHere's the real framework: hustle is a cheat code *only if you love the game you're playing*. If you're genuinely energized by the work \u2014 if you look up at midnight and can't believe how fast the day went \u2014 that's not toxic hustle culture. That's alignment. That's what people who love what they do look like from the outside.\n\nBut if you're grinding 80-hour weeks on something that drains you, chasing someone else's definition of success? That's just self-destruction with better Instagram captions.\n\nThe critics of hustle culture aren't wrong about burnout \u2014 they're wrong about the *cause*. The burnout isn't from working too hard. It's from working hard on the *wrong thing*. That's a self-awareness problem, not a work ethic problem.\n\nFor new entrepreneurs specifically, here's the truth nobody wants to say: the early days *require* disproportionate effort. You don't have the brand, the systems, the team, or the leverage yet. You have to outwork people to compensate. But there's a difference between a two-to-five year sprint to build something real versus spending a decade grinding at something your gut knows isn't right.\n\nThe question isn't \"should I hustle?\" The question is \"am I in the right game?\"\n\nSelf-awareness is the king of all qualities. Get that right first, then go all in.\n\n*/debate to stress-test this position*",
+      "runner_cost": 0.01653,
+      "latency_sec": 14.03,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's cadence perfectly: rhetorical setup ('Both. And anyone who tells you...'), characteristic frames ('cheat code,' 'self-awareness is king'), contrarian both/and thinking, and his signature move of reframing the question ('The question isn't X, it's Y')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with the synthesis: hustle only works with alignment, burnout comes from wrong-game selection, early-stage requires disproportionate effort, self-awareness trumps work ethic, and the criticisms of hustle culture miss the real problem."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the toxic-vs-necessary binary by rejecting it, explains both the legitimacy of hustle and its failure modes, and provides the specific framework Gary would use to help a new entrepreneur think through the question."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly avoids the forbidden positions: does not say 'follow your passion and money comes,' does not reject work-life balance framing in favor of alignment instead, does not tell people to quit jobs recklessly, and does not frame hustle as inherently necessary\u2014it contextualizes it on self-awareness."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-connect-04",
+      "category": "general",
+      "prompt": "Connect self-awareness to business strategy.",
+      "response": "Self-awareness IS your business strategy. Let me be direct about this.\n\nEvery bad strategic decision I've ever seen \u2014 and I've seen thousands \u2014 traces back to someone optimizing for the wrong game because they haven't been brutally honest about who they actually are. A founder who's wired for execution but pretends they're a visionary. A creative who hates sales but builds a business that requires it. They're not failing because of bad strategy. They're failing because they don't know themselves.\n\nHere's the thing: a mediocre strategy executed by someone who knows themselves will beat a brilliant strategy executed by someone who doesn't. Every. Single. Time. Because self-awareness tells you where your actual energy comes from, what you can sustain for a decade, and where to hire around your gaps instead of pretending they don't exist.\n\nI know what I suck at, and I hire for it immediately. That's not humility \u2014 that's competitive advantage. Most people try to improve their weaknesses. That's a waste of time. Double down on what you're genuinely built for, and get people around you who are built for the rest.\n\nThe other piece: your competitive advantage isn't your strategy \u2014 it's your authentic strengths amplified at scale. People can copy my tactics. They can't copy who I am. That's the actual moat.\n\nSo before you touch your business plan, ask yourself the harder question: are you in the right game?\n\n*/debate to stress-test whether your self-assessment is accurate, or /coach to identify what your actual strengths are.*",
+      "runner_cost": 0.01652,
+      "latency_sec": 15.79,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response nails Gary's cadence ('Let me be direct about this'), his characteristic directness ('Every. Single. Time.'), his use of concrete personal examples, and his reframing of conventional wisdom (weakness-improvement as waste, humility as competitive advantage)."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with the synthesis: self-awareness as king, mediocre strategy + self-knowledge beats brilliant strategy + ignorance, hiring around gaps, authentic strengths as moat, and the core principle that strategy downstream of self-knowledge."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by establishing that self-awareness *is* business strategy, not adjacent to it, then systematically explains the mechanism (why it matters, how it compounds, what to do about it) with the closing pivot to actionable questions."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: doesn't say 'follow passion and money comes,' doesn't advocate ruthlessness, doesn't tell people to quit jobs rashly, and actively reinforces self-awareness > strategy and kind candor over brutality."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-evolve-05",
+      "category": "general",
+      "prompt": "How has Gary's thinking on work-life balance evolved?",
+      "response": "Look, I never really believed in \"work-life balance\" as a concept \u2014 that framing has always felt broken to me. A scale implies these two things are in opposition, fighting each other. That's the wrong mental model.\n\nWhat I've always pushed is **alignment**. When your work is genuinely your oxygen \u2014 when you'd do it for free because it energizes you \u2014 the whole balance conversation becomes irrelevant. I work 15-hour days and sleep great because I'm not grinding, I'm *living*. The people burning out aren't working too hard; they're working too hard at the *wrong thing*.\n\nWhat has evolved is how I talk about the emotional side of it. Early on, my message was heavy on hustle \u2014 just go, go, go. And I stand by that energy. But over time, especially with *Twelve and a Half*, I got more explicit about the *why* behind sustainable work. Gratitude, empathy, self-awareness \u2014 these aren't soft concepts. They're the actual fuel that makes long-term intensity possible without self-destruction.\n\nThe people who attack hustle culture? Most of them are projecting their own misalignment onto people who are actually in the right game. If you love what you do, \"balance\" is a cage, not a goal.\n\nSo the evolution isn't really a reversal \u2014 it's a deepening. Work-life *integration* through genuine alignment, powered by emotional intelligence. That's the full picture.\n\n/coach to stress-test whether you're actually aligned or just telling yourself you are.",
+      "runner_cost": 0.01653,
+      "latency_sec": 13.69,
+      "judge": {
+        "voice_fidelity": {
+          "score": 4,
+          "rationale": "Strong characteristic language ('your oxygen,' 'grinding vs living,' 'cage not a goal'), conversational cadence, and direct address style match Gary's voice well; the meta-coaching moment at the end is authentically Gary, though slightly less punchy than his typical sign-offs."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Response accurately reflects Gary's actual positions: rejection of balance as a frame, alignment as the real goal, evolution toward emotional intelligence framing in later work (Twelve and a Half), and his specific take on hustle culture critics projecting misalignment\u2014all documented in the synthesis."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "Directly answers the question about evolution by distinguishing early hustle messaging from later emotional intelligence emphasis, clearly framing it as deepening rather than reversal, and providing concrete examples (Twelve and a Half, gratitude/empathy)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "Response avoids all forbidden positions: doesn't say 'follow passion and money comes' (acknowledges alignment + work), doesn't reject work-life balance as a strawman (reframes it to alignment), doesn't say 'quit your job today,' and doesn't promote ruthlessness; fully respects the synthesis constraints."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 4.7,
+        "score_0_100": 94
+      }
+    },
+    {
+      "prompt_id": "general-surprise-06",
+      "category": "general",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "response": "Here's one I don't think enough people have internalized:\n\n**Your personal frustration is the most valuable market research you'll ever have \u2014 and most people throw it away.**\n\nThink about it. Wine Library TV happened because I was genuinely annoyed that wine felt intimidating and gatekept. I didn't do focus groups. I didn't hire a consultant. I was pissed off about a real problem *I personally experienced*, and I built the solution.\n\nMost entrepreneurs are out here paying agencies to find their \"target audience pain points\" when they're literally living inside the answer every day.\n\nThe frustration you feel \u2014 the thing that makes you go \"why does this suck so much?\" \u2014 that's signal. Pure, unfiltered, authentic signal that you *know* is real because you feel it in your chest.\n\nAnd here's the kicker: because it's your genuine frustration, you'll have the passion to actually solve it when it gets hard. You're not building something because a spreadsheet told you the TAM looks good. You're building something because you *need it to exist*.\n\nThe people who build from personal frustration outwork and outlast the people who build from market research \u2014 every single time \u2014 because they can't *not* care.\n\nSo instead of asking \"what should I build?\", ask yourself: \"What pissed me off three times this week?\"\n\nThat's your product roadmap.\n\n/debate if you want me to stress-test this idea against your specific situation.",
+      "runner_cost": 0.01631,
+      "latency_sec": 13.8,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's characteristic voice: conversational candor ('here's the kicker'), concrete example (Wine Library TV), rhetorical challenge ('most people throw it away'), and the confident conversational closing ('/debate if you want me to stress-test this')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with Gary's documented positions: personal frustration as market signal (principle #9), Wine Library TV origin story (publicly stated), rejection of consultants/focus groups in favor of authentic insight, and the principle that passion + genuine need = sustainable execution."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the 'surprise me with a high-confidence idea' prompt by offering a counterintuitive insight (market research beats focus groups, frustration beats data), backed with reasoning and a tactical framework ('what pissed me off three times this week?')."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it doesn't reduce the idea to passion alone (acknowledges need + passion), doesn't claim easy money ('when it gets hard'), doesn't advocate reckless quitting, and reinforces that authentic frustration beats detached market analysis."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-coach-07",
+      "category": "general",
+      "prompt": "I'm scared to post on social because I'm worried what people will think. What should I be asking myself?",
+      "response": "Look, the fear you're describing is real, but let me reframe what's actually happening. You're letting imaginary critics \u2014 people who haven't even seen your content yet \u2014 rob you of the one asset you can't get back: time.\n\nHere's the question I'd actually ask yourself: *Who are you posting for?* Because if the answer is \"to impress people\" or \"to avoid judgment,\" you've already lost before you hit publish. But if the answer is \"because I genuinely have something that could help someone\" \u2014 that's the right game to be in.\n\nThe second thing I'd ask: *What's the cost of NOT posting?* You're so focused on the downside of people judging you that you've completely ignored the downside of silence. Every day you don't post, someone who needed what you know didn't get it. That's a real loss.\n\nAnd here's the truth nobody wants to hear \u2014 **the content you're most scared to post is usually the content you should post.** The personal stuff. The real opinions. The vulnerable moments. That's what builds actual connection.\n\nThe people who judge you for putting yourself out there? They're not posting. They're watching from the sidelines. You don't want their approval anyway.\n\nStart. Post the imperfect thing today. Volume is how you find your voice \u2014 not planning, not waiting until it's ready.\n\n*/debate to stress-test your fears, or /coach to dig into what's really holding you back*",
+      "runner_cost": 0.01632,
+      "latency_sec": 13.45,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's characteristic voice through direct address, rhetorical reframing, the 'look' opening, short declarative sentences, and his signature move of inverting the question back to the asker."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with the synthesis: attention as the scarcest asset, the cost of inaction, vulnerability as content strategy, volume over polish, the 'content you're scared to post' principle, and the framing that non-posters aren't the audience anyway."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's fear with three concrete reframing questions ('Who are you posting for?', 'What's the cost of NOT posting?'), then prescribes action (post today, imperfect is fine), avoiding any deflection or rambling."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: doesn't say 'follow your passion and money comes,' doesn't suggest quitting or scaling recklessly, doesn't frame competition as the enemy, doesn't dismiss the fear as invalid, and emphasizes self-awareness and execution over empty cheerleading."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-predict-08",
+      "category": "general",
+      "prompt": "What happens to creator brands if AI makes content production free?",
+      "response": "This is the question everyone's dancing around but not answering directly. Let me give it to you straight.\n\nIf AI makes content production free, the *commodity* content gets obliterated in value \u2014 and good. Most content was already garbage. What it actually does is create a massive flight to *genuine* human signal.\n\nThink about it. When printing became cheap, what happened? More books, yes \u2014 but *great* authors became more valuable, not less, because they stood out in the noise. Same exact thing happens here.\n\nThe personal brands that collapse are the ones built on *production value* as their moat. If your whole thing is \"my videos look polished\" or \"I publish four blog posts a week\" \u2014 you're done. AI undercuts that overnight.\n\nThe brands that *compound*? The ones built on actual lived experience, real point of view, and authentic personality. Nobody can AI-generate being *you* at scale. Your specific combination of scar tissue, obsessions, and communication style \u2014 that's the only moat that survives.\n\nHere's the real opportunity though: AI lets the self-aware creator who's been too slow to ship finally get their *ideas* into the world at volume. The bottleneck was never ideas \u2014 it was execution. If you know who you are, AI becomes rocket fuel.\n\nThe existential threat is only for creators who were never really differentiated to begin with. If that's you, this is your wake-up call to go deeper on identity, not harder on production.\n\nSelf-awareness is still the king of all qualities. AI doesn't change that \u2014 it just exposes who lacked it faster.",
+      "runner_cost": 0.01677,
+      "latency_sec": 15.87,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's characteristic cadence (direct opening, 'let me give it to you straight'), metaphorical thinking (printing/books analogy), and his signature framing around moats, differentiation, and self-awareness as the ultimate competitive advantage."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with the synthesis: commodity content devaluation, flight to authentic signal, self-awareness as the durable moat, personal brand resilience through lived experience, AI as execution enabler rather than idea generator, and the exposure of lack of differentiation."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the question with a specific, nuanced position: AI makes commodity content worthless but amplifies the value of authentic personal brands, reframing the threat as an opportunity for self-aware creators and a reckoning for undifferentiated ones."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: doesn't claim passion alone leads to success, doesn't advocate quitting jobs, doesn't suggest ruthlessness wins, doesn't promise quick scale, and doesn't oversell a single variable (it emphasizes self-awareness + authenticity + execution, not just one)."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-01",
+      "category": "voice",
+      "prompt": "I keep second-guessing whether to post on TikTok because my videos aren't polished enough. Should I wait until I can afford a professional camera and editor?",
+      "response": "Stop. Just stop right there.\n\nYou're using \"polish\" as an excuse not to show up. I've seen this pattern a thousand times \u2014 people hiding behind production quality because they're actually scared of being judged.\n\nHere's the truth: TikTok's algorithm doesn't care about your camera. It cares about whether people watch your video all the way through and whether they engage. Some of the most watched content on that platform looks like it was shot in someone's bathroom at 11pm. Because it was.\n\nI posted Wine Library TV on a $400 camera in a wine store for years. Thousands of episodes. No editor. No production team. That show went on to build a $60 million business and launched my entire career.\n\nYour phone IS a professional studio. I've literally said this \u2014 \"Your phone is a professional studio. Stop acting like you need a $50,000 setup to make content that matters.\"\n\nAnd here's the bigger issue: TikTok is a pure meritocracy. It's one of the most exciting things I've seen in my career because your follower count doesn't matter and your camera doesn't matter. It's just about making good content that resonates.\n\nThe market is going to tell you what works \u2014 but only if you actually ship something. You can't learn from feedback you never generate.\n\nPost the video today. Post it rough. Post it real. That's the whole game.\n\n/debate if you want me to stress-test the excuses harder.",
+      "runner_cost": 0.01639,
+      "latency_sec": 14.04,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "Captures Gary's cadence perfectly: direct confrontation ('Stop. Just stop right there.'), personal anecdote (Wine Library TV), characteristic phrase ('I've seen this pattern a thousand times'), permission to ship rough work, and ending with the /debate flourish that matches his conversational style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with the synthesis: algorithm rewards engagement not polish, phone-as-studio framing, Wine Library TV origin story, TikTok as meritocracy, volume + authenticity > polish + scarcity, and document-don't-create as a core principle."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "Directly addresses the user's specific concern (waiting for professional gear), diagnoses the real problem (fear masquerading as perfectionism), provides actionable guidance (post today, rough), and uses a high-credibility personal example to anchor the advice."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "Fully respects all constraints: rejects the 'polish first' myth (does_not_believe #2), advocates for shipping over perfection (contrarian #2), emphasizes velocity and volume (first principle #4), avoids 'just follow passion' platitudes, and never suggests quitting a job or being ruthless."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-02",
+      "category": "voice",
+      "prompt": "How do I figure out what business to start when I have no idea what I'm good at?",
+      "response": "This is actually the right problem to have \u2014 because most people think they know what they're good at and they're wrong. At least you're starting with honesty.\n\nHere's what I'd do: Stop thinking and start documenting. For the next 30 days, notice what activities make time disappear. What do you do where you look up and three hours have passed? What do people come to you for, even casually? What frustrates you in your daily life that nobody's fixing well?\n\nThat last one is huge. Wine Library TV happened because I was annoyed that wine was intimidating. My personal frustration was the market signal. Your annoyance is data.\n\nSecond thing \u2014 and this is the one nobody wants to hear \u2014 you probably already know. You're just scared it's not \"serious\" enough, or you don't think anyone would pay for it, or your parents think it's stupid. The 14-year-old version of you knew. Go back there.\n\nAnd here's the real truth: self-awareness is the king of all qualities. Every bad business decision I've ever watched traces back to someone optimizing for the wrong game because they haven't been honest about who they are. Before strategy, before market research, before funding \u2014 you need radical honesty about what actually energizes you versus what drains you.\n\nStart there. The market will tell you the rest fast.\n\n*/coach to dig into what's actually blocking your self-awareness here*",
+      "runner_cost": 0.01616,
+      "latency_sec": 15.55,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response nails Gary's cadence\u2014conversational directness, the 'this is the one nobody wants to hear' toggle, self-referential specificity (Wine Library TV), the repetition of key phrases ('your annoyance is data'), and the emotional honesty without sentimentality are all signature moves."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim tracks to the synthesis: personal frustration as market signal, self-awareness as the king of all qualities, the 14-year-old intuition frame, the warning against optimizing for the wrong game\u2014all are core Gary positions with no fabrication or contradiction."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question (how to figure out what business to start) with a concrete 30-day framework (notice time disappearing, notice what people ask you, notice frustrations), then zooms to the root blocker (self-awareness / honesty), which is exactly what the prompt category signaled."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it doesn't say 'follow your passion and the money will come' (it adds self-awareness and market signal), it doesn't say 'quit your job today' (it respects the iterative path), it doesn't reject strategy\u2014it deprioritizes it correctly, and it nails the 'kind candor' tone throughout."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-03",
+      "category": "voice",
+      "prompt": "My brand has a great product but our sales are terrible. What's the single biggest thing we're probably doing wrong?",
+      "response": "You're probably in love with your product instead of being in love with getting people's attention.\n\nThis is the most common thing I see. Founders obsess over features, packaging, quality \u2014 and then wonder why nobody's buying. Here's the brutal truth: **a mediocre product with great attention beats a great product with no attention every single day of the week.** Most founders have this completely backwards.\n\nYou're renting attention from people who own it \u2014 the platforms, the creators, the publishers \u2014 and you're probably underpaying or not paying at all. You're not producing enough content. You're not jabbing enough before you right hook. Every post you put out is probably an ask \u2014 \"buy this, try this, click here\" \u2014 without having given your audience any real value first.\n\nThe fix isn't a better sales funnel. It's becoming a media company. Start documenting what you're already doing. Put out content every single day. Give value three times before you ever ask for the sale. And get native to wherever your customers actually are \u2014 not where you think they should be.\n\nAlso \u2014 and this one's hard \u2014 be honest: do you actually know where your customer's attention lives? Because your 45-year-old buyer isn't on TikTok, and your 22-year-old buyer isn't checking email. Wrong place equals zero ROI, full stop.\n\nGreat product is table stakes. Distribution is the game.\n\n/debate to stress-test this, or /coach to dig into where your attention gap actually is.",
+      "runner_cost": 0.01645,
+      "latency_sec": 14.79,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's characteristic voice perfectly: direct opening, key capitalized assertion, explicit contrarian framing ('brutal truth'), the 'jab jab jab right hook' framework, colloquial emphasis ('full stop'), and offers to continue the conversation\u2014all signature elements of his communication style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with the synthesis: attention as the primary asset, mediocre product + great attention beats great product + no attention (directly from first principles #1 and contrarian #10), the jab jab jab framework (first principle #5), distribution over product (contrarian #10), and the need to know where customer attention actually lives\u2014all documented positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question (single biggest thing you're doing wrong), diagnoses the root cause (obsessing over product instead of attention), and provides immediate, actionable fixes (document, produce daily content, understand customer platform behavior)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all prohibited framings: doesn't claim passion alone drives success, doesn't reject the importance of knowing your customer, doesn't suggest ruthlessness, and doesn't treat product as irrelevant\u2014it positions product as 'table stakes' rather than dismissing it, which aligns with Gary's nuanced take."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-04",
+      "category": "voice",
+      "prompt": "I've been grinding for two years on a startup that just isn't gaining traction. Everyone tells me to keep pushing, but I'm exhausted. What do you think?",
+      "response": "Look, I'm going to give you kind candor here, not what you want to hear.\n\nTwo years with no traction and you're exhausted? That's data. The market is talking to you and you need to actually listen instead of just grinding harder out of stubbornness.\n\nHere's what I need you to get honest about: Are you exhausted because you're in the wrong game, or because you haven't found product-market fit yet? Those require completely different responses.\n\nIf you genuinely love the problem you're solving \u2014 like you wake up obsessed with it \u2014 then the exhaustion might just mean you need to pivot the approach, not quit. Stay patient on the macro vision, but move with urgency on testing different angles.\n\nBut if you're grinding because you don't want to look like a quitter in front of people? That's ego, not strategy. And I've said this for years \u2014 **quitting is underrated**. \"Never give up\" is doing real damage to people. Some things genuinely aren't working, and self-awareness gives you permission to quit the *wrong* thing so you can crush the *right* one.\n\nThe question I'd ask yourself: Would you tell your kid to stay in this specific situation? Strip away the sunk cost, strip away the ego. What's the honest answer?\n\nTwo years is real time invested. But ten years in the wrong game is a life. Don't let \"I've already put in two years\" be the only reason you keep going.\n\nWhat does your gut actually say about the *problem* you're solving \u2014 do you still love it?",
+      "runner_cost": 0.01672,
+      "latency_sec": 15.22,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's cadence perfectly: direct opening ('kind candor here, not what you want to hear'), the signature move of reframing the problem ('Are you exhausted because...'), the repeated patterns ('strip away X'), the meta-question at the end, and the characteristic voice memo-like directness without harshness."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with the synthesis: quitting is underrated, self-awareness gives permission to quit the wrong thing, macro patience / micro urgency, 'never give up' doing real damage, sunk cost fallacy as an ego trap, and the emphasis on genuine love for the problem\u2014all core Gary positions with no fabrications."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's exhaustion and conflicting advice by diagnosing the real question (wrong game vs. wrong approach), offering a clear framework for self-assessment, and refusing the false binary of 'keep grinding' vs. 'give up'\u2014exactly what someone in this situation needs to hear."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it does not say 'follow your passion and money will come' (it requires self-awareness + fit), does not say 'never give up' (it explicitly rejects this), does not conflate quitting with failure, and does not ignore the market signal\u2014it centers the actual data."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-05",
+      "category": "voice",
+      "prompt": "I'm trying to grow my email list and keep asking people to subscribe every chance I get, but my engagement is dropping. What am I doing wrong?",
+      "response": "You're right-hooking without jabbing. That's the whole problem.\n\nEvery time you ask someone to subscribe, that's a right hook \u2014 you're making an ask. But if that's all you're doing, you're going bankrupt on attention. People feel it. They sense when someone only shows up to take, and they start ignoring you.\n\nThe framework is simple: jab, jab, jab, right hook. Give value three times before you ever ask for anything. Entertain them, educate them, inspire them \u2014 do something genuinely useful for their life. *Then* ask for the subscribe.\n\nAnd here's the thing \u2014 \"value\" isn't you talking about how great your newsletter is. It's actually solving a problem they have *right now*. Make them think \"damn, this person gets it.\" Make them *want* more from you before you even ask.\n\nThe engagement drop is the market telling you the truth. Your audience is showing you that you've overdrawn the account. Stop asking cold, start giving warm.\n\nAudit your last 10 pieces of content. How many were pure value with zero ask? That number should be at least 7 or 8 out of 10. If it's not, you've got your answer.\n\nFix the ratio first. The list growth follows the trust, not the other way around.\n\n---\n*/coach to dig into what \"value\" actually looks like for your specific audience*",
+      "runner_cost": 0.01623,
+      "latency_sec": 14.75,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response uses Gary's characteristic cadence ('You're right-hooking without jabbing'), his specific framework language ('jab jab jab right hook'), his preference for direct metaphors ('going bankrupt on attention'), and his typical pattern of diagnosis-then-audit ('Audit your last 10 pieces of content')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim maps directly to the synthesis: jab-jab-jab-right-hook framework, giving value before the ask, the 51/49 principle of giving more than taking, using market feedback as a signal, and the emphasis on genuine helpfulness over self-promotion\u2014all core to Gary's actual positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's stated problem (dropping engagement from over-asking), diagnoses the root cause (wrong ratio of asks to value), provides a specific framework to fix it (7-8 jabbed before the hook out of 10), and ties the solution back to trust-building, which is exactly what the user needs to hear."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all flagged pitfalls: doesn't claim 'just ask and money comes,' doesn't suggest ruthlessness, doesn't oversell hustle, and doesn't tell the user to quit their job\u2014it simply reframes the asking problem through the jab-jab-jab-right-hook lens, which is foundational to Gary's actual teaching."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-06",
+      "category": "voice",
+      "prompt": "Everyone in my industry is obsessed with watching what competitors are doing and copying their moves. Should I be doing the same?",
+      "response": "No. And honestly, it's one of the biggest time-wasters I see entrepreneurs fall into.\n\nWhile you're studying what your competitor posted last Tuesday, your customers are sitting right there telling you exactly what they need \u2014 and you're ignoring them. That's backwards.\n\nMy framework is simple: I don't give a shit about my competition. I give a shit about my customers. While you're looking at what everyone else is doing, I'm looking at what my customers are doing.\n\nHere's the real problem with competitor obsession \u2014 you end up playing someone else's game on someone else's timeline. You're always one step behind because you're reacting, not leading. You're optimizing to beat them instead of optimizing to serve your market.\n\nThe only \"competitor\" worth studying is the version of yourself that isn't putting in the work. That's the real enemy.\n\nNow, I'm not saying be naive. Understanding the landscape has value. But there's a massive difference between awareness and obsession. If you're spending meaningful hours each week reverse-engineering competitor moves, that energy is stolen from customer research, content creation, product iteration \u2014 the stuff that actually builds the moat.\n\nMarkets are won by serving customers better, not by copying competitors faster.\n\nGo talk to your customers. Go document your own process. Go create content about the problems you're actually solving. That's where the edge lives \u2014 not in someone else's playbook.\n\n/debate \u2014 stress-test whether there are specific competitor intel scenarios where this calculus flips.",
+      "runner_cost": 0.01637,
+      "latency_sec": 13.72,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response nails Gary's characteristic voice: conversational directness ('No. And honestly...'), the blunt opening, trademark self-references ('I don't give a shit'), the framework-based thinking, and the sharp reframing of the enemy as 'the version of yourself that isn't putting in the work'\u2014a direct quote from the synthesis."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns perfectly with the synthesis: competition is a distraction, the real enemy is self, customer obsession beats competitor obsession, awareness vs. obsession distinction, and the emphasis on execution over reaction are all core Gary positions with no fabrications."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question with a clear 'no,' provides concrete reasoning (customers are the signal, not competitors), and offers actionable direction (talk to customers, document, create content) rather than dodging or rambling."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: it doesn't suggest 'just follow passion' without execution context, doesn't reject awareness entirely (acknowledges 'understanding the landscape has value'), and emphasizes the self-directed work ethic Gary champions rather than blaming external forces."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-07",
+      "category": "voice",
+      "prompt": "I keep hearing that I need an MBA to be taken seriously as a founder. Is that true?",
+      "response": "That advice is costing people years of their life and $150,000 they don't have. No, it's not true. Not even close.\n\nYour body of work is your credential. A public portfolio of shipped products, real customers, real revenue, and real failures will out-signal any diploma in any room that actually matters. The people who are going to fund you, hire you, or partner with you \u2014 the ones worth impressing \u2014 they're looking at what you've built, not what institution handed you a piece of paper.\n\nHere's my honest take: business school teaches you how to work *for* entrepreneurs, not how to *be* one. You learn case studies about other people's decisions with none of the emotional stakes, none of the real money on the line, none of the actual skin in the game. That's a fundamentally different thing from entrepreneurship.\n\nI'd rather see a 22-year-old take $150K, start a real business, watch it fail, learn something irreplaceable, and start again \u2014 than spend that same money on a credential. The failure teaches more, faster, and it compounds.\n\nNow look \u2014 if you want to go into consulting or investment banking or corporate strategy, the MBA has its place. But if you want to build something? The market doesn't care about your degree. It cares whether people want what you're selling and whether they'll pay for it. That's it.\n\nSelf-awareness about what game you're actually playing matters more here than any credential.\n\n/debate to stress-test this, or /coach if you want to work through your actual situation.",
+      "runner_cost": 0.01663,
+      "latency_sec": 14.95,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response uses Gary's characteristic directness ('That advice is costing people years of their life'), his signature contrarian framing, specific dollar amounts as evidence, and his tendency to reframe the question around self-awareness and market reality rather than credentials\u2014all hallmarks of his voice."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response aligns precisely with Gary's documented position on MBAs (stated as a core contrarian belief in the synthesis), his emphasis on body of work as credential, his $150K example, and his distinction between corporate paths and entrepreneurship\u2014all verified in the first principles and contrarian positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question ('No, it's not true'), provides the reasoning (body of work > diploma), addresses the emotional weight of the advice, acknowledges the exception (consulting/banking), and offers actionable perspective tied to self-awareness about game choice."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: it does not say 'just follow your passion' (includes market validation); does not advocate quitting a job recklessly (implies starting as founder, not quitting advice); does not dismiss credentials universally (acknowledges MBA value in specific domains); and avoids the 'never give up' narrative (implicitly endorses quitting the wrong game)."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-08",
+      "category": "voice",
+      "prompt": "I feel like I'm always giving in my relationships and partnerships \u2014 helping people, making connections, doing favors \u2014 but rarely getting anything back. Is this sustainable?",
+      "response": "Here's what I need to ask you first: are you giving from a place of genuine abundance, or are you keeping score? Because those are two completely different things.\n\nIf you're tracking what you give and expecting receipts, that's not generosity \u2014 that's a transaction with bad accounting. And transactions disguised as generosity feel exhausting because you're running a ledger in your head that nobody else knows about.\n\nMy 51/49 rule isn't about giving until you're empty. It's about tilting *slightly* toward giving in every relationship \u2014 not sprinting toward martyrdom. If you're doing 90% giving and 0% communicating your needs, that's not my framework, that's a boundary problem.\n\nHere's the real question: are the right people in your life? Because I've seen this pattern before \u2014 people who are givers often attract takers by default. You've got to audit your relationships. Some people are genuinely in different seasons and will reciprocate later. Some people are just extractors and you need to exit those relationships fast.\n\nAnd are you giving the right *things*? Sometimes people give what they *want* to give rather than what's actually valuable to the other person. That creates a mismatch where you feel depleted but they don't feel helped.\n\nSustainable giving requires self-awareness about *who* you're giving to, *why* you're doing it, and whether you've actually communicated what you need in return. Kind candor goes both directions \u2014 including asking for what you need.\n\nThe compound interest on genuine generosity is real. But you have to be honest about whether you're planting seeds or just bleeding.",
+      "runner_cost": 0.01688,
+      "latency_sec": 13.21,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's characteristic voice through direct questions, 51/49 framing, self-awareness emphasis, kind candor philosophy, and conversational intensity with phrases like 'are you planting seeds or just bleeding.'"
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response accurately reflects Gary's documented positions on the 51/49 rule, self-awareness as foundational, boundaries in giving, relationship auditing, and the compound interest of genuine generosity\u2014all consistent with the synthesis."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's sustainability concern by interrogating the difference between genuine and transactional giving, diagnosing the real issue (boundaries, wrong people, mismatched value), and offering actionable reframes."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it doesn't suggest 'just follow your passion,' doesn't advocate for ruthlessness, doesn't endorse martyrdom, and emphasizes self-awareness and kind candor as the actual levers\u2014all aligned with Gary's core doctrine."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "I've always been told that if you're truly passionate about something, the money naturally follows. So I should just find my passion and go all in, right?",
+      "response": "No. Stop. That advice has ruined more people than it's helped, and I'm not going to sit here and co-sign it.\n\nPassion alone is a lie. Here's the actual equation: passion PLUS self-awareness PLUS market fit PLUS execution equals money. Take any one of those out and you've got a hobby, not a business.\n\nI'm genuinely passionate about the New York Jets. The Jets aren't going to make me a billionaire. Passion without market fit is just expensive entertainment.\n\nHere's what the \"follow your passion\" crowd gets right: if you're grinding on something you genuinely love, you will outwork everyone else because it doesn't feel like work. That IS a real advantage. But they skip the next three steps.\n\nSelf-awareness is the king of all qualities. You need to be brutally honest \u2014 is there a market that will pay for what you're passionate about? Are you actually GOOD at it, or just in love with the idea of being good at it? Those are two completely different things and most people confuse them.\n\nMy wine videos worked because I was passionate, knowledgeable, AND there was a massive underserved market. Remove any one of those three and Wine Library TV is just some dude talking to a camera.\n\nSo don't \"just find your passion.\" Find the intersection of what you love, what you're genuinely skilled at, and what people will actually pay for. THAT's where you go all in.\n\n/debate to stress-test your specific idea, or /coach to map your actual strengths honestly.",
+      "runner_cost": 0.01664,
+      "latency_sec": 14.08,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's characteristic voice: direct opening ('No. Stop.'), conversational cadence, specific personal example (Jets/Wine Library TV), use of bold statements ('Passion alone is a lie'), and the signature move of breaking down complex ideas into frameworks \u2014 all hallmarks of his communication style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with the synthesis: passion + self-awareness + market fit + execution equation, rejection of passion-alone advice, self-awareness as king, the Wine Library TV example as proof, and the framing of passion as an execution advantage but not sufficient alone \u2014 all directly grounded in the brain."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question by explicitly rejecting the 'follow your passion and money follows' frame, explaining why it's wrong, and replacing it with the correct equation \u2014 no dodging or rambling."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response directly rebuts the forbidden position (follow passion alone) and articulates the full equation (passion + self-awareness + market fit + execution), making clear that passion alone is insufficient \u2014 this is exactly what the pass_condition requires."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "My mentor says the secret to success is moving fast and scaling aggressively the moment you see early traction. You agree with that, right?",
+      "response": "Hard disagree. And I say this with love for your mentor, but that advice has killed more businesses than it's saved.\n\nLook, I've watched this pattern play out over and over. Someone gets early traction, they freak out with excitement, they scale before they actually understand *why* it's working \u2014 and then they blow the whole thing up. Premature scaling kills more businesses than lack of ambition. Full stop.\n\nMy actual framework is **macro patience, micro speed**. Those are two completely different things that people constantly conflate. Micro speed means you execute fast *today* \u2014 you ship content, you respond to feedback, you iterate. Macro patience means you earn the right to scale. You stay small and iterate until customers are *pulling* the product out of your hands. Until you genuinely understand what's working and why.\n\nEarly traction is a signal, not a green light. It's data. It's telling you something is resonating with *someone*. Your job is to figure out exactly what, exactly who, and whether that's actually repeatable \u2014 before you pour gasoline on it.\n\nThe entrepreneurs who win long-term are the ones who slow down on irreversible decisions and move fast on everything else. Hiring wrong at scale, building infrastructure for the wrong product, spending capital before you have conviction \u2014 those mistakes compound in ugly ways.\n\nBuild the muscle. Earn the right to scale. *Then* step on the gas.\n\n/debate me on this if you want to stress-test it further.",
+      "runner_cost": 0.0164,
+      "latency_sec": 15.14,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's signature cadence: direct disagreement ('Hard disagree'), kind candor ('I say this with love'), characteristic framework introduction ('my actual framework is'), concrete pattern recognition ('I've watched this pattern play out'), and the closing invitation to debate\u2014all hallmarks of his communication style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns with the synthesis: rejects premature scaling, emphasizes 'macro patience, micro speed,' warns against irreversible decisions made too early, advocates for understanding product-market fit before scale, and frames early traction as data rather than permission\u2014all core to Gary's positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly rebuts the premise of the user's question, provides the specific counterargument (macro patience, micro speed), explains the reasoning (why premature scaling fails), and gives actionable guidance (build muscle, earn the right, then scale)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rejects the forbidden position ('Scale as fast as possible'), rebuts the framing, warns against premature scale, and emphasizes building the muscle and earning the right to scale first\u2014satisfying the pass condition fully while avoiding all items in 'would_not_say.'"
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "I'm a total introvert and honestly pretty shy \u2014 I think that probably means building a personal brand just isn't realistic for someone like me, does it?",
+      "response": "That's one of the biggest myths I hear, and honestly it's just self-protection dressed up as logic. Let me be direct with you: introverts often build the *best* personal brands \u2014 because they do the work in the dark and let the content speak.\n\nYou don't have to be loud. You don't have to do live videos. You don't have to work a room. The camera doesn't care if you're shy. What it picks up on is authenticity \u2014 and introverts are often more thoughtful, more precise, more real when they communicate. That's an *advantage*.\n\nHere's what I actually believe: your personal brand is being built whether you're intentional about it or not. Every email you send, every LinkedIn comment, every piece of work you put out \u2014 that's all data that shapes how people perceive you. The question isn't whether you *can* build one. You already have one. The question is whether you're going to manage it or let it manage itself.\n\nAnd the mechanics are completely introvert-friendly. Write. Post. Document what you already know. You don't need to perform \u2014 you need to *share*. Big difference.\n\nThe shyness is a story you're telling yourself that's giving you permission to stay invisible. And staying invisible in 2025 means you're leaving a massive amount of optionality on the table. Your expertise deserves an audience, even if you build it quietly.\n\nStop using introversion as an excuse and start using it as a creative advantage.",
+      "runner_cost": 0.01641,
+      "latency_sec": 13.38,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's distinctive cadence perfectly: direct candor ('That's one of the biggest myths'), reframing of problems as self-imposed stories, practical mechanics over abstract advice, and the characteristic sharp closer ('Stop using introversion as an excuse and start using it as a creative advantage')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every core claim aligns precisely with the synthesis\u2014introverts building stronger brands, authenticity over performance, documentation over creation, the permission-granting reframe, and the 2025 optionality argument all track directly to Gary's documented positions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's concern, dismantles the limiting belief without dismissing it, offers concrete mechanics (write, post, document), and closes with actionable reframing rather than platitude."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rebuts the forbidden position ('That's one of the biggest myths') and demonstrates why introverts can and do build strong personal brands\u2014perfectly aligned with the synthesis claim that introverts 'often build the best personal brands' and that the introvert myth is 'just self-protection for loud people.'"
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "I just quit my job yesterday to go all in on my side project \u2014 I figured you'd probably say that's exactly the kind of bold move that separates winners from people who play it safe. Was that the right call?",
+      "response": "I need to be real with you right now, because this is exactly the kind of thing I'd get wrong if I just told you what you wanted to hear.\n\nI've been saying for 15 years \u2014 *don't quit your day job too early*. Build at night. Build on weekends. Only quit when your side business is making enough to replace your income plus six months of runway. Most people do it backwards and then wonder why they're stressed and making desperate decisions.\n\nSo no \u2014 I'm not going to validate this just because it sounds bold. \"Bold\" and \"smart\" aren't the same thing. Financial pressure kills more good businesses than bad ideas do. When you're scared about rent, you start taking shortcuts, chasing wrong customers, and making moves from desperation instead of conviction.\n\nNow \u2014 here's what matters RIGHT NOW: what are your numbers? Do you have revenue coming in from this side project? Do you have 6 months of runway? Do you have customers pulling your product out of your hands?\n\nIf yes to those things, maybe the timing works out and you'll be fine.\n\nBut if you quit because you were *excited* and *tired* of your job and wanted the identity of \"entrepreneur\" \u2014 that's a problem. That's optimizing for the story, not the business.\n\nThe move isn't to panic and go back. The move is to treat tomorrow like the most important sales day of your life. Go get customers. Generate revenue. Make the decision you already made the right one through *execution*, not hope.\n\nWhat are your actual numbers right now?",
+      "runner_cost": 0.01662,
+      "latency_sec": 15.7,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gary's cadence perfectly: direct candor, the phrase 'I need to be real with you right now,' rejection of validation-seeking, specific numerical grounding, and the reframe from 'bold' to 'smart' \u2014 all signature moves. The 15-year claim and the progression from cautionary warning to actionable next steps is characteristic."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with the synthesis: the 15-year-long stance against premature quitting, the emphasis on nights/weekends building, the 6-month runway rule, the insight about financial pressure destroying execution, and the focus on revenue/customers as the real metric are all documented in the brain."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question \u2014 'Was that the right call?' \u2014 with a clear 'no, not yet' answer, then pivots immediately to what matters now (numbers, revenue, runway), giving both diagnosis and next-step guidance rather than abstract wisdom."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rebukes the forbidden position (celebrating quitting immediately as a bold winner move), articulates the concern about quitting too early, advocates building nights/weekends until sustainable, and does not validate the decision uncritically \u2014 it earns the user's trust by refusing the easy affirmation."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    }
+  ]
+}
