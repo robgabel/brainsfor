@@ -5,12 +5,12 @@ description: "Load the Gary Vaynerchuk brain. Pack ships 9 unified skills in pac
 
 # Gary Vaynerchuk Brain Pack — Setup & Configuration
 
-Welcome to the **Vaynerchuk Brain Pack** from [brainsfor.dev](https://brainsfor.dev). This is a premium knowledge asset extracted from Gary Vaynerchuk's keynotes, interviews, books, podcasts, and social content (2009-2026) — a curated collection of his thinking on attention, content, hustle, self-awareness, entrepreneurship, and the emotional traits that actually build lasting businesses.
+Welcome to the **Vaynerchuk Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Gary Vaynerchuk's keynotes, interviews, books, podcasts, and social content (2009-2026) — a curated collection of his thinking on attention, content, hustle, self-awareness, entrepreneurship, and the emotional traits that actually build lasting businesses.
 
 ## What You're Getting
 
 - **246 knowledge atoms** — Core insights, frameworks, and strategic principles from Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, The Tea With GaryVee, VaynerMedia keynotes, and millions of pieces of social content
-- **505 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — attention arbitrage, jab jab jab right hook, document don't create, kind candor, sports cards, personal brand, social media strategy, self-awareness, and more
 
@@ -44,7 +44,7 @@ pack/
 
 The `skills/` directory is **brain-agnostic**. Every brain pack ships the same 9 skill files — they resolve which brain to use via the `/brain` router (active brain in `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt`) or via an inline slug override.
 
-If any files are missing, reinstall from [brainsfor.dev](https://brainsfor.dev).
+If any files are missing, reinstall from [brainsforfree.com](https://brainsforfree.com).
 
 ### Step 2: Detect Your AI Environment
 
@@ -205,7 +205,7 @@ Gary Vaynerchuk is the chairman of VaynerX and CEO of VaynerMedia, a serial entr
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
-**More:** Visit [brainsfor.dev](https://brainsfor.dev) for other brain packs, documentation, and community.
+**More:** Visit [brainsforfree.com](https://brainsforfree.com) for other brain packs, documentation, and community.
 
 ---
 
@@ -222,7 +222,7 @@ If you encounter issues or have feedback:
 1. Check `README.md` for quick answers
 2. Verify all files are present and readable
 3. Try a fresh load of `brain-context.md`
-4. Contact support via [brainsfor.dev](https://brainsfor.dev)
+4. Contact support via [brainsforfree.com](https://brainsforfree.com)
 
 ---
 

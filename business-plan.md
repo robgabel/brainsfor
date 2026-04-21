@@ -202,26 +202,28 @@ $199/mo API is for the lazy-but-smart company that wants to offer "Ask [Expert]"
 
 ## The Brains (Current Inventory — April 2026)
 
-### Live — 13 brains built, packaged, and in Supabase
+### Live — 15 brain packs built, packaged, and shippable (13 in Supabase)
 
 | Brain | Atoms | Connections | Content Sources | Why Buyers Want This |
 |-------|-------|-------------|-----------------|---------------------|
-| **Dario Amodei** | 353 | 502 | darioamodei.com essays (Machines of Loving Grace, The Urgency of Interpretability), Dwarkesh, Lex Fridman #452, Ezra Klein, Logan Bartlett, Anthropic communications | AI safety thesis, interpretability, mechanistic thinking |
-| **Peter Zeihan** | 460 | 308 | The Accidental Superpower, The Absent Superpower, Disunited Nations, The End of the World Is Just the Beginning, Zeihan on Geopolitics YouTube, long-form interviews | Geopolitics, demographics, energy, supply chains, deglobalization |
-| **Scott Belsky** | 284 | 430 | All 77 Implications newsletter editions, books, talks | Product intuition, creative leadership, Adobe/VC lens |
+| **Dario Amodei** | 353 | 1,842 | darioamodei.com essays (Machines of Loving Grace, The Urgency of Interpretability), Dwarkesh, Lex Fridman #452, Ezra Klein, Logan Bartlett, Anthropic communications | AI safety thesis, interpretability, mechanistic thinking |
+| **Peter Zeihan** | 362 | 1,503 | The Accidental Superpower, The Absent Superpower, Disunited Nations, The End of the World Is Just the Beginning, Zeihan on Geopolitics YouTube, long-form interviews | Geopolitics, demographics, energy, supply chains, deglobalization |
+| **Oprah Winfrey** | 333 | 355 | Decades of The Oprah Winfrey Show, O Magazine, SuperSoul conversations, commencement addresses, and published books | Influence, interview craft, personal transformation, cultural reach |
+| **Scott Belsky** | 284 | 1,515 | All 77 Implications newsletter editions, books, talks | Product intuition, creative leadership, Adobe/VC lens |
+| **Brené Brown** | 283 | 321 | 20+ years of research, 6 bestselling books, TED talks, Dare to Lead podcast | Leadership, vulnerability research, organizational culture |
 | **Jensen Huang** | 253 | 220 | Lex Fridman #494, Acquired Podcast NVIDIA, Joe Rogan #2422, Computer History Museum, Stanford GSB, GTC 2024/2025 keynotes, 60 Minutes, Stripe Sessions, All-In, Dwarkesh, Hoover Institution | Compute, strategy, long-horizon product vision |
-| **Elon Musk** | 247 | 202 | Tweets, interviews, earnings calls, and public presentations | First-principles engineering, manufacturing scale, risk tolerance |
-| **Gary Vaynerchuk** | 246 | 505 | Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, keynotes | Content strategy, personal branding, entrepreneurial hustle |
-| **Hank Green** | 222 | 366 | 600+ SciShow episodes, 18yr Vlogbrothers, Crash Course, Dear Hank & John, TikTok (7M+), TED talks, 2 novels | Science communication, creator business, internet culture |
-| **Charlie Munger** | 218 | 200 | Poor Charlie's Almanack, Berkshire/Wesco/Daily Journal meetings | Mental models, investment thinking, multidisciplinary wisdom |
-| **Paul Graham** | 213 | 409 | 220+ paulgraham.com essays | Startup wisdom, essay-form thinking, YC founder lens |
-| **Sun Tzu** | 207 | 377 | 13 chapters of The Art of War + centuries of attributed commentary | Strategy, competition, decision-making under uncertainty |
-| **John Green** | 205 | 385 | Anthropocene Reviewed (podcast + book), Everything is Tuberculosis, Vlogbrothers, TED talks | Humanist perspective, storytelling, reviewing the world |
-| **Steve Jobs** | 170 | 792 | Speeches, interviews, keynotes & public appearances (1976–2011) | Product taste, reality distortion field, design philosophy |
-| **Peter Attia** | 153 | 433 | The Drive podcast, Outlive book reviews | Longevity science, health optimization frameworks |
-| **TOTAL** | **3,231** | **5,129** | | **+ 17 cross-brain connections** |
+| **Elon Musk** | 247 | 1,563 | Tweets, interviews, earnings calls, and public presentations | First-principles engineering, manufacturing scale, risk tolerance |
+| **Gary Vaynerchuk** | 246 | 1,850 | Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, keynotes | Content strategy, personal branding, entrepreneurial hustle |
+| **Hank Green** | 222 | 1,245 | 600+ SciShow episodes, 18yr Vlogbrothers, Crash Course, Dear Hank & John, TikTok (7M+), TED talks, 2 novels | Science communication, creator business, internet culture |
+| **Charlie Munger** | 218 | 1,262 | Poor Charlie's Almanack, Berkshire/Wesco/Daily Journal meetings | Mental models, investment thinking, multidisciplinary wisdom |
+| **Paul Graham** | 213 | 975 | 220+ paulgraham.com essays | Startup wisdom, essay-form thinking, YC founder lens |
+| **Sun Tzu** | 207 | 1,283 | 13 chapters of The Art of War + centuries of attributed commentary | Strategy, competition, decision-making under uncertainty |
+| **John Green** | 205 | 1,301 | Anthropocene Reviewed (podcast + book), Everything is Tuberculosis, Vlogbrothers, TED talks | Humanist perspective, storytelling, reviewing the world |
+| **Steve Jobs** | 170 | 1,618 | Speeches, interviews, keynotes & public appearances (1976–2011) | Product taste, reality distortion field, design philosophy |
+| **Peter Attia** | 153 | 1,220 | The Drive podcast, Outlive book reviews | Longevity science, health optimization frameworks |
+| **TOTAL** | **3,749** | **18,073** | | **+ 17 cross-brain connections** |
 
-**Infrastructure stats:** 13 `brain_metadata` records in Supabase. Full export pipeline operational (`auto-build-brain.py` → one command, 6 phases, ~$23 per brain). All 13 brains have complete pack/ directories with brain-context.md, brain-atoms.json, explore.html, README.md, and 8 skill SKILL.md files. Design system (DESIGN.md) and brand guide (BRAND.md) documented and agent-readable. **brainsforfree.com is live** (Next.js app in `website/`, deployed to Vercel, auto-deploy from `main`). `install-brains.sh` handles local installation with symlinks. `audit-brains.py` validates structure + quality scoring (avg score 97/100 across 13 brains).
+**Infrastructure stats:** 13 `brain_metadata` records in Supabase (Brené Brown and Oprah Winfrey ship as packs but aren't yet ingested into Supabase). 0 `brain_requests` logged to date. Full export pipeline operational (`auto-build-brain.py` → one command, 6 phases, ~$23 per brain). All 15 brain packs have complete pack/ directories with brain-context.md, brain-atoms.json, explore.html, README.md, and 8 skill SKILL.md files. Design system (DESIGN.md) and brand guide (BRAND.md) documented and agent-readable. **brainsforfree.com is live** (Next.js app in `website/`, deployed to Vercel, auto-deploy from `main`). `install-brains.sh` handles local installation with symlinks. `audit-brains.py` validates structure + quality scoring (avg score 97/100 across 16 brains, 15 of them shippable).
 
 ### Next Wave — High-demand candidates
 
@@ -232,7 +234,6 @@ $199/mo API is for the lazy-but-smart company that wants to offer "Ask [Expert]"
 | **Peter Thiel** | Contrarian thinking, Zero to One frameworks | Books, lectures, Founders Fund letters, interviews |
 | **Mr Beast** | Creator economy playbook, viral mechanics, business scaling | Interviews, podcast appearances, public business docs |
 | **Jason Calacanis** | Angel investing, startup evaluation, founder networking | This Week in Startups (1500+ episodes), books, tweets. **Rob knows Jason. Offer 100% rev share — buy a case study and megaphone.** |
-| **Brené Brown** | Leadership, vulnerability research, organizational culture | 6 books, TED talks, Dare to Lead podcast |
 | **Malcolm Gladwell** | Pattern recognition, storytelling as analysis | 7 books, Revisionist History podcast, New Yorker archive |
 | **Kara Swisher** | Tech industry BS detector, power dynamics | Pivot + On with Kara Swisher podcasts, Burn Book |
 | **Einstein** | Timeless physics intuition + philosophy of science | Public domain books, letters, papers — **free sample brain candidate** |

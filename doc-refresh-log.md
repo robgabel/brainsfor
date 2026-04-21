@@ -1,5 +1,82 @@
 # BrainsFor Doc Refresh Log
 
+## Doc Refresh — 2026-04-21 (run 6)
+
+### Context
+Automated nightly run. Discovered two large state shifts since run 5:
+1. Two new brains (Brené Brown, Oprah Winfrey) shipped as packs but aren't yet ingested into Supabase — they exist as `brains/<slug>/pack/` + `website/public/brains/<slug>/` only, with no `brene_brown_*` or `oprah_winfrey_*` tables in the DB.
+2. Peter Zeihan pack was re-exported down to 362 atoms (matches Supabase now). Run 5's sync of `atom_count` up to 460 is stale — reverted back to 362.
+3. Supabase connection tables have grown substantially via the daily `enrich-connections` edge function cron — most brains' DB connection counts are now 2-6x what the shipped packs contain. Root cause: `export-brain.py` calls Supabase with a single `.execute()` (no pagination), so shipped packs are capped at ~1,000 connections regardless of true DB totals.
+
+### Changes Applied
+
+**brains/index.json + website/public/brains/index.json** (kept in lockstep):
+- peter-zeihan `atom_count` 460 → 362 (reverts run-5 change; pack + Supabase both say 362)
+- Connection counts updated to live Supabase values per doc-refresh contract ("trust Supabase"):
+  - charlie-munger 200 → 1,262
+  - hank-green 366 → 1,245
+  - john-green 385 → 1,301
+  - paul-graham 409 → 975
+  - peter-attia 433 → 1,220
+  - scott-belsky 430 → 1,515
+  - steve-jobs 792 → 1,618
+  - sun-tzu 377 → 1,283
+  - gary-vee 505 → 1,850
+  - peter-zeihan 308 → 1,503
+  - dario-amodei 502 → 1,842
+  - elon-musk 202 → 1,563
+  - jensen-huang 220 (unchanged — Supabase is 0/0, pack authoritative)
+  - brene-brown 321 (unchanged — no Supabase table)
+  - oprah-winfrey 355 (unchanged — no Supabase table)
+
+**business-plan.md** (Live inventory table):
+- Header: "13 brains built, packaged, and in Supabase" → "15 brain packs built, packaged, and shippable (13 in Supabase)"
+- Peter Zeihan row: 460 atoms / 308 conns → 362 atoms / 1,503 conns
+- Added Brené Brown row: 283 / 321 / "20+ years of research, 6 bestselling books, TED talks, Dare to Lead podcast" / "Leadership, vulnerability research, organizational culture"
+- Added Oprah Winfrey row: 333 / 355 / "Decades of The Oprah Winfrey Show, O Magazine, SuperSoul conversations, commencement addresses, and published books" / "Influence, interview craft, personal transformation, cultural reach"
+- Updated all other brains' connection counts to Supabase values (same deltas as index.json above)
+- TOTAL row: 3,231 atoms / 5,129 conns → 3,749 atoms / 18,073 conns
+- Infrastructure stats: "13 `brain_metadata` records" → added note that Brené Brown and Oprah Winfrey aren't yet ingested; added "0 `brain_requests` logged to date"; audit avg line updated to cite 15 live brains
+- Removed Brené Brown from the "Next Wave" candidate table (promoted to Live)
+
+**brainsfor/CLAUDE.md**:
+- Tables header: "15 brains live" → "15 brain packs built; 13 live in Supabase"
+- Rewrote `<slug>_atoms` and `<slug>_connections` example lists to cite current Supabase counts (Gary Vee 1,850 is now the largest connection table; Steve Jobs dropped to #3)
+- `brain_metadata` line: "15 rows" → "13 rows (Supabase-hosted brains; Brené Brown and Oprah Winfrey shipped as packs only, not yet ingested)"
+- Added `brain_requests — 0 rows` line
+- Expanded Known Data Drift block: kept jensen_huang note; added Brené Brown / Oprah Winfrey "no Supabase tables" note; added new "pack connection count ~1,000 cap" note citing the `export-brain.py` pagination bug
+- Removed "peter_zeihan_atoms in DB is 362 while the pack has 460 — pack is authoritative, re-ingestion pending" — obsolete now that pack was re-exported to 362
+- Storefront directory entry: added "Directory is now empty" note
+- Remaining Questions "Next brain pack after Belsky?" checkbox answer updated to reflect Brené + Oprah shipped and Annie Duke scaffolded
+
+**IMPROVEMENTS.md**:
+- Voice enrichment line: "(85%)" → "(84.5%)" (same 240/284 count, more precise)
+- Footer Last-updated block rewritten end-to-end: run 5 → run 6; "13 brains / 3,231 atoms / 5,129 connections" → "15 shippable brain packs / 3,749 atoms / 18,073 Supabase connections"; added 3 open flags (jensen_huang empty tables, brene/oprah no Supabase tables, export-brain.py pagination bug)
+
+### No Changes Needed
+- `BACKLOG.md` — not a target doc for this run
+- Ship Plan (Pinned "Next Up for First Users" section in IMPROVEMENTS.md) — none of the three tier items have shipped; no checkboxes to flip
+- `DESIGN.md`, `BRAND.md`, `PRD-site-overhaul.md` — not target docs
+- `personas.md` — not a target doc
+- Pricing, revenue, go-to-market sections in business-plan.md — per refresh contract, don't touch strategic/opinion content
+
+### Quality Scores (audit-brains.py)
+- charlie-munger 100, paul-graham 100, gary-vee 100, jensen-huang 100, dario-amodei 100, john-green 100
+- sun-tzu 99, peter-zeihan 99, elon-musk 99
+- brene-brown 98, hank-green 97, scott-belsky 97, steve-jobs 97, oprah-winfrey 97
+- peter-attia 93
+- annie-duke 24 (scaffolded — expected)
+- Live-brain average: ~98/100 (15 brains, annie-duke excluded)
+
+### Flagged for Human Review
+1. **Connection-count jump in customer-facing surfaces.** Per-brain `connection_count` on index.json and business-plan.md jumped 2-6x (e.g. Belsky 430 → 1,515; Gary Vee 505 → 1,850). These reflect live Supabase totals, but the *shipped* pack JSON files are still capped at ~1,000. Customer-visible counts may now overstate what a buyer actually gets until the export bug is fixed and packs are re-exported.
+2. **`export-brain.py` connection pagination bug.** Line 494: `sb.table(connections_table).select("*").execute().data` — no pagination, so Supabase's default row cap truncates everything above ~1,000. Atoms are paginated correctly (lines 477-485); connections are not. Suggested fix: mirror the atoms pagination loop.
+3. **Brené Brown and Oprah Winfrey missing from Supabase.** Packs shipped and live on brainsforfree.com, but `brene_brown_atoms/connections` and `oprah_winfrey_atoms/connections` tables don't exist. `brain_metadata` only has 13 rows. `/board`, cross-brain search, and any Supabase-backed flow will silently skip these two brains.
+4. **Jensen Huang Supabase tables still empty** (0/0) — unchanged since run 5. Pack authoritative. Re-ingestion still pending.
+5. **Peter Zeihan atom count reverted** (460 → 362) — run 5 sync was based on a stale pack file; pack has since been re-exported to 362, which matches Supabase. If 460 was the "correct" target, the pack needs to be rebuilt, not the index.
+
+---
+
 ## Doc Refresh — 2026-04-17 (run 5)
 
 ### Context

@@ -10,7 +10,7 @@ Welcome to the **Green Brain Pack** from [brainsforfree.com](https://brainsforfr
 ## What You're Getting
 
 - **205 knowledge atoms** — Core insights, frameworks, and strategic principles from 36 episodes of The Anthropocene Reviewed podcast, 44 book essays, 7 novels, 2 nonfiction books, 2 TED talks, multiple commencement addresses, and 18+ years of Vlogbrothers videos (2007–present)
-- **385 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Hope and despair, meaning-making, OCD and mental health, attention, the Anthropocene, storytelling, community, imagining others complexly, the beauty of ordinary things, global health, tuberculosis, education, and more
 

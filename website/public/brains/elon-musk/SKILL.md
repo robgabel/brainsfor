@@ -10,7 +10,7 @@ Welcome to the **Musk Brain Pack** from [brainsforfree.com](https://brainsforfre
 ## What You're Getting
 
 - **247 knowledge atoms** — Core insights, frameworks, and strategic principles from Tweets, interviews, earnings calls, and public presentations
-- **202 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — First principles thinking, sustainable energy, space exploration, neural interfaces, manufacturing, AI safety, Mars colonization, electric vehicles, and more
 

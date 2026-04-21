@@ -1,6 +1,6 @@
 # Scott Belsky Brain Pack
 
-> **284 knowledge atoms** · **430 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **284 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Scott's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (284 atoms, 430 connections)
+  ├── brain-atoms.json      ← Structured data (284 atoms, 1000 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -58,7 +58,7 @@ This means:
 
 **284 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**430 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
 **16 topic clusters** — Superhumanity, originality, AI agents, organizational design, longevity, emergence, decision-making, scaling.
 

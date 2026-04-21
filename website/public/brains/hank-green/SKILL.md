@@ -10,7 +10,7 @@ Welcome to the **Green Brain Pack** from [brainsforfree.com](https://brainsforfr
 ## What You're Getting
 
 - **222 knowledge atoms** — Core insights, frameworks, and strategic principles from 600+ SciShow episodes, 18+ years of Vlogbrothers, Crash Course series, Dear Hank & John podcast, TikTok science videos (7M+ followers), TED talks, keynotes, interviews, and two novels (An Absolutely Remarkable Thing, A Beautifully Foolish Endeavor)
-- **366 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Science communication, creator economy, attention and algorithms, climate change, community building, healthcare, TikTok, curiosity, internet culture, entrepreneurship, cancer, fame and identity, and more
 

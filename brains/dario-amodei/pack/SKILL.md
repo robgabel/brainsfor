@@ -5,12 +5,12 @@ description: "Load the Dario Amodei brain. Pack ships 9 unified skills in pack/s
 
 # Dario Amodei Brain Pack — Setup & Configuration
 
-Welcome to the **Amodei Brain Pack** from [brainsfor.dev](https://brainsfor.dev). This is a premium knowledge asset extracted from Dario Amodei's essays on darioamodei.com, long-form podcast interviews, congressional testimony, and Anthropic company communications (2021-2026) — a curated collection of his thinking on AI safety, the scaling hypothesis, mechanistic interpretability, responsible development, and the transformative potential of AI for science, medicine, and human flourishing.
+Welcome to the **Amodei Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Dario Amodei's essays on darioamodei.com, long-form podcast interviews, congressional testimony, and Anthropic company communications (2021-2026) — a curated collection of his thinking on AI safety, the scaling hypothesis, mechanistic interpretability, responsible development, and the transformative potential of AI for science, medicine, and human flourishing.
 
 ## What You're Getting
 
 - **353 knowledge atoms** — Core insights, frameworks, and strategic principles from "Machines of Loving Grace" (2024), "The Urgency of Interpretability" (2025), "The Adolescence of Technology" (2025), Dwarkesh Podcast (2 appearances), Lex Fridman Podcast #452, Ezra Klein Show, Logan Bartlett Show, People by WTF with Nikhil Kamath, A Cheeky Pint with John Collison (Stripe), congressional testimony, and Anthropic blog posts
-- **502 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — scaling hypothesis, constitutional AI, mechanistic interpretability, responsible scaling, machines of loving grace, AI governance, biology acceleration, steering the bus, race to the top, existential risk, CBRN, interpretability, alignment, and more
 
@@ -44,7 +44,7 @@ pack/
 
 The `skills/` directory is **brain-agnostic**. Every brain pack ships the same 9 skill files — they resolve which brain to use via the `/brain` router (active brain in `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt`) or via an inline slug override.
 
-If any files are missing, reinstall from [brainsfor.dev](https://brainsfor.dev).
+If any files are missing, reinstall from [brainsforfree.com](https://brainsforfree.com).
 
 ### Step 2: Detect Your AI Environment
 
@@ -205,7 +205,7 @@ Dario Amodei is the CEO and co-founder of Anthropic, one of the leading AI safet
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
-**More:** Visit [brainsfor.dev](https://brainsfor.dev) for other brain packs, documentation, and community.
+**More:** Visit [brainsforfree.com](https://brainsforfree.com) for other brain packs, documentation, and community.
 
 ---
 
@@ -222,7 +222,7 @@ If you encounter issues or have feedback:
 1. Check `README.md` for quick answers
 2. Verify all files are present and readable
 3. Try a fresh load of `brain-context.md`
-4. Contact support via [brainsfor.dev](https://brainsfor.dev)
+4. Contact support via [brainsforfree.com](https://brainsforfree.com)
 
 ---
 

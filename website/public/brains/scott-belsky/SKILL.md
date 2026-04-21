@@ -10,7 +10,7 @@ Welcome to the **Belsky Brain Pack** from [brainsforfree.com](https://brainsforf
 ## What You're Getting
 
 - **284 knowledge atoms** — Core insights, frameworks, and strategic principles from 77 editions of the Implications newsletter
-- **430 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Superhumanity, originality, AI agents, organizational design, longevity, emergence, decision-making, scaling, and more
 

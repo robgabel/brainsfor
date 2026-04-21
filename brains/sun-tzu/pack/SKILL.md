@@ -10,7 +10,7 @@ Welcome to the **Tzu Brain Pack** from [brainsforfree.com](https://brainsforfree
 ## What You're Getting
 
 - **207 knowledge atoms** — Core insights, frameworks, and strategic principles from 13 chapters of The Art of War, plus centuries of military and strategic commentary attributed to Sun Tzu and his school of thought
-- **377 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — strategic assessment, deception, terrain, momentum, intelligence, leadership, adaptability, timing, resource management, psychological warfare, and more
 

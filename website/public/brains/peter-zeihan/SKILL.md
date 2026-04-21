@@ -5,12 +5,12 @@ description: "Load the Peter Zeihan brain. Pack ships 9 unified skills in pack/s
 
 # Peter Zeihan Brain Pack — Setup & Configuration
 
-Welcome to the **Zeihan Brain Pack** from [brainsfor.dev](https://brainsfor.dev). This is a premium knowledge asset extracted from Peter Zeihan's Peter Zeihan's four books, the Zeihan on Geopolitics YouTube channel, long-form podcast interviews, and public speaking engagements — a curated collection of his most influential thinking on geography, demographics, the end of globalization, and the shape of the post-American world.
+Welcome to the **Zeihan Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Peter Zeihan's Peter Zeihan's four books, the Zeihan on Geopolitics YouTube channel, long-form podcast interviews, and public speaking engagements — a curated collection of his most influential thinking on geography, demographics, the end of globalization, and the shape of the post-American world.
 
 ## What You're Getting
 
-- **460 knowledge atoms** — Core insights, frameworks, and strategic principles from The Accidental Superpower (2014), The Absent Superpower (2017), Disunited Nations (2020), The End of the World Is Just the Beginning (2022), the Zeihan on Geopolitics daily YouTube channel (500+ short videos), and long-form interviews with Joe Rogan, Peter Attia, Lex Fridman, Jordan Peterson, and the Diary of a CEO
-- **308 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **362 knowledge atoms** — Core insights, frameworks, and strategic principles from The Accidental Superpower (2014), The Absent Superpower (2017), Disunited Nations (2020), The End of the World Is Just the Beginning (2022), the Zeihan on Geopolitics daily YouTube channel (500+ short videos), and long-form interviews with Joe Rogan, Peter Attia, Lex Fridman, Jordan Peterson, and the Diary of a CEO
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — demographics, geography, deglobalization, China collapse, energy, industrial commodities, navies, Bretton Woods, Russia, Ukraine, Europe, manufacturing, supply chains, food security, the American order, and more
 
@@ -28,7 +28,7 @@ Your Zeihan Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (460 insights)
+  ├── brain-atoms.json         ← structured atoms (362 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -44,7 +44,7 @@ pack/
 
 The `skills/` directory is **brain-agnostic**. Every brain pack ships the same 9 skill files — they resolve which brain to use via the `/brain` router (active brain in `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt`) or via an inline slug override.
 
-If any files are missing, reinstall from [brainsfor.dev](https://brainsfor.dev).
+If any files are missing, reinstall from [brainsforfree.com](https://brainsforfree.com).
 
 ### Step 2: Detect Your AI Environment
 
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 460 atoms with titles, summaries, connections
+   - JSON structure of 362 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -205,7 +205,7 @@ Peter Zeihan is a geopolitical strategist who spent a decade at Stratfor before 
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
-**More:** Visit [brainsfor.dev](https://brainsfor.dev) for other brain packs, documentation, and community.
+**More:** Visit [brainsforfree.com](https://brainsforfree.com) for other brain packs, documentation, and community.
 
 ---
 
@@ -222,7 +222,7 @@ If you encounter issues or have feedback:
 1. Check `README.md` for quick answers
 2. Verify all files are present and readable
 3. Try a fresh load of `brain-context.md`
-4. Contact support via [brainsfor.dev](https://brainsfor.dev)
+4. Contact support via [brainsforfree.com](https://brainsforfree.com)
 
 ---
 

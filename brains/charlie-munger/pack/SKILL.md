@@ -10,7 +10,7 @@ Welcome to the **Munger Brain Pack** from [brainsforfree.com](https://brainsforf
 ## What You're Getting
 
 - **218 knowledge atoms** — Core insights, frameworks, and strategic principles from Poor Charlie's Almanack (his collected speeches and talks), 40+ years of Berkshire Hathaway shareholder Q&A, Wesco and Daily Journal annual meetings, the 1995 'Psychology of Human Misjudgment' speech at Harvard, the 1986 Harvard School commencement address, and the 2007 USC Law commencement address
-- **200 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — mental models, inversion, investing, patience, psychology, incentives, circle of competence, moats, worldly wisdom, temperament, envy, simplicity, and more
 
