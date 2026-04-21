@@ -724,17 +724,17 @@ When using this brain as context, follow these rules:
 
 **Implication:** Vertical integration in technical systems creates optimization opportunities unavailable to horizontal specialists. Consider owning critical interfaces rather than relying on industry standards.
 
-**NVIDIA's software stack — CUDA, cuDNN, TensorRT — is architected for the data center as the unit of deployment.** These tools abstract the complexity of managing thousands of GPUs while maintaining system-level optimization. The software treats the entire data center as a single computing resource. ([source](Computer History Museum))
-
-> *"Our software stack is designed so that you can scale from one GPU to thousands of GPUs seamlessly. The application doesn't change. The programming model doesn't change."*
-
-**Implication:** Software platforms should scale seamlessly across resource boundaries. The most powerful abstractions hide infrastructure complexity while preserving the ability to utilize all available resources.
-
 **NVIDIA Base Command represents software-defined data center management where the entire facility is programmed and orchestrated as a single resource. Workloads are scheduled across the full system rather than allocated to specific servers.** ([source](Computer History Museum))
 
 > *"Base Command treats the entire data center as a single computer that you program. You submit jobs to the data center, not to specific machines."*
 
 **Implication:** Management abstraction should match the actual computing model. If your infrastructure operates as a unified system, your management tools should reflect that unity.
+
+**NVIDIA's software stack — CUDA, cuDNN, TensorRT — is architected for the data center as the unit of deployment.** These tools abstract the complexity of managing thousands of GPUs while maintaining system-level optimization. The software treats the entire data center as a single computing resource. ([source](Computer History Museum))
+
+> *"Our software stack is designed so that you can scale from one GPU to thousands of GPUs seamlessly. The application doesn't change. The programming model doesn't change."*
+
+**Implication:** Software platforms should scale seamlessly across resource boundaries. The most powerful abstractions hide infrastructure complexity while preserving the ability to utilize all available resources.
 
 **The fundamental unit of computing has shifted from the chip to the data center.** Jensen argues that thinking chip-by-chip is obsolete — the real product is rack-scale, cluster-scale, and eventually campus-scale systems. NVIDIA's architecture integrates GPU, CPU, networking, memory, and software as a single purchasable and operable system. ([source](Lex Fridman Podcast #494))
 
@@ -830,17 +830,17 @@ When using this brain as context, follow these rules:
 
 **Implication:** Organizations should design for cross-domain insights by making project information visible across traditional departmental boundaries, enabling pattern recognition and innovation opportunities.
 
-**Speed comes from transparency, not from hierarchy.** Jensen's flat organization with radical information sharing moves faster than traditional command structures because everyone has the same context to make decisions. Layers of management don't accelerate decision-making — they filter and distort information, creating delays and misalignment. ([source](Lex Fridman Podcast #494))
-
-> *"Speed doesn't come from hierarchy. Speed comes from transparency. When everybody has the same information, everybody can move in the same direction at the same time."*
-
-**Implication:** Organizations seeking to move faster should focus on information transparency and shared context rather than optimizing command chains or reducing approval layers.
-
 **Jensen's management philosophy centers on context over control.** Rather than telling his 50+ direct reports what to do, he provides them with the same context he has so they can make the same decisions he would make. This scales decision-making quality without creating bottlenecks at the top. ([source](Lex Fridman Podcast #494))
 
 > *"I don't manage people by telling them what to do. I manage them by giving them the same context I have. When they have the same information and the same reasoning, they make the same decisions I would make."*
 
 **Implication:** Leaders should shift from command-and-control to context-and-alignment, focusing on sharing their perspective and reasoning rather than micromanaging specific actions.
+
+**Speed comes from transparency, not from hierarchy.** Jensen's flat organization with radical information sharing moves faster than traditional command structures because everyone has the same context to make decisions. Layers of management don't accelerate decision-making — they filter and distort information, creating delays and misalignment. ([source](Lex Fridman Podcast #494))
+
+> *"Speed doesn't come from hierarchy. Speed comes from transparency. When everybody has the same information, everybody can move in the same direction at the same time."*
+
+**Implication:** Organizations seeking to move faster should focus on information transparency and shared context rather than optimizing command chains or reducing approval layers.
 
 **The traditional management pyramid optimizes for the industrial age when information was scarce and had to be carefully filtered up hierarchies. Jensen argues that in the information age, the constraint is not information scarcity but information processing, which requires flat structures that can process multiple information streams simultaneously.** ([source](Lex Fridman Podcast #494))
 
@@ -1708,4 +1708,4 @@ When using this brain as context, follow these rules:
 
 ---
 
-*253 atoms · 14 clusters · 220 connections · Generated 2026-04-16*
+*253 atoms · 14 clusters · 1000 connections · Generated 2026-04-21*

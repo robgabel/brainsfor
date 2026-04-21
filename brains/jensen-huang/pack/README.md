@@ -1,7 +1,7 @@
 # Jensen Huang Brain Pack
 
-> **253 knowledge atoms** · **220 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
-> From [brainsfor.dev](https://brainsfor.dev)
+> **253 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Jensen's perspe
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (253 atoms, 220 connections)
+  ├── brain-atoms.json      ← Structured data (253 atoms, 1000 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -58,7 +58,7 @@ This means:
 
 **253 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**220 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
 **16 topic clusters** — accelerated computing, CUDA, first-principles thinking, AI factories, sovereign AI, organizational design, resilience, supply chain strategy, physical AI, market creation.
 
@@ -106,7 +106,7 @@ Where a thinker's book ideas appear in the knowledge graph, they are represented
 ## Support
 
 - Full setup guide: `SKILL.md`
-- Website: [brainsfor.dev](https://brainsfor.dev)
+- Website: [brainsforfree.com](https://brainsforfree.com)
 
 ---
 

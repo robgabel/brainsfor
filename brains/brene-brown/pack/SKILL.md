@@ -10,7 +10,7 @@ Welcome to the **Brown Brain Pack** from [brainsforfree.com](https://brainsforfr
 ## What You're Getting
 
 - **283 knowledge atoms** — Core insights, frameworks, and strategic principles from 20+ years of research, 6 bestselling books, and thousands of interviews
-- **321 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Vulnerability, shame resilience, courage, empathy, leadership, boundaries, perfectionism, belonging, and more
 
