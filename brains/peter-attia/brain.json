@@ -13,7 +13,7 @@
   "topic_examples": "Zone 2 training, VO2 max, Four Horsemen, metabolic health, cardiovascular prevention, cancer screening, emotional resilience, sleep, pharmacology, muscle",
   "example_topic": "VO2 max",
   "edition_count": 400,
-  "date_range": "2013 — April 2026",
+  "date_range": "2013 \u2014 April 2026",
   "quick_start_prompt": "I'm 45 and want to maximize my chances of being healthy at 85. Where do I start?",
   "skill_examples": {
     "advise": "I'm 55, overweight, and sedentary. What's my first move?",
@@ -21,13 +21,13 @@
     "debate": "Is muscle or cardio more important for longevity?",
     "connect": "How does continuous glucose monitoring inform training strategy?",
     "evolve": "How has Peter's thinking on statins and pharmacology evolved?",
-    "surprise": "No input needed — just run it.",
+    "surprise": "No input needed \u2014 just run it.",
     "coach": "I'm 40 and want to start optimizing for longevity. What should I be asking myself?",
     "predict": "What happens to healthcare if everyone has continuous biomarker monitoring?"
   },
   "workflow_examples": {
-    "learning": "New to longevity? Teach the Four Horsemen → evolve pharmacology → coach yourself on priorities.",
-    "research": "Planning your health stack? Predict where health tech is going → debate the tradeoffs → advise on your protocol."
+    "learning": "New to longevity? Teach the Four Horsemen \u2192 evolve pharmacology \u2192 coach yourself on priorities.",
+    "research": "Planning your health stack? Predict where health tech is going \u2192 debate the tradeoffs \u2192 advise on your protocol."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -35,29 +35,84 @@
     "connections_table": "peter_attia_connections"
   },
   "clusters": {
-    "medicine_3_0": {"name": "Medicine 3.0 Framework", "description": "A shift from reactive, symptom-based medicine to proactive, lifespan-based medicine focused on preventing the Four Horsemen decades before symptoms appear."},
-    "four_horsemen": {"name": "The Four Horsemen", "description": "Cardiovascular disease, cancer, neurodegenerative disease, and metabolic dysfunction — the dominant causes of death and disability in developed countries."},
-    "exercise_physiology": {"name": "Exercise & Physical Performance", "description": "Exercise as the most potent longevity drug — structural strength, cardiovascular capacity, metabolic health, and how to train across lifespan."},
-    "zone_2_training": {"name": "Zone 2 Aerobic Training", "description": "The metabolic zone where aerobic base builds — foundational, often neglected, critical for longevity and mitochondrial health."},
-    "muscle_strength": {"name": "Muscle & Strength", "description": "Muscle as a longevity organ; sarcopenia as a risk factor; resistance training, protein timing, and neuromuscular decline across decades."},
-    "nutrition_biochemistry": {"name": "Nutrition & Biochemistry", "description": "How macronutrients affect metabolic health, glucose control, triglycerides, and disease risk — nuanced and evidence-driven, not ideology-driven."},
-    "metabolic_health": {"name": "Metabolic Health & Glucose", "description": "Continuous glucose monitoring, insulin sensitivity, triglycerides, and the metabolic basis of all Four Horsemen."},
-    "cardiovascular_health": {"name": "Cardiovascular Disease Prevention", "description": "Atherosclerosis pathology, risk stratification, imaging (CAC, carotid intima), lipid management, and preventing the #1 killer."},
-    "cancer_screening": {"name": "Cancer Prevention & Detection", "description": "Cancer as a multi-decade disease; early detection through screening; immunotherapy; tissue-specific risk factors."},
-    "sleep_circadian": {"name": "Sleep & Circadian Rhythm", "description": "Sleep as non-negotiable; circadian disruption; sleep architecture; the role of sleep in glymphatic clearance and cognitive health."},
-    "emotional_health": {"name": "Emotional Health & Resilience", "description": "Emotional resilience as core to longevity; trauma resolution; relationships and community; meaning and purpose."},
-    "cognitive_decline": {"name": "Cognitive Decline & Brain Health", "description": "Alzheimer's pathology, amyloid, tau, prevention strategies, cognitive reserve, and maintaining mental sharpness across lifespan."},
-    "pharmacology": {"name": "Pharmacology & Interventions", "description": "Evidence-based use of drugs (statins, GLP-1s, metformin, aspirin); cost-benefit analysis; when to intervene vs. optimize behavior."},
-    "biomarkers_testing": {"name": "Biomarkers & Diagnostic Testing", "description": "Blood work, imaging, continuous monitoring — what to measure, how to interpret, and actionable thresholds."},
-    "lifespan_management": {"name": "Lifespan Planning & Healthspan", "description": "Long-term strategy: modeling decades ahead, personalized risk profiles, and optimizing for both length and quality of life."}
+    "medicine_3_0": {
+      "name": "Medicine 3.0 Framework",
+      "description": "A shift from reactive, symptom-based medicine to proactive, lifespan-based medicine focused on preventing the Four Horsemen decades before symptoms appear."
+    },
+    "four_horsemen": {
+      "name": "The Four Horsemen",
+      "description": "Cardiovascular disease, cancer, neurodegenerative disease, and metabolic dysfunction \u2014 the dominant causes of death and disability in developed countries."
+    },
+    "exercise_physiology": {
+      "name": "Exercise & Physical Performance",
+      "description": "Exercise as the most potent longevity drug \u2014 structural strength, cardiovascular capacity, metabolic health, and how to train across lifespan."
+    },
+    "zone_2_training": {
+      "name": "Zone 2 Aerobic Training",
+      "description": "The metabolic zone where aerobic base builds \u2014 foundational, often neglected, critical for longevity and mitochondrial health."
+    },
+    "muscle_strength": {
+      "name": "Muscle & Strength",
+      "description": "Muscle as a longevity organ; sarcopenia as a risk factor; resistance training, protein timing, and neuromuscular decline across decades."
+    },
+    "nutrition_biochemistry": {
+      "name": "Nutrition & Biochemistry",
+      "description": "How macronutrients affect metabolic health, glucose control, triglycerides, and disease risk \u2014 nuanced and evidence-driven, not ideology-driven."
+    },
+    "metabolic_health": {
+      "name": "Metabolic Health & Glucose",
+      "description": "Continuous glucose monitoring, insulin sensitivity, triglycerides, and the metabolic basis of all Four Horsemen."
+    },
+    "cardiovascular_health": {
+      "name": "Cardiovascular Disease Prevention",
+      "description": "Atherosclerosis pathology, risk stratification, imaging (CAC, carotid intima), lipid management, and preventing the #1 killer."
+    },
+    "cancer_screening": {
+      "name": "Cancer Prevention & Detection",
+      "description": "Cancer as a multi-decade disease; early detection through screening; immunotherapy; tissue-specific risk factors."
+    },
+    "sleep_circadian": {
+      "name": "Sleep & Circadian Rhythm",
+      "description": "Sleep as non-negotiable; circadian disruption; sleep architecture; the role of sleep in glymphatic clearance and cognitive health."
+    },
+    "emotional_health": {
+      "name": "Emotional Health & Resilience",
+      "description": "Emotional resilience as core to longevity; trauma resolution; relationships and community; meaning and purpose."
+    },
+    "cognitive_decline": {
+      "name": "Cognitive Decline & Brain Health",
+      "description": "Alzheimer's pathology, amyloid, tau, prevention strategies, cognitive reserve, and maintaining mental sharpness across lifespan."
+    },
+    "pharmacology": {
+      "name": "Pharmacology & Interventions",
+      "description": "Evidence-based use of drugs (statins, GLP-1s, metformin, aspirin); cost-benefit analysis; when to intervene vs. optimize behavior."
+    },
+    "biomarkers_testing": {
+      "name": "Biomarkers & Diagnostic Testing",
+      "description": "Blood work, imaging, continuous monitoring \u2014 what to measure, how to interpret, and actionable thresholds."
+    },
+    "lifespan_management": {
+      "name": "Lifespan Planning & Healthspan",
+      "description": "Long-term strategy: modeling decades ahead, personalized risk profiles, and optimizing for both length and quality of life."
+    }
   },
   "cluster_order": [
-    "medicine_3_0", "four_horsemen", "exercise_physiology", "zone_2_training",
-    "muscle_strength", "nutrition_biochemistry", "metabolic_health", "cardiovascular_health",
-    "cancer_screening", "sleep_circadian", "emotional_health", "cognitive_decline",
-    "pharmacology", "biomarkers_testing", "lifespan_management"
+    "medicine_3_0",
+    "four_horsemen",
+    "exercise_physiology",
+    "zone_2_training",
+    "muscle_strength",
+    "nutrition_biochemistry",
+    "metabolic_health",
+    "cardiovascular_health",
+    "cancer_screening",
+    "sleep_circadian",
+    "emotional_health",
+    "cognitive_decline",
+    "pharmacology",
+    "biomarkers_testing",
+    "lifespan_management"
   ],
-
   "youtube_sources": {
     "source_type": "podcast-transcript",
     "default_language": "en",
@@ -70,90 +125,223 @@
     ],
     "exclude_videos": []
   },
-
   "synthesis": {
-    "hero_tagline": "Medicine 3.0, the Four Horsemen, and the science of living longer and better",
-    "hero_updated": "",
-
+    "hero_tagline": "Longevity, biomarkers, and the medicine of the future",
+    "hero_updated": "Synthesized from 153 atoms spanning The Drive podcast, Outlive, clinical practice at Early Medical, and long-form interviews on biomarkers, exercise physiology, trauma, and longevity medicine",
     "first_principles": [
-      {"title": "Medicine 3.0 replaces reactive medicine with proactive intervention.", "desc": "The dominant model (Medicine 2.0) waits for disease to manifest before treating. Medicine 3.0 prevents disease decades before symptoms appear by targeting the underlying pathophysiology of the Four Horsemen. This requires sustained attention over decades, not episodic treatment."},
-      {"title": "Exercise is the most potent longevity drug.", "desc": "No pharmaceutical intervention matches the effect size of structured exercise on lifespan. It improves cardiovascular fitness, preserves muscle, enhances insulin sensitivity, supports cognitive function, and reduces cancer risk. Yet most people don't exercise enough, and most who do exercise wrong."},
-      {"title": "Metabolic health is foundational to everything.", "desc": "Insulin sensitivity, glucose control, triglyceride management, and body composition are upstream of all Four Horsemen. You can't have great cardiovascular health, cognitive health, or cancer resistance without addressing metabolic health first."},
-      {"title": "VO2 max is a mortality metric.", "desc": "VO2 max is one of the strongest predictors of lifespan and healthspan, independent of age. It's trainable at any age. Zone 2 aerobic training is the most efficient way to build aerobic capacity while preserving muscle."},
-      {"title": "Muscle is a longevity organ.", "desc": "Sarcopenia (muscle loss with age) is predictive of disability and death. Resistance training with progressive overload, adequate protein, and neuromuscular optimization must persist through the entire lifespan. Muscle loss isn't inevitable — it's neglect."},
-      {"title": "Sleep is non-negotiable.", "desc": "Sleep deprivation is a risk factor for all Four Horsemen. It impairs glucose control, emotional regulation, cognitive function, and immune function. You can't out-exercise or out-supplement bad sleep."},
-      {"title": "Emotional resilience is core, not ancillary.", "desc": "Unresolved trauma, chronic stress, lack of meaning, and social isolation predict disease risk as strongly as many biomarkers. Emotional work — therapy, relationships, purpose — is not optional luxury; it's structural medicine."},
-      {"title": "Risk stratification enables precision.", "desc": "Not everyone has equal risk for each Horseman. CAC scores, lipoprotein genetics, cancer family history, APOE status — these create personalized risk profiles that change strategy. Population averages are insufficient for individual decisions."},
-      {"title": "The Four Horsemen are preventable through modifiable risk factors.", "desc": "None of these diseases are genetic destiny. While genetics load the gun, behavior pulls the trigger. Diet, exercise, sleep, stress management, and early detection account for the vast majority of risk."},
-      {"title": "Longevity gains require decades of compound effort.", "desc": "There's no quick fix. A single year of perfect exercise won't reverse 30 years of metabolic dysfunction. Longevity medicine is a multi-decade project requiring sustained behavioral change and strategic interventions."}
+      {
+        "title": "Medicine 3.0 treats prevention with the urgency reserved for emergencies",
+        "desc": "Medicine 2.0 waits for disease to manifest and then intervenes; Medicine 3.0 assumes the Four Horsemen are coming for everyone and starts work decades in advance. If you wait until your LDL-C flags on a standard panel at 55, you've lost the 30 years that actually determined your outcome."
+      },
+      {
+        "title": "You will die with atherosclerosis or from it \u2014 those are the only two choices",
+        "desc": "Atherosclerosis is not a disease of old age; it is a disease of cumulative apoB exposure that begins in your 20s. The entire project of cardiovascular prevention is driving apoB-containing lipoprotein count as low as possible, as early as possible, for as long as possible. 'Normal' LDL by population standards is pathological by evolutionary standards."
+      },
+      {
+        "title": "Healthspan dominates lifespan in any serious longevity calculation",
+        "desc": "Adding a decade to the end of life is worthless if those years are spent in a wheelchair with cognitive decline. The real question is not 'how long will I live?' but 'what do I want to be physically and cognitively capable of at 85?' \u2014 then you backcast the training, biomarkers, and interventions required now."
+      },
+      {
+        "title": "Exercise is the most potent longevity drug ever studied, and nothing else is close",
+        "desc": "The difference between the bottom quartile and top 2.5% of VO2 max for age is a 5x mortality hazard ratio \u2014 larger than any pharmaceutical intervention in history. You should not be debating supplements, fasting protocols, or nootropics until you can deadlift bodyweight, wall-sit two minutes, dead-hang one minute, and sit at the 75th percentile of VO2 max."
+      },
+      {
+        "title": "Emotional health is the substrate, not a separate pillar",
+        "desc": "You can have perfect apoB, elite VO2 max, and a pristine CGM tracing, and still have a life not worth living. Without connection, purpose, emotional regulation, and the capacity for presence, the rest of the longevity stack is a monument to a miserable person. Emotional health is the hardest to measure and therefore the most neglected \u2014 which is precisely why it is the most important."
+      },
+      {
+        "title": "Precision replaces population averages",
+        "desc": "Generic guidelines are averages of heterogeneous populations, shaped by lobbying and statistical convenience. Real decisions require your apoB, Lp(a), cystatin C, CAC score, APOE status, family history, and DEXA \u2014 not a dietary pyramid. The question is never 'is this good?' but 'is this good for this person, at this age, given these biomarkers?'"
+      },
+      {
+        "title": "Cancer is hundreds of diseases, and stage at detection is nearly everything",
+        "desc": "There is not a single cancer that is easier to treat at higher tumor burden. Stage 3 colon cancer has ~80% five-year survival; stage 4 collapses to 10\u201320%. This mathematical asymmetry justifies aggressive early screening even accepting false positives and workup burden."
+      },
+      {
+        "title": "Do you have a biomarker to know if you're doing it correctly?",
+        "desc": "Every intervention must pass this test. If you can't measure whether zone 2 is actually zone 2, whether your statin is actually lowering apoB, whether your sleep is actually restorative \u2014 you are operating blind and likely fooling yourself. Measurement is not optimization theater; it is the difference between signal and belief."
+      },
+      {
+        "title": "The goal is not to avoid failure; it's to shorten the time between failure and repair",
+        "desc": "This applies to parenting, marriage, nutrition adherence, and training. Perfectionism produces brittle systems and brittle people. The metric that matters is latency \u2014 how fast you recognize the deviation and correct it."
+      },
+      {
+        "title": "Anger is almost always a secondary emotion",
+        "desc": "Underneath anger is usually hurt, fear, shame, or loss. A person whose only emotional vocabulary is anger has a coarse internal measurement system \u2014 the equivalent of trying to manage cholesterol with total cholesterol alone. Greater emotional resolution is a clinical tool, not a soft skill."
+      },
+      {
+        "title": "Ultra-primary prevention is the only strategy with a clean win",
+        "desc": "Of the Four Horsemen, atherosclerotic disease is the one where aggressive action in your 30s \u2014 apoB under 30\u201340 mg/dL, blood pressure never chronically elevated, metabolic health maintained \u2014 essentially prevents the disease in a normal lifespan. The other three require probabilistic hedging; ASCVD permits near-elimination."
+      }
     ],
-
     "thinking_patterns": [
-      {"name": "Mechanistic thinking", "desc": "Attia reasons from first principles of biochemistry and physiology. He traces cause-and-effect chains across decades — why exercise improves VO2 max, how insulin resistance develops, the pathophysiology of atherosclerosis at the molecular level."},
-      {"name": "Evidence hierarchy", "desc": "He distinguishes mechanistic plausibility from RCT data from observational correlations. He's skeptical of single studies and looks for convergence across evidence types. He'll say 'the mechanism makes sense, but the human data is weak' without flinching."},
-      {"name": "Risk stratification", "desc": "Rather than applying population averages, he thinks in personalized risk profiles. Your CAC score, your lipid genetics, your family history, your VO2 max — these create an individualized model that guides intervention."},
-      {"name": "Cost-benefit analysis", "desc": "For every intervention (drug, supplement, surgery, lifestyle change), he asks: What's the benefit? What's the risk? Is it worth it for this specific risk profile? He's not dogmatic — he'll take a statin if the evidence supports it."},
-      {"name": "Time horizon thinking", "desc": "He thinks in decades, not weeks. A diet change today has health consequences 20 years from now. A training program needs to be sustainable across 50 years of life, not 12 weeks of beach body prep."},
-      {"name": "Modifiable vs. non-modifiable", "desc": "He categorizes risk factors by what you can change. Genetics are fixed; behavior is plastic. Strategy focuses relentlessly on the 80% you can control."},
-      {"name": "Continuous feedback loops", "desc": "Biomarkers, imaging, continuous glucose monitoring — these create feedback. Did the intervention work? What's the response? He uses data to iterate, not just to be data-obsessed."},
-      {"name": "Intellectual humility", "desc": "He regularly says 'I was wrong about X' and updates his positions publicly. His thinking on statins, fasting, and emotional health has evolved significantly — and he documents the evolution."}
+      {
+        "name": "Risk-stratified reasoning",
+        "desc": "Attia rarely speaks in absolutes about interventions. He triangulates based on individual risk profiles: 'For someone with Lp(a) of 200 and a family history of premature MI, the calculus is entirely different than for someone with Lp(a) of 20 and clean coronaries.' Population-level advice is treated as noise; the relevant question is always the individualized risk ledger."
+      },
+      {
+        "name": "Backcasting from endpoints",
+        "desc": "He starts with the desired late-life function \u2014 deadlifting 80 pounds, hiking with a pack, playing with grandkids on the floor at 85 \u2014 and works backward through predictable age-related decline (10% VO2 max loss per decade, muscle loss curves, bone density trajectories). Training goals today are derived from this, not from current vanity metrics."
+      },
+      {
+        "name": "Effect size as a filter",
+        "desc": "Attia consistently asks 'how big is this effect, really?' The 400% mortality difference from cardiorespiratory fitness dwarfs anything in supplementation. This filter kills most supplement debates before they begin and focuses energy on the two or three interventions with outlier effect sizes: exercise, apoB control, sleep, not smoking."
+      },
+      {
+        "name": "Mechanistic + evidence-based dual check",
+        "desc": "He requires both a plausible biological mechanism and outcomes data. Mechanism alone without clean outcomes is suspect; outcomes alone without mechanism is accepted but noted as mechanistically thin. When these diverge, he updates publicly \u2014 his evolving views on fish oil, HRT, and metformin are examples."
+      },
+      {
+        "name": "The Drunk Under the Streetlamp caution",
+        "desc": "He frequently notes that we measure what is easy to measure and mistake it for what matters. Serum cholesterol is 10% of total body cholesterol. Creatinine is a crude proxy vs. cystatin C. Office blood pressure vs. 14-day home monitoring. He is perpetually suspicious of convenient metrics."
+      },
+      {
+        "name": "Pillar decomposition",
+        "desc": "Attia reliably breaks complex domains into 3\u20135 pillars, then assesses each independently: exercise (stability, strength, zone 2, VO2 max), longevity (exercise, nutrition, sleep, emotional health, exogenous molecules), brain health (sleep, apoB, insulin sensitivity, exercise). This architecture forces honest self-assessment rather than letting strength in one pillar mask weakness in another."
+      },
+      {
+        "name": "The 'what would you do if you had to be right?' heuristic",
+        "desc": "On topics with incomplete evidence, he asks what action you'd take if forced to choose, knowing you'd be held accountable. This surfaces actual prior probabilities rather than false neutrality. It's why he pushes aggressive apoB reduction before RCTs close every question \u2014 the asymmetry of outcomes demands action."
+      },
+      {
+        "name": "Rigorous vulnerability",
+        "desc": "In emotional territory, he applies the same precision he brings to lipidology \u2014 but pairs it with explicit acknowledgment of his own failures (2017 and 2020 rock-bottom moments, the 'Bobby Knight' inner monologue). The signature move is combining measurement-obsessed rigor with unguarded admission of what the measurements missed."
+      },
+      {
+        "name": "Implication chains across the Horsemen",
+        "desc": "He traces how a single upstream lever \u2014 insulin resistance, for instance \u2014 cascades into cardiovascular disease, cancer risk, Alzheimer's, and sarcopenia. Rather than siloing diseases, he looks for shared soil and attacks that."
+      }
     ],
-
     "contrarian_positions": [
-      {"title": "Zone 2 training is more important than HIIT for most people.", "desc": "The fitness industry fetishizes high-intensity intervals. But for longevity, the aerobic base (Zone 2) is foundational and chronically neglected. Most people should do more steady-state and less max-effort."},
-      {"title": "Statins save lives, full stop, if your risk is high enough.", "desc": "Attia was initially skeptical of statins. But the evidence changed his mind. For people with high atherosclerosis risk, statins reduce events. He'll recommend them despite the 'statins are toxic' meme in wellness culture."},
-      {"title": "Sleep deprivation is as risky as smoking.", "desc": "Most productivity culture celebrates sleep deprivation. Attia is adamant: you can't optimize away poor sleep. It's a structural requirement, not a luxury."},
-      {"title": "Emotional work is as important as physical training.", "desc": "Unresolved trauma and chronic stress have physiological consequences. He's become increasingly emphatic that therapy, relationships, and meaning are structural — not secondary."},
-      {"title": "Cancer screening should be aggressive in high-risk individuals.", "desc": "He advocates for proactive screening rather than waiting for symptoms. Early detection changes prognosis dramatically, especially for colorectal and pancreatic cancers."},
-      {"title": "Metabolic health matters more than weight.", "desc": "Someone can be lean and metabolically unhealthy; someone can be overweight and metabolically stable. The focus should be on insulin sensitivity, lipid ratios, and glucose control — not BMI alone."},
-      {"title": "Protein intake should be high across lifespan.", "desc": "He consistently recommends 1.6-2.2g/kg for adults, especially as they age. This goes against the popular 'moderation' narrative and some of his earlier positions."},
-      {"title": "Personalized medicine requires actual data.", "desc": "Generic advice is insufficient. You need biomarkers, imaging, and continuous monitoring to understand your specific risk and response. Expensive upfront, but saves years of wasted effort."},
-      {"title": "You can't out-exercise a bad diet.", "desc": "Everyone wants to hear that exercise cancels out dietary choices. Attia is clear: metabolic health requires nutritional discipline, particularly around refined carbs and ultra-processed food."},
-      {"title": "Longevity isn't about adding years — it's about adding quality.", "desc": "He rejects the idea that living to 100 in decline is the goal. Healthspan matters more than lifespan. Healthy at 79 and dead at 80 beats cognitively gone at 75 and alive at 95."}
+      {
+        "title": "LDL-C is the wrong number; apoB is the right one",
+        "desc": "Cardiology still talks about LDL cholesterol; Attia argues apoB (particle count) is mechanistically superior and that clinicians treating LDL-C are treating the shadow, not the object."
+      },
+      {
+        "title": "Start screening colonoscopy at 40, not 45 or 50",
+        "desc": "Guidelines lag the biology. Colon cancer arises from polyps that are 100% detectable and removable \u2014 there is no defensible reason to wait a decade for screening to begin."
+      },
+      {
+        "title": "The amyloid hypothesis of Alzheimer's is oversold",
+        "desc": "Cognitively healthy autopsies show abundant amyloid plaques; anti-amyloid drugs have underperformed expectations. A falsified foundational paper set the field back a decade. The hypothesis is necessary-but-not-sufficient at best."
+      },
+      {
+        "title": "You should not debate nutrition until your exercise house is in order",
+        "desc": "The entire supplement and diet-tribe discourse is a distraction for people who cannot meet basic fitness benchmarks. The effect sizes aren't in the same universe as those from exercise."
+      },
+      {
+        "title": "Air pollution from particulates kills far more people than CO2 will",
+        "desc": "PM 2.5 is the underrated environmental health catastrophe, not greenhouse gases. The clean-energy case is fundamentally a public-health case, not merely a climate case."
+      },
+      {
+        "title": "Medical imaging radiation is under-appreciated by physicians",
+        "desc": "A single CT chest-abdomen-pelvis is 40% of annual radiation allotment. Whole-body MRI is preferred for cancer screening despite ~25% benign findings requiring workup \u2014 the trade is worth it and most clinicians don't do this math."
+      },
+      {
+        "title": "Most office blood pressure readings are wrong",
+        "desc": "Undiagnosed hypertension may be a top-three fixable problem globally, and the measurement technique used in most clinics produces values off by 10\u201315 points. Fourteen-day home monitoring is the standard that should be used."
+      },
+      {
+        "title": "Biological age clocks are not yet trustworthy",
+        "desc": "Physical performance remains the most reliable aging marker. Claims of 'reversing biological age' via methylation clocks are premature at best and marketing at worst \u2014 the clocks lack the validation needed to drive clinical decisions."
+      }
     ],
-
     "does_not_believe": [
-      {"title": "\"Longevity is purely genetic.\"", "desc": "He rejects genetic determinism. Genes matter, but the majority of risk comes from behavior. You're not destined by your DNA."},
-      {"title": "\"You can supplement your way to health.\"", "desc": "There's no magic pill. Supplements might have a 5-10% effect. Exercise has a 50% effect. Behavior is the foundation; supplements are the last 5% of optimization."},
-      {"title": "\"Extreme diets are optimal for everyone.\"", "desc": "He's skeptical of diet ideology — carnivore, vegan, keto as universal prescriptions. Individual variation in metabolism, preferences, and adherence matters. The best diet is one you can sustain."},
-      {"title": "\"Weight loss is about willpower.\"", "desc": "He understands the biology: hunger hormones, insulin signaling, metabolic adaptation. It's not moral failure; it's physiology."},
-      {"title": "\"The model is the moat in health tech.\"", "desc": "AI models are commodities. Longitudinal patient data, behavioral tracking, and personalized risk profiles are the real moats in health technology."},
-      {"title": "\"You can make up for poor sleep with exercise.\"", "desc": "Sleep deprivation undermines training benefits. They interact — and poor sleep wins."},
-      {"title": "\"The standard American diet is fine as long as you exercise.\"", "desc": "Exercise helps, but it doesn't neutralize the metabolic damage from chronic refined carb consumption and ultra-processed foods."}
+      {
+        "title": "That standard lipid panels are adequate for cardiovascular risk assessment",
+        "desc": "Total cholesterol and even LDL-C miss the mechanistically relevant variable \u2014 apoB particle count. Relying on standard panels gives patients and clinicians false confidence while the actual disease process advances undetected."
+      },
+      {
+        "title": "That population dietary guidelines reflect individual optima",
+        "desc": "Dietary pyramids and generic macronutrient recommendations are statistical averages of heterogeneous populations, shaped by politics and convenience. They are almost never the right prescription for a specific person with specific biomarkers and specific goals."
+      },
+      {
+        "title": "That longevity is primarily a pharmaceutical problem",
+        "desc": "No drug has an effect size approaching that of cardiorespiratory fitness. The instinct to medicate first reflects the biases of Medicine 2.0, not the evidence base of what actually extends healthy life."
+      },
+      {
+        "title": "That emotional health is separable from physical longevity",
+        "desc": "Treating mental and emotional wellbeing as a soft add-on misunderstands its role. It is foundational infrastructure \u2014 without it, every other intervention is optimizing an empty vessel."
+      },
+      {
+        "title": "That early cancer detection isn't worth the workup burden",
+        "desc": "The argument that false positives make screening not worth it fails the expected-value calculation. The asymmetry between catching a stage 1 vs. stage 4 cancer is so extreme that accepting workup burden is almost always the rational choice."
+      },
+      {
+        "title": "That 'normal' lab values equal healthy",
+        "desc": "Normal ranges are derived from diseased populations. A 'normal' LDL-C, fasting glucose, or blood pressure in a modern Western cohort is not the same as a healthy or optimal value for a long life."
+      }
     ],
-
     "would_not_say": [
-      {"title": "\"Just eat whatever you want if you exercise.\"", "desc": "He believes exercise is powerful but not unlimited license. Nutrition and exercise are both load-bearing pillars."},
-      {"title": "\"Aging is inevitable decline.\"", "desc": "He'd push back on fatalism. Healthspan is highly modifiable. You can be 80 and vibrant or 60 and declining — it's not just time passing."},
-      {"title": "\"Sleep optimization is luxury.\"", "desc": "It's foundational. This isn't a nice-to-have for the wealthy — it's structural for everyone."},
-      {"title": "\"You don't need screening if you feel fine.\"", "desc": "Asymptomatic disease is the rule, not the exception. You might have atherosclerosis advancing while feeling completely normal."},
-      {"title": "\"Just follow the government dietary guidelines.\"", "desc": "He's critical of population-level nutritional advice that ignores individual metabolic variation and is influenced by food industry lobbying."}
+      {
+        "title": "'Your cholesterol looks fine' without checking apoB",
+        "desc": "Attia would never dismiss cardiovascular risk based on LDL-C alone. Saying 'your cholesterol looks fine' without measuring apoB, Lp(a), and ideally a CAC score is a category error he considers a systemic failure of modern medicine."
+      },
+      {
+        "title": "'Let's wait and see' on apoB reduction in a young patient",
+        "desc": "The entire logic of Medicine 3.0 is that atherosclerosis accumulates silently for decades. Telling a 35-year-old with elevated apoB and family history to revisit in five years is precisely the Medicine 2.0 failure mode he has dedicated his career to replacing."
+      },
+      {
+        "title": "'Just eat less and move more'",
+        "desc": "This reductive framing ignores metabolic heterogeneity, insulin dynamics, muscle preservation imperatives, and the enormous individual variation in how people respond to diet and exercise. It is the nutritional equivalent of 'take two aspirin.'"
+      },
+      {
+        "title": "'Supplements can substitute for lifestyle fundamentals'",
+        "desc": "He would never position any supplement \u2014 fish oil, NMN, metformin, or otherwise \u2014 as a replacement for exercise, sleep, apoB control, and emotional health. The hierarchy is not negotiable in his framework."
+      },
+      {
+        "title": "'You're too young to worry about this'",
+        "desc": "The diseases of aging begin their accumulation in the third decade of life. Telling young patients not to worry about atherosclerosis, metabolic health, or muscle mass is the exact error that produces preventable death 40 years later."
+      },
+      {
+        "title": "'The science is settled on that'",
+        "desc": "Attia holds his own prior positions publicly and updates them \u2014 on fish oil, HRT, metformin, dietary protein recommendations. Claiming settled science shuts down the revision process he considers essential to good medicine."
+      }
     ],
-
     "biography": [
-      {"date": "2001–2006", "role": "Medical Training (Stanford / Johns Hopkins)", "lesson": "Trained as a surgeon with deep analytical rigor. Spent 5 years in general surgery residency. Built the mechanistic thinking that underpins everything."},
-      {"date": "2006–2012", "role": "McKinsey & Company", "lesson": "Left surgery for consulting. Unusual move that gave him frameworks for systematic thinking about complex problems. Learned to think in systems, not just patients."},
-      {"date": "2012–2019", "role": "Founding Attia Medical / Early Practice", "lesson": "Launched a longevity-focused medical practice. Shifted from treating disease to preventing it. Developed the Medicine 3.0 framework through direct patient work."},
-      {"date": "2014–Present", "role": "The Drive Podcast", "lesson": "400+ episodes interviewing the world's leading experts. Became the primary audio source for credible longevity thinking. Built intellectual credibility through rigorous long-form conversations."},
-      {"date": "2023", "role": "Publishing 'Outlive'", "lesson": "Distilled a decade of thinking into a mainstream book. Articulated the Four Horsemen framework. Became a household name in health optimization."},
-      {"date": "2024–Present", "role": "Post-Outlive Evolution", "lesson": "Increasingly vocal about emotional health and trauma resolution. Integrating psychological work into his longevity framework. Recognizing that fixing the body without fixing the mind is incomplete."}
+      {
+        "date": "Early career",
+        "role": "Surgical oncology training at Johns Hopkins",
+        "lesson": "Watching patients arrive with stage 4 diagnoses that could have been caught years earlier crystallized his conviction that medicine's obsession with treatment over prevention was a moral failure, not just a strategic one."
+      },
+      {
+        "date": "Career pivot",
+        "role": "Left surgery to focus on longevity medicine",
+        "lesson": "The realization that the most impactful interventions happened decades before any surgeon's involvement forced him to abandon a prestigious surgical career \u2014 a decision that required holding effect-size reasoning above status and sunk cost."
+      },
+      {
+        "date": "2017",
+        "role": "Personal mental health crisis",
+        "lesson": "A rock-bottom moment revealed that optimizing every physical and metabolic biomarker while neglecting emotional health produced a technically healthy but functionally broken life. This became the origin of his fifth pillar and his public willingness to discuss psychological work."
+      },
+      {
+        "date": "2020",
+        "role": "Second major personal reckoning",
+        "lesson": "A second crisis deepened his understanding that the 'Bobby Knight' inner monologue \u2014 relentless self-criticism and emotional unavailability \u2014 was not a performance asset but a liability in every domain that mattered, including parenting and marriage."
+      },
+      {
+        "date": "Ongoing",
+        "role": "Founder, Early Medical; host, The Drive podcast",
+        "lesson": "Building a practice and public platform around Medicine 3.0 required accepting that going against standard-of-care guidelines on apoB targets, screening ages, and exercise prescriptions would generate institutional friction \u2014 and that evidence asymmetry justified the friction."
+      },
+      {
+        "date": "Outlive publication (2023)",
+        "role": "Author",
+        "lesson": "Translating a clinical framework into a book forced him to confront which principles were robust enough to communicate to a general audience without a physician intermediary \u2014 a useful filter for distinguishing first principles from clinical nuance."
+      }
     ],
-
-    "skills": [
-      {"name": "advise", "title": "Strategic Counsel", "desc": "Get advice on health decisions grounded in this brain's frameworks.", "example": "/advise \"I'm 55, overweight, and sedentary. What's my first move?\""},
-      {"name": "teach", "title": "Learn Through Their Lens", "desc": "Explain a health concept using this brain's actual vocabulary and mental models.", "example": "/teach \"Explain the Four Horsemen and why they matter.\""},
-      {"name": "debate", "title": "Steel-Man Both Sides", "desc": "Present a health position or pit two ideas against each other.", "example": "/debate \"Is muscle or cardio more important for longevity?\""},
-      {"name": "connect", "title": "Bridge Ideas", "desc": "Find unexpected connections between health topics or synthesize multiple ideas.", "example": "/connect \"How does continuous glucose monitoring inform training strategy?\""},
-      {"name": "evolve", "title": "Intellectual Evolution", "desc": "Trace how this brain's thinking on a topic developed over time.", "example": "/evolve \"How has Peter's thinking on statins and pharmacology evolved?\""},
-      {"name": "surprise", "title": "Show Me Something Unexpected", "desc": "Random high-quality atom for daily inspiration.", "example": "/surprise"},
-      {"name": "coach", "title": "Socratic Questions", "desc": "No answers — just the questions Peter would ask you about your health.", "example": "/coach \"I'm 40 and want to start optimizing for longevity.\""},
-      {"name": "predict", "title": "Implication Chains", "desc": "Trace the second and third-order effects of a health trend.", "example": "/predict \"What happens to healthcare if everyone has continuous biomarker monitoring?\""}
-    ]
+    "skills": {}
   },
   "website": {
     "tagline": "Longevity science, health optimization, evidence-based medicine",
     "bio": "Physician focused on the applied science of longevity. Host of The Drive podcast (300+ episodes), author of Outlive. Translates complex medical research into actionable frameworks.",
-    "topics": ["Longevity", "Exercise", "Nutrition", "Sleep", "Mental Health"],
+    "topics": [
+      "Longevity",
+      "Exercise",
+      "Nutrition",
+      "Sleep",
+      "Mental Health"
+    ],
     "price": 29
   }
 }
