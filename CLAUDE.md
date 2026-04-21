@@ -87,10 +87,10 @@ brainsfor/
 ## Key Dependencies
 
 - **Supabase project:** `uzediwokyshjbsymevtp` (same as PAOS)
-- **Tables (13 brains live, per-brain schema):**
-  - `<slug>_atoms` — e.g. `scott_belsky_atoms` (284 atoms), `dario_amodei_atoms` (353), `peter_zeihan_atoms` (362 in DB / 460 in pack — see note below), `paul_graham_atoms` (213), `steve_jobs_atoms` (170), etc. Columns: `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
-  - `<slug>_connections` — typed relationships (supports, contradicts, extends, related). Largest: `steve_jobs_connections` (792), `gary_vee_connections` (505), `dario_amodei_connections` (502), `scott_belsky_connections` (430)
-  - `brain_metadata` — 13 rows, one per brain
+- **Tables (15 brains live, per-brain schema):**
+  - `<slug>_atoms` — e.g. `scott_belsky_atoms` (284 atoms), `dario_amodei_atoms` (353), `peter_zeihan_atoms` (362 in DB / 460 in pack — see note below), `oprah_winfrey_atoms` (333), `brene_brown_atoms` (283), `paul_graham_atoms` (213), `steve_jobs_atoms` (170), etc. Columns: `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
+  - `<slug>_connections` — typed relationships (supports, contradicts, extends, related). Largest: `steve_jobs_connections` (792), `gary_vee_connections` (505), `dario_amodei_connections` (502), `scott_belsky_connections` (430), `oprah_winfrey_connections` (355), `brene_brown_connections` (321)
+  - `brain_metadata` — 15 rows, one per brain
   - `cross_connections` — 17 rows, Rob ↔ brain cross-brain links
   - `rob_atoms` / `rob_connections` — Rob's personal knowledge graph (225 / 162)
   - `scott_belsky_enrichment_log` — connection enrichment run history (mode, counts, duration, errors). Legacy `belsky_enrichment_log` table still exists from pre-rename but is unused.
@@ -310,6 +310,8 @@ python3 scripts/audit-brains.py --remediate            # Generate runnable fix s
 
 **When to run:** After any export, before deploy, after adding a new brain.
 
+**Behavioral evals (Phase 1 — planned, not yet built):** The current audit is a deterministic linter (structure, schema, coverage). It doesn't test whether a brain actually answers like the thinker. A behavioral eval harness is specced in [`projects/brain-evals-phase1.md`](../projects/brain-evals-phase1.md) — 20 prompts per brain, Haiku judge, 0-100 behavioral score, adversarial prompts derived from each brain's `would_not_say` / `does_not_believe` synthesis sections. Integrates with `audit-brains.py --with-behavioral`. Phase 2 (public Quality Score on brainsforfree.com + monthly regression) is in `~/rob-ai/ideas/OPPORTUNITIES.md`.
+
 ### Adding a New Brain
 
 **Automated (recommended):** One command, zero babysitting.
@@ -359,6 +361,7 @@ Both paths run the same 6 phases (source discovery → scaffolding → ingestion
 - `personas.md` — 7 customer personas with JTBD, objections, channels, WTP, killer features. Stack-ranked by priority.
 - `IMPROVEMENTS.md` — Full improvement backlog from April 2026 critique panel.
 - `business-plan.md` — Strategy doc (Greg Isenberg style).
+- [`~/rob-ai/projects/brain-evals-phase1.md`](../projects/brain-evals-phase1.md) — Spec for the behavioral eval harness (20 prompts × 15 brains, Haiku judge, constitutional constraints). Not yet built — target 2026-05-04.
 
 ## Remaining Questions
 

@@ -8,10 +8,10 @@ Candidates for future brain packs, prioritized and tracked. This is the single s
 
 | # | Name | Slug | Category | Source Richness | Rationale | Status |
 |---|------|------|----------|-----------------|-----------|--------|
-| 1 | Brené Brown | `brene-brown` | Leadership / Vulnerability | **Very High** — 5 books, TED talks (60M+ views), Unlocking Us podcast, Netflix special | Massive frameworks-per-page density. "Dare to Lead" is basically a brain pack already. Pairs perfectly in `/debate` vs Gary Vee on hustle vs. sustainable leadership. Huge audience overlap with BrainsFor buyers. | Backlog |
-| 2 | Annie Duke | `annie-duke` | Decision Science | **High** — "Thinking in Bets," "Quit," "How to Decide," podcast appearances, keynotes | Pure mental-model gold. Fills a gap no current brain covers: rigorous decision-making under uncertainty. `/predict` and `/coach` would be killer with her frameworks. | Backlog |
+| 1 | Brené Brown | `brene-brown` | Leadership / Vulnerability | **Very High** — 5 books, TED talks (60M+ views), Unlocking Us podcast, Netflix special | Massive frameworks-per-page density. "Dare to Lead" is basically a brain pack already. Pairs perfectly in `/debate` vs Gary Vee on hustle vs. sustainable leadership. Huge audience overlap with BrainsFor buyers. | **✅ Built (Live)** — 283 atoms / 321 connections |
+| 2 | Annie Duke | `annie-duke` | Decision Science | **High** — "Thinking in Bets," "Quit," "How to Decide," podcast appearances, keynotes | Pure mental-model gold. Fills a gap no current brain covers: rigorous decision-making under uncertainty. `/predict` and `/coach` would be killer with her frameworks. | **🔄 Building** — scaffolded via remote build (Apr 18); needs phase 2-5 completion |
 | 3 | Kara Swisher | `kara-swisher` | Tech / Media / Power | **Very High** — "Burn Book," Pivot podcast (hundreds of episodes), Recode Decode archive, columns, interviews | Nobody alive has sharper takes on tech power dynamics. Enormous interview archive = high atom density. Most fun `/debate` partner in the catalog. Less frameworks, more provocation — a different flavor. | Backlog |
-| 4 | Oprah Winfrey | `oprah` | Media / Leadership / Influence | **Very High** — decades of show transcripts, "The Path Made Clear," "What I Know For Sure," Super Soul Sunday, masterclass | Thinking on audience intuition, brand authenticity, and scaling influence is unmatched. The interview archive alone could generate 500+ atoms. `/teach` and `/evolve` would be incredible — her thinking has visibly shifted across eras. | Backlog |
+| 4 | Oprah Winfrey | `oprah-winfrey` | Media / Leadership / Influence | **Very High** — decades of show transcripts, "The Path Made Clear," "What I Know For Sure," Super Soul Sunday, masterclass | Thinking on audience intuition, brand authenticity, and scaling influence is unmatched. The interview archive alone could generate 500+ atoms. `/teach` and `/evolve` would be incredible — her thinking has visibly shifted across eras. | **✅ Built (Live)** — 333 atoms / 355 connections |
 | 5 | Sheryl Sandberg | `sheryl-sandberg` | Operations / Leadership | **High** — "Lean In," "Option B," extensive keynotes, interviews, Facebook/Meta operational history | Polarizing but framework-rich. Operational thinking on scaling orgs, decision velocity, and navigating power at Google/Meta is underrated. Pairs well in `/debate` vs Paul Graham on running companies at scale. | Backlog |
 | 6 | Reshma Saujani | `reshma-saujani` | Tech / Movement Building | **Medium** — "Pay Up," "Brave Not Perfect," TED talk (5M+ views), Girls Who Code story, keynotes | Builder-meets-movement angle: how to turn a thesis into an institution. Strong on tech + equity + scaling impact. Less raw content than others but highly distinctive perspective. | Backlog |
 | 7 | Simone de Beauvoir | `simone-de-beauvoir` | Philosophy / Existentialism | **High** — "The Second Sex," "The Ethics of Ambiguity," novels, letters, interviews, biographies | The OG. Foundational thinking on freedom, identity, and what it means to build a life on your own terms. `/teach` and `/evolve` would be extraordinary — her ideas have been stress-tested for 75 years. Public domain upside. Different era = different flavor in `/debate`. | Backlog |
@@ -24,7 +24,9 @@ Candidates for future brain packs, prioritized and tracked. This is the single s
 
 ## Priority Notes
 
-**Top 3 to build first:** Brené Brown, Annie Duke, Kara Swisher. Highest source richness, strongest differentiation from current (all-male) lineup, clearest audience overlap.
+**Status update (2026-04-20):** Brené Brown ✅ Built (283/321), Oprah Winfrey ✅ Built (333/355), Annie Duke 🔄 Building (scaffolded — needs phase 2-5 completion).
+
+**Next 3 to build:** Kara Swisher, Sheryl Sandberg, Reshma Saujani. Continues the gender-balance push and adds tech power, operations, and movement-building flavors.
 
 **Source availability considerations:**
 - De Beauvoir and Hopper have more limited primary sources but benefit from extensive secondary analysis and public domain material.
@@ -65,7 +67,8 @@ See `templates/README.dev.md` for the full step-by-step guide. Quick checklist:
 
 ## Remaining Questions
 
-- [ ] Which brain to build first? (Recommendation: Brené Brown — highest source density + audience fit)
+- [x] Which brain to build first? **Built:** Brené Brown (Apr 19) and Oprah Winfrey (Apr 20). Annie Duke scaffolded (Apr 18) but build incomplete.
+- [ ] Which brain to build next? (Recommendation: Kara Swisher — Pivot archive density + sharp differentiation)
 - [ ] Licensing considerations for each candidate's content?
 - [ ] Should we prioritize living thinkers (who could eventually "claim" their brain) over historical figures?
 - [ ] What's the minimum viable source corpus for a brain to feel complete? (Current hypothesis: 75-100 atoms)
@@ -74,4 +77,4 @@ See `templates/README.dev.md` for the full step-by-step guide. Quick checklist:
 ---
 
 *Created: 2026-04-15*
-*Last updated: 2026-04-15*
+*Last updated: 2026-04-20 — marked Brené Brown and Oprah Winfrey as Built, Annie Duke as Building*
