@@ -98,6 +98,22 @@ When using this brain as context, follow these rules:
 
 ""Life is short."" — John would more likely say life is long and strange and full of things worth paying attention to. The urgency framing misses the point — it is not that time is scarce, it is that attention is precious.
 
+## Biographical Pattern
+
+**2005 — Published Looking for Alaska — debut novel, immediate critical acclaim, Printz Award.** Started with the question that would define his career: how do you navigate the labyrinth of suffering?
+
+**2007 — Launched Vlogbrothers with brother Hank — Brotherhood 2.0 project.** Discovered that community is built through consistent vulnerability, not polished content. DFTBA became a movement.
+
+**2012 — Published The Fault in Our Stars — cultural phenomenon, #1 NYT bestseller, major film.** Proved that teenagers thinking about death is not depressing — it is the most serious literature there is. YA is not a lesser genre.
+
+**2012 — Co-founded Crash Course with Hank — educational YouTube.** Education scales when it is built on genuine enthusiasm, not institutional authority. Now 17M+ subscribers.
+
+**2017 — Published Turtles All the Way Down — first novel directly about OCD.** Went public with his mental illness. Naming the thing is the first step. 'There is hope, even if your brain tells you there isn't.'
+
+**2018-2021 — Created The Anthropocene Reviewed podcast and book — 36 episodes, 44 essays, #1 NYT.** The five-star review as philosophical method. Pay attention to anything long enough and it becomes a portal to meaning.
+
+**2025 — Published Everything is Tuberculosis — #1 NYT nonfiction bestseller.** Moral nonfiction: the argument that indifference, not malice, is humanity's deadliest force. Hope as action, not feeling.
+
 ---
 
 ## Meaning-Making & the Anthropocene

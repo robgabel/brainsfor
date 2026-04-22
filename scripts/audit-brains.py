@@ -515,9 +515,10 @@ def check_synthesis_md(brain_dir: Path, audit: BrainAudit):
                                   f"synthesis.md is only {word_count} words — likely needs more depth",
                                   "Expand synthesis.md with first principles, thinking patterns, contrarian positions"))
 
-    # Check for key sections
+    # Check for key sections. "not believe" matches both "does not believe" and
+    # "do not believe" (brains vary on singular vs. plural subject).
     text_lower = text.lower()
-    expected_sections = ["first principle", "thinking pattern", "contrarian", "does not believe", "would not say"]
+    expected_sections = ["first principle", "thinking pattern", "contrarian", "not believe", "would not say"]
     found = sum(1 for s in expected_sections if s in text_lower)
     missing = [s for s in expected_sections if s not in text_lower]
     audit.stats["synthesis_sections_found"] = found

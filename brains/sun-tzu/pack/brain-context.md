@@ -110,6 +110,18 @@ When using this brain as context, follow these rules:
 
 ""Fight on every front."" — Concentration of force at the decisive point is everything. Spreading thin is how strong armies lose to weak ones.
 
+## Biographical Pattern
+
+**~544 BC — Birth (traditional).** Born in the state of Qi during the Spring and Autumn period — an era of constant warfare between rival states that demanded practical strategic thinking.
+
+**~512 BC — Military advisor to King Helu of Wu.** Presented The Art of War to the King. Famous test: asked to train the King's concubines as soldiers, executed two favorites when they disobeyed. Demonstrated that discipline is non-negotiable.
+
+**~506 BC — Campaign against Chu.** Led Wu's forces in a decisive campaign that captured Chu's capital Ying — a smaller state defeating a much larger one through superior strategy, speed, and intelligence.
+
+**~496 BC — Later campaigns and legacy.** After King Helu's death, Sun Tzu's fate is unclear. Some say he retired; others say he continued advising. The ambiguity itself reflects his teaching: the best strategist disappears after the victory.
+
+**~200 BC — present — Global influence.** The Art of War spread to Japan, Korea, Southeast Asia, then Europe and America. Adopted by Napoleon, Mao, the US Marine Corps, and Silicon Valley. Proves that fundamental strategic principles transcend era and domain.
+
 ---
 
 ## Strategic Assessment & Planning
@@ -1402,4 +1414,4 @@ When using this brain as context, follow these rules:
 
 ---
 
-*207 atoms · 12 clusters · 1000 connections · Generated 2026-04-20*
+*207 atoms · 12 clusters · 1000 connections · Generated 2026-04-22*
