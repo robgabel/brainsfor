@@ -15,7 +15,7 @@
   "topic_examples": "First principles thinking, sustainable energy, space exploration, neural interfaces, manufacturing, AI safety, Mars colonization, electric vehicles",
   "example_topic": "first principles thinking",
   "edition_count": 0,
-  "date_range": "2002 \u2014 Present",
+  "date_range": "2002 — Present",
   "quick_start_prompt": "I'm building a hardware startup but struggling with manufacturing costs. How would Elon approach this problem?",
   "skill_examples": {
     "advise": "Should I vertically integrate my supply chain or work with partners?",
@@ -23,13 +23,13 @@
     "debate": "Is Mars colonization worth the investment versus fixing Earth's problems?",
     "connect": "Connect sustainable energy to space exploration.",
     "evolve": "How does Elon's thinking on AI safety evolve over time?",
-    "surprise": "No input needed \u2014 just run it.",
+    "surprise": "No input needed — just run it.",
     "coach": "I'm deciding whether to pivot from software to hardware. What should I be asking myself?",
     "predict": "What happens to the auto industry when full self-driving is solved?"
   },
   "workflow_examples": {
-    "learning": "New to first principles thinking? Teach \u2192 evolve \u2192 coach to build deep understanding.",
-    "research": "Analyzing space industry? Predict the implications \u2192 debate the forecast \u2192 advise on action."
+    "learning": "New to first principles thinking? Teach → evolve → coach to build deep understanding.",
+    "research": "Analyzing space industry? Predict the implications → debate the forecast → advise on action."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -116,7 +116,7 @@
     "first_principles": [
       {
         "title": "Physics is the only law; everything else is a recommendation",
-        "desc": "Physical constraints like thermodynamics and conservation of energy are immutable, but human conventions \u2014 regulations, industry practices, 'best practices' \u2014 are just accumulated assumptions waiting to be challenged."
+        "desc": "Physical constraints like thermodynamics and conservation of energy are immutable, but human conventions — regulations, industry practices, 'best practices' — are just accumulated assumptions waiting to be challenged."
       },
       {
         "title": "The machine that builds the machine matters more than the machine",
@@ -146,7 +146,7 @@
       },
       {
         "name": "Reasoning from physics up",
-        "desc": "Rather than accepting industry practices, break problems down to fundamental physical laws and build solutions from there. Rockets aren't inherently expensive \u2014 they're just aluminum tubes with engines that we've been building wrong."
+        "desc": "Rather than accepting industry practices, break problems down to fundamental physical laws and build solutions from there. Rockets aren't inherently expensive — they're just aluminum tubes with engines that we've been building wrong."
       },
       {
         "name": "Manufacturing as product",
@@ -158,7 +158,7 @@
       },
       {
         "name": "Rate of rate thinking",
-        "desc": "Focus not just on velocity but acceleration \u2014 how fast is the rate of improvement improving? The second derivative matters more than the first."
+        "desc": "Focus not just on velocity but acceleration — how fast is the rate of improvement improving? The second derivative matters more than the first."
       },
       {
         "name": "Deletion before addition",
@@ -278,7 +278,56 @@
         "lesson": "Applied rapid iteration and deletion principles to social media platform and organizational structure"
       }
     ],
-    "skills": []
+    "skills": [
+      {
+        "name": "advise",
+        "title": "Strategic Counsel",
+        "desc": "Recommendations grounded in Elon's frameworks",
+        "example": "Should I vertically integrate my supply chain or work with partners?"
+      },
+      {
+        "name": "teach",
+        "title": "Explanations",
+        "desc": "Explain concepts through Elon's lens",
+        "example": "Explain first principles thinking to me."
+      },
+      {
+        "name": "debate",
+        "title": "Counterarguments",
+        "desc": "Steel-man positions from Elon's worldview",
+        "example": "Is Mars colonization worth the investment versus fixing Earth's problems?"
+      },
+      {
+        "name": "connect",
+        "title": "Bridges",
+        "desc": "Find unexpected links between ideas using Elon's thinking",
+        "example": "Connect sustainable energy to space exploration."
+      },
+      {
+        "name": "evolve",
+        "title": "Timeline of Thought",
+        "desc": "Trace how Elon's thinking changed over time",
+        "example": "How does Elon's thinking on AI safety evolve over time?"
+      },
+      {
+        "name": "surprise",
+        "title": "Serendipity",
+        "desc": "Surface a high-confidence atom from Elon you haven't seen",
+        "example": "No input needed — just run it."
+      },
+      {
+        "name": "coach",
+        "title": "Socratic Questions",
+        "desc": "Questions to ask yourself, from Elon's perspective",
+        "example": "I'm deciding whether to pivot from software to hardware. What should I be asking myself?"
+      },
+      {
+        "name": "predict",
+        "title": "Implication Chains",
+        "desc": "Cascade second and third-order effects from Elon's worldview",
+        "example": "What happens to the auto industry when full self-driving is solved?"
+      }
+    ]
   },
   "website": {
     "tagline": "Engineering mindset, sustainable future, multiplanetary vision",
