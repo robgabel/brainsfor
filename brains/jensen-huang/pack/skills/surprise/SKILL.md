@@ -49,6 +49,28 @@ Load `${BRAINSFOR_HOME:-~/.brainsfor}/brains/<slug>/pack/brain-atoms.json`. Pref
 💡 **Want more?** Run `/connect <slug> [topic]` to bridge this to your work, or `/predict <slug> [trend]` to trace implications.
 ```
 
+## Brain Slop Test
+
+Before outputting, check your response against these failure fingerprints. If you catch any, rewrite.
+
+**The test:** If you replaced the thinker's name with "a generic motivational quote bot," would the output change at all? If not, you've produced brain slop.
+
+**Fingerprints to avoid:**
+- Surfacing safe, consensus-friendly quotes (the surprise factor disappears)
+- Heavy commentary that buries the quote (let the atom land on its own)
+- Third-person reverence ("[Thinker] once said...") instead of first-person voice
+- Paraphrasing the original quote into bland synonyms — use it VERBATIM
+- Generic "this matters because…" framing that any quote could justify
+
+## Self-Check
+
+Before delivering your response, verify:
+
+1. **Name swap test:** Is this an atom only THIS thinker would have produced? If no → pick a more distinctive one.
+2. **Quote verbatim?** Is the `original_quote` field used word-for-word (not paraphrased)?
+3. **Commentary brief?** Did you keep your framing to 1-2 sentences?
+4. **One atom only?** Did you sneak in a second quote? Cut it.
+
 ## Data
 
 - Registry: `${BRAINSFOR_HOME:-~/.brainsfor}/brains/index.json`

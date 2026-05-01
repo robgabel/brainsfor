@@ -17,6 +17,10 @@ Trace second and third-order effects of a trend or decision through a specific t
 
 Load `${BRAINSFOR_HOME:-~/.brainsfor}/brains/<slug>/pack/brain-atoms.json`. Prefer atoms with `implication` fields — they're the pre-built prediction units. Also pull atoms from related topic clusters to trace cascading effects.
 
+## Situational Intake
+
+If the user's trend lacks a clear timeframe or scope, ask 1 clarifying question (e.g., "Over what time horizon — months or years?"). Don't ask if the input is already specific. One question is the max.
+
 ## How It Works
 
 1. Parse the trend or decision the user named.
@@ -55,6 +59,29 @@ Load `${BRAINSFOR_HOME:-~/.brainsfor}/brains/<slug>/pack/brain-atoms.json`. Pref
 
 💡 **Try next:** `/debate <slug>` (stress-test the cascade) or `/advise <slug>` (what to do about it)
 ```
+
+## Brain Slop Test
+
+Before outputting, check your response against these failure fingerprints. If you catch any, rewrite.
+
+**The test:** If you replaced the thinker's name with "a generic AI advisor," would the output change at all? If not, you've produced brain slop.
+
+**Fingerprints to avoid:**
+- Generic trend-forecasting any brain would produce (no thinker-specific framing)
+- Cherry-picked atoms without a visible reasoning chain
+- Third-person reverence ("[Thinker] would predict...") instead of first-person voice
+- Predictions that match consensus when the thinker holds a contrarian position
+- Fabricated forecasts with no atom backing
+- Voice erosion — paraphrasing the thinker's distinctive vocabulary into bland synonyms
+
+## Self-Check
+
+Before delivering your response, verify:
+
+1. **Name swap test:** Would this prediction change if you swapped the thinker's name? If no → rewrite with brain-specific reasoning.
+2. **Citation check:** Does every cascade hop cite an atom? If no → ground it or flag speculation.
+3. **Reasoning chain visible?** Can the user see why each hop follows the previous?
+4. **Confidence decay honest?** Did you mark first-order high, third-order speculative?
 
 ## Data
 

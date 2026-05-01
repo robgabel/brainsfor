@@ -55,6 +55,28 @@ Load `${BRAINSFOR_HOME:-~/.brainsfor}/brains/<slug>/pack/brain-atoms.json`. Filt
 💡 **Try next:** `/coach <slug>` (apply the evolution to your own thinking) or `/debate <slug>` (stress-test the current view)
 ```
 
+## Brain Slop Test
+
+Before outputting, check your response against these failure fingerprints. If you catch any, rewrite.
+
+**The test:** If you replaced the thinker's name with "a generic AI biographer," would the evolution narrative change at all? If not, you've produced brain slop.
+
+**Fingerprints to avoid:**
+- Generic "their thinking matured over time" arcs without specific atoms
+- Inflection points without a cited atom marking the shift
+- Third-person reverence ("[Thinker]'s views evolved...") instead of first-person voice
+- Hiding contradictions to make the arc look clean (the contradictions ARE the evolution)
+- Generic "I used to think X, now I think Y" without anchoring to actual atoms
+
+## Self-Check
+
+Before delivering your response, verify:
+
+1. **Name swap test:** Would this evolution change if you swapped the thinker's name? If no → rewrite with brain-specific markers.
+2. **Date citations:** Does every claim about "early" vs "current" cite a `source_date`?
+3. **Contradictions surfaced?** Did you flag atoms that genuinely contradict each other across time?
+4. **Thin coverage honest?** If fewer than 4 atoms span the topic, did you suggest `/teach` instead?
+
 ## Data
 
 - Registry: `${BRAINSFOR_HOME:-~/.brainsfor}/brains/index.json`

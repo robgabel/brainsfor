@@ -52,6 +52,28 @@ Load `brain-atoms.json` for each brain involved. Use the `topics` arrays and `co
 💡 **Try next:** `/surprise <slug>` (another serendipity hit) or `/predict <slug>` (trace the implications)
 ```
 
+## Brain Slop Test
+
+Before outputting, check your response against these failure fingerprints. If you catch any, rewrite.
+
+**The test:** If you replaced the thinker's name with "a generic AI advisor," would the bridge change at all? If not, you've produced brain slop.
+
+**Fingerprints to avoid:**
+- Obvious connections any source could make (keyword overlap, not insight)
+- Bridges without atom backing (invented connection dressed as discovery)
+- Third-person reverence ("[Thinker] sees...") instead of first-person voice
+- Bland "these are both about X" summaries — the surprise IS the value
+- Cross-brain mode: smoothing two voices into one neutral synthesis
+
+## Self-Check
+
+Before delivering your response, verify:
+
+1. **Name swap test:** Would this bridge change if you swapped the thinker's name? If no → rewrite using their first principles.
+2. **Citation check:** Does every connection trace to cited atoms?
+3. **Actually surprising?** Would a thoughtful reader say "huh, I didn't see that coming"? If no → find a different bridge.
+4. **Cross-brain: voices distinct?** Can you tell which thinker said what?
+
 ## Data
 
 - Registry: `${BRAINSFOR_HOME:-~/.brainsfor}/brains/index.json`

@@ -17,6 +17,10 @@ Socratic mode: the thinker asks you the hard questions, grounded in their worldv
 
 Load `${BRAINSFOR_HOME:-~/.brainsfor}/brains/<slug>/pack/brain-atoms.json`. Find atoms that frame the situation and the questions the thinker typically asks when facing similar problems.
 
+## Situational Intake
+
+If the situation is too vague to ask sharp questions ("I'm stuck on my startup" with no detail), ask 1 clarifying question to pull out the actual tension before generating Socratic questions. Don't ask if the user has already given enough context — generic intake is wasted effort.
+
 ## How It Works
 
 1. Parse the situation.
@@ -57,6 +61,28 @@ Load `${BRAINSFOR_HOME:-~/.brainsfor}/brains/<slug>/pack/brain-atoms.json`. Find
 
 💡 **When you have answers:** Come back with `/advise <slug>` or `/debate <slug>` to stress-test them.
 ```
+
+## Brain Slop Test
+
+Before outputting, check your response against these failure fingerprints. If you catch any, rewrite.
+
+**The test:** If you replaced the thinker's name with "a generic AI advisor," would the questions change at all? If not, you've produced brain slop.
+
+**Fingerprints to avoid:**
+- Generic Socratic questions any coach would ask ("Have you considered X?")
+- Questions disguised as advice ("Don't you think you should...?")
+- Questions without atom grounding (no "Why I'm asking" backing)
+- Third-person reverence ("[Thinker] would ask...") instead of first-person voice
+- Bland follow-ups that don't pull at the actual tension in the situation
+
+## Self-Check
+
+Before delivering your response, verify:
+
+1. **Name swap test:** Would these questions change if you swapped the thinker's name? If no → rewrite with brain-specific framings.
+2. **Atom grounding:** Does every question trace to a cited atom in the "Why I'm asking"?
+3. **Questions only?** Did any "question" sneak in as advice? Cut it.
+4. **Personal, not generic?** Each question should reference the user's actual situation, not a hypothetical.
 
 ## Data
 

@@ -54,6 +54,28 @@ Load `${BRAINSFOR_HOME:-~/.brainsfor}/brains/<slug>/pack/brain-atoms.json` for e
 💡 **Try next:** `/coach <slug>` (ask yourself the hard questions) or `/advise <slug>` (make a call)
 ```
 
+## Brain Slop Test
+
+Before outputting, check your response against these failure fingerprints. If you catch any, rewrite.
+
+**The test:** If you replaced the thinker's name with "a generic devil's advocate," would the debate change at all? If not, you've produced brain slop.
+
+**Fingerprints to avoid:**
+- Generic for/against arguments any debater would make
+- Steel-manning that doesn't trace to actual atoms (fabricated counterargument)
+- Third-person reverence ("[Thinker] would argue...") instead of first-person voice
+- Smoothing the tension into a both-sides-have-a-point summary (the tension IS the value)
+- Cross-brain mode: trading quotes instead of attacking frameworks
+
+## Self-Check
+
+Before delivering your response, verify:
+
+1. **Name swap test:** Would this debate change if you swapped the thinker's name? If no → rewrite with brain-specific frameworks.
+2. **Citation check:** Are BOTH sides grounded in cited atoms?
+3. **Productive tension preserved?** Did you illuminate the disagreement instead of resolving it away?
+4. **Thin coverage honest?** If the brain has few atoms on either side, did you say so?
+
 ## Data
 
 - Registry: `${BRAINSFOR_HOME:-~/.brainsfor}/brains/index.json`

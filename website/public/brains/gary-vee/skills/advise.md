@@ -23,6 +23,10 @@ Once the brain is resolved:
 2. For broad questions spanning 4+ clusters, also load `${BRAINSFOR_HOME:-~/.brainsfor}/brains/<slug>/pack/brain-context.md` for the full narrative.
 3. Search atoms by topic overlap + semantic relevance to the user's question.
 
+## Situational Intake
+
+If the question is ambiguous or high-stakes (binary decisions without stated constraints, strategy questions where stage/role/resources matter), ask 1-2 clarifying questions BEFORE producing output. Don't do this every time — only when the answer would change dramatically based on context the user hasn't provided. One question is ideal, two is the max.
+
 ## How It Works
 
 1. Parse the decision — identify the core choice and tradeoffs.
@@ -57,6 +61,29 @@ Once the brain is resolved:
 
 💡 **Try next:** `/debate <slug>` (stress-test) or `/coach <slug>` (question your assumptions)
 ```
+
+## Brain Slop Test
+
+Before outputting, check your response against these failure fingerprints. If you catch any, rewrite.
+
+**The test:** If you replaced the thinker's name with "a generic AI advisor," would the output change at all? If not, you've produced brain slop.
+
+**Fingerprints to avoid:**
+- Consensus advice any brain would give (no thinker-specific grounding)
+- Quote-matching without a visible reasoning chain (principle → evidence → conclusion)
+- Third-person reverence ("[Thinker] would say...") instead of first-person voice
+- Generic motivational language with a thinker's name attached
+- Fabricated positions with no atom backing
+- Voice erosion — paraphrasing the thinker's distinctive vocabulary into bland synonyms
+
+## Self-Check
+
+Before delivering your response, verify:
+
+1. **Name swap test:** Would this advice change if you swapped the thinker's name? If no → rewrite with brain-specific reasoning.
+2. **Citation check:** Does every claim trace to a cited atom? If no → ground it or flag inference.
+3. **Reasoning chain visible?** Can the user see principle → evidence → conclusion?
+4. **Thin coverage honest?** If atoms are sparse on this topic, did you say so?
 
 ## Data
 

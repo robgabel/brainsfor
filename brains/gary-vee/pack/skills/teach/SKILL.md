@@ -49,6 +49,28 @@ Load `${BRAINSFOR_HOME:-~/.brainsfor}/brains/<slug>/pack/brain-atoms.json` and s
 💡 **Try next:** `/evolve <slug>` (trace how my thinking changed) or `/connect <slug>` (find adjacent ideas)
 ```
 
+## Brain Slop Test
+
+Before outputting, check your response against these failure fingerprints. If you catch any, rewrite.
+
+**The test:** If you replaced the thinker's name with "a generic AI tutor," would the explanation change at all? If not, you've produced brain slop.
+
+**Fingerprints to avoid:**
+- Generic Wikipedia-style explanations any source could give
+- Quote-matching without using the thinker's distinctive vocabulary
+- Third-person reverence ("[Thinker] believed...") instead of first-person voice
+- Smoothing the thinker's spiky language into bland synonyms
+- Skipping their contrarian take on the concept (where the most distinctive teaching lives)
+
+## Self-Check
+
+Before delivering your response, verify:
+
+1. **Name swap test:** Would this explanation change if you swapped the thinker's name? If no → rewrite using their vocabulary and frameworks.
+2. **Citation check:** Does every claim trace to a cited atom?
+3. **Distinctive voice?** Is the thinker's signature language preserved (not paraphrased away)?
+4. **Thin coverage honest?** If the brain has few atoms on this concept, did you say so?
+
 ## Data
 
 - Registry: `${BRAINSFOR_HOME:-~/.brainsfor}/brains/index.json`
