@@ -30,7 +30,7 @@ export function BrainCard({ brain }: { brain: Brain }) {
         {/* Name + source */}
         <h3 className="font-display text-[22px] font-normal tracking-tight text-deep-ink leading-tight flex items-center gap-2">
           {brain.name}
-          {brain.badge && (
+          {brain.badge && isLive && (
             <span className="inline-flex items-center rounded-full bg-gradient-to-r from-brain-indigo to-[#8b5cf6] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">
               {brain.badge}
             </span>

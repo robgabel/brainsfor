@@ -48,7 +48,7 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
                 >
                   {isLive ? "Live" : "Building"}
                 </span>
-                {brain.badge && (
+                {brain.badge && isLive && (
                   <span className="inline-flex items-center rounded-full bg-gradient-to-r from-brain-indigo to-[#8b5cf6] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">
                     {brain.badge}
                   </span>
@@ -84,22 +84,33 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
 
             {/* CTA card */}
             <div className="w-full rounded-xl border border-border-indigo bg-white p-6 shadow-brain-elevated md:w-[320px]">
-              <GetBrainButton brainSlug={brain.slug} />
+              {isLive ? (
+                <>
+                  <GetBrainButton brainSlug={brain.slug} />
 
-              {isLive && (
-                <div className="mt-4">
-                  <InstallCommand
-                    command={`npx skills add brainsfor/${brain.slug}`}
-                    size="sm"
-                  />
-                </div>
+                  <div className="mt-4">
+                    <InstallCommand
+                      command={`npx skills add brainsfor/${brain.slug}`}
+                      size="sm"
+                    />
+                  </div>
+
+                  <div className="mt-4 space-y-2 text-xs text-body">
+                    <p>8 AI skills included</p>
+                    <p>Works with Claude, Cursor, Gemini CLI</p>
+                    <p>Full knowledge graph access</p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="rounded-lg bg-indigo-mist py-3 text-center text-[15px] font-semibold text-indigo-deep">
+                    Building now
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-body">
+                    This brain is being built. Atoms, connections, and the downloadable pack will appear here when it goes live.
+                  </p>
+                </>
               )}
-
-              <div className="mt-4 space-y-2 text-xs text-body">
-                <p>8 AI skills included</p>
-                <p>Works with Claude, Cursor, Gemini CLI</p>
-                <p>Full knowledge graph access</p>
-              </div>
             </div>
           </div>
         </div>
