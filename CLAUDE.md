@@ -87,17 +87,18 @@ brainsfor/
 ## Key Dependencies
 
 - **Supabase project:** `uzediwokyshjbsymevtp` (same as PAOS)
-- **Tables (15 brain packs built; 13 live in Supabase — per-brain schema):**
+- **Tables (15 brain packs built; 14 live in Supabase — per-brain schema):**
   - `<slug>_atoms` — e.g. `scott_belsky_atoms` (284 atoms), `dario_amodei_atoms` (353), `peter_zeihan_atoms` (362 — pack re-exported to match DB), `paul_graham_atoms` (213), `steve_jobs_atoms` (170), etc. Columns: `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
-  - `<slug>_connections` — typed relationships (supports, contradicts, extends, related). Largest in Supabase: `gary_vee_connections` (1,850), `dario_amodei_connections` (1,842), `steve_jobs_connections` (1,618), `elon_musk_connections` (1,563), `scott_belsky_connections` (1,515), `peter_zeihan_connections` (1,503), `sun_tzu_connections` (1,283), `charlie_munger_connections` (1,262), `hank_green_connections` (1,245), `peter_attia_connections` (1,220), `john_green_connections` (1,301).
-  - `brain_metadata` — 13 rows (Supabase-hosted brains; Brené Brown and Oprah Winfrey shipped as packs only, not yet ingested)
+  - `<slug>_connections` — typed relationships (supports, contradicts, extends, related). Largest in Supabase: `brene_brown_connections` (2,035), `gary_vee_connections` (1,850), `dario_amodei_connections` (1,842), `jensen_huang_connections` (1,622), `steve_jobs_connections` (1,618), `elon_musk_connections` (1,563), `scott_belsky_connections` (1,515), `peter_zeihan_connections` (1,503), `john_green_connections` (1,301), `sun_tzu_connections` (1,283), `charlie_munger_connections` (1,262), `hank_green_connections` (1,245), `peter_attia_connections` (1,220), `paul_graham_connections` (975).
+  - `brain_metadata` — 14 rows (Supabase-hosted brains; Oprah Winfrey shipped as a pack only, not yet ingested)
   - `brain_requests` — 0 rows (user brain request pipeline, empty to date)
   - `cross_connections` — 17 rows, Rob ↔ brain cross-brain links
   - `rob_atoms` / `rob_connections` — Rob's personal knowledge graph (225 / 162)
   - `scott_belsky_enrichment_log` — connection enrichment run history (mode, counts, duration, errors). Legacy `belsky_enrichment_log` table still exists from pre-rename but is unused.
   - **Known data drift:**
-    - `jensen_huang_atoms` / `jensen_huang_connections` are empty (0/0) despite the shipped pack having 253 atoms and 220 connections. Pack data is authoritative; Supabase needs re-ingestion.
-    - No Supabase tables exist for `brene_brown` or `oprah_winfrey` — the packs (283/321 and 333/355 respectively) ship from `brains/{slug}/pack/` but live DB ingestion is pending. MCP server reads from pack JSON, so customer-facing skills work; `/board` and Rob-cross-connection flows that query Supabase do not.
+    - `jensen_huang` Supabase tables hold 253 atoms / 1,622 connections; pack was re-exported and now ships 253/1,000 connections (capped by the pagination bug below). Fix pagination, then re-export to surface the remaining ~622 connections.
+    - `brene_brown` Supabase tables hold 283 atoms / 2,035 connections; pack was re-exported and now ships 283/1,000 connections (capped by the pagination bug below). Fix pagination, then re-export to surface the remaining ~1,035 connections.
+    - No Supabase tables exist for `oprah_winfrey` — the pack (333/355) ships from `brains/oprah-winfrey/pack/` but live DB ingestion is pending. MCP server reads from pack JSON, so customer-facing skills work; `/board` and Rob-cross-connection flows that query Supabase do not.
     - Shipped `brain-atoms.json` files are capped at ~1000 connections because `export-brain.py` calls Supabase with a single `.execute()` (no pagination). Supabase row totals are higher (see list above) than pack totals. Fix export to paginate before next pack refresh.
 - **Edge function:** `enrich-connections` — automated connection discovery (topic overlap + temporal + LLM). Runs daily at 11:30pm PT via pg_cron. Modes: `discover` (cron), `discover-llm` (manual), `stats`.
 - **Export scripts** require `SUPABASE_SERVICE_KEY` — set in `~/rob-ai/.env`
@@ -233,17 +234,29 @@ scripts/enrich-connections.py --brain {slug} --stats                  # Quality 
 templates/create-brain-tables.sql   # sed 's/{{SLUG}}/peter_attia/g' | psql
 ```
 
-### Skill Architecture (v4 — Unified, 2026-04-11)
+### Skill Architecture (v5 — Foundation Pattern, 2026-05-01)
 
-**Important:** The PAOS install at `~/rob-ai/skills/` uses a **unified skill architecture** — ONE set of 8 generic reasoning skills + a `/brain` router, not per-brain copies. Any skill can use any installed brain.
+**Important:** The PAOS install at `~/rob-ai/skills/` uses a **unified skill architecture** — ONE foundation skill + 8 reasoning skills + `/brain` router + `/board` orchestrator. Any skill can use any installed brain.
 
-- `~/rob-ai/skills/brain/` — router: `/brain <slug>` sets the active brain for the session (writes `~/.claude/state/active-brain.txt`). `/brain list`, `/brain` (show), `/brain clear` supported.
-- `~/rob-ai/skills/{advise,teach,debate,connect,evolve,surprise,coach,predict}/` — 8 generic thinking skills. Each resolves the brain via: (1) inline first-token slug override, (2) active brain state file, (3) error if neither.
+**Foundation skill** (`~/rob-ai/skills/brain-foundation/SKILL.md`): non-user-invocable shared protocol loaded by all 8 reasoning skills. Contains:
+- Brain selection logic (active state → inline slug → error, cross-brain for /debate + /connect)
+- Context loading hierarchy (MCP-first → file fallback)
+- Deep Reasoning Protocol (name principles → apply pattern → check guardrails → show chain)
+- Persona rules (first person, voice-first, cite atoms, thin topic handling)
+- **Brain Slop Test** — anti-pattern checklist. "If you replaced the thinker's name with a generic AI advisor, would the output change?"
+- **Self-Check** — 5 verification checks before outputting (name swap, citations, guardrails, reasoning chain, thin coverage)
+- Situational intake triggers (for /advise, /predict — ask 1-2 questions when input is ambiguous)
+- Output conventions (emoji vocabulary, "Try next" chaining)
+- Scenario workflow recipes (7 named chains for common user needs)
+
+Inspired by Impeccable UX v3's foundation skill pattern (`/frontend-design`). Each reasoning skill references the foundation and adds only skill-specific logic, eliminating duplicate Brain Selection / Context Loading / Persona Rules sections.
+
+**Reasoning skills:**
+- `~/rob-ai/skills/brain/` — router: `/brain <slug>` sets the active brain (writes `~/.claude/state/active-brain.txt`). `/brain list`, `/brain` (show), `/brain clear`.
+- `~/rob-ai/skills/{advise,teach,debate,connect,evolve,surprise,coach,predict}/` — 8 lean skill files that reference `brain-foundation` then add skill-specific behavior.
 - Cross-brain mode: `/debate <slug-a> <slug-b> <topic>` and `/connect <slug-a> <slug-b> <topic>`.
 
-Why this design: installing 7+ brain packs naively creates 63+ prefixed skills (`scott-belsky-advise`, `paul-graham-advise`, ...) which collide with the README-documented `/advise` UX. Unified skills match the original v3 intent and README promise. See `IMPROVEMENTS.md` → Architecture & Distribution for the history.
-
-Customer deliverable (`brains/<slug>/pack/skills/`) still ships the per-brain skill files for users who install a single brain pack — those are templates for solo use. The PAOS install flattens them into one generic set because PAOS runs all 8 brains simultaneously.
+Customer deliverable (`brains/<slug>/pack/skills/`) still ships the per-brain skill files for users who install a single brain pack — those are templates for solo use. The PAOS install flattens them into one generic set because PAOS runs all 15 brains simultaneously.
 
 ### /board — Board of Advisors (Multi-Brain Orchestrator)
 
@@ -255,14 +268,7 @@ Customer deliverable (`brains/<slug>/pack/skills/`) still ships the per-brain sk
 **State:** `~/.claude/state/board.json`
 **Depends on:** `brainsfor` MCP server (selective retrieval) + Claude Code Agent tool (parallel sub-agents).
 
-### MCP-First Skill Loading (all 8 skills)
-
-All 8 reasoning skills (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) now support two context loading paths:
-
-1. **MCP-first (preferred):** `get_synthesis` → `query_atoms` → `search_atoms` → `get_connections` — ~15KB per brain
-2. **File fallback:** brain-atoms.json → brain-context.md (when MCP server unavailable)
-
-### Skill Design (v3 — 8 skills, zero overlap)
+### Skill Design (v3 → v5 evolution)
 
 8 skills, each a distinct reasoning mode with a unique output type:
 
@@ -270,18 +276,16 @@ All 8 reasoning skills (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `
 |---|-------|-------------|--------------|
 | 1 | `/advise` | Recommendations | Strategic counsel from the thinker's frameworks |
 | 2 | `/teach` | Explanations | Explain concepts through the thinker's lens |
-| 3 | `/debate` | Counterarguments | Steel-man the other side (absorbs old `/brainfight`) |
-| 4 | `/connect` | Bridges | Find unexpected links between ideas (absorbs old `/mashup`) |
+| 3 | `/debate` | Counterarguments | Steel-man the other side (supports cross-brain) |
+| 4 | `/connect` | Bridges | Find unexpected links between ideas (supports cross-brain) |
 | 5 | `/evolve` | Timeline of thought | Trace how thinking changed over time |
 | 6 | `/surprise` | Serendipity | Surface a high-quality atom you haven't seen |
-| 7 | `/coach` | Questions | Socratic questioning — no answers, just what to ask yourself |
+| 7 | `/coach` | Questions | Socratic questioning — one question at a time, adapts |
 | 8 | `/predict` | Implication chains | Cascade second and third-order effects of a trend |
 
-**Cut from v2:** `/brainfight` (into `/debate`), `/mashup` (into `/connect`), `/deep-dive` (into `/advise`), `/apply` (into `/advise`).
-**Added in v3:** `/coach` (Socratic mode), `/predict` (implication chains — plays to thinkers who forecast).
+**v3→v5 changes:** Foundation pattern (DRY shared protocol), Brain Slop Test, Self-Check, Situational Intake for /advise and /predict, scenario workflow recipes.
 
-- Each skill ~15 lines in `skills/{name}/SKILL.md`
-- Each skill assumes `brain-context.md` is loaded — no manifest routing, no cluster discovery
+- Each skill references `brain-foundation` for shared protocol, then adds skill-specific logic
 - Skill instructions also inline at bottom of `brain-context.md` for LLMs that load that file
 - All skills: voice-first (original_quote), thin-topic graceful degradation, suggest next skill
 - Template variables: `{{brain_name}}`, `{{brain_first_name}}`, `{{atom_count}}`, etc.
@@ -373,7 +377,7 @@ cd ~/rob-ai/brainsfor
 python3 scripts/auto-build-brain.py --person "Annie Duke"
 ```
 
-**Remote** (mobile, or walk-away — runs as GitHub Action, 180-min timeout, auto-commits pack to `main` on success → Vercel auto-deploys to brainsforfree.com):
+**Remote** (mobile, or walk-away — runs as GitHub Action, 180-min timeout, opens a PR on success for review before merging to `main` → Vercel auto-deploys on merge):
 ```bash
 gh workflow run build-brain.yml --repo robgabel/brainsfor \
   -f person="Annie Duke" -f confirm_cost=yes-23
