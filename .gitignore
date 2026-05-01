@@ -17,7 +17,7 @@ __pycache__/
 test-*-output/
 
 # Auto-build pipeline artifacts (regenerate via scripts/auto-build-brain.py)
-brains/**/build-progress.json
+# build-progress.json IS committed — required for --resume to work across remote runs
 brains/.*-build.log
 brains/*-build.log
 

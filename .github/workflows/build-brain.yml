@@ -97,6 +97,7 @@ jobs:
           echo "Resolved slug: $SLUG"
 
       - name: Run auto-build-brain pipeline
+        id: run
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
@@ -134,11 +135,12 @@ jobs:
           if-no-files-found: warn
           retention-days: 14
 
-      - name: Commit pack back to main
-        if: success()
+      - name: Commit progress + pack to main (any outcome)
+        if: always() && steps.slug.outputs.slug != ''
         env:
           SLUG: ${{ steps.slug.outputs.slug }}
           PERSON: ${{ inputs.person }}
+          PIPELINE_OUTCOME: ${{ steps.run.outcome }}
         run: |
           set -eo pipefail
           git config user.name "github-actions[bot]"
@@ -147,9 +149,33 @@ jobs:
           git add "brains/${SLUG}/" "brains/index.json" 2>/dev/null || true
 
           if git diff --staged --quiet; then
-            echo "No tracked changes to commit (pipeline may have been skip-only)."
+            echo "No tracked changes to commit (no progress or pack files changed)."
             exit 0
           fi
 
-          git commit -m "feat(brain): auto-build ${PERSON} (${SLUG}) — run ${GITHUB_RUN_ID}"
-          git push origin HEAD:main
+          if [ "$PIPELINE_OUTCOME" = "success" ]; then
+            MSG="feat(brain): auto-build ${PERSON} (${SLUG}) — run ${GITHUB_RUN_ID}"
+          else
+            MSG="chore(brain): partial build progress for ${PERSON} (${SLUG}) — run ${GITHUB_RUN_ID} [${PIPELINE_OUTCOME}]"
+          fi
+
+          git commit -m "$MSG"
+
+          # Rebase onto latest main + retry on push race (build can take 90 min;
+          # other commits to main during that window cause non-fast-forward).
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              echo "::error::Rebase conflict against origin/main on attempt $attempt"
+              git rebase --abort || true
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              echo "Push succeeded on attempt $attempt."
+              exit 0
+            fi
+            echo "Push failed on attempt $attempt; refetching and retrying..."
+            sleep $((attempt * 4))
+          done
+          echo "::error::Push failed after 3 attempts."
+          exit 1
