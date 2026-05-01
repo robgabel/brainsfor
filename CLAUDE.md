@@ -87,7 +87,7 @@ brainsfor/
 ## Key Dependencies
 
 - **Supabase project:** `uzediwokyshjbsymevtp` (same as PAOS)
-- **Tables (15 brain packs built; 14 live in Supabase — per-brain schema):**
+- **Tables (16 brain packs built; 14 live in Supabase — per-brain schema):**
   - `<slug>_atoms` — e.g. `scott_belsky_atoms` (284 atoms), `dario_amodei_atoms` (353), `peter_zeihan_atoms` (362 — pack re-exported to match DB), `paul_graham_atoms` (213), `steve_jobs_atoms` (170), etc. Columns: `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
   - `<slug>_connections` — typed relationships (supports, contradicts, extends, related). Largest in Supabase: `brene_brown_connections` (2,035), `gary_vee_connections` (1,850), `dario_amodei_connections` (1,842), `jensen_huang_connections` (1,622), `steve_jobs_connections` (1,618), `elon_musk_connections` (1,563), `scott_belsky_connections` (1,515), `peter_zeihan_connections` (1,503), `john_green_connections` (1,301), `sun_tzu_connections` (1,283), `charlie_munger_connections` (1,262), `hank_green_connections` (1,245), `peter_attia_connections` (1,220), `paul_graham_connections` (975).
   - `brain_metadata` — 14 rows (Supabase-hosted brains; Oprah Winfrey shipped as a pack only, not yet ingested)
@@ -99,6 +99,7 @@ brainsfor/
     - `jensen_huang` Supabase tables hold 253 atoms / 1,622 connections; pack was re-exported and now ships 253/1,000 connections (capped by the pagination bug below). Fix pagination, then re-export to surface the remaining ~622 connections.
     - `brene_brown` Supabase tables hold 283 atoms / 2,035 connections; pack was re-exported and now ships 283/1,000 connections (capped by the pagination bug below). Fix pagination, then re-export to surface the remaining ~1,035 connections.
     - No Supabase tables exist for `oprah_winfrey` — the pack (333/355) ships from `brains/oprah-winfrey/pack/` but live DB ingestion is pending. MCP server reads from pack JSON, so customer-facing skills work; `/board` and Rob-cross-connection flows that query Supabase do not.
+    - No Supabase tables exist for `sara_blakely` — the pack (486/528) ships from `brains/sara-blakely/pack/` but live DB ingestion is pending. Same caveat as Oprah: MCP-backed skills work, but Supabase-backed flows miss this brain.
     - Shipped `brain-atoms.json` files are capped at ~1000 connections because `export-brain.py` calls Supabase with a single `.execute()` (no pagination). Supabase row totals are higher (see list above) than pack totals. Fix export to paginate before next pack refresh.
 - **Edge function:** `enrich-connections` — automated connection discovery (topic overlap + temporal + LLM). Runs daily at 11:30pm PT via pg_cron. Modes: `discover` (cron), `discover-llm` (manual), `stats`.
 - **Export scripts** require `SUPABASE_SERVICE_KEY` — set in `~/rob-ai/.env`
@@ -261,7 +262,7 @@ Inspired by Impeccable UX v3's foundation skill pattern (`/frontend-design`). Ea
 - `~/rob-ai/skills/{advise,teach,debate,connect,evolve,surprise,coach,predict}/` — 8 lean skill files that reference `brain-foundation` then add skill-specific behavior.
 - Cross-brain mode: `/debate <slug-a> <slug-b> <topic>` and `/connect <slug-a> <slug-b> <topic>`.
 
-Customer deliverable (`brains/<slug>/pack/skills/`) still ships the per-brain skill files for users who install a single brain pack — those are templates for solo use. The PAOS install flattens them into one generic set because PAOS runs all 15 brains simultaneously.
+Customer deliverable (`brains/<slug>/pack/skills/`) still ships the per-brain skill files for users who install a single brain pack — those are templates for solo use. The PAOS install flattens them into one generic set because PAOS runs all 16 brains simultaneously.
 
 ### /board — Board of Advisors (Multi-Brain Orchestrator)
 

@@ -335,7 +335,8 @@ Return a JSON object with these keys:
 - does_not_believe: array of {{title, desc}}
 - would_not_say: array of {{title, desc}}
 - biography: array of {{date, role, lesson}}
-- skills: (copy from existing brain.json — don't modify)
+
+(Note: do NOT include a "skills" key — the synthesis.skills array is generated programmatically from a stable template, not extracted from synthesis.md.)
 
 Here is the synthesis.md to extract from:
 

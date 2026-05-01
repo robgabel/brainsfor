@@ -28,9 +28,11 @@ import importlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import time
+import traceback
 import uuid
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -879,6 +881,47 @@ def phase_2_ingest(
 # PHASE 3: SYNTHESIS
 # =============================================================================
 
+# Stable template — 8 skill names + canonical titles + descriptions used across all
+# brains (matches scott-belsky and the 9 customer-facing skill files in pack/skills/).
+# Only the per-brain "example" is dynamic: pulled from brain_json["skill_examples"].
+SKILL_TEMPLATE = [
+    ("advise",   "Strategic Counsel",            "Get advice on decisions grounded in this brain's frameworks."),
+    ("teach",    "Learn Through Their Lens",     "Explain a concept using this brain's actual vocabulary and mental models."),
+    ("debate",   "Steel-Man Both Sides",         "Present a position or pit two ideas against each other; brain argues the counterpoint."),
+    ("connect",  "Bridge Ideas",                 "Find unexpected connections between concepts or synthesize multiple ideas into something new."),
+    ("evolve",   "Intellectual Evolution",       "Trace how this brain's thinking on a topic developed over time."),
+    ("surprise", "Show Me Something Unexpected", "Random high-quality atom for daily inspiration."),
+    ("coach",    "Socratic Questions",           "No answers — just the questions this thinker would ask you."),
+    ("predict",  "Implication Chains",           "Trace the second and third-order effects of a trend or decision."),
+]
+
+
+def build_synthesis_skills(brain_json: dict) -> list:
+    """Build the synthesis.skills array programmatically from skill_examples.
+    Skills are template-able — only the example string varies per brain."""
+    examples = brain_json.get("skill_examples", {}) or {}
+    skills = []
+    for name, title, desc in SKILL_TEMPLATE:
+        ex = examples.get(name, "").strip()
+        if name == "surprise":
+            # /surprise takes no args. Even if skill_examples[surprise] has a hint
+            # like "No input needed", we don't render it as a fake argument.
+            ex_str = "/surprise"
+        elif ex.startswith("/"):
+            ex_str = ex
+        elif ex:
+            ex_str = f'/{name} "{ex}"'
+        else:
+            ex_str = f"/{name}"
+        skills.append({
+            "name": name,
+            "title": title,
+            "desc": desc,
+            "example": ex_str,
+        })
+    return skills
+
+
 def phase_3_synthesize(
     brain_json: dict,
     brain_dir: Path,
@@ -984,15 +1027,15 @@ def phase_3_synthesize(
 
     if json_result.get("parsed"):
         synthesis_data = json_result["parsed"]
-        # Preserve existing skills array if present
-        if "skills" not in synthesis_data and "skills" in brain_json.get("synthesis", {}):
-            synthesis_data["skills"] = brain_json["synthesis"]["skills"]
+        # Skills are template-able — generate programmatically from skill_examples
+        # rather than relying on the LLM (which used to copy the empty existing array).
+        synthesis_data["skills"] = build_synthesis_skills(brain_json)
         brain_json["synthesis"] = synthesis_data
 
         brain_json_path = brain_dir / "brain.json"
         with open(brain_json_path, "w") as f:
             json.dump(brain_json, f, indent=2)
-        success("brain.json synthesis section updated")
+        success(f"brain.json synthesis section updated ({len(synthesis_data['skills'])} skills)")
 
     return {"synthesis_written": True}
 
@@ -1466,9 +1509,9 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
 
         except Exception as e:
             error(f"Phase {phase_num} failed: {e}")
-            import traceback
-            traceback.print_exc()
-            mark_phase(progress, phase_num, "failed", error=str(e))
+            tb_str = traceback.format_exc()
+            print(tb_str)
+            mark_phase(progress, phase_num, "failed", error=str(e), traceback=tb_str)
             save_progress(brain_dir, progress)
             post_slack(f"`{slug}` · FAILED at Phase {phase_num}: {e}", ":x:")
             warn("Use --resume to retry from this phase.")
