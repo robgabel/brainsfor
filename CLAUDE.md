@@ -183,12 +183,17 @@ scripts/auto-build-brain.py --person "Jensen Huang" --resume-from 3  # Resume fr
 Takes a person's name and produces a complete, shippable brain pack with ZERO manual approval gates. 6 phases:
 - **Phase 0:** Source discovery (web search via Firecrawl → sources.json)
 - **Phase 1:** Scaffolding (dirs, brain.json via LLM, Supabase tables, index.json)
-- **Phase 2:** Content ingestion (YouTube transcripts + deep research atoms → Supabase)
+- **Phase 2:** Content ingestion — three sub-stages run in sequence:
+  - **2.1 YouTube transcripts** — fetch transcripts for any source with `youtube_id`, extract atoms via Haiku
+  - **2.2 Text source scraping** — Firecrawl-fetch every text URL (essays, profiles, interviews, podcast pages, articles), extract atoms via Sonnet. Skips facebook/twitter/x/instagram/tiktok. Idempotent (writes `research/text-atoms.json`)
+  - **2.3 Deep research** — LLM generates 15-25 atoms per cluster from synthesis context + source titles. Per-cluster files (`research/<cluster-key>-atoms.json`) — resumes cluster-by-cluster if interrupted
 - **Phase 3:** Synthesis (LLM-generated synthesis.md + brain.json synthesis section)
 - **Phase 4:** Enrichment (connections via topic overlap + LLM, auto-applied)
 - **Phase 5:** Export & QA (pack generation + audit scoring + remediation loop)
 
-Supports `--skip-phase N`, `--resume`, `--resume-from N`, `--max-sources`, `--target-atoms`, `--model`, `--synthesis-model`. Progress tracked in `brains/{slug}/build-progress.json` (committed to git — required for `--resume` to work across remote workflow runs, since each run does a fresh `actions/checkout`).
+**Atom floor guardrail (added 2026-05-01):** Phase 2 halts the build if the merged atom count is below `MIN_BRAIN_ATOMS` (default 250, configured in `scripts/auto_build_config.py`). Override per-build with `--min-atoms 200` or bypass with `--allow-thin-pack`. The floor fires before Phases 3-5 so we don't spend $17 on synthesis + enrichment for a thin brain. When tripped, the build leaves Phase 2 marked `blocked` with the count and the path forward in the message — add YouTube videos / sources to `brain.json` and `--resume`, or pass `--allow-thin-pack`.
+
+Supports `--skip-phase N`, `--resume`, `--resume-from N`, `--max-sources`, `--target-atoms`, `--min-atoms`, `--allow-thin-pack`, `--model`, `--synthesis-model`. Progress tracked in `brains/{slug}/build-progress.json` (committed to git — required for `--resume` to work across remote workflow runs, since each run does a fresh `actions/checkout`). `--resume-from N` forces re-run of phase N **and cascades — phases N+1 through 5 are also marked pending and will re-run.** This is what you want when you've added new sources and need synthesis + enrichment + pack to reflect the larger atom set, not just Phase 2 alone. (Previously: bug let it skip if N was already marked complete; subsequent phases were untouched and stale.)
 
 Config module: `scripts/auto_build_config.py` (shared constants, cost tables, Claude API wrapper with retry logic, prompt templates). **This is the canonical source of truth for all Anthropic model strings used by BrainsFor scripts.** Every Python script in `scripts/` imports `DEFAULT_MODEL`, `SYNTHESIS_MODEL`, and `FAST_MODEL` from here. `website/app/api/skill/route.ts` hardcodes its string separately (TS can't import from Python) with a comment pointing to this file. Current targets: Sonnet 4.6 / Opus 4.7 / Haiku 4.5.
 

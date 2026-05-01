@@ -39,6 +39,16 @@ MIN_ATOMS_PER_CLUSTER = 5
 MIN_AUDIT_SCORE = 70
 MAX_REMEDIATION_CYCLES = 2
 
+# Hard floor: pipeline halts after Phase 2 if total atoms < this value.
+# Override per-build via --min-atoms or bypass with --allow-thin-pack.
+MIN_BRAIN_ATOMS = 250
+
+# Firecrawl scrape settings
+SCRAPE_MAX_CHARS = 12000
+SCRAPE_MIN_CHARS = 500
+SCRAPE_TIMEOUT_SEC = 60
+SCRAPE_SKIP_DOMAINS = ("facebook.com", "twitter.com", "x.com", "instagram.com", "tiktok.com")
+
 # --- Phase names ---
 PHASE_NAMES = {
     0: "Source Discovery",

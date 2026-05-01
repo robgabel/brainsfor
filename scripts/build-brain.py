@@ -120,7 +120,9 @@ def generate_cluster_atoms(brain_json, cluster_key, cluster_info, exemplars, sou
     contrarian_text = "\n".join(f"- {c['title']}: {c['desc']}" for c in synthesis.get("contrarian_positions", []))
 
     source_titles = "\n".join(
-        f"- {s['title']} ({s['date']}): {s['description']}"
+        f"- {s.get('title', 'Untitled')}"
+        + (f" ({s['date']})" if s.get('date') else "")
+        + (f": {s['description']}" if s.get('description') else (f" — {s.get('type', '')}" if s.get('type') else ""))
         for s in sources_json.get("sources", [])
         if s.get("priority") in ("essential", "high")
     )
@@ -213,13 +215,25 @@ def stage_generate(brain_json, brain_dir, reference_slug, model, dry_run=False):
     research_dir = brain_dir / "research"
     research_dir.mkdir(parents=True, exist_ok=True)
 
-    # Check if atoms already exist
-    existing = list(research_dir.glob("*-atoms.json"))
-    if existing:
-        total = sum(len(json.load(open(f))) for f in existing)
-        print(f"  Found {len(existing)} existing atom files ({total} atoms)")
-        print(f"  To regenerate, delete brains/{brain_json['brain_slug']}/research/*-atoms.json")
+    # Check whether deep-research-generated atoms already exist for THIS brain's clusters.
+    # We look for cluster-keyed files (e.g. idea-generation-atoms.json), not for sibling
+    # ingestion artifacts like video-atoms.json or text-atoms.json — those should NOT
+    # short-circuit deep research (that was the resume bug).
+    cluster_keys = set(brain_json.get("clusters", {}).keys())
+    cluster_files = []
+    for f in research_dir.glob("*-atoms.json"):
+        # Convert filename "idea-generation-atoms.json" → "idea_generation"
+        stem = f.stem.replace("-atoms", "").replace("-", "_")
+        if stem in cluster_keys:
+            cluster_files.append(f)
+
+    if cluster_files and len(cluster_files) >= len(cluster_keys):
+        total = sum(len(json.load(open(f))) for f in cluster_files)
+        print(f"  Found cluster-atom files for all {len(cluster_keys)} clusters ({total} atoms)")
+        print(f"  To regenerate, delete brains/{brain_json['brain_slug']}/research/<cluster>-atoms.json")
         return True
+    elif cluster_files:
+        print(f"  Found {len(cluster_files)}/{len(cluster_keys)} cluster files — generating remaining clusters")
 
     # Load exemplars and sources
     print(f"  Loading exemplars from {reference_slug}...")
@@ -236,7 +250,12 @@ def stage_generate(brain_json, brain_dir, reference_slug, model, dry_run=False):
     print(f"  Generating atoms for {len(clusters)} clusters using {model}...\n")
 
     for i, (cluster_key, cluster_info) in enumerate(clusters.items()):
+        output_path = research_dir / f"{cluster_key.replace('_', '-')}-atoms.json"
         print(f"  [{i + 1}/{len(clusters)}] {cluster_info['name']}...", end=" ", flush=True)
+
+        if output_path.exists():
+            print("(cached)")
+            continue
 
         if dry_run:
             print("[DRY RUN]")
@@ -244,7 +263,6 @@ def stage_generate(brain_json, brain_dir, reference_slug, model, dry_run=False):
 
         try:
             atoms = generate_cluster_atoms(brain_json, cluster_key, cluster_info, exemplars, sources_json, model)
-            output_path = research_dir / f"{cluster_key.replace('_', '-')}-atoms.json"
             with open(output_path, "w") as f:
                 json.dump(atoms, f, indent=2)
             print(f"{len(atoms)} atoms")
@@ -415,6 +433,17 @@ def stage_youtube(brain_json, brain_dir, model, dry_run=False):
     transcripts_dir = brain_dir / "source" / "transcripts"
     transcripts_dir.mkdir(parents=True, exist_ok=True)
     research_dir = brain_dir / "research"
+    research_dir.mkdir(parents=True, exist_ok=True)
+
+    # Idempotent skip — preserves prior atoms across resumes (a single failed
+    # decomposition shouldn't blow away previously-extracted atoms).
+    video_atoms_path = research_dir / "video-atoms.json"
+    if video_atoms_path.exists():
+        with open(video_atoms_path) as f:
+            existing = json.load(f)
+        if isinstance(existing, list) and len(existing) > 0:
+            print(f"  video-atoms.json exists ({len(existing)} atoms) — skipping (delete to force re-run)")
+            return True
 
     all_video_atoms = []
 

@@ -55,6 +55,8 @@ from auto_build_config import (
     DEFAULT_MODEL, SYNTHESIS_MODEL, FAST_MODEL,
     TARGET_ATOMS, TARGET_CONNECTIONS, MIN_ATOMS_PER_CLUSTER,
     MIN_AUDIT_SCORE, MAX_REMEDIATION_CYCLES, PHASE_NAMES,
+    MIN_BRAIN_ATOMS,
+    SCRAPE_MAX_CHARS, SCRAPE_MIN_CHARS, SCRAPE_TIMEOUT_SEC, SCRAPE_SKIP_DOMAINS,
     CostTracker, call_claude,
     phase_header, step, success, warn, error,
     get_search_queries,
@@ -513,6 +515,199 @@ def phase_1_scaffold(
 # PHASE 2: CONTENT INGESTION
 # =============================================================================
 
+def extract_atoms_from_text(
+    brain_json: dict,
+    source: dict,
+    content: str,
+    client: "anthropic.Anthropic",
+    cost_tracker: CostTracker,
+    model: str,
+) -> list:
+    """Use Claude to extract atoms from a single scraped text source."""
+    brain_name = brain_json["brain_name"]
+    first_name = brain_json["brain_first_name"]
+    clusters = brain_json.get("clusters", {})
+    cluster_list = "\n".join(f"- {k}: {v.get('name', '')}" for k, v in clusters.items())
+
+    src_type = source.get("type", "article")
+    src_title = source.get("title", "")
+    src_url = source.get("url", "")
+
+    prompt = f"""Extract atomic insights from this content about {brain_name}.
+
+SOURCE: {src_title} ({src_type})
+URL: {src_url}
+
+CONTENT:
+{content}
+
+YOUR TASK: Extract 8-15 high-quality atoms — discrete units of knowledge — from this source. Each atom should capture a distinct insight, story, framework, or position from {first_name}.
+
+RULES:
+1. Every atom MUST be grounded in the actual content above. Do NOT invent.
+2. "original_quote" must be {first_name}'s ACTUAL words from the content (verbatim or near-verbatim). If only paraphrased in the source, use the closest direct quote you can find. If nothing direct exists, omit the field rather than fabricate.
+3. "content" is your distilled 2-4 sentence statement of the insight.
+4. "implication" is the "so what" — what this means for builders/creators/leaders today.
+5. "source_ref" should reference the source title.
+6. "source_type" should be: {src_type}
+7. Set confidence: 0.95 for direct quotes, 0.85 for clear positions, 0.75 for inferred views.
+8. Assign 2-5 topic tags per atom.
+9. Pick the best-fit cluster from the list below.
+10. If the content is too thin, off-topic, or not actually about {first_name}, return [].
+
+AVAILABLE CLUSTERS:
+{cluster_list}
+
+OUTPUT FORMAT — Return ONLY a JSON array:
+[
+  {{
+    "content": "Distilled 2-4 sentence insight...",
+    "original_quote": "{first_name}'s actual documented words from the source...",
+    "implication": "What this means for builders/leaders today...",
+    "cluster": "cluster_key",
+    "topics": ["topic1", "topic2"],
+    "confidence": 0.92,
+    "source_type": "{src_type}",
+    "source_ref": "{src_title}"
+  }}
+]
+
+Return ONLY the JSON array."""
+
+    try:
+        result = call_claude(
+            client, model,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=8000,
+            parse_json=True,
+            cost_tracker=cost_tracker,
+            label=f"text_atoms_{src_type}",
+        )
+    except Exception as e:
+        warn(f"Atom extraction failed for {src_title[:40]}: {e}")
+        return []
+
+    atoms = result.get("parsed", [])
+    if not isinstance(atoms, list):
+        return []
+    # Stamp the source URL on each atom
+    for a in atoms:
+        a.setdefault("source_url", src_url)
+    return atoms
+
+
+def scrape_text_sources(
+    brain_json: dict,
+    brain_dir: Path,
+    sources_json: dict,
+    client: "anthropic.Anthropic",
+    cost_tracker: CostTracker,
+    model: str = DEFAULT_MODEL,
+    dry_run: bool = False,
+) -> int:
+    """Scrape text URLs (essays, articles, interviews, profiles, podcasts) via Firecrawl
+    and extract atoms with Claude. Returns count of atoms generated. Idempotent: skips
+    if research/text-atoms.json already exists."""
+    research_dir = brain_dir / "research"
+    research_dir.mkdir(parents=True, exist_ok=True)
+    text_atoms_path = research_dir / "text-atoms.json"
+
+    # Idempotent skip
+    if text_atoms_path.exists():
+        with open(text_atoms_path) as f:
+            existing = json.load(f)
+        success(f"text-atoms.json exists ({len(existing)} atoms) — skipping scrape")
+        return len(existing)
+
+    # Filter scrapeable sources
+    text_sources = []
+    for s in sources_json.get("sources", []):
+        if s.get("youtube_id"):
+            continue
+        url = s.get("url", "")
+        if not url.startswith("http"):
+            continue
+        if any(d in url for d in SCRAPE_SKIP_DOMAINS):
+            continue
+        text_sources.append(s)
+
+    if not text_sources:
+        step("No text sources to scrape")
+        return 0
+
+    if dry_run:
+        step(f"[DRY RUN] Would scrape {len(text_sources)} text sources via Firecrawl")
+        return 0
+
+    firecrawl_key = os.environ.get("FIRECRAWL_API_KEY", "")
+    if not firecrawl_key:
+        warn("FIRECRAWL_API_KEY not set — skipping text source scraping")
+        return 0
+
+    step(f"Scraping {len(text_sources)} text sources via Firecrawl...")
+    all_atoms = []
+    scraped_count = 0
+    skipped_thin = 0
+    failed_scrape = 0
+
+    for i, source in enumerate(text_sources, 1):
+        url = source["url"]
+        title = source.get("title", "")[:60]
+        print(f"  [{i}/{len(text_sources)}] {title}...", end=" ", flush=True)
+
+        try:
+            resp = httpx.post(
+                "https://api.firecrawl.dev/v1/scrape",
+                headers={
+                    "Authorization": f"Bearer {firecrawl_key}",
+                    "Content-Type": "application/json",
+                },
+                json={"url": url, "formats": ["markdown"]},
+                timeout=SCRAPE_TIMEOUT_SEC,
+            )
+            if resp.status_code != 200:
+                failed_scrape += 1
+                print(f"scrape failed ({resp.status_code})")
+                continue
+
+            data = resp.json()
+            markdown = (data.get("data") or {}).get("markdown", "")
+            if not markdown or len(markdown) < SCRAPE_MIN_CHARS:
+                skipped_thin += 1
+                print(f"too thin ({len(markdown)} chars)")
+                continue
+
+            scraped_count += 1
+            if len(markdown) > SCRAPE_MAX_CHARS:
+                markdown = markdown[:SCRAPE_MAX_CHARS] + "\n\n[...truncated]"
+
+            atoms = extract_atoms_from_text(
+                brain_json, source, markdown, client, cost_tracker, model
+            )
+            all_atoms.extend(atoms)
+            print(f"{len(atoms)} atoms")
+            time.sleep(1)
+
+        except Exception as e:
+            failed_scrape += 1
+            print(f"error: {e}")
+
+    if all_atoms:
+        with open(text_atoms_path, "w") as f:
+            json.dump(all_atoms, f, indent=2)
+        success(
+            f"Saved {len(all_atoms)} atoms from {scraped_count}/{len(text_sources)} text sources"
+            f" (thin: {skipped_thin}, failed: {failed_scrape})"
+        )
+    else:
+        warn(
+            f"No atoms extracted from {len(text_sources)} text sources"
+            f" (thin: {skipped_thin}, failed: {failed_scrape})"
+        )
+
+    return len(all_atoms)
+
+
 def phase_2_ingest(
     brain_json: dict,
     brain_dir: Path,
@@ -551,7 +746,13 @@ def phase_2_ingest(
     else:
         step("No YouTube sources found — skipping")
 
-    # --- 2.2 Deep research atoms ---
+    # --- 2.2 Text source scraping (essays, profiles, interviews, podcast pages) ---
+    step("Scraping text sources via Firecrawl...")
+    scrape_text_sources(
+        brain_json, brain_dir, sources_json, client, cost_tracker, model, dry_run=dry_run
+    )
+
+    # --- 2.3 Deep research atoms ---
     step("Generating deep research atoms...")
     if not dry_run:
         gen_result = build_brain.stage_generate(
@@ -663,6 +864,9 @@ def phase_2_ingest(
             step("Re-merging with supplemental atoms...")
             build_brain.stage_merge(brain_json, brain_dir)
 
+        # Reload after potential supplemental + remerge
+        with open(all_atoms_path) as f:
+            atoms = json.load(f)
         atom_count = len(atoms)
         step(f"Total atoms: {atom_count} (target: {target_atoms})")
     else:
@@ -1072,6 +1276,8 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
     parser.add_argument("--dry-run", action="store_true", help="Show cost estimate without executing")
     parser.add_argument("--max-sources", type=int, default=15, help="Max sources to discover")
     parser.add_argument("--target-atoms", type=int, default=TARGET_ATOMS, help=f"Target atom count (default: {TARGET_ATOMS})")
+    parser.add_argument("--min-atoms", type=int, default=MIN_BRAIN_ATOMS, help=f"Hard floor — build halts after Phase 2 if below this (default: {MIN_BRAIN_ATOMS})")
+    parser.add_argument("--allow-thin-pack", action="store_true", help="Bypass the min-atoms floor and allow shipping a thin brain")
     parser.add_argument("--verbose", action="store_true", help="Verbose logging")
     args = parser.parse_args()
 
@@ -1119,7 +1325,16 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
 
     if args.resume_from is not None:
         start_phase = args.resume_from
-        step(f"Resuming from Phase {start_phase}")
+        # Force re-run: clear "complete" status for the explicit resume target AND all
+        # subsequent phases so the loop body re-runs them. Re-running Phase 2 with new
+        # sources should also re-run Phase 3/4/5 — otherwise synthesis + pack reflect
+        # the old (smaller) atom set.
+        if progress:
+            for i in range(start_phase, 6):
+                if str(i) in progress["phases"]:
+                    progress["phases"][str(i)] = {"status": "pending"}
+            save_progress(brain_dir, progress)
+        step(f"Resuming from Phase {start_phase} (forced re-run, cascades to later phases)")
     elif args.resume and progress:
         # Find first non-complete phase
         for i in range(6):
@@ -1187,8 +1402,23 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                     reference_slug=args.reference, model=args.model,
                     target_atoms=args.target_atoms,
                 )
+                atom_count = result.get("atom_count", 0)
+
+                # Hard floor — halt before spending on synthesis/enrichment if pack is too thin
+                if atom_count < args.min_atoms and not args.allow_thin_pack:
+                    error(
+                        f"Atom floor not met: {atom_count} < {args.min_atoms}. "
+                        f"Add more sources to brain.json or sources.json and resume, "
+                        f"or pass --allow-thin-pack to ship anyway."
+                    )
+                    mark_phase(progress, 2, "blocked",
+                               atoms=atom_count,
+                               reason=f"below min-atoms floor ({atom_count}/{args.min_atoms})")
+                    save_progress(brain_dir, progress)
+                    break
+
                 mark_phase(progress, 2, "complete",
-                           atoms=result.get("atom_count", 0))
+                           atoms=atom_count)
 
             elif phase_num == 3:
                 if brain_json is None:
