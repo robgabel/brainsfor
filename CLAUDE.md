@@ -175,7 +175,7 @@ This data is exported into brain-atoms.json's `synthesis` key and rendered by ex
 
 ```
 scripts/auto-build-brain.py --person "Jensen Huang"             # Full end-to-end build (~$23, ~60-90 min)
-scripts/auto-build-brain.py --person "Annie Duke" --dry-run     # Cost estimate only
+scripts/auto-build-brain.py --person "Kara Swisher" --dry-run   # Cost estimate only
 scripts/auto-build-brain.py --person "Jensen Huang" --resume    # Resume from last completed phase
 scripts/auto-build-brain.py --person "Jensen Huang" --resume-from 3  # Resume from specific phase
 ```
@@ -374,20 +374,20 @@ python3 scripts/eval-brains.py --all --max-workers 3
 **Local** (at desktop, uses `~/rob-ai/.env`):
 ```bash
 cd ~/rob-ai/brainsfor
-python3 scripts/auto-build-brain.py --person "Annie Duke"
+python3 scripts/auto-build-brain.py --person "Kara Swisher"
 ```
 
 **Remote** (mobile, or walk-away — runs as GitHub Action, 180-min timeout, opens a PR on success for review before merging to `main` → Vercel auto-deploys on merge):
 ```bash
 gh workflow run build-brain.yml --repo robgabel/brainsfor \
-  -f person="Annie Duke" -f confirm_cost=yes-23
+  -f person="Kara Swisher" -f confirm_cost=yes-23
 gh run watch --repo robgabel/brainsfor
 ```
 Workflow: `.github/workflows/build-brain.yml`. Required repo secrets: `ANTHROPIC_API_KEY`, `SUPABASE_SERVICE_KEY`, `SUPABASE_URL`. Optional: `FIRECRAWL_API_KEY` (degrades phase 0), `SLACK_BUILD_WEBHOOK` (phase pings silent if unset). Resume with `-f resume=true`.
 
 Both paths run the same 6 phases (source discovery → scaffolding → ingestion → synthesis → enrichment → export + QA) end-to-end. Cost: ~$23. Time: ~60-90 min. See "Fully Automated Pipeline" section above for flags and details.
 
-**Or via Cowork skill:** `/brain-build Annie Duke` — auto-picks local or remote based on whether `~/rob-ai/.env` is present.
+**Or via Cowork skill:** `/brain-build Kara Swisher` — auto-picks local or remote based on whether `~/rob-ai/.env` is present.
 
 **Manual fallback** (if automation fails or you want fine-grained control):
 1. **Create directory:** `brains/{slug}/` with `brain.json`, `synthesis.md`, `source/`, `research/`, `data/`, `pack/`
@@ -422,7 +422,7 @@ Both paths run the same 6 phases (source discovery → scaffolding → ingestion
 
 - [ ] Pricing model — subscription vs. one-time purchase vs. freemium?
 - [ ] Distribution: working `npx skills add` command pointing to `brains/{slug}/pack/`
-- [x] Next brain pack after Belsky? → Brené Brown and Oprah Winfrey shipped (pack-only, Supabase ingestion pending); Annie Duke scaffolded. See `BACKLOG.md` for the remaining queue and build priorities.
+- [x] Next brain pack after Belsky? → Brené Brown and Oprah Winfrey shipped (pack-only, Supabase ingestion pending). See `BACKLOG.md` for the remaining queue and build priorities.
 - [ ] Legal/licensing framework for packaging a person's published thinking?
 - [ ] Supabase schema migration to generic `brain_atoms` table (Phase 7)
 

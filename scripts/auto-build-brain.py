@@ -8,7 +8,7 @@ with ZERO manual approval gates. Replaces 6-12 hours of babysitting with
 
 Usage:
     python scripts/auto-build-brain.py --person "Jensen Huang"
-    python scripts/auto-build-brain.py --person "Annie Duke" --dry-run
+    python scripts/auto-build-brain.py --person "Kara Swisher" --dry-run
     python scripts/auto-build-brain.py --person "Jensen Huang" --resume
     python scripts/auto-build-brain.py --person "Jensen Huang" --resume-from 3
 
@@ -1054,7 +1054,7 @@ def main():
         epilog="""
 Examples:
   python scripts/auto-build-brain.py --person "Jensen Huang"
-  python scripts/auto-build-brain.py --person "Annie Duke" --dry-run
+  python scripts/auto-build-brain.py --person "Kara Swisher" --dry-run
   python scripts/auto-build-brain.py --person "Jensen Huang" --resume
   python scripts/auto-build-brain.py --person "Jensen Huang" --resume-from 3
 

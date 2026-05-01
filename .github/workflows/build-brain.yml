@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       person:
-        description: Full name of the thinker (e.g. "Annie Duke")
+        description: Full name of the thinker (e.g. "Kara Swisher")
         required: true
         type: string
       slug:
