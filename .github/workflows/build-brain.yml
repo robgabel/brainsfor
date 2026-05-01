@@ -135,12 +135,13 @@ jobs:
           if-no-files-found: warn
           retention-days: 14
 
-      - name: Commit progress + pack to main (any outcome)
+      - name: Commit progress + pack to brain branch (any outcome)
         if: always() && steps.slug.outputs.slug != ''
         env:
           SLUG: ${{ steps.slug.outputs.slug }}
           PERSON: ${{ inputs.person }}
           PIPELINE_OUTCOME: ${{ steps.run.outcome }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -eo pipefail
           git config user.name "github-actions[bot]"
@@ -159,23 +160,48 @@ jobs:
             MSG="chore(brain): partial build progress for ${PERSON} (${SLUG}) — run ${GITHUB_RUN_ID} [${PIPELINE_OUTCOME}]"
           fi
 
-          git commit -m "$MSG"
-
-          # Rebase onto latest main + retry on push race (build can take 90 min;
-          # other commits to main during that window cause non-fast-forward).
-          for attempt in 1 2 3; do
-            git fetch origin main
-            if ! git rebase origin/main; then
-              echo "::error::Rebase conflict against origin/main on attempt $attempt"
-              git rebase --abort || true
-              exit 1
-            fi
-            if git push origin HEAD:main; then
-              echo "Push succeeded on attempt $attempt."
+          # Commit to a per-brain branch so progress accumulates across runs/resumes
+          # without touching main. Concurrency group already prevents parallel runs
+          # for the same slug, so no rebase/retry needed.
+          BRANCH="brain/${SLUG}"
+          git fetch origin "$BRANCH" 2>/dev/null || true
+          if git ls-remote --exit-code origin "refs/heads/${BRANCH}" >/dev/null 2>&1; then
+            git checkout -B "$BRANCH" "origin/${BRANCH}"
+            # Re-stage in case the checkout reset working tree
+            git add "brains/${SLUG}/" "brains/index.json" 2>/dev/null || true
+            if git diff --staged --quiet; then
+              echo "No new changes after syncing with remote branch."
               exit 0
             fi
-            echo "Push failed on attempt $attempt; refetching and retrying..."
-            sleep $((attempt * 4))
-          done
-          echo "::error::Push failed after 3 attempts."
-          exit 1
+          else
+            git checkout -B "$BRANCH"
+          fi
+
+          git commit -m "$MSG"
+          git push -u origin "$BRANCH"
+
+          # Open a PR only on success. Skip if one already exists for this branch.
+          if [ "$PIPELINE_OUTCOME" = "success" ]; then
+            if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
+              echo "PR already exists for ${BRANCH}; skipping create."
+            else
+              gh pr create \
+                --base main \
+                --head "$BRANCH" \
+                --title "feat(brain): add ${PERSON} brain pack" \
+                --body "$(cat <<EOF
+          ## Summary
+          - Auto-built brain pack for **${PERSON}** (\`${SLUG}\`) via \`build-brain.yml\` run [#${GITHUB_RUN_NUMBER}](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID})
+          - Includes atoms, connections, synthesis, explore.html, and all 8 skill templates
+
+          ## Review checklist
+          - [ ] Audit score ≥ 70
+          - [ ] explore.html renders all tabs
+          - [ ] No \`{{\` template variables in pack/
+          - [ ] brain-atoms.json has reasonable atom/connection counts
+
+          Merging this PR triggers Vercel auto-deploy to brainsforfree.com.
+          EOF
+          )"
+            fi
+          fi
