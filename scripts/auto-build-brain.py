@@ -218,8 +218,12 @@ def phase_0_discover_sources(
     if sources_path.exists():
         with open(sources_path) as f:
             existing = json.load(f)
-        success(f"sources.json already exists ({len(existing.get('sources', []))} sources) — skipping discovery")
-        return existing
+        source_count = len(existing.get("sources", []))
+        if source_count > 0:
+            success(f"sources.json already exists ({source_count} sources) — skipping discovery")
+            return existing
+        else:
+            warn("Existing sources.json is empty — re-running discovery")
 
     if dry_run:
         step("[DRY RUN] Would run 5 web searches + classify results")
@@ -1418,8 +1422,16 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                     args.person, slug, brain_dir, client, cost_tracker,
                     max_sources=args.max_sources,
                 )
-                mark_phase(progress, 0, "complete",
-                           sources_found=len(sources_data.get("sources", [])))
+                source_count = len(sources_data.get("sources", []))
+                if source_count > 0:
+                    mark_phase(progress, 0, "complete", sources_found=source_count)
+                else:
+                    mark_phase(progress, 0, "failed",
+                               sources_found=0,
+                               reason="0 sources found — create sources.json manually or check FIRECRAWL_API_KEY")
+                    save_progress(brain_dir, progress)
+                    error("Phase 0 produced 0 sources. Cannot continue.")
+                    sys.exit(1)
 
             elif phase_num == 1:
                 brain_json = phase_1_scaffold(
@@ -1446,6 +1458,14 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                     target_atoms=args.target_atoms,
                 )
                 atom_count = result.get("atom_count", 0)
+
+                if atom_count == 0:
+                    mark_phase(progress, 2, "failed",
+                               atoms=0,
+                               reason="0 atoms produced — check source content and ingestion logs")
+                    save_progress(brain_dir, progress)
+                    error("Phase 2 produced 0 atoms. Cannot continue.")
+                    break
 
                 # Hard floor — halt before spending on synthesis/enrichment if pack is too thin
                 if atom_count < args.min_atoms and not args.allow_thin_pack:
@@ -1520,14 +1540,38 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
         progress["total_cost_usd"] = cost_tracker.total_cost
         save_progress(brain_dir, progress)
 
+    # --- Check for skipped/failed phases ---
+    skipped_phases = [
+        i for i in range(6)
+        if progress["phases"].get(str(i), {}).get("status") == "skipped"
+    ]
+    failed_phases = [
+        i for i in range(6)
+        if progress["phases"].get(str(i), {}).get("status") in ("failed", "blocked")
+    ]
+
+    if 5 in skipped_phases:
+        print(f"\n{c['yellow']}{c['bold']}{'!' * 60}")
+        print(f"  WARNING: Phase 5 (Export & QA) was skipped")
+        print(f"  Brain pack NOT generated. Run with --resume to complete.")
+        print(f"{'!' * 60}{c['reset']}")
+    if 4 in skipped_phases:
+        warn("Phase 4 (Enrichment) was skipped — connections not generated")
+
     # --- Final report ---
     elapsed = time.time() - start_time
     mins = int(elapsed // 60)
     secs = int(elapsed % 60)
 
-    print(f"\n{c['bold']}{c['green']}{'=' * 60}")
-    print(f"  BUILD COMPLETE: {args.person}")
-    print(f"{'=' * 60}{c['reset']}\n")
+    build_incomplete = failed_phases or 5 in skipped_phases
+    if build_incomplete:
+        print(f"\n{c['bold']}{c['yellow']}{'=' * 60}")
+        print(f"  BUILD INCOMPLETE: {args.person}")
+        print(f"{'=' * 60}{c['reset']}\n")
+    else:
+        print(f"\n{c['bold']}{c['green']}{'=' * 60}")
+        print(f"  BUILD COMPLETE: {args.person}")
+        print(f"{'=' * 60}{c['reset']}\n")
     print(f"  Slug:        {slug}")
     print(f"  Time:        {mins}m {secs}s")
     print(f"  {cost_tracker.summary()}")
