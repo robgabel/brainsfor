@@ -10,7 +10,7 @@ Welcome to the **Brown Brain Pack** from [brainsforfree.com](https://brainsforfr
 ## What You're Getting
 
 - **283 knowledge atoms** — Core insights, frameworks, and strategic principles from 20+ years of research, 6 bestselling books, and thousands of interviews
-- **321 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Vulnerability, shame resilience, courage, empathy, leadership, boundaries, perfectionism, belonging, and more
 
@@ -211,7 +211,7 @@ This brain pack extracts and structures her core ideas so you can activate her m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — {{brain_source_ethics}}. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Brown's publicly distributed TED talks, Netflix special (widely discussed in press), Unlocking Us and Dare to Lead podcasts, Oprah's SuperSoul Conversations, and press interviews. Her book ideas are represented through public discussions, author interviews, and talks, not from book text directly.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

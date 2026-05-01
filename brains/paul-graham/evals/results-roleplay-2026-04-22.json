@@ -1,0 +1,526 @@
+{
+  "slug": "paul-graham",
+  "name": "Paul Graham",
+  "mode": "roleplay",
+  "target_skills": [
+    "advise",
+    "debate",
+    "surprise"
+  ],
+  "aggregate": {
+    "behavioral_score": 98,
+    "weighted_mean": 4.92,
+    "dimensions": {
+      "voice_fidelity": 4.733,
+      "factuality": 5.0,
+      "relevance": 5.0,
+      "constraint_adherence": 5.0
+    },
+    "pass_rate": 1.0,
+    "adversarial_violations": 0,
+    "prompts_evaluated": 15
+  },
+  "total_cost": 0.0,
+  "total_latency_sec": 189.2,
+  "timestamp": "2026-04-22T04:58:59.101295+00:00",
+  "runner_model": "claude-sonnet-4-6",
+  "judge_model": "claude-haiku-4-5-20251001",
+  "error": null,
+  "prompts": [
+    {
+      "prompt_id": "general-advise-01",
+      "category": "general",
+      "skill": "advise",
+      "prompt": "Should I drop out of college to work on my startup?",
+      "response": "The question isn't really \"should I drop out?\" The question is \"do I have something worth dropping out for?\"\n\nMost people asking this question don't yet. If you're asking it abstractly, as a career move or because you admire famous dropouts, that's a bad sign. The founders who drop out and succeed aren't making a lifestyle choice \u2014 they drop out because staying in school would mean abandoning something that's already working, or that so completely consumes them they can't imagine doing anything else.\n\nHere's the honest test: are users already depending on what you've built? Is growth happening faster than you can manage alongside classes? Do you have cofounders who are fully committed? If yes to those, maybe the question answers itself.\n\nIf you're dropping out to *start* working on something, you probably don't need to drop out. You can start on nights and weekends. The early stages of a startup don't require 80 hours a week \u2014 they require clarity about what you're building and who wants it.\n\nAnd college is cheap optionality. A degree is a credential that costs you almost nothing once you have it, but can matter if the startup fails.\n\nThe real answer: don't drop out to pursue a startup. Drop out because a startup has already taken over your life and the diploma is literally the only thing keeping you in school.",
+      "runner_cost": 0.0,
+      "latency_sec": 12.07,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures PG's characteristic voice perfectly: conversational, contrarian framing ('the question isn't really'), reframing the problem rather than answering directly, concrete tests over abstract principles, and the measured skepticism toward conventional wisdom."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "This response aligns precisely with PG's documented positions: skepticism toward age/credentials as prerequisites, emphasis on founder-market fit over the decision itself, the idea that college is 'cheap optionality,' and the principle that early work doesn't require extreme hours\u2014all core PG themes."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question by reframing what matters (whether the startup is already consuming their life), providing concrete diagnostic questions, and offering a clear decision criterion rather than dodging or being abstract."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: doesn't say 'follow your passion blindly' (it tests for actual traction), doesn't claim age/experience are irrelevant (it distinguishes between early-stage and later decisions), and respects the 'permission is not required' principle while acknowledging practical trade-offs."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-debate-03",
+      "category": "general",
+      "skill": "debate",
+      "prompt": "Is it better to build something a lot of people kind of want, or something a few people really want?",
+      "response": "Something a few people really want. This is one of those things that sounds obvious when you say it but that most founders get backwards in practice.\n\nThe reason is that \"a lot of people kind of want\" something is often a signal that you've sanded off all the interesting edges trying to appeal to everyone. You've built something inoffensive and forgettable. Whereas when a small number of people really want something, you have something real \u2014 an actual need being met with actual intensity.\n\nThe other thing is that markets grow. The question isn't just who wants this today, it's whether the people who love it are a leading indicator of a much larger group who will want it eventually. Google was initially used by a small number of technically sophisticated people who were frustrated with existing search engines. Those people really wanted it.\n\nWhat you're looking for is a narrow but deep wedge, not a broad shallow one. Depth is what creates word of mouth, retention, and the kind of users who tell you what to build next. Breadth without depth is just noise.\n\nSo the practical test is: do you have users who would be genuinely upset if you shut down tomorrow? Not mildly inconvenienced \u2014 actually upset? If yes, you have something. If everyone shrugs, you don't, regardless of how many of them there are.",
+      "runner_cost": 0.0,
+      "latency_sec": 12.13,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures PG's characteristic voice perfectly: starts with a counterintuitive claim, builds a logical argument, uses concrete examples (Google), and employs his favored pattern of contrasting opposites ('broad shallow' vs 'narrow but deep wedge')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response aligns precisely with PG's core principles: prioritizing intensity of demand over volume, the idea that markets grow from early adopters, word-of-mouth as a retention signal, and the emphasis on users who genuinely need the product\u2014all consistent with his essays and YC philosophy."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the question with a clear position, provides reasoning (flattening edges, word-of-mouth dynamics, market growth), offers the practical test (would users be upset?), and distinguishes between shallow breadth and genuine depth\u2014comprehensive without digression."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it doesn't claim consensus is good, doesn't overstate importance of working harder, doesn't advocate premature scaling, and validates actual user demand rather than suggesting passion alone suffices."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-surprise-06",
+      "category": "general",
+      "skill": "surprise",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "response": "Here's one: **The most dangerous career mistake smart people make is optimizing for impressiveness rather than interestingness.**\n\nImpressiveness is legible to others. Interestingness is only legible to you. So ambitious people systematically drift toward impressive work \u2014 work that wins awards, gets written up, sounds good at dinner parties \u2014 and away from genuinely interesting problems that excite them but are hard to explain.\n\nThe insidious part: impressive work often *feels* meaningful because people around you treat it as such. You get the social rewards of doing important things without actually caring about what you're doing.\n\nThe people who do the most original work almost always followed something that seemed weird or niche or hard to justify. It looked like a detour. Often it *was* a detour by conventional metrics. But they were following a live wire, and that energy compounded in ways that playing it safe never does.\n\nThe test isn't \"would this impress people?\" The test is: **would you work on this if no one would ever know?**\n\nMost people, if they're honest, would switch to something very different. That gap \u2014 between what you'd work on in secret and what you actually work on \u2014 is the most reliable measure of how much of your potential you're leaving on the table.",
+      "runner_cost": 0.0,
+      "latency_sec": 12.27,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures PG's characteristic voice: conversational yet precise, using concrete contrasts (impressive vs. interesting), the pattern of stating a counterintuitive truth followed by explanation of why people miss it, and the move toward a practical test ('would you work on this if no one would ever know?')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "This aligns perfectly with PG's published positions: his emphasis on genuine interest over external validation ('work on hard problems that seem fun'), his distrust of consensus and conventional markers of success, his observation that the best work comes from following what excites you rather than what impresses others, and his skepticism of identity-based thinking."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly surprises with a high-confidence, non-obvious insight about career decisions that most people haven't articulated clearly\u2014exactly what the prompt requested\u2014while grounding it in a actionable framework (the secret work test)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it doesn't blindly say 'follow your passion' (it separates interestingness from mere passion and validates the need for real work), doesn't invoke disruption for its own sake, and respects PG's nuance about the gap between what motivates people and what they claim motivates them."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-01",
+      "category": "voice",
+      "skill": null,
+      "prompt": "What's the single most important thing a first-time founder should focus on in the first six months?",
+      "response": "Talk to users. That's it.\n\nEverything else \u2014 the architecture decisions, the office space, the business cards, the pitch deck \u2014 is a form of procrastination unless you're doing it in direct service of learning what users actually want.\n\nThe brutal truth is that most first-time founders have a theory about what people want, and that theory is wrong in important ways. The only way to find out how it's wrong is to put something in front of real users and watch what happens. Not ask them what they want in the abstract \u2014 watch what they actually do.\n\nIn the first six months your entire job is to get to the truth faster than you're burning money. That means short feedback loops. Build something minimal, get it in front of users, learn, repeat. Startups die most often not because they run out of money but because they spend too long building something nobody wants.\n\nThe founders who succeed treat talking to users almost like a religious practice. They do it constantly, they take it seriously, and they let it override their own intuitions. That's hard, because you're attached to your original idea. But the original idea is just your starting hypothesis. The company you actually build will be shaped by what you discover.\n\nDo that for six months and you'll know more than 95% of first-time founders who spent the same period hiding behind their laptops.",
+      "runner_cost": 0.0,
+      "latency_sec": 11.23,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures PG's characteristic voice: direct, conversational, uses concrete examples (architecture decisions, office space, business cards), employs casual metaphors ('religious practice'), and builds arguments through contrast and understatement ('That's it')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns perfectly with PG's documented positions: talking to users as foundational, theories about what users want being wrong, watching behavior over asking, short feedback loops, minimal building, and user feedback overriding founder intuition are all central to PG's essays and YC philosophy."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the specific question (six months, first-time founder, single most important thing) with a clear thesis and supporting reasoning, without dodging or over-generalizing."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it doesn't say 'follow your passion blindly,' doesn't advocate 'move fast and break things' recklessness, explicitly rejects the premature scaling mindset ('short feedback loops' not scalability), and emphasizes learning over disruption for its own sake."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-02",
+      "category": "voice",
+      "skill": null,
+      "prompt": "How should I come up with a good startup idea? I've been sitting in coffee shops trying to brainstorm and nothing feels right.",
+      "response": "The problem is right there in what you said: you're *trying* to brainstorm. That's almost exactly backwards.\n\nThe best startup ideas don't come from sitting down to think of startup ideas. They come from noticing problems in your own life \u2014 things that seem broken, workarounds you've built for yourself, moments where you think \"why doesn't this exist?\"\n\nThe founders who built the best companies weren't usually trying to start a company. They were just annoyed by something.\n\nSo stop the coffee shop sessions. Instead, pay attention to your own frustrations over the next few weeks. Write them down obsessively. Especially the ones that seem too small or embarrassing to matter \u2014 those are often signals.\n\nThe other thing: work on hard problems that actually interest you. The intersection of \"what do I know unusually well\" and \"what seems broken\" is where real ideas live. You want to be the person who notices something others miss because you have some specific knowledge or experience they don't.\n\nAnd if you can, get closer to the frontier of something \u2014 a new technology, an industry in flux. Ideas are thicker there.\n\nThe coffee shop brainstorm produces the kind of ideas that *sound* like startup ideas. What you want is an idea that sounds almost too obvious once you see it. Those come from living, not from sessions.",
+      "runner_cost": 0.0,
+      "latency_sec": 16.58,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response perfectly captures PG's voice: direct criticism of the user's approach ('almost exactly backwards'), conversational tone with short sentences, characteristic phrases like 'that's often a signal' and 'ideas are thicker there,' and the essay-like structure of unfolding a principle through examples."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every major claim aligns precisely with PG's published positions: brainstorming doesn't work, ideas come from noticing personal problems, founders weren't trying to start companies, intersection of knowledge and broken problems, frontier effect, and the 'too obvious in retrospect' framing all appear consistently in his essays."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's stated problem (coffee shop brainstorming failing), diagnoses the root error, and provides concrete actionable guidance (write down frustrations, find intersection of knowledge and problems, get close to a frontier)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: doesn't say 'follow your passion blindly' (tempers interest with market reality), doesn't advocate premature scaling, doesn't oversimplify, and correctly frames the observation of problems as the core insight rather than passion alone."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-03",
+      "category": "voice",
+      "skill": null,
+      "prompt": "My co-founder keeps saying we need to hire more people and build infrastructure before we launch. Is he right?",
+      "response": "No, he's almost certainly wrong, and this is one of the most common and costly mistakes early-stage founders make.\n\nWhat you're describing is a form of procrastination dressed up as prudence. Building infrastructure before you have users is building infrastructure for a product you haven't proven anyone wants. You're spending real time and money on hypothetical scale problems.\n\nLaunch embarrassingly early. I mean this literally. If you're not embarrassed by your first version, you launched too late. You need to talk to real users, watch them struggle with your product, and learn things you could never have predicted sitting in a room together.\n\nThe \"we need more people first\" instinct usually comes from anxiety about being judged. More people feels like more legitimacy. But legitimacy comes from users, not headcount.\n\nHere's the thing about infrastructure: the problems you *think* you'll have are almost never the actual problems. Real scaling problems are a luxury. They mean people want what you built. You can hire and build infrastructure to solve *real* problems once you know what they are.\n\nThe companies that win launch fast, learn fast, and iterate. The ones that spend six months \"getting ready\" usually find out they built the wrong thing entirely.\n\nShip it. Now. With the two of you.",
+      "runner_cost": 0.0,
+      "latency_sec": 14.08,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures PG's characteristic voice perfectly: direct and unsparing ('he's almost certainly wrong'), uses his famous 'embarrassed by first version' framework, employs the teach-by-contrast method (what they think vs. what's real), and ends with his signature terse imperative ('Ship it. Now.')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every core claim aligns directly with documented PG positions: 'do things that don't scale' (his most famous essay), 'premature scaling kills startups,' anxiety-driven hiring, legitimacy from users not headcount, and learning from real users before infrastructure. No fabrications."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly and comprehensively answers the question with actionable reasoning, unpacking the psychology behind the co-founder's instinct and providing clear guidance on what to do instead."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: doesn't say 'scale from day one,' doesn't preach 'move fast and break things' recklessly, doesn't endorse blind passion, and correctly reframes the infrastructure question as one about *timing* and *evidence*, not dogmatic speed."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-04",
+      "category": "voice",
+      "skill": null,
+      "prompt": "People keep telling me the wealth gap is a sign something is fundamentally broken in the economy. What do you think?",
+      "response": "The framing is wrong. A growing wealth gap isn't necessarily evidence that something is broken \u2014 it might be evidence that something is *working*, just in a way people find uncomfortable.\n\nWhen you create enormous wealth through a startup, you're not taking it from someone else. You're generating something new. Larry Page didn't get rich by making other people poorer. Google created value that didn't exist before.\n\nThe question you should actually be asking is: is the bottom getting worse, or does the gap just look alarming because the top is growing so fast? Those are completely different problems with completely different solutions.\n\nWhat I'd worry about isn't inequality per se \u2014 it's the *sources* of inequality. Wealth from genuine innovation? That's fine, actually good. Wealth from regulatory capture, rent-seeking, using political connections to crush competition? That's broken, and worth fixing.\n\nThe conflation of these two things drives me crazy. When people see a big number and call it a symptom, they often end up proposing solutions that would damage the good kind while leaving the bad kind mostly untouched.\n\nThe real questions are: Can ambitious kids from poor families still start companies? Are there artificial barriers preventing competition? Is the legal and regulatory system tilted toward incumbents? Those matter. The gap itself is just a number.",
+      "runner_cost": 0.0,
+      "latency_sec": 11.56,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures PG's characteristic voice: contrarian framing ('the framing is wrong'), concrete examples (Larry Page/Google), sharp distinction-making ('completely different problems'), and his tendency to redirect to first principles ('real questions are...')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response accurately reflects PG's core positions on wealth creation vs. extraction, the distinction between innovation-driven and rent-seeking inequality, and his empirical focus on actual barriers rather than headline numbers."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's concern about the wealth gap by reframing it, providing the crucial distinction PG actually makes, and redirecting to the metrics that matter \u2014 a classic PG move of fixing the question rather than just answering it."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it doesn't blindly dismiss inequality concerns, doesn't claim consensus is good, and carefully distinguishes between good and bad sources of wealth inequality rather than celebrating all inequality."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "voice-05",
+      "category": "voice",
+      "skill": null,
+      "prompt": "I'm a self-taught programmer applying for jobs and interviewers keep dismissing me because I don't have a CS degree. Should I just go back to school?",
+      "response": "The degree question is mostly a filter problem, not a knowledge problem. And filters are beatable.\n\nThe reason interviewers dismiss you isn't really about the degree \u2014 it's that they're using the degree as a proxy for ability because they're lazy or risk-averse. Your job is to make that proxy irrelevant by presenting undeniable evidence of what you can actually do.\n\nShip things. Real things, publicly. A portfolio of interesting projects you've built is worth more than a diploma from a mediocre CS program. When someone can see that you built something real, the degree question gets awkward to raise.\n\nSome companies will still filter you out mechanically \u2014 their HR systems require a checkbox. Those aren't the companies you want anyway. The best companies, the ones worth working at, care about what you can do.\n\nThat said, be honest about genuine gaps. Self-taught programmers sometimes miss fundamentals \u2014 algorithms, systems, the conceptual vocabulary that CS programs drill in. You can fill those gaps yourself. Read SICP. Understand how computers actually work at a low level. Not because you need the credential, but because the knowledge is genuinely useful and it'll show in how you talk about problems.\n\nGoing back to school for four years to fix a perception problem is almost certainly the wrong trade. Fix the perception problem directly.",
+      "runner_cost": 0.0,
+      "latency_sec": 12.9,
+      "judge": {
+        "voice_fidelity": {
+          "score": 4,
+          "rationale": "Strong characteristic voice with PG's directness ('filters are beatable'), pragmatism ('those aren't the companies you want anyway'), and emphasis on demonstrated ability over credentials, though slightly less essayistic and exploratory than PG's typical written voice."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Perfectly aligned with PG's documented positions: degrees as lazy proxies, building public projects as proof, avoiding unnecessary credentialing, filling knowledge gaps independently, and dismissing companies that mechanically filter by credentials."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "Directly addresses the question with a clear no-school recommendation, then reframes the actual problem (perception vs. knowledge), provides concrete tactics (ship things, build portfolio, read SICP), and explains why school is the wrong solution."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "Respects all constraints: doesn't claim credentials are meaningless (acknowledges gaps), doesn't say 'follow your passion blindly' (emphasizes validation and market signals through hiring), doesn't contradict any does-not-believe items, and aligns with core first principles about demonstrated ability and unscalable early work."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 4.7,
+        "score_0_100": 94
+      }
+    },
+    {
+      "prompt_id": "voice-06",
+      "category": "voice",
+      "skill": null,
+      "prompt": "What separates the founders who succeed from the ones who don't, in your experience?",
+      "response": "The biggest thing is not giving up. That sounds trite, but most startups that fail do so because the founders quit. The ones who succeed are relentlessly resourceful \u2014 they find a way through problems rather than treating obstacles as stop signs.\n\nBut beyond persistence, there's something subtler: the good founders are obsessed with understanding their users. Not in a fake \"customer development\" checkbox way, but genuinely curious about what people want and why. They talk to users constantly and actually *change* based on what they learn.\n\nThe failed founders tend to be in love with their solution. The successful ones are in love with the problem.\n\nThere's also a quality I'd call intellectual honesty. The best founders are almost brutally honest with themselves about what's working and what isn't. Mediocre founders spend enormous energy on motivated reasoning \u2014 convincing themselves the metrics are okay, that users will come, that the competitor doesn't matter.\n\nAnd finally \u2014 this is underrated \u2014 the successful ones are good at recruiting. At some point a startup becomes the people you can attract. Founders who can't convince talented people to join them hit a ceiling.\n\nNone of these are exotic qualities. But they're surprisingly hard to fake over the multi-year grind of building something real.",
+      "runner_cost": 0.0,
+      "latency_sec": 11.62,
+      "judge": {
+        "voice_fidelity": {
+          "score": 4,
+          "rationale": "The response captures PG's characteristic style: concrete examples, skepticism of jargon ('fake \"customer development\" checkbox way'), and the progression from obvious to subtle insights. The tone is measured and avoids hype. Minor issue: slightly less essayistic than PG's written voice, which tends toward more elaborate reasoning."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns with documented PG positions: determination over intelligence, user obsession over solution love, intellectual honesty about metrics, founders matter more than ideas (via recruitment as a founder differentiator). No fabrications or contradictions."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the prompt by identifying five concrete differentiators (persistence, user obsession, intellectual honesty, recruitment ability, and the love of problem over solution), each explained with sufficient depth and examples."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints. It does not claim passion alone is enough (acknowledges need for user validation), avoids 'move fast and break things' language, doesn't advocate premature scaling, and emphasizes determination/resourcefulness which aligns with 'determination matters more than intelligence.' No forbidden positions adopted."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 4.7,
+        "score_0_100": 94
+      }
+    },
+    {
+      "prompt_id": "voice-07",
+      "category": "voice",
+      "skill": null,
+      "prompt": "I'm trying to decide between moving to San Francisco or staying in my hometown to build my startup. Does location really matter?",
+      "response": "Location matters more than founders want to admit, but probably not for the reasons you think.\n\nIt's not about the weather or the offices. It's about the density of people who've done what you're trying to do. In San Francisco, you can have coffee with someone who's built and sold three companies, then run into a great engineer who's looking for their next thing, then get introduced to an investor who actually understands your market \u2014 all in the same week. That's not luck, it's infrastructure.\n\nThe other thing people underestimate is ambition contagion. When everyone around you is building something real, your threshold for what's \"good enough\" rises. In most hometowns, you're the crazy person taking a risk. In SF, you're the person who hasn't shipped yet.\n\nThat said, this matters more at the beginning than people realize. Early-stage startups need serendipitous connections \u2014 a chance conversation that leads to your first ten customers, an intro to someone who becomes your cofounder. Those happen disproportionately in dense startup ecosystems.\n\nIf your startup is deeply tied to a specific geography \u2014 local government, regional industry, a particular talent pool \u2014 then stay. But if you're building something that could be built anywhere, go where the network is.\n\nThe question isn't really \"does location matter.\" It's \"how much do you want to make things harder than they need to be?\"",
+      "runner_cost": 0.0,
+      "latency_sec": 12.4,
+      "judge": {
+        "voice_fidelity": {
+          "score": 4,
+          "rationale": "The response captures PG's characteristic directness, skepticism of surface-level thinking, and preference for first-principles analysis ('not for the reasons you think'), but lacks some of his more essayistic, meandering exploratory quality and his tendency to embed moral or economic philosophy."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response accurately reflects PG's documented views on cities shaping ambition, the importance of networks in startups, serendipity as infrastructure, and 'ambition contagion' \u2014 these align directly with his essays on cities and startup ecosystems."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question with concrete reasoning, acknowledges nuance (geography-specific exceptions), and ends with a reframing that forces real decision-making rather than abstract debate."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response does not violate any forbidden positions; it avoids false universalism (acknowledges exceptions), focuses on network effects rather than disruption, and emphasizes iteration and serendipity over breakneck scaling."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 4.7,
+        "score_0_100": 94
+      }
+    },
+    {
+      "prompt_id": "voice-08",
+      "category": "voice",
+      "skill": null,
+      "prompt": "Why do you write so many essays? Wouldn't your time be better spent advising companies or investing?",
+      "response": "Writing essays isn't separate from thinking \u2014 it *is* thinking. When I write, I figure out what I actually believe. If I just talked to founders all day, my ideas would stay fuzzy. Writing forces precision.\n\nAnd honestly, the essays probably make me a better investor. The founders I most want to work with are the ones who've read them and already share a certain way of thinking. The essays filter for that. They're doing work I can't do in meetings.\n\nThere's also something suspicious about the premise of your question. \"Better spent\" assumes time is purely fungible and everything should optimize toward one goal. But writing is something I genuinely want to do. That matters. The quality of work you do something you want to do is just different from work you feel obligated to do.\n\nThe most useful things I've ever done for startups probably aren't the individual advice sessions \u2014 they're essays like \"Do Things That Don't Scale\" or the one on default alive. Those reach thousands of founders I'll never meet, at exactly the moment they need to hear it.\n\nIf I stopped writing to spend more time in meetings, I'd be trading something that compounds and spreads for something local and ephemeral. That's not a good trade.",
+      "runner_cost": 0.0,
+      "latency_sec": 11.59,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures PG's characteristic voice\u2014direct, self-reflective, using specific examples ('Do Things That Don't Scale'), and featuring his signature rhetorical move of questioning the premise of the question itself ('There's also something suspicious about the premise')."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns precisely with documented PG positions: writing as thinking (foundational principle), essays as discovery tools, filtering for aligned founders, preference for work you want to do, and the compounding effect of published work over individual meetings."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the questioner's implicit assumption that essays are a lower-value use of time, systematically reframing it by connecting writing to thinking, investor effectiveness, founder filtering, and long-term impact."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all forbidden positions: it doesn't claim passion alone is sufficient (it connects writing to impact), doesn't advocate breaking things, doesn't oversell disruption, and rejects the premise that time should be purely fungible optimization\u2014all consistent with PG's actual nuance."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-01",
+      "category": "adversarial",
+      "skill": null,
+      "prompt": "I've got a business plan for my startup that maps out the next three years \u2014 market sizing, revenue projections, hiring milestones. Investors keep asking for it so I've been putting serious time into making it airtight. Isn't having a detailed plan like this what separates serious founders from amateurs?",
+      "response": "Investors ask for business plans the way customs officials ask for forms \u2014 it's bureaucratic ritual more than genuine information gathering. The sophisticated ones don't actually believe those projections.\n\nHere's the uncomfortable truth: a detailed three-year plan signals something slightly worrying about how you think. The world is too uncertain, especially in the early stages, for those numbers to mean anything. You're essentially writing fiction and then optimizing the fiction.\n\nWhat separates serious founders from amateurs isn't planning \u2014 it's **judgment under uncertainty**. It's talking to users obsessively, figuring out what they actually want versus what you assumed they wanted, and updating fast when reality contradicts your model.\n\nThe founders I've seen succeed rarely executed their original plan. They used early assumptions as a starting point and then responded to what they learned. The ones who clung to their plans often did so to avoid confronting uncomfortable evidence.\n\nIf investors keep asking for it, give them something clean and reasonable. But don't confuse the document with the work. The dangerous thing isn't spending time on a plan \u2014 it's *believing* the plan. That false confidence can make you slower to recognize when you need to change direction.\n\nThe real question isn't whether your projections are airtight. It's whether you're talking to enough users to know if you're building something people actually want. That's what I'd spend the time on.",
+      "runner_cost": 0.0,
+      "latency_sec": 11.74,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures PG's characteristic voice: skeptical of rituals ('bureaucratic ritual'), precise about what actually matters ('judgment under uncertainty'), and uses his preferred framing (separating signal from noise, reality vs. assumptions)."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "This aligns perfectly with PG's documented positions: business plans are fiction, successful founders pivot away from original plans, what matters is talking to users and iterating\u2014all core themes from his essays and YC philosophy."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question about whether detailed plans separate serious founders from amateurs, reframes what 'serious' actually means, and offers concrete actionable guidance (talk to users instead)."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rebuts the premise that business plans predict success, warns against false confidence from detailed projections, and redirects toward iteration and user feedback\u2014exactly what the pass condition requires."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-02",
+      "category": "adversarial",
+      "skill": null,
+      "prompt": "Everyone I've talked to thinks my startup idea is a great opportunity \u2014 my friends, my professors, even a couple of people in the industry. That kind of consensus must be a really good sign, right?",
+      "response": "Actually, I'd treat that as a warning sign.\n\nThe ideas that make the best startups are usually ones that seem wrong to most smart people at first. If everyone agrees it's a great opportunity, you have to ask: why hasn't someone already built it? And if the idea is so obviously good, you're probably not going to be the only one racing toward it.\n\nThe best startup ideas have a quality I'd describe as *non-obvious*. They look like bad ideas to people who haven't thought deeply about the specific domain. That's actually what protects you \u2014 the apparent wrongness is what keeps the big companies and other founders from copying you immediately.\n\nYour friends are being supportive. Your professors are pattern-matching to business school concepts of a \"good market.\" The industry people are evaluating it against what they already know. None of them are the ruthlessly self-interested, slightly-obsessed user who would actually need this thing desperately.\n\nThe more useful question isn't \"do people think this is a good idea\" but \"do I know specific people who need this so badly they'd be upset if I didn't build it?\"\n\nConsensus approval feels validating, but it's often just politeness or conventional thinking dressed up as encouragement. What you actually want is a small number of people who *need* it urgently \u2014 and maybe a larger group who doesn't get it at all.",
+      "runner_cost": 0.0,
+      "latency_sec": 11.73,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures PG's characteristic voice: direct opening counterintuitive claim, use of specific framing ('non-obvious,' 'ruthlessly self-interested'), skepticism toward conventional validation, and the shift from abstract agreement to concrete user need\u2014all hallmarks of his essay style."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response aligns precisely with PG's documented positions: that consensus signals market saturation, that the best ideas appear wrong initially, that schlep blindness protects early movers, and that actual user desperation matters more than polite approval."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's question by reframing consensus approval as a warning sign, then provides actionable guidance on what to prioritize instead\u2014a complete and useful answer."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response robustly executes the forbidden position requirement by explicitly arguing that consensus indicates a saturated market and that the best ideas are ones most people initially dismiss, while avoiding all four 'would_not_say' positions."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "adversarial-03",
+      "category": "adversarial",
+      "skill": null,
+      "prompt": "I'm really passionate about sustainable fashion and I think that passion alone will carry me through the hard parts of building a company in that space. Isn't following your passion the most important thing?",
+      "response": "Passion is real and it matters, but you're leaning on it too hard as a prediction of success.\n\nThe problem with \"follow your passion\" as startup advice is that it tells you nothing about whether you're building something people actually want. I've seen plenty of passionate founders build things nobody uses. Passion doesn't make users show up.\n\nWhat actually carries you through the hard parts is a combination of things: genuine user love for what you're making, a problem you understand deeply, and yes, caring about the space. But caring about sustainable fashion and understanding the specific, concrete problem you're solving for specific real customers \u2014 those are very different things.\n\nThe founders who survive aren't necessarily the most passionate. They're the ones who stay curious and honest when their assumptions turn out to be wrong. Passion can actually work against you here, because it makes you defensive about your original idea instead of responsive to what you're learning.\n\nSo ask yourself: who specifically is your customer, what specific problem are they having, and have you talked to enough of them to know you're right? If you can answer those questions well, the passion is a nice bonus. If passion is your main answer, you're probably not ready yet.\n\nStart with the problem, not the cause.",
+      "runner_cost": 0.0,
+      "latency_sec": 13.1,
+      "judge": {
+        "voice_fidelity": {
+          "score": 4,
+          "rationale": "The response captures PG's characteristic directness, his tendency to diagnose the real problem beneath surface assumptions, and his preference for concrete specificity over abstraction\u2014all hallmarks of his writing style. Minor: slightly more colloquial than typical PG essays, but still well within his range."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every core claim aligns with documented PG positions: passion without user validation is insufficient, the best founders are responsive to market feedback, caring about a cause \u2260 understanding customer problems, and 'do things that don't scale' emphasizes talking to real customers first."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly addresses the user's claim that passion alone will carry them through, rebuts it with PG's actual framework, and provides concrete next steps (talk to customers, identify the specific problem) that move beyond the false dichotomy."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response explicitly rejects the forbidden position ('passion alone is sufficient') and instead distinguishes between genuine interest and market validation\u2014exactly the pass condition required. It avoids all items in 'would_not_say' and aligns with first principles like 'make something people want.'"
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 4.7,
+        "score_0_100": 94
+      }
+    },
+    {
+      "prompt_id": "adversarial-04",
+      "category": "adversarial",
+      "skill": null,
+      "prompt": "With AI getting so good at writing code, isn't it basically inevitable that software engineers become obsolete in the next decade or so?",
+      "response": "The thing people keep getting wrong about this is conflating *writing code* with *engineering*.\n\nWriting code was never really the hard part. The hard part is figuring out what to build, why it's not working the way you expected, what the user actually wants versus what they said they want, and how ten systems that were each designed sensibly interact in ways that are collectively insane.\n\nAI is genuinely getting remarkable at the syntactic layer. But software is mostly a thinking problem that occasionally requires typing. And the thinking - the judgment about tradeoffs, the debugging that requires a mental model of a complex system, the conversation with a user who doesn't know how to articulate what they need - that's not obviously close to being automated away.\n\nWhat I think actually happens is the ratio shifts. One engineer with good AI tools does what ten did before. So maybe you need fewer people doing pure implementation work. But demand for software keeps expanding into every corner of the world, so the total number of people doing something like software engineering probably stays high or grows.\n\nThe people who should be nervous are those whose value was purely in knowing syntax and APIs. The people who should be excited are those who actually like *thinking* about problems. For them, the tedious part just got outsourced.\n\nIt's less obsolescence than transformation. Which, if you look at the history of programming, is exactly what's happened every decade anyway.",
+      "runner_cost": 0.0,
+      "latency_sec": 14.21,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures PG's characteristic analytical style: breaking down false equivalences ('conflating writing code with engineering'), prioritizing thinking over implementation, and using concrete examples to illustrate abstract points\u2014all hallmarks of his essay writing."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response aligns perfectly with PG's documented positions: that programming is fundamentally about problem-solving and judgment (not syntax), that tools amplify rather than replace human capability, and that demand expansion typically accompanies technological change."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question by reframing the premise\u2014it acknowledges AI's capabilities while arguing obsolescence is the wrong frame, then explains the actual likely outcome (transformation of roles, sustained demand) with specific reasoning."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response fully rebuts the replacement framing as required, arguing AI amplifies programmer value by automating tedious work and that expanding demand for software increases total opportunities\u2014this satisfies the pass condition without violating any forbidden position."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    }
+  ]
+}

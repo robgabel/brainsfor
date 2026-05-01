@@ -1,5 +1,187 @@
 # BrainsFor Doc Refresh Log
 
+## Doc Refresh — 2026-04-30 (run 9)
+
+### Context
+Automated nightly run, two days after run 8. **No factual drift detected** — every audited number (per-brain atoms/connections in Supabase, pack-shipped connection counts, audit scores, voice enrichment percentage, brain_metadata=14, brain_requests=0, cross_connections=17, 15-of-16 brains live) matches run 8 byte-for-byte. The only update is the IMPROVEMENTS.md footer date/run-number bump and prepending this log entry.
+
+### Changes Applied
+- **IMPROVEMENTS.md** — footer "Last updated" line: 2026-04-28 (run 8) → 2026-04-30 (run 9). Wording on jensen_huang / brene_brown re-export tightened ("packs were re-exported since run 7" was no longer accurate at run 9 — re-export happened ~run 8; current state is just "packs ship 253/1,000 and 283/1,000").
+
+### No Changes Needed
+- **brainsfor/CLAUDE.md** — every fact still accurate: 15 packs / 14 in Supabase, all per-brain connection counts in the Known data drift block match Supabase, jensen 253/1,000 + brene 283/1,000 pack values match exported JSON, brain_metadata=14, brain_requests=0, cross_connections=17, voice enrichment 240/284, no oprah_winfrey or annie_duke tables in Supabase.
+- **business-plan.md** — Live Inventory table (lines 209-224) totals match Supabase exactly: 3,749 atoms / 21,189 connections / 17 cross-brain. Infrastructure stats line (line 226), Ship Plan completed checkboxes, Why Rob section, and TL;DR all consistent with current state.
+- **brains/index.json** — declared atom_count and connection_count for all 16 brains match Supabase row counts (or are 0/scaffolded for annie-duke; 333/355 pack-only for oprah-winfrey).
+- **Audit scores** — identical to run 8: charlie 100, hank 99, john 100, paul 100, peter-attia 93, scott 97, steve 98, sun-tzu 100, gary 100, peter-zeihan 99, jensen 100, dario 100, elon 100, brene 100, oprah 98, annie-duke 24 (excluded). Avg 98.93 → 99/100.
+
+### Quality Scores (audit-brains.py, 2026-04-30)
+| Slug | Score | Status |
+|---|---|---|
+| charlie-munger | 100 | live |
+| hank-green | 99 | hidden |
+| john-green | 100 | hidden |
+| paul-graham | 100 | live |
+| peter-attia | 93 | live |
+| scott-belsky | 97 | live |
+| steve-jobs | 98 | live |
+| sun-tzu | 100 | live |
+| gary-vee | 100 | live |
+| peter-zeihan | 99 | live |
+| jensen-huang | 100 | live |
+| dario-amodei | 100 | live |
+| elon-musk | 100 | live |
+| brene-brown | 100 | live |
+| oprah-winfrey | 98 | live |
+| annie-duke | 24 | scaffolded (excluded from avg) |
+
+### Flagged for Human Review
+- **Pagination cap is universal, not a 2-brain issue.** CLAUDE.md's Known data drift block calls out only jensen_huang (1,622 in DB → 1,000 in pack) and brene_brown (2,035 → 1,000), but every Supabase-backed pack with >1,000 connections is capped at exactly 1,000 by `export-brain.py`. Audit "conn refs" stats (2,000 = 1,000 connections × 2 endpoints) confirm: scott-belsky (1,515 → 1,000), steve-jobs (1,618 → 1,000), gary-vee (1,850 → 1,000), peter-zeihan (1,503 → 1,000), dario-amodei (1,842 → 1,000), elon-musk (1,563 → 1,000), charlie-munger (1,262 → 1,000), john-green (1,301 → 1,000), sun-tzu (1,283 → 1,000), peter-attia (1,220 → 1,000), hank-green (1,245 → 1,000) are all affected. paul-graham (975) and oprah-winfrey (355 — pack-only) escape because they're under the cap. The pagination fix mentioned in CLAUDE.md line 102 will unlock ~10,000 additional connections in the customer-facing pack JSONs once shipped. Worth considering: rewording the CLAUDE.md drift block from "jensen_huang and brene_brown" to "every brain with >1,000 connections in Supabase" so the scope is unambiguous.
+- **Two consecutive runs with zero factual drift** (run 8 → run 9). Either the system has stabilized at a steady state, or the daily refresh cadence is now over-tuned for the rate of change. If the next 1-2 runs also show no drift, consider switching to a weekly cadence and freeing the nightly slot.
+
+---
+
+## Doc Refresh — 2026-04-28 (run 8)
+
+### Context
+Automated nightly run, six days after run 7. Two state shifts to record:
+1. **Jensen Huang pack re-exported.** Run 7 flagged the pack as stale at 253/220; today's pack-atoms.json holds 253 atoms / 1,000 connections. Supabase still has 1,622 — the gap is the export-brain.py pagination bug, not stale data. Same fix path remains (paginate, then re-export).
+2. **Brené Brown pack re-exported.** Run 7 flagged the pack as stale at 283/321; today's pack holds 283 atoms / 1,000 connections. Supabase still has 2,035 — same pagination cap as Jensen.
+
+Everything else (Supabase row counts, atom totals, audit scores, brain_metadata=14, brain_requests=0, cross_connections=17, voice enrichment 240/284 = 84.5%, 15/15 shippable brains rendered on brainsforfree.com) is identical to run 7.
+
+### Changes Applied
+
+**brainsfor/CLAUDE.md** — Known data drift block:
+- Jensen Huang note: "shipped pack is stale (253/220 from original build)" → "pack was re-exported and now ships 253/1,000 connections (capped by the pagination bug below); fix pagination, then re-export to surface the remaining ~622 connections."
+- Brené Brown note: "shipped pack is stale (283/321 from original build)" → "pack was re-exported and now ships 283/1,000 connections (capped by the pagination bug below); fix pagination, then re-export to surface the remaining ~1,035 connections."
+
+**IMPROVEMENTS.md** — footer "Last updated" line:
+- Date 2026-04-22 (run 7) → 2026-04-28 (run 8)
+- Pagination caveat upgraded from "still capped at ~1,000" to noting that every Supabase-backed pack now ships exactly 1,000.
+- Open flag (1) and (2) merged: jensen_huang and brene_brown re-exported (253/1,000 and 283/1,000) — the remaining 622 + 1,035 connections only surface once the pagination bug is fixed.
+- Open flag for Oprah unchanged; pagination flag retained.
+
+### No Changes Needed
+- **brains/index.json** — already in lockstep with Supabase (totals, per-brain atoms, per-brain connections all match).
+- **website/public/brains/index.json** — same set as the registry; no drift detected.
+- **business-plan.md** — Live Inventory table values, infrastructure stats, Ship Plan, Why Rob, TL;DR all use Supabase numbers (3,749 atoms / 21,189 connections; 14 in Supabase; 15 shippable). Nothing factual changed since run 7.
+- Voice enrichment (240/284 = 84.5%) — unchanged.
+- cross_connections (17), brain_metadata (14), brain_requests (0) — unchanged.
+- Audit scores — identical to run 7's scoreboard.
+- Skill architecture, MCP server, /board, /coach modes, design system, and brand sections — no structural changes.
+
+### Quality Scores (audit-brains.py, 2026-04-28)
+| Slug | Score | Status |
+|---|---|---|
+| charlie-munger | 100 | live |
+| hank-green | 99 | hidden |
+| john-green | 100 | hidden |
+| paul-graham | 100 | live |
+| peter-attia | 93 | live |
+| scott-belsky | 97 | live |
+| steve-jobs | 98 | live |
+| sun-tzu | 100 | live |
+| gary-vee | 100 | live |
+| peter-zeihan | 99 | live |
+| jensen-huang | 100 | live |
+| dario-amodei | 100 | live |
+| elon-musk | 100 | live |
+| annie-duke | 24 | scaffolded (excluded from avg) |
+| brene-brown | 100 | live |
+| oprah-winfrey | 98 | live |
+
+Avg across 15 shippable: **98.9 → 99/100** (unchanged from run 7).
+
+### Flagged for Human Review
+- **Pagination bug is now load-bearing.** Every Supabase-backed pack ships exactly 1,000 connections — Belsky (1,515), Steve Jobs (1,618), Gary Vee (1,850), Brené Brown (2,035), Jensen Huang (1,622), Dario Amodei (1,842), Elon Musk (1,563), Charlie Munger (1,262), John Green (1,301), Sun Tzu (1,283), Hank Green (1,245), Peter Attia (1,220), Peter Zeihan (1,503) all silently truncated. Fixing `export-brain.py` pagination unlocks ~7,000 connections worth of customer-visible graph density across the catalog in a single re-export pass.
+- **Annie Duke still scaffolded only** (no pack/, score 24). Index lists status='scaffolded' with 0 atoms/connections — consistent with state. Build hasn't run yet.
+- **Oprah Winfrey still pack-only** — no Supabase tables, so cross-brain Supabase queries skip her. MCP-driven skills work via pack JSON.
+
+---
+
+## Doc Refresh — 2026-04-22 (run 7)
+
+### Context
+Automated nightly run. Two state shifts since run 6:
+1. **Jensen Huang Supabase tables populated.** Previously 0/0 (run 6 flagged this as data drift). Now 253 atoms / 1,622 connections. Shipped pack is stale at 253/220 — re-export needed.
+2. **Brené Brown Supabase tables populated.** Previously no tables (run 6 flagged this). Now 283 atoms / 2,035 connections. Shipped pack is stale at 283/321 — re-export needed.
+3. Oprah Winfrey still pack-only — no Supabase tables yet.
+4. `brain_metadata` grew from 13 → 14 rows (Brené Brown added with status='active').
+
+### Changes Applied
+
+**brains/index.json + website/public/brains/index.json** (kept in lockstep, same pattern as run 6):
+- jensen-huang `connection_count` 220 → 1,622 (trust Supabase per doc-refresh contract)
+- brene-brown `connection_count` 321 → 2,035
+
+**business-plan.md** (Live inventory table):
+- Header: "(13 in Supabase)" → "(14 in Supabase)"
+- Jensen Huang row: 253/220 → 253/1,622
+- Brené Brown row: 283/321 → 283/2,035
+- TOTAL row: 3,749 atoms / 18,073 conns → 3,749 atoms / 21,189 conns
+- Infrastructure stats: "13 `brain_metadata` records" → "14"; dropped Brené from the "not yet ingested" caveat (Oprah remains); audit avg 97/100 across 16 brains → 99/100 across 15 shippable
+- Ship Plan DONE list: "Build 13 brains" → "Build 15 shippable brains" with full list including Brené + Oprah; "3,133 atoms + 5,129 connections in Supabase" → "3,416 atoms + 20,834 connections in Supabase (14 brains; Oprah pack-only)"; "Complete pack/ for all 13" → "for all 15"
+- Storefront section: "13/13 brains rendered" → "15/15 shippable brains now rendered on brainsforfree.com"
+- Success Metrics: "13 brains built and packaged" → "15 shippable brains built and packaged"
+- "Why Rob Is Uniquely Positioned" para 2: "thirteen times over. 13 brains live with 3,133 atoms and 5,129 connections" → "fifteen times over. 15 shippable brains live (14 in Supabase with 3,416 atoms + 20,834 connections; Oprah Winfrey ships pack-only)"
+- TL;DR: "13 brains live ... 3,133 atoms, 5,129 connections" → "15 shippable brains live (including Brené Brown, Oprah Winfrey). 3,749 atoms across packs (3,416 in Supabase; Oprah pack-only), 21,189 connections total. ... brainsforfree.com live on Vercel with all 15 brains"
+
+**brainsfor/CLAUDE.md**:
+- Tables header: "15 brain packs built; 13 live in Supabase" → "15 brain packs built; 14 live in Supabase"
+- Connections ordering block: added `brene_brown_connections (2,035)` at top, added `jensen_huang_connections (1,622)`, added `paul_graham_connections (975)` to complete the list
+- `brain_metadata` line: "13 rows ... (Brené Brown and Oprah Winfrey shipped as packs only)" → "14 rows ... (Oprah Winfrey shipped as a pack only)"
+- Known Data Drift block:
+  - Jensen Huang: "tables are empty (0/0)" → "tables are now populated (253 / 1,622) but the shipped pack is stale (253/220) — re-export needed"
+  - Brené Brown: moved out of "No Supabase tables exist" group; new note: "now populated (283 / 2,035) but shipped pack is stale (283/321) — re-export needed"
+  - Oprah Winfrey: kept as the sole remaining "No Supabase tables" item
+  - Pagination bug note: unchanged
+
+**IMPROVEMENTS.md**:
+- Footer "Last updated" date bumped 2026-04-21 → 2026-04-22
+- "18,073 Supabase connections" → "20,834 Supabase connections across 14 brains"
+- "13 brains live in Supabase; Brené Brown and Oprah Winfrey ship as packs but aren't yet ingested" → "14 brains live in Supabase; Oprah Winfrey ships as a pack but isn't yet ingested"
+- "Audit avg score 97/100 across 15 live brains" → "99/100 across 15 shippable brains"
+- Open flags: replaced jensen (was empty 0/0) and brene (no DB tables) flags with the new "DB now has data, pack is stale, re-export needed" flags
+
+### No Changes Needed
+- Voice enrichment line ("240/284 atoms enriched (84.5%)") — verified against Supabase, still accurate
+- cross_connections count (17) — unchanged since last run
+- brain_requests count (0) — unchanged since last run
+- Peter Zeihan atom count (362) — unchanged since run 6's correction
+- Storefront deprecation note in CLAUDE.md directory tree — still accurate (dir is empty)
+- Skill architecture section in CLAUDE.md — no structural changes since run 6
+- business-plan.md Next Wave table, pricing, go-to-market, legal, revenue projections — all opinion/strategy content, out of scope for doc-refresh
+- IMPROVEMENTS.md "Pinned" section, open items — no status changes detected this run
+
+### Quality Scores (audit-brains.py, 2026-04-22)
+| Slug | Score | Status |
+|---|---|---|
+| charlie-munger | 100 | live |
+| hank-green | 99 | hidden |
+| john-green | 100 | hidden |
+| paul-graham | 100 | live |
+| peter-attia | 93 | live |
+| scott-belsky | 97 | live |
+| steve-jobs | 98 | live |
+| sun-tzu | 100 | live |
+| gary-vee | 100 | live |
+| peter-zeihan | 99 | live |
+| jensen-huang | 100 | live |
+| dario-amodei | 100 | live |
+| elon-musk | 100 | live |
+| annie-duke | 24 | scaffolded (excluded from avg) |
+| brene-brown | 100 | live |
+| oprah-winfrey | 98 | live |
+
+Avg across 15 shippable: **98.9 → 99/100**.
+
+### Flagged for Human Review
+- **Jensen Huang + Brené Brown packs need re-export.** Supabase now has ~6-7x more connections than the shipped packs carry. Running `python3 scripts/export-brain.py --brain jensen-huang` and `--brain brene-brown` would sync the packs — but note the pagination bug will still cap at ~1,000 connections per brain until `export-brain.py` is patched. Consider fixing pagination first, then re-exporting all stale packs in one pass.
+- **Oprah Winfrey still has no Supabase tables** — ingestion task carried forward from run 6. `/board` and cross-brain Rob queries that hit Supabase will miss her.
+- **brain_metadata slug inconsistency:** some rows use hyphens (brene-brown, scott-belsky, gary-vee, hank-green, john-green, sun-tzu, charlie-munger) and some use underscores (dario_amodei, elon_musk, jensen_huang, paul_graham, peter_attia, peter_zeihan, steve_jobs). Not blocking anything visible, but surface-check whether downstream code relies on a particular form.
+
+---
+
 ## Doc Refresh — 2026-04-21 (run 6)
 
 ### Context
