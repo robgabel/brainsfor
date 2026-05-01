@@ -187,7 +187,7 @@ Takes a person's name and produces a complete, shippable brain pack with ZERO ma
 - **Phase 4:** Enrichment (connections via topic overlap + LLM, auto-applied)
 - **Phase 5:** Export & QA (pack generation + audit scoring + remediation loop)
 
-Supports `--skip-phase N`, `--resume`, `--resume-from N`, `--max-sources`, `--target-atoms`, `--model`, `--synthesis-model`. Progress tracked in `brains/{slug}/build-progress.json`.
+Supports `--skip-phase N`, `--resume`, `--resume-from N`, `--max-sources`, `--target-atoms`, `--model`, `--synthesis-model`. Progress tracked in `brains/{slug}/build-progress.json` (committed to git — required for `--resume` to work across remote workflow runs, since each run does a fresh `actions/checkout`).
 
 Config module: `scripts/auto_build_config.py` (shared constants, cost tables, Claude API wrapper with retry logic, prompt templates). **This is the canonical source of truth for all Anthropic model strings used by BrainsFor scripts.** Every Python script in `scripts/` imports `DEFAULT_MODEL`, `SYNTHESIS_MODEL`, and `FAST_MODEL` from here. `website/app/api/skill/route.ts` hardcodes its string separately (TS can't import from Python) with a comment pointing to this file. Current targets: Sonnet 4.6 / Opus 4.7 / Haiku 4.5.
 
