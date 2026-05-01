@@ -400,8 +400,8 @@ def export_skill_files(config: dict, atom_count: int, connection_count: int, out
         "vocabulary_examples": config.get("vocabulary_examples", "specific terms, frameworks, and labels"),
     }
 
-    # Render top-level templates (SKILL.md, README.md)
-    for template_name in ["SKILL.md.template", "README.md.template"]:
+    # Render top-level templates (SKILL.md, README.md, INTEGRATION-GUIDE.md)
+    for template_name in ["SKILL.md.template", "README.md.template", "INTEGRATION-GUIDE.md.template"]:
         template_path = TEMPLATES_DIR / template_name
         if template_path.exists():
             with open(template_path) as f:
