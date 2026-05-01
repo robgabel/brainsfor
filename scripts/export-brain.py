@@ -491,7 +491,16 @@ def fetch_from_supabase(config: dict) -> tuple:
     print(f"  {len(atoms)} atoms loaded")
 
     print(f"Fetching connections from Supabase: {connections_table}...")
-    connections = sb.table(connections_table).select("*").execute().data
+    connections = []
+    offset = 0
+    while True:
+        resp = sb.table(connections_table).select("*").range(offset, offset + 999).execute()
+        if not resp.data:
+            break
+        connections.extend(resp.data)
+        if len(resp.data) < 1000:
+            break
+        offset += 1000
     print(f"  {len(connections)} connections loaded")
 
     return atoms, connections

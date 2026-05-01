@@ -28,9 +28,11 @@ import importlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import time
+import traceback
 import uuid
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -214,8 +216,12 @@ def phase_0_discover_sources(
     if sources_path.exists():
         with open(sources_path) as f:
             existing = json.load(f)
-        success(f"sources.json already exists ({len(existing.get('sources', []))} sources) — skipping discovery")
-        return existing
+        source_count = len(existing.get("sources", []))
+        if source_count > 0:
+            success(f"sources.json already exists ({source_count} sources) — skipping discovery")
+            return existing
+        else:
+            warn("Existing sources.json is empty — re-running discovery")
 
     if dry_run:
         step("[DRY RUN] Would run 5 web searches + classify results")
@@ -684,6 +690,7 @@ def phase_3_synthesize(
     reference_slug: str = "scott-belsky",
     model: str = SYNTHESIS_MODEL,
     dry_run: bool = False,
+    force: bool = False,
 ) -> dict:
     """Generate synthesis.md and update brain.json synthesis section."""
     phase_header(3)
@@ -691,9 +698,13 @@ def phase_3_synthesize(
     synthesis_path = brain_dir / "synthesis.md"
     all_atoms_path = brain_dir / "research" / "all-atoms.json"
 
-    if synthesis_path.exists():
+    if synthesis_path.exists() and not force:
         success(f"synthesis.md already exists ({synthesis_path})")
         return {"synthesis_exists": True}
+    elif synthesis_path.exists() and force:
+        backup_path = synthesis_path.with_suffix(".md.bak")
+        shutil.copy2(synthesis_path, backup_path)
+        step(f"Backed up existing synthesis.md to {backup_path.name}")
 
     if not all_atoms_path.exists():
         error("all-atoms.json not found — run Phase 2 first")
@@ -1072,6 +1083,7 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
     parser.add_argument("--dry-run", action="store_true", help="Show cost estimate without executing")
     parser.add_argument("--max-sources", type=int, default=15, help="Max sources to discover")
     parser.add_argument("--target-atoms", type=int, default=TARGET_ATOMS, help=f"Target atom count (default: {TARGET_ATOMS})")
+    parser.add_argument("--force-synthesis", action="store_true", help="Regenerate synthesis.md even if it already exists (backs up existing to .bak)")
     parser.add_argument("--verbose", action="store_true", help="Verbose logging")
     args = parser.parse_args()
 
@@ -1160,8 +1172,16 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                     args.person, slug, brain_dir, client, cost_tracker,
                     max_sources=args.max_sources,
                 )
-                mark_phase(progress, 0, "complete",
-                           sources_found=len(sources_data.get("sources", [])))
+                source_count = len(sources_data.get("sources", []))
+                if source_count > 0:
+                    mark_phase(progress, 0, "complete", sources_found=source_count)
+                else:
+                    mark_phase(progress, 0, "failed",
+                               sources_found=0,
+                               reason="0 sources found — create sources.json manually or check FIRECRAWL_API_KEY")
+                    save_progress(brain_dir, progress)
+                    error("Phase 0 produced 0 sources. Cannot continue.")
+                    sys.exit(1)
 
             elif phase_num == 1:
                 brain_json = phase_1_scaffold(
@@ -1187,8 +1207,17 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                     reference_slug=args.reference, model=args.model,
                     target_atoms=args.target_atoms,
                 )
-                mark_phase(progress, 2, "complete",
-                           atoms=result.get("atom_count", 0))
+                atom_count = result.get("atom_count", 0)
+
+                if atom_count == 0:
+                    mark_phase(progress, 2, "failed",
+                               atoms=0,
+                               reason="0 atoms produced — check source content and ingestion logs")
+                    save_progress(brain_dir, progress)
+                    error("Phase 2 produced 0 atoms. Cannot continue.")
+                    break
+
+                mark_phase(progress, 2, "complete", atoms=atom_count)
 
             elif phase_num == 3:
                 if brain_json is None:
@@ -1200,6 +1229,7 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                 phase_3_synthesize(
                     brain_json, brain_dir, args.person, client, cost_tracker,
                     reference_slug=args.reference, model=args.synthesis_model,
+                    force=args.force_synthesis,
                 )
                 mark_phase(progress, 3, "complete")
 
@@ -1236,9 +1266,9 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
 
         except Exception as e:
             error(f"Phase {phase_num} failed: {e}")
-            import traceback
-            traceback.print_exc()
-            mark_phase(progress, phase_num, "failed", error=str(e))
+            tb_str = traceback.format_exc()
+            print(tb_str)
+            mark_phase(progress, phase_num, "failed", error=str(e), traceback=tb_str)
             save_progress(brain_dir, progress)
             post_slack(f"`{slug}` · FAILED at Phase {phase_num}: {e}", ":x:")
             warn("Use --resume to retry from this phase.")
@@ -1247,14 +1277,38 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
         progress["total_cost_usd"] = cost_tracker.total_cost
         save_progress(brain_dir, progress)
 
+    # --- Check for skipped/failed phases ---
+    skipped_phases = [
+        i for i in range(6)
+        if progress["phases"].get(str(i), {}).get("status") == "skipped"
+    ]
+    failed_phases = [
+        i for i in range(6)
+        if progress["phases"].get(str(i), {}).get("status") in ("failed", "blocked")
+    ]
+
+    if 5 in skipped_phases:
+        print(f"\n{c['yellow']}{c['bold']}{'!' * 60}")
+        print(f"  WARNING: Phase 5 (Export & QA) was skipped")
+        print(f"  Brain pack NOT generated. Run with --resume to complete.")
+        print(f"{'!' * 60}{c['reset']}")
+    if 4 in skipped_phases:
+        warn("Phase 4 (Enrichment) was skipped — connections not generated")
+
     # --- Final report ---
     elapsed = time.time() - start_time
     mins = int(elapsed // 60)
     secs = int(elapsed % 60)
 
-    print(f"\n{c['bold']}{c['green']}{'=' * 60}")
-    print(f"  BUILD COMPLETE: {args.person}")
-    print(f"{'=' * 60}{c['reset']}\n")
+    build_incomplete = failed_phases or 5 in skipped_phases
+    if build_incomplete:
+        print(f"\n{c['bold']}{c['yellow']}{'=' * 60}")
+        print(f"  BUILD INCOMPLETE: {args.person}")
+        print(f"{'=' * 60}{c['reset']}\n")
+    else:
+        print(f"\n{c['bold']}{c['green']}{'=' * 60}")
+        print(f"  BUILD COMPLETE: {args.person}")
+        print(f"{'=' * 60}{c['reset']}\n")
     print(f"  Slug:        {slug}")
     print(f"  Time:        {mins}m {secs}s")
     print(f"  {cost_tracker.summary()}")
