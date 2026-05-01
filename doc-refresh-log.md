@@ -47,7 +47,7 @@ Automated nightly run. Discovered two large state shifts since run 5:
 - Expanded Known Data Drift block: kept jensen_huang note; added Brené Brown / Oprah Winfrey "no Supabase tables" note; added new "pack connection count ~1,000 cap" note citing the `export-brain.py` pagination bug
 - Removed "peter_zeihan_atoms in DB is 362 while the pack has 460 — pack is authoritative, re-ingestion pending" — obsolete now that pack was re-exported to 362
 - Storefront directory entry: added "Directory is now empty" note
-- Remaining Questions "Next brain pack after Belsky?" checkbox answer updated to reflect Brené + Oprah shipped and Annie Duke scaffolded
+- Remaining Questions "Next brain pack after Belsky?" checkbox answer updated to reflect Brené + Oprah shipped
 
 **IMPROVEMENTS.md**:
 - Voice enrichment line: "(85%)" → "(84.5%)" (same 240/284 count, more precise)
@@ -65,8 +65,7 @@ Automated nightly run. Discovered two large state shifts since run 5:
 - sun-tzu 99, peter-zeihan 99, elon-musk 99
 - brene-brown 98, hank-green 97, scott-belsky 97, steve-jobs 97, oprah-winfrey 97
 - peter-attia 93
-- annie-duke 24 (scaffolded — expected)
-- Live-brain average: ~98/100 (15 brains, annie-duke excluded)
+- Live-brain average: ~98/100 (15 brains)
 
 ### Flagged for Human Review
 1. **Connection-count jump in customer-facing surfaces.** Per-brain `connection_count` on index.json and business-plan.md jumped 2-6x (e.g. Belsky 430 → 1,515; Gary Vee 505 → 1,850). These reflect live Supabase totals, but the *shipped* pack JSON files are still capped at ~1,000. Customer-visible counts may now overstate what a buyer actually gets until the export bug is fixed and packs are re-exported.
