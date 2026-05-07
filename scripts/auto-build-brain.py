@@ -202,6 +202,77 @@ def get_supabase_url() -> str:
 # PHASE 0: SOURCE DISCOVERY
 # =============================================================================
 
+def seed_from_wikipedia(person_name: str) -> list[dict]:
+    """Seed candidate URLs from Wikipedia: the article itself + external links.
+
+    Wikipedia gives biographical scaffolding and — more importantly — a curated
+    external-links section that often surfaces personal sites, podcast pages,
+    and bibliographies the bare web search misses. Returns [{url, title, description}].
+    Silent failure: any error returns [] so we never block Phase 0 on Wikipedia.
+    """
+    WIKI_API = "https://en.wikipedia.org/w/api.php"
+    WIKI_HEADERS = {"User-Agent": "BrainsFor/1.0 (https://brainsforfree.com; rob@brainsforfree.com)"}
+    candidates: list[dict] = []
+
+    try:
+        # 1. Find the right page via search (handles "Jensen Huang" → "Jensen Huang" page)
+        search = httpx.get(
+            WIKI_API,
+            params={"action": "query", "list": "search", "srsearch": person_name,
+                    "srlimit": 1, "format": "json"},
+            headers=WIKI_HEADERS, timeout=15,
+        )
+        if search.status_code != 200:
+            return []
+        hits = search.json().get("query", {}).get("search", [])
+        if not hits:
+            return []
+        page_title = hits[0]["title"]
+
+        # 2. Add the Wikipedia article itself as an essential bio source
+        wiki_url = f"https://en.wikipedia.org/wiki/{page_title.replace(' ', '_')}"
+        candidates.append({
+            "url": wiki_url,
+            "title": f"Wikipedia: {page_title}",
+            "description": "Biographical overview from Wikipedia",
+        })
+
+        # 3. Pull external links from the article
+        ext = httpx.get(
+            WIKI_API,
+            params={"action": "parse", "page": page_title, "prop": "externallinks",
+                    "format": "json"},
+            headers=WIKI_HEADERS, timeout=15,
+        )
+        if ext.status_code == 200:
+            links = ext.json().get("parse", {}).get("externallinks", [])
+            # Skip noise: Wikipedia internals, archive duplicates, citations databases
+            skip_domains = (
+                "archive.org", "web.archive.org", "doi.org", "worldcat.org",
+                "viaf.org", "isni.org", "id.loc.gov", "d-nb.info", "wikidata.org",
+                "wikipedia.org", "wikimedia.org", "google.com/books",
+                "ncbi.nlm.nih.gov", "jstor.org", "semanticscholar.org",
+            )
+            seen = set()
+            for link in links:
+                if not link or not link.startswith(("http://", "https://")):
+                    continue
+                if any(d in link for d in skip_domains):
+                    continue
+                if link in seen:
+                    continue
+                seen.add(link)
+                candidates.append({
+                    "url": link,
+                    "title": "",  # let LLM classifier infer from URL
+                    "description": "External link from Wikipedia article",
+                })
+
+        return candidates
+    except Exception:
+        return []
+
+
 def phase_0_discover_sources(
     person_name: str,
     slug: str,
@@ -235,9 +306,22 @@ def phase_0_discover_sources(
         warn("FIRECRAWL_API_KEY not set — cannot search. Create sources.json manually and use --skip-phase 0")
         return {"sources": []}
 
-    queries = get_search_queries(person_name)
     all_urls = []
     seen_urls = set()
+
+    # --- Wikipedia seed (free, no API key) ---
+    step("Seeding from Wikipedia...")
+    wiki_candidates = seed_from_wikipedia(person_name)
+    for c in wiki_candidates:
+        if c["url"] not in seen_urls:
+            seen_urls.add(c["url"])
+            all_urls.append(c)
+    if wiki_candidates:
+        success(f"Wikipedia seeded {len(wiki_candidates)} URLs (article + external links)")
+    else:
+        warn("Wikipedia returned no usable seeds — continuing with web search only")
+
+    queries = get_search_queries(person_name)
 
     for query in queries:
         step(f"Searching: {query}")
@@ -274,7 +358,7 @@ def phase_0_discover_sources(
     # --- Classify results with LLM ---
     step(f"Classifying {len(all_urls)} URLs with LLM...")
 
-    urls_json = json.dumps([{"url": u["url"], "title": u["title"]} for u in all_urls[:30]], indent=2)
+    urls_json = json.dumps([{"url": u["url"], "title": u["title"]} for u in all_urls[:60]], indent=2)
     prompt = SOURCE_CLASSIFY_PROMPT.format(person_name=person_name, urls_json=urls_json)
 
     result = call_claude(
@@ -935,6 +1019,7 @@ def phase_3_synthesize(
     reference_slug: str = "scott-belsky",
     model: str = SYNTHESIS_MODEL,
     dry_run: bool = False,
+    force: bool = False,
 ) -> dict:
     """Generate synthesis.md and update brain.json synthesis section."""
     phase_header(3)
@@ -942,9 +1027,13 @@ def phase_3_synthesize(
     synthesis_path = brain_dir / "synthesis.md"
     all_atoms_path = brain_dir / "research" / "all-atoms.json"
 
-    if synthesis_path.exists():
+    if synthesis_path.exists() and not force:
         success(f"synthesis.md already exists ({synthesis_path})")
         return {"synthesis_exists": True}
+    elif synthesis_path.exists() and force:
+        backup_path = synthesis_path.with_suffix(".md.bak")
+        shutil.copy2(synthesis_path, backup_path)
+        step(f"Backed up existing synthesis.md to {backup_path.name}")
 
     if not all_atoms_path.exists():
         error("all-atoms.json not found — run Phase 2 first")
@@ -1325,6 +1414,7 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
     parser.add_argument("--target-atoms", type=int, default=TARGET_ATOMS, help=f"Target atom count (default: {TARGET_ATOMS})")
     parser.add_argument("--min-atoms", type=int, default=MIN_BRAIN_ATOMS, help=f"Hard floor — build halts after Phase 2 if below this (default: {MIN_BRAIN_ATOMS})")
     parser.add_argument("--allow-thin-pack", action="store_true", help="Bypass the min-atoms floor and allow shipping a thin brain")
+    parser.add_argument("--force-synthesis", action="store_true", help="Regenerate synthesis.md even if it already exists (backs up existing to .bak)")
     parser.add_argument("--verbose", action="store_true", help="Verbose logging")
     args = parser.parse_args()
 
@@ -1493,6 +1583,7 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                 phase_3_synthesize(
                     brain_json, brain_dir, args.person, client, cost_tracker,
                     reference_slug=args.reference, model=args.synthesis_model,
+                    force=args.force_synthesis,
                 )
                 mark_phase(progress, 3, "complete")
 
