@@ -1,6 +1,6 @@
 # Shiva Rajaraman Brain Pack
 
-> **536 knowledge atoms** · **1815 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **536 knowledge atoms** · **419 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Shiva's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (536 atoms, 1815 connections)
+  ├── brain-atoms.json      ← Structured data (536 atoms, 419 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -58,7 +58,7 @@ This means:
 
 **536 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1815 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**419 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
 **16 topic clusters** — Consumer product design, platform strategy, AI products, music and audio, creator economy, organizational design, taste at scale, product culture.
 

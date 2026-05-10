@@ -10,7 +10,7 @@ Welcome to the **Rajaraman Brain Pack** from [brainsforfree.com](https://brainsf
 ## What You're Getting
 
 - **536 knowledge atoms** — Core insights, frameworks, and strategic principles from Public talks, interviews, and writings across Shiva Rajaraman's career
-- **1815 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **419 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Consumer product design, platform strategy, AI products, music and audio, creator economy, organizational design, taste at scale, product culture, and more
 
