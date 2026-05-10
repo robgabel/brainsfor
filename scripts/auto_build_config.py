@@ -272,6 +272,8 @@ Here is a complete exemplar brain.json to use as your template — follow this s
 Here is what we know about {person_name}'s sources:
 {sources_summary}
 
+CRITICAL — DISAMBIGUATION: The sources above are the GROUND TRUTH for which {person_name} this brain is about. Common names (e.g. "Bill Harris", "John Smith", "Sarah Lee") refer to multiple notable people. Read the URLs, descriptions, and titles carefully BEFORE generating clusters — the domains (e.g. paypal.com vs holosync.com) and titles tell you exactly which person. Do NOT rely on your prior knowledge of who is most famous with this name; rely on what the sources are about. Clusters, synthesis, and skill examples MUST reflect THIS specific person, not a different person who shares the name.
+
 Create a complete brain.json for {person_name}. Requirements:
 - Fill ALL fields from the exemplar (brain_name, brain_first_name, brain_last_name, brain_slug, brain_possessive, etc.)
 - brain_slug should be: {slug}

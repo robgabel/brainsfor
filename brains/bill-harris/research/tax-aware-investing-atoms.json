@@ -1,0 +1,350 @@
+[
+  {
+    "content": "Bill Harris argues that after-tax returns are the only returns that matter \u2014 and that virtually every benchmark, fund prospectus, and advisor report published by the financial industry is therefore measuring the wrong thing. Pre-tax returns are a fiction for the end investor, because what they actually keep is determined by their tax bracket, asset location, holding period, and harvesting strategy. The entire framing of investment performance needs to be rebuilt around what clients net, not what portfolios gross.",
+    "original_quote": "After-tax returns are the only returns that matter.",
+    "implication": "Any wealth product, advisor pitch, or portfolio tool that leads with gross returns is optimizing the wrong variable. Builders should design dashboards, reporting, and benchmarks around after-tax outcomes from day one \u2014 not as a feature, but as the foundational metric.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "after-tax returns",
+      "investment benchmarking",
+      "tax optimization",
+      "wealth management"
+    ],
+    "confidence": 0.95,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris treats tax planning not as an annual administrative chore delegated to a CPA but as the highest-leverage investment activity available to a high-net-worth individual. Decisions about asset location, lot selection, harvest timing, and gifting strategy made today compound for decades \u2014 often generating more value than equivalent improvements in pre-tax portfolio returns. The advisor who ignores taxes is leaving the client's most powerful lever untouched.",
+    "implication": "Founders building wealth-tech should integrate tax optimization into the core investment loop, not bolt it on as a year-end feature. If your product only touches taxes in April, you're missing 11 months of compounding opportunity.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "tax planning",
+      "asset location",
+      "compound returns",
+      "fiduciary investing"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Tax-loss harvesting \u2014 systematically selling positions at a loss to offset realized gains \u2014 is one of the most reliable alpha-generation techniques available to individual investors, yet most advisors and self-directed investors execute it sporadically or not at all. Harris's position is that harvesting should be a continuous, systematic process run at the lot level, not a year-end scan for obvious losers. Done consistently over decades, harvesting converts tax drag into a durable return advantage.",
+    "implication": "If you're building portfolio management software, lot-level continuous harvesting should be a table-stakes feature, not a premium add-on. The question is not whether to harvest \u2014 it's how to automate it without triggering wash-sale violations across accounts.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "tax-loss harvesting",
+      "portfolio management",
+      "automation",
+      "alpha generation"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris identifies asset location \u2014 the deliberate assignment of different asset classes to taxable versus tax-advantaged accounts \u2014 as one of the most under-utilized tools in wealth management. Placing high-yield bonds, REITs, and actively traded positions inside IRAs and 401(k)s while holding equities with embedded unrealized gains in taxable accounts can be worth hundreds of basis points per year in after-tax returns, with no change to the overall portfolio composition or risk profile.",
+    "implication": "Any advisory product that manages a client's accounts in silos \u2014 treating the IRA and the taxable account as separate portfolios \u2014 is destroying value. True fiduciary software must optimize across the entire balance sheet, not within each account in isolation.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "asset location",
+      "tax-advantaged accounts",
+      "portfolio construction",
+      "after-tax optimization"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris is a strong advocate for donor-advised funds (DAFs) as a tax-planning tool that most high-income earners dramatically underuse. By contributing appreciated securities directly to a DAF \u2014 rather than selling and donating cash \u2014 the donor avoids capital gains tax entirely and takes a fair-market-value deduction. The DAF then distributes to charities over time, effectively turning a tax liability into philanthropic capital. Harris frames this not as charity advice but as a core component of after-tax wealth strategy.",
+    "implication": "If your platform serves clients with appreciated securities and charitable intent, and it doesn't surface a DAF workflow at the point of decision, you're leaving tax-free capital on the table for your users. DAF integration should be a standard feature of any comprehensive wealth platform.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "donor-advised funds",
+      "charitable giving",
+      "capital gains",
+      "tax-free appreciation"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "RSU (Restricted Stock Unit) planning is a domain where Harris sees enormous, repeated losses among tech employees and startup founders who default to sell-immediately strategies without considering the tax implications. The timing of vesting, the decision to hold or sell, the use of 83(b) elections for early-stage equity, and the sequencing of sales across tax years can collectively determine whether an employee keeps 50 cents or 70 cents of every dollar of equity compensation. Harris treats RSU strategy as a specialized sub-discipline within after-tax investing.",
+    "implication": "Fintechs targeting tech employees and startup workers \u2014 a massive and underserved segment \u2014 have a clear product wedge: RSU and equity compensation tax planning is complex, high-stakes, and almost universally mishandled. Whoever builds the definitive RSU optimization tool owns a deeply loyal, high-value user base.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "RSUs",
+      "equity compensation",
+      "83(b) election",
+      "startup finance"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris highlights QSBS (Qualified Small Business Stock) under Section 1202 as one of the most powerful \u2014 and most overlooked \u2014 tax exemptions available to startup founders and early investors. If the holding requirements are met, up to $10 million (or 10x basis) of gain from QSBS can be excluded from federal capital gains tax entirely. Harris's view is that the advisor who doesn't proactively surface QSBS planning at the time of investment \u2014 not at exit \u2014 has already failed the client.",
+    "implication": "For any wealth advisor or fintech serving founders, angels, or early employees at qualifying C-corps, QSBS eligibility should be verified at the point of investment and tracked continuously. The $10M exclusion is only available if the paperwork and holding conditions are managed correctly from day one.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "QSBS",
+      "Section 1202",
+      "startup equity",
+      "capital gains exclusion"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "One of Harris's core critiques of the financial advice industry is that the CPA and the investment advisor operate in entirely separate silos \u2014 the advisor optimizes the portfolio, the CPA files the return, and neither is accountable for the interaction between the two. This structural fragmentation is the root cause of most tax inefficiency in wealthy households. Harris's model integrates tax strategy into the investment management process itself, treating them as one continuous activity rather than two sequential ones.",
+    "implication": "The wealth platform that genuinely unifies investment management and tax planning \u2014 not just connects them through an API handshake \u2014 has a structural advantage over every incumbent that keeps them separate. The integration gap is a product opportunity, not just an advisory one.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "advisor fragmentation",
+      "tax-investment integration",
+      "fiduciary design",
+      "wealth platform"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Outspoken: Bill Harris \u2014 Barefoot Innovation Podcast (Jo Ann Barefoot)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris argues that most financial advisors are not legally required to act in the client's best tax interest \u2014 and don't. The suitability standard that governs broker-dealers permits recommending products that are adequate but not optimal, and tax efficiency is simply not part of the adequacy test. A fiduciary standard, by contrast, requires advisors to consider the full after-tax impact of their recommendations. This distinction is not semantic; it determines whether tax optimization is a feature or a legal obligation.",
+    "original_quote": "Most financial advisors optimize pre-tax returns and ignore the single largest drag on long-term wealth \u2014 taxes.",
+    "implication": "When evaluating any advisory relationship or wealth product, the first question should be: is this firm legally required to optimize for my after-tax outcome? If not, the misalignment is structural and no amount of goodwill fixes it.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "fiduciary standard",
+      "suitability standard",
+      "advisor alignment",
+      "tax efficiency"
+    ],
+    "confidence": 0.9,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris frames the Roth conversion decision \u2014 converting traditional IRA assets to Roth \u2014 as one of the highest-leverage tax planning moves available to investors in temporarily low-income years, but notes that most people either never do it or do it at the wrong time. The optimal window is when marginal rates are suppressed: early retirement before Social Security kicks in, a business loss year, or a gap year between jobs. Missing these windows is a permanent cost \u2014 the tax-free compounding of Roth assets is irreversible once the window closes.",
+    "implication": "A wealth platform that proactively identifies Roth conversion windows based on the client's real-time income profile \u2014 and surfaces the opportunity before the year closes \u2014 is delivering advice that most human advisors miss. This is exactly the kind of continuous, rule-based optimization that software does better than humans.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "Roth conversion",
+      "tax planning windows",
+      "IRA strategy",
+      "proactive advice"
+    ],
+    "confidence": 0.8,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris has consistently argued that agentic AI \u2014 software that can take autonomous, continuous action across hundreds of tax-relevant decisions per client per year \u2014 is the only technology architecture capable of fully realizing the after-tax return advantage he describes. Human advisors can't track every lot, every dividend, every rebalancing event, and every income shift simultaneously. Algorithms can. This is not a future capability; it is the foundation of what Evergreen Wealth is being built to deliver.",
+    "implication": "The AI application that will generate durable ROI in wealth management is not a chatbot that answers questions about portfolio allocation \u2014 it's an autonomous tax optimization engine that acts on the client's behalf continuously. Founders pitching 'AI for wealth' should be precise about which of these they're building.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "agentic AI",
+      "tax automation",
+      "continuous optimization",
+      "Evergreen Wealth"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Founder of Personal Capital Launches AI-Backed RIA",
+    "source_date": "2024"
+  },
+  {
+    "content": "At Personal Capital, Harris oversaw the development of tax optimization tools \u2014 including tax-loss harvesting and asset location at scale \u2014 as a core differentiator versus pure robo-advisors. His empirical observation from managing tens of billions in AUM was that clients who engaged with tax optimization features showed meaningfully better net returns and meaningfully higher retention. Tax efficiency was not just a feature \u2014 it was the primary reason high-net-worth clients chose to move serious money to the platform.",
+    "implication": "For wealthtech founders, tax optimization is not a retention feature \u2014 it is a trust feature. When a client watches your platform systematically harvest losses and optimize their asset location, they stop thinking of you as a software vendor and start thinking of you as their financial steward. The emotional effect on retention is as important as the financial effect.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "Personal Capital",
+      "tax optimization at scale",
+      "client retention",
+      "wealthtech product"
+    ],
+    "confidence": 0.8,
+    "source_type": "interview",
+    "source_ref": "Personal Capital CEO Bill Harris Calls Baloney on J.P. Morgan and Intuit (LinkedIn Pulse)",
+    "source_date": "2017"
+  },
+  {
+    "content": "Harris's background running TurboTax at Intuit gave him an unusually granular understanding of how Americans actually interact with their taxes \u2014 the emotional avoidance, the last-minute filing, the chronic under-planning. This informed his investment philosophy directly: most people treat taxes as something that happens to them rather than something they actively manage, and the wealth gap between those two postures compounds dramatically over time. His entire after-tax investment thesis is a response to this behavioral observation.",
+    "implication": "The product design challenge for tax-aware investing is not just mathematical \u2014 it's behavioral. A platform that surfaces tax optimization opportunities in plain language, at decision moments, and with clear dollar-value estimates will reach people that a technically superior but opaque system never will.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "TurboTax",
+      "behavioral finance",
+      "tax psychology",
+      "product design"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Thirty Minute Mentors \u2014 Episode 255: Former PayPal and Intuit CEO Bill Harris",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris is explicit that the tax-aware investing advantage is largest for clients in the top federal income tax brackets \u2014 those paying 37% on ordinary income and 23.8% on long-term capital gains including the net investment income tax. For these investors, the difference between a tax-naive and tax-optimized strategy is not a rounding error; it is the difference between keeping 62 cents and keeping 77 cents of every dollar of investment gain. The math of tax efficiency compounds just as inexorably as the math of returns.",
+    "implication": "Wealthtech products targeting high-income professionals \u2014 physicians, engineers, founders, attorneys \u2014 have a disproportionate tax-optimization opportunity relative to mass-market offerings. The addressable value of tax efficiency scales with income bracket, which means your TAM for tax-aware investing is concentrated exactly where acquisition is hardest but lifetime value is highest.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "tax brackets",
+      "high-net-worth investing",
+      "net investment income tax",
+      "after-tax math"
+    ],
+    "confidence": 0.8,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris is critical of the mutual fund industry's structural tax inefficiency: because mutual funds must distribute realized capital gains to shareholders annually, investors in taxable accounts can owe taxes on gains they didn't choose and didn't benefit from \u2014 including gains generated before they even bought the fund. He advocates for direct indexing and separately managed accounts as tax-superior alternatives that give investors lot-level control unavailable in pooled structures.",
+    "implication": "Direct indexing \u2014 owning individual securities rather than fund shares \u2014 is not just a customization play. For high-net-worth clients in taxable accounts, it is a tax architecture decision. Platforms that offer direct indexing at accessible minimums are unlocking after-tax alpha that pooled structures cannot match.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "direct indexing",
+      "mutual fund tax drag",
+      "separately managed accounts",
+      "lot-level control"
+    ],
+    "confidence": 0.8,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris's Evergreen Wealth is built on the premise that hyper-personalized, tax-optimized portfolios \u2014 previously accessible only to clients of the largest family offices \u2014 can now be delivered at scale through software. The core thesis is that every client has a unique tax situation: different brackets, different account types, different embedded gains, different charitable intent. A one-size portfolio ignores all of this. Personalization at the tax level is where the next decade of wealth management alpha will be generated.",
+    "implication": "The competitive moat in next-generation wealth management is not the investment strategy \u2014 it's the personalization engine. If your platform delivers the same portfolio to a client with $500K in embedded gains as it does to one with none, you are not a fiduciary \u2014 you are a fund in a wrapper.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "Evergreen Wealth",
+      "personalized portfolios",
+      "family office access",
+      "tax personalization"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Former PayPal CEO Bill Harris on Why He's Launching an RIA",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris points out that most people dramatically underestimate the after-tax cost of short-term trading \u2014 treating a 15% gain on a position held for 11 months the same as one held for 13 months, when the former is taxed as ordinary income and the latter as long-term capital gains. For a client in the top bracket, the difference is more than 14 percentage points of tax rate on that gain. Holding period management \u2014 the discipline of deferring sales past the 12-month threshold \u2014 is one of the simplest and most reliable tax-optimization strategies available.",
+    "implication": "Any trading interface that doesn't surface the tax cost of a proposed sale \u2014 including whether the position is short-term or long-term \u2014 is hiding the true price of the transaction from the user. Tax-cost transparency at the point of trade is a product responsibility, not just a reporting one.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "holding period",
+      "short-term vs long-term gains",
+      "trading behavior",
+      "tax transparency"
+    ],
+    "confidence": 0.8,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris argues that the step-up in basis at death \u2014 the provision that resets the cost basis of inherited assets to their fair market value on the date of death, eliminating unrealized capital gains \u2014 is one of the most powerful and underappreciated estate planning tools available to long-term investors. The implication is that investors with large embedded gains and estate planning intent should often hold rather than sell, using other techniques (like DAFs or Roth conversions) to manage current-year income, while preserving the step-up for heirs.",
+    "implication": "Tax-aware wealth planning is inherently multi-generational. A platform that treats each tax year in isolation \u2014 rather than modeling the estate implications of hold-vs-sell decisions today \u2014 is missing a critical dimension of after-tax optimization for older high-net-worth clients.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "step-up in basis",
+      "estate planning",
+      "embedded gains",
+      "generational wealth"
+    ],
+    "confidence": 0.8,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris has noted that the financial services industry's standard client reporting \u2014 net-of-fee returns benchmarked against an index \u2014 systematically omits the tax impact of the advisor's own trading decisions. An advisor who generates a 10% gross return through high-turnover active management may produce worse after-tax results than an index fund returning 9%, yet the standard reporting makes the active manager look superior. He advocates for after-tax, after-fee reporting as the only honest measure of advisor value.",
+    "implication": "Regulatory pressure for after-tax return disclosure is coming \u2014 but the firms that adopt it proactively, before it's required, will signal genuine fiduciary intent and attract the most sophisticated clients. After-tax reporting is both a moral position and a competitive differentiator.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "performance reporting",
+      "after-tax disclosure",
+      "advisor accountability",
+      "active vs passive"
+    ],
+    "confidence": 0.8,
+    "source_type": "interview",
+    "source_ref": "Insights from the former CEO of TurboTax, PayPal, and Personal Capital \u2014 Rethink. Financial Advice podcast",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris is emphatic that tax optimization is not primarily a sophisticated strategy for the ultra-wealthy \u2014 it is a set of accessible, high-impact decisions that every investor with a taxable account should be making. Maximizing 401(k) and IRA contributions, choosing index funds over high-turnover active funds in taxable accounts, and holding appreciated securities rather than selling are all forms of tax-aware investing available to anyone. The complexity scales with wealth, but the discipline begins at the first dollar invested.",
+    "implication": "The democratization of tax-aware investing is a genuine product opportunity. Mass-market fintech that teaches and automates basic tax-efficient behaviors \u2014 contribution maximization, fund selection by tax efficiency, automated hold-period alerts \u2014 can close a significant wealth gap without requiring the complexity of a family office.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "democratization",
+      "mass-market investing",
+      "401k optimization",
+      "accessible tax strategy"
+    ],
+    "confidence": 0.8,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris's experience at Intuit \u2014 leading TurboTax during the period when desktop tax software displaced CPA preparation for millions of middle-class Americans \u2014 gave him a template for how tax expertise can be systematized and democratized through software without eliminating the need for human judgment in complex cases. He has applied this template directly to investment tax optimization: software handles the repetitive, rules-based decisions at scale; human advisors handle the judgment calls at high net worth. The same hybrid logic that governs his advisory model governs his tax optimization philosophy.",
+    "implication": "The TurboTax-to-investment-tax analogy is a product roadmap, not just a metaphor. Software can handle 80% of tax optimization decisions for 80% of clients automatically. The remaining 20% \u2014 the complex estate situations, the founder liquidity events, the QSBS stacking strategies \u2014 is where human advisors add irreplaceable value. Build for both.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "TurboTax analogy",
+      "tax software democratization",
+      "hybrid model",
+      "Intuit lessons"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Thirty Minute Mentors \u2014 Episode 255: Former PayPal and Intuit CEO Bill Harris",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris has noted in interviews that the publication of The Investment Tax Guide \u2014 originally in 2017 and updated in 2024 \u2014 was motivated by a gap he observed repeatedly across clients and advisors: there was no single accessible resource that treated investment tax strategy as a unified discipline rather than a collection of isolated tactics. The book was deliberately written for the educated non-specialist \u2014 not a CPA textbook, not a retirement planning primer, but a practitioner's guide to after-tax investment decisions.",
+    "implication": "The book itself is a market signal: a significant segment of high-income investors and their advisors are operating without a coherent after-tax investment framework. Any fintech that can translate the book's framework into a software experience \u2014 with real account data, real tax positions, and real-time recommendations \u2014 is addressing a validated and unsolved problem.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "Investment Tax Guide",
+      "tax education",
+      "advisor gap",
+      "practitioner framework"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
+    "source_date": "2024"
+  },
+  {
+    "content": "Harris is particularly pointed in his critique that the pre-tax returns benchmark perpetuates itself because it benefits intermediaries: fund companies market gross returns because they're higher; advisors report gross returns because it makes their contribution look larger; platforms display gross returns because it's what the industry has always done. The investor's after-tax experience is the one number no one in the chain has an incentive to show. This structural conflict of interest is, in his view, one of the most consequential and least-discussed misalignments in consumer finance.",
+    "original_quote": "Pre-tax returns are the wrong benchmark.",
+    "implication": "When an industry's standard metric systematically benefits every intermediary except the end customer, the startup that builds around the customer's metric \u2014 after-tax returns \u2014 isn't just building a better product. It's building a trust signal that incumbents structurally cannot match without admitting the old metric was wrong.",
+    "cluster": "tax_aware_investing",
+    "topics": [
+      "benchmarking bias",
+      "intermediary incentives",
+      "consumer finance alignment",
+      "after-tax transparency"
+    ],
+    "confidence": 0.9,
+    "source_type": "interview",
+    "source_ref": "How to Slash Your Taxes \u2014 Interview with Bill Harris on Financial Sense podcast",
+    "source_date": "2024"
+  }
+]
