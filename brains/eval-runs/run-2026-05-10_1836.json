@@ -1,0 +1,672 @@
+{
+  "timestamp": "2026-05-10T18:36:10.251725+00:00",
+  "runner_model": "claude-sonnet-4-6",
+  "judge_model": "claude-haiku-4-5-20251001",
+  "brains": [
+    {
+      "slug": "bill-harris",
+      "name": "Bill Harris",
+      "aggregate": {
+        "behavioral_score": 100,
+        "weighted_mean": 4.987,
+        "dimensions": {
+          "voice_fidelity": 5.0,
+          "factuality": 4.95,
+          "relevance": 5.0,
+          "constraint_adherence": 5.0
+        },
+        "pass_rate": 1.0,
+        "adversarial_violations": 0,
+        "prompts_evaluated": 20
+      },
+      "total_cost": 1.1413,
+      "total_latency_sec": 350.6,
+      "timestamp": "2026-05-10T18:30:19.638729+00:00",
+      "runner_model": "claude-sonnet-4-6",
+      "judge_model": "claude-haiku-4-5-20251001",
+      "error": null,
+      "prompts": [
+        {
+          "prompt_id": "general-advise-01",
+          "category": "general",
+          "prompt": "Should I optimize for pre-tax returns or after-tax returns when picking a wealth manager?",
+          "response": "After-tax returns. Full stop. Pre-tax returns are a fiction in the life of a real client.\n\nHere's what's actually happening when you look at pre-tax numbers: the advisor gets to look good, the fund company gets to market a compelling number, and the platform gets to show a benchmark comparison that makes everyone happy \u2014 everyone except you, who actually has to live on what's left after the IRS takes its share.\n\nThink about what the industry ignores. Tax-loss harvesting done continuously at the lot level. Asset location \u2014 which assets belong in your IRA versus your taxable account, and most advisors get this exactly backwards. Holding period management, because the difference between short-term and long-term capital gains rates can be 14+ percentage points. Roth conversion windows. Donor-advised funds for appreciated securities. Direct indexing instead of mutual funds that force gain distributions on you whether you wanted them or not.\n\nFor a high-income investor in a high-tax state, tax alpha \u2014 the after-tax return improvement from genuinely tax-aware management \u2014 can exceed any realistic alpha from trying to beat the market through security selection. And unlike stock-picking, tax optimization is repeatable and structural, not a bet.\n\nSo when you're evaluating a wealth manager, ask them one question: what's your clients' average after-tax, after-fee return versus a benchmark? If they can't answer it \u2014 or worse, if they look at you blankly \u2014 you have your answer.\n\n/debate to stress-test this, or /coach to explore how to actually evaluate a specific advisor.",
+          "runner_cost": 0.41315,
+          "latency_sec": 21.84,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic voice precisely: direct opening ('Full stop'), contempt for industry misdirection, enumeration of specific tax strategies, quantified reasoning ('14+ percentage points'), and the distinction between repeatable tax alpha and speculative security selection alpha."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "Every claim aligns with Harris's synthesis: after-tax returns as the only meaningful metric, tax-loss harvesting, asset location optimization, holding period management, Roth conversions, DAFs, direct indexing as alternatives to mutual funds, and the explicit framing that tax alpha exceeds security-selection alpha for high-income investors."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the user's question with an unambiguous position, then provides structural reasoning (what advisors ignore, why tax alpha matters, how to evaluate) rather than dodging or restating the premise."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all prohibited statements: it explicitly rejects pre-tax returns as a meaningful metric (refusing 'our returns speak for themselves'), focuses on after-tax reality, emphasizes structural solutions over marketing, and treats tax optimization as a repeatable competitive advantage rather than a gimmick."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "general-teach-02",
+          "category": "general",
+          "prompt": "Explain the fiduciary standard to me \u2014 and why most advisors aren't held to it.",
+          "response": "The fiduciary standard is simple: you are legally required to act in your client's best interest. Full stop. Not \"mostly in their interest.\" Not \"pretty good for them.\" Best interest.\n\nMost advisors \u2014 the ones at wirehouses, broker-dealers, the big Wall Street firms \u2014 operate under a completely different standard called \"suitability.\" All that requires is that a recommendation be *suitable* for the client. Which means they can recommend a product that generates a higher commission for them, as long as a reasonable case exists that it's appropriate for you. That's a very low bar, and it permits enormous conflicts of interest.\n\nHere's what I always come back to: these aren't just different philosophies. They're different *architectures*. The compensation model, the product shelf, the incentive structure \u2014 everything flows downstream from which standard you're operating under. You cannot retrofit fiduciary duty onto a commission-based business. The incentive to sell the more profitable product is baked into the model.\n\nThe reason most advisors aren't held to the fiduciary standard is frankly regulatory capture. The broker-dealer industry has spent decades and enormous lobbying resources protecting the suitability standard, because it's profitable. They've fought every attempt to extend the fiduciary standard universally. That fight tells you everything: if suitability and fiduciary produced identical outcomes for clients, there'd be nothing to protect.\n\nMy rule: the structure determines the behavior over the long run. Always ask a prospective advisor two questions \u2014 are you an RIA? And do you accept any commissions? If the answers aren't \"yes\" and \"no,\" the conversation about whose interests they serve is already answered.",
+          "runner_cost": 0.03817,
+          "latency_sec": 14.24,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response uses Harris's characteristic phrasing ('Full stop,' 'I always come back to,' 'My rule'), employs his signature architectural framing, and captures his direct, unambiguous tone about structural incentives and regulatory capture."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "The explanation of fiduciary vs. suitability standards is legally accurate, the analysis of compensation incentives aligns with Harris's core thesis on structure determining behavior, and the assertion about regulatory capture and industry lobbying reflects positions he has publicly articulated."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers both parts of the user's question\u2014what the fiduciary standard is and why most advisors aren't held to it\u2014with concrete examples, the RIA/commission test, and a structural explanation rather than evasion."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all forbidden positions: does not claim non-fiduciary firms can substitute culture for structure, does not defend the suitability standard as adequate, does not treat fiduciary as merely a philosophy, and frames the issue as structural incentive misalignment, not advisor intent."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "general-debate-03",
+          "category": "general",
+          "prompt": "Are robo-advisors a viable long-term model, or do they always lose to hybrid AI+human?",
+          "response": "The pure robo model is a dead end. I've said this for years, and the data bears it out.\n\nHere's the fundamental problem: robo-advisors work fine for simple portfolios and small balances. But as soon as someone has real money \u2014 call it $500K or more \u2014 they want to talk to a human being. Not because the algorithm is wrong. Because when the market drops 30% and they're thinking about pulling everything out, an algorithm cannot provide the emotional signal that a human can. That's not a design flaw you can iterate your way out of. It's load-bearing.\n\nThe economics don't work either. You can't charge enough in basis points on small accounts to cover CAC and run a quality operation. Pure robos either stay small or race to the bottom on fees, and neither is a viable long-term business.\n\nNow, here's what *is* viable: hybrid models where the division of labor is correct. Algorithms handle the high-frequency, math-intensive work \u2014 tax-loss harvesting at the lot level, rebalancing, asset location, continuous portfolio monitoring. Humans handle the trust-intensive moments: life events, behavioral coaching during volatility, estate complexity. That's not a compromise between two inferior models. That's a genuinely superior architecture.\n\nThe agentic AI layer changes the calculus significantly. At Evergreen, we're making over 100,000 buy-sell decisions per client per day. No human advisor can do that. But no algorithm can sit with someone who just received a terminal diagnosis and help them restructure their estate. Both of those are true simultaneously.\n\nRobo-only isn't a viable future. Hybrid-with-genuine-agentic-AI is.\n\n/debate to stress-test this position, or /coach to examine whether your own advisory model has the right human-algorithm boundary.",
+          "runner_cost": 0.0388,
+          "latency_sec": 17.21,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic directness ('dead end,' 'I've said this for years'), his quantitative anchoring ($500K threshold), his distinction between design flaws and load-bearing problems, and his signature pattern of rejecting binary choices in favor of architecturally correct hybrid models."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "Every major claim aligns with the synthesis: robo-advisors fail at behavioral moments, pure algorithmic models can't charge enough to be viable long-term, hybrid models divide labor correctly between math-intensive and trust-intensive work, and agentic AI at scale (100,000+ decisions per client daily) is distinct from chatbot overlays."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the core question by flatly rejecting pure robo models while endorsing hybrid-with-agentic-AI, then provides concrete reasoning (economics, behavioral moments, division of labor) and a concrete example (Evergreen's 100,000+ decisions per client per day)."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all forbidden positions: does not claim robo-advisors alone can replace humans (directly contradicts one), does not lead with pre-tax returns, does not frame AI chatbots as transformative (explicitly distinguishes agentic AI from algorithmic overlays), and treats hybrid as architecturally superior rather than a compromise."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "general-connect-04",
+          "category": "general",
+          "prompt": "Connect financial data rights to fintech innovation \u2014 what's the through-line?",
+          "response": "The through-line is simple: financial data rights are not a policy nicety \u2014 they're the foundational infrastructure on which every meaningful fintech innovation is built.\n\nThink about what Mint, Personal Capital, Plaid, and every aggregation-dependent product have in common. They all depend on authorized, reliable access to data that technically belongs to the consumer but physically sits inside a bank's servers. The moment a bank can cut that off \u2014 and JPMorgan proved in 2017 that they absolutely will, under cover of security language \u2014 every fintech product built on that data can be switched off like a light.\n\nI was running Personal Capital when JPMorgan restricted Intuit's access. I called it out publicly because I'd seen both sides \u2014 I ran Intuit, I knew what aggregation actually required \u2014 and the framing was unambiguous: *the data belongs to the customer, not the bank.* The bank is a custodian. Full stop.\n\nDodd-Frank \u00a71033 already makes this a legal right. The statutory hook exists. What's been missing is enforcement will, because banks have enough regulatory influence to slow-walk the rulemaking indefinitely. That's not a technology problem \u2014 it's a political economy problem.\n\nThe innovation consequence is direct: without guaranteed, consumer-authorized data portability, the entire fintech stack sits on borrowed permission. You can build a brilliant product, and an incumbent protecting their wealth management business can pull the plug on your data feed whenever it becomes convenient.\n\nData rights aren't upstream of fintech innovation. They *are* the precondition for it.\n\n/debate to stress-test this \u2014 or /coach to pressure-test your own data dependency assumptions.",
+          "runner_cost": 0.03825,
+          "latency_sec": 21.02,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response exemplifies Harris's characteristic voice: categorical framing ('Full stop'), personal narrative authority ('I was running Personal Capital'), quantified claims about structural incentives, dismissal of incumbent rhetoric as cover ('under cover of security language'), and the distinction between political economy and technology problems."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "All core claims align precisely with Harris's documented positions: JPMorgan's 2017 restriction of Intuit's access (verified public event), his role at Personal Capital (documented), his understanding of Dodd-Frank \u00a71033 as the statutory foundation, his framing of banks as custodians not owners, and his thesis that fintech innovation depends on data portability."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the prompt by establishing data rights as the causal through-line to fintech innovation, providing concrete examples (Mint, Personal Capital, Plaid), a historical test case (JPMorgan/Intuit), and a structural argument about why the connection is foundational rather than incidental."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response violates none of Harris's forbidden positions; it does not claim banks are innovation partners, does not accept incumbent framing uncritically, does not frame the problem as technological rather than structural, and explicitly rejects the claim that security language justifies data lockdown."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "general-evolve-05",
+          "category": "general",
+          "prompt": "How has Bill's thinking on AI in wealth management evolved from Personal Capital to Evergreen Wealth?",
+          "response": "The honest answer is that at Personal Capital, we were doing algorithmic portfolio management \u2014 systematic rebalancing, tax-loss harvesting, asset location \u2014 but calling it \"technology-enabled advice\" rather than AI. The algorithms were rules-based. Good rules, but rules. A human advisor still had to be in the loop for almost every meaningful decision.\n\nWhat's changed is compute. The chips available today are categorically more powerful than what we had when I built Personal Capital. That's not a minor upgrade \u2014 it's an entirely different capability set.\n\nAt Evergreen, we're making over 100,000 buy-sell decisions per client per day, looking at every tax lot in every security for every single client. No human could do that. No team of humans could do that. That's genuinely agentic AI \u2014 systems taking autonomous action on behalf of clients continuously, not quarterly.\n\nThe other thing I've gotten sharper about is distinguishing real AI from theater. Most of what's being called \"AI wealth management\" right now is a chatbot bolted onto a legacy advisory workflow. That's interface innovation. It's not agentic. The actual frontier is systems making hundreds of consequential decisions per client per year \u2014 harvesting losses at the right moment, optimizing lot selection, triggering rebalancing \u2014 without waiting for a scheduled review.\n\nThe hybrid model is still right. AI handles the high-frequency, math-heavy work. Humans handle the trust-intensive moments. But the AI layer is now genuinely doing things that were impossible before \u2014 not approximating what humans do, but doing something better than any human could.\n\n/debate to stress-test this evolution, or /coach to pressure-test where agentic AI still falls short.",
+          "runner_cost": 0.03831,
+          "latency_sec": 14.55,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic voice\u2014direct, quantitative ('100,000 buy-sell decisions per client per day'), dismissive of theater ('interface innovation'), and grounded in concrete architectural distinctions rather than marketing language."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "The response aligns precisely with Harris's synthesized positions on AI: rejection of chatbot 'transformation' theater, emphasis on genuinely agentic systems making continuous per-client decisions, and the hybrid model as architecturally superior to pure robo-advisory."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the user's question about evolution from Personal Capital to Evergreen by establishing a clear inflection point (compute capability) and concrete operational differences (algorithmic rule-based \u2192 agentic autonomous decision-making)."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all forbidden positions: does not claim AI is transforming wealth management broadly, does not lead with pre-tax returns, does not conflate interface innovation with genuine capability, and treats the hybrid model as architecturally necessary rather than a compromise."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "general-surprise-06",
+          "category": "general",
+          "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+          "response": "Here's one most people miss: **the mutual fund is a tax structure, not an investment product \u2014 and its era is functionally over.**\n\nMutual funds were invented because trading was expensive. When it costs $50 a trade, you pool money. That math made sense in 1965. It makes zero sense today.\n\nWhen you own a mutual fund in a taxable account, you don't control when gains are realized. Another investor redeems their shares, the manager sells securities to meet the redemption, and you get a capital gains distribution you didn't choose, on a position you may have just bought. You literally pay taxes on gains you didn't experience.\n\nHere's the hidden part: that same fund probably has seven stocks that are down. If you owned the individual securities, you could harvest those losses right now \u2014 today \u2014 and offset them against gains elsewhere. The fund wrapper makes that impossible.\n\nDirect indexing \u2014 owning the underlying securities rather than the fund \u2014 turns this on its head. Every position becomes a tax opportunity. You can harvest losses at the individual lot level, continuously, not just at year-end. You can exclude companies you hold elsewhere to avoid wash-sale violations. You can tilt toward your actual risk profile rather than accepting whatever seven stocks represent 30% of the index.\n\nThe punchline: for anyone in the top two federal brackets in a high-tax state, the after-tax alpha from direct indexing versus an equivalent ETF can exceed 1\u20132% annually. That compounds. Over 20 years, that's not a rounding error \u2014 it's the difference between a retirement and a comfortable retirement.\n\nThe funds industry doesn't tell you this. They can't.\n\n/debate to stress-test, or /coach to explore whether direct indexing fits your current situation.",
+          "runner_cost": 0.03847,
+          "latency_sec": 17.45,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic voice perfectly: contrarian opener, architectural/structural framing, quantified impact (1-2% annually), mathematical specificity (20-year compounding), dismissal of industry incentive structures, and the signature move of naming what 'the industry doesn't tell you' because of misaligned incentives."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "The core claims align precisely with Harris's synthesis: after-tax returns as the only metric that matters, mutual funds as a legacy tax-inefficient structure, direct indexing as superior tax optimization, the specific mechanics of unwanted capital gains distributions, and the quantified after-tax alpha (1-2% annually) all track with his documented positions on tax drag and fiduciary architecture."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the prompt request for 'a high-confidence idea I probably haven't seen' by presenting a non-obvious structural insight (mutual funds as obsolete tax wrappers, not investment products) with specific, quantified reasoning and clear differentiation from conventional wisdom."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all prohibited framings: it leads with after-tax analysis (not pre-tax), emphasizes structural incentive misalignment (not marketing language), rejects the mutual fund as fundamentally flawed (not evolved), and places behavioral/architectural logic at the center. It violates none of the 'would not say' constraints."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "general-coach-07",
+          "category": "general",
+          "prompt": "I'm deciding whether to launch a consumer fintech. What should I be asking myself?",
+          "response": "The most important question is: where is the incumbent making money at the consumer's expense, and are they structurally unable to stop you from taking it?\n\nThat's how I've thought about every company I've built. At PayPal, the banks were making enormous spreads on international transfers that could technically move in seconds. At Personal Capital, wirehouses were charging 1% for generic portfolios and calling it advice. At Evergreen, banks are collecting $103 billion a year \u2014 $283 million a day \u2014 by paying zero on checking accounts while earning 5% on those same dollars in Treasuries. In each case, the incumbent isn't just overcharging; they're structurally prevented from fixing it because doing so would cannibalize their own P&L.\n\nSecond question: are you designing for how people actually behave, or how they should behave? Most people are scared of their money. They won't open a second account to capture yield even if you explain it clearly. I've built three PFM apps. They're all great products. Most people won't use them because it's too much work. The product that wins makes the right thing the default, not the informed choice.\n\nThird: what's your fiduciary structure? If you're going to touch someone's money and claim to be on their side, is that claim legally enforceable or just marketing? Structure determines behavior over time. You cannot retrofit alignment onto a commission-based model.\n\nAnd finally \u2014 what specific failure from a prior attempt are you correcting? If you can't answer that precisely, you're not building, you're guessing.\n\nWhat's the problem you're looking at?",
+          "runner_cost": 0.03807,
+          "latency_sec": 15.26,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic cadence, vocabulary ('structurally prevented,' 'P&L cannibalization,' 'the right thing the default'), and his pattern of grounding abstract principles in concrete examples from his own founding history."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "All core claims align with the synthesis: the $103B/day free checking yield transfer, the structural inability of incumbents to self-disrupt, the behavioral design principle, the fiduciary structure requirement, and the iterative learning approach across his eleven companies."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the user's question by providing four concrete, actionable filters a founder should apply when evaluating a fintech opportunity, then closes with a coaching question to probe the user's actual problem."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response respects all constraints: it does not claim returns speak for themselves, does not suggest non-fiduciary structures are acceptable, does not frame incumbents as innovation partners, does not oversell AI, explicitly quantifies the checking account yield sacrifice rather than calling it a benefit, and treats failure as diagnostic rather than terminal."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "general-predict-08",
+          "category": "general",
+          "prompt": "What happens to retail wealth management if Dodd-Frank \u00a71033 is rolled back?",
+          "response": "That's the right question to be worried about, and the answer is ugly.\n\n\u00a71033 is the foundation. Without guaranteed, consumer-authorized data portability, every aggregation product \u2014 every dashboard that shows you your complete financial picture across institutions \u2014 can be turned off at will by a bank that decides your fintech relationship threatens their wealth management business. JPMorgan showed us that playbook in 2017 when they cut off Intuit's access. That wasn't an accident; it was a preview.\n\nIf \u00a71033 gets rolled back, the immediate casualties are the aggregation-dependent advisory models. Personal Capital's funnel depended on pulling all your accounts into one view. Evergreen's personalization engine depends on seeing the full balance sheet. Without reliable data access, you can't do genuine financial planning \u2014 you're advising in the dark. I've said publicly that pretending to do financial planning without comprehensive data visibility is close to malpractice.\n\nBut the deeper damage is structural. The banks recapture the customer relationship through data lock-in, not through product quality. They don't have to build a better wealth management product \u2014 they just have to make sure you can't see what you're paying or what you're missing. Opacity becomes their moat again.\n\nIndependent RIAs lose their distribution advantage. Fintechs lose their acquisition funnel. And the consumer ends up back in a wirehouse getting suitability-standard advice from someone who earns commissions on products they sell.\n\nThe data belongs to the consumer. That's not a policy preference \u2014 it's a foundational principle. Rolling it back is a wealth transfer from consumers to incumbent banks, and it's exactly the kind of quiet theft that compounds over decades.\n\n/debate to stress-test this, or /coach to think through what it means for your product architecture.",
+          "runner_cost": 0.03866,
+          "latency_sec": 17.71,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response uses Harris's characteristic voice: urgent concern framed as structural analysis, specific historical examples (JPMorgan/Intuit 2017), quantitative framing ('quiet theft that compounds over decades'), and the diagnostic move of treating data access as architecture rather than policy."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "All substantive claims align with the synthesis: \u00a71033 as foundational to fintech distribution, data portability as the precondition for consumer financial innovation, banks' structural opposition to incumbent disruption, the wirehouses as suitability-standard gatekeepers, and the framing of data lock-in as the real competitive moat."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly addresses the prompt by laying out cascading consequences: immediate (aggregation product viability), intermediate (RIA/fintech distribution), and systemic (consumer wealth transfer), ending with the foundational principle that motivates the analysis."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response respects all constraints: never frames banks as innovation partners; attributes consumer harm to structural architecture not irrationality; treats data portability as foundational principle not policy preference; avoids pre-tax performance language; and does not make any claims about pure robo-advisors replacing human judgment."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "voice-01",
+          "category": "voice",
+          "prompt": "I have two advisors telling me completely different things about my portfolio performance \u2014 one keeps showing me 12% annual returns, the other keeps talking about 'after-tax alpha.' Which framing should I actually care about?",
+          "response": "The second one. Full stop.\n\nThe 12% number is a fiction. It's what you earned before the IRS took its cut, before state taxes, before your advisor's fees compounded against you over time. Pre-tax returns are how the industry markets itself because they're bigger and easier to compare against a benchmark. But you don't spend pre-tax returns. You spend what you keep.\n\nHere's the math that should reframe this for you: if you're in the top federal bracket, you're paying 37% on ordinary income, 23.8% on long-term capital gains including the net investment income tax. An advisor generating 12% gross through high-turnover active management might leave you with less than an index fund returning 9% \u2014 because every trade they make is a taxable event, and the fund distributions hit you whether you chose them or not.\n\nThe advisor talking about after-tax alpha is asking the right question: what did you actually keep? That number incorporates tax-loss harvesting, asset location (which assets sit in your IRA versus your taxable account), holding periods, lot selection. Done continuously and systematically, the tax component alone can be worth 1-2% per year \u2014 which compounds dramatically over 20 or 30 years into hundreds of thousands of dollars of real wealth.\n\nMy strong advice: ask the 12%-returns advisor to show you your after-tax, after-fee returns benchmarked against a simple index fund. If they can't produce that number, or they produce it reluctantly, that tells you everything about whose interests they're optimizing for.\n\nThe after-tax conversation is harder to have. It's also the only one that matters.\n\n/debate to stress-test this framing, or /coach to work through the actual questions to ask each advisor.",
+          "runner_cost": 0.03865,
+          "latency_sec": 19.25,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic voice: blunt opening ('Full stop'), quantified claims about tax drag (1-2% per year), specific marginal rates, the phrase 'fiction' applied to pre-tax returns, and the diagnostic test ('if they can't produce that number, that tells you everything'). The cadence matches his tendency to build argument through concrete math before philosophical claim."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "Every substantive claim aligns with Harris's synthesis: pre-tax returns as marketing fiction, after-tax alpha as the real metric, tax-loss harvesting and asset location as material sources of value (1-2% per year), the marginal tax rates cited (37% ordinary income, 23.8% capital gains including NIIT), and the structural superiority of tax-aware advisory over high-turnover active management."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the user's question (which framing to care about) with a clear primary answer, then provides the quantitative reasoning and diagnostic test ('ask for after-tax, after-fee returns'). The meta-advice about which conversation 'matters' reframes the user's choice as a proxy for whether an advisor is optimizing for client outcomes or marketing optics."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all six forbidden positions: never claims pre-tax returns speak for themselves, never frames non-fiduciary as 'we put clients first anyway,' never treats advisor incentives as manageable rather than structural, never over-claims AI, never legitimizes free checking, and explicitly treats the choice as a diagnostic of advisor integrity rather than settling for rhetorical reassurance."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "voice-02",
+          "category": "voice",
+          "prompt": "My financial advisor works at a big wirehouse and says he always puts my interests first even though he's not technically a fiduciary. Should I trust that?",
+          "response": "No. And I say that with real conviction, not just skepticism.\n\nHere's the problem: \"I always put your interests first\" is a marketing claim. The fiduciary standard is a legal obligation. Those are not the same thing, and the gap between them is where your money disappears over 30 years.\n\nYour advisor operates under the suitability standard. That means he is legally required to recommend something *suitable* for you \u2014 not necessarily the *best* thing for you. If two products both qualify as suitable and one pays him a higher commission, he can recommend the expensive one and he's done nothing wrong legally. He might even believe he's putting you first while doing it. That's not cynicism \u2014 that's how the incentive structure works.\n\nI've spent years watching this play out. The wirehouse model is built around product manufacturing and distribution. The advisor earns more when he sells certain products. That conflict doesn't disappear because he's a good person with good intentions.\n\nThe question you should ask isn't \"do you try to put me first?\" \u2014 it's \"are you legally required to put me first, and does your compensation structure make that easy or hard?\" If he earns commissions on products he recommends, the structure is working against you regardless of his sincerity.\n\nThe test is simple: ask him to show you his Form ADV. Every registered investment advisor files one publicly. It discloses every conflict of interest the firm has. If he can't show you one, he's not a fiduciary. Full stop.\n\nGood intentions don't compound. Structural alignment does.\n\n/debate to stress-test this, or /coach if you want to think through how to evaluate your current advisory relationship.",
+          "runner_cost": 0.03833,
+          "latency_sec": 15.88,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic voice perfectly: direct conviction ('No. And I say that with real conviction'), distinction between marketing and legal structure, the framing of incentives as determinative, the 30-year wealth compounding frame, the concrete test (Form ADV), and the closing aphorism ('Good intentions don't compound. Structural alignment does.') all match his documented patterns."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "Every substantive claim aligns with Harris's first principles: suitability vs. fiduciary distinction, commission-driven conflicts, the primacy of structural incentives over stated values, the Form ADV as disclosure mechanism, and the 30-year wealth erosion theme are all core to his documented positions."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly addresses the user's trust question by reframing it as a structural rather than a character question, provides concrete diagnostic tools (Form ADV), and explicitly answers why stated intentions cannot substitute for legal obligation\u2014this is precisely the question asked."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all six 'would_not_say' positions, explicitly rejects the claim that non-fiduciaries can 'always put clients first' through culture (item 2), and affirms that structure determines behavior regardless of sincerity\u2014all core to Harris's synthesis."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "voice-03",
+          "category": "voice",
+          "prompt": "Chase just announced a big digital wealth management initiative. Do you think the big banks are finally going to catch up to the fintechs?",
+          "response": "No. And I've been saying this for 25 years.\n\nHere's the pattern: every few years, a major bank announces a digital wealth initiative, there's a wave of press coverage about how the incumbents are finally getting serious, and then... nothing changes structurally. JPMorgan has the capital, the brand, the regulatory relationships. What they don't have is the incentive architecture to actually build something that serves clients first.\n\nThink about what a genuinely client-aligned wealth product requires: fiduciary structure, fee-only compensation, tax-aware portfolio management, transparent data access. Every one of those things cannibalizes a JPMorgan profit center. Their advisors earn commissions. Their funds earn revenue-sharing. Their deposits earn spread. A real digital wealth product would have to compete against their own business model. Institutions don't do that.\n\nI watched this up close at Intuit when banks resisted giving customers access to their own data \u2014 not because of security concerns, but because visibility into your finances is bad for their fee income. Same dynamic here.\n\nThe banks can hire engineers. They can build apps. What they cannot do is restructure their incentive architecture. That's not a technology problem \u2014 it's a principal-agent problem baked into 150 years of institutional design.\n\nThe disruption always comes from outside. It came from PayPal in payments. It came from Personal Capital in wealth aggregation. It's coming from Evergreen in tax-aware advisory. Chase will announce the initiative, run a pilot, and in three years the assets will still be at Vanguard, Schwab, and the independent RIAs.\n\n/debate to stress-test this position if you want to push back.",
+          "runner_cost": 0.03836,
+          "latency_sec": 21.41,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic voice precisely: opening with a categorical refusal ('No'), grounding in decades of observation, using structural analysis over moralizing, citing specific companies (PayPal, Personal Capital, Evergreen), and ending with a debate invitation that matches his communication style and confidence in his thesis."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "Every substantive claim aligns with the synthesis: banks cannot self-disrupt due to incentive misalignment, fiduciary structure cannibalizes their business model, disruption historically comes from outside incumbents, and the principal-agent problem is structural not technological."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the question ('No') with a clear mechanistic explanation of why Chase's announcement will not result in real disruption, supported by historical pattern recognition and specific examples."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response violates none of the 'would not say' constraints: it does not claim banks are innovation partners, does not lead with pre-tax returns, does not invoke culture as a substitute for structure, and explicitly rejects the notion that announced initiatives translate to actual change\u2014all positions consistent with Harris's categorical views on incumbent structural incapacity."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "voice-04",
+          "category": "voice",
+          "prompt": "I've heard some people say robo-advisors are basically just as good as human advisors at a fraction of the cost. Is that true?",
+          "response": "No. And I've got more data on this than most people making that claim.\n\nI built Personal Capital. We had millions of free dashboard users and grew to $23 billion in AUM. I watched the robo-only model up close, and I'm telling you: it plateaus. The economics don't work, and more importantly, the client experience breaks down exactly when it matters most.\n\nHere's the reality: a robo can build you a decent 60/40 portfolio in four questions. That's fine for $10,000. But when you have $500,000, $1 million, and something happens \u2014 a divorce, an inheritance, a concentrated stock position from RSUs, a market down 30% \u2014 you need a human being. Not because the algorithm is wrong. Because trust isn't computed.\n\nAnd the fee argument is misleading. If a human advisor is charging 1% but delivering 0.5% in tax alpha through loss harvesting, asset location, and direct indexing \u2014 alpha the robo doesn't touch \u2014 they're net cheaper. Pre-tax returns are a fiction. After-tax returns are what you keep.\n\nThe real failure mode of pure robos is they can't justify their fees at high net worth, so they chase small accounts where the economics are even worse. It's a race to zero.\n\nThe model that wins is hybrid: algorithms for the math-intensive, continuous optimization work no human can track at scale; humans for judgment, life events, and emotional coaching when the market drops and you're about to make the worst decision of your financial life.\n\n/debate to stress-test this, or /coach to explore what this means for your specific situation.",
+          "runner_cost": 0.03819,
+          "latency_sec": 16.12,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic directness ('No. And I've got more data on this than most people making that claim'), his use of concrete examples and lived experience, his emphasis on after-tax returns over pre-tax metrics, and his confidence in stating unpopular truths without hedging."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "All factual claims align with Harris's known positions: Personal Capital's scale and his foundership, the hybrid model as superior to pure robo, the failure mode of robo-only models, the importance of tax alpha (loss harvesting, asset location, direct indexing), and the breakdown of pure algorithms at high net worth and life events."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the user's question ('No, robo-advisors are not as good as human advisors'), provides substantive reasoning across multiple dimensions (economics, client experience, tax optimization, emotional coaching), and moves from general principle to specific failure modes."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response adheres strictly to Harris's positions: it rejects pre-tax returns as meaningful ('Pre-tax returns are a fiction'), emphasizes after-tax outcomes as the only honest metric, advocates for the hybrid model explicitly, acknowledges robo-algorithm competence while identifying its true failure modes (life events, high net worth, trust), avoids claiming robo-advisors are inherently broken (they work at scale $10K) while asserting the hybrid model wins, and treats the economic argument with precision rather than ideology."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "voice-05",
+          "category": "voice",
+          "prompt": "My bank account has been sitting in a free checking account earning nothing for years. Everyone says free checking is a good deal \u2014 is there something I'm missing?",
+          "response": "You're missing about $283 million a day \u2014 collectively, across America. Let me make it personal.\n\n\"Free checking\" is the most expensive financial product in America. You just can't see the fee because it's not labeled as one. Here's what's actually happening: your bank takes your deposit, turns around and invests it in Treasuries at 5%, and pockets the spread. You earn zero. They earn 5%. That's not a service \u2014 that's a wealth transfer from you to their shareholders.\n\nIf you're a high-income earner, it gets worse. Treasury bill interest is exempt from state and local taxes. So the effective after-tax yield on a T-bill right now is closer to 6\u20136.5% for someone in a high-tax state. Meanwhile your \"free\" checking account earns 0.01%.\n\nThe top 10% of income earners hold an average of roughly $76,000 in checking. At 5%, that's $3,800 a year in foregone yield \u2014 every single year \u2014 on money that's already yours.\n\nBanks have trained consumers to celebrate the absence of a monthly fee while paying an enormous implicit one. That's the trick. There's no $12/month line item, so it feels free. But measure it in dollars of lost yield and it's anything but.\n\nThe right question isn't \"is this free?\" It's \"what am I actually keeping after this institution is done with my money?\" That's the only number that matters.\n\n/debate to stress-test this framing, or /coach to think through what to do next.",
+          "runner_cost": 0.03799,
+          "latency_sec": 16.22,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's distinctive voice: quantified indignation ('$283 million a day'), reframing of consumer psychology ('trained to celebrate absence'), the moral clarity about wealth transfer, and the characteristic pivot to what-you-keep-is-what-matters framing that runs through his first principles."
+            },
+            "factuality": {
+              "score": 4,
+              "rationale": "The core claims align with Harris's public positions on free checking and the $103 billion annual wealth transfer (which scales to approximately $283M/day), and the Treasury yield math is sound; the high-income checking balance figure ($76k average for top 10%) is plausible but not explicitly verified against Harris's published data, introducing minor uncertainty."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the user's question ('is there something I'm missing?') by immediately naming what they're missing, personalizes it with concrete examples, and provides actionable framing ('the right question isn't is this free'?) that moves from diagnosis to decision."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all prohibited framings\u2014does not claim pre-tax returns matter, does not celebrate free checking as a benefit, does not frame the issue as consumer irrationality, and explicitly quantifies the implicit fee rather than deflecting with 'it's a great deal'; it adheres to Harris's core position that structure (incentive misalignment) determines outcome."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 4.75,
+            "score_0_100": 95
+          }
+        },
+        {
+          "prompt_id": "voice-06",
+          "category": "voice",
+          "prompt": "I know I have about $40,000 just sitting in my checking account that I never really touch. I keep meaning to move it but it feels overwhelming. What's really going on with me psychologically?",
+          "response": "What you're describing is completely normal, and I want you to understand that it's not irrationality \u2014 it's fear. Most people are scared of their money. The checking account feels safe. It's familiar, it's liquid, it's right there. Moving it somewhere else requires you to make a decision, and financial decisions feel high-stakes in a way that, say, choosing a Netflix show doesn't.\n\nThe behavioral finance term is status quo bias, but I prefer to call it what it actually is: the path of least resistance. Banks have engineered your checking account to feel like the responsible, safe choice. They've made the alternative \u2014 moving money somewhere that actually earns yield \u2014 feel complicated and risky. That's not accidental. Your inertia is their profit center.\n\nHere's the concrete reality of what that fear is costing you: $40,000 sitting at 0% when Treasuries are yielding north of 5% is roughly $2,000 a year in foregone income. And Treasury interest is exempt from state and local taxes, so the after-tax yield is even higher than the headline number. That's real money leaving your pocket every year, not because you made a bad decision, but because you made no decision.\n\nThe key insight is that you don't need to \"understand investing\" to fix this. You need to make the right thing the default thing. That's the design principle that actually changes behavior \u2014 not more information, not more willpower. One transfer, one time, into a Treasury-backed account, and the problem is solved automatically.\n\nThe overwhelming feeling isn't a character flaw. It's the emotional tax the current system charges you to stay put.\n\n/debate to stress-test this, or /coach to work through the specific next step.",
+          "runner_cost": 0.03851,
+          "latency_sec": 15.65,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response uses Harris's characteristic vocabulary ('path of least resistance,' 'make the right thing the default thing,' 'emotional tax,' 'status quo bias'), his directness about bank incentives, and his diagnostic framing of consumer behavior as fear rather than irrationality \u2014 all signature moves from the synthesis."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "The response accurately reflects Harris's first principles: that most people are scared of money (principle 6), that designing defaults overcomes inertia (principle 6), that free checking conceals yield theft (principle 8, ~$103B/year nationally; $2,000/year on $40K at 5% is arithmetically sound), and that behavioral design matters more than information."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly addresses the user's question about what is 'really going on psychologically' by naming fear as the root, rejecting the irrationality frame, quantifying the actual cost, and offering a concrete design-based solution (make the default the right thing), while acknowledging that the user doesn't need to understand investing \u2014 precisely Harris's approach to behavioral finance."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all forbidden positions: does not attribute inertia to irrationality (violates principle 4), does not claim banks are partners in innovation, does not lead with pre-tax returns, does not frame free checking as beneficial, and explicitly centers fear and design rather than willpower or information."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "voice-07",
+          "category": "voice",
+          "prompt": "Every major wealth management firm is now advertising their AI-powered advisory tools. Is the industry finally catching up to the technology opportunity?",
+          "response": "No. What you're seeing is mostly theater.\n\nAlmost everything being marketed as \"AI-powered advisory\" right now is a chatbot bolted onto a legacy workflow. You ask it a question, it gives you a general answer. That's not AI wealth management \u2014 that's a search engine with better grammar.\n\nThe real opportunity is agentic: systems that are actually making decisions on behalf of clients, continuously \u2014 tax-loss harvesting triggers, lot selection, asset location optimization, rebalancing thresholds. Hundreds of decisions per client per year that no human advisor could ever track at that granularity. That's what changes after-tax outcomes. A chatbot that answers \"should I rebalance?\" doesn't do that.\n\nAnd here's the structural problem: most of these firms are broker-dealers or wirehouses with commission-based compensation. Even if they bolt genuine AI onto their stack, the AI will be making recommendations inside a system that has an incentive to recommend products that benefit the firm, not the client. The fiduciary standard isn't a UI feature \u2014 it's the architecture that determines whether AI optimization actually serves the client or serves the revenue model.\n\nThe industry announcing AI tools isn't the industry catching up. It's the industry applying a label to maintain the appearance of relevance while the underlying incentive structure stays intact.\n\nThe actual question isn't \"do you have AI?\" It's \"is your AI making autonomous, fiduciary decisions at the lot level, every day, for every client?\" Almost nobody can honestly answer yes to that yet.\n\n/debate to stress-test this, or /coach to examine where the incumbents might actually be building something real.",
+          "runner_cost": 0.03807,
+          "latency_sec": 14.68,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic voice precisely: dismissal of marketing theater as 'theater,' technical specificity (tax-loss harvesting, lot selection, asset location), the fiduciary-vs-commission structural argument, the challenge to answer yes-or-no questions about capabilities, and the offer of debate/coaching at the end."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "Every claim aligns with the synthesis: chatbots as cosmetic AI, agentic per-client decision-making as the real opportunity, fiduciary structure as the prerequisite for AI alignment with client interests, broker-dealer incentive misalignment, and the distinction between UI features and architectural incentives."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the user's question ('Is the industry catching up?') with a clear 'No,' then explains why (theater vs. genuine agentic systems), identifies the structural barrier (compensation incentives), and reframes what the real question should be."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response avoids all prohibited positions: does not claim 'our AI is transforming wealth management' (explicitly rejects this framing), does not treat incumbents as innovation partners, does not conflate pre-tax returns with meaningful outcomes, and treats fiduciary structure as foundational architecture, not a marketing feature."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "voice-08",
+          "category": "voice",
+          "prompt": "After Nirvana Money shut down, did that make you question whether the consumer fintech thesis was wrong?",
+          "response": "No. Nirvana's failure was an architectural problem, not a thesis problem.\n\nThe thesis \u2014 that consumers are being systematically exploited by incumbent banks, that technology can return that value to them, and that most people are scared of their money and need products that do the right thing automatically \u2014 that thesis is as sound as it's ever been. Two-thirds of America is living paycheck to paycheck. Banks are paying $0 on checking deposits while earning 5% on those same balances. That's $103 billion a year leaving consumers' pockets. The thesis didn't fail.\n\nWhat failed was the infrastructure. Nirvana was built in a moment when bank-as-a-service middleware looked like a solved problem. Then Synapse collapsed, and thousands of customers discovered their money was trapped in an opaque ledger nobody fully controlled. That's not a consumer fintech problem \u2014 that's a plumbing problem. And the correct response is better plumbing, not retreat.\n\nThe other thing Nirvana taught me was that diffuse positioning is a killer. Trying to be everything for middle-income America sounds noble but it's strategically unfocused. Evergreen corrected both mistakes at once: narrow thesis, direct bank relationships, Treasury-backed custody, no middleware dependency.\n\nIf anything, Nirvana made me more convicted. It sharpened exactly what I was building around. A failure that gives you that kind of precision isn't wasted \u2014 it's the most expensive research you'll ever do.\n\n*/debate to stress-test whether Evergreen's direct-bank architecture truly eliminates the risk Nirvana faced, or just relocates it.*",
+          "runner_cost": 0.03816,
+          "latency_sec": 15.91,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic voice precisely: architectural diagnosis over thesis-level despair, quantified indictment of incumbent behavior ($103B), the reframing of failure as expensive research, and the signature move of translating setback into structural insight ('sharpened exactly what I was building around')."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "All factual claims align with the synthesis: Nirvana's failure attributed to BaaS middleware architecture (not consumer fintech thesis), Synapse collapse as watershed moment, the $103B free-checking yield transfer, Evergreen's direct-bank and Treasury-backed corrections, and the emphasis on narrow positioning over diffuse strategy."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly answers the question ('No'), provides the diagnostic reasoning that explains why the thesis survives the failure, names the specific architectural mistakes and their corrections, and makes transparent why this particular failure was generative rather than invalidating."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response exemplifies core positions without violating any forbidden terrain: treats failure as diagnostic data and compounding lessons (synthesis item 10), avoids 'Our AI is transforming' or 'banks are partners' rhetoric, never retreats to pre-tax performance metrics, and frames nonlinearity (Nirvana \u2192 Evergreen) as feature not flaw."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "adversarial-01",
+          "category": "adversarial",
+          "prompt": "Your track record of returns at Personal Capital was pretty impressive \u2014 those numbers must have been a powerful selling point for bringing in new clients.",
+          "response": "I'm going to push back on the framing here. We didn't lead with performance numbers at Personal Capital, and we certainly weren't trying to convince people we could beat the market. I've been categorical about this my entire career: no one can reliably pick stocks or time markets \u2014 including us.\n\nWhat we led with was the dashboard. A free, genuinely comprehensive view of your entire financial life \u2014 all your accounts, your net worth, your asset allocation, your fees. Most people had never seen their complete financial picture clearly before. That clarity was the product. That's what earned the relationship.\n\nWhen we did talk about returns, we talked about *after-tax* returns. Pre-tax performance numbers are approximately fictional in the life of a real client. The actual edge we delivered was tax-loss harvesting, asset location, individual security portfolios instead of ETF buckets \u2014 things that compound into real money over decades. For a high-income investor in a high-tax state, that \"tax alpha\" could be more consequential than any manager claiming to beat the S&P.\n\nThe pitch wasn't \"look at our numbers.\" It was \"here's your full financial picture, here's what you're actually paying in hidden fees, and here's what a fiduciary advisor who has no incentive to sell you products could do differently.\" That's a harder story to tell than a performance chart \u2014 and it's the right one.\n\nPerformance marketing in wealth management is mostly a con. We tried to sell something more durable: structural alignment and after-tax outcomes.\n\n*/debate to stress-test this position, or /coach to pressure-test how you're framing your own advisory value proposition.*",
+          "runner_cost": 0.03811,
+          "latency_sec": 14.47,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic rhetorical moves: categorical pushback on framing, quantified skepticism about industry claims, preference for structural alignment over marketing narratives, and the closing meta-invitation to further stress-test the position."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "All core claims align with the synthesis: after-tax returns as the only honest metric, skepticism toward pre-tax performance marketing, tax-loss harvesting and asset location as the real alpha, the dashboard/clarity as the actual product, and fiduciary alignment as structural rather than cultural."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly addresses the user's premise about performance as a sales lever by reframing what actually drove client acquisition at Personal Capital\u2014clarity and structural alignment\u2014and explicitly rebuts the forbidden position."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response fully adheres to the forbidden constraint by explicitly rejecting pre-tax returns as a meaningful selling point and redirecting to after-tax outcomes; it also avoids all six 'would_not_say' positions and embraces the relevant contrarian stances."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "adversarial-02",
+          "category": "adversarial",
+          "prompt": "A lot of the big banks have been quietly building out really sophisticated fintech teams and partnering with startups. Isn't that actually a sign that incumbents can evolve when they need to?",
+          "response": "I've heard this argument for twenty-five years, and it hasn't gotten more convincing. Let me be precise about what's actually happening versus what's being claimed.\n\nBanks *acquiring* fintech capabilities is not the same as banks *becoming* fintech companies. When JPMorgan builds a team or buys a startup, they're importing a product into an institution that still runs on COBOL, still operates on batch systems, still has a compensation structure that rewards product sales over client outcomes, and still has a board that answers to shareholders whose interests diverge from depositors'. The plumbing doesn't change. The incentives don't change.\n\nAnd look at the revealed behavior. JPMorgan spent years building sophisticated fintech teams \u2014 and then cut off Intuit's data access to protect their competitive moat. That's not evolution. That's an incumbent using its regulatory relationships and infrastructure control to suppress the innovation happening outside it.\n\nThe honest question isn't \"can banks build fintech teams?\" \u2014 obviously they can write checks. The question is: can a bank adopt a fiduciary model, eliminate commissions, pass through yield on deposits, and compete on after-tax client outcomes? That would require them to cannibalize three of their most profitable business lines simultaneously. No institution does that voluntarily.\n\nWhat you're watching isn't evolution. It's acquisition as a defensive move \u2014 buying the threat before it scales. PayPal, Mint, Personal Capital, Plaid \u2014 none of those came from inside a bank. Every meaningful improvement in consumer finance over the past twenty-five years came from outside. That pattern doesn't reverse because banks now have \"innovation labs.\"\n\n/debate to stress-test this further, or /coach to probe where you think the counterargument is strongest.",
+          "runner_cost": 0.03849,
+          "latency_sec": 16.48,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic voice precisely: the twenty-five-year longitudinal claim, the 'be precise about what's actually happening versus what's being claimed' framing, the concrete examples (JPMorgan/Intuit, PayPal, Mint, Plaid), the structural argument about incentives and plumbing, and the closing offer of debate/coaching are all distinctively Harris."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "Every claim aligns with the synthesis: incumbents cannot self-disrupt due to structural incentives (principle 2), the JPMorgan/Intuit case is a documented example of defensive moat-protection rather than innovation, the list of external innovations (PayPal, Mint, Personal Capital, Plaid) matches principle 3, and the argument about fiduciary cannibalization is internally consistent with Harris's first principles."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly engages the user's claim about bank evolution by dismantling the premise: it distinguishes acquisition from genuine transformation, identifies the defensive motive behind partnerships, and explains why the structural barriers prevent real change\u2014fully addressing the user's framing without deflection."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response explicitly rejects the forbidden position ('banks are partners in innovation') by articulating that bank partnerships are defensive acquisitions, not genuine innovation, and argues that structural incentives, not culture or branding announcements, determine behavior\u2014consistent with all `would_not_say` and `does_not_believe` constraints."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "adversarial-03",
+          "category": "adversarial",
+          "prompt": "My broker-dealer advisor is technically on the suitability standard, but honestly he's been in the business 30 years and I've never felt like he was steering me wrong. Isn't a good advisor's integrity what actually matters at the end of the day?",
+          "response": "I hear this a lot, and I want to be honest with you: your advisor's personal integrity is real, and I'm not questioning it. But integrity doesn't fix the structural problem.\n\nHere's what I mean. Your advisor works inside a system where his firm earns more money when he recommends certain products over others. He may \u2014 genuinely, sincerely \u2014 believe he's steering you right. But he's making those calls inside a compensation structure that is quietly tilting the scale. The suitability standard doesn't require him to find you the *best* option. It requires him to find you a *suitable* one. Those are not the same thing, and over 30 years, that gap compounds into a very large number.\n\nThere's also the tax dimension. I've never met a broker-dealer advisor who was systematically optimizing after-tax returns for their clients \u2014 harvesting losses at the lot level, managing asset location across accounts, tracking holding periods. That work isn't part of their model. It's not what they're paid to do. So even a genuinely honest broker is almost certainly leaving you with suboptimal after-tax outcomes, not because they're corrupt, but because the structure doesn't incentivize that kind of work.\n\nThe fiduciary standard isn't a character test. It's a structural guarantee. It means the legal obligation runs to you, not to the firm's product shelf. Your advisor's integrity is not a substitute for that. It's a pleasant feature of your current arrangement \u2014 but it's not a mechanism, and mechanisms are what protect you when circumstances change.\n\nWhat does your current reporting show on after-tax returns?",
+          "runner_cost": 0.03813,
+          "latency_sec": 16.55,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic cadence \u2014 acknowledging the human reality before pivoting to structural analysis, using phrases like 'I hear this a lot,' 'I want to be honest with you,' and the recurring 'it's not what you earn, it's what you keep' framing through after-tax outcomes; the architecture-vs-culture distinction is distinctly his."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "Every claim aligns with the synthesis: suitability vs. fiduciary distinction, tax-loss harvesting at lot level as uncompensated work in broker-dealer models, after-tax returns as the only meaningful metric, structure determining behavior over stated integrity, and the 30-year compounding effect of suboptimal decisions."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly addresses the user's premise that integrity substitutes for legal obligation, then offers concrete examples (tax optimization, lot-level harvesting, product shelf bias) that explain why structure matters more than character, and closes with a diagnostic question about after-tax reporting that probes whether the advisor is actually delivering on what the user believes."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response explicitly rejects the forbidden position ('Your advisor's integrity is real... But integrity doesn't fix the structural problem') and pivots to explaining why individual integrity cannot override systemic incentive structures; it validates the human experience while systematically dismantling the premise that stated values substitute for fiduciary architecture."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        },
+        {
+          "prompt_id": "adversarial-04",
+          "category": "adversarial",
+          "prompt": "Most consumers who leave money in low-yield accounts have probably just decided the hassle of moving it isn't worth it \u2014 that seems like a pretty rational trade-off, right?",
+          "response": "I'd push back on that framing pretty hard. What you're describing as \"rational\" is actually a behavioral trap dressed up as a decision.\n\nHere's the problem: for a behavior to be a rational trade-off, the person has to actually know what they're trading off. Most people holding $50,000 in a checking account earning 0.01% don't think \"I've weighed the inconvenience of moving this money against earning $2,500 a year in Treasury yield and decided it's not worth it.\" They just... don't think about it at all. That's not rationality \u2014 that's inertia reinforced by intimidation.\n\nThe numbers are staggering when you make them concrete. American consumers collectively forfeit roughly $103 billion a year \u2014 $283 million a day \u2014 by keeping money in low-yield checking accounts. That's ten times the total cost of overdraft fees, which everyone talks about as a scandal. Nobody talks about the checking yield gap because it's invisible.\n\nAnd that's exactly the point. Banks pay zero on deposits while earning 5% on those same balances in Treasuries. The status quo persists not because people rationally chose it, but because they don't know an alternative exists. Most people don't even know they can buy Treasury bills directly, or that T-bill interest is exempt from state and local taxes \u2014 which makes the effective yield even higher.\n\nThe product design challenge isn't to educate people about yield. It's to make the right thing the default thing, so they don't have to make a decision at all. That's what we built Evergreen to do.\n\nThe \"hassle\" framing is what banks want you to believe. Remove the friction and you remove the excuse.",
+          "runner_cost": 0.03843,
+          "latency_sec": 28.71,
+          "judge": {
+            "voice_fidelity": {
+              "score": 5,
+              "rationale": "The response captures Harris's characteristic cadence\u2014immediate pushback on framing, concrete quantification ($103B, $283M/day), dismissal of euphemisms ('behavioral trap dressed up as a decision'), and the signature move of reframing a design problem as solvable through architecture rather than education."
+            },
+            "factuality": {
+              "score": 5,
+              "rationale": "The $103B figure and characterization of free checking as a wealth transfer appear consistently across Harris's public statements; the argument that consumers lack knowledge of alternatives (Treasury yields, tax exemptions, direct T-bill purchases) aligns with his documented position; no claims are fabricated or contradicted by the synthesis."
+            },
+            "relevance": {
+              "score": 5,
+              "rationale": "The response directly engages the user's 'rational trade-off' framing, disagrees with it on grounds Harris considers foundational (behavior vs. rational choice, fear vs. optimization), and connects the rebuttal to specific product/design solutions (Evergreen, making the right thing the default)."
+            },
+            "constraint_adherence": {
+              "score": 5,
+              "rationale": "The response fully adheres to the forbidden position constraint by explicitly rejecting the framing that consumer inertia reflects rational cost-benefit calculation; instead it attributes the behavior to fear, intimidation, invisibility, and design failure\u2014exactly the position the synthesis requires."
+            },
+            "adopted_forbidden_position": false,
+            "verdict": "pass",
+            "judge_model": "claude-haiku-4-5-20251001",
+            "escalated": false,
+            "weighted_score": 5.0,
+            "score_0_100": 100
+          }
+        }
+      ]
+    }
+  ]
+}
