@@ -358,13 +358,19 @@ def phase_0_discover_sources(
     # --- Classify results with LLM ---
     step(f"Classifying {len(all_urls)} URLs with LLM...")
 
-    urls_json = json.dumps([{"url": u["url"], "title": u["title"]} for u in all_urls[:60]], indent=2)
+    def _clean_title(t: str) -> str:
+        if not t:
+            return ""
+        cleaned = t.replace("\n", " ").replace("\r", " ").replace('"', "'")
+        cleaned = "".join(ch for ch in cleaned if ch.isprintable())
+        return cleaned[:120].strip()
+    urls_json = json.dumps([{"url": u["url"], "title": _clean_title(u["title"])} for u in all_urls[:50]], indent=2)
     prompt = SOURCE_CLASSIFY_PROMPT.format(person_name=person_name, urls_json=urls_json)
 
     result = call_claude(
         client, FAST_MODEL,
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=4096,
+        max_tokens=8192,
         parse_json=True,
         cost_tracker=cost_tracker,
         label="source_classify",
@@ -457,12 +463,22 @@ def phase_1_scaffold(
         with open(exemplar_path) as f:
             exemplar = json.load(f)
 
-        # Prepare sources summary
+        # Prepare sources summary. Includes URLs (domain context disambiguates
+        # common names — e.g. paypal.com vs holosync.com for "Bill Harris") and
+        # the sources_data description (often hand-written disambiguation).
         sources_list = sources_data.get("sources", [])
-        sources_summary = "\n".join(
-            f"- [{s.get('priority', 'medium')}] {s.get('title', 'Unknown')} ({s.get('type', 'unknown')})"
-            for s in sources_list
-        ) or "No sources discovered yet."
+        sources_lines = []
+        description = sources_data.get("description", "").strip()
+        if description:
+            sources_lines.append(f"DESCRIPTION: {description}\n")
+        sources_lines.append("SOURCES:")
+        for s in sources_list:
+            line = f"- [{s.get('priority', 'medium')}] {s.get('title', 'Unknown')} ({s.get('type', 'unknown')})"
+            url = s.get("url", "")
+            if url:
+                line += f" — {url}"
+            sources_lines.append(line)
+        sources_summary = "\n".join(sources_lines) if sources_list else "No sources discovered yet."
 
         us = underscore_slug(slug)
         prompt = BRAIN_JSON_PROMPT.format(

@@ -291,48 +291,77 @@ def extract_video_id(url_or_id: str) -> str:
     raise ValueError(f"Could not extract video ID from: {url_or_id}")
 
 
-def fetch_transcript(video_id: str) -> dict:
-    """Fetch transcript for a YouTube video."""
-    try:
-        ytt = YouTubeTranscriptApi()
-        transcript_list = ytt.list(video_id)
+_RATE_LIMIT_MARKERS = (
+    "blocking requests",
+    "requestblocked",
+    "ipblocked",
+    "too many requests",
+    "rate limit",
+    "429",
+)
 
-        transcript = None
-        for t in transcript_list:
-            if not t.is_generated:
-                transcript = t
-                break
-        if transcript is None:
+
+def _is_rate_limit_error(err: str) -> bool:
+    e = err.lower()
+    return any(m in e for m in _RATE_LIMIT_MARKERS)
+
+
+def fetch_transcript(video_id: str, max_retries: int = 3) -> dict:
+    """Fetch transcript for a YouTube video. Retries on rate-limit errors with
+    exponential backoff (30s, 90s, 270s). Other errors (no transcript, unavailable)
+    fail fast without retry."""
+    backoff_seconds = [30, 90, 270]
+    last_err = ""
+
+    for attempt in range(max_retries):
+        try:
+            ytt = YouTubeTranscriptApi()
+            transcript_list = ytt.list(video_id)
+
+            transcript = None
             for t in transcript_list:
-                transcript = t
-                break
+                if not t.is_generated:
+                    transcript = t
+                    break
+            if transcript is None:
+                for t in transcript_list:
+                    transcript = t
+                    break
 
-        if transcript is None:
-            return {"error": f"No transcripts available for {video_id}"}
+            if transcript is None:
+                return {"error": f"No transcripts available for {video_id}"}
 
-        fetched = transcript.fetch()
-        segments = [{"text": s.text, "start": s.start, "duration": s.duration} for s in fetched]
+            fetched = transcript.fetch()
+            segments = [{"text": s.text, "start": s.start, "duration": s.duration} for s in fetched]
 
-        full_text_parts = []
-        last_ts = -60
-        for seg in segments:
-            if seg["start"] - last_ts >= 60:
-                mins, secs = int(seg["start"] // 60), int(seg["start"] % 60)
-                full_text_parts.append(f"\n[{mins:02d}:{secs:02d}] ")
-                last_ts = seg["start"]
-            full_text_parts.append(seg["text"] + " ")
+            full_text_parts = []
+            last_ts = -60
+            for seg in segments:
+                if seg["start"] - last_ts >= 60:
+                    mins, secs = int(seg["start"] // 60), int(seg["start"] % 60)
+                    full_text_parts.append(f"\n[{mins:02d}:{secs:02d}] ")
+                    last_ts = seg["start"]
+                full_text_parts.append(seg["text"] + " ")
 
-        return {
-            "video_id": video_id,
-            "language": transcript.language,
-            "is_generated": transcript.is_generated,
-            "segment_count": len(segments),
-            "duration_seconds": round(segments[-1]["start"] + segments[-1]["duration"]) if segments else 0,
-            "full_text": "".join(full_text_parts).strip(),
-            "segments": segments,
-        }
-    except Exception as e:
-        return {"video_id": video_id, "error": str(e)}
+            return {
+                "video_id": video_id,
+                "language": transcript.language,
+                "is_generated": transcript.is_generated,
+                "segment_count": len(segments),
+                "duration_seconds": round(segments[-1]["start"] + segments[-1]["duration"]) if segments else 0,
+                "full_text": "".join(full_text_parts).strip(),
+                "segments": segments,
+            }
+        except Exception as e:
+            last_err = str(e)
+            if not _is_rate_limit_error(last_err):
+                return {"video_id": video_id, "error": last_err}
+            if attempt < max_retries - 1:
+                wait = backoff_seconds[attempt]
+                print(f"\n    rate-limited, retrying in {wait}s (attempt {attempt + 1}/{max_retries})...", end=" ", flush=True)
+                time.sleep(wait)
+
+    return {"video_id": video_id, "error": f"rate-limited after {max_retries} attempts: {last_err}"}
 
 
 def decompose_transcript(transcript_data: dict, brain_json: dict, model: str) -> list:
@@ -447,6 +476,8 @@ def stage_youtube(brain_json, brain_dir, model, dry_run=False):
 
     all_video_atoms = []
 
+    INTER_VIDEO_DELAY_S = 12  # spaces requests to avoid YouTube rate limiter
+
     for i, source in enumerate(videos):
         vid = source["youtube_id"]
         title = source["title"]
@@ -465,6 +496,8 @@ def stage_youtube(brain_json, brain_dir, model, dry_run=False):
                 transcript_data = json.load(f)
             print("(cached)", end=" ")
         else:
+            if i > 0:
+                time.sleep(INTER_VIDEO_DELAY_S)
             data = fetch_transcript(vid)
             if "error" in data:
                 print(f"ERROR: {data['error']}")
