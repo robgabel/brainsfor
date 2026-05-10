@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (536 atoms, 1815 typed connections)
+  brain-atoms.json         ~1MB     Structured data (536 atoms, 419 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
