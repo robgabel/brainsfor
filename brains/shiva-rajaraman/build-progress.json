@@ -1,0 +1,39 @@
+{
+  "person": "Shiva Rajaraman",
+  "slug": "shiva-rajaraman",
+  "started_at": "2026-05-09T03:46:59.721640+00:00",
+  "phases": {
+    "0": {
+      "status": "complete",
+      "error": "Unterminated string starting at: line 332 column 5 (char 10702)",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/robgabel/rob-ai/brainsfor/scripts/auto-build-brain.py\", line 1511, in main\n    sources_data = phase_0_discover_sources(\n        args.person, slug, brain_dir, client, cost_tracker,\n        max_sources=args.max_sources,\n    )\n  File \"/Users/robgabel/rob-ai/brainsfor/scripts/auto-build-brain.py\", line 364, in phase_0_discover_sources\n    result = call_claude(\n        client, FAST_MODEL,\n    ...<4 lines>...\n        label=\"source_classify\",\n    )\n  File \"/Users/robgabel/rob-ai/brainsfor/scripts/auto_build_config.py\", line 228, in call_claude\n    raise last_error\n  File \"/Users/robgabel/rob-ai/brainsfor/scripts/auto_build_config.py\", line 192, in call_claude\n    result[\"parsed\"] = json.loads(text)\n                       ~~~~~~~~~~^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py\", line 352, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\njson.decoder.JSONDecodeError: Unterminated string starting at: line 332 column 5 (char 10702)\n",
+      "completed_at": "2026-05-09T03:50:16.247154+00:00",
+      "sources_found": 15
+    },
+    "1": {
+      "status": "complete",
+      "completed_at": "2026-05-09T03:53:38.645853+00:00",
+      "clusters": 14
+    },
+    "2": {
+      "status": "complete",
+      "completed_at": "2026-05-09T04:20:24.148858+00:00",
+      "atoms": 319
+    },
+    "3": {
+      "status": "complete",
+      "completed_at": "2026-05-09T04:22:57.689836+00:00"
+    },
+    "4": {
+      "status": "complete",
+      "completed_at": "2026-05-09T04:26:30.475070+00:00",
+      "connections": 419
+    },
+    "5": {
+      "status": "complete",
+      "completed_at": "2026-05-09T04:26:30.606061+00:00",
+      "audit_score": 86
+    }
+  },
+  "total_cost_usd": 0.9534780000000002
+}
