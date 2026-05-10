@@ -56,16 +56,15 @@ def main():
         }
         # Parse source_date if present — handle ranges like "2020-2021", plain years, etc.
         sd = a.get("source_date")
+        row["source_date"] = None
         if sd:
             sd_str = str(sd).strip()
-            # Range like "2020-2021" → take first year
             if len(sd_str) == 9 and sd_str[4] == "-" and sd_str[:4].isdigit():
                 row["source_date"] = f"{sd_str[:4]}-01-01T00:00:00Z"
             elif len(sd_str) == 4 and sd_str.isdigit():
                 row["source_date"] = f"{sd_str}-01-01T00:00:00Z"
             elif "T" in sd_str or "-" in sd_str:
                 row["source_date"] = sd_str
-            # else skip unparseable dates
         rows.append(row)
 
     # Upload in batches of 50
