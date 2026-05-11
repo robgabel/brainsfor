@@ -36,7 +36,23 @@ fs.mkdirSync(PUBLIC_DIR, { recursive: true });
 fs.copyFileSync(indexPath, path.join(PUBLIC_DIR, "index.json"));
 synced++;
 
+// Hidden brains are private (Rob-only) — skip them entirely so their pack
+// assets and zip never reach the public site. Single source of truth: the
+// status field in brains/index.json.
+const publicBrains = index.brains.filter((b) => b.status !== "hidden");
+
+// Defensively remove any stale hidden-brain dirs (Vercel builds on a fresh
+// filesystem, but local dev / CI caches may have them).
 for (const brain of index.brains) {
+  if (brain.status !== "hidden") continue;
+  const stale = path.join(PUBLIC_DIR, brain.slug);
+  if (fs.existsSync(stale)) {
+    fs.rmSync(stale, { recursive: true, force: true });
+    console.log(`Removed stale hidden brain assets: ${brain.slug}`);
+  }
+}
+
+for (const brain of publicBrains) {
   const packDir = path.join(BRAINS_DIR, brain.slug, "pack");
   const destDir = path.join(PUBLIC_DIR, brain.slug);
 
@@ -70,9 +86,9 @@ for (const brain of index.brains) {
   }
 }
 
-// Generate a downloadable zip per brain from synced files
+// Generate a downloadable zip per brain from synced files (public brains only)
 let zipped = 0;
-for (const brain of index.brains) {
+for (const brain of publicBrains) {
   const destDir = path.join(PUBLIC_DIR, brain.slug);
   if (!fs.existsSync(destDir)) continue;
 
@@ -99,4 +115,4 @@ for (const brain of index.brains) {
   zipped++;
 }
 
-console.log(`Synced ${synced} brain assets for ${index.brains.length} brains. Generated ${zipped} zip files.`);
+console.log(`Synced ${synced} brain assets for ${publicBrains.length} public brains (${index.brains.length - publicBrains.length} hidden, skipped). Generated ${zipped} zip files.`);
