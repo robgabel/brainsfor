@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+# brainsfor pre-commit hook
+#
+# Guards against CLAUDE.md drift: any commit that modifies brains/ must also
+# leave ~/rob-ai/CLAUDE.md in sync with brains/index.json. The check is cheap
+# and only fires when brains/ is part of the staged diff.
+#
+# Installed via scripts/install-hooks.sh (symlinks this file into .git/hooks/).
+# Bypass in an emergency with `git commit --no-verify`.
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+SYNC_SCRIPT="$REPO_ROOT/scripts/sync-claude-md-brains.py"
+
+# Only fire if brains/ is touched in this commit.
+if ! git diff --cached --name-only --diff-filter=ACMRT | grep -q '^brains/'; then
+    exit 0
+fi
+
+if [[ ! -f "$SYNC_SCRIPT" ]]; then
+    echo "pre-commit: sync script missing at $SYNC_SCRIPT — skipping check." >&2
+    exit 0
+fi
+
+PARENT_CLAUDE_MD="$REPO_ROOT/../CLAUDE.md"
+if [[ ! -f "$PARENT_CLAUDE_MD" ]]; then
+    echo "pre-commit: parent CLAUDE.md not found at $PARENT_CLAUDE_MD — skipping check." >&2
+    exit 0
+fi
+
+if python3 "$SYNC_SCRIPT" --check >/dev/null 2>&1; then
+    exit 0
+fi
+
+# Drift detected — auto-fix and block the commit so Rob commits the parent's change.
+echo "---------------------------------------------------------------"
+echo "  CLAUDE.md drift detected (brains/ changed but parent doc stale)"
+echo "---------------------------------------------------------------"
+python3 "$SYNC_SCRIPT"
+echo ""
+echo "  Fixed: ../CLAUDE.md has been updated to match brains/index.json."
+echo "  Action: review and commit that change in the parent rob-ai repo,"
+echo "          then re-run this commit."
+echo ""
+echo "  Bypass (not recommended): git commit --no-verify"
+echo "---------------------------------------------------------------"
+exit 1
