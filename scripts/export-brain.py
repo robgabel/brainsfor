@@ -45,6 +45,7 @@ WEBSITE_PUBLIC_BRAINS_DIR = ROOT_DIR / "website" / "public" / "brains"
 # These are the artifacts the Next.js site reads at runtime. Keep in lockstep with pack.
 WEBSITE_SYNC_FILES = [
     "brain-atoms.json",
+    "brain-atoms.js",
     "brain-context.md",
     "explore.html",
 ]
@@ -179,6 +180,12 @@ def export_atoms_json(atoms: list, connections: list, config: dict, output_dir: 
     path = output_dir / "brain-atoms.json"
     with open(path, "w") as f:
         json.dump(output, f, indent=2)
+
+    js_path = output_dir / "brain-atoms.js"
+    with open(js_path, "w") as f:
+        f.write("window.__BRAIN_DATA__ = ")
+        json.dump(output, f)
+        f.write(";\n")
 
     atoms_with_conns = sum(1 for a in output["atoms"] if "connections" in a)
     print(f"  brain-atoms.json: {len(atoms)} atoms, {len(connections)} connections, {len(topic_index)} topics, {atoms_with_conns} linked")

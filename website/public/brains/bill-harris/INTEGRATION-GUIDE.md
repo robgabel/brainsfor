@@ -1,4 +1,4 @@
-# Loading the Hank Green Brain Pack into Your AI Agent
+# Loading the Bill Harris Brain Pack into Your AI Agent
 
 How to install this brain pack so it guides your agent's decisions.
 
@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (222 atoms, 1000 typed connections)
+  brain-atoms.json         ~1MB     Structured data (564 atoms, 533 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | Hank's synthesized worldview, all 222 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | Bill's synthesized worldview, all 564 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 
@@ -26,32 +26,32 @@ pack/
 
 ## Three Integration Paths
 
-Pick the one that matches how you want Hank's brain to work in your agent.
+Pick the one that matches how you want Bill's brain to work in your agent.
 
 ### Path A: CLAUDE.md Injection (Simplest — Always-On)
 
-Paste `brain-context.md` into your project's `CLAUDE.md`. Every conversation in that project gets shaped by Hank's thinking.
+Paste `brain-context.md` into your project's `CLAUDE.md`. Every conversation in that project gets shaped by Bill's thinking.
 
-**Best for:** "I want every decision in this project filtered through Hank's lens."
+**Best for:** "I want every decision in this project filtered through Bill's lens."
 
 **Steps:**
 
 1. Copy this pack's contents into your project:
    ```bash
-   cp -r path/to/hank-green/pack ./brain-pack
+   cp -r path/to/bill-harris/pack ./brain-pack
    ```
 
 2. Append the brain context to your project's `CLAUDE.md`:
    ```bash
    echo "" >> CLAUDE.md
-   echo "# Brain: Hank Green" >> CLAUDE.md
+   echo "# Brain: Bill Harris" >> CLAUDE.md
    echo "" >> CLAUDE.md
    cat brain-pack/brain-context.md >> CLAUDE.md
    ```
 
-3. Open Claude Code in your project. The brain is now active — every conversation is informed by Hank's frameworks, first principles, and guardrails.
+3. Open Claude Code in your project. The brain is now active — every conversation is informed by Bill's frameworks, first principles, and guardrails.
 
-**Verify it works:** Ask your agent a strategy question and check that the response cites specific ideas from Hank, not generic advice. Try `I'm trying to explain a complex technical concept to a non-technical audience. How would Hank approach it?`.
+**Verify it works:** Ask your agent a strategy question and check that the response cites specific ideas from Bill, not generic advice. Try `I'm a tech operator thinking about starting a consumer fintech company in the wealth-management space. Should I go pure-robo, hybrid, or something else? What would Bill think?`.
 
 **Tradeoff:** ~75K tokens of context loaded on every conversation. For a project where you always want this lens, that's a feature. For occasional use, Path B is lighter.
 
@@ -59,9 +59,9 @@ Paste `brain-context.md` into your project's `CLAUDE.md`. Every conversation in 
 
 ### Path B: MCP Server (Selective — On-Demand)
 
-Register the BrainsFor MCP server. Your agent queries specific atoms when facing decisions relevant to Hank's expertise.
+Register the BrainsFor MCP server. Your agent queries specific atoms when facing decisions relevant to Bill's expertise.
 
-**Best for:** "I want to consult Hank's brain when relevant, not load it on every message."
+**Best for:** "I want to consult Bill's brain when relevant, not load it on every message."
 
 **Cost:** Zero. Fully local — no API keys, no hosting, no network calls. A Node.js process reads JSON files from disk.
 
@@ -70,7 +70,7 @@ Register the BrainsFor MCP server. Your agent queries specific atoms when facing
 1. Install this brain pack to the standard location:
    ```bash
    mkdir -p ~/.brainsfor/brains
-   cp -r path/to/hank-green ~/.brainsfor/brains/hank-green
+   cp -r path/to/bill-harris ~/.brainsfor/brains/bill-harris
    ```
 
 2. Build the MCP server (requires Node.js):
@@ -98,19 +98,19 @@ Register the BrainsFor MCP server. Your agent queries specific atoms when facing
    | Tool | What it does |
    |------|-------------|
    | `list_brains` | Show all installed brains |
-   | `get_synthesis` | Load Hank's intellectual OS (~4KB) |
+   | `get_synthesis` | Load Bill's intellectual OS (~4KB) |
    | `query_atoms` | Filter atoms by topic, cluster, or confidence |
    | `search_atoms` | Full-text search across all atoms |
    | `get_connections` | Trace reasoning chains between atoms |
    | `get_atom` | Fetch a single atom by ID |
 
-**Verify it works:** In Claude Code, ask "what brains do I have installed?" — the agent should call `list_brains` and show `hank-green`.
+**Verify it works:** In Claude Code, ask "what brains do I have installed?" — the agent should call `list_brains` and show `bill-harris`.
 
 **Tradeoff:** The agent must decide when to query the brain. It won't shape every response automatically. Pair with a line in your `CLAUDE.md` like:
 
 ```
 When making strategic decisions, consult the BrainsFor MCP server
-for relevant atoms from Hank Green before recommending an approach.
+for relevant atoms from Bill Harris before recommending an approach.
 ```
 
 ---
@@ -125,29 +125,29 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 1. Copy the skills to your Claude Code skills directory:
    ```bash
-   cp -r path/to/hank-green/pack/skills/* ~/.claude/skills/
+   cp -r path/to/bill-harris/pack/skills/* ~/.claude/skills/
    ```
 
 2. Copy the brain pack to the standard location so skills can find it:
    ```bash
    mkdir -p ~/.brainsfor/brains
-   cp -r path/to/hank-green ~/.brainsfor/brains/hank-green
+   cp -r path/to/bill-harris ~/.brainsfor/brains/bill-harris
    ```
 
 3. Activate the brain in a Claude Code session:
    ```
-   /brain hank-green
+   /brain bill-harris
    ```
 
 4. Use any thinking skill:
    ```
-   /advise Should I start a YouTube channel or a TikTok to build an audience for my science startup?
-   /debate Is social media net positive or net negative for society?
-   /predict What happens to science communication when AI can generate explanations on demand?
+   /advise Should I optimize for pre-tax returns or after-tax returns when picking a wealth manager?
+   /debate Are robo-advisors a viable long-term model, or do they always lose to hybrid AI+human?
+   /predict What happens to retail wealth management if Dodd-Frank §1033 is rolled back?
    /surprise
    ```
 
-**Verify it works:** Run `/brain list` — you should see `hank-green`. Then run `/surprise` — you should get a specific atom from Hank, not generic advice.
+**Verify it works:** Run `/brain list` — you should see `bill-harris`. Then run `/surprise` — you should get a specific atom from Bill, not generic advice.
 
 **Tradeoff:** Requires explicit invocation. The brain won't shape ambient decisions — you pull from it intentionally. Most precise, least overhead.
 
@@ -159,7 +159,7 @@ These paths aren't mutually exclusive. Common combos:
 
 | Combo | Effect |
 |-------|--------|
-| **A + B** | brain-context.md in CLAUDE.md for ambient Hank guidance + MCP server for deep atom queries when the agent needs specifics |
+| **A + B** | brain-context.md in CLAUDE.md for ambient Bill guidance + MCP server for deep atom queries when the agent needs specifics |
 | **B + C** | MCP for programmatic access + skills for structured reasoning modes |
 | **A + C** | Always-on context + explicit skill invocations for targeted analysis |
 
@@ -175,7 +175,7 @@ The same question produces genuinely different answers depending on which brain 
 - **Dario Amodei** (compute scaling, responsible AI) → Reframe as "what risks does launching create?" — define your evals, red lines, and rollback plan first.
 - **Oprah Winfrey** (authentic connection, audience empathy) → Ask who this is *for* and whether it makes them feel seen. Polish is irrelevant if it doesn't connect.
 
-This is why installing multiple brains gives you genuinely different perspectives — and why `/board` (multi-brain advisory) and `/debate <brain-a> <brain-b>` (cross-brain) work. Hank Green brings a specific worldview to your decisions; pair with other brains for productive tension.
+This is why installing multiple brains gives you genuinely different perspectives — and why `/board` (multi-brain advisory) and `/debate <brain-a> <brain-b>` (cross-brain) work. Bill Harris brings a specific worldview to your decisions; pair with other brains for productive tension.
 
 Browse the full catalog at [brainsforfree.com](https://brainsforfree.com).
 

@@ -58,6 +58,7 @@ REQUIRED_SYNTHESIS_KEYS = [
 
 REQUIRED_PACK_FILES = [
     "brain-atoms.json",
+    "brain-atoms.js",
     "brain-context.md",
     "explore.html",
     "README.md",

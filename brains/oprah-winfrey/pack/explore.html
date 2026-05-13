@@ -1461,6 +1461,7 @@
     <div class="surprise-card" id="surpriseCard"></div>
   </div>
 
+  <script src="brain-atoms.js"></script>
   <script>
     let atomsData = [];
     let connectionsData = [];
@@ -1682,18 +1683,22 @@
     // ===== LOAD DATA =====
     async function loadData() {
       let raw;
-      try {
-        const response = await fetch('brain-atoms.json');
-        raw = await response.json();
-      } catch (err) {
-        console.log('Fetch failed, trying XHR...');
-        raw = await new Promise((resolve, reject) => {
-          const xhr = new XMLHttpRequest();
-          xhr.open('GET', 'brain-atoms.json', true);
-          xhr.onload = () => resolve(JSON.parse(xhr.responseText));
-          xhr.onerror = reject;
-          xhr.send();
-        });
+      if (typeof window !== 'undefined' && window.__BRAIN_DATA__) {
+        raw = window.__BRAIN_DATA__;
+      } else {
+        try {
+          const response = await fetch('brain-atoms.json');
+          raw = await response.json();
+        } catch (err) {
+          console.log('Fetch failed, trying XHR...');
+          raw = await new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'brain-atoms.json', true);
+            xhr.onload = () => resolve(JSON.parse(xhr.responseText));
+            xhr.onerror = reject;
+            xhr.send();
+          });
+        }
       }
       brainMeta = raw.brain || {};
       synthesisMeta = raw.synthesis || {};

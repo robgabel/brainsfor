@@ -9,8 +9,8 @@ Welcome to the **Blakely Brain Pack** from [brainsforfree.com](https://brainsfor
 
 ## What You're Getting
 
-- **72 knowledge atoms** — Core insights, frameworks, and strategic principles from 15 sources including podcast appearances, video interviews, essays, and profiles spanning her career from Spanx founding to billionaire entrepreneur
-- **112 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **486 knowledge atoms** — Core insights, frameworks, and strategic principles from 15 sources including podcast appearances, video interviews, essays, and profiles spanning her career from Spanx founding to billionaire entrepreneur
+- **528 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Idea generation, failure reframing, intuition, entrepreneurship, female leadership, brand building, resilience, purpose, and more
 
@@ -28,7 +28,7 @@ Your Blakely Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (72 insights)
+  ├── brain-atoms.json         ← structured atoms (486 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 72 atoms with titles, summaries, connections
+   - JSON structure of 486 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
