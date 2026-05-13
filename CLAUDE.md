@@ -31,6 +31,9 @@ brainsfor/
     enrich-voice.py                  ← generic: --brain scott-belsky
     enrich-connections.py            ← generic: --brain scott-belsky
     ingest-youtube.py                ← generic: --brain peter-attia (download + extract)
+    sync-claude-md-brains.py         ← regenerates the "Installed Brains" table in ~/rob-ai/CLAUDE.md from brains/index.json. Auto-invoked by auto-build-brain.py on success. Use `--check` for drift detection, `--dry-run` to preview.
+    install-hooks.sh                 ← symlinks scripts/hooks/* into .git/hooks/. Run once after cloning.
+    hooks/pre-commit                 ← blocks commits that change brains/ if CLAUDE.md is out of sync (auto-fixes the doc, then asks you to commit the parent change). Bypass with `git commit --no-verify`.
 
   templates/                         ← SHARED templates
     SKILL.md.template                ← brain-setup template
