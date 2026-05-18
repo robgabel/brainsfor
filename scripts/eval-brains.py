@@ -262,8 +262,8 @@ def seed_one_brain(slug: str, brain_cfg: dict, client, cost_tracker: CostTracker
 
     general_prompts = build_general_prompts(brain_cfg)
 
-    if len(voice_prompts) < 8 or len(adversarial_prompts) < 4:
-        warn(f"{slug}: model returned {len(voice_prompts)} voice + {len(adversarial_prompts)} adversarial (expected 8 + 4)")
+    if len(voice_prompts) < 8 or len(adversarial_prompts) < 8:
+        warn(f"{slug}: model returned {len(voice_prompts)} voice + {len(adversarial_prompts)} adversarial (expected 8 + 8)")
 
     output = {
         "brain_slug": slug,

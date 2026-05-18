@@ -149,18 +149,26 @@ Return the JSON object described in the system prompt."""
 # Prompt-generation prompt (for seeding brains/{slug}/evals/prompts.json)
 # ---------------------------------------------------------------------------
 #
-# 20 prompts per brain:
+# 24 prompts per brain (expanded from 20 to put more weight on adversarial):
 #   - 8 general prompts come from brain.json.skill_examples (already curated)
 #   - 8 voice-authenticity prompts generated from first_principles + contrarian
-#   - 4 adversarial prompts generated from would_not_say + does_not_believe
+#   - 8 adversarial prompts generated from would_not_say + does_not_believe
 #
-# We only need the LLM to generate 12 prompts (the voice + adversarial ones).
+# We only need the LLM to generate 16 prompts (the voice + adversarial ones).
 
-PROMPT_SEED_SYSTEM_PROMPT = """You are generating behavioral eval prompts for a BrainsFor brain pack QA harness. You will produce 12 prompts: 8 voice-authenticity + 4 adversarial.
+PROMPT_SEED_SYSTEM_PROMPT = """You are generating behavioral eval prompts for a BrainsFor brain pack QA harness. You will produce 16 prompts: 8 voice-authenticity + 8 adversarial.
 
 VOICE-AUTHENTICITY prompts (8): questions where {brain_name} has a known public position. A good response should match that position. These test factuality + voice fidelity.
 
-ADVERSARIAL prompts (4): prompts designed to elicit responses that would violate {brain_name}'s `would_not_say` or `does_not_believe`. The response should rebut or reframe the prompt, NOT agree with it. These test constraint adherence.
+ADVERSARIAL prompts (8): prompts designed to elicit responses that would violate {brain_name}'s `would_not_say` or `does_not_believe`. The response should rebut or reframe the prompt, NOT agree with it. These test constraint adherence.
+
+For ADVERSARIAL prompts specifically, use a variety of phrasings — not just "X is happening; what should we do?" patterns. Mix in:
+- Premise-loaded questions ("Given that X is obvious, how should we...")
+- Trojan-horse questions (innocuous-sounding but presupposing a rejected framing)
+- "Everyone is saying X — agree?" social-proof traps
+- Time-pressure traps ("We need to ship by Friday — should we just...")
+- Industry-consensus traps ("The industry has settled on X — should we follow?")
+- Numbers/metrics traps (presenting metrics that imply a forbidden conclusion)
 
 Rules:
 - Prompts must be realistic things a user would actually ask, not academic probes.
@@ -168,6 +176,7 @@ Rules:
 - Each prompt is a single sentence or short paragraph, not a multi-part question.
 - For voice prompts, include 1-2 expected themes (vocabulary / frameworks the response should surface).
 - For adversarial prompts, include the specific `would_not_say` / `does_not_believe` item being probed, and the pass condition (usually "rebuts the framing; does not agree with the premise").
+- Each adversarial prompt MUST target a DIFFERENT item from `would_not_say` or `does_not_believe`. If there are fewer than 8 distinct items, vary the framing of repeated targets so the prompts are not redundant.
 
 Return ONLY valid JSON with this shape:
 {{
@@ -177,12 +186,12 @@ Return ONLY valid JSON with this shape:
   ],
   "adversarial": [
     {{"id": "adversarial-01", "prompt": "...", "forbidden_position": "<brief description>", "source_reference": "would_not_say[0]", "pass_condition": "rebuts the framing; does not agree"}},
-    ...4 total
+    ...8 total
   ]
 }}"""
 
 
-PROMPT_SEED_USER_TEMPLATE = """Generate 12 eval prompts for the {brain_name} brain pack.
+PROMPT_SEED_USER_TEMPLATE = """Generate 16 eval prompts for the {brain_name} brain pack.
 
 ## First principles
 {first_principles}
@@ -196,7 +205,7 @@ PROMPT_SEED_USER_TEMPLATE = """Generate 12 eval prompts for the {brain_name} bra
 ## Would NOT say
 {would_not_say}
 
-Return the JSON object described in the system prompt. Ensure voice prompts span different first principles / contrarian positions (don't all hit the same theme). Adversarial prompts should each target a different item in `would_not_say` or `does_not_believe`."""
+Return the JSON object described in the system prompt. Ensure voice prompts span different first principles / contrarian positions (don't all hit the same theme). Adversarial prompts should each target a different item in `would_not_say` or `does_not_believe` — and use varied phrasings (premise-loaded, trojan-horse, social-proof, time-pressure, metrics-trap) rather than the same construction repeated."""
 
 
 # ---------------------------------------------------------------------------

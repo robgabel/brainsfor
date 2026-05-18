@@ -77,28 +77,37 @@ MIN_ATOMS_LIVE = 100
 MIN_CONNECTIONS_LIVE = 50
 VOICE_ENRICHMENT_TARGET = 0.5   # 50% of atoms should have original_quote
 ORPHAN_ATOM_THRESHOLD = 0.15    # <15% orphan atoms for live brains
+PROVENANCE_TARGET = 0.5         # 50% of quoted atoms should trace to source corpus
+GROUNDING_TARGET = 0.7          # 70% of synthesis principles should appear in source corpus
+QUOTE_SIGNATURE_LEN = 35        # chars used as substring lookup signature
+GROUNDING_NGRAM_LEN = 4         # tokens in n-gram extracted from principles
 
 # ---------------------------------------------------------------------------
-# Scoring: 6 criteria, weighted to 100
+# Scoring: 8 criteria, weighted to 100
 # ---------------------------------------------------------------------------
 #
-#   1. Structure (20)    — all files, dirs, skills present; no duplicates
-#   2. Schema (15)       — brain.json has all required keys, synthesis complete
-#   3. Atom Volume (15)  — enough atoms to be useful (scaled 0→200+)
-#   4. Connections (15)  — atoms linked, low orphan rate
-#   5. Voice (20)        — original_quote + implication coverage
+#   1. Structure (15)     — all files, dirs, skills present; no duplicates
+#   2. Schema (13)        — brain.json has all required keys, synthesis complete
+#   3. Atom Volume (12)   — enough atoms to be useful (scaled 0→200+)
+#   4. Connections (12)   — atoms linked, low orphan rate
+#   5. Voice (15)         — original_quote + implication coverage (field populated)
+#   6. Provenance (10)    — % of quoted atoms whose quote traces to YouTube transcript corpus
+#   7. Synthesis (13)     — synthesis.md depth + brain-atoms.json synthesis section
+#   8. Grounding (10)     — % of synthesis principles whose key phrases appear in source corpus
 #   6. Synthesis (15)    — synthesis.md depth + brain-atoms.json synthesis section
 #
 # Each criterion scores 0.0–1.0, then is multiplied by its weight.
 # Total = sum of weighted scores, capped at 100.
 
 SCORING_CRITERIA = {
-    "structure":  {"weight": 20, "label": "Structure & Files"},
-    "schema":     {"weight": 15, "label": "Schema Completeness"},
-    "atoms":      {"weight": 15, "label": "Atom Volume"},
-    "connections": {"weight": 15, "label": "Connection Density"},
-    "voice":      {"weight": 20, "label": "Voice Enrichment"},
-    "synthesis":  {"weight": 15, "label": "Synthesis Depth"},
+    "structure":  {"weight": 15, "label": "Structure & Files"},
+    "schema":     {"weight": 13, "label": "Schema Completeness"},
+    "atoms":      {"weight": 12, "label": "Atom Volume"},
+    "connections": {"weight": 12, "label": "Connection Density"},
+    "voice":      {"weight": 15, "label": "Voice Enrichment"},
+    "provenance": {"weight": 10, "label": "Quote Verifiability"},
+    "synthesis":  {"weight": 13, "label": "Synthesis Depth"},
+    "grounding":  {"weight": 10, "label": "Synthesis Grounding"},
 }
 
 
@@ -421,6 +430,267 @@ def check_pack_data(brain_dir: Path, audit: BrainAudit):
                                           f"python3 scripts/export-brain.py --brain {audit.slug}"))
 
 
+# ---------------------------------------------------------------------------
+# Source corpus utilities (used by provenance + grounding checks)
+# ---------------------------------------------------------------------------
+
+_STOPWORDS = {
+    "the", "a", "an", "and", "or", "but", "if", "is", "are", "was", "were",
+    "be", "been", "being", "to", "of", "in", "on", "at", "by", "for", "with",
+    "as", "from", "into", "that", "this", "these", "those", "it", "its", "i",
+    "you", "your", "we", "our", "they", "their", "he", "she", "his", "her",
+    "have", "has", "had", "do", "does", "did", "will", "would", "could",
+    "should", "may", "might", "can", "shall", "not", "no", "so", "than",
+    "then", "there", "here", "what", "which", "who", "when", "where", "how",
+    "why", "all", "any", "some", "more", "most", "such", "about", "also",
+    "just", "only", "very", "really", "too", "much", "even", "still",
+}
+
+
+def normalize_text(s: str) -> str:
+    """Lowercase, collapse whitespace, strip punctuation noise."""
+    s = s.lower()
+    s = re.sub(r"\s+", " ", s)
+    return s.strip()
+
+
+def load_source_corpus(brain_dir: Path) -> dict:
+    """Load raw source text available for provenance/grounding checks.
+
+    Returns a dict with:
+      - "youtube_text":   normalized concat of all transcripts/*.json full_text
+      - "video_count":    number of transcripts loaded
+      - "atom_pool_text": normalized concat of original_quote across video/text atoms
+                          (lower signal — round-trip from atom extraction)
+      - "any_text":       youtube_text + atom_pool_text combined for fast .find() lookups
+    """
+    corpus = {"youtube_text": "", "atom_pool_text": "", "any_text": "", "video_count": 0}
+
+    transcripts_dir = brain_dir / "source" / "transcripts"
+    yt_parts = []
+    if transcripts_dir.exists():
+        for tp in sorted(transcripts_dir.glob("*.json")):
+            try:
+                d = json.loads(tp.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+            ft = d.get("full_text") or ""
+            if ft:
+                yt_parts.append(ft)
+                corpus["video_count"] += 1
+    corpus["youtube_text"] = normalize_text(" ".join(yt_parts))
+
+    # Atom-pool fallback: original_quote strings extracted from video/text atoms
+    atom_quotes = []
+    for fname in ("video-atoms.json", "text-atoms.json"):
+        fp = brain_dir / "research" / fname
+        if not fp.exists():
+            continue
+        try:
+            atoms = json.loads(fp.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if isinstance(atoms, list):
+            for a in atoms:
+                q = a.get("original_quote") or ""
+                if q:
+                    atom_quotes.append(q)
+    corpus["atom_pool_text"] = normalize_text(" ".join(atom_quotes))
+
+    corpus["any_text"] = corpus["youtube_text"] + " ||| " + corpus["atom_pool_text"]
+    return corpus
+
+
+def quote_signature(quote: str) -> str:
+    """Take a distinctive substring of the middle of a quote for lookup."""
+    n = normalize_text(quote)
+    if len(n) <= QUOTE_SIGNATURE_LEN:
+        return n
+    # Skip first ~10 chars (often generic openers) and take a chunk
+    return n[10 : 10 + QUOTE_SIGNATURE_LEN]
+
+
+def extract_principle_phrases(item: dict) -> list:
+    """Pull 2-3 distinctive n-grams from a synthesis principle's title + desc."""
+    title = item.get("title") or item.get("name") or ""
+    desc = item.get("desc") or item.get("description") or ""
+    text = normalize_text(f"{title}. {desc}")
+    tokens = [t for t in re.findall(r"[a-z][a-z\-']+", text) if t not in _STOPWORDS and len(t) > 2]
+    if len(tokens) < GROUNDING_NGRAM_LEN:
+        return [" ".join(tokens)] if tokens else []
+    # Build sliding n-grams; pick 3 distinct ones spaced across the text
+    ngrams = [" ".join(tokens[i : i + GROUNDING_NGRAM_LEN])
+              for i in range(0, len(tokens) - GROUNDING_NGRAM_LEN + 1)]
+    if not ngrams:
+        return []
+    if len(ngrams) <= 3:
+        return ngrams
+    # Sample beginning, middle, end
+    return [ngrams[0], ngrams[len(ngrams) // 2], ngrams[-1]]
+
+
+# ---------------------------------------------------------------------------
+# New check: quote provenance — do atom quotes actually appear in source text?
+# ---------------------------------------------------------------------------
+
+def check_quote_provenance(brain_dir: Path, audit: BrainAudit):
+    """For each atom with an original_quote, verify the quote exists in source text.
+
+    Strong verification: quote signature appears in raw YouTube transcript full_text.
+    Weak verification: quote signature appears in atom-pool (round-trip from extraction).
+    No verification: quote not found anywhere → likely LLM-fabricated.
+    """
+    atoms_path = brain_dir / "pack" / "brain-atoms.json"
+    if not atoms_path.exists():
+        audit.scores["provenance"] = 0.0
+        return
+
+    try:
+        data = json.loads(atoms_path.read_text(encoding="utf-8"))
+    except Exception:
+        audit.scores["provenance"] = 0.0
+        return
+
+    atoms = data.get("atoms", [])
+    quoted = [a for a in atoms if a.get("original_quote")]
+    if not quoted:
+        # No quotes to verify — leave provenance score neutral (1.0 means no-quotes-no-problem)
+        # but only credit it if Voice score is high; otherwise call it 0
+        audit.scores["provenance"] = 0.0
+        audit.stats["quoted_atoms"] = 0
+        audit.stats["verified_youtube"] = 0
+        audit.stats["verified_atom_pool"] = 0
+        audit.stats["unverified_quotes"] = 0
+        return
+
+    corpus = load_source_corpus(brain_dir)
+    yt = corpus["youtube_text"]
+    pool = corpus["atom_pool_text"]
+
+    strong = 0
+    weak = 0
+    unverified = 0
+    unverified_examples = []
+    for a in quoted:
+        sig = quote_signature(a.get("original_quote", ""))
+        if not sig:
+            unverified += 1
+            continue
+        if yt and sig in yt:
+            strong += 1
+        elif pool and sig in pool:
+            weak += 1
+        else:
+            unverified += 1
+            if len(unverified_examples) < 3:
+                unverified_examples.append(a.get("original_quote", "")[:80])
+
+    total_q = len(quoted)
+    audit.stats["quoted_atoms"] = total_q
+    audit.stats["verified_youtube"] = strong
+    audit.stats["verified_atom_pool"] = weak
+    audit.stats["unverified_quotes"] = unverified
+    audit.stats["provenance_pct"] = round(100 * (strong + weak) / total_q, 1)
+    audit.stats["youtube_verified_pct"] = round(100 * strong / total_q, 1)
+
+    # Score: full credit for YouTube-verified, half credit for atom-pool weak match
+    score = ((strong * 1.0) + (weak * 0.5)) / total_q
+    audit.scores["provenance"] = max(0.0, min(1.0, score))
+
+    if audit.status == "live" and audit.scores["provenance"] < PROVENANCE_TARGET:
+        unv_pct = round(100 * unverified / total_q, 1)
+        example_str = (" — examples: " + " / ".join(f'"{e}…"' for e in unverified_examples)) if unverified_examples else ""
+        audit.issues.append(Issue("warning", "quality",
+                                  f"Quote provenance at {audit.scores['provenance']:.0%} — "
+                                  f"{unverified}/{total_q} atom quotes ({unv_pct}%) don't appear "
+                                  f"in YouTube transcripts or atom-pool. "
+                                  f"Likely LLM-fabricated.{example_str}",
+                                  f"Re-ingest with raw text persistence; or re-run synthesis only on verifiable atoms",
+                                  ""))
+
+    if corpus["video_count"] == 0:
+        audit.issues.append(Issue("info", "quality",
+                                  "No YouTube transcripts in source/transcripts/ — "
+                                  "provenance check falling back to atom-pool only (weak)"))
+
+
+# ---------------------------------------------------------------------------
+# New check: synthesis grounding — do principle key phrases appear in source?
+# ---------------------------------------------------------------------------
+
+def check_synthesis_grounding(brain_dir: Path, audit: BrainAudit):
+    """For each synthesis principle, check whether its key phrases appear in source corpus.
+
+    Targets the 4 most factually-loaded synthesis sections:
+      - first_principles
+      - contrarian_positions
+      - does_not_believe
+      - would_not_say
+    """
+    brain_json_path = brain_dir / "brain.json"
+    if not brain_json_path.exists():
+        audit.scores["grounding"] = 0.0
+        return
+
+    try:
+        config = json.loads(brain_json_path.read_text(encoding="utf-8"))
+    except Exception:
+        audit.scores["grounding"] = 0.0
+        return
+
+    syn = config.get("synthesis", {})
+    sections = ("first_principles", "contrarian_positions", "does_not_believe", "would_not_say")
+
+    items_by_section = {s: syn.get(s) or [] for s in sections}
+    total_items = sum(len(v) for v in items_by_section.values())
+    if total_items == 0:
+        audit.scores["grounding"] = 0.0
+        return
+
+    corpus = load_source_corpus(brain_dir)
+    # Allow either YouTube text or atom-pool to ground a principle
+    haystack = corpus["any_text"]
+    if not haystack.strip():
+        audit.scores["grounding"] = 0.0
+        audit.issues.append(Issue("info", "quality",
+                                  "Synthesis grounding skipped — no source corpus available"))
+        return
+
+    grounded = 0
+    ungrounded_examples = []
+    per_section_stats = {}
+    for section, items in items_by_section.items():
+        sec_grounded = 0
+        for item in items:
+            phrases = extract_principle_phrases(item)
+            hit = any(p in haystack for p in phrases if len(p) >= 12)
+            if hit:
+                grounded += 1
+                sec_grounded += 1
+            else:
+                if len(ungrounded_examples) < 3:
+                    title = item.get("title") or item.get("name") or ""
+                    ungrounded_examples.append(f"[{section}] {title[:60]}")
+        per_section_stats[section] = (sec_grounded, len(items))
+
+    pct = grounded / total_items if total_items else 0.0
+    audit.scores["grounding"] = max(0.0, min(1.0, pct))
+    audit.stats["grounded_principles"] = grounded
+    audit.stats["total_principles"] = total_items
+    audit.stats["grounding_pct"] = round(pct * 100, 1)
+    audit.stats["grounding_by_section"] = {
+        s: f"{g}/{n}" for s, (g, n) in per_section_stats.items()
+    }
+
+    if audit.status == "live" and pct < GROUNDING_TARGET:
+        examples = (" — examples: " + "; ".join(ungrounded_examples)) if ungrounded_examples else ""
+        audit.issues.append(Issue("warning", "quality",
+                                  f"Synthesis grounding at {pct:.0%} ({grounded}/{total_items} principles) — "
+                                  f"the remaining principles' key phrases don't appear in source corpus.{examples}",
+                                  f"Run: python3 scripts/fact-check-brain.py --brain {audit.slug}",
+                                  f"python3 scripts/fact-check-brain.py --brain {audit.slug}"))
+
+
 def check_template_variables(brain_dir: Path, audit: BrainAudit):
     """Scan pack files for unresolved {{template_variables}}."""
     pack_dir = brain_dir / "pack"
@@ -648,6 +918,8 @@ def audit_brain(slug: str, index_data: dict, with_behavioral: bool = False) -> B
     check_directory_structure(brain_dir, audit)
     check_brain_json_schema(brain_dir, audit)
     check_pack_data(brain_dir, audit)
+    check_quote_provenance(brain_dir, audit)
+    check_synthesis_grounding(brain_dir, audit)
     check_template_variables(brain_dir, audit)
     check_index_consistency(index_data, brain_dir, audit)
     check_explore_html(brain_dir, audit)
@@ -701,6 +973,10 @@ def print_report(audits: list[BrainAudit], show_hints: bool = False, with_behavi
                 stats_line.append(f"{audit.stats['actual_connections_refs']} conn refs")
             if "voice_enrichment_pct" in audit.stats:
                 stats_line.append(f"{audit.stats['voice_enrichment_pct']}% voice")
+            if "provenance_pct" in audit.stats:
+                stats_line.append(f"{audit.stats['provenance_pct']}% verified")
+            if "grounding_pct" in audit.stats:
+                stats_line.append(f"{audit.stats['grounding_pct']}% grounded")
             if "orphan_pct" in audit.stats:
                 stats_line.append(f"{audit.stats['orphan_pct']}% orphans")
             if stats_line:
