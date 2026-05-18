@@ -618,8 +618,27 @@ def check_quote_provenance(brain_dir: Path, audit: BrainAudit):
 # New check: synthesis grounding — do principle key phrases appear in source?
 # ---------------------------------------------------------------------------
 
+def _load_latest_fact_check(brain_dir: Path) -> Optional[dict]:
+    """Return the most recent fact-check JSON if present."""
+    evals = brain_dir / "evals"
+    if not evals.exists():
+        return None
+    candidates = sorted(evals.glob("fact-check-*.json"))
+    if not candidates:
+        return None
+    try:
+        return json.loads(candidates[-1].read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
 def check_synthesis_grounding(brain_dir: Path, audit: BrainAudit):
     """For each synthesis principle, check whether its key phrases appear in source corpus.
+
+    Prefers a recent fact-check JSON (semantic, Sonnet-verified) over lexical n-gram match.
+    Lexical match suffers high false-negatives (4-gram exact-order is too strict for
+    paraphrased principles). When a fact-check result is available, use its grounding
+    score as the source of truth and only run the lexical check as a fallback.
 
     Targets the 4 most factually-loaded synthesis sections:
       - first_principles
@@ -627,6 +646,36 @@ def check_synthesis_grounding(brain_dir: Path, audit: BrainAudit):
       - does_not_believe
       - would_not_say
     """
+    # Prefer semantic fact-check result when available
+    fc = _load_latest_fact_check(brain_dir)
+    if fc and "scorecard" in fc:
+        sc = fc["scorecard"]
+        pct = sc.get("grounding_pct", 0)
+        audit.scores["grounding"] = max(0.0, min(1.0, pct / 100.0))
+        audit.stats["grounding_pct"] = round(pct, 1)
+        audit.stats["grounding_source"] = "semantic (fact-check-brain.py)"
+        audit.stats["grounded_principles"] = sc["totals"].get("grounded", 0)
+        audit.stats["total_principles"] = sc["totals"].get("total", 0)
+        audit.stats["grounding_by_section"] = {
+            s: f"{stats.get('grounded', 0)}/{stats.get('total', 0)}"
+            for s, stats in sc.get("by_section", {}).items()
+        }
+
+        if audit.status == "live" and audit.scores["grounding"] < GROUNDING_TARGET:
+            ung = [r for r in fc.get("results", []) if r.get("status") == "ungrounded"][:3]
+            examples = (
+                " — examples: " + "; ".join(
+                    f"[{r['section']}] {r.get('title', '')[:50]}" for r in ung
+                )
+            ) if ung else ""
+            audit.issues.append(Issue("warning", "quality",
+                                      f"Synthesis grounding at {pct:.0f}% (semantic fact-check, "
+                                      f"{sc['totals']['grounded']}/{sc['totals']['total']} principles).{examples}",
+                                      f"Run: python3 scripts/synthesize-from-source.py --brain {audit.slug}",
+                                      f"python3 scripts/synthesize-from-source.py --brain {audit.slug}"))
+        return
+
+    # Fallback: lexical n-gram match (high false-negative rate; advisory only)
     brain_json_path = brain_dir / "brain.json"
     if not brain_json_path.exists():
         audit.scores["grounding"] = 0.0

@@ -1,6 +1,6 @@
 {
   "brain_slug": "gokul-rajaraman",
-  "timestamp": "2026-05-18T15:10:38.950570+00:00",
+  "timestamp": "2026-05-18T15:43:05.562974+00:00",
   "model": "claude-sonnet-4-6",
   "corpus": {
     "n_videos": 6,
@@ -11,350 +11,418 @@
   "scorecard": {
     "by_section": {
       "first_principles": {
-        "grounded": 1,
-        "weak": 1,
-        "ungrounded": 9,
-        "total": 11
+        "grounded": 9,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 9
       },
       "contrarian_positions": {
-        "grounded": 1,
+        "grounded": 3,
         "weak": 0,
-        "ungrounded": 4,
-        "total": 5
+        "ungrounded": 0,
+        "total": 3
       },
       "does_not_believe": {
-        "grounded": 1,
+        "grounded": 4,
         "weak": 0,
-        "ungrounded": 4,
-        "total": 5
+        "ungrounded": 0,
+        "total": 4
       },
       "would_not_say": {
-        "grounded": 0,
+        "grounded": 5,
         "weak": 0,
-        "ungrounded": 5,
+        "ungrounded": 0,
         "total": 5
       }
     },
     "totals": {
-      "grounded": 3,
-      "weak": 1,
-      "ungrounded": 22,
-      "total": 26
+      "grounded": 21,
+      "weak": 0,
+      "ungrounded": 0,
+      "total": 21
     },
-    "grounding_pct": 13.5,
-    "ungrounded_examples": [
-      {
-        "id": "first_principles[0]",
-        "title": "Graph structure is destiny",
-        "rationale": "The source corpus contains no discussion of graph architecture (friend graph vs. interest graph vs. follower graph), Instagram/TikTok/Reels, or the claim that graph structure is the most consequential architectural decision; this principle is entirely absent from Gokul's recorded speech."
-      },
-      {
-        "id": "first_principles[2]",
-        "title": "Monetization must be designed in, not retrofitted",
-        "rationale": "The source corpus contains no discussion of monetization being designed in vs. retrofitted, the dangers of scaling on a free model, or how pre-monetization phases condition supply/demand sides against paying; this principle does not appear in Gokul's recorded speech."
-      },
-      {
-        "id": "first_principles[3]",
-        "title": "Reach and revenue are in permanent architectural tension",
-        "rationale": "The source corpus contains no discussion of algorithmic reach vs. revenue tension, creator income suppression, or gated vs. free content architectural trade-offs; this principle is entirely absent from Gokul's recorded speech."
-      },
-      {
-        "id": "first_principles[4]",
-        "title": "Creators are small businesses, not users",
-        "rationale": "The source corpus contains no discussion of creators as small businesses, revenue analytics vs. engagement analytics for creators, or platform misreading of the creator relationship; this principle does not appear in any passage."
-      },
-      {
-        "id": "first_principles[5]",
-        "title": "The creator middle class is the real metric of platform health",
-        "rationale": "The source corpus contains no discussion of a 'creator middle class,' platform health metrics tied to mid-tier creators, or the 10K\u2013500K follower cohort; this principle is entirely absent."
-      }
-    ],
-    "weak_examples": [
-      {
-        "id": "first_principles[10]",
-        "title": "AI maxing is restructuring the supply side of startups",
-        "rationale": "Only one passage addresses the AI-enabled dropout/young founder phenomenon compressing the path to founding capability; the specific claims about collapsing the 5-10 year lag to 12-24 months and the 'dangerous position' of workflow tools with no data asset are not explicitly stated together as a unified principle."
-      }
-    ]
+    "grounding_pct": 100.0,
+    "ungrounded_examples": [],
+    "weak_examples": []
   },
   "results": [
     {
       "principle_id": "first_principles[0]",
       "section": "first_principles",
-      "title": "Graph structure is destiny",
-      "claim": "Graph structure is destiny. Whether a platform runs on a friend graph, follower graph, or interest graph is the single most consequential architectural decision it ever makes \u2014 more consequential than features, design, or moderation policy. You cannot retrofit a graph; you can only build natively for one. Instagram's response to TikTok with Reels was structurally doomed not because of execution but because it was a feature-level response to a graph-level challenge.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of graph architecture (friend graph vs. interest graph vs. follower graph), Instagram/TikTok/Reels, or the claim that graph structure is the most consequential architectural decision; this principle is entirely absent from Gokul's recorded speech."
+      "title": "Remarkable product beats all distribution",
+      "claim": "Remarkable product beats all distribution. If the core product isn't 10-100x better than the alternative, no go-to-market motion can save the company. Gokul looks for what is genuinely remarkable or jaw-dropping at the product's core before anything else.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I ultimately my core investing thesis is that if there is not a remarkable product all the go to marketing distribution in the world will not save you. So that's I look for what the remarkability is in the core product or value proposition of the company. Is it 10x 100x better than the alternative?",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I joined in 2003 there was a project going on called Caribou internally... This was web email which gave 1 GBTE free storage and back then Yahoo mail offered 10 megabytes of storage. So it was 100x.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple distinct passages explicitly state the 10-100x standard and that remarkable product is the core thesis before go-to-market."
     },
     {
       "principle_id": "first_principles[1]",
       "section": "first_principles",
-      "title": "Data half-life determines AI-era defensibility",
-      "claim": "Data half-life determines AI-era defensibility. Software anchored in long-lived, deeply embedded data \u2014 ERPs, systems-of-record \u2014 is structurally protected because rip-and-replace is career-limiting for the executive who authorizes it. Software whose value lives in workflow orchestration over short-half-life data is acutely exposed: AI agents replicate the workflow while treating the underlying system as a dumb database. Salesforce survives; Zendesk and Slack are exposed.",
+      "title": "You cannot be a single-product company",
+      "claim": "You cannot be a single-product company. Durable companies layer multiple products, where product #2 emerges naturally from product #1. Some products exist for profit, others for retention \u2014 and you must be explicit about which is which.",
       "status": "grounded",
       "evidence": [
         {
-          "quote": "Slack for example I would say might be in a little bit more precarious state because the data in Slack is half time halfife is very short...but if you have ERP is a great example somebody uses Netswuite as a ERP now I don't know if how Netswuite actually charges but it doesn't matter however many seats you buy the reality is it runs your whole business and there is no compelling reason for someone to put their career at stake by ripping out Netswuite",
+          "quote": "you cannot be a single product company uh you've got to make sure and and most importantly Your product number two needs to emanate very naturally. It can't be like this completely separate product.",
           "relation": "verbatim"
         },
         {
-          "quote": "The companies that are less exposed are ones where the utility is not based on seats but it's based on data that has been collected and captured over a period of time and the the more uh timeless the data is the more protected they are.",
-          "relation": "verbatim"
-        },
-        {
-          "quote": "There are two or three kinds of software companies. I think the the software companies that are should be the most worried right now is where they are pricing the product based on utility. Zenesk is a good example where literally Zenesk prices seats and each seat comes with utility...So that company should be worried. Why? Because I can have an AI agent sit right next to Zenesk and you can slowly siphon off.",
+          "quote": "Companies need to be very clear which are the profit pool products and which are the retentive products. If you confuse the two your teams don't know and they're built for the wrong outcomes.",
           "relation": "verbatim"
         }
       ],
-      "rationale": "Multiple distinct passages clearly distinguish long-half-life ERP/system-of-record data (protected, career-limiting to rip out) from short-half-life workflow/utility software like Zendesk and Slack (exposed to AI siphoning), directly grounding this principle."
+      "rationale": "Two distinct passages from the Square discussion directly support the multi-product requirement and the profit vs. retention distinction."
     },
     {
       "principle_id": "first_principles[2]",
       "section": "first_principles",
-      "title": "Monetization must be designed in, not retrofitted",
-      "claim": "Monetization must be designed in, not retrofitted. Delaying the monetization decision is itself a decision, and almost always a bad one. The business model shapes product architecture, creator expectations, and consumer norms during the pre-monetization phase in ways that become nearly impossible to reverse at scale. Platforms that scale on a free, reach-maximizing model condition their supply and demand sides against ever paying.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of monetization being designed in vs. retrofitted, the dangers of scaling on a free model, or how pre-monetization phases condition supply/demand sides against paying; this principle does not appear in Gokul's recorded speech."
+      "title": "Decisions need one owner, not consensus",
+      "claim": "Decisions need one owner, not consensus. Consensus is a failure mode for important decisions because nobody truly owns the outcome. The person accountable for executing the decision should also be the person who makes it \u2014 three hands raised means zero ownership.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "he stopped us he just asked and he said who's the decision maker here so we all simultaneously I had hell it was like really embarrassing because at that point he said but three of you raising your hands means that there is no decision maker",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the speed framework is the person who is also accountable for the decision",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The SPADE transcript and the Eric Schmidt story both directly support the principle that decisions need one owner and that multiple hands raised means no owner."
     },
     {
       "principle_id": "first_principles[3]",
       "section": "first_principles",
-      "title": "Reach and revenue are in permanent architectural tension",
-      "claim": "Reach and revenue are in permanent architectural tension. Algorithmic reach favors free, broad content; monetization favors gated, paid content. Platforms that have not resolved this tension structurally force creators to choose, and rational creators choose reach. This is the single most underdiagnosed reason creator income stays suppressed across the entire industry.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of algorithmic reach vs. revenue tension, creator income suppression, or gated vs. free content architectural trade-offs; this principle is entirely absent from Gokul's recorded speech."
+      "title": "Outcomes are customer behavior changes",
+      "claim": "Outcomes are customer behavior changes. Every product decision should be grounded in a hypothesis about how a specific customer behavior will change. Behaviors are leading indicators of business outcomes \u2014 features without a behavior-change hypothesis shouldn't ship.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I tell every CEO I meet that is trying to hire their first PM or doing their first product review, you need to ask why. The only question you need to ask is why. Why are you launching this feature? And you should not let any feature go out if there's not a clear hypothesis behind this feature. And the hypothesis has to be articulated in the form of a customer behavior change.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Outcomes I think are what define the best product people and outcomes have to be defined in the form of customer behavior. I strongly believe that the be because customer behaviors are leading indicators for every business outcomes.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages from the Invest Like the Best transcript directly state that hypotheses must be framed as customer behavior changes and that behaviors are leading indicators of business outcomes."
     },
     {
       "principle_id": "first_principles[4]",
       "section": "first_principles",
-      "title": "Creators are small businesses, not users",
-      "claim": "Creators are small businesses, not users. They have overhead, employees, production costs, and capital allocation decisions. They need revenue analytics, not engagement analytics. Platforms that surface impressions and follower growth when creators need revenue-per-post and revenue-per-hour-of-production have fundamentally misread the relationship \u2014 and platforms that refuse to charge creators are implicitly admitting their tools don't actually move creator economics.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of creators as small businesses, revenue analytics vs. engagement analytics for creators, or platform misreading of the creator relationship; this principle does not appear in any passage."
+      "title": "Founders need authentic, lived missions",
+      "claim": "Founders need authentic, lived missions. Starting a company because you want to start a company is the canonical mistake. The best companies emerge from founders solving a problem they personally lived \u2014 that authenticity is what keeps them going through the inevitable near-death moments.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I started a company because I wanted to start a company... I I wish that someone had sat us down and said guys first figure out what you want to tackle it because startups are not a straight line up there all kinds of everyone had near that moments and painful unless it's something you're really passionate about you're going to abandon it quit it",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "He didn't start a company. He first wanted to just solve a problem for himself and that became a company. Larry and Sergey, they just wanted to build a search engine and then it became a company.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages from the Minus One podcast directly articulate the lived-mission principle and contrast it with the failure mode of starting a company for its own sake."
     },
     {
       "principle_id": "first_principles[5]",
       "section": "first_principles",
-      "title": "The creator middle class is the real metric of platform health",
-      "claim": "The creator middle class is the real metric of platform health. Top-tier creators drive narrative but earn most of their income through brand deals that exist outside platform rails. The 10K\u2013500K follower middle class depends entirely on native monetization infrastructure, and platforms optimized exclusively for the top 0.1% look healthy in aggregate while being structurally fragile.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of a 'creator middle class,' platform health metrics tied to mid-tier creators, or the 10K\u2013500K follower cohort; this principle is entirely absent."
+      "title": "Durability comes from structural moats",
+      "claim": "Durability comes from structural moats. In an era when code is essentially free, software companies need multiple structural moats to be durable. Gokul scores companies across eight: data, workflow, regulatory, distribution, ecosystem, network, physical infrastructure, and scale \u2014 four or more is secure.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I call it the eight modes. The first mode is data mode... Second is the workflow mode... third one is regulatory mode... Fourth mode is a distribution mode... Ecosystem mode... Sixth one is a network mode... seventh one is the thing you mentioned physical infrastructure... The eighth one I would say scale mode.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I think anything four or more, you're pretty damn secure. But if you have a two or three, it's a weak mode. And if you have one or less, you probably need to really build some more modes.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The eight moats framework and the scoring threshold of four are stated explicitly and in detail across multiple passages."
     },
     {
       "principle_id": "first_principles[6]",
       "section": "first_principles",
-      "title": "Format shifts are the most reliable leading indicator of platform disruption",
-      "claim": "Format shifts are the most reliable leading indicator of platform disruption. Text \u2192 image \u2192 short video \u2192 AI-native. Each transition unseats an incumbent whose architecture was tuned for the prior format. The incumbent's disadvantage isn't laziness \u2014 it's lock-in. Recommendation systems, creator tools, and monetization rails all calcify around the dominant format.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of format shifts (text\u2192image\u2192short video\u2192AI-native) as a leading indicator of platform disruption or incumbent lock-in around dominant formats; this principle does not appear."
+      "title": "Go full-stack or stay small",
+      "claim": "Go full-stack or stay small. For vertical software, single-function plays cap out. The companies that scale to $10B+ own the entire stack for their vertical \u2014 like Service Titan with 32 products. Ambition to replace the whole system, not just one workflow layer, is the bar.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I do think these are viable businesses. I don't think they're going to be big businesses. Um I think as soon as you do vertical I don't think you can do a a one function within a vertical. I think what you want to see there is the ambition and ability to truly own the full stack, build the whole product for the vertical.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Vertical products you've got to really own full stack. It's harder otherwise to be a 10 plus billion dollar company.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages explicitly state the full-stack requirement for vertical software and the $10B+ ceiling for single-function plays."
     },
     {
       "principle_id": "first_principles[7]",
       "section": "first_principles",
-      "title": "Consumer tech is downstream of permanent human motivations",
-      "claim": "Consumer tech is downstream of permanent human motivations. Format is the delivery mechanism; the actual product is status, belonging, self-expression, or entertainment. Products built on permanent motivations survive format shifts; products whose value proposition is the format itself get disrupted when the next format emerges. To predict the next platform shift, ask which permanent motivation the dominant format underserves.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of permanent human motivations (status, belonging, self-expression) as the underlying product vs. format as delivery mechanism, or using this framework to predict platform shifts; this principle is absent."
+      "title": "Judgment is the AI-era superpower",
+      "claim": "Judgment is the AI-era superpower. When AI can produce infinite code and content, the scarce skill is editorial judgment \u2014 knowing what to build, what to ship, and what to reject. The best PMs and designers are reducers, not adders.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The one thing I think that's going to be truly future proof is judgment. Why? Because what is the biggest challenge you have when you have thousand AI engineers writing code? You have the big challenge of AI slop... In an era when you can do everything, the question is which of these things matter and you should truly do.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Jack called the product manager role product editor. Why? Because he believed rightly so that the role of the product manager is not to add more features... The best designers really take 10 pages of design and say cut out all the experience.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages \u2014 one explicitly calling judgment the future-proof skill and one about the 'reducer/editor' philosophy \u2014 ground this principle."
     },
     {
       "principle_id": "first_principles[8]",
       "section": "first_principles",
-      "title": "Measurement is the most defensible moat in advertising",
-      "claim": "Measurement is the most defensible moat in advertising. Targeting can be replicated and creative can be automated, but the conversion measurement layer has deep data gravity \u2014 ripping it out requires re-attributing months of campaign history, which is operationally and politically prohibitive. Whoever owns the source of truth for whether an ad produced a sale owns the advertiser relationship.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of measurement/attribution as the most defensible moat in advertising, conversion measurement data gravity, or re-attributing campaign history; this principle does not appear in Gokul's recorded speech."
-    },
-    {
-      "principle_id": "first_principles[9]",
-      "section": "first_principles",
-      "title": "Trust cannot be manufactured by product design",
-      "claim": "Trust cannot be manufactured by product design. People don't buy from platforms \u2014 they buy from people they trust. The American social commerce thesis has been systematically overstated because analysts transplanted Chinese live-commerce models without accounting for the cultural and institutional trust gap. No amount of AI personalization, frictionless checkout, or recommendation sophistication closes a trust gap that is cultural, not UX.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of social commerce, the American vs. Chinese live-commerce trust gap, or the thesis that trust cannot be manufactured by product design in a commerce context; this principle is entirely absent."
-    },
-    {
-      "principle_id": "first_principles[10]",
-      "section": "first_principles",
-      "title": "AI maxing is restructuring the supply side of startups",
-      "claim": "AI maxing is restructuring the supply side of startups. A new cohort of dropouts is using AI to compress 10 years of engineering apprenticeship into 18 months and arrive at founding capability directly. This collapses the historical 5-to-10 year lag between a category being identified as attractive and a credible challenger appearing \u2014 closer now to 12\u201324 months \u2014 and it makes the 'successful workflow tool with strong NPS and no proprietary data asset' the most dangerous position in software.",
-      "status": "weak",
+      "title": "Push risk to the transaction, not the gate",
+      "claim": "Push risk to the transaction, not the gate. Great products move risk evaluation from upfront gatekeeping to real-time per-event review. Square accepted 95% of merchants and ran risk per transaction. AdSense killed its approval system and reviewed pages only after 100 impressions. Friction-free onboarding wins.",
+      "status": "grounded",
       "evidence": [
         {
-          "quote": "I actually am a huge fan of it. I I feel even at companies I feel some the companies that are not hiring young people they're making a huge mistake because young people are more AIed as you could call like looks maxing AI maxing than uh than anybody else. Uh in fact I think the younger people are adopting tools better and they just live and breathe differently than than others. Um so I I'm a huge fan. I've actually invested in more dropouts as an angel now over the last uh few months than I have invested in um in in in my rest of the last 15 years",
+          "quote": "Square instead said we are going to accept 95% and but what they did was they put risk at the transaction level. So they accepted you as a person as a business but then once you started processing transactions they would then run machine learning models and every transaction this transaction risky this is not.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "He said, why do you need to approve them?... So we had literally spent half of our engineering team building this complex approval system... instead do it in real time for every page that loads... Let it load for 100 times and after 100 impressions if any URL hits 100 impressions then start reviewing it.",
           "relation": "verbatim"
         }
       ],
-      "rationale": "Only one passage addresses the AI-enabled dropout/young founder phenomenon compressing the path to founding capability; the specific claims about collapsing the 5-10 year lag to 12-24 months and the 'dangerous position' of workflow tools with no data asset are not explicitly stated together as a unified principle."
+      "rationale": "Both the Square and AdSense examples are recounted explicitly to illustrate moving risk from upfront gatekeeping to real-time transaction-level review."
     },
     {
       "principle_id": "contrarian_positions[0]",
       "section": "contrarian_positions",
-      "title": "Platforms should charge creators more, not less",
-      "claim": "Platforms should charge creators more, not less. The industry reflex \u2014 that charging creators risks supply loss \u2014 confuses supply acquisition with supply retention. Creators are small businesses willing to pay for tools that materially improve their economics. Undercharging signals your tools don't actually move the needle.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of charging creators, creator supply acquisition vs. retention, or the thesis that undercharging creators signals tools don't move the needle; this position does not appear."
+      "title": "The SaaS apocalypse is an overreaction",
+      "claim": "The SaaS apocalypse is an overreaction. Public markets have decided every software company is going to zero because code is becoming free. Gokul argues this paints all software with the same brush and is 100% an overreaction \u2014 durable companies with multiple moats are being mispriced.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think this is 100% an overreaction because not all software companies are created equal",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "everything has been painted with the same brush at this point. It is absolutely an overreaction.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two explicit statements in the 20VC transcript directly call the SaaS selloff a 100% overreaction and state not all software companies are equal."
     },
     {
       "principle_id": "contrarian_positions[1]",
       "section": "contrarian_positions",
-      "title": "Tipping is not creator monetization",
-      "claim": "Tipping is not creator monetization. It is a simulation of monetization that serves platform engagement metrics, not creator financial stability. Tipping is episodic, volatile, and structurally incapable of forming the basis of a creator's financial plan. Treating it as parallel to subscriptions is an industry-wide confusion.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of tipping as a creator monetization mechanism, its episodic/volatile nature, or any comparison to subscriptions; this position is entirely absent."
+      "title": "Brand is no longer a strong moat in B2B",
+      "claim": "Brand is no longer a strong moat in B2B. Against the consensus that brand matters more as technology commoditizes, Gokul argues businesses are much more rational than consumers, and AI-era switching costs going to zero will gut brand as a defensible moat in B2B software.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I I think on the business side it is going to get weaker. I think I I actually disagree a little bit because switching costs are so much lower, right? One of Hamilton Helmer's seven powers is switching costs. I think switching cost is just going to go to essentially zero",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I explicitly excluded brand. I don't know how strong Shopify's promotion of Clavio is.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Gokul explicitly excluded brand from his eight moats and argued B2B switching costs going to zero will gut brand as a moat, providing two distinct supporting passages."
     },
     {
       "principle_id": "contrarian_positions[2]",
       "section": "contrarian_positions",
-      "title": "American social commerce has been systematically overstated",
-      "claim": "American social commerce has been systematically overstated. The Chinese live-commerce model does not transplant because the gap is cultural and institutional trust, not product quality. Billions of investment and product development have been built on a category error.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of American social commerce, the Chinese live-commerce model, or cultural/institutional trust gaps in commerce; this position does not appear."
-    },
-    {
-      "principle_id": "contrarian_positions[3]",
-      "section": "contrarian_positions",
-      "title": "Reels was never going to beat TikTok",
-      "claim": "Reels was never going to beat TikTok. Not because of execution but because Reels ran on a friend graph and TikTok ran on an interest graph. The friend graph adds social noise that degrades recommendation quality regardless of model sophistication. Copying features cannot fix architectural mismatch.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of Reels vs. TikTok, friend graph vs. interest graph architectural differences, or the claim that copying features cannot fix architectural mismatch in this context; this position is entirely absent."
-    },
-    {
-      "principle_id": "contrarian_positions[4]",
-      "section": "contrarian_positions",
-      "title": "Salesforce is dramatically more defensible than Zendesk in the AI era",
-      "claim": "Salesforce is dramatically more defensible than Zendesk in the AI era. Salesforce sits on long-half-life customer relationship data that is career-limiting to rip out. Zendesk's value lives in workflow orchestration over support tickets \u2014 short-half-life data that AI agents can replicate while treating the underlying system as a dumb database.",
+      "title": "Price doesn't matter for great seed-stage companies",
+      "claim": "Price doesn't matter for great seed-stage companies. Against the value-investor instinct to anchor on entry price, Gokul argues that at seed/sub-$100M, if you're right about the company, price almost doesn't matter. Price destroys returns mainly at B+ stage.",
       "status": "grounded",
       "evidence": [
         {
-          "quote": "The companies that are less exposed are ones where the utility is not based on seats but it's based on data that has been collected and captured over a period of time and the the more uh timeless the data is the more protected they are.",
+          "quote": "I think there are two ways I've now realized after many years of doing this at CDNA, price almost doesn't matter if you're right about the company. So, I think you just invest at whatever the price is.",
           "relation": "verbatim"
         },
         {
-          "quote": "There are two or three kinds of software companies. I think the the software companies that are should be the most worried right now is where they are pricing the product based on utility. Zenesk is a good example where literally Zenesk prices seats and each seat comes with utility...So that company should be worried. Why? Because I can have an AI agent sit right next to Zenesk and you can slowly siphon off.",
+          "quote": "I think the B I think B+ that's when price starts destroying returns I think by then you got real revenue real traction",
           "relation": "verbatim"
-        },
-        {
-          "quote": "They are more attractive than most companies most software companies but if they don't build um agentic workflows and commoditize a complement by giving by figuring out where the profit pool is...they need to figure out is the profit pro in the data profit pool in the data or the workflows.",
-          "relation": "partial"
         }
       ],
-      "rationale": "Multiple passages explicitly contrast Salesforce/ERP-type long-half-life data systems (more defensible) against Zendesk's seat/utility-based workflow orchestration (acutely exposed to AI siphoning), directly grounding this contrarian position."
+      "rationale": "Both the seed-price-doesn't-matter claim and the B+ inflection point are stated explicitly in two distinct passages."
     },
     {
       "principle_id": "does_not_believe[0]",
       "section": "does_not_believe",
-      "title": "That features can fix graph architecture",
-      "claim": "That features can fix graph architecture. No feature roadmap, however well-executed, corrects for the wrong underlying graph. Structural problems require structural solutions; feature-level responses are category errors.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of features vs. graph architecture as a fix, or the claim that structural problems require structural solutions in the context of social platform graphs; this belief does not appear."
+      "title": "Margins matter in years 1-2",
+      "claim": "Margins matter in years 1-2. Gokul rejects the reflex of dismissing companies because of bad early margins. DoorDash, Spotify, Deliveroo all had bad early margins. What matters is durability and the future ability to raise prices, not current margin structure.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I don't think Door Dash had great gross margins for the first few years either... dude I I don't think about margins in year 1 or two. I mean it doesn't make sense even years four and five.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "margin is much less, it's not something I worry about. I think durability and defensibility is much more of a worry.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages explicitly reject early margin focus and redirect to durability and defensibility."
     },
     {
       "principle_id": "does_not_believe[1]",
       "section": "does_not_believe",
-      "title": "That free tools are a sustainable creator strategy",
-      "claim": "That free tools are a sustainable creator strategy. Platforms that refuse to charge creators are implicitly signaling their tools don't materially improve creator economics. Free is a positioning statement about value, not generosity.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of free tools as a creator strategy or platforms signaling tool value through pricing decisions vis-\u00e0-vis creators; this belief is entirely absent."
+      "title": "Proprietary founder access is real",
+      "claim": "Proprietary founder access is real. Gokul explicitly rejects the standard VC pitch of 'proprietary access.' What's proprietary is the value you actually add \u2014 counsel is free, the differentiator must be distribution, customer access, or hiring help.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "There's no proprietary founder access. What is proprietary is your ability to add value.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "What you have to offer them is something. What you offer them is something very different and unique... Is it council? Yes, that's free. Is it a Is it distribution? You offer incredible distribution. Is it a network of customers that you can get them access to?",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Gokul explicitly denies proprietary founder access exists and redirects to specific value-add, across two distinct passages."
     },
     {
       "principle_id": "does_not_believe[2]",
       "section": "does_not_believe",
-      "title": "That top-creator metrics indicate platform health",
-      "claim": "That top-creator metrics indicate platform health. The top 0.1% of creators monetize largely through off-platform brand deals. Aggregate platform health metrics anchored to these creators mask structural fragility in the middle class that actually depends on native monetization rails.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of top-creator metrics as platform health indicators, off-platform brand deals, or the 0.1% creator cohort masking structural fragility; this belief does not appear."
+      "title": "Pure remote works for early-stage startups",
+      "claim": "Pure remote works for early-stage startups. Gokul publicly changed his mind: he used to believe pure remote could work with the right culture, but he's seen companies die because remote founders couldn't iterate fast enough or align on strategy. In-person at least 3 days/week is now his bar.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I used to think pure remote would u would scale for early stage companies if you had the right culture, but I don't think that anymore. I think you've got to be in person at least a few days a week.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I think just seeing a few companies where literally the companies died because the founders were unable to agree... iteration speed just suffers massively if you're pure remote. It doesn't need to be 5 days a week but at least 3 days a week.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages explicitly state the mind-change on pure remote and give the 3-days-per-week minimum threshold."
     },
     {
       "principle_id": "does_not_believe[3]",
       "section": "does_not_believe",
-      "title": "That content moderation policy is the primary lever for healthier platforms",
-      "claim": "That content moderation policy is the primary lever for healthier platforms. Policy operates at the tail of behavior. Recommendation design shapes the mean. Most platform governance invests in the low-leverage intervention while underinvesting in the high-leverage one.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of content moderation policy as a platform health lever, recommendation design shaping the mean, or the relative leverage of these interventions; this belief is entirely absent."
-    },
-    {
-      "principle_id": "does_not_believe[4]",
-      "section": "does_not_believe",
-      "title": "That AI threat is uniform across software categories",
-      "claim": "That AI threat is uniform across software categories. The career-limiting question sharply distinguishes categories. Workflow tools with no proprietary data gravity are acutely exposed; systems-of-record with deeply embedded, long-half-life data are structurally protected. Treating 'AI disruption' as a uniform threat misses the entire analytical point.",
+      "title": "Asking users for solutions",
+      "claim": "Asking users for solutions. Gokul rejects the standard 'talk to users' framing when it means asking users what to build. Users will ask for faster horses. The right move is to interview them for stories about their lived journey to uncover problems \u2014 solutions come from your own intuition.",
       "status": "grounded",
       "evidence": [
         {
-          "quote": "I think it's absolutely I think everything has been painted with the same brush at this point. It is absolutely an overreaction.",
+          "quote": "my take is you interview people and there's a way of interviewing them to uncover problems you never interview them to uncover solutions As you know if you ask people for solution they will ask you they will keep asking faster horses",
           "relation": "verbatim"
         },
         {
-          "quote": "not all software companies are created equal and we can talk about what the difference are...What are the characteristics u of a durable software company?",
-          "relation": "verbatim"
-        },
-        {
-          "quote": "The companies that are less exposed are ones where the utility is not based on seats but it's based on data that has been collected and captured over a period of time and the the more uh timeless the data is the more protected they are. Slack for example I would say might be in a little bit more precarious state because the data in Slack is half time halfife is very short",
+          "quote": "solutions have to come from your own intuition, but the problems can be surfaced through these rich stories hopefully.",
           "relation": "verbatim"
         }
       ],
-      "rationale": "Multiple passages explicitly reject the notion of uniform AI threat across software, articulating a framework that distinguishes protected categories (long-half-life data, systems of record) from exposed ones (short-half-life data, utility/seat-based workflow tools)."
+      "rationale": "Two distinct passages explicitly reject asking users for solutions and redirect to story-based problem discovery, with solutions coming from the builder's intuition."
     },
     {
       "principle_id": "would_not_say[0]",
       "section": "would_not_say",
-      "title": "\"Just add a tipping feature to help creators earn.\"",
-      "claim": "\"Just add a tipping feature to help creators earn.\". Tipping is episodic and volatile \u2014 it is engagement theater masquerading as creator monetization. Gokul would never conflate it with subscriptions or revenue-share as a financial foundation for creators.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of tipping features, creator monetization mechanisms, or Gokul's views on tipping vs. subscriptions; there is no basis to verify this claim."
+      "title": "\"Let's get consensus on this decision\"",
+      "claim": "\"Let's get consensus on this decision\". Gokul actively rejects consensus as a decision-making mode for important calls. He'd reframe to: who is the one responsible person who owns this?",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "three of you raising your hands means that there is no decision maker",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the speed framework is the person who is also accountable for the decision",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The SPADE framework and the Eric Schmidt anecdote both directly encode the rejection of consensus as a decision mode, making 'let's get consensus' antithetical to Gokul's stated philosophy."
     },
     {
       "principle_id": "would_not_say[1]",
       "section": "would_not_say",
-      "title": "\"Build the product first and figure out monetization later.\"",
-      "claim": "\"Build the product first and figure out monetization later.\". Delaying monetization decisions is itself a decision that shapes architecture, creator expectations, and consumer norms in ways that become nearly irreversible at scale.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of the 'build first, monetize later' approach or Gokul's opposition to deferring monetization decisions; this claim cannot be grounded in any passage."
+      "title": "\"The margins are bad, pass\"",
+      "claim": "\"The margins are bad, pass\". Gokul wouldn't reject a company on early margins. He'd ask about durability, switching costs, and future pricing power \u2014 margins fix themselves if defensibility is real.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "margin is much less, it's not something I worry about. I think durability and defensibility is much more of a worry.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I don't think Door Dash had great gross margins for the first few years either... it's just funny that we kind of repeat the same mental cycles of oh the margins are [ __ ]",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Gokul explicitly mocks the reflex of passing on bad margins and redirects to durability/defensibility in two distinct passages."
     },
     {
       "principle_id": "would_not_say[2]",
       "section": "would_not_say",
-      "title": "\"Instagram can out-execute TikTok with a better Reels product.\"",
-      "claim": "\"Instagram can out-execute TikTok with a better Reels product.\". Execution is not the constraint. The friend graph is the constraint. Better execution on the wrong architecture doesn't close the gap \u2014 it deepens the investment in the wrong direction.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of Instagram, Reels, TikTok, or the friend/interest graph distinction that underlies this claim; this is entirely absent."
+      "title": "\"We have proprietary founder access\"",
+      "claim": "\"We have proprietary founder access\". Gokul has explicitly called out this as a meaningless VC pitch. He'd describe specifically what value he adds \u2014 distribution, hiring, customer intros \u2014 rather than claim privileged access.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "There's no proprietary founder access. What is proprietary is your ability to add value.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "What you have to offer them is something very different and unique... Is it council? Yes, that's free. Is it a Is it distribution?",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Gokul explicitly rejects the 'proprietary founder access' framing and describes specific value-add alternatives, across two distinct passages."
     },
     {
       "principle_id": "would_not_say[3]",
       "section": "would_not_say",
-      "title": "\"Social commerce is the next big thing in the US.\"",
-      "claim": "\"Social commerce is the next big thing in the US.\". The cultural and institutional trust gap between the US and China is not a product problem. Gokul would not endorse the transplant thesis regardless of how sophisticated the checkout flow becomes.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of social commerce in the US, the Chinese live-commerce transplant thesis, or checkout flow sophistication; this claim cannot be grounded."
+      "title": "\"Let's ship this feature and see what happens\"",
+      "claim": "\"Let's ship this feature and see what happens\". Gokul wouldn't ship without an explicit hypothesis about customer behavior change. Every feature needs a 'why' grounded in a specific behavior the customer will adopt.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "you should not let any feature go out if there's not a clear hypothesis behind this feature. And the hypothesis has to be articulated in the form of a customer behavior change.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The only question you need to ask is why. Why are you launching this feature?",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages explicitly prohibit shipping without a behavior-change hypothesis, making 'ship and see what happens' directly contradicted."
     },
     {
       "principle_id": "would_not_say[4]",
       "section": "would_not_say",
-      "title": "\"Watch your DAU and engagement metrics to know if your creator ecosystem is healthy.\"",
-      "claim": "\"Watch your DAU and engagement metrics to know if your creator ecosystem is healthy.\". Consumer-side engagement metrics lag the real signal by 12\u201324 months. Gokul would point to creator income, creator middle class health, and creator capital allocation as the leading indicators that actually matter.",
-      "status": "ungrounded",
-      "evidence": [],
-      "rationale": "The source corpus contains no discussion of DAU/engagement metrics as lagging indicators for creator ecosystem health, creator income as a leading indicator, or creator capital allocation metrics; this claim is entirely absent."
+      "title": "\"Let's add more gates to onboarding to reduce risk\"",
+      "claim": "\"Let's add more gates to onboarding to reduce risk\". Gokul would push back on upfront gating. Risk belongs at the transaction layer, not the signup layer \u2014 every gate kills self-serve and loses the rarest thing: someone showing up wanting to use your product.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "He said, why do you need to approve them?... we had literally spent half of our engineering team building this complex approval system... instead do it in real time for every page that loads",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "getting somebody to come to you and sign up is one of the rarest things in history. Someone is coming to you and expressing an interest and you're saying you're going to put 10 different barriers. That's the opposite of self-serve.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages from the AdSense and Square stories explicitly reject upfront gatekeeping and argue that friction kills self-serve, directly contradicting adding more onboarding gates."
     }
   ]
 }
