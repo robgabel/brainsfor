@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Gokul
    ```
 3. Then run any thinking skill:
    ```
-   /advise "Should I build a standalone creator monetization tool or embed it inside an existing social platform?"
+   /advise "We're debating monetization architecture for a new product line — should we design ads-in from day one, or ship free and add it later?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Gokul's perspective, and recommends what to do next.
@@ -60,9 +60,9 @@ This means:
 
 **906 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — Creator economy, social commerce, platform strategy, product-market fit, consumer behavior, monetization, social graphs, growth loops.
+**16 topic clusters** — Product leadership, decision-making (SPADE), ads & monetization architecture, founder mode, AI-era software defensibility, angel investing, startup strategy, hiring PMs.
 
-**Date range:** 2010 — 2025
+**Date range:** 2010 — 2026
 
 ## How to Use
 

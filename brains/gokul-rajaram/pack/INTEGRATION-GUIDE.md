@@ -51,7 +51,7 @@ Paste `brain-context.md` into your project's `CLAUDE.md`. Every conversation in 
 
 3. Open Claude Code in your project. The brain is now active — every conversation is informed by Gokul's frameworks, first principles, and guardrails.
 
-**Verify it works:** Ask your agent a strategy question and check that the response cites specific ideas from Gokul, not generic advice. Try `I'm building a social product and trying to decide whether to focus on creators or consumers first. What would Gokul think?`.
+**Verify it works:** Ask your agent a strategy question and check that the response cites specific ideas from Gokul, not generic advice. Try `I'm a founder trying to make a high-stakes call and three different people want different things. How would Gokul cut through the consensus trap?`.
 
 **Tradeoff:** ~75K tokens of context loaded on every conversation. For a project where you always want this lens, that's a feature. For occasional use, Path B is lighter.
 
@@ -141,9 +141,9 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 4. Use any thinking skill:
    ```
-   /advise Should I build a standalone creator monetization tool or embed it inside an existing social platform?
-   /debate Is the creator economy a sustainable economic model or a bubble?
-   /predict What happens to Instagram if TikTok is banned in the US?
+   /advise We're debating monetization architecture for a new product line — should we design ads-in from day one, or ship free and add it later?
+   /debate Is shipping a feature without a hypothesis ever justified by time pressure?
+   /predict If OpenAI ships a real ad platform in 2026, what are the second and third-order effects on Google, Meta, and AI-app pricing models?
    /surprise
    ```
 
