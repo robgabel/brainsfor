@@ -1,6 +1,6 @@
 # Gokul Rajaraman Brain Pack
 
-> **551 knowledge atoms** · **931 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **554 knowledge atoms** · **906 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Gokul's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (551 atoms, 931 connections)
+  ├── brain-atoms.json      ← Structured data (554 atoms, 906 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,9 +56,9 @@ This means:
 
 ## The Knowledge Graph
 
-**551 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**554 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**931 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**906 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
 **16 topic clusters** — Creator economy, social commerce, platform strategy, product-market fit, consumer behavior, monetization, social graphs, growth loops.
 

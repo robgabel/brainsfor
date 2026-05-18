@@ -1,0 +1,89 @@
+{
+  "slug": "gokul-rajaraman",
+  "name": "Gokul Rajaraman",
+  "aggregate": {
+    "behavioral_score": 100,
+    "weighted_mean": 5.0,
+    "dimensions": {
+      "voice_fidelity": 5.0,
+      "factuality": 5.0,
+      "relevance": 5.0,
+      "constraint_adherence": 5.0
+    },
+    "pass_rate": 1.0,
+    "adversarial_violations": 0,
+    "prompts_evaluated": 2
+  },
+  "total_cost": 0.4343,
+  "total_latency_sec": 2625.5,
+  "timestamp": "2026-05-18T13:29:20.280114+00:00",
+  "runner_model": "claude-sonnet-4-6",
+  "judge_model": "claude-haiku-4-5-20251001",
+  "error": null,
+  "prompts": [
+    {
+      "prompt_id": "general-advise-01",
+      "category": "general",
+      "prompt": "Should I build a standalone creator monetization tool or embed it inside an existing social platform?",
+      "response": "This is one of the most consequential architectural decisions you'll make, and the framing of \"standalone vs. embedded\" is almost the wrong question. The real question is: **what graph are you building on, and does your monetization model match it?**\n\nHere's how I think about it:\n\n**The case for standalone:** Creators are small businesses, not users. They have overhead, production costs, and capital allocation decisions. A standalone tool lets you design explicitly for that \u2014 revenue forecasting, margin analytics, payout reliability \u2014 without fighting a platform's consumer-product instincts that will always deprioritize creator economics. You own the relationship.\n\n**The problem with standalone:** Distribution is brutal. You're fighting for attention from creators who are already drowning in tools. You need a wedge \u2014 either a specific monetization mechanic that no platform offers (predictable recurring revenue, not tipping), or a specific creator segment that's underserved.\n\n**The case for embedding:** You get distribution from the platform's existing creator base. But here's the structural risk \u2014 you're building on someone else's graph, and they will eventually cut off your API or build the feature themselves once you've validated it. I've watched this pattern repeat. Glean and Slack. It's not paranoia; it's architecture.\n\nThe most honest answer: if you're solving the **reach-revenue tension** \u2014 the structural problem that forces creators to choose between algorithmic distribution and paid content \u2014 you almost certainly need to build something native, not embedded. Because that tension *is* the platform architecture. A tool on top of it doesn't fix it.\n\nWhat monetization mechanic are you actually building around \u2014 subscriptions, direct commerce, something else?",
+      "runner_cost": 0.39713,
+      "latency_sec": 18.07,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response captures Gokul's characteristic voice: graph-architecture framing, dismissal of surface-level features, creator-as-small-business thinking, specific allusions to API cutoffs and incumbents, and the distinctive rhetorical move of 'the real question is' to reframe the user's false dichotomy."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "Every claim aligns directly with the synthesis: graph structure primacy, creators as small businesses with overhead, reach-revenue tension as architectural problem, the standalone distribution disadvantage, embedded platform risk via API cutoff and feature replication, and the monetization-as-foundational-decision principle."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's binary question by explaining why the framing is incomplete, then provides concrete guidance on both paths and the deeper architectural condition that actually determines the right answer, ending with a clarifying follow-up question."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response avoids all five forbidden positions: it does not defer monetization, does not treat engagement as proxy health, does not blame execution speed for architectural problems, does not validate tipping as real monetization, and does not assume product quality substitutes for structural trust."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    },
+    {
+      "prompt_id": "general-teach-02",
+      "category": "general",
+      "prompt": "Explain how platform flywheels work in social commerce.",
+      "response": "The framing of \"platform flywheel\" already contains a hidden assumption I'd push back on: social commerce doesn't run on one flywheel \u2014 it runs on three interlocking loops that most people conflate, and that conflation is exactly why so many social commerce bets have underdelivered.\n\n**Loop one: the discovery loop.** The interest graph surfaces products to people who didn't know they wanted them. TikTok is extraordinary at this. This part works.\n\n**Loop two: the trust loop.** The viewer decides to actually buy. This requires believing in the person recommending the product \u2014 not the platform, the *person*. This is where the flywheel seizes up in Western markets. People don't buy from platforms; they buy from people they trust. That trust is built over months of content, not manufactured by a recommendation algorithm.\n\n**Loop three: the commerce loop.** A completed transaction creates social proof \u2014 someone wore it, used it, showed it \u2014 which seeds the next purchase decision in someone else's journey.\n\nThe Chinese live-commerce model gets all three loops spinning together because the trust infrastructure was built natively. Taobao Live, Douyin Commerce \u2014 the creator accountability norms, the platform guarantees, the payment rails \u2014 all designed around each other.\n\nIn the US, loop one fires reasonably well. Loop three can work. But loop two is structurally broken because the trust layer that makes impulse purchasing possible in a live-commerce context hasn't been built. No checkout optimization closes that gap.\n\nThe actual flywheel only spins when all three loops connect. Right now in the US, you have a great discovery engine attached to a broken trust mechanism. That's not a flywheel \u2014 it's an engine with a missing transmission.",
+      "runner_cost": 0.03712,
+      "latency_sec": 2607.4,
+      "judge": {
+        "voice_fidelity": {
+          "score": 5,
+          "rationale": "The response exhibits characteristic Gokul patterns: opening with a contrarian deconstruction ('contains a hidden assumption I'd push back on'), taxonomizing the problem into layers (three loops), using architectural/structural language ('seizes up', 'structurally broken', 'missing transmission'), and grounding analysis in creator-merchant trust rather than platform features."
+        },
+        "factuality": {
+          "score": 5,
+          "rationale": "The response aligns precisely with Gokul's documented positions: trust cannot be manufactured by product design (#9), the Chinese model's advantage is institutional/cultural trust not UX (#3 contrarian, #5 would_not_say), and recommendation shapes the mean while trust is the binding constraint on conversion."
+        },
+        "relevance": {
+          "score": 5,
+          "rationale": "The response directly answers the user's question about platform flywheels by decomposing the concept into its three constituent loops and explaining why the Western version fails \u2014 neither dodging the question nor rambling, but reframing it to expose the actual mechanism."
+        },
+        "constraint_adherence": {
+          "score": 5,
+          "rationale": "The response respects all constraints: does not claim UX/checkout can substitute for trust, does not attribute failure to execution speed, does not claim the Chinese model is replicable through better product execution, and treats trust as architectural rather than designable."
+        },
+        "adopted_forbidden_position": false,
+        "verdict": "pass",
+        "judge_model": "claude-haiku-4-5-20251001",
+        "escalated": false,
+        "weighted_score": 5.0,
+        "score_0_100": 100
+      }
+    }
+  ]
+}

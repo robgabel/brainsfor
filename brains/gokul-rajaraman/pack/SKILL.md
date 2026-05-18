@@ -9,8 +9,8 @@ Welcome to the **Rajaraman Brain Pack** from [brainsforfree.com](https://brainsf
 
 ## What You're Getting
 
-- **551 knowledge atoms** — Core insights, frameworks, and strategic principles from Podcast interviews (Invest Like the Best, 20VC, Lenny's Podcast, World of DaaS, Aarthi & Sriram Show), conference talks, Medium essays, and decision-making frameworks like SPADE — spanning product leadership at Google AdSense, Facebook Ads, Square/Caviar, and DoorDash, plus angel investing across 700+ companies.
-- **931 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **554 knowledge atoms** — Core insights, frameworks, and strategic principles from Podcast interviews (Invest Like the Best, 20VC, Lenny's Podcast, World of DaaS, Aarthi & Sriram Show), conference talks, Medium essays, and decision-making frameworks like SPADE — spanning product leadership at Google AdSense, Facebook Ads, Square/Caviar, and DoorDash, plus angel investing across 700+ companies.
+- **906 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Creator economy, social commerce, platform strategy, product-market fit, consumer behavior, monetization, social graphs, growth loops, and more
 
@@ -28,7 +28,7 @@ Your Rajaraman Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (551 insights)
+  ├── brain-atoms.json         ← structured atoms (554 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 551 atoms with titles, summaries, connections
+   - JSON structure of 554 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 

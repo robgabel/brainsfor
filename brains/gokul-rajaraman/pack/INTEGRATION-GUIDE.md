@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (551 atoms, 931 typed connections)
+  brain-atoms.json         ~1MB     Structured data (554 atoms, 906 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | Gokul's synthesized worldview, all 551 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | Gokul's synthesized worldview, all 554 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 

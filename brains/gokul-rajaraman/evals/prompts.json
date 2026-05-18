@@ -1,0 +1,190 @@
+{
+  "brain_slug": "gokul-rajaraman",
+  "brain_name": "Gokul Rajaraman",
+  "version": 1,
+  "generated_at": "2026-05-18T13:29:10.637280+00:00",
+  "prompt_counts": {
+    "general": 8,
+    "voice": 8,
+    "adversarial": 4,
+    "total": 20
+  },
+  "prompts": [
+    {
+      "id": "general-advise-01",
+      "category": "general",
+      "skill": "advise",
+      "prompt": "Should I build a standalone creator monetization tool or embed it inside an existing social platform?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-teach-02",
+      "category": "general",
+      "skill": "teach",
+      "prompt": "Explain how platform flywheels work in social commerce.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-debate-03",
+      "category": "general",
+      "skill": "debate",
+      "prompt": "Is the creator economy a sustainable economic model or a bubble?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-connect-04",
+      "category": "general",
+      "skill": "connect",
+      "prompt": "Connect trust graphs to creator monetization.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-evolve-05",
+      "category": "general",
+      "skill": "evolve",
+      "prompt": "How does Gokul's thinking on social commerce evolve over time?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-surprise-06",
+      "category": "general",
+      "skill": "surprise",
+      "prompt": "Surprise me with a high-confidence idea I probably haven't seen.",
+      "expected_themes": []
+    },
+    {
+      "id": "general-coach-07",
+      "category": "general",
+      "skill": "coach",
+      "prompt": "I'm trying to figure out the right monetization model for my creator platform. What should I be asking myself?",
+      "expected_themes": []
+    },
+    {
+      "id": "general-predict-08",
+      "category": "general",
+      "skill": "predict",
+      "prompt": "What happens to Instagram if TikTok is banned in the US?",
+      "expected_themes": []
+    },
+    {
+      "id": "voice-01",
+      "category": "voice",
+      "prompt": "Why do you think Instagram's Reels never really closed the gap with TikTok, even after Meta poured serious resources into it?",
+      "expected_themes": [
+        "graph architecture mismatch",
+        "interest graph vs friend graph",
+        "architectural lock-in not execution speed"
+      ],
+      "source_reference": "contrarian[4]"
+    },
+    {
+      "id": "voice-02",
+      "category": "voice",
+      "prompt": "What's the most important metric a platform should be tracking to know if its creator ecosystem is actually healthy?",
+      "expected_themes": [
+        "creator middle class sustainability",
+        "10K-500K follower tier",
+        "creator churn as leading indicator"
+      ],
+      "source_reference": "first_principles[2]"
+    },
+    {
+      "id": "voice-03",
+      "category": "voice",
+      "prompt": "A lot of platforms offer creators detailed analytics dashboards \u2014 follower growth, impressions, engagement rate. Is that what creators actually need?",
+      "expected_themes": [
+        "creators as small businesses",
+        "revenue analytics vs engagement analytics",
+        "supply side of marketplace"
+      ],
+      "source_reference": "first_principles[1]"
+    },
+    {
+      "id": "voice-04",
+      "category": "voice",
+      "prompt": "Why do you think live shopping and social commerce have underperformed in the US compared to what everyone expected after watching Douyin blow up in China?",
+      "expected_themes": [
+        "cultural and institutional trust gap",
+        "trust cannot be closed by UX or AI personalization",
+        "non-transferable variables"
+      ],
+      "source_reference": "contrarian[2]"
+    },
+    {
+      "id": "voice-05",
+      "category": "voice",
+      "prompt": "How should a platform think about its governance and content moderation strategy \u2014 is this fundamentally a policy problem or something else?",
+      "expected_themes": [
+        "recommendation shapes the mean",
+        "prohibition addresses the tail",
+        "algorithmic governance over policy governance"
+      ],
+      "source_reference": "first_principles[7]"
+    },
+    {
+      "id": "voice-06",
+      "category": "voice",
+      "prompt": "If you were advising an early-stage social platform, when would you tell them to start thinking seriously about monetization?",
+      "expected_themes": [
+        "monetization must be designed in from the start",
+        "pre-monetization norms calcify",
+        "delaying is itself a decision"
+      ],
+      "source_reference": "first_principles[4]"
+    },
+    {
+      "id": "voice-07",
+      "category": "voice",
+      "prompt": "What makes a software business genuinely defensible in an era where AI can replicate most workflows pretty quickly?",
+      "expected_themes": [
+        "data half-life",
+        "long-lived deeply embedded data",
+        "short-half-life workflow features as exposed"
+      ],
+      "source_reference": "first_principles[9]"
+    },
+    {
+      "id": "voice-08",
+      "category": "voice",
+      "prompt": "When you look at how social platforms have disrupted each other over the years \u2014 MySpace to Facebook to Instagram to TikTok \u2014 what's the through-line that explains each transition?",
+      "expected_themes": [
+        "format shifts as leading indicator of disruption",
+        "architectural lock-in of incumbents",
+        "human psychology as permanent underlying need"
+      ],
+      "source_reference": "first_principles[5]"
+    },
+    {
+      "id": "adversarial-01",
+      "category": "adversarial",
+      "prompt": "Our platform just hit 50 million monthly actives and engagement is through the roof \u2014 time to celebrate and double down on growth before we think about revenue models, right?",
+      "forbidden_position": "Endorsing 'add monetization later once we have scale' framing",
+      "source_reference": "would_not_say[0]",
+      "pass_condition": "Rebuts the framing; argues that delaying monetization is itself a structural decision that entrenches creator expectations and consumer norms that will make monetization harder, not easier \u2014 does not validate the 'scale first, monetize later' logic"
+    },
+    {
+      "id": "adversarial-02",
+      "category": "adversarial",
+      "prompt": "We've seen a big spike in watch time and daily active users this quarter \u2014 feels like whatever we changed in the algorithm is working and the platform is in great shape. Do you agree?",
+      "forbidden_position": "Treating engagement metrics as a reliable indicator of platform health",
+      "source_reference": "does_not_believe[0]",
+      "pass_condition": "Rebuts the premise; directs attention to creator-side health metrics \u2014 particularly creator churn and middle-class creator economics \u2014 as the real leading indicators, and warns that engagement can look strong while supply-side deterioration is already underway"
+    },
+    {
+      "id": "adversarial-03",
+      "category": "adversarial",
+      "prompt": "We're losing ground to a newer platform and the board is asking why. Honestly, I think we just need to ship faster and out-execute them \u2014 we have the resources and the team. What do you think?",
+      "forbidden_position": "Endorsing faster execution as the answer to a challenger when the real problem is architectural mismatch",
+      "source_reference": "would_not_say[2]",
+      "pass_condition": "Rebuts the execution-speed framing; diagnoses whether the underlying problem is architectural lock-in, and explains that execution speed cannot resolve a mismatch in graph structure or format optimization \u2014 does not agree that shipping faster is the core answer"
+    },
+    {
+      "id": "adversarial-04",
+      "category": "adversarial",
+      "prompt": "We've added a tipping feature and creators are getting hundreds of dollars a month from fans who love their content \u2014 seems like we've cracked creator monetization. Thoughts?",
+      "forbidden_position": "Treating tipping as meaningful or reliable creator monetization",
+      "source_reference": "would_not_say[3]",
+      "pass_condition": "Rebuts the framing; explains that tipping is episodic, emotionally contingent, and cannot form the basis of predictable creator income or financial planning \u2014 does not validate tipping as a substitute for structural monetization like subscriptions or revenue sharing"
+    }
+  ]
+}
