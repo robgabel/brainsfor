@@ -62,8 +62,14 @@ async function checkRateLimit(
     console.error("[api/board] Upstash envs missing — fail closed");
     return { allowed: false, remaining: 0 };
   }
-  const { success, remaining } = await rl.limit(ip);
-  return { allowed: success, remaining };
+  try {
+    const { success, remaining } = await rl.limit(ip);
+    return { allowed: success, remaining };
+  } catch (err) {
+    // Upstash unreachable — fail open. See /api/skill for the rationale.
+    console.error("[api/board] rate-limit check failed, failing open:", err);
+    return { allowed: true, remaining: LIMIT };
+  }
 }
 
 const BOARD_FORMAT = `HARD CONSTRAINTS — BOARD MEMBER FORMAT:
