@@ -72,8 +72,16 @@ async function checkRateLimit(
     );
     return { allowed: false, remaining: 0 };
   }
-  const { success, remaining } = await rl.limit(ip);
-  return { allowed: success, remaining };
+  try {
+    const { success, remaining } = await rl.limit(ip);
+    return { allowed: success, remaining };
+  } catch (err) {
+    // Upstash unreachable (DNS, network, or DB deleted on the free tier).
+    // Fail open so a transient infra outage doesn't black out the demo —
+    // the Anthropic budget is the real abuse ceiling.
+    console.error("[api/skill] rate-limit check failed, failing open:", err);
+    return { allowed: true, remaining: LIMIT };
+  }
 }
 
 // --- System prompts ---
