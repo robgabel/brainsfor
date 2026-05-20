@@ -382,7 +382,7 @@ export function SkillsPlayground({
         />
         <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
           <button
-            onClick={handleRun}
+            onClick={() => handleRun()}
             disabled={!canRun}
             className="rounded-lg bg-brain-indigo px-6 py-3 font-mono text-[14px] font-semibold text-white shadow-brain-cta transition-all hover:bg-indigo-hover active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
           >
