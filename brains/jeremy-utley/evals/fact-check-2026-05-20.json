@@ -1,0 +1,745 @@
+{
+  "brain_slug": "jeremy-utley",
+  "timestamp": "2026-05-20T15:12:24.582741+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 9,
+    "youtube_chars": 115317,
+    "atom_quote_count": 391,
+    "total_chars": 199711
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 8,
+        "weak": 2,
+        "ungrounded": 1,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 10,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 11
+      },
+      "does_not_believe": {
+        "grounded": 6,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 6
+      },
+      "would_not_say": {
+        "grounded": 4,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 28,
+      "weak": 5,
+      "ungrounded": 1,
+      "total": 34
+    },
+    "grounding_pct": 89.7,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[7]",
+        "title": "Most innovation failures are framing failures",
+        "rationale": "The corpus does not contain passages about 'framing failures,' 'How Might We' prompts, or reframing from multiple angles as the highest-leverage skill; this principle appears to be an extrapolation not directly stated in the source material."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[0]",
+        "title": "Ideaflow is the only innovation metric that matters",
+        "rationale": "The corpus mentions 'Ideaflow' as 'the only business metric that matters' (via the book title paraphrase) and discusses volume/variability as key levers, but the specific claim that ideaflow is a 'leading indicator' while revenue/launches/patents are 'lagging' indicators is not directly stated in any passage."
+      },
+      {
+        "id": "first_principles[8]",
+        "title": "Leaders create conditions; they don't supply answers",
+        "rationale": "While Utley touches on leader mindset and organizational culture as conditions for innovation, the specific framing of leaders as 'environmental designers who distribute ideation rather than supply answers' is only weakly supported by a single strong quote about problems vs. solutions."
+      },
+      {
+        "id": "contrarian_positions[4]",
+        "title": "Brainstorming as commonly practiced is broken",
+        "rationale": "While Utley clearly supports separating generation from evaluation, the specific contrarian claim that 'brainstorming as commonly practiced is broken' and that this is the 'most rarely practiced' facilitation discipline is only tangentially supported without explicit direct statement."
+      },
+      {
+        "id": "would_not_say[2]",
+        "title": "'We need to be more innovative'",
+        "rationale": "While Utley clearly pushes against unmeasured aspirations and prefers operational metrics, there is only one passage directly about replacing vague calls to 'be more innovative' with measured ideaflow, making this weak rather than grounded."
+      },
+      {
+        "id": "would_not_say[3]",
+        "title": "'AI will take your job'",
+        "rationale": "While Utley reframes AI as an amplifier and expresses optimism for creators, the specific human-vs-human framing ('a person who works with AI will outcompete a person who doesn't') is not explicitly stated in the corpus, making this only weakly supported."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Ideaflow is the only innovation metric that matters",
+      "claim": "Ideaflow is the only innovation metric that matters. Volume and velocity of ideas per unit of time is the leading indicator of creative health; revenue, launches, and patents are lagging. If you want to predict what an organization will produce next year, don't audit its roadmap \u2014 measure how many ideas its people are generating today.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "volume and variability are really the two big kind of you can think about like a levers at your disposal as an innovator as a Creator how do you have more ideas how do you have uh more varied ideas these are the core questions that I've concerned myself with these last 15 years",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "you also are the co-author of idea flow the only business metric that matters",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus mentions 'Ideaflow' as 'the only business metric that matters' (via the book title paraphrase) and discusses volume/variability as key levers, but the specific claim that ideaflow is a 'leading indicator' while revenue/launches/patents are 'lagging' indicators is not directly stated in any passage."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Quantity is the path to quality, not the enemy of it",
+      "claim": "Quantity is the path to quality, not the enemy of it. Picasso, Edison, and Pauling outproduced their peers by enormous multiples \u2014 their masterworks emerged from volume, not despite it. The team chasing 100 ideas reliably beats the team searching for the perfect one, because breakthroughs are statistically downstream of throughput.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The single greatest variable that impacts the quality of your ideas is actually the quantity of your ideas. So it's literally true the more ideas you have the better ideas there are not because all of your ideas get better, not at all, but because it increases your likelihood of having a good idea",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Linus Pauling's the only individual to ever win two solo Nobel Prizes, and he almost won a third. Someone asked him once, 'How do you come up with so many good ideas?' His answer was deceptively simple. The best way to have a good idea is to have a lot of ideas.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "my colleague Bob Sutton at Stanford told me that on average it takes 2,000 ideas to get to one commercial success. 2,001.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple distinct passages directly support the principle that quantity is the path to quality, citing Pauling, statistical reasoning, and empirical data."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Creativity is a skill, not a talent",
+      "claim": "Creativity is a skill, not a talent. The belief that you are either creative or you're not is itself the primary creative block. Creativity is trainable, measurable, and improvable through deliberate practice \u2014 and the same is now true of working with AI, which Utley treats as the latest extension of creative capacity.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I fully and fundamentally believe every single human being has innate creative capacity. Every single one of us. What the D.school has helped me do is unlock others. Everyone has this latent creative capacity.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Great thinkers aren't born, they're built. They build themselves one habit at a time. Creative excellence isn't inherited, it's learned through disciplined thinking and intentional habit development. And anybody, anybody willing to practice these behaviors can dramatically improve their own thinking.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "AI users outperformed non-users by 40% on quality... less than 3% of the workforce are AI practitioners or experts... Skills require a progression \u2014 from fear, to familiar, to fluent, to fun. They require reps. They require doing it badly before you do it well.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages clearly establish that creativity is trainable and universal, and that AI collaboration is similarly a learnable skill requiring practice."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Ideas are connections, not revelations",
+      "claim": "Ideas are connections, not revelations. The instruction 'think of something new' is bad advice; 'think of connections' is operational. Creativity is the collision of apparently unrelated frames of reference, which means upgrading your inputs and engineering collisions matter more than thinking harder.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Arthur Kesler said creativity is the Collision of apparently unrelated frames of reference",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The human brain doesn't create from nothing. The human brain creates from component conceptual parts, almost like Legos that get stacked together. So when you have an idea, what's actually happening is an unexpected connection between two things.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Anytime you're trying to come up with a new idea, stop it. Think of connections. Try to gather Legos and put them together in unexpected ways. It's way less pressure and way more effective for your creativity.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple verbatim passages directly state that ideas are connections/collisions rather than revelations, and that engineering inputs and collisions is the operational approach."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Self-literacy is the real bottleneck with AI \u2014 not AI literacy",
+      "claim": "Self-literacy is the real bottleneck with AI \u2014 not AI literacy. Most people underuse AI because they have never made their own context, voice, standards, and non-negotiables legible. AI is the first colleague that demands this self-knowledge, and the discomfort of producing it is the actual work people are avoiding.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The bottleneck is not AI literacy. It's self-literacy. We are underusing AI because we have not done the work of making our own context legible.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "A tool needs instructions. A teammate needs context. That's the shift... They want a chief of staff, but they keep opening a blank chat window and asking a stranger to improvise.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The discomfort of building an AI teammate is the point. People want a chief of staff but keep opening blank chats. The first AI teammate is hard not because the tech is hard but because it forces you to articulate yourself.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages directly support that self-literacy and context legibility are the real bottlenecks, not AI literacy itself."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Work with AI; don't use it",
+      "claim": "Work with AI; don't use it. 'Use' implies a tool with a settled purpose. 'Work with' implies a teammate whose destination you bring. Utley's research shows that AI underperformers treat the chat window like a vending machine while star performers treat it like a thinking partner, and the gap is almost entirely about framing.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The only correct answer to the question how do you use AI? Is I don't. I don't use AI. I work with it. When you start working with AI, it will change everything.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the underperformers treated AI like a tool. The outperformers treated AI like a teammate, and shifting your orientation from tool to teammate changes everything about the kinds of outcomes that you can achieve working with generative AI.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "In my research, the difference between people who underperform with AI and people who outperform with AI maps almost cleanly onto this distinction. Underperformers treat AI like a tool \u2014 I'll see if it can do this thing for me. Star performers treat AI like a teammate \u2014 let me bring this whole problem to a partner who can think with me. Same tech. Different relationship. Wildly different outcomes.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The tool-vs-teammate distinction is one of the most repeatedly and explicitly stated principles across the corpus with multiple verbatim passages."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Premature judgment is the idea killer",
+      "claim": "Premature judgment is the idea killer. Generation and evaluation are cognitively incompatible activities. When they happen simultaneously \u2014 which is what most brainstorming meetings do \u2014 evaluation always wins, and the strangest ideas (often the most valuable) die first. Facilitation discipline is mostly about protecting the generative phase.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The fascinating thing actually isn't what turned on \u2014 the more important thing I think was what turned off. And what was it? Criticism. Judgment. These improvisers stop judging, they stop criticizing themselves.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "when someone brings a new idea instead of thinking what do I think of it ask what does it make me think of \u2014 'what do I think of it' is a critical posture... 'what does it make me think of' \u2014 I'm in generative mode. I'm not criticizing.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Psychologically, bad idea brainstorms create what's called psychological safety. They make it fun. They make it playful. But more importantly, they shake our thinking out of its rigid cognitive associations and patterns.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages support the incompatibility of generation and evaluation, citing neuroscience (jazz fMRI study), practical reframing techniques, and psychological safety research."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Most innovation failures are framing failures",
+      "claim": "Most innovation failures are framing failures. Teams spend enormous energy beautifully solving the wrong problem. Sitting with the question, reframing from multiple angles, and crafting the right 'How Might We' prompt before generating any solutions is the highest-leverage skill in the toolkit.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus does not contain passages about 'framing failures,' 'How Might We' prompts, or reframing from multiple angles as the highest-leverage skill; this principle appears to be an extrapolation not directly stated in the source material."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Leaders create conditions; they don't supply answers",
+      "claim": "Leaders create conditions; they don't supply answers. The leader's job in innovation is environmental design \u2014 psychological safety, meeting structure, reward signals, modeling creative risk. Leaders who hoard ideation become the bottleneck; leaders who distribute it multiply capacity.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "We hear the kind of archetypical example of a leader who says don't bring me problems bring me Solutions \u2014 that's not good leadership. A good leader says I love your problems, bring me problems.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "organizationally there's incentives, compensation, culture. In the team there's interpersonal dynamics. And then cognitively we have barriers as well.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Utley touches on leader mindset and organizational culture as conditions for innovation, the specific framing of leaders as 'environmental designers who distribute ideation rather than supply answers' is only weakly supported by a single strong quote about problems vs. solutions."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Pre-commit to humans before the bots fill the jar",
+      "claim": "Pre-commit to humans before the bots fill the jar. Parkinson's Law applied to AI: freed time gets consumed by more work unless you pre-decide its destination. The Odysseus Contract \u2014 binding commitments made before the sirens of productivity sing \u2014 is structurally necessary because allocation failures happen unconsciously.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "That's what I think the AI age requires. Not more discipline. An Odysseus Contract \u2014 a binding commitment you make before the sirens of productivity start singing, that holds even when every fiber of your being says 'just one more hour.'",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "You free up time... and work expands to consume the gain... If I don't pre-decide where my regained hours go, they won't drift toward what I value. They'll drift toward what pings.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The AI version is simple: place your human priorities first, then allocate your newfound capacity gains accordingly.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly support the principle of pre-committing human priorities before AI productivity gains are consumed by more work, including the explicit Odysseus Contract framing."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Discomfort is a diagnostic signal, not a problem to suppress",
+      "claim": "Discomfort is a diagnostic signal, not a problem to suppress. The feeling of being stuck, fatigued by AI talk, or scared of looking stupid is information. 'AI fatigue' is usually insecurity in disguise; the discomfort of onboarding an AI teammate is your old mental model breaking. The signal is to lean in, not retreat.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "What folks are calling 'AI fatigue' isn't fatigue at all. It's insecurity. People aren't tired of hearing about AI. They're tired of not doing anything about it while everyone else talks about it.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Nobody has a wherewithal moment while cruising. You have them when you're struggling. Which means \u2014 and this is the uncomfortable part \u2014 the feeling of being stuck is actually a signal. It's your cue to ask: 'Am I doing this alone because I have to, or because I forgot I don't have to?'",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The discomfort of building an AI teammate is the point... The first AI teammate is hard not because the tech is hard but because it forces you to articulate yourself.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages directly support discomfort as diagnostic information rather than a problem to suppress, covering both AI insecurity reframing and the productive signal of feeling stuck."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "There is no AI fatigue \u2014 there is AI insecurity",
+      "claim": "There is no AI fatigue \u2014 there is AI insecurity. What people call exhaustion from AI discourse is actually the cumulative pressure of not having started while everyone else talks about it. The honest version of 'I'm tired of hearing about AI' is 'I'm scared I should already know this.'",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "What folks are calling 'AI fatigue' isn't fatigue at all. It's insecurity. People aren't tired of hearing about AI. They're tired of not doing anything about it while everyone else talks about it.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Dear Jeremy, 'fear of learning something new that I should [expletive] already know' wasn't one of the choices.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Have you ever felt 'fatigued' by something you're actually good at? Something you're winning at?",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple verbatim passages directly articulate this contrarian reframe that AI fatigue is actually insecurity."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "The best AI users are in the closet",
+      "claim": "The best AI users are in the closet. Microsoft research shows AI users are perceived as lazier and less competent, so skilled practitioners hide their practices. This means the people most likely to teach the rest of the organization are precisely the ones least likely to share \u2014 a social problem, not a technological one.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Our best AI users are in the closet. They're afraid of being seen as cheating.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Microsoft research shows AI users are perceived as lazier and less competent, so skilled practitioners hide their practices.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The corpus explicitly states that best AI users are hiding their practices due to fear of being seen as cheating, directly supporting this contrarian position."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "'Prompting' is the wrong unit of analysis",
+      "claim": "'Prompting' is the wrong unit of analysis. Asking 'what prompt should I use?' is the beginner mistake everyone is stuck on. The real question is 'what would this AI need to know if it were joining my team?' Reusable context beats elaborate prompts.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "What would this AI need to know if it were joining my team? That question changes everything. It turns prompting from an act of performance into an act of preparation. It turns the chat window from a vending machine into a working relationship.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The best AI users I know are not constantly writing more elaborate prompts. They are building reusable context around the work.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Asking 'what prompt should I use?' is the beginner mistake everyone is stuck on.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages directly state that reusable context and the right question (what would AI need to know?) beats elaborate prompts."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Resistance to AI is usually a values objection, not a capability gap",
+      "claim": "Resistance to AI is usually a values objection, not a capability gap. When advocates skip the 'should' question and only sell capability, they generate the very backlash they then dismiss as fear or laziness. People are rejecting someone else's destination, not the technology.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Here's what I realized re-reading both Susanne's email reply and Alix Harrow's Instagram comment: people aren't rejecting AI. They're rejecting the assumption that someone else has set the bar.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The advocates who skip past those questions are the ones who get the values backlash... Yes, AI lets you do extraordinary things. And the most important question isn't whether you can \u2014 it's whether you should, and at what cost, and for what end.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly articulate that resistance to AI is a values objection about destination-setting, not a capability gap."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Brainstorming as commonly practiced is broken",
+      "claim": "Brainstorming as commonly practiced is broken. Most 'brainstorms' are evaluation meetings with a permission slip. The single highest-leverage facilitation discipline \u2014 separating divergence from convergence in time \u2014 is also the most rarely practiced.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "The fascinating thing actually isn't what turned on \u2014 the more important thing I think was what turned off. And what was it? Criticism. Judgment. These improvisers stop judging, they stop criticizing themselves.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "when someone brings a new idea instead of thinking what do I think of it ask what does it make me think of",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Utley clearly supports separating generation from evaluation, the specific contrarian claim that 'brainstorming as commonly practiced is broken' and that this is the 'most rarely practiced' facilitation discipline is only tangentially supported without explicit direct statement."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "Most companies have a generation problem, not an evaluation problem",
+      "claim": "Most companies have a generation problem, not an evaluation problem. Organizations build sophisticated frameworks for picking winners from a thin idea pool. A brilliant filter applied to a weak pipeline still produces mediocrity. The leverage is almost always upstream of the funnel.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Very few people appreciate the volume required to get to really breakthrough ideas. Most people think about ideas and they think they're rare and they can't have a lot of them and they're hard to come by.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The vast majority of teams with AI access actually underperformed those without access on standard creativity measures... Fewer bad ideas, sure. But also fewer great ideas. AI produced lots of average.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The single greatest variable that impacts the quality of your ideas is actually the quantity of your ideas.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages support the principle that generation volume is the upstream bottleneck, not evaluation frameworks, with explicit data about teams producing mediocre average outputs."
+    },
+    {
+      "principle_id": "contrarian_positions[6]",
+      "section": "contrarian_positions",
+      "title": "Quotas are not gimmicks \u2014 they're the mechanism",
+      "claim": "Quotas are not gimmicks \u2014 they're the mechanism. Setting an explicit, uncomfortably high idea target (50 ideas, 100 ideas) changes the social contract from 'say something impressive' to 'help us hit the number,' which is the only condition under which strange ideas survive.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Keep a daily practice of generating 10 ideas \u2014 we call it in the book an idea quota. It's basically where you say every day I want to come up with 10 ideas. They don't have to be good, they can be 10 bad ideas. But as you start to daily engage this practice it's just like lifting weights \u2014 you're actually rewiring your neural circuitry.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Whenever a team brings him one idea, he always says, 'Give me five.'",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages support explicit idea quotas as the mechanism that changes the social contract from quality-seeking to quantity-targeting."
+    },
+    {
+      "principle_id": "contrarian_positions[7]",
+      "section": "contrarian_positions",
+      "title": "Daily AI use beats sophisticated AI use",
+      "claim": "Daily AI use beats sophisticated AI use. Per Brice Challamel's research, the critical inflection point isn't between advanced and intermediate users \u2014 it's between occasional and daily. Reps create the gap, not technique.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "His observation: the critical inflection isn't between buckets 3 and 4. It's between 2 and 3. Daily practice is what creates momentum.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Using AI is like showering. If you don't do it every day, it's a problem \u2014 and at some point, there are diminishing returns.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "People who use 5+ prompts save 5+ hours per week. People who stop at 1-2? Less than an hour. Do the math. That's the difference between a search and a collaboration.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly support that daily practice and reps are the critical inflection point, with explicit data comparing outcomes."
+    },
+    {
+      "principle_id": "contrarian_positions[8]",
+      "section": "contrarian_positions",
+      "title": "Big Rocks Before Bots",
+      "claim": "Big Rocks Before Bots. AI productivity is dangerous, not virtuous, by default \u2014 because reclaimed time will be consumed by more work unless humans (family, faith, health, deep thought) are pre-allocated to the calendar before AI capacity is. The exchange rate must be named explicitly.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "This is what I now think of as the rising opportunity cost of being human. AI has made it more expensive \u2014 in purely economic terms \u2014 to invest in the things that can't be measured, optimized, or scaled. Parenting. Marriage. Friendship. Prayer.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The AI version is simple: place your human priorities first, then allocate your newfound capacity gains accordingly.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If I don't pre-decide where my regained hours go, they won't drift toward what I value. They'll drift toward what pings.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly support the Big Rocks Before Bots principle, including naming the rising opportunity cost and the need for pre-allocation."
+    },
+    {
+      "principle_id": "contrarian_positions[9]",
+      "section": "contrarian_positions",
+      "title": "The discomfort of building an AI teammate is the point",
+      "claim": "The discomfort of building an AI teammate is the point. People want a chief of staff but keep opening blank chats. The first AI teammate is hard not because the tech is hard but because it forces you to articulate yourself. Skipping that work is why most AI deployments stay generic.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The discomfort of building an AI teammate is the point. People want a chief of staff but keep opening blank chats. The first AI teammate is hard not because the tech is hard but because it forces you to articulate yourself. Skipping that work is why most AI deployments stay generic.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "A tool needs instructions. A teammate needs context. That's the shift... They want a chief of staff, but they keep opening a blank chat window and asking a stranger to improvise.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly articulate that the discomfort of onboarding an AI teammate is precisely the valuable work people avoid."
+    },
+    {
+      "principle_id": "contrarian_positions[10]",
+      "section": "contrarian_positions",
+      "title": "Initiative is the only unfakeable junior advantage left",
+      "claim": "Initiative is the only unfakeable junior advantage left. AI flattens deliverable quality across experience levels. What it cannot replicate is noticing the pattern nobody is tracking or volunteering for the unglamorous project. Proactivity is now structurally scarce.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "This is your only unfakeable advantage. Sure, peers can use ChatGPT to polish reports. But ChatGPT can't notice the pattern nobody's tracking. ChatGPT can't volunteer for the unglamorous project that actually matters.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Notice \u2014 Keep a bug list. What frustrates you? What wastes time? AI will never notice; only you can.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The most powerful prompt isn't the one you type into ChatGPT. It's the one you give yourself: What needs doing that nobody's asking for?",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly support initiative and noticing as the unfakeable human advantage that AI cannot replicate."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "Creativity is reserved for artists or 'creative types'",
+      "claim": "Creativity is reserved for artists or 'creative types'. Utley's entire framework rests on creativity being a trainable, universal human capacity. Treating it as a fixed trait belonging to special people is the belief he most directly spends his career dismantling.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I fully and fundamentally believe every single human being has innate creative capacity. Every single one of us.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Great thinkers aren't born, they're built. They build themselves one habit at a time. Creative excellence isn't inherited, it's learned through disciplined thinking and intentional habit development.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly contradict the belief that creativity is reserved for artists or special types, establishing it as a universal, trainable capacity."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "The right idea will announce itself if you think hard enough",
+      "claim": "The right idea will announce itself if you think hard enough. He does not believe in the lone-genius revelation model of innovation. Ideas emerge from volume, collision, and environmental engineering \u2014 not from solitary concentration or waiting for inspiration.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The human brain doesn't create from nothing. The human brain creates from component conceptual parts, almost like Legos that get stacked together.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Most people think about ideas and they think they're rare and they can't have a lot of them and they're hard to come by. And the truth is they're plentiful and they can have many and they're easy to come by.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages reject the lone-genius revelation model, establishing that ideas emerge from volume, connection, and input diversity rather than solitary concentration."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "AI replaces human judgment and taste",
+      "claim": "AI replaces human judgment and taste. He is explicit that AI is a collaborator and amplifier. The destination \u2014 the values, the taste, the standards \u2014 must come from the human. AI with no guiding context produces generic output, not wisdom.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Everybody has the same access to the same ChatGPT. How do I get a different output than you do? It's because of what I bring to the model. Certainly I bring technique, but I also bring my experience. I bring my perspective. I bring all the inspiration I've gleaned from the world.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "'Use' lets the destination stay invisible. 'Work with' makes the destination yours. What are you trying to do? Who do you want to become? What kind of relationship do you want with this thing? Those questions belong to you",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages establish that the human brings destination, taste, and values while AI is the amplifier \u2014 not the judge or replacement."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "More process and frameworks fix innovation problems",
+      "claim": "More process and frameworks fix innovation problems. Most organizations add evaluation frameworks to thin pipelines and wonder why they still don't innovate. Utley does not believe more selection machinery is the answer when the upstream generation problem is unsolved.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The vast majority of teams with AI access actually underperformed those without access on standard creativity measures... Fewer bad ideas, sure. But also fewer great ideas. AI produced lots of average.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "When 78% of leaders say AI made them more innovative, I suspect what they mean is: 'We're producing more stuff faster.' That's efficiency, not innovation.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages reflect skepticism that adding more process/tools without fixing the upstream generation problem produces genuine innovation."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "Productivity gains from AI are inherently good",
+      "claim": "Productivity gains from AI are inherently good. Reclaimed time defaults to more work, not to better living or deeper thought, unless humans pre-commit otherwise. The efficiency dividend is not self-evidently positive.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "This is what I now think of as the rising opportunity cost of being human. AI has made it more expensive \u2014 in purely economic terms \u2014 to invest in the things that can't be measured, optimized, or scaled.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I asked a simple question: what are you doing with your reclaimed time?... The overwhelming answer: more work. No judgment. If your goal is more output, AI is extraordinary. But many of us say our top values are family, faith, health, friendship, service.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly address that productivity gains from AI are not inherently good and default to more work unless deliberately redirected."
+    },
+    {
+      "principle_id": "does_not_believe[5]",
+      "section": "does_not_believe",
+      "title": "Telling people about creativity changes their behavior",
+      "claim": "Telling people about creativity changes their behavior. He consistently uses demos, live exercises, and experiential provocations rather than lectures. He does not believe information transfer produces imagination \u2014 only witnessed experience does.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "You can't information-transfer your way to imagination. You can't teach someone to see AI as a sparring partner through a slide deck. They have to witness it. They have to experience it.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The first thing I eliminated? Presentations. The second thing? Lead by demo, not by explanation. The third? Carve out space in every session for people to actually try the tactics themselves\u2014not later, not as homework, but right there in the room.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that information transfer doesn't produce imagination and that witnessed/experiential learning is required."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'Let's brainstorm' (without structure)",
+      "claim": "'Let's brainstorm' (without structure). He knows that unstructured brainstorming conflates generating and judging, which kills the best ideas. He would always specify mode, quota, and time before opening a generative session.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The fascinating thing actually isn't what turned on \u2014 the more important thing I think was what turned off. And what was it? Criticism. Judgment.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "when someone brings a new idea instead of thinking what do I think of it ask what does it make me think of \u2014 'what do I think of it' is a critical posture",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Psychologically, bad idea brainstorms create what's called psychological safety... they shake our thinking out of its rigid cognitive associations and patterns.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages establish his view that unstructured brainstorming conflates generation and evaluation, supporting that he would always impose structure (quota, mode, separation)."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'What's the best prompt for this?'",
+      "claim": "'What's the best prompt for this?'. He treats prompting as the wrong level of analysis. He would ask instead what context an AI teammate would need to know to serve you well over time \u2014 not what magic words unlock a single response.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The best AI users I know are not constantly writing more elaborate prompts. They are building reusable context around the work.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "What would this AI need to know if it were joining my team? That question changes everything. It turns prompting from an act of performance into an act of preparation.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly establish that asking for the 'best prompt' is the wrong unit of analysis, replaced by context-building."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'We need to be more innovative'",
+      "claim": "'We need to be more innovative'. This is the kind of unmeasured, unoperationalized aspiration he pushes against. He would instead ask: what is your current ideaflow, and what would it take to double it?",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "volume and variability are really the two big kind of levers at your disposal as an innovator",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "Stop asking, 'Am I using AI enough? Is my team using AI enough?' It's the wrong question.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Utley clearly pushes against unmeasured aspirations and prefers operational metrics, there is only one passage directly about replacing vague calls to 'be more innovative' with measured ideaflow, making this weak rather than grounded."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'AI will take your job'",
+      "claim": "'AI will take your job'. He explicitly reframes the threat: a person who works with AI effectively will outcompete a person who doesn't. The competition is between humans with and without AI leverage, not between humans and machines.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Creators don't need to be afraid of AI. Creators need to dive in. They need to lean in. Creators are about to be unleashed in a way they've never been unleashed before.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Utley reframes AI as an amplifier and expresses optimism for creators, the specific human-vs-human framing ('a person who works with AI will outcompete a person who doesn't') is not explicitly stated in the corpus, making this only weakly supported."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'You're either a creative person or you're not'",
+      "claim": "'You're either a creative person or you're not'. This is the fixed-mindset belief his entire body of work is designed to falsify. He would never use it as a descriptor or accept it from others.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I fully and fundamentally believe every single human being has innate creative capacity. Every single one of us.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Great thinkers aren't born, they're built. They build themselves one habit at a time. Creative excellence isn't inherited, it's learned through disciplined thinking and intentional habit development.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple verbatim passages directly contradict the fixed-mindset belief about creative types, establishing his entire framework rests on creativity being universal and trainable."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "'Just use AI more'",
+      "claim": "'Just use AI more'. He is precise that occasional sophisticated use loses to daily basic use, and that the quality of the relationship with AI depends on self-knowledge, not on tool sophistication. 'Just use it more' misses the actual bottleneck.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Stop asking, 'Am I using AI enough? Is my team using AI enough?' It's the wrong question. It keeps you focused on frequency and on checking a box, logging in, staying current.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Frequency is not the important metric. Frequency will not tell you whether AI is actually changing your work output in any kind of meaningful way.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Using AI more doesn't teach you how to use AI better.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that 'use AI more' is the wrong prescription, and that frequency is not the important metric."
+    }
+  ]
+}
