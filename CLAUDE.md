@@ -71,6 +71,11 @@ brainsfor/
       brain.json                     ← config (clusters, skill examples, Supabase refs)
       synthesis.md                   ← thinking analysis layer
       source/                        ← raw inputs + brain-specific scripts
+        sources.json                 ← URL/title/type/priority list (Phase 0 output)
+        transcripts/*.json           ← YouTube transcripts (ingest-youtube.py output, has full_text)
+        raw/*.md                     ← Firecrawl-scraped blog/podcast/Substack text + _index.json
+                                       (audit-brains.py reads these for Quote Verifiability;
+                                       backfill older brains via scripts/backfill-raw-sources.py)
         extracted-insights.md
         export-direct.py             ← Supabase direct fetch
         visual-prototype.html

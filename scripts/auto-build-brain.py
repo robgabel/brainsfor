@@ -24,6 +24,7 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
 """
 
 import argparse
+import hashlib
 import importlib
 import json
 import os
@@ -37,6 +38,7 @@ import uuid
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Optional
 
 # --- Paths ---
 SCRIPT_DIR = Path(__file__).parent
@@ -702,6 +704,46 @@ Return ONLY the JSON array."""
     return atoms
 
 
+def raw_source_filename(source: dict) -> str:
+    """Stable filename for source/raw/ entries: slug(title)_sha8(url).md.
+    Stable across re-runs so backfill + builds don't duplicate."""
+    title = source.get("title", "untitled")
+    url = source.get("url", "")
+    title_slug = slugify(title)[:60] or "untitled"
+    url_hash = hashlib.sha1(url.encode("utf-8")).hexdigest()[:8]
+    return f"{title_slug}_{url_hash}.md"
+
+
+def persist_raw_text(
+    brain_dir: Path, source: dict, markdown: str, scraped_at: Optional[str] = None
+) -> Path:
+    """Write raw scraped markdown to source/raw/ and append to _index.json.
+    Idempotent — same source URL maps to same filename.
+    Returns the path written.
+    """
+    raw_dir = brain_dir / "source" / "raw"
+    raw_dir.mkdir(parents=True, exist_ok=True)
+    filename = raw_source_filename(source)
+    fp = raw_dir / filename
+    fp.write_text(markdown, encoding="utf-8")
+
+    index_path = raw_dir / "_index.json"
+    try:
+        index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else {}
+    except Exception:
+        index = {}
+    index[source.get("url", "")] = {
+        "filename": filename,
+        "title": source.get("title", ""),
+        "type": source.get("type", ""),
+        "priority": source.get("priority", ""),
+        "scraped_at": scraped_at or datetime.now(timezone.utc).isoformat(),
+        "char_count": len(markdown),
+    }
+    index_path.write_text(json.dumps(index, indent=2, sort_keys=True), encoding="utf-8")
+    return fp
+
+
 def scrape_text_sources(
     brain_json: dict,
     brain_dir: Path,
@@ -786,6 +828,12 @@ def scrape_text_sources(
             scraped_count += 1
             if len(markdown) > SCRAPE_MAX_CHARS:
                 markdown = markdown[:SCRAPE_MAX_CHARS] + "\n\n[...truncated]"
+
+            # Persist truncated markdown to source/raw/ for audit corpus + reproducibility.
+            try:
+                persist_raw_text(brain_dir, source, markdown)
+            except Exception as e:
+                warn(f"persist_raw_text failed for {url}: {e}")
 
             atoms = extract_atoms_from_text(
                 brain_json, source, markdown, client, cost_tracker, model

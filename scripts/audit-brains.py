@@ -458,13 +458,23 @@ def load_source_corpus(brain_dir: Path) -> dict:
     """Load raw source text available for provenance/grounding checks.
 
     Returns a dict with:
-      - "youtube_text":   normalized concat of all transcripts/*.json full_text
-      - "video_count":    number of transcripts loaded
-      - "atom_pool_text": normalized concat of original_quote across video/text atoms
-                          (lower signal — round-trip from atom extraction)
-      - "any_text":       youtube_text + atom_pool_text combined for fast .find() lookups
+      - "youtube_text":      normalized concat of all transcripts/*.json full_text
+      - "blog_podcast_text": normalized concat of all source/raw/*.md (Firecrawl-scraped
+                             blog essays, podcast pages, interviews, Substack posts)
+      - "atom_pool_text":    normalized concat of original_quote across video/text atoms
+                             (lower signal — round-trip from atom extraction)
+      - "any_text":          all three concatenated, fast .find() lookup target
+      - "video_count":       number of transcripts loaded
+      - "text_source_count": number of raw markdown files loaded
     """
-    corpus = {"youtube_text": "", "atom_pool_text": "", "any_text": "", "video_count": 0}
+    corpus = {
+        "youtube_text": "",
+        "blog_podcast_text": "",
+        "atom_pool_text": "",
+        "any_text": "",
+        "video_count": 0,
+        "text_source_count": 0,
+    }
 
     transcripts_dir = brain_dir / "source" / "transcripts"
     yt_parts = []
@@ -479,6 +489,21 @@ def load_source_corpus(brain_dir: Path) -> dict:
                 yt_parts.append(ft)
                 corpus["video_count"] += 1
     corpus["youtube_text"] = normalize_text(" ".join(yt_parts))
+
+    # Blog / podcast / interview raw text persisted by auto-build-brain.py's
+    # scrape_text_sources() (or by scripts/backfill-raw-sources.py for older brains).
+    raw_dir = brain_dir / "source" / "raw"
+    raw_parts = []
+    if raw_dir.exists():
+        for rp in sorted(raw_dir.glob("*.md")):
+            try:
+                txt = rp.read_text(encoding="utf-8")
+            except Exception:
+                continue
+            if txt:
+                raw_parts.append(txt)
+                corpus["text_source_count"] += 1
+    corpus["blog_podcast_text"] = normalize_text(" ".join(raw_parts))
 
     # Atom-pool fallback: original_quote strings extracted from video/text atoms
     atom_quotes = []
@@ -497,7 +522,13 @@ def load_source_corpus(brain_dir: Path) -> dict:
                     atom_quotes.append(q)
     corpus["atom_pool_text"] = normalize_text(" ".join(atom_quotes))
 
-    corpus["any_text"] = corpus["youtube_text"] + " ||| " + corpus["atom_pool_text"]
+    corpus["any_text"] = (
+        corpus["youtube_text"]
+        + " ||| "
+        + corpus["blog_podcast_text"]
+        + " ||| "
+        + corpus["atom_pool_text"]
+    )
     return corpus
 
 
@@ -559,16 +590,21 @@ def check_quote_provenance(brain_dir: Path, audit: BrainAudit):
         audit.scores["provenance"] = 0.0
         audit.stats["quoted_atoms"] = 0
         audit.stats["verified_youtube"] = 0
+        audit.stats["verified_blog_podcast"] = 0
         audit.stats["verified_atom_pool"] = 0
         audit.stats["unverified_quotes"] = 0
         return
 
     corpus = load_source_corpus(brain_dir)
     yt = corpus["youtube_text"]
+    raw = corpus["blog_podcast_text"]
     pool = corpus["atom_pool_text"]
+    audit.stats["youtube_transcript_count"] = corpus["video_count"]
+    audit.stats["raw_source_count"] = corpus["text_source_count"]
 
-    strong = 0
-    weak = 0
+    strong_yt = 0           # found in YouTube transcripts
+    strong_blog = 0         # found in blog/podcast scrape (source/raw/)
+    weak = 0                # only round-trip via atom-pool
     unverified = 0
     unverified_examples = []
     for a in quoted:
@@ -577,7 +613,9 @@ def check_quote_provenance(brain_dir: Path, audit: BrainAudit):
             unverified += 1
             continue
         if yt and sig in yt:
-            strong += 1
+            strong_yt += 1
+        elif raw and sig in raw:
+            strong_blog += 1
         elif pool and sig in pool:
             weak += 1
         else:
@@ -585,15 +623,17 @@ def check_quote_provenance(brain_dir: Path, audit: BrainAudit):
             if len(unverified_examples) < 3:
                 unverified_examples.append(a.get("original_quote", "")[:80])
 
+    strong = strong_yt + strong_blog
     total_q = len(quoted)
     audit.stats["quoted_atoms"] = total_q
-    audit.stats["verified_youtube"] = strong
+    audit.stats["verified_youtube"] = strong_yt
+    audit.stats["verified_blog_podcast"] = strong_blog
     audit.stats["verified_atom_pool"] = weak
     audit.stats["unverified_quotes"] = unverified
     audit.stats["provenance_pct"] = round(100 * (strong + weak) / total_q, 1)
-    audit.stats["youtube_verified_pct"] = round(100 * strong / total_q, 1)
+    audit.stats["strong_verified_pct"] = round(100 * strong / total_q, 1)
 
-    # Score: full credit for YouTube-verified, half credit for atom-pool weak match
+    # Score: full credit for strong (YouTube OR blog/podcast scrape), half for atom-pool weak match
     score = ((strong * 1.0) + (weak * 0.5)) / total_q
     audit.scores["provenance"] = max(0.0, min(1.0, score))
 
@@ -603,15 +643,21 @@ def check_quote_provenance(brain_dir: Path, audit: BrainAudit):
         audit.issues.append(Issue("warning", "quality",
                                   f"Quote provenance at {audit.scores['provenance']:.0%} — "
                                   f"{unverified}/{total_q} atom quotes ({unv_pct}%) don't appear "
-                                  f"in YouTube transcripts or atom-pool. "
+                                  f"in source corpus (YouTube + blog/podcast + atom-pool). "
                                   f"Likely LLM-fabricated.{example_str}",
                                   f"Re-ingest with raw text persistence; or re-run synthesis only on verifiable atoms",
                                   ""))
 
-    if corpus["video_count"] == 0:
+    if corpus["video_count"] == 0 and corpus["text_source_count"] == 0:
         audit.issues.append(Issue("info", "quality",
-                                  "No YouTube transcripts in source/transcripts/ — "
-                                  "provenance check falling back to atom-pool only (weak)"))
+                                  "No raw source text in source/transcripts/ or source/raw/ — "
+                                  "provenance check falling back to atom-pool only (weak). "
+                                  "Run scripts/backfill-raw-sources.py to populate."))
+    elif corpus["text_source_count"] == 0:
+        audit.issues.append(Issue("info", "quality",
+                                  "No blog/podcast text in source/raw/ — non-YouTube quotes "
+                                  "can only weak-verify via atom-pool. "
+                                  "Run scripts/backfill-raw-sources.py to expand corpus."))
 
 
 # ---------------------------------------------------------------------------
