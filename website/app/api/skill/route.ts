@@ -3,6 +3,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
 import { loadBrainContext, loadSkillPrompt } from "@/lib/brain-context";
+import { findCitations } from "@/lib/brain-citations";
 import { SKILLS, getBrain } from "@/lib/brains";
 
 export const runtime = "nodejs";
@@ -79,13 +80,63 @@ async function checkRateLimit(
 const BREVITY_GENERIC = `HARD CONSTRAINT: Respond in exactly 4-5 sentences of plain prose. No markdown, no bold, no headers, no bullet points. Plain text only.`;
 
 const BREVITY_ENHANCED = `HARD CONSTRAINTS — FORMAT:
-- Output ONE short answer (1 sentence, 25 words max) in first person as the thinker, followed by EXACTLY 3 direct quotes.
-- Each quote MUST be verbatim from an atom's original_quote in the brain context above. Never fabricate or paraphrase.
-- Pick the 3 quotes MOST RELEVANT to the user's question, not the most famous ones.
-- Cite each quote in this exact format: "quote text here" — Source Name, Year.
-- Separate the answer and each quote with a period and a space so they render as distinct paragraphs.
-- No markdown, no bold, no headers, no bullet points, no numbering. Plain text only.
-- The answer sentence must be opinionated and specific, channeling the thinker's actual worldview — no hedging, no generic filler.`;
+
+Answer in two paragraphs, all in first person as the thinker.
+
+PARAGRAPH 1 — Your lens (1-2 sentences, ~40 words): State the belief, principle, or framework you apply to questions like this. This is HOW you think about the topic generally, not the specific answer yet. It should sound like your worldview, not generic advice. If you'd reject the question's premise, say so here.
+
+PARAGRAPH 2 — The answer (1-2 sentences, ~40 words): Apply that lens directly to the user's specific situation. Be concrete and opinionated — take a side. Do not hedge.
+
+Separate the two paragraphs with a single blank line so they render distinctly.
+
+After the two paragraphs, on a new line, output EXACTLY this marker line:
+GROUNDED ON: "verbatim atom quote one" || "verbatim atom quote two" || "verbatim atom quote three"
+
+The GROUNDED ON line contains 2-3 short verbatim quotes from atoms in the brain context. These are used internally for source attribution — they are not displayed inline to the user. Do NOT include source names, dates, citations, or commentary in this line; only the verbatim quote text in double quotes, separated by " || ".
+
+HARD RULES:
+- No hedging, no "it depends," no "consider the trade-offs."
+- No markdown, no bold, no headers, no bullets, no numbering.
+- Total visible answer (both paragraphs combined) under 90 words.
+- Quotes go ONLY in the GROUNDED ON line — never in the visible paragraphs.
+- The lens must be specific to you and recognizable as your worldview.`;
+
+// /evolve has its own format because the whole proof point of this skill is
+// "vanilla LLMs cannot do this — they don't have temporally-tagged atoms."
+// The output must show a *change* across time, not answer the question.
+const BREVITY_ENHANCED_EVOLVE = `HARD CONSTRAINTS — EVOLVE FORMAT:
+
+Your job is NOT to answer the user's question. Your job is to trace how YOUR OWN thinking on the topic in the question has CHANGED over time, using the dated atoms in the brain context above. This is the only skill in the catalog that requires temporally-tagged atoms — vanilla LLMs cannot produce this output, and the user is here specifically to see that proof.
+
+Output a 3-era timeline in first person as the thinker. Each era is its own short paragraph. No headers, no bullets, no markdown.
+
+Each era paragraph MUST follow this exact shape:
+
+[year or year range]: Then-current view in 1-2 sentences (under 30 words).
+
+Concrete example structure (do not copy the content — use your own dated material):
+2014–2017: I believed X about this topic. The reason was Y.
+
+2019–2021: I started to see that Z was the missing variable. My earlier view was incomplete because…
+
+2023–today: Now I think the real driver is W. The shift came from observing…
+
+The eras must be VISIBLY DIFFERENT in stance, vocabulary, or emphasis. If you cannot find genuine change across 3 eras in the brain context, use 2 eras instead — but the eras must still show real evolution, not paraphrases of each other.
+
+After the timeline, on a new line, output EXACTLY this marker:
+GROUNDED ON: "verbatim atom quote from earliest era" || "verbatim atom quote from middle era" || "verbatim atom quote from most recent era"
+
+Each grounding quote MUST come from an atom whose source_date is in the corresponding era. The GROUNDED ON line is hidden from the user and used only for source attribution. Do not include source names or dates in this line.
+
+INTERPRETATION RULES:
+- If the user's question is shaped as "How has X changed?" — trace your evolution on X.
+- If the user's question is shaped as a "should I…?" or "what about X?" — pivot to "Here is how my thinking about X has changed over time." Do not answer their question directly; trace the evolution.
+- Never say "It depends on when you ask me" or other meta-evasions. Show the actual change.
+
+HARD RULES:
+- No markdown, no bold, no bullets, no numbering.
+- Total visible response under 130 words.
+- Quotes go ONLY in the GROUNDED ON line — never in the visible paragraphs.`;
 
 // The skill files below were authored for a CLI brain router. They contain
 // sections like "Brain Selection" that tell the model to read ${BRAINSFOR_HOME}
@@ -102,8 +153,15 @@ const ROUTER_OVERRIDE = `CRITICAL OVERRIDE — READ THIS BEFORE FOLLOWING THE SK
 
 const GENERIC_SYSTEM = `You are a helpful AI assistant. Answer the following question directly.\n\n${BREVITY_GENERIC}`;
 
-function buildEnhancedSystem(brainContext: string, skillPrompt: string): string {
-  return `${brainContext}\n\n---\n\n${skillPrompt}\n\n---\n\n${ROUTER_OVERRIDE}\n\n---\n\n${BREVITY_ENHANCED}`;
+function buildEnhancedSystem(
+  brainContext: string,
+  skillPrompt: string,
+  skill: string,
+): string {
+  // Per-skill format override — /evolve produces a timeline, everything else
+  // uses the default belief→application shape.
+  const format = skill === "evolve" ? BREVITY_ENHANCED_EVOLVE : BREVITY_ENHANCED;
+  return `${brainContext}\n\n---\n\n${skillPrompt}\n\n---\n\n${ROUTER_OVERRIDE}\n\n---\n\n${format}`;
 }
 
 // --- POST handler ---
@@ -182,6 +240,11 @@ export async function POST(request: NextRequest) {
       // Send remaining count
       emit({ type: "meta", remaining });
 
+      // Accumulate the enhanced response so we can run citation matching against
+      // it after streaming completes. We don't accumulate the generic side because
+      // vanilla Claude has no atoms to cite.
+      let enhancedFullText = "";
+
       const pump = async (
         systemPrompt: string,
         type: "generic" | "enhanced",
@@ -189,7 +252,9 @@ export async function POST(request: NextRequest) {
         try {
           const userMessage =
             type === "enhanced"
-              ? `[DEMO MODE: Answer in ONE short sentence (25 words max) in first person as the thinker, then quote the 3 atoms most relevant to this question verbatim. Each quote followed by "— Source, Year." Plain text only, no markdown.]\n\n${query}`
+              ? skill === "evolve"
+                ? `[DEMO MODE: Do NOT answer this question. Instead, trace how YOUR thinking on the topic in this question has CHANGED across 2-3 dated eras. Use real dated atoms from the brain context. End with a hidden GROUNDED ON: marker line with one verbatim quote per era.]\n\nTopic: ${query}`
+                : `[DEMO MODE: Answer in two paragraphs — first state YOUR LENS on this kind of question (your belief/framework), then APPLY IT to give a concrete opinionated answer. Then on a new line output the GROUNDED ON: marker with 2-3 verbatim atom quotes separated by " || ". The marker line is for source attribution and is not displayed.]\n\nQuestion: ${query}`
               : `You are ${brainName}, ${skill} me: ${query}`;
           const messageStream = client.messages.stream({
             // Canonical Python-side source of truth: scripts/auto_build_config.py
@@ -204,7 +269,9 @@ export async function POST(request: NextRequest) {
               event.type === "content_block_delta" &&
               event.delta.type === "text_delta"
             ) {
-              emit({ type, delta: event.delta.text });
+              const text = event.delta.text;
+              if (type === "enhanced") enhancedFullText += text;
+              emit({ type, delta: text });
             }
           }
         } catch (err) {
@@ -216,12 +283,24 @@ export async function POST(request: NextRequest) {
         }
       };
 
-      const enhancedSystem = buildEnhancedSystem(brainContext, skillPrompt);
+      const enhancedSystem = buildEnhancedSystem(brainContext, skillPrompt, skill);
 
       await Promise.all([
         pump(GENERIC_SYSTEM, "generic"),
         pump(enhancedSystem, "enhanced"),
       ]);
+
+      // Citation pass — runs after streaming so the network burst stays snappy.
+      // String-matches the enhanced response against the brain's atoms and
+      // emits real source URLs the client can render as clickable chips.
+      try {
+        const citations = findCitations(brain, enhancedFullText);
+        if (citations.length > 0) {
+          emit({ type: "citations", citations });
+        }
+      } catch {
+        // citations are an enhancement — never break the response on failure
+      }
 
       emit({ type: "done" });
       controller.close();

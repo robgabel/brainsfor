@@ -2,6 +2,14 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import type { SkillDemo } from "@/lib/skill-demos";
+import { BrainDropdown } from "./BrainDropdown";
+
+interface Citation {
+  quote: string;
+  url: string | null;
+  date: string | null;
+  preview: string;
+}
 
 interface BrainOption {
   slug: string;
@@ -23,10 +31,29 @@ interface SkillsPlaygroundProps {
   demos: Record<string, SkillDemo>;
   defaultBrain: string;
   defaultSkill: string;
+  /** When set, the skill picker is hidden and this skill is forced for every run. */
+  lockedSkill?: string;
+  /** Quick-fill chips rendered above the question textarea. */
+  seedQueries?: string[];
+  /** Short labels for each seedQueries entry. When omitted, the full query text
+   *  is used as the chip label (truncated). Aligned by index with seedQueries. */
+  seedQueryLabels?: string[];
+  /** Placeholder for the textarea (defaults to "Ask <brain> anything using /<skill>..."). */
+  inputPlaceholder?: string;
 }
 
 const DEFAULT_DEMO_LIMIT = process.env.NODE_ENV === "development" ? 999 : 10;
 const STORAGE_KEY = "bf-demo-count";
+
+/** Hide the trailing "GROUNDED ON: ..." marker from the visible response so it
+ *  doesn't flash on-screen while streaming. Server-side, the marker is parsed
+ *  for citation matching; the UI only renders the visible answer above it. */
+function stripGroundingMarker(text: string): string {
+  // Greedy match: as soon as we see "GROUNDED ON" anywhere, cut from there.
+  const idx = text.search(/\bGROUNDED ON\b/i);
+  if (idx < 0) return text;
+  return text.slice(0, idx).trimEnd();
+}
 
 /** Split text into sentences, respecting quotes and abbreviations.
  *  Also splits on hard newline breaks (\n\n or \n) which the model uses for paragraphs. */
@@ -85,9 +112,13 @@ export function SkillsPlayground({
   demos,
   defaultBrain,
   defaultSkill,
+  lockedSkill,
+  seedQueries,
+  seedQueryLabels,
+  inputPlaceholder,
 }: SkillsPlaygroundProps) {
   const [selectedBrain, setSelectedBrain] = useState(defaultBrain);
-  const [selectedSkill, setSelectedSkill] = useState(defaultSkill);
+  const [selectedSkill, setSelectedSkill] = useState(lockedSkill ?? defaultSkill);
 
   // Interactive query state
   const [query, setQuery] = useState("");
@@ -97,6 +128,7 @@ export function SkillsPlayground({
   const [showResult, setShowResult] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [demoCount, setDemoCount] = useState(0);
+  const [citations, setCitations] = useState<Citation[]>([]);
   const [beastMode, setBeastMode] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
   const genericScrollRef = useRef<HTMLDivElement | null>(null);
@@ -158,12 +190,16 @@ export function SkillsPlayground({
     setSelectedSkill(name);
   };
 
-  const handleRun = async () => {
-    if (!query.trim() || demoCount >= DEMO_LIMIT || isStreaming) return;
-
+  const handleRun = async (queryOverride?: string) => {
+    // Use the override when a seed chip fires us before React commits the
+    // setQuery state change — otherwise we'd send the previous query.
+    const effectiveQuery = (queryOverride ?? query).trim();
+    if (!effectiveQuery || demoCount >= DEMO_LIMIT) return;
+    // Abort any in-flight run so a fresh chip click always wins.
     cancelStream();
     setGenericText("");
     setEnhancedText("");
+    setCitations([]);
     setError(null);
     setShowResult(true);
     setIsStreaming(true);
@@ -189,7 +225,7 @@ export function SkillsPlayground({
         body: JSON.stringify({
           brain: selectedBrain,
           skill: selectedSkill,
-          query: query.trim(),
+          query: effectiveQuery,
         }),
         signal: controller.signal,
       });
@@ -236,6 +272,8 @@ export function SkillsPlayground({
               } catch {
                 // ignore
               }
+            } else if (msg.type === "citations" && Array.isArray(msg.citations)) {
+              setCitations(msg.citations);
             } else if (msg.type === "error") {
               setError(msg.message || "LLM call failed");
             }
@@ -266,77 +304,68 @@ export function SkillsPlayground({
     <div className="mx-auto max-w-[1140px] px-6">
       {/* ─── Brain Selector ─── */}
       <div className="mb-6">
-        <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted">
-          Choose a brain
-        </label>
-
-        {/* Desktop: button row */}
-        <div className="hidden flex-wrap gap-2 sm:flex">
-          {brains.map((brain) => (
-            <button
-              key={brain.slug}
-              onClick={() => handleBrainChange(brain.slug)}
-              className={`flex items-center gap-1.5 rounded-lg border px-4 py-2 text-[14px] font-medium transition-all ${
-                selectedBrain === brain.slug
-                  ? "border-brain-indigo bg-brain-indigo/5 text-brain-indigo shadow-sm"
-                  : "border-border-default bg-white text-body hover:border-border-indigo hover:text-deep-ink"
-              }`}
-            >
-              {brain.name}
-              {brain.badge && (
-                <span className="inline-flex items-center rounded-full bg-gradient-to-r from-brain-indigo to-[#8b5cf6] px-1.5 py-0.5 text-[9px] font-bold uppercase leading-none tracking-wider text-white">
-                  {brain.badge}
-                </span>
-              )}
-            </button>
-          ))}
-        </div>
-
-        {/* Mobile: native select */}
-        <select
-          value={selectedBrain}
-          onChange={(e) => handleBrainChange(e.target.value)}
-          className="block w-full rounded-lg border border-border-default bg-white px-3 py-2.5 text-[15px] font-medium text-deep-ink focus:border-brain-indigo focus:outline-none focus:ring-2 focus:ring-brain-indigo/20 sm:hidden"
-        >
-          {brains.map((brain) => (
-            <option key={brain.slug} value={brain.slug}>
-              {brain.name}{brain.badge ? ` ✦ ${brain.badge}` : ""}
-            </option>
-          ))}
-        </select>
+        <BrainDropdown
+          brains={brains}
+          selected={selectedBrain}
+          onChange={handleBrainChange}
+        />
       </div>
 
       {/* ─── Skill Selector ─── */}
-      <div className="mb-8">
-        <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted">
-          Choose a skill
-        </label>
-        <div className="flex flex-wrap gap-2">
-          {skills.map((skill) => {
-            const active = selectedSkill === skill.name;
-            return (
-              <button
-                key={skill.name}
-                onClick={() => handleSkillChange(skill.name)}
-                className={`flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[13px] font-medium transition-all ${
-                  active
-                    ? "bg-brain-indigo text-white shadow-sm"
-                    : "bg-cool-surface text-label hover:bg-brain-indigo/10 hover:text-brain-indigo"
-                }`}
-              >
-                <span>{skill.icon}</span>
-                <span>/{skill.name}</span>
-              </button>
-            );
-          })}
+      {!lockedSkill && (
+        <div className="mb-8">
+          <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted">
+            Choose a skill
+          </label>
+          <div className="flex flex-wrap gap-2">
+            {skills.map((skill) => {
+              const active = selectedSkill === skill.name;
+              return (
+                <button
+                  key={skill.name}
+                  onClick={() => handleSkillChange(skill.name)}
+                  className={`flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-[13px] font-medium transition-all ${
+                    active
+                      ? "bg-brain-indigo text-white shadow-sm"
+                      : "bg-cool-surface text-label hover:bg-brain-indigo/10 hover:text-brain-indigo"
+                  }`}
+                >
+                  <span>{skill.icon}</span>
+                  <span>/{skill.name}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* ─── Interactive Query Section ─── */}
       <div className="mb-8">
         <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted">
           Ask a question
         </label>
+        {seedQueries && seedQueries.length > 0 && (
+          <div className="mb-3 flex flex-wrap gap-2">
+            {seedQueries.map((q, i) => {
+              const label = seedQueryLabels?.[i] ?? (q.length > 60 ? q.slice(0, 57) + "…" : q);
+              return (
+                <button
+                  key={q}
+                  onClick={() => {
+                    // Fill the textarea AND auto-run — clicking a chip
+                    // should produce a new demo, not just change the input.
+                    setQuery(q);
+                    handleRun(q);
+                  }}
+                  disabled={demoCount >= DEMO_LIMIT}
+                  className="rounded-full bg-cool-surface px-3 py-1 text-xs text-label transition-all hover:bg-brain-indigo/10 hover:text-brain-indigo disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </div>
+        )}
         <textarea
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -346,7 +375,7 @@ export function SkillsPlayground({
               handleRun();
             }
           }}
-          placeholder={`Ask ${brainName} anything using /${selectedSkill}...`}
+          placeholder={inputPlaceholder ?? "Type a real question…"}
           rows={2}
           className="w-full resize-none rounded-lg border border-border-default bg-white px-4 py-3 text-[15px] text-deep-ink placeholder:text-muted/60 focus:border-brain-indigo focus:outline-none focus:ring-2 focus:ring-brain-indigo/20"
           disabled={demoCount >= DEMO_LIMIT}
@@ -443,7 +472,7 @@ export function SkillsPlayground({
             <div ref={enhancedScrollRef} className="mt-4 max-h-[400px] overflow-y-auto font-mono text-sm leading-relaxed text-[#c7d2fe]">
               {enhancedText ? (
                 <>
-                  <SentenceParagraphs text={enhancedText} />
+                  <SentenceParagraphs text={stripGroundingMarker(enhancedText)} />
                   {isStreaming && (
                     <span className="ml-0.5 inline-block animate-pulse text-brain-indigo">|</span>
                   )}
@@ -459,10 +488,55 @@ export function SkillsPlayground({
                 Claude Sonnet + {brainName}&apos;s knowledge atoms
               </p>
             )}
+
+            {/* Source-linked citations — emitted by the server after a string
+                match between the response's verbatim quotes and the brain's atoms.
+                These chips are the proof a prompt alone can't fake: real URLs
+                to the original podcast / essay / talk. */}
+            {!isStreaming && citations.length > 0 && (
+              <div className="mt-5 border-t border-[#1e1b3a] pt-4">
+                <p className="mb-2 font-mono text-[10px] uppercase tracking-wider text-[#818cf8]">
+                  Sources ({citations.length})
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {citations.map((c, i) =>
+                    c.url ? (
+                      <a
+                        key={c.url + i}
+                        href={c.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={c.quote}
+                        className="group inline-flex max-w-full items-center gap-1.5 rounded-md border border-[#1e1b3a] bg-[#1a1432] px-2.5 py-1 font-mono text-[11px] text-[#c7d2fe] transition-all hover:border-brain-indigo hover:bg-brain-indigo/20 hover:text-white"
+                      >
+                        <span className="truncate max-w-[280px]">&ldquo;{c.preview}&rdquo;</span>
+                        {c.date && (
+                          <span className="text-[#818cf8] group-hover:text-white/80">
+                            {c.date.slice(0, 4)}
+                          </span>
+                        )}
+                        <span className="text-[#6366f1] group-hover:text-white">&rarr;</span>
+                      </a>
+                    ) : (
+                      <span
+                        key={i}
+                        title={c.quote}
+                        className="inline-flex max-w-full items-center gap-1.5 rounded-md border border-[#1e1b3a] bg-[#1a1432] px-2.5 py-1 font-mono text-[11px] text-[#94a3b8]"
+                      >
+                        <span className="truncate max-w-[280px]">&ldquo;{c.preview}&rdquo;</span>
+                        {c.date && <span>{c.date.slice(0, 4)}</span>}
+                      </span>
+                    ),
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
-      ) : demo ? (
-        /* ─── Static Demo Gallery (shown when no live query has been run) ─── */
+      ) : false && demo ? (
+        /* DEPRECATED: Static Demo Gallery — kept dead-stripped below.
+           Removed per request to remove placeholder defaults so users
+           are intrigued and have to actually type a question. */
         <div
           key={`${selectedBrain}:${selectedSkill}`}
           className="grid gap-6 md:grid-cols-2 animate-in fade-in duration-300"
@@ -525,21 +599,15 @@ export function SkillsPlayground({
           </div>
         </div>
       ) : (
-        /* ─── No Demo Fallback ─── */
-        <div className="rounded-xl border border-border-default bg-cool-surface p-8 text-center">
-          <p className="font-mono text-sm text-label">
-            <span className="text-brain-indigo">/{selectedSkill}</span> +{" "}
-            <span className="font-semibold text-deep-ink">{brainName}</span>
+        /* Empty state — no canned demo. The visitor has to type to see anything. */
+        <div className="rounded-xl border border-dashed border-border-indigo/40 bg-cool-surface/50 px-6 py-16 text-center">
+          <p className="font-display text-lg font-normal tracking-tight text-deep-ink">
+            Type a question above.
           </p>
-          <p className="mt-3 text-sm text-body">
-            Type a question above and click Run to see the difference a brain
-            makes.
+          <p className="mx-auto mt-2 max-w-[460px] text-sm leading-relaxed text-body">
+            Same Claude model on both sides &mdash; one with a knowledge graph loaded,
+            one without. The difference is the point.
           </p>
-          {skillMeta && (
-            <p className="mt-4 text-xs text-muted">
-              {skillMeta.icon} {skillMeta.title} &mdash; {skillMeta.desc}
-            </p>
-          )}
         </div>
       )}
     </div>

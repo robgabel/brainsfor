@@ -24,11 +24,11 @@ export default function SkillsPage() {
       <section className="px-6 pb-8 pt-20 md:pt-28">
         <div className="mx-auto max-w-[900px] text-center">
           <h1 className="font-display text-4xl font-light leading-[1.05] tracking-[-1.2px] text-deep-ink md:text-[48px]">
-            Try the skills.
+            Pick a brain. Pick a skill.
           </h1>
           <p className="mx-auto mt-5 max-w-[640px] text-lg leading-relaxed text-body">
-            Pick a brain. Pick a skill. See what structured knowledge does to
-            your AI.
+            See what only a knowledge graph can do &mdash; temporal evolution,
+            typed connections, and source-cited voice that no prompt alone can fake.
           </p>
         </div>
       </section>
@@ -51,16 +51,27 @@ export default function SkillsPage() {
             8 thinking skills per brain
           </h2>
           <p className="mx-auto mt-3 max-w-[640px] text-center text-base text-body">
-            Not just data. Interactive reasoning modes that chain into workflows.
+            The top row only works with a brain loaded. The bottom row works better with one.
           </p>
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {SKILLS.map((skill) => (
               <div
                 key={skill.name}
-                className="group rounded-lg border border-border-default bg-white p-4 transition-all hover:border-border-indigo hover:shadow-brain"
+                className={`group rounded-lg border bg-white p-4 transition-all hover:shadow-brain ${
+                  skill.uniqueToBrains
+                    ? "border-border-indigo hover:border-brain-indigo"
+                    : "border-border-default hover:border-border-indigo"
+                }`}
               >
-                <div className="text-2xl">{skill.icon}</div>
+                <div className="flex items-start justify-between">
+                  <div className="text-2xl">{skill.icon}</div>
+                  {skill.uniqueToBrains && (
+                    <span className="inline-flex items-center rounded-full bg-brain-indigo/10 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-brain-indigo">
+                      Only with a brain
+                    </span>
+                  )}
+                </div>
                 <p className="mt-2 font-mono text-sm font-medium text-deep-ink">
                   /{skill.name}
                 </p>

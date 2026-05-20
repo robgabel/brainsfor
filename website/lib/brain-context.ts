@@ -34,6 +34,34 @@ export function loadBrainContext(slug: string): string {
   return content;
 }
 
+// Returns the brain's first-person voice intro (the "hear them think" snippet
+// shown above the fold on /brains/[slug]). Returns null when no intro.md has
+// been authored yet — caller falls back to brain.bio.
+export function loadBrainIntro(slug: string): string | null {
+  validateSlug(slug);
+
+  const cacheKey = `intro:${slug}`;
+  const cached = contextCache.get(cacheKey);
+  if (cached !== undefined) return cached || null;
+
+  const localPath = path.join(BRAINS_DIR, slug, "pack", "intro.md");
+  const vercelPath = path.join(BRAINS_DIR, slug, "intro.md");
+  const filePath = fs.existsSync(localPath)
+    ? localPath
+    : fs.existsSync(vercelPath)
+      ? vercelPath
+      : null;
+
+  if (!filePath) {
+    contextCache.set(cacheKey, "");
+    return null;
+  }
+
+  const content = fs.readFileSync(filePath, "utf-8").trim();
+  contextCache.set(cacheKey, content);
+  return content || null;
+}
+
 export function loadSkillPrompt(slug: string, skill: string): string {
   validateSlug(slug);
   validateSlug(skill);

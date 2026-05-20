@@ -1,7 +1,10 @@
-import { getBrain, BRAINS, SKILLS } from "@/lib/brains";
+import { getBrain, BRAINS, SKILLS, getLiveBrains } from "@/lib/brains";
+import { loadBrainIntro } from "@/lib/brain-context";
+import { getAllDemos } from "@/lib/skill-demos";
 import { InstallCommand } from "@/components/InstallCommand";
 import { GetBrainButton } from "@/components/GetBrainButton";
 import { SkillBadge } from "@/components/SkillBadge";
+import { SkillsPlayground } from "@/components/SkillsPlayground";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -25,6 +28,17 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
   if (!brain) notFound();
 
   const isLive = brain.status === "live";
+  const intro = isLive ? loadBrainIntro(slug) : null;
+
+  // Pin the inline playground to this brain so visitors can hear it speak
+  // before they install. Reuses the same component as the homepage + /skills.
+  const allLiveBrains = getLiveBrains().map((b) => ({
+    slug: b.slug,
+    name: b.name,
+    badge: b.badge,
+  }));
+  const pinnedBrain = allLiveBrains.filter((b) => b.slug === slug);
+  const demos = getAllDemos();
 
   return (
     <>
@@ -55,7 +69,19 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
                 )}
               </div>
               <p className="mt-1 font-mono text-sm text-muted">{brain.source}</p>
-              <p className="mt-4 text-base leading-relaxed text-body">{brain.bio}</p>
+
+              {/* Voice intro — first-person snippet pulled from pack/intro.md.
+                  Falls back to the brain bio when no intro has been authored. */}
+              {intro ? (
+                <blockquote className="mt-5 border-l-[3px] border-brain-indigo bg-indigo-mist/40 px-5 py-4 italic text-deep-ink">
+                  &ldquo;{intro}&rdquo;
+                  <span className="mt-2 block text-xs not-italic text-muted">
+                    &mdash; {brain.name}, in their own voice
+                  </span>
+                </blockquote>
+              ) : (
+                <p className="mt-4 text-base leading-relaxed text-body">{brain.bio}</p>
+              )}
 
               {/* Topics */}
               <div className="mt-4 flex flex-wrap gap-1.5">
@@ -64,7 +90,8 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
                 ))}
               </div>
 
-              {/* Stats row */}
+              {/* Stats row — kept as evidence of depth but framed as "what's
+                  inside" rather than the headline. */}
               {isLive && (
                 <div className="mt-6 flex gap-8">
                   {[
@@ -115,6 +142,27 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
           </div>
         </div>
       </section>
+
+      {/* ─── Inline live demo (pinned to this brain) ─── */}
+      {isLive && pinnedBrain.length > 0 && (
+        <section className="px-6 pb-12">
+          <div className="mx-auto max-w-[1140px]">
+            <h2 className="mb-2 font-display text-2xl font-normal tracking-[-0.5px] text-deep-ink">
+              Ask {brain.name} something.
+            </h2>
+            <p className="mb-6 text-sm text-body">
+              Same Claude model on both sides. The right side has {brain.name}&rsquo;s knowledge graph loaded.
+            </p>
+            <SkillsPlayground
+              brains={pinnedBrain}
+              skills={SKILLS}
+              demos={demos}
+              defaultBrain={slug}
+              defaultSkill="advise"
+            />
+          </div>
+        </section>
+      )}
 
       {/* ─── Brain Explorer (iframe) ─── */}
       {isLive && (

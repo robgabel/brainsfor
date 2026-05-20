@@ -1,0 +1,1 @@
+The first mile of anything you build is where new users decide if you're worth their attention — most of you treat it as an afterthought, which is why most of you lose. The work itself happens in the messy middle, but the meta-skill is taste: knowing what to cut, what to keep, and when "interesting" beats "complete."

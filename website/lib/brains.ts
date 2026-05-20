@@ -83,7 +83,9 @@ function loadBrains(): Brain[] {
       price: config.website?.price ?? 29,
       topics: config.website?.topics ?? [],
       packPath: entry.pack_path,
-      badge: config.badge,
+      // Badges (V1/V2/NEW/Draft) are intentionally suppressed site-wide.
+      // The data still lives in brain.json — we just don't render it.
+      badge: undefined,
     };
   });
 }
@@ -102,15 +104,19 @@ export function getLiveBrains(): Brain[] {
   return BRAINS.filter((b) => b.status === "live");
 }
 
+// Order matters: leads with the skills that are structurally impossible to fake
+// with a single prompted LLM call (evolve = temporal, connect = typed-graph,
+// surprise = curated-atom retrieval). /advise is most prompt-replicable so it
+// goes last. `uniqueToBrains` controls the "Only with a brain" badge on /skills.
 export const SKILLS = [
-  { name: "advise", title: "Advise", desc: "Strategic counsel on your decisions", icon: "\u{1F9ED}", workflow: "Decision" },
-  { name: "teach", title: "Teach", desc: "Learn concepts through their lens", icon: "\u{1F4D6}", workflow: "Learning" },
-  { name: "debate", title: "Debate", desc: "Stress-test ideas or pit positions head-to-head", icon: "\u2694\uFE0F", workflow: "Decision" },
-  { name: "connect", title: "Connect", desc: "Find unexpected bridges or synthesize ideas", icon: "\u{1F517}", workflow: "Creative" },
-  { name: "evolve", title: "Evolve", desc: "Track how their thinking changed over time", icon: "\u{1F4C8}", workflow: "Learning" },
-  { name: "surprise", title: "Surprise", desc: "Surface an unexpected insight", icon: "\u2728", workflow: "Creative" },
-  { name: "coach", title: "Coach", desc: "No answers \u2014 just the questions they\u2019d ask you", icon: "\u{1FA9E}", workflow: "Decision" },
-  { name: "predict", title: "Predict", desc: "Trace second and third-order effects", icon: "\u{1F52E}", workflow: "Forecast" },
+  { name: "evolve", title: "Evolve", desc: "Watch a thinker change their mind across time \u2014 dated quotes, in order.", icon: "\u{1F4C8}", workflow: "Learning", uniqueToBrains: true },
+  { name: "connect", title: "Connect", desc: "Find a typed bridge between two ideas in the graph.", icon: "\u{1F517}", workflow: "Creative", uniqueToBrains: true },
+  { name: "surprise", title: "Surprise", desc: "Curated atom you didn\u2019t go looking for.", icon: "\u2728", workflow: "Creative", uniqueToBrains: true },
+  { name: "predict", title: "Predict", desc: "Cascade second and third-order effects from their worldview.", icon: "\u{1F52E}", workflow: "Forecast", uniqueToBrains: false },
+  { name: "coach", title: "Coach", desc: "Sequential Socratic questions in their voice.", icon: "\u{1FA9E}", workflow: "Decision", uniqueToBrains: false },
+  { name: "debate", title: "Debate", desc: "Stress-test a position from their actual stance.", icon: "\u2694\uFE0F", workflow: "Decision", uniqueToBrains: false },
+  { name: "teach", title: "Teach", desc: "Concepts through their lens, in their frameworks.", icon: "\u{1F4D6}", workflow: "Learning", uniqueToBrains: false },
+  { name: "advise", title: "Advise", desc: "Counsel grounded in the brain\u2019s atoms.", icon: "\u{1F9ED}", workflow: "Decision", uniqueToBrains: false },
 ];
 
 export const TIERS = [

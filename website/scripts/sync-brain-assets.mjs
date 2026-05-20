@@ -17,7 +17,7 @@ if (!fs.existsSync(indexPath)) {
 }
 const index = JSON.parse(fs.readFileSync(indexPath, "utf-8"));
 
-const ASSETS = ["explore.html", "brain-atoms.json", "brain-atoms.js", "brain-context.md", "SKILL.md", "README.md", "INTEGRATION-GUIDE.md"];
+const ASSETS = ["explore.html", "brain-atoms.json", "brain-atoms.js", "brain-context.md", "SKILL.md", "README.md", "INTEGRATION-GUIDE.md", "intro.md"];
 const SKILL_NAMES = [
   "advise",
   "teach",

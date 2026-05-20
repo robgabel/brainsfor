@@ -1,20 +1,44 @@
-import { BRAINS, SKILLS } from "@/lib/brains";
+import { BRAINS, SKILLS, getLiveBrains } from "@/lib/brains";
+import { getAllDemos } from "@/lib/skill-demos";
 import { BrainCard } from "@/components/BrainCard";
 import { InstallCommand } from "@/components/InstallCommand";
 import { RequestBrainForm } from "@/components/RequestBrainForm";
+import { LivePlayground } from "@/components/LivePlayground";
 import Link from "next/link";
 
 export default function Home() {
+  const liveBrains = getLiveBrains().map((b) => ({
+    slug: b.slug,
+    name: b.name,
+    badge: b.badge,
+  }));
+  const demos = getAllDemos();
+  // Default the homepage to Scott Belsky — he's the showcase brain. Falls back
+  // to the first live brain if Belsky isn't installed.
+  const preferredHero =
+    liveBrains.find((b) => b.slug === "scott-belsky")?.slug ??
+    liveBrains[0]?.slug ??
+    "";
+  // Seed the Board tab with five strong, diverse voices when available.
+  const defaultBoardBrains = [
+    "scott-belsky",
+    "charlie-munger",
+    "paul-graham",
+    "steve-jobs",
+    "peter-attia",
+  ].filter((s) => liveBrains.some((b) => b.slug === s));
+
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="px-6 pb-20 pt-20 md:pt-28">
+      <section className="px-6 pb-12 pt-20 md:pt-28">
         <div className="mx-auto max-w-[900px] text-center">
           <h1 className="font-display text-4xl font-light leading-[1.05] tracking-[-1.5px] text-deep-ink md:text-[56px]">
             Load a genius into your AI.
           </h1>
-          <p className="mx-auto mt-5 max-w-[620px] text-lg leading-relaxed text-body">
-            Knowledge graphs of the world&apos;s best thinkers, packaged as 8 AI skills. Installs in seconds.
+          <p className="mx-auto mt-5 max-w-[640px] text-lg leading-relaxed text-body">
+            Knowledge graphs of the world&apos;s best thinkers &mdash; in their voice,
+            with their evidence, citing their sources. The things a prompt alone can&rsquo;t fake.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4">
@@ -24,31 +48,53 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/brains"
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="#try-it"
               className="rounded-lg bg-brain-indigo px-6 py-3 text-[15px] font-semibold text-white shadow-brain-cta transition-all hover:bg-indigo-hover active:scale-[0.98]"
             >
-              Browse Brains
-            </Link>
+              Try it live &darr;
+            </a>
             <Link
-              href="/brains/scott-belsky"
+              href="/brains"
               className="rounded-lg border-[1.5px] border-indigo-soft bg-transparent px-6 py-3 text-[15px] font-semibold text-brain-indigo transition-all hover:bg-brain-indigo/5 hover:border-brain-indigo"
             >
-              View Demo
+              Browse {liveBrains.length} brains
             </Link>
           </div>
         </div>
+      </section>
+
+      {/* ─── Live Playground (3 tabs: voice / evolve / board) ─── */}
+      <section id="try-it" className="px-6 pb-20 pt-4 scroll-mt-20">
+        <div className="mx-auto mb-10 max-w-[900px] text-center">
+          <h2 className="font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
+            Three things your LLM can&rsquo;t do.
+          </h2>
+          <p className="mx-auto mt-3 max-w-[680px] text-base text-body">
+            Each tab below is a different proof point. None of them are imitations of vanilla
+            Claude with a clever prompt &mdash; they rely on the knowledge graph, the temporal data,
+            or the multi-brain orchestration that ships with every brain pack.
+          </p>
+        </div>
+
+        <LivePlayground
+          brains={liveBrains}
+          skills={SKILLS}
+          demos={demos}
+          defaultBrain={preferredHero}
+          defaultBoardBrains={defaultBoardBrains}
+        />
       </section>
 
       {/* ─── Brain Catalog Preview ─── */}
       <section className="bg-warm-paper px-6 py-20">
         <div className="mx-auto max-w-[1140px]">
           <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
-            Available brains
+            {liveBrains.length} minds, ready to install
           </h2>
           <p className="mx-auto mt-3 max-w-[640px] text-center text-base text-body">
-            Explore before you install. Every atom, connection, and insight &mdash; visible.
+            The same atoms a brain uses to answer &mdash; visible to you before you install.
           </p>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -61,60 +107,6 @@ export default function Home() {
             <Link href="/brains" className="text-sm font-semibold text-brain-indigo hover:underline">
               View all brains &rarr;
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Live Demo (side-by-side) ─── */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-[1140px]">
-          <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
-            See the difference.
-          </h2>
-          <p className="mx-auto mt-3 max-w-[640px] text-center text-base text-body">
-            The same question, with and without a brain loaded.
-          </p>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {/* Without brain */}
-            <div className="rounded-xl bg-deep-ink p-6">
-              <div className="mb-4 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#94a3b8]" />
-                <span className="font-mono text-xs text-[#94a3b8]">Without a brain</span>
-              </div>
-              <p className="font-mono text-sm leading-relaxed text-[#94a3b8]">
-                <span className="text-[#e2e8f0]">&gt; Should I raise my Series A or stay bootstrapped?</span>
-              </p>
-              <div className="mt-4 font-mono text-sm leading-relaxed text-[#64748b]">
-                It depends on your situation. Consider factors like your runway, growth rate, market opportunity, and
-                personal goals. Both paths have trade-offs. Raising can accelerate growth but dilutes ownership.
-                Bootstrapping preserves control but may limit speed...
-              </div>
-              <p className="mt-4 font-mono text-xs text-[#475569]">Generic. No frameworks. No evidence.</p>
-            </div>
-
-            {/* With brain */}
-            <div className="rounded-xl border border-border-indigo bg-deep-ink p-6">
-              <div className="mb-4 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-success" />
-                <span className="font-mono text-xs text-success">Belsky Brain V2 loaded (3 atoms, confidence: 0.95)</span>
-              </div>
-              <p className="font-mono text-sm leading-relaxed text-[#e2e8f0]">
-                &gt; /advise &quot;Should I raise my Series A or stay bootstrapped?&quot;
-              </p>
-              <div className="mt-4 font-mono text-sm leading-relaxed text-[#c7d2fe]">
-                Belsky would push you toward staying small. His core thesis is
-                &quot;revenue per employee&quot; as the new status metric &mdash; he believes
-                resourcefulness outperforms resources, and AI-native tools let
-                small teams scale ambition without proportionate headcount.
-              </div>
-              <div className="mt-3 font-mono text-xs text-[#818cf8]">
-                Sources: &quot;Scaling Without Growing&quot;, &quot;Premium of Originality&quot;, &quot;Exponential Code&quot;
-              </div>
-              <div className="mt-3 font-mono text-xs text-[#6366f1]">
-                Try /debate to stress-test &bull; /coach to find your blind spots
-              </div>
-            </div>
           </div>
         </div>
       </section>
