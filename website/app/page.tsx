@@ -65,28 +65,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Live Playground (3 tabs: voice / evolve / board) ─── */}
-      <section id="try-it" className="px-6 pb-20 pt-4 scroll-mt-20">
-        <div className="mx-auto mb-10 max-w-[900px] text-center">
-          <h2 className="font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
-            Three things your LLM can&rsquo;t do.
-          </h2>
-          <p className="mx-auto mt-3 max-w-[680px] text-base text-body">
-            Each tab below is a different proof point. None of them are imitations of vanilla
-            Claude with a clever prompt &mdash; they rely on the knowledge graph, the temporal data,
-            or the multi-brain orchestration that ships with every brain pack.
-          </p>
-        </div>
-
-        <LivePlayground
-          brains={liveBrains}
-          skills={SKILLS}
-          demos={demos}
-          defaultBrain={preferredHero}
-          defaultBoardBrains={defaultBoardBrains}
-        />
-      </section>
-
       {/* ─── Brain Catalog Preview ─── */}
       <section className="bg-warm-paper px-6 py-20">
         <div className="mx-auto max-w-[1140px]">
@@ -111,25 +89,76 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Sources & Ethics ─── */}
-      <section className="px-6 py-12">
-        <div className="mx-auto max-w-[720px] rounded-xl border border-border-default bg-cool-surface p-6 text-center">
-          <h3 className="font-display text-lg font-normal tracking-tight text-deep-ink">
-            Built from public sources only
-          </h3>
-          <p className="mx-auto mt-2 max-w-[560px] text-sm leading-relaxed text-body">
-            Every brain is derived exclusively from freely available, public resources &mdash; interviews, podcasts,
-            free newsletters, talks, and blog posts. No commercial transcripts or paywalled content.
-            Where book ideas appear, they come from public discourse: reviews, author interviews, and press coverage.
+      {/* ─── Skill Showcase ─── */}
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-[1140px]">
+          <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
+            8 thinking skills + 1 board skill per brain
+          </h2>
+          <p className="mx-auto mt-3 max-w-[640px] text-center text-base text-body">
+            Interactive reasoning modes that chain into workflows &mdash; plus /board, which fans out across brains.
+          </p>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {SKILLS.map((skill) => (
+              <div
+                key={skill.name}
+                className="group rounded-lg border border-border-default bg-white p-4 transition-all hover:border-border-indigo hover:shadow-brain"
+              >
+                <div className="text-2xl">{skill.icon}</div>
+                <p className="mt-2 font-mono text-sm font-medium text-deep-ink">/{skill.name}</p>
+                <p className="mt-1 text-xs leading-relaxed text-body">{skill.desc}</p>
+                <span className="mt-2 inline-block rounded-full bg-cool-surface px-2 py-0.5 text-[10px] font-semibold text-muted">
+                  {skill.workflow}
+                </span>
+              </div>
+            ))}
+
+            {/* Highlighted /board tile — multi-brain orchestrator */}
+            <div
+              key="board"
+              className="group rounded-lg border-2 border-brain-indigo bg-indigo-soft/20 p-4 shadow-brain transition-all hover:shadow-brain-cta"
+            >
+              <div className="text-2xl">&#x1F3DB;&#xFE0F;</div>
+              <p className="mt-2 font-mono text-sm font-semibold text-brain-indigo">/board</p>
+              <p className="mt-1 text-xs leading-relaxed text-body">
+                Convene 3&ndash;5 brains on one question. Each reasons in isolation, then a chair synthesizes.
+              </p>
+              <span className="mt-2 inline-block rounded-full bg-brain-indigo px-2 py-0.5 text-[10px] font-semibold text-white">
+                Multi-brain
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Live Playground (3 tabs: voice / evolve / board) ─── */}
+      <section id="try-it" className="px-6 pb-20 pt-4 scroll-mt-20">
+        <div className="mx-auto mb-10 max-w-[900px] text-center">
+          <h2 className="font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
+            Three things your LLM can&rsquo;t do.
+          </h2>
+          <p className="mx-auto mt-3 max-w-[680px] text-base text-body">
+            Each tab below is a different proof point. None of them are imitations of vanilla
+            Claude with a clever prompt &mdash; they rely on the knowledge graph, the temporal data,
+            or the multi-brain orchestration that ships with every brain pack.
           </p>
         </div>
+
+        <LivePlayground
+          brains={liveBrains}
+          skills={SKILLS}
+          demos={demos}
+          defaultBrain={preferredHero}
+          defaultBoardBrains={defaultBoardBrains}
+        />
       </section>
 
       {/* ─── How It Works ─── */}
       <section className="bg-warm-paper px-6 py-20">
         <div className="mx-auto max-w-[1140px]">
           <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
-            Three steps. That&apos;s it.
+            Three steps to install.
           </h2>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -147,8 +176,8 @@ export default function Home() {
               },
               {
                 step: "03",
-                title: "Use 8 thinking skills",
-                desc: "From /advise for decisions to /surprise for daily inspiration. Chain skills into workflows.",
+                title: "Use 8 thinking skills + /board",
+                desc: "From /advise for decisions to /surprise for daily inspiration, plus /board to convene multiple brains. Chain skills into workflows.",
               },
             ].map((item) => (
               <div key={item.step} className="rounded-xl bg-white p-6 shadow-brain">
@@ -166,31 +195,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ���── Skill Showcase ─── */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-[1140px]">
-          <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
-            8 thinking skills per brain
-          </h2>
-          <p className="mx-auto mt-3 max-w-[640px] text-center text-base text-body">
-            Not just data. Interactive reasoning modes that chain into workflows.
+      {/* ─── Sources & Ethics ─── */}
+      <section className="px-6 py-12">
+        <div className="mx-auto max-w-[720px] rounded-xl border border-border-default bg-cool-surface p-6 text-center">
+          <h3 className="font-display text-lg font-normal tracking-tight text-deep-ink">
+            Built from public sources only
+          </h3>
+          <p className="mx-auto mt-2 max-w-[560px] text-sm leading-relaxed text-body">
+            Every brain is derived exclusively from freely available, public resources &mdash; interviews, podcasts,
+            free newsletters, talks, and blog posts. No commercial transcripts or paywalled content.
+            Where book ideas appear, they come from public discourse: reviews, author interviews, and press coverage.
           </p>
-
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {SKILLS.map((skill) => (
-              <div
-                key={skill.name}
-                className="group rounded-lg border border-border-default bg-white p-4 transition-all hover:border-border-indigo hover:shadow-brain"
-              >
-                <div className="text-2xl">{skill.icon}</div>
-                <p className="mt-2 font-mono text-sm font-medium text-deep-ink">/{skill.name}</p>
-                <p className="mt-1 text-xs leading-relaxed text-body">{skill.desc}</p>
-                <span className="mt-2 inline-block rounded-full bg-cool-surface px-2 py-0.5 text-[10px] font-semibold text-muted">
-                  {skill.workflow}
-                </span>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
