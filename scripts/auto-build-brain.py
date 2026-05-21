@@ -975,13 +975,16 @@ def phase_2_ingest(
                     "confidence_tier": a.get("confidence_tier", "medium"),
                 }
                 sd = a.get("source_date")
+                row["source_date"] = None
                 if sd:
                     sd_str = str(sd).strip()
-                    if len(sd_str) == 9 and sd_str[4] == "-" and sd_str[:4].isdigit():
-                        row["source_date"] = f"{sd_str[:4]}-01-01T00:00:00Z"
-                    elif len(sd_str) == 4 and sd_str.isdigit():
+                    if len(sd_str) == 4 and sd_str.isdigit():
                         row["source_date"] = f"{sd_str}-01-01T00:00:00Z"
-                    elif "T" in sd_str or "-" in sd_str:
+                    elif len(sd_str) == 7 and sd_str[4] == "-" and sd_str[:4].isdigit() and sd_str[5:7].isdigit():
+                        row["source_date"] = f"{sd_str}-01T00:00:00Z"
+                    elif len(sd_str) == 10 and sd_str[4] == "-" and sd_str[7] == "-":
+                        row["source_date"] = f"{sd_str}T00:00:00Z"
+                    elif "T" in sd_str:
                         row["source_date"] = sd_str
                 rows.append(row)
 
