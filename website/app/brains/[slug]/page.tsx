@@ -5,6 +5,7 @@ import { InstallCommand } from "@/components/InstallCommand";
 import { GetBrainButton } from "@/components/GetBrainButton";
 import { SkillBadge } from "@/components/SkillBadge";
 import { SkillsPlayground } from "@/components/SkillsPlayground";
+import { SkillCatalog } from "@/components/SkillCatalog";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -167,27 +168,7 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
 
       {/* ─── Skills ─── */}
       <section className="px-6 py-16">
-        <div className="mx-auto max-w-[1140px]">
-          <h2 className="mb-2 font-display text-2xl font-normal tracking-[-0.5px] text-deep-ink">
-            8 thinking skills included
-          </h2>
-          <p className="mb-8 text-sm text-body">
-            Chain skills into workflows: Decision (/advise &rarr; /debate &rarr; /coach), Learning (/teach &rarr; /evolve &rarr; /coach), Creative (/surprise &rarr; /connect &rarr; /predict).
-          </p>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {SKILLS.map((skill) => (
-              <div
-                key={skill.name}
-                className="rounded-lg border border-border-default bg-white p-4 transition-all hover:border-border-indigo hover:shadow-brain"
-              >
-                <div className="text-2xl">{skill.icon}</div>
-                <p className="mt-2 font-mono text-sm font-medium text-deep-ink">/{skill.name}</p>
-                <p className="mt-1 text-xs leading-relaxed text-body">{skill.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <SkillCatalog showBoardTile={false} />
       </section>
 
       {/* ─── What you get ─── */}

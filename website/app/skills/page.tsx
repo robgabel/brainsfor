@@ -1,6 +1,7 @@
 import { getLiveBrains, SKILLS } from "@/lib/brains";
 import { getAllDemos, getDefaultDemo } from "@/lib/skill-demos";
 import { SkillsPlayground } from "@/components/SkillsPlayground";
+import { SkillCatalog } from "@/components/SkillCatalog";
 import Link from "next/link";
 
 export const metadata = {
@@ -33,8 +34,13 @@ export default function SkillsPage() {
         </div>
       </section>
 
+      {/* \u2500\u2500\u2500 Skill Catalog (info first, demo after) \u2500\u2500\u2500 */}
+      <section className="bg-warm-paper px-6 py-20">
+        <SkillCatalog />
+      </section>
+
       {/* \u2500\u2500\u2500 Interactive Playground \u2500\u2500\u2500 */}
-      <section className="pb-20">
+      <section className="pb-20 pt-20">
         <SkillsPlayground
           brains={liveBrains}
           skills={SKILLS}
@@ -42,49 +48,6 @@ export default function SkillsPage() {
           defaultBrain={defaultDemo.brain}
           defaultSkill={defaultDemo.skill}
         />
-      </section>
-
-      {/* \u2500\u2500\u2500 All 8 Skills Grid \u2500\u2500\u2500 */}
-      <section className="bg-warm-paper px-6 py-20">
-        <div className="mx-auto max-w-[1140px]">
-          <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
-            8 thinking skills per brain
-          </h2>
-          <p className="mx-auto mt-3 max-w-[640px] text-center text-base text-body">
-            The top row only works with a brain loaded. The bottom row works better with one.
-          </p>
-
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {SKILLS.map((skill) => (
-              <div
-                key={skill.name}
-                className={`group rounded-lg border bg-white p-4 transition-all hover:shadow-brain ${
-                  skill.uniqueToBrains
-                    ? "border-border-indigo hover:border-brain-indigo"
-                    : "border-border-default hover:border-border-indigo"
-                }`}
-              >
-                <div className="flex items-start justify-between">
-                  <div className="text-2xl">{skill.icon}</div>
-                  {skill.uniqueToBrains && (
-                    <span className="inline-flex items-center rounded-full bg-brain-indigo/10 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-brain-indigo">
-                      Only with a brain
-                    </span>
-                  )}
-                </div>
-                <p className="mt-2 font-mono text-sm font-medium text-deep-ink">
-                  /{skill.name}
-                </p>
-                <p className="mt-1 text-xs leading-relaxed text-body">
-                  {skill.desc}
-                </p>
-                <span className="mt-2 inline-block rounded-full bg-cool-surface px-2 py-0.5 text-[10px] font-semibold text-muted">
-                  {skill.workflow}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* \u2500\u2500\u2500 CTA \u2500\u2500\u2500 */}
