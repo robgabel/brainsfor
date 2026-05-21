@@ -20,6 +20,7 @@ test-*-output/
 # build-progress.json IS committed — required for --resume to work across remote runs
 brains/.*-build.log
 brains/*-build.log
+brains/*/build*.log
 
 # Large generated files (keep in repo for now, revisit with LFS later)
 # brain-atoms.json
