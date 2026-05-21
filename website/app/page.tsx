@@ -37,14 +37,13 @@ export default function Home() {
             Load a genius into your AI.
           </h1>
           <p className="mx-auto mt-5 max-w-[640px] text-lg leading-relaxed text-body">
-            Knowledge graphs of the world&apos;s best thinkers &mdash; in their voice,
-            with their evidence, citing their sources. The things a prompt alone can&rsquo;t fake.
+            The reasoning a prompt can&rsquo;t fake. The taste a model can&rsquo;t learn.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4">
             <InstallCommand />
             <p className="font-mono text-xs text-muted">
-              Works with Claude Code, Cursor, Gemini CLI, and more
+              Works with Claude Code, Hermes, OpenClaw, Cursor and more
             </p>
           </div>
 
