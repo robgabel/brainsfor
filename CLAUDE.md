@@ -10,6 +10,22 @@ Do NOT create or save files to a standalone `Brainsfor` Cowork mount, `~/.claude
 
 BrainsFor is a product: packaged "brain packs" — curated knowledge sets from notable thinkers (starting with Scott Belsky) that users install into AI assistants. Each brain ships with 8 thinking skills (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`).
 
+## Brain Status Values
+
+Every brain in `brains/index.json` has a `status` field. Two values are in use today:
+
+| Status | On brainsforfree.com | MCP / local skills | Supabase tables | When to use |
+|---|---|---|---|---|
+| `live` | Yes — public `/brains/<slug>` page | Yes | Yes (populated) | Default for shipped brains |
+| `hidden` | **No** — filtered out by `website/lib/brains.ts` | Yes | Yes (populated) | Private brains (Rob-only) or pre-launch packs |
+
+**Rules:**
+- Hidden brains still work locally — MCP server, `/advise <slug>`, local `explore.html` all read from `brains/<slug>/pack/`.
+- Hidden brains are NOT in `/surprise`'s random pool of public brains.
+- To make a hidden brain public: flip status to `live` in `index.json`, copy pack into `website/public/brains/<slug>/`, redeploy.
+- To hide a public brain: flip status to `hidden`, remove from `website/public/brains/<slug>/`, redeploy.
+- When asked "what brains are shipped?" — count live only. When asked "what brains exist?" — count both.
+
 ## Directory Structure (v2)
 
 ```
@@ -95,22 +111,29 @@ brainsfor/
 ## Key Dependencies
 
 - **Supabase project:** `uzediwokyshjbsymevtp` (same as PAOS)
-- **Tables (16 brain packs built; 14 live in Supabase — per-brain schema):**
-  - `<slug>_atoms` — e.g. `scott_belsky_atoms` (284 atoms), `dario_amodei_atoms` (353), `peter_zeihan_atoms` (362 — pack re-exported to match DB), `paul_graham_atoms` (213), `steve_jobs_atoms` (170), etc. Columns: `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
-  - `<slug>_connections` — typed relationships (supports, contradicts, extends, related). Largest in Supabase: `brene_brown_connections` (2,035), `gary_vee_connections` (1,850), `dario_amodei_connections` (1,842), `jensen_huang_connections` (1,622), `steve_jobs_connections` (1,618), `elon_musk_connections` (1,563), `scott_belsky_connections` (1,515), `peter_zeihan_connections` (1,503), `john_green_connections` (1,301), `sun_tzu_connections` (1,283), `charlie_munger_connections` (1,262), `hank_green_connections` (1,245), `peter_attia_connections` (1,220), `paul_graham_connections` (975).
-  - `brain_metadata` — 14 rows (Supabase-hosted brains; Oprah Winfrey shipped as a pack only, not yet ingested)
+- **Tables (20 brain packs built; 18 live in Supabase — per-brain schema):**
+  - `<slug>_atoms` — e.g. `scott_belsky_atoms` (284 atoms), `bill_harris_atoms` (564), `jeremy_utley_atoms` (759), `gokul_rajaram_atoms` (454), `dario_amodei_atoms` (353), `peter_zeihan_atoms` (362 — pack re-exported to match DB), `paul_graham_atoms` (213), `steve_jobs_atoms` (170), etc. Columns: `content`, `original_quote`, `implication`, `confidence_tier`, `cluster`, `topics`, `embedding`
+  - `<slug>_connections` — typed relationships (supports, contradicts, extends, related). Largest in Supabase: `jeremy_utley_connections` (2,272), `brene_brown_connections` (2,035), `dario_amodei_connections` (1,842), `shiva_rajaraman_connections` (1,815), `jensen_huang_connections` (1,622), `steve_jobs_connections` (1,618), `elon_musk_connections` (1,563), `scott_belsky_connections` (1,515), `peter_zeihan_connections` (1,503), `john_green_connections` (1,301), `sun_tzu_connections` (1,283), `charlie_munger_connections` (1,262), `hank_green_connections` (1,245), `peter_attia_connections` (1,220), `paul_graham_connections` (975), `gokul_rajaram_connections` (789 — see drift note), `bill_harris_connections` (533), `gary_vee_connections` (255 — see drift note).
+  - `brain_metadata` — 18 rows (Supabase-hosted brains; Oprah Winfrey and Sara Blakely shipped as packs only, not yet ingested)
   - `brain_requests` — 0 rows (user brain request pipeline, empty to date)
   - `cross_connections` — 17 rows, Rob ↔ brain cross-brain links
-  - `rob_atoms` / `rob_connections` — Rob's personal knowledge graph (225 / 162)
+  - `rob_atoms` / `rob_connections` — Rob's personal knowledge graph (237 / 162)
   - `scott_belsky_enrichment_log` — connection enrichment run history (mode, counts, duration, errors). Legacy `belsky_enrichment_log` table still exists from pre-rename but is unused.
   - **Known data drift:**
     - `jensen_huang` Supabase tables hold 253 atoms / 1,622 connections; pack was re-exported and now ships 253/1,000 connections (capped by the pagination bug below). Fix pagination, then re-export to surface the remaining ~622 connections.
     - `brene_brown` Supabase tables hold 283 atoms / 2,035 connections; pack was re-exported and now ships 283/1,000 connections (capped by the pagination bug below). Fix pagination, then re-export to surface the remaining ~1,035 connections.
     - No Supabase tables exist for `oprah_winfrey` — the pack (333/355) ships from `brains/oprah-winfrey/pack/` but live DB ingestion is pending. MCP server reads from pack JSON, so customer-facing skills work; `/board` and Rob-cross-connection flows that query Supabase do not.
     - No Supabase tables exist for `sara_blakely` — the pack (486/528) ships from `brains/sara-blakely/pack/` but live DB ingestion is pending. Same caveat as Oprah: MCP-backed skills work, but Supabase-backed flows miss this brain.
-    - Shipped `brain-atoms.json` files are capped at ~1000 connections because `export-brain.py` calls Supabase with a single `.execute()` (no pagination). Supabase row totals are higher (see list above) than pack totals. Fix export to paginate before next pack refresh.
+    - `gary_vee` Supabase tables hold 319 atoms / 255 connections; pack ships 246/1,850. Atoms were re-ingested (246 → 319, +73 atoms from new sources) but the connection enrichment hasn't been re-run, so old connections were wiped and only 255 remain in Supabase. Pack is stale relative to new atoms; needs re-enrichment + re-export.
+    - `shiva_rajaraman` Supabase tables hold 536 atoms / 1,815 connections; pack ships 536/419. Atoms match, but connections have grown 4x via enrichment runs since the pack was last exported. Re-export needed to surface the additional 1,396 connections. Brain remains `hidden` from brainsforfree.com.
+    - `bill_harris` is fully in Supabase (564 atoms / 533 connections, matching pack). Connection density is on the lower end pending additional enrichment runs.
+    - `gokul_rajaram` Supabase tables hold 454 atoms / 789 connections; `index.json` previously said 554/906 (now updated to match Supabase per doc-refresh on 2026-05-20). Atoms dropped ~100 and connections dropped ~117 between prior refresh and this one — flagged as a possible regression / partial re-ingestion. Pack likely needs re-export to reflect Supabase truth; verify whether the older atoms should be restored from `research/text-atoms.json` or whether the lower count is correct.
+    - `jeremy_utley` is fully in Supabase (759 atoms / 2,272 connections, matching pack and index.json). Largest brain in the catalog by both atom and connection count.
+    - `kara_swisher_atoms` and `kara_swisher_connections` tables exist in Supabase but are EMPTY (0 rows). Likely scaffolded by `auto-build-brain.py` Phase 1 (table creation) before an aborted build. NOT in `index.json` — flagged for human review on 2026-05-20. Either resume the build or drop the empty tables.
+    - Shipped `brain-atoms.json` files are capped at ~1000 connections because `export-brain.py` calls Supabase with a single `.execute()` (no pagination). Supabase row totals are higher (see list above) than pack totals. The pagination cap affects every brain with >1,000 connections in Supabase — not just jensen_huang and brene_brown listed above. Fix export to paginate before next pack refresh; ~10,000 additional connections will surface in customer-facing packs.
     - `shiva-rajaraman` is **hidden from brainsforfree.com** (private brain — Rob-only). `brains/index.json` has `"status": "hidden"`, and `website/public/brains/shiva-rajaraman/` was removed. Local use (MCP server, `/advise shiva-rajaraman`, local `explore.html`) is unaffected — pack at `brains/shiva-rajaraman/pack/` is intact. Supabase tables (`shiva_rajaraman_atoms`, `shiva_rajaraman_connections`) remain populated. Do not re-publish to the public site without confirming with Rob.
 - **Edge function:** `enrich-connections` — automated connection discovery (topic overlap + temporal + LLM). Runs daily at 11:30pm PT via pg_cron. Modes: `discover` (cron), `discover-llm` (manual), `stats`.
+- **RPC `search_brain_atoms(p_slug, p_embedding, p_k, p_min_similarity)`** — top-K atom retrieval by cosine similarity, used by `website/app/api/board/route.ts` for question-aware atom selection (mode-collapse fix, 2026-05-20). Slug-allowlisted (regex `^[a-z][a-z0-9_-]{1,60}$`), k-capped at 50, SECURITY DEFINER, anon-callable. Atoms are already public via shipped JSON packs so opening RPC read access doesn't expose new data.
 - **Export scripts** require `SUPABASE_SERVICE_KEY` — set in `~/rob-ai/.env`
 - **Voice enrichment** requires `ANTHROPIC_API_KEY` env var
 
@@ -282,6 +305,16 @@ Customer deliverable (`brains/<slug>/pack/skills/`) still ships the per-brain sk
 **Commands:** `/board <question>`, `/board set <slug1> <slug2> ...`, `/board list`, `/board clear`.
 **State:** `~/.claude/state/board.json`
 **Depends on:** `brainsfor` MCP server (selective retrieval) + Claude Code Agent tool (parallel sub-agents).
+
+### Website `/api/board` route (brainsforfree.com demo)
+
+Separate from the local `/board` skill above — this is the public board demo at brainsforfree.com. Source: [`website/app/api/board/route.ts`](website/app/api/board/route.ts). Fans out to up to 5 brains in parallel via the Anthropic SDK (Claude Sonnet 4.6 streaming), then runs a synthesis chair pass at the end. Rate-limited via Upstash (4/24h per IP), owner-bypass header for testing.
+
+**Mode-collapse fix (shipped 2026-05-20).** Pre-fix, every brain led with its canonical mental model regardless of question. Two-layer fix:
+- **Layer 1 — prompt surgery.** ANTI-DEFAULT RULE in BOARD_FORMAT explicitly forbids opening with each brain's headline tagline. `buildSystem()` reorders the system prompt so BOARD_FORMAT + question + retrieved atoms come BEFORE the full brain-context.md — by the time the model reads "Taste is the ultimate human moat", it has already been told not to lead with that.
+- **Layer 2 — question-aware atom retrieval.** [`website/lib/brain-atom-retrieval.ts`](website/lib/brain-atom-retrieval.ts) embeds the query with OpenAI `text-embedding-3-large` (1536-dim, matching the stored embeddings) and pulls top-15 atoms per brain via Supabase RPC `search_brain_atoms(p_slug, p_embedding, p_k)`. The RPC is slug-allowlisted (regex `^[a-z][a-z0-9_-]{1,60}$`), k-capped at 50, SECURITY DEFINER, anon-callable. Failure mode is graceful — empty atoms block + Layer 1 prompt alone.
+
+**Env vars:** `ANTHROPIC_API_KEY` (required), `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY` (required for Layer 2), `OPENAI_API_KEY` (required for Layer 2; without it the route logs a warning and falls back to Layer 1), `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN` (rate limiting), `OWNER_BYPASS_TOKEN` (owner-only rate-limit bypass header `x-owner-bypass`).
 
 ### Skill Design (v3 → v5 evolution)
 

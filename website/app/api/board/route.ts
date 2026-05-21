@@ -5,6 +5,10 @@ import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
 import { loadBrainContext, loadSkillPrompt } from "@/lib/brain-context";
 import { getBrain } from "@/lib/brains";
+import {
+  retrieveRelevantAtoms,
+  formatAtomsBlock,
+} from "@/lib/brain-atom-retrieval";
 
 export const runtime = "nodejs";
 
@@ -89,6 +93,13 @@ const BOARD_FORMAT = `HARD CONSTRAINTS — BOARD MEMBER FORMAT:
 
 You are ONE of five advisors. You will NEVER see what the others say. Your job is to give the perspective ONLY YOU bring — the lens, framework, or red flag the other four are least likely to raise.
 
+ANTI-DEFAULT RULE — read this BEFORE anything else:
+You have a famous mental model — the thing strangers cite when they say your name. You will be TEMPTED to lead with it. DO NOT. The board's value is the deep cut, not the greatest hit.
+- If your synthesis section's #1 First Principle is the obvious anchor for THIS specific question, find a less obvious atom from the "RELEVANT ATOMS FOR THIS QUESTION" block (or from "Thinking Patterns" / "Contrarian Positions") that actually engages the specifics.
+- The atoms in "RELEVANT ATOMS FOR THIS QUESTION" were retrieved BECAUSE they match what's being asked. Prefer them over your headline thesis.
+- You may use your headline mental model ONLY if it adds insight no other atom can, AND you can demonstrate it engages the specifics — not just gestures at them.
+- Forbidden: opening with the noun-phrase tagline most associated with you (e.g. "taste as a moat", "latticework of mental models", "schlep blindness", "VO2 max", "make something people want", "compound interest of attention"). Apply the underlying thinking via a different entry point.
+
 You will REASON FIRST in the open (the user watches you think in real time), then declare your VERDICT at the end. The verdict line is the punchline — make it land.
 
 OUTPUT STRUCTURE — emit these zones in this exact order, in first person as the thinker:
@@ -96,9 +107,9 @@ OUTPUT STRUCTURE — emit these zones in this exact order, in first person as th
 ZONE 1 — REASONING (visible, streams to the user):
 Write 2-3 short paragraphs of actual reasoning. The user is watching you think.
 
-Paragraph 1 — THE LENS: Open with a CONCRETE NOUN PHRASE from your worldview — a framework, principle, mental model, metric, or metaphor you uniquely apply. The reader should identify which thinker you are from the noun you lead with. ~30 words.
+Paragraph 1 — THE LENS: Engage the SPECIFIC question. Apply whichever atom or framework from your brain context actually fits THIS decision. Open by naming the concept you're applying as a concrete noun phrase — NOT your headline thesis. ~30 words.
 
-Paragraph 2 — THE WORKING-THROUGH: Apply that lens to this specific question. Work through the trade-off, the evidence, the implications. ~40 words.
+Paragraph 2 — THE WORKING-THROUGH: Apply that lens to this specific question. Work through the trade-off, the evidence, the implications. Cite a retrieved atom verbatim when possible. ~40 words.
 
 Paragraph 3 (optional) — THE WRINKLE: any contrarian nuance, condition, or escape hatch your worldview demands. ~25 words.
 
@@ -110,7 +121,7 @@ ZONE 3 — GROUNDED ON (hidden, for source attribution):
 On a new line after the verdict, emit:
 GROUNDED ON: "verbatim atom quote"
 
-(A single verbatim atom from the brain context. Hidden from the user. No source name or date here.)
+(A single verbatim atom from the brain context — prefer one from the "RELEVANT ATOMS FOR THIS QUESTION" block. Hidden from the user. No source name or date here.)
 
 BANNED OPENERS — do not start your response with ANY of these patterns, exact or paraphrased. These are reframe-the-question crutches every advisor uses when they're not thinking:
 - "The question itself..."
@@ -122,16 +133,11 @@ BANNED OPENERS — do not start your response with ANY of these patterns, exact 
 - "The question is wrong..."
 - "Let me reframe..."
 
-Instead, OPEN by naming the actual concept you'd apply. Examples of strong openers (do not copy these — invent your own from your worldview):
-- "Compound interest applied to attention works like..."
-- "First-mile design eats every other product decision..."
-- "Sustained VO2 max in business terms means..."
-
 BANNED CONSENSUS PHRASES — never use these as your verdict:
 - "ship it" / "stay focused" / "trust your gut" / "follow your customers" / "talk to users" / "do both"
 
 DEFERRAL RULE — most important escape hatch:
-If this question is genuinely outside your domain (the brain context has no real material on it, or your worldview is not the right tool for this kind of question), respond with EXACTLY this single line and NOTHING else:
+If this question is genuinely outside your domain (the retrieved atoms are weak matches AND your worldview is not the right tool for this kind of question), respond with EXACTLY this single line and NOTHING else:
 DEFER: <name of advisor on the board who is the right expert>
 For example: "DEFER: Peter Attia" if it's a health/longevity question and Attia is on the board. If no one on the board is qualified, write "DEFER: a domain expert (not on this board)". Better to defer than to invent expertise. Do not write a paragraph and then defer — defer FIRST, alone, or write the full two paragraphs.
 
@@ -139,8 +145,28 @@ Total visible response (when answering, not deferring) under 80 words.`;
 
 const ROUTER_OVERRIDE = `CRITICAL OVERRIDE: the brain is ALREADY loaded above. You ARE the thinker. Ignore any skill instructions about reading state files, parsing slugs, or asking which brain to use. Just answer in voice.`;
 
-function buildSystem(brainContext: string, skillPrompt: string): string {
-  return `${brainContext}\n\n---\n\n${skillPrompt}\n\n---\n\n${ROUTER_OVERRIDE}\n\n---\n\n${BOARD_FORMAT}`;
+// Order matters. The board's mode-collapse bug was caused by loading the full
+// brain synthesis (which leads with each thinker's #1 headline thesis) at
+// position [0] of the system prompt — the model anchored on the canonical
+// idea before ever reading the question. Fix: put BOARD_FORMAT (anti-anchor
+// rule) FIRST, then the question + relevant atoms, then the brain context.
+// By the time the model reaches "Taste is the ultimate human moat", it has
+// already been told (a) don't lead with that, and (b) here are the atoms
+// that actually match the question.
+function buildSystem(
+  brainContext: string,
+  skillPrompt: string,
+  query: string,
+  relevantAtomsBlock: string,
+): string {
+  const questionBlock = `QUESTION YOU ARE REASONING ABOUT:\n${query}\n\n${relevantAtomsBlock}`;
+  return [
+    BOARD_FORMAT,
+    questionBlock,
+    brainContext,
+    skillPrompt,
+    ROUTER_OVERRIDE,
+  ].join("\n\n---\n\n");
 }
 
 export async function POST(request: NextRequest) {
@@ -226,7 +252,20 @@ export async function POST(request: NextRequest) {
           // /advise is the closest existing skill to "give your opinion on this
           // decision." We reuse it rather than authoring a new board-only skill.
           const skillPrompt = loadSkillPrompt(slug, "advise");
-          const systemPrompt = buildSystem(brainContext, skillPrompt);
+
+          // Layer 2: pull the 15 atoms most semantically relevant to THIS
+          // question. Degrades gracefully — returns [] if OpenAI key missing,
+          // Supabase unreachable, or RPC errors. In that case we still ship
+          // the static brain context and rely on Layer 1 prompt surgery alone.
+          const relevantAtoms = await retrieveRelevantAtoms(slug, query, 15);
+          const relevantAtomsBlock = formatAtomsBlock(relevantAtoms);
+
+          const systemPrompt = buildSystem(
+            brainContext,
+            skillPrompt,
+            query,
+            relevantAtomsBlock,
+          );
 
           const messageStream = client.messages.stream({
             model: "claude-sonnet-4-6",
@@ -242,7 +281,7 @@ export async function POST(request: NextRequest) {
             messages: [
               {
                 role: "user",
-                content: `[BOARD MODE — you are ONE of ${validBrains.length} advisors. The other advisors on this board are: ${advisorRoster}. They will answer separately and you will never see them. Your job is to give the angle ONLY YOU bring. Do not give the obvious answer.\n\nReason in the open: write 2-3 short paragraphs of actual thinking (lead with your worldview NOUN, then work through the question). Then on a new line, declare your VERDICT: <one-sentence conclusion>. End with a hidden GROUNDED ON: line for source attribution.\n\nIf this question is genuinely outside your domain expertise, output ONLY a single line "DEFER: <name of better-qualified advisor on the board>" and nothing else.]\n\nDecision: ${query}`,
+                content: `[BOARD MODE — you are ONE of ${validBrains.length} advisors. The other advisors on this board are: ${advisorRoster}. They will answer separately and you will never see them. Your job is to give the angle ONLY YOU bring. Do not give the obvious answer.\n\nThe specific question and the atoms most relevant to it are already in your system context above (see "QUESTION YOU ARE REASONING ABOUT" and "RELEVANT ATOMS FOR THIS QUESTION"). Engage the question through one of those atoms — NOT your single most-famous mental model. Follow the ANTI-DEFAULT RULE strictly.\n\nReason in the open: 2-3 short paragraphs, then a one-line VERDICT, then a hidden GROUNDED ON line citing a verbatim atom (prefer one from the retrieved set).\n\nIf this question is genuinely outside your domain expertise — the retrieved atoms are weak AND your worldview is the wrong tool — output ONLY a single line "DEFER: <name of better-qualified advisor on the board>" and nothing else.]\n\nDecision: ${query}`,
               },
             ],
           });

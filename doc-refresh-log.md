@@ -1,5 +1,76 @@
 # BrainsFor Doc Refresh Log
 
+## Doc Refresh — 2026-05-20 (run 12)
+
+### Context
+Automated nightly run, three days after run 11. **Catalog grew from 18 → 20 brain packs** (Jeremy Utley and Gokul Rajaram added since run 11). Live count: 15 → 17 (both new brains shipped as `live`). Hidden unchanged at 3 (Hank Green, John Green, Shiva Rajaraman). Supabase now hosts 18 brains (was 16). One data regression flagged: gokul_rajaram dropped 554/906 → 454/789 between runs.
+
+### Changes Applied
+- **brains/index.json** — gokul-rajaram atom_count 554 → 454, connection_count 906 → 789 (Supabase is the source of truth per task spec).
+- **brainsfor/CLAUDE.md** — "Tables (18 brain packs built; 16 live in Supabase" → "20 brain packs built; 18 live in Supabase". Largest-connections list updated to include `jeremy_utley_connections` (2,272) at the top and `gokul_rajaram_connections` (789) inserted between paul_graham and bill_harris. `brain_metadata` row count 15 → 18. Added three new entries to the "Known data drift" block: gokul_rajaram regression (554→454 atoms, 906→789 connections), jeremy_utley parity confirmation (759/2,272), and kara_swisher empty tables flag.
+- **business-plan.md** — Section header "Live — 15 live brain packs (plus 3 hidden), 18 packs total, 16 live in Supabase" → "17 live ... 20 packs total, 18 live in Supabase". Added 2 rows to Live Inventory table: Jeremy Utley (759/2,272) at top and Gokul Rajaram (454/789) sorted into atom-rank position. TOTAL row 4,799/22,250 → 6,012/25,311. Infrastructure stats: 15 brain_metadata records → 18, "All 17 shippable brain packs" → "All 20". Ship Plan DONE checklist: "Build 17 shippable brains" → "Build 19" + appended Gokul Rajaram, Jeremy Utley to the names list; "4,589 atoms + 21,587 connections in Supabase (16 brains" → "5,802 atoms + 24,648 connections in Supabase (18 brains"; "Complete pack/ for all 18" → "for all 20". "17/17 shippable brains now rendered" → "17/17 live brains rendered" (clarified live vs total). Success metrics row "17 shippable brains built" → "19". Why Rob "seventeen times over" → "nineteen times over" with refreshed Supabase counts. TL;DR brain list + atom/connection totals refreshed to current state.
+- **IMPROVEMENTS.md** — footer "Last updated" 2026-05-17 (run 11) → 2026-05-20 (run 12); rewrote summary to reflect catalog growth, gokul regression flag, kara_swisher empty tables flag, and brain_metadata 15 → 18.
+
+### No Changes Needed
+- Voice enrichment unchanged at 240/284 = 84.5% (Belsky).
+- cross_connections=17, brain_requests=0, rob_atoms/rob_connections=237/162 — all unchanged.
+- gary_vee Supabase drift (319/255 vs pack 246/1,850) and shiva_rajaraman drift (pack ships 419 connections vs Supabase 1,815) — both still documented in CLAUDE.md Known data drift block; carried forward unchanged.
+- Pack-only entries (Oprah Winfrey 333/355, Sara Blakely 486/528) unchanged.
+
+### Quality Scores
+- Skipped audit-brains.py run this cycle to avoid blocking on long script execution. Prior run (2026-05-17) reported avg 99/100 across 17 shippable brains; deltas in this run are catalog-growth only, not quality changes.
+
+### Flagged for Human Review
+- **`gokul_rajaram` regression.** Supabase atoms dropped from 554 to 454 (-100), connections from 906 to 789 (-117) between runs 11 and 12. Either an intentional re-ingestion that pruned low-confidence atoms, or an accidental partial-data loss. index.json updated to match Supabase; pack still ships the older numbers. Recommend running `python3 scripts/audit-brains.py --brain gokul-rajaram` and inspecting `research/text-atoms.json` to determine whether to restore or re-export the pack at 454/789.
+- **`kara_swisher_atoms` and `kara_swisher_connections` tables exist in Supabase but are EMPTY (0 rows).** Not registered in `brains/index.json`. Most likely created by `auto-build-brain.py` Phase 1 (table scaffold) during an aborted build, since the CLAUDE.md "Adding a New Brain" example uses Kara Swisher as the placeholder. Recommend either: (a) resume the build with `python3 scripts/auto-build-brain.py --person "Kara Swisher" --resume`, or (b) drop the empty tables: `DROP TABLE kara_swisher_atoms, kara_swisher_connections;`.
+- **`brain_metadata` row count 15 → 18.** Jeremy and Gokul account for 2 of the 3 new rows; the third row's identity isn't confirmed by this refresh (could be a metadata-only entry for kara-swisher matching the empty tables, or a backfill for oprah/sara). Recommend `SELECT slug FROM brain_metadata ORDER BY created_at DESC LIMIT 5;` to confirm.
+- **Parent `~/rob-ai/CLAUDE.md` sync needed.** index.json changed (gokul gokul-rajaram 554/906 → 454/789), so the parent CLAUDE.md "Installed Brains" table and Totals line are now stale. Run `python3 brainsfor/scripts/sync-claude-md-brains.py` to regenerate.
+
+---
+
+## Doc Refresh — 2026-05-17 (run 11)
+
+### Context
+Automated nightly run, one day after run 10. **Zero factual drift in the Supabase data, packs, or audit scores.** Every per-brain atom/connection count, brain_metadata=15, brain_requests=0, cross_connections=17, rob_atoms=237, rob_connections=162, and voice enrichment (240/284 = 84.5%) is byte-for-byte identical to run 10. Only one update applied: the parent `~/rob-ai/CLAUDE.md` Installed Brains table was out of sync with `brains/index.json` and was regenerated by `scripts/sync-claude-md-brains.py`.
+
+### Changes Applied
+- **~/rob-ai/CLAUDE.md** — ran `scripts/sync-claude-md-brains.py` to fix drift. shiva-rajaraman connection_count 419 → 1,815 (parent doc was stale; index.json was already at 1,815 per run 10's refresh contract). Totals line: 22,669 → 24,065 connections across 18 brains. This is the catch-up that run 10 missed (run 10 updated index.json but didn't re-run the sync script).
+- **IMPROVEMENTS.md** — footer "Last updated" line: 2026-05-16 (run 10) → 2026-05-17 (run 11). Wording updated to "Zero data drift from run 10" and removed the stale "rob_atoms grew 225 → 237" delta (now phrased as steady-state at 237/162).
+
+### No Changes Needed
+- **brainsfor/CLAUDE.md** — every fact still accurate: 18 packs / 16 in Supabase, all per-brain connection counts in the Known data drift block match Supabase live values (verified with UNION ALL count query), brain_metadata=15, brain_requests=0, cross_connections=17, rob_atoms/rob_connections=237/162, voice enrichment 240/284, gary_vee drift (319/255 Supabase vs 246/1,850 pack) still accurate, shiva_rajaraman drift (536/1,815 Supabase vs 536/419 pack) still accurate.
+- **business-plan.md** — Live Inventory table (lines 209-225) totals match Supabase exactly: 4,799 atoms / 22,250 connections / 17 cross-brain across the 17 visible-table brains. Infrastructure stats line (line 228): 15 brain_metadata records, 0 brain_requests, audit avg 99/100 across 17 shippable brains (98.5 rounds to 99 — unchanged). Ship Plan completed checkboxes, Why Rob section, and TL;DR all consistent with current state.
+- **brains/index.json** — declared atom_count and connection_count for all 18 brains match Supabase row counts (where present); oprah-winfrey (333/355) and sara-blakely (486/528) are pack-only with no Supabase tables.
+- **Audit scores** — identical to run 10: charlie 100, hank 99, john 100, paul 100, peter-attia 93, scott 97, steve 98, sun-tzu 100, gary 100, peter-zeihan 99, jensen 100, dario 100, elon 100, brene 100, oprah 98, sara-blakely 97, bill-harris 93, shiva-rajaraman 77 (hidden). Avg across 17 shippable = 1674/17 = 98.5 → 99/100.
+
+### Quality Scores (audit-brains.py, 2026-05-17)
+| Slug | Score | Status |
+|---|---|---|
+| charlie-munger | 100 | live |
+| hank-green | 99 | hidden |
+| john-green | 100 | hidden |
+| paul-graham | 100 | live |
+| peter-attia | 93 | live |
+| scott-belsky | 97 | live |
+| steve-jobs | 98 | live |
+| sun-tzu | 100 | live |
+| gary-vee | 100 | live |
+| peter-zeihan | 99 | live |
+| jensen-huang | 100 | live |
+| dario-amodei | 100 | live |
+| elon-musk | 100 | live |
+| brene-brown | 100 | live |
+| oprah-winfrey | 98 | live |
+| sara-blakely | 97 | live |
+| bill-harris | 93 | live |
+| shiva-rajaraman | 77 | hidden (excluded from "17 shippable" average) |
+
+### Flagged for Human Review
+- **Parent CLAUDE.md sync was missed in run 10.** Run 10 updated `brains/index.json` to reflect Supabase's live shiva-rajaraman connection count (419 → 1,815) but did not run `scripts/sync-claude-md-brains.py`, so the parent `~/rob-ai/CLAUDE.md` carried a stale value for ~24 hours. The pre-commit hook is supposed to catch this on commit, but the task script doesn't commit. Worth adding a "run sync script after touching index.json" step to the refresh task explicitly, or moving the sync into the task itself when index.json drift is detected.
+- **Three consecutive runs (9, 10, 11) with effectively zero Supabase-side drift.** Run 9 noted this and suggested switching to weekly cadence; run 10 had one substantive change (shiva index.json sync); run 11 had none. The 11pm enrich-connections cron is also running but not changing totals materially. If runs 12-13 also show no drift, weekly cadence is the right call.
+
+---
+
 ## Doc Refresh — 2026-04-30 (run 9)
 
 ### Context

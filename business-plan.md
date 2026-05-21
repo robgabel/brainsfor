@@ -202,10 +202,14 @@ $199/mo API is for the lazy-but-smart company that wants to offer "Ask [Expert]"
 
 ## The Brains (Current Inventory — April 2026)
 
-### Live — 15 brain packs built, packaged, and shippable (14 in Supabase)
+### Live — 17 live brain packs (plus 3 hidden), 20 packs total, 18 live in Supabase
 
 | Brain | Atoms | Connections | Content Sources | Why Buyers Want This |
 |-------|-------|-------------|-----------------|---------------------|
+| **Jeremy Utley** | 759 | 2,272 | Ideaflow book, Stanford d.school Creativity in Business course, podcast interviews, and public lectures | Creativity research, idea generation, design-thinking applied to business |
+| **Bill Harris** | 564 | 533 | 2 books on tax-aware investing, American Banker op-ed, LinkedIn Pulse essay, long-form video interviews (Bloomberg, Fox Business, CNBC, Yahoo Finance), 5 long-form podcast/interview transcripts (Adam Mendler, Jo Ann Barefoot, Financial Sense, Modus, Acast Rethink), plus founding-chapter press | Tax-aware investing, fintech founder lens, wealth-management strategy |
+| **Sara Blakely** | 486 | 528 | 15 sources — podcast appearances, video interviews, essays, and profiles spanning her career from Spanx founding to billionaire entrepreneur | Entrepreneurship, brand building, founder grit, D2C playbook |
+| **Gokul Rajaram** | 454 | 789 | Podcast interviews (Invest Like the Best, 20VC, World of DaaS, Aarthi & Sriram Show), conference talks, Medium essays, SPADE decision framework — product leadership at Google AdSense, Facebook Ads, Square/Caviar, DoorDash, plus angel investing across 700+ companies | Product leadership, angel investing frameworks, decision-making under uncertainty |
 | **Dario Amodei** | 353 | 1,842 | darioamodei.com essays (Machines of Loving Grace, The Urgency of Interpretability), Dwarkesh, Lex Fridman #452, Ezra Klein, Logan Bartlett, Anthropic communications | AI safety thesis, interpretability, mechanistic thinking |
 | **Peter Zeihan** | 362 | 1,503 | The Accidental Superpower, The Absent Superpower, Disunited Nations, The End of the World Is Just the Beginning, Zeihan on Geopolitics YouTube, long-form interviews | Geopolitics, demographics, energy, supply chains, deglobalization |
 | **Oprah Winfrey** | 333 | 355 | Decades of The Oprah Winfrey Show, O Magazine, SuperSoul conversations, commencement addresses, and published books | Influence, interview craft, personal transformation, cultural reach |
@@ -221,9 +225,9 @@ $199/mo API is for the lazy-but-smart company that wants to offer "Ask [Expert]"
 | **John Green** | 205 | 1,301 | Anthropocene Reviewed (podcast + book), Everything is Tuberculosis, Vlogbrothers, TED talks | Humanist perspective, storytelling, reviewing the world |
 | **Steve Jobs** | 170 | 1,618 | Speeches, interviews, keynotes & public appearances (1976–2011) | Product taste, reality distortion field, design philosophy |
 | **Peter Attia** | 153 | 1,220 | The Drive podcast, Outlive book reviews | Longevity science, health optimization frameworks |
-| **TOTAL** | **3,749** | **21,189** | | **+ 17 cross-brain connections** |
+| **TOTAL** | **6,012** | **25,311** | | **+ 17 cross-brain connections** |
 
-**Infrastructure stats:** 14 `brain_metadata` records in Supabase (Oprah Winfrey ships as a pack but isn't yet ingested into Supabase). 0 `brain_requests` logged to date. Full export pipeline operational (`auto-build-brain.py` → one command, 6 phases, ~$23 per brain). All 15 brain packs have complete pack/ directories with brain-context.md, brain-atoms.json, explore.html, README.md, and 8 skill SKILL.md files. Design system (DESIGN.md) and brand guide (BRAND.md) documented and agent-readable. **brainsforfree.com is live** (Next.js app in `website/`, deployed to Vercel, auto-deploy from `main`). `install-brains.sh` handles local installation with symlinks. `audit-brains.py` validates structure + quality scoring (avg score 99/100 across 15 shippable brains; annie-duke scaffold excluded).
+**Infrastructure stats:** 18 `brain_metadata` records in Supabase (Oprah Winfrey and Sara Blakely ship as packs but aren't yet ingested into Supabase). 0 `brain_requests` logged to date. Full export pipeline operational (`auto-build-brain.py` → one command, 6 phases, ~$23 per brain). All 20 shippable brain packs have complete pack/ directories with brain-context.md, brain-atoms.json, explore.html, README.md, and 8 skill SKILL.md files. Design system (DESIGN.md) and brand guide (BRAND.md) documented and agent-readable. **brainsforfree.com is live** (Next.js app in `website/`, deployed to Vercel, auto-deploy from `main`). `install-brains.sh` handles local installation with symlinks. `audit-brains.py` validates structure + quality scoring (avg score 99/100 across shippable brains).
 
 ### Next Wave — High-demand candidates
 
@@ -618,9 +622,9 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 
 - [x] Register brainsforfree.com (owned, on Vercel)
 - [x] Build brain pipeline (`auto-build-brain.py` — one command, 6 phases, ~$23 per brain)
-- [x] Build 15 shippable brains: Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Dario Amodei, Elon Musk, Jensen Huang, Brené Brown, Oprah Winfrey (plus annie-duke scaffolded)
-- [x] 3,416 atoms + 20,834 connections in Supabase (14 brains; Oprah pack-only)
-- [x] Complete pack/ for all 15 (brain-context.md, brain-atoms.json, explore.html, 8 skills each)
+- [x] Build 19 shippable brains: Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Dario Amodei, Elon Musk, Jensen Huang, Brené Brown, Oprah Winfrey, Sara Blakely, Bill Harris, Gokul Rajaram, Jeremy Utley
+- [x] 5,802 atoms + 24,648 connections in Supabase (18 brains; Oprah Winfrey and Sara Blakely pack-only)
+- [x] Complete pack/ for all 20 (brain-context.md, brain-atoms.json, explore.html, 8 skills each — including hidden Shiva Rajaraman brain)
 - [x] Design system (DESIGN.md) + brand guide (BRAND.md)
 - [x] Landing page prototype (13/13 brains rendered)
 - [x] `install-brains.sh` for local distribution
@@ -632,7 +636,7 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 ### What's LEFT to ship v1
 
 **Storefront (1 day):**
-- [x] Add missing brains to landing page (15/15 shippable brains now rendered on brainsforfree.com)
+- [x] Add missing brains to landing page (17/17 live brains rendered on brainsforfree.com; hidden brains correctly excluded)
 - [ ] Wire Stripe checkout (3 products: Standard $29, Pro $79, API $199/mo)
 - [ ] Build delivery edge function (Stripe webhook → email download link)
 - [ ] Wire "Request a Brain" form to `brain_requests` table
@@ -677,7 +681,7 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 ## Success Metrics
 
 ### Week 1 (launch week)
-- [x] 15 shippable brains built and packaged ✅ (done pre-launch)
+- [x] 19 shippable brains built and packaged ✅ (done pre-launch)
 - [ ] Storefront live with checkout
 - [ ] 100+ site visitors
 - [ ] 10+ purchases (any tier)
@@ -713,7 +717,7 @@ This isn't a random idea. Rob has **unfair advantages** that make this a 4-5 on 
 
 1. **The pipeline already exists.** `build-brain.py` is a one-command, 7-stage pipeline (generate → merge → synthesize → YouTube → connections → export → validate). `export-brain.py`, `enrich-connections.py`, `enrich-voice.py`, `ingest-youtube.py`, `audit-brains.py` — all operational. Most people would need 3 months just to build the infrastructure.
 
-2. **Proof of concept is done — fifteen times over.** 15 shippable brains live (14 in Supabase with 3,416 atoms + 20,834 connections; Oprah Winfrey ships pack-only). Each has a complete pack (brain-context.md, brain-atoms.json, explore.html, 8 skills). That's not a concept — that's a catalog.
+2. **Proof of concept is done — nineteen times over.** 19 shippable brains live (18 in Supabase with 5,802 atoms + 24,648 connections; Oprah Winfrey and Sara Blakely ship pack-only). Each has a complete pack (brain-context.md, brain-atoms.json, explore.html, 8 skills). That's not a concept — that's a catalog.
 
 3. **Creator economy expertise.** Rob understands the creator-as-business model from Tubular, TubeBuddy, and Spotter. The "claim your brain" rev-share model is natural for someone who's spent a decade in creator monetization.
 
@@ -739,7 +743,7 @@ The evolution path is: **knowledge pack → interactive advisor → platform** �
 
 **What:** Brainsfor.com — installable AI skill packs built from the world's most interesting minds. `npx skills add brainsfor/belsky` gives you 8 thinking tools powered by a real knowledge graph.
 
-**Current state (April 2026):** 15 shippable brains live (Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Dario Amodei, Elon Musk, Jensen Huang, Brené Brown, Oprah Winfrey). 3,749 atoms across packs (3,416 in Supabase; Oprah pack-only), 21,189 connections total. Full build pipeline, design system, brand guide, brainsforfree.com live on Vercel with all 15 brains. Storefront and checkout not yet wired.
+**Current state (May 2026):** 19 shippable brains live (Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Dario Amodei, Elon Musk, Jensen Huang, Brené Brown, Oprah Winfrey, Sara Blakely, Bill Harris, Gokul Rajaram, Jeremy Utley). 6,012 atoms across the catalog (5,802 in Supabase; Oprah Winfrey and Sara Blakely pack-only), 25,311 connections total. Full build pipeline, design system, brand guide, brainsforfree.com live on Vercel with 17 live brains rendered (3 hidden). Storefront and checkout not yet wired.
 
 **Who:** Three audiences: (1) Builders/founders who want expert-level context without hand-curating it ($29-79). (2) Professionals prepping for high-stakes interactions — sales teams brain-ing a target customer, founders brain-ing board members, creators studying competitors ($500-2K custom). (3) AI platforms who want premium knowledge content for their users (licensing deals).
 
