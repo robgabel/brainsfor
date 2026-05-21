@@ -16,6 +16,9 @@ export interface Brain {
   topics: string[];
   packPath: string;
   badge?: string;
+  // True when the brain has enough dated atoms across enough years to make
+  // /evolve produce a real timeline. Set by scripts/compute-evolve-flags.py.
+  supportsEvolve: boolean;
 }
 
 interface IndexEntry {
@@ -26,6 +29,7 @@ interface IndexEntry {
   connection_count: number;
   status: string;
   pack_path: string;
+  supports_evolve?: boolean;
 }
 
 interface BrainConfig {
@@ -86,6 +90,7 @@ function loadBrains(): Brain[] {
       // Badges (V1/V2/NEW/Draft) are intentionally suppressed site-wide.
       // The data still lives in brain.json — we just don't render it.
       badge: undefined,
+      supportsEvolve: entry.supports_evolve === true,
     };
   });
 }
@@ -102,6 +107,10 @@ export function getBrain(slug: string): Brain | undefined {
 
 export function getLiveBrains(): Brain[] {
   return BRAINS.filter((b) => b.status === "live");
+}
+
+export function getEvolveBrains(): Brain[] {
+  return BRAINS.filter((b) => b.status === "live" && b.supportsEvolve);
 }
 
 // Order matters: leads with the skills that are structurally impossible to fake

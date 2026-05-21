@@ -640,12 +640,32 @@ def extract_atoms_from_text(
     src_type = source.get("type", "article")
     src_title = source.get("title", "")
     src_url = source.get("url", "")
+    # Source publication date — required for /evolve to work. We accept several
+    # shapes (`date`, `published`, `year`) and fall back to null if none exist.
+    src_date = (
+        source.get("date")
+        or source.get("published")
+        or source.get("year")
+        or None
+    )
+    src_date_str = str(src_date) if src_date else ""
+    src_date_line = f"PUBLISHED: {src_date_str}\n" if src_date_str else ""
+    src_date_rule = (
+        f'5b. "source_date" MUST be set to "{src_date_str}" on every atom (the source\'s publication date — verbatim, no inference). This is required for the /evolve skill.\n'
+        if src_date_str
+        else '5b. "source_date" — omit this field. The source has no known publication date.\n'
+    )
+    src_date_example = (
+        f'"source_date": "{src_date_str}",\n    '
+        if src_date_str
+        else ""
+    )
 
     prompt = f"""Extract atomic insights from this content about {brain_name}.
 
 SOURCE: {src_title} ({src_type})
 URL: {src_url}
-
+{src_date_line}
 CONTENT:
 {content}
 
@@ -657,7 +677,7 @@ RULES:
 3. "content" is your distilled 2-4 sentence statement of the insight.
 4. "implication" is the "so what" — what this means for builders/creators/leaders today.
 5. "source_ref" should reference the source title.
-6. "source_type" should be: {src_type}
+{src_date_rule}6. "source_type" should be: {src_type}
 7. Set confidence: 0.95 for direct quotes, 0.85 for clear positions, 0.75 for inferred views.
 8. Assign 2-5 topic tags per atom.
 9. Pick the best-fit cluster from the list below.
@@ -676,7 +696,8 @@ OUTPUT FORMAT — Return ONLY a JSON array:
     "topics": ["topic1", "topic2"],
     "confidence": 0.92,
     "source_type": "{src_type}",
-    "source_ref": "{src_title}"
+    "source_ref": "{src_title}",
+    {src_date_example}"source_url": "{src_url}"
   }}
 ]
 

@@ -100,15 +100,21 @@ GROUNDING_NGRAM_LEN = 4         # tokens in n-gram extracted from principles
 # Total = sum of weighted scores, capped at 100.
 
 SCORING_CRITERIA = {
-    "structure":  {"weight": 15, "label": "Structure & Files"},
-    "schema":     {"weight": 13, "label": "Schema Completeness"},
-    "atoms":      {"weight": 12, "label": "Atom Volume"},
-    "connections": {"weight": 12, "label": "Connection Density"},
-    "voice":      {"weight": 15, "label": "Voice Enrichment"},
-    "provenance": {"weight": 10, "label": "Quote Verifiability"},
-    "synthesis":  {"weight": 13, "label": "Synthesis Depth"},
-    "grounding":  {"weight": 10, "label": "Synthesis Grounding"},
+    "structure":  {"weight": 14, "label": "Structure & Files"},
+    "schema":     {"weight": 12, "label": "Schema Completeness"},
+    "atoms":      {"weight": 11, "label": "Atom Volume"},
+    "connections": {"weight": 11, "label": "Connection Density"},
+    "voice":      {"weight": 14, "label": "Voice Enrichment"},
+    "provenance": {"weight": 9,  "label": "Quote Verifiability"},
+    "synthesis":  {"weight": 12, "label": "Synthesis Depth"},
+    "grounding":  {"weight": 9,  "label": "Synthesis Grounding"},
+    "temporal":   {"weight": 8,  "label": "Temporal Density"},
 }
+
+# Temporal density thresholds (match scripts/compute-evolve-flags.py)
+TEMPORAL_COVERAGE_TARGET = 0.50   # ≥50% of atoms must have source_date
+TEMPORAL_YEAR_SPAN_TARGET = 3     # dated atoms must span ≥3 distinct years
+_TEMPORAL_YEAR_RE = re.compile(r"\b(19\d{2}|20\d{2})\b")
 
 
 # ---------------------------------------------------------------------------
@@ -428,6 +434,73 @@ def check_pack_data(brain_dir: Path, audit: BrainAudit):
                                           f"brain-atoms.json synthesis.{key} missing or empty",
                                           f"Re-export after filling brain.json synthesis.{key}",
                                           f"python3 scripts/export-brain.py --brain {audit.slug}"))
+
+
+def check_temporal_density(brain_dir: Path, audit: BrainAudit):
+    """Score whether the pack has enough dated atoms across enough years for /evolve.
+
+    Score (0.0–1.0) = 0.6 × coverage_normalized + 0.4 × year_span_normalized
+    Coverage hits 1.0 at 50%+ dated atoms; year span hits 1.0 at 5+ distinct years.
+    """
+    atoms_path = brain_dir / "pack" / "brain-atoms.json"
+    if not atoms_path.exists():
+        audit.scores["temporal"] = 0.0
+        return
+    try:
+        atoms = json.loads(atoms_path.read_text(encoding="utf-8")).get("atoms", [])
+    except Exception:
+        audit.scores["temporal"] = 0.0
+        return
+
+    total = len(atoms)
+    if total == 0:
+        audit.scores["temporal"] = 0.0
+        return
+
+    years: set[int] = set()
+    dated = 0
+    for a in atoms:
+        raw = a.get("source_date")
+        if not raw:
+            continue
+        s = str(raw).strip()
+        if not s or s.lower() in {"unknown", "none", "null", "n/a"}:
+            continue
+        m = _TEMPORAL_YEAR_RE.search(s)
+        if not m:
+            continue
+        dated += 1
+        years.add(int(m.group(1)))
+
+    coverage = dated / total
+    year_span = len(years)
+    audit.stats["temporal_coverage_pct"] = round(coverage * 100, 1)
+    audit.stats["temporal_year_span"] = year_span
+    audit.stats["temporal_year_min"] = min(years) if years else None
+    audit.stats["temporal_year_max"] = max(years) if years else None
+
+    coverage_norm = min(1.0, coverage / TEMPORAL_COVERAGE_TARGET)
+    span_norm = min(1.0, year_span / 5.0)
+    audit.scores["temporal"] = (coverage_norm * 0.6) + (span_norm * 0.4)
+
+    supports_evolve = (
+        coverage >= TEMPORAL_COVERAGE_TARGET
+        and year_span >= TEMPORAL_YEAR_SPAN_TARGET
+    )
+    audit.stats["supports_evolve"] = supports_evolve
+
+    if audit.status == "live" and not supports_evolve:
+        # Only warn for live brains — hidden brains are local-only
+        if coverage < TEMPORAL_COVERAGE_TARGET:
+            audit.issues.append(Issue("warning", "quality",
+                                      f"Only {coverage*100:.0f}% of atoms have source_date "
+                                      f"(/evolve target: {int(TEMPORAL_COVERAGE_TARGET*100)}%+)",
+                                      "Run backfill or rebuild text-source atoms with dates",
+                                      f"python3 scripts/backfill-source-dates.py --brain {audit.slug} --pack-only"))
+        if year_span < TEMPORAL_YEAR_SPAN_TARGET:
+            audit.issues.append(Issue("info", "quality",
+                                      f"Dated atoms span only {year_span} distinct year(s) — "
+                                      f"/evolve needs {TEMPORAL_YEAR_SPAN_TARGET}+ for a real timeline"))
 
 
 # ---------------------------------------------------------------------------
@@ -1013,6 +1086,7 @@ def audit_brain(slug: str, index_data: dict, with_behavioral: bool = False) -> B
     check_directory_structure(brain_dir, audit)
     check_brain_json_schema(brain_dir, audit)
     check_pack_data(brain_dir, audit)
+    check_temporal_density(brain_dir, audit)
     check_quote_provenance(brain_dir, audit)
     check_synthesis_grounding(brain_dir, audit)
     check_template_variables(brain_dir, audit)
@@ -1074,6 +1148,16 @@ def print_report(audits: list[BrainAudit], show_hints: bool = False, with_behavi
                 stats_line.append(f"{audit.stats['grounding_pct']}% grounded")
             if "orphan_pct" in audit.stats:
                 stats_line.append(f"{audit.stats['orphan_pct']}% orphans")
+            if "temporal_coverage_pct" in audit.stats:
+                span = audit.stats.get("temporal_year_span", 0)
+                ymin = audit.stats.get("temporal_year_min")
+                ymax = audit.stats.get("temporal_year_max")
+                year_range = f"{ymin}–{ymax}" if ymin and ymax else "n/a"
+                supports = audit.stats.get("supports_evolve", False)
+                evolve_tag = "✓ evolve" if supports else "✗ evolve"
+                stats_line.append(
+                    f"{audit.stats['temporal_coverage_pct']}% dated ({span}yr, {year_range}) {evolve_tag}"
+                )
             if stats_line:
                 print(f"       Stats:  {' | '.join(stats_line)}")
 
