@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { timingSafeEqual } from "node:crypto";
 import Anthropic from "@anthropic-ai/sdk";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
@@ -7,6 +8,18 @@ import { findCitations } from "@/lib/brain-citations";
 import { SKILLS, getBrain } from "@/lib/brains";
 
 export const runtime = "nodejs";
+
+// Owner bypass — constant-time compare so a wrong token can't be probed via
+// timing. Returns false if either the request header or the env var is absent.
+function hasOwnerBypass(request: NextRequest): boolean {
+  const provided = request.headers.get("x-owner-bypass");
+  const expected = process.env.OWNER_BYPASS_TOKEN;
+  if (!provided || !expected) return false;
+  const a = Buffer.from(provided);
+  const b = Buffer.from(expected);
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
+}
 
 const VALID_SKILLS = SKILLS.map((s) => s.name);
 
@@ -209,10 +222,14 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // Rate limit — Upstash Redis, keyed on client IP. No header bypasses.
+  // Rate limit — Upstash Redis, keyed on client IP. Owner bypass via
+  // x-owner-bypass header (constant-time compared with OWNER_BYPASS_TOKEN).
+  const ownerBypass = hasOwnerBypass(request);
   const ip =
     request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-  const { allowed, remaining } = await checkRateLimit(ip);
+  const { allowed, remaining } = ownerBypass
+    ? { allowed: true, remaining: 999 }
+    : await checkRateLimit(ip);
   if (!allowed) {
     return Response.json(
       { error: "limit", remaining: 0 },

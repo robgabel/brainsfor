@@ -35,6 +35,7 @@ const SEED_QUESTIONS = [
 ];
 
 const STORAGE_KEY = "bf-board-count";
+const OWNER_TOKEN_KEY = "bf-owner-token";
 const DEFAULT_LIMIT = process.env.NODE_ENV === "development" ? 999 : 4;
 const MAX_BRAINS = 5;
 const MIN_BRAINS = 2;
@@ -52,14 +53,30 @@ export function BoardDemo({ brains, defaultBrains }: BoardDemoProps) {
   const [showResult, setShowResult] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [count, setCount] = useState(0);
+  const [ownerToken, setOwnerToken] = useState<string | null>(null);
   const [synthesis, setSynthesis] = useState("");
   const [synthesisDone, setSynthesisDone] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
 
+  // On mount: capture ?token= → localStorage, then read it. With a token
+  // present we wipe the legacy bf-board-count so stale "used X" UI doesn't
+  // linger after the bypass ships.
   useEffect(() => {
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) setCount(parseInt(stored, 10) || 0);
+      const params = new URLSearchParams(window.location.search);
+      const urlToken = params.get("token");
+      if (urlToken) {
+        localStorage.setItem(OWNER_TOKEN_KEY, urlToken);
+      }
+      const stored = localStorage.getItem(OWNER_TOKEN_KEY);
+      if (stored) {
+        setOwnerToken(stored);
+        localStorage.removeItem(STORAGE_KEY);
+        setCount(0);
+        return;
+      }
+      const storedCount = localStorage.getItem(STORAGE_KEY);
+      if (storedCount) setCount(parseInt(storedCount, 10) || 0);
     } catch {
       // SSR
     }
@@ -106,12 +123,14 @@ export function BoardDemo({ brains, defaultBrains }: BoardDemoProps) {
     }
     setResponses(seeded);
 
-    const newCount = count + 1;
-    setCount(newCount);
-    try {
-      localStorage.setItem(STORAGE_KEY, String(newCount));
-    } catch {
-      // ignore
+    if (!ownerToken) {
+      const newCount = count + 1;
+      setCount(newCount);
+      try {
+        localStorage.setItem(STORAGE_KEY, String(newCount));
+      } catch {
+        // ignore
+      }
     }
 
     const controller = new AbortController();
@@ -120,7 +139,10 @@ export function BoardDemo({ brains, defaultBrains }: BoardDemoProps) {
     try {
       const res = await fetch("/api/board", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          ...(ownerToken ? { "x-owner-bypass": ownerToken } : {}),
+        },
         body: JSON.stringify({
           brains: selectedSlugs,
           query: query.trim(),
@@ -217,13 +239,13 @@ export function BoardDemo({ brains, defaultBrains }: BoardDemoProps) {
       setIsRunning(false);
       abortRef.current = null;
     }
-  }, [brains, count, isRunning, query, selectedSlugs]);
+  }, [brains, count, isRunning, ownerToken, query, selectedSlugs]);
 
   const remaining = DEFAULT_LIMIT - count;
   const canRun =
     query.trim().length > 0 &&
     !isRunning &&
-    count < DEFAULT_LIMIT &&
+    (ownerToken !== null || count < DEFAULT_LIMIT) &&
     selectedSlugs.length >= MIN_BRAINS;
 
   return (
@@ -292,7 +314,7 @@ export function BoardDemo({ brains, defaultBrains }: BoardDemoProps) {
           placeholder="Type a real decision you're facing…"
           rows={2}
           className="w-full resize-none rounded-lg border border-border-default bg-white px-4 py-3 text-[15px] text-deep-ink placeholder:text-muted/60 focus:border-brain-indigo focus:outline-none focus:ring-2 focus:ring-brain-indigo/20"
-          disabled={count >= DEFAULT_LIMIT}
+          disabled={!ownerToken && count >= DEFAULT_LIMIT}
         />
         <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
           <button
@@ -310,7 +332,9 @@ export function BoardDemo({ brains, defaultBrains }: BoardDemoProps) {
             )}
           </button>
           <span className="text-xs text-muted">
-            {count >= DEFAULT_LIMIT ? (
+            {ownerToken ? (
+              <span className="text-brain-indigo">Owner — unlimited</span>
+            ) : count >= DEFAULT_LIMIT ? (
               <span className="text-amber-600">
                 Board limit reached — install a brain pack for unlimited boards
               </span>

@@ -44,6 +44,7 @@ interface SkillsPlaygroundProps {
 
 const DEFAULT_DEMO_LIMIT = process.env.NODE_ENV === "development" ? 999 : 10;
 const STORAGE_KEY = "bf-demo-count";
+const OWNER_TOKEN_KEY = "bf-owner-token";
 
 /** Hide the trailing "GROUNDED ON: ..." marker from the visible response so it
  *  doesn't flash on-screen while streaming. Server-side, the marker is parsed
@@ -129,20 +130,36 @@ export function SkillsPlayground({
   const [error, setError] = useState<string | null>(null);
   const [demoCount, setDemoCount] = useState(0);
   const [citations, setCitations] = useState<Citation[]>([]);
-  const [beastMode, setBeastMode] = useState(false);
+  // beastMode is now derived from "do we have a stored owner token?" —
+  // the legacy ?mode=beast URL flag is gone (it was client-only and lied
+  // to the user; server didn't honor it).
+  const [ownerToken, setOwnerToken] = useState<string | null>(null);
+  const beastMode = ownerToken !== null;
   const abortRef = useRef<AbortController | null>(null);
   const genericScrollRef = useRef<HTMLDivElement | null>(null);
   const enhancedScrollRef = useRef<HTMLDivElement | null>(null);
 
   const DEMO_LIMIT = beastMode ? 999 : DEFAULT_DEMO_LIMIT;
 
-  // Read demo count + check beast mode from URL on mount
+  // On mount: pick up ?token=<value> from URL and persist; then read existing
+  // token. When a token is present we wipe the legacy bf-demo-count so stale
+  // "used 6" UI from before the bypass shipped doesn't linger.
   useEffect(() => {
     try {
       const params = new URLSearchParams(window.location.search);
-      if (params.get("mode") === "beast") setBeastMode(true);
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) setDemoCount(parseInt(stored, 10) || 0);
+      const urlToken = params.get("token");
+      if (urlToken) {
+        localStorage.setItem(OWNER_TOKEN_KEY, urlToken);
+      }
+      const stored = localStorage.getItem(OWNER_TOKEN_KEY);
+      if (stored) {
+        setOwnerToken(stored);
+        localStorage.removeItem(STORAGE_KEY);
+        setDemoCount(0);
+        return;
+      }
+      const storedCount = localStorage.getItem(STORAGE_KEY);
+      if (storedCount) setDemoCount(parseInt(storedCount, 10) || 0);
     } catch {
       // SSR or storage unavailable
     }
@@ -204,12 +221,14 @@ export function SkillsPlayground({
     setShowResult(true);
     setIsStreaming(true);
 
-    const newCount = demoCount + 1;
-    setDemoCount(newCount);
-    try {
-      localStorage.setItem(STORAGE_KEY, String(newCount));
-    } catch {
-      // storage unavailable
+    if (!ownerToken) {
+      const newCount = demoCount + 1;
+      setDemoCount(newCount);
+      try {
+        localStorage.setItem(STORAGE_KEY, String(newCount));
+      } catch {
+        // storage unavailable
+      }
     }
 
     const controller = new AbortController();
@@ -220,7 +239,7 @@ export function SkillsPlayground({
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          ...(beastMode ? { "x-beast-mode": "1" } : {}),
+          ...(ownerToken ? { "x-owner-bypass": ownerToken } : {}),
         },
         body: JSON.stringify({
           brain: selectedBrain,
@@ -263,14 +282,20 @@ export function SkillsPlayground({
             } else if (msg.type === "enhanced") {
               setEnhancedText((prev) => prev + msg.delta);
             } else if (msg.type === "meta" && msg.remaining !== undefined) {
-              setDemoCount(DEMO_LIMIT - msg.remaining);
-              try {
-                localStorage.setItem(
-                  STORAGE_KEY,
-                  String(DEMO_LIMIT - msg.remaining),
-                );
-              } catch {
-                // ignore
+              // Owner bypass: server returns remaining=999, but we don't want
+              // to surface that as a counter — pin demoCount at 0 instead.
+              if (ownerToken) {
+                setDemoCount(0);
+              } else {
+                setDemoCount(DEMO_LIMIT - msg.remaining);
+                try {
+                  localStorage.setItem(
+                    STORAGE_KEY,
+                    String(DEMO_LIMIT - msg.remaining),
+                  );
+                } catch {
+                  // ignore
+                }
               }
             } else if (msg.type === "citations" && Array.isArray(msg.citations)) {
               setCitations(msg.citations);
@@ -396,9 +421,11 @@ export function SkillsPlayground({
             )}
           </button>
           <span className="text-xs text-muted">
-            {demoCount >= DEMO_LIMIT ? (
+            {ownerToken ? (
+              <span className="text-brain-indigo">Owner — unlimited</span>
+            ) : demoCount >= DEMO_LIMIT ? (
               <span className="text-amber-600">
-                Demo limit reached (6/6) — install a brain for unlimited use
+                Demo limit reached ({DEMO_LIMIT}/{DEMO_LIMIT}) — install a brain for unlimited use
               </span>
             ) : (
               <>
