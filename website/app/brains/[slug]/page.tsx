@@ -143,27 +143,6 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
         </div>
       </section>
 
-      {/* ─── Inline live demo (pinned to this brain) ─── */}
-      {isLive && pinnedBrain.length > 0 && (
-        <section className="px-6 pb-12">
-          <div className="mx-auto max-w-[1140px]">
-            <h2 className="mb-2 font-display text-2xl font-normal tracking-[-0.5px] text-deep-ink">
-              Ask {brain.name} something.
-            </h2>
-            <p className="mb-6 text-sm text-body">
-              Same Claude model on both sides. The right side has {brain.name}&rsquo;s knowledge graph loaded.
-            </p>
-            <SkillsPlayground
-              brains={pinnedBrain}
-              skills={SKILLS}
-              demos={demos}
-              defaultBrain={slug}
-              defaultSkill="advise"
-            />
-          </div>
-        </section>
-      )}
-
       {/* ─── Brain Explorer (iframe) ─── */}
       {isLive && (
         <section className="bg-warm-paper px-6 py-16">
@@ -233,6 +212,27 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
           </div>
         </div>
       </section>
+
+      {/* ─── Inline live demo (pinned to this brain) ─── */}
+      {isLive && pinnedBrain.length > 0 && (
+        <section className="px-6 py-16">
+          <div className="mx-auto max-w-[1140px]">
+            <h2 className="mb-2 font-display text-2xl font-normal tracking-[-0.5px] text-deep-ink">
+              Ask {brain.name} something.
+            </h2>
+            <p className="mb-6 text-sm text-body">
+              Same Claude model on both sides. The right side has {brain.name}&rsquo;s knowledge graph loaded.
+            </p>
+            <SkillsPlayground
+              brains={pinnedBrain}
+              skills={SKILLS}
+              demos={demos}
+              defaultBrain={slug}
+              defaultSkill="advise"
+            />
+          </div>
+        </section>
+      )}
 
       {/* ─── Sources & Ethics ─── */}
       <section className="px-6 py-12">
