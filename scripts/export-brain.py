@@ -88,6 +88,90 @@ def flatten_dict(d: dict, parent_key: str = '', sep: str = '.') -> dict:
     return dict(items)
 
 
+def _normalize_title(s: str) -> str:
+    """Lowercase + collapse whitespace + strip punctuation for fuzzy title matching."""
+    s = (s or "").lower()
+    s = re.sub(r"[‐-―−]", "-", s)  # normalize dashes
+    s = re.sub(r"[^a-z0-9#\- ]+", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+
+def build_source_url_lookup(slug: str) -> dict:
+    """Build {normalized_title: url} map for a brain from sources.json + raw/_index.json.
+
+    Used by the export to backfill a `source_url` field on each atom so the website's
+    citation chips can link to the real source. source_ref in the DB is usually a
+    human-readable label like "Lex Fridman Podcast #494" — not a URL.
+    """
+    brain_src = BRAINS_DIR / slug / "source"
+    lookup: dict = {}
+
+    def _add(title: str, url: str):
+        if not title or not url:
+            return
+        nt = _normalize_title(title)
+        if nt and nt not in lookup:
+            lookup[nt] = url
+
+    # 1) sources.json — primary curated list with youtube_id / transcript_url / url
+    sources_path = brain_src / "sources.json"
+    if sources_path.exists():
+        try:
+            data = json.loads(sources_path.read_text())
+            for s in data.get("sources", []):
+                title = s.get("title", "")
+                url = (
+                    s.get("transcript_url")
+                    or s.get("url")
+                    or (f"https://www.youtube.com/watch?v={s['youtube_id']}" if s.get("youtube_id") else None)
+                )
+                _add(title, url)
+        except Exception as e:
+            print(f"  WARN: failed to read {sources_path}: {e}")
+
+    # 2) raw/_index.json — Firecrawl scrape index, keyed by URL, with title inside
+    raw_index = brain_src / "raw" / "_index.json"
+    if raw_index.exists():
+        try:
+            data = json.loads(raw_index.read_text())
+            if isinstance(data, dict):
+                for url, meta in data.items():
+                    title = (meta or {}).get("title") if isinstance(meta, dict) else None
+                    if url.startswith(("http://", "https://")):
+                        _add(title, url)
+        except Exception as e:
+            print(f"  WARN: failed to read {raw_index}: {e}")
+
+    return lookup
+
+
+def match_source_url(source_ref: str, lookup: dict) -> str | None:
+    """Match a (possibly truncated) source_ref to a URL via prefix/substring on titles."""
+    if not source_ref:
+        return None
+    if re.match(r"^https?://", source_ref, re.I):
+        return source_ref  # already a URL — pass through
+    if not lookup:
+        return None
+    nq = _normalize_title(source_ref)
+    if not nq:
+        return None
+    if nq in lookup:
+        return lookup[nq]
+    # Prefix match: source_ref is a shortened form of a longer source title
+    for nt, url in lookup.items():
+        if nt.startswith(nq) or nq.startswith(nt):
+            return url
+    # Substring fallback (last resort, longer of the two must contain the shorter)
+    for nt, url in lookup.items():
+        if len(nq) >= 12 and nq in nt:
+            return url
+        if len(nt) >= 12 and nt in nq:
+            return url
+    return None
+
+
 def build_connection_map(connections: list) -> dict:
     """Build atom_id -> list of connections map (bidirectional)."""
     conn_map = defaultdict(list)
@@ -118,6 +202,7 @@ def export_atoms_json(atoms: list, connections: list, config: dict, output_dir: 
     """Generate brain-atoms.json"""
     conn_map = build_connection_map(connections)
     topic_index = build_topic_index(atoms)
+    source_url_lookup = build_source_url_lookup(config["brain_slug"])
 
     rel_counts = defaultdict(int)
     for c in connections:
@@ -150,14 +235,20 @@ def export_atoms_json(atoms: list, connections: list, config: dict, output_dir: 
         "topic_index": topic_index
     }
 
+    matched_urls = 0
     for atom in atoms:
         atom_conns = conn_map.get(atom["id"], [])
+        source_ref = atom.get("source_ref")
+        source_url = match_source_url(source_ref, source_url_lookup) if source_ref else None
+        if source_url:
+            matched_urls += 1
         entry = {
             "id": atom["id"],
             "content": atom["content"],
             "cluster": atom.get("cluster"),
             "topics": atom.get("topics", []),
-            "source_ref": atom.get("source_ref"),
+            "source_ref": source_ref,
+            "source_url": source_url,
             "source_date": (atom.get("source_date") or "")[:10] if atom.get("source_date") else None,
             "confidence": atom.get("confidence"),
             "confidence_tier": atom.get("confidence_tier"),
@@ -188,7 +279,8 @@ def export_atoms_json(atoms: list, connections: list, config: dict, output_dir: 
         f.write(";\n")
 
     atoms_with_conns = sum(1 for a in output["atoms"] if "connections" in a)
-    print(f"  brain-atoms.json: {len(atoms)} atoms, {len(connections)} connections, {len(topic_index)} topics, {atoms_with_conns} linked")
+    pct = (100 * matched_urls / len(atoms)) if atoms else 0
+    print(f"  brain-atoms.json: {len(atoms)} atoms, {len(connections)} connections, {len(topic_index)} topics, {atoms_with_conns} linked, {matched_urls} source URLs ({pct:.0f}%)")
     return len(atoms), len(connections)
 
 
