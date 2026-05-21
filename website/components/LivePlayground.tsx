@@ -21,6 +21,9 @@ interface SkillOption {
 
 interface LivePlaygroundProps {
   brains: BrainOption[];
+  // Subset of brains that have dated atoms across enough years for /evolve.
+  // Falls back to `brains` when undefined (older callers).
+  evolveBrains?: BrainOption[];
   skills: SkillOption[];
   demos: Record<string, SkillDemo>;
   defaultBrain: string;
@@ -89,11 +92,23 @@ const VOICE_SEEDS = [
 
 export function LivePlayground({
   brains,
+  evolveBrains,
   skills,
   demos,
   defaultBrain,
   defaultBoardBrains,
 }: LivePlaygroundProps) {
+  // The evolve tab only shows brains whose atoms span enough years to produce
+  // a real timeline. If the parent didn't pass a filtered list (or filtering
+  // would leave it empty), fall back to the full brain list — better to show
+  // every brain than to ship an empty dropdown.
+  const brainsForEvolve =
+    evolveBrains && evolveBrains.length > 0 ? evolveBrains : brains;
+  // If the default brain doesn't support /evolve, swap to the first one that does.
+  const evolveDefaultBrain =
+    brainsForEvolve.find((b) => b.slug === defaultBrain)?.slug ??
+    brainsForEvolve[0]?.slug ??
+    defaultBrain;
   // Default to the board — that's the felt augmentation moment. The evolve
   // teaser above the tabs carries the moat signal in <1s of attention so the
   // skeptic-tax gets paid without diverting from the conversion path.
@@ -206,10 +221,10 @@ export function LivePlayground({
         )}
         {activeTab === "evolve" && (
           <SkillsPlayground
-            brains={brains}
+            brains={brainsForEvolve}
             skills={skills}
             demos={demos}
-            defaultBrain={defaultBrain}
+            defaultBrain={evolveDefaultBrain}
             defaultSkill="evolve"
             lockedSkill="evolve"
             seedQueries={EVOLVE_TOPICS.map(evolveQueryFor)}
