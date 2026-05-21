@@ -16,6 +16,7 @@ interface AtomLike {
   original_quote?: string;
   content?: string;
   source_ref?: string;
+  source_url?: string | null;
   source_date?: string;
   confidence?: number;
 }
@@ -84,10 +85,15 @@ function loadAtomIndex(slug: string): AtomIndexEntry[] {
       .map((a) => {
         const q = a.original_quote ?? a.content ?? "";
         if (!q) return null;
+        const ref = a.source_ref;
+        const refUrl = ref && /^https?:\/\//i.test(ref) ? ref : null;
         return {
           normalized: normalize(q),
           quote: q,
-          url: a.source_ref ?? null,
+          // Prefer the export-side resolved URL; fall back to source_ref if it
+          // happens to already be an http(s) URL. Never use a bare title — it
+          // would render as a relative link and 404 on the site.
+          url: a.source_url ?? refUrl,
           date: a.source_date ?? null,
         };
       })
