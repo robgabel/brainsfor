@@ -6,6 +6,10 @@ import { Redis } from "@upstash/redis";
 import { loadBrainContext, loadSkillPrompt } from "@/lib/brain-context";
 import { findCitations } from "@/lib/brain-citations";
 import { SKILLS, getBrain } from "@/lib/brains";
+import {
+  retrieveRelevantAtoms,
+  formatAtomsBlock,
+} from "@/lib/brain-atom-retrieval";
 
 export const runtime = "nodejs";
 
@@ -165,6 +169,19 @@ HARD RULES:
 // API the brain is ALREADY resolved (passed in the POST body and loaded as
 // context above this line), so the model must ignore any router instructions
 // and just answer as the thinker.
+// Skill-page equivalent of the board's ANTI-DEFAULT RULE (see
+// /api/board/route.ts BOARD_FORMAT). Same root cause: brain-context.md leads
+// with each thinker's #1 first principle, so the model anchors on the
+// canonical tagline before reading the question. Layer 1 of the mode-collapse
+// fix is to tell the model NOT to lead with that tagline. Trimmed vs. board:
+// no zone structure, no DEFER rule, no banned-openers list — those are
+// multi-advisor concerns. Single-brain skills only need the anti-anchor part.
+const ANTI_DEFAULT_RULE = `ANTI-DEFAULT RULE — read this BEFORE the skill instructions and brain context below:
+You have a famous mental model — the noun phrase strangers cite when they say your name. You will be TEMPTED to lead with it. DO NOT.
+- The atoms in "RELEVANT ATOMS FOR THIS QUESTION" were retrieved BECAUSE they match what's being asked. Prefer them over your headline thesis when stating your lens.
+- You may invoke your headline mental model ONLY if it adds insight no other atom can, AND you can demonstrate it engages the specifics of this question — not just gestures at them.
+- Forbidden: opening with the tagline most associated with you (e.g. "taste as a moat", "latticework of mental models", "schlep blindness", "VO2 max", "make something people want", "compound interest of attention"). Apply the underlying thinking via a different entry point if needed.`;
+
 const ROUTER_OVERRIDE = `CRITICAL OVERRIDE — READ THIS BEFORE FOLLOWING THE SKILL INSTRUCTIONS BELOW:
 - The brain is ALREADY loaded above. You ARE the thinker. You have everything you need.
 - IGNORE any skill instructions about reading \${BRAINSFOR_HOME}, state files, active-brain.txt, brains/index.json, parsing slugs from user input, or listing "installed brains".
@@ -178,11 +195,28 @@ function buildEnhancedSystem(
   brainContext: string,
   skillPrompt: string,
   skill: string,
+  query: string,
+  relevantAtomsBlock: string,
 ): string {
   // Per-skill format override — /evolve produces a timeline, everything else
   // uses the default belief→application shape.
   const format = skill === "evolve" ? BREVITY_ENHANCED_EVOLVE : BREVITY_ENHANCED;
-  return `${brainContext}\n\n---\n\n${skillPrompt}\n\n---\n\n${ROUTER_OVERRIDE}\n\n---\n\n${format}`;
+  // Order mirrors /api/board/route.ts buildSystem: anti-default rule + question
+  // + retrieved atoms FIRST, then brain context, then skill, then router
+  // override, then format. By the time the model reaches the brain's #1 first
+  // principle inside brain-context.md, it has already been told (a) don't lead
+  // with that, and (b) here are the atoms that actually match the question.
+  // `format` stays last so it remains the most recent instruction in context —
+  // load-bearing for the GROUNDED ON marker and /evolve's 3-era output shape.
+  const questionBlock = `QUESTION YOU ARE REASONING ABOUT:\n${query}\n\n${relevantAtomsBlock}`;
+  return [
+    ANTI_DEFAULT_RULE,
+    questionBlock,
+    brainContext,
+    skillPrompt,
+    ROUTER_OVERRIDE,
+    format,
+  ].join("\n\n---\n\n");
 }
 
 // --- POST handler ---
@@ -278,8 +312,8 @@ export async function POST(request: NextRequest) {
           const userMessage =
             type === "enhanced"
               ? skill === "evolve"
-                ? `[DEMO MODE: Do NOT answer this question. Instead, trace how YOUR thinking on the topic in this question has CHANGED across 2-3 dated eras. Use real dated atoms from the brain context. End with a hidden GROUNDED ON: marker line with one verbatim quote per era.]\n\nTopic: ${query}`
-                : `[DEMO MODE: Answer in two paragraphs — first state YOUR LENS on this kind of question (your belief/framework), then APPLY IT to give a concrete opinionated answer. Then on a new line output the GROUNDED ON: marker with 2-3 verbatim atom quotes separated by " || ". The marker line is for source attribution and is not displayed.]\n\nQuestion: ${query}`
+                ? `[DEMO MODE: Do NOT answer this question. Instead, trace how YOUR thinking on the topic in this question has CHANGED across 2-3 dated eras. Use real dated atoms from the brain context (prefer ones in the "RELEVANT ATOMS FOR THIS QUESTION" block when they fit). End with a hidden GROUNDED ON: marker line with one verbatim quote per era.]\n\nTopic: ${query}`
+                : `[DEMO MODE: Answer in two paragraphs — first state YOUR LENS on this kind of question (your belief/framework — NOT your most-famous tagline; follow the ANTI-DEFAULT RULE), then APPLY IT to give a concrete opinionated answer. The atoms most relevant to this specific question are in the "RELEVANT ATOMS FOR THIS QUESTION" block in your system context — prefer those. Then on a new line output the GROUNDED ON: marker with 2-3 verbatim atom quotes separated by " || ". The marker line is for source attribution and is not displayed.]\n\nQuestion: ${query}`
               : `You are ${brainName}, ${skill} me: ${query}`;
           const messageStream = client.messages.stream({
             // Canonical Python-side source of truth: scripts/auto_build_config.py
@@ -308,7 +342,21 @@ export async function POST(request: NextRequest) {
         }
       };
 
-      const enhancedSystem = buildEnhancedSystem(brainContext, skillPrompt, skill);
+      // Layer 2 of the mode-collapse fix: pull the 15 atoms most semantically
+      // relevant to THIS question (same helper the board route uses). Degrades
+      // gracefully — returns [] if OPENAI_API_KEY is missing, Supabase is
+      // unreachable, or the RPC errors. formatAtomsBlock then emits a labeled
+      // "(retrieval unavailable)" block and we rely on Layer 1 alone.
+      const relevantAtoms = await retrieveRelevantAtoms(brain, query, 15);
+      const relevantAtomsBlock = formatAtomsBlock(relevantAtoms);
+
+      const enhancedSystem = buildEnhancedSystem(
+        brainContext,
+        skillPrompt,
+        skill,
+        query,
+        relevantAtomsBlock,
+      );
 
       await Promise.all([
         pump(GENERIC_SYSTEM, "generic"),
