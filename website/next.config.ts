@@ -18,7 +18,27 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Force Markdown content-type for the agent doc — Vercel defaults to
+      // text/markdown but be explicit so non-browser clients (curl, agent
+      // fetchers) don't get surprised.
+      {
+        source: "/AGENTS.md",
+        headers: [
+          { key: "Content-Type", value: "text/markdown; charset=utf-8" },
+        ],
+      },
+      {
+        source: "/llms.txt",
+        headers: [
+          { key: "Content-Type", value: "text/markdown; charset=utf-8" },
+        ],
+      },
     ];
+  },
+  // Mirror /AGENTS.md at /llms.txt so we maintain one source file. The
+  // emerging llms.txt convention expects this exact path.
+  async rewrites() {
+    return [{ source: "/llms.txt", destination: "/AGENTS.md" }];
   },
 };
 

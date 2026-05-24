@@ -29,7 +29,14 @@ export function Footer() {
             <h4 className="text-xs font-semibold uppercase tracking-wider text-muted">Resources</h4>
             <ul className="mt-4 space-y-3">
               <li><span className="text-sm text-muted">Docs (coming soon)</span></li>
-              <li><span className="text-sm text-muted">API (coming soon)</span></li>
+              <li>
+                <a
+                  href="/AGENTS.md"
+                  className="text-sm text-body hover:text-deep-ink transition-colors"
+                >
+                  For AI agents
+                </a>
+              </li>
             </ul>
           </div>
 

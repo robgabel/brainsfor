@@ -46,6 +46,16 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
     >
+      <head>
+        {/* Agent-discovery: well-behaved AI agents look for an alternate
+            Markdown representation. Mirror at /llms.txt via next.config rewrites. */}
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href="/AGENTS.md"
+          title="AGENTS.md — interface for AI agents"
+        />
+      </head>
       <body className="bg-background text-foreground">
         <Nav />
         <main>{children}</main>
