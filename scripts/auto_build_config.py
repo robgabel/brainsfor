@@ -110,25 +110,30 @@ def error(msg: str):
 
 # --- Cost tracker ---
 class CostTracker:
-    """Track API call costs across the pipeline."""
+    """Track API call costs across the pipeline. Thread-safe — Phase 2.2 / 2.3
+    fire `record()` concurrently from ThreadPoolExecutor workers, and `+=` on
+    primitives is not atomic in CPython (read-modify-write loses updates)."""
 
     def __init__(self):
+        import threading
         self.total_input_tokens = 0
         self.total_output_tokens = 0
         self.total_cost = 0.0
         self.calls = []
+        self._lock = threading.Lock()
 
     def record(self, model: str, input_tokens: int, output_tokens: int, label: str = ""):
         in_cost = (input_tokens / 1000) * COST_INPUT.get(model, 0.003)
         out_cost = (output_tokens / 1000) * COST_OUTPUT.get(model, 0.015)
         cost = in_cost + out_cost
-        self.total_input_tokens += input_tokens
-        self.total_output_tokens += output_tokens
-        self.total_cost += cost
-        self.calls.append({
-            "model": model, "input": input_tokens, "output": output_tokens,
-            "cost": cost, "label": label,
-        })
+        with self._lock:
+            self.total_input_tokens += input_tokens
+            self.total_output_tokens += output_tokens
+            self.total_cost += cost
+            self.calls.append({
+                "model": model, "input": input_tokens, "output": output_tokens,
+                "cost": cost, "label": label,
+            })
         return cost
 
     def summary(self) -> str:

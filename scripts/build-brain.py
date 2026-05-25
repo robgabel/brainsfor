@@ -257,29 +257,46 @@ def stage_generate(brain_json, brain_dir, reference_slug, model, dry_run=False):
             sources_json = json.load(f)
 
     clusters = brain_json.get("clusters", {})
-    print(f"  Generating atoms for {len(clusters)} clusters using {model}...\n")
+    print(f"  Generating atoms for {len(clusters)} clusters using {model} (4 workers)...\n")
 
-    for i, (cluster_key, cluster_info) in enumerate(clusters.items()):
+    # Fast-path: surface cached + dry-run results synchronously so the log order
+    # stays sane, then defer real generation to a thread pool.
+    pending = []  # (cluster_key, cluster_info, output_path)
+    for cluster_key, cluster_info in clusters.items():
         output_path = research_dir / f"{cluster_key.replace('_', '-')}-atoms.json"
-        print(f"  [{i + 1}/{len(clusters)}] {cluster_info['name']}...", end=" ", flush=True)
-
         if output_path.exists():
-            print("(cached)")
+            print(f"  {cluster_info['name']}... (cached)")
             continue
-
         if dry_run:
-            print("[DRY RUN]")
+            print(f"  {cluster_info['name']}... [DRY RUN]")
             continue
+        pending.append((cluster_key, cluster_info, output_path))
 
+    if not pending:
+        return True
+
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    def _gen_one(item):
+        cluster_key, cluster_info, output_path = item
         try:
             atoms = generate_cluster_atoms(brain_json, cluster_key, cluster_info, exemplars, sources_json, model)
             with open(output_path, "w") as f:
                 json.dump(atoms, f, indent=2)
-            print(f"{len(atoms)} atoms")
-            if i < len(clusters) - 1:
-                time.sleep(2)  # Rate limiting
+            return cluster_info["name"], len(atoms), None
         except Exception as e:
-            print(f"ERROR: {e}")
+            return cluster_info["name"], 0, str(e)
+
+    done = 0
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        futures = [pool.submit(_gen_one, item) for item in pending]
+        for fut in as_completed(futures):
+            name, count, err = fut.result()
+            done += 1
+            if err:
+                print(f"  [{done}/{len(pending)}] {name}... ERROR: {err}")
+            else:
+                print(f"  [{done}/{len(pending)}] {name}... {count} atoms")
 
     return True
 
