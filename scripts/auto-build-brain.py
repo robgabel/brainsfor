@@ -59,7 +59,7 @@ from auto_build_config import (
     DEFAULT_MODEL, SYNTHESIS_MODEL, FAST_MODEL,
     TARGET_ATOMS, TARGET_CONNECTIONS, MIN_ATOMS_PER_CLUSTER,
     MIN_AUDIT_SCORE, MAX_REMEDIATION_CYCLES, PHASE_NAMES,
-    MIN_BRAIN_ATOMS,
+    MIN_BRAIN_ATOMS, MIN_QUOTE_PROVENANCE,
     SCRAPE_MAX_CHARS, SCRAPE_MIN_CHARS, SCRAPE_TIMEOUT_SEC, SCRAPE_SKIP_DOMAINS,
     CostTracker, call_claude,
     phase_header, step, success, warn, error,
@@ -883,6 +883,122 @@ def scrape_text_sources(
     return len(all_atoms)
 
 
+# =============================================================================
+# QUOTE VERIFIER (corpus grounding)
+# =============================================================================
+
+# Mirrors audit-brains.py: lowercase + whitespace collapse + 35-char signature
+# Use the same algorithm so verifier-passes == audit-passes.
+_QUOTE_SIG_LEN = 35
+
+
+def _normalize_corpus_text(s: str) -> str:
+    """Match audit-brains.normalize_text exactly so substrings line up."""
+    s = s.lower()
+    s = re.sub(r"\s+", " ", s)
+    return s.strip()
+
+
+def _quote_signature(quote: str) -> str:
+    """Match audit-brains.quote_signature exactly: middle 35-char substring."""
+    n = _normalize_corpus_text(quote)
+    if len(n) <= _QUOTE_SIG_LEN:
+        return n
+    return n[10 : 10 + _QUOTE_SIG_LEN]
+
+
+def _load_verification_corpus(brain_dir: Path) -> str:
+    """Concat YouTube transcripts + scraped raw text into one normalized blob.
+
+    Same sources audit-brains uses for provenance scoring, so the verifier and
+    the auditor agree on what counts as grounded. Atom-pool fallback is NOT
+    included on purpose — round-trip self-grounding would defeat the check.
+    """
+    parts = []
+
+    transcripts_dir = brain_dir / "source" / "transcripts"
+    if transcripts_dir.exists():
+        for tp in sorted(transcripts_dir.glob("*.json")):
+            try:
+                d = json.loads(tp.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+            ft = d.get("full_text") or ""
+            if ft:
+                parts.append(ft)
+
+    raw_dir = brain_dir / "source" / "raw"
+    if raw_dir.exists():
+        for rp in sorted(raw_dir.glob("*.md")):
+            try:
+                parts.append(rp.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+
+    return _normalize_corpus_text(" ".join(parts))
+
+
+def verify_quotes_against_corpus(brain_dir: Path) -> dict:
+    """Strip unverified original_quote values from research/all-atoms.json.
+
+    Each atom's quote is substring-matched against the merged corpus (YouTube
+    transcripts + Firecrawl-scraped markdown). Quotes that don't match are
+    set to None in-place. Atoms keep their content + implication regardless —
+    only the unfounded voice attribution is removed.
+
+    Returns: {"checked": N, "kept": K, "stripped": S, "no_quote": Q}.
+    Safe no-op if all-atoms.json doesn't exist (e.g., dry-run, early failure).
+    """
+    atoms_path = brain_dir / "research" / "all-atoms.json"
+    if not atoms_path.exists():
+        return {"checked": 0, "kept": 0, "stripped": 0, "no_quote": 0}
+
+    try:
+        atoms = json.loads(atoms_path.read_text(encoding="utf-8"))
+    except Exception as e:
+        warn(f"Quote verifier could not parse all-atoms.json: {e}")
+        return {"checked": 0, "kept": 0, "stripped": 0, "no_quote": 0}
+
+    corpus = _load_verification_corpus(brain_dir)
+    if not corpus:
+        # No corpus to verify against — strip all quotes; we cannot prove any.
+        # Better to ship with no quotes than fabricated ones.
+        stripped = 0
+        no_quote = 0
+        for a in atoms:
+            if a.get("original_quote"):
+                a["original_quote"] = None
+                stripped += 1
+            else:
+                no_quote += 1
+        atoms_path.write_text(json.dumps(atoms, indent=2), encoding="utf-8")
+        warn(f"No source corpus found — stripped all {stripped} quotes")
+        return {"checked": len(atoms), "kept": 0, "stripped": stripped, "no_quote": no_quote}
+
+    kept = 0
+    stripped = 0
+    no_quote = 0
+    for a in atoms:
+        q = a.get("original_quote")
+        if not q:
+            no_quote += 1
+            continue
+        sig = _quote_signature(q)
+        if sig and sig in corpus:
+            kept += 1
+        else:
+            a["original_quote"] = None
+            stripped += 1
+
+    atoms_path.write_text(json.dumps(atoms, indent=2), encoding="utf-8")
+    return {
+        "checked": len(atoms),
+        "kept": kept,
+        "stripped": stripped,
+        "no_quote": no_quote,
+    }
+
+
 def phase_2_ingest(
     brain_json: dict,
     brain_dir: Path,
@@ -947,6 +1063,28 @@ def phase_2_ingest(
         merge_result = build_brain.stage_merge(brain_json, brain_dir, dry_run=dry_run)
     else:
         step("[DRY RUN] Would merge all atom files")
+
+    # --- 2.3b Verify quotes against source corpus ---
+    # Strips original_quote values that aren't substring-grounded in scraped MD
+    # or YouTube transcripts. Prevents Phase 3 synthesis (and Supabase upload
+    # below) from ever seeing fabricated quotes.
+    if not dry_run:
+        step("Verifying quote provenance against source corpus...")
+        vr = verify_quotes_against_corpus(brain_dir)
+        if vr["checked"] == 0:
+            warn("No atoms to verify (skipped)")
+        else:
+            kept_pct = round(100 * vr["kept"] / max(vr["checked"], 1), 1)
+            success(
+                f"Quote verifier: kept {vr['kept']} / stripped {vr['stripped']} "
+                f"/ no-quote {vr['no_quote']} of {vr['checked']} atoms ({kept_pct}% have verified quotes)"
+            )
+            if vr["stripped"]:
+                step(
+                    f"Stripped quotes are fabrications — kept the atoms (content + implication)"
+                )
+    else:
+        step("[DRY RUN] Would verify quote provenance against corpus")
 
     # --- 2.4 Upload to Supabase ---
     all_atoms_path = research_dir / "all-atoms.json"
@@ -1419,7 +1557,54 @@ def phase_5_export_qa(
             score = audit.completeness_score
             step(f"Post-remediation score: {score}/100")
 
-        return {"score": score, "errors": len(audit.errors), "warnings": len(audit.warnings)}
+        # --- 5.6 Quote-provenance guardrail ---
+        # If quote provenance is below the floor, re-run the verifier (catches
+        # any quotes added between Phase 2 and Phase 5, e.g. by synthesis or
+        # manual edits), re-export, re-audit. Then enforce the floor.
+        provenance_pct = audit.stats.get("provenance_pct", 0.0) if hasattr(audit, "stats") else 0.0
+        quoted_atoms = audit.stats.get("quoted_atoms", 0) if hasattr(audit, "stats") else 0
+
+        if quoted_atoms > 0 and provenance_pct < MIN_QUOTE_PROVENANCE:
+            warn(
+                f"Quote provenance {provenance_pct}% < {MIN_QUOTE_PROVENANCE}% floor "
+                f"({quoted_atoms} quoted atoms) — re-running verifier"
+            )
+            vr = verify_quotes_against_corpus(brain_dir)
+            step(
+                f"Verifier stripped {vr['stripped']} unverified quotes "
+                f"(kept {vr['kept']}, no-quote {vr['no_quote']})"
+            )
+            # Re-export so pack/brain-atoms.json reflects the strip, then re-audit.
+            build_brain.stage_export(brain_json, brain_dir)
+            build_brain.stage_update_index(brain_json, brain_dir)
+            audit = audit_brains.audit_brain(slug, index_data)
+            score = audit.completeness_score
+            provenance_pct = audit.stats.get("provenance_pct", 0.0) if hasattr(audit, "stats") else 0.0
+            step(f"Post-verifier score: {score}/100, provenance: {provenance_pct}%")
+
+            # Hard abort if structural score collapsed (e.g. voice enrichment
+            # killed by mass strip) OR provenance still under floor (corpus
+            # is so thin that even the verifier can't find matches).
+            if score < MIN_AUDIT_SCORE or (
+                audit.stats.get("quoted_atoms", 0) > 0
+                and provenance_pct < MIN_QUOTE_PROVENANCE
+            ):
+                error(
+                    "Brain build BLOCKED — quote provenance cannot meet floor.\n"
+                    f"  Score: {score}/100 (floor: {MIN_AUDIT_SCORE})\n"
+                    f"  Provenance: {provenance_pct}% (floor: {MIN_QUOTE_PROVENANCE}%)\n"
+                    "  Fix: add more source coverage (YouTube videos, essays, "
+                    "interview transcripts) to brain.json and re-run with "
+                    "--resume-from 2. Better to ship a thinner brain with real "
+                    "voice than a fat one with fabricated quotes."
+                )
+
+        return {
+            "score": score,
+            "errors": len(audit.errors),
+            "warnings": len(audit.warnings),
+            "provenance_pct": provenance_pct,
+        }
 
     except Exception as e:
         warn(f"Audit failed: {e}")
