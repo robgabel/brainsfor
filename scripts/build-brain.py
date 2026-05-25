@@ -139,13 +139,15 @@ CLUSTER DESCRIPTION: {cluster_info['description']}
 IMPORTANT RULES:
 1. Every atom must be grounded in {first_name}'s ACTUAL documented statements, speeches,
    interviews, or publicly known positions. Do NOT invent or speculate.
-2. "original_quote" must be {first_name}'s REAL words — actual quotes from speeches, interviews,
-   or documented conversations. If you cannot find a real quote, omit the field rather than fabricate.
-3. "content" is your distilled 2-4 sentence statement of the insight.
+2. DO NOT INCLUDE QUOTES. This deep-research phase is for synthesizing {first_name}'s
+   documented positions into paraphrased insights — not for attributing verbatim words.
+   Quotes are attached in a later voice-grounding phase that pulls only from the actual
+   scraped source corpus. Any field named "original_quote" will be REJECTED and stripped.
+3. "content" is your distilled 2-4 sentence paraphrase of the insight in your own words.
 4. "implication" is the "so what" — what this means for builders, creators, and leaders today.
 5. "source_ref" should reference the specific speech, interview, or appearance.
 6. "source_date" should be as precise as possible (YYYY-MM-DD or YYYY).
-7. Set confidence: 0.95 for direct quotes, 0.85 for well-documented positions, 0.75 for reasonable inferences.
+7. Set confidence: 0.85 for well-documented positions, 0.75 for reasonable inferences.
 8. Assign 2-5 topic tags per atom.
 
 {first_name.upper()}'S FIRST PRINCIPLES (for context):
@@ -166,15 +168,14 @@ ALL AVAILABLE CLUSTERS (assign to "{cluster_key}" unless a different one fits be
 EXEMPLAR ATOMS (from another brain pack — match this format and quality):
 {exemplar_text}
 
-OUTPUT FORMAT — Return ONLY a JSON array:
+OUTPUT FORMAT — Return ONLY a JSON array. DO NOT include an "original_quote" field:
 [
   {{
-    "content": "Distilled 2-4 sentence insight...",
-    "original_quote": "{first_name}'s actual documented words...",
+    "content": "Distilled 2-4 sentence paraphrased insight in your own words...",
     "implication": "What this means for builders/leaders today...",
     "cluster": "{cluster_key}",
     "topics": ["topic1", "topic2", "topic3"],
-    "confidence": 0.92,
+    "confidence": 0.85,
     "source_type": "video",
     "source_ref": "Stanford commencement speech, 2005",
     "source_date": "2005-06-12"
@@ -196,7 +197,16 @@ Return ONLY the JSON array."""
         text = re.sub(r'^```(?:json)?\s*', '', text)
         text = re.sub(r'\s*```$', '', text)
 
-    return json.loads(text)
+    atoms = json.loads(text)
+
+    # Defensive strip: deep-research atoms must NOT carry original_quote.
+    # Voice attribution is the job of the corpus-grounded verifier in Phase 2.
+    # (See verify_quotes_against_corpus in auto-build-brain.py.)
+    for a in atoms:
+        if "original_quote" in a:
+            del a["original_quote"]
+
+    return atoms
 
 
 def stage_generate(brain_json, brain_dir, reference_slug, model, dry_run=False):

@@ -39,6 +39,13 @@ MIN_ATOMS_PER_CLUSTER = 5
 MIN_AUDIT_SCORE = 70
 MAX_REMEDIATION_CYCLES = 2
 
+# Quote provenance floor: % of atom quotes that must substring-match the source
+# corpus (YouTube transcripts + scraped MD) at audit time. Below this, Phase 5
+# re-runs the verifier (stripping fabrications) and re-audits. If the brain
+# still fails after remediation, the build aborts — better to fix sources than
+# ship LLM-invented words attributed to a real person.
+MIN_QUOTE_PROVENANCE = 50
+
 # Hard floor: pipeline halts after Phase 2 if total atoms < this value.
 # Override per-build via --min-atoms or bypass with --allow-thin-pack.
 MIN_BRAIN_ATOMS = 250
