@@ -813,16 +813,18 @@ def scrape_text_sources(
         warn("FIRECRAWL_API_KEY not set — skipping text source scraping")
         return 0
 
-    step(f"Scraping {len(text_sources)} text sources via Firecrawl...")
+    step(f"Scraping {len(text_sources)} text sources via Firecrawl (5 workers)...")
     all_atoms = []
     scraped_count = 0
     skipped_thin = 0
     failed_scrape = 0
 
-    for i, source in enumerate(text_sources, 1):
+    def _process_one(i_source):
+        """Scrape one URL + persist raw + extract atoms. Returns a tuple the
+        outer loop can fold back into counters. Runs in a worker thread."""
+        i, source = i_source
         url = source["url"]
         title = source.get("title", "")[:60]
-        print(f"  [{i}/{len(text_sources)}] {title}...", end=" ", flush=True)
 
         try:
             resp = httpx.post(
@@ -835,22 +837,19 @@ def scrape_text_sources(
                 timeout=SCRAPE_TIMEOUT_SEC,
             )
             if resp.status_code != 200:
-                failed_scrape += 1
-                print(f"scrape failed ({resp.status_code})")
-                continue
+                return i, "failed", title, [], f"scrape failed ({resp.status_code})"
 
             data = resp.json()
             markdown = (data.get("data") or {}).get("markdown", "")
             if not markdown or len(markdown) < SCRAPE_MIN_CHARS:
-                skipped_thin += 1
-                print(f"too thin ({len(markdown)} chars)")
-                continue
+                return i, "thin", title, [], f"too thin ({len(markdown)} chars)"
 
-            scraped_count += 1
             if len(markdown) > SCRAPE_MAX_CHARS:
                 markdown = markdown[:SCRAPE_MAX_CHARS] + "\n\n[...truncated]"
 
-            # Persist truncated markdown to source/raw/ for audit corpus + reproducibility.
+            # Persist truncated markdown to source/raw/ for audit corpus +
+            # reproducibility. The provenance verifier (Phase 2.3b) reads
+            # from here, so this MUST happen before atom extraction.
             try:
                 persist_raw_text(brain_dir, source, markdown)
             except Exception as e:
@@ -859,13 +858,34 @@ def scrape_text_sources(
             atoms = extract_atoms_from_text(
                 brain_json, source, markdown, client, cost_tracker, model
             )
-            all_atoms.extend(atoms)
-            print(f"{len(atoms)} atoms")
-            time.sleep(1)
+            return i, "ok", title, atoms, f"{len(atoms)} atoms"
 
         except Exception as e:
-            failed_scrape += 1
-            print(f"error: {e}")
+            return i, "failed", title, [], f"error: {e}"
+
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    completed = 0
+    results = []  # (i, atoms) for status=="ok"; sorted later to preserve source order
+    with ThreadPoolExecutor(max_workers=5) as pool:
+        futures = {pool.submit(_process_one, (i, s)): i for i, s in enumerate(text_sources, 1)}
+        for fut in as_completed(futures):
+            i, status, title, atoms, msg = fut.result()
+            completed += 1
+            print(f"  [{completed}/{len(text_sources)}] {title}... {msg}", flush=True)
+            if status == "ok":
+                scraped_count += 1
+                results.append((i, atoms))
+            elif status == "thin":
+                skipped_thin += 1
+            else:
+                failed_scrape += 1
+
+    # Preserve original source order in the saved atoms file so manual review +
+    # downstream tooling (e.g. extract-by-source dashboards) stay stable.
+    results.sort(key=lambda x: x[0])
+    for _, atoms in results:
+        all_atoms.extend(atoms)
 
     if all_atoms:
         with open(text_atoms_path, "w") as f:
