@@ -31,15 +31,22 @@ const SKILL_NAMES = [
 
 let synced = 0;
 
-// Copy index.json so lib/brains.ts can find it on Vercel
-fs.mkdirSync(PUBLIC_DIR, { recursive: true });
-fs.copyFileSync(indexPath, path.join(PUBLIC_DIR, "index.json"));
-synced++;
-
 // Hidden brains are private (Rob-only) — skip them entirely so their pack
 // assets and zip never reach the public site. Single source of truth: the
 // status field in brains/index.json.
 const publicBrains = index.brains.filter((b) => b.status !== "hidden");
+
+// Write a FILTERED index.json containing only public brains. Don't
+// copyFileSync — the source file contains hidden brain entries which would
+// leak through GET /brains/index.json (the agent-facing registry). The
+// internal local-dev path (lib/brains.ts → ../brains/index.json) still sees
+// the full file.
+fs.mkdirSync(PUBLIC_DIR, { recursive: true });
+fs.writeFileSync(
+  path.join(PUBLIC_DIR, "index.json"),
+  JSON.stringify({ ...index, brains: publicBrains }, null, 2) + "\n",
+);
+synced++;
 
 // Defensively remove any stale hidden-brain dirs (Vercel builds on a fresh
 // filesystem, but local dev / CI caches may have them).

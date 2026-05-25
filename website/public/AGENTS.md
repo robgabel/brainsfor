@@ -49,9 +49,10 @@ All endpoints are HTTP GET except `/api/board` (POST).
 GET /brains/index.json
 ```
 
-Returns the canonical registry — every brain in the catalog, including public
-(`status: "live"`) and private (`status: "hidden"`) packs. Filter on `status` if
-you only want public brains.
+Returns the canonical registry of every **publicly available** brain. Private
+brains (`status: "hidden"` in the internal source) are filtered out at build
+time and never reach this endpoint. Every brain you see here is fetchable via
+the other endpoints below.
 
 ```json
 {
@@ -238,7 +239,7 @@ in an isolated context so the answers don't contaminate each other.
 **Errors**:
 - `400 { "error": "Need between 2 and 5 brains" }`
 - `400 { "error": "Query required (under 500 chars)" }`
-- `404 { "error": "Brain not available: {slug}" }` — slug doesn't exist or is hidden
+- `404 { "error": "Brain not available: {slug}" }` — slug doesn't exist in the public registry
 - `429 { "error": "limit", "remaining": 0 }` — rate-limited
 
 **Rate limit**: 4 requests per 24 hours per IP. Each board call costs us ~5× a
@@ -310,10 +311,9 @@ import httpx, json
 
 BASE = "https://brainsforfree.com"
 
-# 1. List brains, filter to live
+# 1. List brains (registry contains only public brains)
 index = httpx.get(f"{BASE}/brains/index.json", timeout=30).json()
-live = [b for b in index["brains"] if b["status"] == "live"]
-print(f"{len(live)} live brains available")
+print(f"{len(index['brains'])} brains available")
 
 # 2. Pull a specific pack
 pack = httpx.get(f"{BASE}/brains/scott-belsky/brain-atoms.json", timeout=30).json()
@@ -403,8 +403,9 @@ is ours, and we'd rather the ecosystem use it widely than enforce.
   (planned), bump means breaking; minor additions stay backwards-compatible.
 - New fields may appear without notice (additive only).
 - New brains are added regularly. Re-fetch `index.json` if you're caching.
-- Removed brains are rare; when a brain moves from `live` → `hidden`, the JSON
-  files at `/brains/{slug}/...` may stop being served. Handle 404 gracefully.
+- Brains can be removed from the public registry; when that happens, the
+  registry entry and the JSON files at `/brains/{slug}/...` are removed in the
+  same build. Handle 404 gracefully if you cache slugs.
 
 ## What this isn't
 
