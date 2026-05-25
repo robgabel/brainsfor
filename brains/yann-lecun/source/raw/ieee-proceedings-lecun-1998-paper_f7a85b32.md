@@ -1,0 +1,53 @@
+Now on home page
+
+## ADS
+
+## Gradient-based learning applied to document recognition
+
+- [Lecun, Y.](https://ui.adsabs.harvard.edu/search/?q=author%3A%22Lecun%2C+Y.%22)
+;
+
+ - [Bottou, L.](https://ui.adsabs.harvard.edu/search/?q=author%3A%22Bottou%2C+L.%22)
+;
+
+ - [Bengio, Y.](https://ui.adsabs.harvard.edu/search/?q=author%3A%22Bengio%2C+Y.%22)
+;
+
+ - [Haffner, P.](https://ui.adsabs.harvard.edu/search/?q=author%3A%22Haffner%2C+P.%22)
+
+#### Abstract
+
+Multilayer neural networks trained with the back-propagation algorithm constitute the best example of a successful gradient based learning technique. Given an appropriate network architecture, gradient-based learning algorithms can be used to synthesize a complex decision surface that can classify high-dimensional patterns, such as handwritten characters, with minimal preprocessing. This paper reviews various methods applied to handwritten character recognition and compares them on a standard handwritten digit recognition task. Convolutional neural networks, which are specifically designed to deal with the variability of 2D shapes, are shown to outperform all other techniques. Real-life document recognition systems are composed of multiple modules including field extraction, segmentation recognition, and language modeling. A new learning paradigm, called graph transformer networks (GTN), allows such multimodule systems to be trained globally using gradient-based methods so as to minimize an overall performance measure. Two systems for online handwriting recognition are described. Experiments demonstrate the advantage of global training, and the flexibility of graph transformer networks. A graph transformer network for reading a bank cheque is also described. It uses convolutional neural network character recognizers combined with global training techniques to provide record accuracy on business and personal cheques. It is deployed commercially and reads several million cheques per day.
+
+
+Publication:
+
+IEEE Proceedings
+
+Pub Date:November 1998DOI:
+
+[10.1109/5.726791](https://ui.adsabs.harvard.edu/link_gateway/1998IEEEP..86.2278L/doi:10.1109/5.726791)
+
+Bibcode:[1998IEEEP..86.2278L](https://ui.adsabs.harvard.edu/abs/1998IEEEP..86.2278L/abstract)Keywords:
+
+- Neural networks;
+- Pattern recognition;
+- Machine learning;
+- Optical character recognition software;
+- Character recognition;
+- Feature extraction;
+- Multi-layer neural network;
+- Optical computing;
+- Hidden Markov models;
+- Principal component analysis
+
+full text sources
+
+
+IEEE
+
+
+
+\|
+
+🌓
