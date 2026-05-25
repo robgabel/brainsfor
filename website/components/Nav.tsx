@@ -14,7 +14,8 @@ export function Nav() {
           brainsforfree
         </Link>
 
-        {/* Desktop links */}
+        {/* Desktop links — "For Agents" sits at equal weight with Brains/Skills.
+            Agents are first-class consumers of this product, not an accommodation. */}
         <div className="hidden items-center gap-8 md:flex">
           <Link href="/brains" className="text-[15px] font-medium text-body hover:text-deep-ink transition-colors">
             Brains
@@ -22,6 +23,9 @@ export function Nav() {
           <Link href="/skills" className="text-[15px] font-medium text-body hover:text-deep-ink transition-colors">
             Skills
           </Link>
+          <a href="/AGENTS.md" className="text-[15px] font-medium text-body hover:text-deep-ink transition-colors">
+            For Agents
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -66,6 +70,13 @@ export function Nav() {
             >
               Skills
             </Link>
+            <a
+              href="/AGENTS.md"
+              className="rounded-lg px-4 py-3 text-base font-medium text-body hover:bg-brain-indigo/5 min-h-[44px]"
+              onClick={() => setMobileOpen(false)}
+            >
+              For Agents
+            </a>
             <Link
               href="/brains"
               className="mt-2 rounded-lg bg-brain-indigo px-4 py-3 text-center text-[15px] font-semibold text-white shadow-brain-cta min-h-[44px]"
