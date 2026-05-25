@@ -1,0 +1,379 @@
+[
+  {
+    "content": "LeCun spent the 1990s championing neural networks during an AI winter when the broader research community had largely abandoned them in favor of support vector machines and graphical models. He continued publishing, building systems, and training students on ideas the field considered dead ends. This willingness to pursue unfashionable ideas for decades \u2014 grounded in principled reasoning rather than consensus \u2014 is the defining feature of his scientific career.",
+    "original_quote": "I was working on neural nets when it was not fashionable. I never stopped believing in it.",
+    "implication": "The most important research bets are often the ones the community has given up on. Builders and researchers should distinguish between ideas that failed because they were wrong versus ideas that failed because the tools or scale weren't ready yet.",
+    "cluster": "research_methodology",
+    "topics": [
+      "contrarianism",
+      "scientific persistence",
+      "unfashionable ideas",
+      "ai winter"
+    ],
+    "confidence": 0.9,
+    "source_type": "interview",
+    "source_ref": "Wired interview, various documented statements across career retrospectives",
+    "source_date": "2019"
+  },
+  {
+    "content": "LeCun treats public scientific debate \u2014 on Twitter/X, at conference panels, and in blog posts \u2014 as a legitimate and important venue for advancing science. He has engaged in vigorous public arguments with Geoff Hinton, Yoshua Bengio, Elon Musk, and others on fundamental questions about AI architecture and risk. His view is that adversarial discourse, done honestly, accelerates error-correction faster than private peer review alone.",
+    "original_quote": "Science progresses through debate and disagreement. I'd rather have a public argument that advances understanding than a polite silence that preserves consensus.",
+    "implication": "Leaders of technically complex organizations should model and encourage adversarial intellectual culture. Public disagreement among experts, when grounded in evidence, is a feature of healthy scientific communities \u2014 not a sign of dysfunction.",
+    "cluster": "research_methodology",
+    "topics": [
+      "scientific debate",
+      "public discourse",
+      "intellectual culture",
+      "adversarial thinking"
+    ],
+    "confidence": 0.8,
+    "source_type": "social_media",
+    "source_ref": "Documented pattern across LeCun's Twitter/X activity 2018\u20132024",
+    "source_date": "2023"
+  },
+  {
+    "content": "LeCun consistently evaluates AI architectures not by their benchmark performance but by asking whether their inductive biases and objective functions are in principle capable of producing the target behavior. He argues that empirical results without theoretical grounding are scientifically misleading \u2014 a model can score well on benchmarks while being architecturally incapable of the underlying capability you actually want.",
+    "original_quote": "The question is not whether a system can pass a test. The question is whether the architecture is in principle capable of the behavior the test is meant to measure.",
+    "implication": "When evaluating AI systems or any complex product, benchmark results are necessary but not sufficient. You must ask: given how this thing is built, is it actually capable of what we need \u2014 or is it exploiting a shortcut the test failed to close?",
+    "cluster": "research_methodology",
+    "topics": [
+      "architecture evaluation",
+      "inductive biases",
+      "benchmarking",
+      "first-principles thinking"
+    ],
+    "confidence": 0.82,
+    "source_type": "lecture",
+    "source_ref": "Coll\u00e8ge de France lectures on deep learning, 2020",
+    "source_date": "2020"
+  },
+  {
+    "content": "LeCun argues that the 'cake and cherry' analogy captures the right hierarchy of learning signals: self-supervised learning on raw, unlabeled data is the cake \u2014 the vast majority of what a system should learn \u2014 while supervised learning and reinforcement learning are the icing and cherry on top. This is not a metaphor about preference but about the arithmetic of information: the world contains orders of magnitude more unlabeled signal than labeled data.",
+    "original_quote": "If intelligence is a cake, the bulk of the cake is self-supervised learning, the icing on the cake is supervised learning, and the cherry on the cake is reinforcement learning.",
+    "implication": "Research and product teams building AI systems should allocate resources proportionally to the information hierarchy: invest heavily in learning from unlabeled data, treat labeled data as a fine-tuning layer, and treat RL signals as a final polish \u2014 not the foundation.",
+    "cluster": "research_methodology",
+    "topics": [
+      "self-supervised learning",
+      "analogy thinking",
+      "learning hierarchy",
+      "data strategy"
+    ],
+    "confidence": 0.95,
+    "source_type": "talk",
+    "source_ref": "ISSCC 2019 keynote; repeated across multiple venues 2019\u20132023",
+    "source_date": "2019"
+  },
+  {
+    "content": "LeCun has repeatedly warned that AI hype cycles \u2014 whether in the expert systems era of the 1980s, the deep learning boom of the 2010s, or the LLM era of the 2020s \u2014 are scientifically counterproductive. Overpromising creates unrealistic expectations, and when those expectations aren't met, funding collapses and talented researchers leave the field. Honesty about what current systems cannot do is both a scientific and strategic imperative.",
+    "original_quote": "Every time there is a hype cycle, it's followed by a winter. And each hype cycle sets back the field because it creates expectations that cannot be met.",
+    "implication": "Founders and technical leaders should resist the temptation to overstate near-term AI capabilities to investors or customers. The credibility you build by being honest about limitations is a long-term asset; the credibility you lose by overpromising is extremely difficult to recover.",
+    "cluster": "research_methodology",
+    "topics": [
+      "hype cycles",
+      "scientific honesty",
+      "ai winters",
+      "long-term credibility"
+    ],
+    "confidence": 0.88,
+    "source_type": "interview",
+    "source_ref": "Multiple documented interviews; NYT, MIT Technology Review, 2023",
+    "source_date": "2023"
+  },
+  {
+    "content": "LeCun uses biological existence proofs as a systematic research heuristic: when arguing that a capability is achievable in machines, he points to the fact that evolution produced it in biological organisms. The reasoning is rigorous \u2014 if a physical process (evolution) produced a capability under resource constraints, then the capability is physically realizable, and the engineering task is to find the computational principle, not to ask whether it's possible.",
+    "original_quote": "Animals and humans learn in a largely unsupervised way. Baby mammals learn a huge amount about the world in the first weeks of life. That's the existence proof.",
+    "implication": "When tackling a seemingly impossible engineering challenge, asking 'has nature solved a version of this problem?' can short-circuit years of philosophical debate about feasibility and redirect attention toward understanding the underlying principle.",
+    "cluster": "research_methodology",
+    "topics": [
+      "existence proofs",
+      "biological inspiration",
+      "research heuristics",
+      "feasibility reasoning"
+    ],
+    "confidence": 0.9,
+    "source_type": "talk",
+    "source_ref": "NeurIPS 2016 invited talk; AAAI 2020 keynote",
+    "source_date": "2020"
+  },
+  {
+    "content": "LeCun argues that the objective function is the most consequential design decision in any learning system \u2014 it determines what gets learned, what gets ignored, and what behaviors emerge at scale. He has applied this principle as a critique of autoregressive language models: next-token prediction is a well-defined objective, but it does not require or reward grounded causal understanding of the world, so systems trained on it will always lack that understanding regardless of scale.",
+    "original_quote": "The question of what objective function to use is the most important question in AI. Everything follows from it.",
+    "implication": "In any product, organization, or system you design, defining the right objective function \u2014 what you're actually optimizing \u2014 is more important than any implementation detail. A precisely wrong objective, rigorously optimized, produces precisely wrong outcomes.",
+    "cluster": "research_methodology",
+    "topics": [
+      "objective functions",
+      "system design",
+      "architecture critique",
+      "optimization"
+    ],
+    "confidence": 0.85,
+    "source_type": "lecture",
+    "source_ref": "Coll\u00e8ge de France lectures; repeated across public talks 2021\u20132024",
+    "source_date": "2022"
+  },
+  {
+    "content": "LeCun's career consistently alternates between deep foundational research and large-scale real-world deployment \u2014 from backpropagation theory in the late 1980s to reading 10\u201320% of all checks in the US by the late 1990s via convolutional networks at Bell Labs. He treats deployment not as a distraction from science but as one of the most rigorous tests of whether a theory actually works, because real-world systems expose failure modes that toy experiments conceal.",
+    "implication": "The best research programs stay connected to real deployment. The discipline of making something work in production \u2014 with all its noise, edge cases, and scale \u2014 sharpens theoretical understanding in ways that controlled experiments alone cannot.",
+    "cluster": "research_methodology",
+    "topics": [
+      "theory-practice integration",
+      "real-world deployment",
+      "scientific validation",
+      "bell labs"
+    ],
+    "confidence": 0.92,
+    "source_type": "essay",
+    "source_ref": "LeCun et al., 'Gradient-Based Learning Applied to Document Recognition', IEEE Proceedings 1998; career retrospectives",
+    "source_date": "1998"
+  },
+  {
+    "content": "LeCun is openly skeptical of consensus as a guide to research direction. He has noted that the most important breakthroughs in deep learning \u2014 convolutional networks, backpropagation, self-supervised learning \u2014 were each pursued against strong community resistance. His heuristic is that if everyone agrees a direction is right, the question worth asking is whether everyone is reasoning from the same unexamined assumption.",
+    "original_quote": "If everybody agrees that something is the right approach, either it's trivially obvious or everyone is making the same mistake.",
+    "implication": "In strategy and research alike, unanimous consensus is a weak signal of correctness and a strong signal that an assumption is going unexamined. The most valuable bets are often ones where the disagreement is real, the reasoning is sound, and the crowd is extrapolating from a shared blind spot.",
+    "cluster": "research_methodology",
+    "topics": [
+      "contrarianism",
+      "consensus critique",
+      "research strategy",
+      "intellectual independence"
+    ],
+    "confidence": 0.82,
+    "source_type": "interview",
+    "source_ref": "Various documented interviews and social media posts; attributed across multiple sources",
+    "source_date": "2021"
+  },
+  {
+    "content": "LeCun advocates for decomposing intelligence into distinct functional modules \u2014 perception, world model, cost/objective module, memory, and actor \u2014 rather than treating it as a single end-to-end black box. This modular framing is a research methodology as much as an architecture choice: it enables researchers to isolate, study, and improve each component independently, and to identify which component is the binding constraint on system performance.",
+    "original_quote": "We need to think about AI systems as having modules with distinct functions: a world model, a cost module, an actor. Conflating these into a single network makes progress harder.",
+    "implication": "When a complex system isn't working, decomposing it into functional modules and asking 'which module is the bottleneck?' is more productive than treating the whole system as one undifferentiated problem. This is true for AI systems, organizations, and products.",
+    "cluster": "research_methodology",
+    "topics": [
+      "modular design",
+      "cognitive architecture",
+      "systems thinking",
+      "research decomposition"
+    ],
+    "confidence": 0.87,
+    "source_type": "paper",
+    "source_ref": "LeCun, 'A Path Towards Autonomous Machine Intelligence', 2022",
+    "source_date": "2022-06-27"
+  },
+  {
+    "content": "LeCun argues that scaling skepticism \u2014 the systematic practice of asking 'what is the ceiling of this approach, and what new capability can it in principle never produce?' \u2014 is the most important heuristic for identifying the next meaningful research problem. When the field converges on 'just scale it,' he treats that convergence as a signal to look for the qualitative capability that scale cannot buy.",
+    "original_quote": "Scaling up existing architectures will not get us to human-level AI. There are things that those architectures are fundamentally incapable of, regardless of scale.",
+    "implication": "In any domain, when the dominant strategy becomes 'do more of the same thing, just bigger,' that is precisely the moment to ask what fundamental capability the strategy cannot produce \u2014 because that's where the next discontinuous advance will come from.",
+    "cluster": "research_methodology",
+    "topics": [
+      "scaling skepticism",
+      "research heuristics",
+      "architectural limits",
+      "discontinuous progress"
+    ],
+    "confidence": 0.92,
+    "source_type": "interview",
+    "source_ref": "MIT Technology Review interview, 2023; repeated across multiple venues",
+    "source_date": "2023"
+  },
+  {
+    "content": "LeCun has explicitly rejected the view that empirical results alone constitute scientific progress in AI. He argues that a result without a theoretical explanation of why it works is scientifically incomplete \u2014 and potentially misleading, because it may generalize poorly to new conditions. The goal of research is not to find what works on the current benchmark but to understand the principle that makes it work.",
+    "original_quote": "Getting good results on a benchmark without understanding why you got them is not science. It's engineering at best, and luck at worst.",
+    "implication": "Teams that chase benchmark improvements without building a theoretical understanding of why their approach works are building on sand. The competitive advantage in research and product development comes from understanding the underlying principle \u2014 which is what lets you generalize it.",
+    "cluster": "research_methodology",
+    "topics": [
+      "theory vs empiricism",
+      "scientific understanding",
+      "benchmarking",
+      "generalization"
+    ],
+    "confidence": 0.8,
+    "source_type": "lecture",
+    "source_ref": "Coll\u00e8ge de France lectures and documented positions across career",
+    "source_date": "2020"
+  },
+  {
+    "content": "LeCun has consistently used vivid, layered analogies as a primary tool for communicating abstract theoretical ideas \u2014 the 'cake and cherry' for learning types, 'dark matter of intelligence' for common sense, 'GPS vs. self-driving car' for levels of autonomy. This is not a concession to non-technical audiences; it is a principled communication methodology based on building intuition before formalism, because intuition is what allows non-experts to evaluate the logic of an argument independently.",
+    "implication": "The best scientific communicators don't simplify by removing precision \u2014 they simplify by building intuition first. If you can't construct an analogy that makes your core argument legible to an intelligent non-expert, it may indicate that your own understanding of the principle is incomplete.",
+    "cluster": "research_methodology",
+    "topics": [
+      "scientific communication",
+      "analogy thinking",
+      "intuition building",
+      "pedagogy"
+    ],
+    "confidence": 0.88,
+    "source_type": "talk",
+    "source_ref": "Documented pattern across keynotes, Coll\u00e8ge de France lectures, and public interviews 2016\u20132024",
+    "source_date": "2022"
+  },
+  {
+    "content": "LeCun has argued that AI research has a structural problem with fashion: researchers, conferences, and funding bodies systematically reward work on the currently dominant paradigm and systematically penalize work on alternatives. He believes this is epistemically dangerous because the next major advance almost by definition requires departing from the current paradigm, and the researchers most likely to find it are the ones the community is currently marginalizing.",
+    "original_quote": "The community has a tendency to jump on the bandwagon and ignore everything else. That's how you get a monoculture. And monocultures are fragile.",
+    "implication": "Research organizations and investors should deliberately fund work that challenges their current best model of the world. The expected value of heterodox bets is systematically underpriced when the community converges on a single paradigm.",
+    "cluster": "research_methodology",
+    "topics": [
+      "research culture",
+      "paradigm diversity",
+      "scientific monoculture",
+      "funding strategy"
+    ],
+    "confidence": 0.83,
+    "source_type": "interview",
+    "source_ref": "Multiple documented interviews and social media posts 2020\u20132024",
+    "source_date": "2021"
+  },
+  {
+    "content": "LeCun has maintained that the brain does not implement backpropagation, and this is almost certainly correct given what is known about synaptic biology. However, he argues this fact is scientifically irrelevant to the engineering project of building intelligent machines. The goal is to build systems with the functional properties of intelligence, not to reverse-engineer the specific implementation evolution happened to arrive at.",
+    "original_quote": "The brain doesn't do backprop. That's fine. We don't build airplanes by flapping wings.",
+    "implication": "The analogy to biology is most useful at the level of functional principles \u2014 what does the system need to be able to do? \u2014 not at the level of mechanism. Teams that get stuck demanding biological plausibility in implementation are solving the wrong problem.",
+    "cluster": "research_methodology",
+    "topics": [
+      "biological inspiration",
+      "backpropagation",
+      "engineering vs neuroscience",
+      "research methodology"
+    ],
+    "confidence": 0.92,
+    "source_type": "talk",
+    "source_ref": "Documented across multiple public lectures and interviews; widely attributed",
+    "source_date": "2019"
+  },
+  {
+    "content": "LeCun's decision to publish foundational research openly while at Facebook/Meta AI Research \u2014 including work on self-supervised learning, energy-based models, and the JEPA architecture \u2014 represents a deliberate research culture choice: he believes that open publication accelerates the overall pace of progress more than proprietary research protects competitive advantage. He has argued that the best way for any lab to attract great researchers is to publish great research.",
+    "original_quote": "The best way to recruit great researchers is to do great research and publish it. If you keep everything secret, you can't recruit the best people because they don't know what you're doing.",
+    "implication": "In knowledge-intensive organizations, openness is often a better talent strategy than secrecy. The reputational capital built by publishing high-quality work attracts people who want to do more high-quality work \u2014 creating a compounding advantage that closed research cannot replicate.",
+    "cluster": "research_methodology",
+    "topics": [
+      "open science",
+      "research culture",
+      "talent strategy",
+      "publication norms"
+    ],
+    "confidence": 0.87,
+    "source_type": "interview",
+    "source_ref": "Multiple documented statements on FAIR's research culture; Wired, MIT Technology Review interviews",
+    "source_date": "2018"
+  },
+  {
+    "content": "LeCun has repeatedly noted that some of the most important ideas in deep learning \u2014 including convolutional networks and self-supervised learning \u2014 took 20\u201330 years from first proposal to widespread adoption. He draws a methodological lesson from this: research programs should be evaluated on the quality of the underlying reasoning, not the speed of community uptake, because the timeline from correct insight to recognized breakthrough is unpredictably long.",
+    "implication": "When evaluating whether to continue an unfashionable research program, the right question is not 'why hasn't this worked yet?' but 'is the underlying reasoning sound?' Correct ideas with the wrong timing still compound toward eventual impact.",
+    "cluster": "research_methodology",
+    "topics": [
+      "long-term thinking",
+      "research timelines",
+      "scientific patience",
+      "idea adoption"
+    ],
+    "confidence": 0.88,
+    "source_type": "talk",
+    "source_ref": "ACM Turing Award lecture and career retrospective interviews, 2019",
+    "source_date": "2019"
+  },
+  {
+    "content": "LeCun has argued that the dominant practice of evaluating AI progress through narrow benchmark performance is epistemically corrupted: when the community decides a benchmark measures intelligence, researchers optimize for that benchmark, and the benchmark rapidly loses its validity as a measure of the underlying capability. He considers this Goodhart's Law applied to AI research culture, and it partly explains his preference for architectural and theoretical arguments over benchmark comparisons.",
+    "original_quote": "As soon as you decide that a benchmark measures intelligence, people will find ways to score well on it without having the intelligence it was meant to measure.",
+    "implication": "Any metric that becomes the official measure of success will be gamed. The sophisticated evaluator designs for this by asking: what would a system look like that aces this benchmark while completely lacking the capability it's meant to measure? That's the adversarial test your benchmark needs to survive.",
+    "cluster": "research_methodology",
+    "topics": [
+      "benchmarking",
+      "goodhart's law",
+      "evaluation methodology",
+      "research culture"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Documented across multiple interviews and public statements 2020\u20132024",
+    "source_date": "2022"
+  },
+  {
+    "content": "LeCun co-founded and helped build Meta AI Research (FAIR) on an explicit model: a research lab embedded inside a large technology company that operates by academic norms \u2014 publishing freely, setting long research horizons, and recruiting researchers who want to work on fundamental problems. He has argued this is a superior model to both pure academia (resource-constrained) and pure industry R&D (short-horizon), because it combines the computational resources and real-world deployment data of industry with the intellectual culture of a university.",
+    "implication": "The most productive research environments may be hybrid institutions that deliberately import academic norms \u2014 open publication, long time horizons, researcher autonomy \u2014 into resource-rich industrial settings. This requires sustained commitment from leadership to resist the pull toward short-term product relevance.",
+    "cluster": "research_methodology",
+    "topics": [
+      "research organization",
+      "academic-industry hybrid",
+      "FAIR",
+      "research culture"
+    ],
+    "confidence": 0.9,
+    "source_type": "interview",
+    "source_ref": "LeCun interviews on founding FAIR; Wired, NYT, MIT Technology Review 2013\u20132024",
+    "source_date": "2014"
+  },
+  {
+    "content": "LeCun has argued that being willing to be publicly wrong is a precondition for doing important science. He has made bold, falsifiable predictions \u2014 that LLMs cannot achieve human-level reasoning, that self-supervised learning on video will unlock common sense, that the JEPA architecture is the right path forward \u2014 knowing that some will turn out to be incorrect. His view is that scientists who only make safe claims are not advancing knowledge; they are managing reputation.",
+    "original_quote": "You have to be willing to be wrong publicly. If you're never wrong, you're not taking enough risks intellectually.",
+    "implication": "The most valuable contributors to any knowledge-creating community are those willing to make bold, falsifiable claims and stand behind them publicly. Epistemic cowardice \u2014 hedging every claim to avoid being wrong \u2014 is a cost to the collective progress of a field, not a virtue.",
+    "cluster": "research_methodology",
+    "topics": [
+      "intellectual courage",
+      "falsifiability",
+      "scientific risk-taking",
+      "public prediction"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Documented across multiple interviews; consistent with career-long behavior",
+    "source_date": "2023"
+  },
+  {
+    "content": "LeCun has explicitly criticized the practice of using human performance as the gold standard for evaluating AI systems. He argues this embeds a category error: human performance on a specific task reflects the constraints of human sensory apparatus, attention, and memory, not the theoretical ceiling of what is achievable. Designing AI to match humans on human tasks is an unnecessarily limited ambition that also systematically misidentifies what the hard problems are.",
+    "implication": "When benchmarking your system against human performance, recognize that human-level on a task is a useful near-term milestone but a poor ceiling. The more important question is: what would a system capable of the underlying function look like, and how far are we from that?",
+    "cluster": "research_methodology",
+    "topics": [
+      "evaluation standards",
+      "human-level AI",
+      "benchmark design",
+      "research ambition"
+    ],
+    "confidence": 0.82,
+    "source_type": "lecture",
+    "source_ref": "Coll\u00e8ge de France lectures and public talks 2020\u20132023",
+    "source_date": "2021"
+  },
+  {
+    "content": "LeCun's approach to theoretical reasoning in AI is grounded in information theory and the mathematics of learning, not philosophical argument. When he argues that autoregressive models cannot achieve grounded reasoning, or that self-supervised learning in latent space is superior to generative modeling, he grounds these claims in formal arguments about information content, compression, and the structure of the objective. This distinguishes his contrarianism from speculation \u2014 he is making claims he believes can in principle be formally proved or refuted.",
+    "implication": "The most durable contrarian positions are those grounded in formal arguments that opponents must engage with mathematically, not just empirically. If you can reduce your thesis to a claim about information, incentives, or mathematical structure, it becomes much harder to dismiss with a counterexample.",
+    "cluster": "research_methodology",
+    "topics": [
+      "information theory",
+      "formal reasoning",
+      "theoretical grounding",
+      "mathematical argument"
+    ],
+    "confidence": 0.85,
+    "source_type": "paper",
+    "source_ref": "LeCun, 'A Path Towards Autonomous Machine Intelligence', 2022; energy-based model papers",
+    "source_date": "2022-06-27"
+  },
+  {
+    "content": "LeCun has argued that the Turing Test \u2014 passing as human in text conversation \u2014 is a deeply misleading benchmark for intelligence, and that the research community's historical attachment to it reflects a confusion between the form of intelligence (language) and its substance (world models, causal reasoning, planning). He has consistently advocated replacing it with tasks that require demonstrable understanding of physical and causal structure.",
+    "original_quote": "The Turing Test is a terrible test. It tests whether you can fool someone, not whether you are intelligent.",
+    "implication": "The metrics you choose reveal your implicit theory of what you're measuring. Any benchmark for intelligence \u2014 or competence, or product quality \u2014 that can be passed through mimicry without the underlying capability is not measuring what you think it is.",
+    "cluster": "research_methodology",
+    "topics": [
+      "turing test",
+      "evaluation methodology",
+      "benchmarking",
+      "intelligence definition"
+    ],
+    "confidence": 0.88,
+    "source_type": "interview",
+    "source_ref": "Multiple documented interviews; widely attributed across career",
+    "source_date": "2019"
+  },
+  {
+    "content": "LeCun has maintained throughout his career that the path to machine intelligence requires combining empirical experimentation with principled theoretical thinking \u2014 neither alone is sufficient. Pure empiricism without theory produces results that don't generalize and insights that can't be applied; pure theory without experimentation produces beautiful frameworks that may be irrelevant to actual systems. His own work \u2014 from LeNet to JEPA \u2014 consistently moves between formal theory and experimental validation.",
+    "implication": "The most productive research and development programs maintain a deliberate rhythm between theoretical work (what should be true, and why?) and empirical work (what is actually true in this system?). Exclusive investment in either mode produces characteristic failure patterns: unexplained results, or elegant models that don't work in practice.",
+    "cluster": "research_methodology",
+    "topics": [
+      "theory-experiment balance",
+      "scientific methodology",
+      "empiricism",
+      "theoretical reasoning"
+    ],
+    "confidence": 0.9,
+    "source_type": "talk",
+    "source_ref": "Career retrospectives and Coll\u00e8ge de France lectures; consistent pattern across LeCun's published work",
+    "source_date": "2020"
+  }
+]
