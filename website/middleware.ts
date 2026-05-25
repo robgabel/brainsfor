@@ -1,7 +1,14 @@
 import { NextResponse, type NextRequest } from "next/server";
 
+// Path-to-regexp matcher with a single negative lookahead at the start. Any
+// path prefix listed here bypasses the password gate entirely. Public agent
+// surface (AGENTS.md, llms.txt, /brains/* assets, and the live agent
+// endpoints) MUST stay exempt — see public/AGENTS.md for the contract. Each
+// endpoint has its own protections (rate limits, CORS, slug allowlists).
 export const config = {
-  matcher: ["/((?!_next/|favicon.ico|api/skill).*)"],
+  matcher: [
+    "/((?!_next/|favicon\\.ico|api/skill|api/board|AGENTS\\.md|llms\\.txt|brains/).*)",
+  ],
 };
 
 function constantTimeEqual(a: string, b: string): boolean {
