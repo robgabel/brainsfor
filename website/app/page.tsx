@@ -134,7 +134,7 @@ export default function Home() {
                 step: "02",
                 title: "Install with one command",
                 desc: "One line in your terminal. Works with Claude Code, Cursor, Gemini CLI, and any AI tool that supports skills.",
-                code: "npx skills add brainsfor/belsky",
+                code: "npx skills add brainsfor/scott-belsky",
               },
               {
                 step: "03",
@@ -147,9 +147,22 @@ export default function Home() {
                 <h3 className="mt-3 font-display text-xl font-normal tracking-tight text-deep-ink">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-body">{item.desc}</p>
                 {item.code && (
-                  <div className="mt-4 rounded-lg bg-deep-ink px-4 py-3 font-mono text-xs text-success">
-                    $ {item.code}
-                  </div>
+                  <>
+                    <div className="mt-4 rounded-lg bg-deep-ink px-4 py-3 font-mono text-xs text-success">
+                      $ {item.code}
+                    </div>
+                    <p className="mt-2 text-xs text-muted">
+                      Launching next week —{" "}
+                      <a
+                        href="/brains/scott-belsky/scott-belsky-brain-pack.zip"
+                        download
+                        className="font-medium text-brain-indigo hover:underline"
+                      >
+                        download the zip
+                      </a>{" "}
+                      in the meantime.
+                    </p>
+                  </>
                 )}
               </div>
             ))}
@@ -167,33 +180,6 @@ export default function Home() {
             Every brain is derived exclusively from freely available, public resources &mdash; interviews, podcasts,
             free newsletters, talks, and blog posts. No commercial transcripts or paywalled content.
             Where book ideas appear, they come from public discourse: reviews, author interviews, and press coverage.
-          </p>
-        </div>
-      </section>
-
-      {/* ─── Founding Supporters ─── */}
-      <section className="bg-brand-night px-6 py-20 text-white">
-        <div className="mx-auto max-w-[720px] text-center">
-          <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold tracking-wide text-white/80">
-            Limited
-          </span>
-          <h2 className="mt-6 font-display text-3xl font-light tracking-[-0.75px] md:text-4xl">
-            Become a founding supporter
-          </h2>
-          <p className="mx-auto mt-4 max-w-[540px] text-base leading-relaxed text-white/70">
-            First 100 members per brain get their name embedded in the brain pack, free updates forever,
-            and a vote on the next brain we build.
-          </p>
-          <div className="mt-8">
-            <Link
-              href="/brains"
-              className="inline-block rounded-lg bg-white px-6 py-3 text-[15px] font-semibold text-deep-ink transition-all hover:bg-white/90"
-            >
-              Claim your spot
-            </Link>
-          </div>
-          <p className="mt-4 font-mono text-xs text-white/40">
-            87 of 100 founding spots remaining for the Belsky brain
           </p>
         </div>
       </section>

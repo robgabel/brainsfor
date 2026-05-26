@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="border-t border-[var(--border-default)] bg-white">
       <div className="mx-auto max-w-[1140px] px-6 py-16">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <p className="font-display text-xl font-semibold tracking-tight text-deep-ink">
@@ -28,7 +28,6 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-muted">Resources</h4>
             <ul className="mt-4 space-y-3">
-              <li><span className="text-sm text-muted">Docs (coming soon)</span></li>
               <li>
                 <a
                   href="/AGENTS.md"
@@ -37,15 +36,6 @@ export function Footer() {
                   For AI agents
                 </a>
               </li>
-            </ul>
-          </div>
-
-          {/* Community */}
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-muted">Community</h4>
-            <ul className="mt-4 space-y-3">
-              <li><span className="text-sm text-muted">Discord (coming soon)</span></li>
-              <li><span className="text-sm text-muted">Newsletter (coming soon)</span></li>
             </ul>
           </div>
         </div>

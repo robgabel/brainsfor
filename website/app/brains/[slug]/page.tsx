@@ -249,9 +249,22 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
                 <div key={item.tool} className="rounded-lg border border-border-default bg-white p-4">
                   <p className="mb-2 text-sm font-medium text-label">{item.tool}</p>
                   {item.tool !== "Manual" ? (
-                    <div className="rounded-lg bg-deep-ink px-4 py-3 font-mono text-sm text-success">
-                      $ {item.cmd}
-                    </div>
+                    <>
+                      <div className="rounded-lg bg-deep-ink px-4 py-3 font-mono text-sm text-success">
+                        $ {item.cmd}
+                      </div>
+                      <p className="mt-2 text-xs text-muted">
+                        Launching next week —{" "}
+                        <a
+                          href={`/brains/${brain.slug}/${brain.slug}-brain-pack.zip`}
+                          download
+                          className="font-medium text-brain-indigo hover:underline"
+                        >
+                          download the zip
+                        </a>{" "}
+                        in the meantime.
+                      </p>
+                    </>
                   ) : (
                     <p className="text-sm text-body">{item.cmd}</p>
                   )}

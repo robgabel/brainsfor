@@ -99,9 +99,22 @@ export default async function DashboardPage() {
                       </p>
                     )}
                     {brain.status === "live" && (
-                      <div className="mt-3 rounded-lg bg-deep-ink px-3 py-2 font-mono text-xs text-success">
-                        $ npx skills add brainsfor/{brain.slug}
-                      </div>
+                      <>
+                        <div className="mt-3 rounded-lg bg-deep-ink px-3 py-2 font-mono text-xs text-success">
+                          $ npx skills add brainsfor/{brain.slug}
+                        </div>
+                        <p className="mt-1.5 text-[10px] text-muted">
+                          Launching next week —{" "}
+                          <a
+                            href={`/brains/${brain.slug}/${brain.slug}-brain-pack.zip`}
+                            download
+                            className="font-medium text-brain-indigo hover:underline"
+                          >
+                            download the zip
+                          </a>{" "}
+                          in the meantime.
+                        </p>
+                      </>
                     )}
                     <Link
                       href={`/brains/${brain.slug}`}

@@ -1,5 +1,6 @@
 import { BRAINS } from "@/lib/brains";
 import { BrainCard } from "@/components/BrainCard";
+import { RequestBrainForm } from "@/components/RequestBrainForm";
 
 export const metadata = {
   title: "Brains — brainsforfree",
@@ -67,15 +68,8 @@ export default function BrainsPage() {
           <p className="mt-2 text-sm text-body">
             Request a brain. When it hits 50 requests, we build it.
           </p>
-          <div className="mt-6 flex gap-3">
-            <input
-              type="text"
-              placeholder="e.g. Sara Blakely, Daymond John, Seth Godin..."
-              className="flex-1 rounded-lg border border-border-default bg-white px-4 py-3 text-sm text-deep-ink placeholder-muted outline-none transition-all focus:border-brain-indigo focus:ring-[3px] focus:ring-brain-indigo/20"
-            />
-            <button className="rounded-lg bg-brain-indigo px-5 py-3 text-sm font-semibold text-white shadow-brain-cta transition-all hover:bg-indigo-hover">
-              Request
-            </button>
+          <div className="mt-6">
+            <RequestBrainForm />
           </div>
         </div>
       </section>
