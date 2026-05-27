@@ -242,14 +242,41 @@ def call_claude(
 
 # --- Search queries for source discovery ---
 def get_search_queries(person_name: str) -> list:
-    """Return the 5 search queries for discovering sources about a person."""
+    """Return web-search queries for TEXT source discovery via Firecrawl.
+
+    YouTube videos are handled separately by discover_youtube_videos() using
+    yt-dlp — do NOT add video/podcast-oriented queries here or they'll return
+    YouTube URLs that Firecrawl can't usefully scrape.
+    """
     return [
         f"{person_name} best way to understand",
-        f"{person_name} best interviews",
+        f"{person_name} best interviews transcript",
         f"{person_name} best essays OR best writing OR best articles",
         f"{person_name} books",
-        f"{person_name} podcast appearances OR keynotes OR talks",
     ]
+
+
+# --- YouTube partner discovery prompt ---
+YOUTUBE_PARTNER_PROMPT = """\
+You are helping build a knowledge database about {person_name}.
+
+List podcast hosts, interviewers, and events that are HIGHLY LIKELY to have
+a recorded interview with {person_name} available on YouTube.
+
+STRICT RULES:
+- Only include entries where you are HIGHLY CONFIDENT the interview exists on YouTube
+- If you are unsure whether someone has ever hosted {person_name}, DO NOT include them
+- Each name will be used as an exact quoted string in a YouTube search alongside
+  "{person_name}" — so use the person's or event's full recognizable name
+- Prefer long-form interviews (podcasts, talks, conference keynotes) over clips
+
+Return a JSON object — no markdown, no explanation:
+{{"partners": ["Tim Ferriss", "Shane Parrish", ...]}}
+
+Include at most 12 partners. Fewer high-confidence entries beat many uncertain ones.
+
+Who are the most well-known people or events that have hosted or interviewed {person_name} on YouTube?\
+"""
 
 
 # --- Prompt templates ---

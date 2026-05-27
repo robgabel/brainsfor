@@ -1,0 +1,362 @@
+[
+  {
+    "content": "Every decision is fundamentally a bet on an uncertain future \u2014 a wager that one path will produce better outcomes than the alternatives. Duke argues that making this framing explicit forces intellectual honesty: you can no longer pretend a choice is 'right' or 'wrong' in advance, only better or worse calibrated given available information. This reframe is the foundation of cleaner thinking under uncertainty.",
+    "implication": "Leaders and builders who adopt the 'bet' framing stop demanding certainty before acting and start asking the more useful question: what probability do I assign to this working, and is that high enough to justify the cost?",
+    "cluster": "thinking_in_bets",
+    "topics": [
+      "probabilistic thinking",
+      "decision framing",
+      "uncertainty",
+      "intellectual honesty"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts \u2014 Annie Duke",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke introduces the concept of 'resulting' \u2014 the near-universal human habit of judging the quality of a decision by the quality of its outcome. Because outcomes are contaminated by luck, this feedback loop actively misleads: a great decision can produce a bad outcome, and a terrible decision can produce a great one. Conflating the two prevents genuine learning and improvement.",
+    "implication": "Product teams and executives who reward outcomes rather than reasoning quality create cultures that accidentally reinforce bad processes whenever they get lucky \u2014 and punish sound thinking whenever luck runs against them.",
+    "cluster": "resulting",
+    "topics": [
+      "resulting",
+      "outcome bias",
+      "learning",
+      "feedback loops"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "'Resulting': Don't mistake a bad outcome for a bad decision | Annie Duke | Big Think",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke uses poker as her primary illustration of why resulting is so dangerous. A poker player who makes a mathematically correct call and loses to a low-probability card did not make a bad decision \u2014 they made the best decision available given the information and odds at the time. Evaluating that call as 'wrong' because it lost trains exactly the wrong instincts.",
+    "implication": "When running post-mortems on failed initiatives, teams must reconstruct what was knowable at the time of the decision \u2014 not import hindsight \u2014 or the lessons will be systematically distorted.",
+    "cluster": "poker_as_laboratory",
+    "topics": [
+      "poker",
+      "resulting",
+      "decision evaluation",
+      "post-mortem"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Thinking in Bets | Annie Duke | Talks at Google",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke argues that the correct unit of belief is not 'true' or 'false' but a probability \u2014 a percentage confidence that a proposition holds. Most people treat beliefs as binary, which hides overconfidence and prevents calibration. Forcing yourself to assign an explicit number \u2014 say, 70% rather than 'pretty sure' \u2014 immediately surfaces the genuine uncertainty that vague language conceals.",
+    "implication": "Builders and strategists who replace confident assertions with explicit probability estimates communicate more honestly and create space for course correction that false certainty forecloses.",
+    "cluster": "probabilistic_thinking",
+    "topics": [
+      "probabilistic thinking",
+      "calibration",
+      "belief formation",
+      "overconfidence"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts \u2014 Annie Duke",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "The 'wanna bet?' test is Duke's practical tool for revealing true confidence levels. When someone states a belief with apparent certainty, asking them to put money on it immediately exposes the gap between stated and genuine confidence. People claim certainty for free all the time; the prospect of a real financial stake forces honest calibration in seconds.",
+    "implication": "Leaders can use low-stakes structured betting \u2014 even symbolic wagers \u2014 to surface hidden doubts within a team before committing to a costly direction, turning confident declarations into honest probability estimates.",
+    "cluster": "thinking_in_bets",
+    "topics": [
+      "accountability",
+      "calibration",
+      "belief testing",
+      "team dynamics"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Annie Duke on Thinking in Bets - And Why Winners Can Be Wrong",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke draws a direct line between poker's structure and its value as a decision-making laboratory: in poker, you receive fast, unambiguous, high-volume feedback on thousands of decisions in compressed time. Most business and life domains offer slow, noisy, luck-contaminated feedback cycles that make it genuinely hard to learn. This asymmetry is why poker, more than almost any other domain, builds probabilistic intuition efficiently.",
+    "implication": "Organizations wanting to build decision quality should design rapid feedback loops that approximate poker's learning conditions \u2014 frequent small experiments with clear outcomes \u2014 rather than relying on a handful of slow, high-stakes bets per year.",
+    "cluster": "poker_as_laboratory",
+    "topics": [
+      "poker",
+      "feedback loops",
+      "learning velocity",
+      "decision training"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Annie Duke l Poker as a Decision-Making Model",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke argues that hindsight bias systematically distorts how we evaluate past decisions by making outcomes appear far more predictable than they actually were at the time. After the fact, it is tempting to say 'we should have known,' but this imports knowledge that simply did not exist when the choice was made. Correcting for hindsight bias requires deliberately reconstructing the uncertainty landscape of the original decision moment.",
+    "implication": "Post-mortems that don't explicitly reconstruct prior uncertainty teach false lessons \u2014 making teams overconfident about their ability to predict, and unfairly harsh in judging decision-makers who navigated genuine ambiguity reasonably.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "hindsight bias",
+      "decision evaluation",
+      "post-mortem",
+      "cognitive bias"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts \u2014 Annie Duke",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke describes motivated reasoning as operating like a lawyer defending a predetermined conclusion rather than a scientist seeking truth. When new information arrives, the brain's default mode is not neutral updating \u2014 it is filtering evidence through whatever belief it already holds. Recognizing this requires asking a discomfiting question: what evidence would actually change my mind? If the honest answer is 'nothing,' the belief is ideology, not reasoning.",
+    "implication": "Builders and investors who can identify when they are in lawyer-mode versus scientist-mode have a meaningful edge \u2014 catching themselves defending a bad bet before the losses compound rather than after.",
+    "cluster": "motivated_reasoning",
+    "topics": [
+      "motivated reasoning",
+      "belief updating",
+      "intellectual honesty",
+      "bias"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "The Reason Smart People Make Wrong Decisions | Annie Duke",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke emphasizes that leaders who project false certainty to appear decisive are actually miscalibrating everyone around them. Teams calibrate their own confidence to their leader's expressed confidence \u2014 so when a leader claims certainty they don't possess, they propagate overconfidence across the entire organization. Explicitly expressing uncertainty ('I'd put this at roughly 60%') is both more honest and more strategically useful.",
+    "implication": "Founders and executives who normalize probabilistic language \u2014 publicly expressing confidence as a range rather than a binary \u2014 build teams that are more adaptive and less blindsided when reality diverges from the plan.",
+    "cluster": "thinking_in_bets",
+    "topics": [
+      "leadership communication",
+      "uncertainty",
+      "organizational culture",
+      "calibration"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Risk Schmisk | Annie Duke | TEDxGeorgetown",
+    "source_date": "2015"
+  },
+  {
+    "content": "Duke argues that accurately separating luck from skill in any outcome is one of the most important \u2014 and most neglected \u2014 analytical tasks in decision-making. If you attribute a lucky outcome to skill, you become overconfident and fail to improve the underlying process. If you attribute a skilled outcome to luck, you abandon what is actually working. Neither error is neutral; both are expensive.",
+    "implication": "Teams reviewing performance results should systematically ask how much of the outcome would be reproducible across many trials \u2014 identifying which elements to reinforce as skill versus which to treat as variance they cannot control.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "luck vs skill",
+      "attribution",
+      "learning",
+      "calibration"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts \u2014 Annie Duke",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke recommends pre-mortem thinking as a systematic antidote to optimism bias before major commitments: before launching, imagine the project has already failed catastrophically and work backward to identify the most plausible causes. Forward-looking planning is dominated by enthusiasm and survivorship thinking; the pre-mortem artificially shifts perspective to surface the risks that motivated optimism consistently hides.",
+    "implication": "Product and strategy teams that run structured pre-mortems before significant investments consistently surface the two or three critical failure modes early enough to design preventive responses \u2014 rather than discovering them mid-crisis.",
+    "cluster": "pre_mortems_kill_criteria",
+    "topics": [
+      "pre-mortem",
+      "risk assessment",
+      "planning",
+      "optimism bias"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts \u2014 Annie Duke",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke argues that sunk costs are among the most expensive cognitive errors in practice \u2014 not just in theory \u2014 because the emotional pull to 'not waste' past investment is extraordinarily powerful even when people are aware of the bias. What has already been spent is gone regardless of the next decision; continuing a failing path doesn't recover it. The only rational question is whether the future expected value of continuing exceeds the future expected value of stopping.",
+    "implication": "Leaders must design explicit structural checkpoints \u2014 not rely on willpower \u2014 to force honest evaluation of ongoing investments, because sunk cost pressure will reliably overpower rational analysis in the absence of pre-set criteria.",
+    "cluster": "sunk_cost",
+    "topics": [
+      "sunk cost",
+      "loss aversion",
+      "decision quality",
+      "cognitive bias"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Annie Duke on Knowing When to Quit",
+    "source_date": "2022"
+  },
+  {
+    "content": "Duke's concept of decision quality being assessable only at the moment of decision \u2014 not retrospectively \u2014 is one of her most practically important ideas. To know whether a decision was good, you must freeze the information set to what was available at the time it was made. Any information that arrived afterward is, by definition, not something the decision-maker could have acted on and cannot fairly be used to evaluate the choice.",
+    "implication": "Organizations that evaluate decisions by reconstructing the prior information state rather than importing current knowledge make better-calibrated performance assessments and create psychological safety for honest risk-taking.",
+    "cluster": "decision_quality",
+    "topics": [
+      "decision quality",
+      "hindsight",
+      "process evaluation",
+      "fairness"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Annie Duke - Thinking in Bets - Bregman Leadership Podcast",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke describes a 'decision pod' \u2014 a small group of trusted peers who share a commitment to accuracy over validation \u2014 as one of the highest-leverage tools available for improving individual reasoning quality. The group's job is not to affirm your conclusions but to identify where your reasoning has gone astray: catching motivated reasoning, surfacing unconsidered alternatives, and calibrating probability estimates against a wider range of perspectives.",
+    "implication": "The most impactful investment a founder or executive can make in decision quality is building a small, honest advisory group explicitly designed to challenge rather than validate \u2014 and creating norms that make disagreement safe and expected.",
+    "cluster": "decision_groups",
+    "topics": [
+      "decision groups",
+      "accountability",
+      "peer review",
+      "organizational design"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts \u2014 Annie Duke",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke observes that most people unconsciously select advisors and information sources that confirm what they already believe, rather than ones that will challenge it. This makes the typical social environment a bias-amplification machine rather than a bias-correction system. Deliberately building a contrarian feedback loop \u2014 people who are rewarded for honesty over agreement \u2014 is structurally rare and competitively valuable.",
+    "implication": "Builders who actively recruit critics, not just champions, into their inner circle gain an asymmetric advantage: they catch the fatal flaws in their reasoning before those flaws become fatal in execution.",
+    "cluster": "decision_groups",
+    "topics": [
+      "confirmation bias",
+      "advisory circles",
+      "epistemic humility",
+      "team design"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Thinking in Bets | Annie Duke | Talks at Google",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke argues that identity is one of the most underrated drivers of bad decisions \u2014 when a strategy, career path, or belief becomes part of who you are, reconsidering it feels like a threat to the self rather than a rational update. This causes people to defend clearly failing paths long after the evidence has turned against them, framing persistence as integrity rather than recognizing it as identity protection.",
+    "implication": "Founders especially need to maintain a deliberate separation between their personal identity and their current strategy \u2014 the company's pivot does not invalidate the person, and conflating the two makes necessary course corrections emotionally unbearable.",
+    "cluster": "career_identity",
+    "topics": [
+      "identity",
+      "motivated reasoning",
+      "quitting",
+      "self-concept"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Former Poker Player Lays Out Life Rules To Know When It's Time To Quit",
+    "source_date": "2022"
+  },
+  {
+    "content": "Duke's framework for opportunity cost frames staying in a bad situation not as a neutral holding action but as an active choice with a real price. Every day spent on a losing bet is a day not spent on the best available alternative. The true cost of not quitting is the opportunity foregone \u2014 which is often the most expensive component of a bad investment, and almost never counted in conventional analysis.",
+    "implication": "Leaders evaluating whether to continue a struggling initiative should explicitly calculate what the team, capital, and time could produce in their best alternative use \u2014 making the invisible cost of staying visible and comparable.",
+    "cluster": "sunk_cost",
+    "topics": [
+      "opportunity cost",
+      "quitting",
+      "resource allocation",
+      "decision quality"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "When smart people quit: QUIT by Annie Duke | Core Message",
+    "source_date": "2022"
+  },
+  {
+    "content": "Duke notes that cultural celebration of grit and persistence creates a significant blind spot: it treats all quitting as failure and all persistence as virtue, without regard for whether the underlying path is worth continuing. Applied to a fundamentally broken direction, grit is not a character strength \u2014 it is the mechanism by which sunk cost fallacy, identity protection, and motivated reasoning compound into catastrophic losses.",
+    "implication": "Organizations need to explicitly distinguish between quitting because things are hard \u2014 which may be premature \u2014 and quitting because the expected value of continuing is genuinely negative, which is rational and often overdue.",
+    "cluster": "quitting_strategically",
+    "topics": [
+      "grit",
+      "quitting",
+      "persistence bias",
+      "cognitive bias"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Why the Best Quitters Win! | feat. Annie Duke | Ideas Lab 8",
+    "source_date": "2022"
+  },
+  {
+    "content": "Duke developed the idea of kill criteria \u2014 specific, observable, pre-agreed conditions under which an initiative will be abandoned \u2014 as the structural solution to the emotional distortions that corrupt exit decisions in real time. The key is that these criteria must be set before starting, when you are still emotionally detached, not during the messy middle when sunk costs and hope cloud judgment.",
+    "implication": "Every significant investment \u2014 a product launch, a strategic partnership, a hiring experiment \u2014 should be accompanied by a written 'if X then we stop' clause established at the outset, before any emotional or financial stake has accumulated.",
+    "cluster": "pre_mortems_kill_criteria",
+    "topics": [
+      "kill criteria",
+      "pre-commitment",
+      "exit planning",
+      "decision hygiene"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Author Talks: What poker pro Annie Duke can teach you about quitting on time",
+    "source_date": "2022"
+  },
+  {
+    "content": "Duke points out that the optimal quit point is almost always in what she calls 'the muggy middle' \u2014 before the losses become catastrophic but also at the moment when quitting feels most emotionally difficult. People tend to quit either too early, when initial discomfort is high, or far too late, after sunk costs have compounded. The rational window is the difficult middle ground that emotions reliably obscure.",
+    "implication": "Recognizing that 'this feels really hard to stop' is often a signal that you are precisely at the optimal exit point \u2014 not evidence that you should continue \u2014 is a counterintuitive but actionable insight for anyone managing a struggling initiative.",
+    "cluster": "quitting_strategically",
+    "topics": [
+      "quitting timing",
+      "sunk cost",
+      "emotional decision-making",
+      "loss aversion"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Annie Duke on Knowing When to Quit",
+    "source_date": "2022"
+  },
+  {
+    "content": "Duke argues that awareness of a cognitive bias is necessary but not sufficient to neutralize it. Knowing about sunk cost fallacy, confirmation bias, or resulting does not protect you when you are emotionally invested in a situation. Only structural interventions \u2014 pre-commitment contracts, kill criteria, decision pods with accountability norms \u2014 reliably override the emotional pressures that awareness alone cannot.",
+    "implication": "Training programs that teach people about cognitive biases without also designing structural guardrails are largely ineffective. The leverage is in building systems, not in building awareness.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "cognitive bias",
+      "structural interventions",
+      "pre-commitment",
+      "decision systems"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Thinking in Bets for Engineers \ud83c\udfb2 \u2014 with Annie Duke",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke emphasizes that the future is most usefully thought of as a probability distribution \u2014 a range of possible outcomes with varying likelihoods \u2014 rather than as a single prediction. Committing to a single forecast collapses all the uncertainty into a false binary of right or wrong. Holding a distribution preserves the nuance needed to act wisely across different scenarios and updates more gracefully as new information arrives.",
+    "implication": "Strategic planning processes that produce single-point forecasts should be replaced or supplemented by scenario-based approaches that explicitly represent the distribution of outcomes, making contingency planning a natural output rather than an afterthought.",
+    "cluster": "probabilistic_thinking",
+    "topics": [
+      "scenario planning",
+      "forecasting",
+      "probability distributions",
+      "strategy"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts \u2014 Annie Duke",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke describes how her decade-plus of elite poker sharpened her probabilistic intuition not because poker is glamorous but because it provided thousands of fast, clear, high-stakes feedback cycles. She has described the game as essentially forcing you to internalize expected value calculation at an emotional level \u2014 not just an intellectual one \u2014 because the cost of not doing so is immediate and measurable.",
+    "implication": "Anyone serious about improving decision quality should seek domains that provide rapid, unambiguous feedback at volume \u2014 because slow, noisy feedback cycles, which characterize most business environments, make genuine calibration nearly impossible without deliberate design.",
+    "cluster": "poker_as_laboratory",
+    "topics": [
+      "poker",
+      "deliberate practice",
+      "feedback",
+      "expected value"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Ep. 317 \u2013 Annie Duke: How to Hack the 10,000 Hour Rule",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke's broader argument is that 'thinking in bets' is not a poker concept exported to general life \u2014 it is the correct epistemology for any domain characterized by uncertainty, incomplete information, and probabilistic outcomes. Since virtually every significant decision in business and life falls into this category, the mental habit of treating every choice as an explicit wager on an uncertain future is universally applicable and universally underused.",
+    "implication": "The practical first step to implementing this framework is simply replacing the language of certainty with the language of probability in everyday decision discussions \u2014 'I'm about 70% confident' rather than 'I'm sure' \u2014 as a habit that gradually recalibrates both individual and organizational reasoning.",
+    "cluster": "thinking_in_bets",
+    "topics": [
+      "decision framework",
+      "epistemology",
+      "uncertainty",
+      "probabilistic thinking"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "How to make better decisions | Annie Duke",
+    "source_date": "2018"
+  }
+]

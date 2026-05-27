@@ -66,6 +66,7 @@ from auto_build_config import (
     get_search_queries,
     SOURCE_CLASSIFY_PROMPT, BRAIN_JSON_PROMPT,
     SYNTHESIS_PROMPT, SYNTHESIS_JSON_PROMPT,
+    YOUTUBE_PARTNER_PROMPT,
     COLORS,
 )
 
@@ -275,6 +276,100 @@ def seed_from_wikipedia(person_name: str) -> list[dict]:
         return []
 
 
+def discover_youtube_videos(
+    person_name: str,
+    client: "anthropic.Anthropic",
+    cost_tracker: "CostTracker",
+    max_base: int = 20,
+    max_per_partner: int = 2,
+) -> list[dict]:
+    """Hybrid yt-dlp YouTube discovery — two passes, zero identity confusion.
+
+    Pass A: ytsearch{max_base}:{person_name}
+        Full-name anchor — YouTube's own ranking, high recall, no hallucination.
+
+    Pass B: curated partner queries with QUOTED name strings
+        LLM generates high-confidence partner/event names.
+        Each query: ytsearch2:"Person Name" "Partner Name"
+        Quoted strings prevent 'Annie → Annie Jacobsen' style identity confusion.
+
+    Results are deduped by video ID. yt-dlp must be installed (brew install yt-dlp).
+    """
+    yt_dlp_bin = shutil.which("yt-dlp")
+    if not yt_dlp_bin:
+        warn("yt-dlp not installed — skipping YouTube discovery (brew install yt-dlp)")
+        return []
+
+    seen_ids: set[str] = set()
+    videos: list[dict] = []
+
+    def _run_ytsearch(query: str, limit: int) -> list[dict]:
+        try:
+            result = subprocess.run(
+                [yt_dlp_bin, f"ytsearch{limit}:{query}",
+                 "--print", "%(id)s\t%(title)s",
+                 "--no-playlist", "--no-warnings"],
+                capture_output=True, text=True, timeout=45,
+            )
+            items = []
+            for line in result.stdout.strip().splitlines():
+                if "\t" not in line:
+                    continue
+                vid_id, title = line.split("\t", 1)
+                vid_id, title = vid_id.strip(), title.strip()
+                if vid_id and title:
+                    items.append({
+                        "youtube_id": vid_id,
+                        "title": title,
+                        "url": f"https://www.youtube.com/watch?v={vid_id}",
+                    })
+            return items
+        except Exception as e:
+            warn(f"yt-dlp error for {query!r}: {e}")
+            return []
+
+    # --- Pass A: base search ---
+    step(f"YouTube [A]: ytsearch{max_base}:{person_name!r}...")
+    for v in _run_ytsearch(person_name, max_base):
+        if v["youtube_id"] not in seen_ids:
+            seen_ids.add(v["youtube_id"])
+            videos.append(v)
+    success(f"YouTube [A]: {len(videos)} videos")
+
+    # --- Pass B: curated partner queries ---
+    step("YouTube [B]: generating partner list via LLM...")
+    try:
+        partner_result = call_claude(
+            client, FAST_MODEL,
+            messages=[{"role": "user", "content": YOUTUBE_PARTNER_PROMPT.format(person_name=person_name)}],
+            max_tokens=512,
+            parse_json=True,
+            cost_tracker=cost_tracker,
+            label="youtube_partners",
+        )
+        partners = partner_result.get("parsed", {}).get("partners", [])
+        if not isinstance(partners, list):
+            partners = []
+    except Exception as e:
+        warn(f"Partner LLM call failed: {e}")
+        partners = []
+
+    success(f"YouTube [B]: {len(partners)} partner candidates from LLM")
+
+    new_b = 0
+    for partner in partners[:12]:
+        query = f'"{person_name}" "{partner}"'
+        for v in _run_ytsearch(query, max_per_partner):
+            if v["youtube_id"] not in seen_ids:
+                seen_ids.add(v["youtube_id"])
+                videos.append(v)
+                new_b += 1
+
+    success(f"YouTube [B]: +{new_b} unique videos from partner queries")
+    success(f"YouTube total: {len(videos)} unique videos discovered")
+    return videos
+
+
 def phase_0_discover_sources(
     person_name: str,
     slug: str,
@@ -299,66 +394,73 @@ def phase_0_discover_sources(
             warn("Existing sources.json is empty — re-running discovery")
 
     if dry_run:
-        step("[DRY RUN] Would run 5 web searches + classify results")
+        step("[DRY RUN] Would run 4 Firecrawl web searches + yt-dlp YouTube discovery + LLM classify")
         return {"sources": []}
 
-    # --- Web search via Firecrawl search API ---
+    # --- YouTube discovery via yt-dlp (independent of Firecrawl) ---
+    yt_videos = discover_youtube_videos(person_name, client, cost_tracker)
+
+    # --- Web search via Firecrawl (TEXT sources only — YouTube handled above) ---
     firecrawl_key = os.environ.get("FIRECRAWL_API_KEY", "")
     if not firecrawl_key:
-        warn("FIRECRAWL_API_KEY not set — cannot search. Create sources.json manually and use --skip-phase 0")
-        return {"sources": []}
+        warn("FIRECRAWL_API_KEY not set — skipping text source search. YouTube videos still discovered.")
 
     all_urls = []
     seen_urls = set()
 
-    # --- Wikipedia seed (free, no API key) ---
-    step("Seeding from Wikipedia...")
-    wiki_candidates = seed_from_wikipedia(person_name)
-    for c in wiki_candidates:
-        if c["url"] not in seen_urls:
-            seen_urls.add(c["url"])
-            all_urls.append(c)
-    if wiki_candidates:
-        success(f"Wikipedia seeded {len(wiki_candidates)} URLs (article + external links)")
-    else:
-        warn("Wikipedia returned no usable seeds — continuing with web search only")
+    if firecrawl_key:
+        # --- Wikipedia seed (free, no API key) ---
+        step("Seeding from Wikipedia...")
+        wiki_candidates = seed_from_wikipedia(person_name)
+        # Cap Wikipedia external links to 30 to limit biographical noise —
+        # the article itself is always first, so we keep it + up to 29 links.
+        wiki_candidates = wiki_candidates[:30]
+        for c in wiki_candidates:
+            if c["url"] not in seen_urls:
+                seen_urls.add(c["url"])
+                all_urls.append(c)
+        if wiki_candidates:
+            success(f"Wikipedia seeded {len(wiki_candidates)} URLs (article + external links, capped at 30)")
+        else:
+            warn("Wikipedia returned no usable seeds — continuing with web search only")
 
-    queries = get_search_queries(person_name)
+        queries = get_search_queries(person_name)
 
-    for query in queries:
-        step(f"Searching: {query}")
-        try:
-            resp = httpx.post(
-                "https://api.firecrawl.dev/v1/search",
-                headers={"Authorization": f"Bearer {firecrawl_key}", "Content-Type": "application/json"},
-                json={"query": query, "limit": 10},
-                timeout=30,
-            )
-            if resp.status_code == 200:
-                data = resp.json()
-                results = data.get("data", [])
-                for r in results:
-                    url = r.get("url", "")
-                    if url and url not in seen_urls:
-                        seen_urls.add(url)
-                        all_urls.append({
-                            "url": url,
-                            "title": r.get("title", ""),
-                            "description": r.get("description", ""),
-                        })
-                success(f"Found {len(results)} results")
-            else:
-                warn(f"Search returned {resp.status_code}: {resp.text[:200]}")
-            time.sleep(1)
-        except Exception as e:
-            warn(f"Search error: {e}")
+        for query in queries:
+            step(f"Searching: {query}")
+            try:
+                resp = httpx.post(
+                    "https://api.firecrawl.dev/v1/search",
+                    headers={"Authorization": f"Bearer {firecrawl_key}", "Content-Type": "application/json"},
+                    json={"query": query, "limit": 10},
+                    timeout=30,
+                )
+                if resp.status_code == 200:
+                    data = resp.json()
+                    results = data.get("data", [])
+                    for r in results:
+                        url = r.get("url", "")
+                        # Skip YouTube URLs — those come from yt-dlp, not Firecrawl
+                        if url and url not in seen_urls and "youtube.com" not in url and "youtu.be" not in url:
+                            seen_urls.add(url)
+                            all_urls.append({
+                                "url": url,
+                                "title": r.get("title", ""),
+                                "description": r.get("description", ""),
+                            })
+                    success(f"Found {len(results)} results")
+                else:
+                    warn(f"Search returned {resp.status_code}: {resp.text[:200]}")
+                time.sleep(1)
+            except Exception as e:
+                warn(f"Search error: {e}")
 
-    if not all_urls:
+    if not all_urls and not yt_videos:
         warn("No search results found. Create sources.json manually.")
         return {"sources": []}
 
-    # --- Classify results with LLM ---
-    step(f"Classifying {len(all_urls)} URLs with LLM...")
+    # --- Classify TEXT results with LLM ---
+    step(f"Classifying {len(all_urls)} text URLs with LLM...")
 
     def _clean_title(t: str) -> str:
         if not t:
@@ -378,33 +480,35 @@ def phase_0_discover_sources(
         label="source_classify",
     )
 
-    classified = result.get("parsed", [])
-    if not classified:
-        warn("LLM classification returned empty results")
-        return {"sources": []}
+    classified = result.get("parsed", []) if all_urls else []
 
-    # Build sources.json
+    # Build text sources from LLM classification (skip any YouTube URLs that
+    # slipped through — they'd be duplicates of what yt-dlp already found)
     sources = []
     for item in classified[:max_sources]:
+        url = item.get("url", "")
+        if "youtube.com" in url or "youtu.be" in url:
+            continue  # YouTube handled by yt-dlp path
         source = {
             "title": item.get("title", "Unknown"),
             "type": item.get("type", "other"),
             "priority": item.get("priority", "medium"),
-            "url": item.get("url", ""),
+            "url": url,
         }
-        # Extract YouTube video ID
-        yt_id = item.get("youtube_id")
-        if not yt_id and "youtube.com" in source["url"] or "youtu.be" in source.get("url", ""):
-            try:
-                yt_id = build_brain.extract_video_id(source["url"])
-            except (ValueError, AttributeError):
-                pass
-        if yt_id:
-            source["youtube_id"] = yt_id
         sources.append(source)
 
+    # --- Merge YouTube videos from yt-dlp (always essential — they have transcripts) ---
+    for v in yt_videos:
+        sources.append({
+            "title": v["title"],
+            "type": "video",
+            "priority": "high",
+            "url": v["url"],
+            "youtube_id": v["youtube_id"],
+        })
+
     sources_data = {
-        "description": f"Source material for the {person_name} brain pack — auto-discovered via web search.",
+        "description": f"Source material for the {person_name} brain pack — text via Firecrawl, video via yt-dlp.",
         "brain_slug": slug,
         "brain_name": person_name,
         "discovered_at": datetime.now(timezone.utc).isoformat(),
@@ -418,8 +522,9 @@ def phase_0_discover_sources(
         json.dump(sources_data, f, indent=2)
 
     essential = sum(1 for s in sources if s.get("priority") == "essential")
-    videos = sum(1 for s in sources if s.get("youtube_id"))
-    success(f"Discovered {len(sources)} sources ({essential} essential, {videos} with YouTube IDs)")
+    n_videos = sum(1 for s in sources if s.get("youtube_id"))
+    n_text = len(sources) - n_videos
+    success(f"Discovered {len(sources)} sources: {n_text} text + {n_videos} YouTube videos ({essential} essential)")
 
     return sources_data
 

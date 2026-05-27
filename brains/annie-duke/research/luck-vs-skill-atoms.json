@@ -1,0 +1,362 @@
+[
+  {
+    "content": "Duke argues that outcomes are always a mixture of skill and luck, but humans have a deep-seated tendency to conflate the two. When things go well, people naturally attribute success to their own talent and effort; when things go poorly, they blame external forces. This asymmetric attribution creates a distorted self-image that makes genuine improvement nearly impossible, because the feedback loop is systematically corrupted before learning can occur.",
+    "implication": "Leaders and builders must actively audit whether their wins are reproducible \u2014 not just celebrate them. If you can't identify the skill component that drove a success, you can't scale it.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "attribution bias",
+      "self-assessment",
+      "feedback loops",
+      "improvement"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke uses poker as a clean laboratory for separating luck from skill precisely because the game makes both visible over time. A single hand can be won by the worst player at the table; over thousands of hands, skill reliably surfaces. This distinction \u2014 that luck dominates in the short run while skill dominates in the long run \u2014 is a general truth that applies to business, investing, and career decisions, not just cards.",
+    "implication": "Evaluate your team's decisions and processes across a large sample of outcomes, not a single high-stakes result. One big win or loss is nearly uninformative about underlying skill.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "poker as laboratory",
+      "sample size",
+      "long-run thinking",
+      "skill assessment"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Thinking in Bets | Annie Duke | Talks at Google",
+    "source_date": "2018-03-05"
+  },
+  {
+    "content": "Duke developed the concept she calls 'resulting' \u2014 the cognitive error of judging decision quality by outcome quality. Because luck contaminates every result, a bad outcome can follow a perfectly sound decision and a great outcome can follow terrible reasoning. Treating outcomes as reliable verdicts on decision quality is one of the most expensive and pervasive errors in human judgment.",
+    "implication": "Build evaluation cultures where process reviews are distinct from outcome reviews. Rewarding results alone will teach your team to be lucky, not skilled.",
+    "cluster": "resulting",
+    "topics": [
+      "resulting",
+      "outcome bias",
+      "decision quality",
+      "process evaluation"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke points to the drunk driver example as a visceral illustration of resulting. A drunk driver who arrives home safely did not make a good decision \u2014 the good outcome was pure luck. Conversely, a sober driver who was hit by a red-light runner made a responsible decision despite the bad outcome. These cases make clear that outcomes and decisions occupy entirely separate moral and analytical categories.",
+    "implication": "When debriefing failures on your team, resist the instinct to conclude that the decision was wrong just because the result was bad. Ask instead: given what was known at the time, was this the right process?",
+    "cluster": "resulting",
+    "topics": [
+      "resulting",
+      "outcome bias",
+      "moral reasoning",
+      "decision evaluation"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "'Resulting': Don't mistake a bad outcome for a bad decision | Annie Duke | Big Think",
+    "source_date": "2019-01-15"
+  },
+  {
+    "content": "Duke describes a mental exercise she calls the 'luck-skill decomposition': for any given outcome, ask how much of the result would be reproduced if the same scenario were run one thousand times. High variance across those imagined trials points to luck as the dominant factor; low variance signals that skill drove the outcome. This thought experiment forces the kind of honest attribution that instinct routinely gets wrong.",
+    "implication": "Before investing further resources into a strategy that worked once, run the mental simulation: would this work seven times out of ten, or did it just get lucky? The answer determines whether to double down or investigate further.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "luck-skill decomposition",
+      "probabilistic thinking",
+      "reproducibility",
+      "investment decisions"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke emphasizes that over-crediting skill for success is just as analytically dangerous as over-crediting luck for failure. When a leader attributes a strong quarter entirely to their own strategic genius rather than a favorable market environment, they are miscalibrating their model of what drives results. This overconfidence then infects future decisions, leading to excessive risk-taking grounded in an inflated sense of personal skill.",
+    "implication": "Celebrate wins while explicitly asking: what portion of this was favorable conditions we didn't create? That discipline keeps confidence calibrated and prevents the overconfidence that precedes costly failures.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "overconfidence",
+      "calibration",
+      "self-assessment",
+      "strategic thinking"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "The Reason Smart People Make Wrong Decisions | Annie Duke",
+    "source_date": "2018-04-12"
+  },
+  {
+    "content": "Duke notes that fields with slow, noisy feedback cycles \u2014 business, medicine, politics, investing \u2014 are especially vulnerable to luck-skill confusion, because practitioners rarely accumulate enough clean trials to see through the noise. Poker is unusual in offering rapid, high-volume feedback that makes the signal visible within a career. Most professionals operate without that luxury and must deliberately compensate by thinking probabilistically.",
+    "implication": "In domains with slow feedback \u2014 long product cycles, multi-year strategies \u2014 build in deliberate review rituals that separate process quality from outcome quality, because natural feedback is too slow and noisy to teach you accurately.",
+    "cluster": "poker_as_laboratory",
+    "topics": [
+      "feedback cycles",
+      "noisy environments",
+      "skill development",
+      "deliberate practice"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Annie Duke l Poker as a Decision-Making Model",
+    "source_date": "2018-06-20"
+  },
+  {
+    "content": "Duke argues that hindsight bias \u2014 the tendency to view past outcomes as more predictable than they actually were \u2014 is a direct obstacle to accurate luck-skill attribution. After a project fails, it is tempting to declare that the warning signs were obvious and the outcome was inevitable. But this retrospective clarity is largely an illusion; reconstructing the genuine uncertainty that existed at decision time reveals that many 'obvious' failures were actually reasonable bets.",
+    "implication": "Conduct post-mortems that explicitly reconstruct the information environment at the time of the original decision. Without this discipline, post-mortems become blame sessions rather than learning exercises.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "hindsight bias",
+      "post-mortem",
+      "decision quality",
+      "learning"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke argues that accurately separating luck from skill is the foundational prerequisite for improving over time. If you attribute a lucky win to your own brilliance, you will not invest in the genuine skill improvements that would make the win reproducible. If you attribute a skillful loss to bad luck, you will not diagnose and correct the flawed reasoning that produced it. Both mislabelings are expensive, and the damage compounds across thousands of decisions.",
+    "implication": "Build a personal or team practice of explicit attribution after major outcomes: what was controllable, what was not, and what does each teach us? Skipping this step means learning from noise rather than signal.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "attribution",
+      "skill development",
+      "learning loops",
+      "improvement"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke points out that the very feedback most people rely on to improve \u2014 results \u2014 is systematically unreliable as a signal of decision quality in luck-contaminated domains. Because outcomes mix skill and chance in unknowable proportions in any single instance, you cannot simply look at whether things turned out well to determine whether you should repeat the same reasoning. Most people never realize their improvement process is built on corrupted data.",
+    "implication": "Smart organizations invest in process documentation, not just outcome tracking. If you only record whether a product launched successfully, you have no way to improve the launch process \u2014 you need to record the quality of reasoning behind each step.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "feedback quality",
+      "improvement systems",
+      "process documentation",
+      "decision quality"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Annie Duke on Thinking in Bets - And Why Winners Can Be Wrong",
+    "source_date": "2018-09-10"
+  },
+  {
+    "content": "Duke describes a common failure mode she calls the 'self-serving bias asymmetry' in teams: credit for good outcomes flows upward to leadership while blame for bad outcomes flows outward to market conditions or bad luck. This asymmetric attribution is not just a morale problem \u2014 it is an epistemological one, because it prevents the organization from building an accurate causal model of what it is actually good at.",
+    "implication": "Leaders who consistently take credit for wins but deflect blame for losses are not just being unfair \u2014 they are actively degrading their organization's ability to learn. Ownership of both signals is a prerequisite for accurate calibration.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "self-serving bias",
+      "organizational learning",
+      "leadership accountability",
+      "calibration"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Thinking in Bets | Annie Duke | Talks at Google",
+    "source_date": "2018-03-05"
+  },
+  {
+    "content": "Duke connects luck-skill attribution directly to the 10,000-hour rule debate, arguing that deliberate practice only improves skill if the practitioner can accurately identify which component of their performance drove results. In domains with high luck variance, practitioners can accumulate thousands of hours of practice while actually reinforcing bad habits, because outcomes don't reliably distinguish good technique from fortunate variance.",
+    "implication": "When building expertise programs or coaching talent, pair outcome tracking with explicit process evaluation. Hours of practice only build skill when feedback accurately targets the skill component \u2014 not the luck component \u2014 of performance.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "deliberate practice",
+      "expertise",
+      "feedback quality",
+      "skill development"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Ep. 317 \u2013 Annie Duke: How to Hack the 10,000 Hour Rule",
+    "source_date": "2019-03-18"
+  },
+  {
+    "content": "Duke argues that poker's most important lesson for decision-makers is that you can make the best possible decision and still lose \u2014 and that losing does not mean the decision was wrong. Professional poker players experience this constantly: a player who gets the money in as a 75% favorite will lose a quarter of the time. Learning to emotionally and analytically accept this reality is the core cognitive discipline that separates elite from average decision-makers.",
+    "implication": "Create team cultures where a good decision that produced a bad outcome is explicitly named, protected, and learned from \u2014 not quietly buried. If good reasoning only gets recognized when it happens to produce good outcomes, you are training your team to be lucky.",
+    "cluster": "poker_as_laboratory",
+    "topics": [
+      "poker lessons",
+      "emotional regulation",
+      "variance acceptance",
+      "decision quality"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Risk Schmisk | Annie Duke | TEDxGeorgetown",
+    "source_date": "2013-04-22"
+  },
+  {
+    "content": "Duke uses the concept of 'fielding' \u2014 a metaphor borrowed from baseball \u2014 to describe the mental habit of assigning responsibility between skill and luck rather than defaulting to one explanation. Just as a good fielder has to call the ball before catching it, a good decision-maker has to explicitly claim the attribution before acting on the lesson. Without this conscious labeling, the mind defaults to self-serving narratives.",
+    "implication": "Make attribution explicit and verbal in your team's review culture. Requiring people to state 'this outcome was primarily due to skill/luck because...' before drawing lessons forces the cognitive work that instinct avoids.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "attribution",
+      "metacognition",
+      "team culture",
+      "learning"
+    ],
+    "confidence": 0.75,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke draws attention to the fact that elite performers in high-variance fields \u2014 poker, investing, entrepreneurship \u2014 are distinguished not by their win rates but by their ability to accurately identify and correct their own errors. The best poker players lose many hands; what makes them elite is that they lose fewer hands to correctable mistakes over time. This requires the discipline to separate 'I played that wrong' from 'I ran bad' \u2014 a distinction mediocre players systematically fail to make.",
+    "implication": "In any high-variance field, build your improvement strategy around error identification, not outcome maximization. The question 'where did my process fail?' is more actionable and more honest than 'why did I lose?'",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "elite performance",
+      "error correction",
+      "self-improvement",
+      "variance management"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Annie Duke l Poker as a Decision-Making Model",
+    "source_date": "2018-06-20"
+  },
+  {
+    "content": "Duke points out that luck-skill confusion is especially acute when it comes to initial successes. The first major win for a startup, investor, or creative professional is frequently a high-luck, low-skill event \u2014 the right idea at the right time with the right tailwind. Treating that initial success as proof of durable skill sets up a dangerous miscalibration that often produces costly overconfidence in the second attempt.",
+    "implication": "Treat your first big success as a hypothesis, not a proof. Invest the resources to understand which elements were reproducible before betting the next venture on the same playbook.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "early success",
+      "overconfidence",
+      "startup thinking",
+      "calibration"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke argues that the ability to say 'I got lucky' is not a form of false modesty \u2014 it is an act of intellectual precision that most high achievers find psychologically threatening. Because success is tied to identity, attributing wins to luck feels like undermining one's own worth. But this psychological discomfort, if surrendered to, produces systematically overconfident agents who cannot update their models when circumstances change.",
+    "implication": "Normalize luck acknowledgment at the leadership level. When executives openly say 'we caught a favorable market' or 'that acquisition worked partly because of timing we didn't control,' they model the calibration that accelerates organizational learning.",
+    "cluster": "career_identity",
+    "topics": [
+      "identity",
+      "intellectual honesty",
+      "overconfidence",
+      "leadership modeling"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "The Reason Smart People Make Wrong Decisions | Annie Duke",
+    "source_date": "2018-04-12"
+  },
+  {
+    "content": "Duke introduces the concept of 'working backwards from outcomes' as a diagnostic trap. Most people, after a bad result, ask: 'What did I do wrong?' But this question assumes the result is a reliable signal of a mistake \u2014 which is only true if luck played no role. The disciplined version of the question is: 'Given the information available at the time, was the decision well-reasoned?' The difference between these questions is the difference between learning and self-flagellation.",
+    "implication": "Rewrite your team's retrospective template to separate 'was the outcome bad?' from 'was the process flawed?' They are independent questions and should generate independent action items.",
+    "cluster": "decision_quality",
+    "topics": [
+      "retrospectives",
+      "decision quality",
+      "process evaluation",
+      "learning"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "How to Decide \u2014 Annie Duke (2020)",
+    "source_date": "2020-10-13"
+  },
+  {
+    "content": "Duke notes that peer accountability groups \u2014 what she calls 'decision pods' modeled on her poker study groups \u2014 are particularly powerful for luck-skill attribution because outside observers are less emotionally invested in a particular narrative. When a colleague describes their outcome, a well-structured group can ask: 'Was there anything in the process that would have changed the result?' in a way the decision-maker cannot do for themselves, precisely because the decision-maker's ego is on the line.",
+    "implication": "Build structured peer review processes specifically designed to challenge luck-skill attributions. The question 'what could you have done differently?' asked by a trusted peer is worth more than a hundred solo post-mortems.",
+    "cluster": "decision_groups",
+    "topics": [
+      "accountability groups",
+      "peer review",
+      "luck-skill attribution",
+      "bias correction"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke argues that the field of business is particularly bad at teaching luck-skill separation because business education relies heavily on case studies of successful companies. Studying only successes \u2014 companies that survived \u2014 creates survivorship bias that makes skill look universal and luck look irrelevant. The thousands of equally well-run companies that failed due to bad timing, economic shocks, or random competitive dynamics are systematically excluded from the curriculum.",
+    "implication": "When learning from success stories, deliberately seek the counterfactual: what was the base rate of similar ventures, and what percentage failed despite similar quality? Without the full distribution, every case study is a lottery ticket masquerading as a lesson.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "survivorship bias",
+      "business education",
+      "base rates",
+      "case studies"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke describes the challenge of maintaining accurate calibration across a career in which early luck can permanently distort self-perception. A professional who enjoyed early success \u2014 even if largely luck-driven \u2014 will develop a confidence level appropriate to the inflated skill estimate, take larger risks, and eventually encounter a situation where luck runs out and the miscalibration is exposed. The solution is not humility for its own sake but rigorous ongoing attribution discipline throughout a career.",
+    "implication": "Treat calibration as a continuous maintenance practice, not a one-time reset after a failure. Build regular reviews of what you believe you are good at and whether recent evidence actually supports those beliefs.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "calibration",
+      "career management",
+      "overconfidence",
+      "self-assessment"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Annie Duke - Thinking in Bets - Bregman Leadership Podcast",
+    "source_date": "2018-05-14"
+  },
+  {
+    "content": "Duke connects luck-skill attribution to quitting decisions specifically: one of the most common reasons people stay in losing situations too long is that they attribute continuing poor results to bad luck rather than to a fundamental skill or strategy deficit. The belief that 'my luck is about to turn' is often a rationalization that masks unwillingness to acknowledge that the approach itself is flawed. Accurate attribution is therefore not just a learning tool \u2014 it is a survival mechanism.",
+    "implication": "When evaluating whether to persist or quit, explicitly ask: is the evidence of underperformance luck-driven or skill-driven? If the answer is skill-driven, no amount of persistence will reverse the outcome \u2014 only a fundamental strategy change will.",
+    "cluster": "quitting_strategically",
+    "topics": [
+      "quitting",
+      "persistence",
+      "luck-skill attribution",
+      "strategic exit"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Quit \u2014 Annie Duke (2022)",
+    "source_date": "2022-10-04"
+  },
+  {
+    "content": "Duke argues that the discomfort of acknowledging luck is compounded in competitive environments where peers and markets reward confidence. Publicly admitting that a win was partly lucky feels like ceding ground to competitors who will not make the same admission. But this social pressure toward false certainty about one's own skill is precisely what produces the overconfidence that eventually leads to catastrophic bets.",
+    "implication": "High-performance teams need to create internal norms of honest attribution that are explicitly protected from the external performance of confidence. The team that is most honest with itself about luck and skill will out-learn and outlast teams that perform certainty they don't actually have.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "competitive environments",
+      "false certainty",
+      "overconfidence",
+      "team norms"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Poker Champion Annie Duke on Making Smart Bets in Life, Politics, and Football",
+    "source_date": "2018-09-25"
+  },
+  {
+    "content": "Duke highlights that even knowing about the luck-skill confusion does not automatically protect you from it, because the bias operates at an emotional and identity level that cognitive awareness alone cannot reach. People who have read about attribution bias and understand it intellectually still systematically over-attribute success to skill in their own domain. This is why Duke emphasizes structural interventions \u2014 peer groups, written attribution logs, pre-set evaluation criteria \u2014 over relying on willpower and insight.",
+    "implication": "Don't trust awareness to fix calibration. Build systems \u2014 decision logs, retrospective templates, external accountability partners \u2014 that force explicit attribution before the emotional narrative solidifies.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "cognitive bias",
+      "structural interventions",
+      "calibration",
+      "behavioral change"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Thinking in Bets for Engineers \ud83c\udfb2\u2014 with Annie Duke",
+    "source_date": "2019-05-08"
+  }
+]

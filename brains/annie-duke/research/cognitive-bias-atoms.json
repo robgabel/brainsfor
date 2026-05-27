@@ -1,0 +1,362 @@
+[
+  {
+    "content": "Hindsight bias systematically distorts how we evaluate past decisions by making outcomes appear far more predictable than they actually were at the time. Once we know how something turned out, our brains retroactively assign inevitability to the result, making the decision-maker look foolish or brilliant in ways that weren't warranted. Duke argues that to fairly assess any decision, you must deliberately reconstruct the information landscape that existed at the moment the choice was made \u2014 not import knowledge of the outcome backward in time.",
+    "implication": "Leaders and post-mortems teams must actively resist importing hindsight into retrospectives. Build structured review processes that force participants to document what was known \u2014 and unknown \u2014 at decision time before discussing outcomes.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "hindsight bias",
+      "decision evaluation",
+      "outcome bias",
+      "calibration"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Confirmation bias causes people to seek out, favor, and remember information that supports what they already believe, while unconsciously ignoring or discounting contradictory evidence. Duke frames this not as a character flaw but as a default feature of human cognition \u2014 one that is particularly dangerous because it feels like rigorous thinking while actively corrupting it. The bias is especially virulent when the belief is emotionally important or tied to identity.",
+    "implication": "Builders and executives should institutionalize 'disconfirmation rituals' \u2014 deliberately assigning team members to find the strongest evidence against a proposed strategy before any decision is finalized.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "confirmation bias",
+      "belief formation",
+      "motivated reasoning",
+      "epistemics"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Motivated reasoning is the process by which humans unconsciously work backward from a desired conclusion, marshaling evidence like a defense attorney building a case rather than a scientist testing a hypothesis. Duke distinguishes this sharply from genuine reasoning: in motivated reasoning, the conclusion precedes the evidence, and contradictory information is filtered out before it can threaten the preferred belief. This pattern is nearly universal and operates largely below conscious awareness.",
+    "implication": "The single most useful diagnostic question for any important belief is: 'What specific evidence would cause me to change my mind?' If you can't answer that clearly, you are in motivated reasoning territory, not analytical territory.",
+    "cluster": "motivated_reasoning",
+    "topics": [
+      "motivated reasoning",
+      "belief updating",
+      "cognitive bias",
+      "intellectual honesty"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Thinking in Bets | Annie Duke | Talks at Google",
+    "source_date": "2018"
+  },
+  {
+    "content": "The sunk cost fallacy compels people to continue investing resources \u2014 money, time, emotional energy \u2014 into a failing endeavor simply because they have already invested in it. Duke emphasizes that from a rational standpoint, past investments are irretrievably gone and should have zero bearing on future decisions; only expected future value should drive the next choice. Yet human psychology treats past investment as a reason to keep going, which turns a cognitive error into an escalating trap.",
+    "implication": "Organizations need explicit decision hygiene around capital allocation: every continued investment should be justified solely on expected forward returns, never on protecting the appearance of past expenditures. 'We've already spent $2M on this' is never a valid argument for continuing.",
+    "cluster": "sunk_cost",
+    "topics": [
+      "sunk cost fallacy",
+      "resource allocation",
+      "cognitive bias",
+      "loss aversion"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Quit: The Power of Knowing When to Walk Away \u2014 Annie Duke (2022)",
+    "source_date": "2022-09-13"
+  },
+  {
+    "content": "Duke makes the striking argument that knowing about a cognitive bias is nowhere near sufficient to protect against it. Even people who can define the sunk cost fallacy, explain its mechanism, and identify it in others will still fall prey to it under emotional pressure. The bias operates at a level deeper than conscious awareness, meaning that intellectual understanding alone is a weak defense \u2014 structural interventions are required.",
+    "implication": "Training employees about cognitive biases is valuable but insufficient. Organizations must pair awareness with structural safeguards: pre-commitment rules, kill criteria written before projects begin, and decision groups empowered to call out bias in real time.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "bias awareness",
+      "structural intervention",
+      "sunk cost",
+      "pre-commitment"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "The Reason Smart People Make Wrong Decisions | Annie Duke",
+    "source_date": "2022"
+  },
+  {
+    "content": "Resulting is Duke's term for the cognitive error of judging the quality of a decision by its outcome rather than by the quality of the reasoning that produced it. Because outcomes contain significant luck, a great decision can produce a terrible result and a terrible decision can produce a great result. Systematically using outcomes as the primary feedback signal for decision quality guarantees that you will draw wrong lessons \u2014 rewarding bad processes that got lucky and punishing good processes that got unlucky.",
+    "implication": "Performance reviews, product retrospectives, and investment reviews must be redesigned to evaluate the decision process \u2014 the information used, the alternatives considered, the probabilities assigned \u2014 independently from the outcomes those decisions produced.",
+    "cluster": "resulting",
+    "topics": [
+      "resulting",
+      "outcome bias",
+      "feedback loops",
+      "decision quality"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "'Resulting': Don't mistake a bad outcome for a bad decision | Annie Duke | Big Think",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke uses the analogy of a drunk driver who makes it home safely: the good outcome does not retroactively validate the decision to drive drunk. The reasoning was bad, the risk was unjustifiable, and the positive result was luck \u2014 but resulting causes observers and the driver alike to update toward 'that worked out fine' rather than 'that was a dangerous decision.' This example illustrates how resulting can actively reinforce bad decision patterns by attaching positive feedback to reckless reasoning.",
+    "implication": "Leaders must explicitly call out when good outcomes follow from bad processes \u2014 not to punish the individual but to prevent the team from learning the wrong lesson and repeating the flawed reasoning on higher-stakes decisions.",
+    "cluster": "resulting",
+    "topics": [
+      "resulting",
+      "luck",
+      "outcome bias",
+      "process vs. outcome"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Thinking in Bets | Annie Duke | Talks at Google",
+    "source_date": "2018"
+  },
+  {
+    "content": "Identity fusion with a belief, career, or strategy is one of the most powerful and underappreciated drivers of poor decision-making. When a position becomes part of who someone is \u2014 rather than merely what they think or do \u2014 updating that position feels like a threat to the self, not a refinement of reasoning. Duke argues this is why smart, informed people often hold beliefs most stubbornly in domains where they have the most experience and status invested.",
+    "implication": "The most dangerous moment for any leader is when a strategy becomes identity. Building in regular 'belief audits' \u2014 checkpoints where the team explicitly asks whether positions are being held for analytical or identity-protection reasons \u2014 can catch this trap before it becomes catastrophic.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "identity",
+      "belief updating",
+      "motivated reasoning",
+      "ego protection"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Tribal epistemics \u2014 the tendency to adopt the beliefs of our social group and reject information that would isolate us from that group \u2014 is a powerful and often invisible source of cognitive bias. Duke emphasizes that humans are deeply social animals, and the psychological cost of belief-driven social exclusion is high enough that most people unconsciously distort their reasoning to avoid it. This means that who you surround yourself with has a direct and measurable effect on the quality of your beliefs.",
+    "implication": "Deliberately cultivating a network that includes people with different tribal affiliations, incentive structures, and priors is not just intellectually virtuous \u2014 it is practically necessary for good decision-making. Echo chambers are not just ideologically limiting; they are epistemically degrading.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "tribal epistemics",
+      "social proof",
+      "group think",
+      "belief formation"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "The illusion of explanatory depth describes the tendency for people to believe they understand complex systems \u2014 policies, mechanisms, strategies \u2014 far more deeply than they actually do. Duke connects this to overconfidence: when pressed to explain how something actually works step by step, most people quickly discover the shallowness of their knowledge. This gap between perceived and actual understanding drives confident decisions built on faulty foundations.",
+    "implication": "Before committing to a strategic bet, leaders should require team members to explain the mechanism by which the plan will succeed in granular, step-by-step terms. The inability to articulate the mechanism is a red flag \u2014 not just a communication problem but a knowledge problem.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "overconfidence",
+      "illusion of knowledge",
+      "calibration",
+      "decision quality"
+    ],
+    "confidence": 0.75,
+    "source_type": "video",
+    "source_ref": "How to make better decisions | Annie Duke",
+    "source_date": "2022"
+  },
+  {
+    "content": "Duke highlights that humans have a deep-seated aversion to feeling regret, and that this aversion systematically distorts decision-making in ways that favor inaction and the status quo. Because regret from action ('I did something and it went wrong') feels worse than regret from inaction ('I didn't do something and missed out'), people bias toward doing nothing even when doing nothing carries equal or greater expected cost. This asymmetric regret calculus makes us systematically too conservative.",
+    "implication": "When evaluating a decision between action and inaction, explicitly model the regret scenario for both paths. The bias toward status quo is so strong that most teams need to actively overcorrect toward considering the cost of not acting before a final choice is made.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "regret aversion",
+      "status quo bias",
+      "loss aversion",
+      "inaction cost"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "How to Decide \u2014 Annie Duke (2020)",
+    "source_date": "2020-10-13"
+  },
+  {
+    "content": "Duke argues that the cultural glorification of persistence and grit creates a powerful social norm that functions as a cognitive trap. Labeling quitting as weakness and perseverance as virtue means that staying in a failing situation feels like courage while the rational choice \u2014 exiting \u2014 feels like failure. This social layer on top of sunk cost and loss aversion makes it triply hard to quit at the optimal time, and means that people who do quit appropriately are often penalized socially for having made the right call.",
+    "implication": "Organizations that want better strategic decisions must explicitly rehabilitate quitting as a legitimate and even laudable outcome. Creating visible examples of celebrated strategic pivots and exits \u2014 rather than treating them as embarrassments \u2014 changes the social calculus around persistence.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "grit",
+      "persistence bias",
+      "quitting",
+      "social norms"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Quit: The Power of Knowing When to Walk Away \u2014 Annie Duke (2022)",
+    "source_date": "2022-09-13"
+  },
+  {
+    "content": "Loss aversion \u2014 the well-documented tendency for losses to feel approximately twice as painful as equivalent gains feel pleasurable \u2014 creates systematic bias in how people evaluate bets and hold positions. Duke connects this directly to both the sunk cost fallacy and the reluctance to quit: the prospect of locking in a loss triggers an emotional response disproportionate to the actual economic reality, causing people to hold losing positions far longer than any rational analysis would justify.",
+    "implication": "In any portfolio of projects, the initiatives that are hardest to kill are almost always the ones where the most has already been lost. Recognize that the emotional resistance to cutting a project is itself diagnostic of potential loss aversion \u2014 and build decision processes that counteract rather than defer to that feeling.",
+    "cluster": "sunk_cost",
+    "topics": [
+      "loss aversion",
+      "sunk cost",
+      "prospect theory",
+      "emotional decision-making"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Annie Duke l Poker as a Decision-Making Model",
+    "source_date": "2019"
+  },
+  {
+    "content": "Duke points out that humans are particularly susceptible to the 'peak-end rule' \u2014 evaluating past experiences primarily by their most intense moment and their final moment, rather than by their overall average quality. This means that a long, mediocre project that ends badly will be remembered as worse than its full duration warranted, while a brief intense success will be remembered as more representative than it was. This distorts the lessons we draw from experience in systematic and predictable ways.",
+    "implication": "When debriefing long projects or relationships, actively guard against the disproportionate weight given to the ending. Structure retrospectives to gather ratings or assessments at multiple points throughout the project's lifespan, not just at the conclusion.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "peak-end rule",
+      "memory bias",
+      "experience evaluation",
+      "retrospective"
+    ],
+    "confidence": 0.75,
+    "source_type": "book",
+    "source_ref": "How to Decide \u2014 Annie Duke (2020)",
+    "source_date": "2020-10-13"
+  },
+  {
+    "content": "Duke emphasizes that overconfidence is one of the most pervasive and costly cognitive biases \u2014 not because people are stupid, but because the feedback systems in most real-world domains are too slow, too noisy, and too luck-contaminated to reliably correct miscalibrated confidence over time. Unlike a poker player who gets rapid, unambiguous feedback, a business executive can hold badly calibrated beliefs for years without the environment providing a clear correction signal.",
+    "implication": "In domains with slow feedback cycles \u2014 strategy, hiring, marketing \u2014 organizations should create artificial feedback acceleration mechanisms: structured predictions with explicit probabilities, tracked over time, to surface and correct overconfidence before it compounds into costly strategic errors.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "overconfidence",
+      "calibration",
+      "feedback loops",
+      "probabilistic thinking"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Thinking in Bets for Engineers \ud83c\udfb2\u2014 with Annie Duke",
+    "source_date": "2021"
+  },
+  {
+    "content": "The 'wanna bet?' test is Duke's practical tool for exposing the gap between stated confidence and actual confidence. When someone asserts a belief with high certainty, inviting them to wager money on it immediately surfaces how much of that certainty was performative or unconsidered. People routinely claim levels of conviction in casual conversation that they would never back with real stakes \u2014 and that gap is the exact measure of miscalibration.",
+    "implication": "Leaders can use low-stakes internal betting as a calibration tool \u2014 not for gambling, but to force explicit probability statements before decisions. A team that says 'we're sure this will work' should be able to specify a number; if they can't, the certainty was an artifact of social dynamics, not genuine analysis.",
+    "cluster": "probabilistic_thinking",
+    "topics": [
+      "calibration",
+      "betting",
+      "stated vs. revealed confidence",
+      "decision hygiene"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke argues that the way most people process new information is fundamentally asymmetric: information that confirms existing beliefs is accepted quickly and with low scrutiny, while information that challenges existing beliefs is subjected to intense critical examination and often rejected. This means the bar for evidence is not fixed but varies based on whether the evidence is convenient or inconvenient \u2014 a form of epistemically corrupted reasoning that feels internally like rigor.",
+    "implication": "A practical countermeasure is to explicitly ask: 'Am I holding this new data to a different standard because of what it implies?' Applying a consistent evidential threshold \u2014 requiring the same quality of evidence to update in any direction \u2014 is the structural fix for asymmetric belief processing.",
+    "cluster": "motivated_reasoning",
+    "topics": [
+      "asymmetric scrutiny",
+      "confirmation bias",
+      "belief updating",
+      "epistemic standards"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Thinking in Bets | Annie Duke | Talks at Google",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke draws a direct connection between cognitive bias and the architecture of feedback in different domains. Poker provides the kind of dense, rapid, and relatively unambiguous feedback that allows biases to be identified and corrected at scale \u2014 thousands of hands create a dataset large enough to separate skill from noise. Most career and business decisions, by contrast, happen in low-frequency, high-variance environments where biases can persist for decades without triggering any corrective signal.",
+    "implication": "Deliberately seeking out high-feedback-rate analogues or simulations for important decision domains \u2014 market tests, small experiments, scenario modeling \u2014 creates artificial poker-like environments that surface biases faster than waiting for real-world outcomes to materialize.",
+    "cluster": "poker_as_laboratory",
+    "topics": [
+      "feedback loops",
+      "poker",
+      "bias correction",
+      "experimentation"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Annie Duke l TEDxGeorgetown l Risk Management",
+    "source_date": "2013"
+  },
+  {
+    "content": "Duke observes that the self-serving attribution bias causes people to assign successes to their own skill and failures to external circumstances like bad luck, difficult conditions, or others' interference. This pattern is psychologically protective but epistemically catastrophic: it prevents learning from failure while creating false lessons from success. Over time, the result is a decision-maker who grows more confident and less calibrated with experience.",
+    "implication": "Build attribution audits into post-mortems: for both successes and failures, teams should explicitly and quantitatively assess what proportion of the outcome was driven by the quality of their decisions versus factors outside their control. Consistent under-attribution of luck in successes is a red flag for overconfidence drift.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "self-serving bias",
+      "attribution error",
+      "luck vs. skill",
+      "learning from outcomes"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "Thinking in Bets \u2014 Annie Duke (2018)",
+    "source_date": "2018-02-06"
+  },
+  {
+    "content": "Duke highlights that humans are pattern-recognition machines who see meaningful patterns even in random data \u2014 a cognitive feature that was adaptive in ancestral environments but is actively harmful in high-variance domains like markets, sports, and strategy. The tendency to construct causal narratives from random sequences ('we won three games in a row because of our new strategy') generates false confidence and leads to doubling down on approaches that may be producing results entirely by chance.",
+    "implication": "In any domain with high variance, require statistical significance thresholds before updating strategy based on recent results. Small sample sizes and the human appetite for narrative explanation are a dangerous combination \u2014 deliberate sample-size awareness is the antidote.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "pattern recognition",
+      "randomness",
+      "narrative fallacy",
+      "sample size"
+    ],
+    "confidence": 0.75,
+    "source_type": "video",
+    "source_ref": "Poker Champion Annie Duke on Making Smart Bets in Life, Politics, and Football",
+    "source_date": "2018"
+  },
+  {
+    "content": "Duke argues that emotional states at the moment of decision \u2014 stress, excitement, fear, elation \u2014 create systematic distortions in risk assessment and probability estimation that people are largely unaware of. Negative emotional states cause people to overweight downside probabilities; positive states cause overconfidence and underweighting of risk. Because the emotional state feels like a neutral backdrop rather than an active input, it corrupts the reasoning process invisibly.",
+    "implication": "High-stakes decisions should be delayed when possible until emotional conditions are more neutral. For decisions that must be made under pressure, explicitly name the emotional state and ask: 'How might feeling this way be distorting my probability estimates right now?' Simply labeling the emotion has been shown to reduce its distorting influence.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "emotional bias",
+      "affect heuristic",
+      "risk perception",
+      "decision timing"
+    ],
+    "confidence": 0.75,
+    "source_type": "video",
+    "source_ref": "How to Decide | Summary In Under 11 Minutes (Book by Annie Duke)",
+    "source_date": "2020"
+  },
+  {
+    "content": "Duke notes that the availability heuristic causes people to overweight the probability of events that are vivid, recent, or emotionally salient \u2014 regardless of their actual statistical frequency. A dramatic product failure in the news makes teams overestimate the risk of a similar failure; a recent competitor success makes them overestimate how reliably that approach generalizes. The emotional intensity of a memory is not correlated with its statistical representativeness.",
+    "implication": "When a recent dramatic event is shaping strategic decisions, explicitly counter it by seeking base rate data: how often does this type of event actually occur across a large sample? Anchoring decisions in base rates rather than vivid recent cases is a direct structural fix for availability bias.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "availability heuristic",
+      "base rates",
+      "probability estimation",
+      "recency bias"
+    ],
+    "confidence": 0.85,
+    "source_type": "book",
+    "source_ref": "How to Decide \u2014 Annie Duke (2020)",
+    "source_date": "2020-10-13"
+  },
+  {
+    "content": "Duke stresses that the mere awareness of cognitive biases \u2014 even deep, expert-level awareness \u2014 provides surprisingly limited protection against those biases in high-stakes, emotionally charged situations. This is a particularly important and counterintuitive point for educated, analytically sophisticated people who may believe that knowing about biases confers immunity. The cognitive science literature consistently shows that expert knowledge of biases does not meaningfully reduce their influence in the moment of decision.",
+    "implication": "Invest less in bias education and more in bias-resistant decision architecture. Checklists, pre-commitment contracts, structured devil's advocacy roles, and mandatory waiting periods are all more effective interventions than awareness training alone, because they operate on the decision environment rather than relying on willpower.",
+    "cluster": "cognitive_bias",
+    "topics": [
+      "bias awareness",
+      "debiasing",
+      "decision architecture",
+      "behavioral design"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "The Reason Smart People Make Wrong Decisions | Annie Duke",
+    "source_date": "2022"
+  },
+  {
+    "content": "Duke frames the 10,000-hour rule as a domain-dependent claim that requires careful interpretation: deliberate practice accelerates skill development primarily in domains where feedback is rapid, accurate, and tightly coupled to actions. In low-feedback domains \u2014 where results are delayed, noisy, or confounded by luck \u2014 10,000 hours of practice can just as easily entrench bad habits and overconfident heuristics as it can build genuine expertise. Experience without accurate feedback is not skill development; it is bias reinforcement.",
+    "implication": "Before investing heavily in experience accumulation, audit the feedback quality of the domain. If outcomes are slow, noisy, or luck-contaminated, raw experience accumulation is insufficient \u2014 you need to engineer feedback acceleration into your practice regimen to ensure the hours are actually teaching the right lessons.",
+    "cluster": "luck_vs_skill",
+    "topics": [
+      "deliberate practice",
+      "feedback quality",
+      "skill acquisition",
+      "expertise"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Ep. 317 \u2013 Annie Duke: How to Hack the 10,000 Hour Rule",
+    "source_date": "2019"
+  }
+]
