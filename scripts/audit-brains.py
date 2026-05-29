@@ -81,6 +81,13 @@ PROVENANCE_TARGET = 0.5         # 50% of quoted atoms should trace to source cor
 GROUNDING_TARGET = 0.7          # 70% of synthesis principles should appear in source corpus
 QUOTE_SIGNATURE_LEN = 35        # chars used as substring lookup signature
 GROUNDING_NGRAM_LEN = 4         # tokens in n-gram extracted from principles
+GROUNDING_TOKEN_OVERLAP = 0.6   # frac of a principle's distinctive content tokens that
+                                # must appear in the source corpus to count as grounded.
+                                # Lexical fallback only — semantic fact-check (when present)
+                                # overrides this. Synthesis is paraphrased, so exact-order
+                                # n-gram matching produces deterministic false 0%; token-set
+                                # overlap measures "is this principle's vocabulary actually
+                                # present in the source" without demanding verbatim quotes.
 
 # ---------------------------------------------------------------------------
 # Scoring: 8 criteria, weighted to 100
@@ -816,13 +823,35 @@ def check_synthesis_grounding(brain_dir: Path, audit: BrainAudit):
         return
 
     corpus = load_source_corpus(brain_dir)
-    # Allow either YouTube text or atom-pool to ground a principle
-    haystack = corpus["any_text"]
-    if not haystack.strip():
+    # Build the corpus's distinctive-content-token set ONCE. We score a principle by how
+    # much of its vocabulary is present in the source, NOT by exact-order phrase matching:
+    # synthesis principles are LLM-paraphrased distillations, so demanding a verbatim
+    # 4-gram produces deterministic false negatives (see GROUNDING_TOKEN_OVERLAP note).
+    #
+    # NOTE: corpus["any_text"] joins parts with " ||| " separators, so it is never truly
+    # empty even when no source text exists — derive emptiness from the token set, not
+    # from any_text.strip(), to correctly distinguish "no corpus" from "lexical 0%".
+    haystack_tokens = set(
+        t for t in re.findall(r"[a-z][a-z\-']+", corpus["any_text"])
+        if t not in _STOPWORDS and len(t) > 2
+    )
+    if not haystack_tokens:
         audit.scores["grounding"] = 0.0
+        audit.stats["grounding_source"] = "skipped (no corpus)"
         audit.issues.append(Issue("info", "quality",
-                                  "Synthesis grounding skipped — no source corpus available"))
+                                  "Synthesis grounding skipped — no source corpus available "
+                                  "(brain predates raw-source persistence). "
+                                  f"Backfill: python3 scripts/backfill-raw-sources.py --brain {audit.slug}"))
         return
+
+    audit.stats["grounding_source"] = "lexical token-overlap (run fact-check-brain.py for semantic)"
+
+    def _principle_tokens(item: dict) -> set:
+        title = item.get("title") or item.get("name") or ""
+        desc = item.get("desc") or item.get("description") or ""
+        text = normalize_text(f"{title}. {desc}")
+        return set(t for t in re.findall(r"[a-z][a-z\-']+", text)
+                   if t not in _STOPWORDS and len(t) > 2)
 
     grounded = 0
     ungrounded_examples = []
@@ -830,8 +859,15 @@ def check_synthesis_grounding(brain_dir: Path, audit: BrainAudit):
     for section, items in items_by_section.items():
         sec_grounded = 0
         for item in items:
-            phrases = extract_principle_phrases(item)
-            hit = any(p in haystack for p in phrases if len(p) >= 12)
+            ptoks = _principle_tokens(item)
+            if not ptoks:
+                # No distinctive tokens to test — don't penalize, treat as grounded.
+                hit = True
+            else:
+                overlap = len(ptoks & haystack_tokens) / len(ptoks)
+                # Tiny principles (1-2 distinctive tokens) must match all of them;
+                # larger ones use the overlap threshold.
+                hit = overlap >= (1.0 if len(ptoks) < 3 else GROUNDING_TOKEN_OVERLAP)
             if hit:
                 grounded += 1
                 sec_grounded += 1
@@ -853,8 +889,10 @@ def check_synthesis_grounding(brain_dir: Path, audit: BrainAudit):
     if audit.status == "live" and pct < GROUNDING_TARGET:
         examples = (" — examples: " + "; ".join(ungrounded_examples)) if ungrounded_examples else ""
         audit.issues.append(Issue("warning", "quality",
-                                  f"Synthesis grounding at {pct:.0%} ({grounded}/{total_items} principles) — "
-                                  f"the remaining principles' key phrases don't appear in source corpus.{examples}",
+                                  f"Synthesis grounding at {pct:.0%} ({grounded}/{total_items} principles, "
+                                  f"lexical token-overlap) — the remaining principles' vocabulary is sparsely "
+                                  f"represented in the source corpus.{examples} For an authoritative score, "
+                                  f"run the semantic fact-check.",
                                   f"Run: python3 scripts/fact-check-brain.py --brain {audit.slug}",
                                   f"python3 scripts/fact-check-brain.py --brain {audit.slug}"))
 
