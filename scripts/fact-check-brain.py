@@ -91,20 +91,33 @@ def load_source_corpus(slug: str) -> dict:
                 n_videos += 1
     youtube_text = "\n\n---\n\n".join(yt_parts)
 
+    # Pull verbatim source quotes from every research atom file. New brains use
+    # video-atoms.json / text-atoms.json; older back-catalog brains (built before
+    # the YouTube-first pipeline) store them in all-atoms.json or per-cluster files
+    # (book-atoms.json, interview-atoms.json, batch1-atoms.json, ...). Glob covers
+    # all of them so the back catalog gets a real corpus for grounding instead of
+    # falling through to "no corpus". connections.json is not matched by *-atoms.json.
+    # Verbatim only (original_quote) — never the distilled `content` field, which
+    # would make grounding circular.
     atom_quotes = []
-    for fname in ("video-atoms.json", "text-atoms.json"):
-        fp = brain_dir / "research" / fname
-        if not fp.exists():
-            continue
-        try:
-            atoms = json.loads(fp.read_text(encoding="utf-8"))
-        except Exception:
-            continue
-        if isinstance(atoms, list):
+    seen_quotes = set()
+    research_dir = brain_dir / "research"
+    if research_dir.exists():
+        for fp in sorted(research_dir.glob("*-atoms.json")):
+            try:
+                atoms = json.loads(fp.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+            if not isinstance(atoms, list):
+                continue
             for a in atoms:
                 q = a.get("original_quote") or ""
                 src = a.get("source_ref") or "unknown"
                 if q and len(q) > 20:
+                    key = q.strip().lower()
+                    if key in seen_quotes:
+                        continue
+                    seen_quotes.add(key)
                     atom_quotes.append((q, src))
 
     return {

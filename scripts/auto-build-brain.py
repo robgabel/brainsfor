@@ -1619,12 +1619,14 @@ def phase_5_export_qa(
     brain_dir: Path,
     slug: str,
     dry_run: bool = False,
+    client=None,
+    cost_tracker: "CostTracker" = None,
 ) -> dict:
     """Export pack, run audit, remediate if needed."""
     phase_header(5)
 
     if dry_run:
-        step("[DRY RUN] Would run export + audit")
+        step("[DRY RUN] Would run export + audit + semantic fact-check")
         return {"score": 0}
 
     # --- 5.1 Generate synthesis.md from brain.json if not exists ---
@@ -1642,6 +1644,29 @@ def phase_5_export_qa(
 
     # --- 5.3 Update index ---
     build_brain.stage_update_index(brain_json, brain_dir, dry_run=dry_run)
+
+    # --- 5.3.5 Semantic fact-check (authoritative synthesis grounding) ---
+    # Runs BEFORE the audit so audit-brains.check_synthesis_grounding picks up the
+    # fact-check JSON and reports the semantic score instead of the lexical fallback.
+    # Non-fatal: a fact-check failure must not block a build (the lexical fallback
+    # still produces a usable score).
+    if client is not None and cost_tracker is not None:
+        step("Running semantic fact-check (synthesis grounding)...")
+        try:
+            fact_check = importlib.import_module("fact-check-brain")
+            sc = fact_check.fact_check_brain(slug, client, cost_tracker)
+            if sc:
+                totals = sc.get("totals", {})
+                success(f"Fact-check grounding: {sc.get('grounding_pct', 0)}% "
+                        f"({totals.get('grounded', 0)}/{totals.get('total', 0)} grounded, "
+                        f"{totals.get('weak', 0)} weak)")
+            else:
+                warn("Fact-check produced no scorecard (no corpus or no principles) "
+                     "— audit will use lexical grounding fallback")
+        except Exception as e:
+            warn(f"Fact-check failed (non-fatal): {e} — audit will use lexical fallback")
+    else:
+        warn("Fact-check skipped — no Anthropic client passed to phase 5")
 
     # --- 5.4 Audit ---
     step("Running quality audit...")
@@ -2006,7 +2031,8 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                         with open(bjp) as f:
                             brain_json = json.load(f)
 
-                result = phase_5_export_qa(brain_json, brain_dir, slug)
+                result = phase_5_export_qa(brain_json, brain_dir, slug,
+                                           client=client, cost_tracker=cost_tracker)
                 mark_phase(progress, 5, "complete",
                            audit_score=result.get("score", 0))
 
