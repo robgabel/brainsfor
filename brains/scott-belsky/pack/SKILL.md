@@ -5,14 +5,14 @@ description: "Load the Scott Belsky brain. Pack ships 9 unified skills in pack/s
 
 # Scott Belsky Brain Pack — Setup & Configuration
 
-Welcome to the **Belsky Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Scott Belsky's "Implications" newsletter — a curated collection of his most strategic thinking on originality, organizational design, agentic commerce, and the future of work.
+Welcome to the **Belsky Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Scott Belsky's "Implications" newsletter, interviews, and The Messy Middle book — a curated collection of his most strategic thinking on originality, organizational design, agentic commerce, product craft, and the future of human creativity.
 
 ## What You're Getting
 
-- **284 knowledge atoms** — Core insights, frameworks, and strategic principles from 77 editions of the Implications newsletter
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1086 knowledge atoms** — Core insights, frameworks, and strategic principles from 77 editions of the Implications newsletter, The Messy Middle book, Tim Ferriss Show, Lenny's Podcast, First Round Review, NFX, a16z, Design Better, TEDx talks, SXSW, Web Summit, and 35+ video interviews
+- **1174 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — Superhumanity, originality, AI agents, organizational design, longevity, emergence, decision-making, scaling, and more
+- **Cross-referenced topics** — Superhumanity, originality, AI agents, organizational design, longevity, emergence, decision-making, scaling, product craft, the messy middle, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Belsky Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (284 insights)
+  ├── brain-atoms.json         ← structured atoms (1086 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 284 atoms with titles, summaries, connections
+   - JSON structure of 1086 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,23 +93,23 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Scott's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "Should I raise my Series A or stay bootstrapped?"*
+*Example: "Should I optimize my product for breadth of users or depth of engagement?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Scott sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain agentic commerce to me."*
+*Example: "Explain the three waves of agentic commerce to me."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Is remote work better for innovation?"*
+*Example: "Is taste something you're born with or can it be trained?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect originality to organizational structure."*
+*Example: "Connect the messy middle to organizational design."*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How does Scott's thinking on AI agents evolve?"*
+*Example: "How does Scott's thinking on AI and creativity evolve over time?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -117,11 +117,11 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions Scott would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I'm deciding whether to pivot my product. What should I be asking myself?"*
+*Example: "I'm stuck in the hard middle of building my startup and thinking about quitting. What should I be asking myself?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens to SaaS if AI agents do most of the work?"*
+*Example: "What happens to the creative industry when AI can generate anything on demand?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to originality? Teach → evolve → coach to build deep understanding.*
+*Example: New to the messy middle? Teach → evolve → coach to build deep understanding and apply it to your own journey.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Writing about AI agents? Predict the implications → debate the forecast → advise on action.*
+*Example: Writing about AI and creativity? Predict the implications → debate the forecast → advise on action for your specific context.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -161,13 +161,13 @@ Use these skill combinations for better results:
 ```
 /brain scott-belsky
 
-/advise "I'm thinking about whether to focus my company on serving large enterprises or build a platform for creators. What would Scott think?"
+/advise "I'm building a creative tool and trying to decide whether to optimize for power users or beginners. What would Scott think?"
 ```
 
 Or skip the activation step and use an inline slug for a one-off:
 
 ```
-/advise scott-belsky "I'm thinking about whether to focus my company on serving large enterprises or build a platform for creators. What would Scott think?"
+/advise scott-belsky "I'm building a creative tool and trying to decide whether to optimize for power users or beginners. What would Scott think?"
 ```
 
 You should get a thoughtful response that:
@@ -186,7 +186,7 @@ If you get that, you're all set.
 → Make sure `brain-context.md` is loaded in your session. If using Claude Code, check that the file is in your working directory.
 
 **Q: I want to search the brain for a specific topic.**
-→ Use `/advise` with a keyword: `"What does Scott think about emergence?"` → The brain will pull all relevant atoms.
+→ Use `/advise` with a keyword: `"What does Scott think about the messy middle?"` → The brain will pull all relevant atoms.
 
 **Q: Can I combine skills?**
 → Absolutely. Chain them: `"First /advise on whether to pivot, then /debate the tradeoffs, then /coach me on what I'm missing."`
@@ -201,7 +201,7 @@ If you get that, you're all set.
 
 ## About Scott Belsky
 
-Scott Belsky is a legendary entrepreneur and strategic thinker who has shaped product and organizational thinking across the tech industry. His "Implications" newsletter is where he shares his latest thinking on originality, organizational design, AI, and the future of work.
+Scott Belsky is a legendary entrepreneur, product thinker, and strategic investor who has shaped product and organizational thinking across the tech industry. Founder of Behance, former Chief Product Officer and Chief Strategy Officer at Adobe, early angel investor in Uber, Pinterest, and Perplexity, and now a partner at A24. His 'Implications' newsletter and The Messy Middle are where he shares his latest thinking on originality, organizational design, AI, and the future of creative work.
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Belsky's freely distributed 'Implications' newsletter editions, public talks, podcast appearances, and widely circulated writing across social media and press.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Belsky's freely distributed 'Implications' newsletter editions, public talks, podcast appearances, book excerpts, and widely circulated writing across social media and press.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

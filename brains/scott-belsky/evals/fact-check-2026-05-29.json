@@ -1,0 +1,530 @@
+{
+  "brain_slug": "scott-belsky-v2",
+  "timestamp": "2026-05-29T07:27:20.245904+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 34,
+    "youtube_chars": 1207706,
+    "atom_quote_count": 670,
+    "total_chars": 1388686
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 6,
+        "weak": 2,
+        "ungrounded": 3,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 3,
+        "weak": 1,
+        "ungrounded": 4,
+        "total": 8
+      },
+      "does_not_believe": {
+        "grounded": 2,
+        "weak": 1,
+        "ungrounded": 2,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 1,
+        "weak": 2,
+        "ungrounded": 3,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 12,
+      "weak": 6,
+      "ungrounded": 12,
+      "total": 30
+    },
+    "grounding_pct": 50.0,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[0]",
+        "title": "Taste is the ultimate human moat",
+        "rationale": "The corpus does not contain any discussion of 'taste' decomposed into Inputs, Filters, and Discernment as a framework; the concept is not mentioned in any of the Belsky passages."
+      },
+      {
+        "id": "first_principles[1]",
+        "title": "Agency beats optimization",
+        "rationale": "Belsky never discusses 'agency beats optimization' or the idea that naive belief defeats algorithms; this framing does not appear in the source corpus."
+      },
+      {
+        "id": "first_principles[5]",
+        "title": "The first mile determines everything",
+        "rationale": "The specific '30% of energy on the first 30 seconds' framework, and the characterization of users as 'lazy, vain, and selfish' in that window, does not appear anywhere in the source corpus."
+      },
+      {
+        "id": "contrarian_positions[2]",
+        "title": "Open-source models are essential consumer protection",
+        "rationale": "Belsky does not discuss open-source models as consumer protection or as a counterweight to dystopian concentration in the source corpus."
+      },
+      {
+        "id": "contrarian_positions[3]",
+        "title": "The chat interface is a transitional embarrassment",
+        "rationale": "Belsky does not call the chat interface a 'transitional embarrassment' or compare it to skeuomorphic design in the source corpus; this framing is absent."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[3]",
+        "title": "Interface controls value",
+        "rationale": "Only one passage directly supports the interface-controls-value idea; the broader claim about models commoditizing and OS-level surfaces is not explicitly made in the corpus."
+      },
+      {
+        "id": "first_principles[6]",
+        "title": "Small Team, Big Business is the new shape of leverage",
+        "rationale": "While Belsky discusses AI-native small businesses scaling and talent arbitrage, he does not explicitly articulate the 'Small Team, Big Business' principle or 'revenue per employee' as the central metric in the corpus; only tangential support exists."
+      },
+      {
+        "id": "contrarian_positions[4]",
+        "title": "Memory belongs to the user, not the model",
+        "rationale": "Belsky mentions the portable memory layer concept once, but does not explicitly argue that it belongs to the user rather than the model or that LLM providers will fight it; only one tangential passage exists."
+      },
+      {
+        "id": "does_not_believe[1]",
+        "title": "That scale alone creates defensibility",
+        "rationale": "Only one passage tangentially supports this; Belsky does not explicitly argue against scale as a moat or articulate the behavioral graph/memory architecture as superior to scale in the corpus."
+      },
+      {
+        "id": "would_not_say[0]",
+        "title": "Move fast and break things",
+        "rationale": "While Belsky's emphasis on craft and endurance implies opposition to 'move fast and break things,' he never directly addresses or rejects that phrase, and only indirect support exists in the corpus."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Taste is the ultimate human moat",
+      "claim": "Taste is the ultimate human moat. In a world where AI can make anything, the scarce resource becomes knowing what to make. Taste decomposes into Inputs (the nutritious diet of original ideas you seek out), Filters (what you deliberately block to preserve a unique lens), and Discernment (the choices you actually make). Everything else \u2014 craft, originality, the rebellion against AI slop \u2014 flows downstream from this.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus does not contain any discussion of 'taste' decomposed into Inputs, Filters, and Discernment as a framework; the concept is not mentioned in any of the Belsky passages."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Agency beats optimization",
+      "claim": "Agency beats optimization. Humans do not win against machines by calculating better; they win by believing impossible things and acting on them. The naive belief that anything is possible \u2014 often born of ignorance \u2014 has changed the world more than any algorithm. AI optimizes within the known; humans defy what is known.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Belsky never discusses 'agency beats optimization' or the idea that naive belief defeats algorithms; this framing does not appear in the source corpus."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "The messy middle is where everything real happens",
+      "claim": "The messy middle is where everything real happens. The space between initial excitement and eventual outcome is nonlinear, volatile, and psychologically brutal \u2014 and most failures happen there because people quit, not because the idea was wrong. Endurance, optimizing for the lows rather than the highs, and rationing morale are more decisive than strategy.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the journey in between is really just an to better understand and Chronicle what great artists or entrepreneurs or even leaders of big companies do to endure the middle of their Journey the messy middle that no one wants to write about no one wants to talk about the Press ignores is full of anonymity and self-doubt and ambiguity",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it's definitely not linear right it's always you have this great idea oh this is really hard to execute okay like I'm going to make progress well it's not linear it's actually very volatile full of these Downs these lows which you have to endure and these highs which you have to optimize",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I think it's all about optimizing the little things that seem to be working which are your strengths... endurance in those lows you know optimizing the things that work",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple distinct passages across the corpus clearly support the principle that the messy middle is nonlinear, brutal, and requires endurance and optimization."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Interface controls value",
+      "claim": "Interface controls value. Whoever owns the interface layer captures the market, regardless of who built the underlying technology. Models commoditize; browsers, agents, and OS-level surfaces are the new ground zero. Technology is an infinite game of slap-a-hand where the hand on top wins.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I think that the interface is the place where a lot of Industries are finally becoming competitive and being determined in terms of who win and it's sort of like that slap a hand game where you know a great product is building an interface for the technology that they built and then another product is building interface that just basically uses the apis of that product",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Only one passage directly supports the interface-controls-value idea; the broader claim about models commoditizing and OS-level surfaces is not explicitly made in the corpus."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Craft survives abundance",
+      "claim": "Craft survives abundance. When anything becomes ubiquitous, demand re-prices toward scarcity, craft, and meaning. Fast food didn't kill fine dining; LVMH built an empire on commoditized inputs by infusing them with story. AI slop will not kill originality \u2014 it will make originality more valuable.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The analogy here is Canal Street and, you know, Louis Vuitton purses versus the real thing or Birkin bags whenever anything is commoditized, right. Clothes, alcohol, cars, people end up seeking the more scarce, meaning-infused purse version of that thing",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I think it's a natural human tendency for us when something is readily available to crave the more scarce and meaning infused version of it",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "AI slop will flood the market and make genuine taste and craft more valuable, not less. Abundance of mediocrity has always historically increased the premium on the extraordinary.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages support the idea that when content or goods become commoditized/abundant, demand shifts toward scarce, craft-infused, meaning-laden versions."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "The first mile determines everything",
+      "claim": "The first mile determines everything. More than 30% of product energy should go into the first 30 seconds of user experience. Users in that window are lazy, vain, and selfish \u2014 they will not invest effort to understand, they care how they appear, and they want immediate personal return. Products that fail the first mile never get the chance to prove their deeper value.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The specific '30% of energy on the first 30 seconds' framework, and the characterization of users as 'lazy, vain, and selfish' in that window, does not appear anywhere in the source corpus."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Small Team, Big Business is the new shape of leverage",
+      "claim": "Small Team, Big Business is the new shape of leverage. AI collapses the talent stack: a 10-person company can now do what 500-person companies did. Revenue per employee becomes the central metric of competence, and seat-based SaaS pricing structurally breaks when agents replace seats.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "AI is a big thing, but you go into big companies and they're still trying to hire SEO people... Here we are again... my encouragement to anyone listening who is either in this demographic or has nephews or kids or whatever, it's like, encourage them to leverage knowledge arbitrage",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Belsky discusses AI-native small businesses scaling and talent arbitrage, he does not explicitly articulate the 'Small Team, Big Business' principle or 'revenue per employee' as the central metric in the corpus; only tangential support exists."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Personal frustration is the highest-resolution market signal",
+      "claim": "Personal frustration is the highest-resolution market signal. Behance was built from Belsky's own frustration with a disorganized creative world. The best founders are people personally annoyed enough to build a fix \u2014 collective frustration becomes the addressable market, and the founder's lived irritation is more reliable than any TAM analysis.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "with beans was the disorganization of the creative world and the fact that there was no attribution no one knew who did what yeah the the solution to that I felt should be medium agnostic",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "when I really am committed to solving a problem I try not to be confined by a particular medium",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I'm also implying is that I'm also medium agnostic in the sense that if there's something I really am passionate about and I feel is a problem worth solving and also is paired with empathy of the people that are actually suffering from that problem",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm that Behance was built from Belsky's personal frustration with a disorganized creative world, and that personal problem-identification paired with empathy drove his mission."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Resourcefulness is muscle; resources are carbs",
+      "claim": "Resourcefulness is muscle; resources are carbs. Constraint breeds lasting capability; capital breeds dependence. The best founders ration bandwidth by choice to force clarity on what truly matters. Well-funded teams who skip this conditioning lose to lean teams who built the muscle early.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "constraints unearth our inner sense of resourcefulness which is much more important than resources resourcefulness is um is making use of what's in front of you",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I just don't think that creatives can operate productively in a vacuum in an empty space with the co the the supposed infinite resources and no noise noise is actually a critical part of our process",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "one of the roles of the leader is to constantly reiterate and merchandise the constraints and when you don't have logical obvious constraints find them seek them",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple distinct passages clearly support that constraint breeds resourcefulness and that unlimited resources actually impede creative productivity."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Know what you are willing to be bad at",
+      "claim": "Know what you are willing to be bad at. Real competitive advantage comes not from listing what you want to be best at \u2014 everyone does that \u2014 but from naming what you will deliberately deprioritize. Southwest chose to be bad at food and route breadth; Apple chose to be bad at variety and price. If your investment lines match the industry's, you have no advantage.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "what I mean by deciding what you're willing to be bad at is facing first of all the fact that if you try to be good at everything you're not going to be good at any one thing better than everyone else",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "when you make that decision that affects everything it affects how you Market yourself it affects the types of projects you say yes to and no to and you start to have like these standards that you project through your portfolio",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "in truth what you really end up standing out uh through is is finding out what you're willing to be bad at",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly and explicitly articulate the principle of knowing what you're willing to be bad at as the source of real competitive advantage."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Technology succeeds when it restores something ancient at greater scale",
+      "claim": "Technology succeeds when it restores something ancient at greater scale. Humans long for how things once were, with more efficiency. Agentic commerce is the village shopkeeper restored. Personal AI is being known by name, restored. Innovation that ignores 300,000 years of human wiring fails; innovation that re-delivers it wins.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "my cardinal thesis of technology that's great for consumers is that it takes us back to the way things once were that we long for with more scale and efficiency",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "for almost 300,000 years since the dawn of humanity, we have lived in villages and small groups and small towns. Everyone knew each other. There was a comfort of being known and recognized... And then only in the past few hundred years did we lose all that with the Industrial Revolution",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state Belsky's thesis that great technology restores ancient human experiences at scale, referencing 300,000 years of human wiring."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Data is no longer the moat \u2014 the behavioral graph is",
+      "claim": "Data is no longer the moat \u2014 the behavioral graph is. As MCP, universal connectors, and on-device vision spread, everyone will have access to everyone's data. The defensible asset shifts to the graph of who works with whom, on what, with what permissions \u2014 not the raw data itself. This contradicts the dominant data network effect narrative.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if data is no longer remote because it's everywhere, what does the moat become? Now I think on the data side it becomes the graph that sort of explains a connection between a set of sets of data that is more proprietary",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "at Atlassian, their team is building the teamwork graph. Their view is that even if you have all the data of JIRA tickets and stuff, what's really useful is knowing who works with whom in the organization, on what project, and who's allowed to see what permissioning data",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages clearly articulate that the behavioral/relational graph replaces raw data as the defensible moat, directly contradicting the data network effect narrative."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Hardware is becoming more defensible, not less",
+      "claim": "Hardware is becoming more defensible, not less. As vibe coding makes software trivially replicable, tightly coupled hardware-software products become harder to copy. The Stripe-ification of the hardware stack means startups can finally compete on physical form, where copying is structurally slower.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if you are a pure software play, how many years are we away from you being able to just say to a LLM 'Make me that software?' And it just like boom makes it. I think we're getting closer. And and as a result, having that tightly coupled hardware software solution that does something unique for you",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "hardware becomes a more popular moat... the stack of designing, making, distributing hardware has actually always been extraordinarily hard... those are now becoming automated. And therefore the friction is gone down",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly support that hardware becomes more defensible as software becomes trivially replicable, with the hardware stack now being Stripe-ified."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Open-source models are essential consumer protection",
+      "claim": "Open-source models are essential consumer protection. Most operators view open source as a developer convenience. Belsky views it as the structural counterweight to dystopian concentration of memory and model in the same monolithic entity. Without it, Login with OpenAI becomes a more invasive ad-tech regime than the one we already have.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Belsky does not discuss open-source models as consumer protection or as a counterweight to dystopian concentration in the source corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "The chat interface is a transitional embarrassment",
+      "claim": "The chat interface is a transitional embarrassment. Chat is the skeuomorphic stitched-leather contact book of AI \u2014 a comfort design choice, not a destination. Most current consumer AI products are wasting their UX innovation budget on prompt engineering, which is itself just a workaround for the fact that AI doesn't yet know you.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Belsky does not call the chat interface a 'transitional embarrassment' or compare it to skeuomorphic design in the source corpus; this framing is absent."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Memory belongs to the user, not the model",
+      "claim": "Memory belongs to the user, not the model. The portable memory layer \u2014 login-based, cross-app, consumer-owned \u2014 is the most important infrastructure of the next decade. LLM providers will fight this because it threatens their ad model, which is precisely why builders should fight for it.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "There are companies that are building what I call the memory layer, you know, that allows memory to be portable across different, agent experiences",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Belsky mentions the portable memory layer concept once, but does not explicitly argue that it belongs to the user rather than the model or that LLM providers will fight it; only one tangential passage exists."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "Independent products on top of LLMs capture more user data than the LLMs themselves",
+      "claim": "Independent products on top of LLMs capture more user data than the LLMs themselves. Because API abstraction layers strip behavioral context, product companies sitting above the model accumulate richer memory than the foundation model providers below. This inverts the conventional assumption that the LLM owns everything.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The specific claim that independent products above LLMs capture more user data than the LLMs themselves via API abstraction stripping behavioral context does not appear in the source corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[6]",
+      "section": "contrarian_positions",
+      "title": "Hospitality, not intelligence, is the consumer AI differentiator",
+      "claim": "Hospitality, not intelligence, is the consumer AI differentiator. The breakthrough isn't smarter models \u2014 it's making people feel known. Most AI roadmaps optimize for capability benchmarks; the actual unlock is restoring the pre-industrial intimacy of being recognized by name.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Hospitality becomes a differentiating factor of commerce... I believe that one word for that, that I'm starting to get more focused on is hospitality",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I do think that we long to be known and be treated special... what does it feel like to be greeted? You know, in a store or in a digital experience by name, to be known",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages support that hospitality \u2014 making people feel known \u2014 is the real consumer AI differentiator, not smarter models."
+    },
+    {
+      "principle_id": "contrarian_positions[7]",
+      "section": "contrarian_positions",
+      "title": "Revenue-per-employee is the new vanity metric that's actually meaningful",
+      "claim": "Revenue-per-employee is the new vanity metric that's actually meaningful. Headcount as a proxy for ambition is dead. Small Team, Big Business structures will outperform legacy headcount-heavy organizations, and the boards still asking how many people you have are using the wrong scorecard entirely.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Belsky does not explicitly discuss revenue-per-employee as a metric or argue that headcount as a proxy for ambition is dead in the source corpus."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That AI will commoditize creative work",
+      "claim": "That AI will commoditize creative work. Belsky believes AI slop will flood the market and make genuine taste and craft more valuable, not less. Abundance of mediocrity has always historically increased the premium on the extraordinary.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "now that content has become commoditized to some extent, anyone can make something. I think then there is a question of will people, A, like have a higher bar for what they're looking for as audiences, which will then raise the bar of what's required on the production side, which requires more craftsmanship",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I think it's a natural human tendency for us when something is readily available to crave the more scarce and meaning infused version of it",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm Belsky believes AI/commoditization makes genuine craft more valuable, not less."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That scale alone creates defensibility",
+      "claim": "That scale alone creates defensibility. He does not believe that growing fast and big is sufficient moat. The interface layer, behavioral graph, and memory architecture matter more than raw scale in the agentic era.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the interface is the place where a lot of Industries are finally becoming competitive and being determined in terms of who win",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Only one passage tangentially supports this; Belsky does not explicitly argue against scale as a moat or articulate the behavioral graph/memory architecture as superior to scale in the corpus."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That consensus is a reliable signal",
+      "claim": "That consensus is a reliable signal. Consensus produces average outcomes. The investments and ideas that look foolish at inception \u2014 early Uber, early Pinterest \u2014 are precisely the ones that produce non-ordinary returns. Social proof is a trap for builders and investors alike.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Belsky does not discuss consensus as a trap for investors or reference early Uber/Pinterest as examples of consensus-defying investments in the source corpus."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That more resources make better companies",
+      "claim": "That more resources make better companies. Excess capital breeds dependence and atrophies the resourcefulness muscle. The best companies are built lean by founders who internalized constraint before they ever had abundance.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "constraints unearth our inner sense of resourcefulness which is much more important than resources",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I just don't think that creatives can operate productively in a vacuum in an empty space with the co the the supposed infinite resources and no noise",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly state that more resources do not make better companies and that constraint/resourcefulness beats capital."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That the prompt interface is where AI ends up",
+      "claim": "That the prompt interface is where AI ends up. He does not believe the current era of chat-and-prompt is the mature state of AI interaction. It is a transitional phase, equivalent to the command line before the GUI \u2014 necessary but not final.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Belsky does not discuss the chat/prompt interface as a transitional phase equivalent to a command line in the source corpus."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "Move fast and break things",
+      "claim": "Move fast and break things. Belsky's worldview is deeply concerned with craft, endurance through the messy middle, and organizational health. Speed without taste and intentionality produces slop \u2014 exactly what he rails against.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "design is very much the little things that make a big difference",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Belsky's emphasis on craft and endurance implies opposition to 'move fast and break things,' he never directly addresses or rejects that phrase, and only indirect support exists in the corpus."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "Let the data decide",
+      "claim": "Let the data decide. Data-driven decision-making without human taste and discernment produces optimization of the known at the expense of the genuinely new. Belsky believes conviction must lead; data follows as confirmation, not oracle.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Belsky never explicitly addresses 'let the data decide' as a flawed approach or argues that conviction must lead data in the source corpus."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "We need to hire our way out of this",
+      "claim": "We need to hire our way out of this. He is explicitly a proponent of the Small Team, Big Business model. Adding headcount is often a symptom of unclear thinking, not a solution to it.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Belsky does not explicitly argue against hiring as a solution or champion small team structures in the source corpus; the Small Team, Big Business framing is absent."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "Our moat is our data",
+      "claim": "Our moat is our data. He has explicitly named this as the outdated narrative. In an MCP-connected world, data access equalizes; the behavioral graph and memory architecture are the actual defensible assets.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "data becomes a less valuable moat... I was trying to juxtapose a better moat of hardware and a declining moat of data",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if data is no longer remote because it's everywhere, what does the moat become?",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly show Belsky explicitly naming data-as-moat as the outdated narrative and pointing to graphs/hardware as the actual defensible assets."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "AI will figure out what users want",
+      "claim": "AI will figure out what users want. Belsky believes AI still needs human taste to set direction. Without human discernment at the top, AI optimization loops converge on mediocrity \u2014 the algorithmic feed problem writ large.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Belsky does not discuss AI figuring out what users want or algorithmic feed problems converging on mediocrity in the source corpus."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "Build for the exit",
+      "claim": "Build for the exit. His career arc \u2014 staying through Behance's acquisition, running Adobe's product org, taking a GP seat at Benchmark \u2014 reflects mission-centric thinking, not exit-centric thinking. The medium changes; the mission doesn't.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I'm also medium agnostic in the sense that if there's something I really am passionate about and I feel is a problem worth solving... the mission of all of these things was the same to organize creative people",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Only one passage supports mission-centric over exit-centric thinking, and it doesn't directly address building for exit; the principle is only weakly supported."
+    }
+  ]
+}

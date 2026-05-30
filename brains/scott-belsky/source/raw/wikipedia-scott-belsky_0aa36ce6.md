@@ -1,0 +1,61 @@
+# Scott Belsky
+
+Scott Belsky
+
+American entrepreneur
+
+| Scott Belsky |
+| --- |
+| [![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/TNW_USA_2014_%2816085105617%29_%28cropped%29.jpg/500px-TNW_USA_2014_%2816085105617%29_%28cropped%29.jpg)](https://en.wikipedia.org/wiki/File:TNW_USA_2014_(16085105617)_(cropped).jpg) |
+| Born | (1980-04-18) 18 April 1980 (age46) |
+| Almamater | [Cornell University](https://en.wikipedia.org/wiki/Cornell_University "Cornell University")<br>[Harvard Business School](https://en.wikipedia.org/wiki/Harvard_Business_School "Harvard Business School") |
+| Occupations | Entrepreneur, author, investor |
+| Employer | [A24 Films](https://en.wikipedia.org/wiki/A24_Films "A24 Films") |
+| Knownfor | [Behance](https://en.wikipedia.org/wiki/Behance "Behance") |
+| Notablework | _Making Ideas Happen_<br>_The Messy Middle_ |
+| Board memberof | Cornell University's Entrepreneurship Program<br>[Museum of Modern Art](https://en.wikipedia.org/wiki/Museum_of_Modern_Art "Museum of Modern Art")<br>Coop Careers |
+| Relatives | [Stanley Kaplan](https://en.wikipedia.org/wiki/Stanley_Kaplan "Stanley Kaplan") |
+| Website | [www.scottbelsky.com](http://www.scottbelsky.com/) |
+
+**Scott Belsky** (born April 18, 1980) is an American [entrepreneur](https://en.wikipedia.org/wiki/Entrepreneur "Entrepreneur"), author and early-stage investor.[\[1\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Wired_Magazine_UK-1)[\[2\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Amazon_Book_Sales_Info-2)[\[3\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-:0-3) He is best known for making seed investments in companies such as [Uber](https://en.wikipedia.org/wiki/Uber "Uber") and [Pinterest](https://en.wikipedia.org/wiki/Pinterest "Pinterest") as well as co-creating the online portfolio platform, [Behance](https://en.wikipedia.org/wiki/Behance "Behance"), Inc. His books _Making Ideas Happen_ and _The Messy Middle_ are both national bestselling books.[\[4\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-WSJ-4)[\[5\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-RH-5)
+
+Belsky currently works as a Partner at [A24 Films](https://en.wikipedia.org/wiki/A24_Films "A24 Films"), overseeing the studio's technology and innovation initiatives.[\[6\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Verge-6)[\[7\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Deadline-7)[\[8\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Variety-8)[\[9\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Coop-9)
+
+## Career
+
+In 2010, Belsky was included in _[Fast Company](https://en.wikipedia.org/wiki/Fast_Company "Fast Company")'_ s "100 Most Creative People in Business" list.[\[10\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Fast_Company_Profile-10)
+
+In December 2012, Behance was acquired by [Adobe](https://en.wikipedia.org/wiki/Adobe_Systems "Adobe Systems")[\[11\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-BehanceAdobeAcquisition-11)[\[12\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-AdobeAcquisition-12) where Belsky became VP of Products, Mobile and Community at Adobe.[\[13\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-BelskyNamedVPCommunityAdobe-13)[\[14\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-BelskyNewAdobeVP-14)[\[15\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-15) In February 2016, Belsky left Adobe and joined [Benchmark](https://en.wikipedia.org/wiki/Benchmark_(venture_capital_firm) "Benchmark (venture capital firm)") as the firm's sixth general partner. Prior to joining Benchmark, Belsky had been an early-stage investor and active advisor to companies including [Uber](https://en.wikipedia.org/wiki/Uber "Uber"), [Warby Parker](https://en.wikipedia.org/wiki/Warby_Parker "Warby Parker"), [Pinterest](https://en.wikipedia.org/wiki/Pinterest "Pinterest"), [Periscope](https://en.wikipedia.org/wiki/Periscope_(app) "Periscope (app)") and [Sweetgreen](https://en.wikipedia.org/wiki/Sweetgreen "Sweetgreen").[\[3\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-:0-3)[\[16\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Eater-16) In 2017, Belsky returned to Adobe as the Chief Product Officer, Executive Vice President for Adobe Creative Cloud. Scott Belsky also serves on the Board of the Atlassian Corporation (NASDAQ: TEAM)[\[17\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-BelskyJoinsAtlassianBoard-17)
+
+In January 2025, Belsky joined A24's leadership team as a partner, overseeing the studio's technology and innovation initiatives, [A24 Films](https://en.wikipedia.org/wiki/A24_Films "A24 Films").[\[6\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Verge-6)[\[7\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Deadline-7)[\[8\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Variety-8)[\[9\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Coop-9)
+
+### Notable investments
+
+Belsky’s notable seed investments include: [Airtable](https://en.wikipedia.org/wiki/Airtable "Airtable"), [Meter](https://en.wikipedia.org/wiki/Meter_(company) "Meter (company)"), [Pinterest](https://en.wikipedia.org/wiki/Pinterest "Pinterest"), [Ramp](https://en.wikipedia.org/wiki/Ramp_(company) "Ramp (company)"), [Sweetgreen](https://en.wikipedia.org/wiki/Sweetgreen "Sweetgreen"), [Uber](https://en.wikipedia.org/wiki/Uber "Uber") and [Warby Parker](https://en.wikipedia.org/wiki/Warby_Parker "Warby Parker").[\[3\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-:0-3)[\[16\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Eater-16)[\[18\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Biz-18) In 2025, Belsky was listed on _[Business Insider](https://en.wikipedia.org/wiki/Business_Insider "Business Insider")_’s “Best Early-Stage Investors” list and was included as one of the industry’s top angel investors.[\[18\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Biz-18)
+
+## Personal life and education
+
+Belsky graduated from [Cornell University](https://en.wikipedia.org/wiki/Cornell_University "Cornell University"). He received his MBA from [Harvard Business School](https://en.wikipedia.org/wiki/Harvard_Business_School "Harvard Business School"). Belsky serves on the advisory board of Cornell University's Entrepreneurship Program, and is a board member at the Museum of Modern Art[\[19\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-19) and Coop Careers.[\[9\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Coop-9) Belsky is the grandson of [Stanley Kaplan](https://en.wikipedia.org/wiki/Stanley_Kaplan "Stanley Kaplan").[\[20\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-20)
+
+## Books
+
+- _Making Ideas Happen_, [Penguin Group](https://en.wikipedia.org/wiki/Penguin_Group "Penguin Group"), 2010 [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier) "ISBN (identifier)") [978-1591844112](https://en.wikipedia.org/wiki/Special:BookSources/978-1591844112 "Special:BookSources/978-1591844112")[\[9\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Coop-9)
+- _The Messy Middle: Finding Your Way Through the Hardest and Most Crucial Part of Any Bold Venture_, [Penguin Group](https://en.wikipedia.org/wiki/Penguin_Group "Penguin Group"), 2018 [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier) "ISBN (identifier)") [978-0735218079](https://en.wikipedia.org/wiki/Special:BookSources/978-0735218079 "Special:BookSources/978-0735218079")[\[9\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-Coop-9)
+
+_Making Ideas Happen_ and _The Messy Middle_ are both national bestselling books.[\[4\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-WSJ-4)[\[5\]](https://en.wikipedia.org/wiki/Scott_Belsky#cite_note-RH-5) Belsky also has a chapter giving advice in [Tim Ferriss](https://en.wikipedia.org/wiki/Tim_Ferriss "Tim Ferriss")' book [Tools of Titans](https://en.wikipedia.org/wiki/Tools_of_Titans "Tools of Titans").
+
+## References
+
+01. [↑](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Wired_Magazine_UK_1-0)["Wired Magazine UK"](https://web.archive.org/web/20120617002708/http://www.wired.co.uk/news/archive/2011-07/26/scott-belsky-making-ideas-happen). wired.co.uk. Archived from [the original](https://www.wired.co.uk/news/archive/2011-07/26/scott-belsky-making-ideas-happen) on June 17, 2012. Retrieved June 10, 2012.
+02. [↑](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Amazon_Book_Sales_Info_2-0)Belsky, Scott (2012). _Amazon Book Sales Info_. Penguin Publishing. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier) "ISBN (identifier)") [978-1591844112](https://en.wikipedia.org/wiki/Special:BookSources/978-1591844112 "Special:BookSources/978-1591844112").
+03. [1](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-:0_3-0) [2](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-:0_3-1) [3](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-:0_3-2)Loizos, Connie (8 February 2016). ["Benchmark Adds A Sixth General Partner: Scott Belsky"](https://techcrunch.com/2016/02/08/benchmark-adds-a-sixth-general-partner-scott-belsky/). _TechCrunch_. Retrieved 2016-02-18.
+04. [1](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-WSJ_4-0) [2](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-WSJ_4-1)["Part I: The Promise of Having an Impact"](https://www.wsj.com/articles/BL-232B-271?gaa_at=eafs&gaa_n=AWEtsqde3_TUip4jmnJFJmdeKJc0COlOD17fr3FZ1S1Dc87Rsg4ZtSV0ERymOjqxcac%3D&gaa_ts=693c4ec6&gaa_sig=GFiV7pODb-ULQ1mF9pEgUVvCV9d2Rd3SJWkGxezpyRCLNqXS6bxOl7ko1ilBboq8sZDawezxkwumsNc9WXggQA%3D%3D). _Wall Street Journal_. December 12, 2012. Retrieved January 2, 2026.
+05. [1](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-RH_5-0) [2](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-RH_5-1)["The Messy Middle"](https://www.penguinrandomhouse.com/books/557330/the-messy-middle-by-scott-belsky/). _Penguin Random House_. Retrieved January 2, 2026.
+06. [1](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Verge_6-0) [2](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Verge_6-1)Weatherbed, Jess (2025-01-31). ["Adobe's head of product is joining A24 to make movies"](https://www.theverge.com/news/603909/adobe-product-head-scott-belsky-joining-a24). _The Verge_. Retrieved 2025-03-09.
+07. [1](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Deadline_7-0) [2](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Deadline_7-1)Goldsmith, Jill (2025-01-30). ["A24 Taps Adobe Chief Strategy Officer Scott Belsky To Lead Technology & Innovation Projects"](https://deadline.com/2025/01/a24-adobe-chief-strategy-officer-scott-belsky-technology-innovation-1236273665/). _Deadline_. Retrieved 2025-03-29.
+08. [1](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Variety_8-0) [2](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Variety_8-1)Todd Spangler (January 30, 2025). ["Adobe Chief Strategy Officer Scott Belsky Exits to Join A24 as Partner"](https://variety.com/2025/film/news/scott-belsky-a24-adobe-1236291763/). _Variety_. Retrieved January 2, 2026.
+09. [1](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Coop_9-0) [2](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Coop_9-1) [3](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Coop_9-2) [4](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Coop_9-3) [5](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Coop_9-4)["Scott Belsky"](https://coopcareers.org/scott-belsky#:~:text=He%20is%20a%20product%2C%20storytelling,and%20adaptive%20to%20new%20technologies). _Coop Careers_. Retrieved January 2, 2026.
+10. [↑](https://en.wikipedia.org/wiki/Scott_Belsky#cite_ref-Fast_Company_Profile_10-0)["Fast Company Article On Scott Belsky"](https://web.archive.org/web/20121107101349/http://www.fastcompany.com/most-creative-people/2010/scott-belsky). fastcompany.com. Archived from [the original](http://www.fastcompany.com/most-creative-people/2010/scott-belsky) on November 7, 2012. Retrieved April 16, 2012.
+11. [↑](http
+
+[...truncated]

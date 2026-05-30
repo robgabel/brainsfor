@@ -1,11 +1,11 @@
 # Scott Belsky Brain Pack
 
-> **284 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **1086 knowledge atoms** · **1174 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Scott Belsky's thinking, extracted from 77 editions of the Implications newsletter. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Scott Belsky's thinking, extracted from 77 editions of the Implications newsletter, The Messy Middle book, Tim Ferriss Show, Lenny's Podcast, First Round Review, NFX, a16z, Design Better, TEDx talks, SXSW, Web Summit, and 35+ video interviews. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Scott's actual ideas, frameworks, and worldview.
 
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Scott
    ```
 3. Then run any thinking skill:
    ```
-   /advise "Should I raise my Series A or stay bootstrapped?"
+   /advise "Should I optimize my product for breadth of users or depth of engagement?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Scott's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Scott's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (284 atoms, 1000 connections)
+  ├── brain-atoms.json      ← Structured data (1086 atoms, 1174 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**284 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**1086 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**1174 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — Superhumanity, originality, AI agents, organizational design, longevity, emergence, decision-making, scaling.
+**16 topic clusters** — Superhumanity, originality, AI agents, organizational design, longevity, emergence, decision-making, scaling, product craft, the messy middle.
 
 **Date range:** May 2014 — April 2026
 
@@ -95,7 +95,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 ## About Scott Belsky
 
-Scott Belsky is a legendary entrepreneur and strategic thinker who has shaped product and organizational thinking across the tech industry. His "Implications" newsletter is where he shares his latest thinking on originality, organizational design, AI, and the future of work.
+Scott Belsky is a legendary entrepreneur, product thinker, and strategic investor who has shaped product and organizational thinking across the tech industry. Founder of Behance, former Chief Product Officer and Chief Strategy Officer at Adobe, early angel investor in Uber, Pinterest, and Perplexity, and now a partner at A24. His 'Implications' newsletter and The Messy Middle are where he shares his latest thinking on originality, organizational design, AI, and the future of creative work.
 
 ## Sources & Ethics
 
