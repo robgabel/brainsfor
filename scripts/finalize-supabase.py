@@ -70,29 +70,43 @@ def atom_row(a):
     return row
 
 
-def insert_batches(url, headers, table, rows, label, retries=4):
-    """Insert in batches of 50, retrying each batch on transient failure.
+def table_count(url, headers, table):
+    r = httpx.get(f"{url}/rest/v1/{table}?select=id",
+                  headers={**headers, "Prefer": "count=exact", "Range": "0-0"}, timeout=60)
+    try:
+        return int(r.headers.get("content-range", "*/0").split("/")[-1])
+    except Exception:
+        return -1
 
-    The headers carry Prefer: resolution=merge-duplicates, so a retry re-POSTs
-    the same rows idempotently (upsert on id) — a partial first attempt is healed
-    rather than duplicated. Without this, a transient blip mid-load left atoms
-    half-populated and every downstream connection failed its FK check.
+
+def insert_batches(url, headers, table, rows, label, passes=8):
+    """Idempotently upsert rows until the table count reaches len(rows).
+
+    Supabase's REST API starts rejecting after ~400 rows POSTed back-to-back in a
+    single process (rate/connection pressure), which silently left tables half
+    loaded — atoms stalled at ~400/1086 and every downstream connection failed its
+    FK check. Fix: small batches (40) with a brief inter-batch sleep, and re-pass
+    the whole set (merge-duplicates makes it an idempotent upsert) until the live
+    count matches the target or we run out of passes. Heals partial loads instead
+    of trusting a single pass.
     """
-    done = 0
-    for i in range(0, len(rows), 50):
-        batch = rows[i:i + 50]
-        for attempt in range(retries):
-            r = httpx.post(f"{url}/rest/v1/{table}", headers=headers, json=batch, timeout=60)
-            if r.status_code in (200, 201):
-                done += len(batch)
-                break
-            if attempt == retries - 1:
-                say("WARN", f"{label} batch {i} failed after {retries} tries: "
-                            f"HTTP {r.status_code} {r.text[:140]}")
-            else:
-                time.sleep(2)
-    say("OK" if done == len(rows) else "WARN", f"loaded {done}/{len(rows)} {label}")
-    return done
+    target = len(rows)
+    for p in range(passes):
+        for i in range(0, target, 40):
+            batch = rows[i:i + 40]
+            try:
+                httpx.post(f"{url}/rest/v1/{table}", headers=headers, json=batch, timeout=60)
+            except Exception:
+                pass
+            time.sleep(0.15)
+        c = table_count(url, headers, table)
+        if c >= target:
+            say("OK", f"loaded {c}/{target} {label} (pass {p + 1})")
+            return c
+        say("i", f"  {label} pass {p + 1}: {c}/{target} — re-passing")
+    c = table_count(url, headers, table)
+    say("WARN" if c < target else "OK", f"loaded {c}/{target} {label}")
+    return c
 
 
 def main():
