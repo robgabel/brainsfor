@@ -201,6 +201,73 @@ def get_supabase_url() -> str:
     return os.environ.get("SUPABASE_URL", "https://uzediwokyshjbsymevtp.supabase.co").rstrip("/")
 
 
+def ensure_supabase_tables(slug: str, person_name: str, brain_json: dict) -> bool:
+    """Create a brain's atoms/connections tables idempotently and verify they're live.
+
+    Runs templates/create-brain-tables.sql (per-statement) through the service-role
+    `exec_sql` RPC, reloads the PostgREST schema cache, then polls until both tables
+    are queryable via REST (so the subsequent atom upload won't 404 on schema-cache lag).
+
+    Returns True ONLY when both tables are verified visible. Returns False — honestly,
+    with a real error — on any failure, instead of the old code's fake "Executed N
+    statements" success. The pack still ships either way; Supabase is optional infra.
+    """
+    step("Creating + verifying Supabase tables...")
+    us = underscore_slug(slug)
+    url = get_supabase_url()
+    headers = get_supabase_rest_headers()
+    try:
+        sql = (TEMPLATES_DIR / "create-brain-tables.sql").read_text()
+        first_name = brain_json.get("brain_first_name", person_name.split()[0])
+        last_name = brain_json.get("brain_last_name",
+                                   person_name.split()[-1] if " " in person_name else "")
+        possessive = brain_json.get("brain_possessive", "their")
+        sql = (sql.replace("{{SLUG}}", us).replace("{{NAME}}", person_name)
+                  .replace("{{FIRST_NAME}}", first_name).replace("{{LAST_NAME}}", last_name)
+                  .replace("{{POSSESSIVE}}", possessive))
+
+        # Split into single statements (template has no function bodies / DO blocks),
+        # stripping comment-only lines so exec_sql gets clean SQL.
+        def _clean(stmt: str) -> str:
+            return "\n".join(l for l in stmt.splitlines()
+                             if not l.strip().startswith("--")).strip()
+        statements = [_clean(s) for s in sql.split(";")]
+        statements = [s for s in statements if s]
+
+        failures = []
+        for stmt in statements:
+            resp = httpx.post(f"{url}/rest/v1/rpc/exec_sql", headers=headers,
+                              json={"query": stmt}, timeout=60)
+            if resp.status_code not in (200, 201, 204):
+                failures.append(f"HTTP {resp.status_code}: {resp.text[:140]} :: {stmt[:70]}")
+        if failures:
+            warn(f"Table creation failed ({len(failures)} statement(s)):")
+            for f in failures[:6]:
+                warn(f"  {f}")
+            return False
+
+        # Force PostgREST to pick up the new tables immediately.
+        httpx.post(f"{url}/rest/v1/rpc/exec_sql", headers=headers,
+                   json={"query": "NOTIFY pgrst, 'reload schema'"}, timeout=30)
+
+        # Poll until both tables answer a REST query (defeats schema-cache lag —
+        # the exact bug that silently orphaned every recent build).
+        for _ in range(6):
+            time.sleep(1.5)
+            a = httpx.get(f"{url}/rest/v1/{us}_atoms?select=id&limit=0",
+                          headers=headers, timeout=30).status_code
+            c = httpx.get(f"{url}/rest/v1/{us}_connections?select=id&limit=0",
+                          headers=headers, timeout=30).status_code
+            if a == 200 and c == 200:
+                success(f"Supabase tables ready: {us}_atoms, {us}_connections")
+                return True
+        warn(f"Tables created but {us}_atoms not visible to PostgREST after retries")
+        return False
+    except Exception as e:
+        warn(f"Supabase table creation failed: {e}")
+        return False
+
+
 # =============================================================================
 # PHASE 0: SOURCE DISCOVERY
 # =============================================================================
@@ -630,68 +697,16 @@ def phase_1_scaffold(
             json.dump(brain_json, f, indent=2)
         success(f"brain.json generated ({len(brain_json.get('clusters', {}))} clusters)")
 
-    # 1.3 Create Supabase tables
-    step("Creating Supabase tables...")
+    # 1.3 Create Supabase tables (verified — see ensure_supabase_tables)
     if dry_run:
-        step("[DRY RUN] Would create Supabase tables")
+        step("[DRY RUN] Would create + verify Supabase tables")
     else:
-        try:
-            sql_template_path = TEMPLATES_DIR / "create-brain-tables.sql"
-            with open(sql_template_path) as f:
-                sql_template = f.read()
-
-            us = underscore_slug(slug)
-            first_name = brain_json.get("brain_first_name", person_name.split()[0])
-            last_name = brain_json.get("brain_last_name", person_name.split()[-1] if " " in person_name else "")
-            possessive = brain_json.get("brain_possessive", "their")
-
-            sql = sql_template.replace("{{SLUG}}", us)
-            sql = sql.replace("{{NAME}}", person_name)
-            sql = sql.replace("{{FIRST_NAME}}", first_name)
-            sql = sql.replace("{{LAST_NAME}}", last_name)
-            sql = sql.replace("{{POSSESSIVE}}", possessive)
-
-            # Execute via Supabase REST RPC
-            url = get_supabase_url()
-            key = os.environ.get("SUPABASE_SERVICE_KEY", "")
-            headers = {
-                "apikey": key,
-                "Authorization": f"Bearer {key},",
-                "Content-Type": "application/json",
-            }
-
-            # Split SQL into individual statements and execute each
-            statements = [s.strip() for s in sql.split(";") if s.strip() and not s.strip().startswith("--")]
-            executed = 0
-            for stmt in statements:
-                try:
-                    resp = httpx.post(
-                        f"{url}/rest/v1/rpc/",
-                        headers=headers,
-                        json={"query": stmt},
-                        timeout=30,
-                    )
-                    # RPC endpoint may not exist — fall back to direct SQL via pg API
-                    if resp.status_code not in (200, 201, 204):
-                        # Try the SQL endpoint instead
-                        resp2 = httpx.post(
-                            f"{url}/pg",
-                            headers={
-                                "apikey": key,
-                                "Authorization": f"Bearer {key}",
-                                "Content-Type": "application/json",
-                            },
-                            json={"query": stmt + ";"},
-                            timeout=30,
-                        )
-                except Exception:
-                    pass
-                executed += 1
-
-            success(f"Executed {executed} SQL statements for {us}_atoms and {us}_connections")
-        except Exception as e:
-            warn(f"Supabase table creation failed: {e}")
-            warn("Tables may need to be created manually. Continuing...")
+        tables_ready = ensure_supabase_tables(slug, person_name, brain_json)
+        brain_json["_supabase_tables_ready"] = tables_ready
+        if not tables_ready:
+            warn("Supabase tables NOT ready — atoms/connections upload will be skipped. "
+                 "Pack still ships, but Supabase-backed connection enrichment is disabled "
+                 "for this brain until the tables exist.")
 
     # 1.4 Register in index.json
     step("Registering in index.json...")
@@ -1213,7 +1228,12 @@ def phase_2_ingest(
 
     # --- 2.4 Upload to Supabase ---
     all_atoms_path = research_dir / "all-atoms.json"
-    if all_atoms_path.exists() and not dry_run:
+    # Self-heal: if Phase 1 ran before the table-creation fix (or tables got dropped),
+    # ensure tables exist now rather than silently 404-ing every batch.
+    if all_atoms_path.exists() and not dry_run and not brain_json.get("_supabase_tables_ready"):
+        if ensure_supabase_tables(slug, brain_json.get("brain_name", slug), brain_json):
+            brain_json["_supabase_tables_ready"] = True
+    if all_atoms_path.exists() and not dry_run and brain_json.get("_supabase_tables_ready"):
         step("Uploading atoms to Supabase...")
         try:
             with open(all_atoms_path) as f:
@@ -1266,10 +1286,18 @@ def phase_2_ingest(
                 else:
                     warn(f"Upload batch error: {resp.status_code} {resp.text[:200]}")
 
-            success(f"Uploaded {uploaded}/{len(rows)} atoms to {table}")
+            if uploaded == len(rows):
+                success(f"Uploaded {uploaded}/{len(rows)} atoms to {table}")
+            elif uploaded == 0:
+                warn(f"ORPHANED: 0/{len(rows)} atoms reached {table} — brain is NOT in Supabase")
+                brain_json["_supabase_tables_ready"] = False
+            else:
+                warn(f"PARTIAL: only {uploaded}/{len(rows)} atoms reached {table}")
         except Exception as e:
             warn(f"Supabase upload failed: {e}")
             warn("Atoms are saved locally — you can upload manually later")
+    elif all_atoms_path.exists() and not dry_run:
+        warn(f"Skipped atom upload — Supabase tables for {slug} are not ready (pack still ships)")
 
     # --- 2.5 Gap check ---
     if all_atoms_path.exists() and not dry_run:

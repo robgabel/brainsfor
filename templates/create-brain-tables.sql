@@ -51,14 +51,19 @@ ALTER TABLE {{SLUG}}_atoms ENABLE ROW LEVEL SECURITY;
 ALTER TABLE {{SLUG}}_connections ENABLE ROW LEVEL SECURITY;
 
 -- Policy: allow read access (adjust for your auth model)
+-- DROP-then-CREATE so the template is idempotent (CREATE POLICY has no IF NOT EXISTS).
+DROP POLICY IF EXISTS "Allow public read on {{SLUG}}_atoms" ON {{SLUG}}_atoms;
 CREATE POLICY "Allow public read on {{SLUG}}_atoms"
   ON {{SLUG}}_atoms FOR SELECT USING (true);
+DROP POLICY IF EXISTS "Allow public read on {{SLUG}}_connections" ON {{SLUG}}_connections;
 CREATE POLICY "Allow public read on {{SLUG}}_connections"
   ON {{SLUG}}_connections FOR SELECT USING (true);
 
 -- Service role write access
+DROP POLICY IF EXISTS "Allow service write on {{SLUG}}_atoms" ON {{SLUG}}_atoms;
 CREATE POLICY "Allow service write on {{SLUG}}_atoms"
   ON {{SLUG}}_atoms FOR ALL USING (auth.role() = 'service_role');
+DROP POLICY IF EXISTS "Allow service write on {{SLUG}}_connections" ON {{SLUG}}_connections;
 CREATE POLICY "Allow service write on {{SLUG}}_connections"
   ON {{SLUG}}_connections FOR ALL USING (auth.role() = 'service_role');
 
