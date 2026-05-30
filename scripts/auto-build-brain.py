@@ -1643,6 +1643,66 @@ def phase_4_enrich(
 # PHASE 5: EXPORT & QA
 # =============================================================================
 
+def embed_and_check_parity(slug: str, brain_dir: Path) -> dict:
+    """Phase-5 finalizer: generate embeddings (non-destructive fill) and assert
+    pack<->Supabase parity.
+
+    Addresses two audit defects:
+      - "embeddings are never generated" — loops the embed-brain edge function so
+        every uploaded atom gets a 1536-dim vector (semantic search / board RPC).
+      - "pack <-> Supabase divergence" — compares pack atom count to the live DB
+        count and flags loudly when the two sources of truth disagree.
+
+    Best-effort and never raises: embeddings depend on an external API, so a blip
+    must not fail an otherwise-good build. The hard backstop is the taste gate —
+    builds stay 'hidden' until a human promotes, so a parity warning is seen
+    before anything goes live. Run finalize-supabase.py to reconcile a mismatch.
+    """
+    us = underscore_slug(slug)
+    url = get_supabase_url()
+    headers = get_supabase_rest_headers()
+    key = os.environ.get("SUPABASE_SERVICE_KEY", "")
+    pack = brain_dir / "pack" / "brain-atoms.json"
+    pack_count = len(json.loads(pack.read_text()).get("atoms", [])) if pack.exists() else 0
+
+    embedded_total = 0
+    try:
+        step("Generating embeddings (embed-brain)...")
+        for _ in range(60):
+            r = httpx.post(f"{url}/functions/v1/embed-brain",
+                           headers={"Authorization": f"Bearer {key}", "apikey": key,
+                                    "Content-Type": "application/json"},
+                           json={"table": f"{us}_atoms", "limit": 200}, timeout=300)
+            if r.status_code != 200:
+                warn(f"embed-brain HTTP {r.status_code}: {r.text[:120]} — embeddings incomplete")
+                break
+            n = r.json().get("embedded", 0)
+            embedded_total += n
+            if n == 0:
+                break
+            time.sleep(1)
+    except Exception as e:
+        warn(f"embedding step failed (non-fatal): {e}")
+
+    db_count = -1
+    try:
+        r = httpx.get(f"{url}/rest/v1/{us}_atoms?select=id",
+                      headers={**headers, "Prefer": "count=exact", "Range": "0-0"}, timeout=60)
+        db_count = int(r.headers.get("content-range", "*/0").split("/")[-1])
+    except Exception as e:
+        warn(f"parity check failed: {e}")
+
+    parity_ok = (db_count == pack_count and pack_count > 0)
+    if not parity_ok:
+        warn(f"PACK<->DB PARITY MISMATCH: pack={pack_count}, db={db_count} ({us}_atoms). "
+             f"Two sources of truth disagree — run: "
+             f"python3 scripts/finalize-supabase.py --brain {slug}")
+    else:
+        success(f"pack<->DB parity OK ({pack_count} atoms); embeddings filled (+{embedded_total})")
+    return {"embedded": embedded_total, "db_atoms": db_count,
+            "pack_atoms": pack_count, "parity_ok": parity_ok}
+
+
 def phase_5_export_qa(
     brain_json: dict,
     brain_dir: Path,
@@ -1778,11 +1838,18 @@ def phase_5_export_qa(
                     "voice than a fat one with fabricated quotes."
                 )
 
+        # --- 5.7 Embeddings + pack<->DB parity (audit defects #2, #3) ---
+        fin = embed_and_check_parity(slug, brain_dir)
+
         return {
             "score": score,
             "errors": len(audit.errors),
             "warnings": len(audit.warnings),
             "provenance_pct": provenance_pct,
+            "embedded": fin["embedded"],
+            "db_atoms": fin["db_atoms"],
+            "pack_atoms": fin["pack_atoms"],
+            "parity_ok": fin["parity_ok"],
         }
 
     except Exception as e:

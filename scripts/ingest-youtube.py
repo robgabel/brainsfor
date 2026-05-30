@@ -74,6 +74,24 @@ def extract_video_id(url_or_id: str) -> str:
     raise ValueError(f"Could not extract video ID from: {url_or_id}")
 
 
+def _call_with_timeout(fn, seconds, what):
+    """Run fn() with a hard wall-clock timeout.
+
+    youtube-transcript-api sets no socket timeout, so a hung TCP read blocks
+    forever — the 75-minute / 1-second-CPU wedge that produced Melinda's
+    zero-transcript build. ThreadPoolExecutor enforces a wall regardless of the
+    library's (absent) socket handling. The orphaned thread can't be killed, but
+    the build stops waiting and moves on instead of hanging the whole pipeline.
+    """
+    from concurrent.futures import ThreadPoolExecutor, TimeoutError as FTimeout
+    with ThreadPoolExecutor(max_workers=1) as ex:
+        fut = ex.submit(fn)
+        try:
+            return fut.result(timeout=seconds)
+        except FTimeout:
+            raise TimeoutError(f"{what} timed out after {seconds}s")
+
+
 def fetch_transcript(video_id: str) -> dict:
     """Fetch transcript for a YouTube video. Returns transcript data."""
     if not HAS_YT_TRANSCRIPT:
@@ -82,7 +100,7 @@ def fetch_transcript(video_id: str) -> dict:
 
     try:
         ytt = YouTubeTranscriptApi()
-        transcript_list = ytt.list(video_id)
+        transcript_list = _call_with_timeout(lambda: ytt.list(video_id), 60, f"list({video_id})")
 
         # Prefer manual captions over auto-generated
         transcript = None
@@ -99,7 +117,7 @@ def fetch_transcript(video_id: str) -> dict:
         if transcript is None:
             return {"error": f"No transcripts available for {video_id}"}
 
-        fetched = transcript.fetch()
+        fetched = _call_with_timeout(lambda: transcript.fetch(), 90, f"fetch({video_id})")
         segments = []
         for snippet in fetched:
             segments.append({

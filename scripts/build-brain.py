@@ -333,17 +333,37 @@ def _is_rate_limit_error(err: str) -> bool:
     return any(m in e for m in _RATE_LIMIT_MARKERS)
 
 
+def _call_with_timeout(fn, seconds, what):
+    """Run fn() with a hard wall-clock timeout.
+
+    youtube-transcript-api sets no socket timeout, so a hung TCP read blocks
+    forever — the 75-minute / 1-second-CPU wedge that produced Melinda's
+    zero-transcript build (the whole pipeline stalled on one video). A
+    ThreadPoolExecutor enforces a wall regardless of the library's (absent)
+    socket handling; the orphaned thread can't be killed but the build stops
+    waiting and moves to the next video.
+    """
+    from concurrent.futures import ThreadPoolExecutor, TimeoutError as FTimeout
+    with ThreadPoolExecutor(max_workers=1) as ex:
+        fut = ex.submit(fn)
+        try:
+            return fut.result(timeout=seconds)
+        except FTimeout:
+            raise TimeoutError(f"{what} timed out after {seconds}s")
+
+
 def fetch_transcript(video_id: str, max_retries: int = 3) -> dict:
     """Fetch transcript for a YouTube video. Retries on rate-limit errors with
-    exponential backoff (30s, 90s, 270s). Other errors (no transcript, unavailable)
-    fail fast without retry."""
+    exponential backoff (30s, 90s, 270s). Other errors (no transcript, unavailable,
+    timeout) fail fast without retry. Each network call has a hard wall-clock
+    timeout so a hung read can never wedge the build."""
     backoff_seconds = [30, 90, 270]
     last_err = ""
 
     for attempt in range(max_retries):
         try:
             ytt = YouTubeTranscriptApi()
-            transcript_list = ytt.list(video_id)
+            transcript_list = _call_with_timeout(lambda: ytt.list(video_id), 60, f"list({video_id})")
 
             transcript = None
             for t in transcript_list:
@@ -358,7 +378,7 @@ def fetch_transcript(video_id: str, max_retries: int = 3) -> dict:
             if transcript is None:
                 return {"error": f"No transcripts available for {video_id}"}
 
-            fetched = transcript.fetch()
+            fetched = _call_with_timeout(lambda: transcript.fetch(), 90, f"fetch({video_id})")
             segments = [{"text": s.text, "start": s.start, "duration": s.duration} for s in fetched]
 
             full_text_parts = []
@@ -973,19 +993,19 @@ def stage_update_index(brain_json, brain_dir, dry_run=False):
         with open(connections_path) as f:
             connection_count = len(json.load(f))
 
-    # Determine status
+    # Determine status for a NEW brain. The pipeline NEVER auto-promotes to
+    # "live" — going live is a human taste-gate decision (Path C). A freshly
+    # built brain defaults to "hidden" (off the public site) until a human
+    # explicitly flips it to "live". Existing brains keep whatever status they
+    # already have (so re-exports during promotion don't demote a live brain).
     pack_dir = brain_dir / "pack"
     has_pack = (pack_dir / "brain-atoms.json").exists()
-    if has_pack and atom_count >= 100:
-        status = "live"
-    elif atom_count > 0:
-        status = "ingesting"
+    if atom_count == 0:
+        new_status = "scaffolded"
+    elif has_pack and atom_count >= 100:
+        new_status = "hidden"
     else:
-        status = "scaffolded"
-
-    if dry_run:
-        print(f"  [DRY RUN] Would update {slug}: {atom_count} atoms, {connection_count} connections, status={status}")
-        return True
+        new_status = "ingesting"
 
     if index_path.exists():
         with open(index_path) as f:
@@ -999,6 +1019,14 @@ def stage_update_index(brain_json, brain_dir, dry_run=False):
         if b["slug"] == slug:
             entry = b
             break
+
+    is_new = entry is None
+    status = new_status if is_new else entry.get("status", new_status)
+
+    if dry_run:
+        print(f"  [DRY RUN] Would update {slug}: {atom_count} atoms, {connection_count} connections, "
+              f"status={status} ({'new->hidden, human must promote' if is_new else 'preserved'})")
+        return True
 
     if entry is None:
         entry = {

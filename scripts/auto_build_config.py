@@ -55,7 +55,12 @@ MIN_BRAIN_ATOMS = 250
 # (e.g. YouTube blocks cloud/CI IPs) where text-scraping still clears the atom
 # floor but the brain ships at ~7% voice with ungrounded synthesis. The atom
 # count looks fine; the brain is hollow. Bypass with --allow-thin-pack.
-MIN_VOICE_PCT = 0.15
+# Audit recommended ~0.35; set to 0.30 because the healthy brains cluster at
+# 36-47% voice (reshma the lowest at 36%), so a 0.35 floor leaves only a 1pt
+# margin and would risk tripping its own "blocks >1 in 4 legit brains" kill
+# criterion. 0.30 still catches hollow (7%) and clearly-thin builds. Tunable;
+# --allow-thin-pack is the explicit override for rare-source thinkers.
+MIN_VOICE_PCT = 0.30
 # If at least this many YouTube videos were discovered but ZERO transcripts were
 # fetched, that's the transcript-fetch-failure signature (not a real "no videos"
 # case) — halt rather than ship a quote-less brain.
