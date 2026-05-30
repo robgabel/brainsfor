@@ -70,15 +70,27 @@ def atom_row(a):
     return row
 
 
-def insert_batches(url, headers, table, rows, label):
+def insert_batches(url, headers, table, rows, label, retries=4):
+    """Insert in batches of 50, retrying each batch on transient failure.
+
+    The headers carry Prefer: resolution=merge-duplicates, so a retry re-POSTs
+    the same rows idempotently (upsert on id) — a partial first attempt is healed
+    rather than duplicated. Without this, a transient blip mid-load left atoms
+    half-populated and every downstream connection failed its FK check.
+    """
     done = 0
     for i in range(0, len(rows), 50):
         batch = rows[i:i + 50]
-        r = httpx.post(f"{url}/rest/v1/{table}", headers=headers, json=batch, timeout=60)
-        if r.status_code in (200, 201):
-            done += len(batch)
-        else:
-            say("WARN", f"{label} batch {i}: HTTP {r.status_code} {r.text[:160]}")
+        for attempt in range(retries):
+            r = httpx.post(f"{url}/rest/v1/{table}", headers=headers, json=batch, timeout=60)
+            if r.status_code in (200, 201):
+                done += len(batch)
+                break
+            if attempt == retries - 1:
+                say("WARN", f"{label} batch {i} failed after {retries} tries: "
+                            f"HTTP {r.status_code} {r.text[:140]}")
+            else:
+                time.sleep(2)
     say("OK" if done == len(rows) else "WARN", f"loaded {done}/{len(rows)} {label}")
     return done
 
