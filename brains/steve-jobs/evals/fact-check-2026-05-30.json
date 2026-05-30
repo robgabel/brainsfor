@@ -1,0 +1,575 @@
+{
+  "brain_slug": "steve-jobs-v2",
+  "timestamp": "2026-05-30T05:25:47.811687+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 33,
+    "youtube_chars": 675318,
+    "atom_quote_count": 601,
+    "total_chars": 791363
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 6,
+        "weak": 4,
+        "ungrounded": 1,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 1,
+        "weak": 3,
+        "ungrounded": 0,
+        "total": 4
+      },
+      "does_not_believe": {
+        "grounded": 4,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 6
+      },
+      "would_not_say": {
+        "grounded": 0,
+        "weak": 6,
+        "ungrounded": 0,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 11,
+      "weak": 15,
+      "ungrounded": 1,
+      "total": 27
+    },
+    "grounding_pct": 68.5,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[9]",
+        "title": "Cannibalize yourself before someone else does",
+        "rationale": "No passage in the source corpus explicitly discusses the strategy of cannibilizing one's own products before competitors do; this principle does not appear in the provided transcripts."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[4]",
+        "title": "People don't know what they want until you show it to them",
+        "rationale": "The corpus contains one strong passage about starting from customer experience and working backward, but no explicit statement that customers don't know what they want until shown; the principle is only partially supported."
+      },
+      {
+        "id": "first_principles[5]",
+        "title": "Simplicity is the endpoint of work, not the starting point",
+        "rationale": "The corpus supports simplicity through elimination in the software context, but the broader principle about simplicity as the endpoint of deep understanding (the iPod/iPhone examples) is not explicitly stated in the source material; only one thematic area is addressed."
+      },
+      {
+        "id": "first_principles[6]",
+        "title": "Design is how it works, not how it looks",
+        "rationale": "While the corpus suggests Jobs cared deeply about user experience and the integration of design with technology, the specific articulation that 'design is how it works not how it looks' and the inversion of the design/engineering sequence is not explicitly stated in the source material."
+      },
+      {
+        "id": "first_principles[10]",
+        "title": "You can only connect the dots looking backward",
+        "rationale": "The corpus does not contain explicit articulation of the 'connecting dots looking backward' principle; the Stanford speech material that famously expresses this idea is not present in the source corpus, and only tangentially related passages exist."
+      },
+      {
+        "id": "contrarian_positions[0]",
+        "title": "Market research is actively harmful for category-defining products",
+        "rationale": "While Jobs clearly advocates starting from customer experience rather than technology, there is no explicit statement in the corpus that market research is 'actively harmful' or that Apple 'does no market research'; only one partially relevant passage exists."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Own the whole widget or accept a quality ceiling",
+      "claim": "Own the whole widget or accept a quality ceiling. Every layer you don't control is a design decision handed to someone whose incentives are price or market share rather than user experience. Integration is the only structural condition under which a company can take full responsibility for what the user actually feels.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Apple has been highlighted as having an incredibly great weakness of being totally vertically integrated. Well, it doesn't make its own semiconductors but it makes the hardware. It makes the software. It controls the user experience. It does the marketing and distribute... I also perceive it as Apple's greatest strength if managed right.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the fact that Apple controls the product design from end to end, hardware, software, gives Apple an incredibly unique opportunity. It's the only company in the industry that does that. An incredibly unique opportunity to tackle some of these really gnarly complex problems",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "This is something microsoft couldn't do because it made software but not the hardware it's something sony couldn't do because it made a lot of devices but it didn't really make software operating system it's so the only company that had end-to-end control was apple",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple distinct passages in the corpus explicitly support the idea that vertical integration / end-to-end control is Apple's greatest structural advantage for delivering a coherent user experience."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Focus is elimination, not prioritization",
+      "claim": "Focus is elimination, not prioritization. Most organizations confuse ranking things with cutting things; the two are nearly opposite in practice. Innovation is saying no to a thousand good ideas. The quality of an organization's 'no' decisions is the leading indicator of its health.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "you know the hardest thing is when you think about focusing right? You think well focusing is is saying yes! No. Focusing is about saying no. Focusing is about saying no. and you've got to say no no no no",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "focus is about saying no and the result of that focus is going to be some really great products where the total is much greater than the sum of the parts",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "there were people that were going off in 18 different directions doing arguably interesting things in each one of them. Good engineers, lousy management. And what happened was you look at the the the farm that's been created with all these different animals going in different directions and it doesn't add up. The the the total is less than the sum of the parts.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus contains strong, explicit, repeated statements that focusing means saying no, directly supporting this principle across multiple passages."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Products come first; profits follow as consequence",
+      "claim": "Products come first; profits follow as consequence. When finance people run product companies, they optimize the metric and the product decays underneath them. Profits exist to enable better products, not the reverse. Reverse the causal arrow and the company begins dying even as the spreadsheets look healthy.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think every good product that I've ever seen in this industry and pretty much anywhere is because a group of people cared deeply about making about about about making something wonderful that they and their friends wanted you know they wanted to use it themselves.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it's incredibly stupid for Apple to get in a position where for Apple to win, Microsoft has to lose... profitability to me is the high order bit of marketing for Apple at this point in time",
+          "relation": "partial"
+        },
+        {
+          "quote": "We don't do things because we think they're public services. We do them because we think they ought to be done, I guess. We do them because we want to do them.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports the idea that great products come from caring about making something wonderful rather than from financial optimization, though the explicit 'profits follow products' framing is implicit rather than verbatim; two passages support the product-first orientation strongly."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Creativity is connection, not origination",
+      "claim": "Creativity is connection, not origination. Creative people have more experiences to connect than others and are less embarrassed about where ideas came from. Originality is synthesis across domains most people keep separate \u2014 calligraphy and typography, Zen and industrial design, fractional-horsepower motors and personal computing.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "he did it isaacson says by standing at the crossroads of science in the humanities connecting creativity with technology and combining leaps of imagination with feats of engineering to produce new devices that consumers hadn't even thought of",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "we're solving the problems of injecting some liberal arts into these computers. That's what we're trying to do right now.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Computer people aren't\u2026you read all this computer-nerd stuff. It's not really true anymore. They're really a lot closer to artists than they are to anything else.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "It is to stand at the intersection of technology and humanity and to make something for people that want to bring this into their lives",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages support the idea that creativity involves connecting domains (technology and liberal arts/humanities), and that synthesis across disciplines is central to Jobs's approach."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "People don't know what they want until you show it to them",
+      "claim": "People don't know what they want until you show it to them. Market research can describe what already exists; it cannot describe products that don't. Asking customers to design their own tools delegates the hardest work \u2014 the work of vision \u2014 to people who haven't done the thinking yet. The customer is the destination, not the map.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "consumers hadn't even thought of",
+          "relation": "partial"
+        },
+        {
+          "quote": "you've got to start with the customer experience and work backwards to the technology. You can't start with the technology and try to figure out where you're going to try to sell it.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus contains one strong passage about starting from customer experience and working backward, but no explicit statement that customers don't know what they want until shown; the principle is only partially supported."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Simplicity is the endpoint of work, not the starting point",
+      "claim": "Simplicity is the endpoint of work, not the starting point. Simple is harder than complex because it requires understanding the problem deeply enough to know what can be removed. Most products are complex because their creators stopped working too early. One button on the iPod, no keyboard on the iPhone \u2014 these were not minimalist aesthetics but finished thinking.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "The line of code that's the fastest to write, that never breaks, that doesn't need maintenance, is the line you never had to write.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the goal here is to eliminate 80% of the code that you have to write for your app.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports simplicity through elimination in the software context, but the broader principle about simplicity as the endpoint of deep understanding (the iPod/iPhone examples) is not explicitly stated in the source material; only one thematic area is addressed."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Design is how it works, not how it looks",
+      "claim": "Design is how it works, not how it looks. The industry treats design as decoration applied after engineering. Jobs inverted the sequence: start with how the product should feel to use, then constrain engineering to that experience. This is why Apple products feel inevitable rather than assembled.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "It is to stand at the intersection of technology and humanity and to make something for people that want to bring this into their lives and use it for things that make them more creative, not just make them more productive.",
+          "relation": "partial"
+        },
+        {
+          "quote": "he did it isaacson says by standing at the crossroads of science in the humanities connecting creativity with technology",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "While the corpus suggests Jobs cared deeply about user experience and the integration of design with technology, the specific articulation that 'design is how it works not how it looks' and the inversion of the design/engineering sequence is not explicitly stated in the source material."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "A-players only; one B-player starts a cancer",
+      "claim": "A-players only; one B-player starts a cancer. Great teams are built by ruthless refusal to compromise, not by averaging. B-players hire C-players to feel superior, and the quality floor collapses one hire at a time. Small teams of A-players who argue constantly beat large teams of competent people who don't.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we believe in the phenomenon of great people. And what I mean by that is, we think there are people that are so good that they can run circles around five pretty good people. And those are the kind of people that we want at Apple.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The first thing we do is we've always tried to hire people that were much better than we needed for the current job, because within six months they'd be fighting to keep up with it.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we've always tried to hire people\u2026the reason we hire people is to tell us what to do.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages clearly support the principle that great teams require exceptional individuals and that Jobs sought only top-tier talent at Apple."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "The intersection of technology and liberal arts is where magic happens",
+      "claim": "The intersection of technology and liberal arts is where magic happens. A computer is a bicycle for the mind \u2014 leverage on human capability \u2014 but its value depends entirely on the humanity of the people building it. Pure technologists ship feature lists; people who are also musicians, calligraphers, and historians ship culture.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "It is to stand at the intersection of technology and humanity and to make something for people that want to bring this into their lives",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we're solving the problems of injecting some liberal arts into these computers. That's what we're trying to do right now.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "What a computer is to me, is it's the most remarkable tool that we've ever come up with, and it's the equivalent of a bicycle for our minds.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Computer people aren't\u2026you read all this computer-nerd stuff. It's not really true anymore. They're really a lot closer to artists than they are to anything else.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly support the idea that technology must be combined with humanity/liberal arts to produce meaningful products, which is the core of this principle."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Cannibalize yourself before someone else does",
+      "claim": "Cannibalize yourself before someone else does. The market will eventually destroy your best product; the only question is who controls the timing. The iPhone was designed to kill the iPod because if Apple didn't, someone else would. Protecting current products from your own future products is strategic cowardice that guarantees long-term loss.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus explicitly discusses the strategy of cannibilizing one's own products before competitors do; this principle does not appear in the provided transcripts."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "You can only connect the dots looking backward",
+      "claim": "You can only connect the dots looking backward. Career coherence is visible in retrospect, never in prospect. Dropping out of Reed, auditing calligraphy, going to India, being fired from Apple \u2014 none of these looked like investments at the time. The faith required is not that each experience will prove useful, but that a life lived with genuine curiosity will eventually compose into something meaningful.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the things that I've done in my life and like the things we do now at Pixar, these are team sports",
+          "relation": "partial"
+        },
+        {
+          "quote": "I got into this because of the technology at the beginning. It excited you? Oh, it blew me away... But you're John's right. He educated me that what we are really about is storytelling.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus does not contain explicit articulation of the 'connecting dots looking backward' principle; the Stanford speech material that famously expresses this idea is not present in the source corpus, and only tangentially related passages exist."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Market research is actively harmful for category-defining products",
+      "claim": "Market research is actively harmful for category-defining products. The industry consensus is that listening to customers reduces risk. Jobs argued the opposite: asking people to describe products that don't yet exist guarantees you build incremental improvements to products that do. 'We do no market research' was a statement of method, not arrogance.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "you've got to start with the customer experience and work backwards to the technology. You can't start with the technology and try to figure out where you're going to try to sell it.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Jobs clearly advocates starting from customer experience rather than technology, there is no explicit statement in the corpus that market research is 'actively harmful' or that Apple 'does no market research'; only one partially relevant passage exists."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Licensing your platform is a form of slow suicide",
+      "claim": "Licensing your platform is a form of slow suicide. The industry assumes broad distribution wins markets. Jobs argued that licensing fragments quality, dilutes the brand, and trains customers to expect a degraded experience. He killed the Mac clone program on return because every clone was an argument against Apple's design standards.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I think the clone setup, the way it was set up, was done really poorly in, you know, 3, four years ago... Apple licenses the hardware designs and forces the clone makers to use them. That's stupid.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I've been advocating to eliminate the licensing of the hardware and let the clone makers do whatever they want and B to raise the price or the royalty of the software to a reasonable level",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Jobs criticizes how licensing was done but actually advocates for continued licensing with better terms; the corpus contradicts the strong claim that licensing is 'slow suicide' \u2014 he recommends improving licensing terms rather than eliminating licensing entirely."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Vertical integration is a competitive advantage, not a strategic mistake",
+      "claim": "Vertical integration is a competitive advantage, not a strategic mistake. Wall Street and most business schools treated vertical integration as a 20th-century anachronism. Jobs treated it as the only architecture under which a coherent user experience is possible \u2014 and the most valuable consumer-electronics company in history proved to be the most vertically integrated one.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Apple has been highlighted as having an incredibly great weakness of being totally vertically integrated... I don't agree with that. I perceive it as a potential weakness if not managed right. I also perceive it as Apple's greatest strength if managed right.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the fact that Apple controls the product design from end to end, hardware, software, gives Apple an incredibly unique opportunity. It's the only company in the industry that does that.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly support the contrarian view that vertical integration is a competitive advantage rather than a strategic mistake, in direct contrast to the Wall Street consensus."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Focus groups can only tell you about the past",
+      "claim": "Focus groups can only tell you about the past. Convening users to react to prototypes anchors the product to existing mental models. The job of a product company is to change those mental models, not to confirm them. Relying on focus groups for vision is a category error about what customers are able to imagine.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "you've got to start with the customer experience and work backwards to the technology. You can't start with the technology and try to figure out where you're going to try to sell it.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Only one passage tangentially addresses this; the specific claim about focus groups anchoring products to existing mental models is not stated in the corpus."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That headcount growth signals organizational health",
+      "claim": "That headcount growth signals organizational health. Jobs treated large teams as a symptom of managerial insecurity. Adding people to a late project makes it later; adding people to a product team diffuses accountability and slows the decision cycles that produce quality.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we think there are people that are so good that they can run circles around five pretty good people... what we want to do is keep the number of people down so that we can spend time with\u2014",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we are going to cross $1 billion in sales very shortly with under 5,000 people worldwide. And that's phenomenal.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The way you get programmer productivity is not by increasing the lines of code per programmer per day. That doesn't work. The way you get programmer productivity is by eliminating lines of code you have to write.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages support Jobs's view that small, highly capable teams outperform large ones, and that growing headcount is not the goal \u2014 keeping teams lean is."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That the customer is always right",
+      "claim": "That the customer is always right. Customers are right about their experience of existing products and wrong about what the next product should be. Deferring product vision to customer feedback is an abdication of the one thing a product company exists to do.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "you've got to start with the customer experience and work backwards to the technology. You can't start with the technology and try to figure out where you're going to try to sell it.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Jobs emphasizes starting from the customer experience, no passage explicitly states that 'the customer is wrong about what the next product should be' or that deferring to customer feedback is an abdication; only one tangentially relevant passage exists."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That profit maximization is a legitimate corporate purpose",
+      "claim": "That profit maximization is a legitimate corporate purpose. Companies that exist to make money make worse products over time. The only legitimate purpose of a company is to make something you believe the world needs. Profit is the scorecard, not the game.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think every good product that I've ever seen in this industry and pretty much anywhere is because a group of people cared deeply about making about about about making something wonderful that they and their friends wanted",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "We don't do things because we think they're public services. We do them because we think they ought to be done, I guess. We do them because we want to do them.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "what he wanted to do in his life was create tools that allowed people to work at the highest levels",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The corpus supports that Jobs's motivation was making great products rather than maximizing profit, and that caring about the product is the driver of good work."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That being fired is the worst thing that can happen to a founder",
+      "claim": "That being fired is the worst thing that can happen to a founder. Being pushed out of Apple turned out to be the most creatively liberating event of Jobs's life. It freed him to start NeXT, acquire Pixar, and return to Apple with clarity he wouldn't have had otherwise. The catastrophe was the education.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "he sold his stock and used the company to start a new venture called next computer which made great products that no one bought but jobs would be saved by a tiny company that he acquired from george lucas for five million dollars pixar studios would eventually revolutionize movie animation",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "he was out of his own company kicked out of his own company and you know he always had that feeling of abandonment",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The corpus describes Jobs's departure from Apple and subsequent ventures but Jobs himself does not explicitly say in the corpus that being fired was the most 'creatively liberating' event or reframe it as education; these passages are third-party narration."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That open always beats closed",
+      "claim": "That open always beats closed. The industry theology holds that open platforms win in the long run. Jobs believed the opposite for consumer devices: closed, integrated systems produce experiences that open, fragmented ones cannot match, and users ultimately prefer the experience.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the fact that Apple controls the product design from end to end, hardware, software, gives Apple an incredibly unique opportunity",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "this is something microsoft couldn't do because it made software but not the hardware it's something sony couldn't do because it made a lot of devices but it didn't really make software operating system it's so the only company that had end-to-end control was apple",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "biographer walter isaacson writes that jobs had created a walled garden if you wanted to use any of his products it was easier to buy into the whole apple ecosystem it was something only a complete control freak could have pulled off",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages support Jobs's belief in closed/integrated systems over open/fragmented ones as the path to superior user experience."
+    },
+    {
+      "principle_id": "does_not_believe[5]",
+      "section": "does_not_believe",
+      "title": "That compromise produces better outcomes than conviction",
+      "claim": "That compromise produces better outcomes than conviction. Jobs's operating assumption was that committees and consensus produce mediocrity by averaging away the edges that make products memorable. The strongest products are the ones that most clearly reflect a single coherent vision.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Good engineers, lousy management. And what happened was you look at the the the farm that's been created with all these different animals going in different directions and it doesn't add up. The the the total is less than the sum of the parts.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "focus is about saying no and the result of that focus is going to be some really great products where the total is much greater than the sum of the parts",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports Jobs's belief that having clear direction/conviction rather than trying to satisfy multiple directions produces better outcomes; diffusion through compromise leads to worse products."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'Let's see what the data says before we decide'",
+      "claim": "'Let's see what the data says before we decide'. Jobs treated data as a retrospective description of the past, not a guide to the future. For decisions about products that don't yet exist, there is no relevant data \u2014 there is only judgment trained by deep engagement with what matters.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "you've got to start with the customer experience and work backwards to the technology. You can't start with the technology and try to figure out where you're going to try to sell it.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Jobs's approach clearly favors vision over data-driven decision-making, no passage in the corpus explicitly addresses the 'let's see what the data says' framing; only one tangentially related passage exists."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'We should add that feature to satisfy enterprise customers'",
+      "claim": "'We should add that feature to satisfy enterprise customers'. Feature additions driven by a specific customer segment rather than by the coherence of the product as a whole were precisely the kind of decision Jobs eliminated. Every unnecessary feature is a cost to every user who doesn't want it.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "focus is about saying no and the result of that focus is going to be some really great products",
+          "relation": "partial"
+        },
+        {
+          "quote": "microcosmically they might have made sense macrocosmically they made no sense",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports Jobs's focus philosophy which implies rejecting feature additions that don't fit the coherent vision, but no explicit statement about enterprise-driven feature additions is present."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'Good enough ships'",
+      "claim": "'Good enough ships'. Jobs's standard was not good enough but 'insanely great' \u2014 and he distinguished real artists who ship from people who ship whatever they have. Shipping is not the excuse; shipping something finished is the standard.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "he could just really just go at them and say you're doing this all wrong it's horrible and you'd say why did you do that why want you nicer and he'd say i really want to be with people who demand perfection",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The corpus touches on Jobs's demand for perfection but does not contain an explicit statement from Jobs himself about 'good enough ships' as a standard he rejected; the evidence is from third-party narration."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'Let's license this to grow the ecosystem faster'",
+      "claim": "'Let's license this to grow the ecosystem faster'. Every licensing conversation is a conversation about handing quality control to someone whose incentives diverge from yours. Jobs would not trade short-term ecosystem growth for long-term experience degradation.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I've been advocating to eliminate the licensing of the hardware and let the clone makers do whatever they want and B to raise the price or the royalty of the software to a reasonable level",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Jobs actually discusses licensing in nuanced terms in the corpus \u2014 he doesn't reject licensing entirely but argues for better terms; the corpus contradicts the strong anti-licensing position implied by this 'would_not_say' item, making only a weak case."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'We need more options so customers can choose what's right for them'",
+      "claim": "'We need more options so customers can choose what's right for them'. Proliferating options is a failure of vision. The job of a product company is to make the hard choices so the customer doesn't have to. More options signal that the company hasn't decided what the product should be.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "he draws a chart that just has four squares he says professional home consumer laptop desktop we're going to make four computers",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "focus is about saying no",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports Jobs's preference for focused product lines over proliferating options, but no explicit statement about 'more options = failure of vision' is present; the evidence is indirect."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "'That's not our core competency'",
+      "claim": "'That's not our core competency'. The core-competency frame is a rationalization for not doing the hard work of vertical integration. If the capability is necessary to deliver the experience, it becomes your competency by definition \u2014 or you accept a permanent quality ceiling.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the fact that Apple controls the product design from end to end, hardware, software, gives Apple an incredibly unique opportunity",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Jobs clearly believed in owning all capabilities needed to deliver a great experience, the specific 'core competency' framing as a rationalization for avoiding vertical integration is not directly addressed in the corpus."
+    }
+  ]
+}

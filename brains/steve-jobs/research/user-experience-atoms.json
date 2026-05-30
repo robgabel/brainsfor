@@ -1,134 +1,362 @@
 [
   {
-    "content": "At the WWDC 1997 keynote, just weeks after returning to Apple, Jobs articulated what would become the company's governing design philosophy: start with the customer experience and work backwards to the technology. He contrasted this with Apple's recent failure, which was starting with technology and trying to figure out how to sell it. The restatement of this principle reorganized everything that followed — it was a declaration of causality, not just strategy.",
-    "original_quote": "You've got to start with the customer experience and work backwards to the technology. You can't start with the technology and try to figure out where you're going to try to sell it.",
-    "implication": "The sequence of design decisions is as important as the decisions themselves. Starting with what the user feels versus starting with what the engineer has built leads to categorically different outcomes, even when the same people make both products.",
+    "content": "Jobs consistently insisted that the right starting point for any product was the customer's experience \u2014 what it should feel like to use \u2014 and that engineering and technology decisions should flow backward from that felt experience. He argued that most technology companies got this exactly backwards, beginning with what their engineers knew how to build and then trying to dress it in design at the end. This reversal, he believed, was the root cause of most bad products in the industry.",
+    "implication": "Before writing a line of code or specifying a component, product teams should be able to articulate in precise, human terms what the experience of using the product will feel like. If that description doesn't exist yet, the engineering hasn't actually started \u2014 it's just exploration dressed up as execution.",
     "cluster": "user_experience",
-    "topics": ["customer experience", "design process", "product philosophy", "WWDC 1997"],
-    "confidence": 0.95,
-    "source_type": "speech",
+    "topics": [
+      "backward reasoning",
+      "customer experience",
+      "product development",
+      "design process"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
     "source_ref": "Apple Worldwide Developers Conference, 1997",
     "source_date": "1997-05-01"
   },
   {
-    "content": "Jobs held that users rarely knew what they wanted before they experienced it — not because users were unsophisticated but because desire is only fully formed in response to something real. Market research and focus groups asked users to reason abstractly about experiences they had never had, producing data that was more accurate about the past than about the future. Jobs trusted his own taste and his team's execution over research-generated requirements.",
-    "original_quote": "A lot of times, people don't know what they want until you show it to them.",
-    "implication": "Market research is best at identifying dissatisfaction with what exists. It is unreliable as a source of direction for what should exist next. The design responsibility is to imagine experiences users haven't had yet and make them real enough to be judged.",
+    "content": "At the 1997 WWDC, Jobs publicly committed Apple to the principle that technology decisions must be subordinate to experience decisions. He described this as one of the most important lessons he had learned \u2014 that when you start with the customer experience and work backward to the technology, you end up in a very different place than when you start with the technology. The distinction was not rhetorical; it structured how Apple's product teams actually operated.",
+    "implication": "Organizations that give engineers final authority over what ships will always optimize for technical elegance over user coherence. Experience-led development requires someone with taste and authority to hold the engineering accountable to a human standard, not the other way around.",
     "cluster": "user_experience",
-    "topics": ["user research", "design leadership", "taste", "product vision"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "BusinessWeek Interview, 1998",
-    "source_date": "1998"
+    "topics": [
+      "customer-first thinking",
+      "engineering vs. design",
+      "product leadership",
+      "Apple turnaround"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Apple Worldwide Developers Conference, 1997",
+    "source_date": "1997-05-01"
   },
   {
-    "content": "Apple's packaging was designed by Jobs as a choreographed experience — the resistance of the lid, the layering of the components revealed in sequence, the conspicuous absence of instruction manuals. The unboxing was designed to communicate that everything inside had been thought through, that the user was in capable hands before touching any feature. The experience of receiving the product was a designed product in its own right.",
-    "original_quote": "We make the packaging, the box, beautiful because when you open the box of an iPhone or iPad, we want to transmit a message — this is a quality product.",
-    "implication": "The customer's experience begins with the moment of purchase, not the moment of use. The packaging is the product's first interaction and sets expectations that the device either fulfills or fails to meet. Treating packaging as a cost line is a design failure.",
+    "content": "Jobs was deeply skeptical of market research and focus groups as tools for understanding what customers actually needed. His position was that customers could accurately describe their dissatisfaction with existing products but could not describe products that didn't yet exist. The job of a great product company was to develop enough empathy for the user's life \u2014 their frustrations, their rhythms, their desires \u2014 that the company could envision what the customer would love before the customer could articulate it.",
+    "implication": "Empathy is not the same as asking. Deep user research means immersing yourself in how people actually live and work until you feel their friction as your own \u2014 not convening a group to react to mockups. The insight that produces category-defining products rarely comes from what customers say; it comes from what they struggle with silently.",
     "cluster": "user_experience",
-    "topics": ["packaging", "unboxing experience", "first impression", "product design"],
-    "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Steve Jobs by Walter Isaacson, 2011",
+    "topics": [
+      "market research",
+      "empathy",
+      "user needs",
+      "innovation"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Steve Jobs: How a Dreamer Changed the World",
     "source_date": "2011"
   },
   {
-    "content": "The Apple Store Genius Bar was Jobs's application of the user experience philosophy to post-purchase support. He wanted every Apple customer to have a physical place where genuinely knowledgeable people would help them — not a phone menu, not a remote support ticket, but a face-to-face conversation with an expert. The Genius Bar was the product promise extended into the support relationship. The experience of owning an Apple product included access to expertise.",
-    "original_quote": "We want to be the best place to buy a Mac, not just buy it — to learn about it, to take classes, to get help, to buy accessories.",
-    "implication": "Product experience does not end at purchase. The support and learning experience is a designed product surface, and its quality either confirms or undermines the promise the product made in the store. Bad support is a product failure.",
+    "content": "Jobs frequently described Apple's mission as being at the intersection of technology and liberal arts \u2014 a formulation that had direct implications for how he thought about the user. A purely technical organization sees the user as a problem of interface; an organization rooted in liberal arts sees the user as a full human being with emotions, aesthetics, and a desire for meaning. Apple products were designed to honor that fuller picture of the person holding them.",
+    "implication": "Hiring for technical skill alone systematically underweights the capacity for empathy that produces great user experience. The teams that build the most human-feeling products tend to include people who have studied how humans think, feel, narrate, and perceive \u2014 not just people who know how to build things.",
     "cluster": "user_experience",
-    "topics": ["Genius Bar", "Apple Stores", "customer support", "post-purchase experience"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "Fortune Interview, 2001",
-    "source_date": "2001"
+    "topics": [
+      "liberal arts",
+      "human-centered design",
+      "technology and humanities",
+      "empathy"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "iPad launch keynote, Apple Special Event",
+    "source_date": "2010-01-27"
   },
   {
-    "content": "Jobs's rejection of the stylus for the iPhone was a user experience decision before it was a hardware one. He observed that styluses created a two-step process — find the stylus, then use it — between the user's intent and the action. The finger eliminated the gap. 'God gave us ten styluses' was his argument for why the most intimate and always-available pointing device was already on the user's hand. Reducing friction between intent and action was the UX principle.",
-    "original_quote": "Who wants a stylus? You have to get them and put them away, and you lose them. Yuck! Nobody wants a stylus. So let's not use a stylus.",
-    "implication": "Every tool, accessory, or intermediate step between a user's intent and their desired outcome is a UX tax. The design brief is always to minimize the number of physical and cognitive steps required to do what the user wants to do.",
+    "content": "Jobs understood the unboxing of an Apple product as part of the product itself. He spoke about the way packaging should create a sense of theater \u2014 that the experience of opening a box should communicate care, intention, and quality before the device was even touched. This attention to what competitors considered irrelevant detail was, for Jobs, not perfectionism for its own sake but an expression of respect for the customer.",
+    "implication": "Every touchpoint before the core product interaction shapes the user's emotional state going into that interaction. Teams that treat packaging, onboarding, and first-run experience as secondary concerns are conceding the first impression \u2014 which is often the most powerful one \u2014 to inattention.",
     "cluster": "user_experience",
-    "topics": ["stylus", "iPhone", "friction reduction", "interaction design"],
-    "confidence": 0.95,
-    "source_type": "speech",
-    "source_ref": "iPhone Introduction Keynote, Macworld, 2007",
+    "topics": [
+      "packaging",
+      "first impression",
+      "product touchpoints",
+      "attention to detail"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Steve Jobs: How a Dreamer Changed the World",
+    "source_date": "2011"
+  },
+  {
+    "content": "Jobs believed that people could feel craftsmanship even when they couldn't articulate it \u2014 that quality registered emotionally before it registered rationally. This was why he insisted on attention to details that most users would never consciously notice, including the interior surfaces of products and the way software animations behaved at the pixel level. The experience of quality accumulated from details the user couldn't name but would feel as a whole.",
+    "implication": "The details that users can't consciously identify are often the ones that produce the feeling of trust and delight that defines a great product. Building for the subconscious experience \u2014 not just the conscious evaluation \u2014 is one of the most underappreciated disciplines in product development.",
+    "cluster": "user_experience",
+    "topics": [
+      "craftsmanship",
+      "subconscious experience",
+      "quality perception",
+      "attention to detail"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Steve Jobs - The Lost Interview",
+    "source_date": "1995"
+  },
+  {
+    "content": "When Jobs launched the iTunes Music Store in 2003, he framed the piracy problem not as a moral failing of users but as a failure of the industry to offer a legal experience worth choosing. People were downloading music illegally because it was easier, faster, and more pleasant than the legal alternatives. iTunes was designed to win on the dimension of experience \u2014 to be so much more convenient and satisfying than piracy that the ethical choice became the obvious one.",
+    "implication": "When users behave in ways a company considers wrong \u2014 pirating, workarounds, abandonment \u2014 the correct diagnostic question is almost always: what is the experience failure that made this behavior rational? Fixing the experience is more durable than enforcing compliance.",
+    "cluster": "user_experience",
+    "topics": [
+      "iTunes",
+      "piracy",
+      "UX as solution",
+      "music industry"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "iTunes Music Store launch keynote, Apple Special Event",
+    "source_date": "2003-04-28"
+  },
+  {
+    "content": "Jobs spoke about the original Macintosh as a machine built for people who weren't trained in computing \u2014 people who wanted to write, create, and think without first learning a technical language. The graphical user interface and the mouse were not novelties but expressions of a philosophical commitment: that computers should adapt to people, not the other way around. This inversion \u2014 technology serving the human rather than the human serving the technology \u2014 was the foundational UX principle of his career.",
+    "implication": "Every moment a user has to stop and think about how to operate a product is a moment the product has failed. The standard is not 'learnable with effort' but 'immediately legible to a curious person who has never seen it before.' Designing for the non-expert is harder and produces better products.",
+    "cluster": "user_experience",
+    "topics": [
+      "Macintosh",
+      "graphical user interface",
+      "accessibility",
+      "human-computer interaction"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Steve Jobs Interview - 2/18/1981",
+    "source_date": "1981-02-18"
+  },
+  {
+    "content": "Jobs opened Apple Stores in 2001 at a moment when every major technology company was abandoning retail. His reasoning was rooted in user experience: the existing retail channel \u2014 electronics superstores staffed by underpaid salespeople with no product knowledge \u2014 was destroying the experience of discovering Apple products. The store was the first chapter of the product experience, and if Apple didn't own it, someone who didn't share Apple's values would.",
+    "implication": "Distribution is not neutral. Every channel a product passes through either reinforces or degrades the experience the product is trying to deliver. Companies that treat distribution as a logistics question and not a design question are allowing their product experience to be partially authored by strangers.",
+    "cluster": "user_experience",
+    "topics": [
+      "Apple Stores",
+      "retail experience",
+      "distribution",
+      "product touchpoints"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "From the 60 Minutes Archive: Steve Jobs",
+    "source_date": "2003"
+  },
+  {
+    "content": "Jobs described the introduction of the iPhone in 2007 by walking through the experience of using it before explaining a single technical specification. He established what the phone should feel like \u2014 to touch, to scroll, to intuitively navigate \u2014 before revealing how it was built. This sequencing was deliberate: the felt experience was the primary fact, and the technical achievement was evidence that the experience was real.",
+    "implication": "Product presentations that lead with specifications are implicitly admitting that the experience isn't compelling enough to stand on its own. If the experience is right, lead with the experience. The spec sheet is proof, not the argument.",
+    "cluster": "user_experience",
+    "topics": [
+      "iPhone launch",
+      "product presentation",
+      "experience-first communication",
+      "demonstration"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Macworld San Francisco 2007 Keynote Address",
     "source_date": "2007-01-09"
   },
   {
-    "content": "Jobs was committed to making Apple products accessible to people with no technical background — the 'rest of us' for whom the Macintosh was ostensibly designed. This meant removing every aspect of the experience that required domain expertise to navigate, from eliminating the command line to removing visible file systems from iOS. Accessibility in this sense was not an accommodation feature but a core design requirement: if an expert was required, the design was unfinished.",
-    "original_quote": "We wanted to make a computer for the rest of us. Not for the computer hobbyist, not for the professional, but for the poet, the teacher, the parent.",
-    "implication": "When non-technical users cannot operate a product without help, it is a design failure, not a user failure. The correct response is to remove the expertise requirement, not to provide better training.",
+    "content": "Jobs articulated that one of the deepest forms of empathy in product design was anticipating what users would want to do next \u2014 not just serving the action they were currently taking. The iPod's click wheel, the iPhone's momentum scrolling, the App Store's one-tap install were all designed to make the next step feel obvious and frictionless. The empathetic question was not 'what does the user want to do now?' but 'what will they want to do in thirty seconds?'",
+    "implication": "Reactive design \u2014 responding to the user's current action \u2014 is the minimum standard. Anticipatory design \u2014 reducing friction for the user's next action before they reach for it \u2014 is what creates the feeling of a product that 'just works.' Building this requires deep, repeated observation of real user behavior in real contexts.",
     "cluster": "user_experience",
-    "topics": ["accessibility", "non-technical users", "Macintosh", "design standard"],
+    "topics": [
+      "anticipatory design",
+      "friction reduction",
+      "iPod",
+      "iPhone"
+    ],
     "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Playboy Interview with Steve Jobs, 1985",
-    "source_date": "1985-02-01"
+    "source_type": "video",
+    "source_ref": "Steve Jobs and Bill Gates Interview, D5 Conference",
+    "source_date": "2007-05-30"
   },
   {
-    "content": "Jobs made technology invisible through deliberate design discipline — hiding file systems, eliminating configuration screens, removing ports that required expertise to use. He believed that the degree to which technology was visible in the user's experience was the degree to which it had failed to serve the user's actual purpose. The best technology was the kind that let users forget it existed.",
-    "original_quote": "Technology is nothing. What's important is that you have a faith in people, that they're basically good and smart, and if you give them tools, they'll do wonderful things with them.",
-    "implication": "The sophistication of technology should be measured by how invisible it is to the user, not by how complex it is. Systems that require user expertise to operate have transferred their design problems to their users.",
+    "content": "Jobs was known for personally testing products under conditions that approximated real use, pushing back when something that worked in a demo broke down in ordinary circumstances. He frequently cited the experience of a typical user \u2014 someone who hadn't studied the product, who wasn't paying close attention, who was doing something else simultaneously \u2014 as the relevant test case. The power user's experience was irrelevant if the average user felt confused or defeated.",
+    "implication": "Products should be tested by people who have never seen them, in conditions that are slightly distracting and imperfect, not by people who built them in ideal settings. The gap between demo performance and real-world performance is where most UX failures live.",
     "cluster": "user_experience",
-    "topics": ["invisible technology", "iOS", "complexity hiding", "user empowerment"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "Rolling Stone Interview, 1994",
-    "source_date": "1994"
-  },
-  {
-    "content": "Jobs's implementation of one-button simplicity on the original iPod — and later a single home button on the iPhone — reflected a user experience principle: when in doubt, give users one unambiguous escape. The home button was the answer to 'I don't know where I am or what to do next.' It was a user experience safety net that existed precisely because complex interfaces created situations where users lost orientation. Simplicity at the hardware level enabled confidence at the software level.",
-    "original_quote": "The way we're running the company, the product design, the advertising, it all comes down to this: Let's make it simple. Really simple.",
-    "implication": "Complex interfaces need simple escapes. One unambiguous 'take me somewhere safe' affordance eliminates the anxiety of being lost in a product — which is what prevents many users from exploring products confidently.",
-    "cluster": "user_experience",
-    "topics": ["one-button simplicity", "home button", "iPhone", "user orientation"],
+    "topics": [
+      "user testing",
+      "real-world conditions",
+      "average user",
+      "product quality"
+    ],
     "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Steve Jobs by Walter Isaacson, 2011",
+    "source_type": "video",
+    "source_ref": "Steve Jobs: How a Dreamer Changed the World",
     "source_date": "2011"
   },
   {
-    "content": "Jobs insisted that every Apple product work 'out of the box' — no setup required, no account creation, no configuration steps before the device was useful. He understood that the friction of initial setup created an emotional trough between purchase excitement and first use, and that users who fell into that trough were less forgiving of every subsequent friction. The goal was to deliver the product promise within the first sixty seconds of ownership.",
-    "original_quote": "The most important thing I've ever encountered to help me make decisions is knowing what I truly enjoy doing. Whatever I do, I do it with love. If I'm doing something I love, I put my all into it.",
-    "implication": "The onboarding experience determines the emotional register from which all subsequent product interactions are evaluated. A difficult first sixty seconds creates a deficit that the best subsequent features cannot fully repay.",
+    "content": "Jobs frequently described the relationship between Apple and its customers in terms of trust \u2014 specifically, the user's trust that Apple had made every hard decision on their behalf so they wouldn't have to make it themselves. Complexity that was resolved inside the product represented respect for the user's time and attention. Complexity that was passed through to the user represented the company's failure to do the work.",
+    "implication": "Every decision a user has to make while using your product is a decision your team failed to make for them. The goal is not to give users control over everything \u2014 it is to resolve every decision that can be resolved so users only encounter choices that genuinely require their input.",
     "cluster": "user_experience",
-    "topics": ["onboarding", "out-of-box experience", "setup friction", "first use"],
+    "topics": [
+      "trust",
+      "simplicity",
+      "decision-making",
+      "user respect"
+    ],
     "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Steve Jobs by Walter Isaacson, 2011",
-    "source_date": "2011"
+    "source_type": "video",
+    "source_ref": "Steve Jobs - The Lost Interview",
+    "source_date": "1995"
   },
   {
-    "content": "Jobs defined the standard for Apple's user experience as what a brilliant friend with technical expertise would do for you — not what a formal support system could provide. A friend who happened to be a doctor, lawyer, or financial advisor would give you real information based on your specific situation, not liability-managed generalities. Apple's products and retail experience were designed to match this standard: specific, capable, honest help from someone who actually understood the system.",
-    "original_quote": "What would I most want for myself? I'd want a brilliant friend who happened to have the knowledge of a doctor, lawyer, financial advisor, and expert in whatever you need. As a friend, they give you real information based on your specific situation rather than overly cautious advice.",
-    "implication": "The user experience standard is not 'does it work?' or even 'is it easy?' — it is 'is it as helpful as the most capable and honest person you know?' That standard reshapes every product decision from error messages to customer support scripts.",
+    "content": "Jobs believed that the emotional response a user had to a product was data, not decoration. When he saw people smile while holding a new product, or heard them say something was 'magical,' he treated that as confirmation that the design had worked \u2014 not as a marketing outcome but as a design outcome. Delight was a success metric, not a side effect.",
+    "implication": "Teams that don't measure emotional response to their products are flying without an important instrument. Qualitative reactions \u2014 confusion, delight, frustration, confidence \u2014 are signals about the product's actual performance that quantitative metrics often obscure or lag. Build feedback systems that capture how the product makes people feel.",
     "cluster": "user_experience",
-    "topics": ["user experience standard", "brilliant friend model", "helpful technology", "Apple support"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "Steve Jobs by Walter Isaacson, 2011",
-    "source_date": "2011"
-  },
-  {
-    "content": "Jobs used the Macintosh desktop metaphor — desk, folders, documents, trash — as proof that spatial metaphors from the physical world could make computing intuitive without training. Users who had never seen a computer could navigate the Mac's interface because it mapped to cognitive structures they already possessed. The UX innovation was not a new interface paradigm but the insight that no new paradigm was needed — the existing spatial world was already the right model.",
-    "original_quote": "What we were trying to do was to make a product for the rest of us, and that metaphor — the desktop, the folder, the file — was something that the rest of us already understood.",
-    "implication": "The most powerful UX innovations are often the ones that make existing mental models work rather than teaching new ones. If users need a tutorial to understand the metaphor, the metaphor is wrong.",
-    "cluster": "user_experience",
-    "topics": ["desktop metaphor", "Macintosh", "spatial cognition", "intuitive design"],
+    "topics": [
+      "emotional design",
+      "delight",
+      "product feedback",
+      "design metrics"
+    ],
     "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Triumph of the Nerds documentary, 1996",
-    "source_date": "1996"
+    "source_type": "video",
+    "source_ref": "iPad launch keynote, Apple Special Event",
+    "source_date": "2010-01-27"
   },
   {
-    "content": "Jobs believed that empathy for users required direct, personal experience of the problems users faced — not secondhand reports from user research teams. He regularly used Apple products as a civilian user would, arriving at design reviews with personal frustrations that had accumulated through actual use. This practice kept the design process anchored in real experience rather than hypothetical user models, and it gave Jobs the specificity to identify friction that research reports missed.",
-    "original_quote": "You've got to start with the customer experience and work backwards to the technology.",
-    "implication": "User empathy requires personal contact with user experience, not just data about it. Product leaders who receive all user feedback through research processes are separated from the reality they are designing for by at least two layers of interpretation.",
+    "content": "Jobs consistently argued that the removal of the keyboard from the iPhone was an act of empathy, not minimalism. A physical keyboard committed the user to a fixed set of inputs before the application was known \u2014 it was the hardware imposing its logic on the software. A touch screen allowed every application to define its own input vocabulary, matching the interface to the task rather than forcing the task to conform to the interface.",
+    "implication": "Constraints that feel like features \u2014 a keyboard, a button layout, a menu structure \u2014 may actually be imposing the product's convenience on the user's experience rather than serving it. Periodically ask whether the standard elements of your interface exist because they serve users or because they serve the engineering.",
     "cluster": "user_experience",
-    "topics": ["user empathy", "direct experience", "product leadership", "design research"],
-    "confidence": 0.95,
-    "source_type": "speech",
+    "topics": [
+      "iPhone",
+      "touch interface",
+      "hardware constraints",
+      "input design"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Macworld San Francisco 2007 Keynote Address",
+    "source_date": "2007-01-09"
+  },
+  {
+    "content": "Jobs framed the computer as a bicycle for the mind \u2014 a tool that amplified human cognitive capability the way a bicycle amplified human physical movement. This metaphor carried a UX implication: a good bicycle disappears while you're riding it, and you feel only the wind and the terrain. The ideal computing experience would similarly disappear, leaving only the thinking and creating the user came to do. Visible interface was evidence of unresolved design work.",
+    "implication": "The measure of a tool's UX maturity is how invisible it becomes during skilled use. If users are still thinking about the product after months of use, the product hasn't finished its design work. Great tools become extensions of intent, not objects of attention.",
+    "cluster": "user_experience",
+    "topics": [
+      "bicycle for the mind",
+      "tool design",
+      "cognitive amplification",
+      "interface transparency"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "One of the Greatest Speeches Ever | Steve Jobs",
+    "source_date": "1990"
+  },
+  {
+    "content": "Jobs saw the software experience and the hardware experience as inseparable, and he believed that companies which separated them \u2014 producing software for other people's hardware, or hardware running other people's software \u2014 were producing a fundamentally degraded user experience. The integration of hardware and software at Apple was not a competitive strategy; it was a requirement for taking full responsibility for what the user actually felt. Divided ownership produced divided accountability and fragmented experience.",
+    "implication": "Any organizational boundary inside a company that maps onto a boundary the user experiences is a structural UX problem. If the user's experience degrades at the handoff between teams, the handoff is in the wrong place. UX accountability must follow the user's journey, not the org chart.",
+    "cluster": "user_experience",
+    "topics": [
+      "hardware-software integration",
+      "unified experience",
+      "accountability",
+      "organizational design"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Steve Jobs and Bill Gates Interview, D5 Conference",
+    "source_date": "2007-05-30"
+  },
+  {
+    "content": "When Jobs returned to Apple in 1997, one of his first observations was that the company had lost touch with what made its products special to the people who loved them. His early moves \u2014 simplifying the product line, redesigning the iMac, reorienting marketing around the Think Different campaign \u2014 were all attempts to restore empathy with Apple's core users after years of product decisions driven by cost, competition, and channel pressure. Reconnecting with the user was not a marketing exercise; it was an organizational reset.",
+    "implication": "When a product organization loses its way, the recovery path almost always runs through the users first \u2014 not through competitive analysis, financial restructuring, or operational improvement. Organizations that have drifted need to reestablish visceral, direct contact with the people they are failing before they can rebuild.",
+    "cluster": "user_experience",
+    "topics": [
+      "Apple turnaround",
+      "user reconnection",
+      "product culture",
+      "organizational reset"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
     "source_ref": "Apple Worldwide Developers Conference, 1997",
     "source_date": "1997-05-01"
+  },
+  {
+    "content": "Jobs described great products as requiring the maker to deeply understand not just what users do but what they aspire to be. The Macintosh was not designed for people who wanted to operate computers; it was designed for people who wanted to create things and thought of themselves as creative. The product was an expression of the user's self-image, and getting that right required a kind of empathy that went beyond task analysis into identity.",
+    "implication": "Users don't just buy products for what they do \u2014 they buy them for what the product says about who they are and who they want to become. Product teams that understand only the functional job-to-be-done miss the identity layer that often determines purchase, loyalty, and advocacy.",
+    "cluster": "user_experience",
+    "topics": [
+      "identity design",
+      "user aspiration",
+      "product positioning",
+      "Macintosh"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Steve Jobs Interview - 2/18/1981",
+    "source_date": "1981-02-18"
+  },
+  {
+    "content": "Jobs believed that error messages and failure states were among the most revealing tests of a product's empathy for its users. A product that failed with a cryptic technical message was communicating that its makers had not imagined the experience of someone who didn't understand the system. Apple's products were expected to handle errors in plain human language, to anticipate confusion, and to offer a clear path forward \u2014 because failure moments were also moments of trust.",
+    "implication": "How a product behaves when something goes wrong is as important to user trust as how it behaves when everything goes right. Teams that design only the happy path are designing half the product. The error state, the empty state, and the slow-loading state are all part of the user experience and deserve proportionate design attention.",
+    "cluster": "user_experience",
+    "topics": [
+      "error states",
+      "failure design",
+      "user trust",
+      "edge cases"
+    ],
+    "confidence": 0.8,
+    "source_type": "video",
+    "source_ref": "Steve Jobs - The Lost Interview",
+    "source_date": "1995"
+  },
+  {
+    "content": "Jobs described taste as an accumulated education \u2014 a capacity developed by engaging seriously with great work across many domains. When he spoke about the calligraphy classes he took at Reed College and their eventual influence on the Macintosh's typography, he was illustrating that empathy for the user's aesthetic experience required the maker to have cultivated their own aesthetic sensibility. You could not design for human delight without having experienced it yourself.",
+    "implication": "Taste is not innate \u2014 it is built through exposure to excellence in many forms: film, architecture, music, writing, industrial design. Product leaders who want to build teams capable of producing genuinely beautiful experiences should invest in the team's aesthetic education, not just their technical skill.",
+    "cluster": "user_experience",
+    "topics": [
+      "taste",
+      "aesthetic education",
+      "calligraphy",
+      "design sensibility"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Steve Jobs' 2005 Stanford Commencement Address",
+    "source_date": "2005-06-12"
+  },
+  {
+    "content": "Jobs argued that truly great products required someone in the organization with the authority to make taste-based decisions and the courage to hold them under commercial pressure. In the absence of that person, products were shaped by consensus, and consensus always optimized for what no one objected to \u2014 which was never the same thing as what delighted people. Empathy for the user had to be institutionalized in a role with real power, not distributed across a committee.",
+    "implication": "If no individual in your organization has the authority to say 'this isn't good enough for our users' and stop a ship date, that authority defaults to schedule and cost \u2014 and the user always loses that negotiation. Design leadership is not a function; it is an authority structure that has to be deliberately created and protected.",
+    "cluster": "user_experience",
+    "topics": [
+      "design authority",
+      "product leadership",
+      "taste",
+      "organizational structure"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Steve Jobs talks about managing people",
+    "source_date": "1985"
+  },
+  {
+    "content": "Jobs frequently cited Sony as a company whose products he admired for taking the user experience seriously \u2014 and then used Sony's later decline as a cautionary example of what happened when a company's internal divisions began to compete with each other rather than serve the user. Sony's inability to produce an integrated music-player-plus-store experience before Apple, despite owning both hardware and content, was the result of business unit politics overwhelming user empathy. The user suffered from an org chart problem.",
+    "implication": "Internal competition between business units is one of the most common ways user empathy gets destroyed at scale. When teams are incentivized to protect their domain rather than serve the end user, the user's experience becomes the casualty of internal politics. Organizational design is a UX decision.",
+    "cluster": "user_experience",
+    "topics": [
+      "Sony",
+      "organizational dysfunction",
+      "music industry",
+      "integrated experience"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Steve Jobs and Bill Gates Interview, D5 Conference",
+    "source_date": "2007-05-30"
+  },
+  {
+    "content": "In his later years, Jobs spoke about the iPad as an example of a product that had required the team to question assumptions so fundamental they were nearly invisible \u2014 assumptions about what a computing device needed to weigh, how it needed to start up, what it needed to include. The process of questioning each assumption was, for Jobs, an act of empathy: asking 'why does the user have to tolerate this?' for every friction point, no matter how normalized it had become.",
+    "implication": "The most valuable UX questions target the assumptions so embedded in a product category that no one questions them anymore. What does the user have to do that they shouldn't have to? What do they wait for that they shouldn't wait for? What do they carry that they shouldn't carry? These questions require the beginner's mind \u2014 the willingness to be annoyed by what experts have learned to ignore.",
+    "cluster": "user_experience",
+    "topics": [
+      "iPad",
+      "assumption questioning",
+      "beginner's mind",
+      "friction elimination"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "iPad launch keynote, Apple Special Event",
+    "source_date": "2010-01-27"
   }
 ]

@@ -1,192 +1,343 @@
 {
-  "description": "Curated public video/speech sources for the Steve Jobs brain. All are freely available public appearances, interviews, keynotes, and speeches — no copyrighted book content.",
-  "source_types": {
-    "keynote": "Apple product launches and presentations",
-    "interview": "Press interviews, conference appearances, panels",
-    "speech": "Commencement addresses, internal talks, public remarks",
-    "internal": "Internal Apple meetings captured on video",
-    "documentary": "Clips from documentaries with Jobs speaking directly"
-  },
+  "description": "Source material for the Steve Jobs brain pack \u2014 text via Firecrawl, video via yt-dlp.",
+  "brain_slug": "steve-jobs-v2",
+  "brain_name": "Steve Jobs",
+  "discovered_at": "2026-05-30T04:07:59.375555+00:00",
   "sources": [
     {
-      "title": "Think Different internal meeting (1997)",
-      "type": "internal",
-      "description": "Jobs explains Apple's brand strategy after returning. 'Marketing is about values.' Often called the greatest marketing video of all time.",
-      "youtube_search": "Steve Jobs Think Different internal meeting 1997",
-      "date": "1997-09-23",
-      "priority": "essential",
-      "key_topics": ["marketing", "brand", "values", "focus", "Apple identity"]
-    },
-    {
-      "title": "Stanford commencement speech (2005)",
-      "type": "speech",
-      "description": "Three stories: connecting the dots, love and loss, death. 'Stay hungry, stay foolish.' His most personal public statement.",
-      "youtube_search": "Steve Jobs Stanford commencement speech 2005 full",
-      "date": "2005-06-12",
-      "priority": "essential",
-      "key_topics": ["mortality", "intuition", "purpose", "failure", "connecting dots"]
-    },
-    {
-      "title": "The Lost Interview (1995)",
-      "type": "interview",
-      "description": "70-minute interview filmed during NeXT years, lost and rediscovered. Candid views on product, Microsoft, creativity, management.",
-      "youtube_search": "Steve Jobs The Lost Interview 1995 full",
-      "date": "1995-01-01",
-      "priority": "essential",
-      "key_topics": ["product design", "Microsoft", "creativity", "management", "NeXT", "taste"]
-    },
-    {
-      "title": "D Conference with Walt Mossberg (2003)",
-      "type": "interview",
-      "description": "Wide-ranging conversation at D: All Things Digital. iTunes, music industry, Apple strategy.",
-      "youtube_search": "Steve Jobs D Conference Walt Mossberg 2003",
-      "date": "2003-05-28",
+      "title": "Wikipedia: Steve Jobs",
+      "type": "profile",
       "priority": "high",
-      "key_topics": ["business strategy", "music industry", "iTunes", "digital lifestyle"]
+      "url": "https://en.wikipedia.org/wiki/Steve_Jobs"
     },
     {
-      "title": "D Conference with Walt Mossberg (2005)",
-      "type": "interview",
-      "description": "Follow-up D interview. iPod ecosystem, Intel switch, vision for digital hub.",
-      "youtube_search": "Steve Jobs D Conference Walt Mossberg 2005",
-      "date": "2005-05-25",
-      "priority": "high",
-      "key_topics": ["iPod", "Intel", "digital hub", "hardware-software"]
-    },
-    {
-      "title": "D8 Conference with Walt Mossberg (2010)",
-      "type": "interview",
-      "description": "Jobs' last major D interview. Thoughts on Flash, iPad, Google, privacy, and the post-PC era.",
-      "youtube_search": "Steve Jobs D8 conference 2010 full",
-      "date": "2010-06-01",
-      "priority": "essential",
-      "key_topics": ["iPad", "Flash", "Google", "privacy", "post-PC"]
-    },
-    {
-      "title": "iPhone introduction keynote (2007)",
-      "type": "keynote",
-      "description": "Macworld 2007. 'An iPod, a phone, and an internet communicator.' The defining product launch of the century.",
-      "youtube_search": "Steve Jobs iPhone introduction 2007 full keynote",
-      "date": "2007-01-09",
-      "priority": "essential",
-      "key_topics": ["product design", "user experience", "innovation", "integration"]
-    },
-    {
-      "title": "Macintosh introduction (1984)",
-      "type": "keynote",
-      "description": "The original Mac launch. '1984 won't be like 1984.' Jobs at 28, pure showmanship.",
-      "youtube_search": "Steve Jobs Macintosh introduction 1984",
-      "date": "1984-01-24",
-      "priority": "high",
-      "key_topics": ["vision", "product launch", "rebellion", "personal computing"]
-    },
-    {
-      "title": "iPad introduction keynote (2010)",
-      "type": "keynote",
-      "description": "Jobs introduces the iPad — a product category many mocked. Turned out to be a billion-dollar business.",
-      "youtube_search": "Steve Jobs iPad introduction keynote 2010",
-      "date": "2010-01-27",
-      "priority": "high",
-      "key_topics": ["product design", "user experience", "simplicity", "new categories"]
-    },
-    {
-      "title": "WWDC 1997 — Responding to insult",
-      "type": "keynote",
-      "description": "An audience member insults Jobs. His response about starting with the customer experience is legendary.",
-      "youtube_search": "Steve Jobs WWDC 1997 insult response customer experience",
-      "date": "1997-05-13",
-      "priority": "essential",
-      "key_topics": ["customer experience", "humility", "focus", "saying no"]
-    },
-    {
-      "title": "NeXT introduction (1988)",
-      "type": "keynote",
-      "description": "Jobs launches NeXT Computer. Over-engineered and over-priced, but the OS became macOS. Beautiful failure that became a foundation.",
-      "youtube_search": "Steve Jobs NeXT introduction 1988",
-      "date": "1988-10-12",
+      "title": "Disney Board of Directors",
+      "type": "other",
       "priority": "medium",
-      "key_topics": ["ambition", "design", "higher education", "object-oriented"]
+      "url": "http://corporate.disney.go.com/corporate/board_of_directors.html"
     },
     {
-      "title": "Macworld 1998 — iMac introduction",
-      "type": "keynote",
-      "description": "The Bondi Blue iMac. Design as strategy. Jobs proves that aesthetics move hardware.",
-      "youtube_search": "Steve Jobs iMac introduction 1998 Macworld",
-      "date": "1998-05-06",
-      "priority": "high",
-      "key_topics": ["design", "simplicity", "comeback", "consumer focus"]
-    },
-    {
-      "title": "iPod introduction (2001)",
-      "type": "keynote",
-      "description": "'1,000 songs in your pocket.' The product that funded the iPhone. Scroll wheel as interaction design.",
-      "youtube_search": "Steve Jobs iPod introduction 2001",
-      "date": "2001-10-23",
-      "priority": "high",
-      "key_topics": ["product design", "simplicity", "music", "user interface"]
-    },
-    {
-      "title": "Apple WWDC 2011 — iCloud introduction",
-      "type": "keynote",
-      "description": "Jobs' last major public appearance. Introduces iCloud and the post-PC vision. Visibly ill but still commanding.",
-      "youtube_search": "Steve Jobs WWDC 2011 iCloud keynote",
-      "date": "2011-06-06",
-      "priority": "high",
-      "key_topics": ["cloud", "ecosystem", "post-PC", "legacy"]
-    },
-    {
-      "title": "Smithsonian oral history interview (1995)",
-      "type": "interview",
-      "description": "Detailed interview about his career, Apple's founding, Woz, design philosophy. Scholarly but personal.",
-      "youtube_search": "Steve Jobs Smithsonian interview 1995",
-      "date": "1995-04-20",
-      "priority": "high",
-      "key_topics": ["history", "founding", "Woz", "philosophy", "early Apple"]
-    },
-    {
-      "title": "Playboy interview (1985)",
-      "type": "interview",
-      "description": "Long-form interview right before getting fired. Candid about vision, ego, and where computing is going.",
-      "youtube_search": "Steve Jobs Playboy interview 1985 reading",
-      "date": "1985-02-01",
+      "title": "National Inventors Hall of Fame: Steve Jobs",
+      "type": "profile",
       "priority": "medium",
-      "key_topics": ["vision", "personal computing", "ego", "early philosophy"]
+      "url": "https://www.invent.org/inductees/steve-jobs"
     },
     {
-      "title": "ABC Nightline interview (1999)",
-      "type": "interview",
-      "description": "Short but revealing interview about Apple's comeback, the importance of taste, and why most products suck.",
-      "youtube_search": "Steve Jobs ABC Nightline interview 1999",
-      "date": "1999-11-25",
+      "title": "Berkeley Daily Planet Article",
+      "type": "essay",
       "priority": "medium",
-      "key_topics": ["taste", "product quality", "Apple comeback"]
+      "url": "http://www.berkeleydailyplanet.com/issue/2002-10-05/article/15120"
     },
     {
-      "title": "Gates & Jobs together at D5 (2007)",
-      "type": "interview",
-      "description": "Historic joint interview with Bill Gates. Mutual respect, philosophical differences, views on the future.",
-      "youtube_search": "Steve Jobs Bill Gates D5 conference 2007 full",
-      "date": "2007-05-30",
-      "priority": "high",
-      "key_topics": ["competition", "industry", "partnership", "philosophy"]
-    },
-    {
-      "title": "Thoughts on Flash — Apple.com (2010)",
-      "type": "speech",
-      "description": "Published open letter. Jobs' clearest articulation of platform strategy and saying no to incumbents.",
-      "youtube_search": "Steve Jobs thoughts on Flash 2010",
-      "date": "2010-04-29",
+      "title": "Steve Jobs Lives On at the Patent Office",
+      "type": "essay",
       "priority": "medium",
-      "key_topics": ["platform strategy", "open vs closed", "saying no", "web standards"]
+      "url": "https://www.technologyreview.com/2014/11/27/170289/steve-jobs-lives-on-at-the-patent-office/"
     },
     {
-      "title": "Internal talk — 'Bicycle for the mind'",
-      "type": "internal",
-      "description": "Jobs explains the computer as a bicycle for the mind — amplifying human capability rather than replacing it.",
-      "youtube_search": "Steve Jobs bicycle for the mind",
-      "date": "1990-01-01",
+      "title": "Steve Jobs Father Story",
+      "type": "essay",
+      "priority": "low",
+      "url": "https://www.seattlemet.com/news-and-city-life/2011/10/steve-jobs-father-allegedly-left-students-stranded-in-egypt-october-2011"
+    },
+    {
+      "title": "Steve Jobs Biography Review",
+      "type": "essay",
+      "priority": "medium",
+      "url": "https://www.cnet.com/news/steve-jobs-biography-a-wealth-of-detail/"
+    },
+    {
+      "title": "The Loop: Michael Malone Book Excerpt",
+      "type": "essay",
       "priority": "high",
-      "key_topics": ["human augmentation", "computing vision", "technology purpose"]
+      "url": "https://archive.nytimes.com/www.nytimes.com/books/first/m/malone-loop.html"
+    },
+    {
+      "title": "Steve Jobs' Mountain View Childhood Home",
+      "type": "essay",
+      "priority": "low",
+      "url": "https://www.mv-voice.com/news/2011/10/07/steve-jobs-called-mountain-view-home-as-a-child"
+    },
+    {
+      "title": "Steve Jobs Childhood Home",
+      "type": "essay",
+      "priority": "low",
+      "url": "http://www.mercurynews.com/news/ci_24410143/steve-jobs-childhood-home-becomes-a"
+    },
+    {
+      "title": "Steve Jobs' Old Garage",
+      "type": "essay",
+      "priority": "low",
+      "url": "http://www.mercurynews.com/breaking-news/ci_24193660/steve-jobs-old-garage-about-become-piece-history?source=pkg"
+    },
+    {
+      "title": "Steve Jobs Video (Vimeo)",
+      "type": "video",
+      "priority": "medium",
+      "url": "https://vimeo.com/48043894"
+    },
+    {
+      "title": "Apple's First Employee: Bill Fernandez",
+      "type": "essay",
+      "priority": "medium",
+      "url": "https://www.techrepublic.com/article/apples-first-employee-the-remarkable-odyssey-of-bill-fernandez/"
+    },
+    {
+      "title": "Steve Jobs and Steve Wozniak: The Blue Box Story",
+      "type": "essay",
+      "priority": "medium",
+      "url": "https://www.esquire.com/news-politics/a38878/steve-jobs-steve-wozniak-blue-box-phone-phreaking/"
+    },
+    {
+      "title": "Steve Jobs: Apple History",
+      "type": "essay",
+      "priority": "medium",
+      "url": "http://www.i-programmer.info/history/people/104-steve-jobs-apple.html"
+    },
+    {
+      "title": "Steve Jobs' 2005 Stanford Commencement Address",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=UF8uR6Z6KLc",
+      "youtube_id": "UF8uR6Z6KLc"
+    },
+    {
+      "title": "Steve Jobs: How a Dreamer Changed the World",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=5fI3zz2cp3k",
+      "youtube_id": "5fI3zz2cp3k"
+    },
+    {
+      "title": "Steve Jobs talks about managing people",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=f60dheI4ARg",
+      "youtube_id": "f60dheI4ARg"
+    },
+    {
+      "title": "Steve Jobs Insult Response - Highest Quality",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=oeqPrUmVz-o",
+      "youtube_id": "oeqPrUmVz-o"
+    },
+    {
+      "title": "A 28-year-old Steve Jobs gives a talk at the 1983 International Design Conference in Aspen",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=t9HmOz8H0qI",
+      "youtube_id": "t9HmOz8H0qI"
+    },
+    {
+      "title": "Steve Jobs Secrets of Life",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=kYfNvmF0Bqw",
+      "youtube_id": "kYfNvmF0Bqw"
+    },
+    {
+      "title": "Steve fires Francis due to lack of fonts \u2013 Jobs (2013)",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=x9xPX3WiK3E",
+      "youtube_id": "x9xPX3WiK3E"
+    },
+    {
+      "title": "\"Focusing is about saying no\" - Steve Jobs (WWDC'97)",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=H8eP99neOVs",
+      "youtube_id": "H8eP99neOVs"
+    },
+    {
+      "title": "Celebrating Steve | October 5 | Apple",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=CeSAjK2CBEA",
+      "youtube_id": "CeSAjK2CBEA"
+    },
+    {
+      "title": "Steve Jobs on being inspired by the Beatles | 60 Minutes Archive",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=vydmUCGQnyI",
+      "youtube_id": "vydmUCGQnyI"
+    },
+    {
+      "title": "Steve Jobs (4/10) Movie CLIP - Here's What I'm Going to Do (2015) HD",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=mLKA_BX6xKo",
+      "youtube_id": "mLKA_BX6xKo"
+    },
+    {
+      "title": "Steve Jobs Interview - 2/18/1981",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=DbfejwP1d3c",
+      "youtube_id": "DbfejwP1d3c"
+    },
+    {
+      "title": "History of Steve Jobs (Full Documentary)",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=s4pVFLUlx8g",
+      "youtube_id": "s4pVFLUlx8g"
+    },
+    {
+      "title": "Pixar's Early Days - A Never-Before-Seen Interview With Steve Jobs, 1996",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=R0XmBKsRJF8",
+      "youtube_id": "R0XmBKsRJF8"
+    },
+    {
+      "title": "Steve Jobs - The Lost Interview (11 May 2012) [VO] [ST-FR] [Ultra HD 4K]",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=9m68auPIPRk",
+      "youtube_id": "9m68auPIPRk"
+    },
+    {
+      "title": "From the 60 Minutes Archive: Steve Jobs",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=c-JkrlVhs_0",
+      "youtube_id": "c-JkrlVhs_0"
+    },
+    {
+      "title": "One of the Greatest Speeches Ever | Steve Jobs",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Tuw8hxrFBH8",
+      "youtube_id": "Tuw8hxrFBH8"
+    },
+    {
+      "title": "Steve Jobs on Failure",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=zkTf0LmDqKI",
+      "youtube_id": "zkTf0LmDqKI"
+    },
+    {
+      "title": "Steve Jobs on Starting A Business",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=kwkGX-PlTxs",
+      "youtube_id": "kwkGX-PlTxs"
+    },
+    {
+      "title": "steve jobs most innovative speech",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=YM4If6YHN3s",
+      "youtube_id": "YM4If6YHN3s"
+    },
+    {
+      "title": "Steve Jobs in 2007, at D5 Conference (Edited, Full Video)",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=WktCKB-QMkk",
+      "youtube_id": "WktCKB-QMkk"
+    },
+    {
+      "title": "Walt Mossberg: The Last Days of Steve Jobs",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=k6UiR3jUHj8",
+      "youtube_id": "k6UiR3jUHj8"
+    },
+    {
+      "title": "Walt Mossberg: Meeting Steve Jobs",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=uoUZgqlov88",
+      "youtube_id": "uoUZgqlov88"
+    },
+    {
+      "title": "Steve Jobs\u2019s Best Interviews",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=boCM-3W6-Sk",
+      "youtube_id": "boCM-3W6-Sk"
+    },
+    {
+      "title": "Kara Swisher on Elon Musk, Steve Jobs, Zuckerberg, Trump & More (The Issue Is: Full Interview)",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=dfS6qyBcEyE",
+      "youtube_id": "dfS6qyBcEyE"
+    },
+    {
+      "title": "1996 Charlie Rose- Steve Jobs & John Lasseter",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=QFgB-sCKb4w",
+      "youtube_id": "QFgB-sCKb4w"
+    },
+    {
+      "title": "Charlie Rose: Steve Jobs - Saturday Night Live",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=omEop0aJsaw",
+      "youtube_id": "omEop0aJsaw"
+    },
+    {
+      "title": "Steve Jobs and Bill Gates Interview (Full Video)",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=L1pA1LqXqXo",
+      "youtube_id": "L1pA1LqXqXo"
+    },
+    {
+      "title": "Steve Jobs vs Bill Gates. Epic Rap Battles of History",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=njos57IJf-0",
+      "youtube_id": "njos57IJf-0"
+    },
+    {
+      "title": "Apple's Secret Billionaire: Laurene Powell Jobs",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=zaIKwaqQlBQ",
+      "youtube_id": "zaIKwaqQlBQ"
+    },
+    {
+      "title": "Exclusive Laurene Powell Jobs Interview (HD 720P)",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=ubas2JJ9Z80",
+      "youtube_id": "ubas2JJ9Z80"
+    },
+    {
+      "title": "Steve Jobs' 2005 Stanford Commencement Address (with intro by President John Hennessy)",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Hd_ptbiPoXM",
+      "youtube_id": "Hd_ptbiPoXM"
+    },
+    {
+      "title": "Complete Apple WWDC | Steve Jobs talk and answer developers questions | 1997",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=yQ16_YxLbB8",
+      "youtube_id": "yQ16_YxLbB8"
+    },
+    {
+      "title": "Macworld 2008 (San Francisco) - Chapter 1",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=WJKhxhcxGJ8",
+      "youtube_id": "WJKhxhcxGJ8"
+    },
+    {
+      "title": "Macworld San Francisco 2008 Keynote Address (MacBook Air & iTunes Move Rentals) by Steve Jobs",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=i9XU6wk_mWY",
+      "youtube_id": "i9XU6wk_mWY"
     }
   ]
 }

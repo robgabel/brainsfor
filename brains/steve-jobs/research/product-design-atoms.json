@@ -1,222 +1,362 @@
 [
   {
-    "content": "Jobs rejected the conventional separation of aesthetics and function, arguing that design is not decoration applied to a finished product but the expression of how it works. This collapsed the distinction between engineering and design teams at Apple, requiring them to solve problems together from day one. The result was products where every surface carried functional meaning. Form and function evolved as one system, not in sequence.",
-    "original_quote": "Most people make the mistake of thinking design is what it looks like. People think it's this veneer — that the designers are handed this box and told, 'Make it look good!' That's not what we think design is. It's not just what it looks like and feels like. Design is how it works.",
-    "implication": "If design is brought in after engineering decisions are made, you get decoration, not design. The organizational structure of the team determines the quality of the product before any work begins.",
+    "content": "Jobs treated simplicity not as a starting point but as the destination of hard work. He insisted that making something simple required a deeper understanding of the problem than making it complex \u2014 you had to know the thing well enough to know what could be removed without loss. Most products are complex because their creators stopped working before they reached clarity. Simplicity, in his view, was the resolution of complexity, not its avoidance.",
+    "implication": "If your product feels complicated, that is a signal you haven't finished understanding it yet. Simplicity is earned through iteration and subtraction, not assumed at the outset. Keep working until you know what to take away.",
     "cluster": "product_design",
-    "topics": ["design philosophy", "engineering", "product development", "form and function"],
-    "confidence": 0.95,
+    "topics": [
+      "simplicity",
+      "design philosophy",
+      "iteration",
+      "problem understanding"
+    ],
+    "confidence": 0.9,
     "source_type": "interview",
-    "source_ref": "New York Times Magazine, 2003",
-    "source_date": "2003-11-30"
-  },
-  {
-    "content": "Jobs believed simplicity was the ultimate design achievement but insisted it was harder to attain than complexity. True simplicity required understanding a problem deeply enough to strip it to its essence. This meant fighting organizational pressure to add features, layers, and options. Products with genuine simplicity feel inevitable rather than constrained.",
-    "original_quote": "Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple. But it's worth it in the end because once you get there, you can move mountains.",
-    "implication": "Simplicity is a discipline requiring active effort and organizational courage, not a starting constraint. Builders who accept complexity as inevitable have stopped doing the real design work.",
-    "cluster": "product_design",
-    "topics": ["simplicity", "design philosophy", "product development", "clarity"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "BusinessWeek Interview, 1998",
+    "source_ref": "BusinessWeek Interview with Steve Jobs, 1998",
     "source_date": "1998"
   },
   {
-    "content": "Jobs applied a 'say no to 1000 things' discipline to Apple's product roadmap. Saying no was not timidity — it was how focus was manufactured. The products Apple did not make were as strategically important as those it did. Restraint required more confidence than abundance, and it was the discipline that preserved Apple's ability to execute with excellence on the few things it chose.",
-    "original_quote": "I'm actually as proud of the things we haven't done as the things I have done. Innovation is saying no to 1,000 things.",
-    "implication": "Product leaders must treat 'no' as an active creative act, not a defensive reflex. A crowded roadmap is evidence of insufficient courage disguised as ambition.",
+    "content": "Jobs drew a sharp distinction between how something looks and how it works, arguing that design is primarily the latter. The visual surface of a product is a consequence of deep decisions about how the product should behave, not a layer applied afterward. When Apple designed the original Mac or the iPod, the experience \u2014 how it would feel to hold, navigate, and return to \u2014 was decided first, and the engineering followed from that decision.",
+    "implication": "Organizations that treat design as a final polish phase are doing it backward. The design decision must precede and constrain the engineering decision, or the product will feel assembled rather than inevitable.",
     "cluster": "product_design",
-    "topics": ["focus", "saying no", "product strategy", "innovation"],
-    "confidence": 0.95,
-    "source_type": "speech",
-    "source_ref": "Apple Worldwide Developers Conference, 1997",
-    "source_date": "1997-05-01"
-  },
-  {
-    "content": "Jobs demanded quality in parts of a product no customer would ever see, citing his father's lesson about finishing the back of a fence properly even though no one sees it. This principle governed Apple's circuit board layouts, packaging interiors, and manufacturing tolerances. Invisible quality shapes visible quality culture — the standards a team applies when no one is watching determine what standards they apply everywhere.",
-    "original_quote": "When you're a carpenter making a beautiful chest of drawers, you're not going to use a piece of plywood on the back, even though it faces the wall and nobody will ever see it. You'll know it's there, so you're going to use a beautiful piece of wood on the back.",
-    "implication": "Standards that apply only when someone is watching are performances, not standards. The parts of your product no one sees determine whether your team has genuine craft or just good marketing.",
-    "cluster": "product_design",
-    "topics": ["craft", "quality", "invisible design", "standards"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "Playboy Interview with Steve Jobs, 1985",
-    "source_date": "1985-02-01"
-  },
-  {
-    "content": "The iPod scroll wheel emerged from a relentless focus on reducing interaction steps between user intent and music playing. Jobs insisted no song should require more than three clicks from anywhere in the interface. The scroll wheel was the hardware answer to a software requirement — form derived from user flow, not from engineering capability. This was the design method in its clearest physical form.",
-    "original_quote": "The most important thing is that we've made the buttons simple. Everything is touchscreen or this click wheel, and we think this is going to be a landmark product.",
-    "implication": "Hardware interfaces should be designed from the inside out — start with the maximum number of interactions a user should perform, then engineer the physical controls to meet that constraint, not the reverse.",
-    "cluster": "product_design",
-    "topics": ["interaction design", "iPod", "hardware design", "user flow"],
-    "confidence": 0.85,
-    "source_type": "speech",
-    "source_ref": "iPod Introduction Keynote, 2001",
-    "source_date": "2001-10-23"
-  },
-  {
-    "content": "The iPhone's multi-touch interface replaced a stylus with the human finger, collapsing the accessory layer entirely. Jobs understood this as removing friction between the human and the information. The decision to use glass rather than plastic for the screen was inseparable from the decision to use fingers — materials and interaction model were a single integrated design judgment, not independent engineering choices.",
-    "original_quote": "Who wants a stylus? You have to get them and put them away, and you lose them. Yuck! Nobody wants a stylus. So let's not use a stylus.",
-    "implication": "Every accessory or adapter a product requires is evidence of an unresolved design problem upstream. The design question is always: can we eliminate this by solving the prior problem differently?",
-    "cluster": "product_design",
-    "topics": ["iPhone", "multi-touch", "interaction design", "hardware decisions"],
-    "confidence": 0.95,
-    "source_type": "speech",
-    "source_ref": "iPhone Introduction Keynote, Macworld, 2007",
-    "source_date": "2007-01-09"
-  },
-  {
-    "content": "Jobs insisted on owning the hardware-software integration as a single design problem. The iPod's fluid interface was only possible because Apple controlled both chip behavior and the software stack. This vertical integration was a design philosophy first — the business advantages of the moat came later. Giving up control of either layer meant accepting the constraints of whoever owned it.",
-    "original_quote": "We're the only company that owns the whole widget — the hardware, the software and the operating system. We can take full responsibility for the user experience. We can do things that the other guy can't do.",
-    "implication": "End-to-end product responsibility enables design decisions that platform companies cannot make. If you build on someone else's stack, you inherit their constraints as your product's ceiling.",
-    "cluster": "product_design",
-    "topics": ["vertical integration", "hardware-software", "product ownership", "user experience"],
-    "confidence": 0.95,
+    "topics": [
+      "design philosophy",
+      "form vs. function",
+      "engineering",
+      "user experience"
+    ],
+    "confidence": 0.9,
     "source_type": "interview",
     "source_ref": "Fortune Interview, 2000",
     "source_date": "2000"
   },
   {
-    "content": "Jobs was obsessive about physical materials as design decisions in their own right. The shift to aluminum unibodies, the choice of Gorilla Glass, the machining tolerances of the MacBook — each was a statement about what the product was. Materials communicate values before the user interacts with a single feature, and poor material choices undermine product quality claims that the software cannot recover.",
-    "original_quote": "We don't settle for anything less than excellence in every group in the company, and we have the self-honesty to admit when we're wrong and the courage to change.",
-    "implication": "The physical properties of a product — weight, texture, sound when placed on a surface — are the first layer of the user experience. They communicate quality or its absence before the device is powered on.",
+    "content": "At the 1983 International Design Conference in Aspen, a 28-year-old Jobs argued that the computer would become the most important design medium of the century \u2014 and that the people building it had an obligation to bring the same seriousness to its design that architects and industrial designers brought to physical objects. He warned that if engineers and businesspeople made all the decisions, the computer's aesthetic and human potential would be permanently squandered.",
+    "implication": "The people who define what a technology is for must include people with a deep sense of human experience \u2014 not just people who can build it. Technical competence without design sensibility produces tools that work but do not matter.",
     "cluster": "product_design",
-    "topics": ["materials", "physical design", "manufacturing", "premium experience"],
+    "topics": [
+      "design culture",
+      "technology and humanity",
+      "early Apple philosophy",
+      "designers vs. engineers"
+    ],
     "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Fortune Profile of Steve Jobs, 2008",
-    "source_date": "2008"
-  },
-  {
-    "content": "Apple's packaging was designed by Jobs as an integral part of the product experience, not a disposal step. The unboxing of an iPhone was choreographed: the resistance of the lid, the layering of components, the conspicuous absence of instruction manuals. Every touch point was a deliberate design decision that began before the product was revealed. The box set the emotional register for the device.",
-    "original_quote": "We make the packaging, the box, beautiful because when you open the box of an iPhone or iPad, we want to transmit a message — this is a quality product.",
-    "implication": "The customer experience begins before the product is used. Every touchpoint from purchase to first use is a design surface that either reinforces or undermines the product's promise.",
-    "cluster": "product_design",
-    "topics": ["packaging", "unboxing", "customer experience", "product presentation"],
-    "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Steve Jobs by Walter Isaacson, 2011",
-    "source_date": "2011"
-  },
-  {
-    "content": "Jobs ran Apple design reviews with extraordinary frequency and rigor, insisting on physical prototypes rather than slides or renders. Iteration cycles were short and decisions were made in the room by the people who would execute them. This kept the design process grounded in physical reality rather than theoretical specifications. Frequency of review was as important as quality of review.",
-    "original_quote": "We do these design meetings every two weeks. The designers bring in their work, the engineers bring in their work. I will usually drive the agenda, but other people contribute. What I find is when you keep doing that, when you keep iterating and iterating, only one or two really good ideas come out of it.",
-    "implication": "Design quality is a function of iteration frequency as much as talent. Slow review cycles allow bad decisions to accumulate into architecture. Rapid physical prototyping keeps everyone honest about what they are actually building.",
-    "cluster": "product_design",
-    "topics": ["design process", "iteration", "prototyping", "product reviews"],
-    "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Steve Jobs by Walter Isaacson, 2011",
-    "source_date": "2011"
-  },
-  {
-    "content": "Jobs was a ruthless editor of features, eliminating functionality that was technically impressive but added cognitive load. He understood that every feature a user does not need is a feature that makes the product harder to use. Subtraction was an active design force at Apple, not an afterthought. The discipline to kill good features to preserve a great experience was a distinctive organizational competency.",
-    "original_quote": "That's been one of my mantras — focus and simplicity. Simple can be harder than complex. You have to work hard to get your thinking clean to make it simple.",
-    "implication": "A product's feature list reflects its political history as much as its users' needs. Killing features requires clear authority and a non-negotiable standard — 'does this make the experience better?' — applied without sentiment.",
-    "cluster": "product_design",
-    "topics": ["feature reduction", "simplicity", "product editing", "design discipline"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "BusinessWeek Interview, 1998",
-    "source_date": "1998"
-  },
-  {
-    "content": "Jobs applied the 'bicycle for the mind' metaphor to describe computers as amplifiers of human cognitive capability, not just automation tools. A human on a bicycle beats every other species in locomotion efficiency — the tool makes the human more than they were alone. This framing governed Apple's product philosophy: technology exists to serve human purpose, and its quality is measured by the degree of amplification it enables.",
-    "original_quote": "What a computer is to me is it's the most remarkable tool that we've ever come up with, and it's the equivalent of a bicycle for our minds.",
-    "implication": "Products that merely automate miss the deeper opportunity: amplifying human capability. The design question is not 'what can this technology do?' but 'what can humans do with this that they couldn't before?'",
-    "cluster": "product_design",
-    "topics": ["computing philosophy", "human augmentation", "product purpose", "technology vision"],
-    "confidence": 0.95,
-    "source_type": "video",
-    "source_ref": "Memory & Imagination documentary, 1990",
-    "source_date": "1990"
-  },
-  {
-    "content": "The original Macintosh was designed with a singular focus on making computing accessible to people who were not engineers. Jobs wanted a computer a poet could use. This drove decisions about the desktop metaphor, the mouse, proportional fonts — all oriented toward removing the expertise barrier to entry. The test of design was not whether experts could use it but whether a novice could figure it out without help.",
-    "original_quote": "It was important to me to make the Macintosh a computer that people could use without a manual. I was embarrassed to give anyone a manual. The Macintosh was supposed to be the first 'insanely great' computer.",
-    "implication": "Friction for novices is a design failure, not a rite of passage. If your product requires expertise to operate, the design work is not finished.",
-    "cluster": "product_design",
-    "topics": ["accessibility", "Macintosh", "ease of use", "human-centered design"],
-    "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Playboy Interview with Steve Jobs, 1985",
-    "source_date": "1985-02-01"
-  },
-  {
-    "content": "Jobs understood fonts as a design element inseparable from computing, driven by his calligraphy course at Reed College after dropping out. He insisted the original Macintosh ship with proportional typefaces and multiple fonts — a decision that sparked the desktop publishing revolution. Typography was not decoration on top of computing; it was proof that computing and culture could be one thing.",
-    "original_quote": "If I had never dropped in on that single calligraphy course in college, the Mac would have never had multiple typefaces or proportionally spaced fonts.",
-    "implication": "Aesthetic decisions embedded early in a platform's architecture have compounding effects across entire industries. Investing in typographic quality at the OS level created an ecosystem that redefined publishing — an outcome no product roadmap would have predicted.",
-    "cluster": "product_design",
-    "topics": ["typography", "calligraphy", "Macintosh", "design history"],
-    "confidence": 0.95,
     "source_type": "speech",
-    "source_ref": "Stanford University Commencement Address, 2005",
+    "source_ref": "1983 International Design Conference in Aspen",
+    "source_date": "1983"
+  },
+  {
+    "content": "Jobs believed that adding features was the easy path \u2014 the path taken by companies without the conviction to decide what a product actually is. Every feature added that doesn't belong degrades the experience for every user who came for the core purpose. He saw feature accumulation not as generosity toward users but as a failure of leadership: evidence that no one with taste and conviction was making the hard calls about what the product should refuse to do.",
+    "implication": "Feature requests are easy to say yes to and expensive to live with. Every addition is an implicit vote on what the product is for. Saying no to a feature is as important a product decision as saying yes \u2014 and far harder to do consistently.",
+    "cluster": "product_design",
+    "topics": [
+      "feature bloat",
+      "product focus",
+      "saying no",
+      "design conviction"
+    ],
+    "confidence": 0.9,
+    "source_type": "interview",
+    "source_ref": "Apple Worldwide Developers Conference, 1997",
+    "source_date": "1997-05-01"
+  },
+  {
+    "content": "Jobs insisted on working backward from the user's experience to the engineering \u2014 starting with what it should feel like to hold, open, and use a product, and only then determining how to build it. He contrasted this with the industry norm of starting from what engineers knew how to build, then applying design at the end. The result of the backward approach, in his view, was products that felt inevitable; the result of the forward approach was products that felt assembled.",
+    "implication": "Start every product conversation with a vivid description of the desired experience \u2014 not a list of capabilities. The experience description is the brief. Engineering is the response to it, not the source of it.",
+    "cluster": "product_design",
+    "topics": [
+      "backward reasoning",
+      "user experience",
+      "design process",
+      "engineering"
+    ],
+    "confidence": 0.9,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs \u2014 The Lost Interview, 1995",
+    "source_date": "1995"
+  },
+  {
+    "content": "Jobs argued that the best designers were people who had accumulated life experiences broadly enough to make connections across domains that specialists couldn't see. The decision to include calligraphy as a discipline at Reed College, which he audited after dropping out, later shaped the typographic richness of the Macintosh \u2014 something no market researcher could have anticipated and no engineer would have thought to include. Creativity, in this view, was synthesis across seemingly unrelated domains.",
+    "implication": "Hire designers who have done other things \u2014 who have studied music, read history, worked with their hands. The breadth of their experience determines the richness of their connections. Narrow specialists produce technically correct but culturally empty work.",
+    "cluster": "product_design",
+    "topics": [
+      "creativity",
+      "calligraphy",
+      "interdisciplinary thinking",
+      "connecting dots"
+    ],
+    "confidence": 0.9,
+    "source_type": "speech",
+    "source_ref": "Stanford Commencement Address, 2005",
     "source_date": "2005-06-12"
   },
   {
-    "content": "Jobs viewed Apple's retail experience as a designed product subject to the same iterative discipline as hardware. He had prototype stores built in a warehouse and iterated on layout, lighting, and fixture placement for months before committing to any public location. The Genius Bar placement at the back, products organized by use case, no cash registers at the entrance — all were deliberate design decisions, not retail conventions.",
-    "original_quote": "We want the store to become the best place to buy a Mac, not just buy it — to learn about it, to take classes, to get help, to buy accessories.",
-    "implication": "Any customer-facing environment is a designed product. Building a prototype store before committing to real estate is the retail equivalent of a product design review — expensive to skip, more expensive to skip.",
+    "content": "Jobs viewed the hardware enclosure \u2014 the physical object a user touches before anything else \u2014 as a communicative act. The original iMac's translucent plastic, the PowerBook's titanium casing, the iPhone's glass-and-aluminum construction were not aesthetic choices made after engineering was finished. They were statements about what computing should feel like, made at the start of the design process and used to constrain every decision that followed.",
+    "implication": "The physical or visual surface of a product is the first sentence of a conversation with the user. Design the object as if it has to communicate its purpose and values before anyone uses it \u2014 because it does.",
     "cluster": "product_design",
-    "topics": ["retail design", "Apple Store", "customer experience", "iteration"],
-    "confidence": 0.95,
+    "topics": [
+      "industrial design",
+      "materials",
+      "physical design",
+      "product communication"
+    ],
+    "confidence": 0.85,
     "source_type": "interview",
-    "source_ref": "Fortune Interview, 2001",
+    "source_ref": "Fortune Interview, 2000",
+    "source_date": "2000"
+  },
+  {
+    "content": "Jobs was deeply influenced by the work of designer Dieter Rams, whose principles for industrial design \u2014 particularly the idea that good design is as little design as possible \u2014 aligned with Jobs's own instinct that the best products disappear in use. He wanted Apple products to feel so natural and intuitive that the technology itself receded, leaving only the human task it was enabling. The interface was finished when there was nothing left to remove, not when all the features were added.",
+    "implication": "Great product design makes the product invisible. If users are aware of the tool, the tool has gotten in the way. The goal is to remove every source of friction until only the purpose remains.",
+    "cluster": "product_design",
+    "topics": [
+      "Dieter Rams",
+      "design principles",
+      "invisible design",
+      "minimalism"
+    ],
+    "confidence": 0.8,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs biography by Walter Isaacson, 2011",
+    "source_date": "2011"
+  },
+  {
+    "content": "When Jobs introduced the MacBook Air at Macworld 2008, he produced it from inside a manila envelope. The theatrical gesture was not incidental \u2014 it was a product argument made without words. The design brief for the Air had been a single constraint: build the thinnest laptop in the world. That constraint forced the elimination of the optical drive, a conventional port layout, and every component that couldn't justify its weight. The envelope was the proof that the constraint had been honored.",
+    "implication": "Give your design team a single inviolable constraint rather than a list of requirements. Constraints force elimination of everything that doesn't serve the core purpose, which is the only reliable path to a product that feels singular and inevitable.",
+    "cluster": "product_design",
+    "topics": [
+      "MacBook Air",
+      "design constraints",
+      "product launches",
+      "elimination"
+    ],
+    "confidence": 0.9,
+    "source_type": "speech",
+    "source_ref": "Macworld San Francisco 2008 Keynote Address",
+    "source_date": "2008-01-15"
+  },
+  {
+    "content": "Jobs consistently positioned Apple products not as technology products but as tools for human expression and empowerment. The Macintosh was not a computer \u2014 it was a bicycle for the mind, a device that amplified human creative capacity the way a bicycle amplifies human physical capacity. This framing shaped every design decision: if the product's purpose was to extend human capability, then anything that made it harder to use was a design failure, not a tradeoff.",
+    "implication": "Define your product by what it enables a human being to do or feel, not by its technical category. That definition will give your design team the right filter for every decision they face.",
+    "cluster": "product_design",
+    "topics": [
+      "bicycles for the mind",
+      "human empowerment",
+      "product framing",
+      "design philosophy"
+    ],
+    "confidence": 0.9,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs: How a Dreamer Changed the World \u2014 documentary",
+    "source_date": "1995"
+  },
+  {
+    "content": "Jobs operated on the principle that people cannot articulate desires for products that don't yet exist, which meant user research could validate existing categories but could never generate genuinely new ones. The job of a product designer, in his view, was to do the thinking that customers hadn't done yet \u2014 to understand their frustrations deeply enough to imagine the solution they couldn't name. Showing people the product was the only form of market research that yielded useful information about breakthrough ideas.",
+    "implication": "User research is invaluable for improving existing products and dangerous as the primary input for defining new ones. The creative leap from what users complain about to what would actually solve it requires imagination, not just listening.",
+    "cluster": "product_design",
+    "topics": [
+      "market research",
+      "user needs",
+      "product vision",
+      "innovation"
+    ],
+    "confidence": 0.9,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs \u2014 The Lost Interview, 1995",
+    "source_date": "1995"
+  },
+  {
+    "content": "Jobs believed that the first iPod succeeded not primarily because of its storage capacity or its technical specifications, but because of a single interface decision: the click wheel. The scroll wheel reduced the number of steps between the user and any song in a thousand-song library to a small, consistent number of movements. Every competing MP3 player of the era had more features; none had that one thing right. Jobs's argument was that one deeply right decision outweighed any number of additional features.",
+    "implication": "Find the single interaction in your product that happens most often and make it so good that nothing else matters as much. Depth on the core use case beats breadth across many use cases every time.",
+    "cluster": "product_design",
+    "topics": [
+      "iPod",
+      "interface design",
+      "click wheel",
+      "core interaction"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs and Bill Gates Interview at D5 Conference, 2007",
+    "source_date": "2007"
+  },
+  {
+    "content": "Jobs was notorious for demanding that products be great on dimensions that users would never consciously notice \u2014 including internal components they would never see. He insisted that the circuit boards inside the original Macintosh be laid out with the same care as visible surfaces, arguing that a craftsman's commitment to quality applied to hidden elements as much as visible ones. This standard was not practical in the conventional sense; it was a declaration of the kind of company Apple intended to be.",
+    "implication": "The parts of your product that users never see still shape how the product feels overall \u2014 through the care they signal to the people building it. Tolerating shortcuts in invisible areas erodes the culture of craft that produces visible excellence.",
+    "cluster": "product_design",
+    "topics": [
+      "craft",
+      "hidden quality",
+      "Macintosh",
+      "design standards"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs biography by Walter Isaacson, 2011",
+    "source_date": "2011"
+  },
+  {
+    "content": "Jobs argued that packaging was part of the product experience \u2014 that the ritual of unboxing set the emotional tone for every subsequent interaction with the device. Apple's packaging was designed to produce a specific feeling: anticipation building through layers, a sense that something precious was being revealed. This was not a marketing department decision made after engineering finished; it was a design decision made at the same level of seriousness as the product itself.",
+    "implication": "Every touchpoint before the user reaches the core product either builds or destroys the emotional frame in which the product will be experienced. Packaging, onboarding, and first-run flows are not afterthoughts \u2014 they are the first chapters of the product story.",
+    "cluster": "product_design",
+    "topics": [
+      "packaging design",
+      "unboxing",
+      "first impressions",
+      "product experience"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs biography by Walter Isaacson, 2011",
+    "source_date": "2011"
+  },
+  {
+    "content": "When Jobs returned to Apple in 1997, he found a product lineup so sprawling that even the people selling the products couldn't explain the differences between them. His solution was to eliminate roughly 70% of Apple's product line \u2014 not by analyzing which products were most profitable, but by asking which products a customer genuinely needed and which existed only because no one had made the decision to kill them. The brutality of the reduction was inseparable from its effectiveness: it created the conditions for the iMac, the iPod, and the iPhone.",
+    "implication": "A bloated product line is not a sign of success \u2014 it is a sign of unmade decisions. Every product that shouldn't exist consumes organizational attention that should be directed at the products that should. The elimination is the strategy.",
+    "cluster": "product_design",
+    "topics": [
+      "product portfolio",
+      "Apple turnaround",
+      "elimination",
+      "strategic focus"
+    ],
+    "confidence": 0.9,
+    "source_type": "speech",
+    "source_ref": "Apple Worldwide Developers Conference, 1997",
+    "source_date": "1997-05-01"
+  },
+  {
+    "content": "Jobs described the experience of designing the original iPhone as beginning with a decision to remove the keyboard entirely \u2014 not to shrink it, not to make it retractable, but to eliminate it as a permanent fixture. The conventional wisdom was that a phone without a physical keyboard was unusable. Jobs's argument was that a fixed physical keyboard locked the phone into a single use model, while a software keyboard could become any interface required by any application. The removal was itself the innovation.",
+    "implication": "The most powerful design moves are often acts of removal that seem like losses until the product ships. Ask not what you can add to solve a problem, but what you can remove to reveal the solution that was already there.",
+    "cluster": "product_design",
+    "topics": [
+      "iPhone",
+      "keyboard removal",
+      "subtractive design",
+      "innovation through elimination"
+    ],
+    "confidence": 0.9,
+    "source_type": "speech",
+    "source_ref": "Macworld San Francisco Keynote, 2007",
+    "source_date": "2007-01-09"
+  },
+  {
+    "content": "Jobs insisted that great product design required a single person with taste and conviction to make the final call \u2014 not a committee, not a process, not a vote. He observed that committees reliably produced the option that offended no one, which was always the least interesting option available. The organizational implication was that design authority had to be concentrated, protected from dilution by consensus, and exercised with enough speed to preserve coherence across the product.",
+    "implication": "If your product decisions are made by committee, the committee is the design constraint \u2014 and it is a bad one. Identify the person with the strongest taste and the clearest product vision and give them real authority, then protect that authority from organizational dilution.",
+    "cluster": "product_design",
+    "topics": [
+      "design leadership",
+      "decision-making",
+      "consensus failure",
+      "creative authority"
+    ],
+    "confidence": 0.9,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs \u2014 The Lost Interview, 1995",
+    "source_date": "1995"
+  },
+  {
+    "content": "Jobs spoke extensively about the difference between products that were technically impressive and products that were genuinely useful and delightful to use. He saw the personal computer industry of the 1980s and 1990s as having become technically sophisticated while becoming progressively worse to use \u2014 more powerful, more feature-laden, and more confusing. His argument was that technical capability in the absence of design sensibility produced products that failed the human beings who were supposed to benefit from them.",
+    "implication": "Technical sophistication and human usefulness are not the same axis. A product can excel on one and fail entirely on the other. Measure your product against the quality of the human experience it produces, not the impressiveness of the technology that enables it.",
+    "cluster": "product_design",
+    "topics": [
+      "technical capability vs. usability",
+      "human-centered design",
+      "PC industry",
+      "design philosophy"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs \u2014 The Lost Interview, 1995",
+    "source_date": "1995"
+  },
+  {
+    "content": "Jobs saw the retail store not as a distribution channel but as a designed product experience \u2014 an extension of the product itself that had to be controlled with the same rigor as the hardware and software. When every major technology company was abandoning retail in 2001, Jobs opened Apple Stores, arguing that no retail partner could be trusted to present Apple's products with the care the products deserved. The store was designed the same way as the products: starting from the desired customer experience and working backward to the physical layout.",
+    "implication": "Every environment in which your product is encountered is part of the product experience. If you distribute that environment to partners with different incentives, you accept a ceiling on the quality of the experience you can deliver. Control the context, or accept the consequences.",
+    "cluster": "product_design",
+    "topics": [
+      "Apple Stores",
+      "retail design",
+      "vertical integration",
+      "customer experience"
+    ],
+    "confidence": 0.9,
+    "source_type": "interview",
+    "source_ref": "Fortune Interview, Steve Jobs and the Store, 2001",
     "source_date": "2001"
   },
   {
-    "content": "Jobs insisted that interface animations and transitions were functional design, not cosmetic polish. They communicated causality, provided spatial orientation, and gave users a mental model of how the system worked. A window that zoomed to its dock icon told users where their work was stored. A sheet that slid from a toolbar told users which toolbar owned it. Motion was a language of system structure.",
-    "original_quote": "Design is not just what it looks like and feels like. Design is how it works.",
-    "implication": "Interface animations are orientation cues that make a system legible. Removing them in the name of performance or minimalism removes the spatial grammar users rely on to understand where they are and where to find things.",
+    "content": "Jobs described the design process at Apple as one of subtractive iteration \u2014 of building prototypes, living with them, and asking which elements could be removed without losing anything essential. This was the opposite of the industry norm of additive development, in which each revision added new capabilities. His claim was that most products reached the market prematurely, before the hard work of removal had been done, and that the products felt accordingly cluttered and unresolved.",
+    "implication": "Build a version, then live with it long enough to understand which parts are genuinely necessary and which are noise. Schedule time for removal iterations \u2014 not just feature additions \u2014 before shipping. The product that ships should be the one with nothing left to remove.",
     "cluster": "product_design",
-    "topics": ["software design", "interface", "animation", "user mental models"],
-    "confidence": 0.95,
+    "topics": [
+      "design iteration",
+      "subtractive design",
+      "prototyping",
+      "product development process"
+    ],
+    "confidence": 0.85,
     "source_type": "interview",
-    "source_ref": "New York Times Magazine, 2003",
-    "source_date": "2003-11-30"
+    "source_ref": "Steve Jobs biography by Walter Isaacson, 2011",
+    "source_date": "2011"
   },
   {
-    "content": "The 2x2 product grid Jobs imposed on Apple in 1997 — desktop/portable by consumer/pro — was a structural act of design thinking applied to the entire company's output. It gave every team a clear mandate and eliminated product ambiguity. Four products, all great, rather than dozens mediocre. The grid forced trade-offs that years of consensus decision-making had been unable to produce.",
-    "original_quote": "When I got back to Apple, the product line was a zoo. The Apple II came in so many varieties that it was daunting even for die-hard Mac fans. I asked the product people, 'Which ones do I tell my friends to buy?' They couldn't answer. So we cut 70 percent of the products and kept four.",
-    "implication": "A portfolio so complicated that your own team cannot give a recommendation to a friend is a portfolio that has lost its design coherence. A simple organizing matrix forces clarity faster than any strategy document.",
+    "content": "Jobs was explicit that the integration of hardware and software \u2014 Apple owning both the chip architecture and the operating system and the application layer \u2014 was not primarily a business decision but a design decision. Every layer of the stack that Apple owned was a design decision Apple could make. Every layer delegated to another company was a design decision handed to people who did not share Apple's standards or priorities. Integration was how Apple took full responsibility for the user experience.",
+    "implication": "Map every layer of your product stack and identify which layers you control and which you delegate. Each delegated layer is an implicit agreement to accept someone else's quality decisions as your own. Integration decisions are quality decisions.",
     "cluster": "product_design",
-    "topics": ["product portfolio", "strategic focus", "organizational design", "Apple turnaround"],
-    "confidence": 0.95,
+    "topics": [
+      "hardware-software integration",
+      "vertical integration",
+      "quality control",
+      "stack ownership"
+    ],
+    "confidence": 0.9,
     "source_type": "interview",
-    "source_ref": "Fortune Interview with Steve Jobs, 1998",
-    "source_date": "1998"
+    "source_ref": "Fortune Interview, 2000",
+    "source_date": "2000"
   },
   {
-    "content": "Jobs ran Apple as if every product category the company entered could be redefined from first principles. He was not interested in making a better version of what existed — he wanted to identify the ideal product for a use case and then figure out how to build it. This approach required tolerating years of investment before a market paid off, and it was the source of both Apple's biggest failures and its most transformative successes.",
-    "original_quote": "The people who are crazy enough to think they can change the world are the ones who do.",
-    "implication": "Accepting the existing category definition as the design brief produces incrementally better products. Restarting from the ideal end-state and working backwards produces category-defining ones.",
+    "content": "Jobs believed that a product's quality could be read in what the company had chosen not to include as clearly as in what it had. He was as proud of the products Apple had decided not to build as the ones it had shipped \u2014 arguing that the quality of an organization's no decisions was the most honest indicator of its actual beliefs. Products that tried to be everything revealed a company that didn't know what it believed; products with sharp limits revealed a company that did.",
+    "implication": "Audit your product's feature list for what it reveals about your organization's beliefs. If the product has no clear point of view about what it is not, it also has no clear point of view about what it is. The no decisions are the product strategy made visible.",
     "cluster": "product_design",
-    "topics": ["vision", "product categories", "first principles", "product ambition"],
-    "confidence": 0.95,
+    "topics": [
+      "saying no",
+      "product identity",
+      "design conviction",
+      "organizational values"
+    ],
+    "confidence": 0.9,
     "source_type": "speech",
-    "source_ref": "Apple Think Different Campaign, 1997",
-    "source_date": "1997"
+    "source_ref": "Apple Worldwide Developers Conference, 1997",
+    "source_date": "1997-05-01"
   },
   {
-    "content": "Jobs believed the first thirty seconds of product use determined the user's long-term relationship with it. This made onboarding the highest-stakes design surface in any product. Apple obsessed over the moment a device first powered on — no setup manual, no account creation friction, immediate delight. First impressions formed mental models that persisted for the product's entire useful life.",
-    "original_quote": "A lot of times, people don't know what they want until you show it to them.",
-    "implication": "The out-of-box experience is not a logistics problem — it is a design surface at least as important as any feature. The emotional register established in the first thirty seconds shapes every subsequent interaction.",
+    "content": "Jobs frequently used the analogy of a carpenter who finishes the back of a cabinet \u2014 the side against the wall that no one will ever see \u2014 to illustrate what it meant to have genuine craft standards rather than merely performative ones. A craftsman's standard is not determined by what is visible or auditable; it is determined by what they cannot tolerate leaving wrong. He applied this standard relentlessly to Apple products, including elements that customers would never encounter directly.",
+    "implication": "Craft is a standard applied to the work itself, not to the audience for the work. If your team's quality standard adjusts based on what users can see or test, it is not a quality standard \u2014 it is a presentation standard. These produce very different products.",
     "cluster": "product_design",
-    "topics": ["onboarding", "first impression", "user experience", "product design"],
-    "confidence": 0.95,
+    "topics": [
+      "craft standards",
+      "hidden quality",
+      "craftsman ethic",
+      "design integrity"
+    ],
+    "confidence": 0.85,
     "source_type": "interview",
-    "source_ref": "BusinessWeek Interview, 1998",
-    "source_date": "1998"
+    "source_ref": "Steve Jobs biography by Walter Isaacson, 2011",
+    "source_date": "2011"
   },
   {
-    "content": "Jobs held that great products emerge from the integration of technology and art, not from optimizing either in isolation. Products built only by engineers tend to be technically impressive but alienating; products built only by designers tend to be beautiful but non-functional. The intersection was not a compromise between the two disciplines but a synthesis that neither could reach independently.",
-    "original_quote": "It's in Apple's DNA that technology alone is not enough — it's technology married with liberal arts, married with the humanities, that yields us the result that makes our heart sing.",
-    "implication": "The organizational composition of a product team determines whether the product can reach the intersection where technology becomes meaningful. Hiring only one type of person produces only one type of product.",
+    "content": "Jobs argued that the reason most technology products failed to achieve genuine simplicity was that it required making hard decisions early \u2014 decisions about what the product would never do \u2014 and most organizations lacked the conviction to make those decisions before they had evidence that they were correct. Simplicity required acting on taste and vision before the market could validate it, which meant accepting the risk of being wrong in exchange for the possibility of being right in a way that incremental thinking couldn't reach.",
+    "implication": "Simplicity requires early commitment to what the product will not do \u2014 before the market confirms your judgment. Organizations that wait for validation before making elimination decisions never achieve simplicity, because the accumulation of hedges and additions is itself the obstacle.",
     "cluster": "product_design",
-    "topics": ["liberal arts", "technology", "interdisciplinary teams", "product philosophy"],
-    "confidence": 0.95,
-    "source_type": "speech",
-    "source_ref": "iPad 2 Keynote, 2011",
-    "source_date": "2011-03-02"
+    "topics": [
+      "simplicity",
+      "design courage",
+      "early decisions",
+      "product conviction"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs: How a Dreamer Changed the World \u2014 documentary",
+    "source_date": "2008"
   }
 ]

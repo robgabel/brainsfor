@@ -9,8 +9,8 @@ Welcome to the **Jobs Brain Pack** from [brainsforfree.com](https://brainsforfre
 
 ## What You're Getting
 
-- **170 knowledge atoms** — Core insights, frameworks, and strategic principles from 50+ years of speeches, interviews, keynotes, and documented conversations (1976–2011)
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1029 knowledge atoms** — Core insights, frameworks, and strategic principles from 50+ years of speeches, interviews, keynotes, and documented conversations (1976–2011)
+- **1019 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Simplicity, taste, product design, marketing, innovation, team building, focus, craftsmanship, the intersection of technology and liberal arts, and more
 
@@ -28,7 +28,7 @@ Your Jobs Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (170 insights)
+  ├── brain-atoms.json         ← structured atoms (1029 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 170 atoms with titles, summaries, connections
+   - JSON structure of 1029 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -97,19 +97,19 @@ Ask for advice on decisions grounded in Steve's frameworks. Best for: career mov
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Steve sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain the intersection of technology and liberal arts."*
+*Example: "Explain what Steve meant by the intersection of technology and liberal arts."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Is design more important than engineering?"*
+*Example: "Is owning the full hardware-software stack worth the market share you sacrifice?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect taste to hiring to product quality."*
+*Example: "Connect Steve's Zen practice to his approach to product simplicity."*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How did Steve's thinking on design evolve from Apple to NeXT to Apple's return?"*
+*Example: "How did Steve's thinking on leadership evolve from his first stint at Apple through the NeXT years and his return?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -117,11 +117,11 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions Steve would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I'm launching a new product and can't decide what to cut. What should I be asking myself?"*
+*Example: "I'm about to launch a product I know isn't ready. What questions should I be asking myself?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens to product design as AI generates interfaces on the fly?"*
+*Example: "What would Steve think about the future of AI-generated interfaces replacing human-designed ones?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to Jobs' philosophy? Teach → evolve → coach to internalize the full arc.*
+*Example: New to Jobs' philosophy? Start with teach → evolve → coach to absorb the ideas, trace their development, and apply them to your own situation.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Building a product? Predict where your market is heading → debate your assumptions → advise on strategy.*
+*Example: Building a product? Use predict to see where the market is heading → debate to stress-test your assumptions → advise to get a strategic recommendation grounded in Steve's frameworks.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Jobs's publicly broadcast speeches (including the Stanford commencement), Apple keynote presentations circulating in public archives, press interviews, and widely quoted historical appearances. No proprietary Apple internal documents are reproduced.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Jobs's publicly broadcast speeches (including the Stanford commencement address), Apple keynote presentations circulating in public archives, press interviews with outlets including 60 Minutes and Charlie Rose, the 1996 Lost Interview, D5 Conference appearances, WWDC 1997, and widely quoted historical appearances. No proprietary Apple internal documents are reproduced.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

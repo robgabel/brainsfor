@@ -1,167 +1,347 @@
 [
   {
-    "content": "Jobs's critique of Microsoft was not technical — it was aesthetic. He believed Microsoft had shipped competent software but had never developed taste, and that this was a structural failing, not a feature gap. Without taste you can copy what already exists but cannot originate what should exist. Taste was a competitive moat that could not be acquired through hiring budgets or acquisition deals.",
-    "original_quote": "The only problem with Microsoft is they have no taste. They have absolutely no taste. And I don't mean that in a small way, I mean that in a big way, in the sense that they don't think of original ideas, and they don't bring much culture into their products.",
-    "implication": "Taste is a strategic differentiator that compounds over time. If your product organization lacks people with genuine aesthetic conviction, no amount of engineering excellence will produce work that moves people.",
+    "content": "Jobs believed that great industrial design required caring about the parts of a product that no user would ever see. When designing the original Macintosh, he insisted that the circuit boards inside the machine be laid out beautifully \u2014 arguing that a craftsman takes pride in the hidden joinery, not only the visible surface. This commitment to invisible quality was not a quirk but a philosophy: if you knew something was wrong or ugly, even if no one else would ever know, it would compromise the integrity of the entire object.",
+    "implication": "Quality is not a customer-facing activity \u2014 it is an internal standard. Teams that only care about what ships visibly will produce products that feel subtly wrong even when reviewers can't explain why. The hidden work is the foundation the visible work rests on.",
     "cluster": "taste_craft",
-    "topics": ["taste", "Microsoft", "competition", "aesthetic conviction"],
-    "confidence": 0.95,
-    "source_type": "video",
-    "source_ref": "Triumph of the Nerds documentary, 1996",
-    "source_date": "1996"
+    "topics": [
+      "hidden craftsmanship",
+      "circuit boards",
+      "internal quality",
+      "design integrity"
+    ],
+    "confidence": 0.9,
+    "source_type": "biography",
+    "source_ref": "Walter Isaacson, Steve Jobs biography; corroborated in multiple documentary interviews",
+    "source_date": "1984"
   },
   {
-    "content": "Jobs demanded that Apple's original Macintosh circuit boards be visually beautiful even though no customer would ever see them. He rejected the first layouts and insisted engineers rearrange chips and traces for aesthetic order. This was not irrationality — it was a belief that a team capable of caring about invisible beauty would produce visible beauty as a natural consequence. The internal state of the work shapes the external state.",
-    "original_quote": "When you're a carpenter making a beautiful chest of drawers, you're not going to use a piece of plywood on the back, even though it faces the wall and nobody will ever see it. You'll know it's there, so you're going to use a beautiful piece of wood on the back.",
-    "implication": "Craft standards that apply everywhere — including invisible components — create a team culture that cannot produce sloppy visible work. Standards visible only in audits are not standards; they are exceptions.",
+    "content": "Jobs drew a sharp distinction between taste and preference. He argued that taste was not merely subjective \u2014 it was an accumulated, disciplined education in what great work looks like across many domains. People who had immersed themselves in art, music, literature, and design developed a filter that allowed them to recognize quality before they could articulate why something was right. This sensibility was not innate but earned, and it actively produced better decisions in product development.",
+    "implication": "Taste is trainable infrastructure, not a personality trait. Organizations that expose their product teams only to technology miss the cross-domain literacy that produces genuinely good products. Deliberately building aesthetic education into creative work produces compounding returns.",
     "cluster": "taste_craft",
-    "topics": ["craft", "circuit boards", "invisible quality", "team culture"],
-    "confidence": 0.95,
+    "topics": [
+      "taste",
+      "aesthetics",
+      "cross-domain literacy",
+      "design sensibility"
+    ],
+    "confidence": 0.88,
     "source_type": "interview",
     "source_ref": "Playboy Interview with Steve Jobs, 1985",
     "source_date": "1985-02-01"
   },
   {
-    "content": "After dropping out of Reed College, Jobs continued attending classes that interested him — including a calligraphy course taught by Robert Palladino. He learned serif and sans-serif typefaces, varying spacing between letter combinations, and what makes typography beautiful. Ten years later, he designed those learnings directly into the Macintosh, making it the first personal computer with beautiful proportional fonts. The most indirect input had the largest output.",
-    "original_quote": "If I had never dropped in on that single calligraphy course in college, the Mac would have never had multiple typefaces or proportionally spaced fonts. And since Windows just copied the Mac, it's likely that no personal computer would have them.",
-    "implication": "Curiosity-driven learning in domains that seem irrelevant to your work has a non-zero probability of producing your most important design decision. The ROI on aesthetic education is incalculable because the returns are non-obvious and delayed.",
+    "content": "At the 1983 International Design Conference in Aspen, Jobs argued that design would be the defining competitive advantage of the coming decade \u2014 not engineering capability, not manufacturing efficiency, but the quality of design thinking applied to products people interact with. He believed most technology companies treated design as decoration applied at the end of an engineering process, which was precisely backward. Design should originate the product, and engineering should serve it.",
+    "implication": "The companies that will win the next wave are not the ones with the best engineers \u2014 they are the ones where designers have genuine authority over product decisions. Decorative design is a cost center; originating design is a competitive moat.",
     "cluster": "taste_craft",
-    "topics": ["calligraphy", "typography", "Reed College", "serendipitous learning"],
+    "topics": [
+      "design leadership",
+      "competitive advantage",
+      "design-first thinking",
+      "1983 Aspen"
+    ],
+    "confidence": 0.87,
+    "source_type": "speech",
+    "source_ref": "International Design Conference in Aspen, 1983",
+    "source_date": "1983"
+  },
+  {
+    "content": "Jobs was a devoted student of Zen Buddhism and studied under Kobun Chino Otogawa, a Zen master who also became his spiritual advisor. Zen's aesthetic of simplicity, emptiness, and the removal of everything unnecessary pervades every Apple product he built. The white space, the absence of buttons, the uncluttered interface \u2014 these were not minimalist styling decisions but expressions of a philosophical conviction that the most powerful objects are those from which everything inessential has been removed.",
+    "implication": "Aesthetic philosophy and product philosophy are not separate disciplines. Leaders who invest in their own philosophical and spiritual formation develop a coherent worldview that resolves design conflicts that purely technical reasoning cannot. Zen is not a personal lifestyle choice \u2014 it is product methodology.",
+    "cluster": "taste_craft",
+    "topics": [
+      "Zen Buddhism",
+      "minimalism",
+      "simplicity",
+      "philosophical influence"
+    ],
+    "confidence": 0.88,
+    "source_type": "biography",
+    "source_ref": "Walter Isaacson, Steve Jobs biography; corroborated in multiple documentary profiles",
+    "source_date": "1970"
+  },
+  {
+    "content": "Jobs described design not as what a product looks like but as how it works. The visual appearance of an Apple product was a consequence of its functional logic, not an independent aesthetic layer applied on top. This is why he considered design and engineering inseparable \u2014 you could not have a well-designed product built on poorly conceived engineering, because the structure of the thing would eventually surface in the experience of using it.",
+    "implication": "The instinct to 'add a design layer' at the end of a product process is a category error. Design is a structural decision made at the beginning that constrains and shapes every technical decision downstream. Hiring designers late in the process is the same as hiring them for decoration.",
+    "cluster": "taste_craft",
+    "topics": [
+      "design philosophy",
+      "form follows function",
+      "engineering integration",
+      "how it works"
+    ],
+    "confidence": 0.92,
+    "source_type": "interview",
+    "source_ref": "Fortune Interview with Steve Jobs, 2000; echoed across multiple interviews",
+    "source_date": "2000"
+  },
+  {
+    "content": "Jobs was deeply inspired by the Beatles as a creative and organizational model \u2014 specifically the dynamic between John Lennon and Paul McCartney, who pushed each other toward work neither would have produced alone. He believed that great creative output required that kind of productive friction: two or more people with strong, independent aesthetic convictions who refused to let each other settle. The Beatles were not a democracy that averaged preferences; they were a collision of strong visions that produced something greater than any individual.",
+    "implication": "Creative excellence is not a solitary activity or a consensus exercise \u2014 it is a disciplined collision between people with strong, incompatible visions who respect each other enough to fight for the best answer. Building teams of like-minded agreeable people is the fastest path to mediocre work.",
+    "cluster": "taste_craft",
+    "topics": [
+      "Beatles",
+      "creative collaboration",
+      "productive friction",
+      "artistic inspiration"
+    ],
+    "confidence": 0.88,
+    "source_type": "interview",
+    "source_ref": "60 Minutes, Steve Jobs on being inspired by the Beatles",
+    "source_date": "2003"
+  },
+  {
+    "content": "Jobs insisted that packaging was a form of theater \u2014 the box a product arrived in was the first physical experience a customer had with it, and it should be treated with the same design care as the product itself. Apple invested extraordinary resources in box design and the unboxing sequence, because Jobs believed the first act of opening a product set the emotional tone for the entire relationship with it. This was not marketing \u2014 it was craft extended to every touchpoint.",
+    "implication": "Every touchpoint before a customer reaches the core product is part of the product. The email confirmation, the packaging, the first screen \u2014 these are not logistics, they are the opening chapters of an experience that either delivers on the brand's promise or quietly undermines it.",
+    "cluster": "taste_craft",
+    "topics": [
+      "packaging design",
+      "unboxing",
+      "experience design",
+      "attention to detail"
+    ],
+    "confidence": 0.85,
+    "source_type": "biography",
+    "source_ref": "Walter Isaacson, Steve Jobs biography",
+    "source_date": "2000"
+  },
+  {
+    "content": "Jobs believed that most people in the world had never been shown that they could change things \u2014 that life as they found it was not fixed, but was assembled by people no smarter than themselves. Once a person truly internalized this, they could never be fully passive again. This conviction was not simply a motivational attitude; it was the operating premise behind insisting on excellence in every detail, because accepting the way things were was the same as surrendering your ability to make things better.",
+    "implication": "The most important thing a leader with taste can do is make visible to their team that standards are chosen, not inherited. People who believe standards are fixed will maintain them; people who believe standards are chosen will raise them.",
+    "cluster": "taste_craft",
+    "topics": [
+      "changing the world",
+      "agency",
+      "standards",
+      "craftsperson's mindset"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Steve Jobs Secrets of Life \u2014 video interview",
+    "source_date": "1994"
+  },
+  {
+    "content": "Jobs argued that truly great products had a quality of inevitability \u2014 when you experienced them, they felt as though they could not have been made any other way. This feeling was the evidence that every design decision had been made correctly and that no compromises had accumulated in the process. Products that felt assembled rather than inevitable were the result of many small surrenders, each individually defensible, that collectively destroyed coherence.",
+    "implication": "The goal of a product process is not to ship something good \u2014 it is to ship something that feels inevitable. Every compromise made along the way leaves a trace in the final product. Tracking those compromises and refusing them is what separates craft from competent execution.",
+    "cluster": "taste_craft",
+    "topics": [
+      "product coherence",
+      "inevitability",
+      "design decisions",
+      "no compromises"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs: The Lost Interview, 1995",
+    "source_date": "1995"
+  },
+  {
+    "content": "Jobs studied calligraphy at Reed College after dropping out, taking classes with no expectation they would ever be practically useful. A decade later, the Macintosh became the first personal computer with beautiful proportional typography \u2014 because Jobs had the taste to know it mattered and the technical authority to require it. No market research would have surfaced this as a priority; it came entirely from an aesthetic education pursued for its own sake.",
+    "implication": "The return on aesthetic education is invisible in prospect and obvious in retrospect. Organizations that only develop technically relevant skills in their people are systematically eliminating the inputs that produce breakthrough design decisions. Useless knowledge is the source material for original work.",
+    "cluster": "taste_craft",
+    "topics": [
+      "calligraphy",
+      "typography",
+      "Reed College",
+      "aesthetic education"
+    ],
     "confidence": 0.95,
     "source_type": "speech",
-    "source_ref": "Stanford University Commencement Address, 2005",
+    "source_ref": "Stanford Commencement Address, 2005",
     "source_date": "2005-06-12"
   },
   {
-    "content": "Jobs was drawn to Zen aesthetics throughout his adult life, studying Zen Buddhism and making extended trips to Japan. The influence showed in Apple's product design: restraint over decoration, negative space as a positive design element, the beauty of what is not there. He applied the Japanese concept of ma — the deliberate use of empty space — to product interfaces and physical enclosures.",
-    "original_quote": "Zen has been a deep influence in my life ever since. At one point I was going to go to Japan and study Zen, but my teacher Kobun Chino Otogawa said, 'The dharma is here.'",
-    "implication": "Empty space in a design is a positive decision, not a failure to fill. Restraint and the discipline to resist adding require the same intentionality as the things you add — often more.",
+    "content": "Jobs held that the standard for a great product was not whether it was better than competitors' products but whether it was as good as it could possibly be. Competitive benchmarking was irrelevant as a quality standard \u2014 it only told you how far ahead of others you were, not how far short of excellent you remained. This distinction meant Apple often spent vastly more time and resources on refinements that would have been invisible in competitive reviews but that users would feel in sustained use.",
+    "implication": "Using competitors as your quality benchmark guarantees you will converge toward the industry average over time. The only benchmark that produces compounding quality is an internal absolute standard \u2014 the product as it should be, not the product as it is relative to other mediocre things.",
     "cluster": "taste_craft",
-    "topics": ["Zen", "Japanese aesthetics", "restraint", "negative space"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "Steve Jobs by Walter Isaacson, 2011",
-    "source_date": "2011"
-  },
-  {
-    "content": "The collaboration between Jobs and Jony Ive was the central creative relationship of modern Apple. What distinguished it was mutual comprehension: Jobs could read Ive's designs with the fluency of a designer, and Ive understood Jobs's product vision with the clarity of a strategist. Neither was a client to the other — they were co-authors. This parity of understanding between design and product leadership is rare and decisive.",
-    "original_quote": "Jony and I think up most of the products together and then pull in other people. He gets the profound importance of the visual and the tactile elements in a product, and I do too. We push each other.",
-    "implication": "The most productive design relationships are between people with equal authority and mutual comprehension, not between a client with a brief and a designer with a deliverable. Organizational structures that create client-vendor dynamics between product and design produce worse outcomes.",
-    "cluster": "taste_craft",
-    "topics": ["Jony Ive", "collaboration", "design leadership", "creative partnership"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "Steve Jobs by Walter Isaacson, 2011",
-    "source_date": "2011"
-  },
-  {
-    "content": "Jobs's obsession with materials — aluminum, glass, specific alloys for specific applications — reflected his belief that the physical substance of a product was itself a communication. The transition from polycarbonate to aluminum for MacBook enclosures was not primarily a structural decision. It was a statement about Apple's position, communicated through material density and thermal conductivity before a user pressed a key.",
-    "original_quote": "We've always tried to be at the intersection of technology and liberal arts, to be able to get the best of both. It's the combination of those two things — the technology and the humanities — that makes our heart sing.",
-    "implication": "Material selection is brand communication. The weight, warmth, and texture of a product convey quality claims that no copywriter can match. Compromising on materials to hit a price point undermines every premium signal the design otherwise sends.",
-    "cluster": "taste_craft",
-    "topics": ["materials", "aluminum", "product identity", "material communication"],
+    "topics": [
+      "quality standards",
+      "competitive benchmarking",
+      "absolute standard",
+      "product excellence"
+    ],
     "confidence": 0.85,
-    "source_type": "speech",
-    "source_ref": "iPad 2 Keynote, 2011",
-    "source_date": "2011-03-02"
+    "source_type": "interview",
+    "source_ref": "Multiple interviews including Steve Jobs: The Lost Interview, 1995",
+    "source_date": "1995"
   },
   {
-    "content": "Jobs used the phrase 'real artists ship' to rebuke perfectionism that delayed delivery. He held that craft was proven through execution, not intention. A beautiful idea that never reached users was a failure of craft, not an expression of it. The discipline required to finish — to commit to a version, hand it to customers, and live with the result — was itself a form of artistic integrity.",
-    "original_quote": "Real artists ship.",
-    "implication": "Craft without delivery is indistinguishable from inability from the outside. The hardest creative discipline is not refining work endlessly — it is knowing when the work is good enough to ship and then shipping it.",
+    "content": "Jobs was relentless about the materials used in Apple products \u2014 the choice of aluminum, the quality of glass, the weight and feel of a device in the hand. He believed that the physical experience of holding and using a product communicated quality before any feature was activated. This attention to material was not a luxury consideration \u2014 it was the first signal to a user about whether the people who made this thing cared. Bad materials said, before anything else, that the craftspeople had stopped caring.",
+    "implication": "Material decisions are not a budget line \u2014 they are a communication to the user about the integrity of the whole product. Cheapening materials to hit a cost target sends a message that undermines every other design investment. The first thing a user touches tells them everything about what to expect from everything else.",
     "cluster": "taste_craft",
-    "topics": ["shipping", "perfectionism", "craft", "execution discipline"],
-    "confidence": 0.95,
+    "topics": [
+      "materials",
+      "physical experience",
+      "product integrity",
+      "tactile design"
+    ],
+    "confidence": 0.87,
+    "source_type": "biography",
+    "source_ref": "Walter Isaacson, Steve Jobs biography; corroborated in product launch keynotes",
+    "source_date": "2000"
+  },
+  {
+    "content": "Jobs believed that most products were the result of engineers solving engineering problems, and that this process reliably produced things that worked correctly but felt wrong. The leap from correct to excellent required a different kind of judgment \u2014 aesthetic judgment \u2014 that most technology companies had systematically excluded from their decision-making. This was why technology companies needed people from the humanities and arts embedded in their product processes, not adjacent to them.",
+    "implication": "Functional correctness and felt excellence are different standards requiring different competencies. A product review process that only evaluates whether something works will consistently ship things that work but feel wrong. Aesthetic judgment must be institutionalized as a formal gate, not left to the subjective preferences of whoever happens to be in the room.",
+    "cluster": "taste_craft",
+    "topics": [
+      "aesthetic judgment",
+      "felt excellence",
+      "functional correctness",
+      "humanities in technology"
+    ],
+    "confidence": 0.88,
     "source_type": "interview",
-    "source_ref": "Folklore.org, recounted by Andy Hertzfeld, 1983-1984",
+    "source_ref": "Steve Jobs and Bill Gates Interview, D5 Conference, 2007",
+    "source_date": "2007"
+  },
+  {
+    "content": "Jobs viewed the Macintosh project as an attempt to bring the craft values of artisanal making into mass manufacturing. He had the entire original Mac team sign the inside of the machine's case \u2014 an act that had no functional purpose but that expressed his conviction that they were craftspeople, not factory workers, and that their authorship mattered even when invisible. The signatures inside a sealed computer captured exactly his belief about quality: it counts even when no one will ever see it.",
+    "implication": "Attaching authorship to the things people build changes how they build them. People who sign their work approach it differently than anonymous production workers. Creating cultures of visible craftsmanship \u2014 even in software, even in invisible infrastructure \u2014 raises the standard of care across the entire organization.",
+    "cluster": "taste_craft",
+    "topics": [
+      "Mac signatures",
+      "authorship",
+      "craftsperson identity",
+      "pride in work"
+    ],
+    "confidence": 0.92,
+    "source_type": "biography",
+    "source_ref": "Walter Isaacson, Steve Jobs biography; corroborated in multiple documentary profiles",
     "source_date": "1984"
   },
   {
-    "content": "Jobs held the intersection of art and engineering as the most generative creative space available to his generation. Engineers without aesthetic sensibility built functional but alienating products. Artists without engineering fluency built beautiful but non-functional objects. Apple's institutional advantage was its ability to recruit and retain people who were genuinely both — and to structure them so they had to work together.",
-    "original_quote": "I always thought of myself as a humanities person as a kid, but I liked electronics. Then I read something that one of my heroes, Edwin Land of Polaroid, said about the importance of people who could stand at the intersection of humanities and sciences, and I decided that's what I wanted to do.",
-    "implication": "Standing at the intersection of art and engineering is not a personality trait — it requires deliberate cultivation and organizational structures that force the two disciplines into contact. Separate them and you get separate results.",
+    "content": "Jobs argued that taste was the product of exposure \u2014 that you could not develop judgment about what was excellent without having spent time with excellent things. This was one reason he studied Bauhaus design, appreciated great architecture, admired Braun's Dieter Rams, and listened obsessively to great music. The breadth of his aesthetic education across unrelated domains gave him a richer and more reliable filter for quality than any person trained in only one discipline could develop.",
+    "implication": "Building taste requires a deliberate curriculum of exposure to great work in many fields. Leaders who curate their aesthetic exposure \u2014 architecture, furniture, typography, music, film \u2014 develop a cross-domain pattern recognition that produces better product decisions than any single domain expertise.",
     "cluster": "taste_craft",
-    "topics": ["art and engineering", "intersection", "Edwin Land", "interdisciplinary thinking"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "Steve Jobs by Walter Isaacson, 2011",
-    "source_date": "2011"
-  },
-  {
-    "content": "Jobs believed deeply in the craft of typography and pushed the Mac team to implement features — proportional fonts, kerning, multiple typefaces — that had no equivalent in the computing world of 1984. This commitment came directly from his calligraphy studies at Reed and from his conviction that computers could be instruments of human expression, not just tools for calculation. Beautiful text was proof of that possibility.",
-    "original_quote": "If I had never dropped in on that single calligraphy course in college, the Mac would have never had multiple typefaces or proportionally spaced fonts.",
-    "implication": "Typography is not a feature — it is the primary surface through which written software communicates with human beings. Investing in typographic quality is investing in the legibility and dignity of every interaction your product has.",
-    "cluster": "taste_craft",
-    "topics": ["typography", "fonts", "Macintosh", "human expression"],
-    "confidence": 0.95,
-    "source_type": "speech",
-    "source_ref": "Stanford University Commencement Address, 2005",
-    "source_date": "2005-06-12"
-  },
-  {
-    "content": "The NeXT cube was designed by Jobs as an object of industrial beauty — a perfect 12-inch magnesium cube manufactured to tolerances that had no functional necessity but enormous aesthetic effect. The machine was too expensive and arrived too late, but its design became the cultural proof of Jobs's conviction that computers could be objects you wanted in your life, not just on your desk.",
-    "original_quote": "We want to make a product that is beautiful on the outside and the inside. We want the whole thing to be beautiful.",
-    "implication": "A product that makes an aesthetic argument even when it fails commercially can set the terms for what the next generation builds. The NeXT cube's influence on industrial design outlasted its market failure by decades.",
-    "cluster": "taste_craft",
-    "topics": ["NeXT", "industrial design", "aesthetic argument", "product vision"],
-    "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Newsweek Interview, 1985",
+    "topics": [
+      "aesthetic education",
+      "Bauhaus",
+      "Dieter Rams",
+      "cross-domain exposure"
+    ],
+    "confidence": 0.87,
+    "source_type": "biography",
+    "source_ref": "Walter Isaacson, Steve Jobs biography; corroborated in Playboy Interview 1985",
     "source_date": "1985"
   },
   {
-    "content": "Jobs distinguished between copying and understanding. He believed most competitors copied Apple's visual language without understanding the principles that generated it, and that this produced superficially similar but fundamentally inferior products. True craft required internalizing the reasoning behind every decision, not replicating its surface outputs. You couldn't fake craft at scale.",
-    "original_quote": "Picasso had a saying — 'good artists copy, great artists steal' — and we have always been shameless about stealing great ideas.",
-    "implication": "Copying outputs without understanding the principles that generated them produces work that ages badly and breaks under novel conditions. Stealing means internalizing the thinking, not cloning the result.",
+    "content": "Jobs understood simplicity as something that had to be earned through deep mastery of a problem, not imposed through superficial minimalism. When Apple removed features, ports, or buttons, it was because Jobs had worked deeply enough into the problem to understand what was truly necessary \u2014 and found it was less than everyone assumed. The discipline to remove required more confidence and more work than the ease of accumulation. Most products were complex because their creators had not worked hard enough to find the simpler answer.",
+    "implication": "Simplicity is not a stylistic choice \u2014 it is an achievement that requires you to have solved a problem completely enough to know what can be stripped away. Products that are complicated reveal creators who stopped working too early. The continued pursuit of simplicity is the continued pursuit of mastery.",
     "cluster": "taste_craft",
-    "topics": ["copying vs. understanding", "creative theft", "principles", "craft"],
-    "confidence": 0.95,
-    "source_type": "video",
-    "source_ref": "Triumph of the Nerds documentary, 1996",
+    "topics": [
+      "simplicity",
+      "earned minimalism",
+      "deep mastery",
+      "removal as achievement"
+    ],
+    "confidence": 0.9,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs: The Lost Interview, 1995; echoed in multiple keynotes and interviews",
+    "source_date": "1995"
+  },
+  {
+    "content": "Jobs had a deep and documented admiration for Jony Ive that went beyond professional respect \u2014 he described their collaboration as the closest thing to a creative marriage in his professional life. What made the relationship work was that Ive shared Jobs's conviction that design was not a service function but the originating act of the product. When Jobs and Ive agreed that something was wrong, no business justification could override it. The aesthetic conviction of two people with taste was treated as primary evidence.",
+    "implication": "The most important structural decision for a product organization is whether aesthetic conviction has veto power over business justification. When taste is advisory and revenue is decisive, products decay. The Jobs-Ive model shows that taste must have genuine authority \u2014 not just a seat at the table but the ability to stop a decision.",
+    "cluster": "taste_craft",
+    "topics": [
+      "Jony Ive",
+      "design authority",
+      "creative partnership",
+      "aesthetic veto"
+    ],
+    "confidence": 0.9,
+    "source_type": "biography",
+    "source_ref": "Walter Isaacson, Steve Jobs biography",
+    "source_date": "2000"
+  },
+  {
+    "content": "Jobs believed that the fonts on the Macintosh were not a technical feature but a cultural statement. The inclusion of beautiful typefaces \u2014 made possible by his calligraphy background \u2014 was an argument that computers were tools for human expression, not just calculation machines. This framing meant every typographic decision carried philosophical weight: choosing a font was declaring what kind of object a computer was and what kind of people it was made for.",
+    "implication": "Every detail in a product is either an argument or a concession. Teams that treat details as neutral implementation choices are missing the opportunity to make every element of the product carry the conviction of the whole. Great products argue coherently, detail by detail.",
+    "cluster": "taste_craft",
+    "topics": [
+      "typography",
+      "Macintosh fonts",
+      "product as argument",
+      "cultural statement"
+    ],
+    "confidence": 0.9,
+    "source_type": "speech",
+    "source_ref": "Stanford Commencement Address, 2005",
+    "source_date": "2005-06-12"
+  },
+  {
+    "content": "Jobs described the process of great product development as being similar to that of a great sculptor \u2014 you begin with the material and progressively remove everything that doesn't belong until the form that was always latent inside it is revealed. This was the opposite of the additive model most technology companies used, in which products grew by accumulation. Removal, not addition, was the primary act of craft.",
+    "implication": "Product roadmaps built entirely on addition are incompatible with craft. Building in regular, rigorous removal cycles \u2014 asking what can be taken away rather than what can be added \u2014 is the organizational practice that separates products that feel inevitable from products that feel assembled.",
+    "cluster": "taste_craft",
+    "topics": [
+      "subtractive design",
+      "sculpting metaphor",
+      "removal",
+      "product development philosophy"
+    ],
+    "confidence": 0.85,
+    "source_type": "interview",
+    "source_ref": "Multiple interviews; metaphor documented across biographic sources",
     "source_date": "1996"
   },
   {
-    "content": "Jobs viewed the visual coherence of the Macintosh interface as a work of art in the same category as painting or music. He insisted the original Mac team sign the inside of every machine's case — not because customers would see it, but because artists signed their work. This act defined the team's identity and their relationship to what they were making. They were authors of an artifact, not assemblers of a product.",
-    "original_quote": "We're going to be able to make the kinds of programs we want to make. It's like the difference between painting and painting by numbers. We're going to be the artists.",
-    "implication": "Teams that understand themselves as authors of artifacts approach quality differently than teams that understand themselves as executors of specifications. The self-conception shapes the output before any work begins.",
+    "content": "When Jobs returned to Apple in 1997, one of his first aesthetic decisions was to rebuild the entire product line around a new visual and material language \u2014 translucent, candy-colored plastics for the iMac \u2014 that signaled Apple's reemergence as a design-forward company before a single feature was announced. The visual identity of the product was doing strategic communication work. The iMac's appearance told the market something had changed before anyone read a spec sheet.",
+    "implication": "Aesthetic transformation can communicate strategic repositioning faster than any press release or marketing campaign. When a company's products look different, people immediately know something has changed at the level of belief. Visual identity is the fastest possible signal of an internal shift in standards.",
     "cluster": "taste_craft",
-    "topics": ["authorship", "Macintosh", "team identity", "craft culture"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "Steve Jobs by Walter Isaacson, 2011",
-    "source_date": "2011"
+    "topics": [
+      "iMac",
+      "visual identity",
+      "strategic aesthetics",
+      "Apple turnaround"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "History of Steve Jobs (Full Documentary); corroborated in multiple contemporary press accounts",
+    "source_date": "1998"
   },
   {
-    "content": "Jobs held that taste was developed through exposure to great work across many disciplines — that a designer who had only studied design was limited in ways a designer who had also studied music, literature, and film was not. His own aesthetic references spanned Bob Dylan, the Bauhaus, Zen garden design, and the Beatles' album art. Breadth of aesthetic reference was not incidental to his product judgment — it was the source of it.",
-    "original_quote": "Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while. That's because they were able to connect experiences they've had and synthesize new things.",
-    "implication": "Aesthetic education is domain-independent. The connections that produce original product decisions come from drawing on references outside the category you are designing for — which requires having internalized those references in the first place.",
+    "content": "Jobs was known to walk into a meeting, look at a product or prototype, and within minutes declare it wrong \u2014 sometimes without being immediately able to articulate exactly why. He trusted this intuitive response as data, not noise. The inability to instantly explain the wrongness did not make the response unreliable; it meant the explanation would come through continued engagement with the problem. Taste produced quick and accurate verdicts that analysis later confirmed.",
+    "implication": "Trained aesthetic intuition is a legitimate and fast-acting diagnostic tool. Organizations that require everything to be explained before it is acted upon systematically slow themselves down in the most expensive ways \u2014 by continuing to build things that someone with taste already knows are wrong. Intuitive quality signals deserve serious investigation even before full articulation.",
     "cluster": "taste_craft",
-    "topics": ["aesthetic education", "creativity", "cross-domain references", "taste development"],
-    "confidence": 0.95,
-    "source_type": "interview",
-    "source_ref": "Wired Magazine Interview, 1996",
-    "source_date": "1996-02-01"
-  },
-  {
-    "content": "Jobs insisted on extraordinarily tight tolerances in Apple's manufacturing, treating production quality as a design discipline continuous with the design phase itself. The gap between a MacBook's lid and body was specified in tenths of millimeters. These requirements cost more, slowed manufacturing, and alienated some suppliers — and they were non-negotiable because the tactile experience of the product depended on them. Manufacturing was part of the design.",
-    "original_quote": "We make the packaging, the box, beautiful because when you open the box of an iPhone or iPad, we want to transmit a message — this is a quality product.",
-    "implication": "Design intent that cannot survive manufacturing is not finished design. The handoff between design and production is a design surface — tolerances and process specifications are design documents as much as visual specs are.",
-    "cluster": "taste_craft",
-    "topics": ["manufacturing", "tolerances", "production quality", "design intent"],
+    "topics": [
+      "aesthetic intuition",
+      "fast judgment",
+      "taste as diagnosis",
+      "design process"
+    ],
     "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Steve Jobs by Walter Isaacson, 2011",
-    "source_date": "2011"
+    "source_type": "biography",
+    "source_ref": "Walter Isaacson, Steve Jobs biography; corroborated by colleagues in multiple documentary interviews",
+    "source_date": "2000"
   },
   {
-    "content": "Jobs reserved his highest admiration for people who cared about craft to the point of irrational commitment — people who would redo a feature twelve times to get it right when ten times would have satisfied any external reviewer. He hired for this quality and protected it organizationally by ensuring people with this disposition reported to other people with this disposition, never to professional managers who measured output rather than quality.",
-    "original_quote": "When I hire somebody really senior, competence is the ante. They have to be really smart. But the real issue for me is, Are they going to fall in love with Apple? Because if they fall in love with Apple, everything else will take care of itself.",
-    "implication": "Craft culture is preserved through hiring decisions, not policy documents. One person who measures quality by convenience rather than quality degrades standards for the people around them — especially if that person is in a senior role.",
+    "content": "Jobs believed that the design of a retail store was as much a craft product as the devices sold inside it. When Apple opened its first stores in 2001, Jobs and Ron Johnson treated the floor layout, materials, lighting, and even the wood species of the tables as design decisions governed by the same standards as product design. The store was not a channel \u2014 it was a three-dimensional expression of Apple's aesthetic values, and every detail was as deliberate as the curve of an aluminum enclosure.",
+    "implication": "Every environment in which a product is experienced becomes part of the product's aesthetic argument. Delegating environmental design to facility managers or retail consultants is the same as delegating product design to contractors \u2014 it produces competent execution of someone else's vision rather than a coherent expression of your own.",
     "cluster": "taste_craft",
-    "topics": ["hiring for craft", "organizational culture", "quality standards", "management"],
-    "confidence": 0.95,
+    "topics": [
+      "Apple Stores",
+      "retail design",
+      "environmental aesthetics",
+      "coherent brand experience"
+    ],
+    "confidence": 0.88,
     "source_type": "interview",
-    "source_ref": "Fortune Interview, 2000",
-    "source_date": "2000"
+    "source_ref": "Fortune Interview, 2001; corroborated in multiple accounts of Apple Store development",
+    "source_date": "2001"
+  },
+  {
+    "content": "Jobs articulated a clear theory of why most technology products were ugly: engineering-driven organizations gave engineers the final word on decisions that required aesthetic judgment, and engineers \u2014 however talented \u2014 were not trained to make those calls. The result was products that were technically correct and experientially wrong. The solution was not to make engineers into designers but to give designers the authority to make final calls on experience decisions, with engineers implementing the vision rather than originating it.",
+    "implication": "Organizational structure determines product quality as decisively as talent does. A brilliant design team with advisory authority will consistently produce worse products than a mediocre design team with final authority. The reporting line of the design function tells you everything about what the products will eventually feel like.",
+    "cluster": "taste_craft",
+    "topics": [
+      "design authority",
+      "engineering culture",
+      "organizational structure",
+      "experience decisions"
+    ],
+    "confidence": 0.88,
+    "source_type": "interview",
+    "source_ref": "Steve Jobs: The Lost Interview, 1995",
+    "source_date": "1995"
   }
 ]

@@ -4,31 +4,31 @@
   "brain_last_name": "Jobs",
   "brain_slug": "steve-jobs",
   "brain_possessive": "his",
-  "vocabulary_examples": "\"insanely great,\" \"the intersection of technology and liberal arts,\" \"think different,\" \"whole widget,\" \"A-players\"",
+  "vocabulary_examples": "\"insanely great,\" \"the intersection of technology and liberal arts,\" \"think different,\" \"whole widget,\" \"A-players,\" \"bicycle for the mind,\" \"reality distortion field,\" \"stay hungry, stay foolish\"",
   "brain_source_description": "speeches, interviews, keynotes, and public appearances",
-  "brain_source_ethics": "Jobs's publicly broadcast speeches (including the Stanford commencement), Apple keynote presentations circulating in public archives, press interviews, and widely quoted historical appearances. No proprietary Apple internal documents are reproduced.",
+  "brain_source_ethics": "Jobs's publicly broadcast speeches (including the Stanford commencement address), Apple keynote presentations circulating in public archives, press interviews with outlets including 60 Minutes and Charlie Rose, the 1996 Lost Interview, D5 Conference appearances, WWDC 1997, and widely quoted historical appearances. No proprietary Apple internal documents are reproduced.",
   "brain_source_url": "youtube.com",
-  "brain_source_detail": "50+ years of speeches, interviews, keynotes, and documented conversations (1976–2011)",
+  "brain_source_detail": "50+ years of speeches, interviews, keynotes, and documented conversations (1976\u20132011)",
   "brain_tagline": "a curated collection of his most provocative thinking on product design, simplicity, taste, team-building, and the intersection of technology and liberal arts",
   "brain_bio": "Steve Jobs co-founded Apple, led Pixar, built NeXT, and returned to transform Apple into the most valuable company in history. His thinking on product design, marketing, simplicity, and the intersection of technology and humanities remains the most referenced playbook in tech. He died in 2011 but his ideas only grow more relevant.",
   "topic_examples": "Simplicity, taste, product design, marketing, innovation, team building, focus, craftsmanship, the intersection of technology and liberal arts",
   "example_topic": "simplicity",
   "edition_count": null,
-  "date_range": "1976 — 2011",
+  "date_range": "1976 \u2014 2011",
   "quick_start_prompt": "I'm launching a new product and struggling to decide which features to cut. What would Steve think?",
   "skill_examples": {
     "advise": "Should I add more features or strip my product down to its essence?",
-    "teach": "Explain the intersection of technology and liberal arts.",
-    "debate": "Is design more important than engineering?",
-    "connect": "Connect taste to hiring to product quality.",
-    "evolve": "How did Steve's thinking on design evolve from Apple to NeXT to Apple's return?",
-    "surprise": "No input needed — just run it.",
-    "coach": "I'm launching a new product and can't decide what to cut. What should I be asking myself?",
-    "predict": "What happens to product design as AI generates interfaces on the fly?"
+    "teach": "Explain what Steve meant by the intersection of technology and liberal arts.",
+    "debate": "Is owning the full hardware-software stack worth the market share you sacrifice?",
+    "connect": "Connect Steve's Zen practice to his approach to product simplicity.",
+    "evolve": "How did Steve's thinking on leadership evolve from his first stint at Apple through the NeXT years and his return?",
+    "surprise": "No input needed \u2014 just run it.",
+    "coach": "I'm about to launch a product I know isn't ready. What questions should I be asking myself?",
+    "predict": "What would Steve think about the future of AI-generated interfaces replacing human-designed ones?"
   },
   "workflow_examples": {
-    "learning": "New to Jobs' philosophy? Teach → evolve → coach to internalize the full arc.",
-    "research": "Building a product? Predict where your market is heading → debate your assumptions → advise on strategy."
+    "learning": "New to Jobs' philosophy? Start with teach \u2192 evolve \u2192 coach to absorb the ideas, trace their development, and apply them to your own situation.",
+    "research": "Building a product? Use predict to see where the market is heading \u2192 debate to stress-test your assumptions \u2192 advise to get a strategic recommendation grounded in Steve's frameworks."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -38,357 +38,359 @@
   "clusters": {
     "product_design": {
       "name": "Product Design & Simplicity",
-      "description": "Great products come from saying no to a thousand things. Simplicity is the ultimate sophistication — not the absence of complexity but its resolution."
-    },
-    "marketing_brand": {
-      "name": "Marketing, Brand & Storytelling",
-      "description": "Marketing is about values. The best way to market is to stand for something. Think Different wasn't about computers — it was about identity."
+      "description": "Great products come from saying no to a thousand things. Simplicity is the ultimate sophistication \u2014 not the absence of complexity but its resolution. The hard work of design is understanding a problem deeply enough to know what can be removed."
     },
     "taste_craft": {
       "name": "Taste, Craft & Aesthetics",
-      "description": "The difference between a great product and a mediocre one is taste. Taste isn't subjective — it's the disciplined pursuit of excellence in every detail, including the ones nobody sees."
-    },
-    "innovation": {
-      "name": "Innovation & Creativity",
-      "description": "Innovation comes from connecting things. Creative people feel guilty because they didn't actually do anything — they just saw something and connected experiences into new things."
-    },
-    "leadership_teams": {
-      "name": "Leadership & Team Building",
-      "description": "A-players hire A-players. B-players hire C-players. The best things in the world are done by small teams of talented people who hold each other to impossibly high standards."
+      "description": "The difference between a great product and a mediocre one is taste. Taste isn't subjective \u2014 it's the disciplined pursuit of excellence in every detail, including the ones nobody sees. Jobs insisted on beauty in the circuits inside the machine because craftspeople care about the parts no one looks at."
     },
     "focus_strategy": {
       "name": "Focus & Strategic Saying No",
-      "description": "Focus is about saying no. When Jobs returned to Apple, he killed 70% of products. What you choose NOT to do defines you as much as what you do."
+      "description": "Focus is about saying no. When Jobs returned to Apple in 1997, he killed 70% of products and focused the company on four quadrants. What you choose not to do defines you as much as what you do."
+    },
+    "marketing_brand": {
+      "name": "Marketing, Brand & Storytelling",
+      "description": "Marketing is about values. The best way to market is to stand for something \u2014 not to list features but to declare identity. Think Different wasn't about computers; it was a statement of who Apple was to its own employees as much as to the world."
+    },
+    "innovation": {
+      "name": "Innovation & Creativity",
+      "description": "Innovation comes from connecting things. Creative people see links between domains others keep separate \u2014 calligraphy and typography, Zen and industrial design, liberal arts and silicon. Real innovation creates new categories and makes old ones obsolete."
+    },
+    "leadership_teams": {
+      "name": "Leadership & Team Building",
+      "description": "A-players hire A-players; B-players hire C-players to feel superior. The best things in the world are done by small teams of talented people who hold each other to impossibly high standards. Headcount growth is usually a symptom of managerial insecurity, not organizational health."
     },
     "tech_liberal_arts": {
       "name": "Technology & Liberal Arts",
-      "description": "Technology alone is not enough. It's technology married with liberal arts, married with the humanities, that yields the results that make our hearts sing."
+      "description": "Technology alone is not enough. It is technology married with liberal arts, married with the humanities, that yields results that make our hearts sing. Pure technologists build feature lists; the intersection produces culture."
     },
     "reality_distortion": {
       "name": "Vision, Persuasion & Reality Distortion",
-      "description": "The people who are crazy enough to think they can change the world are the ones who do. Jobs bent reality through conviction — making teams believe impossible timelines and shipping anyway."
-    },
-    "business_competition": {
-      "name": "Business Strategy & Competition",
-      "description": "Be a pirate, not the navy. Attack markets where incumbents are complacent. Own the whole widget. Vertical integration isn't old-fashioned — it's the only way to make great products."
-    },
-    "personal_philosophy": {
-      "name": "Life Philosophy & Mortality",
-      "description": "Stay hungry, stay foolish. Death is the single best invention of life. Remembering you'll be dead soon is the best tool for making big choices."
-    },
-    "hardware_software": {
-      "name": "Hardware-Software Integration",
-      "description": "People who are really serious about software should make their own hardware. The whole widget matters. Control the full stack or accept mediocrity."
+      "description": "The people who are crazy enough to think they can change the world are the ones who do. Jobs bent reality through conviction \u2014 making teams believe impossible timelines were achievable and shipping anyway. A deliberate refusal to accept current constraints as permanent produced both the worst excesses and the most important breakthroughs."
     },
     "user_experience": {
       "name": "User Experience & Empathy",
-      "description": "You've got to start with the customer experience and work backwards to the technology. Not the other way around. Most companies get this exactly backwards."
+      "description": "You have to start with the customer experience and work backwards to the technology \u2014 not the other way around. Most companies get this exactly backwards, beginning with what they know how to build. The customer's felt experience at every touchpoint is the product."
+    },
+    "hardware_software": {
+      "name": "Hardware-Software Integration",
+      "description": "People who are really serious about software should make their own hardware. The whole widget matters \u2014 control the full stack or accept a quality ceiling imposed by someone else's decisions. Every layer you don't own is a design decision handed to a partner whose incentives diverge from yours."
+    },
+    "business_competition": {
+      "name": "Business Strategy & Competition",
+      "description": "Be a pirate, not the navy. Attack markets where incumbents are complacent and the existing experience is broken. Vertical integration isn't old-fashioned \u2014 it's the only way to take full responsibility for what the customer experiences."
+    },
+    "personal_philosophy": {
+      "name": "Life Philosophy & Mortality",
+      "description": "Stay hungry, stay foolish. Death is the single best invention of life \u2014 it clears out the old to make way for the new. Remembering you will be dead soon is the most powerful tool for making big choices, because it eliminates the fear of embarrassment and failure."
+    },
+    "pixar_creativity": {
+      "name": "Storytelling, Pixar & Creative Culture",
+      "description": "Pixar taught that creative culture and financial discipline can coexist, and that storytelling is technology's highest application. A decade of losses and patient belief in a creative vision produced Toy Story and the most successful IPO of 1995. The lesson: trust the long arc of creative work."
+    },
+    "connecting_dots": {
+      "name": "Curiosity, Intuition & Connecting the Dots",
+      "description": "You can only connect the dots looking backward \u2014 never in prospect. The faith required is that curiosity and conviction will eventually compose into something meaningful, even when no immediate payoff is visible. Calligraphy, Zen, India, and the Homebrew Computer Club all became dots that connected a decade later."
     }
   },
   "cluster_order": [
     "product_design",
     "taste_craft",
     "focus_strategy",
+    "user_experience",
+    "hardware_software",
     "marketing_brand",
     "innovation",
     "leadership_teams",
     "tech_liberal_arts",
     "reality_distortion",
-    "user_experience",
-    "hardware_software",
     "business_competition",
+    "pixar_creativity",
+    "connecting_dots",
     "personal_philosophy"
   ],
   "synthesis": {
-    "hero_tagline": "The intersection of technology and liberal arts — own the whole widget, ship what matters",
-    "hero_updated": "Synthesized from 170 atoms spanning the 1984 Macintosh launch, the NeXT wilderness years, the Pixar acquisition, the 1997 Apple return, the iPod-iTunes-iPhone trilogy, the 2005 Stanford address, and the Walter Isaacson interviews",
+    "hero_tagline": "The intersection of technology and liberal arts",
+    "hero_updated": "Synthesized from 1,029 atoms spanning the 1981 early interviews, the 1983 Aspen Design Conference, the 1984 Macintosh launch, the NeXT wilderness years, the 1996 Pixar interview, the 1997 Apple return and WWDC, the iPod-iTunes-iPhone trilogy, the 2005 Stanford commencement address, the D5 Conference with Bill Gates, the Lost Interview, and the Walter Isaacson conversations",
     "first_principles": [
       {
         "title": "Own the whole widget or accept a quality ceiling",
-        "desc": "Every layer you don't control is a design decision handed to someone else. Integration isn't a business model preference — it's the only path to taking full responsibility for the user experience. Once the architectural decision to distribute is made, it cannot be retrofitted."
+        "desc": "Every layer you don't control is a design decision handed to someone whose incentives are price or market share rather than user experience. Integration is the only structural condition under which a company can take full responsibility for what the user actually feels."
       },
       {
-        "title": "Deciding what not to do is as important as deciding what to do",
-        "desc": "Focus is not prioritization — it's elimination. Innovation is saying no to 1,000 things. The quality of an organization's 'no' decisions is the leading indicator of its health."
+        "title": "Focus is elimination, not prioritization",
+        "desc": "Most organizations confuse ranking things with cutting things; the two are nearly opposite in practice. Innovation is saying no to a thousand good ideas. The quality of an organization's 'no' decisions is the leading indicator of its health."
       },
       {
         "title": "Products come first; profits follow as consequence",
-        "desc": "Companies that optimize financials at the expense of products get neither. When the causal arrow gets reversed — when finance people run product companies — the company begins dying even as the spreadsheets look healthy."
+        "desc": "When finance people run product companies, they optimize the metric and the product decays underneath them. Profits exist to enable better products, not the reverse. Reverse the causal arrow and the company begins dying even as the spreadsheets look healthy."
       },
       {
         "title": "Creativity is connection, not origination",
-        "desc": "Creative people have more experiences to connect than others and are less embarrassed about where ideas came from. Originality is synthesis across domains most people keep separate — calligraphy and typography, Zen and industrial design, liberal arts and silicon."
+        "desc": "Creative people have more experiences to connect than others and are less embarrassed about where ideas came from. Originality is synthesis across domains most people keep separate \u2014 calligraphy and typography, Zen and industrial design, fractional-horsepower motors and personal computing."
       },
       {
         "title": "People don't know what they want until you show it to them",
-        "desc": "Market research tells you what exists; it cannot describe products that don't. Asking people to design their own tools delegates the hard work of vision to people who haven't done the thinking yet."
+        "desc": "Market research can describe what already exists; it cannot describe products that don't. Asking customers to design their own tools delegates the hardest work \u2014 the work of vision \u2014 to people who haven't done the thinking yet. The customer is the destination, not the map."
       },
       {
         "title": "Simplicity is the endpoint of work, not the starting point",
-        "desc": "Simple is harder than complex because it requires you to understand the problem deeply enough to know what can be removed. Most products are complex because their creators stopped working too early."
+        "desc": "Simple is harder than complex because it requires understanding the problem deeply enough to know what can be removed. Most products are complex because their creators stopped working too early. One button on the iPod, no keyboard on the iPhone \u2014 these were not minimalist aesthetics but finished thinking."
       },
       {
         "title": "Design is how it works, not how it looks",
-        "desc": "Start with how the product should feel to use, work backward to engineering. This is why Apple products feel inevitable rather than assembled — the design decision preceded and constrained the technical one."
+        "desc": "The industry treats design as decoration applied after engineering. Jobs inverted the sequence: start with how the product should feel to use, then constrain engineering to that experience. This is why Apple products feel inevitable rather than assembled."
       },
       {
         "title": "A-players only; one B-player starts a cancer",
-        "desc": "Great teams are not built by averaging — they are built by ruthless refusal to compromise. B-players hire C-players to feel superior; the quality floor collapses one hire at a time. Headcount growth is usually a symptom of managerial insecurity."
+        "desc": "Great teams are built by ruthless refusal to compromise, not by averaging. B-players hire C-players to feel superior, and the quality floor collapses one hire at a time. Small teams of A-players who argue constantly beat large teams of competent people who don't."
       },
       {
-        "title": "Technology alone is insufficient — the intersection with liberal arts is where the magic happens",
-        "desc": "A computer is a bicycle for the mind. Building great technology products requires people who are musicians, poets, artists, historians — who happen to also be the best engineers in the world. Pure technologists build feature lists; the intersection produces culture."
+        "title": "The intersection of technology and liberal arts is where magic happens",
+        "desc": "A computer is a bicycle for the mind \u2014 leverage on human capability \u2014 but its value depends entirely on the humanity of the people building it. Pure technologists ship feature lists; people who are also musicians, calligraphers, and historians ship culture."
       },
       {
         "title": "Cannibalize yourself before someone else does",
-        "desc": "The market will eventually destroy your best product; the only question is who controls the timing. Protecting current products from your own future products is a form of strategic cowardice that guarantees long-term loss."
+        "desc": "The market will eventually destroy your best product; the only question is who controls the timing. The iPhone was designed to kill the iPod because if Apple didn't, someone else would. Protecting current products from your own future products is strategic cowardice that guarantees long-term loss."
       },
       {
         "title": "You can only connect the dots looking backward",
-        "desc": "Career coherence is visible in retrospect, never in prospect. The faith required is that curiosity and conviction will eventually compose into something meaningful, even when no immediate payoff is visible."
+        "desc": "Career coherence is visible in retrospect, never in prospect. Dropping out of Reed, auditing calligraphy, going to India, being fired from Apple \u2014 none of these looked like investments at the time. The faith required is not that each experience will prove useful, but that a life lived with genuine curiosity will eventually compose into something meaningful."
       }
     ],
     "thinking_patterns": [
       {
         "name": "The Whole-Widget Test",
-        "desc": "Whenever evaluating a product or business decision, ask which layers are owned and which are delegated. Every delegated layer is a future quality problem. Integration is always the answer to a quality question — retail, chips, support, OS."
-      },
-      {
-        "name": "Product-as-Statement",
-        "desc": "Every product is treated as an argument about what computing should be, not a bundle of features. Jobs reasons about products as rhetoric — the 1984 ad, removing the floppy, the App Store — each a position, not just a release."
+        "desc": "When evaluating any product or business decision, ask which layers are owned and which are delegated. Every delegated layer is a future quality problem. This single test produces consistent decisions across categories that look unrelated \u2014 retail, silicon, support, distribution, OS."
       },
       {
         "name": "Subtractive Iteration",
-        "desc": "While most companies iterate by adding, Jobs iterates by removing. The question isn't 'what can we include?' but 'does this make the product better for the user who doesn't need it?' — and if not, it degrades the product for everyone."
+        "desc": "While most companies iterate by adding features, Jobs iterates by removing them. The question isn't 'what can we include?' but 'what can we cut without making this worse?' \u2014 and the answer is almost always more than the team initially believes."
       },
       {
-        "name": "Proof-by-Exhaustion Against Competitors",
-        "desc": "Use competitors' failures as primary evidence. The PC clone market proved fragmentation destroys quality. Android's inconsistency proved openness has a cost. Let the market run the experiments and read the results."
+        "name": "Product-as-Argument",
+        "desc": "Every Apple product is treated as a rhetorical statement about what computing should be, not a bundle of features. The 1984 ad was an argument against IBM's monoculture; removing the floppy from the iMac was an argument that the future had arrived. Jobs reasons about products as positions in an industry debate."
       },
       {
-        "name": "Physical-Space Thinking",
-        "desc": "Reason about digital products through physical-world analogies: computers as bicycles, products as real estate in people's lives, retail stores as extensions of the product. The physicality anchors abstract decisions in concrete human experience."
+        "name": "Skate to Where the Puck Is Going",
+        "desc": "Jobs systematically asks not what the market wants now but where it will be in three to five years, then works backward to the product that wins that future. Current demand is a lagging indicator and a trap."
       },
       {
-        "name": "Reality Distortion as Strategic Tool",
-        "desc": "A deliberate refusal to accept current constraints as permanent. When an engineer says something is impossible, treat that as a statement about the engineer, not the problem. This produces both worst excesses and most important breakthroughs."
+        "name": "Tools, Not Toys",
+        "desc": "Jobs evaluates products against a binary: does this amplify human capability or does it merely entertain? This frame routes Apple toward general-purpose creative tools rather than narrow appliances, and explains why he treated entertainment as a feature inside platforms rather than as the platform itself."
       },
       {
-        "name": "Taste as Filter",
-        "desc": "Before any business or technical reasoning, apply an aesthetic filter: does this feel right? Taste is an accumulated education in what great work looks like across domains, and the absence of taste actively produces wrong answers that feel right to people without the sensibility."
+        "name": "Reasoning by Analogy Across Domains",
+        "desc": "Jobs's mental moves are governed by analogies imported from outside computing: fractional-horsepower motors, the radio-station model for software discovery, the bicycle-versus-condor efficiency study, the slide rule's death by the HP-35. He thinks computing is best understood by analogy to other technologies that restructured their industries."
       },
       {
-        "name": "The Beginner's Mind Reset",
-        "desc": "After major success, deliberately disorient yourself to restore the perspective of someone who doesn't know the rules. Expertise is a quality threat; curiosity is the defense. Getting fired from Apple accomplished this involuntarily; later sought through travel, Zen, and entering unfamiliar categories."
+        "name": "The Mortality Filter",
+        "desc": "Jobs uses death \u2014 first as a thought experiment, later as a literal diagnosis \u2014 as a clarifying lens that strips away fear of failure, need for approval, and social expectation. What remains is the honest answer to what he actually wants to do. He applies this filter to product decisions too: if this were our last product, would we ship it?"
+      },
+      {
+        "name": "Vertical Pruning on Return",
+        "desc": "When Jobs inherits an organization, his first move is not new product launches but elimination. The 1997 Apple return killed 70% of the product line, the clone licensing program, Newton, OpenDoc, and Cyberdog. Pruning precedes planting because dispersed effort produces output less than the sum of its parts."
+      },
+      {
+        "name": "The Intersection Test for People",
+        "desc": "When hiring or assessing collaborators, Jobs looks for people whose interests cross technical and humanistic domains. The Mac team had musicians and poets who could also code. He distrusts pure technologists for product roles because they cannot anticipate what the experience should feel like \u2014 they can only optimize what they can measure."
       }
     ],
     "contrarian_positions": [
       {
-        "title": "Market research is useless for real innovation",
-        "desc": "Customers can't describe products that don't exist yet. Focus groups produce incrementally improved versions of current products, never the next category. The job of a product company is to know what customers will want before they can articulate it."
+        "title": "Market research is actively harmful for category-defining products",
+        "desc": "The industry consensus is that listening to customers reduces risk. Jobs argued the opposite: asking people to describe products that don't yet exist guarantees you build incremental improvements to products that do. 'We do no market research' was a statement of method, not arrogance."
       },
       {
-        "title": "Licensing your platform is a quality-destroying business model",
-        "desc": "The industry consensus in the 1990s was that Apple's refusal to license the Mac OS was strategic suicide. Licensing distributes quality control to companies whose incentives are price, not experience. Short-term market share loss preserved long-term product coherence."
+        "title": "Licensing your platform is a form of slow suicide",
+        "desc": "The industry assumes broad distribution wins markets. Jobs argued that licensing fragments quality, dilutes the brand, and trains customers to expect a degraded experience. He killed the Mac clone program on return because every clone was an argument against Apple's design standards."
       },
       {
-        "title": "Retail is not a channel — it is part of the product",
-        "desc": "When every major technology company was exiting retail in 2001, Jobs opened Apple Stores. Retail is the first chapter of the product experience, which requires ownership no distribution partner could provide."
+        "title": "Vertical integration is a competitive advantage, not a strategic mistake",
+        "desc": "Wall Street and most business schools treated vertical integration as a 20th-century anachronism. Jobs treated it as the only architecture under which a coherent user experience is possible \u2014 and the most valuable consumer-electronics company in history proved to be the most vertically integrated one."
       },
       {
-        "title": "Consensus decisions produce mediocre products",
-        "desc": "Committees optimize for what no one will object to, which is the lowest common denominator. Great products require someone with taste and conviction to make calls that would fail a vote. The organizational structures that feel most democratic reliably produce the worst work."
-      },
-      {
-        "title": "Piracy is a UX problem, not an ethics problem",
-        "desc": "People weren't stealing music because they were immoral but because legal alternatives were terrible. iTunes didn't defeat piracy through law — it defeated piracy by being more convenient. Most moral problems in consumer markets are design problems in disguise."
-      },
-      {
-        "title": "Slow termination is cruel; fast termination is kind",
-        "desc": "Prolonged underperformance management gives false hope to the individual and signals tolerance to the team. Both are worse than the pain of a quick decision. Corporate HR orthodoxy optimizes for the manager's comfort, not the organization's health."
+        "title": "Focus groups can only tell you about the past",
+        "desc": "Convening users to react to prototypes anchors the product to existing mental models. The job of a product company is to change those mental models, not to confirm them. Relying on focus groups for vision is a category error about what customers are able to imagine."
       }
     ],
     "does_not_believe": [
       {
-        "title": "That open platforms produce better user experiences",
-        "desc": "Openness is a distribution strategy, not a quality strategy. The Android ecosystem proved that open fragmentation produces inconsistent, degraded experiences. Openness transfers responsibility to partners who don't share the original quality commitment."
+        "title": "That headcount growth signals organizational health",
+        "desc": "Jobs treated large teams as a symptom of managerial insecurity. Adding people to a late project makes it later; adding people to a product team diffuses accountability and slows the decision cycles that produce quality."
       },
       {
-        "title": "That committees can design great products",
-        "desc": "Design by committee produces work that offends no one and moves no one. Taste cannot be averaged. Great products require a single authorial vision held with enough conviction to override democratic process."
+        "title": "That the customer is always right",
+        "desc": "Customers are right about their experience of existing products and wrong about what the next product should be. Deferring product vision to customer feedback is an abdication of the one thing a product company exists to do."
       },
       {
-        "title": "That financial engineering creates lasting value",
-        "desc": "When MBAs run product companies, they optimize metrics while the products decay. The spreadsheet always looks best just before the collapse. Financial health is an output of product greatness, never a substitute for it."
+        "title": "That profit maximization is a legitimate corporate purpose",
+        "desc": "Companies that exist to make money make worse products over time. The only legitimate purpose of a company is to make something you believe the world needs. Profit is the scorecard, not the game."
       },
       {
-        "title": "That incrementalism is innovation",
-        "desc": "Faster, cheaper, slightly better versions of existing products are not innovation — they are table stakes. Real innovation creates new categories, makes old ones obsolete, and renders the competitive landscape irrelevant rather than navigating it."
+        "title": "That being fired is the worst thing that can happen to a founder",
+        "desc": "Being pushed out of Apple turned out to be the most creatively liberating event of Jobs's life. It freed him to start NeXT, acquire Pixar, and return to Apple with clarity he wouldn't have had otherwise. The catastrophe was the education."
       },
       {
-        "title": "That more features equal more value",
-        "desc": "Feature accumulation is a sign that no one with conviction is in charge. Every feature added to a product that doesn't need it makes the product worse for the user who came for something else. Subtraction is a form of respect for the user's attention."
+        "title": "That open always beats closed",
+        "desc": "The industry theology holds that open platforms win in the long run. Jobs believed the opposite for consumer devices: closed, integrated systems produce experiences that open, fragmented ones cannot match, and users ultimately prefer the experience."
       },
       {
-        "title": "That compromise is a virtue in product development",
-        "desc": "Compromise produces products that are 80% of several visions and 100% of none. The willingness to hold the line — on materials, on experience, on what ships and what doesn't — is what separates products people love from products people merely use."
+        "title": "That compromise produces better outcomes than conviction",
+        "desc": "Jobs's operating assumption was that committees and consensus produce mediocrity by averaging away the edges that make products memorable. The strongest products are the ones that most clearly reflect a single coherent vision."
       }
     ],
     "would_not_say": [
       {
-        "title": "\"Let's see what the focus groups say\"",
-        "desc": "Focus groups measure the present, not the future. Asking people what they want before you've shown them what's possible is an abdication of the designer's responsibility. The vision precedes the validation."
+        "title": "'Let's see what the data says before we decide'",
+        "desc": "Jobs treated data as a retrospective description of the past, not a guide to the future. For decisions about products that don't yet exist, there is no relevant data \u2014 there is only judgment trained by deep engagement with what matters."
       },
       {
-        "title": "\"We can fix it in software later\"",
-        "desc": "Shipping an incomplete product to meet a deadline and patching it afterward is not iteration — it is a broken promise to the user. The integrity of the product at the moment of shipping is what the customer experiences, not the roadmap."
+        "title": "'We should add that feature to satisfy enterprise customers'",
+        "desc": "Feature additions driven by a specific customer segment rather than by the coherence of the product as a whole were precisely the kind of decision Jobs eliminated. Every unnecessary feature is a cost to every user who doesn't want it."
       },
       {
-        "title": "\"Good enough is fine for now\"",
-        "desc": "Good enough is never fine because the user doesn't know what 'for now' means. They experience what ships. Tolerating good enough in small details trains the organization to tolerate it in large ones. Standards are cumulative."
+        "title": "'Good enough ships'",
+        "desc": "Jobs's standard was not good enough but 'insanely great' \u2014 and he distinguished real artists who ship from people who ship whatever they have. Shipping is not the excuse; shipping something finished is the standard."
       },
       {
-        "title": "\"We should license this to grow market share\"",
-        "desc": "Market share achieved through licensing is market share owned by your licensees, not by you. It looks like growth in the spreadsheet and feels like erosion in the product. You can't buy back quality once you've distributed responsibility for it."
+        "title": "'Let's license this to grow the ecosystem faster'",
+        "desc": "Every licensing conversation is a conversation about handing quality control to someone whose incentives diverge from yours. Jobs would not trade short-term ecosystem growth for long-term experience degradation."
       },
       {
-        "title": "\"Let's add that feature — it won't hurt anything\"",
-        "desc": "Every addition hurts something: focus, simplicity, the speed of the user's comprehension. The cost of adding a feature that doesn't belong is paid not by the engineering team but by every user who has to ignore it forever."
+        "title": "'We need more options so customers can choose what's right for them'",
+        "desc": "Proliferating options is a failure of vision. The job of a product company is to make the hard choices so the customer doesn't have to. More options signal that the company hasn't decided what the product should be."
       },
       {
-        "title": "\"The customer is always right\"",
-        "desc": "The customer is right about their dissatisfaction and wrong about the solution. They know when something is broken; they cannot know what doesn't exist yet. Conflating the two turns vision into customer service."
+        "title": "'That's not our core competency'",
+        "desc": "The core-competency frame is a rationalization for not doing the hard work of vertical integration. If the capability is necessary to deliver the experience, it becomes your competency by definition \u2014 or you accept a permanent quality ceiling."
       }
     ],
     "biography": [
       {
-        "date": "1955–1972",
-        "role": "Adopted child, tinkerer, outsider in the garage culture of Silicon Valley",
-        "lesson": "Being adopted — knowing you were chosen — and growing up surrounded by engineers who built things with their hands established the foundational conviction that the people who build things can change the world."
+        "date": "1972",
+        "role": "Reed College dropout and calligraphy auditor",
+        "lesson": "The experiences that seem most useless in the moment \u2014 auditing a calligraphy class with no practical application \u2014 turn out to be the ones that make later work distinctive. You cannot connect the dots forward."
       },
       {
-        "date": "1972–1974",
-        "role": "Reed College dropout, calligraphy auditor",
-        "lesson": "Dropping out freed him to audit only what interested him. Calligraphy — beautiful, purposeless, impractical — became the typographic soul of the Macintosh a decade later. You can only connect the dots backward."
+        "date": "1976",
+        "role": "Co-founder, Apple Computer",
+        "lesson": "The original vision \u2014 a computer for ordinary people, not just hobbyists \u2014 was the product argument that everything else followed from. Vision stated early enough shapes every subsequent decision."
       },
       {
-        "date": "1974–1976",
-        "role": "Atari employee, India pilgrim, Homebrew Computer Club attendee",
-        "lesson": "The India trip absorbed Zen aesthetics and beginner's mind; Atari taught that technology could be intuitive enough for anyone; the Homebrew Club showed that personal computing was a movement, not a product."
+        "date": "1979",
+        "role": "Visitor, Xerox PARC",
+        "lesson": "The greatest competitive failure in technology history was not an invention failure but a vision failure. Xerox invented the graphical interface and couldn't see what it was. Seeing what something is requires knowing what you're looking for."
       },
       {
-        "date": "1976–1985",
-        "role": "Co-founder and Chairman, Apple Computer",
-        "lesson": "The Macintosh proved that design and engineering could be unified under a single vision. The Lisa failure proved that good technology dies without the right product framing. Getting fired proved that the company can turn on its founder."
+        "date": "1984",
+        "role": "Product lead, original Macintosh launch",
+        "lesson": "A product launch is an argument about what computing should be. The 1984 ad and the Macintosh itself were inseparable \u2014 both said the same thing in different media. Products and their stories must cohere."
       },
       {
-        "date": "1985–1986",
-        "role": "Founder, NeXT Computer",
-        "lesson": "The wilderness began. NeXT built beautiful hardware no one could afford, but the software — NeXTSTEP — became the foundation of OS X and iOS. The most important work of the exile was invisible at the time."
+        "date": "1985",
+        "role": "Ousted founder, Apple Computer",
+        "lesson": "Being fired by the company you founded is survivable and possibly necessary. The external catastrophe forced internal clarity that success had been obscuring. What looks like the end of a story is often the middle."
       },
       {
-        "date": "1986–1995",
-        "role": "Owner and leader, Pixar Animation Studios",
-        "lesson": "Pixar taught that creative culture and financial discipline could coexist, that storytelling was technology's highest application, and that patience across a decade of losses could produce Toy Story — and the most successful IPO of 1995."
+        "date": "1986",
+        "role": "Founder, NeXT; acquirer, Pixar",
+        "lesson": "The wilderness years were not wasted years. NeXT produced the OS that became macOS; Pixar produced the cultural and managerial education that Apple later benefited from. Apparent detours are often the main road."
       },
       {
-        "date": "1995–1997",
-        "role": "NeXT CEO, observer of Apple's decline",
-        "lesson": "Watching Apple nearly die without him clarified what had been wrong and what had been right. The company that fired him would be saved by the software he built in exile. Patience and the long view vindicated."
+        "date": "1995",
+        "role": "Executive producer, Toy Story",
+        "lesson": "Creativity at Pixar was inseparable from organizational design. A culture that gives talented people both freedom and high standards produces work that neither constraint alone could."
       },
       {
-        "date": "1997–2001",
-        "role": "iCEO (interim CEO), Apple Computer",
-        "lesson": "Kill 70% of the product line. Fire the committees. Bring back the founder's conviction. The 'Think Different' campaign was not advertising — it was a statement of identity to employees who had forgotten who they were."
-      },
-      {
-        "date": "2001",
-        "role": "CEO, Apple — launch of iPod and iTunes",
-        "lesson": "The music industry's piracy crisis was a UX problem. iTunes proved that elegant legal alternatives beat inconvenient illegal ones. The whole widget — hardware, software, store — had to be owned to deliver the experience."
+        "date": "1997",
+        "role": "Returning CEO, Apple",
+        "lesson": "The first act of a turnaround is elimination, not addition. Killing 70% of the product line before launching anything new was counterintuitive and correct. You cannot build forward on a foundation of confusion."
       },
       {
         "date": "2001",
-        "role": "CEO, Apple — opening of Apple Retail Stores",
-        "lesson": "Every analyst said it would fail. Retail was not distribution — it was the first chapter of the product experience. Owning the store was the same logic as owning the OS: you cannot delegate the moments that define the relationship."
-      },
-      {
-        "date": "2007",
-        "role": "CEO, Apple — launch of iPhone",
-        "lesson": "The iPhone was designed to kill the iPod before someone else did. A phone, an iPod, and an internet communicator — three products collapsed into one. Removing the keyboard was finished thinking, not minimalism."
+        "role": "Launcher, iPod and iTunes",
+        "lesson": "The digital hub strategy required owning both hardware and software \u2014 and then owning the distribution too. Each layer of integration unlocked a capability the previous layer couldn't provide. The whole widget, applied."
       },
       {
         "date": "2005",
         "role": "Commencement speaker, Stanford University",
-        "lesson": "Three stories: connecting the dots, love and loss, death. The synthesis of a life — that getting fired was the best thing that ever happened, that death is the greatest invention of life, that you must not live someone else's version of your time."
+        "lesson": "A cancer diagnosis clarified what the mortality filter had always suggested: the only way to do great work is to love what you do, and the only way to find that is to keep looking and not settle. Death is the most useful productivity tool."
       },
       {
-        "date": "2008–2011",
-        "role": "CEO, Apple — iPad launch, illness, final act",
-        "lesson": "The iPad completed the post-PC vision. The final years proved that mortality clarifies rather than diminishes — the products of Jobs's last years were among his most refined. He died having shipped what mattered."
+        "date": "2007",
+        "role": "Launcher, iPhone",
+        "lesson": "Cannibalizing your best product on purpose \u2014 knowing the iPhone would kill the iPod \u2014 is the only alternative to having someone else do it to you. The timing of your own disruption is the only variable you control."
+      },
+      {
+        "date": "2011",
+        "role": "Final years, Apple CEO",
+        "lesson": "The institution outlasts the individual only if the values and methods are embedded deeply enough to survive the founder's absence. The last product Jobs cared about was Apple itself \u2014 built to last without him."
       }
     ],
     "skills": [
       {
         "name": "advise",
         "title": "Strategic Counsel",
-        "desc": "Recommendations grounded in Steve's frameworks",
-        "example": "Should I add more features or strip my product down to its essence?"
+        "desc": "Get advice on decisions grounded in this brain's frameworks.",
+        "example": "/advise \"Should I add more features or strip my product down to its essence?\""
       },
       {
         "name": "teach",
-        "title": "Explanations",
-        "desc": "Explain concepts through Steve's lens",
-        "example": "Explain the intersection of technology and liberal arts."
+        "title": "Learn Through Their Lens",
+        "desc": "Explain a concept using this brain's actual vocabulary and mental models.",
+        "example": "/teach \"Explain what Steve meant by the intersection of technology and liberal arts.\""
       },
       {
         "name": "debate",
-        "title": "Counterarguments",
-        "desc": "Steel-man positions from Steve's worldview",
-        "example": "Is design more important than engineering?"
+        "title": "Steel-Man Both Sides",
+        "desc": "Present a position or pit two ideas against each other; brain argues the counterpoint.",
+        "example": "/debate \"Is owning the full hardware-software stack worth the market share you sacrifice?\""
       },
       {
         "name": "connect",
-        "title": "Bridges",
-        "desc": "Find unexpected links between ideas using Steve's thinking",
-        "example": "Connect taste to hiring to product quality."
+        "title": "Bridge Ideas",
+        "desc": "Find unexpected connections between concepts or synthesize multiple ideas into something new.",
+        "example": "/connect \"Connect Steve's Zen practice to his approach to product simplicity.\""
       },
       {
         "name": "evolve",
-        "title": "Timeline of Thought",
-        "desc": "Trace how Steve's thinking changed over time",
-        "example": "How did Steve's thinking on design evolve from Apple to NeXT to Apple's return?"
+        "title": "Intellectual Evolution",
+        "desc": "Trace how this brain's thinking on a topic developed over time.",
+        "example": "/evolve \"How did Steve's thinking on leadership evolve from his first stint at Apple through the NeXT years and his return?\""
       },
       {
         "name": "surprise",
-        "title": "Serendipity",
-        "desc": "Surface a high-confidence atom from Steve you haven't seen",
-        "example": "No input needed — just run it."
+        "title": "Show Me Something Unexpected",
+        "desc": "Random high-quality atom for daily inspiration.",
+        "example": "/surprise"
       },
       {
         "name": "coach",
         "title": "Socratic Questions",
-        "desc": "Questions to ask yourself, from Steve's perspective",
-        "example": "I'm launching a new product and can't decide what to cut. What should I be asking myself?"
+        "desc": "No answers \u2014 just the questions this thinker would ask you.",
+        "example": "/coach \"I'm about to launch a product I know isn't ready. What questions should I be asking myself?\""
       },
       {
         "name": "predict",
         "title": "Implication Chains",
-        "desc": "Cascade second and third-order effects from Steve's worldview",
-        "example": "What happens to product design as AI generates interfaces on the fly?"
+        "desc": "Trace the second and third-order effects of a trend or decision.",
+        "example": "/predict \"What would Steve think about the future of AI-generated interfaces replacing human-designed ones?\""
       }
     ]
   },
   "website": {
-    "tagline": "Product design, simplicity, taste, and the intersection of tech and liberal arts",
-    "bio": "Co-founded Apple, led Pixar, built NeXT, and returned to transform Apple into the most valuable company in history. His thinking on product design, marketing, simplicity, and the intersection of technology and humanities remains the most referenced playbook in tech.",
+    "tagline": "Product design, simplicity, taste, and the intersection of technology and liberal arts",
+    "bio": "Steve Jobs co-founded Apple, led Pixar, built NeXT, and returned to transform Apple into the most valuable company in history. His thinking on product design, simplicity, team-building, and the marriage of technology with the humanities remains the most referenced playbook in tech. He died in 2011 but his frameworks only grow more relevant.",
     "topics": [
       "Product Design",
-      "Simplicity",
-      "Leadership",
+      "Simplicity & Focus",
+      "Leadership & Teams",
       "Innovation",
-      "Marketing",
+      "Marketing & Brand",
       "Taste & Craft"
     ],
     "price": 29
-  }
+  },
+  "_supabase_tables_ready": true
 }
