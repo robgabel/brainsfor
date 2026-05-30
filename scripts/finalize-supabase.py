@@ -79,7 +79,7 @@ def table_count(url, headers, table):
         return -1
 
 
-def insert_batches(url, headers, table, rows, label, passes=8):
+def insert_batches(url, headers, table, rows, label, passes=10):
     """Idempotently upsert rows until the table count reaches len(rows).
 
     Supabase's REST API starts rejecting after ~400 rows POSTed back-to-back in a
@@ -98,7 +98,7 @@ def insert_batches(url, headers, table, rows, label, passes=8):
                 httpx.post(f"{url}/rest/v1/{table}", headers=headers, json=batch, timeout=60)
             except Exception:
                 pass
-            time.sleep(0.15)
+            time.sleep(0.2)
         c = table_count(url, headers, table)
         if c >= target:
             say("OK", f"loaded {c}/{target} {label} (pass {p + 1})")
@@ -124,8 +124,15 @@ def main():
         say("ERR", f"no pack at {pack}"); sys.exit(1)
     data = json.loads(pack.read_text())
     atoms = data.get("atoms", [])
-    conns = [c for c in data.get("connections", []) if c.get("atom_id_1") and c.get("atom_id_2")]
-    say("i", f"{slug}: pack has {len(atoms)} atoms, {len(conns)} connections")
+    atom_ids = {a["id"] for a in atoms}
+    # Only load connections whose BOTH endpoints exist in the pack's atom set.
+    # A dangling connection (atom filtered out post-enrichment) would fail its FK
+    # forever and stall the loop-until-count pass.
+    all_conns = data.get("connections", [])
+    conns = [c for c in all_conns if c.get("atom_id_1") in atom_ids and c.get("atom_id_2") in atom_ids]
+    dangling = len(all_conns) - len(conns)
+    say("i", f"{slug}: pack has {len(atoms)} atoms, {len(conns)} connections"
+             + (f" ({dangling} dangling skipped)" if dangling else ""))
 
     url = get_supabase_url()
     headers = get_supabase_rest_headers()
