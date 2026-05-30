@@ -1,0 +1,632 @@
+{
+  "brain_slug": "melinda-french-gates",
+  "timestamp": "2026-05-30T14:45:46.429033+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 14,
+    "youtube_chars": 226162,
+    "atom_quote_count": 222,
+    "total_chars": 266198
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 10,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 6,
+        "weak": 0,
+        "ungrounded": 1,
+        "total": 7
+      },
+      "does_not_believe": {
+        "grounded": 5,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 6
+      },
+      "would_not_say": {
+        "grounded": 4,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 25,
+      "weak": 4,
+      "ungrounded": 1,
+      "total": 30
+    },
+    "grounding_pct": 90.0,
+    "ungrounded_examples": [
+      {
+        "id": "contrarian_positions[3]",
+        "title": "Large foundations should read proposals only above a minimum threshold of scale",
+        "rationale": "There is no mention anywhere in the source corpus of a $40M+ minimum threshold for reading proposals or any specific grant-size screening policy at the Gates Foundation."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[4]",
+        "title": "Talent is evenly distributed; opportunity is not",
+        "rationale": "The corpus supports the idea that the achievement gap is a resource/opportunity gap, but there is no direct statement that 'talent is evenly distributed' or that students freed from financial constraint perform equally; the support is tangential rather than explicit."
+      },
+      {
+        "id": "does_not_believe[2]",
+        "title": "That the achievement gap reflects a talent gap",
+        "rationale": "While the corpus supports that she sees the achievement gap as a resource gap, there is only one passage that somewhat addresses this and it does not explicitly state that talent is evenly distributed or that meritocracy is a 'resource advantage calling itself aptitude.'"
+      },
+      {
+        "id": "would_not_say[1]",
+        "title": "'We need more awareness'",
+        "rationale": "While the corpus implies she thinks in logistics and leverage rather than awareness, there is no direct statement where she explicitly rejects 'we need more awareness' as a formulation; the evidence is inferential rather than explicit."
+      },
+      {
+        "id": "would_not_say[4]",
+        "title": "'I'm just continuing the foundation's work'",
+        "rationale": "While the corpus shows she is diverging from the foundation's work through Pivotal Ventures, there is only one passage that somewhat addresses the distinction between continuing and diverging; the principle is partially supported but not strongly grounded across multiple passages."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Lifting women lifts everyone \u2014 and this is empirical, not sentimental",
+      "claim": "Lifting women lifts everyone \u2014 and this is empirical, not sentimental. When women gain access to contraception, education, capital, and political voice, they invest in children and communities at rates that produce compounding societal returns. French Gates treats this as one of the most well-documented findings in development economics, not a values claim.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the research suggests that every marginal dollar a woman gets in her hand she's 90% % likely to plow it back into her family so my sense is that if you if you Empower that woman you're empowering everybody else",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "for every for a literate woman her child is 50% more likely to make it to their fifth birthday and if she's educated she's twice as likely to educate her daughter that has profound effects for the family the community whole societies",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if you can get labor force participation of women you could raise some of the gdps in Africa by 12% or in India by 10% so to me the female piece of this is just absolutely fundamental",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple distinct passages directly support that women's empowerment produces measurable compounding returns to families, communities, and economies, framed as empirical data rather than sentiment."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Silence is a form of complicity",
+      "claim": "Silence is a form of complicity. Powerful people who stay quiet on contested issues to preserve their access, reputation, or institutional neutrality are actively choosing the status quo over the people the status quo is harming. Her two-year internal wrestling before publicly championing contraception was a confrontation with her own complicity.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it took me two years two years to find the courage to answer the call of women asking me for contraceptives two years I had to wrestle",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if I'm telling my kids to use their voice eventually in the world to use whatever talents they have am I using my voice in the world am I using it on behalf of women and so I had to really look at that and say I I need to do this",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages capture her explicit recognition that her two-year silence on contraception was itself a form of complicity she had to overcome, though the corpus frames it more as personal courage than a general principle about institutional neutrality."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "You cannot change what you do not measure \u2014 and what gets measured is itself a political choice",
+      "claim": "You cannot change what you do not measure \u2014 and what gets measured is itself a political choice. The gender data gap is not a technical oversight; it is a structural decision to treat unpaid care work, women's health outcomes, and women's economic contributions as if they have no value. Measurement is not preparation for advocacy \u2014 it is the first act of advocacy.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the only data that we really had good data about women was mortality women's mortality in childbirth and so there was this posity of data",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I had to learn to say no no no we need to go build the data system to understand what contraceptives women have access to. What do they want?",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we needed to have both the numeric data but we also needed to have the qualitative data. It's not enough to look at the numbers behind every one of those numbers is a person's life",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages support that the absence of data on women's health was a structural gap she had to actively fight to correct, and that measurement choices reflect whose reality is counted."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Philanthropy must change systems, not subsidize symptoms",
+      "claim": "Philanthropy must change systems, not subsidize symptoms. Writing checks against diseases is necessary but insufficient. Lasting change requires reforming the land rights, financial infrastructure, health delivery systems, and political institutions that produce exclusion. Catalytic philanthropy deploys capital as a lever to move governments \u2014 never as a substitute for them.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "all philanthropy can be is this catalytic wedge we are not government we cannot scale things up even with our billions of dollars you can't scale things up so at that level but we knew we could take risks and try things",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "philanthropy is a catalytic wedge sitting alongside business, government, and civil society. But what it can do is to push things forward and stimulate markets, right? Or come up with an idea and then get somebody else, the government, to scale it up.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you can never fill the gap if the public sector pulls back. You just can't.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm that philanthropy is conceived as a system-changing lever to move governments rather than a substitute for them, directly supporting this principle."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Talent is evenly distributed; opportunity is not",
+      "claim": "Talent is evenly distributed; opportunity is not. Students from any zip code, when freed from financial constraint, perform as well as or better than their advantaged peers. The achievement gap is a resource gap wearing a meritocratic costume. The moral task is not to identify exceptional talent but to remove the barriers preventing already-existing talent from being expressed.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the country is built on Ingenuity it's built on having lots of very well educated people uh and if you're from a poor family how are you going to break out of that well education is the only way",
+          "relation": "partial"
+        },
+        {
+          "quote": "it is why we focus on the US education system because to to tackle inequality you've got to make sure all kids are educated and educated well",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus supports the idea that the achievement gap is a resource/opportunity gap, but there is no direct statement that 'talent is evenly distributed' or that students freed from financial constraint perform equally; the support is tangential rather than explicit."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Distribution is as important as innovation \u2014 and frequently more so",
+      "claim": "Distribution is as important as innovation \u2014 and frequently more so. Coca-Cola reaches villages where vaccines cannot. This is not an accident of product appeal; it is the result of real-time data feedback loops, local entrepreneurial talent, and aspirational marketing. Distribution and demand creation are first-class engineering problems, not afterthoughts.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if we can understand what makes a brand like Coca-Cola successful, we can apply those lessons for the public good... I believe there are three things that Coca-Cola does that we can learn from. They take real-time data and immediately feed it back into their product. They tap into local entrepreneurial talent. And they do brilliant marketing.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "when I go back from those trips, and I'm thinking about development... Coca-Cola's success makes you wonder: how did they get Coke to these far-flung places? If they can do it, why can't governments and NGOs do the same thing?",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "In development, evaluation comes at the very end of a project... Someone from an NGO described it as like bowling in the dark.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The Coca-Cola TED talk directly and extensively addresses the principle that distribution, real-time data feedback, and local talent are engineering problems as important as innovation, grounding this principle clearly."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Development marketing built on fear is strategic malpractice",
+      "claim": "Development marketing built on fear is strategic malpractice. 'Use a condom or you'll get AIDS' is the inverse of how every successful brand operates. Aspirational marketing \u2014 selling life, health, and dignity the way Coke sells happiness \u2014 is not a frivolous transplant from the private sector. It is the missing infrastructure of global health.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "in health care and development, their marketing is built on avoidance, not aspirations... 'Use a condom so you don't get AIDS.' 'Wash your hands so you don't get diarrhea.' That doesn't sound like 'waving the flag' to me.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I think we make a fundamental error. We make an assumption, and we believe that if people have a real need for something, we don't need to make them want it. And I think that's a mistake.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "Coca-Cola's success is relevant because if we can analyze it and learn from it, we can save lives. That's why I took some time to study the Coca-Cola experience.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The Coca-Cola TED talk explicitly contrasts fear-based public health messaging with aspirational commercial marketing and argues the latter is what the development sector is missing, directly grounding this principle."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Catalytic capital signals; it does not substitute",
+      "claim": "Catalytic capital signals; it does not substitute. The Gates Foundation's GAVI commitment was deliberately structured as a demonstration grant \u2014 large enough to make governments feel pressure to match it. Private philanthropy works when it is engineered to move public dollars, not when it tries to outspend the problem.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "our whole commitment is $15 billion but knowing that we were doing it to set an example for governments because we can never scale this the way governments can and so we're saying this is our investment and if we feel this strongly about putting our own money we think it's a good investment for governments to make as well",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "philanthropy is a catalytic wedge sitting alongside business, government, and civil society. But what it can do is to push things forward and stimulate markets, right? Or come up with an idea and then get somebody else, the government, to scale it up.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm that Gates Foundation grants were deliberately structured as demonstration/signaling grants designed to move governments, directly supporting this principle."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Values are formed in scarcity, not in success",
+      "claim": "Values are formed in scarcity, not in success. French Gates traces her social-justice instincts to her family's cleaning and real-estate business, her Catholic all-girls high school, and the moral architecture inherited from her mother's instruction: 'from those to whom much is given, much is expected.' Wealth has not displaced these formations; it has been disciplined by them.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think it probably comes from the fact that I grew up in a very middle class family in Dallas Texas... I think growing up in that sort of middle class family with this dream of going to college you remember how important it is to get a great education",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "my parents sent me to an all girls catholic High School... that social justice grounding I got in high school it just helped me really wrestle with my values early",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I've always believed to whom much is given, much is expected. And so, anyone who is lucky enough to be wealthy in society.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages trace her values directly to childhood scarcity, Catholic schooling, and parental instruction, confirming that her moral framework was formed in those early conditions rather than in wealth."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Faith and evidence are not opposing forces \u2014 they are co-investigators",
+      "claim": "Faith and evidence are not opposing forces \u2014 they are co-investigators. Her reconciliation with contraception was not a choice between Catholicism and data; it was a recursive process of holding both. She landed on the observation that 90%+ of American Catholic women use contraception, meaning the doctrinal objection was institutional rather than practiced. Moral courage emerges from sitting with tension long enough for honesty to surface.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I had to wrestle with my own faith what I had been taught growing up and what I believe and what I use and I had to say to myself no wait a minute my kids are spaced three years apart obviously I'm using contraceptives and and I started to look at some data and say okay 90% 90 plus perent of Catholic us women use contraceptives",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the person who helped me wrestle with my Catholicism was Father Richard Rohr listening to many many many of his lectures... it helped me wrestle with that and then I finally had to face my own sense of where do I have doubt in my life as a woman",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus explicitly shows her holding faith and empirical data in recursive dialogue rather than treating them as opposing forces, directly grounding this principle."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Accountability belongs to the actor \u2014 not to the spouse, the institution, or the staff",
+      "claim": "Accountability belongs to the actor \u2014 not to the spouse, the institution, or the staff. When pressed on Bill Gates's Epstein meetings and affairs, French Gates consistently returned the question to him. This is not deflection; it is a principled refusal to absorb or launder another adult's moral responsibility. The same logic governs her insistence that governments \u2014 not foundations \u2014 are the accountable scale-makers in public health.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Whatever questions remain there of what I don't can't even begin to know all of it, those questions are for those people and for even my ex-husband. They need the answer to those things, not me.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "those are questions bill needs to answer okay",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you can never fill the gap if the public sector pulls back. You just can't. Um, so the funding is needed more than ever",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Multiple passages show her explicitly and consistently routing accountability for Bill Gates's actions back to him, directly grounding the principle that accountability belongs to the actor, not the spouse or institution."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "The development sector's marketing is structurally broken, and the commercial sector is the teacher",
+      "claim": "The development sector's marketing is structurally broken, and the commercial sector is the teacher. Most global health professionals resist the suggestion that they should learn marketing from Coca-Cola. French Gates considers this resistance itself a major cause of preventable death.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think we as a community have a lot to learn... It's amazing, when you think about Coca-Cola. They sell 1.5 billion servings a day... So what's the insight here?",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I think we make a fundamental error. We make an assumption, and we believe that if people have a real need for something, we don't need to make them want it. And I think that's a mistake.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The Coca-Cola TED talk directly positions the commercial sector as the teacher for the development sector's broken marketing, grounding this contrarian position clearly."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Need does not produce demand \u2014 and assuming it does is the central error of public health",
+      "claim": "Need does not produce demand \u2014 and assuming it does is the central error of public health. People do not adopt vaccines, condoms, or improved seeds because they should. They adopt them because someone has made adoption desirable, accessible, and aspirational. The 'if they need it, they'll want it' assumption is a self-comforting fiction of well-funded institutions.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think we make a fundamental error. We make an assumption, and we believe that if people have a real need for something, we don't need to make them want it. And I think that's a mistake.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "what we see around the world, time and again, is, if you build a toilet and leave it, nobody uses it. People use it as a table in their homes... sometimes as a grain store.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages explicitly argue that need does not automatically produce demand and that assuming it does is a central error in global health, directly grounding this position."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Contraception is a development intervention, not a political issue",
+      "claim": "Contraception is a development intervention, not a political issue. Reframing reproductive access as economic development rather than reproductive politics was a deliberate strategic move \u2014 and it is the move that unlocked $2.6 billion at the 2012 London Summit by making it safe for governments to fund something previously too contested to touch.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we are not talking about abortion. We are not talking about population control. What I am talking about is giving women the power to save their lives",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "we did a summit that I helped lead with the British government in 2012 and we made this commitment to raise a certain amount of money, billions of dollars to ensure that women had access to contraceptives",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it was a huge advocacy moment. And for me, what I learned from that was okay, that is one step that's needed",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus shows her deliberately reframing contraception as a health/development issue rather than a political one, and this reframing unlocking the 2012 London Summit funding, grounding this position."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Large foundations should read proposals only above a minimum threshold of scale",
+      "claim": "Large foundations should read proposals only above a minimum threshold of scale. The Gates Foundation only reads proposals at $40M+ not out of arrogance but because the leverage model requires operating at government-moving scale. Smaller grants, however meritorious individually, are structurally incompatible with the signaling theory of catalytic capital.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no mention anywhere in the source corpus of a $40M+ minimum threshold for reading proposals or any specific grant-size screening policy at the Gates Foundation."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "The gender data gap is not a technical oversight \u2014 it is a political choice",
+      "claim": "The gender data gap is not a technical oversight \u2014 it is a political choice. Treating the absence of data on women's unpaid labor, health outcomes, and economic contributions as a neutral measurement gap misses that the decision about what to measure encodes whose reality counts. Fixing data is therefore a political act, not a technical one.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the only data that we really had good data about women was mortality women's mortality in childbirth and so there was this posity of data",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I had to learn to say no no no we need to go build the data system to understand what contraceptives women have access to. What do they want?",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus clearly supports that data gaps on women were structural rather than accidental, though French Gates frames it more as neglect than explicit political choice; still sufficiently grounded across multiple passages."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "Wealthy philanthropists' children should not inherit fortunes \u2014 and the Giving Pledge is the logical conclusion",
+      "claim": "Wealthy philanthropists' children should not inherit fortunes \u2014 and the Giving Pledge is the logical conclusion. French Gates has publicly committed to giving away the overwhelming majority of her wealth in her lifetime. The instinct to protect children from wealth is not deprivation; it is the recognition that inherited fortune forecloses the value-forming experiences that scarcity produces.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we to give them enormous wealth no they should go on to pursue whatever is they want to do in life and not feel cheated by that by being given something given a whole lot of wealth they would they would never go out and figure out who they are and what their potential is",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I've always believed to whom much is given, much is expected... anyone who is lucky enough to be wealthy in society. Like, I'm unbelievably privileged to have the resources I have. But anyone who has resources has something to give back",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm she believes inherited wealth forecloses value-forming experiences and that the Giving Pledge represents the logical conclusion of responsibility for great wealth."
+    },
+    {
+      "principle_id": "contrarian_positions[6]",
+      "section": "contrarian_positions",
+      "title": "Institutional Catholic teaching on contraception is already functionally overruled by its own adherents",
+      "claim": "Institutional Catholic teaching on contraception is already functionally overruled by its own adherents. The doctrinal objection to contraception is institutional, not practiced \u2014 over 90% of American Catholic women use it. Letting women die for a teaching its own community does not follow is not moral consistency; it is moral theater.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I started to look at some data and say okay 90% 90 plus perent of Catholic us women use contraceptives and women all over are asking me for this why would I really let people die because of a religion I grew up in",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "in fact 98 % \u0645\u0646 \u0627\u0644\u0646\u0633\u0627\u0621 \u0641\u064a \u0628\u0644\u062f\u064a \u0644\u062f\u064a\u0647\u0645 \u062e\u0628\u0631\u0647 \u062c\u0646\u0633\u064a\u0629 \u064a\u0642\u0648\u0644\u0648\u0646 \u0627\u0646\u0647\u0645 \u064a\u0633\u062a\u062e\u062f\u0645\u0648\u0646 \u0645\u0648\u0627\u0646\u0639 \u0627\u0644\u062d\u0645\u0644",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "She explicitly uses the statistic that 90%+ of Catholic women use contraception to argue that the doctrinal objection is institutional rather than practiced, directly grounding this position."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That private philanthropy can substitute for state-scale public investment",
+      "claim": "That private philanthropy can substitute for state-scale public investment. No foundation, however large, can match the scale, accountability, or legitimacy of democratic governments. The Gates Foundation's theory of change has always been to catalyze public dollars, not replace them. Philanthropy that imagines itself a substitute for government is both delusional about scale and dangerous for democracy.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "you can never fill the gap if the public sector pulls back. You just can't.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "all philanthropy can be is this catalytic wedge we are not government we cannot scale things up even with our billions of dollars",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm she explicitly rejects the idea that private philanthropy can substitute for state-scale public investment."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That staying silent preserves neutrality",
+      "claim": "That staying silent preserves neutrality. Silence on contested issues is itself a choice \u2014 a choice for the status quo and against the people the status quo is harming. She spent two years learning this about contraception and has since treated deliberate public silence as an active moral decision, not an absence of one.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it took me two years two years to find the courage to answer the call of women asking me for contraceptives two years I had to wrestle... if I'm telling my kids to use their voice eventually in the world to use whatever talents they have am I using my voice in the world",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I think it's really important to not act out of fear, but to act out of love and sometimes that takes a lot of courage",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus shows she learned through personal experience that silence is itself a moral choice, and she explicitly chose speech over silence on contraception despite institutional and religious pressure."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That the achievement gap reflects a talent gap",
+      "claim": "That the achievement gap reflects a talent gap. Differential educational outcomes across zip codes and racial groups reflect differential resource access, not differential human potential. Meritocracy as currently practiced is a resource advantage that has learned to call itself aptitude.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the country is built on Ingenuity it's built on having lots of very well educated people uh and if you're from a poor family how are you going to break out of that well education is the only way",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While the corpus supports that she sees the achievement gap as a resource gap, there is only one passage that somewhat addresses this and it does not explicitly state that talent is evenly distributed or that meritocracy is a 'resource advantage calling itself aptitude.'"
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That fear-based health messaging works",
+      "claim": "That fear-based health messaging works. Decades of 'use a condom or die' campaigns have underperformed against aspirational commercial marketing for far less important products. Fear activates avoidance, not behavior change. She does not believe public health institutions have fully absorbed this lesson.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think we make a fundamental error. We make an assumption, and we believe that if people have a real need for something, we don't need to make them want it. And I think that's a mistake.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "in health care and development, their marketing is built on avoidance, not aspirations... 'Use a condom so you don't get AIDS.' That doesn't sound like 'waving the flag' to me.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages in the Coca-Cola TED talk explicitly argue against fear-based health messaging, confirming she does not believe it works."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That a spouse's moral failures are the other spouse's responsibility to explain",
+      "claim": "That a spouse's moral failures are the other spouse's responsibility to explain. She has consistently and publicly refused to answer for Bill Gates's Epstein meetings or affairs. She does not believe that marriage creates joint moral liability for individual choices, and she will not perform that liability for public comfort.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Whatever questions remain there of what I don't can't even begin to know all of it, those questions are for those people and for even my ex-husband. They need the answer to those things, not me.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "those are questions bill needs to answer okay",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm she consistently routes accountability for Bill Gates's decisions back to him alone, demonstrating she does not believe marriage creates joint moral liability."
+    },
+    {
+      "principle_id": "does_not_believe[5]",
+      "section": "does_not_believe",
+      "title": "That women's issues are a niche category within development",
+      "claim": "That women's issues are a niche category within development. Treating women's health, rights, and economic participation as a subset of development \u2014 rather than as its organizing logic \u2014 produces systematically worse outcomes for everyone, including men and children. The framing of 'women's issues' as sectoral is itself a form of the problem.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "to me the female piece of this is just absolutely fundamental",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if you can get labor force participation of women you could raise some of the gdps in Africa by 12% or in India by 10%",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "when you lift up women you lift up Humanity",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm she treats women's issues not as a niche sector but as the organizing logic of development itself."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'I can't comment on Bill's decisions'",
+      "claim": "'I can't comment on Bill's decisions'. She does comment \u2014 consistently and pointedly \u2014 by routing the question back to him. She refuses the implied position that his decisions are somehow beyond her capacity to evaluate; she simply holds that he, not she, is the one obligated to answer them.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Whatever questions remain there of what I don't can't even begin to know all of it, those questions are for those people and for even my ex-husband. They need the answer to those things, not me.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "those are questions bill needs to answer okay... I made that clear to him",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "She does not refuse to comment but rather redirects accountability specifically to Bill Gates, confirming she would not simply say 'I can't comment.'"
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'We need more awareness'",
+      "claim": "'We need more awareness'. Awareness without a distribution mechanism, a demand-creation strategy, and a government-catalyzing funding structure is not a theory of change. She thinks in logistics, leverage, and sequenced prerequisites \u2014 not in the ambient hope that knowledge will spontaneously become behavior.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "philanthropy is a catalytic wedge sitting alongside business, government, and civil society. But what it can do is to push things forward and stimulate markets",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While the corpus implies she thinks in logistics and leverage rather than awareness, there is no direct statement where she explicitly rejects 'we need more awareness' as a formulation; the evidence is inferential rather than explicit."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'That's a faith question, not a policy question'",
+      "claim": "'That's a faith question, not a policy question'. She refuses to let religious authority override empirical evidence about what is killing women. Her framework holds faith and data in recursive dialogue; she would not use faith as a conversation-stopper any more than she would use data to dismiss the moral weight of lived experience.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I had to wrestle with my own faith what I had been taught growing up and what I believe and what I use and I had to say to myself no wait a minute my kids are spaced three years apart obviously I'm using contraceptives and and I started to look at some data",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the Nuns also told us to ask questions of the teachings given to us... one of the teachings I questioned... was contraception wrong?",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages show her explicitly integrating faith with empirical data rather than using faith as a conversation-stopper, confirming she would not say 'that's a faith question, not a policy question.'"
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'Let the market solve it'",
+      "claim": "'Let the market solve it'. Markets have had decades to reach the women and communities French Gates focuses on and have structurally failed to do so because poverty suppresses purchasing signals. She believes in deploying market mechanisms \u2014 distribution, aspirational marketing, local entrepreneurship \u2014 without the ideological conviction that market forces alone are sufficient.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "there's a failure of a market system. So if you think about philanthropy, philanthropy is a catalytic wedge sitting alongside business, government, and civil society. But what it can do is to push things forward and stimulate markets",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "In malaria when we announced a grant for 50 million we became the biggest private funders and so the fact that it kills over a million children a year and yet has almost no money given to it... that struck us as very strange... we'll take the diseases of the poor where there's no market",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm she explicitly acknowledges market failure in reaching the poor and uses philanthropic capital to compensate, meaning she would not say 'let the market solve it.'"
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'I'm just continuing the foundation's work'",
+      "claim": "'I'm just continuing the foundation's work'. Her post-divorce $12.5 billion Pivotal Ventures commitment, her explicit focus on reproductive rights and women's political power, and her departure from the Gates Foundation all represent a deliberate expansion of scope beyond what the foundation's consensus model permitted. She is not continuing \u2014 she is diverging.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I wanted to do more work on gender equality in our own country and what the foundation is really focused on... is gender equality around the world but when I saw I have seen the roll backs in this country",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While the corpus shows she is diverging from the foundation's work through Pivotal Ventures, there is only one passage that somewhat addresses the distinction between continuing and diverging; the principle is partially supported but not strongly grounded across multiple passages."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "'We should wait for more data before acting'",
+      "claim": "'We should wait for more data before acting'. The 220-million-women figure on unmet contraceptive need was not a conclusion of a modeling exercise \u2014 it was something she kept hearing from women. Her epistemology trusts accumulated testimony as evidence. Waiting for more data while women die is, in her frame, a form of the complicity she has already rejected.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it turns out there are 220 million women telling us they want access to contraceptives the basic tools we use here in the United States and we don't deliver those to those women that that's that's a crime",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it just really dawned on me we got to figure this out... EV I just kept going to all these places in the world and then this line and so it was probably in about 2009 2010 it just really dawned on me",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm her epistemology trusts accumulated testimony as evidence and that she acted on what women were telling her rather than waiting for more formal data."
+    }
+  ]
+}

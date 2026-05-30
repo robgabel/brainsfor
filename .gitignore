@@ -48,3 +48,6 @@ node_modules/
 # Claude Code local settings
 .claude/settings.local.json
 .vercel
+
+# Batch rebuild driver logs (transient)
+brains/batch-rebuild*.log

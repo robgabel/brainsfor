@@ -171,7 +171,9 @@ def main():
             b["connection_count"] = len(pack.get("connections", []))
             if stage_entry and stage_entry.get("source"):
                 b["source"] = stage_entry["source"]
-            b["status"] = "live"
+            # Preserve the live brain's existing visibility — do NOT force "live"
+            # (would wrongly publish a hidden/Rob-only brain on promotion).
+            b["status"] = b.get("status", "live")
             b["pack_path"] = f"brains/{base}/pack/"
         new_brains.append(b)
     idx["brains"] = new_brains
