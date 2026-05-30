@@ -80,9 +80,8 @@ def main():
     ap.add_argument("--staging-slug", help="Staging slug (default: <slug>-v2)")
     ap.add_argument("--force", action="store_true", help="Skip the audit >= live gate")
     ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--reload-supabase", action="store_true",
-                    help="Also truncate+reload <slug>_atoms/connections (CASCADE)")
-    ap.add_argument("--yes-drop-cross-connections", action="store_true")
+    ap.add_argument("--skip-finalize", action="store_true",
+                    help="Skip the post-swap finalize-supabase (load pack + embed)")
     args = ap.parse_args()
 
     base = args.slug
@@ -192,16 +191,16 @@ def main():
         f"DROP TABLE IF EXISTS {stage_us}_atoms CASCADE;")
     say("OK" if ok else "WARN", f"drop {stage_us}_* tables: {msg}")
 
-    # --- optional: reload base Supabase atoms -----------------------------
-    if args.reload_supabase:
-        if not args.yes_drop_cross_connections:
-            say("WARN", "--reload-supabase needs --yes-drop-cross-connections "
-                        "(truncate CASCADE drops dependent cross_connections rows). Skipped.")
-        else:
-            supabase_exec(f"TRUNCATE TABLE {base_us}_connections, {base_us}_atoms CASCADE;")
-            subprocess.run(["python3", str(ROOT / "scripts" / "load-to-supabase.py"),
-                            "--brain", base, "--atoms", "--connections"], cwd=ROOT)
-            say("OK", f"reloaded {base_us}_atoms/connections from local files")
+    # --- 9. Finalize base Supabase: load pack + embed + parity ------------
+    # Makes the promoted brain an exact, embedded DB mirror of its pack so it
+    # isn't left with stale atoms (the deferred-finalize bug). finalize-supabase
+    # is idempotent and robust (loop-until-count); for brains that cross_connections
+    # FK-references (scott-belsky) it clears the stale links first.
+    if not args.skip_finalize:
+        say("i", "finalizing base Supabase (load pack + embed)...")
+        r = subprocess.run(["python3", str(ROOT / "scripts" / "finalize-supabase.py"),
+                            "--brain", base], cwd=ROOT)
+        say("OK" if r.returncode == 0 else "WARN", f"finalize-supabase exited {r.returncode}")
 
     print()
     say("DONE", f"{stage} promoted to {base}. Review `git status`/diff, then commit.")
