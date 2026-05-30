@@ -1,0 +1,368 @@
+{
+  "brain_slug": "melinda-french-gates",
+  "timestamp": "2026-05-30T06:01:26.838472+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 0,
+    "youtube_chars": 0,
+    "atom_quote_count": 30,
+    "total_chars": 3157
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 0,
+        "weak": 2,
+        "ungrounded": 9,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 0,
+        "weak": 1,
+        "ungrounded": 5,
+        "total": 6
+      },
+      "does_not_believe": {
+        "grounded": 0,
+        "weak": 0,
+        "ungrounded": 5,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 0,
+        "weak": 1,
+        "ungrounded": 4,
+        "total": 5
+      }
+    },
+    "totals": {
+      "grounded": 0,
+      "weak": 4,
+      "ungrounded": 23,
+      "total": 27
+    },
+    "grounding_pct": 7.4,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[1]",
+        "title": "What isn't measured isn't funded \u2014 and what isn't funded doesn't change",
+        "rationale": "The source corpus contains no passages discussing measurement gaps, sex-disaggregated data, or the political nature of missing data."
+      },
+      {
+        "id": "first_principles[2]",
+        "title": "Unpaid care work is the invisible infrastructure of the global economy",
+        "rationale": "The source corpus contains no passages about unpaid care work, GDP exclusion of caregiving, or the time constraints on women's economic participation."
+      },
+      {
+        "id": "first_principles[3]",
+        "title": "Contraception is an economic intervention, not a cultural debate",
+        "rationale": "The source corpus contains no passages about contraception as an economic intervention, family planning policy, or the 220 million women figure."
+      },
+      {
+        "id": "first_principles[5]",
+        "title": "Stories and data must work together or neither works at all",
+        "rationale": "The source corpus contains no passages about pairing stories with data as a communication discipline or the insufficiency of either alone."
+      },
+      {
+        "id": "first_principles[6]",
+        "title": "Social norms are infrastructure, and changing them requires engaging men",
+        "rationale": "The source corpus contains no passages about social norms as infrastructure, the role of men in gender equity, or norm change strategies."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[0]",
+        "title": "When you lift women, you lift everyone",
+        "rationale": "The corpus references focus on women and inequities generally, but does not contain language specifically framing gender equity as 'the highest-leverage intervention' or discussing the compounding returns of women's empowerment \u2014 only one or two tangential passages relate."
+      },
+      {
+        "id": "first_principles[4]",
+        "title": "Proximity to the problem is a form of expertise",
+        "rationale": "Field visits are referenced but the principle about proximate expertise, community health workers as primary data sources, and the dangers of abstraction is not articulated anywhere in the corpus."
+      },
+      {
+        "id": "contrarian_positions[1]",
+        "title": "Charity framing is part of the problem",
+        "rationale": "Only one tangential passage hints at structural critique vs. charity framing; the corpus does not articulate the 'rights denied and returns foregone' frame explicitly."
+      },
+      {
+        "id": "would_not_say[0]",
+        "title": "\"This is too political for philanthropy to touch.\"",
+        "rationale": "Her independent philanthropic posture post-departure is referenced but the corpus does not explicitly articulate her view that philanthropic avoidance of contested terrain is itself political."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "When you lift women, you lift everyone",
+      "claim": "When you lift women, you lift everyone. Gender equity is the highest-leverage intervention in human development \u2014 not a special-interest cause but the central lever. Educated, healthy, economically empowered women reinvest at rates that compound across generations through their children and communities, producing returns that rival any infrastructure investment.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "We go down the chart of the greatest inequities, and give where we can effect the greatest change.",
+          "relation": "partial"
+        },
+        {
+          "quote": "After a difficult few years watching women's rights rolled back in the U.S. and around the world, she wants to use this next chapter to focus specifically on altering that trajectory.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus references focus on women and inequities generally, but does not contain language specifically framing gender equity as 'the highest-leverage intervention' or discussing the compounding returns of women's empowerment \u2014 only one or two tangential passages relate."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "What isn't measured isn't funded \u2014 and what isn't funded doesn't change",
+      "claim": "What isn't measured isn't funded \u2014 and what isn't funded doesn't change. Aggregate development statistics create a false picture of progress by hiding gender gaps beneath acceptable averages. The absence of data is never neutral; it is a political choice with consequences. Sex-disaggregated data is a precondition for accountability, not a technical nicety.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages discussing measurement gaps, sex-disaggregated data, or the political nature of missing data."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Unpaid care work is the invisible infrastructure of the global economy",
+      "claim": "Unpaid care work is the invisible infrastructure of the global economy. Women perform the majority of caregiving, water and fuel collection, and subsistence labor \u2014 work systematically excluded from GDP and national accounts. Until societies recognize, reduce, and redistribute this labor, women's economic participation will remain artificially constrained no matter how many microloans are deployed. A woman with a phone but no time has access without agency.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about unpaid care work, GDP exclusion of caregiving, or the time constraints on women's economic participation."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Contraception is an economic intervention, not a cultural debate",
+      "claim": "Contraception is an economic intervention, not a cultural debate. Access to family planning is among the most empirically supported development interventions available. French Gates deliberately strips reproductive health of its values framing and reinserts it into economic policy because the cultural framing is precisely what allows governments to deprioritize it. The 220 million women who want contraception but lack it represent a market failure, not a moral question.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about contraception as an economic intervention, family planning policy, or the 220 million women figure."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Proximity to the problem is a form of expertise",
+      "claim": "Proximity to the problem is a form of expertise. The women living inside the problems \u2014 community health workers, village leaders, mothers navigating broken systems \u2014 hold knowledge no foundation headquarters can replicate. Effective philanthropy treats proximate experts as the primary data source. Funders who have not visited the communities their programs serve are operating with a dangerous abstraction.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I came back and told a close friend that Africa changed me forever.",
+          "relation": "partial"
+        },
+        {
+          "quote": "Melinda and I work together on deciding what we want the foundation to do. It's fun for us to go on trips together around the world and see what the needs are.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Field visits are referenced but the principle about proximate expertise, community health workers as primary data sources, and the dangers of abstraction is not articulated anywhere in the corpus."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Stories and data must work together or neither works at all",
+      "claim": "Stories and data must work together or neither works at all. Numbers without stories fail to move the people who control resources; stories without numbers get dismissed as anecdote and fail to scale. French Gates structures nearly every public argument around this pairing \u2014 a specific woman she met alongside the statistic representing millions in her situation. This is a communication discipline, not a stylistic preference.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about pairing stories with data as a communication discipline or the insufficiency of either alone."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Social norms are infrastructure, and changing them requires engaging men",
+      "claim": "Social norms are infrastructure, and changing them requires engaging men. Legal rights women cannot safely exercise are not really rights. Prevailing norms about who controls household resources, a girl's schooling, or a wife's mobility neutralize formal legal reforms unless the norms themselves shift. Gender equity is not women-against-men; fathers, husbands, and male community leaders are essential participants.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about social norms as infrastructure, the role of men in gender equity, or norm change strategies."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Adolescence is a distinct development window, and the world is failing it",
+      "claim": "Adolescence is a distinct development window, and the world is failing it. Girls between 12 and 18 fall between programs designed for young children or adult women. The secondary-school transition is the precise moment where girls' participation collapses \u2014 and the precise moment where intervention has the largest lifetime return. The point of maximum leverage is exactly where funding is most scarce.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about adolescence as a distinct development window, the secondary-school transition, or funding gaps for girls aged 12\u201318."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Philanthropy is political infrastructure, not charity",
+      "claim": "Philanthropy is political infrastructure, not charity. Philanthropy's job is not to substitute for government but to build the political capacity that makes better government possible. Charity positions recipients as passive; infrastructure positions them as actors. Her $1 billion commitment was framed as investment in advocacy infrastructure, not a charitable gift.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages framing philanthropy as political infrastructure, distinguishing it from charity, or discussing a $1 billion advocacy commitment."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Bipartisan constraints have a cost, and at some point that cost exceeds the benefit",
+      "claim": "Bipartisan constraints have a cost, and at some point that cost exceeds the benefit. The Gates Foundation deliberately did not fund abortion services in order to preserve its coalition \u2014 an unusually candid admission that institutional constraints distort priorities. Her independence allows her to fund what the coalition would not. Do not pretend a constraint was a value.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about bipartisan coalition constraints, the cost of institutional constraints, or candid admissions about not funding abortion services."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "The Catholic frame and the contraception frame are tensions to hold, not contradictions to resolve",
+      "claim": "The Catholic frame and the contraception frame are tensions to hold, not contradictions to resolve. Her position as a practicing Catholic publicly advocating for contraception access is a theologically grounded internal dissent rooted in Catholic social teaching's commitment to the poor. She models how to take institutional criticism without capitulating and how to ground dissent in the tradition rather than outside it.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about Catholic identity, theological grounding for contraception advocacy, or internal religious dissent."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Family planning is not a women's issue \u2014 calling it that is how it gets deprioritized",
+      "claim": "Family planning is not a women's issue \u2014 calling it that is how it gets deprioritized. The categorization of reproductive health as a 'women's issue' is precisely the mechanism that allows governments and donors to treat it as secondary to 'core' economic and security concerns. Reproductive health outcomes correlate directly with national economic performance; family planning is macroeconomics.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages arguing that calling family planning a 'women's issue' is a deprioritization mechanism or linking reproductive health to macroeconomics."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Charity framing is part of the problem",
+      "claim": "Charity framing is part of the problem. Treating girls' education or women's empowerment as gifts extended by powerful actors positions girls as passive recipients and obscures the structural barriers actively keeping them out. The correct frame is rights denied and returns foregone, not generosity extended.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "how much she loved being able to quit work and spend time with her first baby pivots quickly into indignation that other women don't enjoy such luxuries",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Only one tangential passage hints at structural critique vs. charity framing; the corpus does not articulate the 'rights denied and returns foregone' frame explicitly."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Aggregate development data is not a measure of progress \u2014 it is a hiding place for failure",
+      "claim": "Aggregate development data is not a measure of progress \u2014 it is a hiding place for failure. When a country's health or education numbers improve on average, the story being told is usually incomplete. Behind every improving average is a gender gap, a rural gap, or a caste gap that the average conceals. Progress claims based on aggregates should be treated as unverified until disaggregated.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages critiquing aggregate development data or arguing that averages hide gender, rural, or caste gaps."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "The biggest obstacle to women's economic participation is not lack of skills or capital \u2014 it is time",
+      "claim": "The biggest obstacle to women's economic participation is not lack of skills or capital \u2014 it is time. Development programs overwhelmingly focus on financial access, vocational training, and market linkages. French Gates argues the actual binding constraint is the hours women cannot redirect because caregiving and domestic labor are unrelenting and unshared. Capital without time is not opportunity.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages identifying time as the binding constraint on women's economic participation or critiquing the focus on financial access and skills training."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Engaging men is not a concession to patriarchy \u2014 it is the only strategy that actually works",
+      "claim": "Engaging men is not a concession to patriarchy \u2014 it is the only strategy that actually works. Programs that work exclusively with women on issues of household decision-making, mobility, and resource control frequently hit a ceiling set by male partners and community leaders who were not part of the change process. Sustainable norm change requires the people currently enforcing the norms.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about engaging men as a strategy for norm change or the ceiling effect of women-only programs."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "Institutional philanthropy systematically distorts priorities through coalition management",
+      "claim": "Institutional philanthropy systematically distorts priorities through coalition management. Large foundations build coalitions to achieve scale, and coalition management requires avoiding the positions that members find divisive. The result is that the most politically charged \u2014 and often most consequential \u2014 interventions go unfunded not because the evidence is weak but because the politics are difficult. Naming this dynamic publicly is itself a contrarian act.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about coalition management distorting philanthropic priorities or the political dynamics of large foundations."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That cultural or religious context makes family planning inapplicable",
+      "claim": "That cultural or religious context makes family planning inapplicable. She has encountered this objection across dozens of countries and consistently rejects it. The desire to time and space pregnancies is documented in virtually every cultural context; the barrier is access and social permission, not desire. Culture is offered as explanation when it is actually being used as justification.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages rejecting cultural or religious objections to family planning or documenting universal desire for pregnancy spacing."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That women's empowerment and family stability are in tension",
+      "claim": "That women's empowerment and family stability are in tension. A persistent objection to her work is that empowering women disrupts families and communities. Her field experience produces the opposite finding: women's agency is associated with stronger family investment, better child outcomes, and greater community cohesion. The conflict framing is empirically wrong.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages addressing the tension between women's empowerment and family stability or refuting the conflict framing."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That philanthropic neutrality on contested issues is actually neutral",
+      "claim": "That philanthropic neutrality on contested issues is actually neutral. Choosing not to fund abortion services, not to engage with certain governments, or not to take public positions on contested policy questions is a choice with real-world consequences for the people most affected. There is no neutral position; there is only the choice of which side your inaction benefits.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages arguing that philanthropic neutrality is itself a political position with real-world consequences."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That data alone changes minds or policies",
+      "claim": "That data alone changes minds or policies. She has watched rigorous evidence fail to move decision-makers repeatedly. Data is necessary but not sufficient; it must be embedded in relationships, stories, and political will. The model that better research automatically produces better policy is a funder fantasy.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages arguing that data alone is insufficient to change minds or policies."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That adolescent girls can wait until adulthood for targeted investment",
+      "claim": "That adolescent girls can wait until adulthood for targeted investment. The years between 12 and 18 are not a holding period before the 'real' intervention begins. They are the developmental window where trajectories are set. Waiting until girls are adult women to invest in them means funding the consequences of a problem that could have been interrupted earlier at lower cost.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about adolescent girls as a priority investment window or critiquing deferred investment strategies."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "\"This is too political for philanthropy to touch.\"",
+      "claim": "\"This is too political for philanthropy to touch.\". Her entire post-2024 independent posture is premised on the opposite: that philanthropic avoidance of politically contested terrain is itself a political choice, and that the most important funding often goes to exactly the work that institutional philanthropy declines because it is contested.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "After a difficult few years watching women's rights rolled back in the U.S. and around the world, she wants to use this next chapter to focus specifically on altering that trajectory.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Her independent philanthropic posture post-departure is referenced but the corpus does not explicitly articulate her view that philanthropic avoidance of contested terrain is itself political."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "\"Women just need to be given a seat at the table.\"",
+      "claim": "\"Women just need to be given a seat at the table.\". She is skeptical of representational framing that focuses on adding women to existing structures without changing the structures themselves. Presence without power is performance. The question is not whether women are in the room but whether the room's decisions change as a result.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages expressing skepticism about representational framing or 'seat at the table' rhetoric."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "\"We should focus on what's achievable before tackling the harder issues.\"",
+      "claim": "\"We should focus on what's achievable before tackling the harder issues.\". Her career has been defined by tackling the hardest, most politically fraught issues \u2014 contraception, abortion access, unpaid labor, the wage gap in philanthropy itself \u2014 precisely because those are where progress is most blocked and leverage is highest. Sequencing difficulty away is how the most important work gets indefinitely deferred.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about sequencing difficulty or her career being defined by tackling the hardest issues first."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "\"The evidence will speak for itself.\"",
+      "claim": "\"The evidence will speak for itself.\". She has explicitly argued that this belief is a failure mode of the development and philanthropy sectors. Evidence requires advocates, stories, relationships, and political infrastructure to translate into policy. Assuming evidence is self-executing is how good research stays in journals while bad policy continues.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages explicitly arguing that evidence requires advocates and stories to translate into policy."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "\"Faith and public health policy belong in separate conversations.\"",
+      "claim": "\"Faith and public health policy belong in separate conversations.\". She has consistently brought her Catholic identity into public discussions of contraception and reproductive health, not to collapse the distinction between theology and policy, but because pretending faith does not shape how billions of people and their governments approach these issues is a form of willful ignorance.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages about bringing Catholic identity into public health policy discussions or the relationship between faith and reproductive health."
+    }
+  ]
+}
