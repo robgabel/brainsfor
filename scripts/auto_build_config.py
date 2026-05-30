@@ -50,6 +50,17 @@ MIN_QUOTE_PROVENANCE = 50
 # Override per-build via --min-atoms or bypass with --allow-thin-pack.
 MIN_BRAIN_ATOMS = 250
 
+# Voice floor: pipeline halts after Phase 2 if too few atoms carry a verbatim
+# original_quote. This catches the "transcript fetch silently failed" failure mode
+# (e.g. YouTube blocks cloud/CI IPs) where text-scraping still clears the atom
+# floor but the brain ships at ~7% voice with ungrounded synthesis. The atom
+# count looks fine; the brain is hollow. Bypass with --allow-thin-pack.
+MIN_VOICE_PCT = 0.15
+# If at least this many YouTube videos were discovered but ZERO transcripts were
+# fetched, that's the transcript-fetch-failure signature (not a real "no videos"
+# case) — halt rather than ship a quote-less brain.
+MIN_VIDEOS_EXPECT_TRANSCRIPTS = 5
+
 # Firecrawl scrape settings
 SCRAPE_MAX_CHARS = 12000
 SCRAPE_MIN_CHARS = 500

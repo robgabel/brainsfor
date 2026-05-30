@@ -60,6 +60,7 @@ from auto_build_config import (
     TARGET_ATOMS, TARGET_CONNECTIONS, MIN_ATOMS_PER_CLUSTER,
     MIN_AUDIT_SCORE, MAX_REMEDIATION_CYCLES, PHASE_NAMES,
     MIN_BRAIN_ATOMS, MIN_QUOTE_PROVENANCE,
+    MIN_VOICE_PCT, MIN_VIDEOS_EXPECT_TRANSCRIPTS,
     SCRAPE_MAX_CHARS, SCRAPE_MIN_CHARS, SCRAPE_TIMEOUT_SEC, SCRAPE_SKIP_DOMAINS,
     CostTracker, call_claude,
     phase_header, step, success, warn, error,
@@ -2020,6 +2021,48 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                                reason=f"below min-atoms floor ({atom_count}/{args.min_atoms})")
                     save_progress(brain_dir, progress)
                     break
+
+                # Voice floor — catch the "transcripts silently failed" failure mode
+                # (e.g. YouTube blocks CI/cloud IPs). Text scraping can clear the atom
+                # floor while the brain ships near-quoteless and ungrounded. Measure
+                # what actually landed rather than trusting the atom count.
+                if not args.allow_thin_pack:
+                    n_videos = 0
+                    sj = brain_dir / "source" / "sources.json"
+                    if sj.exists():
+                        try:
+                            sjd = json.loads(sj.read_text())
+                            n_videos = sum(1 for s in sjd.get("sources", []) if s.get("youtube_id"))
+                        except Exception:
+                            pass
+                    n_transcripts = len(list((brain_dir / "source" / "transcripts").glob("*.json"))) \
+                        if (brain_dir / "source" / "transcripts").exists() else 0
+                    voice_pct = 0.0
+                    aap = brain_dir / "research" / "all-atoms.json"
+                    if aap.exists():
+                        try:
+                            _atoms = json.loads(aap.read_text())
+                            if _atoms:
+                                voice_pct = sum(1 for a in _atoms if (a.get("original_quote") or "").strip()) / len(_atoms)
+                        except Exception:
+                            pass
+
+                    transcript_fail = (n_videos >= MIN_VIDEOS_EXPECT_TRANSCRIPTS and n_transcripts == 0)
+                    if transcript_fail or voice_pct < MIN_VOICE_PCT:
+                        why = (f"transcript fetch failed: {n_videos} videos discovered, 0 transcripts fetched "
+                               f"(likely IP block — YouTube blocks cloud/CI IPs; build locally or add a proxy)"
+                               if transcript_fail else
+                               f"voice too thin: {voice_pct:.0%} of atoms have a verbatim quote "
+                               f"(< {MIN_VOICE_PCT:.0%} floor)")
+                        error(f"Voice floor not met — {why}. "
+                              f"Atoms={atom_count}, transcripts={n_transcripts}/{n_videos} videos, "
+                              f"voice={voice_pct:.0%}. The brain would ship hollow (thin voice + "
+                              f"ungrounded synthesis). Fix the transcript source and --resume, or pass "
+                              f"--allow-thin-pack to ship anyway.")
+                        mark_phase(progress, 2, "blocked", atoms=atom_count,
+                                   reason=f"voice floor: {voice_pct:.0%} voice, {n_transcripts}/{n_videos} transcripts")
+                        save_progress(brain_dir, progress)
+                        break
 
                 mark_phase(progress, 2, "complete",
                            atoms=atom_count)
