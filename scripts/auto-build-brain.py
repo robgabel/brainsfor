@@ -668,7 +668,11 @@ def phase_1_scaffold(
         result = call_claude(
             client, model,
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=8192,
+            # 8192 truncated brain.json mid-string for richer thinkers (charlie-munger,
+            # jensen-huang failed at ~char 34900 == the 8192-token ceiling), producing
+            # invalid JSON. The synthesis section (first_principles, contrarian_positions,
+            # etc.) can run large — give it headroom.
+            max_tokens=16384,
             parse_json=True,
             cost_tracker=cost_tracker,
             label="brain_json_gen",
