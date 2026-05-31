@@ -5,6 +5,7 @@ for the auto-build-brain pipeline.
 """
 
 import json
+import re
 import time
 import logging
 from pathlib import Path
@@ -161,13 +162,51 @@ class CostTracker:
 
 
 # --- Claude API wrapper with retries ---
+def extract_json_block(text: str) -> str:
+    """Best-effort extraction of a JSON value from an LLM response.
+
+    Handles markdown fences, leading/trailing prose, and trailing garbage by
+    scanning from the first {/[ through its balanced close (string- and
+    escape-aware). If the value is truncated (no balanced close — the max_tokens
+    ceiling case), returns what's present so json.loads raises and the caller
+    escalates the token budget on retry. Never raises itself.
+    """
+    t = (text or "").strip()
+    if "```" in t:
+        m = re.search(r"```(?:json)?\s*(.*?)```", t, re.DOTALL)
+        t = (m.group(1) if m else t.replace("```json", "").replace("```", "")).strip()
+    start = next((i for i, ch in enumerate(t) if ch in "{["), None)
+    if start is None:
+        return t
+    open_ch = t[start]
+    close_ch = "}" if open_ch == "{" else "]"
+    depth = 0
+    in_str = False
+    esc = False
+    for i in range(start, len(t)):
+        ch = t[i]
+        if in_str:
+            esc = (ch == "\\" and not esc)
+            if ch == '"' and not esc:
+                in_str = False
+        elif ch == '"':
+            in_str = True
+        elif ch == open_ch:
+            depth += 1
+        elif ch == close_ch:
+            depth -= 1
+            if depth == 0:
+                return t[start:i + 1]
+    return t[start:]  # truncated — caller will escalate max_tokens
+
+
 def call_claude(
     client,
     model: str,
     messages: list,
     system: str = None,
     max_tokens: int = 4096,
-    max_retries: int = 3,
+    max_retries: int = 4,
     parse_json: bool = False,
     cost_tracker: CostTracker = None,
     label: str = "",
@@ -201,37 +240,29 @@ def call_claude(
             }
 
             if parse_json:
-                # Extract JSON from markdown code blocks if present
-                text = content.strip()
-                if text.startswith("```"):
-                    lines = text.split("\n")
-                    # Remove first and last lines (``` markers)
-                    json_lines = []
-                    started = False
-                    for line in lines:
-                        if line.strip().startswith("```") and not started:
-                            started = True
-                            continue
-                        if line.strip() == "```" and started:
-                            break
-                        if started:
-                            json_lines.append(line)
-                    text = "\n".join(json_lines)
-                result["parsed"] = json.loads(text)
+                result["parsed"] = json.loads(extract_json_block(content))
 
             return result
 
         except json.JSONDecodeError as e:
             last_error = e
             if attempt < max_retries - 1:
-                warn(f"JSON parse failed (attempt {attempt + 1}), retrying with stricter prompt...")
-                # Add instruction to return valid JSON
+                # The dominant cause is truncation at the max_tokens ceiling (valid
+                # JSON cut mid-string). Retrying at the SAME budget just truncates
+                # again — escalate it, and re-prompt for complete JSON. This turns
+                # the charlie-munger/jensen-huang abort class into a self-heal.
+                kwargs["max_tokens"] = min(32000, int(kwargs.get("max_tokens", max_tokens) * 1.6))
+                warn(f"JSON parse failed (attempt {attempt + 1}) — "
+                     f"retrying at max_tokens={kwargs['max_tokens']}...")
                 if messages and messages[-1]["role"] == "user":
                     messages = messages.copy()
                     messages[-1] = {
                         "role": "user",
-                        "content": messages[-1]["content"] + "\n\nIMPORTANT: Return ONLY valid JSON. No markdown, no explanation, no code blocks.",
+                        "content": messages[-1]["content"]
+                        + "\n\nReturn ONLY valid, COMPLETE JSON — no markdown, no prose, "
+                          "and do not truncate. If large, be concise but keep it well-formed.",
                     }
+                    kwargs["messages"] = messages  # original code forgot this — kwargs kept stale messages
                 time.sleep(1)
             continue
 
