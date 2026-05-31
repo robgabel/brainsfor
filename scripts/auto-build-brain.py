@@ -2119,24 +2119,32 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                             pass
 
                     transcript_fail = (n_videos >= MIN_VIDEOS_EXPECT_TRANSCRIPTS and n_transcripts == 0)
-                    if transcript_fail or voice_pct < MIN_VOICE_PCT:
-                        why = (f"transcript fetch failed: {n_videos} videos discovered, 0 transcripts fetched "
-                               f"(likely IP block — YouTube blocks cloud/CI IPs; build locally or add a proxy)"
-                               if transcript_fail else
-                               f"voice too thin: {voice_pct:.0%} of atoms have a verbatim quote "
-                               f"(< {MIN_VOICE_PCT:.0%} floor)")
-                        error(f"Voice floor not met — {why}. "
-                              f"Atoms={atom_count}, transcripts={n_transcripts}/{n_videos} videos, "
-                              f"voice={voice_pct:.0%}. The brain would ship hollow (thin voice + "
-                              f"ungrounded synthesis). Fix the transcript source and --resume, or pass "
+                    if transcript_fail:
+                        # FATAL-for-this-environment: videos existed but ZERO
+                        # transcripts fetched (IP block / no captions). Continuing
+                        # spends ~$15 of synthesis+enrichment on a quote-less brain.
+                        # Halt as a cost guard — re-run locally / add a proxy.
+                        error(f"Transcript fetch failed: {n_videos} videos discovered, 0 transcripts "
+                              f"fetched (likely IP block — YouTube blocks cloud/CI IPs). The brain "
+                              f"would ship hollow. Build locally / add a proxy and --resume, or pass "
                               f"--allow-thin-pack to ship anyway.")
                         mark_phase(progress, 2, "blocked", atoms=atom_count,
-                                   reason=f"voice floor: {voice_pct:.0%} voice, {n_transcripts}/{n_videos} transcripts")
+                                   reason=f"transcript fetch failed: 0/{n_videos} transcripts")
                         save_progress(brain_dir, progress)
                         break
+                    if voice_pct < MIN_VOICE_PCT:
+                        # QUALITY, not fatal: real but thin voice. Builds-should-not-fail —
+                        # finish the build and ship HIDDEN + flagged (the no-auto-promote
+                        # default keeps it off the live site). A human decides whether to
+                        # promote or re-mine for voice. Does NOT abort.
+                        warn(f"Voice below floor: {voice_pct:.0%} < {MIN_VOICE_PCT:.0%} "
+                             f"({n_transcripts}/{n_videos} transcripts). Build CONTINUES; brain ships "
+                             f"HIDDEN + flagged low-voice for human review (not aborted).")
+                        progress["low_voice_flag"] = round(voice_pct, 3)
 
                 mark_phase(progress, 2, "complete",
-                           atoms=atom_count)
+                           atoms=atom_count,
+                           voice_pct=round(voice_pct, 3) if not args.allow_thin_pack else None)
 
             elif phase_num == 3:
                 if brain_json is None:

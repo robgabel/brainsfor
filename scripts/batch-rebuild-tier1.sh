@@ -36,9 +36,23 @@ for entry in "${BRAINS[@]}"; do
   echo "[$(date +%H:%M)] BUILD $vslug ($name) starting..." | tee -a "$BATCH_LOG"
   resume_flag=""
   [ -f "$prog" ] && resume_flag="--resume"
-  python3 scripts/auto-build-brain.py --person "$name" --slug "$vslug" --reference "$slug" $resume_flag \
-    >> "brains/${vslug}-build.log" 2>&1
-  rc=$?
+  # Self-heal: a build that exits non-zero (transient API/network fault) is
+  # retried via --resume up to 2x before being declared failed. Phases are
+  # idempotent/resumable, so a retry picks up exactly where it died — no rework.
+  rc=1
+  for try in 1 2 3; do
+    python3 scripts/auto-build-brain.py --person "$name" --slug "$vslug" --reference "$slug" $resume_flag \
+      >> "brains/${vslug}-build.log" 2>&1
+    rc=$?
+    [ $rc -eq 0 ] && break
+    # If phase 5 is already complete, treat as success regardless of exit code.
+    if [ -f "$prog" ] && python3 -c "import json,sys;sys.exit(0 if json.load(open('$prog'))['phases']['5']['status']=='complete' else 1)" 2>/dev/null; then
+      rc=0; break
+    fi
+    echo "[$(date +%H:%M)] RETRY $vslug (attempt $try failed rc=$rc, resuming)..." | tee -a "$BATCH_LOG"
+    resume_flag="--resume"
+    sleep 10
+  done
   # capture result
   if [ -f "$prog" ]; then
     summary=$(python3 -c "import json;d=json.load(open('$prog'));p=d['phases'];print('p5='+p['5']['status'],'atoms='+str(p['2'].get('atoms','?')),'score='+str(p['5'].get('audit_score','?')),'cost=\$%.2f'%d.get('total_cost_usd',0))" 2>/dev/null)
