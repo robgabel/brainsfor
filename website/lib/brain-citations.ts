@@ -1,25 +1,14 @@
-import fs from "fs";
-import path from "path";
+import { fetchBrainAtoms } from "./brain-atoms-db";
 
 /**
- * Match the verbatim "..." quoted strings in a model's response back to atoms
- * in a brain's brain-atoms.json. Returns a list of citations the UI can render
- * as clickable links — closing the gap between "this looks like a quote" and
- * "this IS the quote, here's the URL to the original."
+ * Match the verbatim "..." quoted strings in a model's response back to a brain's
+ * atoms (from Supabase). Returns citations the UI can render as clickable links —
+ * closing the gap between "this looks like a quote" and "this IS the quote, here's
+ * the URL to the original."
  *
- * The brain-atoms.json files are big (several MB for some brains), so we cache
- * a slim per-slug index of just {original_quote, source_ref, source_date}.
+ * Reads atoms from the <slug>_atoms table (not the multi-MB pack JSON off disk,
+ * which broke Vercel function bundling). Caches a slim per-slug index.
  */
-
-interface AtomLike {
-  id?: string;
-  original_quote?: string;
-  content?: string;
-  source_ref?: string;
-  source_url?: string | null;
-  source_date?: string;
-  confidence?: number;
-}
 
 export interface Citation {
   quote: string;
@@ -36,12 +25,6 @@ interface AtomIndexEntry {
   date: string | null;
 }
 
-const BRAINS_DIR = fs.existsSync(
-  path.join(process.cwd(), "..", "brains", "index.json"),
-)
-  ? path.join(process.cwd(), "..", "brains")
-  : path.join(process.cwd(), "public", "brains");
-
 const indexCache = new Map<string, AtomIndexEntry[]>();
 
 function normalize(s: string): string {
@@ -53,57 +36,29 @@ function normalize(s: string): string {
     .trim();
 }
 
-function validateSlug(slug: string): void {
-  if (/[./\\]/.test(slug)) {
-    throw new Error(`Invalid slug: ${slug}`);
-  }
-}
-
-function loadAtomIndex(slug: string): AtomIndexEntry[] {
-  validateSlug(slug);
+async function loadAtomIndex(slug: string): Promise<AtomIndexEntry[]> {
   const cached = indexCache.get(slug);
   if (cached) return cached;
 
-  // Local dev pack location, then public/ fallback for Vercel.
-  const localPath = path.join(BRAINS_DIR, slug, "pack", "brain-atoms.json");
-  const vercelPath = path.join(BRAINS_DIR, slug, "brain-atoms.json");
-  const filePath = fs.existsSync(localPath)
-    ? localPath
-    : fs.existsSync(vercelPath)
-      ? vercelPath
-      : null;
-
-  if (!filePath) {
-    indexCache.set(slug, []);
-    return [];
-  }
-
-  try {
-    const raw = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-    const atoms: AtomLike[] = Array.isArray(raw.atoms) ? raw.atoms : [];
-    const index: AtomIndexEntry[] = atoms
-      .map((a) => {
-        const q = a.original_quote ?? a.content ?? "";
-        if (!q) return null;
-        const ref = a.source_ref;
-        const refUrl = ref && /^https?:\/\//i.test(ref) ? ref : null;
-        return {
-          normalized: normalize(q),
-          quote: q,
-          // Prefer the export-side resolved URL; fall back to source_ref if it
-          // happens to already be an http(s) URL. Never use a bare title — it
-          // would render as a relative link and 404 on the site.
-          url: a.source_url ?? refUrl,
-          date: a.source_date ?? null,
-        };
-      })
-      .filter((x): x is AtomIndexEntry => x !== null);
-    indexCache.set(slug, index);
-    return index;
-  } catch {
-    indexCache.set(slug, []);
-    return [];
-  }
+  const atoms = await fetchBrainAtoms(slug); // from Supabase <slug>_atoms
+  const index: AtomIndexEntry[] = atoms
+    .map((a) => {
+      const q = a.original_quote ?? a.content ?? "";
+      if (!q) return null;
+      const ref = a.source_ref;
+      const refUrl = ref && /^https?:\/\//i.test(ref) ? ref : null;
+      return {
+        normalized: normalize(q),
+        quote: q,
+        // Prefer the resolved URL; fall back to source_ref only if it's already
+        // an http(s) URL. Never use a bare title — it would 404 as a relative link.
+        url: a.source_url ?? refUrl,
+        date: a.source_date ?? null,
+      };
+    })
+    .filter((x): x is AtomIndexEntry => x !== null);
+  indexCache.set(slug, index);
+  return index;
 }
 
 /**
@@ -156,8 +111,8 @@ export function stripGroundingMarker(text: string): string {
  * uniquely identify an atom in practice, and tolerates the model trimming or
  * lightly paraphrasing the tail. Returns at most 5 citations, deduped by URL.
  */
-export function findCitations(slug: string, responseText: string): Citation[] {
-  const index = loadAtomIndex(slug);
+export async function findCitations(slug: string, responseText: string): Promise<Citation[]> {
+  const index = await loadAtomIndex(slug);
   if (index.length === 0) return [];
 
   const quotes = extractQuotedStrings(responseText);

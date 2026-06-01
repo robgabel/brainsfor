@@ -55,11 +55,17 @@ const nextConfig: NextConfig = {
       "**/brains/*/evals/**",
       "**/brains/*/build-progress.json",
       "**/brains/*/synthesis.md",
+      // brain-atoms.json/.js no longer read at runtime — /api/skill and /api/board
+      // now query Supabase (lib/brain-atoms-db). Keep them out of function bundles
+      // so deploy size stays flat as the catalog grows. They still ship as static
+      // public assets for explore.html (HTTP fetch) and the downloadable packs.
+      "**/brains/*/pack/brain-atoms.json",
       "**/brains/*/pack/brain-atoms.js",
       "**/brains/*/pack/brain-context.md",
       "**/brains/*/pack/skills/**",
       "**/brains/*/pack/*.zip",
       "**/brains/*/cross-connections-backup.json",
+      "**/public/brains/*/brain-atoms.json",
       "**/public/brains/*/brain-atoms.js",
       "**/public/brains/*/brain-context.md",
       "**/public/brains/*/*.zip",

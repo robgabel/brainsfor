@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS {{SLUG}}_atoms (
   cluster TEXT,
   topics TEXT[] DEFAULT '{}',
   source_ref TEXT,
+  source_url TEXT,
   source_date TIMESTAMPTZ,
   confidence FLOAT DEFAULT 0.8,
   confidence_tier TEXT DEFAULT 'medium' CHECK (confidence_tier IN ('high', 'medium', 'low')),

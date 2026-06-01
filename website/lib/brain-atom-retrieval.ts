@@ -6,19 +6,17 @@
 // relevant to the user's question shifts what the model attends to from "the
 // canonical thesis" to "atoms that match THIS question."
 //
-// Retrieval source: the SHIPPED pack JSON at public/brains/<slug>/brain-atoms.json,
+// Retrieval source: the brain's <slug>_atoms table in Supabase (via lib/brain-atoms-db),
 // scored by lexical overlap (content + verbatim quote + implication + topics +
-// cluster) against the question. This deliberately does NOT use Supabase vector
-// search: only 1 of 22 brains ever had embeddings populated, so the vector RPC
-// silently returned empty for everyone else and Layer 2 was a no-op fleet-wide.
-// Reading the pack works for every brain with zero infra and no embeddings.
+// cluster) against the question. Previously this read the multi-MB pack JSON off
+// the filesystem, which made Next trace the whole brains/ tree into the function
+// bundle and broke deploys. Supabase keeps the bundle flat.
 //
-// Failure mode is graceful: if the pack can't be read, the caller gets an empty
+// Failure mode is graceful: if Supabase is unreachable, the caller gets an empty
 // block and the route falls back to the static brain-context.md alone (still
 // benefits from Layer 1 prompt surgery).
 
-import { readFile } from "fs/promises";
-import path from "path";
+import { fetchBrainAtoms } from "./brain-atoms-db";
 
 interface RetrievedAtom {
   id: string;
@@ -30,20 +28,6 @@ interface RetrievedAtom {
   topics: string[] | null;
   similarity: number; // lexical relevance score in [0,1] (kept name for caller compat)
 }
-
-interface PackAtom {
-  id: string;
-  content?: string;
-  original_quote?: string | null;
-  implication?: string | null;
-  confidence_tier?: string | null;
-  confidence?: number | null;
-  cluster?: string | null;
-  topics?: string[] | null;
-}
-
-// Slug allowlist — we read a path derived from this, so guard against traversal.
-const SLUG_RE = /^[a-z][a-z0-9_-]{1,60}$/;
 
 const STOPWORDS = new Set([
   "the", "a", "an", "and", "or", "but", "if", "is", "are", "was", "were", "be",
@@ -63,41 +47,12 @@ function tokenize(text: string): string[] {
   );
 }
 
-// Per-slug pack cache (atoms only). Populated on first request, then reused for
-// the lifetime of the serverless instance.
-const packCache = new Map<string, PackAtom[]>();
-
-async function loadPackAtoms(slug: string): Promise<PackAtom[]> {
-  if (packCache.has(slug)) return packCache.get(slug)!;
-  try {
-    const file = path.join(
-      process.cwd(),
-      "public",
-      "brains",
-      slug,
-      "brain-atoms.json",
-    );
-    const raw = await readFile(file, "utf8");
-    const parsed = JSON.parse(raw);
-    const atoms: PackAtom[] = Array.isArray(parsed?.atoms) ? parsed.atoms : [];
-    packCache.set(slug, atoms);
-    return atoms;
-  } catch (err) {
-    console.error(
-      `[brain-atom-retrieval] could not load pack for ${slug}: ${(err as Error).message}`,
-    );
-    packCache.set(slug, []); // cache the miss so we don't retry fs every request
-    return [];
-  }
-}
-
 export async function retrieveRelevantAtoms(
   slug: string,
   query: string,
   k: number = 15,
 ): Promise<RetrievedAtom[]> {
-  if (!SLUG_RE.test(slug)) return [];
-  const atoms = await loadPackAtoms(slug);
+  const atoms = await fetchBrainAtoms(slug);
   if (atoms.length === 0) return [];
 
   const qTokens = tokenize(query);

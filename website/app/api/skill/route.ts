@@ -367,7 +367,7 @@ export async function POST(request: NextRequest) {
       // String-matches the enhanced response against the brain's atoms and
       // emits real source URLs the client can render as clickable chips.
       try {
-        const citations = findCitations(brain, enhancedFullText);
+        const citations = await findCitations(brain, enhancedFullText);
         if (citations.length > 0) {
           emit({ type: "citations", citations });
         }
