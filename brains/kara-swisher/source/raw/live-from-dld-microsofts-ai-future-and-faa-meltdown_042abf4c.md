@@ -1,6 +1,7 @@
-- JANUARY 13, 2023
-- EPISODE 370
-- 51 MIN
+![Pivot](https://podcasts.apple.com/assets/artwork/1x1.gif)
+
+- January 13, 2023
+- 51 min
 
 # Live from DLD: Microsoft's AI Future and the FAA Meltdown
 
@@ -14,11 +15,15 @@ Send us your questions! Call 855-51-PIVOT or go to nymag.com/pivot.
 
 Learn more about your ad choices. Visit podcastchoices.com/adchoices
 
-- [**Kara Swisher**\\
+- [![Kara Swisher](https://podcasts.apple.com/assets/artwork/1x1.gif)\\
+\\
+**Kara Swisher**\\
 \\
 Host](https://podcasts.apple.com/us/browse)
 
-- [**Scott Galloway**\\
+- [![Scott Galloway](https://podcasts.apple.com/assets/artwork/1x1.gif)\\
+\\
+**Scott Galloway**\\
 \\
 Host](https://podcasts.apple.com/us/browse)
 

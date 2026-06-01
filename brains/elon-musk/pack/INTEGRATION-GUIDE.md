@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (247 atoms, 1000 typed connections)
+  brain-atoms.json         ~1MB     Structured data (836 atoms, 719 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | Elon's synthesized worldview, all 247 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | Elon's synthesized worldview, all 836 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 
@@ -141,9 +141,9 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 4. Use any thinking skill:
    ```
-   /advise Should I vertically integrate my supply chain or work with partners?
-   /debate Is Mars colonization worth the investment versus fixing Earth's problems?
-   /predict What happens to the auto industry when full self-driving is solved?
+   /advise Should I vertically integrate my supply chain or outsource manufacturing to reduce upfront costs?
+   /debate Is colonizing Mars worth the investment when we have unsolved problems on Earth?
+   /predict What happens to traditional automakers when full self-driving is finally solved?
    /surprise
    ```
 

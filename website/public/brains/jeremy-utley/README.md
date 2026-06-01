@@ -1,11 +1,11 @@
 # Jeremy Utley Brain Pack
 
-> **759 knowledge atoms** · **2272 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **911 knowledge atoms** · **961 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Jeremy Utley's thinking, extracted from Ideaflow book, Stanford d.school Creativity in Business course, podcast interviews, and public lectures. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Jeremy Utley's thinking, extracted from Ideaflow book, Stanford d.school Creativity in Business course, Beyond the Prompt podcast, Paint & Pipette newsletter, Roland Berger interview, Capgemini interview, unSILOed podcast, YouTube lectures, and LinkedIn essays. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Jeremy's actual ideas, frameworks, and worldview.
 
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Jeremy's perspe
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (759 atoms, 2272 connections)
+  ├── brain-atoms.json      ← Structured data (911 atoms, 961 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**759 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**911 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**2272 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**961 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — Ideaflow, creative confidence, innovation habits, idea quotas, input quality, organizational creativity, AI and creativity.
+**16 topic clusters** — Ideaflow, AI as creative teammate, creative confidence, idea quotas, input quality, organizational creativity, self-literacy, brainstorming facilitation, problem framing, design thinking.
 
 **Date range:** 2012 — 2025
 
@@ -95,7 +95,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 ## About Jeremy Utley
 
-Jeremy Utley is an adjunct professor at Stanford University's d.school and co-director of Stanford's Executive Education program in creativity and innovation. He is the co-author of Ideaflow: The Only Business Metric That Matters, which argues that the volume and velocity of ideas an organization generates is the leading indicator of its long-term success.
+Jeremy Utley is an adjunct professor at Stanford University's d.school and co-director of Stanford's Executive Education program in creativity and innovation. He is the co-author of Ideaflow: The Only Business Metric That Matters and host of the Beyond the Prompt podcast, where he explores how AI is reshaping creative practice. His work spans executive education at Google, IDEO, and LinkedIn, and his writing on creativity and AI appears in his Paint & Pipette newsletter.
 
 ## Sources & Ethics
 

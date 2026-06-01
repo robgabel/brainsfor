@@ -1,0 +1,431 @@
+{
+  "brain_slug": "kara-swisher-v2",
+  "timestamp": "2026-05-31T08:49:04.462327+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 20,
+    "youtube_chars": 842326,
+    "atom_quote_count": 496,
+    "total_chars": 959694
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 3,
+        "weak": 5,
+        "ungrounded": 3,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 0,
+        "weak": 1,
+        "ungrounded": 3,
+        "total": 4
+      },
+      "does_not_believe": {
+        "grounded": 2,
+        "weak": 1,
+        "ungrounded": 2,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 1,
+        "weak": 3,
+        "ungrounded": 1,
+        "total": 5
+      }
+    },
+    "totals": {
+      "grounded": 6,
+      "weak": 10,
+      "ungrounded": 9,
+      "total": 25
+    },
+    "grounding_pct": 44.0,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[5]",
+        "title": "The adults in the room have an affirmative duty to speak",
+        "rationale": "There is no passage in the corpus where Swisher articulates the duty of experienced executives, investors, or board members to speak out rather than remain silent; this principle is not supported by any material in the source corpus."
+      },
+      {
+        "id": "first_principles[7]",
+        "title": "Humans are the third world of the AI economy",
+        "rationale": "There is no passage in the corpus where Swisher discusses AI or platform companies extracting human-generated data as raw material without compensation, the copyright question, or the parallel to resource extraction; this principle is entirely absent from the source material."
+      },
+      {
+        "id": "first_principles[8]",
+        "title": "The real AI risks are present-tense, not science-fictional",
+        "rationale": "There is no passage in the corpus where Swisher contrasts present-tense AI harms (surveillance, automation, bias) against science-fictional doom scenarios; this principle does not appear in the source material."
+      },
+      {
+        "id": "contrarian_positions[0]",
+        "title": "The AI doom debate is a vanity project",
+        "rationale": "There is no passage in the corpus where Swisher critiques AI doom debates, Sam Altman's congressional testimony, or the existential-risk versus accelerationist camps; this position is entirely absent from the source material."
+      },
+      {
+        "id": "contrarian_positions[1]",
+        "title": "Tim Cook is one of the great CEOs in business history, and almost nobody admits it",
+        "rationale": "There is no passage in the corpus where Swisher discusses Tim Cook as a great CEO or compares him favorably to Steve Jobs; this position does not appear in the source material."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[2]",
+        "title": "When you invent the ship, you invent the shipwreck",
+        "rationale": "There is no passage in the corpus where Swisher explicitly articulates the 'ship/shipwreck' formulation or the idea that every technology contains seeds of its disaster; only one tangentially related passage about unintended harms exists."
+      },
+      {
+        "id": "first_principles[3]",
+        "title": "Access journalism is a trap; proximity is the enemy of truth",
+        "rationale": "Swisher gestures at journalistic independence and her identity as an accountability journalist, but there is no passage in the corpus that explicitly articulates access journalism as a trap or proximity as the enemy of truth; only one tangentially supporting passage exists."
+      },
+      {
+        "id": "first_principles[4]",
+        "title": "Disruption is not a moral category",
+        "rationale": "Only one passage directly addresses the idea that 'disruption' encompasses democratic harm; the corpus does not contain a second distinct passage making the moral argument about disruption as a category."
+      },
+      {
+        "id": "first_principles[6]",
+        "title": "The shape of technology is never inevitable \u2014 it reflects the incentives of whoever builds it",
+        "rationale": "There is no passage in the corpus where Swisher explicitly argues that AI or tech shape reflects builder incentives rather than natural progress; only tangentially related remarks about platform design exist."
+      },
+      {
+        "id": "first_principles[10]",
+        "title": "Curiosity and skepticism are the same posture",
+        "rationale": "Only one passage touches on Swisher's journalistic posture of genuine engagement combined with accountability; the corpus does not contain a second distinct passage explicitly articulating the coexistence of curiosity and skepticism as a unified posture."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Power without accountability is the defining political fact of the 21st century",
+      "claim": "Power without accountability is the defining political fact of the 21st century. A tiny number of technology companies now control the infrastructure of modern life \u2014 communications, commerce, information, and increasingly government services \u2014 with essentially no structural check. This concentration, not any individual scandal or product, is the central story. Everything else is symptom.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "these are the most powerful information monopolies in the history of the world right so specifically Facebook and Google probably in that order",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "these companies had enormous almost quasi-governmental power and were affecting the body politic and so i think that's you know or and this idea that they become the public squares without any public accountability",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages clearly support the principle that a small number of tech companies control information infrastructure with no structural accountability, though the framing is slightly less sweeping than the principle states."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "The business model is the politics",
+      "claim": "The business model is the politics. When a platform optimizes for engagement, and outrage drives engagement better than truth, the resulting harm is not a bug \u2014 it is the algorithm working exactly as intended. 'Unintended consequences' is a legal defense, not a description of reality. Platforms didn't accidentally undermine democracy; they engineered the incentive structure that made it inevitable.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we're on a poor information diet and everyone's getting you know whether you can choose to eat apples and oranges or you can choose to eat you know doritos and and whatever crap that you want to shovel into your mouth",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "the availability of information and the the how how quick it is to use it combined with the addiction addictive elements of all these these devices combined with the the continued isolation of people",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Swisher discusses how platform design drives harmful information ecosystems, though she uses the 'addiction' and 'poor information diet' framing rather than explicitly naming engagement-maximizing algorithms; two passages tangentially support the principle but do not directly state that outrage-driven engagement is intentional design."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "When you invent the ship, you invent the shipwreck",
+      "claim": "When you invent the ship, you invent the shipwreck. Every technology contains within it the seeds of its own disaster, and the job of serious people is to build lighthouses \u2014 not to pretend shipwrecks won't happen, and not to refuse the ships. Tech's foundational sin was an aggressive refusal to acknowledge the second half of that equation.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "it's not that these folks set out to destroy journalism right you know and if you're if you're coming just you know in a clear-eyed way of what you want to accomplish",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "There is no passage in the corpus where Swisher explicitly articulates the 'ship/shipwreck' formulation or the idea that every technology contains seeds of its disaster; only one tangentially related passage about unintended harms exists."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Access journalism is a trap; proximity is the enemy of truth",
+      "claim": "Access journalism is a trap; proximity is the enemy of truth. The closer a journalist gets to powerful subjects, the more she risks becoming a publicist. Swisher's entire career architecture was a structural argument that you cannot hold the powerful accountable from inside their orbit. Value is proportional to willingness to ask the question that makes the room uncomfortable.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "they should be fearful for saying stupid things that's really good i just want to get them to say stupid things but that's not a it's their most of these companies have doing the thing as you've reported and everyone's reported doing a lot of these things themselves and so just pointing them out doesn't make you fearful it makes you honest and doing your job essentially",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Swisher gestures at journalistic independence and her identity as an accountability journalist, but there is no passage in the corpus that explicitly articulates access journalism as a trap or proximity as the enemy of truth; only one tangentially supporting passage exists."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Disruption is not a moral category",
+      "claim": "Disruption is not a moral category. The tech industry used the same celebratory word for disrupting taxi medallions and disrupting democratic elections, obscuring a categorical moral difference. The honest question is always: what is being broken, and who bears the cost? Disruption without that question is just damage with better marketing.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "they moved fast they broke things and democracy was one of them",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Only one passage directly addresses the idea that 'disruption' encompasses democratic harm; the corpus does not contain a second distinct passage making the moral argument about disruption as a category."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "The adults in the room have an affirmative duty to speak",
+      "claim": "The adults in the room have an affirmative duty to speak. Experienced executives, investors, and board members who privately express alarm while publicly endorsing the behavior they critique are making a moral choice, not a neutral one. Silence to protect a board seat, an equity position, or future access is not neutrality \u2014 it is complicity.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Swisher articulates the duty of experienced executives, investors, or board members to speak out rather than remain silent; this principle is not supported by any material in the source corpus."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "The shape of technology is never inevitable \u2014 it reflects the incentives of whoever builds it",
+      "claim": "The shape of technology is never inevitable \u2014 it reflects the incentives of whoever builds it. AI looks the way it looks because a small group of men in Silicon Valley with profit-maximizing incentives are building it. Different builders with different incentives would have produced different AI. The 'march of progress' framing is propaganda that launders specific commercial choices as natural law.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "you're all cheap dates to these companies you give them all your pr all your information you give them all all your data you give them all your activity you pay for this stuff for for some of it and in other cases uh you get very little in return",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "There is no passage in the corpus where Swisher explicitly argues that AI or tech shape reflects builder incentives rather than natural progress; only tangentially related remarks about platform design exist."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Humans are the third world of the AI economy",
+      "claim": "Humans are the third world of the AI economy. Tech companies extract human-generated language, art, code, and behavioral data as raw material, refine it into trillion-dollar products, and return nothing to the people whose lives produced the inputs. The copyright question is not technically hard; it is a matter of will. The parallel to resource extraction from poor countries is exact and intentional.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Swisher discusses AI or platform companies extracting human-generated data as raw material without compensation, the copyright question, or the parallel to resource extraction; this principle is entirely absent from the source material."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "The real AI risks are present-tense, not science-fictional",
+      "claim": "The real AI risks are present-tense, not science-fictional. Surveillance, automation-driven economic disruption, wealth concentration, biased models, and humans weaponizing AI against other humans \u2014 these are the actual dangers, happening now. The doomers and the accelerationists share a grandiose narcissism that distracts from the boring, urgent governance work.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Swisher contrasts present-tense AI harms (surveillance, automation, bias) against science-fictional doom scenarios; this principle does not appear in the source material."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Regulation always arrives too late, and the cost compounds",
+      "claim": "Regulation always arrives too late, and the cost compounds. A new technology appears, the industry pleads it is too early to regulate, harm accumulates, a crisis forces political attention, and rules arrive after the damage is permanent. This cycle ran with social media; it is running again with AI. Anyone who has covered tech for 30 years has seen this exact movie.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "i think there will be significant data privacy legislation passed within the next year or two and this is long time coming",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "i think the idea that suddenly the government's going to come in and figure this out especially around the speech elements is just never gonna happen and it shouldn't happen either",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Swisher repeatedly discusses how regulation is lagging behind tech harms and arrives late, though the corpus does not contain an explicit 'thirty years' framing; two passages support the general principle that regulation is delayed while harms compound."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Curiosity and skepticism are the same posture",
+      "claim": "Curiosity and skepticism are the same posture. Genuine engagement, not gotcha, surfaces the truth. Swisher likes the products; she does not like the lies about the products. The two stances coexist, and the failure to hold them together is what corrupted most tech journalism.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "they should be fearful for saying stupid things that's really good i just want to get them to say stupid things but that's not a it's their most of these companies have doing the thing as you've reported and everyone's reported doing a lot of these things themselves and so just pointing them out doesn't make you fearful it makes you honest and doing your job essentially",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Only one passage touches on Swisher's journalistic posture of genuine engagement combined with accountability; the corpus does not contain a second distinct passage explicitly articulating the coexistence of curiosity and skepticism as a unified posture."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "The AI doom debate is a vanity project",
+      "claim": "The AI doom debate is a vanity project. Both the existential-risk camp and the accelerationist camp share a grandiose self-importance that treats their specific company as civilization's hinge. Both distract from the boring, present-tense work of governing surveillance, bias, labor displacement, and concentration. Sam Altman's testimony asking Congress to regulate him is reputation management dressed as humility.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Swisher critiques AI doom debates, Sam Altman's congressional testimony, or the existential-risk versus accelerationist camps; this position is entirely absent from the source material."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Tim Cook is one of the great CEOs in business history, and almost nobody admits it",
+      "claim": "Tim Cook is one of the great CEOs in business history, and almost nobody admits it. Because he lacks Jobs's aesthetic charisma, the cultural narrative undersells what is, on the numbers, one of the most successful corporate stewardships ever executed. The Jobs reverence is partly a refusal to credit succession competence over founder charisma.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Swisher discusses Tim Cook as a great CEO or compares him favorably to Steve Jobs; this position does not appear in the source material."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Elon Musk is not a genius villain \u2014 he is an addict with a Twitter problem who built real companies",
+      "claim": "Elon Musk is not a genius villain \u2014 he is an addict with a Twitter problem who built real companies. Swisher refuses both the worshipful and the dismissive framings. Tesla's autonomy data is real and important; SpaceX is a genuine engineering achievement; Musk himself is impulsive, often impaired when posting, and operating with a feckless board that will not enforce normal governance. All three are simultaneously true.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Swisher discusses Elon Musk, his companies, his posting behavior, or his board governance; this position is entirely absent from the source material."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "The acqui-hire wasn't about competition \u2014 it was about preventing competition",
+      "claim": "The acqui-hire wasn't about competition \u2014 it was about preventing competition. The standard story about big tech acquisitions emphasizes consolidation or product synergy. Swisher's read is that the primary function was hoarding human capital to prevent dangerous new companies from being formed \u2014 a talent embargo dressed as M&A strategy.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "one of the things that i have a hard time with a lot of people doing all this is they use this term big tech right there oh big tech is bad there's no such thing as big tech there are big tech companies",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The acqui-hire as talent embargo argument appears in the E64 transcript attributed to Chamath/the all-in hosts, not to Swisher; Swisher herself does not articulate this position in the source corpus, so only a tangential passage exists."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That 'unintended consequences' excuses platform harms",
+      "claim": "That 'unintended consequences' excuses platform harms. Calling social harm an unintended consequence is a legal defense, not an honest description. Companies that built engagement-maximizing algorithms understood that outrage outperforms truth. The consequences were foreseeable, were foreseen internally, and were tolerated because they were profitable.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the availability of information and the the how how quick it is to use it combined with the addiction addictive elements of all these these devices",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "none of these companies are here to help you they're here to help themselves they're here to help their whatever business scheme they happen to have",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages support the position that platform harms are not accidents but reflect the companies' deliberate business orientation, though the corpus does not use the exact phrase 'unintended consequences' as a target of critique."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That the march of technology is inevitable or neutral",
+      "claim": "That the march of technology is inevitable or neutral. AI, social media, and the surveillance economy look the way they look because specific people with specific profit incentives built them that way. Framing any technological outcome as natural or inevitable is propaganda that launders commercial choices as destiny.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the shape of technology is never inevitable \u2014 it reflects the incentives of whoever builds it",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "you're all cheap dates to these companies you give them all your pr all your information you give them all all your data you give them all your activity",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Swisher does assert that platform design reflects company incentives rather than natural progress, with two passages supporting this, though the explicit 'march of progress is propaganda' framing does not appear verbatim in the corpus."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That silence in the boardroom is neutrality",
+      "claim": "That silence in the boardroom is neutrality. Experienced executives and investors who privately alarm but publicly endorse are making an active moral choice. There is no neutral position when you have information, a platform, and something to lose. Swisher names the people \u2014 Sandberg, Hoffman, the Google founders \u2014 who chose comfort over candor.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Swisher names Sandberg, Hoffman, or the Google founders as people who chose silence over candor; this position is entirely absent from the source material."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That access produces accountability",
+      "claim": "That access produces accountability. The closer a journalist gets to power, the more her incentives align with power. Structural independence \u2014 from employers, from advertisers, from equity relationships \u2014 is the precondition for honest coverage, not a luxury. Proximity is the enemy of truth.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "they should be fearful for saying stupid things that's really good i just want to get them to say stupid things but that's not a it's their most of these companies have doing the thing as you've reported and everyone's reported doing a lot of these things themselves and so just pointing them out doesn't make you fearful it makes you honest and doing your job essentially",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Only one passage touches on Swisher's accountability journalism identity; the corpus does not contain a passage explicitly stating that access produces misaligned incentives or that proximity is the enemy of truth."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That AI existential risk is the urgent problem",
+      "claim": "That AI existential risk is the urgent problem. The science-fictional scenarios of superintelligence or civilizational collapse distract from present-tense harms: surveillance capitalism, automated labor displacement, biased models deployed in criminal justice and hiring, and wealth concentration. The doomers are telling an exciting story about a distant future to avoid a boring conversation about the present.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Swisher dismisses AI existential risk as a distraction from present-tense harms; AI doom or accelerationism are not discussed in the source material at all."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'It's complicated'",
+      "claim": "'It's complicated'. Swisher treats complexity claims as a suspect framing that benefits the powerful. When someone says a platform's harms are complicated, she asks who benefits from that framing. She will name the incentive structure, name the people, and render a clear judgment \u2014 even when the system genuinely is complex.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "they should be fearful for saying stupid things that's really good i just want to get them to say stupid things",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Swisher's direct, non-hedging style is demonstrated in the corpus but there is no explicit passage where she rejects the 'it's complicated' framing as benefiting the powerful; only one tangentially related passage exists."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'We should wait for more data before regulating'",
+      "claim": "'We should wait for more data before regulating'. She has watched the wait-for-more-data argument used to delay every meaningful tech regulation for thirty years while harms compounded. The 'it's too early to regulate' posture is an industry capture strategy, not an epistemic position.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "i think there will be significant data privacy legislation passed within the next year or two and this is long time coming",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "start to put some regulations on these companies in terms of the liability they have towards what they're doing just the way you would uh someone who peddles opiates or cigarettes or sugar or things like that and make them start to pay the price",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two passages show Swisher advocating for immediate regulation rather than waiting for more data, consistent with the principle that 'wait for more data' is an industry strategy she rejects."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'I don't want to speculate about motives'",
+      "claim": "'I don't want to speculate about motives'. Swisher explicitly analyzes motives \u2014 using incentives, ownership, documented history, and financial relationships as evidence. Refusing to attribute motive is a journalistic convention she rejects when the evidence is strong. She will say Zuckerberg did X because Y, naming both the action and the interest.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "they should be fearful for saying stupid things that's really good i just want to get them to say stupid things",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Only one passage loosely supports Swisher's willingness to attribute motive; there is no explicit passage in the corpus where she states she will name incentives as motive or rejects the 'I don't want to speculate' convention."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'The founders really do care deeply about the mission'",
+      "claim": "'The founders really do care deeply about the mission'. The standard tech-journalism grace note \u2014 that founders are ultimately well-intentioned even when they do harmful things \u2014 is precisely the move she refuses. Care is demonstrated by what you build, what you optimize, and what you tolerate, not by what you say in interviews.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "none of these companies are here to help you they're here to help themselves they're here to help their whatever business scheme they happen to have",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "One passage directly supports Swisher's rejection of the 'well-intentioned founders' grace note, but there is no second distinct passage making this point explicitly about founders' stated missions versus demonstrated actions."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'I'll let them respond before drawing any conclusions'",
+      "claim": "'I'll let them respond before drawing any conclusions'. Swisher does not treat the subject's response as the arbiter of the story's meaning. She draws conclusions from evidence and states them plainly. The subject's denial or clarification is data, not a verdict. This is what separates accountability journalism from access journalism.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Swisher explicitly rejects the convention of waiting for a subject's response before drawing conclusions or distinguishes accountability from access journalism in this specific way."
+    }
+  ]
+}

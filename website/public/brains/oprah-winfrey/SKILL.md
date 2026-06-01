@@ -5,14 +5,14 @@ description: "Load the Oprah Winfrey brain. Pack ships 9 unified skills in pack/
 
 # Oprah Winfrey Brain Pack — Setup & Configuration
 
-Welcome to the **Winfrey Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Oprah Winfrey's interviews, speeches, and published works — a curated collection of her most transformative thinking on self-discovery, resilience, intentional living, spiritual growth, and the power of authentic storytelling.
+Welcome to the **Winfrey Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Oprah Winfrey's interviews, speeches, SuperSoul conversations, and published works — a curated collection of her most transformative thinking on self-discovery, resilience, intentional living, spiritual growth, authentic storytelling, and the power of knowing what you know for sure.
 
 ## What You're Getting
 
-- **333 knowledge atoms** — Core insights, frameworks, and strategic principles from Decades of The Oprah Winfrey Show, O Magazine, SuperSoul conversations, commencement addresses, and published books
-- **355 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **740 knowledge atoms** — Core insights, frameworks, and strategic principles from Decades of The Oprah Winfrey Show, O Magazine, SuperSoul Sunday, SuperSoul Conversations, commencement addresses, Academy of Achievement interviews, 60 Minutes appearances, and major public speeches including the 2018 Golden Globes Cecil B. DeMille address
+- **705 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — Self-discovery, resilience, gratitude, spirituality, storytelling, leadership, philanthropy, trauma and healing, intentional living, empathy, and more
+- **Cross-referenced topics** — Self-discovery, resilience, gratitude, spirituality, storytelling, leadership, philanthropy, trauma and healing, intentional living, empathy, reading, race and identity, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Winfrey Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (333 insights)
+  ├── brain-atoms.json         ← structured atoms (740 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 333 atoms with titles, summaries, connections
+   - JSON structure of 740 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to intentional living? Teach → evolve → coach to build a personal framework.*
+*Example: New to intentional living? Teach → evolve → coach to build a personal framework rooted in Oprah's decades of practice.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Writing about authentic leadership? Advise on your situation → debate the tradeoffs → predict the long-term implications.*
+*Example: Writing about authentic leadership? Advise on your situation → debate the tradeoffs → predict the long-term implications through Oprah's lens.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -201,7 +201,7 @@ If you get that, you're all set.
 
 ## About Oprah Winfrey
 
-Oprah Winfrey is one of the most influential communicators and entrepreneurs of the modern era. From her groundbreaking talk show to her media empire, philanthropic work, and spiritual leadership, she has spent decades helping people connect with their deepest selves and live with greater intention and purpose.
+Oprah Winfrey is one of the most influential communicators, entrepreneurs, and philanthropists of the modern era. From her groundbreaking talk show to her media empire, her Leadership Academy in South Africa, and her decades of public spiritual inquiry, she has spent her life helping people connect with their deepest selves, heal from their histories, and live with greater intention and purpose.
 
 This brain pack extracts and structures her core ideas so you can activate her mental models in your own thinking.
 
@@ -211,7 +211,7 @@ This brain pack extracts and structures her core ideas so you can activate her m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Winfrey's publicly broadcast interviews from The Oprah Winfrey Show (archives circulating in public discourse), SuperSoul Conversations, commencement addresses, and O Magazine excerpts that appear in press coverage.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Winfrey's publicly broadcast interviews from The Oprah Winfrey Show (archives circulating in public discourse), SuperSoul Conversations, commencement addresses, O Magazine excerpts that appear in press coverage, Academy of Achievement interviews, and 60 Minutes appearances.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

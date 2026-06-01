@@ -1,11 +1,11 @@
 # Hank Green Brain Pack
 
-> **222 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **651 knowledge atoms** · **641 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Hank Green's thinking, extracted from 600+ SciShow episodes, 18+ years of Vlogbrothers, Crash Course series, Dear Hank & John podcast, TikTok science videos (7M+ followers), TED talks, keynotes, interviews, and two novels (An Absolutely Remarkable Thing, A Beautifully Foolish Endeavor). Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Hank Green's thinking, extracted from 600+ SciShow episodes, 18+ years of Vlogbrothers, Crash Course series, Dear Hank & John podcast, TikTok science videos (7M+ followers), TED talks, keynotes, interviews, Wikipedia profile, NPR interviews, TIME Magazine feature, New York Times coverage, and two novels (An Absolutely Remarkable Thing, A Beautifully Foolish Endeavor). Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Hank's actual ideas, frameworks, and worldview.
 
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Hank's perspect
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (222 atoms, 1000 connections)
+  ├── brain-atoms.json      ← Structured data (651 atoms, 641 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,9 +56,9 @@ This means:
 
 ## The Knowledge Graph
 
-**222 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**651 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**641 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
 **16 topic clusters** — Science communication, creator economy, attention and algorithms, climate change, community building, healthcare, TikTok, curiosity, internet culture, entrepreneurship, cancer, fame and identity.
 

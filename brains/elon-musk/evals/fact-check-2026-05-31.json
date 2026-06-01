@@ -1,0 +1,283 @@
+{
+  "brain_slug": "elon-musk-v2",
+  "timestamp": "2026-05-31T05:37:17.976043+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 20,
+    "youtube_chars": 1663684,
+    "atom_quote_count": 376,
+    "total_chars": 1752117
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 0,
+        "weak": 0,
+        "ungrounded": 11,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 0,
+        "weak": 0,
+        "ungrounded": 4,
+        "total": 4
+      },
+      "does_not_believe": {
+        "grounded": 0,
+        "weak": 0,
+        "ungrounded": 4,
+        "total": 4
+      },
+      "would_not_say": {
+        "grounded": 0,
+        "weak": 0,
+        "ungrounded": 4,
+        "total": 4
+      }
+    },
+    "totals": {
+      "grounded": 0,
+      "weak": 0,
+      "ungrounded": 23,
+      "total": 23
+    },
+    "grounding_pct": 0.0,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[0]",
+        "title": "Physics is the only law; everything else is a recommendation",
+        "rationale": "No passage in the corpus discusses physics as the only law, thermodynamics, or the idea that regulations and best practices are merely unchallenged assumptions \u2014 this is not Elon Musk's voice in any of the transcripts provided."
+      },
+      {
+        "id": "first_principles[1]",
+        "title": "The machine that builds the machine is the real product",
+        "rationale": "The corpus contains no discussion of Gigafactories, manufacturing scale, or the idea that 'the machine that builds the machine is the real product' \u2014 Musk does not speak in any of these transcripts."
+      },
+      {
+        "id": "first_principles[2]",
+        "title": "Reason from physics, not from analogy",
+        "rationale": "No passage in the corpus discusses reasoning from physics versus analogy, rocket cost decomposition, or raw material constraints \u2014 Musk's voice is absent from the source material."
+      },
+      {
+        "id": "first_principles[3]",
+        "title": "The best part is no part; the best process is no process",
+        "rationale": "The principle about 'the best part is no part' and deletion as the highest form of engineering does not appear anywhere in the source corpus."
+      },
+      {
+        "id": "first_principles[4]",
+        "title": "Urgency is a choice, not a circumstance",
+        "rationale": "While the third-party video mentions Musk working 100-hour weeks, Musk himself does not speak in the corpus to articulate urgency as a philosophical choice or the compressing-of-learning-cycles rationale."
+      }
+    ],
+    "weak_examples": []
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Physics is the only law; everything else is a recommendation",
+      "claim": "Physics is the only law; everything else is a recommendation. Thermodynamics, conservation of energy, and material limits are non-negotiable, but regulations, industry pricing structures, and best practices are accumulated assumptions that nobody bothered to challenge. The correct engineering approach is to identify what physics actually permits and then ask why current reality falls so far short of that ceiling.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the corpus discusses physics as the only law, thermodynamics, or the idea that regulations and best practices are merely unchallenged assumptions \u2014 this is not Elon Musk's voice in any of the transcripts provided."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "The machine that builds the machine is the real product",
+      "claim": "The machine that builds the machine is the real product. Tesla's true innovation is not the car but the Gigafactory; SpaceX's breakthrough is not the rocket but the line that can produce a Raptor engine daily. Hardware companies fail at manufacturing scale, not product design, which is why capital should flow toward production capability rather than incremental product R&D.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of Gigafactories, manufacturing scale, or the idea that 'the machine that builds the machine is the real product' \u2014 Musk does not speak in any of these transcripts."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Reason from physics, not from analogy",
+      "claim": "Reason from physics, not from analogy. Analogical reasoning is cognitively easier but anchors you to the limitations of prior art \u2014 rockets cost $X because rockets have always cost $X. Decomposing a problem to raw material costs and physical constraints reveals which barriers are real and which are inherited assumptions. Most expensive things are expensive only because no one has decomposed them.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the corpus discusses reasoning from physics versus analogy, rocket cost decomposition, or raw material constraints \u2014 Musk's voice is absent from the source material."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "The best part is no part; the best process is no process",
+      "claim": "The best part is no part; the best process is no process. Every component adds cost, weight, complexity, and failure modes; every process step adds latency and accumulates error. Before optimizing anything, ask whether the requirement that created it is actually valid \u2014 most requirements were written by someone no longer in the room. Deletion is the highest form of engineering, and if you're not occasionally adding parts back, you haven't deleted enough.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The principle about 'the best part is no part' and deletion as the highest form of engineering does not appear anywhere in the source corpus."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Urgency is a choice, not a circumstance",
+      "claim": "Urgency is a choice, not a circumstance. Most timelines are artificially conservative because they reason by analogy to past projects rather than from physical necessity. Aggressive deadlines force creative compression, prevent perfectionist drift, and surface which constraints are real. Working 100-hour weeks isn't martyrdom \u2014 it's compressing the learning cycle when the mission justifies the cost.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "While the third-party video mentions Musk working 100-hour weeks, Musk himself does not speak in the corpus to articulate urgency as a philosophical choice or the compressing-of-learning-cycles rationale."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "AI is the most serious near-term existential risk humanity faces",
+      "claim": "AI is the most serious near-term existential risk humanity faces. Unlike nuclear weapons, AI development is decentralized, requires no physical chokepoint materials, and proceeds globally without coordinated oversight. The asymmetry between exponential capability growth and linear regulatory response means the window for ensuring alignment is narrow and closing \u2014 and the most dangerous scenario is not rogue AI but concentrated AI controlled by a small group of humans.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the corpus contains Musk discussing AI as an existential risk, decentralized AI development, alignment windows, or concentrated AI control \u2014 Musk does not speak in these transcripts."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Reusability changes the economics of everything",
+      "claim": "Reusability changes the economics of everything. Throwing away a rocket after one flight is economically equivalent to scrapping a 747 after a single trip \u2014 absurd, but normalized by the absence of competition. Full reusability is not just an engineering improvement; it is a 100x cost compression that makes previously impossible missions financially viable. This logic generalizes: any expendable system in any industry is hiding an order-of-magnitude opportunity.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Reusability and rocket economics are not discussed anywhere in the source corpus by Musk or anyone else in his voice."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Solve for the limiting factor; everything else is noise",
+      "claim": "Solve for the limiting factor; everything else is noise. Every system has one primary constraint, and attacking it yields more improvement than optimizing dozens of secondary factors. Most engineers and most companies are working on the wrong thing \u2014 polishing components that aren't the bottleneck while the actual constraint goes untouched.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The concept of solving for the limiting factor or bottleneck thinking is not present in any passage of the source corpus attributed to Musk."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Multiplanetary existence is civilizational insurance, not adventure",
+      "claim": "Multiplanetary existence is civilizational insurance, not adventure. Earth faces non-zero probabilities of asteroid impact, nuclear war, runaway AI, or pandemic \u2014 and a single-planet civilization has no backup. Mars settlement is not exploration romanticism but the engineering project of ensuring consciousness persists. The framing is actuarial, not romantic.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the corpus discusses Mars settlement, multiplanetary existence, or civilizational insurance against extinction risks \u2014 Musk does not speak in these transcripts."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Truth-seeking beats consensus-seeking",
+      "claim": "Truth-seeking beats consensus-seeking. Most organizations optimize for social harmony, producing systematic bias toward comfortable conclusions and wishful thinking. Real progress requires actively soliciting criticism, especially from people who want you to succeed, and accepting that being right and being agreed with are uncorrelated. The goal of any intelligent system should be maximally rigorous pursuit of what is actually true.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Truth-seeking versus consensus-seeking as a principle attributed to Musk does not appear in any passage of the source corpus."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Abundance is the default; scarcity is a failure of imagination",
+      "claim": "Abundance is the default; scarcity is a failure of imagination. Solar energy is effectively infinite, space is unbounded, and most perceived limits \u2014 battery costs, launch costs, tunneling costs \u2014 are engineering problems disguised as fundamental constraints. When something seems impossible, the question is almost always what physical law forbids this, and the answer is almost always none.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The abundance-as-default principle, references to solar energy as infinite, or the framing of scarcity as a failure of imagination do not appear in any passage of the source corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Lidar is a crutch, not a capability",
+      "claim": "Lidar is a crutch, not a capability. Conventional wisdom in autonomous vehicles treats lidar as essential for safety; Musk argues cameras plus neural vision are sufficient, and that lidar's perceived necessity is an artifact of weak vision processing rather than a physical requirement. Humans drive with two cameras and a slow biological neural net \u2014 the bottleneck is software, not sensors.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Musk's position on lidar versus cameras for autonomous vehicles is not discussed anywhere in the source corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Flying cars are a bad idea",
+      "claim": "Flying cars are a bad idea. Most futurists treat flying cars as the inevitable next step; Musk argues the physics of rotor downwash and noise pollution over dense cities makes them practically untenable. The right answer is going underground via tunnels, not up \u2014 because the third dimension is already crowded with weather, birds, and air traffic.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the corpus contains Musk discussing flying cars, rotor downwash, noise pollution, or tunneling as an alternative \u2014 this principle is entirely absent."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Carbon fiber is wrong for deep-sea pressure vessels",
+      "claim": "Carbon fiber is wrong for deep-sea pressure vessels. Industry treats carbon fiber as the premium structural material; Musk points out that submersibles need dense materials for negative buoyancy and compressive strength under cyclic load, both of which favor steel or titanium. The OceanGate Titan disaster was the predictable result of treating material selection as aesthetic rather than physical.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Carbon fiber, deep-sea pressure vessels, the OceanGate Titan disaster, or material selection for submersibles are not discussed anywhere in the source corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Rockets aren't expensive \u2014 incumbents are inefficient",
+      "claim": "Rockets aren't expensive \u2014 incumbents are inefficient. The aerospace industry priced launches based on cost-plus government contracts and the absence of competitive pressure. Decomposing rocket cost to raw aluminum, steel, and fuel reveals a massive idiot index \u2014 most of the cost is organizational and contractual overhead, not physical necessity.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "While the third-party video briefly mentions Musk and rocket economics, Musk himself does not speak in the corpus about rocket cost decomposition or the 'idiot index' \u2014 no supporting passages exist."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "Consensus is a reliable signal of truth",
+      "claim": "Consensus is a reliable signal of truth. Musk treats expert consensus as a prior to interrogate, not a conclusion to accept. Most consensus reflects the incentives and assumptions of incumbent institutions, not the actual limits of what physics permits. The correct response to consensus is to ask what assumptions it rests on and whether those assumptions survive first-principles scrutiny.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Musk's view on expert consensus as a prior to interrogate rather than a conclusion to accept does not appear in any passage of the source corpus."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "Regulatory timelines reflect technical necessity",
+      "claim": "Regulatory timelines reflect technical necessity. Government approval timelines for vehicles, rockets, and medical devices are calibrated to institutional risk aversion and political liability, not to actual physical or safety requirements. Regulatory friction is a negotiable social construct, not a fundamental constraint \u2014 which is why SpaceX built iteratively on-site and why Tesla pursued type approval in parallel with development.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the corpus contains Musk discussing regulatory timelines as reflecting institutional risk aversion rather than technical necessity."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "Incremental improvement is sufficient for civilizational challenges",
+      "claim": "Incremental improvement is sufficient for civilizational challenges. Problems like climate change, AI risk, and interplanetary travel require order-of-magnitude change in capability, not 10% year-over-year improvement. Incrementalism is appropriate for mature, stable systems but is epistemically wrong when applied to problems whose solutions require crossing nonlinear thresholds.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Musk's rejection of incrementalism for civilizational challenges is not discussed anywhere in the source corpus."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "Human consciousness is rare or insignificant in the universe",
+      "claim": "Human consciousness is rare or insignificant in the universe. Musk takes seriously that the emergence of self-aware, technology-capable life may be extraordinarily improbable \u2014 the Fermi Paradox as genuine evidence, not just a curiosity. If consciousness is rare, its preservation becomes the highest-stakes engineering problem imaginable, which is why extinction risk is not hyperbole but actuarial reasoning.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Musk's views on the rarity of human consciousness, the Fermi Paradox, or extinction risk as actuarial reasoning do not appear in any passage of the source corpus."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "Let's wait for more data before deciding",
+      "claim": "Let's wait for more data before deciding. Musk treats delayed decisions as decisions to preserve the status quo. When the cost of waiting exceeds the cost of being wrong and correcting, action dominates. His operational default is to move, measure, and adjust rather than delay for certainty that won't arrive in time to matter.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the corpus contains Musk expressing a bias toward action over waiting for data \u2014 this principle is entirely absent from the source material."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "That's not our core competency",
+      "claim": "That's not our core competency. Core competency framing is how incumbent organizations rationalize avoiding capabilities they should build. Musk's pattern is to vertically integrate whenever a supplier or partner represents a bottleneck \u2014 not because integration is inherently good, but because ceding control of a constraint means ceding control of the outcome.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Musk's rejection of 'core competency' framing and his pattern of vertical integration are not discussed anywhere in the source corpus in Musk's own voice."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "We should hire a consultant to evaluate this",
+      "claim": "We should hire a consultant to evaluate this. Consultants optimize for defensible recommendations, not correct ones. Their incentive is to produce advice that cannot be blamed, which systematically biases them toward consensus and against bold action. The people who should evaluate a problem are the people who will be held accountable for the outcome.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Musk's rejection of consultants and the principle that accountability should drive evaluation are not present in any passage of the source corpus."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "The market isn't ready for this yet",
+      "claim": "The market isn't ready for this yet. Market readiness is a demand-side framing that ignores the supply-side fact that markets often don't know they want something until it exists. Tesla, Starlink, and Neuralink all address markets that didn't demonstrably exist before the product. Waiting for market readiness signals is waiting for permission that the market cannot give in advance.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the corpus contains Musk discussing market readiness as an invalid framing or referencing Tesla, Starlink, or Neuralink in this context \u2014 Musk does not speak in these transcripts."
+    }
+  ]
+}

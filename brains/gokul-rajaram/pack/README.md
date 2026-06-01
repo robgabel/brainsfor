@@ -1,11 +1,11 @@
 # Gokul Rajaram Brain Pack
 
-> **554 knowledge atoms** · **906 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **889 knowledge atoms** · **820 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Gokul Rajaram's thinking, extracted from Podcast interviews (Invest Like the Best, 20VC, Lenny's Podcast, World of DaaS, Aarthi & Sriram Show), conference talks, Medium essays, and decision-making frameworks like SPADE — spanning product leadership at Google AdSense, Facebook Ads, Square/Caviar, and DoorDash, plus angel investing across 700+ companies.. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Gokul Rajaram's thinking, extracted from Podcast interviews (Invest Like the Best, 20VC, Lenny's Podcast, World of DaaS, Aarthi & Sriram Show), YouTube interviews (Fish Sauce Podcast, Outlier Academy, AI Hackathon 2026, Startupsunedited), conference talks, Medium essays, and decision-making frameworks like SPADE — spanning product leadership at Google AdSense, Facebook Ads, Square/Caviar, and DoorDash, plus angel investing across 700+ companies.. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Gokul's actual ideas, frameworks, and worldview.
 
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Gokul
    ```
 3. Then run any thinking skill:
    ```
-   /advise "We're debating monetization architecture for a new product line — should we design ads-in from day one, or ship free and add it later?"
+   /advise "We're building a two-sided marketplace and debating whether to seed supply or demand first — what does Gokul think about sequencing?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Gokul's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Gokul's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (554 atoms, 906 connections)
+  ├── brain-atoms.json      ← Structured data (889 atoms, 820 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**554 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**889 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**906 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**820 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — Product leadership, decision-making (SPADE), ads & monetization architecture, founder mode, AI-era software defensibility, angel investing, startup strategy, hiring PMs.
+**16 topic clusters** — Product leadership, decision-making (SPADE), ads & monetization architecture, founder mode, AI-era software defensibility, angel investing, startup strategy, hiring PMs, growth loops, platform strategy.
 
 **Date range:** 2010 — 2026
 
@@ -95,7 +95,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 ## About Gokul Rajaram
 
-Gokul Rajaram is one of the most prolific operator-investors in tech — known as the 'Godfather of AdSense' for growing Google's AdSense from zero to $1B+, then leading Ads Product at Facebook, holding product leadership roles at Square and DoorDash, and angel investing in 700+ companies (Airtable, Figma, Groq, Runway, Supabase, Vercel, and more). He now runs Marathon Management Partners. His writing on SPADE decision-making, hiring PMs, and AI's impact on product building has become required reading for tech operators.
+Gokul Rajaram is one of the most prolific operator-investors in tech — known as the 'Godfather of AdSense' for growing Google's AdSense from zero to $1B+, then leading Ads Product at Facebook (scaling from $750M to $6.5B), holding product leadership roles at Square and DoorDash, and angel investing in 700+ companies (Airtable, Figma, Groq, Runway, Supabase, Vercel, and more). He now runs Marathon Management Partners. His writing and interviews on SPADE decision-making, hiring PMs for spikiness, AI's impact on software defensibility, and founder mode have become required reading and listening for tech operators and investors worldwide.
 
 ## Sources & Ethics
 

@@ -9,77 +9,16 @@ Select
 - Most Popular Opinion
 - Recommended Videos
 
-[DJIA\\
-\\
-50009.35\\
-\\
-1.31%](https://www.wsj.com/market-data/quotes/index/US/DJIA)
+content frame
 
-[S&P 500\\
-\\
-7432.97\\
-\\
-1.08%](https://www.wsj.com/market-data/quotes/index/US/SPX)
+**An error has occurred**
 
-[Nasdaq\\
-\\
-26270.36\\
-\\
-1.54%](https://www.wsj.com/market-data/quotes/index/US/COMP)
+Take part in this brief survey
 
-[Russell 2000\\
-\\
-2817.36\\
-\\
-2.56%](https://www.wsj.com/market-data/quotes/index/US/RUT)
+to help shape the future of WSJ’s digital experience.
 
-[U.S. 10 Yr\\
-\\
-28/32\\
-\\
-4.592%](https://www.wsj.com/market-data/quotes/bond/BX/TMUBMUSD10Y)
 
-[VIX\\
-\\
-17.44\\
-\\
--3.43%](https://www.wsj.com/market-data/quotes/index/US/VIX)
-
-[Gold\\
-\\
-4546.20\\
-\\
-0.78%](https://www.wsj.com/market-data/quotes/futures/GC00)
-
-[Bitcoin\\
-\\
-77568.06\\
-\\
--0.05%](https://www.wsj.com/market-data/quotes/crypto/BTCUSD)
-
-[Crude Oil\\
-\\
-99.08\\
-\\
--4.87%](https://www.wsj.com/market-data/quotes/futures/CRUDE%20OIL%20-%20ELECTRONIC)
-
-[Dollar Index\\
-\\
-95.77\\
-\\
--0.01%](https://www.wsj.com/market-data/quotes/index/XX/BUXX)
-
-[KBW Nasdaq Bank Index\\
-\\
-166.67\\
-\\
-2.55%](https://www.wsj.com/market-data/quotes/index/BKX)
-
-[S&P GSCI Index Spot\\
-\\
-741.20\\
-\\
--2.88%](https://www.wsj.com/market-data/quotes/index/XX/S&P%20GSCI/SPGSCI)
+![Close](https://www.wsj.com/asset/piano/fnlondon/img/fnlondon-close-button.svg)
 
 This copy is for your personal, non-commercial use only. Distribution and use of this material are governed by
 our Subscriber Agreement and by copyright law. For non-personal use or to order multiple copies, please contact
@@ -114,10 +53,10 @@ content frame
 $3/Week
 
 
-[Subscribe Now](https://www.wsj.com/subscribe/?inttrackingCode=a8644931&ucid=WSJ_ONS_ALL_ACQ_NAP_WEV_ALE_NAP_NAP_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&AP1F4404=AP1F4404&_ptid=%7Bkpdx%7DAAAAwWOzqfvzhQoKS0tiZ3FwQmxwdRIQbXBlbG9iNDQ3dXJyc29hNhoMRVgyQVNINThBWTlLIiUxODA4YzE4MGNvLTAwMDAzN2k3Y2E1czRsNDlmY2QyMjZ2ZmlvKhxzaG93VGVtcGxhdGVEN1ZUTVpMTUVQQkMyNzEyMAE6DE9UTVhaV0xaNDROQkINT1RWN0tRNVZBNzlaTFISdi2GAPAXOXl4Y2U2eW11Wgw1LjE4My45MS4xNzhiA2R3Y2i1_r3QBnATeAQ)
+[Subscribe Now](https://www.wsj.com/subscribe/?inttrackingCode=a8644931&ucid=WSJ_ONS_ALL_ACQ_NAP_WEV_ALE_NAP_NAP_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&AP1F4404=AP1F4404&_ptid=%7Bkpdx%7DAAAAwWQjaf3zhQoKS0tiZ3FwQmxwdRIQbXB0aXNzZjV1b3EwdnlmdRoMRVgyQVNINThBWTlLIiUxODA3aTFvMGRzLTAwMDAzN2p0NTFxbHE5aHFoNjE3M3EwNjJvKhxzaG93VGVtcGxhdGVEN1ZUTVpMTUVQQkMyNzEyMAE6DE9UTVhaV0xaNDROQkINT1RWN0tRNVZBNzlaTFISdi2GAPAXYjRtOTYycnFlWgw1LjE4My45MS4yNTJiA2RiYmjIhvXQBnAWeAQ)
 
 Already a subscriber?
-[Sign in](https://www.wsj.com/client/login?target=https%3A%2F%2Fwww.wsj.com%2Farticles%2FSB952735252750159649&_ptid=%7Bkpdx%7DAAAAwWOzqfvzhQoKS0tiZ3FwQmxwdRIQbXBlbG9iNDQ3dXJyc29hNhoMRVgyQVNINThBWTlLIiUxODA4YzE4MGNvLTAwMDAzN2k3Y2E1czRsNDlmY2QyMjZ2ZmlvKhxzaG93VGVtcGxhdGVEN1ZUTVpMTUVQQkMyNzEyMAE6DE9UTVhaV0xaNDROQkINT1RWN0tRNVZBNzlaTFISdi2GAPAXOXl4Y2U2eW11Wgw1LjE4My45MS4xNzhiA2R3Y2i1_r3QBnATeAQ)
+[Sign in](https://www.wsj.com/client/login?target=https%3A%2F%2Fwww.wsj.com%2Farticles%2FSB952735252750159649&_ptid=%7Bkpdx%7DAAAAwWQjaf3zhQoKS0tiZ3FwQmxwdRIQbXB0aXNzZjV1b3EwdnlmdRoMRVgyQVNINThBWTlLIiUxODA3aTFvMGRzLTAwMDAzN2p0NTFxbHE5aHFoNjE3M3EwNjJvKhxzaG93VGVtcGxhdGVEN1ZUTVpMTUVQQkMyNzEyMAE6DE9UTVhaV0xaNDROQkINT1RWN0tRNVZBNzlaTFISdi2GAPAXYjRtOTYycnFlWgw1LjE4My45MS4yNTJiA2RiYmjIhvXQBnAWeAQ)
 
 Continue reading your article with a WSJ subscription
 
@@ -135,27 +74,31 @@ Already a subscriber? [Sign In](https://www.wsj.com/client/login?target=https%3A
 
 * * *
 
+## Up Next
+
+* * *
+
 ### Most Popular News
 
-[![These Parents Are Buying Homes for Their Kids—With Strings Attached](https://images.wsj.net/im-03188225?size=1.5&width=161&height=90)](https://www.wsj.com/personal-finance/these-parents-are-buying-homes-for-their-kidswith-strings-attached-aa3da6d2?mod=trending_now_news_1)
+[![A Famous Math Problem Stumped Humans for 80 Years. AI Just Cracked It.](https://images.wsj.net/im-55510855?size=1.5&width=161&height=90)](https://www.wsj.com/tech/ai/ai-math-solves-erdos-problem-openai-c4029e84?mod=trending_now_news_1)
 
-#### [These Parents Are Buying Homes for Their Kids—With Strings Attached](https://www.wsj.com/personal-finance/these-parents-are-buying-homes-for-their-kidswith-strings-attached-aa3da6d2?mod=trending_now_news_1)
+#### [A Famous Math Problem Stumped Humans for 80 Years. AI Just Cracked It.](https://www.wsj.com/tech/ai/ai-math-solves-erdos-problem-openai-c4029e84?mod=trending_now_news_1)
 
-[![America’s Toxic Divide Reaches the Jury Room](https://images.wsj.net/im-78944506?size=1.5&width=161&height=90)](https://www.wsj.com/us-news/law/jury-strife-increase-political-division-27383925?mod=trending_now_news_2)
+[![Graham Platner’s Wife Flagged Sexually Explicit Texts to His Senate Campaign](https://images.wsj.net/im-19199292?size=1.5&width=161&height=90)](https://www.wsj.com/politics/elections/graham-platners-wife-flagged-sexually-explicit-texts-to-his-senate-campaign-628ec832?mod=trending_now_news_2)
 
-#### [America’s Toxic Divide Reaches the Jury Room](https://www.wsj.com/us-news/law/jury-strife-increase-political-division-27383925?mod=trending_now_news_2)
+#### [Graham Platner’s Wife Flagged Sexually Explicit Texts to His Senate Campaign](https://www.wsj.com/politics/elections/graham-platners-wife-flagged-sexually-explicit-texts-to-his-senate-campaign-628ec832?mod=trending_now_news_2)
 
-[![Thomas Massie Defeated in GOP Primary After Attacks From Trump](https://images.wsj.net/im-39646729?size=1.5&width=161&height=90)](https://www.wsj.com/politics/elections/thomas-massie-defeated-in-gop-primary-after-attacks-from-trump-211c5066?mod=trending_now_news_3)
+[![Trump’s $1.8 Billion Settlement Fund Sparks Alarm Inside White House](https://images.wsj.net/im-02515565?size=1.5&width=161&height=90)](https://www.wsj.com/politics/policy/trumps-1-8-billion-settlement-fund-sparks-alarm-inside-white-house-a9703af9?mod=trending_now_news_3)
 
-#### [Thomas Massie Defeated in GOP Primary After Attacks From Trump](https://www.wsj.com/politics/elections/thomas-massie-defeated-in-gop-primary-after-attacks-from-trump-211c5066?mod=trending_now_news_3)
+#### [Trump’s $1.8 Billion Settlement Fund Sparks Alarm Inside White House](https://www.wsj.com/politics/policy/trumps-1-8-billion-settlement-fund-sparks-alarm-inside-white-house-a9703af9?mod=trending_now_news_3)
 
-[![See How SpaceX Is About to Eclipse Every Other Blockbuster IPO](https://images.wsj.net/im-52178360?size=1.5&width=161&height=90)](https://www.wsj.com/tech/spacex-ipo-charts-graphs-9144ec5e?mod=trending_now_news_4)
+[![The U.S. Has Found a Way to Down a Drone Without Spending $1 Million](https://images.wsj.net/im-94370778?size=1.5&width=161&height=90)](https://www.wsj.com/world/the-u-s-has-found-a-way-to-down-a-drone-without-spending-1-million-848facd0?mod=trending_now_news_4)
 
-#### [See How SpaceX Is About to Eclipse Every Other Blockbuster IPO](https://www.wsj.com/tech/spacex-ipo-charts-graphs-9144ec5e?mod=trending_now_news_4)
+#### [The U.S. Has Found a Way to Down a Drone Without Spending $1 Million](https://www.wsj.com/world/the-u-s-has-found-a-way-to-down-a-drone-without-spending-1-million-848facd0?mod=trending_now_news_4)
 
-[![OpenAI Is Preparing to File for an IPO Very Soon](https://images.wsj.net/im-18865992?size=1.5&width=161&height=90)](https://www.wsj.com/tech/ai/openai-ipo-filing-date-0ec95af5?mod=trending_now_news_5)
+[![White House Releases Results of Trump’s Physical](https://images.wsj.net/im-53885152?size=1.5&width=161&height=90)](https://www.wsj.com/politics/trump-remains-in-excellent-physical-health-white-house-doctor-report-says-0dbe4a0b?mod=trending_now_news_5)
 
-#### [OpenAI Is Preparing to File for an IPO Very Soon](https://www.wsj.com/tech/ai/openai-ipo-filing-date-0ec95af5?mod=trending_now_news_5)
+#### [White House Releases Results of Trump’s Physical](https://www.wsj.com/politics/trump-remains-in-excellent-physical-health-white-house-doctor-report-says-0dbe4a0b?mod=trending_now_news_5)
 
 * * *
 
@@ -163,26 +106,32 @@ Already a subscriber? [Sign In](https://www.wsj.com/client/login?target=https%3A
 
 OPINION
 
-[![Trump’s $1.776 Billion ‘Anti-Weaponization Fund’](https://opinion-images.wsj.net/im-42756835/?size=1.5&width=161&height=90)](https://www.wsj.com/opinion/donald-trump-settlement-fund-doj-irs-todd-blanche-8b1c4303?mod=trending_now_opn_1)
+[![The Academy Rethinks the SAT](https://opinion-images.wsj.net/im-14274164/?size=1.5&width=161&height=90)](https://www.wsj.com/opinion/university-of-california-sat-act-math-stem-professors-06dd0f6d?mod=trending_now_opn_1)
 
-#### [Trump’s $1.776 Billion ‘Anti-Weaponization Fund’](https://www.wsj.com/opinion/donald-trump-settlement-fund-doj-irs-todd-blanche-8b1c4303?mod=trending_now_opn_1)
+#### [The Academy Rethinks the SAT](https://www.wsj.com/opinion/university-of-california-sat-act-math-stem-professors-06dd0f6d?mod=trending_now_opn_1)
 
-[![Trump Makes Chuck Schumer’s Day by Endorsing Ken Paxton](https://opinion-images.wsj.net/im-22494077/?size=1.5&width=161&height=90)](https://www.wsj.com/opinion/donald-trump-endorses-ken-paxton-texas-senate-john-cornyn-d2251686?mod=trending_now_opn_2)
+[![Are Democrats Doomed to Biden Bitter-Enders?](https://opinion-images.wsj.net/im-77254875?size=1.5&width=161&height=90)](https://www.wsj.com/opinion/are-democrats-doomed-to-biden-bitter-enders-beb8dedd?mod=trending_now_opn_2)
 
-#### [Trump Makes Chuck Schumer’s Day by Endorsing Ken Paxton](https://www.wsj.com/opinion/donald-trump-endorses-ken-paxton-texas-senate-john-cornyn-d2251686?mod=trending_now_opn_2)
+#### [Are Democrats Doomed to Biden Bitter-Enders?](https://www.wsj.com/opinion/are-democrats-doomed-to-biden-bitter-enders-beb8dedd?mod=trending_now_opn_2)
 
-[![New York Voters Can Send Mamdani a Message](https://opinion-images.wsj.net/im-10524405?size=1.5&width=161&height=90)](https://www.wsj.com/opinion/new-york-voters-can-send-mamdani-a-message-d64fe969?mod=trending_now_opn_3)
+[![Gavin Newsom Wants an AI New Deal](https://opinion-images.wsj.net/im-24970516/?size=1.5&width=161&height=90)](https://www.wsj.com/opinion/newsom-wants-a-new-ai-new-deal-02e4b0f9?mod=trending_now_opn_3)
 
-#### [New York Voters Can Send Mamdani a Message](https://www.wsj.com/opinion/new-york-voters-can-send-mamdani-a-message-d64fe969?mod=trending_now_opn_3)
+#### [Gavin Newsom Wants an AI New Deal](https://www.wsj.com/opinion/newsom-wants-a-new-ai-new-deal-02e4b0f9?mod=trending_now_opn_3)
 
-[![‘Woke’ Isn’t Dead, or Even Resting](https://opinion-images.wsj.net/im-53003332/?size=1.5&width=161&height=90)](https://www.wsj.com/opinion/woke-isnt-dead-or-even-resting-77a6448f?mod=trending_now_opn_4)
+[![What’s Up With Trump and NATO?](https://opinion-images.wsj.net/im-62977548/?size=1.5&width=161&height=90)](https://www.wsj.com/opinion/nato-europe-u-s-troops-donald-trump-pentagon-ae89cb86?mod=trending_now_opn_4)
 
-#### [‘Woke’ Isn’t Dead, or Even Resting](https://www.wsj.com/opinion/woke-isnt-dead-or-even-resting-77a6448f?mod=trending_now_opn_4)
+#### [What’s Up With Trump and NATO?](https://www.wsj.com/opinion/nato-europe-u-s-troops-donald-trump-pentagon-ae89cb86?mod=trending_now_opn_4)
 
-[![A Housing Bill That Would Hurt Housing](https://opinion-images.wsj.net/im-28517154/?size=1.5&width=161&height=90)](https://www.wsj.com/opinion/housing-bill-congress-republicans-donald-trump-6a1ddddf?mod=trending_now_opn_5)
+[![Donald Trump, Climate Scientist](https://opinion-images.wsj.net/im-64820395/?size=1.5&width=161&height=90)](https://www.wsj.com/opinion/donald-trump-climate-scientist-e84a4100?mod=trending_now_opn_5)
 
-#### [A Housing Bill That Would Hurt Housing](https://www.wsj.com/opinion/housing-bill-congress-republicans-donald-trump-6a1ddddf?mod=trending_now_opn_5)
+#### [Donald Trump, Climate Scientist](https://www.wsj.com/opinion/donald-trump-climate-scientist-e84a4100?mod=trending_now_opn_5)
 
 * * *
 
-#### Recommended Videos
+### Recommended Videos
+
+Copyright ©2026 Dow Jones & Company, Inc. All Rights Reserved
+
+This copy is for your personal, non-commercial use only. Distribution and use of this material are governed by
+our Subscriber Agreement and by copyright law. For non-personal use or to order multiple copies, please contact
+Dow Jones Reprints at 1-800-843-0008 or visit www.djreprints.com.

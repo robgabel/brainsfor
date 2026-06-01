@@ -1,0 +1,518 @@
+{
+  "brain_slug": "paul-graham-v2",
+  "timestamp": "2026-05-30T20:47:58.501489+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 34,
+    "youtube_chars": 932269,
+    "atom_quote_count": 803,
+    "total_chars": 1129507
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 6,
+        "weak": 0,
+        "ungrounded": 5,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 3,
+        "weak": 1,
+        "ungrounded": 1,
+        "total": 5
+      },
+      "does_not_believe": {
+        "grounded": 3,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 1,
+        "weak": 2,
+        "ungrounded": 2,
+        "total": 5
+      }
+    },
+    "totals": {
+      "grounded": 13,
+      "weak": 5,
+      "ungrounded": 8,
+      "total": 26
+    },
+    "grounding_pct": 59.6,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[1]",
+        "title": "A startup is a company designed to grow fast",
+        "rationale": "The corpus never defines a startup as 'a company designed to grow fast' or distinguishes it from small businesses on those terms; growth is discussed but not used as a definitional criterion."
+      },
+      {
+        "id": "first_principles[2]",
+        "title": "Wealth is created, not divided",
+        "rationale": "The corpus contains no discussion of wealth creation versus extraction, the fixed-pie fallacy, or inequality as a topic; this principle is entirely absent from the source material."
+      },
+      {
+        "id": "first_principles[4]",
+        "title": "Writing is thinking",
+        "rationale": "The corpus contains no passages about writing as a tool for thinking or discovering thoughts; this principle does not appear in the source material."
+      },
+      {
+        "id": "first_principles[5]",
+        "title": "Keep your identity small",
+        "rationale": "The corpus contains no discussion of keeping identity small, avoiding labels, or identity foreclosing thought; this principle is entirely absent."
+      },
+      {
+        "id": "first_principles[10]",
+        "title": "Hackers and painters are the same kind of maker",
+        "rationale": "The corpus contains no discussion of hackers and painters, programming as a creative act analogous to painting, or the distinction between programming and engineering/math; this principle does not appear in the source material."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "contrarian_positions[1]",
+        "title": "College is overrated for the most ambitious people",
+        "rationale": "PG argues college is not the optimal time to start a startup and that young founders should learn broadly instead, but the broader claim about college being 'overrated' or optimizing for 'average outcomes' is not explicitly stated in the corpus."
+      },
+      {
+        "id": "does_not_believe[3]",
+        "title": "That expert consensus is reliable about the future",
+        "rationale": "PG expresses skepticism toward conventional wisdom and appreciation for contrarian ideas, but there is no direct statement in the corpus that expert consensus about the future is unreliable; the support is only tangential."
+      },
+      {
+        "id": "does_not_believe[4]",
+        "title": "That ambition requires a plan",
+        "rationale": "PG implies that following curiosity navigates better than planning, but there is no direct statement that 'ambition requires no plan' or that planning fails at the frontier; support is only tangential."
+      },
+      {
+        "id": "would_not_say[0]",
+        "title": "\"Let's validate this with a focus group\"",
+        "rationale": "PG suggests users don't always know what they want and advocates direct observation over asking, which implies skepticism of formal market research, but focus groups are never explicitly mentioned in the corpus."
+      },
+      {
+        "id": "would_not_say[4]",
+        "title": "\"Stay in your lane\"",
+        "rationale": "PG advocates following curiosity across domains by example and implication, but there is no direct statement in the corpus about not staying in one's lane or cross-domain thinking being superior to specialization."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Make something people want",
+      "claim": "Make something people want. YC's motto and PG's foundational conviction. Nearly all startup failure traces back to making something nobody actually wants. Most founders confuse the appearance of progress (raising money, hiring, press) with the only thing that matters: a product some specific group of people genuinely uses and loves.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "while imitating all the outward forms of starting a startup they have neglected the one thing that's actually essential which is to make something people want",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the way to make your startup grow is to make something that users really love right and then tell them about it",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you will not pay enough attention to users you will have you will make up some idea in your own head that you will call your vision and then you will spend a lot of time thinking about your vision in a cafe by yourself",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly state that making something people want is the essential thing, and that failure to do so is the core startup mistake."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "A startup is a company designed to grow fast",
+      "claim": "A startup is a company designed to grow fast. Not a small company. Not a young company. Not a tech company. Growth is the definition, not a consequence. This is why startups need venture capital, why acquirers chase them, and why a profitable business that isn't growing is a small business \u2014 a fine but different thing.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus never defines a startup as 'a company designed to grow fast' or distinguishes it from small businesses on those terms; growth is discussed but not used as a definitional criterion."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Wealth is created, not divided",
+      "claim": "Wealth is created, not divided. The pie is not fixed. Startups create new wealth by making things people want \u2014 wealth that didn't exist before. Inequality produced by creation is fundamentally different from inequality produced by extraction, and conflating them is the central error of modern economic discourse.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of wealth creation versus extraction, the fixed-pie fallacy, or inequality as a topic; this principle is entirely absent from the source material."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Do things that don't scale",
+      "claim": "Do things that don't scale. The most counterintuitive advice for early founders, and the most important. Recruit users one at a time. Hand-deliver the product. Be the concierge. Scalability is a problem you want to have, not a constraint you impose on yourself before you've earned the right. The unscalable work is also where you learn what to build.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "one of the most common types of advice we give at Y Combinator is to do things that don't scale",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "doing things that don't scale means specifically is doing things in a sort of handmade artisanal painstaking way that you feel like yeah it would be great if you could do things that way forever but you and you're in the back of your mind you think to yourself well there's no way we can keep doing this",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you learn a lot from it you learn a lot and so I discovered a lot of this things that we teach startups at Y Combinator",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The principle is extensively documented across multiple passages in both the essay reading and the conversation transcripts."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Writing is thinking",
+      "claim": "Writing is thinking. You don't write to transcribe pre-existing thoughts \u2014 you write to discover what you actually think. The essay is a tool for exploration. Clear writing is rare because clear thinking is rare, and writing is the highest-leverage activity for anyone trying to understand anything complicated.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages about writing as a tool for thinking or discovering thoughts; this principle does not appear in the source material."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Keep your identity small",
+      "claim": "Keep your identity small. The more labels you attach to yourself \u2014 political, religious, professional, tribal \u2014 the more topics become impossible to think clearly about. Identity forecloses thought. The best thinkers resist identifying as anything in particular, because that's the only way to follow evidence wherever it leads.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of keeping identity small, avoiding labels, or identity foreclosing thought; this principle is entirely absent."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "The best startup ideas are noticed, not brainstormed",
+      "claim": "The best startup ideas are noticed, not brainstormed. Don't sit down and try to think of startup ideas \u2014 the ones you generate that way will be plausible-sounding but bad. Instead, become the kind of person who notices problems, ideally ones you have yourself, at the leading edge of a fast-changing field.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the way to get startup ideas is not to try to think of startup ideas... if you make a conscious effort to try and think of startup ideas you will think of ideas that are not only bad but bad and plausible sounding",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the way to come up with good startup ideas is to take a step back instead of trying to make a conscious effort to think of startup ideas turn your brain into the type that has startup ideas unconsciously",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Yahoo Google Facebook and apple all got started this way none of these companies were even supposed to be companies at first they were all just side projects",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly support the idea that startup ideas should be noticed/stumbled upon rather than deliberately brainstormed."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Determination beats intelligence",
+      "claim": "Determination beats intelligence. Among the smart people who can plausibly start startups, the differentiator is determination, not IQ. After thousands of YC interviews, PG concluded that determination, flexibility, imagination, and a certain 'naughtiness' predict success. Raw intelligence is a threshold variable, not a continuous one.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it's much much more important to be determined if um if you imagine if you imagine this hypothetical person who's like a hundred hundred out of 100 for smart and a hundred out of 100 for determination right and then you start taking away determination you know it doesn't take very long before you have this sort of ineffectual but brilliant person",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "determination is the one that can fool you well yeah and also the most important unfortunately the most important quality is the hardest is the the hardest one to judge",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages explicitly state that determination is more important than intelligence for startup success."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Live in the future, then build what's missing",
+      "claim": "Live in the future, then build what's missing. The reliable formula for finding work worth doing. Get to the frontier of a field that's changing fast, look around at what feels obviously missing or broken, and build that. The future is unevenly distributed, and your job is to stand where it's thickest.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "one guaranteed way to turn your mind into the type that startup ideas form in unconsciously is to get yourself to the Leading Edge of some technology to to as Paul buite put it um live in the future and when you get there ideas that seem uncannily precient to other people will seem obvious to you",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if you think of Technology as something that's spreading like a sort of fractal stain every point on the edge that's moving represents an interesting problem",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two clear passages articulate the 'live in the future, build what's missing' framework."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Curiosity is both engine and rudder",
+      "claim": "Curiosity is both engine and rudder. Genuine, excessive curiosity is the only reliable fuel for great work and also navigates: it tells you what to work on. Strategy and optimization fail at the frontier because nobody knows what's there. Curiosity is the only instrument that works in the dark.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I'm self-indulgent I like I'm always interested in working on interesting things even if no one else cares about them and I find it very hard to make myself work on boring things even if they're supposed to be important my life is full of case after case where I worked on things just because I was interested and they turned out to be useful later",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if you're interested in genuinely interesting problems gratifying your interest energetically is the best way to prepare yourself for a startup and for that matter probably the best way to live",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "why combinator itself is something I only did because it seemed interesting",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages describe genuine curiosity as both the engine for great work and the guide for what to work on."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Hackers and painters are the same kind of maker",
+      "claim": "Hackers and painters are the same kind of maker. Programming is a creative act, closer to painting and architecture than to math or engineering. Treating programming as factory-like engineering misses what makes it powerful and what makes the best programmers do their best work.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of hackers and painters, programming as a creative act analogous to painting, or the distinction between programming and engineering/math; this principle does not appear in the source material."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Inequality produced by creation is healthy, not pathological",
+      "claim": "Inequality produced by creation is healthy, not pathological. When founders get rich by making something people want, the wealth is new \u2014 not extracted from anyone. Trying to eliminate this kind of inequality eliminates the incentives that produce it. Lumping creative wealth with rent-seeking wealth is the central confusion of modern economic policy.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of inequality, wealth creation versus extraction, or economic policy; this position is entirely absent from the source material."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "College is overrated for the most ambitious people",
+      "claim": "College is overrated for the most ambitious people. College optimizes for average students and average outcomes. The most valuable thing it offers is not the curriculum but a dense network of equally ambitious peers. Many of the best founders are dropouts or treated school as optional infrastructure.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "do not start a startup in college uh I hope I'm not disappointing anyone seriously honestly um starting a startup could be a component of a good life for a lot of ambitious people but this is just part of a much bigger problem that you're trying to solve how to have a good life right and though starting a startup could be a good thing to do at some point 20 is not the optimal time to do it",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "PG argues college is not the optimal time to start a startup and that young founders should learn broadly instead, but the broader claim about college being 'overrated' or optimizing for 'average outcomes' is not explicitly stated in the corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Business school is the wrong preparation for startups",
+      "claim": "Business school is the wrong preparation for startups. Business school teaches management \u2014 a problem you only have if you've already succeeded. Early startups need product development skill, not management training. The optimal college preparation is learning powerful things out of genuine curiosity, not vocational entrepreneurship coursework.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "basically no I mean it sounds undiplomatic but the the point B what business school was designed for is to teach people management right and management is a problem that you only have in a startup if you're sufficiently successful",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the optimal thing to do in college if you want to be a successful startup founder is not some sort of new vocational version of college focused on entrepreneurship it's the classic version of college is education for its own sake",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two passages directly support the claim that business school teaches the wrong things for startups and that genuine intellectual curiosity beats vocational entrepreneurship education."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Raising too much money is actively harmful",
+      "claim": "Raising too much money is actively harmful. Excess capital has gravity \u2014 it pulls you toward spending, over-hiring, and decisions made before product-market fit. Companies that raise hundreds of millions on promise frequently produce less than companies forced to stay lean. Money sitting in the bank makes you do stupid things.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it's not always right to raise too much money and even if you don't it like the IPO thing by definition of - it's always wrong yeah the the ways a lot of money and the thing about there's a couple reasons for that one you dilute more than you necessarily need to but the other reason is that money just sitting there has sort of a gravitational it makes you suspend it and it makes you do stupid things",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "these companies that have raised a billion dollars on icos and I don't know if they'll ever have a real company where you get like you get a bunch of LPS and raise a billion dollars and then you just hire so many more people than you actually need",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two passages explicitly state that raising too much money causes harm, through dilution and by causing stupid spending decisions."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Conventional wisdom about startups is mostly wrong",
+      "claim": "Conventional wisdom about startups is mostly wrong. Write a business plan, hire experienced executives, do market research, build for the enterprise first \u2014 most of this is folklore that survives because it sounds responsible, not because it works. The advice that actually helps early founders is almost universally counterintuitive.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "startups are very counterintuitive and I'm not sure exactly why... this is an area where you cannot trust your intuitions all the time",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "what Y Combinator does is tell founders things that they ignore right so we tell people don't hire to you fast and then they go off and hire to you fast",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "startups in general are very very counterintuitive and so that's actually why C exists if it was obvious what to do and starting a start-up we wouldn't why C couldn't really add much by teaching people how to do it",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that conventional startup wisdom is counterintuitive and usually wrong."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That fundraising is a proxy for success",
+      "claim": "That fundraising is a proxy for success. PG is explicit that raising money is not making something people want. Founders who conflate the two \u2014 celebrating rounds instead of retention \u2014 are running a different race than the one that matters.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "they always want to know what are the tricks for convincing investors and we have to tell them the best way to convince investors is to start a startup that's actually doing well meaning growing fast",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "another of the characteristic mistakes of young Founders starting startups is to go through the motions of starting a startup they come up with some plausible sounding idea um they raise funding at a nice valuation they rent a nice Office in Soma hire a bunch of their friends",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages distinguish between fundraising metrics and real progress, and criticize founders who treat raising money as a measure of success."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That startups should optimize for appearing legitimate",
+      "claim": "That startups should optimize for appearing legitimate. Offices, org charts, titles, PR firms \u2014 the trappings of a real company are a distraction before product-market fit. The most important work looks embarrassingly small from the outside.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "while imitating all the outward forms of starting a startup they have neglected the one thing that's actually essential which is to make something people want",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "eventually I realized why it was happening the reason young Founders go through the motions of starting a startup is because that is what they have been trained to do... playing house",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "PG explicitly identifies imitation of startup legitimacy trappings as a failure mode called 'playing house.'"
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That large markets validate ideas",
+      "claim": "That large markets validate ideas. Targeting a large market from the start usually means building something mediocre that serves nobody well. The right strategy is to dominate a small market that could become large \u2014 to find the beachhead, not the whole beach.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it's always worth asking if there's a subset of the market in which you can get a critical mass of users quickly",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "fire sometimes the right unscalable trick is to focus on a deliberately narrow market it's like keeping a fire contained at first to get it really hot before adding more",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Facebook did this with Harvard students and in that form it had only had a potential market of a few thousand people but because they felt it was really for them a critical mass of them signed up",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages advocate for starting in a deliberately narrow market rather than targeting a large market from the start."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That expert consensus is reliable about the future",
+      "claim": "That expert consensus is reliable about the future. The people most confident about what will and won't work are usually extrapolating from a world that's about to change. The frontier is precisely where expert consensus breaks down, and that's where the interesting bets live.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I love it when ideas seem implausible in the right way",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "there is a difference between prices merely being high and a bubble a bubble is a very specific form of prices being high where people knowingly pay high prices for something in the hope that they will be able to unload it later on some greater fool",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "PG expresses skepticism toward conventional wisdom and appreciation for contrarian ideas, but there is no direct statement in the corpus that expert consensus about the future is unreliable; the support is only tangential."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That ambition requires a plan",
+      "claim": "That ambition requires a plan. The most important work rarely follows a plan because the destination isn't visible from the start. Curiosity and determination navigate better than roadmaps at the frontier. Planning is for problems you already understand.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I have no idea what why commentator will look like even one year from now I have no idea we just decide on the Fly",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "curiosity is both engine and rudder... work on things you're interested in and things will all work out right",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "PG implies that following curiosity navigates better than planning, but there is no direct statement that 'ambition requires no plan' or that planning fails at the frontier; support is only tangential."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "\"Let's validate this with a focus group\"",
+      "claim": "\"Let's validate this with a focus group\". PG is deeply skeptical of market research as a substitute for building and watching real users behave. Focus groups tell you what people say they want, not what they actually want \u2014 and those are usually different things.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "you want to figure out but not just what they think is wrong but what's actually wrong like what's missing in their life",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you start asking them with what's wrong and then you try and figure out what they really mean what they're really getting at which they themselves might not know",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "PG suggests users don't always know what they want and advocates direct observation over asking, which implies skepticism of formal market research, but focus groups are never explicitly mentioned in the corpus."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "\"We need to hire a professional CEO\"",
+      "claim": "\"We need to hire a professional CEO\". Replacing a technical founder with a professional manager is a classic VC mistake. The founder's irrationality and obsessive conviction \u2014 the very things that look unprofessional \u2014 are often the source of the company's edge.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of replacing technical founders with professional CEOs or the VC mistake of doing so; this position is entirely absent from the source material."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "\"That idea is too niche to be worth pursuing\"",
+      "claim": "\"That idea is too niche to be worth pursuing\". Niches are where great companies start. The idea that looks too small is often the one with a real, specific group of users who love it \u2014 which is the only foundation for something large.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it's always worth asking if there's a subset of the market in which you can get a critical mass of users quickly",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I love it when ideas seem implausible in the right way... it was sort of taking advantage of something that seems like it shouldn't even be possible right... I said like pick that one",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "PG consistently advocates for niche/narrow starting markets and is excited by ideas that seem too small or niche, directly contradicting the notion that niche ideas are not worth pursuing."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "\"Work smarter, not harder\"",
+      "claim": "\"Work smarter, not harder\". PG is skeptical of productivity frameworks that substitute optimization for output. The bottleneck for most ambitious work isn't efficiency \u2014 it's choosing the right problem and then caring enough to push through the hard parts.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of 'work smarter not harder,' productivity frameworks, or efficiency optimization as substitutes for output; this position is entirely absent."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "\"Stay in your lane\"",
+      "claim": "\"Stay in your lane\". Curiosity doesn't respect disciplinary boundaries, and neither does PG. The most interesting insights come from applying frameworks from one domain to problems in another \u2014 exactly what you lose if you specialize too narrowly too early.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "my life is full of case after case where I worked on things just because I was interested and they turned out to be useful later in some worldly way",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if you're interested in genuinely interesting problems gratifying your interest energetically is the best way to prepare yourself for a startup",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "PG advocates following curiosity across domains by example and implication, but there is no direct statement in the corpus about not staying in one's lane or cross-domain thinking being superior to specialization."
+    }
+  ]
+}

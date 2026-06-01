@@ -5,14 +5,14 @@ description: "Load the Jeremy Utley brain. Pack ships 9 unified skills in pack/s
 
 # Jeremy Utley Brain Pack — Setup & Configuration
 
-Welcome to the **Utley Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Jeremy Utley's Stanford d.school courses, "Ideaflow" book, and public talks — a curated collection of his most practical thinking on creative confidence, ideaflow, innovation habits, and building organizations that generate better ideas.
+Welcome to the **Utley Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Jeremy Utley's Stanford d.school courses, Ideaflow book, public talks, essays, podcast interviews, and YouTube lectures — a curated collection of his most practical thinking on ideaflow, AI as creative teammate, creative confidence, innovation habits, and building organizations that generate better ideas.
 
 ## What You're Getting
 
-- **759 knowledge atoms** — Core insights, frameworks, and strategic principles from Ideaflow book, Stanford d.school Creativity in Business course, podcast interviews, and public lectures
-- **2272 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **911 knowledge atoms** — Core insights, frameworks, and strategic principles from Ideaflow book, Stanford d.school Creativity in Business course, Beyond the Prompt podcast, Paint & Pipette newsletter, Roland Berger interview, Capgemini interview, unSILOed podcast, YouTube lectures, and LinkedIn essays
+- **961 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — Ideaflow, creative confidence, innovation habits, idea quotas, input quality, organizational creativity, AI and creativity, and more
+- **Cross-referenced topics** — Ideaflow, AI as creative teammate, creative confidence, idea quotas, input quality, organizational creativity, self-literacy, brainstorming facilitation, problem framing, design thinking, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Utley Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (759 insights)
+  ├── brain-atoms.json         ← structured atoms (911 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 759 atoms with titles, summaries, connections
+   - JSON structure of 911 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -97,7 +97,7 @@ Ask for advice on decisions grounded in Jeremy's frameworks. Best for: career mo
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Jeremy sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain the concept of ideaflow to me."*
+*Example: "Explain the concept of ideaflow and why it matters more than other innovation metrics."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
@@ -109,7 +109,7 @@ Find unexpected connections between two concepts or synthesize multiple ideas in
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How does Jeremy's thinking on AI and creativity evolve?"*
+*Example: "How has Jeremy's thinking on AI as a creative partner evolved over time?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Writing about organizational innovation? Predict implications → debate assumptions → advise on implementation.*
+*Example: Writing about AI and organizational creativity? Predict implications → debate assumptions → advise on implementation.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -201,7 +201,7 @@ If you get that, you're all set.
 
 ## About Jeremy Utley
 
-Jeremy Utley is an adjunct professor at Stanford University's d.school and co-director of Stanford's Executive Education program in creativity and innovation. He is the co-author of Ideaflow: The Only Business Metric That Matters, which argues that the volume and velocity of ideas an organization generates is the leading indicator of its long-term success.
+Jeremy Utley is an adjunct professor at Stanford University's d.school and co-director of Stanford's Executive Education program in creativity and innovation. He is the co-author of Ideaflow: The Only Business Metric That Matters and host of the Beyond the Prompt podcast, where he explores how AI is reshaping creative practice. His work spans executive education at Google, IDEO, and LinkedIn, and his writing on creativity and AI appears in his Paint & Pipette newsletter.
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Utley's publicly available lectures, podcast appearances, co-authored book Ideaflow, Stanford d.school course materials, interviews, and widely circulated writing on creativity and innovation.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Utley's publicly available lectures, podcast appearances, co-authored book Ideaflow, Stanford d.school course materials, LinkedIn essays, Medium posts, YouTube videos, and widely circulated writing on creativity, innovation, and AI as creative collaborator.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

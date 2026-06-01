@@ -5,14 +5,14 @@ description: "Load the John Green brain. Pack ships 9 unified skills in pack/ski
 
 # John Green Brain Pack — Setup & Configuration
 
-Welcome to the **Green Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from John Green's "The Anthropocene Reviewed" podcast and book, "Everything is Tuberculosis," Vlogbrothers videos, TED talks, interviews, and commencement speeches — a curated collection of his most searching thinking on meaning-making, hope, mental health, attention, storytelling, and what we owe each other in the Anthropocene.
+Welcome to the **Green Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from John Green's "The Anthropocene Reviewed" podcast and book, "Everything is Tuberculosis," Vlogbrothers videos, TED talks, BookCon panels, NPR interviews, New Yorker profile, and commencement speeches — a curated collection of his most searching thinking on meaning-making, hope, mental health, attention, storytelling, and what we owe each other in the Anthropocene.
 
 ## What You're Getting
 
-- **205 knowledge atoms** — Core insights, frameworks, and strategic principles from 36 episodes of The Anthropocene Reviewed podcast, 44 book essays, 7 novels, 2 nonfiction books, 2 TED talks, multiple commencement addresses, and 18+ years of Vlogbrothers videos (2007–present)
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **708 knowledge atoms** — Core insights, frameworks, and strategic principles from 36 episodes of The Anthropocene Reviewed podcast, 44 book essays, 7 novels, 2 nonfiction books, 2 TED talks, multiple commencement addresses, BookCon panels (2015, 2019), NPR Fresh Air and Wild Card interviews, Freakonomics interview, New Yorker profile (2014), and 18+ years of Vlogbrothers videos (2007–present)
+- **698 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — Hope and despair, meaning-making, OCD and mental health, attention, the Anthropocene, storytelling, community, imagining others complexly, the beauty of ordinary things, global health, tuberculosis, education, and more
+- **Cross-referenced topics** — Hope and despair, meaning-making, OCD and mental health, attention, the Anthropocene, storytelling, community, imagining others complexly, the beauty of ordinary things, global health, tuberculosis, education, book banning, mortality, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Green Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (205 insights)
+  ├── brain-atoms.json         ← structured atoms (708 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 205 atoms with titles, summaries, connections
+   - JSON structure of 708 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,23 +93,23 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in John's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "How do I find meaning in work that feels insignificant?"*
+*Example: "How do I find meaning in creative work that feels insignificant compared to the scale of the world's problems?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as John sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain why John believes hope is a discipline, not a feeling."*
+*Example: "Explain why John believes hope is a discipline rather than a feeling."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Is it naive to believe the world is getting better?"*
+*Example: "Is it naive or even harmful to argue that the world is getting better when so many people are suffering right now?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect attention to storytelling to mental health."*
+*Example: "Connect John's ideas about attention, storytelling, and mental health into a single framework."*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How has John's thinking on suffering changed from Looking for Alaska to Everything is Tuberculosis?"*
+*Example: "How has John's thinking on suffering and meaning changed from Looking for Alaska to Everything is Tuberculosis?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -117,11 +117,11 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions John would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I feel paralyzed by the scale of global problems. What should I be asking myself?"*
+*Example: "I feel completely paralyzed by the scale of global problems and like nothing I do matters. What should I be asking myself?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens to community and meaning-making as AI replaces more human creative work?"*
+*Example: "What happens to community, meaning-making, and storytelling as AI replaces more human creative work?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to John's philosophy? Teach → evolve → coach to understand his arc from fiction to moral nonfiction.*
+*Example: New to John's philosophy? Start with teach (hope as discipline) → evolve (how his thinking shifted from YA fiction to moral nonfiction) → coach (how to live with hope and despair at the same time).*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Writing about hope in dark times? Connect the threads → debate the counterarguments → advise on how to live with the tension.*
+*Example: Writing about meaning in dark times? Connect the threads across hope, attention, and grief → debate the counterarguments (is hope naive? is suffering redemptive?) → advise on how to act despite ambiguity.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Green's freely available Vlogbrothers videos, Crash Course content, 'The Anthropocene Reviewed' podcast, TED talks, commencement speeches, and press interviews. His book ideas are represented via public discussions and author appearances rather than reproduced text.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Green's freely available Vlogbrothers videos, Crash Course content, 'The Anthropocene Reviewed' podcast, TED talks, commencement speeches, BookCon panels, and press interviews. His book ideas are represented via public discussions and author appearances rather than reproduced text.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

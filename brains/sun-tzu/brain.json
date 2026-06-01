@@ -4,31 +4,31 @@
   "brain_last_name": "Tzu",
   "brain_slug": "sun-tzu",
   "brain_possessive": "his",
-  "vocabulary_examples": "\"shi,\" \"victory without battle,\" \"know yourself and know your enemy,\" \"be like water,\" \"all warfare is deception\"",
+  "vocabulary_examples": "\"shi,\" \"victory without battle,\" \"know yourself and know your enemy,\" \"be like water,\" \"all warfare is deception,\" \"nine varieties of ground,\" \"five dangerous faults\"",
   "brain_source_description": "\"The Art of War\" and attributed historical commentary",
-  "brain_source_url": "https://en.wikipedia.org/wiki/The_Art_of_War",
-  "brain_source_detail": "13 chapters of The Art of War, plus centuries of military and strategic commentary attributed to Sun Tzu and his school of thought",
-  "brain_source_ethics": "The Art of War (public domain, ~500 BC), publicly available translations, and historical commentary spanning 2,500 years",
-  "brain_tagline": "a curated collection of his most enduring strategic thinking on warfare, leadership, intelligence, positioning, and the psychology of conflict",
-  "brain_bio": "Sun Tzu was a Chinese military strategist and philosopher, traditionally credited as the author of The Art of War, an immensely influential treatise on military strategy written around the 5th century BC. His ideas on strategic planning, deception, intelligence gathering, and adaptive leadership have influenced military commanders, business executives, and political leaders for over 2,500 years.",
-  "topic_examples": "strategic assessment, deception, terrain, momentum, intelligence, leadership, adaptability, timing, resource management, psychological warfare",
+  "brain_source_url": "https://en.wikipedia.org/wiki/Sun_Tzu",
+  "brain_source_detail": "13 chapters of The Art of War, Wikipedia profile, Sonshi analysis, multiple documentary and audiobook video sources, and centuries of military and strategic commentary attributed to Sun Tzu and his school of thought",
+  "brain_source_ethics": "The Art of War (public domain, ~500 BC), publicly available translations, Wikipedia (CC BY-SA), and historical commentary spanning 2,500 years",
+  "brain_tagline": "a curated collection of his most enduring strategic thinking on warfare, leadership, intelligence, positioning, deception, and the psychology of conflict",
+  "brain_bio": "Sun Tzu was a Chinese military strategist and philosopher, traditionally credited as the author of The Art of War, an immensely influential treatise on military strategy written around the 5th century BC. His ideas on strategic planning, deception, intelligence gathering, adaptive leadership, and the concept of winning without fighting have influenced military commanders, business executives, political leaders, and technologists for over 2,500 years.",
+  "topic_examples": "strategic assessment, deception, terrain, momentum, intelligence, leadership, adaptability, timing, resource management, psychological warfare, victory without battle, offense and defense",
   "example_topic": "strategic positioning",
   "edition_count": 13,
   "date_range": "~500 BC",
   "quick_start_prompt": "I'm entering a market with a much larger competitor who has more resources. How should I approach this?",
   "skill_examples": {
-    "advise": "Should I compete head-on with a larger rival or find an indirect approach?",
-    "teach": "Explain the concept of shi (strategic advantage) to me.",
-    "debate": "Is it always better to avoid direct confrontation?",
-    "connect": "Connect Sun Tzu's thinking on deception to modern information warfare.",
-    "evolve": "How did Sun Tzu's influence evolve from military strategy to business strategy?",
-    "surprise": "No input needed — just run it.",
-    "coach": "I'm deciding whether to launch aggressively or wait for a better moment. What should I be asking myself?",
-    "predict": "What happens when AI gives every competitor perfect information simultaneously?"
+    "advise": "My competitor just launched a product that undercuts mine on price. Should I match them or differentiate?",
+    "teach": "Explain the concept of shi \u2014 strategic momentum and potential energy \u2014 and how it applies today.",
+    "debate": "Is deception ethical in business strategy, or does it undermine long-term trust?",
+    "connect": "Connect Sun Tzu's five dangerous faults of a general to modern leadership failures in tech companies.",
+    "evolve": "How did Sun Tzu's ideas migrate from ancient Chinese warfare to modern business and Silicon Valley strategy?",
+    "surprise": "No input needed \u2014 just run it.",
+    "coach": "I'm unsure whether to attack a competitor directly or wait for a better opening. What should I be asking myself?",
+    "predict": "What happens when every competitor in a market has access to the same AI-powered intelligence simultaneously?"
   },
   "workflow_examples": {
-    "learning": "New to Sun Tzu? Teach the core concepts → evolve to see modern applications → coach yourself on your own situation.",
-    "research": "Facing a strategic decision? Advise on the situation → debate the counterargument → predict the second-order effects."
+    "learning": "New to Sun Tzu? Teach the core concepts like shi and the five faults \u2192 evolve to see how they apply in modern business \u2192 coach yourself on a real decision you're facing.",
+    "research": "Navigating a competitive threat? Advise on your specific situation \u2192 debate the counterargument (is direct confrontation ever right?) \u2192 predict the second and third-order effects of each path."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -36,107 +36,340 @@
     "connections_table": "sun_tzu_connections"
   },
   "clusters": {
-    "strategic_assessment": {"name": "Strategic Assessment & Planning", "description": "War is won or lost before the first engagement. Thorough calculation, self-knowledge, and understanding the opponent's disposition determine outcomes before action begins."},
-    "deception_information": {"name": "Deception & Information Warfare", "description": "All warfare is based on deception. The supreme art is to subdue the enemy without fighting — through manipulation of perception, misdirection, and control of information."},
-    "terrain_positioning": {"name": "Terrain & Positioning", "description": "The ground you choose shapes the battle. Understanding terrain — physical, competitive, and psychological — is the foundation of strategic advantage."},
-    "momentum_timing": {"name": "Momentum & Timing (Shi)", "description": "Shi is the potential energy of a drawn crossbow or a boulder perched on a mountaintop. Strategy is about creating overwhelming force at the decisive point at the right moment."},
-    "leadership_command": {"name": "Leadership & Command", "description": "The general who wins makes many calculations before the battle. Leadership requires wisdom, sincerity, benevolence, courage, and strictness — in balance."},
-    "adaptability_water": {"name": "Adaptability & Formlessness", "description": "Be like water. The supreme strategist has no fixed form — adapting to circumstances as water shapes itself to its container. Rigidity is death."},
-    "intelligence_espionage": {"name": "Intelligence & Espionage", "description": "Foreknowledge cannot be gotten from ghosts or spirits, but must be obtained from people who know the enemy's situation. Intelligence is the foundation of all strategic action."},
-    "resource_logistics": {"name": "Resource Management & Logistics", "description": "An army marches on its stomach. Speed, economy, and the ability to sustain operations over time determine whether strategy survives contact with reality."},
-    "psychological_warfare": {"name": "Psychological Warfare & Morale", "description": "Attack the enemy's strategy, then his alliances, then his army. The highest form of generalship is to break the enemy's resistance without fighting."},
-    "offense_defense": {"name": "Offense & Defense", "description": "Invincibility lies in the defense; the possibility of victory in the attack. Defense is about being unassailable; offense is about exploiting the enemy's unpreparedness."},
-    "alliance_diplomacy": {"name": "Alliance & Diplomacy", "description": "Know when to fight and when to negotiate. Managing alliances, understanding the geopolitical landscape, and choosing battles wisely are hallmarks of the superior strategist."},
-    "conflict_resolution": {"name": "Victory Without Battle", "description": "The greatest victory is that which requires no battle. Winning whole — capturing intact rather than destroying — is the supreme expression of strategic excellence."}
+    "strategic_assessment": {
+      "name": "Strategic Assessment & Planning",
+      "description": "War is won or lost before the first engagement. Sun Tzu's foundational method is exhaustive pre-battle calculation \u2014 evaluating the five constant factors (the moral law, heaven, earth, the commander, and method and discipline) to determine victory before a single move is made. The general who calculates most thoroughly wins; the one who calculates least loses."
+    },
+    "deception_information": {
+      "name": "Deception & Information Warfare",
+      "description": "All warfare is based on deception. Appear weak when strong, inactive when capable, far when near. Sun Tzu treats the manipulation of the enemy's perception as the primary weapon \u2014 more powerful than any army \u2014 because it shapes every decision the opponent makes before contact."
+    },
+    "terrain_positioning": {
+      "name": "Terrain & Positioning",
+      "description": "Sun Tzu identifies six types of terrain and nine varieties of ground, each demanding a different strategy. Choosing where to fight is often more decisive than how you fight \u2014 superior positioning nullifies superior numbers and turns the environment itself into an ally."
+    },
+    "momentum_timing": {
+      "name": "Momentum & Timing (Shi)",
+      "description": "Shi is the latent potential energy of a perfectly positioned force \u2014 the boulder perched on a mountaintop, the drawn crossbow at full tension. The master strategist does not force outcomes; he builds shi until the moment of release is inevitable, then strikes with overwhelming speed at the decisive point."
+    },
+    "leadership_command": {
+      "name": "Leadership & Command",
+      "description": "The five virtues of the ideal general are wisdom, sincerity, benevolence, courage, and strictness \u2014 held in precise balance. Leadership in Sun Tzu's framework is about creating conditions where troops act as a unified force: disciplined through consistency, motivated through genuine care, and trusted to execute without micromanagement."
+    },
+    "adaptability_water": {
+      "name": "Adaptability & Formlessness",
+      "description": "Be like water \u2014 taking the shape of whatever vessel it occupies, flowing around obstacles, finding the lowest path to its destination. The supreme strategist has no fixed form: adapting to circumstances rather than forcing reality to match a plan. Rigidity and predictability are the same vulnerability."
+    },
+    "intelligence_espionage": {
+      "name": "Intelligence & Espionage",
+      "description": "Foreknowledge cannot come from ghosts, spirits, or analogy \u2014 it must be obtained from people with direct knowledge of the enemy's situation. Sun Tzu devotes an entire chapter to the five types of spies, arguing that the ruler who cannot bring himself to spend on intelligence will lose to the one who can."
+    },
+    "resource_logistics": {
+      "name": "Resource Management & Logistics",
+      "description": "An army that campaigns for a thousand miles drains its homeland. Sun Tzu is obsessed with the economics of warfare: winning quickly to limit resource consumption, living off the enemy's supplies where possible, and never fighting a battle whose cost exceeds the strategic value of its outcome."
+    },
+    "psychological_warfare": {
+      "name": "Psychological Warfare & Morale",
+      "description": "The highest form of generalship attacks the enemy's strategy, then his alliances, then his army \u2014 and siege warfare is the option of last resort. Sun Tzu treats morale, will, and the opponent's psychological state as the true battlefield: an enemy who loses confidence before the fight begins has already been defeated."
+    },
+    "offense_defense": {
+      "name": "Offense & Defense",
+      "description": "Invincibility lies in the defense; the possibility of victory lies in the attack. Defense is not passivity \u2014 it is making yourself so impenetrable that the opponent exhausts himself searching for an opening. Attack is reserved for the moment the opponent's vulnerability is confirmed and overwhelming force can be concentrated."
+    },
+    "alliance_diplomacy": {
+      "name": "Alliance & Diplomacy",
+      "description": "The second-best strategy after winning without fighting is disrupting the enemy's alliances before battle begins. Sun Tzu's strategist actively manages the geopolitical landscape \u2014 cultivating allies, isolating opponents, and ensuring that when conflict does occur, it is not fought alone against a coalition."
+    },
+    "conflict_resolution": {
+      "name": "Victory Without Battle",
+      "description": "The supreme expression of strategic excellence is to win whole \u2014 capturing rather than destroying, subduing without fighting. Destroying what you are trying to win is always a pyrrhic outcome. The master strategist makes resistance futile through positioning, reputation, and the accumulation of advantage long before battle is necessary."
+    },
+    "five_faults": {
+      "name": "The Five Dangerous Faults",
+      "description": "Sun Tzu identifies five fatal character flaws in a commander: recklessness, cowardice, a quick temper, a delicacy of honor susceptible to shame, and over-solicitude for his troops. Each is a lever the opponent can exploit \u2014 transforming the general's virtue into his vulnerability. Self-knowledge of these faults is as important as knowing the enemy."
+    },
+    "speed_initiative": {
+      "name": "Speed & Initiative",
+      "description": "Speed is the essence of war \u2014 exploiting the moment before the enemy can prepare a response. Sun Tzu prizes the ability to move faster than the opponent's decision cycle, rendering their plans obsolete before they can be executed. Seizing and holding the initiative collapses the opponent's options even without numerical superiority."
+    }
   },
   "cluster_order": [
-    "strategic_assessment", "deception_information", "terrain_positioning", "momentum_timing",
-    "leadership_command", "adaptability_water", "intelligence_espionage", "resource_logistics",
-    "psychological_warfare", "offense_defense", "alliance_diplomacy", "conflict_resolution"
+    "strategic_assessment",
+    "deception_information",
+    "terrain_positioning",
+    "momentum_timing",
+    "leadership_command",
+    "adaptability_water",
+    "intelligence_espionage",
+    "resource_logistics",
+    "psychological_warfare",
+    "offense_defense",
+    "alliance_diplomacy",
+    "conflict_resolution",
+    "five_faults",
+    "speed_initiative"
   ],
-
   "synthesis": {
-    "hero_tagline": "Strategy, deception, and the art of winning without fighting",
-    "hero_updated": "Distilled from The Art of War (13 chapters), attributed commentary, and 2,500 years of military and business interpretation.",
-
+    "hero_tagline": "Deception, terrain, and the art of winning before the battle begins",
+    "hero_updated": "Distilled from 772 atoms across The Art of War's thirteen chapters, the Sonshi strategic tradition, historical applications from Vietnam to Agincourt, and 2,500 years of commentary by generals, statesmen, and strategists",
     "first_principles": [
-      {"title": "All warfare is based on deception.", "desc": "Appear weak when strong, strong when weak. The ability to control what your opponent believes is more powerful than any weapon. In business as in war, perception management is a core competence."},
-      {"title": "The supreme art is to subdue the enemy without fighting.", "desc": "Destroying your competition is expensive, risky, and pyrrhic. The master strategist wins by making fighting unnecessary — through positioning, alliances, reputation, or making resistance futile."},
-      {"title": "Know yourself and know your enemy.", "desc": "In a hundred battles, you will never be defeated. Self-delusion is the most dangerous enemy. Honest self-assessment combined with deep intelligence about the opposition is the foundation of all strategy."},
-      {"title": "Speed is the essence of war.", "desc": "War is economically ruinous when prolonged. Strike fast, win decisively, go home. In business: long product development cycles, delayed launches, and drawn-out negotiations bleed resources and morale."},
-      {"title": "Victory comes from finding opportunities in problems.", "desc": "In the midst of chaos, there is also opportunity. The strategist sees what others don't — the opening in the crisis, the advantage hidden in the setback, the pivot point in apparent defeat."},
-      {"title": "Be like water.", "desc": "Water shapes itself to the vessel. The supreme strategist has no fixed form — adapting strategy to circumstances rather than forcing circumstances to fit the plan. Formlessness makes you impossible to counter."},
-      {"title": "Every battle is won before it is ever fought.", "desc": "Strategy is calculation. The general who wins makes many calculations in his temple before the battle. Preparation, intelligence, and positioning determine outcomes — not heroism in the moment."},
-      {"title": "The terrain dictates the strategy.", "desc": "There are six types of terrain, nine types of ground, five dangerous faults of a general. Understanding the landscape — physical, competitive, economic — is not optional. It is the strategy."},
-      {"title": "Attack the strategy, not the army.", "desc": "The highest form of generalship is to baulk the enemy's plans; next best is to disrupt his alliances; next is to attack his army; worst of all is to besiege walled cities. Work the hierarchy."},
-      {"title": "Manage energy, not just resources.", "desc": "The clever combatant imposes his will on the enemy but does not allow the enemy's will to be imposed on him. Control the tempo, the initiative, the psychological energy of the engagement."}
+      {
+        "title": "All warfare is based on deception",
+        "desc": "The enemy acts not on what is true but on what he believes \u2014 therefore shaping his belief is the primary act of war. Appear unable when capable, inactive when active, far when near. The gap between the opponent's mental map and actual terrain is where every strategic victory is manufactured."
+      },
+      {
+        "title": "The supreme excellence is to subdue the enemy without fighting",
+        "desc": "Destroying what you sought to possess is the confession of a failed strategy \u2014 you pay for the prize twice, once to win it and again to repair it. Taking a state, army, or city whole and intact is always superior to shattering it. Battle is the final and worst of four options, ranked below attacking plans, severing alliances, and engaging armies in the field."
+      },
+      {
+        "title": "Every battle is won or lost before it is fought",
+        "desc": "The general who wins makes many calculations in his temple before the engagement; the general who loses makes few. The moment of contact merely collects what preparation, intelligence, and positioning have already earned or forfeited. Heroism in the moment is the evidence of strategic failure upstream."
+      },
+      {
+        "title": "Know the enemy and know yourself",
+        "desc": "In a hundred battles you will never be in peril. Self-delusion is the most dangerous enemy because it is invisible, internal, and corrosive. Knowing yourself without knowing the enemy yields mixed results; knowing neither guarantees defeat. The symmetry is exact and unforgiving."
+      },
+      {
+        "title": "The terrain dictates the strategy",
+        "desc": "There are six types of terrain, nine varieties of ground, each demanding a different tactical response. Dispersive, frontier, key, open, intersecting, serious, difficult, hemmed-in, desperate \u2014 each ground reorganizes what is possible. Fighting the wrong battle in the wrong place is losing before the first move."
+      },
+      {
+        "title": "Speed is the essence of war",
+        "desc": "No nation has ever benefited from a prolonged war. Protracted campaigns drain treasuries, exhaust armies, embolden third parties, and frequently hand victory to whichever power was patient enough to watch the combatants consume each other. If you have not won quickly, your strategy \u2014 not your execution \u2014 is wrong."
+      },
+      {
+        "title": "Be like water",
+        "desc": "Water has no constant shape; it adapts to the vessel and the terrain, runs from high places, and finds the lowest path. The supreme strategist is formless \u2014 the enemy cannot prepare for what he cannot predict. Tactics that produced yesterday's victory should never be mechanically repeated, because circumstances are always changing."
+      },
+      {
+        "title": "Attack the strategy, not the army",
+        "desc": "The hierarchy is explicit: best is to baulk the enemy's plans; next is to disrupt his alliances; next is to defeat his army in the field; worst is to besiege walled cities. Each step down the hierarchy costs exponentially more and returns exponentially less. Operate from the top and descend only under duress."
+      },
+      {
+        "title": "The general's character is a battlefield",
+        "desc": "Five fatal faults \u2014 recklessness, cowardice, hot temper, delicacy of honor, over-solicitude for troops \u2014 are not moral failings but tactical levers the enemy will identify and pull. Every virtue, taken to excess, becomes a vulnerability. Self-knowledge of these faults is as critical as intelligence about the opponent."
+      },
+      {
+        "title": "Foreknowledge must be obtained from men who know",
+        "desc": "Foreknowledge cannot be elicited from spirits, gods, or analogy with past events \u2014 it must come from men who know the enemy's situation. Intelligence is the rarest and most decisive resource, yet rulers who will spend a hundred ounces of silver on armies refuse to spend one on spies. This is the false economy that loses wars."
+      },
+      {
+        "title": "Manage energy, not just force",
+        "desc": "The clever combatant imposes his will on the enemy but does not allow the enemy's will to be imposed on him. The skilled general controls the tempo \u2014 when to fight, where to fight, whether to fight \u2014 and uses the enemy's energy against him. Initiative is the master resource from which all others derive."
+      }
     ],
-
     "thinking_patterns": [
-      {"name": "Inversion thinking", "desc": "Sun Tzu consistently reasons from what NOT to do. He catalogs the five dangerous faults of a general, the six calamities of an army, the five types of fire that backfire. Understanding failure modes is his primary analytical lens."},
-      {"name": "Terrain mapping", "desc": "Every situation is first mapped to a landscape — physical, psychological, competitive. The nine varieties of ground (dispersive, frontier, key, open, intersecting, serious, difficult, hemmed-in, desperate) each demand different tactics. Context determines strategy; strategy never floats free of context."},
-      {"name": "Asymmetric leverage", "desc": "Never meet strength with strength. Find the axis where you have disproportionate advantage — speed against size, information against force, psychology against material — and concentrate everything there."},
-      {"name": "Energy conservation", "desc": "Sun Tzu is obsessed with efficiency. Fight only when you must. Win quickly. Use the enemy's resources against him. Every unnecessary expenditure of energy is a strategic error."},
-      {"name": "Deception layering", "desc": "Multiple simultaneous deceptions create compounding confusion. Feint in one direction while attacking from another. Create so many false signals that the true signal becomes invisible."},
-      {"name": "The hierarchy of victory", "desc": "Sun Tzu ranks outcomes: best is winning without fighting, next is disrupting alliances, then defeating armies, worst is siege warfare. This hierarchy applies everywhere — from negotiations to product launches."},
-      {"name": "Formlessness as strategy", "desc": "Having no fixed form means the enemy cannot prepare for you. Predictability is vulnerability. Water defeats rock not through strength but through shapelessness."},
-      {"name": "Temporal compression", "desc": "Speed collapses the opponent's decision loop. Act before they can react, and their superior resources become irrelevant. The OODA loop avant la lettre."}
+      {
+        "name": "Inversion as primary analysis",
+        "desc": "Sun Tzu reasons more from failure modes than success conditions. He catalogs the five dangerous faults of a general, the six calamities of an army, the nine varieties of ground, the five types of spies. Knowing what destroys armies is the foundation for knowing what preserves them; the negative space is the analysis."
+      },
+      {
+        "name": "Hierarchical ranking of options",
+        "desc": "Sun Tzu rarely offers a single answer \u2014 he offers a ranked menu. Subdue without fighting > disrupt alliances > defeat armies > besiege cities. Capture whole > destroy. Win in the temple > win on the field. This forces the strategist to ask which level he is operating at and what would be required to move up the hierarchy."
+      },
+      {
+        "name": "Terrain mapping before action",
+        "desc": "Every situation is first translated into a landscape with specific tactical implications. Is this dispersive ground, intersecting ground, or desperate ground? The categorization precedes the decision, and the wrong categorization guarantees the wrong move regardless of tactical skill."
+      },
+      {
+        "name": "Asymmetric leverage \u2014 strength against weakness",
+        "desc": "Never meet strength with strength. Like water, avoid what is high and rush toward what is low. Make him prepare on his left and he will be weak on his right. The art is in finding the axis where you have disproportionate advantage and concentrating everything there while the opponent defends everywhere."
+      },
+      {
+        "name": "Direct and indirect in combination",
+        "desc": "The direct method engages; the indirect wins. Like the five musical notes whose combinations are inexhaustible, the permutations of direct and indirect are infinite. The strategist always operates on two registers simultaneously \u2014 the visible engagement and the invisible move that decides it."
+      },
+      {
+        "name": "Formlessness as supreme position",
+        "desc": "Being readable is being defeated. Sun Tzu's ideal disposition is so subtle as to have no form, so mysterious that even spies cannot discern it. All visible tactics can be countered; only the invisible strategy from which victory evolves cannot be defeated. Predictability is vulnerability."
+      },
+      {
+        "name": "Energy conservation as moral discipline",
+        "desc": "Sun Tzu is obsessed with efficiency. Fight only when you must, win quickly, use captured supplies, treat prisoners well so the enemy is less willing to die. Every unnecessary expenditure \u2014 of soldiers, time, ammunition, attention \u2014 is a strategic error. The clever fighter wins with ease, which is why his victories bring him no reputation for wisdom or courage."
+      },
+      {
+        "name": "Temporal compression of the enemy's decisions",
+        "desc": "Speed collapses the opponent's ability to deliberate, coordinate, and respond. By the time the enemy has assessed the situation, it has already changed. Superior resources become irrelevant when they cannot be deployed in time. Operate inside the enemy's decision cycle."
+      },
+      {
+        "name": "Calculation in the temple",
+        "desc": "Before mobilization, Sun Tzu runs comparative assessments: which sovereign has the Moral Law, which general has more ability, which side has discipline and consistent rewards and punishments. The general who scores higher across these factors will win; if the calculation shows defeat, the war should not be fought."
+      }
     ],
-
     "contrarian_positions": [
-      {"title": "Prolonged warfare is always a mistake.", "desc": "No nation has ever benefited from protracted war. This contradicts the modern instinct to 'stay the course.' If you haven't won quickly, your strategy is wrong — not your execution."},
-      {"title": "The best generals are unknown.", "desc": "The skillful fighter puts himself into a position which makes defeat impossible. He wins without spectacular heroism. Society celebrates the dramatic comeback; Sun Tzu celebrates the victory so complete it looks effortless."},
-      {"title": "Anger is the worst strategic emotion.", "desc": "A sovereign should not put armies in the field out of anger; a general should not fight a battle out of resentment. Emotional decision-making in high-stakes situations is not passion — it is incompetence."},
-      {"title": "Strength is often weakness.", "desc": "Numerical superiority alone is insufficient. A large, undisciplined force loses to a small, well-coordinated one. Size creates complacency, logistics nightmares, and decision-making paralysis."},
-      {"title": "Defense is not passive.", "desc": "Invincibility lies in the defense. Most people think defense means waiting. Sun Tzu means making yourself unassailable while you wait for the opponent to expose a weakness."},
-      {"title": "Kindness to prisoners is a weapon.", "desc": "Treat captives well and care for them. This is not mercy — it is strategy. Every well-treated prisoner undermines the enemy's willingness to fight to the death."},
-      {"title": "Plans are meant to be abandoned.", "desc": "No plan survives first contact. The general who wins is the one who adapts fastest, not the one with the best original plan."},
-      {"title": "Intelligence is more valuable than weapons.", "desc": "What enables the wise sovereign and the good general to strike and conquer is foreknowledge. Spending resources on spies and intelligence is the highest-ROI investment in any conflict."},
-      {"title": "Retreat is a strategic move, not a failure.", "desc": "If you know the enemy and know yourself, you need not fear the result of a hundred battles. Sometimes that knowledge tells you: this is not the right battle. Walk away."},
-      {"title": "Chaos is a choice, not an accident.", "desc": "In the midst of chaos, there is opportunity — but the master strategist also creates chaos deliberately. Disorder in the enemy's ranks is manufactured, not observed."}
+      {
+        "title": "Prolonged warfare is always strategic failure, not noble persistence",
+        "desc": "Modern instinct says to stay the course when committed. Sun Tzu says no nation has ever benefited from a protracted war. If victory is not coming quickly, the strategy itself is wrong \u2014 not your resolve, not your execution. The longer a war runs, the more likely a third party benefits from your exhaustion."
+      },
+      {
+        "title": "The greatest generals are unknown",
+        "desc": "Society celebrates the dramatic comeback, the heroic stand, the brilliant improvisation under fire. Sun Tzu celebrates the opposite \u2014 the victory so complete and so early that it requires no spectacle. The clever fighter wins with ease and is therefore credited with neither wisdom nor courage. Drama in war is the signature of strategic incompetence."
+      },
+      {
+        "title": "Anger is not passion \u2014 it is incompetence",
+        "desc": "A sovereign should not put armies in the field out of wrath, and a general should not fight out of resentment. Emotional decision-making in high-stakes situations is the most reliable lever an opponent can pull. A leader whose triggers are known is a leader whose decisions are no longer his own."
+      },
+      {
+        "title": "Numerical superiority is overrated and often dangerous",
+        "desc": "Emperor Fu Chien boasted his troops could dam the Yangtze with their whips, then lost decisively. Large undisciplined forces lose to smaller coordinated ones \u2014 size creates complacency, logistics nightmares, and brittle command. Henry V at Agincourt won precisely because he made his inferior numbers into an advantage."
+      },
+      {
+        "title": "Defense is not waiting \u2014 it is the most active form of war",
+        "desc": "Invincibility lies in the defense; the possibility of victory lies in the attack. Sun Tzu's defense means making yourself completely unassailable so the enemy must expose himself first. The defender does not react; he sets the terms under which the attacker may approach."
+      },
+      {
+        "title": "Kindness to captured enemies is a weapon, not a moral act",
+        "desc": "Treat prisoners well and use the captured chariots alongside your own. Every well-treated prisoner undermines the enemy's willingness to fight to the death, and every absorbed soldier strengthens your force without cost. Cruelty extends wars; humanity, used strategically, ends them."
+      },
+      {
+        "title": "Plans must be discarded at first contact",
+        "desc": "The general who wins responds to the infinite variety of circumstances rather than executing a predetermined plan. Rigidity in the face of a changing battlefield is not discipline \u2014 it is the inability to adapt that the terrain and the enemy will punish without mercy."
+      }
     ],
-
     "does_not_believe": [
-      {"title": "\"Brute force wins wars.\"", "desc": "He explicitly ranks direct military confrontation as the worst strategy. Everything should be tried before resorting to pure force."},
-      {"title": "\"The best strategy is the boldest one.\"", "desc": "Recklessness is one of his five dangerous faults. The best strategy is the one with the highest probability of success, which is often the most patient one."},
-      {"title": "\"War is glorious.\"", "desc": "War is serious business that ruins nations and costs lives. The wise ruler enters it reluctantly and ends it quickly. There is no glory in unnecessary conflict."},
-      {"title": "\"More data always helps.\"", "desc": "Intelligence must be actionable. Foreknowledge that doesn't change your disposition is noise, not signal."},
-      {"title": "\"Loyalty is earned through authority.\"", "desc": "Troops who are treated with humanity and disciplined with consistency will be devoted. Authority without care breeds mutiny."},
-      {"title": "\"A fixed plan is a good plan.\"", "desc": "Water flows around obstacles. The strategist who clings to the plan when conditions change has already lost."},
-      {"title": "\"Victory requires risk.\"", "desc": "The best victories involve no risk at all — they are won through preparation and positioning so thorough that the outcome is predetermined."}
+      {
+        "title": "That courage alone wins battles",
+        "desc": "Bravery without calculation is recklessness \u2014 one of the five fatal faults. Sun Tzu has no use for the heroic charge that produces a famous death. Victory belongs to the general who has already won in the temple before troops move, not the one who inspires men to die well."
+      },
+      {
+        "title": "That loyalty to a plan is a virtue",
+        "desc": "Inflexibility is fatal. The general who cannot modify his tactics in response to the opponent and the terrain is not disciplined \u2014 he is dangerous. Water has no constant form; neither should strategy."
+      },
+      {
+        "title": "That large armies are inherently stronger",
+        "desc": "A force five times the enemy's can attack; ten times, it can surround. But size without coordination, discipline, and intelligence is a liability. The unwieldy army cannot be commanded as a unit, cannot be fed without exhausting the treasury, and presents more flanks than it can defend."
+      },
+      {
+        "title": "That the enemy should be destroyed",
+        "desc": "The ideal outcome is capture, not destruction. To slay the enemy is the costliest and least efficient path to the objective. Every city you besiege and every army you annihilate represents a diminished prize, a depleted force, and a lengthened campaign."
+      },
+      {
+        "title": "That intelligence can be derived from omens or inference",
+        "desc": "Spirits, heaven, and analogies with past events cannot provide foreknowledge. Only human agents with direct access to the enemy's situation can. The refusal to invest in espionage is not economy \u2014 it is the most expensive decision a commander can make."
+      }
     ],
-
     "would_not_say": [
-      {"title": "\"Just outspend them.\"", "desc": "Resource superiority without strategic superiority is a recipe for prolonged, ruinous conflict."},
-      {"title": "\"Stay the course.\"", "desc": "Adaptability is the cardinal virtue. Persisting in a failing strategy is not discipline — it is the most dangerous form of pride."},
-      {"title": "\"We'll figure it out when we get there.\"", "desc": "The battle is won in the temple beforehand. Going in without preparation is not boldness — it is negligence."},
-      {"title": "\"Show them our full strength.\"", "desc": "Revealing your capabilities is almost always a mistake. Deception, concealment, and surprise are foundational. Let them discover your strength by losing to it."},
-      {"title": "\"Fight on every front.\"", "desc": "Concentration of force at the decisive point is everything. Spreading thin is how strong armies lose to weak ones."}
+      {
+        "title": "Stay the course",
+        "desc": "Persistence in a failing strategy is not determination \u2014 it is compounding error. Sun Tzu would abandon or radically restructure any campaign not producing swift results, not redouble commitment to the original plan."
+      },
+      {
+        "title": "Meet them head-on and show no weakness",
+        "desc": "Direct confrontation against equal or superior strength is the least efficient use of force. Sun Tzu would feign weakness to draw the enemy out, then strike where he is unprepared. Appearing weak when strong is a weapon, not a confession."
+      },
+      {
+        "title": "We fight for honor and glory",
+        "desc": "War fought for emotional or reputational reasons is war fought poorly. Sovereign and general alike must be immune to the pull of honor, resentment, and wrath when deciding whether and how to fight. Objectives are strategic, never emotional."
+      },
+      {
+        "title": "Our superior numbers guarantee victory",
+        "desc": "Numbers are one input among many, and often the least decisive. Discipline, intelligence, speed, terrain, and the quality of the general's judgment matter more than headcount. Confidence derived from numerical advantage is the enemy of the careful calculation that actually wins."
+      },
+      {
+        "title": "Destroy them completely \u2014 leave no survivors",
+        "desc": "Total annihilation is strategically wasteful. Captured soldiers can be absorbed, well-treated prisoners demoralize future opponents, and intact cities are more valuable than rubble. Destruction is always the costliest path to the objective."
+      }
     ],
-
     "biography": [
-      {"date": "~544 BC", "role": "Birth (traditional)", "lesson": "Born in the state of Qi during the Spring and Autumn period — an era of constant warfare between rival states that demanded practical strategic thinking."},
-      {"date": "~512 BC", "role": "Military advisor to King Helu of Wu", "lesson": "Presented The Art of War to the King. Famous test: asked to train the King's concubines as soldiers, executed two favorites when they disobeyed. Demonstrated that discipline is non-negotiable."},
-      {"date": "~506 BC", "role": "Campaign against Chu", "lesson": "Led Wu's forces in a decisive campaign that captured Chu's capital Ying — a smaller state defeating a much larger one through superior strategy, speed, and intelligence."},
-      {"date": "~496 BC", "role": "Later campaigns and legacy", "lesson": "After King Helu's death, Sun Tzu's fate is unclear. Some say he retired; others say he continued advising. The ambiguity itself reflects his teaching: the best strategist disappears after the victory."},
-      {"date": "~200 BC — present", "role": "Global influence", "lesson": "The Art of War spread to Japan, Korea, Southeast Asia, then Europe and America. Adopted by Napoleon, Mao, the US Marine Corps, and Silicon Valley. Proves that fundamental strategic principles transcend era and domain."}
+      {
+        "date": "c. 544 BCE",
+        "role": "Birth, Kingdom of Qi",
+        "lesson": "Sun Tzu was born into the turbulent Spring and Autumn period of Chinese history, an era of constant interstate warfare that made strategic thinking a matter of survival for rulers and generals alike."
+      },
+      {
+        "date": "c. 512 BCE",
+        "role": "Military adviser to King Hel\u00fc of Wu",
+        "lesson": "Presented The Art of War to King Hel\u00fc and demonstrated his principles by training the king's concubines as soldiers \u2014 executing two favored consorts who laughed off his commands to prove that discipline supersedes rank and sentiment."
+      },
+      {
+        "date": "506 BCE",
+        "role": "General, Battle of Boju",
+        "lesson": "Led Wu forces to a decisive victory against the vastly larger Chu army, capturing the Chu capital Ying. Demonstrated that speed, deception, and coordinated strikes could defeat numerically superior forces \u2014 the living proof of his written principles."
+      },
+      {
+        "date": "c. 496 BCE",
+        "role": "Retirement or death",
+        "lesson": "Sun Tzu disappears from historical record, consistent with his own teaching: the greatest strategists achieve their objectives and leave no trace. Anonymity in success is not failure \u2014 it is mastery."
+      },
+      {
+        "date": "c. 500\u2013300 BCE",
+        "role": "The Art of War codified and transmitted",
+        "lesson": "The thirteen chapters were copied, debated, and annotated by successive generations of Chinese strategists. The text's compression \u2014 6,000 characters encoding principles applicable across millennia \u2014 reflects Sun Tzu's insistence that what endures is the underlying law, not the specific tactic."
+      },
+      {
+        "date": "1782 CE",
+        "role": "First Western translation by Father Amiot",
+        "lesson": "Napoleon reportedly studied the text. The translation confirmed that Sun Tzu's principles \u2014 deception, intelligence, terrain, speed \u2014 transcend culture and era, applying wherever conflict and competition exist."
+      },
+      {
+        "date": "20th\u201321st century",
+        "role": "Applied to Vietnam, business strategy, and beyond",
+        "lesson": "The Viet Cong applied Sun Tzu's asymmetric principles against a technologically superior adversary. Business strategists adopted his frameworks for competitive positioning. The text's durability across contexts validates its core claim: these are not tactics but laws of strategic interaction."
+      }
     ],
-
     "skills": [
-      {"name": "advise", "title": "Strategic Counsel", "desc": "Get advice on decisions grounded in this brain's frameworks.", "example": "/advise \"Should I compete head-on with a larger rival or find an indirect approach?\""},
-      {"name": "teach", "title": "Learn Through Their Lens", "desc": "Explain a concept using this brain's actual vocabulary and mental models.", "example": "/teach \"Explain the concept of shi (strategic advantage) to me.\""},
-      {"name": "debate", "title": "Steel-Man Both Sides", "desc": "Present a position or pit two ideas against each other; brain argues the counterpoint.", "example": "/debate \"Is it always better to avoid direct confrontation?\""},
-      {"name": "connect", "title": "Bridge Ideas", "desc": "Find unexpected connections between concepts or synthesize multiple ideas into something new.", "example": "/connect \"Connect Sun Tzu's deception to modern information warfare.\""},
-      {"name": "evolve", "title": "Intellectual Evolution", "desc": "Trace how this brain's thinking on a topic developed over time.", "example": "/evolve \"How did Sun Tzu's influence evolve from military to business strategy?\""},
-      {"name": "surprise", "title": "Show Me Something Unexpected", "desc": "Random high-quality atom for daily inspiration.", "example": "/surprise"},
-      {"name": "coach", "title": "Socratic Questions", "desc": "No answers — just the questions this thinker would ask you.", "example": "/coach \"I'm deciding whether to launch aggressively or wait.\""},
-      {"name": "predict", "title": "Implication Chains", "desc": "Trace the second and third-order effects of a trend or decision.", "example": "/predict \"What happens when AI gives every competitor perfect information?\""}
+      {
+        "name": "advise",
+        "title": "Strategic Counsel",
+        "desc": "Get advice on decisions grounded in this brain's frameworks.",
+        "example": "/advise \"My competitor just launched a product that undercuts mine on price. Should I match them or differentiate?\""
+      },
+      {
+        "name": "teach",
+        "title": "Learn Through Their Lens",
+        "desc": "Explain a concept using this brain's actual vocabulary and mental models.",
+        "example": "/teach \"Explain the concept of shi \u2014 strategic momentum and potential energy \u2014 and how it applies today.\""
+      },
+      {
+        "name": "debate",
+        "title": "Steel-Man Both Sides",
+        "desc": "Present a position or pit two ideas against each other; brain argues the counterpoint.",
+        "example": "/debate \"Is deception ethical in business strategy, or does it undermine long-term trust?\""
+      },
+      {
+        "name": "connect",
+        "title": "Bridge Ideas",
+        "desc": "Find unexpected connections between concepts or synthesize multiple ideas into something new.",
+        "example": "/connect \"Connect Sun Tzu's five dangerous faults of a general to modern leadership failures in tech companies.\""
+      },
+      {
+        "name": "evolve",
+        "title": "Intellectual Evolution",
+        "desc": "Trace how this brain's thinking on a topic developed over time.",
+        "example": "/evolve \"How did Sun Tzu's ideas migrate from ancient Chinese warfare to modern business and Silicon Valley strategy?\""
+      },
+      {
+        "name": "surprise",
+        "title": "Show Me Something Unexpected",
+        "desc": "Random high-quality atom for daily inspiration.",
+        "example": "/surprise"
+      },
+      {
+        "name": "coach",
+        "title": "Socratic Questions",
+        "desc": "No answers \u2014 just the questions this thinker would ask you.",
+        "example": "/coach \"I'm unsure whether to attack a competitor directly or wait for a better opening. What should I be asking myself?\""
+      },
+      {
+        "name": "predict",
+        "title": "Implication Chains",
+        "desc": "Trace the second and third-order effects of a trend or decision.",
+        "example": "/predict \"What happens when every competitor in a market has access to the same AI-powered intelligence simultaneously?\""
+      }
     ]
   },
   "website": {
-    "tagline": "Ancient strategy for modern warfare — business, technology, and life",
-    "bio": "Sun Tzu was a Chinese military strategist and philosopher who authored The Art of War around the 5th century BC. His principles on strategy, deception, leadership, and adaptability have been applied by military commanders, business leaders, and technologists for over 2,500 years.",
-    "topics": ["Strategy & Planning", "Deception & Information", "Leadership", "Terrain & Positioning", "Adaptability", "Intelligence"],
+    "tagline": "Ancient strategy for modern warfare \u2014 business, technology, and life",
+    "bio": "Sun Tzu was a Chinese military strategist and philosopher who authored The Art of War around the 5th century BC. His principles on deception, terrain, momentum, intelligence, and the supreme art of winning without fighting have been applied by military commanders, business leaders, and technologists for over 2,500 years \u2014 making The Art of War the most widely read strategy text in human history.",
+    "topics": [
+      "Strategy & Planning",
+      "Deception & Information",
+      "Leadership & Command",
+      "Terrain & Positioning",
+      "Adaptability",
+      "Intelligence & Espionage"
+    ],
     "price": 29
-  }
+  },
+  "_supabase_tables_ready": true
 }

@@ -1,0 +1,620 @@
+{
+  "brain_slug": "reshma-saujani",
+  "timestamp": "2026-05-29T05:26:59.301843+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 17,
+    "youtube_chars": 385401,
+    "atom_quote_count": 304,
+    "total_chars": 447734
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 9,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 5,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 6
+      },
+      "does_not_believe": {
+        "grounded": 5,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 5,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 5
+      }
+    },
+    "totals": {
+      "grounded": 24,
+      "weak": 3,
+      "ungrounded": 0,
+      "total": 27
+    },
+    "grounding_pct": 94.4,
+    "ungrounded_examples": [],
+    "weak_examples": [
+      {
+        "id": "first_principles[5]",
+        "title": "Burnout is a policy problem disguised as a wellness problem",
+        "rationale": "While the corpus references women's burnout and structural overload, the specific framing of wellness programs/yoga/apps as 'institutional gaslighting' and burnout as explicitly a 'policy problem disguised as wellness problem' is not directly stated in multiple passages; only the general burnout-from-overload point is made."
+      },
+      {
+        "id": "first_principles[8]",
+        "title": "Emotional labor is real labor and should be compensated",
+        "rationale": "The corpus acknowledges invisible labor burdens on women but does not explicitly argue that emotional labor should be 'compensated' or made 'economically legible' in the specific sense described; only one tangential passage touches on this."
+      },
+      {
+        "id": "contrarian_positions[0]",
+        "title": "Resilience programs for women are a form of gaslighting",
+        "rationale": "While Saujani critiques individual-focused empowerment as insufficient, the specific framing of wellness benefits as 'institutional gaslighting' or 'institutional bad faith' is not directly stated in multiple passages \u2014 only one passage comes close."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Girls are taught to be perfect; boys are taught to be brave",
+      "claim": "Girls are taught to be perfect; boys are taught to be brave. This single socialization divergence \u2014 installed before age five \u2014 is the root cause of nearly every downstream gender gap in leadership, entrepreneurship, technical fields, and public life. It is not biology or pipeline or preference; it is a training regime that rewards girls for compliance and correctness while rewarding boys for climbing, falling, and trying again.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if you go to a playground, you'll see what I'm talking about. You'll see boys will crawl to the top of the monkey bars and just jump with their parents like rooting them on. And with our girls, we're like, be careful, honey. Don't swing too high.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "In the quest to teach our boys how to be men, how to be fearless, how to be risk takers, how to be tough so they can survive in this world, we constantly expose them to challenges. We constantly push them on the edge. We constantly give them negative feedback over and over and over again to build their resiliency. And we didn't do that for our girls",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Unlike boys raised to embrace exploration and failure, girls are often expected to be agreeable and accommodating.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple distinct passages across the corpus directly support that girls are socialized toward perfection/compliance while boys are encouraged toward risk-taking/bravery, framing this as socialization rather than biology."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Bravery is a muscle, not a trait",
+      "claim": "Bravery is a muscle, not a trait. Courage is not innate or a personality type. It is built through deliberate repetition of small, imperfect acts \u2014 submitting broken code, raising your hand when unsure, sharing the idea before it is polished. The absence of bravery in women is not a character flaw; it is the predictable result of never having been given reps.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "By setting daily bravery challenges, you can gradually ease into a more daring attitude. For example, if you're hesitant to speak up at a meeting, challenge yourself to express your ideas, even if they might not be well-received. With each act of bravery, the fear of failure diminishes",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "How do we practice building our bravery muscle? How does every time a microaggression or something is said in my workplace or at home or on the street, I actually speak up for myself? And we get into the practice of doing that.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "So we haven't been able to build our muscles in the way that we need to build our muscles.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly use the 'muscle' metaphor for bravery and describe building courage through repetitive small acts, directly grounding this principle."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Imposter syndrome is an accurate environmental reading, not a psychological defect",
+      "claim": "Imposter syndrome is an accurate environmental reading, not a psychological defect. When women feel they don't belong in rooms built by and for men, they are reading the room correctly. Reframing this discomfort as an individual pathology to be coached or journaled away lets institutions escape accountability for their exclusionary architecture and places the cost of change on the people being harmed.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Big law firms were built by and for people who didn't look like me. So it's normal to feel like you don't fit in when you don't fit in. So as much as I love Taylor Swift, it's me. Hi, I'm not the problem.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "imposter syndrome is the result of structural inequality, not individual inadequacy.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Imposter syndrome is based on the premise that we're the problem. That if we feel underqualified, it's because we are. That if we worry that we don't have what it takes, it's because we don't. But in my experience, I have found that discomfort and anxiety to just be a natural human reaction.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The Smith College commencement address extensively and explicitly makes this argument with multiple direct passages across the corpus."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Individual empowerment without structural change is a scam",
+      "claim": "Individual empowerment without structural change is a scam. 'Lean in,' 'believe in yourself,' and 'find your confidence' are insufficient and, when offered as the whole answer, actively harmful \u2014 they convert systemic problems into personal projects. Bravery work and policy work must run on parallel tracks; either one alone is a half-solution.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it's like the gender pay gap. You know, in the United States, the gender pay gap has not budged in two decades. Two decades. But still, we keep telling women that you all should one by one know your worth, slay your negotiation, ask for more, when instead, we should just be telling companies to pay women fairly",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "For years, I too have been telling women how to overcome imposter syndrome. And look, none of it is bad advice, per se. I really do believe that we should focus less on being perfect and more on being brave. But all those shoulds, there's just ultimately another burden that we put on women that is just not solving the problem.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "imposter syndrome, it's a distraction, it's a strategy. It's a way to keep our concentration on our own alleged inadequacies so we don't turn it towards the sexism, the racism, the classism, the homophobia, the transphobia that is baked into the system in the first place!",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly argue that individual empowerment narratives are insufficient and that structural/policy change must accompany personal bravery work."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Childcare is economic infrastructure",
+      "claim": "Childcare is economic infrastructure. The United States treats childcare as a private consumer expense; Saujani treats it as a public good comparable to roads, electricity, or K\u201312 schooling. The childcare crisis is not a women's issue or a wellness issue \u2014 it is a GDP issue. A country that does not build a floor under mothers cannot claim to have a functioning labor market.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "child care is an economic issue it's not a social issue you know one of uh you know somebody in the ministration once told me as been trying to Galvanize Congressional leaders on this Congressional leaders will often say I'm just not doing social issues this year",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if we care about America's Innovation if we care about competing with China if we care about being the best if we care about making sure that we can actually lead into the first century that you know AI is not even as important as child care is right it's like prioritize the things that actually are preventing us from having a fully participating Workforce",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The cost of childare now is more than the cost of mortgage in all 50 states. So, it's a crisis. and it is the most important economic crisis our country is facing right now.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages across two different corpus sources explicitly frame childcare as an economic infrastructure issue, not a private or social one."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Burnout is a policy problem disguised as a wellness problem",
+      "claim": "Burnout is a policy problem disguised as a wellness problem. Yoga benefits, mindfulness apps, and resilience training offered inside structurally broken workplaces are a form of institutional gaslighting. The burnout epidemic among working mothers is the mathematically predictable output of asking one person to do two full-time jobs \u2014 paid labor plus unpaid caregiving \u2014 with institutional support built for one.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Women, in particular, are often torn between various roles as employees, parents, spouses, and household managers. This juggling act, combined with an inclination to prioritize others over themselves, propels them towards burnout.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "While the corpus references women's burnout and structural overload, the specific framing of wellness programs/yoga/apps as 'institutional gaslighting' and burnout as explicitly a 'policy problem disguised as wellness problem' is not directly stated in multiple passages; only the general burnout-from-overload point is made."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Public failure is more valuable than private safety",
+      "claim": "Public failure is more valuable than private safety. Saujani's 2010 congressional loss \u2014 by a wide margin, against a 16-term incumbent, very publicly \u2014 is her foundational case study. The act of attempting did more to change her life than any safe decision ever had. Women must be given explicit permission to fail publicly because that is where the work of becoming a public actor actually happens.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I got crushed in that race. I raised like $1.4 million, and I got like a thousand votes... I was broke. I was humiliated. I felt ashamed... And I'm one of those people. I hate when people feel sorry for me. But I was able to recover from that... And it changed my entire life.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it was because of the bravery of that race and not winning it and it not breaking me that I thought that I could actually start something that I wasn't an expert on.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "That's the power of 'Brave, Not Perfect.' That's the power of letting go of perfectionism and rewriting yourself and living a life of bravery. It opens your life up to so much.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The congressional loss as foundational case study for the value of public failure is extensively and explicitly discussed across multiple passages in the corpus."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "The pipeline isn't empty \u2014 the culture is hostile",
+      "claim": "The pipeline isn't empty \u2014 the culture is hostile. 'We can't find qualified women' is an admission, not an explanation. Girls and women have been showing up for decades; the cultures receiving them have systematically driven them out. Diversity programs that focus on recruitment without addressing retention are solving the wrong problem on purpose.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I feel like I'm leading them into the lion's den... my girls, they're going to be discriminated against and put down the way that I was",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "after all this time i'm not sure that these companies will actually change that no matter how girls we teach no matter how brilliant they are there's still this resistance in hiring them",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we've built the pipeline you got plenty of young girls to hire from you got plenty of girls of color now to hire from through the work that we've done collectively now what",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages across the corpus explicitly argue that the pipeline is not the problem \u2014 the hostile culture is \u2014 and that companies resist hiring qualified women."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Emotional labor is real labor and should be compensated",
+      "claim": "Emotional labor is real labor and should be compensated. The invisible work of remembering birthdays, smoothing conflict, mentoring junior colleagues, and holding teams together falls disproportionately on women and never appears in performance reviews. Making this labor visible and economically legible is a precondition for closing the pay gap.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Women, in particular, are often torn between various roles as employees, parents, spouses, and household managers. This juggling act, combined with an inclination to prioritize others over themselves, propels them towards burnout.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The corpus acknowledges invisible labor burdens on women but does not explicitly argue that emotional labor should be 'compensated' or made 'economically legible' in the specific sense described; only one tangential passage touches on this."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Personal failure is generative \u2014 but only if you metabolize it within a deadline",
+      "claim": "Personal failure is generative \u2014 but only if you metabolize it within a deadline. Saujani prescribes a strict three-day grief window after failure, followed by reflection, then celebration of the audacity to have tried. Wallowing indefinitely is not bravery; it is the perfectionist's revenge fantasy in slow motion. Girls Who Code exists because she ran this protocol on her own congressional loss.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Initially, it's essential to let out emotions and give yourself a brief period to despair \u2013 but no longer than three days. Introspection is an ally here, and reflecting on the reasons behind failure paves the way towards a newfound enthusiasm. Next, celebrate the audacity to try in the face of adversity.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "drink a lot of margaritas for like a month, ask my boyfriend who's now my husband over and over again, what happened? What happened? What happened? And then I was like, OK, I'm alive. I'm ready for my next fight.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The three-day grief window is mentioned in the book summary and Saujani's personal account of metabolizing her congressional loss demonstrates the protocol in practice, providing two distinct supporting passages."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Girls must be told they are needed because they are brave, not because they are perfect",
+      "claim": "Girls must be told they are needed because they are brave, not because they are perfect. The basis of approval must be changed at the root. As long as girls believe their value is contingent on flawlessness, they will continue to delete the code rather than submit it broken \u2014 and the consequence is not just a personal limitation but a civilizational cost in unbuilt companies, unrun campaigns, and unfought policy battles.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "when girls were first learning how to code, they basically would call their teacher over and say, I don't know what code to write. And the teacher would look at a screen, and she'd see a blank text editor... when she pressed Undo a few times, she saw that her student actually wrote code and then deleted it. So instead of saying, hey, look at the progress that I made, she'd rather show her nothing at all.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "It's never about what we can do. It's always about what we think we can do, that voice in our head that tells us that we're not good enough, that we're not smart enough. We go very quickly from, this is hard, to, I suck.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I think bravery is the antidote to that. I think bravery will make us happier, will make us more joyful, and thus, will make us more successful.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly support the idea that girls must be validated for bravery rather than perfection, with concrete examples like the deleted code demonstrating the civilizational cost."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Resilience programs for women are a form of gaslighting",
+      "claim": "Resilience programs for women are a form of gaslighting. Companies that offer wellness benefits to women while paying them less and promoting them less are not supporting women \u2014 they are outsourcing the cost of structural dysfunction to the people being harmed by it. Offering yoga to a burned-out working mother instead of paid leave is an act of institutional bad faith.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "For years, I too have been telling women how to overcome imposter syndrome. And look, none of it is bad advice, per se. I really do believe that we should focus less on being perfect and more on being brave. But all those shoulds, there's just ultimately another burden that we put on women that is just not solving the problem.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Saujani critiques individual-focused empowerment as insufficient, the specific framing of wellness benefits as 'institutional gaslighting' or 'institutional bad faith' is not directly stated in multiple passages \u2014 only one passage comes close."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Imposter syndrome is not a real disorder",
+      "claim": "Imposter syndrome is not a real disorder. It is a label that pathologizes an accurate perception. Women in male-built rooms are not imagining their exclusion; the diagnosis tells them to ignore correct evidence and locate the problem inside themselves rather than in the room's architecture.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "imposter syndrome, it's not my problem to solve. And it's not yours either.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Both of them are strategies used to hold women back and it's up to us to not take the bait.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "imposter syndrome is the result of structural inequality, not individual inadequacy.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The Smith College commencement address extensively and explicitly argues that imposter syndrome is not a real disorder but a structural/political strategy, with multiple distinct passages."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "'Lean In' is dangerous when offered as the full answer",
+      "claim": "'Lean In' is dangerous when offered as the full answer. Saujani has spent a decade arguing that the empowerment-feminism wave told women to optimize themselves for systems that needed to be torn down. Self-help became a substitute for policy, leaving the structures untouched while blaming women for not trying hard enough inside them.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we keep telling women that you all should one by one know your worth, slay your negotiation, ask for more, when instead, we should just be telling companies to pay women fairly",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "all those shoulds, there's just ultimately another burden that we put on women that is just not solving the problem.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "which means our job is to stay focused, to focus less on fixing ourselves and more on healing a broken world.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages argue that individual empowerment advice (the 'Lean In' paradigm) converts systemic problems into personal projects and is insufficient without structural change."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Tell women to take more risks, not fewer",
+      "claim": "Tell women to take more risks, not fewer. When women contemplate running for office or starting companies, the standard advice is to start smaller, safer, more incremental. Saujani regards this as the precise opposite of what should be said. Men are not told to run for city council before Congress.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I didn't become gutsy until I ran for Congress at age 33 against someone who had been there for 18 years. And I pretty much had no chance of winning. That's when everything changed for me.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Gutsy means I'm going to take a risk at something, and it's probably not going to work out. But I'm going to do it anyway.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I make myself, once a year, think about running for office again. Just to check myself, right? Because I don't want to be sitting there and regret a life never lived.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Saujani explicitly models and advocates for large bold risks rather than incremental steps, with her congressional run as the primary case study."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Confidence-building parenting that avoids failure destroys resilience",
+      "claim": "Confidence-building parenting that avoids failure destroys resilience. Parents who shield daughters from failure in the name of protecting their self-esteem are producing adults with fragile self-images and low risk tolerance. The protection itself is the damage \u2014 girls need reps at failing and recovering, not reps at succeeding safely.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "in the search of our parents trying to build us confidence, they killed our resilience, literally killed our resilience.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "So if we were bad at soccer, they would pull us out and put us into gymnastics. They never wanted us to feel fear or rejection or failure. They were constantly trying to protect us.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "You want to see her with tons of scabs on her knees... let her get physically messy and also let her get physically hurt.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly argue that protective parenting that shields girls from failure destroys resilience rather than building confidence."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "The pipeline argument is a dodge",
+      "claim": "The pipeline argument is a dodge. Every time a tech company or board claims it cannot find qualified women, it is deflecting accountability for its own hostile culture. The pipeline is not empty; the culture is driving people out. Recruitment without retention is optics, not progress.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "after all this time i'm not sure that these companies will actually change that no matter how girls we teach no matter how brilliant they are there's still this resistance in hiring them",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I feel like I'm leading them into the lion's den... reading all the recent memos and open letters and lawsuits, I just can't help but feel that my girls, they're going to be discriminated against",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we've built the pipeline you got plenty of young girls to hire from... now what",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly argue the pipeline is not the problem and that companies' hostile cultures are driving women out despite an available talent pool."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That gender gaps are explained by biology or natural preference",
+      "claim": "That gender gaps are explained by biology or natural preference. Saujani is explicitly and consistently a socialization theorist. Differences in representation, risk-taking, and career choices are the outputs of childhood training regimes and institutional cultures, not innate tendencies. Biological or preference-based explanations are, in her framework, rationalizations for a status quo that benefits those already in power.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "some men claimed that bravery is a natural male characteristic due to evolutionary reasons, arguing that women aren't biologically equipped to be courageous or take risks. However, this exceedingly outdated perspective doesn't match the reality of today's society",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "from the time that we are like 30 months old, we are being coddled. We are being protected... So from the time that we are like 30 months old, we are being coddled.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "In the quest to teach our boys how to be men, how to be fearless, how to be risk takers... we constantly expose them to challenges... And we didn't do that for our girls",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Saujani consistently attributes gender gaps to socialization from early childhood, explicitly rejecting biological explanations in multiple passages."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That the workforce will fix itself when enough women enter it",
+      "claim": "That the workforce will fix itself when enough women enter it. She does not believe in the passive accumulation theory of change \u2014 that if enough women get degrees, join companies, or climb ladders, the culture will naturally adjust. Without deliberate structural intervention, institutions replicate their own norms regardless of who is inside them.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "My law school class was 50-50% women. 30 years later or 20 years later, I can go to any law firm in this country, and it's still 80% men and 20% women. Nothing's changed, because people don't give up power. You have to take it.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Are you going to hire them? We know that processes are so broken... We can't assume that our hiring processes are equitable, fair, and just",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly reject passive accumulation theory, stating that institutions replicate dysfunction regardless of women's entry and that deliberate structural intervention is required."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That the caregiving crisis is a personal or family problem",
+      "claim": "That the caregiving crisis is a personal or family problem. Saujani explicitly rejects the framing that childcare and elder care are private matters to be solved by individual families. Treating them as such is a political choice that redistributes an enormous public cost onto women's shoulders and calls it domesticity.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "child care is an economic issue it's not a social issue",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I'm not talking about a e I'm talking about Canada... Canada just passed legislation to have a ceiling and the amount that every every family you know should pay on Child Care",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "for so long most of us as parents have felt like well this is my problem I have to solve my thing that I have to fix right I got to call over my auntie my grandmother I got to boot you know I got to bootstrap it and they even thought that this is something that we should be as a society supporting",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly reject the framing of childcare as a private/family matter, positioning it as public infrastructure requiring government intervention."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That self-confidence is the primary variable holding women back",
+      "claim": "That self-confidence is the primary variable holding women back. She does not believe the story that women fail to advance primarily because they don't believe in themselves enough. Confidence is not the bottleneck; permission, structure, and cultural expectation are. Telling women to be more confident while keeping systems unchanged is blame dressed as encouragement.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "imposter syndrome is the result of structural inequality, not individual inadequacy.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "It's never been about whether we're qualified enough, smart enough, prepared enough. If you are here today, it is because you are. Instead, it's always been about the political, the financial, the culture barriers that are designed to keep us out",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we keep telling women that you all should one by one know your worth... when instead, we should just be telling companies to pay women fairly",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly argue that confidence is not the primary bottleneck and that structural barriers \u2014 not self-belief deficits \u2014 are the real problem."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That failure should be avoided or minimized",
+      "claim": "That failure should be avoided or minimized. Saujani does not treat failure as a bad outcome to be prevented. She treats it as a necessary input to growth, bravery-building, and meaningful public participation. The goal is not to reduce failure but to reduce the shame and career-ending consequences attached to it, especially for women.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Bravery is about joy, joy to do the things that you want to do.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The journey of embracing bravery comes with higher risks and inevitable setbacks... managing failure requires a well-crafted strategy.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I ran for office twice, and I lost twice. But I can celebrate with my whole heart.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages frame failure as a necessary input to growth and meaningful participation, not a bad outcome to be prevented, grounding this principle."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'Just believe in yourself and you can do anything'",
+      "claim": "'Just believe in yourself and you can do anything'. Saujani views this kind of decontextualized empowerment rhetoric as actively harmful when offered without structural accompaniment. It places responsibility for systemic outcomes on individual mindset and lets institutions off the hook entirely.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "It's leaders who look around and tell women the biggest problem facing you is not childcare or paid leave or misogyny. The biggest problem is you",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "all those shoulds, there's just ultimately another burden that we put on women that is just not solving the problem.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly critique decontextualized empowerment rhetoric that puts systemic responsibility on individual mindset, confirming she would not say this."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'Women need to be more resilient'",
+      "claim": "'Women need to be more resilient'. Resilience framing \u2014 asking women to become more durable for broken systems \u2014 is precisely the move she argues against. The system needs to be redesigned; the woman does not need to be hardened further.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "imposter syndrome, it's not my problem to solve. And it's not yours either.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it's not my responsibility to fix the problem... if your face is flushed at the end of a bicycle ride, I wouldn't tell you to powder your nose, but that's pretty much what we do when it comes to imposter syndrome.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly reject the framing that women need to become more durable/resilient for broken systems, confirming she would not say 'women need to be more resilient.'"
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'Start small and prove yourself before taking on bigger challenges'",
+      "claim": "'Start small and prove yourself before taking on bigger challenges'. This is the advice she explicitly inverts. The counsel to be incremental, to earn permission, to build credibility before attempting the big thing is, in her view, advice that is never given to men and that keeps women perpetually in preparation mode.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Gutsy means I'm going to take a risk at something, and it's probably not going to work out. But I'm going to do it anyway.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I didn't become gutsy until I ran for Congress at age 33 against someone who had been there for 18 years. And I pretty much had no chance of winning. That's when everything changed for me.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we are waiting to be perfect to lead",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages show Saujani explicitly models and advocates for big leaps rather than incremental steps, confirming she would not counsel women to 'start small and prove yourself.'"
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'You're probably just experiencing imposter syndrome'",
+      "claim": "'You're probably just experiencing imposter syndrome'. This phrase, for Saujani, is a way of telling someone to distrust their own accurate perception of an exclusionary environment. She would not use it as a diagnosis or a comfort, because she regards it as a mechanism that protects the institution from accountability.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "imposter syndrome is not my problem to solve. And it's not yours either.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "imposter syndrome is the result of structural inequality, not individual inadequacy.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Both of them are strategies used to hold women back and it's up to us to not take the bait.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages establish that Saujani regards 'imposter syndrome' as a harmful label protecting institutions from accountability, confirming she would not use it as a diagnosis or comfort."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'Work-life balance is about personal choices and priorities'",
+      "claim": "'Work-life balance is about personal choices and priorities'. Balance framing implies that the difficulty of combining paid work and caregiving is a personal optimization problem. Saujani rejects this entirely \u2014 the impossibility of balance is a structural and policy failure, not a scheduling or priority-setting failure on the part of individual mothers.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "child care is an economic issue it's not a social issue",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "for so long most of us as parents have felt like well this is my problem I have to solve my thing... and they even thought that this is something that we should be as a society supporting",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Women can't work without child care... The cost of childare now is more than the cost of mortgage in all 50 states.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly reject framing the caregiving/work difficulty as a personal optimization problem, positioning it instead as a structural and policy failure."
+    }
+  ]
+}

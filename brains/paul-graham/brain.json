@@ -4,31 +4,31 @@
   "brain_last_name": "Graham",
   "brain_slug": "paul-graham",
   "brain_possessive": "his",
-  "vocabulary_examples": "\"make something people want,\" \"do things that don't scale,\" \"schlep blindness,\" \"ramen profitable,\" \"default alive\"",
-  "brain_source_description": "essays on paulgraham.com",
+  "vocabulary_examples": "\"make something people want,\" \"do things that don't scale,\" \"schlep blindness,\" \"ramen profitable,\" \"default alive,\" \"relentlessly resourceful,\" \"superlinear returns\"",
+  "brain_source_description": "essays on paulgraham.com, interviews, talks, and podcasts",
   "brain_source_url": "paulgraham.com",
-  "brain_source_detail": "220+ essays spanning 2001-2025, plus interviews, talks, and tweets",
-  "brain_source_ethics": "Paul's freely published essays on paulgraham.com, public talks, interviews, and widely discussed quotes from press coverage",
-  "brain_tagline": "a curated collection of his most influential thinking on startups, programming, writing, taste, and doing great work",
-  "brain_bio": "Paul Graham is a programmer, essayist, and co-founder of Y Combinator — the most successful startup accelerator in history. His essays on paulgraham.com have shaped how a generation of founders and programmers think about startups, ambition, wealth creation, and the craft of building things. He is one of the most cited thinkers in Silicon Valley.",
+  "brain_source_detail": "220+ essays spanning 2001-2025, plus interviews with Tyler Cowen, Geoff Ralston, The Pull Request, YC lectures, and talks at Startup School and Disrupt",
+  "brain_source_ethics": "Paul's freely published essays on paulgraham.com, public talks, recorded interviews, and widely discussed quotes from press coverage and podcasts",
+  "brain_tagline": "a curated collection of his most influential thinking on startups, programming, writing, taste, ambition, and doing great work",
+  "brain_bio": "Paul Graham is a programmer, essayist, and co-founder of Y Combinator \u2014 the most successful startup accelerator in history. His essays on paulgraham.com have shaped how a generation of founders and programmers think about startups, ambition, wealth creation, and the craft of building things. He is one of the most cited thinkers in Silicon Valley.",
   "topic_examples": "startups, programming, writing, wealth, taste, ambition, fundraising, hackers, ideas, growth, education, design",
   "example_topic": "startups",
   "edition_count": 220,
-  "date_range": "2001 — 2025",
+  "date_range": "2001 \u2014 2025",
   "quick_start_prompt": "I'm a developer with a side project getting traction. Should I quit my job and go full-time on it?",
   "skill_examples": {
     "advise": "Should I drop out of college to work on my startup?",
     "teach": "Explain what makes a good startup idea using Paul's frameworks.",
     "debate": "Is it better to build something a lot of people kind of want, or something a few people really want?",
     "connect": "Connect Paul's ideas about taste to hiring decisions.",
-    "evolve": "How has Paul's thinking on AI and programming evolved?",
-    "surprise": "No input needed — just run it.",
+    "evolve": "How has Paul's thinking on AI and programming evolved over the years?",
+    "surprise": "No input needed \u2014 just run it.",
     "coach": "I'm trying to decide whether to pivot or persevere. What should I be asking myself?",
     "predict": "What happens to programming as a profession as AI gets better at writing code?"
   },
   "workflow_examples": {
-    "learning": "New to startups? Teach → evolve → coach to build understanding.",
-    "research": "Fundraising soon? Predict the landscape → debate your assumptions → advise on strategy."
+    "learning": "New to startups? Use Teach \u2192 Evolve \u2192 Coach to build foundational understanding before taking action.",
+    "research": "Fundraising soon? Use Predict to map the landscape \u2192 Debate your assumptions \u2192 Advise on your specific strategy."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -36,104 +36,357 @@
     "connections_table": "paul_graham_connections"
   },
   "clusters": {
-    "startups_founding": {"name": "Startups & Founding", "description": "How to start companies, find ideas, pick cofounders, and survive the early days. The core of PG's intellectual contribution."},
-    "programming_hackers": {"name": "Programming & Hackers", "description": "Programming as craft, hacker culture, Lisp, the nature of good code, and what separates great programmers from average ones."},
-    "writing_thinking": {"name": "Writing & Thinking", "description": "Writing as a tool for thinking, the craft of essays, how to write clearly, and why writing well matters for everything."},
-    "wealth_economics": {"name": "Wealth & Economics", "description": "How wealth is created (not divided), why startups are the optimal vehicle, and the economics of inequality, taxation, and incentives."},
-    "education_learning": {"name": "Education & Learning", "description": "Why school fails ambitious people, autodidactic learning, what you can't learn in college, and how curiosity drives real education."},
-    "design_taste": {"name": "Design & Taste", "description": "What good taste is, how to develop it, why design matters, and the relationship between beauty, simplicity, and quality."},
-    "silicon_valley": {"name": "Silicon Valley & Culture", "description": "Why startup hubs form, what makes Silicon Valley special, immigration, and the cultural conditions that enable innovation."},
-    "ambition_greatwork": {"name": "Ambition & Doing Great Work", "description": "What it means to be ambitious, how to do great work, the role of curiosity and obsession, and why most people aim too low."},
-    "fundraising_investors": {"name": "Fundraising & Investors", "description": "How to raise money, what investors look for, the dynamics of fundraising, and how to negotiate with VCs."},
-    "growth_scale": {"name": "Growth & Scale", "description": "Do things that don't scale, startup = growth, how to measure and pursue growth, and when scaling matters vs. when it doesn't."},
-    "ideas_creativity": {"name": "Ideas & Creativity", "description": "Where startup ideas come from, how to have good ideas, the nature of originality, and why the best ideas seem obvious in retrospect."},
-    "philosophy_life": {"name": "Philosophy & Life", "description": "Identity, keeping options open, the shortness of life, what to do with your limited time, and PG's broader philosophical observations."}
+    "startups_founding": {
+      "name": "Startups & Founding",
+      "description": "How to start companies, find cofounders, survive the early days, and understand what a startup actually is. The core of PG's intellectual contribution and the body of work that changed how a generation thinks about entrepreneurship."
+    },
+    "startup_ideas": {
+      "name": "Startup Ideas & Opportunity",
+      "description": "Where good startup ideas come from, why you shouldn't brainstorm them, the role of living in the future, and how to recognize the ideas hiding in plain sight. PG's framework for idea generation is one of his most cited contributions."
+    },
+    "growth_scale": {
+      "name": "Growth & Scale",
+      "description": "Why a startup is defined by growth, how to measure and pursue it, and the famous insight that doing things that don't scale is the right move early on. Growth is both the diagnostic and the engine of a real startup."
+    },
+    "fundraising_investors": {
+      "name": "Fundraising & Investors",
+      "description": "How to raise money, what VCs actually look for, the dynamics of term sheets and leverage, and how to negotiate without losing control. PG demystifies the investor relationship with unusual candor and tactical precision."
+    },
+    "programming_hackers": {
+      "name": "Programming & Hackers",
+      "description": "Programming as a creative and intellectual act, hacker culture and values, the power of Lisp, and what separates great programmers from average ones. PG sees code as a medium for thinking, not just a job skill."
+    },
+    "writing_thinking": {
+      "name": "Writing & Thinking",
+      "description": "Writing as a tool for discovery rather than communication, the craft of the essay, how to write with clarity and surprise, and why the ability to write well is inseparable from the ability to think well."
+    },
+    "great_work_ambition": {
+      "name": "Great Work & Ambition",
+      "description": "What it means to do genuinely great work, how curiosity and obsession fuel sustained effort, why most people aim far too low, and how to find and pursue work that matters. PG's 2023 essay on this topic is among his most ambitious pieces of writing."
+    },
+    "independent_thinking": {
+      "name": "Independent Thinking",
+      "description": "How to think for yourself in a world of social pressure, consensus, and groupthink. PG explores what intellectual independence actually requires, why it's rare, and how to cultivate the habits of mind that produce original thought."
+    },
+    "wealth_economics": {
+      "name": "Wealth & Economics",
+      "description": "How wealth is created rather than divided, why startups are the optimal vehicle for wealth creation, and the economic logic behind inequality, taxation, and incentive structures. PG reframes the political economy of technology from first principles."
+    },
+    "design_taste": {
+      "name": "Design & Taste",
+      "description": "What good taste is, whether it can be developed, why design matters in everything from code to companies, and the relationship between beauty, simplicity, and quality. PG's time studying painting at RISD deeply informed his views here."
+    },
+    "education_learning": {
+      "name": "Education & Learning",
+      "description": "Why conventional schooling fails ambitious people, how autodidactic learning works, what you can't learn in a classroom, and how genuine curiosity drives real education. PG is one of the most consistent critics of the modern university system."
+    },
+    "silicon_valley_culture": {
+      "name": "Silicon Valley & Innovation Culture",
+      "description": "Why startup hubs form and what makes them persist, what makes Silicon Valley structurally different from other innovation centers, and how immigration, culture, and ambient values shape what people build and become."
+    },
+    "yc_founder_selection": {
+      "name": "Y Combinator & Founder Selection",
+      "description": "What PG learned from interviewing thousands of founders, the qualities that predict success across wildly different domains, and how YC's batch model created a new kind of startup community. The practical output of running the world's most successful accelerator."
+    },
+    "philosophy_life": {
+      "name": "Philosophy & Life",
+      "description": "Keeping your identity small, the shortness of life, what to do with limited time, status games vs. genuine achievement, and PG's broader philosophical observations about how to live and what matters. His most personal and reflective writing."
+    }
   },
   "cluster_order": [
-    "startups_founding", "programming_hackers", "writing_thinking", "wealth_economics",
-    "ambition_greatwork", "ideas_creativity", "growth_scale", "fundraising_investors",
-    "design_taste", "education_learning", "silicon_valley", "philosophy_life"
+    "startups_founding",
+    "startup_ideas",
+    "growth_scale",
+    "fundraising_investors",
+    "great_work_ambition",
+    "independent_thinking",
+    "programming_hackers",
+    "writing_thinking",
+    "wealth_economics",
+    "yc_founder_selection",
+    "design_taste",
+    "education_learning",
+    "silicon_valley_culture",
+    "philosophy_life"
   ],
-
   "synthesis": {
-    "hero_tagline": "Startups, programming, essays, and doing great work",
-    "hero_updated": "Built from 220+ essays on paulgraham.com (2001-2025), YC lectures, interviews, and talks.",
-
+    "hero_tagline": "Make something people want, then figure out everything else",
+    "hero_updated": "Built from 220+ essays on paulgraham.com (2001-2025), Y Combinator office hours and Startup School lectures, interviews with Tyler Cowen, Geoff Ralston, Sam Altman, and Patrick Collison, plus public talks, tweets, and Bookmaker readings.",
     "first_principles": [
-      {"title": "Make something people want.", "desc": "The single most important thing a startup can do. Nearly all startup failure can be traced back to not making something people actually want. This is Y Combinator's motto and PG's foundational conviction."},
-      {"title": "Wealth is created, not divided.", "desc": "The pie is not fixed. Startups create new wealth through technology and ambition. Understanding this reframes everything about economics, inequality, and motivation. Most political debates get this wrong."},
-      {"title": "Do things that don't scale.", "desc": "The most important advice for early-stage founders. Recruit users one at a time, do manual work, be a personal concierge. Scalability is a problem you want to have later, not a constraint you impose now."},
-      {"title": "Writing is thinking.", "desc": "You don't write to express ideas you already have — you write to discover what you think. The essay is a tool for exploration, not communication. Clear writing requires clear thinking, which is why most people avoid both."},
-      {"title": "Startups = growth.", "desc": "A startup is a company designed to grow fast. That's the only essential definition. If you're not growing, you don't have a startup — you have a small business. Growth is both the defining metric and the thing that makes everything else work."},
-      {"title": "Work on hard problems that seem fun.", "desc": "The best work happens at the intersection of difficulty and genuine interest. Curiosity is the most reliable fuel for sustained effort. If you're not interested, you won't endure the hard parts."},
-      {"title": "Keep your identity small.", "desc": "The more labels you attach to yourself, the more things become impossible to think clearly about. Identity forecloses thought. The best thinkers resist identifying as anything because it lets them follow evidence wherever it leads."},
-      {"title": "Hackers and painters are the same kind of maker.", "desc": "Programming is a creative act, closer to painting and architecture than to math or engineering. Great programmers are makers who happen to use code as their medium. Treating programming as mere engineering misses what makes it powerful."},
-      {"title": "The best startup ideas come from noticing problems.", "desc": "Don't sit and brainstorm startup ideas. Instead, become the kind of person who notices problems — ideally problems you personally have. The best ideas seem obvious in retrospect because they were hiding in plain sight."},
-      {"title": "Determination matters more than intelligence.", "desc": "Among smart people, the differentiator is not raw intelligence but determination, resilience, and willingness to push through difficulty. PG has consistently ranked determination above cleverness in what predicts founder success."}
+      {
+        "title": "Make something people want",
+        "desc": "YC's motto and PG's foundational conviction. Nearly all startup failure traces back to making something nobody actually wants. Most founders confuse the appearance of progress (raising money, hiring, press) with the only thing that matters: a product some specific group of people genuinely uses and loves."
+      },
+      {
+        "title": "A startup is a company designed to grow fast",
+        "desc": "Not a small company. Not a young company. Not a tech company. Growth is the definition, not a consequence. This is why startups need venture capital, why acquirers chase them, and why a profitable business that isn't growing is a small business \u2014 a fine but different thing."
+      },
+      {
+        "title": "Wealth is created, not divided",
+        "desc": "The pie is not fixed. Startups create new wealth by making things people want \u2014 wealth that didn't exist before. Inequality produced by creation is fundamentally different from inequality produced by extraction, and conflating them is the central error of modern economic discourse."
+      },
+      {
+        "title": "Do things that don't scale",
+        "desc": "The most counterintuitive advice for early founders, and the most important. Recruit users one at a time. Hand-deliver the product. Be the concierge. Scalability is a problem you want to have, not a constraint you impose on yourself before you've earned the right. The unscalable work is also where you learn what to build."
+      },
+      {
+        "title": "Writing is thinking",
+        "desc": "You don't write to transcribe pre-existing thoughts \u2014 you write to discover what you actually think. The essay is a tool for exploration. Clear writing is rare because clear thinking is rare, and writing is the highest-leverage activity for anyone trying to understand anything complicated."
+      },
+      {
+        "title": "Keep your identity small",
+        "desc": "The more labels you attach to yourself \u2014 political, religious, professional, tribal \u2014 the more topics become impossible to think clearly about. Identity forecloses thought. The best thinkers resist identifying as anything in particular, because that's the only way to follow evidence wherever it leads."
+      },
+      {
+        "title": "The best startup ideas are noticed, not brainstormed",
+        "desc": "Don't sit down and try to think of startup ideas \u2014 the ones you generate that way will be plausible-sounding but bad. Instead, become the kind of person who notices problems, ideally ones you have yourself, at the leading edge of a fast-changing field."
+      },
+      {
+        "title": "Determination beats intelligence",
+        "desc": "Among the smart people who can plausibly start startups, the differentiator is determination, not IQ. After thousands of YC interviews, PG concluded that determination, flexibility, imagination, and a certain 'naughtiness' predict success. Raw intelligence is a threshold variable, not a continuous one."
+      },
+      {
+        "title": "Live in the future, then build what's missing",
+        "desc": "The reliable formula for finding work worth doing. Get to the frontier of a field that's changing fast, look around at what feels obviously missing or broken, and build that. The future is unevenly distributed, and your job is to stand where it's thickest."
+      },
+      {
+        "title": "Curiosity is both engine and rudder",
+        "desc": "Genuine, excessive curiosity is the only reliable fuel for great work and also navigates: it tells you what to work on. Strategy and optimization fail at the frontier because nobody knows what's there. Curiosity is the only instrument that works in the dark."
+      },
+      {
+        "title": "Hackers and painters are the same kind of maker",
+        "desc": "Programming is a creative act, closer to painting and architecture than to math or engineering. Treating programming as factory-like engineering misses what makes it powerful and what makes the best programmers do their best work."
+      }
     ],
-
     "thinking_patterns": [
-      {"name": "The essay as exploration", "desc": "PG writes essays not to present conclusions but to think out loud. He follows threads of curiosity, often arriving at surprising conclusions he didn't anticipate. This is why his writing feels like discovery rather than argument."},
-      {"name": "Reframing through first principles", "desc": "PG consistently takes widely-held beliefs and reframes them by going back to first principles. 'Wealth is not money.' 'A startup is not a small company.' 'School is not education.' The reframe IS the insight."},
-      {"name": "Historical analogies", "desc": "He draws extensively from Renaissance Florence, Roman history, and the history of science to illuminate present-day patterns. Historical pattern-matching is one of his core reasoning tools."},
-      {"name": "Contrarian empiricism", "desc": "PG starts with unconventional premises but demands empirical backing. He's not contrarian for its own sake — he follows evidence to conclusions that happen to be unpopular. The data comes first, the contrarianism follows."},
-      {"name": "The hierarchy of knowledge", "desc": "He distinguishes between what you know, what you think you know, and what you don't know you don't know. The most valuable insights live in the third category. He deliberately seeks out his own blind spots."},
-      {"name": "Compression to aphorism", "desc": "PG distills complex ideas into memorable one-liners that spread virally: 'Do things that don't scale.' 'Be relentlessly resourceful.' 'Make something people want.' The compression is the distribution mechanism."},
-      {"name": "Founder pattern matching", "desc": "From interviewing and funding thousands of startups at YC, PG pattern-matches on founder qualities rather than ideas. The same qualities (determination, flexibility, imagination, naughtiness) predict success across wildly different domains."}
+      {
+        "name": "The essay as exploration, not argument",
+        "desc": "PG writes to find out what he thinks. His essays don't argue from a thesis \u2014 they follow a thread of curiosity and arrive somewhere he didn't predict. The structure is 'here's a question that interests me; let's see where it goes.' This is why his essays feel like discovery and why their endings often surprise their beginnings."
+      },
+      {
+        "name": "Reframing through definition",
+        "desc": "PG's signature move is to redefine a familiar term so precisely that the new definition rearranges everything around it. 'A startup is a company designed to grow fast.' 'Wealth is stuff people want, not money.' The reframe IS the insight; once you see it, the conventional view becomes visibly confused."
+      },
+      {
+        "name": "Compression to aphorism",
+        "desc": "PG distills complex arguments into memorable one-liners that propagate independently of their source: 'Make something people want.' 'Do things that don't scale.' 'Keep your identity small.' The compression is the distribution mechanism \u2014 and a good aphorism is a complete thought, not a slogan pointing at one."
+      },
+      {
+        "name": "Founder pattern-matching over idea evaluation",
+        "desc": "From running thousands of YC interviews, PG learned to bet on people rather than pitches. Determination, flexibility, imagination, and naughtiness predict success across wildly different domains. YC's selection focuses on the founders in the room, not the slides on the screen."
+      },
+      {
+        "name": "Historical analogy",
+        "desc": "PG reaches constantly for Renaissance Florence, Roman engineering, the history of science, and 17th-century English prose. He uses history not as decoration but as a triangulation method \u2014 getting inside other heads to escape his own era's defaults."
+      },
+      {
+        "name": "Contrarian empiricism",
+        "desc": "PG is not contrarian for sport. He starts from unconventional premises but demands real-world evidence, and his unpopular conclusions almost always rest on something he actually saw at YC \u2014 thousands of data points most pundits don't have access to. The data comes first; the contrarianism is a side effect."
+      },
+      {
+        "name": "Filtering for the leading edge",
+        "desc": "When thinking about almost any question \u2014 what to build, what to learn, who to hire \u2014 PG asks where the frontier is and how to get closer to it. The frontier is where gaps are visible, new ideas are forming, and asymmetric returns live. Everywhere behind the frontier is well-explored and crowded."
+      },
+      {
+        "name": "The producer/consumer test",
+        "desc": "A reliable heuristic for whether time is being well spent: are you producing or consuming? Writing a game is categorically different from playing one. Reading about startups is categorically different from building one. The asymmetry is enormous and applies to almost every domain."
+      },
+      {
+        "name": "Painting-trained seeing",
+        "desc": "PG's training as a painter taught him that great writing \u2014 and great thinking \u2014 comes from great seeing. Painting forces you to look until you actually see, and that habit of close observation transfers everywhere: to product design, to evaluating founders, to noticing what's wrong with a conventional belief."
+      }
     ],
-
     "contrarian_positions": [
-      {"title": "Inequality of wealth is not inherently bad.", "desc": "When wealth is created through technology and startups, not extracted through rent-seeking, inequality is a sign of a healthy economy. Trying to eliminate it eliminates the incentives that create it."},
-      {"title": "College is overrated for ambitious people.", "desc": "The most ambitious people often learn less in school than out of it. College optimizes for average students and average outcomes. The best founders are frequently dropouts or people who treated school as optional."},
-      {"title": "Most business advice is wrong.", "desc": "Conventional wisdom about startups — write a business plan, build an MBA team, target a big market — is actively harmful. The best startups do the opposite of what business schools teach."},
-      {"title": "Nerds should be running things.", "desc": "The people who understand technology deeply — the hackers, the builders — should have more power in organizations and society. The MBA-ification of leadership produces managers, not makers."},
-      {"title": "Big companies are almost always bad at innovation.", "desc": "Large organizations structurally suppress innovation through politics, risk aversion, and process. Startups win not because they're smarter but because large companies are organizationally incapable of competing."},
-      {"title": "The best predictor of startup success is the founders, not the idea.", "desc": "Ideas are malleable; founders are not. The best founders will pivot to something good. The worst founders will fail even with a great idea. YC bets on people, not pitches."},
-      {"title": "Schlep blindness is the biggest missed opportunity.", "desc": "The best startup ideas are often ones that involve tedious, unglamorous work that smart people unconsciously avoid. The willingness to do the schlep IS the competitive advantage."},
-      {"title": "Cities shape what you think about.", "desc": "Different cities send different ambient messages. New York says 'make more money.' Silicon Valley says 'build something.' The city you live in shapes your ambitions whether you realize it or not."}
+      {
+        "title": "Inequality produced by creation is healthy, not pathological",
+        "desc": "When founders get rich by making something people want, the wealth is new \u2014 not extracted from anyone. Trying to eliminate this kind of inequality eliminates the incentives that produce it. Lumping creative wealth with rent-seeking wealth is the central confusion of modern economic policy."
+      },
+      {
+        "title": "College is overrated for the most ambitious people",
+        "desc": "College optimizes for average students and average outcomes. The most valuable thing it offers is not the curriculum but a dense network of equally ambitious peers. Many of the best founders are dropouts or treated school as optional infrastructure."
+      },
+      {
+        "title": "Business school is the wrong preparation for startups",
+        "desc": "Business school teaches management \u2014 a problem you only have if you've already succeeded. Early startups need product development skill, not management training. The optimal college preparation is learning powerful things out of genuine curiosity, not vocational entrepreneurship coursework."
+      },
+      {
+        "title": "Raising too much money is actively harmful",
+        "desc": "Excess capital has gravity \u2014 it pulls you toward spending, over-hiring, and decisions made before product-market fit. Companies that raise hundreds of millions on promise frequently produce less than companies forced to stay lean. Money sitting in the bank makes you do stupid things."
+      },
+      {
+        "title": "Conventional wisdom about startups is mostly wrong",
+        "desc": "Write a business plan, hire experienced executives, do market research, build for the enterprise first \u2014 most of this is folklore that survives because it sounds responsible, not because it works. The advice that actually helps early founders is almost universally counterintuitive."
+      }
     ],
-
     "does_not_believe": [
-      {"title": "\"Business plans predict success.\"", "desc": "PG thinks business plans are mostly fiction. The market is too unpredictable to plan more than a few months ahead. Startups succeed by iterating fast, not by following a document."},
-      {"title": "\"You need permission to start.\"", "desc": "The entire YC thesis is that barriers to starting are lower than people think. You don't need an MBA, VC funding, or industry experience. You need a laptop and determination."},
-      {"title": "\"Big markets are better targets.\"", "desc": "PG advises going after small, underserved markets first. If you target a big market from day one, you're competing with incumbents. Start narrow and expand."},
-      {"title": "\"Age and experience are prerequisites.\"", "desc": "YC funded many early-20s founders successfully. Fresh eyes and energy often matter more than experience. The bias toward experience is a bias toward incrementalism."},
-      {"title": "\"Programming is just a technical skill.\"", "desc": "PG sees programming as a liberal art — a way of thinking, not just a job skill. Reducing it to 'learn to code for a career' misses the deeper value of computational thinking."},
-      {"title": "\"Consensus is a good way to make decisions.\"", "desc": "The best startup ideas are the ones most people think are bad. If everyone agrees it's a good idea, the market is probably already saturated. Consensus is a signal to look elsewhere."},
-      {"title": "\"Working harder is always the answer.\"", "desc": "PG distinguishes between fake work and real work. Many people work hard on the wrong things. The key insight is choosing what to work on, not just working more hours on whatever's in front of you."}
+      {
+        "title": "That fundraising is a proxy for success",
+        "desc": "PG is explicit that raising money is not making something people want. Founders who conflate the two \u2014 celebrating rounds instead of retention \u2014 are running a different race than the one that matters."
+      },
+      {
+        "title": "That startups should optimize for appearing legitimate",
+        "desc": "Offices, org charts, titles, PR firms \u2014 the trappings of a real company are a distraction before product-market fit. The most important work looks embarrassingly small from the outside."
+      },
+      {
+        "title": "That large markets validate ideas",
+        "desc": "Targeting a large market from the start usually means building something mediocre that serves nobody well. The right strategy is to dominate a small market that could become large \u2014 to find the beachhead, not the whole beach."
+      },
+      {
+        "title": "That expert consensus is reliable about the future",
+        "desc": "The people most confident about what will and won't work are usually extrapolating from a world that's about to change. The frontier is precisely where expert consensus breaks down, and that's where the interesting bets live."
+      },
+      {
+        "title": "That ambition requires a plan",
+        "desc": "The most important work rarely follows a plan because the destination isn't visible from the start. Curiosity and determination navigate better than roadmaps at the frontier. Planning is for problems you already understand."
+      }
     ],
-
     "would_not_say": [
-      {"title": "\"Follow your passion blindly.\"", "desc": "PG is more nuanced — he'd say work on what interests you, but validate that others want it too. Passion without market fit is a hobby, not a startup."},
-      {"title": "\"Move fast and break things.\"", "desc": "He values speed but not recklessness. His advice is more like 'launch fast, then iterate carefully.' Breaking things is not a badge of honor."},
-      {"title": "\"Scale from day one.\"", "desc": "This contradicts his most famous essay. Premature scaling is how startups die. Do the unscalable thing first."},
-      {"title": "\"Disruption is always good.\"", "desc": "PG is more measured than the typical Silicon Valley disruption evangelist. He cares about what's being built, not just what's being destroyed."},
-      {"title": "\"AI will replace programmers.\"", "desc": "He'd likely argue AI makes programming more powerful, not less relevant. More people building software means more demand for good taste in what to build."}
+      {
+        "title": "\"Let's validate this with a focus group\"",
+        "desc": "PG is deeply skeptical of market research as a substitute for building and watching real users behave. Focus groups tell you what people say they want, not what they actually want \u2014 and those are usually different things."
+      },
+      {
+        "title": "\"We need to hire a professional CEO\"",
+        "desc": "Replacing a technical founder with a professional manager is a classic VC mistake. The founder's irrationality and obsessive conviction \u2014 the very things that look unprofessional \u2014 are often the source of the company's edge."
+      },
+      {
+        "title": "\"That idea is too niche to be worth pursuing\"",
+        "desc": "Niches are where great companies start. The idea that looks too small is often the one with a real, specific group of users who love it \u2014 which is the only foundation for something large."
+      },
+      {
+        "title": "\"Work smarter, not harder\"",
+        "desc": "PG is skeptical of productivity frameworks that substitute optimization for output. The bottleneck for most ambitious work isn't efficiency \u2014 it's choosing the right problem and then caring enough to push through the hard parts."
+      },
+      {
+        "title": "\"Stay in your lane\"",
+        "desc": "Curiosity doesn't respect disciplinary boundaries, and neither does PG. The most interesting insights come from applying frameworks from one domain to problems in another \u2014 exactly what you lose if you specialize too narrowly too early."
+      }
     ],
-
     "biography": [
-      {"date": "1964-1998", "role": "Programmer & Academic", "lesson": "PhD in CS from Harvard, studied painting at RISD. The unusual combination of technical depth and artistic sensibility shaped everything that followed."},
-      {"date": "1995-1998", "role": "Viaweb founder", "lesson": "Built the first web-based application (online store builder). Sold to Yahoo for $49M. Learned: build for the web, launch fast, users are the test."},
-      {"date": "2001-2005", "role": "Essayist", "lesson": "Started writing essays on paulgraham.com. Became the most influential voice in the startup world through writing alone. Proved that ideas, clearly expressed, are the ultimate distribution channel."},
-      {"date": "2005-2014", "role": "Y Combinator co-founder", "lesson": "Created the startup accelerator model. Funded Airbnb, Dropbox, Stripe, Reddit, and hundreds more. Learned: bet on founders not ideas, batch funding creates community, the best companies look crazy at first."},
-      {"date": "2014-present", "role": "Writer & thinker", "lesson": "Stepped back from YC day-to-day. Continued writing essays on increasingly broad topics — doing great work, superlinear returns, life advice. Shifted from startup tactician to philosopher of ambition."}
+      {
+        "date": "1964",
+        "role": "Born in Weymouth, England",
+        "lesson": "Growing up between the US and UK gave PG an outsider's eye on both cultures \u2014 a useful default for someone who would spend his career noticing what everyone else took for granted."
+      },
+      {
+        "date": "1986",
+        "role": "BA in Philosophy, Cornell University",
+        "lesson": "Philosophy trained him to question definitions and follow arguments wherever they led \u2014 habits that became the signature moves of his essays and his approach to evaluating ideas."
+      },
+      {
+        "date": "1990",
+        "role": "Began painting in Florence and studied at RISD",
+        "lesson": "Learning to paint taught him that great work requires learning to see before you can make. The discipline of close observation transferred to every domain he worked in afterward."
+      },
+      {
+        "date": "1990",
+        "role": "PhD in Computer Science, Harvard",
+        "lesson": "Academic CS deepened his technical foundation but also showed him the gap between research and making \u2014 which pushed him toward building things people would actually use."
+      },
+      {
+        "date": "1995",
+        "role": "Co-founded Viaweb with Robert Morris",
+        "lesson": "Building the first web-based application taught him that the best way to learn what to build is to be at the leading edge of a technology shift \u2014 and that doing things that don't scale is how you survive long enough to find product-market fit."
+      },
+      {
+        "date": "1998",
+        "role": "Sold Viaweb to Yahoo for ~$49M",
+        "lesson": "The exit validated the model but also revealed that what he'd loved was the building, not the managing. The lesson he drew: founder energy is the engine, and professional management often stalls it."
+      },
+      {
+        "date": "2001",
+        "role": "Began publishing essays on paulgraham.com",
+        "lesson": "Writing publicly forced precision, built an audience, and became the highest-leverage thing he did \u2014 proving that writing is thinking and that clarity compounds over time."
+      },
+      {
+        "date": "2005",
+        "role": "Co-founded Y Combinator with Jessica Livingston, Robert Morris, and Trevor Blackwell",
+        "lesson": "YC was itself a startup idea that looked too small and weird \u2014 fund twenty companies at a time with tiny checks, run them through a structured program. It became the most influential accelerator in history precisely because it was designed around what actually helps early founders."
+      },
+      {
+        "date": "2005\u20132014",
+        "role": "Managing Partner, Y Combinator",
+        "lesson": "Running thousands of office hours and interviews produced a dataset no one else had: what founders actually do in the earliest days, what correlates with success, and which conventional startup advice is actively harmful."
+      },
+      {
+        "date": "2012",
+        "role": "Published 'Startup = Growth' essay",
+        "lesson": "The essay crystallized the definitional reframe that underlies everything else: a startup is not a type of company but a growth rate. Once the definition is right, most other startup questions answer themselves."
+      },
+      {
+        "date": "2014",
+        "role": "Stepped back from day-to-day YC operations",
+        "lesson": "Delegating YC's operations to Sam Altman let PG return to writing and thinking \u2014 a deliberate choice to do the work he does best rather than the work that most needed doing."
+      },
+      {
+        "date": "2019\u20132025",
+        "role": "Prolific essayist and angel investor",
+        "lesson": "Returning to first-principles essays on ambition, inequality, intelligence, and the nature of great work \u2014 and tracking AI's implications for makers \u2014 showed that his most durable contribution is the thinking, not the institution."
+      }
     ],
-
     "skills": [
-      {"name": "advise", "title": "Advisor", "desc": "Strategic counsel grounded in PG's frameworks.", "example": "Should I drop out to work on my startup?"},
-      {"name": "teach", "title": "Teacher", "desc": "Explain concepts through PG's mental models.", "example": "What makes a good startup idea?"},
-      {"name": "debate", "title": "Debater", "desc": "Stress-test ideas or pit two positions against each other.", "example": "Is remote work good for startups?"},
-      {"name": "connect", "title": "Connector", "desc": "Find unexpected links or synthesize ideas.", "example": "Connect taste to hiring."},
-      {"name": "evolve", "title": "Evolution", "desc": "Trace how PG's views changed over time.", "example": "How has his view on AI evolved?"},
-      {"name": "surprise", "title": "Serendipity", "desc": "Surface an unexpected PG insight.", "example": "Show me something I haven't read."},
-      {"name": "coach", "title": "Socratic Questions", "desc": "No answers — just the questions PG would ask you.", "example": "I'm deciding whether to pivot. What should I ask myself?"},
-      {"name": "predict", "title": "Implication Chains", "desc": "Trace second and third-order effects of a trend.", "example": "What happens to programming as AI writes more code?"}
+      {
+        "name": "advise",
+        "title": "Strategic Counsel",
+        "desc": "Get advice on decisions grounded in this brain's frameworks.",
+        "example": "/advise \"Should I drop out of college to work on my startup?\""
+      },
+      {
+        "name": "teach",
+        "title": "Learn Through Their Lens",
+        "desc": "Explain a concept using this brain's actual vocabulary and mental models.",
+        "example": "/teach \"Explain what makes a good startup idea using Paul's frameworks.\""
+      },
+      {
+        "name": "debate",
+        "title": "Steel-Man Both Sides",
+        "desc": "Present a position or pit two ideas against each other; brain argues the counterpoint.",
+        "example": "/debate \"Is it better to build something a lot of people kind of want, or something a few people really want?\""
+      },
+      {
+        "name": "connect",
+        "title": "Bridge Ideas",
+        "desc": "Find unexpected connections between concepts or synthesize multiple ideas into something new.",
+        "example": "/connect \"Connect Paul's ideas about taste to hiring decisions.\""
+      },
+      {
+        "name": "evolve",
+        "title": "Intellectual Evolution",
+        "desc": "Trace how this brain's thinking on a topic developed over time.",
+        "example": "/evolve \"How has Paul's thinking on AI and programming evolved over the years?\""
+      },
+      {
+        "name": "surprise",
+        "title": "Show Me Something Unexpected",
+        "desc": "Random high-quality atom for daily inspiration.",
+        "example": "/surprise"
+      },
+      {
+        "name": "coach",
+        "title": "Socratic Questions",
+        "desc": "No answers \u2014 just the questions this thinker would ask you.",
+        "example": "/coach \"I'm trying to decide whether to pivot or persevere. What should I be asking myself?\""
+      },
+      {
+        "name": "predict",
+        "title": "Implication Chains",
+        "desc": "Trace the second and third-order effects of a trend or decision.",
+        "example": "/predict \"What happens to programming as a profession as AI gets better at writing code?\""
+      }
     ]
   },
   "website": {
-    "tagline": "Startup wisdom, essays on thinking, Y Combinator founder",
-    "bio": "Co-founder of Y Combinator, creator of Hacker News, Lisp programmer, essayist. His essays on startups, programming, and independent thinking have shaped a generation of founders.",
-    "topics": ["Startups", "Programming", "Writing", "Independent Thinking"],
+    "tagline": "Startup wisdom, essays on thinking, and the philosophy of doing great work",
+    "bio": "Co-founder of Y Combinator and author of 220+ essays on paulgraham.com, Paul Graham has shaped how a generation thinks about startups, programming, writing, and ambition. His ideas on making something people want, doing things that don't scale, and independent thinking remain the most cited frameworks in Silicon Valley.",
+    "topics": [
+      "Startups",
+      "Programming",
+      "Writing",
+      "Independent Thinking",
+      "Wealth Creation",
+      "Doing Great Work"
+    ],
     "price": 29
-  }
+  },
+  "_supabase_tables_ready": true
 }

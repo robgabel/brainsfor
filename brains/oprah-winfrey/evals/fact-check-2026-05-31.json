@@ -1,0 +1,392 @@
+{
+  "brain_slug": "oprah-winfrey-v2",
+  "timestamp": "2026-05-31T02:09:50.639233+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 23,
+    "youtube_chars": 700622,
+    "atom_quote_count": 345,
+    "total_chars": 769259
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 2,
+        "weak": 1,
+        "ungrounded": 8,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 1,
+        "weak": 1,
+        "ungrounded": 3,
+        "total": 5
+      },
+      "does_not_believe": {
+        "grounded": 1,
+        "weak": 0,
+        "ungrounded": 4,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 1,
+        "weak": 0,
+        "ungrounded": 4,
+        "total": 5
+      }
+    },
+    "totals": {
+      "grounded": 5,
+      "weak": 2,
+      "ungrounded": 19,
+      "total": 26
+    },
+    "grounding_pct": 23.1,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[0]",
+        "title": "Every person fundamentally wants to know they matter",
+        "rationale": "No passage in the source corpus has Oprah describing the '30,000 interviews' finding or the three-part question ('Was that okay? Did you hear me? Did what I say mean anything?'); this claim does not appear anywhere in the provided transcripts."
+      },
+      {
+        "id": "first_principles[1]",
+        "title": "Your life speaks in whispers before it shouts",
+        "rationale": "The 'whisper, pebble, brick, brick wall' framework is not mentioned anywhere in the source corpus; no passage supports this principle."
+      },
+      {
+        "id": "first_principles[2]",
+        "title": "What you focus on expands",
+        "rationale": "No passage in the source corpus has Oprah articulating the principle that 'what you focus on expands' or describing gratitude journaling as neurological retraining of perception."
+      },
+      {
+        "id": "first_principles[5]",
+        "title": "Excellence is a form of devotion",
+        "rationale": "No passage in the source corpus has Oprah framing excellence as a spiritual devotion or equating mediocrity with ingratitude; this principle is not supported by any text in the corpus."
+      },
+      {
+        "id": "first_principles[6]",
+        "title": "Forgiveness is the most selfish thing you can do \u2014 and that's the point",
+        "rationale": "No passage in the source corpus has Oprah discussing forgiveness as self-interested release of resentment; this principle does not appear anywhere in the provided transcripts."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[3]",
+        "title": "Authenticity is truth in service of connection, not vulnerability for its own sake",
+        "rationale": "The corpus contains one passage where Oprah praises genuine disclosure that creates recognition in others, but no passage articulates her sharp distinction between 'performed vulnerability' and 'genuine testimony' as a principle she holds."
+      },
+      {
+        "id": "contrarian_positions[3]",
+        "title": "Vulnerability that does not serve the listener is spectacle, not authenticity",
+        "rationale": "Only one passage tangentially touches on the idea that genuine disclosure (as opposed to keeping up appearances) creates recognition, but Oprah does not articulate the specific distinction between 'spectacle' and 'authentic vulnerability' or name a functional test; insufficient support."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Every person fundamentally wants to know they matter",
+      "claim": "Every person fundamentally wants to know they matter. After interviewing roughly 30,000 people, Oprah arrived at a single unifying finding: every guest was silently asking the same three-part question \u2014 Was that okay? Did you hear me? Did what I say mean anything? This is the load-bearing claim from which every editorial, business, and philanthropic decision in her career descends.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah describing the '30,000 interviews' finding or the three-part question ('Was that okay? Did you hear me? Did what I say mean anything?'); this claim does not appear anywhere in the provided transcripts."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Your life speaks in whispers before it shouts",
+      "claim": "Your life speaks in whispers before it shouts. The universe communicates first through small signals \u2014 a nagging discomfort, a repeated pattern, a quiet misalignment. First a whisper, then a pebble, then a brick, then a brick wall. The discipline of a conscious life is developing sensitivity to detect the whisper, because by the time reality is undeniable, the cost of correction has compounded beyond what gentle adjustment can repair.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The 'whisper, pebble, brick, brick wall' framework is not mentioned anywhere in the source corpus; no passage supports this principle."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "What you focus on expands",
+      "claim": "What you focus on expands. The gratitude journal is not naive positive thinking \u2014 it is deliberate retraining of perception at a neurological level. Attention is not a passive lens that records what is there; it is a generative instrument that participates in creating what becomes visible. Systematic noticing of what works changes what the brain scans for, which changes decisions and the risks you are willing to take.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah articulating the principle that 'what you focus on expands' or describing gratitude journaling as neurological retraining of perception."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Authenticity is truth in service of connection, not vulnerability for its own sake",
+      "claim": "Authenticity is truth in service of connection, not vulnerability for its own sake. Oprah distinguishes sharply between performed vulnerability \u2014 a subtler form of impression management \u2014 and genuine testimony, which risks real rejection to make space for another person's recognition. The criterion is not how much you expose but whether the disclosure creates permission for someone else to speak their own truth. If yes, it is sacred. If not, it is spectacle.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I have to say, considering who you are in the world and the world's impression of who you are in the world, this is the bravest thing I've ever seen... because you could have just kept this story to yourself and allowed people to think that you had eaten and prayed and loved and everything was still just perfectly okay.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus contains one passage where Oprah praises genuine disclosure that creates recognition in others, but no passage articulates her sharp distinction between 'performed vulnerability' and 'genuine testimony' as a principle she holds."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Your history is not your destiny \u2014 but denial is not the path out",
+      "claim": "Your history is not your destiny \u2014 but denial is not the path out. You cannot outrun what you refuse to examine. The path from history to destiny runs through the wound, not around it. Unprocessed pain will run your life until examined pain informs it. Turn your wounds into wisdom \u2014 meaning that the examination is the mechanism of transformation, not a detour from it.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I don't think we get to pretend that this stuff didn't happen I don't think you can just play it off this is like a disease you have to treat it",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "it wasn't until i was a full-grown adult and i met my best friend gail... writing about it um for the first time is the first time i actually recognized oh this is not a normal thing",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "being beaten as a child um having to be subservient to other people's ideals... taught me that my opinions do not matter keep your opinions to yourself",
+          "relation": "partial"
+        },
+        {
+          "quote": "I realized that it's not just for children that you ask that question but it's really everybody and that moment bruce... changed the way i saw my relationships how i saw my own life",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages show Oprah insisting that denial prevents healing and that examining what happened to you (going through the wound) is the mechanism of transformation, grounding this principle adequately."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Excellence is a form of devotion",
+      "claim": "Excellence is a form of devotion. Every interview, every magazine page, every business decision is an act of honoring the gift given by using it fully. Mediocrity is not a competitive failure but a spiritual one \u2014 a kind of ingratitude. This reframes professional standards from ambition to obligation, which is why a poorly prepared interview registers the way a broken commandment registers for a person of faith.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah framing excellence as a spiritual devotion or equating mediocrity with ingratitude; this principle is not supported by any text in the corpus."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Forgiveness is the most selfish thing you can do \u2014 and that's the point",
+      "claim": "Forgiveness is the most selfish thing you can do \u2014 and that's the point. Forgiveness is not a gift to the person who harmed you; it is the refusal to let them continue damaging your present from a place they no longer occupy. Holding resentment is granting the past permanent tenancy in your future, paying perpetual rent to a tenant who has already left.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah discussing forgiveness as self-interested release of resentment; this principle does not appear anywhere in the provided transcripts."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Ownership is creative sovereignty, not financial upside",
+      "claim": "Ownership is creative sovereignty, not financial upside. When Oprah negotiated ownership of her show through Harpo Productions in 1986 \u2014 unprecedented for a Black woman in television \u2014 the point was never the money. Ownership meant no network executive could overrule her on content, guests, or direction. Financial wealth is a byproduct of editorial control, not the other way around.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no discussion of Harpo Productions, Oprah's 1986 ownership negotiations, or the principle that ownership equals editorial sovereignty rather than financial gain."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Service and commerce are the same mechanism, properly understood",
+      "claim": "Service and commerce are the same mechanism, properly understood. Oprah refuses the implicit American dichotomy between doing well and doing good. The ventures that served her audience most deeply were also the ones that performed best commercially \u2014 not coincidentally but causally. The Book Club, the magazine, and the investment partnerships generated a quality of audience trust that no advertising-optimized business could manufacture.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah articulating the unity of service and commerce or discussing Book Club, magazine, or investment partnerships as proof of this thesis."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Shame is an accelerant, not a corrective",
+      "claim": "Shame is an accelerant, not a corrective. The dominant cultural message \u2014 that people must feel bad enough to change \u2014 is not merely wrong but inverted. Shame does not interrupt destructive behavior; it drives it, because people eat, drink, or self-sabotage precisely to escape the feeling of shame. This is the foundation of her 2024 break with diet culture and her endorsement of reframing 'What is wrong with you?' to 'What happened to you?'",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I realized that it's not just for children that you ask that question but it's really everybody and that moment bruce... changed the way i saw my relationships how i saw my own life how i interacted with people and even in politics where it was so crazy in the past four years and everybody's always talking about what's wrong what's wrong what's wrong i would always say i wonder what happened to that person",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "most people ask the question when kids are not behaving the way you want them to behave or what's wrong with them we really should be asking about what's happened to you",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "i will have to tell you it is also for me not for everybody else but for me one of the reasons why i was so susceptible to sexual abuse because i had been taught and trained not to speak up for myself",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Multiple passages show Oprah endorsing the shift from 'what is wrong with you' to 'what happened to you' as a foundation for understanding destructive behavior, supporting the principle that shame/judgment is counterproductive and curiosity about history is the corrective."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Specificity is the only path to universality",
+      "claim": "Specificity is the only path to universality. Oprah refuses abstraction. She begins not with an argument about representation but with the image of a ten-year-old girl on a linoleum floor in Milwaukee in 1964 watching Sidney Poitier accept the Oscar. The specific sensory detail does work that the abstract argument cannot \u2014 because recognition, not persuasion, is what actually changes people, and recognition requires a particular image, not a general claim.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah articulating the principle that specificity is the only path to universality, or describing the Sidney Poitier/Milwaukee memory as an example of this method."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Shame makes destructive behavior worse, not better",
+      "claim": "Shame makes destructive behavior worse, not better. Against the dominant cultural assumption that people must feel sufficiently bad to motivate change, Oprah holds that shame is precisely what drives the behavior people are trying to escape. The path out runs through compassion and curiosity about what happened, not through intensified self-judgment.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "most people ask the question when kids are not behaving the way you want them to behave or what's wrong with them we really should be asking about what's happened to you and something went in my brain it was like a major moment like i got it in a way that i hadn't received it before",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "i wonder what happened to that person i wonder what happened to them younger that caused them to be this way so all of the labels that you just gave jay there there's a world of labels",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Oprah consistently endorses replacing shame/judgment ('what is wrong with you') with compassionate curiosity ('what happened to you') across multiple passages, supporting this contrarian position."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Ownership matters more than salary \u2014 especially for people historically excluded from it",
+      "claim": "Ownership matters more than salary \u2014 especially for people historically excluded from it. At a time when talent was expected to be grateful for prominent platforms, Oprah insisted on owning the platform itself. The financial upside was real but secondary; the primary value was that ownership removed the veto power of those who did not share her editorial values or her accountability to her audience.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no discussion of Oprah insisting on ownership over salary or of the Harpo Productions negotiations; this contrarian position is not supported by any text."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "The audience relationship is a long-term compounding asset, not a ratings quarter",
+      "claim": "The audience relationship is a long-term compounding asset, not a ratings quarter. When competitors chased exploitation and shock in the early 1990s and won short-term ratings, Oprah absorbed the competitive cost to protect what she understood as a covenant. That quality of trust later made every subsequent venture \u2014 books, magazine, network, investments \u2014 viable in ways that pure audience-size metrics never could.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah discussing the audience relationship as a long-term compounding asset or referencing the tabloid wars of the early 1990s; this principle is not grounded."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Vulnerability that does not serve the listener is spectacle, not authenticity",
+      "claim": "Vulnerability that does not serve the listener is spectacle, not authenticity. Against a culture that celebrates disclosure as inherently brave or virtuous, Oprah insists on a functional test: does this opening create the permission structure for another person's recognition? She publicly named her own 1988 wagon-of-fat television moment as a failure of this test \u2014 performed vulnerability deployed for ratings rather than genuine connection.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I have to say, considering who you are in the world and the world's impression of who you are in the world, this is the bravest thing I've ever seen... because you could have just kept this story to yourself and allowed people to think that you had eaten and prayed and loved and everything was still just perfectly okay.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Only one passage tangentially touches on the idea that genuine disclosure (as opposed to keeping up appearances) creates recognition, but Oprah does not articulate the specific distinction between 'spectacle' and 'authentic vulnerability' or name a functional test; insufficient support."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "GLP-1 medications are a medical intervention, not a moral failing or shortcut",
+      "claim": "GLP-1 medications are a medical intervention, not a moral failing or shortcut. Against the weight-loss industry framework that dominated her public life for decades \u2014 and which she participated in as a Weight Watchers board member and investor \u2014 Oprah reversed course in 2024 to argue publicly that obesity has physiological drivers that willpower cannot address and that medical intervention is not evidence of weakness but of appropriate tool-use.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah discussing GLP-1 medications, Weight Watchers, or her 2024 reversal on diet culture; this contrarian position is entirely absent from the corpus."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That credentials or pedigree are reliable proxies for human insight",
+      "claim": "That credentials or pedigree are reliable proxies for human insight. Oprah's most transformative interviews were with people who had no platform, no title, and no credential \u2014 abuse survivors, the terminally ill, ordinary people who had endured extraordinary circumstances. Her empirical finding about the universal need to be heard came from that range, not from the celebrated guests.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah articulating a belief that credentials or pedigree are unreliable proxies for human insight, or connecting this to her interview methodology."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That doing well and doing good are in inherent tension",
+      "claim": "That doing well and doing good are in inherent tension. The implicit American assumption that commercial success and genuine service require trade-offs is, in Oprah's experience, false. Her deepest acts of service to her audience were also her most commercially durable decisions. She treats the apparent tension as a failure of time horizon rather than a genuine conflict.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah explicitly rejecting the tension between doing well and doing good or framing it as a failure of time horizon."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That the path out of a painful history runs around rather than through it",
+      "claim": "That the path out of a painful history runs around rather than through it. Oprah does not believe in survivorship without examination. She is equally insistent against two errors: the determinism that says origins define outcomes, and the denial that says you can skip processing the wound. The mechanism of transformation requires going through, not bypassing.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I don't think we get to pretend that this stuff didn't happen I don't think you can just play it off this is like a disease you have to treat it",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "i realized that it's not just for children that you ask that question but it's really everybody... changed the way i saw my relationships how i saw my own life",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "what happened to you no matter who you are is important in understanding why you have the world view that you do",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages show Oprah rejecting both determinism and denial, insisting that examining history (not bypassing it) is the mechanism of transformation."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That forgiveness primarily benefits the person forgiven",
+      "claim": "That forgiveness primarily benefits the person forgiven. Forgiveness as Oprah understands it is entirely self-interested \u2014 the release of a claim that is costing the person holding it, not a gesture of generosity toward the person who caused harm. Framing it as a gift to the perpetrator is, in her view, one of the reasons people resist doing it.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah discussing forgiveness as self-interested rather than a gift to the perpetrator; forgiveness is not mentioned anywhere in the provided transcripts."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That diet culture's framework of willpower and moral discipline addresses obesity",
+      "claim": "That diet culture's framework of willpower and moral discipline addresses obesity. After decades of public struggle with weight \u2014 including investments in, and public advocacy for, Weight Watchers \u2014 Oprah concluded that the framework was wrong at the level of causation. The willpower model locates the problem in character; the medical model locates it in physiology. She believes the evidence supports the medical model.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah discussing diet culture, Weight Watchers, or the physiological versus willpower model of obesity."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'What is wrong with you?'",
+      "claim": "'What is wrong with you?'. Oprah has made the replacement of this question with 'What happened to you?' a consistent teaching across decades of work, interviews, and public advocacy. The moral-judgment framing locates the problem in the person's character rather than in their history, which misidentifies the cause and forecloses the most direct path to change.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "most people ask the question when kids are not behaving the way you want them to behave or what's wrong with them we really should be asking about what's happened to you",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "i would always say i wonder what happened to that person i wonder what happened to them younger that caused them to be this way",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Oprah explicitly and repeatedly replaces 'what is wrong with you' with 'what happened to you' across multiple passages, making clear she would not use the former framing."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'My platform is separate from my personal convictions'",
+      "claim": "'My platform is separate from my personal convictions'. The compartmentalization that most media figures and celebrity endorsers maintain between their commercial activities and their private beliefs is precisely what Oprah has refused throughout her career. Her personal-use test for endorsement makes the separation structurally impossible \u2014 she only promotes what she has personally found transformative.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah discussing a personal-use test for endorsement or the inseparability of her platform from her convictions; this principle is not grounded."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'I'm sharing this because people deserve to know'",
+      "claim": "'I'm sharing this because people deserve to know'. Oprah distinguishes sharply between disclosure that serves the listener's recognition and disclosure that serves the discloser's need to be seen. She would not use the language of the audience's entitlement to her private experience to justify what is actually performed vulnerability or spectacle.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah articulating the distinction between disclosure justified by the audience's entitlement versus genuine connection; this principle is not grounded."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'I forgave them for their sake'",
+      "claim": "'I forgave them for their sake'. Oprah's framing of forgiveness is entirely self-interested \u2014 releasing the grip of the past to free your own present. Framing forgiveness as generosity toward the person who harmed you is, in her framework, a misunderstanding that makes the act harder and less likely to happen.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Forgiveness is not discussed anywhere in the source corpus, so there is no basis to determine what framing Oprah would or would not use for it."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'The ratings don't lie'",
+      "claim": "'The ratings don't lie'. Ratings-as-truth is the operating premise of commercial television that Oprah explicitly rejected during the tabloid wars of the early 1990s. Short-term audience size is, in her view, one of the least reliable measures of whether a media relationship is healthy, durable, or worth building.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus has Oprah discussing ratings as truth or her rejection of short-term audience-size metrics during the tabloid wars; this principle is entirely absent from the corpus."
+    }
+  ]
+}

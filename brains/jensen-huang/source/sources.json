@@ -1,125 +1,232 @@
 {
-  "description": "Source material for the Jensen Huang brain pack — long-form interviews, keynotes, and articles covering accelerated computing, AI, leadership, and NVIDIA's strategic evolution.",
-  "brain_slug": "jensen-huang",
+  "description": "Source material for the Jensen Huang brain pack \u2014 text via Firecrawl, video via yt-dlp.",
+  "brain_slug": "jensen-huang-v2",
   "brain_name": "Jensen Huang",
+  "discovered_at": "2026-05-30T23:21:21.606842+00:00",
   "sources": [
     {
-      "title": "Lex Fridman Podcast #494 — Jensen Huang: NVIDIA, The AI Revolution",
-      "type": "interview",
-      "date": "2025-03-23",
-      "priority": "essential",
-      "description": "3+ hour deep dive covering accelerated computing philosophy, rack-scale engineering, AI scaling laws, TSMC/supply chain, NVIDIA's competitive moat, leadership, AGI timeline, the future of programming, and personal philosophy.",
-      "youtube_id": "vif8NQcjVf0",
-      "key_topics": ["accelerated computing", "AI revolution", "supply chain", "leadership", "AGI", "first principles", "CUDA"]
-    },
-    {
-      "title": "Acquired Podcast — NVIDIA CEO Jensen Huang",
-      "type": "interview",
-      "date": "2023-10-15",
-      "priority": "essential",
-      "description": "After 500+ hours of NVIDIA research, hosts Ben Gilbert and David Rosenthal interviewed Jensen at NVIDIA HQ. Covers founding story, building the datacenter business, creating CUDA, and betting the company multiple times.",
-      "youtube_id": "y6NfxiemvHg",
-      "key_topics": ["founding story", "CUDA", "market creation", "business strategy", "resilience", "datacenter"]
-    },
-    {
-      "title": "Joe Rogan Experience #2422 — Jensen Huang",
-      "type": "interview",
-      "date": "2025-12-03",
-      "priority": "essential",
-      "description": "~2.5 hour wide-ranging conversation covering Elon Musk as early GPU customer, the AI tech race, NVIDIA's founding, personal philosophy, immigration story, and technology's future.",
-      "youtube_id": "3hptKYix4X8",
-      "key_topics": ["personal philosophy", "founding story", "AI revolution", "technology roadmap", "resilience"]
-    },
-    {
-      "title": "Computer History Museum — Oral History of Jensen Huang",
-      "type": "interview",
-      "date": "2025-12-01",
-      "priority": "essential",
-      "description": "Comprehensive oral history interview — deep biographical and technical history of Jensen and NVIDIA from founding through the AI era.",
-      "youtube_id": "0c8i4T9BSqY",
-      "key_topics": ["founding story", "biography", "chip design", "technology evolution", "leadership"]
-    },
-    {
-      "title": "Stanford GSB View From The Top — Jensen Huang",
-      "type": "interview",
-      "date": "2024-04-25",
-      "priority": "high",
-      "description": "Interviewed by Shantam Jain (MBA '24). Covers first-principles thinking, Denny's origin story, surviving near-death experiences, org design (50 direct reports), conviction through downturns, and the AI revolution.",
-      "youtube_id": "lXLBTBBil2U",
-      "transcript_url": "https://www.gsb.stanford.edu/insights/jensen-huang-how-use-first-principles-thinking-drive-decisions",
-      "key_topics": ["first principles", "organizational design", "resilience", "market creation", "AI revolution"]
-    },
-    {
-      "title": "GTC March 2025 Keynote — Jensen Huang",
-      "type": "keynote",
-      "date": "2025-03-17",
-      "priority": "high",
-      "description": "Official GTC 2025 keynote. Blackwell Ultra, Vera Rubin architecture, physical AI, robotics, sovereign AI infrastructure, and the next generation of accelerated computing.",
-      "youtube_id": "_waPvOwL9Z8",
-      "key_topics": ["technology roadmap", "physical AI", "sovereign AI", "accelerated computing", "robotics"]
-    },
-    {
-      "title": "60 Minutes — Nvidia CEO Jensen Huang and the $2 Trillion Company Powering Today's AI",
-      "type": "interview",
-      "date": "2024-04-01",
-      "priority": "high",
-      "description": "Bill Whitaker profiles Jensen Huang and NVIDIA. Covers his journey from Denny's dishwasher to running a trillion-dollar company, the AI revolution, and NVIDIA's role as the engine behind it.",
-      "youtube_id": "DpQQi2scsHo",
-      "key_topics": ["biography", "AI revolution", "personal philosophy", "resilience"]
-    },
-    {
-      "title": "Stripe Sessions 2024 — Jensen Huang x Patrick Collison",
-      "type": "interview",
-      "date": "2024-05-01",
-      "priority": "high",
-      "description": "Fireside chat between Jensen and Stripe CEO Patrick Collison. Topics include leadership in the age of AI, NVIDIA's use of AI internally, organizational design, feedback culture, and the new industrial revolution.",
-      "youtube_id": "8Pfa8kPjUio",
-      "key_topics": ["leadership", "organizational design", "AI revolution", "culture"]
-    },
-    {
-      "title": "All-In Podcast — Jensen Huang: Nvidia's Future, Physical AI, Rise of the Agent",
-      "type": "interview",
-      "date": "2026-03-01",
-      "priority": "high",
-      "description": "Discussion covering physical AI, agentic AI, inference scaling, and NVIDIA's strategic direction with the All-In hosts.",
-      "youtube_id": "gwW8GKwHB3I",
-      "key_topics": ["physical AI", "AI revolution", "technology roadmap", "business strategy"]
-    },
-    {
-      "title": "Dwarkesh Patel — Jensen Huang on TPU Competition, China, and Nvidia's Supply Chain Moat",
-      "type": "interview",
-      "date": "2026-04-15",
-      "priority": "high",
-      "description": "Deep technical and strategic interview covering TPU competition, China chip export policy, and NVIDIA's supply chain moat.",
-      "youtube_id": "Hrbq66XqtCo",
-      "key_topics": ["supply chain", "business strategy", "sovereign AI", "competition"]
-    },
-    {
-      "title": "GTC March 2024 Keynote — Jensen Huang",
-      "type": "keynote",
-      "date": "2024-03-18",
+      "title": "Wikipedia: Jensen Huang",
+      "type": "profile",
       "priority": "medium",
-      "description": "Official GTC 2024 keynote introducing Blackwell GPU architecture, AI infrastructure vision, and next-generation computing platforms.",
-      "youtube_id": "Y2F8yisiS6E",
-      "key_topics": ["technology roadmap", "accelerated computing", "datacenter", "AI revolution"]
+      "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
     },
     {
-      "title": "Stanford SIEPR Economic Summit 2024 — Jensen Huang Keynote",
-      "type": "keynote",
-      "date": "2024-03-01",
+      "title": "California Business Filing",
+      "type": "other",
+      "priority": "low",
+      "url": "https://bizfileonline.sos.ca.gov/api/report/GetImageByNum/034117059052077044090092010255252084026143162165"
+    },
+    {
+      "title": "Forbes Profile: Jensen Huang",
+      "type": "profile",
+      "priority": "high",
+      "url": "https://www.forbes.com/profile/jensen-huang/"
+    },
+    {
+      "title": "Reuters: NVIDIA Market Valuation",
+      "type": "other",
       "priority": "medium",
-      "description": "Jensen at the Stanford Institute for Economic Policy Research. Economic implications of AI and accelerated computing.",
-      "youtube_id": "cEg8cOx7UZk",
-      "key_topics": ["AI revolution", "accelerated computing", "sovereign AI", "market creation"]
+      "url": "https://www.reuters.com/business/nvidia-poised-record-5-trillion-market-valuation-2025-10-29/"
     },
     {
-      "title": "Hoover Institution — Betting on AI: Jensen Huang and NVIDIA's Rise to the Top",
+      "title": "CNN: NVIDIA CEO Taiwan Visit",
+      "type": "other",
+      "priority": "medium",
+      "url": "https://edition.cnn.com/2023/11/05/tech/nvidia-amd-ceos-taiwan-intl-hnk/index.html"
+    },
+    {
+      "title": "Britannica: Jensen Huang",
+      "type": "profile",
+      "priority": "medium",
+      "url": "https://www.britannica.com/money/Jensen-Huang"
+    },
+    {
+      "title": "WSJ: Jensen Huang Taiwan Fame",
+      "type": "profile",
+      "priority": "high",
+      "url": "https://www.wsj.com/world/asia/jensen-huang-nvidia-ceo-taiwan-fame-99630726"
+    },
+    {
+      "title": "CNBC: Jensen Huang on Learning English from His Mother",
       "type": "interview",
-      "date": "2026-04-13",
+      "priority": "high",
+      "url": "https://www.cnbc.com/2018/05/06/nvidia-ceo-my-mom-taught-me-english-a-random-10-words-at-a-time.html"
+    },
+    {
+      "title": "CNBC: Jensen Huang Management Style",
+      "type": "other",
       "priority": "medium",
-      "description": "Recent interview on NVIDIA's rise, the AI bet, and geopolitical implications of AI infrastructure.",
-      "youtube_id": "RStlq16d9Zc",
-      "key_topics": ["AI revolution", "sovereign AI", "business strategy", "leadership"]
+      "url": "https://www.cnbc.com/2024/05/13/nvidias-ceo-was-labeled-a-demanding-boss-by-staff-experts-discuss.html"
+    },
+    {
+      "title": "Business Insider: Jensen Huang Profile",
+      "type": "profile",
+      "priority": "medium",
+      "url": "https://www.businessinsider.com/nvidia-jensen-huang-chipmaker-cofounder-ceo-wealth-net-worth-ai-2023-5"
+    },
+    {
+      "title": "The New Yorker: Jensen Huang and the AI Revolution",
+      "type": "profile",
+      "priority": "high",
+      "url": "https://www.newyorker.com/magazine/2023/12/04/how-jensen-huangs-nvidia-is-powering-the-ai-revolution"
+    },
+    {
+      "title": "Forbes: NVIDIA Deep Learning and AI",
+      "type": "other",
+      "priority": "medium",
+      "url": "https://www.forbes.com/sites/aarontilley/2016/11/30/nvidia-deep-learning-ai-intel/?sh=6c0e3f037ff1"
+    },
+    {
+      "title": "NPR: Jensen Huang Tech Pioneer Interview",
+      "type": "interview",
+      "priority": "high",
+      "url": "https://www.npr.org/sections/alltechconsidered/2012/02/20/147162496/tech-pioneer-channels-hard-lessons-into-silicon-valley-success"
+    },
+    {
+      "title": "Wired: NVIDIA Profile (2002)",
+      "type": "profile",
+      "priority": "high",
+      "url": "https://www.wired.com/2002/07/nvidia/"
+    },
+    {
+      "title": "David Senra \u2014 How Extreme Winners Think and Win: Lessons from 400+ of History\u2019s Greatest Founders",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=mesjY6l2T8c",
+      "youtube_id": "mesjY6l2T8c"
+    },
+    {
+      "title": "The Questions You're Avoiding Hold The Breakthrough You Desire",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=xGKnhpuLLQ4",
+      "youtube_id": "xGKnhpuLLQ4"
+    },
+    {
+      "title": "Jensen Huang: Nvidia's Future, Physical AI, Rise of the Agent, Inference Explosion, AI PR Crisis",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=gwW8GKwHB3I",
+      "youtube_id": "gwW8GKwHB3I"
+    },
+    {
+      "title": "Jensen Huang \u2013 Will Nvidia\u2019s moat persist?",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Hrbq66XqtCo",
+      "youtube_id": "Hrbq66XqtCo"
+    },
+    {
+      "title": "NVIDIA GTC Washington, D.C. Keynote with CEO Jensen Huang",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=lQHK61IDFH4",
+      "youtube_id": "lQHK61IDFH4"
+    },
+    {
+      "title": "NVIDIA GTC 2026 Keynote with Jensen Huang Highlights",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=kDd24YOeqQQ",
+      "youtube_id": "kDd24YOeqQQ"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang speaks at the World Economic Forum",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=CxysykYyRG8",
+      "youtube_id": "CxysykYyRG8"
+    },
+    {
+      "title": "WEF LIVE: NVIDIA CEO Jensen Huang Speaks At World Economic Forum | Davos",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=3_Ixe0Ao62M",
+      "youtube_id": "3_Ixe0Ao62M"
+    },
+    {
+      "title": "Jensen Huang says AI isn\u2019t just a model\u2014it\u2019s a five-layer cake you have to bake in order.",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=X9Nc-JrreSk",
+      "youtube_id": "X9Nc-JrreSk"
+    },
+    {
+      "title": "Nvidia's Plan to Dominate AI... and the World",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Y4F0NmJ_Gqo",
+      "youtube_id": "Y4F0NmJ_Gqo"
+    },
+    {
+      "title": "Meeting The Computing Demand Of AI",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=-kAQRATrN_s",
+      "youtube_id": "-kAQRATrN_s"
+    },
+    {
+      "title": "Christina Pan Podcast: Jensen Huang on Naysayers, Self Doubt, and Your Zone of Genius",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Obefnis6aSk",
+      "youtube_id": "Obefnis6aSk"
+    },
+    {
+      "title": "Jensen Huang, Founder and CEO of NVIDIA",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=lXLBTBBil2U",
+      "youtube_id": "lXLBTBBil2U"
+    },
+    {
+      "title": "U.S. Leadership in AI with Jensen Huang, Founder and CEO of NVIDIA, and Congressman Ro Khanna",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=tofBqR5N1RI",
+      "youtube_id": "tofBqR5N1RI"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang gives a keynote address at the GTC conference in Washington \u2014 10/28/25",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=xDjbj_sLy_s",
+      "youtube_id": "xDjbj_sLy_s"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang Interview| Bloomberg Technology Special",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=GjXag-NB1HM",
+      "youtube_id": "GjXag-NB1HM"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang: AI is going to fundamentally change how we compute everything",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=P9dX_ek_6yY",
+      "youtube_id": "P9dX_ek_6yY"
+    },
+    {
+      "title": "Jensen Huang: Agentic AI is fully accretive for software companies",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=AZ9ySZESED0",
+      "youtube_id": "AZ9ySZESED0"
+    },
+    {
+      "title": "Jensen Huang: NVIDIA - The $4 Trillion Company & the AI Revolution | Lex Fridman Podcast #494",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=vif8NQcjVf0",
+      "youtube_id": "vif8NQcjVf0"
+    },
+    {
+      "title": "Joe Rogan Experience #2422 - Jensen Huang",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=3hptKYix4X8",
+      "youtube_id": "3hptKYix4X8"
     }
   ]
 }

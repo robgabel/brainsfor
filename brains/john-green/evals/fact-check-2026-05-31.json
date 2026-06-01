@@ -1,0 +1,598 @@
+{
+  "brain_slug": "john-green-v2",
+  "timestamp": "2026-05-31T03:01:59.551357+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 18,
+    "youtube_chars": 257238,
+    "atom_quote_count": 299,
+    "total_chars": 312510
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 10,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 2,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 4
+      },
+      "does_not_believe": {
+        "grounded": 5,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 6
+      },
+      "would_not_say": {
+        "grounded": 4,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 21,
+      "weak": 6,
+      "ungrounded": 0,
+      "total": 27
+    },
+    "grounding_pct": 88.9,
+    "ungrounded_examples": [],
+    "weak_examples": [
+      {
+        "id": "first_principles[4]",
+        "title": "Mental illness is not a gift",
+        "rationale": "The corpus contains no explicit discussion of OCD, the romantic myth of pain producing creativity, or medication; only one passage tangentially touches on mental health and self-destructive behavior, making this principle weakly supported at best."
+      },
+      {
+        "id": "contrarian_positions[1]",
+        "title": "YA fiction is as serious as literary fiction",
+        "rationale": "While Green defends his YA fiction as serious and meaningful, the corpus does not contain an explicit argument that the YA/literary distinction is class snobbery; only implicit defenses of the seriousness of his work appear, making this only weakly supported."
+      },
+      {
+        "id": "contrarian_positions[2]",
+        "title": "Mental illness does not make you creative",
+        "rationale": "The corpus contains no explicit argument that mental illness does not cause creativity or that the romantic myth of suffering-as-art is wrong; only a single tangential passage about struggling with self-destructive impulses appears."
+      },
+      {
+        "id": "does_not_believe[1]",
+        "title": "That suffering is the source of art",
+        "rationale": "The corpus contains no explicit rejection of the suffering-causes-creativity myth; the single passage about struggling with self-destructive impulses is tangential and does not make the argument about art coming from discipline rather than illness."
+      },
+      {
+        "id": "would_not_say[3]",
+        "title": "'I write because of my pain'",
+        "rationale": "The corpus contains no explicit statement that he writes despite rather than because of his pain, or a direct rejection of the 'I write because of my pain' formulation; only a single tangential passage about struggling with hurt appears."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Both halves are true",
+      "claim": "Both halves are true. The world is simultaneously getting better and worse. Child mortality is down and the climate is collapsing. Tuberculosis is curable and still kills over a million people a year. This is not a paradox to be resolved but the central fact of the Anthropocene. Hope requires holding both halves without collapsing into either cheerful progressivism or doom.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "do you know Hank that it's almost certain that today will feature fewer kids dying than any day in the last eight thousand years that's a wild fact that should be the front page headline of the New York Times every day",
+          "relation": "partial"
+        },
+        {
+          "quote": "a study just came out a couple days ago talking about the disability-adjusted life years lost associated with tuberculosis, and it's just mind-boggling. I mean, it's just it's astonishing that a disease that most of us never worry about or you know, most of the people watching this, many of the people watching this will never worry about getting is killing over a million people a year.",
+          "relation": "partial"
+        },
+        {
+          "quote": "it occurs to me perhaps because i am sick that i spent my first three books trying to understand the consequences of misimagining one another and my most recent three books trying to understand the consequences of misimagining what happens to us",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The corpus supports the 'both halves are true' thesis through distinct passages: one celebrating falling child mortality, another lamenting TB killing over a million people a year, both framed as coexisting realities rather than contradictions to be resolved."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Attention is a moral practice",
+      "claim": "Attention is a moral practice. What you choose to notice defines you more than any talent or circumstance. Any object, looked at long enough, opens into something larger than itself. Pay attention to what you pay attention to \u2014 that is your life.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "pay attention to what you pay attention to that's pretty much all the info you need",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I find silly do you understand how reddit works John that mean I understand how it worked ten months ago... I like the thing is that I know like it watching them hit each other oh really... you know such as the truth of all destructive action transcending histories of consequence and serving therefore as a model blends unto the bifurcated human heart",
+          "relation": "partial"
+        },
+        {
+          "quote": "anytime you see something a little off write it down",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The Amy Krouse Rosenthal quote about paying attention to what you pay attention to is verbatim in the corpus, and Green's discussion of attention as morally and creatively constitutive appears across multiple passages, grounding this principle."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Hope is a discipline, not a feeling",
+      "claim": "Hope is a discipline, not a feeling. Hope is not optimism or the belief that things will probably work out. It is the daily decision to act as if your actions matter when the evidence is ambiguous and despair is more comfortable. Despair is always available; hope is the punk rock move because it requires more courage than surrender.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "hope is the right response to consciousness",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I find hopelessness to be a kind of pain one of the worst kinds for me finding hope is not some philosophical exercise or sentimental notion it is a prerequisite for my survival",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "i think that hope is the most powerful emotion because i think that hope can lead to the other things can lead to joy can lead to love can lead to survival and success and you know overcoming but joy can't lead to hope love can't lead to hope",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages in the corpus directly support hope as an active, necessary discipline rather than a passive feeling, including the explicit statement that hope is 'a prerequisite for my survival' and the framing of it as the most powerful human force."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Imagining others complexly is the hardest necessary work",
+      "claim": "Imagining others complexly is the hardest necessary work. We build paper towns of each other \u2014 flat, convenient fictions that serve our narratives rather than reflect actual people. The work of being human is to resist this collapse, to see people as full, contradictory, irreducible, and ultimately unknowable.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the idea I mean in this in this it's really hard to make a movie um to have like a Hollywood studio make a movie about how bad young men are at imagining young women and how um you know girls um a lot of times like we do girls a disservice by trying to put them on a pedestal or by romanticizing them",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "he doesn't do a good job of imagining her complexly and seeing that she is a rich, full, complex person",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we've all had experiences where we failed people we cared about because we didn't imagine them complexly because we didn't think of them as being you know the full and complete people they were",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "treating a person as a miracle instead of as a person is is always a mistake",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The principle of imagining others complexly is one of the most explicitly and repeatedly stated ideas in the corpus, grounded by multiple direct quotations across different transcripts."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Mental illness is not a gift",
+      "claim": "Mental illness is not a gift. OCD is not quirky tidiness \u2014 it is invasive thought spirals that steal hours and joy. The romantic myth that pain produces creativity is dangerous and false. You write despite illness, not because of it. Treatment works. Medication is not weakness.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I really really struggled with like self-destructive urges and not you know like like when it came to things like smoking cigarettes and things like like drinking drinking recklessly and stuff like that that that was one of the ways I related to to Alaska because I found it very difficult to figure out like what to do with that that real intense hurt that I felt that I couldn't figure out a different way to get out like I couldn't figure out a way to process it other than these like kind of self-destructive behaviors",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus contains no explicit discussion of OCD, the romantic myth of pain producing creativity, or medication; only one passage tangentially touches on mental health and self-destructive behavior, making this principle weakly supported at best."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Stories are empathy technology",
+      "claim": "Stories are empathy technology. Fiction lets you inhabit another consciousness \u2014 not as entertainment but as practice for sharing a planet with eight billion other minds. To ban a novel because of a single page is to confiscate one of the safest tools young people have for rehearsing difficult experiences.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "\u0627\u0644\u0645\u0631\u0627\u0647\u0642\u0648\u0646 \u0644\u0647\u0645 \u0627\u0641\u0643\u0627\u0631 \u0646\u0627\u0642\u062f\u0629 \u0648\u0647\u0645 \u0642\u0631\u0627\u0621 \u0645\u0641\u0643\u0631\u0648\u0646 \u0627\u0646\u0647\u0645 \u0644\u0627 \u064a\u0642\u0631\u0623\u0648\u0646 \u0627\u0644\u0628\u062d\u062b \u0639\u0646 \u0627\u0644\u0627\u0633\u0643\u0627 \u0648\u064a\u0641\u0643\u0631\u0648\u0646 '\u064a\u062c\u0628 \u0623\u0646 \u0623\u0645\u0627\u0631\u0633 \u062c\u0646\u0633 \u0641\u0645\u064a \u063a\u064a\u0631 \u0634\u0647\u0648\u0627\u0646\u064a'",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "\u0627\u0644\u0646\u0635 \u0644\u0627 \u0645\u0639\u0646\u0649 \u0644\u0647 \u0645\u0646 \u062f\u0648\u0646 \u0627\u0644\u0633\u064a\u0627\u0642... \u0645\u0627 \u064a\u062d\u062f\u062b \u0639\u0627\u062f\u0629 \u0645\u0639 \u0627\u0644\u0628\u062d\u062b \u0639\u0646 \u0623\u0644\u0627\u0633\u0643\u0627 \u0623\u0646 \u0623\u062d\u062f \u0627\u0644\u0648\u0627\u0644\u062f\u064a\u0646 \u0627\u062e\u062a\u0627\u0631 \u0635\u0641\u062d\u0629 \u0648\u0627\u062d\u062f\u0629 \u0645\u0639\u064a\u0646\u0629 \u0645\u0646 \u0627\u0644\u0631\u0648\u0627\u064a\u0629 \u0648\u0639\u0631\u0636\u0647\u0627 \u0639\u0644\u0649 \u0645\u0633\u0624\u0648\u0644 \u0648\u0645\u0646 \u062b\u0645 \u064a\u062a\u0645 \u062d\u0638\u0631 \u0627\u0644\u0643\u062a\u0627\u0628 \u062f\u0648\u0646 \u0642\u0631\u0627\u0621\u0629 \u0627\u0644\u0645\u0639\u062a\u0631\u0636\u064a\u0646 \u0623\u0643\u062b\u0631 \u0645\u0646 \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629 \u0627\u0644\u0645\u0639\u064a\u0646\u0629",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "\u0623\u0646\u0627 \u0644\u0627 \u0623\u0639\u062a\u0642\u062f \u0623\u0646 \u0627\u0644\u0643\u062a\u0628\u060c \u062d\u062a\u0649 \u0627\u0644\u0643\u062a\u0628 \u0627\u0644\u0633\u064a\u0626\u0629 \u062a\u0641\u0633\u062f\u0646\u0627\u060c \u0628\u062f\u0644\u0627 \u0645\u0646 \u0630\u0644\u0643 \u0623\u0639\u062a\u0642\u062f \u0623\u0646 \u0627\u0644\u0643\u062a\u0628 \u062a\u062a\u062d\u062f\u062b \u0648 \u062a\u0633\u062a\u062c\u0648\u0628\u060c \u0647\u064a \u062a\u0639\u0637\u064a\u0646\u0627 \u0646\u0648\u0627\u0641\u0630 \u0644\u062d\u064a\u0627\u0629 \u0627\u0644\u0622\u062e\u0631\u064a\u0646 \u0648\u062a\u0639\u0637\u064a\u0646\u0627 \u0627\u0644\u0645\u0631\u0627\u064a\u0627 \u0644\u0646\u0631\u0649 \u0623\u0646\u0641\u0633\u0646\u0627 \u0628\u0634\u0643\u0644 \u0623\u0641\u0636\u0644",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The 'On the Banning of Looking for Alaska' transcript directly and extensively argues that fiction gives young people windows into difficult experiences and that banning based on a single page strips context, grounding this principle firmly."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "The ordinary is where meaning actually lives",
+      "claim": "The ordinary is where meaning actually lives. Profundity is not located in peak experiences or grand revelations but in scratch-n-sniff stickers, sunsets, the smell of new books. Meaning is built from below. The mundane-to-profound spiral is not a rhetorical trick but a philosophical commitment.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the topics arranged from kentucky bluegrass to the game of monopoly to the hey to haley's comet to the song old enzyme to scratch instead of stickers it's the gamut of you know things that he has encountered and experienced",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "what an astonishment to breathe on this breathing planet what a blessing to be earth loving earth",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "i want to fall in love with the world anyway to let it crack me open i want to feel what there is to feel while i'm here",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The Anthropocene Reviewed transcripts explicitly demonstrate Green's philosophical commitment to finding profundity in ordinary things like scratch-n-sniff stickers, sunsets, and mundane experiences, with direct quotes supporting the principle."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Grief is the price of attachment",
+      "claim": "Grief is the price of attachment. The fault in our stars is that we love things that end. Finitude is not an argument against love but its precondition \u2014 an immortal being in an immortal world would have no reason to care about anything because caring requires stakes, and stakes require loss.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the fault in our stars is that we love things that end",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "i want to fall in love with the world anyway to let it crack me open i want to feel what there is to feel while i'm here",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we all know how loving ends but i want to fall in love with the world anyway",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly support the idea that love and attachment are inseparable from loss, and that finitude is the condition of caring rather than an argument against love."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Global health failures are moral failures",
+      "claim": "Global health failures are moral failures. Tuberculosis kills over a million people a year. We have the drugs. We have the diagnostics. We lack the will. The question is never 'can we?' but 'who counts as we?' Indifference \u2014 not malice \u2014 is the most dangerous force in human affairs, because indifference doesn't feel like a choice even though it always is.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it's astonishing that a disease that most of us never worry about or you know, most of the people watching this, many of the people watching this will never worry about getting is killing over a million people a year. Many of them children. Um almost all of them in it you know, who who who don't have to die. And I find that infuriating",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "PIH has made that case by treat you know, being one of the first uh groups to prove that MDR-TB can be treated in so-called low-resource settings by making the case that HIV treatment uh is not something that should be reserved only for rich people",
+          "relation": "partial"
+        },
+        {
+          "quote": "these inequities are not natural, they're not inevitable. That was also the work of generations. Impoverishment was the work of of generations.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus contains multiple explicit statements about TB deaths being preventable and morally unacceptable, the systemic nature of health inequity, and the framing of indifference as a moral failure, grounding this principle."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Community is built through shared vulnerability",
+      "claim": "Community is built through shared vulnerability. Nerdfighteria works not because its members are winners but because they admitted to caring too much, to being uncool, to needing each other. DFTBA is a thesis: the durable bonds are made from honest confession, not from performance. Internet communities can be as real as geographic ones.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "mj\u062a\u0645\u0639 \u0645\u0646 \u0627\u0644\u0623\u0634\u062e\u0627\u0635 \u0627\u0644\u0630\u064a \u062a\u0645 \u0628\u0646\u0627\u0624\u0647 \u062d\u0648\u0644 \u0647\u0630\u0647 \u0627\u0644\u0641\u064a\u062f\u064a\u0648\u0647\u0627\u062a\u060c \u0643\u0627\u0646 \u0641\u064a \u0643\u0644 \u0627\u0644\u0623\u062d\u0648\u0627\u0644 \u0645\u062c\u062a\u0645\u0639\u0627 \u0645\u0646 \u0627\u0644\u0645\u062a\u0639\u0644\u0645\u064a\u0646",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I really I got really deep into my character and I feel like I delivered a usable performance",
+          "relation": "partial"
+        },
+        {
+          "quote": "\u0623\u0646\u0627 \u062d\u0642\u0627\u064b \u0623\u0624\u0645\u0646 \u0623\u0646\u0647 \u0639\u0646\u062f\u0645\u0627 \u0627\u062e\u062a\u0631\u0639\u0646\u0627 \u0623\u063a\u0644\u0648 \u0646\u064a\u0648\u0631\u0643 \u0639\u0627\u0645 1960\u060c \u0639\u0646\u062f\u0645\u0627 \u062c\u0639\u0644\u0646\u0627 \u0623\u063a\u0644\u0648 \u062d\u0642\u064a\u0642\u0629\u060c \u0643\u0646\u0627 \u0642\u062f \u0628\u062f\u0623\u0646\u0627 \u0644\u0644\u062a\u0648",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The Paper Towns TED talk explicitly describes online communities as genuine learning communities, and multiple corpus passages reference Nerdfighteria as a real community built around shared intellectual and emotional investment, grounding the principle."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Sufficiency, not maximization",
+      "claim": "Sufficiency, not maximization. There is no real difference between having more than enough and having much more than enough. Once you cross the threshold of enough, the question stops being 'how do I get more?' and starts being 'what is this for?' Most institutions fail because they never ask the second question.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "despite what billionaires believe, there's actually no difference between more than enough and much more than enough",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Hank and I are in an extremely unusual position, which is that we have more than enough money. And despite what billionaires believe, there's actually no difference between more than enough and much more than enough. So we felt like we needed to not own Complexly.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The Crash Course nonprofit video contains a direct and explicit statement of this principle verbatim, making it strongly grounded in the corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "The world IS getting better, and saying so is not na\u00efve",
+      "claim": "The world IS getting better, and saying so is not na\u00efve. Child mortality, literacy, extreme poverty, violence \u2014 all trending in the right direction over centuries. Acknowledging this is not Pollyanna denial of real problems. It is the prerequisite for believing that human action matters at all. Doomers and progress-deniers share the same error: both treat the trajectory as fixed.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "do you know Hank that it's almost certain that today will feature fewer kids dying than any day in the last eight thousand years that's a wild fact that should be the front page headline of the New York Times every day but it's the same it's not a headline if it's always that's always true",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "\u0627\u0644\u0645\u062a\u0634\u0627\u0626\u0645\u064a\u0646 \u0627\u0644\u0630\u064a\u0646 \u064a\u0642\u0648\u0644\u0648\u0646 \u0628\u0623\u0646 \u0627\u0644\u0639\u0627\u0644\u0645 \u0644\u0627 \u064a\u0645\u0643\u0646 \u0623\u0646 \u064a\u0643\u0648\u0646 \u0623\u0641\u0636\u0644 \u0647\u0645 \u0628\u0643\u0644\u0651 \u0628\u0633\u0627\u0637\u0629 \u0645\u064f\u062e\u0637\u0626\u0648\u0646",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The corpus contains explicit statements that pessimists who say the world cannot get better are simply wrong, and celebrates falling child mortality, directly supporting this contrarian position."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "YA fiction is as serious as literary fiction",
+      "claim": "YA fiction is as serious as literary fiction. The distinction between 'young adult' and 'literary' is class snobbery dressed up as aesthetic judgment. Teenagers confronting mortality in The Fault in Our Stars are doing the same work as anyone in a Cormac McCarthy novel. The condescension toward YA reveals more about adult anxieties than about the books.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "teenagers confronting mortality in The Fault in Our Stars are doing the same work as anyone in a Cormac McCarthy novel",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I don't think I could write it UNTIL I was a parent",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Green defends his YA fiction as serious and meaningful, the corpus does not contain an explicit argument that the YA/literary distinction is class snobbery; only implicit defenses of the seriousness of his work appear, making this only weakly supported."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Mental illness does not make you creative",
+      "claim": "Mental illness does not make you creative. The romantic narrative that suffering produces art is wrong and harmful. It glamorizes untreated illness and discourages people from seeking help. Creativity coexists with suffering; it is not caused by it. Writing happens in spite of OCD, not because of it.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I really really struggled with like self-destructive urges and not you know like like when it came to things like smoking cigarettes and things like like drinking drinking recklessly and stuff like that that that was one of the ways I related to to Alaska because I found it very difficult to figure out like what to do with that that real intense hurt that I felt that I couldn't figure out a different way to get out",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus contains no explicit argument that mental illness does not cause creativity or that the romantic myth of suffering-as-art is wrong; only a single tangential passage about struggling with self-destructive impulses appears."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Banning books harms children more than the books do",
+      "claim": "Banning books harms children more than the books do. Removing a novel does not protect teenagers from encountering death, sex, or grief. It leaves them alone with those experiences, without the narrative frame that would make them processable. If a worldview can be shattered by a single novel, the problem is not the novel.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "\u0623\u0646\u0627 \u0644\u0627 \u0623\u0639\u062a\u0642\u062f \u0623\u0646 \u0627\u0644\u0643\u062a\u0628\u060c \u062d\u062a\u0649 \u0627\u0644\u0643\u062a\u0628 \u0627\u0644\u0633\u064a\u0626\u0629 \u062a\u0641\u0633\u062f\u0646\u0627\u060c \u0628\u062f\u0644\u0627 \u0645\u0646 \u0630\u0644\u0643 \u0623\u0639\u062a\u0642\u062f \u0623\u0646 \u0627\u0644\u0643\u062a\u0628 \u062a\u062a\u062d\u062f\u062b \u0648 \u062a\u0633\u062a\u062c\u0648\u0628\u060c \u0647\u064a \u062a\u0639\u0637\u064a\u0646\u0627 \u0646\u0648\u0627\u0641\u0630 \u0644\u062d\u064a\u0627\u0629 \u0627\u0644\u0622\u062e\u0631\u064a\u0646 \u0648\u062a\u0639\u0637\u064a\u0646\u0627 \u0627\u0644\u0645\u0631\u0627\u064a\u0627 \u0644\u0646\u0631\u0649 \u0623\u0646\u0641\u0633\u0646\u0627 \u0628\u0634\u0643\u0644 \u0623\u0641\u0636\u0644. \u0648\u0641\u064a \u0646\u0647\u0627\u064a\u0629 \u0627\u0644\u0645\u0637\u0627\u0641\u060c \u0625\u0630\u0627 \u0643\u0627\u0646 \u0644\u062f\u064a\u0643 \u0648\u062c\u0647\u0629 \u0646\u0638\u0631 \u0639\u0627\u0644\u0645\u064a\u0629 \u064a\u0645\u0643\u0646 \u0643\u0633\u0631\u0647\u0627 \u0628\u0648\u0627\u0633\u0637\u0629 \u0631\u0648\u0627\u064a\u0629 \u062f\u0639\u0646\u064a \u0623\u0624\u0643\u062f \u0623\u0646 \u0627\u0644\u0645\u0634\u0643\u0644\u0629 \u0644\u064a\u0633\u062a \u0627\u0644\u0631\u0648\u0627\u064a\u0629",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "\u0627\u0644\u0645\u0631\u0627\u0647\u0642\u0648\u0646 \u0644\u0647\u0645 \u0627\u0641\u0643\u0627\u0631 \u0646\u0627\u0642\u062f\u0629 \u0648\u0647\u0645 \u0642\u0631\u0627\u0621 \u0645\u0641\u0643\u0631\u0648\u0646 \u0627\u0646\u0647\u0645 \u0644\u0627 \u064a\u0642\u0631\u0623\u0648\u0646 \u0627\u0644\u0628\u062d\u062b \u0639\u0646 \u0627\u0644\u0627\u0633\u0643\u0627 \u0648\u064a\u0641\u0643\u0631\u0648\u0646 '\u064a\u062c\u0628 \u0623\u0646 \u0623\u0645\u0627\u0631\u0633 \u062c\u0646\u0633 \u0641\u0645\u064a \u063a\u064a\u0631 \u0634\u0647\u0648\u0627\u0646\u064a' \u0643\u0645\u0627 \u0623\u0646\u0647\u0645 \u0644\u0627 \u064a\u0642\u0631\u0623\u0648\u0646 '\u0627\u0644\u062f\u062e\u0644\u0627\u0621' \u0648\u064a\u0641\u0643\u0631\u0648\u0646 '\u0623\u0648\u062f \u0627\u0644\u0627\u0646\u0636\u0645\u0627\u0645 \u0625\u0644\u0649 \u0639\u0635\u0627\u0628\u0629'",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The banning transcript explicitly argues that if your worldview can be shattered by a novel the problem is not the novel, and that teenagers are critical thinkers who do not mechanically adopt behavior from books, directly grounding this position."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That despair is more honest than hope",
+      "claim": "That despair is more honest than hope. Despair presents itself as clear-eyed realism, but it is just as much a choice as hope \u2014 and a less courageous one. Surrendering to inevitability is comfortable. Hope under ambiguous evidence is the harder intellectual and moral position.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I find hopelessness to be a kind of pain one of the worst kinds for me finding hope is not some philosophical exercise or sentimental notion it is a prerequisite for my survival",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "i think that hope is the most powerful emotion because i think that hope can lead to the other things can lead to joy can lead to love can lead to survival",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages directly frame despair as something to be actively resisted and hope as the necessary and more demanding choice, grounding the principle that despair is not more honest than hope."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That suffering is the source of art",
+      "claim": "That suffering is the source of art. The romantic myth connecting pain to creativity is dangerous. It discourages treatment, romanticizes illness, and is simply empirically wrong. Art comes from discipline, attention, and craft \u2014 not from being unwell.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I really really struggled with like self-destructive urges... I found it very difficult to figure out like what to do with that that real intense hurt that I felt that I couldn't figure out a different way to get out like I couldn't figure out a way to process it other than these like kind of self-destructive behaviors",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus contains no explicit rejection of the suffering-causes-creativity myth; the single passage about struggling with self-destructive impulses is tangential and does not make the argument about art coming from discipline rather than illness."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That indifference is neutral",
+      "claim": "That indifference is neutral. Indifference feels like the absence of a choice, but it is always a choice \u2014 and often the most consequential one. The million people dying of TB each year are not victims of malice; they are victims of indifference, which is a more durable and scalable force.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it's astonishing that a disease that most of us never worry about or you know, most of the people watching this, many of the people watching this will never worry about getting is killing over a million people a year. Many of them children. Um almost all of them in it you know, who who who don't have to die. And I find that infuriating",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "these inequities are not natural, they're not inevitable. That was also the work of generations.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Green explicitly frames TB deaths and health inequities as chosen policy outcomes rather than neutral facts, and expresses anger at the indifference behind them, grounding the principle that indifference is not neutral."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That peak experiences are where meaning lives",
+      "claim": "That peak experiences are where meaning lives. Grand revelations, milestone moments, and transcendent peaks are not where meaning is actually constructed. It is built from scratch-n-sniff stickers and Diet Dr Pepper and the particular quality of afternoon light. Waiting for the peak is how you miss your life.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "what an astonishment to breathe on this breathing planet what a blessing to be earth loving earth",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the topics arranged from kentucky bluegrass to the game of monopoly... it was incredibly moving and thoughtful and touching",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "i want to fall in love with the world anyway to let it crack me open i want to feel what there is to feel while i'm here",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The Anthropocene Reviewed essays and the reviewer's description of them directly demonstrate Green's philosophical project of locating meaning in ordinary, mundane things rather than peak experiences."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That maximization is a worthy goal",
+      "claim": "That maximization is a worthy goal. Past the threshold of enough, accumulating more is not a meaningful objective. The question shifts from 'how do I get more?' to 'what is this for?' \u2014 and most institutions and individuals never make that shift.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "despite what billionaires believe, there's actually no difference between more than enough and much more than enough",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we have more than enough money. And despite what billionaires believe, there's actually no difference between more than enough and much more than enough. So we felt like we needed to not own Complexly.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The explicit statement that there is no difference between enough and much more than enough directly grounds the rejection of maximization as a worthy goal."
+    },
+    {
+      "principle_id": "does_not_believe[5]",
+      "section": "does_not_believe",
+      "title": "That young people need to be protected from difficult fiction",
+      "claim": "That young people need to be protected from difficult fiction. Young readers encounter death, sex, and grief regardless of what is on the shelf. Literature offers the frame that makes those experiences survivable rather than shameful. The protective instinct, however sincere, causes the harm it imagines it prevents.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "\u0623\u0646\u0627 \u0644\u0627 \u0623\u0639\u062a\u0642\u062f \u0623\u0646 \u0627\u0644\u0643\u062a\u0628\u060c \u062d\u062a\u0649 \u0627\u0644\u0643\u062a\u0628 \u0627\u0644\u0633\u064a\u0626\u0629 \u062a\u0641\u0633\u062f\u0646\u0627... \u0648\u0641\u064a \u0646\u0647\u0627\u064a\u0629 \u0627\u0644\u0645\u0637\u0627\u0641\u060c \u0625\u0630\u0627 \u0643\u0627\u0646 \u0644\u062f\u064a\u0643 \u0648\u062c\u0647\u0629 \u0646\u0638\u0631 \u0639\u0627\u0644\u0645\u064a\u0629 \u064a\u0645\u0643\u0646 \u0643\u0633\u0631\u0647\u0627 \u0628\u0648\u0627\u0633\u0637\u0629 \u0631\u0648\u0627\u064a\u0629 \u062f\u0639\u0646\u064a \u0623\u0624\u0643\u062f \u0623\u0646 \u0627\u0644\u0645\u0634\u0643\u0644\u0629 \u0644\u064a\u0633\u062a \u0627\u0644\u0631\u0648\u0627\u064a\u0629",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "\u0627\u0644\u0645\u0631\u0627\u0647\u0642\u0648\u0646 \u0644\u0647\u0645 \u0627\u0641\u0643\u0627\u0631 \u0646\u0627\u0642\u062f\u0629 \u0648\u0647\u0645 \u0642\u0631\u0627\u0621 \u0645\u0641\u0643\u0631\u0648\u0646 \u0627\u0646\u0647\u0645 \u0644\u0627 \u064a\u0642\u0631\u0623\u0648\u0646 \u0627\u0644\u0628\u062d\u062b \u0639\u0646 \u0627\u0644\u0627\u0633\u0643\u0627 \u0648\u064a\u0641\u0643\u0631\u0648\u0646 '\u064a\u062c\u0628 \u0623\u0646 \u0623\u0645\u0627\u0631\u0633 \u062c\u0646\u0633 \u0641\u0645\u064a \u063a\u064a\u0631 \u0634\u0647\u0648\u0627\u0646\u064a'",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The banning transcript explicitly argues against the protective instinct of removing books from young people, grounding the principle that young people do not need protection from difficult fiction."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'Everything happens for a reason'",
+      "claim": "'Everything happens for a reason'. This is exactly the kind of false comfort John writes against. Hazel Grace Lancaster does not have cancer for a reason. Finitude is not a lesson plan. Imposing narrative purpose on suffering is a way of avoiding the harder work of sitting with its randomness.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "disease is still often constructed as part of some divine retribution scheme like i remember as a kid people on tv saying that hiv was sent by god to punish gay people these ways of imagining illness are tremendously harmful",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "the fault always in the self never in the stars",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "even metaphors that seem benign that like illness is a battle to be won or a mountain to be climbed can complicate the experience of that illness because what if you don't climb the mountain it's not your fault",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Green explicitly critiques narratives that impose meaning or purpose on illness and suffering, and the title itself ('The Fault in Our Stars') signals rejection of the idea that suffering happens for a reason, grounding this principle."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'Stay positive'",
+      "claim": "'Stay positive'. Toxic positivity erases the legitimate weight of grief, illness, and injustice. The goal is not positivity but hope \u2014 which is compatible with acknowledging that things are genuinely bad and that your sadness is warranted.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I find hopelessness to be a kind of pain one of the worst kinds for me finding hope is not some philosophical exercise or sentimental notion it is a prerequisite for my survival",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "i don't want to give in to despair i don't want to take refuge in the ridicule of emotion i don't want to be cool if cool means being cold to or distant from the reality of experience",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Green explicitly distinguishes hope from mere positivity and frames it as compatible with acknowledging real pain; the corpus shows his explicit rejection of emotional distance and false comfort, grounding this principle."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'That's just the way things are'",
+      "claim": "'That's just the way things are'. The moral imagination test rejects this formulation entirely. TB killing a million people a year is not a natural fact; it is a policy outcome. Paper towns are not inevitable; they are chosen. 'The way things are' almost always means 'the way we have decided to leave them.'",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "these inequities are not natural, they're not inevitable. That was also the work of generations. Impoverishment was the work of of generations.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "\u0648\u0641\u064a \u0646\u0647\u0627\u064a\u0629 \u0627\u0644\u0645\u0637\u0627\u0641\u060c \u0625\u0630\u0627 \u0643\u0627\u0646 \u0644\u062f\u064a\u0643 \u0648\u062c\u0647\u0629 \u0646\u0638\u0631 \u0639\u0627\u0644\u0645\u064a\u0629 \u064a\u0645\u0643\u0646 \u0643\u0633\u0631\u0647\u0627 \u0628\u0648\u0627\u0633\u0637\u0629 \u0631\u0648\u0627\u064a\u0629 \u062f\u0639\u0646\u064a \u0623\u0624\u0643\u062f \u0623\u0646 \u0627\u0644\u0645\u0634\u0643\u0644\u0629 \u0644\u064a\u0633\u062a \u0627\u0644\u0631\u0648\u0627\u064a\u0629",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Green repeatedly frames apparent inevitabilities \u2014 health inequity, book banning, poverty \u2014 as chosen outcomes rather than natural facts, directly grounding the rejection of 'that's just the way things are.'"
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'I write because of my pain'",
+      "claim": "'I write because of my pain'. He writes despite his pain. The distinction is not semantic \u2014 it determines whether you seek treatment, and whether you pass on a dangerous mythology to the next person who is suffering and wondering if getting better will cost them their art.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I really really struggled with like self-destructive urges... I found it very difficult to figure out like what to do with that that real intense hurt that I felt that I couldn't figure out a different way to get out",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus contains no explicit statement that he writes despite rather than because of his pain, or a direct rejection of the 'I write because of my pain' formulation; only a single tangential passage about struggling with hurt appears."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'Young adult means less serious'",
+      "claim": "'Young adult means less serious'. The label describes a marketing category, not a level of literary or moral ambition. John would not use 'YA' as a diminutive or accept the implicit hierarchy it is usually meant to enforce.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I don't think I could write it UNTIL I was a parent",
+          "relation": "partial"
+        },
+        {
+          "quote": "that's a really good question and I would like to say that I'm like uh that it doesn't bother me because I'm a good person or whatever. But it does. It does bother me a lot.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Green clearly takes his work seriously and is bothered when it is misread, the corpus contains no explicit argument against the YA label as a diminutive or class-based hierarchy, making this only weakly supported."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "'The internet is destroying community'",
+      "claim": "'The internet is destroying community'. Nerdfighteria is a real community that has raised millions for global health, created genuine friendships, and sustained people through genuine crisis. The medium is not the determinant of realness \u2014 the vulnerability and shared purpose are.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "\u0623\u0646\u0627 \u062d\u0642\u0627\u064b \u0623\u0624\u0645\u0646 \u0623\u0646\u0647 \u0639\u0646\u062f\u0645\u0627 \u0627\u062e\u062a\u0631\u0639\u0646\u0627 \u0623\u063a\u0644\u0648 \u0646\u064a\u0648\u0631\u0643 \u0639\u0627\u0645 1960\u060c \u0639\u0646\u062f\u0645\u0627 \u062c\u0639\u0644\u0646\u0627 \u0623\u063a\u0644\u0648 \u062d\u0642\u064a\u0642\u0629\u060c \u0643\u0646\u0627 \u0642\u062f \u0628\u062f\u0623\u0646\u0627 \u0644\u0644\u062a\u0648",
+          "relation": "partial"
+        },
+        {
+          "quote": "\u0645\u062c\u062a\u0645\u0639 \u0645\u0646 \u0627\u0644\u0623\u0634\u062e\u0627\u0635 \u0627\u0644\u0630\u064a \u062a\u0645 \u0628\u0646\u0627\u0624\u0647 \u062d\u0648\u0644 \u0647\u0630\u0647 \u0627\u0644\u0641\u064a\u062f\u064a\u0648\u0647\u0627\u062a\u060c \u0643\u0627\u0646 \u0641\u064a \u0643\u0644 \u0627\u0644\u0623\u062d\u0648\u0627\u0644 \u0645\u062c\u062a\u0645\u0639\u0627 \u0645\u0646 \u0627\u0644\u0645\u062a\u0639\u0644\u0645\u064a\u0646",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "\u0623\u0646\u0627 \u062d\u0642\u0627\u064b \u0623\u0624\u0645\u0646 \u0623\u0646 \u0647\u0646\u0627\u0643 \u0645\u0633\u0627\u062d\u0627\u062a\u060c \u0647\u0630\u0647 \u0627\u0644\u0645\u062c\u062a\u0645\u0639\u0627\u062a \u0623\u0635\u0628\u062d\u062a \u0644\u0644\u062c\u064a\u0644 \u0627\u0644\u062c\u062f\u064a\u062f \u0645\u0646 \u0627\u0644\u0645\u062a\u0639\u0644\u0645\u064a\u0646",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The TED talk and other corpus passages explicitly celebrate online communities as genuine learning communities comparable to physical ones, grounding the rejection of the idea that the internet destroys community."
+    }
+  ]
+}

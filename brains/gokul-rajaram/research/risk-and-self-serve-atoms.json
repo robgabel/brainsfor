@@ -1,0 +1,377 @@
+[
+  {
+    "content": "Gokul's foundational insight from building AdSense is that every approval gate placed before a user can access a product is a demand destruction event. Someone showing up wanting to use your product is the rarest and most precious occurrence in any business \u2014 and turning them away at the door with a form, a review queue, or a manual approval process destroys value that can never be recovered. The correct mental model is to treat onboarding friction as a direct tax on demand.",
+    "implication": "Builders should audit every step of their onboarding flow and ask: is this gate protecting us from real risk, or is it a legacy of risk-aversion theater? Every unnecessary gate should be eliminated, not optimized \u2014 optimizing a gate that shouldn't exist is still waste.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "onboarding design",
+      "demand destruction",
+      "self-serve",
+      "AdSense"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram | Lessons from Zuck, Jack Dorsey, Sergey Brin + Defining your ICP and Market",
+    "source_date": "2023"
+  },
+  {
+    "content": "When Gokul ran AdSense, the team removed the upfront publisher approval system and replaced it with a model that reviewed pages only after they had served approximately 100 impressions. Rather than gatekeeping publishers before they could participate, the system let nearly everyone in and evaluated quality based on actual behavior in the network. This shift was directly attributed to Sergey Brin pushing the team to stop destroying supply before it could prove itself.",
+    "implication": "Product teams managing two-sided networks should resist the instinct to protect quality through upfront screening. Real behavioral data \u2014 actual usage under live conditions \u2014 is a far stronger quality signal than any application form or manual review can produce. Let supply in, then measure it.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "AdSense",
+      "publisher networks",
+      "supply-side health",
+      "behavioral data",
+      "Sergey Brin"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram | Lessons from Zuck, Jack Dorsey, Sergey Brin + Defining your ICP and Market",
+    "source_date": "2023"
+  },
+  {
+    "content": "The architectural principle Gokul draws from both AdSense and Square is to move risk evaluation from the onboarding layer to the transaction layer. Instead of deciding whether a publisher or merchant is trustworthy before they can participate, the system decides whether each individual event \u2014 each impression, each payment \u2014 is trustworthy in real time. This is a fundamentally different risk model: it accepts more participants while catching more actual bad actors, because behavior under live conditions reveals truth that application data cannot.",
+    "implication": "Any product that currently screens users upfront should ask whether that risk can be pushed downstream to the per-event level. Machine learning on live behavioral signals is almost always a more accurate risk model than static application data \u2014 and it eliminates the demand destruction cost of the upfront gate entirely.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "risk architecture",
+      "per-event review",
+      "machine learning",
+      "transaction-layer risk"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Secrets of Tech's Top CEOs | Gokul Rajaram on Google, Facebook & Square",
+    "source_date": "2022"
+  },
+  {
+    "content": "Square's merchant onboarding model was built on the principle of near-universal acceptance \u2014 the company accepted approximately 95% of merchants who applied rather than using restrictive upfront underwriting. Risk was not eliminated; it was relocated to the per-transaction layer, where machine learning evaluated every payment in real time for fraud, chargeback risk, and behavioral anomalies. This model unlocked an entirely new segment of merchants who had been excluded from traditional payment processing because they couldn't pass legacy underwriting gates.",
+    "implication": "Payment infrastructure and fintech founders should recognize that traditional underwriting is as much a business model choice as a risk choice. Accepting more participants and running better per-transaction ML is both a growth strategy and a risk strategy \u2014 the two are not in conflict when the architecture is right.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "Square",
+      "merchant onboarding",
+      "payment risk",
+      "fintech",
+      "machine learning"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Fish Sauce Podcast | Gokul Rajaram - Square",
+    "source_date": "2018"
+  },
+  {
+    "content": "Gokul frames the shift from upfront gatekeeping to per-event review as an application of machine learning's core strength: ML is far better at evaluating behavior streams than at evaluating static attributes. An application form captures who someone claims to be; a transaction stream captures what they actually do. The asymmetry in signal quality is so large that any architecture that relies heavily on application-form risk evaluation is leaving predictive accuracy on the table.",
+    "implication": "Teams building risk systems should invest ML resources primarily in behavioral signal processing rather than in enriching or refining application-stage screening. The data that flows after a user is active is an order of magnitude more predictive than the data collected before they start.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "machine learning",
+      "behavioral signals",
+      "risk systems",
+      "predictive accuracy"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "He Built The Revenue Engines for Google, Facebook & Square",
+    "source_date": "2022"
+  },
+  {
+    "content": "One of Gokul's core operator observations is that traditional payment processors and publisher ad networks alike had built their moats around access restriction \u2014 controlling who could participate was itself the business. Square and AdSense both disrupted those incumbents not by being technically superior on every dimension but by removing the access gate entirely and replacing it with a better risk model. The incumbents' moat turned out to be a customer acquisition liability.",
+    "implication": "Incumbents whose business model depends on controlling access to a network or infrastructure layer are structurally vulnerable to challengers who can offer near-universal access with equivalent or better risk outcomes. The access moat is not a moat \u2014 it is a slow-motion demand destruction machine waiting to be disrupted.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "disruption",
+      "access restriction",
+      "incumbent vulnerability",
+      "Square",
+      "AdSense"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Secrets of Tech's Top CEOs | Gokul Rajaram on Google, Facebook & Square",
+    "source_date": "2022"
+  },
+  {
+    "content": "Gokul applies the self-serve design principle beyond payments and publisher networks to SaaS onboarding broadly. The company that forces a prospect to talk to a sales rep, submit a use-case justification, or wait for a provisioning review is destroying demand at exactly the moment when intent is highest. Self-serve architecture \u2014 where any user can go from zero to value in minutes without human intervention \u2014 is not just a growth tactic; it is a direct expression of respect for the user's time and intent.",
+    "implication": "SaaS founders should treat time-to-value as a risk metric, not just a growth metric. Every minute between a user's first intent signal and their first value moment is a window in which they can lose interest, find a competitor, or rationalize not changing. Minimize that window relentlessly.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "SaaS onboarding",
+      "self-serve",
+      "time-to-value",
+      "sales friction"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram on Defensibility, Scaling Companies & Hiring for Spikiness",
+    "source_date": "2023"
+  },
+  {
+    "content": "The AdSense 100-impression rule was not just a product decision \u2014 it was a deliberate rebalancing of where organizational attention should flow. Before the change, the team spent significant energy on upfront review processes that consumed resources without producing better outcomes. After the change, those resources were redirected toward behavioral monitoring systems that caught real violations more accurately and at scale. Removing the gate freed the organization to do the harder, more valuable work.",
+    "implication": "When teams eliminate upfront gates, they should explicitly redirect the freed resources into downstream behavioral monitoring rather than banking the savings. The whole model only works if the per-event review system is well-resourced and continuously improving \u2014 otherwise you've just traded a false positive problem for a false negative problem.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "AdSense",
+      "organizational design",
+      "resource allocation",
+      "behavioral monitoring"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram | Lessons from Zuck, Jack Dorsey, Sergey Brin + Defining your ICP and Market",
+    "source_date": "2023"
+  },
+  {
+    "content": "Gokul treats supply-side onboarding friction and demand-side onboarding friction as structurally identical problems in two-sided marketplaces. Just as AdSense needed to reduce publisher entry barriers to build a healthy supply network, Square needed to reduce merchant entry barriers to build payment volume. In both cases, the instinct to protect quality through upfront screening was producing a smaller, not better, network \u2014 and network effects only activate when volume crosses a critical threshold.",
+    "implication": "Marketplace founders should apply the same low-friction onboarding logic to both sides of their network simultaneously. Optimizing one side while leaving the other gate-heavy creates supply-demand imbalance that compounds over time. The threshold for network effects requires volume on both sides, and both sides need frictionless entry.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "two-sided marketplaces",
+      "supply-side",
+      "network effects",
+      "onboarding friction"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "He Built The Revenue Engines for Google, Facebook & Square",
+    "source_date": "2022"
+  },
+  {
+    "content": "Gokul observes that most companies' risk architectures are designed by people who have never experienced the cost of the demand they're destroying. The risk team optimizes for minimizing bad actors, the growth team optimizes for acquisition volume, and nobody owns the combined cost-benefit of the gate itself. This organizational structure produces systematically over-restrictive onboarding because the asymmetry in visibility: rejected legitimate users are invisible, while fraudulent users who get through are very visible.",
+    "implication": "Companies should measure and make visible the demand destruction cost of every onboarding gate \u2014 tracking not just bad actors blocked but good users turned away or dropped. Without that metric, organizational incentives will always push toward over-restriction because the cost of false positives is invisible and the cost of false negatives is career-damaging.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "organizational design",
+      "risk teams",
+      "false positives",
+      "measurement",
+      "incentive design"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram on Product, Leadership, and Building Enduring Teams",
+    "source_date": "2023"
+  },
+  {
+    "content": "The self-serve design principle as Gokul applies it is fundamentally about who bears the burden of proof. Traditional architectures put the burden on the user to prove they deserve access before receiving it. The alternative architecture flips this: the platform grants access by default and places the burden on the system to detect and act on violations after they occur. This inversion has profound implications for product design, because it means the primary investment shifts from intake screening to real-time behavioral intelligence.",
+    "implication": "Product teams designing onboarding flows should explicitly ask: whose burden is this? If the answer is 'the user must prove they deserve access,' that is a design choice with a known demand destruction cost. If you can build a system that inverts the burden, you unlock a larger addressable market and a better risk model simultaneously.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "burden of proof",
+      "product design",
+      "real-time intelligence",
+      "access design"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Secrets of Tech's Top CEOs | Gokul Rajaram on Google, Facebook & Square",
+    "source_date": "2022"
+  },
+  {
+    "content": "Square's instant merchant activation was one of the features Gokul cites as genuinely remarkable \u2014 not incrementally better but structurally different from the incumbent experience. Before Square, a small merchant getting payment processing accepted a multi-day application review, a credit check, and a hardware-waiting period. Square compressed that entire process to minutes with a free hardware device mailed or available at retail. The remarkableness was inseparable from the risk architecture \u2014 you could not have instant activation without the per-transaction ML risk model.",
+    "implication": "The most remarkable product experiences are often the direct output of a better underlying risk architecture, not just better UX design. If you want to create a 10x better onboarding experience, ask first whether your risk model allows it \u2014 because the best UX in the world cannot overcome a risk model that requires upfront screening.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "Square",
+      "remarkable product",
+      "instant activation",
+      "UX and risk",
+      "merchant experience"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Fish Sauce Podcast | Gokul Rajaram - Square",
+    "source_date": "2018"
+  },
+  {
+    "content": "Gokul connects the risk-architecture principle directly to his broader thesis about remarkable products: the product that accepts you instantly and charges you only when you transact is a fundamentally different value proposition than the product that makes you wait for approval and charges you a monthly fee regardless. Square's pricing model \u2014 no monthly fee, per-transaction percentage \u2014 was not just a business model choice; it was the commercial expression of a risk model that only charged when it was sure value was being created.",
+    "implication": "Founders designing pricing and risk models together should consider whether usage-based or transaction-based pricing aligns incentives with the per-event risk model. If you are only at risk when a transaction occurs, charging only when a transaction occurs aligns risk, revenue, and customer value in a way that flat subscription pricing does not.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "Square",
+      "pricing model",
+      "transaction-based pricing",
+      "risk-revenue alignment"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Fish Sauce Podcast | Gokul Rajaram - Square",
+    "source_date": "2018"
+  },
+  {
+    "content": "Gokul draws a sharp contrast between what he calls 'access products' and 'work products' in the context of self-serve design. Access products \u2014 where the value is in getting in \u2014 require near-zero onboarding friction because the act of entry is the value. Work products \u2014 where the value is in sustained use \u2014 can tolerate somewhat more onboarding investment because the payoff is larger and more durable. But even work products, he argues, should push all avoidable friction past the first moment of perceived value.",
+    "implication": "Product teams should classify their product as primarily access-oriented or work-oriented before designing their onboarding flow. Access products need zero-friction entry above all else. Work products need users to reach a meaningful value moment before any complex onboarding investment is asked of them \u2014 front-loading complexity before value is a near-universal mistake.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "access products",
+      "work products",
+      "onboarding design",
+      "first value moment"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram on Defensibility, Scaling Companies & Hiring for Spikiness",
+    "source_date": "2023"
+  },
+  {
+    "content": "One of Gokul's consistent operator observations is that companies confuse compliance theater with actual risk management. Many onboarding gates exist not because they meaningfully reduce fraud or abuse but because some past incident created organizational anxiety and a gate was added as a visible response. Over time, these gates accumulate into a multi-step barrier that destroys significant demand while providing marginal actual protection. Distinguishing real risk controls from compliance theater is an ongoing organizational discipline, not a one-time cleanup.",
+    "implication": "Every risk control in an onboarding flow should be able to answer the question: what specific bad outcome does this gate prevent, and what is the measurable rate at which it prevents it? Gates that cannot answer that question with data are likely compliance theater and should be removed or replaced with downstream behavioral detection.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "compliance theater",
+      "risk controls",
+      "onboarding audit",
+      "organizational discipline"
+    ],
+    "confidence": 0.75,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram on Product, Leadership, and Building Enduring Teams",
+    "source_date": "2023"
+  },
+  {
+    "content": "Gokul notes that the companies that got the risk architecture right \u2014 AdSense, Square, Stripe \u2014 all treated their risk systems as core product investments rather than back-office functions. The quality of the per-event ML model was a direct product differentiator: better risk models enabled better onboarding experiences, which enabled faster supply growth, which strengthened the network. Risk engineering and product design were not separate roadmaps \u2014 they were the same roadmap.",
+    "implication": "Founders building platforms with any risk or fraud surface should hire their first risk engineering talent as product builders, not as compliance functions. If the risk system is treated as a cost center, it will be starved of resources and produce conservative, gate-heavy outcomes. If it is treated as a product investment, it becomes a growth engine.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "risk engineering",
+      "product investment",
+      "Stripe",
+      "Square",
+      "AdSense",
+      "growth engine"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "He Built The Revenue Engines for Google, Facebook & Square",
+    "source_date": "2022"
+  },
+  {
+    "content": "The per-event risk model requires a fundamentally different relationship with false negatives than the upfront-gate model does. In an upfront-gate model, every false negative (a bad actor who gets through) is a visible failure because they were evaluated and passed. In a per-event model, some bad events will occur before the ML has enough signal to flag them \u2014 and the organization must be culturally prepared to treat early bad events as tuning data rather than policy failures. This cultural tolerance for early false negatives is, Gokul argues, what most risk-conservative organizations cannot sustain.",
+    "implication": "Transitioning from gate-based to per-event risk architecture requires explicit cultural change management alongside technical change. Leadership must communicate that early false negatives are expected and acceptable as the ML model trains \u2014 otherwise the organization will revert to gates at the first incident, destroying the architecture's long-term value.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "false negatives",
+      "ML training",
+      "organizational culture",
+      "risk tolerance",
+      "change management"
+    ],
+    "confidence": 0.75,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram | Lessons from Zuck, Jack Dorsey, Sergey Brin + Defining your ICP and Market",
+    "source_date": "2023"
+  },
+  {
+    "content": "Gokul argues that the self-serve design principle is a direct democratization mechanism, not just a business optimization. AdSense let the long tail of the web \u2014 millions of small publishers who could never have navigated a manual approval process \u2014 participate in the ad economy. Square let the long tail of commerce \u2014 food trucks, individual craftspeople, farmers market vendors \u2014 participate in card-based payments for the first time. In both cases, the removal of the gate did not just grow the business; it changed who could participate in the economy.",
+    "implication": "Founders should evaluate their onboarding architecture not only for its impact on their own conversion rates but for its impact on who is excluded from their market. If your gate systematically excludes a population that genuinely benefits from your product, you are not just leaving revenue on the table \u2014 you are making a structural choice about who the economy serves.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "democratization",
+      "long tail",
+      "inclusion",
+      "AdSense",
+      "Square",
+      "market access"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Fish Sauce Podcast | Gokul Rajaram - Square",
+    "source_date": "2018"
+  },
+  {
+    "content": "Gokul connects the risk-architecture principle to the supply-side tracing pattern he applies to all marketplaces: the health of the supply side is the leading indicator of consumer-side outcomes, and anything that restricts supply entry creates a ceiling on eventual consumer value. In AdSense, restricting publisher entry meant fewer pages, fewer ad slots, lower revenue for Google. In Square, restricting merchant entry meant fewer transaction opportunities, less data for the ML model, and a smaller payments network. Supply restriction was self-defeating at every level.",
+    "implication": "Marketplace operators should track supply-side rejection rates as a top-line health metric alongside consumer engagement. A rising rejection rate at the supply onboarding stage is an early warning of network ceiling \u2014 the platform is limiting its own growth before the consumer side ever knows it happened.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "supply-side health",
+      "marketplace dynamics",
+      "supply restriction",
+      "network ceiling",
+      "leading indicators"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "He Built The Revenue Engines for Google, Facebook & Square",
+    "source_date": "2022"
+  },
+  {
+    "content": "Gokul positions the move from upfront gating to per-event review as an example of a principle he applies broadly: design the system for the common case, not the edge case. Upfront gates are designed to handle the worst-case user \u2014 the fraudster, the bad actor, the policy violator \u2014 and in doing so they create friction for the vast majority of users who are legitimate. Per-event systems design for the majority first and handle the edge case downstream, which is the correct asymmetry when the bad-actor rate is low.",
+    "implication": "Every onboarding flow decision should be stress-tested against the question: am I designing this for my median user or my worst-case user? If the answer is worst-case, and the worst-case rate is under 5%, the design choice is likely wrong \u2014 you are making 95% of your users pay for the sins of 5%.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "design for the majority",
+      "edge case design",
+      "onboarding logic",
+      "bad actor rate"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram on Product, Leadership, and Building Enduring Teams",
+    "source_date": "2023"
+  },
+  {
+    "content": "Gokul observes that the companies that pioneered per-event risk models \u2014 Square, AdSense, Stripe \u2014 all had to build proprietary ML infrastructure to do it, because no off-the-shelf risk system in the early 2010s was designed for high-volume per-transaction evaluation. That infrastructure investment became a structural moat: the model improved with every transaction, and incumbents who had invested in gate-based processes could not replicate the ML advantage without rebuilding from scratch. The risk architecture became a data moat.",
+    "implication": "Per-event risk systems compound over time in a way that gate-based systems do not. Every transaction is a training example; every year of operation increases the model's accuracy; every new merchant or publisher adds signal diversity. Founders building transaction-layer risk systems should think of the ML model as a compounding asset that becomes more valuable and harder to replicate with scale.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "data moat",
+      "ML compounding",
+      "proprietary infrastructure",
+      "risk systems",
+      "Square",
+      "Stripe"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram on the 8 Moats Companies Need & Why Dropouts are AI Maxing the World",
+    "source_date": "2026"
+  },
+  {
+    "content": "Gokul describes the AdSense self-serve model as one of the earliest large-scale applications of the principle that product quality review should be continuous and behavioral rather than binary and administrative. The old model asked: is this publisher acceptable? The new model asked: is this specific page, at this specific moment, serving relevant and policy-compliant ads? The shift from binary to continuous review was enabled by the impression-level data stream that self-serve activation created.",
+    "implication": "Self-serve onboarding and continuous quality review are not separate product decisions \u2014 they are architecturally linked. You cannot do meaningful continuous quality review without the behavioral data stream that self-serve activation generates. Teams that want better quality signals must first remove the gates that prevent the data from flowing.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "continuous review",
+      "binary vs continuous quality",
+      "AdSense",
+      "behavioral data stream",
+      "self-serve architecture"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram | Lessons from Zuck, Jack Dorsey, Sergey Brin + Defining your ICP and Market",
+    "source_date": "2023"
+  },
+  {
+    "content": "Gokul points to Square Capital \u2014 Square's lending product for merchants \u2014 as the direct downstream product that the per-event risk architecture made possible. Because Square had years of per-transaction data on each merchant, it could underwrite loans based on actual cash flow rather than credit scores or application forms. Merchants who would have been declined by traditional lenders could receive working capital offers generated automatically from their own transaction history. The risk architecture that enabled better payment onboarding eventually enabled an entirely new financial product.",
+    "implication": "The data assets created by a well-designed per-event risk system are not limited to improving the original product. Transaction-level behavioral data is a foundation for lending, insurance, identity verification, and other financial products that can only be built by parties with longitudinal behavioral data. Teams should map the downstream product possibilities enabled by their risk data architecture early.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "Square Capital",
+      "embedded finance",
+      "data as product foundation",
+      "merchant lending",
+      "downstream products"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "He Built The Revenue Engines for Google, Facebook & Square",
+    "source_date": "2022"
+  },
+  {
+    "content": "Gokul frames the risk-architecture principle as one of the clearest examples of how a better product and a better business are the same thing, not a tradeoff. Removing the upfront gate improved the user experience, grew the supply network, improved the ML model, and reduced operational costs simultaneously. Teams that frame risk management and growth as opposing forces are operating with a false constraint \u2014 the right risk architecture resolves the tension by making them complementary.",
+    "implication": "Risk teams and growth teams should be evaluated on a shared metric that captures both false negative cost and false positive cost \u2014 demand destruction from over-restriction is as real a cost as fraud losses from under-restriction. Organizations that separate these teams with separate metrics will systematically generate the wrong tradeoffs.",
+    "cluster": "risk_and_self_serve",
+    "topics": [
+      "risk-growth alignment",
+      "shared metrics",
+      "organizational structure",
+      "false constraint"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Secrets of Tech's Top CEOs | Gokul Rajaram on Google, Facebook & Square",
+    "source_date": "2022"
+  }
+]

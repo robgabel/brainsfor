@@ -5,12 +5,12 @@ description: "Load the Paul Graham brain. Pack ships 9 unified skills in pack/sk
 
 # Paul Graham Brain Pack — Setup & Configuration
 
-Welcome to the **Graham Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Paul Graham's essays on paulgraham.com — a curated collection of his most influential thinking on startups, programming, writing, taste, and doing great work.
+Welcome to the **Graham Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Paul Graham's essays on paulgraham.com, interviews, talks, and podcasts — a curated collection of his most influential thinking on startups, programming, writing, taste, ambition, and doing great work.
 
 ## What You're Getting
 
-- **213 knowledge atoms** — Core insights, frameworks, and strategic principles from 220+ essays spanning 2001-2025, plus interviews, talks, and tweets
-- **975 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1135 knowledge atoms** — Core insights, frameworks, and strategic principles from 220+ essays spanning 2001-2025, plus interviews with Tyler Cowen, Geoff Ralston, The Pull Request, YC lectures, and talks at Startup School and Disrupt
+- **1187 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — startups, programming, writing, wealth, taste, ambition, fundraising, hackers, ideas, growth, education, design, and more
 
@@ -28,7 +28,7 @@ Your Graham Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (213 insights)
+  ├── brain-atoms.json         ← structured atoms (1135 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 213 atoms with titles, summaries, connections
+   - JSON structure of 1135 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -109,7 +109,7 @@ Find unexpected connections between two concepts or synthesize multiple ideas in
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How has Paul's thinking on AI and programming evolved?"*
+*Example: "How has Paul's thinking on AI and programming evolved over the years?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to startups? Teach → evolve → coach to build understanding.*
+*Example: New to startups? Use Teach → Evolve → Coach to build foundational understanding before taking action.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Fundraising soon? Predict the landscape → debate your assumptions → advise on strategy.*
+*Example: Fundraising soon? Use Predict to map the landscape → Debate your assumptions → Advise on your specific strategy.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Paul's freely published essays on paulgraham.com, public talks, interviews, and widely discussed quotes from press coverage. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Paul's freely published essays on paulgraham.com, public talks, recorded interviews, and widely discussed quotes from press coverage and podcasts. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

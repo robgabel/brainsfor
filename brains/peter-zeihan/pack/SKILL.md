@@ -5,14 +5,14 @@ description: "Load the Peter Zeihan brain. Pack ships 9 unified skills in pack/s
 
 # Peter Zeihan Brain Pack — Setup & Configuration
 
-Welcome to the **Zeihan Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Peter Zeihan's Peter Zeihan's four books, the Zeihan on Geopolitics YouTube channel, long-form podcast interviews, and public speaking engagements — a curated collection of his most influential thinking on geography, demographics, the end of globalization, and the shape of the post-American world.
+Welcome to the **Zeihan Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Peter Zeihan's Peter Zeihan's four books, the Zeihan on Geopolitics YouTube channel, long-form podcast interviews with Joe Rogan, Jordan Peterson, Scott Galloway, Peter Attia, and public speaking engagements — a curated collection of his most influential thinking on geography, demographics, the end of globalization, and the shape of the post-American world.
 
 ## What You're Getting
 
-- **362 knowledge atoms** — Core insights, frameworks, and strategic principles from The Accidental Superpower (2014), The Absent Superpower (2017), Disunited Nations (2020), The End of the World Is Just the Beginning (2022), the Zeihan on Geopolitics daily YouTube channel (500+ short videos), and long-form interviews with Joe Rogan, Peter Attia, Lex Fridman, Jordan Peterson, and the Diary of a CEO
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **669 knowledge atoms** — Core insights, frameworks, and strategic principles from The Accidental Superpower (2014), The Absent Superpower (2017), Disunited Nations (2020), The End of the World Is Just the Beginning (2022), the Zeihan on Geopolitics daily YouTube channel, long-form interviews including Joe Rogan Experience #1921, Jordan Peterson podcast, Prof G Conversations, and multiple public interview appearances from 2014 through April 2026
+- **632 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — demographics, geography, deglobalization, China collapse, energy, industrial commodities, navies, Bretton Woods, Russia, Ukraine, Europe, manufacturing, supply chains, food security, the American order, and more
+- **Cross-referenced topics** — demographics, geography, deglobalization, China collapse, energy, industrial commodities, navies, Bretton Woods, Russia, Ukraine, Europe, manufacturing, supply chains, food security, the American order, Mexico, Iran, cartels, tariffs, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Zeihan Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (362 insights)
+  ├── brain-atoms.json         ← structured atoms (669 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 362 atoms with titles, summaries, connections
+   - JSON structure of 669 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 

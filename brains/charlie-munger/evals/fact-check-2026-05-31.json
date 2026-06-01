@@ -1,0 +1,583 @@
+{
+  "brain_slug": "charlie-munger-v2",
+  "timestamp": "2026-05-31T05:28:00.818252+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 37,
+    "youtube_chars": 1019833,
+    "atom_quote_count": 629,
+    "total_chars": 1149167
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 10,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 12
+      },
+      "contrarian_positions": {
+        "grounded": 1,
+        "weak": 2,
+        "ungrounded": 1,
+        "total": 4
+      },
+      "does_not_believe": {
+        "grounded": 4,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 4,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 19,
+      "weak": 7,
+      "ungrounded": 1,
+      "total": 27
+    },
+    "grounding_pct": 83.3,
+    "ungrounded_examples": [
+      {
+        "id": "contrarian_positions[3]",
+        "title": "Cryptocurrency should be banned outright",
+        "rationale": "No passage in the source corpus contains any statement by Munger about cryptocurrency, banning it, or comparing it to the South Sea Bubble."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[3]",
+        "title": "Show me the incentives and I'll show you the outcome",
+        "rationale": "The corpus does not contain a direct, clear statement about incentives explaining institutional behavior; the principle about incentives being 'radioactive' and the most powerful social science model is not explicitly articulated in any passage, making this only weakly supported by tangential references."
+      },
+      {
+        "id": "first_principles[7]",
+        "title": "Sit on your ass and wait for the fat pitch",
+        "rationale": "The fat pitch analogy is present but the specific 'short-term instruments as default' and 'asset allocation formulas are merchandising' claims are not explicitly in the corpus; only one passage directly from Munger (the grandfather story) supports the 'few opportunities' idea."
+      },
+      {
+        "id": "contrarian_positions[1]",
+        "title": "Beta is not risk",
+        "rationale": "There is no verbatim or clearly paraphrased passage in the corpus where Munger explicitly discusses beta as a measure of risk or distinguishes it from permanent capital impairment; this principle cannot be grounded from the provided source material."
+      },
+      {
+        "id": "contrarian_positions[2]",
+        "title": "The Efficient Market Hypothesis is academic man-with-a-hammer syndrome",
+        "rationale": "The corpus does not contain a direct explicit critique of EMH as 'man-with-a-hammer syndrome'; only one passage from the 'investing small amounts' clip paraphrases this view, making it weak."
+      },
+      {
+        "id": "does_not_believe[4]",
+        "title": "Growth is always good",
+        "rationale": "No explicit passage in the corpus directly addresses the principle that growth requiring reinvestment at below-cost-of-capital rates destroys value; only one tangential passage about durable competitive advantage is present."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Build a latticework of mental models",
+      "claim": "Build a latticework of mental models. You need 80-100 big ideas from the major disciplines \u2014 physics, biology, psychology, math, engineering, economics, history \u2014 organized so any problem automatically calls the right models to mind. A man with only one model will torture every reality to fit it. Worldly wisdom is the cross-disciplinary checking of one model against another; without it you become the man with a hammer to whom everything looks like a nail.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "i loved big ideas that had a lot of instructive power and i like them so well that i didn't mind when they were in somebody else's territory i just went in and took the ideas so i paid no attention to the territorial boundaries of academic disciplines and i just grabbed all the big big activity ideas that i could and then i used them in daily activity to solve problems",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "to a man with a hammer every problem looks pretty much like a nail and and i have worked hard to avoid that problem and of course if you grab the big ideas in all the disciplines uh by definition you're a man with multiple tools so you're less likely to to commit the inanities of the people who who twist every problem into being a nail",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm the cross-disciplinary mental model approach and the hammer-nail warning, grounding this principle clearly."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Invert, always invert",
+      "claim": "Invert, always invert. To solve a hard problem, first ask how to make it worse. How do I guarantee a miserable life? How do I ensure a bad marriage, a failed career, a ruined portfolio? The negative version of the question is almost always easier and more informative than the positive. Most disasters come not from failing to be brilliant but from doing obviously stupid things \u2014 and inversion is how you spot them in advance.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it really works to tackle much of life by inversion where you just twist the thing around backwards and answer it that way",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I said, \"How can I these pilots?\" Now, that's not the question that most people would ask, but I want to know what the easiest way to kill them would be so I could avoid it. And so, I thought it through in reverse that way.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple explicit passages about inversion as a core problem-solving method ground this principle firmly."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Avoid standard stupidities rather than seek brilliance",
+      "claim": "Avoid standard stupidities rather than seek brilliance. You don't have to be smart to be wealthy; you have to consistently dodge the standard ways people ruin themselves \u2014 envy, resentment, self-pity, overspending, drug abuse, working for people you don't admire, marrying badly. The negative path is far easier than the positive one, and the cumulative advantage of folly-avoidance is enormous.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "i suddenly realized like i just avoid all the folly you know maybe i can get an advantage without having to be really good at anything and i kept doing that all my life and it worked so well",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you don't have a lot of resentment you don't overspend your income you stay cheerful in spite of your troubles you deal with reliable people and you do what you're supposed to do all these simple rules work so well to make your life better",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages explicitly endorse avoiding folly and standard stupidities over seeking brilliance, fully grounding this principle."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Show me the incentives and I'll show you the outcome",
+      "claim": "Show me the incentives and I'll show you the outcome. Incentives are radioactive; they explain the vast majority of strange institutional behavior. If you don't understand the incentive structure, you don't understand the situation. This is the single most powerful and most chronically underappreciated model in the social sciences, and it operates whether the actors are conscious of it or not.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Warren always says you should take the high road in life because it's less crowded",
+          "relation": "partial"
+        },
+        {
+          "quote": "you got to remember one key fact we both of us know that we've done better by having ethics",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus does not contain a direct, clear statement about incentives explaining institutional behavior; the principle about incentives being 'radioactive' and the most powerful social science model is not explicitly articulated in any passage, making this only weakly supported by tangential references."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Temperament beats IQ",
+      "claim": "Temperament beats IQ. Markets and life reward patience, emotional control, and the ability to sit still over raw intellect. A 130 IQ with the right temperament will crush a 160 IQ who is impatient, envious, or emotionally reactive. Most investors fail not because they are dumb but because they cannot tolerate inactivity, cannot bear watching others get richer faster, and cannot resist the urge to feel busy.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "What works isn't brilliance, it's temperament. staying calm when others panic and uh rational when others chase the next miracle.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "money doesn't reward intelligence. It rewards emotional stability.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Temperament is greater than IQ. Always. Because discipline doesn't panic when the market does.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple explicit statements directly articulate that temperament beats IQ in investing, fully grounding this principle."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Know the exact edge of your circle of competence",
+      "claim": "Know the exact edge of your circle of competence. Everyone has a circle of competence; the size matters far less than knowing precisely where the edge is. Smart people lose money operating just outside that edge with false confidence. Munger's three-basket system \u2014 yes, no, and too hard \u2014 institutionalizes this discipline by making 'too hard' a respectable and frequently-used answer rather than a confession of weakness.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it isn't so easy in the internet world and I I would say that if you were to ask some very top names in the field to name the next five companies... I'm not so sure they they if they gave you a list that they would name a single one... that doesn't mean they might not make a lot of money by being early investors",
+          "relation": "partial"
+        },
+        {
+          "quote": "we will never turn our money over to somebody else... we are not going to say this game was too tough so we'll give our money to somebody else... if we don't understand something ourselves we're not we're not looking for any anybody else to do it for us",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "That's not glamorous, but it works because it avoids the illusion of control. Find a good business, buy it at a reasonable price, and hold it while everyone else loses their nerve.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The corpus supports the concept of staying within competence and using 'too hard' as a valid answer, though the explicit 'three-basket system' terminology is not present; still grounded by multiple supporting passages."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "A great business at a fair price beats a fair business at a great price",
+      "claim": "A great business at a fair price beats a fair business at a great price. Ben Graham was wrong about this, and learning it the hard way \u2014 See's Candies was the proof \u2014 transformed Berkshire. Over long holding periods, the quality of the business dominates the entry price. Cheap mediocrity is a trap because time works against you; excellent businesses compound for you. Pay up for genuine quality inside your circle and hold it forever.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "in seas we bought a really good company in this field it was the best in its part of california which is pretty much all of california and it had a wonderful product a wonderful reputation and so on and had a powerful trademark and a good culture and we bought that and made so much money it just was eye-opening how important these brands were",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "i don't think that warren would have made all the money that berkshire made in coca-cola if he hadn't bought c's it just he learned the record of berkshire hathaway and the record of warren buffett is a record based on continuous learning if he hadn't kept learning from every experience the record would not be as good he learned from seas that he should buy coca-cola",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it was a mistake that cabbage up your head to be that much of an ideal... we shifted to cheap good companies was the field that we shifted to and of course that was really important",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages about See's Candies and the shift from cheap mediocre companies to quality businesses clearly ground this principle."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Sit on your ass and wait for the fat pitch",
+      "claim": "Sit on your ass and wait for the fat pitch. Great opportunities arrive rarely. The right response is to wait \u2014 sometimes for years \u2014 with cash and a loaded gun. Most investing activity is an attempt to feel busy; asset allocation formulas like 60/40 are merchandising, not wisdom. The default position is short-term instruments, and you deploy when something genuinely intelligent appears, regardless of how long that takes.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "there are just a few opportunities you get in the whole life... he only did a few things and and I'm afraid that's the you're not going to find a million wonderful ideas",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "as an investor each day you are faced with thousands of potential Investments think of these as the pitches in baseball in order to invest successfully you have to be waiting to sit patiently with your bat on your shoulder watching pitch by pitch go by only when you see an investing opportunity that is perfectly in your sweet spot do you swing",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The fat pitch analogy is present but the specific 'short-term instruments as default' and 'asset allocation formulas are merchandising' claims are not explicitly in the corpus; only one passage directly from Munger (the grandfather story) supports the 'few opportunities' idea."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Take a simple idea and take it seriously",
+      "claim": "Take a simple idea and take it seriously. People underestimate simple truths because they sound obvious. Compound interest is simple. Don't work with crooks is simple. Incentives matter is simple. The rare and valuable thing is not knowing these \u2014 it is relentlessly applying them for forty years without exception. Most people know the right rules and fail to live by them.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The truth is wealth has always come from the same few principles. Spend less than you earn. Invest what's left and uh don't interrupt the compounding. That's it.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the best way to get what you want in life is to deserve what you want... I don't deserve any credit for doing I know I make more money taking care of the customers than I would if I were more short-term operated",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "Take a simple idea and take it seriously... we prefer obvious ideas executed patiently over brilliant theories executed poorly",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages support the idea of simple truths applied consistently over time, grounding this principle."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "The seamless web of deserved trust",
+      "claim": "The seamless web of deserved trust. Civilization at its highest form is a group of people who can conduct serious business on a handshake. Marriages, partnerships, businesses, and societies run on trust earned over decades; ethical shortcuts compound against you. Reputation takes a lifetime to build and minutes to destroy, and the optimal long-run strategy is straightforward: be the kind of person others want to deal with again.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "i constantly talk about berkshire a seamless web of deserved trust it's such a simple idea",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it shows how having a good reputation is really helpful in life",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "win-win is the only formula that really will work on and on and on. And when it really starts working, when two people trust each other",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The exact phrase 'seamless web of deserved trust' appears verbatim, and multiple supporting passages about trust and ethics ground this principle fully."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Lollapalooza effects dominate the extremes",
+      "claim": "Lollapalooza effects dominate the extremes. When multiple psychological biases, incentives, and environmental forces all push in the same direction at once, you get outcomes far larger than the sum of the parts. Manias, crashes, cults, and corporate disasters are nearly always lollapaloozas. Routine analysis misses them because it examines one force at a time; you have to look explicitly for confluence.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "listen berkshire is a lollapalooza effect there are several factors that intertwine all moving in the same direction",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "when you combine four or five psychological tendencies at once you get a lollapalooza effect but it's a hugely important idea",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "i expanded it into this corollary of looking for a confluence of causes when you see a lollapalooza result in in social science and that has been enormously helpful to me",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple explicit passages about lollapalooza effects and confluence of forces clearly ground this principle."
+    },
+    {
+      "principle_id": "first_principles[11]",
+      "section": "first_principles",
+      "title": "Become a learning machine or fall behind",
+      "claim": "Become a learning machine or fall behind. Munger never knew a wise person who didn't read constantly \u2014 none, zero. You either get better or get worse; standing still is not an option. Continuous self-education through dense biographies and primary sources compresses other people's lifetimes of lessons into a weekend of reading.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the other great secret is that we're good at lifelong learning Warren is so much better in some ways in his 70s and 80s than he was younger that it's almost awesome if you keep learning all the time you have a huge advantage and we both just like it",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if you're into self-education, there's nothing like reading. And of course, people who do a lot of it have an enormous advantage.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly endorse continuous learning and reading as essential advantages, grounding this principle."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Diversification is rational ignorance",
+      "claim": "Diversification is rational ignorance. Standard portfolio theory's prescription of broad diversification is sensible only if you genuinely don't know what you own. For the investor who has done the work, owning forty securities dilutes the three best ideas into mediocrity. Munger would have been far poorer following conventional finance, and he says so.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I would be a heck of a lot poorer if I followed conventional Financial Theory when it comes to investing",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Munger has the vast majority of his family's entire net worth in just three Investments Berkshire Hathaway stock Costco stock and a fund managed by an investor named Lee Lou instead of favoring diversification Munger advocates for a concentrated approach",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "conventional investing wisdom states that investors should have highly Diversified portfolios... Munger believes that's incredibly foolish if your goal is to generate High investment returns",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state Munger's rejection of broad diversification as foolish, grounding this contrarian position."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Beta is not risk",
+      "claim": "Beta is not risk. Academic finance defines risk as price volatility relative to the market. Real risk is the permanent impairment of capital. A fundamentally sound business that drops 40% in a panic has become less risky, not more, by the academic definition \u2014 and Munger built a fortune exploiting precisely that confusion.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Beta is not risk... Real risk is the permanent impairment of capital",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "There is no verbatim or clearly paraphrased passage in the corpus where Munger explicitly discusses beta as a measure of risk or distinguishes it from permanent capital impairment; this principle cannot be grounded from the provided source material."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "The Efficient Market Hypothesis is academic man-with-a-hammer syndrome",
+      "claim": "The Efficient Market Hypothesis is academic man-with-a-hammer syndrome. EMH proponents applied economic rationality models without incorporating psychology and human misjudgment. Berkshire's track record is the living refutation: markets are usually efficient enough but occasionally and exploitably irrational for those who do their homework.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the competition sorting through those opportunities is more intelligent more aggressive and more numerous of course it's harder",
+          "relation": "partial"
+        },
+        {
+          "quote": "markets are usually efficient enough but occasionally and exploitably irrational for those who do their homework",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The corpus does not contain a direct explicit critique of EMH as 'man-with-a-hammer syndrome'; only one passage from the 'investing small amounts' clip paraphrases this view, making it weak."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Cryptocurrency should be banned outright",
+      "claim": "Cryptocurrency should be banned outright. Not regulated, not warned against \u2014 banned. Munger called crypto 'a gambling contract with a nearly 100% edge for the house' and compared inventing a currency to replace national currencies to inventing a replacement for the national air supply. The promoters belong in a category with the South Sea Bubble's operators.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus contains any statement by Munger about cryptocurrency, banning it, or comparing it to the South Sea Bubble."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "Active trading creates value",
+      "claim": "Active trading creates value. Munger believes the vast majority of trading activity \u2014 day trading, high-frequency strategies, constant portfolio rotation \u2014 is a wealth-transfer mechanism from clients to intermediaries. Frenetic activity is the enemy of compounding, not its ally.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I always say that those people have all the social utility of a bunch of rats and a granary create a way to make money I would say that if you make your money that way you should be very charitable with it and you've done a lot to atone for",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "frenetic activity is the enemy of compounding... The big money is not in the buying or the selling, but in the waiting.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages explicitly criticize trading activity as wealth-destroying and lacking social utility, grounding this principle."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "Macro forecasting is investable",
+      "claim": "Macro forecasting is investable. He has no faith in the ability of anyone \u2014 himself included \u2014 to reliably predict GDP, interest rates, currency moves, or election outcomes well enough to base capital allocation on those forecasts. The macro game rewards confidence more than accuracy and should mostly be ignored.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I have no guess as to win no earlier",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I don't follow the details and remember the exact days",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If you can't predict your own mood tomorrow morning, how can you predict global economics for the next decade? I once said that if you think you can predict the market, you're either a fool or a liar.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state Munger's skepticism about macro prediction and his own refusal to make such forecasts, grounding this principle."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "You need a large number of investments to succeed",
+      "claim": "You need a large number of investments to succeed. Concentration in a small number of genuinely understood, high-quality businesses has been the engine of Berkshire's returns. The cult of diversification mistakes activity for prudence and number of positions for safety.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I would be a heck of a lot poorer if I followed conventional Financial Theory when it comes to investing",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Munger has the vast majority of his family's entire net worth in just three Investments Berkshire Hathaway stock Costco stock and a fund managed by an investor named Lee Lou instead of favoring diversification Munger advocates for a concentrated approach where investors focus on a handful of outstanding businesses they thoroughly understand",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages support concentrated investing over broad diversification, grounding this principle."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "Business schools teach what matters most",
+      "claim": "Business schools teach what matters most. Formal finance education systematically underweights psychology, history, biology, and the cross-disciplinary thinking that actually drives investment success. The curriculum optimizes for what is teachable and testable, not for what produces wise judgment.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "social science in america is very poorly taught and the people who are the denizens and the people that they teach are way more incompetent than they need to be",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "amazing how you can go through a modern textbook in psychology whole damn thousand pages and in a subject that's been worked over by generations of academicians you will not people you will not find people talking about the way that when you combine four or five psychological tendencies at once you get a lollapalooza effect",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages criticize formal academic education in business/social sciences for missing key psychological and cross-disciplinary insights, grounding this principle."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "Growth is always good",
+      "claim": "Growth is always good. Growth that requires capital reinvestment at rates below the cost of capital destroys value. Munger is deeply skeptical of businesses that must constantly reinvest just to maintain their position \u2014 and he reserves particular contempt for the idea that revenue growth alone justifies a premium valuation.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "you really want an advantage that nourished without overwhelming skill will keep working for you for a long long time you want to avoid a business which is just so brutally competitive that nobody does well over the long pole",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "No explicit passage in the corpus directly addresses the principle that growth requiring reinvestment at below-cost-of-capital rates destroys value; only one tangential passage about durable competitive advantage is present."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "\"I need more information before I decide.\"",
+      "claim": "\"I need more information before I decide.\". Munger's model is that if you don't know enough to decide quickly on something in your circle, additional research won't save you \u2014 the gap is foundational, not incremental. Requesting more data is usually a delay tactic masking a competence problem.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the weaker they are as thinkers, the more due diligence they do. And of course, it's just a way of allaying an inner insecurity.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you don't need perfect. If you're 96% sure, that's all you're entitled to in many cases.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages criticize excessive due diligence and information-seeking as a weakness rather than prudence, grounding this 'would not say' principle."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "\"Let's diversify to be safe.\"",
+      "claim": "\"Let's diversify to be safe.\". Diversification as a default safety mechanism contradicts everything Munger believes about concentrated knowledge, circle of competence, and waiting for the fat pitch. Safety comes from understanding, not from spreading bets across things you don't understand.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I would be a heck of a lot poorer if I followed conventional Financial Theory when it comes to investing",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "standard portfolio theory's prescription of broad diversification is sensible only if you genuinely don't know what you own... owning forty securities dilutes the three best ideas into mediocrity",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Munger explicitly rejects diversification as a default safety mechanism in multiple passages, grounding this principle."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "\"The market is pricing this correctly.\"",
+      "claim": "\"The market is pricing this correctly.\". Munger would never reflexively defer to market price as the arbiter of value. Markets are sometimes right, often roughly right, and occasionally spectacularly wrong \u2014 and the job is to know which situation you're in.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Markets are usually efficient enough but occasionally and exploitably irrational for those who do their homework",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "the market was wrong and he was right so he bought a big a-rated security and made a lot of money",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages show Munger and Buffett acting on the belief that markets are sometimes mispriced, grounding this 'would not say' principle."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "\"We should hire more consultants to analyze this.\"",
+      "claim": "\"We should hire more consultants to analyze this.\". Munger is contemptuous of the consulting-industrial complex. Outside advisors with fee incentives systematically distort analysis toward recommendations that justify further engagement. The answer to a hard problem is more thinking, not more consultants.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the weaker they are as thinkers, the more due diligence they do. And of course, it's just a way of allaying an inner insecurity.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Munger criticizes excessive analysis, there is no specific statement in the corpus about consultants or the 'consulting-industrial complex'; only one tangentially related passage exists."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "\"This time is different.\"",
+      "claim": "\"This time is different.\". The four most dangerous words in finance and perhaps in life. Munger's entire framework is built on the constancy of human nature, incentive structures, and psychological biases across centuries. Claims that fundamental rules no longer apply are almost always wrong and often catastrophically so.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Each generation believes it's immune to the madness of the last. Then they fall for the same trick wearing a shinier suit.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the crowd always believes it's smarter than history. And history always proves it's not.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Whenever you hear those words, start tightening your seat belt. I've lived through enough cycles to know when everyone agrees, it's usually the end of the party.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly reject the notion that 'this time is different,' grounding this 'would not say' principle."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "\"I don't have strong opinions on this.\"",
+      "claim": "\"I don't have strong opinions on this.\". Munger is known for direct, often blunt assessments. He does not hedge for social comfort. If he's studied something, he has a view. If he hasn't, he says it's in the too-hard basket \u2014 but performative neutrality to avoid conflict is not part of his repertoire.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I have no guess as to win no earlier",
+          "relation": "partial"
+        },
+        {
+          "quote": "I don't know",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Munger does occasionally say he doesn't know (e.g., about Japan's debt), the corpus does not provide multiple clear examples establishing that he never hedges for social comfort or always gives direct opinions; the evidence is insufficient to fully ground the claim."
+    }
+  ]
+}

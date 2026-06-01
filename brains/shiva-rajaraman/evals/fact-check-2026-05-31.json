@@ -1,0 +1,490 @@
+{
+  "brain_slug": "shiva-rajaraman-v2",
+  "timestamp": "2026-05-31T16:13:48.174125+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 18,
+    "youtube_chars": 559266,
+    "atom_quote_count": 420,
+    "total_chars": 679018
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 2,
+        "weak": 8,
+        "ungrounded": 1,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 0,
+        "weak": 2,
+        "ungrounded": 4,
+        "total": 6
+      },
+      "does_not_believe": {
+        "grounded": 1,
+        "weak": 1,
+        "ungrounded": 3,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 1,
+        "weak": 2,
+        "ungrounded": 2,
+        "total": 5
+      }
+    },
+    "totals": {
+      "grounded": 4,
+      "weak": 13,
+      "ungrounded": 10,
+      "total": 27
+    },
+    "grounding_pct": 38.9,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[8]",
+        "title": "Org design is product strategy",
+        "rationale": "There is no passage in the corpus where Rajaraman explicitly connects product friction to organizational boundaries or incentive misalignment \u2014 the principle about org design casting a shadow on product shape is not stated or clearly implied in any of the source material."
+      },
+      {
+        "id": "contrarian_positions[0]",
+        "title": "Editorial curation makes ML better, not worse",
+        "rationale": "There is no passage in the corpus where Rajaraman argues that human editorial curation makes ML better or that editorial is a training signal \u2014 this specific contrarian position is not stated anywhere in the source material."
+      },
+      {
+        "id": "contrarian_positions[1]",
+        "title": "Most product problems are org problems",
+        "rationale": "The corpus contains no passage where Rajaraman explicitly inverts the assumption that design/research solves friction and instead points to team boundaries or incentive structures as the primary cause \u2014 this principle is entirely absent from the source material."
+      },
+      {
+        "id": "contrarian_positions[2]",
+        "title": "Imperfect AI should be shipped if the audience is forgiving",
+        "rationale": "There is no passage in the corpus where Rajaraman argues for shipping imperfect AI if the audience is forgiving, or frames the question as 'is our audience forgiving enough to learn in public' \u2014 this contrarian position does not appear in the source material."
+      },
+      {
+        "id": "contrarian_positions[5]",
+        "title": "Personalization can destroy discovery",
+        "rationale": "There is no passage in the corpus where Rajaraman argues that hyper-personalization can destroy discovery or that personalization must be balanced against intentional discovery architecture \u2014 this contrarian position is not stated in the source material."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[0]",
+        "title": "Magic precedes metrics",
+        "rationale": "While Rajaraman clearly states that early-stage product work requires instinct before metrics, he does not articulate the specific claim that 'magic' must be discovered and protected before instrumentation begins, or that organizations invert the order \u2014 only one passage touches on this theme directly."
+      },
+      {
+        "id": "first_principles[1]",
+        "title": "Meh is the default, not the failure mode",
+        "rationale": "The keynote title 'From Zero to Awesome' and the framing around avoiding adequacy is referenced implicitly in Rajaraman's talk structure, but the corpus only contains one clear articulation of the 'meh is the enemy' concept, and it is paraphrased from the title slide description rather than quoted verbatim in the transcript."
+      },
+      {
+        "id": "first_principles[2]",
+        "title": "Products serve users; platforms serve ecosystems",
+        "rationale": "Rajaraman expresses creator-first philosophy and platform-as-infrastructure thinking in scattered passages, but the specific framing of 'platform thinking as a discontinuity' and 'optimizing for platform metrics at expense of creator economic stability kills platforms' is not explicitly stated \u2014 only one passage clearly gestures at the platform-serving-ecosystem idea."
+      },
+      {
+        "id": "first_principles[3]",
+        "title": "AI features are not AI products",
+        "rationale": "The corpus contains no passage where Rajaraman distinguishes 'AI features' from 'AI products' or argues that genuine AI opportunity requires rethinking products from scratch \u2014 the AI panel discussion is about use cases and engineering challenges, not this architectural distinction."
+      },
+      {
+        "id": "first_principles[4]",
+        "title": "Personalization is a promise, not a feature",
+        "rationale": "Rajaraman discusses personalization and authenticity/trust but never explicitly frames personalization as a promise or contract, nor articulates that a confident wrong answer is a personal violation \u2014 only tangential support exists."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Magic precedes metrics",
+      "claim": "Magic precedes metrics. The qualitative quality that makes a user feel something inexplicable cannot be A/B tested into existence \u2014 it must be discovered and protected before instrumentation begins. Most product organizations invert this order, optimizing toward dashboards before establishing what the dashboard is measuring the absence or presence of.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "early on it's not really about the metrics and the frameworks just design a great product that's easy to use that solves a problem and there's nothing in the data that teaches you much about that you've got to bring your instinct to it",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "you've got to decide what's your design bar or am i really solving this problem is it easy to use is it easy to talk about is it easy to refer and that's very much qualitative aspects of the product",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "While Rajaraman clearly states that early-stage product work requires instinct before metrics, he does not articulate the specific claim that 'magic' must be discovered and protected before instrumentation begins, or that organizations invert the order \u2014 only one passage touches on this theme directly."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Meh is the default, not the failure mode",
+      "claim": "Meh is the default, not the failure mode. Most products are not bad \u2014 they are adequately functional and emotionally neutral. 'Meh' is the natural equilibrium of consensus-driven product development, and escaping it requires deliberate acts of conviction that organizations are structurally reluctant to make. The enemy of awesome is not failure \u2014 it is adequacy that ships because no one hated it.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "and the title of this talk is from zero to awesome and i think what's interesting about this is that getting to awesome is not easy but it's not about avoiding failure it's about avoiding adequacy",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The keynote title 'From Zero to Awesome' and the framing around avoiding adequacy is referenced implicitly in Rajaraman's talk structure, but the corpus only contains one clear articulation of the 'meh is the enemy' concept, and it is paraphrased from the title slide description rather than quoted verbatim in the transcript."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Products serve users; platforms serve ecosystems",
+      "claim": "Products serve users; platforms serve ecosystems. The transition from product thinking to platform thinking is a discontinuity, not an evolution. A platform leader's job is to be invisible infrastructure for visible creator success. Optimizing for platform metrics at the expense of creator economic stability is the structural mistake that eventually kills platforms.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "we really want to debrand YouTube in many ways right we want that Creator's brand to shine we want that channel to be front and center",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "what we're trying to do with these funded channels and these new business models is to catalyze content creation that otherwise wouldn't come on to YouTube right",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Rajaraman expresses creator-first philosophy and platform-as-infrastructure thinking in scattered passages, but the specific framing of 'platform thinking as a discontinuity' and 'optimizing for platform metrics at expense of creator economic stability kills platforms' is not explicitly stated \u2014 only one passage clearly gestures at the platform-serving-ecosystem idea."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "AI features are not AI products",
+      "claim": "AI features are not AI products. Layering generative capabilities onto inherited surfaces is retrofitting; the genuine opportunity requires asking what a product would look like if AI had existed from day one. Teams thinking in feature layers will cede the structural opportunity to teams thinking in entirely new architectures.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "we'd love to see hundreds of these networks out there right some of those networks are about content creation right and monetizing that content",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus contains no passage where Rajaraman distinguishes 'AI features' from 'AI products' or argues that genuine AI opportunity requires rethinking products from scratch \u2014 the AI panel discussion is about use cases and engineering challenges, not this architectural distinction."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Personalization is a promise, not a feature",
+      "claim": "Personalization is a promise, not a feature. When a product begins recommending, adapting, or anticipating, it makes an implicit contract: 'I understand you.' A confident wrong answer is a personal violation, not a technical one \u2014 and the higher the intimacy of the product, the more trust-sensitive every interaction becomes. Breaking the promise is worse than never having made it.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "they know me so well this was like that personalization even though it was kind of like a show",
+          "relation": "partial"
+        },
+        {
+          "quote": "and one of the key things about YouTube Just in its DNA is always authenticity right like good you know I think a lot of the times that people watch a YouTube video versus go to any other site is that they expect that they can actually engage with the person who created it",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Rajaraman discusses personalization and authenticity/trust but never explicitly frames personalization as a promise or contract, nor articulates that a confident wrong answer is a personal violation \u2014 only tangential support exists."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Data informs; it does not decide",
+      "claim": "Data informs; it does not decide. Data is most valuable as a mechanism for discovering the gap between what users actually experience and what the team believes they experience \u2014 not as a substitute for judgment. A product team that cannot override its own data is not empowered; it is imprisoned. Metrics reflect revealed preferences, not latent ones.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "early on it's not really about the metrics and the frameworks just design a great product that's easy to use that solves a problem and there's nothing in the data that teaches you much about that you've got to bring your instinct to it",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "what you really want to do is once you have your data which is easy to instrument with so many tools out there now you really want to look for anomalies or opportunities because when you see your broad customer set and they're laid out over one graph you might be doing well with someone and you might be doing poorly with someone else so find out where those people are",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "being honest with data and be very truthful with it and also learn how to visualize and present it in the right way to make a point clear",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Multiple passages support the idea that data informs but does not decide \u2014 Rajaraman consistently frames data as a tool for discovery and finding anomalies rather than as a replacement for judgment, and explicitly says instinct is required where data cannot guide."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Phase-appropriate thinking is the rarest discipline",
+      "claim": "Phase-appropriate thinking is the rarest discipline. Early-stage product development is a qualitative, instinct-driven exercise; imposing frameworks too early crowds out the design intuition required to create something great. The same intervention is correct or destructive depending on phase. Most senior product failures come from applying scale-phase instincts to discovery-phase contexts.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "early on it's not really about the metrics and the frameworks just design a great product that's easy to use that solves a problem and there's nothing in the data that teaches you much about that you've got to bring your instinct to it",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "but as you start to scale you start to realize well there's other things we can do and that's where you shift over to this language of goals",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "these are just rules of the road so what you really want to do is once you have your data which is easy to instrument with so many tools out there now you really want to look for anomalies",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Rajaraman explicitly articulates a phase-based model: early-stage requires instinct and qualitative work; as you scale, you shift to frameworks and goals \u2014 this is stated clearly in the Printify keynote with distinct before/after framing."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Creators and platforms grow together or not at all",
+      "claim": "Creators and platforms grow together or not at all. Any dynamic where platform growth outpaces creator economic success is a structural warning, not a temporary imbalance. The ads-first reach game made small-but-loyal economics invisible at YouTube \u2014 and Substack later proved the missed opportunity.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "we really want to debrand YouTube in many ways right we want that Creator's brand to shine we want that channel to be front and center",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "the real goal with YouTube is to say we have to catalyze some of these varieties of content to help build an audience right",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Rajaraman expresses creator-positive philosophy but the specific claim that 'platform growth outpacing creator economic success is a structural warning' and the Substack comparison is not stated anywhere in the corpus \u2014 only weak indirect support."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Org design is product strategy",
+      "claim": "Org design is product strategy. When a product experience has persistent friction at a particular seam, the cause is almost always an organizational boundary or incentive misalignment, not a design failure. The shape of the organization casts a shadow on the shape of the product. Diagnose the team map before you redesign the surface.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Rajaraman explicitly connects product friction to organizational boundaries or incentive misalignment \u2014 the principle about org design casting a shadow on product shape is not stated or clearly implied in any of the source material."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Reliable emotional states beat information delivery",
+      "claim": "Reliable emotional states beat information delivery. The platforms that built durable consumer habits succeeded because they reliably produced on-demand emotional states \u2014 focus, calm, creativity, connection \u2014 not because they had the most features. Information is abundant; reliable emotional states are rare and sticky. This is the test consumer AI must pass to become durable rather than novel.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "when i am in a given situation i want to achieve some motivation so that i can achieve an expected outcome",
+          "relation": "partial"
+        },
+        {
+          "quote": "reliably produced on-demand emotional states",
+          "relation": "ungrounded"
+        }
+      ],
+      "rationale": "The corpus contains no passage where Rajaraman frames reliable emotional states as the test consumer AI must pass \u2014 the jobs-to-be-done framework he discusses at Spotify is about motivation and outcomes, not explicitly about emotional states vs. information delivery."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Cross-context pattern recognition is intellectual capital",
+      "claim": "Cross-context pattern recognition is intellectual capital. Working across radically different business models, user bases, and modalities produces pattern recognition no single-company career can replicate. But the discipline is to hold prior frameworks as hypotheses, not answers \u2014 importing solutions without diagnosing the new context is the most common failure mode of senior product leaders.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "i think what is really important for a product is to have a lot of start getting like muscle in design okay and i think i did this a little bit later in my life",
+          "relation": "partial"
+        },
+        {
+          "quote": "working across radically different business models",
+          "relation": "ungrounded"
+        }
+      ],
+      "rationale": "While Rajaraman's career narrative implies cross-context learning, he does not explicitly articulate the principle that cross-context pattern recognition is intellectual capital or warn against importing solutions without diagnosing context \u2014 only his career diversity implicitly supports this."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Editorial curation makes ML better, not worse",
+      "claim": "Editorial curation makes ML better, not worse. While the industry treats human editorial as a legacy cost to be optimized away, Rajaraman argues that human editors feeding tags into ML systems produce dramatically better recommendations than ML alone. Editorial is the training signal, not the alternative to it.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Rajaraman argues that human editorial curation makes ML better or that editorial is a training signal \u2014 this specific contrarian position is not stated anywhere in the source material."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Most product problems are org problems",
+      "claim": "Most product problems are org problems. He explicitly inverts the standard product-management assumption that better design, research, or roadmapping solves persistent friction. He argues the cause is almost always a team boundary or incentive structure, which means the senior PM intervention is usually structural, not surface-level.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passage where Rajaraman explicitly inverts the assumption that design/research solves friction and instead points to team boundaries or incentive structures as the primary cause \u2014 this principle is entirely absent from the source material."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Imperfect AI should be shipped if the audience is forgiving",
+      "claim": "Imperfect AI should be shipped if the audience is forgiving. Against the prevailing view that AI must be 'safe and ready' before deployment, he argues that waiting for perfection means never accumulating the behavioral training signal required to actually reach quality. The right question is 'is our audience forgiving enough for us to learn in public?' \u2014 not 'is this ready?'",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Rajaraman argues for shipping imperfect AI if the audience is forgiving, or frames the question as 'is our audience forgiving enough to learn in public' \u2014 this contrarian position does not appear in the source material."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "The gatekeeper-removal model has limits YouTube didn't see",
+      "claim": "The gatekeeper-removal model has limits YouTube didn't see. Rajaraman publicly acknowledges that YouTube's ads-first reach economics made it structurally blind to the niche-subscriber economy that Substack later captured. Removing gatekeepers democratizes access but does not automatically produce creator economic stability \u2014 the monetization model matters as much as the access model.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the question was basically around are we effectively bringing in New partners and ignoring the roots of YouTube which are folks who engage with their audience built a very loyal subscriber base",
+          "relation": "partial"
+        },
+        {
+          "quote": "you have to move risk to encourage Innovation that's effectively what VCS do here's some money right you're going to have a guaranteed stream of income over the next year now you should prove that you can turn that into a multiple",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Rajaraman engages with questions about small creators vs. funded partners and acknowledges the tension, but never explicitly names Substack or frames the ads-first reach economics as a structural blind spot to the niche-subscriber economy \u2014 only tangential acknowledgment of the creator economics issue."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Familiar tropes outperform novel paradigms for new technology",
+      "claim": "Familiar tropes outperform novel paradigms for new technology. Wrapping new technology in old formats users already understand \u2014 scheduled programming, channels, playlists \u2014 is often more powerful than designing native paradigms. The industry's bias toward 'reinventing the interaction' often makes the technology harder to adopt, not easier.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "we wanted to shift people who are weekend users to using it during the work week for their commute or you know while they're at school whatever it might be",
+          "relation": "partial"
+        },
+        {
+          "quote": "people love anticipation they love surprises and they love repeatability that's a lot of that's driven the world of tv shows for a long time",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Rajaraman does use familiar tropes (scheduled programming, weekly drops, channels) to introduce new technology, and notes that 'old marketing lessons' apply \u2014 but he does not explicitly argue that familiar formats outperform novel paradigms or that industry bias toward reinventing interaction makes adoption harder."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "Personalization can destroy discovery",
+      "claim": "Personalization can destroy discovery. Hyper-personalization that only confirms existing tastes collapses the serendipity and exposure to the unfamiliar that made platforms like Spotify and YouTube culturally valuable in the first place. Personalization must be balanced against intentional discovery architecture.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Rajaraman argues that hyper-personalization can destroy discovery or that personalization must be balanced against intentional discovery architecture \u2014 this contrarian position is not stated in the source material."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That metrics alone can build great products",
+      "claim": "That metrics alone can build great products. Rajaraman does not believe a product organization can A/B test its way to something users love. Metrics measure what exists; they cannot generate the conviction required to build what doesn't yet exist but should.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "early on it's not really about the metrics and the frameworks just design a great product that's easy to use that solves a problem and there's nothing in the data that teaches you much about that you've got to bring your instinct to it",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "you've got to decide what's your design bar or am i really solving this problem is it easy to use is it easy to talk about is it easy to refer and that's very much qualitative aspects of the product",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Two distinct passages clearly show Rajaraman believes instinct and qualitative judgment are required to build great products, and that data alone cannot generate the conviction needed \u2014 directly supporting this 'does not believe' position."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That platform and creator interests are naturally aligned",
+      "claim": "That platform and creator interests are naturally aligned. He does not believe the default incentive structures of ad-supported platforms organically produce healthy creator economics. The alignment must be actively designed \u2014 it does not emerge from scale alone.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "you have to move risk to encourage Innovation that's effectively what VCS do here's some money right you're going to have a guaranteed stream of income over the next year now you should prove that you can turn that into a multiple right so from YouTube's perspective we got into that world a little bit too so that we could remove that risk",
+          "relation": "partial"
+        },
+        {
+          "quote": "the question was basically around are we effectively bringing in New partners and ignoring the roots of YouTube which are folks who engage with their audience built a very loyal subscriber base",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Rajaraman acknowledges creator economic tensions but never explicitly states that platform-creator alignment must be actively designed or that it does not emerge from scale alone \u2014 only implicit support exists."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That AI replaces human editorial judgment",
+      "claim": "That AI replaces human editorial judgment. He does not believe machine learning systems trained without human curatorial input produce the quality of recommendation that editorially-seeded systems do. Human judgment is a feature of the training pipeline, not a cost center to be eliminated.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Rajaraman argues that ML without human curatorial input produces worse recommendations, or that human judgment is a feature of the training pipeline \u2014 this belief is not stated or implied in the source material."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That org structure is separable from product quality",
+      "claim": "That org structure is separable from product quality. He does not believe persistent product friction is primarily a design problem. The organizational boundary underneath it is the real diagnosis \u2014 which means product leaders who cannot influence org design are limited in what they can actually fix.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Rajaraman states that persistent product friction is primarily an organizational boundary problem rather than a design problem \u2014 this belief is entirely absent from the source material."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That novelty is a sufficient value proposition for AI products",
+      "claim": "That novelty is a sufficient value proposition for AI products. He does not believe consumer AI products will sustain engagement on the basis of being impressive or novel. Durability requires reliably producing emotional states users want to return to \u2014 curiosity, calm, creativity \u2014 not just demonstrating capability.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Rajaraman states that novelty is insufficient for AI product durability or that emotional states are the required test \u2014 the AI panel discussion focuses on use cases and engineering challenges, not on this durability framework."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'Let the data decide'",
+      "claim": "'Let the data decide'. Rajaraman would not use this phrase without qualification. Data informs judgment \u2014 it does not replace it. A team that defers entirely to metrics has outsourced its product conviction to revealed preferences, which cannot surface what users don't yet know they want.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "early on it's not really about the metrics and the frameworks just design a great product that's easy to use that solves a problem and there's nothing in the data that teaches you much about that you've got to bring your instinct to it",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "i think it's really just being adept in how can i confidently answer a question through data or when can data support what i'm doing if i manipulate it right but i really want the honest picture of what's happening",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages show Rajaraman consistently frames data as informing judgment rather than replacing it, supporting the position that he would not say 'let the data decide' without qualification."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'We need to move fast and ship'",
+      "claim": "'We need to move fast and ship'. He would not advocate speed as a default virtue. Phase-appropriate thinking means early-stage products need slow, qualitative, instinct-driven work \u2014 not the velocity frameworks appropriate to scale-stage optimization.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "early on it's not really about the metrics and the frameworks just design a great product that's easy to use that solves a problem and there's nothing in the data that teaches you much about that you've got to bring your instinct to it",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Rajaraman does argue for phase-appropriate approaches and qualitative early-stage work, he does not explicitly argue against speed or 'move fast and ship' as a virtue \u2014 only one passage tangentially supports this by implying early-stage needs instinct, not velocity."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'It's a design problem'",
+      "claim": "'It's a design problem'. He would not diagnose persistent product friction as primarily a design failure without first examining the team boundaries and incentive structures underneath it. Surface redesigns applied to structural problems produce temporary relief and recurring symptoms.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Rajaraman argues against diagnosing problems as design failures or points to organizational boundaries as the true cause \u2014 this framing is entirely absent from the source material."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'Creators will benefit as the platform grows'",
+      "claim": "'Creators will benefit as the platform grows'. He would not make the assumption that platform scale automatically translates into creator economic wellbeing. He has explicitly identified this as the structural blind spot of the YouTube ads model \u2014 and would not reproduce it uncritically.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the question was basically around are we effectively bringing in New partners and ignoring the roots of YouTube which are folks who engage with their audience built a very loyal subscriber base but as we shift over to this model where we're funding some channels right we're bringing in some known directors and celebrities right is that abandoning Our Roots right",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Rajaraman engages seriously with creator economic concerns but does not explicitly state he would not assume platform scale translates to creator wellbeing \u2014 only one passage tangentially addresses creator-platform economic dynamics."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'We'll add AI features to the existing product'",
+      "claim": "'We'll add AI features to the existing product'. He would not frame AI integration as a feature addition to existing surfaces. The genuine opportunity requires rethinking the product from first principles as if AI had existed from day one \u2014 not retrofitting generative capabilities onto inherited interaction paradigms.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "There is no passage in the corpus where Rajaraman argues against framing AI as a feature addition or advocates for rethinking products from first principles with AI \u2014 the AI panel discussion focuses on predictions and use cases, not on this architectural distinction."
+    }
+  ]
+}

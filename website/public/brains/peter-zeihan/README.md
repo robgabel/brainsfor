@@ -1,11 +1,11 @@
 # Peter Zeihan Brain Pack
 
-> **362 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **669 knowledge atoms** · **632 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Peter Zeihan's thinking, extracted from The Accidental Superpower (2014), The Absent Superpower (2017), Disunited Nations (2020), The End of the World Is Just the Beginning (2022), the Zeihan on Geopolitics daily YouTube channel (500+ short videos), and long-form interviews with Joe Rogan, Peter Attia, Lex Fridman, Jordan Peterson, and the Diary of a CEO. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Peter Zeihan's thinking, extracted from The Accidental Superpower (2014), The Absent Superpower (2017), Disunited Nations (2020), The End of the World Is Just the Beginning (2022), the Zeihan on Geopolitics daily YouTube channel, long-form interviews including Joe Rogan Experience #1921, Jordan Peterson podcast, Prof G Conversations, and multiple public interview appearances from 2014 through April 2026. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Peter's actual ideas, frameworks, and worldview.
 
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Peter's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (362 atoms, 1000 connections)
+  ├── brain-atoms.json      ← Structured data (669 atoms, 632 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**362 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**669 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**632 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — demographics, geography, deglobalization, China collapse, energy, industrial commodities, navies, Bretton Woods, Russia, Ukraine, Europe, manufacturing, supply chains, food security, the American order.
+**16 topic clusters** — demographics, geography, deglobalization, China collapse, energy, industrial commodities, navies, Bretton Woods, Russia, Ukraine, Europe, manufacturing, supply chains, food security, the American order, Mexico, Iran, cartels, tariffs.
 
 **Date range:** 2014 — April 2026
 

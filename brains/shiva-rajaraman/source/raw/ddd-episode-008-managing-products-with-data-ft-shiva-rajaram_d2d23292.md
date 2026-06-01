@@ -1,0 +1,61 @@
+[Skip to content](https://design.berkeley.edu/ddd-episode-008#content)
+
+## **Prelude**
+
+**Shiva:** I think it’s really important for designers now to have a really good grip of what you can measure analytically, and look at the logs for what you can’t do that and what tools might help you understand that? Because the best way to defend your design and get it shipped often is going to be the evidence about why this design makes a lot of sense.
+
+**Ted:** Welcome to Design Despite Disciplines, a podcast series from the Master of Design program at UC Berkeley, where we explore the important fissures and emerging territories of interdisciplinary and design practice. This is episode “Managing Products with Data”, featuring Shiva Rajaraman. We are your hosts, Ted, Shuyang and Yu.
+
+## **Intro**
+
+Who are product managers? In the context of tech companies, product managers are the ones who wear several hats to take charge of a specific function of a digital product. They’ll look into the market trends, study their user’s needs and make decisions. In a broader sense. Product managers are also data-driven designers. With user data and market insights, they design and iterate product features, optimize and nourish product platforms. In almost every job description of a product manager recruitment page, data analysis is always prioritized on the requirements. However, is data analysis really the ultimate, omnipotent weapon of a product manager, but might be its trade-offs in product management? How will the future of product management unfold?
+
+In this episode, we’re very honored to have Shiva Rajaraman as our guest, an experienced product manager lead at Facebook who has also served in YouTube, Spotify, and WeWork. He started his career as a software engineer after graduating from UC Berkeley with a bachelor’s degree in molecular biology, and later shifted to the path of product management. Shiva will first share his unique understanding of the data-driven process and product feature iteration, and platform operation. We will also hear about his insights into the potential risks and future outlook of the data-driven product development process.
+
+## **Data-Driven Iteration**
+
+Product management is an iterative process informed by data from multiple sources. Although product iteration might sound like a phrase specific to tech companies in the information age, it actually came into being long before the birth of the Internet. Modern product management originated in 1931 with a memo written by Neil McElroy at Procter and Gamble. It started as a justification to hire more people as “ Brand man” and later became a cornerstone for the modern concept of brand management, and ultimately product management. According to the memo, McElroy gave the description of the brand man’s responsibilities: tracking the sales, managing the products, advertising, and promotions. A unique point in the memo, was that such responsibilities are accomplished with two methods: field testing and client interaction. The Brand man will learn from the data collected from testing results and the client feedback and then modify their product plans accordingly.
+
+**Shiva:** If you think about traditional CPG, back in the way, a lot of experimentation, a lot of research, et cetera, but eventually you get to a product that sits on a shelf. And then it works, right? Or it doesn’t work, right? And it’s hard to say, hold on, my soap, didn’t smell perfect. I’m going to take those away and put out a new one.
+
+**Ted:** That is the primitive concept of what is called product iteration in the industry of CPG, which means consumer packaged product, but it was still a slow and laborious process back then.   Today, for digital products like mobile and web applications, the product iteration process is accelerated like never before. Product managers now are able to monitor user behavior to analyze data in an accurate and rapid way. They use “buried points”, which are the embedded codes in the interfaces to track the events triggered by users. Our featured speaker, Shiva Rajaraman, who has improved YouTube with its advertisement and search feature, shared his understanding of product iteration back then and now.
+
+**Shiva:** In our world, one of the key things is like, what are these feedback loops and how can you basically roll out a service? How can you roll out software? How can you roll out an ecosystem and keep making it better over time? The internet is largely that you can ship something and keep iterating it, or you can roll something out to one country or one subset of users and see how they react. And there’s no cost to doing that. And you know, for a lot of CPG, if you’re getting it out in the world means getting it into Walmart or Amazon or whatever your ecosystem is . And you have to make that work at scale and make it fully functional. In our world, I think you can basically still make it fully functional, but you have a chance to iterate or try six things at once.
+
+**Ted:** Computational power, cloud services and artificial intelligence are developing rapidly. With the help of that, the product iteration process is evolving into a brand new framework, no matter what form of product or business you’re managing, you cannot avoid being attracted to the trend of digitalizing the management process, a more agile way to get access to data directly from the users. Shiva shared an example of how Disney plus is attaching more importance to collecting data directly from the subscribers to improve the series iteratively.
+
+**Shiva:** Increasingly you’re seeing a lot of people want to get the data about how their customers use products independent of whether it’s software or not. So for example, a Disney now has Disney plus. Disney plus goes directly to the consumer. Disney plus can now see who’s watching what. And they can optimize the types of contents they go after for that consumer base based on what they observe. This is fairly new in the world. You know, it’s not that Procter and gamble can bypass the grocery store tomorrow, nor should they. But they are eager to get more direct feedback about their products and how people are using them. So they’ve done that through research in the past, but increasingly people want direct channels so they can see that commerce activity themselves and get the data. That’s a really a big shift, which is how by going direct to consumer, I can get that data and understand it.
+
+**Ted:** Digital products nowadays are not confined to a standalone software or a mobile app that serves a detailed function. More and more products are developing into a platform where different stakeholders would interact and engage in more complex behavior. How might product managers take care of large scale platforms and communities with data insights?
+
+## **Data-Driven Platform Management**
+
+**Shuyang:** A good platform, needs data to understand the user’s needs, obtaining user feedback, and that evaluates whether the product is successful. Before product design, we need to analyze user behavior through data and the analysis. It was there’s pain points. When the product gets full launch, we could use user’s path to see whether the user can’t achieve their goals.
+
+After the product goes online for some time. We can learn about the retention of users through data analysis for iteration. Only through data analysis could we build an online platform, listen to the voice of users and the optimize the online platform. Shiva used WeWork as an example to show how they use data to find the pain points and get solutions.
+
+**Shiva:** Let’s talk about it from a capability. The key capability we hadn’t, WeWork was like an incredible capacity to design things ? So,  for a period of time , WeWork with launching a building a week .
+
+And huge expansion, what the real capability there is that we work had the ability to look at a base building, go in there and quickly design the layout, but you could go in and rechange, you could change things on a weekend and maybe you didn’t get it right. Maybe it didn’t get enough conference rooms.
+
+You could add one. That was one of the key advantages at WeWork cause that you’re the operator and the designer . That’s unusual in the world of physical, real estate. So by putting those two things together, could we use data that had to be privacy safe.  We don’t want to see everyone going everywhere as an individual, but  are people using this common space.
+
+Is it that more people want to use the common space, but you know, you see effectively 20 dots there and then you see. 10 dots walking up and walking away because they couldn’t find a place to sit. Maybe you should think about either making that more dense or expanding it or whatever the solution by feet.
+
+Because we were an operator and a designer, we could go and make those changes. Right? Like that was the key thing. And _so I think one of the key things, when you look at like using data, you want to match that data or those insights you get to capabilities you might have._
+
+**Shuyang:** In the process of digitalization in the real world, data-driven product design is happening and that even makes traditional jobs glow with new vitality. In WeWork, architects and the developers collaborate closely to understand the user behaviors through data analysis and the optimized space design. Thanks to the platform ,designers care more about data and technology and become a new design practice —— data driven design.
+
+**Shiva:** I was at, we work, I was the CTO there. We obviously had a lot of wild stuff going on, but generally. We would hire  architects and then put them right next to software engineers and say, go figure out what you need to build because  we were opening up two buildings a week.
+
+For two years straight that’s crazy. And the design, it was not cookie cutter. Each one had its own art and graphics and layouts . And of course you inherit the base building. So. You have constraints there too. We didn’t build our buildings. Right. We remodeled them. So just getting to that pace meant that the software that existed today was not bad.
+
+So not for us. It didn’t have a memory for us. It didn’t collect data. So we had to put those two things together. So _for those architects, though, they all basically had their first true immersion and technology and how technology works and it’s very different__._ So it was very bumpy for some, but all of them who’ve moved on from WeWork or still at,WeWork I think, are very thankful of that, that experience because they got to design the tools for the first time that they use. And they got to see that what software engineering and AI and ML can do for their profession, that was additive. So you put those two things together is really exciting. So I’m just a big believer in stumbling around trying to find something you love, but people first never put product above people.
+
+## **Trade-offs**
+
+**Ted:** Fast-paced data analysis is the tool to ensure that product iteration is carried out in an efficient manner. It also provides a unique perspective for product managers to strike a balance for product platforms. Data empowers product managers as analysts. Does rigorous data analysis guarantee sensible decisions in a product management process? What are some factors that product managers should be careful about when they’re dealing with data?
+
+First of, availability bias. In daily life, people tend to consider the factors that are easier to recall or measure to be of greater importance or consequences. This is called an availability bias. Remember the statistics 101 lecture about dependent variables and independent variables? Similar to designing an experiment, product managers conduct A/B testing to evaluate the outcomes of different prototypes by controlling independent variables. Some variables might be easier to measure than others, like user turning rate, daily active user, et cetera, but it is never wise to only
+
+[...truncated]

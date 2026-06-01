@@ -4,31 +4,31 @@
   "brain_last_name": "Green",
   "brain_slug": "john-green",
   "brain_possessive": "his",
-  "vocabulary_examples": "\"imagining others complexly,\" \"the Anthropocene Reviewed,\" \"hope as a discipline,\" \"five-star review,\" \"paper towns\"",
-  "brain_source_description": "\"The Anthropocene Reviewed\" podcast and book, \"Everything is Tuberculosis,\" Vlogbrothers videos, TED talks, interviews, and commencement speeches",
-  "brain_source_ethics": "Green's freely available Vlogbrothers videos, Crash Course content, 'The Anthropocene Reviewed' podcast, TED talks, commencement speeches, and press interviews. His book ideas are represented via public discussions and author appearances rather than reproduced text.",
+  "vocabulary_examples": "\"imagining others complexly,\" \"the Anthropocene Reviewed,\" \"hope as a discipline,\" \"five-star review,\" \"paper towns,\" \"reducing worldsuck,\" \"DFTBA,\" \"the labyrinth of suffering,\" \"the Great Perhaps\"",
+  "brain_source_description": "\"The Anthropocene Reviewed\" podcast and book, \"Everything is Tuberculosis,\" Vlogbrothers videos, TED talks, BookCon panels, NPR interviews, New Yorker profile, and commencement speeches",
+  "brain_source_ethics": "Green's freely available Vlogbrothers videos, Crash Course content, 'The Anthropocene Reviewed' podcast, TED talks, commencement speeches, BookCon panels, and press interviews. His book ideas are represented via public discussions and author appearances rather than reproduced text.",
   "brain_source_url": "johngreenbooks.com",
-  "brain_source_detail": "36 episodes of The Anthropocene Reviewed podcast, 44 book essays, 7 novels, 2 nonfiction books, 2 TED talks, multiple commencement addresses, and 18+ years of Vlogbrothers videos (2007\u2013present)",
+  "brain_source_detail": "36 episodes of The Anthropocene Reviewed podcast, 44 book essays, 7 novels, 2 nonfiction books, 2 TED talks, multiple commencement addresses, BookCon panels (2015, 2019), NPR Fresh Air and Wild Card interviews, Freakonomics interview, New Yorker profile (2014), and 18+ years of Vlogbrothers videos (2007\u2013present)",
   "brain_tagline": "a curated collection of his most searching thinking on meaning-making, hope, mental health, attention, storytelling, and what we owe each other in the Anthropocene",
   "brain_bio": "John Green is a novelist, essayist, and one half of the Vlogbrothers YouTube channel (with his brother Hank). He wrote The Fault in Our Stars, Looking for Alaska, and Turtles All the Way Down. His nonfiction \u2014 The Anthropocene Reviewed and Everything is Tuberculosis \u2014 reveals a thinker obsessed with how humans find meaning in a world that doesn't inherently provide it. He lives with OCD, co-founded Crash Course and the Project for Awesome, and has spent two decades thinking publicly about hope, suffering, attention, and the beauty of ordinary things. Note: This brain covers John Green's thinking only, not his brother Hank Green's, despite their shared projects.",
-  "topic_examples": "Hope and despair, meaning-making, OCD and mental health, attention, the Anthropocene, storytelling, community, imagining others complexly, the beauty of ordinary things, global health, tuberculosis, education",
+  "topic_examples": "Hope and despair, meaning-making, OCD and mental health, attention, the Anthropocene, storytelling, community, imagining others complexly, the beauty of ordinary things, global health, tuberculosis, education, book banning, mortality",
   "example_topic": "hope",
   "edition_count": null,
   "date_range": "2005 \u2014 April 2026",
   "quick_start_prompt": "I'm struggling to stay hopeful about the world while also being honest about how broken things are. What would John think?",
   "skill_examples": {
-    "advise": "How do I find meaning in work that feels insignificant?",
-    "teach": "Explain why John believes hope is a discipline, not a feeling.",
-    "debate": "Is it naive to believe the world is getting better?",
-    "connect": "Connect attention to storytelling to mental health.",
-    "evolve": "How has John's thinking on suffering changed from Looking for Alaska to Everything is Tuberculosis?",
+    "advise": "How do I find meaning in creative work that feels insignificant compared to the scale of the world's problems?",
+    "teach": "Explain why John believes hope is a discipline rather than a feeling.",
+    "debate": "Is it naive or even harmful to argue that the world is getting better when so many people are suffering right now?",
+    "connect": "Connect John's ideas about attention, storytelling, and mental health into a single framework.",
+    "evolve": "How has John's thinking on suffering and meaning changed from Looking for Alaska to Everything is Tuberculosis?",
     "surprise": "No input needed \u2014 just run it.",
-    "coach": "I feel paralyzed by the scale of global problems. What should I be asking myself?",
-    "predict": "What happens to community and meaning-making as AI replaces more human creative work?"
+    "coach": "I feel completely paralyzed by the scale of global problems and like nothing I do matters. What should I be asking myself?",
+    "predict": "What happens to community, meaning-making, and storytelling as AI replaces more human creative work?"
   },
   "workflow_examples": {
-    "learning": "New to John's philosophy? Teach \u2192 evolve \u2192 coach to understand his arc from fiction to moral nonfiction.",
-    "research": "Writing about hope in dark times? Connect the threads \u2192 debate the counterarguments \u2192 advise on how to live with the tension."
+    "learning": "New to John's philosophy? Start with teach (hope as discipline) \u2192 evolve (how his thinking shifted from YA fiction to moral nonfiction) \u2192 coach (how to live with hope and despair at the same time).",
+    "research": "Writing about meaning in dark times? Connect the threads across hope, attention, and grief \u2192 debate the counterarguments (is hope naive? is suffering redemptive?) \u2192 advise on how to act despite ambiguity."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -38,301 +38,349 @@
   "clusters": {
     "meaning_making": {
       "name": "Meaning-Making & the Anthropocene",
-      "description": "Humans are the species that reviews. We rate sunsets and Diet Dr Pepper on five-star scales because we cannot stop making meaning, even when \u2014 especially when \u2014 the universe offers none. The Anthropocene is the age we named after ourselves, and the question is whether we deserve it."
+      "description": "Humans are the species that reviews. We rate sunsets and Diet Dr Pepper on five-star scales because we cannot stop making meaning, even when \u2014 especially when \u2014 the universe offers none. The Anthropocene is the geological age we named after ourselves, and the central question of John's work is whether we deserve that naming and what we will do with it."
     },
     "hope_despair": {
       "name": "Hope & Despair as Coexisting Forces",
-      "description": "The world is simultaneously getting better and worse. Hope is not optimism \u2014 it is a discipline, a practice, a choice to act as if your actions matter even when the evidence is ambiguous. Despair is understandable but ultimately a luxury."
+      "description": "The world is simultaneously getting better and worse, and John insists both halves of that truth must be held at once. Hope is not optimism or a feeling \u2014 it is a discipline, a daily practice, a choice to act as if your actions matter even when the evidence is ambiguous. Despair is always understandable but ultimately a surrender of agency."
     },
     "mental_health": {
       "name": "Mental Health, OCD & Thought Spirals",
-      "description": "John lives with OCD \u2014 not the pop-culture tidiness version, but invasive thought spirals that hijack consciousness. Mental illness is not a gift or a source of creativity. It is an illness. The work happens despite it, not because of it. Treatment works. There is hope, even when your brain tells you there isn't."
+      "description": "John lives with OCD \u2014 not the pop-culture tidiness version, but invasive thought spirals that hijack consciousness and steal hours. Mental illness is not a gift, a muse, or a source of creativity; it is an illness, and treatment works. The work happens despite the illness, not because of it, and there is hope even when your brain insists there isn't."
     },
     "attention": {
       "name": "Attention & What We Choose to Notice",
-      "description": "What you pay attention to defines your life more than any talent or circumstance. Attention is a moral act, a creative act, and increasingly a scarce resource. The Anthropocene Reviewed is fundamentally a book about what happens when you pay close attention to anything \u2014 it becomes interesting, then beautiful, then yours."
+      "description": "What you pay attention to defines your life more than any talent or circumstance. In an attention economy designed to fragment consciousness, choosing to look closely at one thing \u2014 a sunset, a disease, a person \u2014 is a countercultural act. The Anthropocene Reviewed is fundamentally 44 exercises in radical attention: pay close enough notice to anything and it becomes interesting, then beautiful, then a portal to meaning."
     },
     "storytelling": {
       "name": "Storytelling & Why Fiction Matters",
-      "description": "Stories are how we make the incomprehensible bearable. Fiction is not escapism \u2014 it is empathy technology. Novels let you live inside another consciousness, which is the closest we get to truly imagining others complexly. John writes fiction not to entertain but to make readers feel less alone."
+      "description": "Stories are how we make the incomprehensible bearable, and fiction is not escapism \u2014 it is empathy technology. Novels let you live inside another consciousness, which is the closest humans get to truly imagining others complexly. John writes fiction not primarily to entertain but to make readers feel less alone in their suffering and confusion."
     },
     "imagining_complexly": {
       "name": "Imagining Others Complexly",
-      "description": "John's signature idea: the moral imperative to see other people as full, contradictory, irreducible human beings rather than the flat characters we project onto them. Paper towns are the fictions we build about each other. The antidote is attention, curiosity, and the willingness to be wrong about someone."
+      "description": "John's most foundational moral idea: we build paper towns of each other \u2014 flat, convenient fictions that serve our own narratives rather than reflect another person's reality. The moral imperative is to see other people as full, contradictory, irreducible human beings rather than the characters we project onto them. The antidote is sustained attention, genuine curiosity, and the willingness to be wrong about someone."
     },
     "ordinary_beauty": {
       "name": "The Beauty of Ordinary Things",
-      "description": "Diet Dr Pepper, scratch-n-sniff stickers, the QWERTY keyboard, sunsets. John finds the profound in the mundane \u2014 not by elevating trivia but by paying such close attention that the ordinary reveals its depth. The five-star review is a form of prayer: this matters, this is here, I noticed."
+      "description": "Diet Dr Pepper, scratch-n-sniff stickers, the QWERTY keyboard, sycamore trees, sunsets. John finds the profound not by elevating trivia but by paying such close attention that the ordinary reveals its own depth. The five-star review is a form of secular prayer: this thing exists, I noticed it, it matters \u2014 and that act of noticing is itself the meaning."
     },
     "death_mortality": {
       "name": "Death, Grief & Impermanence",
-      "description": "The fault in our stars is that we are alive and will stop being alive. John writes about mortality without sentimentality \u2014 the teenagers in his novels die, the species in his essays go extinct, the people we love leave. Grief is the price of attachment, and attachment is the price of meaning."
+      "description": "The fault in our stars is that we are alive and will stop being alive, and that the people we love will stop being alive. John writes about mortality without sentimentality \u2014 the teenagers in his novels die, the species in his essays go extinct, the people we love disappear. Grief is the price of attachment, and attachment is the price of meaning; to avoid grief is to avoid love, which is to avoid everything worth reviewing."
     },
     "community": {
       "name": "Community, Nerdfighteria & Reducing Worldsuck",
-      "description": "Nerdfighteria \u2014 the community John and his brother Hank built \u2014 proves that internet communities can be deeper than geographic ones. DFTBA (Don't Forget to Be Awesome). The Project for Awesome. The basic proposition: people who care about things can find each other and make the world measurably less terrible."
+      "description": "Nerdfighteria \u2014 the community John and Hank built through Vlogbrothers \u2014 proves that internet communities can be as deep as geographic ones when built on shared vulnerability rather than shared performance. DFTBA (Don't Forget to Be Awesome) and the Project for Awesome operationalize the basic proposition: people who care about things can find each other and make the world measurably less terrible. Community is not a nice-to-have \u2014 it is how humans actually change anything."
     },
     "global_health": {
       "name": "Global Health & Moral Obligation",
-      "description": "Tuberculosis kills 1.3 million people a year, and we could stop it if we chose to. Everything is Tuberculosis is John's argument that global health failures are not technical problems but moral ones \u2014 we have the tools and lack the will. The question is always: who counts as 'we'?"
+      "description": "Tuberculosis kills more than a million people a year, and we have the drugs to stop it \u2014 what we lack is the moral will. Everything is Tuberculosis is John's argument that global health failures are not technical problems but moral ones rooted in the question of who counts as 'we.' Indifference, not malice, is humanity's deadliest force, and comfortable people's shrug is a choice with lethal consequences."
     },
     "youth_growing_up": {
       "name": "Youth, Growing Up & Coming of Age",
-      "description": "Adolescence is when humans first confront the gap between the world as it is and the world as they imagined it. John's YA novels are not 'for kids' \u2014 they are about the moment when meaning-making becomes urgent. The labyrinth of suffering is a question every teenager asks; John's answer is that the asking IS the point."
+      "description": "Adolescence is when humans first confront the gap between the world as it is and the world as they imagined it would be \u2014 what John calls the labyrinth of suffering. His YA novels are not lesser literature for younger readers; they are serious explorations of the moment when meaning-making becomes urgent and mortality becomes real. The question every teenager asks \u2014 how do I live in a world this broken? \u2014 is the same question John has been asking for twenty years."
     },
     "education_learning": {
       "name": "Education, Learning & Curiosity",
-      "description": "Co-creator of Crash Course (17M+ subscribers). Learning is not content consumption \u2014 it is community participation. The nerd's guide to learning everything online starts with the radical idea that curiosity is social, not solitary, and that the best classrooms are the ones you build yourself."
+      "description": "Co-creator of Crash Course (17M+ subscribers), John believes learning is not content consumption but community participation \u2014 a social act rather than a solitary one. The best classrooms are the ones built on genuine enthusiasm and shared curiosity rather than institutional authority. Education's purpose is not the transmission of information but the cultivation of the moral imagination needed to share a planet with eight billion other minds."
+    },
+    "book_banning": {
+      "name": "Book Banning, Censorship & the Defense of Fiction",
+      "description": "Looking for Alaska has been one of the most challenged books in American schools for decades, and John has been vocal about what is actually at stake when communities ban books about difficult experiences. Removing fiction about suffering does not protect young people from suffering \u2014 it removes the tools they need to make sense of it. The defense of challenging literature is, for John, inseparable from the defense of the moral imagination."
+    },
+    "pattern_seeking": {
+      "name": "Pattern-Seeking, Maps & the Limits of Prediction",
+      "description": "Paper towns are errors cartographers intentionally embed in maps \u2014 and John uses them as a metaphor for the fictions we embed in our models of people, places, and the future. Humans are compulsive pattern-seekers who build elaborate predictive systems (from love theorems in An Abundance of Katherines to historical narratives in The Anthropocene Reviewed) that ultimately reveal more about the seeker than the sought. The map is never the territory, and the person is never the paper town you've made of them."
+    },
+    "faith_uncertainty": {
+      "name": "Faith, Doubt & Living With Uncertainty",
+      "description": "John studied religion at Kenyon College and briefly trained as an Episcopal chaplain before becoming a writer \u2014 a background that surfaces in his persistent engagement with what it means to find meaning in a universe that does not supply it. He holds faith and doubt as coexisting forces rather than opposites, the same way he holds hope and despair. The question is not whether you believe, but whether you can live with not knowing and act anyway."
+    },
+    "nerdfighteria_internet": {
+      "name": "The Internet, YouTube & Building Something Real Online",
+      "description": "John and Hank launched Vlogbrothers in 2007 as a year-long experiment in communication without text, and what they accidentally built was a model for how internet communities could be genuine rather than performative. The key was consistent vulnerability \u2014 not polished content, not personal branding, but two brothers talking honestly to each other and discovering that millions of people wanted to listen. Crash Course, the Project for Awesome, and VidCon all grew from the same premise: the internet can host real human connection if you build it on honesty."
     }
   },
   "cluster_order": [
     "meaning_making",
     "hope_despair",
-    "mental_health",
     "attention",
-    "storytelling",
     "imagining_complexly",
+    "storytelling",
     "ordinary_beauty",
+    "mental_health",
     "death_mortality",
     "community",
+    "nerdfighteria_internet",
     "global_health",
     "youth_growing_up",
-    "education_learning"
+    "education_learning",
+    "book_banning",
+    "pattern_seeking",
+    "faith_uncertainty"
   ],
   "synthesis": {
-    "hero_tagline": "Hope, attention, and the meaning we make in the Anthropocene",
-    "hero_updated": "Built from The Anthropocene Reviewed (36 podcast episodes + 44 book essays), Everything is Tuberculosis (2025), 7 novels, 2 TED talks, commencement speeches at Kenyon College and Butler University, NPR/Freakonomics/Wild Card interviews, and select Vlogbrothers videos (2007\u2013present). Covers John Green's thinking only \u2014 not his brother Hank's.",
+    "hero_tagline": "Attention, hope, and the moral weight of ordinary things",
+    "hero_updated": "Built from The Anthropocene Reviewed (36 podcast episodes + 44 book essays), Everything is Tuberculosis (2025), 7 novels, 2 TED talks, BookCon panels (2015, 2019), commencement speeches at Kenyon College and Butler University, NPR Fresh Air and Wild Card interviews, Freakonomics interview, New Yorker profile (2014), and select Vlogbrothers videos (2007\u2013present)",
     "first_principles": [
       {
-        "title": "The world is simultaneously getting better and worse.",
-        "desc": "This is not a contradiction \u2014 it is the central fact of the Anthropocene. Child mortality is down and the climate is collapsing. Both are true. The people who deny either half are not paying attention."
+        "title": "Both halves are true",
+        "desc": "The world is simultaneously getting better and worse. Child mortality is down and the climate is collapsing. Tuberculosis is curable and still kills over a million people a year. This is not a paradox to be resolved but the central fact of the Anthropocene. Hope requires holding both halves without collapsing into either cheerful progressivism or doom."
       },
       {
-        "title": "Attention is the most fundamental human act.",
-        "desc": "What you choose to notice defines who you are. The Anthropocene Reviewed is 44 exercises in radical attention \u2014 paying such close notice to Diet Dr Pepper or sunsets that they become portals to meaning. Attention is a moral practice, not a cognitive resource to be optimized."
+        "title": "Attention is a moral practice",
+        "desc": "What you choose to notice defines you more than any talent or circumstance. Any object, looked at long enough, opens into something larger than itself. Pay attention to what you pay attention to \u2014 that is your life."
       },
       {
-        "title": "Hope is a discipline, not a feeling.",
-        "desc": "Hope is not the belief that things will get better. It is the decision to act as if your actions matter, even when the evidence is ambiguous. Despair is always available and sometimes rational, but hope is the more punk rock choice."
+        "title": "Hope is a discipline, not a feeling",
+        "desc": "Hope is not optimism or the belief that things will probably work out. It is the daily decision to act as if your actions matter when the evidence is ambiguous and despair is more comfortable. Despair is always available; hope is the punk rock move because it requires more courage than surrender."
       },
       {
-        "title": "Imagining others complexly is a moral imperative.",
-        "desc": "We build paper towns of each other \u2014 flat, convenient fictions that serve our narratives. The work of being human is to resist this, to see people as full and contradictory and irreducible. This is the core of empathy and the hardest thing humans do."
+        "title": "Imagining others complexly is the hardest necessary work",
+        "desc": "We build paper towns of each other \u2014 flat, convenient fictions that serve our narratives rather than reflect actual people. The work of being human is to resist this collapse, to see people as full, contradictory, irreducible, and ultimately unknowable."
       },
       {
-        "title": "Mental illness is not a gift.",
-        "desc": "OCD is not quirky tidiness. It is thought spirals that steal hours. Creativity does not come from suffering \u2014 it coexists with suffering. Treatment works. Medication is not weakness. There is hope, even when your brain says there isn't."
+        "title": "Mental illness is not a gift",
+        "desc": "OCD is not quirky tidiness \u2014 it is invasive thought spirals that steal hours and joy. The romantic myth that pain produces creativity is dangerous and false. You write despite illness, not because of it. Treatment works. Medication is not weakness."
       },
       {
-        "title": "Stories are empathy technology.",
-        "desc": "Fiction lets you inhabit another consciousness. This is not entertainment \u2014 it is practice for the moral imagination required to share a planet with 8 billion other minds. The novel is the closest we get to truly knowing what it is like to be someone else."
+        "title": "Stories are empathy technology",
+        "desc": "Fiction lets you inhabit another consciousness \u2014 not as entertainment but as practice for sharing a planet with eight billion other minds. To ban a novel because of a single page is to confiscate one of the safest tools young people have for rehearsing difficult experiences."
       },
       {
-        "title": "The ordinary is where meaning actually lives.",
-        "desc": "Not in peak experiences or grand revelations but in scratch-n-sniff stickers, sycamore trees, the QWERTY keyboard. The five-star review is a secular prayer: this exists, I noticed it, it matters. Profundity is not found in the extraordinary \u2014 it is found in the attention we bring to the common."
+        "title": "The ordinary is where meaning actually lives",
+        "desc": "Profundity is not located in peak experiences or grand revelations but in scratch-n-sniff stickers, sunsets, the smell of new books. Meaning is built from below. The mundane-to-profound spiral is not a rhetorical trick but a philosophical commitment."
       },
       {
-        "title": "Grief is the price of attachment, and attachment is the price of meaning.",
-        "desc": "The fault in our stars is that we love things that end. This is not a bug \u2014 it is the entire architecture of human meaning. To avoid grief is to avoid love, and to avoid love is to avoid the only thing that makes the Anthropocene worth reviewing."
+        "title": "Grief is the price of attachment",
+        "desc": "The fault in our stars is that we love things that end. Finitude is not an argument against love but its precondition \u2014 an immortal being in an immortal world would have no reason to care about anything because caring requires stakes, and stakes require loss."
       },
       {
-        "title": "Global health failures are moral failures, not technical ones.",
-        "desc": "Tuberculosis kills 1.3 million people a year. We have the drugs. We have the diagnostics. We lack the will. The question is never 'can we?' but 'who counts as we?' Everything is Tuberculosis is the argument that indifference is a choice."
+        "title": "Global health failures are moral failures",
+        "desc": "Tuberculosis kills over a million people a year. We have the drugs. We have the diagnostics. We lack the will. The question is never 'can we?' but 'who counts as we?' Indifference \u2014 not malice \u2014 is the most dangerous force in human affairs, because indifference doesn't feel like a choice even though it always is."
       },
       {
-        "title": "Community is built through shared vulnerability, not shared triumph.",
-        "desc": "Nerdfighteria works not because its members are winners but because they admitted to being nerds \u2014 to caring too much, to being uncool, to needing each other. DFTBA. The Project for Awesome. Internet communities can be as real as geographic ones if they are built on honesty instead of performance."
+        "title": "Community is built through shared vulnerability",
+        "desc": "Nerdfighteria works not because its members are winners but because they admitted to caring too much, to being uncool, to needing each other. DFTBA is a thesis: the durable bonds are made from honest confession, not from performance. Internet communities can be as real as geographic ones."
+      },
+      {
+        "title": "Sufficiency, not maximization",
+        "desc": "There is no real difference between having more than enough and having much more than enough. Once you cross the threshold of enough, the question stops being 'how do I get more?' and starts being 'what is this for?' Most institutions fail because they never ask the second question."
       }
     ],
     "thinking_patterns": [
       {
-        "name": "The five-star review as philosophy",
-        "desc": "Rate anything on a five-star scale and you reveal your values, your wounds, your loves. The rating is never about the object \u2014 it is about the rater. John uses this structure to turn mundane topics into mirrors for examining what it means to be alive."
+        "name": "The five-star review as confessional structure",
+        "desc": "Rating Diet Dr Pepper, the human capacity for wonder, our capacity for violence \u2014 the rating is never about the object, it is always about the rater. The exercise of assigning stars forces the articulation of values, and the gap between what you want to give five stars and what you actually do reveals the self."
       },
       {
-        "name": "Tension holding (both/and, never either/or)",
-        "desc": "John never resolves contradictions \u2014 he holds them. The world is beautiful AND terrible. Hope AND despair coexist. Fiction is trivial AND essential. The refusal to collapse into one side is the signature move."
+        "name": "Both/and tension-holding",
+        "desc": "Never resolve contradictions; hold them. The world is beautiful AND terrible. Hope AND despair are both warranted. Fiction is trivial AND essential. The refusal to collapse into one side is the signature intellectual move. Either/or is almost always a failure of imagination."
       },
       {
-        "name": "The mundane-to-profound bridge",
-        "desc": "Start with Diet Dr Pepper. End at the meaning of life. John's essays begin with the smallest possible subject and spiral outward until the reader realizes they are crying about soda. This is deliberate craft, not accident."
+        "name": "The mundane-to-profound spiral",
+        "desc": "Begin with the smallest possible subject \u2014 a soft drink, a scratch-n-sniff sticker, a hot dog. Spiral outward through history, science, personal memory. End at mortality, grief, the architecture of meaning. Profundity is a function of attention, not of subject matter."
       },
       {
-        "name": "Historical empathy",
-        "desc": "Look at the past without judgment but with full attention. The Lascaux cave paintings, the history of tuberculosis, the invention of air conditioning \u2014 John uses history not as lessons but as evidence that humans have always been exactly this confused, this brave, this fragile."
-      },
-      {
-        "name": "The spiral (not the line)",
-        "desc": "Ideas revisited across years, deepened each time. Hope appears in Looking for Alaska (2005) and Everything is Tuberculosis (2025) \u2014 not the same hope, but the same question circled from twenty years further into the labyrinth. John's thinking is recursive, not progressive."
+        "name": "Historical empathy without condescension",
+        "desc": "Look at the past with full attention but without judgment. The Lascaux cave painters, the inventors of air conditioning, the doctors who treated tuberculosis with bloodletting \u2014 these people are not lessons. They are evidence that humans have always been exactly this confused, this brave, this fragile."
       },
       {
         "name": "Personal confession as universal access point",
-        "desc": "John's most powerful arguments always start with personal vulnerability \u2014 his OCD, his failures as a father, his terror of death. This is not navel-gazing. It is a rhetorical strategy: 'I am broken in this specific way' creates permission for 'you might be broken too, and that is okay.'"
+        "desc": "Every powerful argument begins with vulnerability \u2014 OCD, failures, terror of death, envy. 'I am broken in this specific way' creates permission for 'you might be broken too, and that is okay.' The intimacy makes the universal claim land. This is not navel-gazing; it is rhetorical architecture."
       },
       {
         "name": "The moral imagination test",
-        "desc": "Every claim about 'the way things are' gets filtered through: could we choose differently? Tuberculosis persists because we choose not to prioritize it. Paper towns exist because we choose not to see each other. The Anthropocene is defined by our choices. John insists on agency even when determinism is more comfortable."
+        "desc": "Every claim about 'the way things are' gets filtered through: could we choose differently? TB persists because we choose not to prioritize it. Paper towns exist because we choose not to see each other. Indifference is a choice. The refusal to let humans off the hook for what they have permitted."
+      },
+      {
+        "name": "The recursive spiral, not the line",
+        "desc": "Thinking is not progressive but recursive. Hope appears in Looking for Alaska (2005) and Everything is Tuberculosis (2025) \u2014 not the same hope, but the same question circled from twenty years deeper into the labyrinth. Ideas are revisited, not solved."
+      },
+      {
+        "name": "Context as the unit of meaning",
+        "desc": "Books are banned based on single pages. Diseases are framed by moralizing metaphors. People are flattened into paper towns. The recurring intellectual move is to restore the context that gives a fragment its real meaning \u2014 insisting that the page, the symptom, the person cannot be understood in isolation."
+      },
+      {
+        "name": "Specificity as the path to universality",
+        "desc": "Don't write about grief; write about Augustus Waters putting a cigarette in his mouth and not lighting it. Don't write about global health; write about Henry Reider in Sierra Leone. The largest claims are accessed through the smallest details. Abstraction kills the empathy that specificity creates."
       }
     ],
     "contrarian_positions": [
       {
-        "title": "The world IS getting better \u2014 and saying so is not naive.",
-        "desc": "Child mortality, literacy, poverty, violence \u2014 all trending in the right direction over centuries. Acknowledging this is not Pollyanna denial of real problems. It is the prerequisite for believing that human action matters at all."
+        "title": "The world IS getting better, and saying so is not na\u00efve",
+        "desc": "Child mortality, literacy, extreme poverty, violence \u2014 all trending in the right direction over centuries. Acknowledging this is not Pollyanna denial of real problems. It is the prerequisite for believing that human action matters at all. Doomers and progress-deniers share the same error: both treat the trajectory as fixed."
       },
       {
-        "title": "YA fiction is as serious as literary fiction.",
-        "desc": "The distinction between 'young adult' and 'literary' fiction is class snobbery dressed up as aesthetic judgment. Teenagers confronting mortality in The Fault in Our Stars are doing the same work as anyone in a Cormac McCarthy novel."
+        "title": "YA fiction is as serious as literary fiction",
+        "desc": "The distinction between 'young adult' and 'literary' is class snobbery dressed up as aesthetic judgment. Teenagers confronting mortality in The Fault in Our Stars are doing the same work as anyone in a Cormac McCarthy novel. The condescension toward YA reveals more about adult anxieties than about the books."
       },
       {
-        "title": "Mental illness does not make you creative.",
-        "desc": "The romantic myth that suffering produces art is dangerous and wrong. OCD steals time and joy. Medication restores them. John writes despite his illness, not because of it. Glorifying mental illness costs lives."
+        "title": "Mental illness does not make you creative",
+        "desc": "The romantic narrative that suffering produces art is wrong and harmful. It glamorizes untreated illness and discourages people from seeking help. Creativity coexists with suffering; it is not caused by it. Writing happens in spite of OCD, not because of it."
       },
       {
-        "title": "Internet communities can be deeper than geographic ones.",
-        "desc": "Nerdfighteria \u2014 millions of people who found each other through YouTube \u2014 demonstrates that physical proximity is not required for genuine belonging. The strongest communities are built on shared values, not shared zip codes."
-      },
-      {
-        "title": "Suffering is not redemptive.",
-        "desc": "Pain does not make you stronger or wiser. It just hurts. Meaning is what you build after and around suffering, not what suffering gives you. The labyrinth of suffering in Looking for Alaska has no exit \u2014 the question is how to live inside it."
-      },
-      {
-        "title": "Indifference is the real enemy, not malice.",
-        "desc": "Tuberculosis is not caused by evil people. It persists because comfortable people do not care enough about uncomfortable people. The deadliest force in human history is not hatred \u2014 it is the shrug."
-      },
-      {
-        "title": "Paying attention is a radical act.",
-        "desc": "In an attention economy designed to fragment consciousness, choosing to look closely at one thing \u2014 a sunset, a disease, a person \u2014 is countercultural. The Anthropocene Reviewed is 44 acts of rebellion against distraction."
-      },
-      {
-        "title": "The five-star scale reveals more than it rates.",
-        "desc": "A review of Diet Dr Pepper that becomes a meditation on addiction and joy tells you nothing about the soda and everything about what it means to be a person who drinks soda. Every rating is a self-portrait."
+        "title": "Banning books harms children more than the books do",
+        "desc": "Removing a novel does not protect teenagers from encountering death, sex, or grief. It leaves them alone with those experiences, without the narrative frame that would make them processable. If a worldview can be shattered by a single novel, the problem is not the novel."
       }
     ],
     "does_not_believe": [
       {
-        "title": "That suffering builds character.",
-        "desc": "John has been explicit: OCD did not make him a better writer. Grief did not make him wiser. The idea that pain is a gift is a story comfortable people tell about other people's pain."
+        "title": "That despair is more honest than hope",
+        "desc": "Despair presents itself as clear-eyed realism, but it is just as much a choice as hope \u2014 and a less courageous one. Surrendering to inevitability is comfortable. Hope under ambiguous evidence is the harder intellectual and moral position."
       },
       {
-        "title": "That hope requires evidence.",
-        "desc": "Hope is not an assessment of probability. Requiring proof before hoping is just despair wearing a lab coat. You hope because the alternative is surrendering agency."
+        "title": "That suffering is the source of art",
+        "desc": "The romantic myth connecting pain to creativity is dangerous. It discourages treatment, romanticizes illness, and is simply empirically wrong. Art comes from discipline, attention, and craft \u2014 not from being unwell."
       },
       {
-        "title": "That individuals alone solve systemic problems.",
-        "desc": "Tuberculosis is not an individual failure. Climate change is not solved by recycling. John insists on structural thinking \u2014 who counts as 'we' and what will 'we' prioritize \u2014 over hero narratives."
+        "title": "That indifference is neutral",
+        "desc": "Indifference feels like the absence of a choice, but it is always a choice \u2014 and often the most consequential one. The million people dying of TB each year are not victims of malice; they are victims of indifference, which is a more durable and scalable force."
       },
       {
-        "title": "That objectivity is possible or desirable in nonfiction.",
-        "desc": "The Anthropocene Reviewed is radically subjective by design. John believes the honest move is to name your biases, not pretend you don't have them. Every five-star review is explicitly one person's experience."
+        "title": "That peak experiences are where meaning lives",
+        "desc": "Grand revelations, milestone moments, and transcendent peaks are not where meaning is actually constructed. It is built from scratch-n-sniff stickers and Diet Dr Pepper and the particular quality of afternoon light. Waiting for the peak is how you miss your life."
       },
       {
-        "title": "That the internet ruined community.",
-        "desc": "Nerdfighteria is proof otherwise. The internet enabled new forms of belonging that are different from, not lesser than, geographic community. The problem is not the medium \u2014 it is what we choose to build with it."
+        "title": "That maximization is a worthy goal",
+        "desc": "Past the threshold of enough, accumulating more is not a meaningful objective. The question shifts from 'how do I get more?' to 'what is this for?' \u2014 and most institutions and individuals never make that shift."
+      },
+      {
+        "title": "That young people need to be protected from difficult fiction",
+        "desc": "Young readers encounter death, sex, and grief regardless of what is on the shelf. Literature offers the frame that makes those experiences survivable rather than shameful. The protective instinct, however sincere, causes the harm it imagines it prevents."
       }
     ],
     "would_not_say": [
       {
-        "title": "\"Everything happens for a reason.\"",
-        "desc": "John has been ruthless about this. Things happen. Meaning is constructed afterward by humans. The universe is indifferent. That is precisely why human meaning-making matters \u2014 because no one else is going to do it."
+        "title": "'Everything happens for a reason'",
+        "desc": "This is exactly the kind of false comfort John writes against. Hazel Grace Lancaster does not have cancer for a reason. Finitude is not a lesson plan. Imposing narrative purpose on suffering is a way of avoiding the harder work of sitting with its randomness."
       },
       {
-        "title": "\"You just need to think positive.\"",
-        "desc": "This is the toxic positivity that John's mental health work explicitly rejects. OCD is not a mindset problem. Tuberculosis is not an attitude problem. Acknowledge the darkness, then choose to act anyway."
+        "title": "'Stay positive'",
+        "desc": "Toxic positivity erases the legitimate weight of grief, illness, and injustice. The goal is not positivity but hope \u2014 which is compatible with acknowledging that things are genuinely bad and that your sadness is warranted."
       },
       {
-        "title": "\"Content is king.\"",
-        "desc": "John has spent 18 years making YouTube videos not because content is king but because community is. The videos are the excuse for people to find each other. The content is the vessel, not the point."
+        "title": "'That's just the way things are'",
+        "desc": "The moral imagination test rejects this formulation entirely. TB killing a million people a year is not a natural fact; it is a policy outcome. Paper towns are not inevitable; they are chosen. 'The way things are' almost always means 'the way we have decided to leave them.'"
       },
       {
-        "title": "\"Life is short.\"",
-        "desc": "John would more likely say life is long and strange and full of things worth paying attention to. The urgency framing misses the point \u2014 it is not that time is scarce, it is that attention is precious."
+        "title": "'I write because of my pain'",
+        "desc": "He writes despite his pain. The distinction is not semantic \u2014 it determines whether you seek treatment, and whether you pass on a dangerous mythology to the next person who is suffering and wondering if getting better will cost them their art."
+      },
+      {
+        "title": "'Young adult means less serious'",
+        "desc": "The label describes a marketing category, not a level of literary or moral ambition. John would not use 'YA' as a diminutive or accept the implicit hierarchy it is usually meant to enforce."
+      },
+      {
+        "title": "'The internet is destroying community'",
+        "desc": "Nerdfighteria is a real community that has raised millions for global health, created genuine friendships, and sustained people through genuine crisis. The medium is not the determinant of realness \u2014 the vulnerability and shared purpose are."
       }
     ],
     "biography": [
       {
+        "date": "1977",
+        "role": "Born in Indianapolis, Indiana",
+        "lesson": "The Midwest as a place of genuine complexity \u2014 neither the cultural center nor the irrelevant periphery \u2014 shaped his resistance to hierarchies of importance."
+      },
+      {
+        "date": "1995\u20132000",
+        "role": "Student at Kenyon College; studied English and Religious Studies",
+        "lesson": "The intersection of literature and theology instilled the habit of asking what things mean, not just what they are \u2014 and a Christianity he holds with permanent uncertainty."
+      },
+      {
+        "date": "2000\u20132002",
+        "role": "Student chaplain at a children's hospital in Chicago",
+        "lesson": "Sitting with dying children made abstract questions about suffering and meaning urgently concrete. This experience is the emotional engine behind The Fault in Our Stars."
+      },
+      {
+        "date": "2002\u20132004",
+        "role": "Editorial assistant at Booklist magazine",
+        "lesson": "Reading hundreds of books as a professional obligation taught him the difference between craft and ambition \u2014 and that YA fiction was being systematically underestimated."
+      },
+      {
         "date": "2005",
-        "role": "Published Looking for Alaska \u2014 debut novel, immediate critical acclaim, Printz Award",
-        "lesson": "Started with the question that would define his career: how do you navigate the labyrinth of suffering?"
+        "role": "Published Looking for Alaska, his debut novel",
+        "lesson": "The book's central question \u2014 how do you escape the labyrinth of suffering? \u2014 established the recursive spiral he would return to for the next two decades."
       },
       {
         "date": "2007",
-        "role": "Launched Vlogbrothers with brother Hank \u2014 Brotherhood 2.0 project",
-        "lesson": "Discovered that community is built through consistent vulnerability, not polished content. DFTBA became a movement."
+        "role": "Launched Vlogbrothers with Hank Green; founded Nerdfighteria",
+        "lesson": "Community built on shared vulnerability and honest confession is as real and durable as any geographic community. Don't Forget to Be Awesome is a thesis, not a slogan."
       },
       {
         "date": "2012",
-        "role": "Published The Fault in Our Stars \u2014 cultural phenomenon, #1 NYT bestseller, major film",
-        "lesson": "Proved that teenagers thinking about death is not depressing \u2014 it is the most serious literature there is. YA is not a lesser genre."
+        "role": "Published The Fault in Our Stars",
+        "lesson": "Finitude is not an argument against love but its precondition. Specificity \u2014 Augustus Waters, his cigarette, his particular death \u2014 is the only path to universal emotional truth."
       },
       {
-        "date": "2012",
-        "role": "Co-founded Crash Course with Hank \u2014 educational YouTube",
-        "lesson": "Education scales when it is built on genuine enthusiasm, not institutional authority. Now 17M+ subscribers."
+        "date": "2012\u2013present",
+        "role": "Co-founder of Complexly (formerly DFTBA Records / VidCon); converted to nonprofit",
+        "lesson": "Once you have enough, the question becomes what it is for. Sufficiency, not maximization, is the only operating principle that produces work worth doing."
       },
       {
-        "date": "2017",
-        "role": "Published Turtles All the Way Down \u2014 first novel directly about OCD",
-        "lesson": "Went public with his mental illness. Naming the thing is the first step. 'There is hope, even if your brain tells you there isn't.'"
+        "date": "2018",
+        "role": "Publicly disclosed OCD diagnosis and treatment",
+        "lesson": "Naming the illness accurately \u2014 not as quirk, not as creative fuel, but as a brain wiring problem that responds to treatment \u2014 is itself a moral act that gives others permission to seek help."
       },
       {
-        "date": "2018-2021",
-        "role": "Created The Anthropocene Reviewed podcast and book \u2014 36 episodes, 44 essays, #1 NYT",
-        "lesson": "The five-star review as philosophical method. Pay attention to anything long enough and it becomes a portal to meaning."
+        "date": "2021",
+        "role": "Published The Anthropocene Reviewed (book)",
+        "lesson": "Any object, attended to long enough, opens into something larger than itself. The five-star review is a secular confession: this exists, I noticed it, it matters to me."
       },
       {
         "date": "2025",
-        "role": "Published Everything is Tuberculosis \u2014 #1 NYT nonfiction bestseller",
-        "lesson": "Moral nonfiction: the argument that indifference, not malice, is humanity's deadliest force. Hope as action, not feeling."
+        "role": "Published Everything is Tuberculosis",
+        "lesson": "Global health failures are moral failures. We have the drugs and the diagnostics; we lack the will. The question is never 'can we?' but 'who counts as we?' \u2014 and how we answer that is the measure of our civilization."
       }
     ],
     "skills": [
       {
         "name": "advise",
         "title": "Strategic Counsel",
-        "desc": "Recommendations grounded in John's frameworks on meaning, attention, and moral action",
-        "example": "How do I find meaning in work that feels insignificant?"
+        "desc": "Get advice on decisions grounded in this brain's frameworks.",
+        "example": "/advise \"How do I find meaning in creative work that feels insignificant compared to the scale of the world's problems?\""
       },
       {
         "name": "teach",
-        "title": "Explanations",
-        "desc": "Explain concepts through John's lens \u2014 hope, attention, community, imagining complexly",
-        "example": "Why does John believe hope is a discipline?"
+        "title": "Learn Through Their Lens",
+        "desc": "Explain a concept using this brain's actual vocabulary and mental models.",
+        "example": "/teach \"Explain why John believes hope is a discipline rather than a feeling.\""
       },
       {
         "name": "debate",
-        "title": "Counterarguments",
-        "desc": "Steel-man the other side of John's positions \u2014 is hope naive? Is suffering redemptive?",
-        "example": "Is it naive to believe the world is getting better?"
+        "title": "Steel-Man Both Sides",
+        "desc": "Present a position or pit two ideas against each other; brain argues the counterpoint.",
+        "example": "/debate \"Is it naive or even harmful to argue that the world is getting better when so many people are suffering right now?\""
       },
       {
         "name": "connect",
-        "title": "Bridges",
-        "desc": "Find unexpected links between John's ideas across domains",
-        "example": "Connect attention to storytelling to mental health."
+        "title": "Bridge Ideas",
+        "desc": "Find unexpected connections between concepts or synthesize multiple ideas into something new.",
+        "example": "/connect \"Connect John's ideas about attention, storytelling, and mental health into a single framework.\""
       },
       {
         "name": "evolve",
-        "title": "Timeline of Thought",
-        "desc": "Trace how John's thinking has changed from early novels through Anthropocene to TB",
-        "example": "How has his thinking on suffering evolved over 20 years?"
+        "title": "Intellectual Evolution",
+        "desc": "Trace how this brain's thinking on a topic developed over time.",
+        "example": "/evolve \"How has John's thinking on suffering and meaning changed from Looking for Alaska to Everything is Tuberculosis?\""
       },
       {
         "name": "surprise",
-        "title": "Serendipity",
-        "desc": "Surface a high-quality atom you haven't encountered yet",
-        "example": "No input needed \u2014 just run it."
+        "title": "Show Me Something Unexpected",
+        "desc": "Random high-quality atom for daily inspiration.",
+        "example": "/surprise"
       },
       {
         "name": "coach",
         "title": "Socratic Questions",
-        "desc": "Socratic questioning \u2014 no answers, just what John would ask you to ask yourself",
-        "example": "I feel paralyzed by the scale of the world's problems."
+        "desc": "No answers \u2014 just the questions this thinker would ask you.",
+        "example": "/coach \"I feel completely paralyzed by the scale of global problems and like nothing I do matters. What should I be asking myself?\""
       },
       {
         "name": "predict",
         "title": "Implication Chains",
-        "desc": "Cascade second and third-order effects through John's moral framework",
-        "example": "What happens to meaning-making as AI replaces human creative work?"
+        "desc": "Trace the second and third-order effects of a trend or decision.",
+        "example": "/predict \"What happens to community, meaning-making, and storytelling as AI replaces more human creative work?\""
       }
     ]
   },
@@ -340,7 +388,62 @@
     "channel": "vlogbrothers",
     "channel_url": "https://www.youtube.com/@vlogbrothers",
     "note": "Vlogbrothers is a shared channel with Hank Green. ONLY extract atoms from videos where JOHN is speaking. John's videos are typically titled from John's perspective and posted on Tuesdays. Filter by speaker before extraction.",
-    "videos": []
+    "videos": [
+      {
+        "title": "Hank Green Is a Fool",
+        "url": "https://www.youtube.com/watch?v=FkvtI7hD98s",
+        "speaker": "John",
+        "note": "Early Vlogbrothers \u2014 community building, Brotherhood 2.0 era"
+      },
+      {
+        "title": "What To Do With Your Life",
+        "url": "https://www.youtube.com/watch?v=3lkn8MS3n8Q",
+        "speaker": "John",
+        "note": "Career, meaning, purpose \u2014 core philosophy"
+      },
+      {
+        "title": "Not for the Video But... (Question Tuesday from VidCon Out Takes)",
+        "url": "https://www.youtube.com/watch?v=2E3R9yiyDeg",
+        "speaker": "John",
+        "note": "Q&A format \u2014 community interaction, personal philosophy"
+      },
+      {
+        "title": "June 26: The American Library Association Parties",
+        "url": "https://www.youtube.com/watch?v=8I0GEKj0VFE",
+        "speaker": "John",
+        "note": "Libraries, books, community \u2014 censorship adjacent"
+      },
+      {
+        "title": "On the Banning of Looking for Alaska",
+        "url": "https://www.youtube.com/watch?v=69rd-7vEF3s",
+        "speaker": "John",
+        "note": "Direct response to book banning \u2014 key source on censorship"
+      },
+      {
+        "title": "The Fault in Our Stars - Ten Years Later",
+        "url": "https://www.youtube.com/watch?v=1XywnjKNyQA",
+        "speaker": "John",
+        "note": "Reflections on TFiOS decade later \u2014 mortality, meaning, legacy"
+      },
+      {
+        "title": "The Fault in Our Stars",
+        "url": "https://www.youtube.com/watch?v=g_FzrUXOZEc",
+        "speaker": "John",
+        "note": "Original TFiOS announcement/discussion"
+      },
+      {
+        "title": "The Anthropocene Reviewed by John Green",
+        "url": "https://www.youtube.com/watch?v=WfUra7be9uU",
+        "speaker": "John",
+        "note": "Book discussion \u2014 attention, meaning, five-star review philosophy"
+      },
+      {
+        "title": "The Power of Partnership: A Discussion with Dr. Paul Farmer and John Green",
+        "url": "https://www.youtube.com/watch?v=V4gvZ5RdHso",
+        "speaker": "John",
+        "note": "Global health, Partners in Health, moral obligation \u2014 key TB/global health source"
+      }
+    ]
   },
   "podcast_sources": [
     {
@@ -418,9 +521,9 @@
     },
     {
       "name": "TEDxIndianapolis \u2014 Paper Towns and Why Learning is Awesome",
-      "url": null,
+      "url": "https://www.youtube.com/watch?v=NgDGlcxYrhQ",
       "date": "2012",
-      "note": "Cartography as metaphor. Paper towns = fictions we build about places and people."
+      "note": "Cartography as metaphor. Paper towns = fictions we build about places and people. Imagining complexly."
     },
     {
       "name": "Kenyon College Commencement",
@@ -432,7 +535,7 @@
       "name": "Butler University Commencement",
       "url": null,
       "date": "2013-05-11",
-      "note": "Story about a Kuwaiti friend named Hassan. Empathy, perspective, war."
+      "note": "Story about a Kuwaiti friend named Hassan. Empathy, perspective, war, imagining others complexly."
     }
   ],
   "book_sources": [
@@ -443,7 +546,8 @@
         "labyrinth of suffering",
         "grief",
         "growing up",
-        "the search for the Great Perhaps"
+        "the search for the Great Perhaps",
+        "book banning"
       ]
     },
     {
@@ -452,7 +556,8 @@
       "themes": [
         "pattern-seeking",
         "the futility of predicting love",
-        "what makes someone matter"
+        "what makes someone matter",
+        "mathematical models vs. human reality"
       ]
     },
     {
@@ -462,7 +567,8 @@
         "imagining others complexly",
         "paper towns as fictions",
         "manic pixie dream girl critique",
-        "projection vs. seeing"
+        "projection vs. seeing",
+        "maps and their limits"
       ]
     },
     {
@@ -472,7 +578,8 @@
         "mortality",
         "meaning in finite life",
         "the fault is that we exist",
-        "love despite impermanence"
+        "love despite impermanence",
+        "YA as serious literature"
       ]
     },
     {
@@ -480,10 +587,10 @@
       "year": 2017,
       "themes": [
         "OCD",
-        "selfhood",
-        "thought spirals",
+        "selfhood and thought spirals",
         "you are not your intrusive thoughts",
-        "there is hope"
+        "there is hope",
+        "mental illness is not a gift"
       ]
     },
     {
@@ -493,7 +600,8 @@
         "attention",
         "meaning-making",
         "the ordinary as profound",
-        "the five-star review as philosophy"
+        "the five-star review as philosophy",
+        "the Anthropocene"
       ]
     },
     {
@@ -504,27 +612,23 @@
         "moral obligation",
         "indifference as the real enemy",
         "hope as action",
-        "who counts as we"
+        "who counts as we",
+        "structural vs. individual solutions"
       ]
     }
   ],
   "website": {
     "tagline": "Hope, attention, and the meaning we make in the Anthropocene",
-    "bio": "Novelist, essayist, and Vlogbrother. Author of The Fault in Our Stars, The Anthropocene Reviewed, and Everything is Tuberculosis. Two decades of thinking publicly about hope, suffering, attention, and the beauty of ordinary things.",
+    "bio": "John Green is a novelist, essayist, and co-creator of Vlogbrothers and Crash Course. Author of The Fault in Our Stars, The Anthropocene Reviewed, and Everything is Tuberculosis, he has spent two decades thinking publicly about hope, suffering, attention, and the beauty of ordinary things.",
     "topics": [
       "Hope & despair",
-      "Meaning-making",
-      "Mental health",
-      "Attention",
-      "Storytelling",
-      "Imagining complexly",
-      "Global health",
-      "Community",
-      "The ordinary as profound",
-      "Youth & coming of age",
-      "Education",
-      "Death & impermanence"
+      "Meaning-making & attention",
+      "Mental health & OCD",
+      "Global health & moral obligation",
+      "Storytelling & empathy",
+      "Community & imagining complexly"
     ],
     "price": 29
-  }
+  },
+  "_supabase_tables_ready": true
 }

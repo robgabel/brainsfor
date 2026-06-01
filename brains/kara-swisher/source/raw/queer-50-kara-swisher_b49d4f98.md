@@ -41,6 +41,8 @@ But her opinions, now detailed in [her _New York Times_ column](https://www.nyti
 
 Subscribe to the Daily newsletter.Fast Company's trending stories delivered to you every day
 
+SIGN UP
+
 [Privacy Policy](https://www.mansueto.com/privacy-policy/)
 
 \|

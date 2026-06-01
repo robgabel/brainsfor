@@ -1,201 +1,238 @@
 {
-  "description": "Source material for the Bill Harris brain pack — hand-curated. Bill Harris is a fintech pioneer: ran TurboTax for 10 years, was CEO of Intuit (1999), founding CEO of PayPal/X.com (1999-2000, lasted 5 months alongside Musk and Thiel), founder/CEO of Personal Capital (2009-2019, sold to Empower for $1B at $23B AUM), and now founder/CEO of Evergreen Money / Evergreen Wealth (2024-present). He has founded 11 tech and fintech companies. Core themes: tax-aware investing, fiduciary standard, consumer financial data rights (Dodd-Frank §1033), hybrid AI+human advisory, fintech vs banks. Auto-discovery returned the wrong Bill Harris (omega-3 researcher); this list was researched and compiled by hand.",
-  "brain_slug": "bill-harris",
+  "description": "Source material for the Bill Harris brain pack \u2014 text via Firecrawl, video via yt-dlp.",
+  "brain_slug": "bill-harris-v2",
   "brain_name": "Bill Harris",
-  "discovered_at": "2026-05-07T21:30:00+00:00",
-  "discovery_method": "manual-curation",
+  "discovered_at": "2026-05-31T14:17:43.637891+00:00",
   "sources": [
     {
-      "title": "The Investment Tax Guide: How to Slash Your Taxes (2024 edition)",
-      "type": "book",
-      "priority": "essential",
-      "url": "https://www.amazon.com/Investment-Tax-Guide-Bill-Harris/dp/B0CS9X776F",
-      "notes": "Bill's flagship book on tax-aware investing. Top Ten Tax Strategies — tax loss harvesting, donor advised funds, after-tax vs pre-tax returns. Core voice document for tax/wealth atoms."
+      "title": "Bill Harris Wikipedia",
+      "type": "profile",
+      "priority": "medium",
+      "url": "https://en.wikipedia.org/wiki/Bill_Harris"
     },
     {
-      "title": "Investment Tax Guide, 2017 Edition",
-      "type": "book",
-      "priority": "high",
-      "url": "https://www.amazon.com/Investment-Guide-2017-Bill-Harris/dp/1544700369",
-      "notes": "Earlier edition — useful for tracking how his tax thinking evolved between 2017 and 2024."
-    },
-    {
-      "title": "Thirty Minute Mentors — Episode 255: Former PayPal and Intuit CEO Bill Harris (full transcript)",
+      "title": "Optimal Omega-3 Intake with Dr. Bill Harris",
       "type": "interview",
-      "priority": "essential",
-      "url": "https://www.adammendler.com/blog/bill-harris/",
-      "notes": "Full transcript on Adam Mendler's site. Wide-ranging: leadership, hiring, learning from failure, PayPal chaos with Musk/Thiel, lessons from Scott Cook. Highest-density primary source."
+      "priority": "high",
+      "url": "https://theproof.com/optimal-omega-3-intake-with-bill-harris-phd/"
     },
     {
-      "title": "Thirty Minute Mentors — Episode 255 (audio)",
+      "title": "Omega-3s and Brain Health with Dr. Bill Harris",
+      "type": "interview",
+      "priority": "high",
+      "url": "https://zoe.com/learn/omega-3-with-bill-harris?srsltid=AfmBOoo-vzjttnEVWlhE5GJ7IZdC5hldxWXPKhNyneGtKVidXxQehCgy"
+    },
+    {
+      "title": "OmegaMatters Episode 48 with Dr. Bill Harris",
       "type": "podcast",
       "priority": "high",
-      "url": "https://thirtyminutementors.libsyn.com/episode-255-former-paypal-and-intuit-ceo-bill-harris",
-      "notes": "Audio version of the Adam Mendler interview."
+      "url": "https://omegaquant.com/omegamatters-ep-48/"
     },
     {
-      "title": "Outspoken: Bill Harris — Barefoot Innovation Podcast (Jo Ann Barefoot)",
-      "type": "interview",
-      "priority": "essential",
-      "url": "https://www.jsbarefoot.com/podcasts/2017/5/21/outspoken-bill-harris-ceo-of-personal-capital-and-former-ceo-of-intuit-and-paypal",
-      "notes": "May 2017 — focuses on consumer financial data rights, Dodd-Frank §1033, fiduciary standard. Bill at his most outspoken on policy. Captures Personal Capital era thinking."
-    },
-    {
-      "title": "He Sold Personal Capital for $1 Billion. But Bill Harris Can't Stop Starting Businesses.",
-      "type": "interview",
-      "priority": "essential",
-      "url": "https://www.modus.news/he-sold-personal-capital-for-1-billion-but-bill-harris-cant-stop-starting-businesses/",
-      "notes": "Substantive long-form profile. Covers career arc, Evergreen Money rationale, why he keeps starting companies. Strong narrative source."
-    },
-    {
-      "title": "Bill Harris launches Evergreen Wealth, recalls PayPal 'chaos' with Elon Musk",
-      "type": "interview",
-      "priority": "essential",
-      "url": "https://www.investmentnews.com/ria-news/bill-harris-launches-evergreen-wealth-recalls-paypal-chaos-with-elon-musk/262338",
-      "notes": "InvestmentNews — Evergreen Wealth launch + extensive PayPal-era recollections. Voice quotes on Musk's boldness, Thiel's contrarianism, leadership lessons."
-    },
-    {
-      "title": "Former PayPal CEO Bill Harris on Why He's Launching an RIA",
-      "type": "interview",
-      "priority": "essential",
-      "url": "https://www.thedailyupside.com/advisor/industry-news/former-paypal-ceo-bill-harris-on-why-hes-launching-an-ria/",
-      "notes": "The Daily Upside — Evergreen Wealth thesis, AI + human advisor blend, why pure-robo failed."
-    },
-    {
-      "title": "Ex-PayPal CEO opines on everything from crypto to Cobol",
-      "type": "interview",
-      "priority": "essential",
-      "url": "https://www.paymentsdive.com/news/paypal-intuit-CEO-payments-stablecoins-cryptocurrency-banks/734027/",
-      "notes": "Wide-ranging Payments Dive interview. Stablecoins, banks vs fintechs, legacy systems, crypto skepticism."
-    },
-    {
-      "title": "This fintech launched weeks after Synapse failed. Its CEO is undaunted.",
-      "type": "interview",
-      "priority": "high",
-      "url": "https://www.americanbanker.com/news/this-fintech-launched-weeks-after-synapse-failed-its-ceo-is-undaunted",
-      "notes": "American Banker — Evergreen Money launch context post-Synapse collapse. His view on fintech-bank partnership risk."
-    },
-    {
-      "title": "'Most people are scared of their money': Bill Harris on his new neobank",
-      "type": "interview",
-      "priority": "high",
-      "url": "https://www.americanbanker.com/news/most-people-are-scared-of-their-money-bill-harris-on-his-new-neobank",
-      "notes": "American Banker — about Nirvana Money (2022, his neobank attempt before Evergreen). Behavioral finance angle."
-    },
-    {
-      "title": "Fintechs are banking's Transformers. And banks aren't ready. (op-ed by Bill Harris)",
-      "type": "essay",
-      "priority": "essential",
-      "url": "https://www.americanbanker.com/payments/opinion/fintechs-are-bankings-transformers-and-banks-arent-ready",
-      "notes": "Bill writing in his own voice. Banks-vs-fintechs thesis. Rare first-person essay."
-    },
-    {
-      "title": "Personal Capital CEO Bill Harris Calls Baloney on J.P. Morgan and Intuit (LinkedIn Pulse)",
-      "type": "essay",
-      "priority": "high",
-      "url": "https://www.linkedin.com/pulse/bill-harris-former-ceo-intuit-calls-baloney-jp-morgan-bill-harris",
-      "notes": "Bill writing on consumer financial data access — JPM cutting off Intuit. First-person voice on data rights / Dodd-Frank §1033."
-    },
-    {
-      "title": "How to Slash Your Taxes — Interview with Bill Harris on Financial Sense",
-      "type": "podcast",
-      "priority": "essential",
-      "url": "https://www.financialsense.com/podcast/20850/how-slash-your-taxes-interview-former-paypal-and-turbotax-ceo-bill-harris",
-      "notes": "Long-form podcast on tax strategy. Companion to The Investment Tax Guide book — same material in spoken form."
-    },
-    {
-      "title": "Insights from the former CEO of TurboTax, PayPal, and Personal Capital — Rethink. Financial Advice",
+      "title": "OmegaMatters Episode 38 Part 2 with Dr. Bill Harris",
       "type": "podcast",
       "priority": "high",
-      "url": "https://shows.acast.com/rethinkfa/episodes/insights-from-fintech-ceo-bill-harris",
-      "notes": "Acast podcast on advisor industry trends. Covers his cross-decade view of fintech evolution."
+      "url": "https://omegaquant.com/omegamatters-ep-38-part-2/"
     },
     {
-      "title": "Former Personal Capital Chairman & Founder Bill Harris Talks Entrepreneurship — Bloomberg Talks (Uncharted Summit)",
-      "type": "video",
-      "priority": "essential",
-      "url": "https://www.youtube.com/watch?v=LpvRZpNcRk0",
-      "youtube_id": "LpvRZpNcRk0",
-      "notes": "Bloomberg Talks long-form. Uncharted Annual Summit, Southampton NY. Entrepreneurship lessons."
-    },
-    {
-      "title": "Former PayPal CEO on his new company offering high-yield checking accounts (Fox Business)",
-      "type": "video",
-      "priority": "high",
-      "url": "https://www.youtube.com/watch?v=jKPiQG2LYE8",
-      "youtube_id": "jKPiQG2LYE8",
-      "notes": "Fox Business — Evergreen Money / Liquid Treasuries explanation. Contrarian view on banks paying nothing on checking."
-    },
-    {
-      "title": "Former TurboTax Chief's Tax Advice as Deadline Looms",
-      "type": "video",
-      "priority": "high",
-      "url": "https://www.youtube.com/watch?v=u4ux8njfAco",
-      "youtube_id": "u4ux8njfAco",
-      "notes": "Tax advice — captures his consumer-tax-strategy voice, Intuit/TurboTax-era wisdom applied today."
-    },
-    {
-      "title": "Personal Capital new breed of financial advising: CEO (CNBC, 2015)",
-      "type": "video",
-      "priority": "high",
-      "url": "https://www.cnbc.com/video/2015/06/02/personal-capital-new-breed-of-financial-advising-ceo.html",
-      "notes": "2015 CNBC — early Personal Capital pitch. 'Hybrid advisor' framing pre-acquisition. Useful for tracking thinking evolution."
-    },
-    {
-      "title": "Personal Capital: Don't Call Us a 'Robo' (WealthManagement.com)",
+      "title": "Omega-3 Myths and Hot Topics with Dr. Bill Harris",
       "type": "interview",
       "priority": "high",
-      "url": "https://www.wealthmanagement.com/financial-technology/personal-capital-don-t-call-us-a-robo-",
-      "notes": "Bill's defining position: Personal Capital is NOT a robo-advisor. 'Virtual advice, not robo advice.' Core contrarian stance."
+      "url": "https://empowerednutrition.health/omega3/"
     },
     {
-      "title": "Founder of Personal Capital Launches AI-Backed RIA",
+      "title": "Omega-3 Keys from Dr. Bill Harris",
       "type": "interview",
+      "priority": "medium",
+      "url": "https://www.premiercatch.com/blogs/seafood-nutrition/omega-3-keys-from-dr-bill-harris?srsltid=AfmBOopIyzQ7bHgkM6MSlgLwqZSWss2PaDIcdkPzPC40kWr9jXn5QZ7H"
+    },
+    {
+      "title": "Bill Harris PhD: Omega-3 Fatty Acids Podcast",
+      "type": "podcast",
       "priority": "high",
-      "url": "https://www.wealthmanagement.com/ria-news/founder-of-personal-capital-bill-harris-launches-ai-backed-ria",
-      "notes": "WealthManagement.com — Evergreen Wealth launch. AI + fiduciary advisor framing."
+      "url": "https://podcasts.apple.com/us/podcast/bill-harris-ph-d-omega-3-fatty-acids/id1400828889?i=1000459076693"
     },
     {
-      "title": "Former Intuit CEO Bill Harris Launches Personal Capital (TechCrunch, 2011)",
+      "title": "Reverend Bill Harris Interview Transcript",
       "type": "interview",
       "priority": "medium",
-      "url": "https://techcrunch.com/2011/09/20/bill-harris-launches-personal-capital/",
-      "notes": "TechCrunch 2011 — Personal Capital launch. Original founding thesis, $27M raised, 40 employees."
+      "url": "https://tnholcom.org/wp-content/uploads/2021/06/Reverend-Bill-Harris-Transcript.pdf"
     },
     {
-      "title": "Fintech Pioneer Bill Harris Launches Evergreen Wealth (BusinessWire, Oct 2025)",
-      "type": "profile",
-      "priority": "medium",
-      "url": "https://www.businesswire.com/news/home/20251001736158/en/Fintech-Pioneer-Bill-Harris-Launches-Evergreen-Wealth-to-Redefine-Digital-Wealth-Management",
-      "notes": "Press release — Evergreen Wealth launch with $100M+ AUM. Self-funded $10M+. Useful for company facts."
+      "title": "FCC Interview Transcript",
+      "type": "other",
+      "priority": "low",
+      "url": "https://www.fcc.gov/sites/default/files/Transcript-Transcribed-Unedited-Interview-Footage-6-of-14.pdf"
     },
     {
-      "title": "Former PayPal and Intuit CEO Bill Harris Launches Evergreen Money (PRNewswire, June 2024)",
-      "type": "profile",
-      "priority": "medium",
-      "url": "https://www.prnewswire.com/news-releases/former-paypal-and-intuit-ceo-bill-harris-launches-evergreen-money-302181056.html",
-      "notes": "Press release — Evergreen Money / Liquid Treasuries launch. 5.31% yield checking pitch."
+      "title": "Not relevant - Kamala Harris",
+      "type": "other",
+      "priority": "low",
+      "url": "https://www.nytimes.com/interactive/2025/02/05/business/media/60-minutes-kamala-harris-interview-transcript.html"
     },
     {
-      "title": "Fintech Pioneer Bill Harris Launches Nirvana Money (PRNewswire, 2022)",
-      "type": "profile",
-      "priority": "medium",
-      "url": "https://www.prnewswire.com/news-releases/fintech-pioneer-bill-harris-launches-nirvana-money-301656819.html",
-      "notes": "Press release — Nirvana Money launch (his neobank attempt that preceded Evergreen). Important chapter for completeness."
+      "title": "Not relevant - Kamala Harris",
+      "type": "other",
+      "priority": "low",
+      "url": "https://singjupost.com/kamala-harris-the-2024-60-minutes-interview-transcript/"
     },
     {
-      "title": "X.com (bank) — Wikipedia",
-      "type": "profile",
-      "priority": "medium",
-      "url": "https://en.wikipedia.org/wiki/X.com_(bank)",
-      "notes": "Historical context — X.com / PayPal merger, his 5-month CEO tenure, exit dynamics. For biographical accuracy."
+      "title": "Not relevant - Kamala Harris",
+      "type": "other",
+      "priority": "low",
+      "url": "https://www.thefp.com/p/60-minutes-release-the-unedited-kamala"
     },
     {
-      "title": "Personal Capital Founder Bill Harris — Marketing Genius (Robo-Advisor Pros)",
-      "type": "profile",
-      "priority": "medium",
-      "url": "https://www.roboadvisorpros.com/bill-harris-personal-capital-marketing-genius/",
-      "notes": "Third-party analysis of his Personal Capital marketing playbook. Free dashboard → AUM funnel."
+      "title": "Not relevant - Kamala Harris",
+      "type": "other",
+      "priority": "low",
+      "url": "https://www.nbcnews.com/politics/2024-election/full-transcript-president-kamala-harris-interviewed-nbc-news-yamiche-a-rcna178222"
+    },
+    {
+      "title": "Not relevant - Kamala Harris",
+      "type": "other",
+      "priority": "low",
+      "url": "https://www.rev.com/transcripts/vice-president-kamala-harris-the-2023-60-minutes-interview-transcript"
+    },
+    {
+      "title": "Bulletproof Biohacking Conference 2015 - Bill Harris - Holosync - Keynote Speaker",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=tF340zge4jY",
+      "youtube_id": "tF340zge4jY"
+    },
+    {
+      "title": "Dispelling the MYTHS About Fish Oil, Fatty15 and Seed Oils | Dr. Bill Harris",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Yz3ji8Wx0s4",
+      "youtube_id": "Yz3ji8Wx0s4"
+    },
+    {
+      "title": "Dr. Bill Harris on the Omega-3 Index: Increasing Omega-3 to Promote Longevity & Transform Health",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=-f-CFQxaUY4",
+      "youtube_id": "-f-CFQxaUY4"
+    },
+    {
+      "title": "Leading Researcher Breaks Down 8 New Studies on Omega-3",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=cm919i7yAcY",
+      "youtube_id": "cm919i7yAcY"
+    },
+    {
+      "title": "OMEGA-3 and Brain Health: The Science from a Leading Expert with Bill Harris",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=_ItEkc86uDc",
+      "youtube_id": "_ItEkc86uDc"
+    },
+    {
+      "title": "Omega-3s and brain health: what the science really says  | Dr. Bill Harris & Prof. Sarah Berry",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=uqyKqDaH3E4",
+      "youtube_id": "uqyKqDaH3E4"
+    },
+    {
+      "title": "Bill Harris and his Orchestra \"Bill Not Phil\" (1952)",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=-EGQomijMqY",
+      "youtube_id": "-EGQomijMqY"
+    },
+    {
+      "title": "Change Your Brain, Change Your Life: Brain Waves 101 | Bill Harris | Mind Power",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=TOfNOLGwE9M",
+      "youtube_id": "TOfNOLGwE9M"
+    },
+    {
+      "title": "Benny Carter, Dizzy Gillespie, Bill Harris \u2013 New Jazz Sounds",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Hdywi5LKRlU",
+      "youtube_id": "Hdywi5LKRlU"
+    },
+    {
+      "title": "Possessed - Bill Harris (Transcription)",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=gmhuCO6wKPY",
+      "youtube_id": "gmhuCO6wKPY"
+    },
+    {
+      "title": "Bill Harris on the permanency of results of Holosync use...",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=B-lHXKxBr14",
+      "youtube_id": "B-lHXKxBr14"
+    },
+    {
+      "title": "Lullaby of Birdland",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=f5BzsBmk2Mw",
+      "youtube_id": "f5BzsBmk2Mw"
+    },
+    {
+      "title": "Bill Harris - Lullaby Of Birdland",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=HMvLA2WYHzE",
+      "youtube_id": "HMvLA2WYHzE"
+    },
+    {
+      "title": "Bill Harris -- The Secret -- The \"Inside\" story",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=7HQGQnJg9T4",
+      "youtube_id": "7HQGQnJg9T4"
+    },
+    {
+      "title": "Bill Harris - 'S Wonderful",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=kogtutIHTRI",
+      "youtube_id": "kogtutIHTRI"
+    },
+    {
+      "title": "Omega Fats & \u03c9-3 Supplements in Human Health | Bill Harris | Episode 292",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=wcDzfIfzo8w",
+      "youtube_id": "wcDzfIfzo8w"
+    },
+    {
+      "title": "Meet Connor McFadden, new sales pro at Bill Harris Cevrolet",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=RYv23BjuzHY",
+      "youtube_id": "RYv23BjuzHY"
+    },
+    {
+      "title": "Bill Harris - Perdido",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=VOJdOpBsxXo",
+      "youtube_id": "VOJdOpBsxXo"
+    },
+    {
+      "title": "Celebrating Excellence in Service | Bill Harris Chevrolet",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=cIBH9mjKO_M",
+      "youtube_id": "cIBH9mjKO_M"
+    },
+    {
+      "title": "Omega-3 Intake: Sources, Dosage & Timing | Dr Bill Harris Ep 3",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=zEu-ctpYqB4",
+      "youtube_id": "zEu-ctpYqB4"
     }
   ]
 }

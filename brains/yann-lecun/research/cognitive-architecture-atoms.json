@@ -1,360 +1,362 @@
 [
   {
-    "content": "LeCun draws a direct analogy between his proposed AI cognitive architecture and Kahneman's System 1 / System 2 distinction. Current deep learning systems, including LLMs, operate in a purely System 1 mode \u2014 fast, reactive, pattern-matching \u2014 but lack the deliberate, multi-step reasoning that characterizes human System 2 thinking. Achieving human-level AI requires architectures that can switch into a slower, more deliberate reasoning mode.",
-    "original_quote": "Current AI systems are missing the ability to reason, to plan, and to do what Kahneman calls System 2 thinking \u2014 the kind of deliberate, sequential, logical reasoning that humans do when they face a new problem.",
-    "implication": "Builders treating today's LLMs as general reasoning engines are systematically overestimating their capability in high-stakes, multi-step domains. System 2-style tasks \u2014 legal reasoning, strategic planning, scientific inference \u2014 require architectures that don't yet exist at commercial scale.",
+    "content": "LeCun draws a sharp distinction between System 1 and System 2 cognition \u2014 borrowed from Daniel Kahneman \u2014 to diagnose precisely where current AI sits. All existing deep learning systems, regardless of scale or parameter count, operate as System 1: fast, associative, single-pass pattern matching that maps inputs directly to outputs without deliberation. Genuine reasoning requires System 2 capabilities \u2014 deliberate planning, hypothesis testing, and hierarchical search \u2014 which current architectures are structurally incapable of implementing. Scaling a System 1 architecture does not produce System 2 behavior; it produces a larger System 1.",
+    "implication": "Product teams building on top of current LLMs should be clear-eyed about what they are actually deploying: a sophisticated pattern matcher, not a reasoner. Tasks requiring multi-step planning, causal inference, or out-of-distribution generalization will hit a structural ceiling that more compute cannot resolve.",
     "cluster": "cognitive_architecture",
     "topics": [
-      "System 2 thinking",
+      "System 1 vs System 2",
       "reasoning",
-      "Kahneman",
-      "LLM limitations"
+      "deep learning limitations",
+      "Kahneman"
     ],
-    "confidence": 0.85,
-    "source_type": "talk",
-    "source_ref": "Yann LeCun keynote, NYU Center for Data Science / various public lectures on JEPA architecture",
-    "source_date": "2022"
+    "confidence": 0.9,
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
+    "source_date": "2022-06-27"
   },
   {
-    "content": "LeCun has proposed a modular cognitive architecture for advanced AI consisting of five distinct functional components: a perception module, a world model, a cost module, a memory module, and an actor/policy module. He argues that conflating these functions into a single end-to-end trained network \u2014 as LLMs do \u2014 is architecturally insufficient for general intelligence. Each module must be designable and studyable in isolation.",
-    "original_quote": "A complete autonomous intelligent agent needs to have a perception module, a world model, a cost module, an actor module, and memory. These are distinct functions and we should be able to design them separately.",
-    "implication": "AI product teams should resist the temptation to treat a single large model as the entire cognitive stack. The most robust systems will likely be modular \u2014 with distinct components for state estimation, prediction, goal specification, memory, and action \u2014 even if they are trained jointly.",
+    "content": "LeCun's proposed cognitive architecture for autonomous machine intelligence decomposes intelligence into five distinct functional modules: a configurator that orchestrates the system's mode of operation, a perception module that processes sensory input, a world model that predicts future states, a cost module that evaluates outcomes against objectives, and an actor that selects and executes actions. Intelligence is not a property of any single component but emerges from their structured interaction. This modular decomposition is explicitly opposed to the monolithic, black-box approach of large language models.",
+    "implication": "Engineers building toward general-purpose AI systems should treat modularity not as an architectural constraint but as a design principle. Decomposing a system into components with well-defined computational roles makes it interpretable, debuggable, and far more likely to generalize beyond its training distribution.",
     "cluster": "cognitive_architecture",
     "topics": [
       "modular architecture",
-      "cognitive modules",
-      "world models",
-      "agent design"
+      "cognitive decomposition",
+      "autonomous systems",
+      "system design"
     ],
-    "confidence": 0.88,
-    "source_type": "paper",
-    "source_ref": "LeCun, 'A Path Towards Autonomous Machine Intelligence', OpenReview preprint",
+    "confidence": 0.95,
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
     "source_date": "2022-06-27"
   },
   {
-    "content": "In LeCun's proposed architecture, the 'cost module' plays a role analogous to motivation or values in biological systems \u2014 it defines what the agent is trying to minimize or achieve. He distinguishes between intrinsic costs (hardwired drives like avoiding discomfort or maintaining energy) and trainable costs (learned objectives). Getting the cost module right is, in his view, the key to building safe and aligned AI systems.",
-    "implication": "Alignment researchers who focus solely on output filtering or RLHF are addressing symptoms rather than the root cause. The real alignment problem is designing cost modules that correctly represent human values at the architectural level \u2014 before training, not as a post-hoc patch.",
+    "content": "The configurator module in LeCun's proposed architecture plays a metacognitive role: it sets the objectives, adjusts the behavior of every other module, and determines which perceptual features are relevant given the current task. This is what allows the system to shift between different modes of operation \u2014 attending to different aspects of its environment depending on what it is trying to accomplish. Without a configurator, a system cannot direct its own attention or dynamically adapt its processing to task demands.",
+    "implication": "Building task-flexible AI systems requires a mechanism for top-down goal propagation \u2014 something that tells the rest of the system what matters right now. Current transformer architectures have no principled equivalent of this; task conditioning via prompt is a crude substitute for genuine metacognitive control.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "configurator",
+      "metacognition",
+      "attention",
+      "task flexibility"
+    ],
+    "confidence": 0.9,
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
+    "source_date": "2022-06-27"
+  },
+  {
+    "content": "LeCun frames intelligent behavior as a form of model-predictive control: the agent uses its world model to mentally simulate possible sequences of actions, evaluates each simulated trajectory against a cost function, and then commits to the action sequence that minimizes cost. This 'think before you act' structure is the computational formalization of deliberate reasoning. Current autoregressive language models cannot do this because they produce outputs in a single forward pass, with no mechanism for simulating and comparing alternative futures before committing to a token.",
+    "implication": "Any application requiring reliable, consequential decision-making \u2014 medical diagnosis, legal reasoning, engineering design \u2014 needs a planning loop, not a single-pass generator. Architects of such systems should build explicit simulation and evaluation stages rather than relying on the implicit 'reasoning' of a prompted language model.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "model-predictive control",
+      "planning",
+      "cost function",
+      "world model"
+    ],
+    "confidence": 0.9,
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
+    "source_date": "2022-06-27"
+  },
+  {
+    "content": "LeCun argues that current large language models are, by construction, System 1 systems \u2014 they cannot pause to consider alternatives, cannot run internal simulations of outcomes, and cannot revise a partially constructed response in light of downstream consequences. Each generated token is a committed action rather than a hypothesis under evaluation. The architecture of autoregressive generation makes deliberation structurally impossible, not merely currently absent.",
+    "implication": "Teams relying on LLMs for reasoning-intensive tasks should implement external scaffolding \u2014 explicit search, verification loops, or symbolic reasoners \u2014 to compensate for the architecture's inability to self-deliberate. This is not a workaround; it is a necessary architectural layer that the underlying model cannot provide.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "autoregressive generation",
+      "deliberation",
+      "LLM limitations",
+      "System 2"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Yann LeCun: Meta AI, Open Source, Limits of LLMs, AGI & the Future of AI | Lex Fridman Podcast #416",
+    "source_date": "2024-01-12"
+  },
+  {
+    "content": "LeCun has repeatedly emphasized that the cost module in his proposed architecture is not a simple scalar reward signal \u2014 it is a structured representation of the agent's objectives, intrinsic drives, and task-specific goals. The cost module must encode multiple objectives simultaneously, including both learned and hard-coded drives such as energy conservation or safety constraints. This is qualitatively different from the scalar reward functions used in reinforcement learning, which notoriously fail to capture the multi-objective nature of real-world intelligent behavior.",
+    "implication": "Reward engineering for autonomous systems is fundamentally multi-objective, not single-objective. Builders should design cost modules that explicitly represent competing drives and can arbitrate between them \u2014 rather than collapsing everything to a single scalar and hoping gradient descent finds the balance.",
     "cluster": "cognitive_architecture",
     "topics": [
       "cost module",
-      "alignment",
       "objective function",
-      "intrinsic motivation"
+      "multi-objective optimization",
+      "reward engineering"
     ],
-    "confidence": 0.87,
-    "source_type": "paper",
-    "source_ref": "LeCun, 'A Path Towards Autonomous Machine Intelligence', OpenReview preprint",
+    "confidence": 0.85,
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
     "source_date": "2022-06-27"
   },
   {
-    "content": "LeCun argues that planning in AI requires the ability to search through a space of possible action sequences and evaluate them against a world model \u2014 similar to how chess engines use tree search, but applied to real-world physical and social environments. This is fundamentally different from what LLMs do, which is to generate the next token without any explicit lookahead or rollback capability.",
-    "original_quote": "Reasoning and planning require the system to be able to imagine a sequence of actions, predict the consequences using a world model, and evaluate those consequences with a cost function \u2014 that's not what language models do.",
-    "implication": "For any application requiring genuine planning \u2014 robotics, autonomous vehicles, long-horizon business strategy support \u2014 the autoregressive generation paradigm is the wrong substrate. Builders need to consider hybrid architectures that couple generative models with explicit search and evaluation components.",
+    "content": "LeCun distinguishes between reactive behavior \u2014 direct mapping from perception to action \u2014 and deliberate behavior that involves planning through a world model. He views the capacity for deliberate, model-based action selection as the defining capability that separates genuinely intelligent systems from sophisticated reflex arcs. Current AI systems, including the best-performing language models, are sophisticated reflex arcs: they react to input patterns rather than reasoning about consequences.",
+    "implication": "When evaluating AI capabilities, distinguish between reactive competence and deliberate reasoning. A system that performs well on benchmarks may still be pattern-matching rather than reasoning \u2014 and this distinction matters enormously for deployment contexts where novel situations, edge cases, or adversarial conditions are likely.",
     "cluster": "cognitive_architecture",
     "topics": [
+      "reactive vs deliberate",
       "planning",
-      "tree search",
-      "world models",
-      "reasoning"
+      "world model",
+      "intelligence definition"
     ],
-    "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Lex Fridman Podcast #212 with Yann LeCun",
-    "source_date": "2021-10-19"
-  },
-  {
-    "content": "LeCun distinguishes sharply between 'reactive' systems \u2014 those that map inputs directly to outputs \u2014 and 'model-based' systems that maintain an internal representation of the world and use it to simulate future states before acting. He views the absence of a model-based component as the core architectural deficiency of all current frontier AI systems, including GPT-4 and its successors.",
-    "original_quote": "All current AI systems are essentially reactive systems. They don't have a model of the world that they can use to plan ahead. That's the fundamental missing piece.",
-    "implication": "The reactive-vs-model-based distinction is more diagnostic than the parameter count or benchmark score of any given model. When evaluating AI vendors, the right question is: does this system simulate before it acts, or does it merely respond?",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "reactive systems",
-      "model-based AI",
-      "world models",
-      "planning"
-    ],
-    "confidence": 0.85,
-    "source_type": "talk",
-    "source_ref": "LeCun talk at the Coll\u00e8ge de France, 'Learning World Models'",
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Yann LeCun - The Next Step Towards Artificial Intelligence",
     "source_date": "2023"
   },
   {
-    "content": "LeCun uses the analogy of a teenager learning to drive to illustrate the data efficiency advantage of model-based reasoning. A human teenager needs roughly 20 hours of practice to drive competently because they bring a pre-existing world model \u2014 physics, social rules, spatial reasoning \u2014 built from years of embodied experience. An AI system trained purely from driving data needs millions of miles because it has no such prior model. This gap, he argues, is not a data problem but an architecture problem.",
-    "original_quote": "A 17-year-old can learn to drive a car in about 20 hours of practice. No current AI system can do that. Why? Because the teenager already has a model of the world \u2014 they know about physics, about other people's intentions, about space. The AI has to learn all of this from scratch from driving data.",
-    "implication": "Data efficiency is not primarily a function of better algorithms applied to more data \u2014 it is a function of having the right prior model. Organizations investing in AI that require massive labeled datasets should ask whether a world-model-based approach would get them to the same capability with orders of magnitude less data.",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "data efficiency",
-      "world models",
-      "biological analogy",
-      "common sense"
-    ],
-    "confidence": 0.88,
-    "source_type": "interview",
-    "source_ref": "Lex Fridman Podcast #212 with Yann LeCun",
-    "source_date": "2021-10-19"
-  },
-  {
-    "content": "LeCun argues that a proper cognitive architecture must include multiple forms of memory operating on different timescales: a short-term working memory for the current episode, a long-term episodic memory for past experiences, and a persistent world model that encodes structural knowledge about how the world works. No current large language model architecture implements all three in a principled way \u2014 context windows are a crude approximation of working memory, not a solution.",
-    "implication": "Memory architecture is an underrated design variable in enterprise AI deployment. Retrieval-augmented generation (RAG) is a partial engineering fix, not a principled solution. Teams building long-horizon AI agents should treat memory architecture as a first-class design problem rather than an afterthought.",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "memory",
-      "working memory",
-      "episodic memory",
-      "agent architecture"
-    ],
-    "confidence": 0.83,
-    "source_type": "paper",
-    "source_ref": "LeCun, 'A Path Towards Autonomous Machine Intelligence', OpenReview preprint",
-    "source_date": "2022-06-27"
-  },
-  {
-    "content": "LeCun's Joint Embedding Predictive Architecture (JEPA) is his proposed solution to the problem of building world models without falling into the trap of generative models. Rather than predicting raw pixel-level or token-level outputs, JEPA predicts abstract representations in latent space \u2014 allowing the system to model what matters (structure, causality, high-level states) while ignoring what doesn't (irrelevant texture, exact wording). He sees this as the correct inductive bias for building world models.",
-    "original_quote": "The idea of JEPA is that you train a system to predict the representation of the future, not the future itself. You don't try to predict every pixel. You try to predict an abstract representation of what's going to happen.",
-    "implication": "For teams building predictive AI systems, the choice of prediction target is as important as the choice of model architecture. Predicting in raw output space is computationally expensive and epistemically impoverished. Abstract latent-space prediction is likely the more tractable path toward systems that actually understand their domain.",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "JEPA",
-      "latent space",
-      "world models",
-      "representation learning"
-    ],
-    "confidence": 0.92,
-    "source_type": "paper",
-    "source_ref": "LeCun, 'A Path Towards Autonomous Machine Intelligence', OpenReview preprint",
-    "source_date": "2022-06-27"
-  },
-  {
-    "content": "LeCun frames the problem of common sense as essentially a world-model problem. Humans possess vast amounts of implicit knowledge about how the world works \u2014 object permanence, physical causality, social intentions, temporal continuity \u2014 that is never explicitly taught but is absorbed through embodied experience. This 'dark matter of intelligence,' as he sometimes calls it, is what current AI systems lack and what prevents them from reasoning reliably in novel situations.",
-    "original_quote": "Common sense is the dark matter of artificial intelligence. It's the vast amount of background knowledge about how the world works that allows humans to understand situations and reason about them. Current AI systems don't have it.",
-    "implication": "The brittleness of current AI systems in edge cases is not a fine-tuning problem \u2014 it reflects the absence of a grounded world model. Organizations deploying AI in safety-critical domains (medicine, infrastructure, law) must account for the fact that common sense failure is a systematic architectural issue, not a solvable data gap.",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "common sense",
-      "world models",
-      "embodied knowledge",
-      "reasoning"
-    ],
-    "confidence": 0.88,
-    "source_type": "interview",
-    "source_ref": "MIT Technology Review interview with Yann LeCun",
-    "source_date": "2022"
-  },
-  {
-    "content": "LeCun has argued that the path to System 2 reasoning in machines requires the ability to perform what he calls 'inference-time optimization' \u2014 using a cost function and world model to search for the best action or answer at test time, not just at training time. This is analogous to how a human thinks carefully through a problem rather than giving the first answer that comes to mind. Current transformers have no such mechanism built in.",
-    "implication": "The popular practice of prompting LLMs to 'think step by step' is a surface-level hack that elicits latent structure in training data rather than implementing genuine inference-time search. True System 2 AI will require fundamentally different inference procedures \u2014 iterative optimization against an internal model, not sequential token generation.",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "inference-time optimization",
-      "System 2",
-      "search",
-      "test-time compute"
-    ],
-    "confidence": 0.84,
-    "source_type": "talk",
-    "source_ref": "LeCun keynote at ICML / NeurIPS 2022 workshops on world models",
-    "source_date": "2022"
-  },
-  {
-    "content": "LeCun emphasizes that hierarchical planning is essential for handling the long time horizons required in real-world tasks. A system planning how to make a cup of tea must simultaneously reason at the level of sub-second motor commands, second-by-second action sequences, and minute-level goal structures. He argues that flat, single-level architectures cannot in principle represent all these timescales simultaneously, and that hierarchical latent-variable models are the right framework.",
-    "implication": "AI agents deployed for complex, multi-step workflows \u2014 procurement, research synthesis, project management \u2014 will hit hard capability ceilings if built on flat architectures. Hierarchical planning, with different abstraction levels operating on different timescales, is likely a prerequisite for reliable long-horizon task completion.",
+    "content": "LeCun argues that hierarchical planning \u2014 the ability to decompose a goal into subgoals, and those subgoals into actions, across multiple levels of abstraction \u2014 is a core requirement for human-level intelligence that no current architecture implements. Humans plan a road trip at the level of cities, then routes, then turns; they do not generate a sequence of muscle contractions from scratch. This hierarchical temporal abstraction is absent from transformers and from most current deep learning systems, which operate at a single level of granularity.",
+    "implication": "Builders of long-horizon AI systems \u2014 robotics, strategy, complex project management \u2014 should treat hierarchical planning as a first-class architectural requirement. Flat sequence models, however large, will fail at tasks requiring coordination across multiple timescales and abstraction levels.",
     "cluster": "cognitive_architecture",
     "topics": [
       "hierarchical planning",
       "temporal abstraction",
-      "long-horizon tasks",
-      "agent architecture"
+      "subgoal decomposition",
+      "architecture"
     ],
     "confidence": 0.85,
-    "source_type": "paper",
-    "source_ref": "LeCun, 'A Path Towards Autonomous Machine Intelligence', OpenReview preprint",
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
     "source_date": "2022-06-27"
   },
   {
-    "content": "LeCun critiques autoregressive language models specifically for their inability to revise \u2014 once a token is generated, it cannot be taken back, and errors early in a sequence propagate and compound. Humans, by contrast, have inner speech and inner simulation that allow them to mentally draft, evaluate, and discard plans before committing to action. This capacity for internal revision is a core component of deliberate reasoning that LLMs architecturally lack.",
-    "original_quote": "Auto-regressive LLMs are doomed to be wrong sometimes because the generation process has no way to revise early decisions. There's no backtracking. Humans can think before they speak \u2014 LLMs can't.",
-    "implication": "LLM-based systems used in high-stakes sequential decision-making \u2014 financial advice, medical triage, legal drafting \u2014 should always include human checkpoints precisely because the model cannot internally revise a reasoning path once started. Architectural solutions (chain-of-thought, tree-of-thought) are approximations; the limitation is fundamental.",
+    "content": "LeCun views the ability to perform inference-time search \u2014 exploring a space of possible actions or hypotheses and selecting the best one \u2014 as a fundamental requirement for System 2 reasoning that current neural networks lack. A language model generates the most probable next token; it does not search over possible responses and select the best. Genuine reasoning requires the system to entertain multiple hypotheses simultaneously and evaluate them against a criterion before committing to an answer.",
+    "implication": "Inference-time compute allocation \u2014 giving a system more time to 'think' about hard problems \u2014 is a promising direction, but it requires architectural support for search, not just longer sampling chains. Builders should distinguish between generating longer outputs and genuinely searching over a structured hypothesis space.",
     "cluster": "cognitive_architecture",
     "topics": [
-      "autoregressive models",
-      "error propagation",
-      "revision",
-      "System 2"
-    ],
-    "confidence": 0.87,
-    "source_type": "social_media",
-    "source_ref": "Yann LeCun posts on X (formerly Twitter) / Meta AI blog commentary, 2023",
-    "source_date": "2023"
-  },
-  {
-    "content": "LeCun has consistently argued that energy-based models (EBMs) provide a more natural framework for System 2 reasoning than generative models, because EBMs can represent the compatibility between a query and an answer as a scalar energy value \u2014 enabling optimization-based inference. Finding the lowest-energy answer is structurally analogous to deliberate reasoning: exploring a space of possibilities and selecting the best one.",
-    "implication": "The EBM framework deserves more attention from AI practitioners building reasoning systems. It provides a principled way to handle uncertainty, incorporate constraints, and perform structured inference \u2014 capabilities that are bolted on awkwardly to purely generative systems but are native to the energy-based formulation.",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "energy-based models",
-      "inference",
-      "reasoning",
-      "optimization"
+      "inference-time search",
+      "hypothesis testing",
+      "System 2",
+      "reasoning architecture"
     ],
     "confidence": 0.85,
-    "source_type": "paper",
-    "source_ref": "LeCun & Chopra, 'A Tutorial on Energy-Based Learning'; also 'A Path Towards Autonomous Machine Intelligence'",
-    "source_date": "2006"
-  },
-  {
-    "content": "LeCun draws on developmental psychology \u2014 particularly the work of researchers studying infant cognition \u2014 to argue that core knowledge about physics, objects, and agents is acquired very early in development, long before language. This suggests that grounding AI in language alone is the wrong approach: language is a late-stage cognitive capability built on top of a rich non-linguistic world model. Multimodal, embodied learning must precede linguistic reasoning.",
-    "original_quote": "Babies learn about the physical world \u2014 about objects, space, time, causality \u2014 before they learn language. Language is built on top of that. So if you only train on text, you're missing the foundation.",
-    "implication": "Language-only AI training is building the penthouse before the foundation. Multimodal and embodied AI \u2014 systems that learn from sensory-motor interaction with the physical world \u2014 will likely produce more robust reasoning capabilities than ever-larger text corpora, regardless of how much data is added.",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "developmental psychology",
-      "embodied learning",
-      "language grounding",
-      "multimodal AI"
-    ],
-    "confidence": 0.88,
-    "source_type": "interview",
-    "source_ref": "Lex Fridman Podcast #212 with Yann LeCun",
-    "source_date": "2021-10-19"
-  },
-  {
-    "content": "LeCun argues that the objective function of a cognitive system is not a peripheral design choice but its most fundamental defining feature. A system optimizing next-token prediction will, by construction, learn to produce plausible-sounding continuations \u2014 not to understand, plan, or reason. The objective function determines not just what the system learns but what it is capable of knowing.",
-    "original_quote": "The objective function is really the most important thing. If you define it wrongly, you can throw as much data and compute as you want at it and you'll never get to the right answer.",
-    "implication": "Engineering teams that treat the loss function as a tuning parameter rather than a fundamental design choice are likely to hit capability ceilings they won't be able to explain. The question 'what is this system actually optimizing?' should be the first, not the last, question in any AI system design process.",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "objective function",
-      "loss function",
-      "reasoning",
-      "architecture design"
-    ],
-    "confidence": 0.87,
-    "source_type": "talk",
-    "source_ref": "Various LeCun keynotes and interviews, 2022\u20132023; consistent documented position",
+    "source_type": "video",
+    "source_ref": "Do LLMs Understand? AI Pioneer Yann LeCun Spars with DeepMind's Adam Brown",
     "source_date": "2023"
   },
   {
-    "content": "LeCun has proposed that a general-purpose cognitive agent needs what he calls a 'configurator' \u2014 a high-level module that sets the parameters and objectives of all other modules based on the current task. This is analogous to executive function in neuroscience: the capacity to direct attention, set subgoals, and modulate the behavior of lower-level processes. Without a configurator, an AI system cannot flexibly redirect its cognitive resources to new tasks.",
-    "implication": "Building general-purpose AI agents requires an explicit meta-control layer that dynamically allocates cognitive resources and sets task-specific objectives. Current prompt engineering is a crude external approximation of this function; building it architecturally into the system is the more principled long-term path.",
+    "content": "LeCun has argued that the actor module in his proposed architecture must be capable of operating at multiple timescales \u2014 both selecting immediate low-level actions and committing to higher-level action plans that unfold over longer horizons. This multi-timescale action structure requires a world model capable of making predictions at corresponding levels of abstraction. Without a hierarchically organized world model, the actor can only operate reactively at the shortest timescale.",
+    "implication": "Autonomous systems designed for real-world deployment must handle decisions at radically different timescales simultaneously. Architectural investment in multi-scale world models and hierarchical actor modules is not optional for systems expected to plan beyond a few seconds of horizon.",
     "cluster": "cognitive_architecture",
     "topics": [
-      "configurator",
-      "executive function",
-      "meta-control",
-      "agent architecture"
+      "actor module",
+      "multi-timescale action",
+      "hierarchical world model",
+      "autonomous systems"
     ],
-    "confidence": 0.84,
-    "source_type": "paper",
-    "source_ref": "LeCun, 'A Path Towards Autonomous Machine Intelligence', OpenReview preprint",
+    "confidence": 0.85,
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
     "source_date": "2022-06-27"
   },
   {
-    "content": "LeCun distinguishes between 'perception-action' systems that learn direct mappings from inputs to outputs, and systems that learn an internal model of the world and use it as the basis for planning. He argues that the former are fundamentally brittle \u2014 they fail outside the distribution of their training data \u2014 while the latter can generalize by simulating novel situations. This distinction, not scale, is what separates narrow AI from genuinely general intelligence.",
-    "implication": "Robustness to distribution shift is not primarily a data augmentation or regularization problem. It is an architectural problem. Systems without internal world models will always be brittle at distribution boundaries, no matter how large their training sets are. Generalization requires simulation, not just interpolation.",
+    "content": "LeCun has pointed out that System 2 thinking requires not just planning but also the capacity to detect when a plan is failing and to revise it mid-execution. This metacognitive monitoring \u2014 checking whether predicted outcomes match actual outcomes and triggering replanning when they diverge \u2014 is a fundamental feature of intelligent behavior that current AI systems do not implement. A system without anomaly detection and replanning is brittle by construction.",
+    "implication": "Robust AI deployment in dynamic environments requires building explicit monitoring loops that compare predicted and actual outcomes, and that trigger plan revision when divergence exceeds acceptable thresholds. This is an architectural requirement, not something that can be patched with better prompting.",
     "cluster": "cognitive_architecture",
     "topics": [
-      "generalization",
-      "distribution shift",
-      "world models",
-      "perception-action"
+      "metacognition",
+      "replanning",
+      "anomaly detection",
+      "robustness"
     ],
-    "confidence": 0.85,
-    "source_type": "talk",
-    "source_ref": "LeCun talk at Coll\u00e8ge de France, Paris",
-    "source_date": "2023"
+    "confidence": 0.8,
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
+    "source_date": "2022-06-27"
   },
   {
-    "content": "LeCun has argued that the challenge of building AI that can reason is fundamentally a representation learning challenge: systems need to learn representations of the world at the right level of abstraction \u2014 abstract enough to generalize, concrete enough to be actionable. He believes JEPA-style architectures, which learn structured latent representations rather than pixel-level or token-level outputs, are the path to representations that support reasoning.",
-    "original_quote": "The key to reasoning is having the right representations. If your representations are at the wrong level of abstraction \u2014 too low-level or too entangled \u2014 you can't reason with them. You need representations that capture the structure of the world.",
-    "implication": "Representation quality is the hidden variable in AI system performance on reasoning tasks. Teams that evaluate models primarily on benchmark accuracy without probing the structure of learned representations are likely to be surprised when those models fail in deployment on slightly different problems.",
+    "content": "LeCun uses the sample efficiency of human learning as a diagnostic probe for architectural inadequacy. A teenager requires roughly 20 hours of driving practice to achieve safe competency; autonomous vehicle systems have required millions of miles of training data to approach comparable performance in limited domains. This gap is not a quantitative engineering shortfall but a qualitative signal that the architecture is missing a world model that allows simulation-based planning \u2014 the same resource that lets humans generalize from sparse experience.",
+    "implication": "When evaluating AI system readiness, sample efficiency on genuinely novel tasks is a more honest metric than benchmark accuracy. A system that needs a million examples to learn what a human learns in twenty should trigger architectural investigation, not merely a call for more data.",
     "cluster": "cognitive_architecture",
     "topics": [
+      "sample efficiency",
+      "world model",
+      "driving",
+      "architecture diagnosis"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Yann LeCun: Meta AI, Open Source, Limits of LLMs, AGI & the Future of AI | Lex Fridman Podcast #416",
+    "source_date": "2024-01-12"
+  },
+  {
+    "content": "LeCun argues that the perception module in his proposed architecture must do more than classify inputs \u2014 it must construct an internal representation of the world state that is rich enough to support world model predictions and cost evaluations. Perception is not a preprocessing step; it is the foundation of the agent's model of reality. This requires representations that are abstract enough to be predictable and plannable, which is precisely why raw pixel or token-level prediction is the wrong objective for a perception system.",
+    "implication": "Perception systems in autonomous AI should be evaluated not on classification accuracy alone but on whether their representations support downstream planning. A perception module that produces good labels but poor world model inputs is the wrong tool for the job.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "perception",
       "representation learning",
-      "abstraction",
-      "JEPA",
-      "reasoning"
+      "world model",
+      "latent space"
     ],
-    "confidence": 0.86,
-    "source_type": "talk",
-    "source_ref": "LeCun keynote at NeurIPS, various years; consistently documented position",
-    "source_date": "2022"
+    "confidence": 0.85,
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
+    "source_date": "2022-06-27"
   },
   {
-    "content": "LeCun has expressed skepticism about chain-of-thought prompting as a solution to the reasoning limitations of LLMs. While he acknowledges that eliciting step-by-step outputs can improve performance on some tasks, he argues this is surface-level: the model is pattern-matching to the style of reasoning traces in its training data, not performing genuine logical inference. The distinction matters because genuine reasoning generalizes; pattern-matching to reasoning-style text does not.",
-    "implication": "Product teams building 'reasoning' features on top of LLMs via chain-of-thought prompting should be cautious about how they characterize those capabilities. When the reasoning task is truly novel \u2014 outside the stylistic patterns of the training data \u2014 chain-of-thought provides much weaker guarantees than it appears to on benchmarks that leak into training distributions.",
+    "content": "LeCun contends that the dominant paradigm in AI \u2014 training ever-larger monolithic networks end-to-end on massive datasets \u2014 is fundamentally opposed to the kind of modular, interpretable architecture that genuine reasoning requires. Scaling a monolithic system increases its pattern-matching surface but does not add reasoning structure. The architectural choice between monolithic and modular systems is not a matter of engineering taste; it determines whether System 2 capabilities are even theoretically achievable.",
+    "implication": "AI labs and engineering teams face a genuine fork in the road: continuing to invest in scaling monolithic models versus investing in modular architectures with explicit reasoning structure. LeCun's position is that the former path cannot reach general intelligence regardless of how far it is pursued.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "monolithic vs modular",
+      "scaling",
+      "architecture choice",
+      "reasoning structure"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Yann LeCun - Next Step Towards AI",
+    "source_date": "2023"
+  },
+  {
+    "content": "LeCun draws on cognitive science and neuroscience to argue that biological intelligence is itself organized around something like his proposed modular architecture \u2014 with distinct neural systems for perception, prediction, valuation, and action selection. This is not an argument for biological plausibility of the implementation details, but for the functional decomposition. Nature converged on this structure because it works; AI should converge on it for the same reason.",
+    "implication": "Cognitive science and neuroscience offer a rich source of architectural hypotheses for AI system design \u2014 not at the level of neural mechanism, but at the level of functional module decomposition. Researchers should engage seriously with the cognitive science literature as an inspiration for architectural priors.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "cognitive science",
+      "neuroscience",
+      "functional modules",
+      "biological inspiration"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Yann LeCun: Deep Learning, ConvNets, and Self-Supervised Learning | Lex Fridman Podcast #36",
+    "source_date": "2019-04-18"
+  },
+  {
+    "content": "LeCun has argued that a central failure of current AI systems is their inability to perform what he calls 'mental simulation' \u2014 using an internal world model to play out the consequences of hypothetical actions before committing to any of them. This capacity is what allows a human chess player to think several moves ahead, a driver to anticipate a pedestrian's trajectory, or a scientist to reason about the outcome of an experiment they have not yet run. Mental simulation requires a world model precise enough and fast enough to be useful for planning.",
+    "implication": "The development of fast, accurate, and abstract world models is one of the highest-leverage research investments for the field. Without mental simulation capability, AI systems will remain reactive and will fail catastrophically in any situation requiring anticipation of consequences.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "mental simulation",
+      "world model",
+      "planning",
+      "counterfactual reasoning"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Predictive Learning, NIPS 2016 | Yann LeCun, Facebook Research",
+    "source_date": "2016-12-05"
+  },
+  {
+    "content": "LeCun has noted that the transition from System 1 to System 2 behavior in AI is not a matter of adding a reasoning module on top of a language model \u2014 it requires a ground-up architectural rethinking. Patching a reactive system with a chain-of-thought prompt or an external verifier does not change the underlying computation; it adds a layer of post-hoc rationalization on top of a system that has already committed to its associative response. The fix must be structural, not superficial.",
+    "implication": "Chain-of-thought prompting and similar techniques improve surface-level performance on some benchmarks but do not constitute genuine System 2 reasoning. Organizations treating these techniques as a path to reliable reasoning should understand their fundamental limitations and invest in genuinely different architectures for high-stakes applications.",
     "cluster": "cognitive_architecture",
     "topics": [
       "chain-of-thought",
-      "reasoning",
-      "LLM limitations",
-      "generalization"
+      "System 2",
+      "architectural reform",
+      "LLM limitations"
     ],
-    "confidence": 0.83,
-    "source_type": "social_media",
-    "source_ref": "Yann LeCun commentary on X (formerly Twitter), 2023; consistent with documented public positions",
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Yann LeCun: Meta AI, Open Source, Limits of LLMs, AGI & the Future of AI | Lex Fridman Podcast #416",
+    "source_date": "2024-01-12"
+  },
+  {
+    "content": "LeCun emphasizes that a critical property of System 2 reasoning is its ability to generalize to genuinely novel situations \u2014 ones that lie outside the training distribution. A System 1 system can only interpolate within the space of patterns it has seen; a System 2 system can compose known knowledge structures in new ways to address problems it has never encountered. This compositional generalization is the hallmark of human intelligence and is precisely what LeCun argues current architectures cannot achieve.",
+    "implication": "Testing AI systems only on held-out samples from the same distribution as training data dramatically underestimates their failure modes. Robust evaluation must include systematically out-of-distribution problems that require compositional reasoning \u2014 the kind of tests that reveal whether a system is actually reasoning or merely retrieving.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "compositional generalization",
+      "out-of-distribution",
+      "System 2",
+      "evaluation"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Do LLMs Understand? AI Pioneer Yann LeCun Spars with DeepMind's Adam Brown",
     "source_date": "2023"
   },
   {
-    "content": "LeCun has argued that the biological analogy of the prefrontal cortex is instructive for AI architecture: in humans, the prefrontal cortex is associated with working memory, planning, abstract reasoning, and the suppression of impulsive responses. This is precisely the cluster of capabilities missing from current AI systems. He does not argue that AI should replicate the prefrontal cortex mechanistically, but that understanding its computational role points toward what architectural components must be engineered.",
-    "implication": "Neuroscience is not just inspirational for AI \u2014 it is a functional specification document for the capabilities that are missing. Researchers and architects who dismiss neuroscientific analogies as non-rigorous are discarding one of the most useful sources of hypotheses about what a complete cognitive architecture must include.",
+    "content": "LeCun has argued that the cost module in his proposed architecture needs to encode not just task-specific objectives but also what he describes as intrinsic drives \u2014 basic motivational states analogous to hunger, curiosity, or discomfort \u2014 that provide a motivational substrate for all behavior. These intrinsic drives are not learned from task reward but are designed into the system as architectural constants. This is what provides behavioral coherence across diverse tasks without requiring a separate reward signal for each.",
+    "implication": "Building truly general-purpose AI systems requires designing in motivational architecture \u2014 explicit representations of what the system fundamentally cares about \u2014 rather than training separate reward functions for each application domain. This is a foundational design decision with far-reaching consequences for system behavior.",
     "cluster": "cognitive_architecture",
     "topics": [
-      "prefrontal cortex",
-      "biological inspiration",
-      "working memory",
-      "planning"
-    ],
-    "confidence": 0.8,
-    "source_type": "talk",
-    "source_ref": "Various LeCun public lectures on autonomous machine intelligence, 2021\u20132023",
-    "source_date": "2022"
-  },
-  {
-    "content": "LeCun argues that the right test for machine intelligence is not performance on language benchmarks but the ability to learn a new physical skill from a small number of demonstrations \u2014 the way a human can learn to use an unfamiliar tool after watching someone else use it once. This 'few-shot physical learning' test requires perception, world modeling, goal inference, and motor planning operating together \u2014 a much more demanding bar than any current NLP benchmark.",
-    "original_quote": "If a robot can watch me do something once and then do it itself, that's real intelligence. Current systems can't do that. That's the test we should be working toward.",
-    "implication": "The benchmark treadmill in AI \u2014 ever-larger models achieving superhuman performance on ever-more-complex language tasks \u2014 may be measuring the wrong thing entirely. The real capability gap is in physical, few-shot, cross-modal learning. Organizations evaluating AI 'progress' should demand demonstrations of this kind of generalization, not just benchmark scores.",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "few-shot learning",
-      "physical intelligence",
-      "benchmarks",
+      "intrinsic drives",
+      "cost module",
+      "motivation",
       "general intelligence"
     ],
-    "confidence": 0.84,
-    "source_type": "interview",
-    "source_ref": "Various LeCun interviews and talks, 2021\u20132023; consistent documented position",
-    "source_date": "2022"
-  },
-  {
-    "content": "LeCun has consistently argued that end-to-end training of monolithic neural networks is insufficient for building systems capable of deliberate reasoning. While end-to-end gradient descent is a powerful optimization method, it does not impose the structural constraints needed to produce modular, interpretable, and generalizable representations. Cognitive architecture must be partly designed \u2014 not entirely learned \u2014 because some structural properties cannot be discovered by gradient descent from data.",
-    "original_quote": "You can't just throw everything into a giant neural net and hope that reasoning will emerge. You need to engineer the architecture to have the right inductive biases for the kind of reasoning you want.",
-    "implication": "The 'just train end-to-end' philosophy that dominated the deep learning era is hitting its limits. The next generation of capable AI systems will require deliberate architectural design \u2014 explicit modules, structured representations, and engineered inductive biases \u2014 not just better optimizers applied to bigger models.",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "end-to-end learning",
-      "inductive bias",
-      "modular architecture",
-      "architecture design"
-    ],
-    "confidence": 0.86,
-    "source_type": "talk",
-    "source_ref": "LeCun keynotes and interviews, 2022\u20132023; consistent with 'A Path Towards Autonomous Machine Intelligence'",
-    "source_date": "2022"
-  },
-  {
-    "content": "LeCun has described the problem of building AI capable of multi-step reasoning as fundamentally requiring a shift from 'system identification' (learning a function from data) to 'model predictive control' (using a learned model to optimize action sequences over a planning horizon). This framing, borrowed from control theory, makes clear that the missing ingredient is not better function approximation but a qualitatively different inference procedure at runtime.",
-    "implication": "Control theory and operations research offer mature mathematical frameworks for planning and optimization under uncertainty that the AI field has largely set aside in favor of end-to-end learning. Revisiting model predictive control, dynamic programming, and related tools \u2014 combined with learned world models \u2014 may be more productive than scaling autoregressive models further.",
-    "cluster": "cognitive_architecture",
-    "topics": [
-      "model predictive control",
-      "planning",
-      "control theory",
-      "reasoning"
-    ],
-    "confidence": 0.82,
-    "source_type": "paper",
-    "source_ref": "LeCun, 'A Path Towards Autonomous Machine Intelligence', OpenReview preprint",
+    "confidence": 0.8,
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
     "source_date": "2022-06-27"
+  },
+  {
+    "content": "LeCun has consistently argued that the central bottleneck on the path to human-level AI is not data, compute, or even algorithmic cleverness \u2014 it is the absence of a world model that supports efficient planning. Once a system has a good world model, it can reason about novel situations, plan over long horizons, and generalize from limited experience. Without it, no amount of data or compute produces genuine intelligence. The world model is the missing ingredient, and building it is the central research challenge of the field.",
+    "implication": "Research investment and engineering effort should be disproportionately concentrated on world model development \u2014 the ability to learn compact, abstract, predictive representations of physical and social reality. This is the highest-leverage bet for reaching human-level AI, according to LeCun's analysis.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "world model",
+      "general intelligence",
+      "research priority",
+      "planning"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "Yann LeCun - The Next Step Towards Artificial Intelligence",
+    "source_date": "2023"
+  },
+  {
+    "content": "LeCun has pointed out that the interaction between the world model and the cost module in his proposed architecture implements something analogous to value-based reasoning: the system evaluates hypothetical futures not just for their likelihood but for their desirability. This is qualitatively different from likelihood-maximizing generation \u2014 it requires the system to have preferences over futures, not just probability distributions over next tokens. Desirability-weighted planning is a structural feature that no current architecture implements.",
+    "implication": "For AI systems to be genuinely useful in goal-directed tasks, they must be able to evaluate outcomes against preferences, not just predict what comes next. This requires building explicit value representations into the architecture, not relying on implicit preferences encoded in training data.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "value-based reasoning",
+      "cost module",
+      "world model",
+      "preference representation"
+    ],
+    "confidence": 0.8,
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
+    "source_date": "2022-06-27"
+  },
+  {
+    "content": "LeCun has argued that achieving System 2 capabilities requires AI systems to learn representations at the right level of abstraction \u2014 abstract enough to be predictable across the non-determinism of real-world sensory detail, but concrete enough to be actionable. This is the theoretical motivation for JEPA (Joint Embedding Predictive Architecture): by predicting in a learned latent space rather than in pixel or token space, the system is forced to learn representations at the level of abstraction where planning is tractable.",
+    "implication": "The choice of prediction target is not a technical detail \u2014 it is a fundamental architectural decision that determines whether the learned representations will support planning. Researchers and practitioners should treat the level of abstraction at which a model predicts as a primary design parameter, not an afterthought.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "JEPA",
+      "abstraction level",
+      "latent space prediction",
+      "representation learning"
+    ],
+    "confidence": 0.9,
+    "source_type": "essay",
+    "source_ref": "LeCun, Y. \u2014 'A Path Towards Autonomous Machine Intelligence', Open Review preprint",
+    "source_date": "2022-06-27"
+  },
+  {
+    "content": "LeCun has noted that one of the key deficiencies of current AI systems as reasoning engines is their inability to maintain and update a consistent model of the world state across an extended interaction or task. Language models have no persistent world state \u2014 each forward pass is stateless with respect to the world, and whatever 'memory' exists is confined to the context window. A genuine cognitive architecture requires a continuously updated world model that serves as a shared substrate for perception, planning, and action.",
+    "implication": "Applications requiring extended, coherent interaction with a dynamic environment \u2014 robotics, long-horizon task completion, persistent assistants \u2014 cannot be adequately served by stateless, context-window-bound models. Architectural investment in persistent, updatable world state representations is a prerequisite for these use cases.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "world state",
+      "persistent memory",
+      "context window",
+      "stateful reasoning"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Yann LeCun: Meta AI, Open Source, Limits of LLMs, AGI & the Future of AI | Lex Fridman Podcast #416",
+    "source_date": "2024-01-12"
+  },
+  {
+    "content": "LeCun has argued that the gap between current AI and human-level intelligence is primarily a gap in architecture, not a gap in scale. The architectural innovations still required \u2014 a trainable world model, a modular cost structure, a hierarchical planning system, and a configurator that orchestrates them \u2014 are not incremental improvements to current systems. They represent a qualitatively different research program that the current scaling paradigm is not pursuing and cannot be evolved into by adding parameters.",
+    "implication": "Leaders making long-range AI strategy decisions should distinguish between the current scaling paradigm, which has a clear near-term roadmap and real commercial value, and the architectural paradigm shift that LeCun argues is necessary for general intelligence. Betting exclusively on scaling is betting that the architectural limitations are not real \u2014 a contestable assumption with enormous strategic consequences.",
+    "cluster": "cognitive_architecture",
+    "topics": [
+      "architecture vs scale",
+      "research agenda",
+      "general intelligence",
+      "paradigm shift"
+    ],
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "AGI debate heats up as Demis Hassabis Says Yann LeCun Is Wrong About Human Intelligence",
+    "source_date": "2023"
   }
 ]

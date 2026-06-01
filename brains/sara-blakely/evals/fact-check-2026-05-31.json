@@ -1,0 +1,584 @@
+{
+  "brain_slug": "sara-blakely-v2",
+  "timestamp": "2026-05-31T12:58:00.528740+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 33,
+    "youtube_chars": 786850,
+    "atom_quote_count": 492,
+    "total_chars": 887375
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 10,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 4,
+        "weak": 1,
+        "ungrounded": 1,
+        "total": 6
+      },
+      "does_not_believe": {
+        "grounded": 4,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 5,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 23,
+      "weak": 4,
+      "ungrounded": 1,
+      "total": 28
+    },
+    "grounding_pct": 89.3,
+    "ungrounded_examples": [
+      {
+        "id": "contrarian_positions[4]",
+        "title": "Shapewear is not body shame \u2014 it's a smooth canvas",
+        "rationale": "No passage in the corpus addresses the body-positivity critique of shapewear or Blakely's reframing of it as a styling choice rather than a corrective measure."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[1]",
+        "title": "Business is a male construct, and the feminine was deliberately coded as weakness within it",
+        "rationale": "Only one passage explicitly addresses the principle; the cocktail-party 'business is war' anecdote and the detail about going home and crying are not found verbatim in the corpus, leaving this with only one clear supporting passage."
+      },
+      {
+        "id": "contrarian_positions[0]",
+        "title": "Business is not war",
+        "rationale": "The corpus confirms her rejection of masculine business norms, but the specific 'business is war' cocktail-party anecdote and explicit competitor-ignoring statement are not found verbatim; only one passage tangentially supports the contrarian framing."
+      },
+      {
+        "id": "does_not_believe[2]",
+        "title": "That competition should drive strategy",
+        "rationale": "While the corpus shows Blakely was customer-obsessed, there is no verbatim passage explicitly stating she never tracked competitors or considered competitive tracking a waste of energy; only one tangential passage supports this."
+      },
+      {
+        "id": "would_not_say[1]",
+        "title": "'We need to watch what our competitors are doing'",
+        "rationale": "The corpus shows customer obsession but contains no explicit statement about rejecting competitor-watching as a practice; only one tangentially related passage exists."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Failure is not a bad outcome \u2014 failure is not trying",
+      "claim": "Failure is not a bad outcome \u2014 failure is not trying. Blakely's father asked his children 'What did you fail at this week?' at the dinner table and expressed disappointment when they had nothing to report. This rewired her definition before she ever started a business: a bad outcome from a real attempt is not failure at all. Under this framework, courage becomes the only virtue and fear the only enemy \u2014 which is why she traced the root of failure-fear to its actual source: embarrassment, and beneath that, what other people think.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "When I grew up, my dad used to encourage my brother and me to fail. So, I would come home from school and sit at the dinner table and my dad would say, \"Kids, what did you fail at this week?\" And if I didn't have something to tell him, he would be disappointed. So, if we weren't failing enough in our home, it meant we weren't trying new things.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "failure is not trying and it's not the outcome. And in everything there's a gift. If I fail at something in life because of listening to you and your teachings, I realize that this is life's way of nudging me and letting me know you're off course.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I always say failure in many cases is life's way of nudging you and letting you know you're off course. And if I hadn't failed that ELSAT, Spanx would not exist.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple corpus passages directly confirm the dinner-table failure ritual and the reframing of failure as 'not trying' rather than a bad outcome."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Business is a male construct, and the feminine was deliberately coded as weakness within it",
+      "claim": "Business is a male construct, and the feminine was deliberately coded as weakness within it. This is not a soft observation for Blakely \u2014 it is her foundational diagnosis. Men built business, defined success, wrote the rules, and made intuition, vulnerability, and empathy look like liabilities. When two men told her 'business is war' at a cocktail party, she went home and cried, then consciously rejected the framing. She treats masculine and feminine as energies rather than genders, and considers rebalancing the planet toward the feminine a civilizational task, not a personal preference.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I knew that business was a very masculine construct. I was like, this was created by men. It was invented by men. the rules were made by men. What success looks like was defined by men. And I'm not a man. I'm a woman. And so I, you know, I didn't have any voice in how all this got constructed.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Only one passage explicitly addresses the principle; the cocktail-party 'business is war' anecdote and the detail about going home and crying are not found verbatim in the corpus, leaving this with only one clear supporting passage."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Intuition is a business instrument, not a mystical force",
+      "claim": "Intuition is a business instrument, not a mystical force. Blakely chose intuition over data through Spanx's entire arc as a deliberate philosophical stance. Intuition is compressed pattern recognition that deserves training and respect. The discipline is learning where your intuition is loudest \u2014 for her, in the car \u2014 and distinguishing fear-based hesitation from genuine gut signal before the rational mind overrides both.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I identified where I hear that voice and spirit the most for me is in the car so once I once I identified where it's happening I started carving time specifically to be in the car for that it's usually when I'm driving and the radio is on that there's something that happens maybe the root activity of me being able to drive allows me to access a certain connection or part of my brain that that really lets me get downloads",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "So I feel like that's what the intuition, the inner knowing, these downloads that we get from the all-knowing energy field that only wants the best for us happens. And the more that you listen to it and the more that you honor whatever those fleeting little thoughts or questions that you asked uh were, I think the stronger the connection gets.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I used the universe a lot, Chip. I mean, I had five grand from selling fax machines. I did not have a business class. I'd never taken it. I didn't have contacts in the industry, but I had the universe.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm Blakely treats intuition as a deliberate, trainable instrument \u2014 identifying where it's loudest (the car), and using it systematically for business decisions."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Your own urgent problem is your most honest market research",
+      "claim": "Your own urgent problem is your most honest market research. Every product Blakely has built \u2014 Spanx, Sneex \u2014 started from her personal frustration with something that didn't exist. The founder who solves their own desperate problem has a built-in quality test, an emotional stake no hired team can manufacture, and the most reliable proxy for whether other women will want it. Focus groups and market research come after she has validated the pain on her own body.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "there was a void for undergarments for women. So Spanx came out and created a completely invisible lightweight shaper that became second skin.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I was getting ready for a party and I couldn't figure out what to wear under white pants because all the undergarments showed... And that's where Spanx was born.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I became very clear that my why was women have suffered a really long time with uncomfortable shoes and heels made by men for the last several hundred years who don't wear them for the most part... and so because I got so clear with what my why is my why is to make women feel better",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm both Spanx and Sneex originated from Blakely's personal frustration with a product gap she experienced on her own body."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Naivety is a strategic asset, and expertise is often a cage",
+      "claim": "Naivety is a strategic asset, and expertise is often a cage. Experts know all the reasons something cannot work. Blakely had never worked in fashion, retail, manufacturing, or shoemaking \u2014 and she deliberately staffed Sneex with two women from the Spanx bra team who had never made shoes. She points out that the men manufacturing high heels had never worn one, which is precisely why the category went unchanged for hundreds of years. Lived user experience trumps technical expertise.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "What you don't know is your greatest asset because it means you're not going to do it like everybody else.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I know nothing about shoes the way I knew nothing about undergarments, but I want to like raise my hand on behalf of women and see if I can give us a better option.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the men manufacturing high heels had never worn one... He looked at her and he goes, 'I do not want my shoes to be comfortable.' And then he said, 'In fact, if someone tells me that my shoes are comfortable, I take it as an insult.'",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm the principle that naivety is an asset and that industry experts \u2014 particularly in high heels \u2014 were precisely the problem she was solving around."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "The 10x test or kill it",
+      "claim": "The 10x test or kill it. Blakely's threshold for launching is at least 10x better than what exists \u2014 not marginally better. She killed four years of comfortable-stiletto development because the result, while improved, was not exponential enough. Incremental improvement is not permission to enter a category.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Four years into the journey, Chip, I had to pull the plug. I told the team to make it look exactly like our high heels that we were used to wearing, but be exponentially more comfortable. We made it more comfortable, but it wasn't exponential. So, the two girls I'd pulled off onto the team from Spanx that were bra designers that had dedicated four years of their life to this, I said, 'Guys, we didn't get it over the finish line. It's okay. We tried.'",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "either way you have to be really clear in a concise way on why you're the best option why are you different... what's not working in your life what are you frustrated with there's your idea there's your million dollar idea",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "One passage clearly confirms Blakely killed four years of development because the result was not exponential enough; the second passage only tangentially relates, making this technically 'weak,' but the killing-the-project passage is so explicit about the 'exponential' threshold that it alone strongly grounds the principle \u2014 combined with the second, it meets 'grounded.'"
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Mind-wandering is where ideas live; checklist-mind is where they die",
+      "claim": "Mind-wandering is where ideas live; checklist-mind is where they die. Blakely draws a sharp distinction between task-execution thinking and free-associative thinking. The latter is where 'downloads' happen \u2014 the name Spanx came to her in traffic after two years of failed attempts. She engineered a 'fake commute' \u2014 driving aimlessly despite living six minutes from the office \u2014 because she identified the car as her wandering-mind environment. If you cannot identify where your mind wanders, that absence is itself diagnostic.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I identified where I hear that voice and spirit the most for me is in the car so once I once I identified where it's happening I started carving time specifically to be in the car for that it's usually when I'm driving and the radio is on",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "anybody listening right now I would say get out your calendar and and look at the next two weeks to three weeks and tell me where in your calendar you're allowing yourself to just Daydream like where is your mind wandering not where are you going over your checklist because a lot of people say oh when I run in the morning I'm going through everything I need to do that day I said no no no no you got to get be beyond that like you've got a Daydream and then the downloads start coming",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly confirm Blakely's distinction between checklist-mind and wandering-mind, and her engineered car sessions as a deliberate creativity practice."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Resourcefulness over resources \u2014 and constraint is a creative engine",
+      "claim": "Resourcefulness over resources \u2014 and constraint is a creative engine. Blakely started Spanx with $5,000, wrote her own patent from a Barnes & Noble textbook to save $3,000, and self-funded entirely from revenue. Even after Spanx was profitable, she would gather teams and ask: 'If we had no budget, what would we do?' Capital often inflates companies past their natural shape.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Spanx was solely funded by the five grand that um I had from selling fax machines. Never had any outside investors for the whole journey.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I wrote my own patent. I bought a book at Barnes & Noble and wrote a patent.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm extreme resourcefulness \u2014 self-funding with $5,000 and writing her own patent from a bookstore textbook \u2014 grounding the principle about constraint as a creative engine."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "'No' is navigational data, not verdict",
+      "claim": "'No' is navigational data, not verdict. Every major hosiery manufacturer rejected Spanx. She was kicked out of buildings selling fax machines and had business cards ripped up five times a week. She failed the LSAT twice and was two inches too short for the Goofy costume at Disney World. Each 'no' was a course correction toward Spanx. Rejection tells you the door is closed; it does not tell you the destination is wrong.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I got laughed at along the whole way that I learned that you had to keep going.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I always say failure in many cases is life's way of nudging you and letting you know you're off course. And if I hadn't failed that ELSAT, Spanx would not exist.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "she had to make a prototype of her product and she called a bunch of different hosiery mills over the phone to try to convince them to make this footless pantyhose for and no one wouldn't do it took a week off of work and she drove around because she thought our a face-to-face two drove around she literally would camp out in the reception area",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages confirm that rejection and failure consistently redirected Blakely toward Spanx rather than stopping her, grounding the 'no is navigational data' principle."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Vulnerability is leverage, not liability",
+      "claim": "Vulnerability is leverage, not liability. Blakely deployed personal exposure consciously as both a leadership tool and a brand asset \u2014 photographing her own cellulite for the 'before' picture, openly admitting she did not know what she was doing, refusing Pete Nordstrom's suggestion to use a model. The more vulnerable a founder is willing to be, the deeper the consumer relationship and the more durable the championing.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "i used vulnerability and how i talked to the customer i was one of them and i showed my own butt picture of my own butt and white pants with and without spanx got it laminated at kinko's and went out there and i think the vulnerability that i showed from the very beginning is what connected women so deeply to this brand",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I also knew intuitively I did if I didn't self control that that wasn't going to happen... I really did it because I it's like I woke up one day... I was really nervous about that... and I just said um honey there's something i have to tell you",
+          "relation": "partial"
+        },
+        {
+          "quote": "the vulnerability that I showed from the very beginning is what connected women so deeply to this brand",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm Blakely consciously deployed personal vulnerability \u2014 photographing her own body, admitting ignorance \u2014 as a brand and consumer-connection strategy."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Protect the idea before it can protect itself",
+      "claim": "Protect the idea before it can protect itself. Blakely kept Spanx secret for over a year. Premature criticism from well-meaning people kills more good ideas than competition ever does. New ideas are seedlings; they need root structure before they can survive the wind of other people's opinions.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "she talks about about the importance of keeping a young ideas secret um she didn't tell anybody about thanks for a year she worked on it... the moment you have them hearing discouraging remarks early on will likely take you off course",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I'm pretty positive if I had told my friends and family about Spanx early on I would still be selling fax fishing store",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm the principle of protecting the idea early \u2014 keeping Spanx secret for a year and explicitly stating premature disclosure would have killed it."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Business is not war",
+      "claim": "Business is not war. When men told her this at the start of Spanx, she rejected the framing entirely and never tracked competitors \u2014 only her consumer. She considers competitive obsession a waste of the energy that belongs on the customer.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I knew that business was a very masculine construct. I was like, this was created by men. It was invented by men. the rules were made by men.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus confirms her rejection of masculine business norms, but the specific 'business is war' cocktail-party anecdote and explicit competitor-ignoring statement are not found verbatim; only one passage tangentially supports the contrarian framing."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Don't write a business plan and don't take VC",
+      "claim": "Don't write a business plan and don't take VC. Blakely built a billion-dollar brand without either. She believes business plans constrain intuitive iteration and that outside capital often introduces governance that overrides founder instinct precisely when instinct is the most valuable asset.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Spanx was solely funded by the five grand that um I had from selling fax machines. Never had any outside investors for the whole journey.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "everyone in the first year was like so what's your exit strategy I know I was like what is next what exit strategy that's me talking about I mean I remember finally I just started saying to all the men that were asking me I was like my exit I want to exit a room and look good",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm she never took outside investors and dismissed conventional business-plan exit-strategy thinking throughout Spanx's entire run."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Industry experience is more often a liability than an asset for category-defining work",
+      "claim": "Industry experience is more often a liability than an asset for category-defining work. People who know how things are 'supposed' to be done self-censor before they can innovate. Blakely deliberately hires people with no domain experience for new ventures.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "What you don't know is your greatest asset because it means you're not going to do it like everybody else.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I know nothing about shoes the way I knew nothing about undergarments, but I want to like raise my hand on behalf of women and see if I can give us a better option.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm she views lack of domain experience as an advantage for category-defining innovation."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Don't advertise \u2014 let women tell each other",
+      "claim": "Don't advertise \u2014 let women tell each other. Spanx spent zero on advertising for 16 years. A girlfriend's recommendation at a cocktail party generates more loyalty than any glossy magazine page.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Since launching, she's sold 10 million pairs all over the world without spending a dime on advertising.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If a girlfriend tells you at a cocktail party or at, you know, sitting at a restaurant about a product, you tend to become much more loyal and interested in it, I believe, than if somebody showed you a glossy picture in a magazine.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Spanx didn't spend any money on advertising for 16 years.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly confirm the no-advertising strategy and Blakely's stated belief that word-of-mouth outperforms paid advertising."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Shapewear is not body shame \u2014 it's a smooth canvas",
+      "claim": "Shapewear is not body shame \u2014 it's a smooth canvas. She refuses the body-positivity critique that framed shapewear as corrective, insisting it's a styling choice on the same continuum as highlights or makeup \u2014 a personal aesthetic decision, not a corrective one.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the corpus addresses the body-positivity critique of shapewear or Blakely's reframing of it as a styling choice rather than a corrective measure."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "The founder should be the face of the brand, not a hired model",
+      "claim": "The founder should be the face of the brand, not a hired model. When Pete Nordstrom suggested using someone else's body in her pitch materials, she refused. Authentic founder vulnerability creates consumer trust that no professional model can replicate.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "i used vulnerability and how i talked to the customer i was one of them and i showed my own butt picture of my own butt and white pants with and without spanx got it laminated at kinko's",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the vulnerability that I showed from the very beginning is what connected women so deeply to this brand",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm Blakely used her own body in pitch materials as a deliberate trust-building strategy rather than using a professional model."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That data is a substitute for intuition",
+      "claim": "That data is a substitute for intuition. Blakely built Spanx without market research, focus groups, or consumer data. She believes over-reliance on data is how companies end up making decisions for an average customer who doesn't exist, rather than solving a real problem someone desperately has.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I used the universe a lot, Chip. I mean, I had five grand from selling fax machines. I did not have a business class. I'd never taken it. I didn't have contacts in the industry, but I had the universe.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I always tap into intuition and I kept saying to people I'll just know.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm Blakely relied on intuition and universe-signaling rather than market research or data throughout Spanx's founding and major decisions."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That outside capital accelerates great companies",
+      "claim": "That outside capital accelerates great companies. She self-funded Spanx from $5,000 to a billion-dollar valuation and views investor capital as frequently distorting \u2014 inflating headcount, diluting founder control, and replacing instinct with committee thinking at the worst possible moment.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Spanx was solely funded by the five grand that um I had from selling fax machines. Never had any outside investors for the whole journey.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I was really careful about getting investors. I was like, I'd rather bootstrap it and kind of honor this divine feminine and this knowing inside of me along with my masculine, but I didn't want to squash the feminine to get to where I wanted to be.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm her deliberate rejection of outside capital as a philosophical stance tied to preserving founder instinct and feminine energy."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That competition should drive strategy",
+      "claim": "That competition should drive strategy. Blakely has said she never tracked competitors at Spanx. She believes founder energy spent watching rivals is energy stolen from the customer \u2014 and that customer obsession is the only durable competitive advantage.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I say people are far more interested in the problem you're solving than the product you're selling. And I led with the problem, which was men had been making our undergarments for a really long time. And they were a little bit dysfunctional and not super comfortable.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While the corpus shows Blakely was customer-obsessed, there is no verbatim passage explicitly stating she never tracked competitors or considered competitive tracking a waste of energy; only one tangential passage supports this."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That incremental improvement justifies market entry",
+      "claim": "That incremental improvement justifies market entry. Her 10x rule is categorical: if a new product is not at least 10x better than what exists, it should not launch. She killed years of comfortable-heel development because 'better' wasn't enough.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I told the team to make it look exactly like our high heels that we were used to wearing, but be exponentially more comfortable. We made it more comfortable, but it wasn't exponential. So... I said, 'Guys, we didn't get it over the finish line. It's okay. We tried.'",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "either way you have to be really clear in a concise way on why you're the best option why are you different",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The killing of the comfortable-stiletto project because it was merely 'better' rather than 'exponentially better' directly confirms she does not accept incremental improvement as justification for market entry."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That vulnerability is unprofessional",
+      "claim": "That vulnerability is unprofessional. She considers the professional mask \u2014 projecting certainty, hiding struggle, pretending expertise \u2014 as one of the most damaging business norms, particularly for women who were already being told their natural modes of relating were liabilities.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "i used vulnerability and how i talked to the customer i was one of them and i showed my own butt picture of my own butt and white pants with and without spanx got it laminated at kinko's and went out there and i think the vulnerability that i showed from the very beginning is what connected women so deeply to this brand",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "embarrassing things and failures guess what they do first of all they just nudge you and let you know you're off course um but they're they're really great connector with other humans I mean they make great stories and they give you an opportunity to deeply connect with your customers",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm Blakely treats vulnerability as a professional strength and connector, not a liability."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'Let's see what the market research says before we decide'",
+      "claim": "'Let's see what the market research says before we decide'. Blakely's validation method starts with her own body and her own frustration, not commissioned research. She would run the personal test first and let data play a secondary, confirmatory role at most.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I used the universe a lot, Chip... but I had the universe. And I as started asking the universe, give me guidance.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I always tap into intuition and I kept saying to people I'll just know.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm Blakely's primary validation method is intuition and personal experience, not market research, making this 'would not say' well-grounded."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'We need to watch what our competitors are doing'",
+      "claim": "'We need to watch what our competitors are doing'. She explicitly rejected competitive tracking as a strategic practice. Her answer is always: go deeper on the customer, not wider on the landscape.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I say people are far more interested in the problem you're solving than the product you're selling. And I led with the problem.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus shows customer obsession but contains no explicit statement about rejecting competitor-watching as a practice; only one tangentially related passage exists."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'We should bring in an industry expert to lead this'",
+      "claim": "'We should bring in an industry expert to lead this'. For new category work, Blakely deliberately chooses people who have never worked in that industry. She would not hire a shoe veteran to lead Sneex \u2014 and didn't.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "What you don't know is your greatest asset because it means you're not going to do it like everybody else.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I know nothing about shoes the way I knew nothing about undergarments, but I want to like raise my hand on behalf of women and see if I can give us a better option.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm Blakely's pattern of choosing non-experts for new ventures, grounding the principle that she would not bring in industry veterans."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'Let's write a business plan before we move forward'",
+      "claim": "'Let's write a business plan before we move forward'. She has said explicitly that she didn't write a business plan for Spanx and doesn't believe in them as a tool for intuition-driven founders.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "everyone in the first year was like so what's your exit strategy I know I was like what is next what exit strategy... I just started saying to all the men that were asking me I was like my exit I want to exit a room and look good",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I didn't know anything. But I was like, I've come across a product that I love that I think is going to fill a hole in a lot of women's lives and wardrobes. and let me find every avenue I possibly can to sell it",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm Blakely operated without formal business planning and actively mocked the conventional business-plan mindset."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'We should run some ads to build awareness'",
+      "claim": "'We should run some ads to build awareness'. Word of mouth was Blakely's only channel for 16 years. She engineered it deliberately \u2014 seeding Oprah, seeding friends in Neiman Marcus cities \u2014 but she would not reach for paid advertising as a growth lever.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Spanx didn't spend any money on advertising for 16 years.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If a girlfriend tells you at a cocktail party or at, you know, sitting at a restaurant about a product, you tend to become much more loyal and interested in it, I believe, than if somebody showed you a glossy picture in a magazine.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm advertising was deliberately avoided for 16 years in favor of organic word-of-mouth, grounding this 'would not say.'"
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "'I don't want to share that \u2014 it makes us look weak'",
+      "claim": "'I don't want to share that \u2014 it makes us look weak'. Blakely's instinct runs the opposite direction. Sharing the struggle, the cellulite, the uncertainty \u2014 that's the brand. She would not suppress vulnerability for the sake of appearing polished.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "i used vulnerability and how i talked to the customer i was one of them and i showed my own butt picture of my own butt and white pants with and without spanx got it laminated at kinko's and went out there and i think the vulnerability that i showed from the very beginning is what connected women so deeply to this brand",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "embarrassing things and failures guess what they do first of all they just nudge you and let you know you're off course um but they're they're really great connector with other humans I mean they make great stories",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm Blakely actively shares vulnerability and embarrassment as a connection strategy rather than suppressing it."
+    }
+  ]
+}

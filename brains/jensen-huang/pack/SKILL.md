@@ -9,8 +9,8 @@ Welcome to the **Huang Brain Pack** from [brainsforfree.com](https://brainsforfr
 
 ## What You're Getting
 
-- **253 knowledge atoms** — Core insights, frameworks, and strategic principles from Lex Fridman Podcast #494, Acquired Podcast NVIDIA episode, Joe Rogan Experience #2422, Computer History Museum Oral History, Stanford GSB View From The Top, GTC 2024/2025 Keynotes, 60 Minutes profile, Stripe Sessions with Patrick Collison, All-In Podcast, Dwarkesh Patel interview, Stanford SIEPR Economic Summit, and Hoover Institution interview
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **805 knowledge atoms** — Core insights, frameworks, and strategic principles from Lex Fridman Podcast #494, Acquired Podcast NVIDIA episode, Joe Rogan Experience #2422, Computer History Museum Oral History, Stanford GSB View From The Top, GTC 2024/2025 Keynotes, 60 Minutes profile, Stripe Sessions with Patrick Collison, All-In Podcast, Dwarkesh Patel interview, Stanford SIEPR Economic Summit, and Hoover Institution interview
+- **736 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — accelerated computing, CUDA, first-principles thinking, AI factories, sovereign AI, organizational design, resilience, supply chain strategy, physical AI, market creation, and more
 
@@ -28,7 +28,7 @@ Your Huang Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (253 insights)
+  ├── brain-atoms.json         ← structured atoms (805 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 253 atoms with titles, summaries, connections
+   - JSON structure of 805 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,7 +93,7 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Jensen's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "Should I build my own AI infrastructure or rent from hyperscalers?"*
+*Example: "Should I build my own AI infrastructure or rent compute from hyperscalers?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Jensen sees it. Best for: understanding unfamiliar ideas, building mental models.
@@ -101,11 +101,11 @@ Get a clear explanation of a concept as Jensen sees it. Best for: understanding 
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Is NVIDIA's CUDA moat sustainable, or will open alternatives erode it?"*
+*Example: "Is NVIDIA's CUDA moat sustainable, or will open alternatives eventually erode it?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect Jensen's organizational design (50 direct reports) to his views on information flow and speed."*
+*Example: "Connect Jensen's flat organizational design with his views on information flow and decision speed."*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
@@ -117,7 +117,7 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions Jensen would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I'm deciding whether to invest in building an AI team or buying AI services. What should I be asking myself?"*
+*Example: "I'm deciding whether to invest in building an in-house AI team or buying AI services. What should I be asking myself?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to accelerated computing? Teach the GPU revolution → evolve how Jensen's vision changed from gaming to AI → coach yourself through build vs. buy decisions.*
+*Example: New to accelerated computing? Teach the GPU revolution → evolve how Jensen's vision changed from gaming to AI → coach yourself through a build-vs-buy infrastructure decision.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)

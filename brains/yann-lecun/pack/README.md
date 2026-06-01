@@ -1,11 +1,11 @@
 # Yann LeCun Brain Pack
 
-> **442 knowledge atoms** · **458 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **609 knowledge atoms** · **616 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Yann LeCun's thinking, extracted from Foundational research papers including the 1989 NeurIPS paper and 1998 IEEE proceedings, Turing Award materials, and major press profiles. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Yann LeCun's thinking, extracted from Foundational research papers including the 1989 NeurIPS paper and 1998 IEEE proceedings, Turing Award materials, JEPA path paper, Lex Fridman podcast episodes, and major video lectures from Facebook AI Research and academic institutions. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Yann's actual ideas, frameworks, and worldview.
 
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Yann'
    ```
 3. Then run any thinking skill:
    ```
-   /advise "Should I focus my AI research on scaling transformers or explore alternative architectures?"
+   /advise "Should I focus my AI research on scaling transformers or explore alternative architectures like JEPA?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Yann's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Yann's perspect
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (442 atoms, 458 connections)
+  ├── brain-atoms.json      ← Structured data (609 atoms, 616 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**442 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**609 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**458 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**616 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — Convolutional neural networks, world models, self-supervised learning, AI safety, autonomous machines, energy-based models, cognitive architecture.
+**16 topic clusters** — Convolutional neural networks, world models, self-supervised learning, AI safety, autonomous machines, energy-based models, cognitive architecture, open-source AI.
 
 **Date range:** 1989 — 2024
 
@@ -95,7 +95,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 ## About Yann LeCun
 
-Yann LeCun is one of the founding fathers of modern deep learning and a Turing Award laureate who pioneered convolutional neural networks and backpropagation. As Chief AI Scientist at Meta and Silver Professor at NYU, he is one of the most influential voices on the future of artificial intelligence.
+Yann LeCun is one of the founding fathers of modern deep learning and a Turing Award laureate who pioneered convolutional neural networks and backpropagation. As Chief AI Scientist at Meta and Silver Professor at NYU, he is one of the most influential and contrarian voices on the future of artificial intelligence.
 
 ## Sources & Ethics
 

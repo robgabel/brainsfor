@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (566 atoms, 556 typed connections)
+  brain-atoms.json         ~1MB     Structured data (885 atoms, 772 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | Kara's synthesized worldview, all 566 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | Kara's synthesized worldview, all 885 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 
@@ -141,9 +141,9 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 4. Use any thinking skill:
    ```
-   /advise Should my startup work with government regulators proactively or wait to be called?
-   /debate Is Elon Musk good or bad for innovation?
-   /predict What happens to democracy if AI is controlled by three companies?
+   /advise Should my startup engage proactively with government regulators, or wait until they come to us?
+   /debate Is Elon Musk's ownership of X good or bad for free speech?
+   /predict What happens to democracy if three companies control the world's AI infrastructure?
    /surprise
    ```
 

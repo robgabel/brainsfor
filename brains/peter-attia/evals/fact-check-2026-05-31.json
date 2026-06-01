@@ -1,0 +1,563 @@
+{
+  "brain_slug": "peter-attia-v2",
+  "timestamp": "2026-05-31T09:49:56.255369+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 18,
+    "youtube_chars": 1307639,
+    "atom_quote_count": 374,
+    "total_chars": 1401433
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 3,
+        "weak": 5,
+        "ungrounded": 3,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 1,
+        "weak": 1,
+        "ungrounded": 5,
+        "total": 7
+      },
+      "does_not_believe": {
+        "grounded": 2,
+        "weak": 3,
+        "ungrounded": 1,
+        "total": 6
+      },
+      "would_not_say": {
+        "grounded": 1,
+        "weak": 3,
+        "ungrounded": 2,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 7,
+      "weak": 12,
+      "ungrounded": 11,
+      "total": 30
+    },
+    "grounding_pct": 43.3,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[7]",
+        "title": "Stage at detection is nearly everything in cancer",
+        "rationale": "The corpus contains no passages discussing colonoscopy screening age, stage-specific cancer survival statistics, liquid biopsy, whole-body MRI, or the mathematical asymmetry of cancer stage detection that would ground this principle."
+      },
+      {
+        "id": "first_principles[9]",
+        "title": "Ultra-primary prevention is the only domain with a clean win",
+        "rationale": "The corpus contains no passages stating that ASCVD is 'essentially preventable' or specifying apoB targets of 30-40 mg/dL, nor does it frame ASCVD prevention as uniquely providing a 'near-elimination' win versus probabilistic hedging for other diseases."
+      },
+      {
+        "id": "first_principles[10]",
+        "title": "The goal is not to avoid failure; it's to shorten the time between failure and repair",
+        "rationale": "The corpus contains no passages discussing the concept of shortening time between failure and repair, latency as a key metric, or applying this framework to parenting, marriage, nutrition adherence, or emotional dysregulation."
+      },
+      {
+        "id": "contrarian_positions[1]",
+        "title": "The optimal apoB target is roughly 30\u201340 mg/dL \u2014 far below guideline targets",
+        "rationale": "The corpus contains no passages specifying an optimal apoB target of 30-40 mg/dL, referencing healthy newborn apoB levels, or critiquing U.S. lab reference ranges for apoB as pathological by biological standards."
+      },
+      {
+        "id": "contrarian_positions[2]",
+        "title": "Colonoscopy screening should begin at 40, not 45",
+        "rationale": "The corpus contains no passages discussing colonoscopy screening age recommendations, early-onset colorectal cancer incidence, or the shift from age 50 to 45 to 40."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[0]",
+        "title": "Medicine 3.0 treats prevention with the urgency reserved for emergencies",
+        "rationale": "The corpus mentions the four horsemen and apoB, but does not contain the specific Medicine 2.0/Medicine 3.0 framing, the '30 years that determined the outcome' language, or the LDL-C flagging at 55 framing \u2014 only one passage tangentially supports the prevention-focused idea."
+      },
+      {
+        "id": "first_principles[1]",
+        "title": "You will die with atherosclerosis or from it \u2014 those are the only two choices",
+        "rationale": "The corpus mentions atherosclerosis and apoB as key concerns but does not contain the specific framing that atherosclerosis begins in the twenties, the 'plaque that kills at 65 began forming at 25,' or the 'cumulative apoB-particle-years' language; the evidence is only tangential."
+      },
+      {
+        "id": "first_principles[2]",
+        "title": "The Four Horsemen share insulin resistance as a common upstream soil",
+        "rationale": "The corpus supports that the four horsemen share metabolic underpinnings, but does not explicitly state they share insulin resistance as 'common upstream soil' or that exercise/sleep/diet are 'one integrated leverage point against four mortality risks simultaneously.'"
+      },
+      {
+        "id": "first_principles[5]",
+        "title": "Emotional health is the substrate, not a separate pillar",
+        "rationale": "The corpus supports emotional health as critically important and often neglected, but does not contain the specific claim that 'anger is almost always a secondary emotion masking hurt, fear, or shame' \u2014 that specific sub-claim is ungrounded, reducing this to weak."
+      },
+      {
+        "id": "first_principles[8]",
+        "title": "Every intervention must have a biomarker to verify it is working",
+        "rationale": "The corpus supports the idea of measurement to verify interventions are working (drug response tracking, repeat blood tests), but does not explicitly articulate the broad principle that every intervention must have a biomarker verification, and specific examples like zone 2 verification or sleep measurement are absent."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Medicine 3.0 treats prevention with the urgency reserved for emergencies",
+      "claim": "Medicine 3.0 treats prevention with the urgency reserved for emergencies. Medicine 2.0 waits for disease to manifest, then intervenes with expensive end-stage tools. Medicine 3.0 assumes the Four Horsemen \u2014 atherosclerotic disease, cancer, neurodegeneration, and metabolic dysfunction \u2014 are already accumulating decades before symptoms, and starts work in the third decade of life. By the time a standard panel flags LDL-C at 55, the 30 years that determined the outcome have already passed.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "if you're in your 40s or Beyond and you care about this issue which immediately puts you in a selection bias category there's an 80% chance you're going to die of those four diseases so any strategy geared towards increasing longevity has to be geared towards reducing the risk of those diseases as much as as humanly possible",
+          "relation": "partial"
+        },
+        {
+          "quote": "primarily ApoB would be the single most important lipoprotein that we care about",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus mentions the four horsemen and apoB, but does not contain the specific Medicine 2.0/Medicine 3.0 framing, the '30 years that determined the outcome' language, or the LDL-C flagging at 55 framing \u2014 only one passage tangentially supports the prevention-focused idea."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "You will die with atherosclerosis or from it \u2014 those are the only two choices",
+      "claim": "You will die with atherosclerosis or from it \u2014 those are the only two choices. Atherosclerosis is a disease of cumulative apoB exposure beginning in the twenties, not a disease of old age. The plaque that kills at 65 began forming at 25, making cardiovascular prevention fundamentally a math problem about lifetime apoB-particle-years. 'Normal' LDL by population standards is pathological by the standards of clean coronary arteries at autopsy.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "atherosclerotic disease, cancer, neurodegenerative disease, and metabolic disease, which directly isn't the cause of many deaths, but basically creates the foundation to all of those other diseases",
+          "relation": "partial"
+        },
+        {
+          "quote": "primarily ApoB would be the single most important lipoprotein that we care about",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus mentions atherosclerosis and apoB as key concerns but does not contain the specific framing that atherosclerosis begins in the twenties, the 'plaque that kills at 65 began forming at 25,' or the 'cumulative apoB-particle-years' language; the evidence is only tangential."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "The Four Horsemen share insulin resistance as a common upstream soil",
+      "claim": "The Four Horsemen share insulin resistance as a common upstream soil. Cardiovascular disease, cancer, Alzheimer's, and metabolic dysfunction are not independent diseases competing for attention \u2014 they share the same metabolic substrate. Exercise, sleep, dietary quality, and apoB control are not four separate interventions but one integrated leverage point operating against four mortality risks simultaneously.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "metabolic disease, which directly isn't the cause of many deaths, but basically creates the foundation to all of those other diseases",
+          "relation": "partial"
+        },
+        {
+          "quote": "they're not infectious diseases they don't kill you quickly right these are all deaths these are all disease processes that build up over over time the second thing that jumps out at us is that these are diseases that did not that that did not exist in populations that failed to see Western influence",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus supports that the four horsemen share metabolic underpinnings, but does not explicitly state they share insulin resistance as 'common upstream soil' or that exercise/sleep/diet are 'one integrated leverage point against four mortality risks simultaneously.'"
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Healthspan dominates lifespan in any serious longevity calculation",
+      "claim": "Healthspan dominates lifespan in any serious longevity calculation. Adding a decade to the end of life is worthless if those years are spent immobile and demented. The relevant question is the Centenarian Decathlete: what must I be physically and cognitively capable of at 85, and then backcast through the predictable 10% per decade VO2 max decline and muscle loss curve to derive what must be built right now.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if someone said to me Peter you can live to be 150 years old in perfect health but you have to sit in a dark room alone and never see your family again would you do it I mean not a chance right like I'd rather die in five years than have to do that",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "the marginal decade is the last decade of your life... I think the exercise that we like to go through with our patients very early on is have them, in exquisite detail... lay out what their marginal decade should look like",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "okay, how do you break down that into metrics that we can measure... VO2 max of 30 milliliters of oxygen per minute per kilogram... that declines at about 8% to 10% per decade. So if you have to be at 30, and let's just assume you're going to be doing that at 90",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The corpus clearly supports the marginal decade concept, the centenarian decathlete framing, backcasting from desired end-state to current requirements, and the VO2 max decline per decade \u2014 multiple distinct passages ground this principle."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Exercise is the most potent longevity drug ever studied, and nothing else is close",
+      "claim": "Exercise is the most potent longevity drug ever studied, and nothing else is close. The hazard ratio between the bottom quartile and top 2.5% of VO2 max is roughly 5x for all-cause mortality \u2014 a larger effect than any pharmaceutical in history. Until you can deadlift bodyweight, wall-sit two minutes, dead-hang one minute, and sit at the 75th percentile of VO2 max for your age, debates about supplements, nootropics, and fasting protocols are a distraction.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if you compare the bottom 25% to the top 2.5%, so you're talking about bottom quarter to the elite, for a given age, you're talking about five X. - Wow! - 400% difference in all-cause mortality. That's probably the single strongest association I've seen for any modifiable behavior.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "until you can deadlift your body weight for 10 reps. Like then you can come and talk about those things... until your VO2 max is at least to the 75th percentile and you're able to dead hang for at least a minute, and you're able to wall sit for at least two... you couldn't talk about anything else health-related",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I just can't get enough of the machinating and arguing about this supplement versus that supplement. And I feel like you shouldn't be having those arguments until you have your exercise house in order",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple distinct passages in the corpus explicitly state the 5x hazard ratio for VO2 max, the specific physical benchmarks (dead hang, wall sit, VO2 max percentile), and the priority of exercise over supplements, fully grounding this principle."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Emotional health is the substrate, not a separate pillar",
+      "claim": "Emotional health is the substrate, not a separate pillar. You can have perfect apoB, elite VO2 max, and a pristine CGM tracing, and still have a life not worth living. Anger is almost always a secondary emotion masking hurt, fear, or shame. The hardest pillar to measure is therefore the most neglected, and the most important.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "And then there's the emotional piece, which depending on who you are, might be the single most important piece, without which none of this other stuff matters, right? If you're a totally miserable human being, your relationships suck, I don't think any of this other stuff matters.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the irony of thinking about how many years I spent sort of in pursuit of fully optimizing every detail of everything, without any attention being paid to that dimension, is not lost on me",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports emotional health as critically important and often neglected, but does not contain the specific claim that 'anger is almost always a secondary emotion masking hurt, fear, or shame' \u2014 that specific sub-claim is ungrounded, reducing this to weak."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Precision replaces population averages",
+      "claim": "Precision replaces population averages. Population guidelines are averages of heterogeneous populations, shaped by healthcare system capacity and statistical convenience. Real decisions require apoB, Lp(a), CAC score, APOE status, DEXA, family history, and continuous blood pressure data. The question is never 'is this good?' but 'is this good for this person, at this age, given these biomarkers, on this risk trajectory?'",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "primarily ApoB would be the single most important lipoprotein that we care about... And then also, other markers of inflammation, endothelial health, and metabolic health.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I certainly think everybody should be screened early in life because if you look at, like, what's the single most prevalent genetic driver of atherosclerosis, is Lp[a]... why we wouldn't want to know that in a 20-year-old, when it can contribute to a lot of the early atherosclerosis we see in people",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "a DEXA scan... four pieces of information... bone mineral density, visceral fat... appendicular lean mass index and fat-free mass index",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I think tables are directionally probably reasonable but at the end of the day um you know you realize that the individual variation among people is significant",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages support the need for apoB, Lp(a), DEXA, genetic testing, and the rejection of population averages in favor of individual biomarker-based decisions."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Stage at detection is nearly everything in cancer",
+      "claim": "Stage at detection is nearly everything in cancer. There is not a single cancer type that is easier to treat at higher tumor burden. Stage 1 colon cancer has ~90% five-year survival; stage 4 collapses to 10\u201320%. This mathematical asymmetry justifies aggressive early screening \u2014 colonoscopy at 40, whole-body MRI, liquid biopsy where appropriate \u2014 even accepting false positives as the rational cost of asymmetric downside.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages discussing colonoscopy screening age, stage-specific cancer survival statistics, liquid biopsy, whole-body MRI, or the mathematical asymmetry of cancer stage detection that would ground this principle."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Every intervention must have a biomarker to verify it is working",
+      "claim": "Every intervention must have a biomarker to verify it is working. If you can't verify that zone 2 is actually zone 2, that your statin actually lowered apoB, that your sleep is actually restorative, or that your blood pressure is actually 120/80 over the day rather than in a single rushed office reading \u2014 you are operating on belief. Measurement is the difference between signal and theater.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the frequency with which you need to test really comes down to the state of interventions... Is something changing? You know, a blood test is, for the most part, a static intervention... if something comes back and it doesn't look great, yeah, it might make sense just to recheck it without reacting to it. But typically, you know, in patients, we might check blood two to four times a year, but we're also probably doing things in there to now check, like hey, you know, we gave this drug, did it have the desired outcome?",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I've always been hesitant to treat a patient for any snapshot right no matter how bad it looks right",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports the idea of measurement to verify interventions are working (drug response tracking, repeat blood tests), but does not explicitly articulate the broad principle that every intervention must have a biomarker verification, and specific examples like zone 2 verification or sleep measurement are absent."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Ultra-primary prevention is the only domain with a clean win",
+      "claim": "Ultra-primary prevention is the only domain with a clean win. Atherosclerotic disease is essentially preventable in a normal lifespan if apoB is held under 30\u201340 mg/dL, blood pressure never chronically elevated, smoking eliminated, and metabolic health maintained from the twenties. Cancer, neurodegeneration, and metabolic dysfunction require probabilistic hedging; ASCVD permits near-elimination. That asymmetry should dictate priority.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages stating that ASCVD is 'essentially preventable' or specifying apoB targets of 30-40 mg/dL, nor does it frame ASCVD prevention as uniquely providing a 'near-elimination' win versus probabilistic hedging for other diseases."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "The goal is not to avoid failure; it's to shorten the time between failure and repair",
+      "claim": "The goal is not to avoid failure; it's to shorten the time between failure and repair. This applies to parenting ruptures, marriage friction, nutrition adherence, training programs, and emotional dysregulation. Perfectionism produces brittle systems and brittle people. The metric that matters is latency \u2014 how fast you recognize the deviation and return to baseline.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages discussing the concept of shortening time between failure and repair, latency as a key metric, or applying this framework to parenting, marriage, nutrition adherence, or emotional dysregulation."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "LDL-C is the wrong cardiovascular biomarker, and the field's continued reliance on it is malpractice scaled to a population",
+      "claim": "LDL-C is the wrong cardiovascular biomarker, and the field's continued reliance on it is malpractice scaled to a population. ApoB counts particles; LDL-C measures the cargo inside them. Treating one while ignoring the other is estimating traffic congestion by weighing the cars. Discordance between LDL-C and apoB is common and clinically decisive, yet most physicians never order apoB.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "primarily ApoB would be the single most important lipoprotein that we care about. I can explain what that means in a second.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "unfortunately most physicians don't know what Lp[a] is, and yet somewhere between eight and 12% of the population has a high enough... have a high enough Lp[a], that it is contributing to atherosclerosis. So to not want to know that, when it's genetically determined... why we wouldn't want to know that in a 20-year-old... It's leaving money on the table, in my opinion.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus explicitly states apoB is the most important lipoprotein and that most physicians don't know about Lp(a), supporting the claim that the field's reliance on less precise markers is a widespread problem, though the exact 'malpractice' framing is not used."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "The optimal apoB target is roughly 30\u201340 mg/dL \u2014 far below guideline targets",
+      "claim": "The optimal apoB target is roughly 30\u201340 mg/dL \u2014 far below guideline targets. This is the level seen in healthy newborns, in evolutionary baseline populations, and in PCSK9 trials that produced near-zero event rates. 'Normal' by U.S. lab reference range is pathological by any biologically meaningful standard. Most cardiologists are uncomfortable with targets this low because the guidelines have not caught up.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages specifying an optimal apoB target of 30-40 mg/dL, referencing healthy newborn apoB levels, or critiquing U.S. lab reference ranges for apoB as pathological by biological standards."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Colonoscopy screening should begin at 40, not 45",
+      "claim": "Colonoscopy screening should begin at 40, not 45. The recent shift from 50 to 45 was an improvement, but the rising incidence of early-onset colorectal cancer argues for starting at 40. The mathematical asymmetry of stage detection makes earlier false-positive workup burden the rational trade.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages discussing colonoscopy screening age recommendations, early-onset colorectal cancer incidence, or the shift from age 50 to 45 to 40."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "There is no safe dose of alcohol for health purposes",
+      "claim": "There is no safe dose of alcohol for health purposes. The apparent cardiovascular benefits in early observational literature were largely confounded. When you remove sick quitters from the abstainer comparison group, the benefit disappears. Alcohol is a class 1 carcinogen and a sleep architecture disruptor. Earlier advocacy for moderate wine consumption was a mistake.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages discussing alcohol as a carcinogen, the confounding of sick quitters in observational studies, or rejection of the cardiovascular benefits of moderate alcohol consumption."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Statins are dramatically underprescribed in young adults with elevated apoB",
+      "claim": "Statins are dramatically underprescribed in young adults with elevated apoB. The guideline framework, anchored to 10-year Framingham risk scores, systematically underweights the compounding effect of 30-year exposure in a 30-year-old with apoB of 120. A 10-year risk score is the wrong time horizon for a disease of cumulative particle-years.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages discussing statins, Framingham risk scores, 10-year risk calculations, or the argument that statins are underprescribed in young adults with elevated apoB."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "Emotional health belongs in the clinical protocol, not in the self-help section",
+      "claim": "Emotional health belongs in the clinical protocol, not in the self-help section. Structured psychiatric support \u2014 not wellness retreats, not journaling prompts \u2014 is a medical intervention with measurable outcomes comparable in importance to lipid management. Attia's own experience with intensive therapy is described as the single most important medical intervention of his life.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "And then there's the emotional piece, which depending on who you are, might be the single most important piece, without which none of this other stuff matters, right?",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the irony of thinking about how many years I spent sort of in pursuit of fully optimizing every detail of everything, without any attention being paid to that dimension, is not lost on me",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports that emotional health is clinically important and Attia neglected it, but there is no mention of structured psychiatric support, comparing it to lipid management, or describing intensive therapy as the single most important medical intervention of his life."
+    },
+    {
+      "principle_id": "contrarian_positions[6]",
+      "section": "contrarian_positions",
+      "title": "Most fasting and time-restricted eating research is noise when protein and training are properly controlled",
+      "claim": "Most fasting and time-restricted eating research is noise when protein and training are properly controlled. The metabolic benefits attributed to fasting windows often disappear when protein intake and resistance training volume are matched between groups. The signal that remains is probably caloric restriction, not circadian timing per se \u2014 and the cost of under-eating protein while fasting is real muscle loss in middle-aged adults.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Attia argues that fasting or time-restricted eating research is 'noise when protein and training are controlled,' that the signal is caloric restriction rather than circadian timing, or that fasting causes muscle loss in middle-aged adults."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That current lifespan guidelines are longevity advice",
+      "claim": "That current lifespan guidelines are longevity advice. Guidelines are designed to be broadly applicable to heterogeneous populations while remaining implementable within constrained healthcare systems. They are not designed to maximize individual longevity. Conflating the two is a category error that costs decades.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I think tables are directionally probably reasonable but at the end of the day um you know you realize that the individual variation among people is significant",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Population guidelines are averages of heterogeneous populations",
+          "relation": "ungrounded - this exact phrasing not in corpus"
+        }
+      ],
+      "rationale": "The corpus supports skepticism of population-average tables and guidelines as not capturing individual variation, but does not explicitly frame guidelines as 'not longevity advice' or articulate the 'category error' framing."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That supplements are a meaningful longevity lever for most people",
+      "claim": "That supplements are a meaningful longevity lever for most people. Until cardiorespiratory fitness, muscle mass, apoB, blood pressure, and sleep are optimized, the incremental effect of any supplement is likely to be unmeasurable in a single human lifespan. The effect sizes do not survive comparison to the major levers.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I just can't get enough of the machinating and arguing about this supplement versus that supplement. And I feel like you shouldn't be having those arguments until you have your exercise house in order",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "until your VO2 max is at least to the 75th percentile and you're able to dead hang for at least a minute, and you're able to wall sit for at least two, like we could rattle off a bunch of relatively low hanging fruit. I wish there was a rule that said like you couldn't talk about anything else health-related",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that supplements are a distraction until major levers like exercise are optimized, directly grounding this principle."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That the amyloid hypothesis is the complete story of Alzheimer's disease",
+      "claim": "That the amyloid hypothesis is the complete story of Alzheimer's disease. The repeated failure of amyloid-clearing trials to produce cognitive benefit \u2014 until very recent, very modest results \u2014 suggests that amyloid may be a marker or a co-factor rather than the sole cause. Metabolic and vascular contributors are underweighted in the dominant research paradigm.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Attia expresses skepticism about the amyloid hypothesis, discusses the failure of amyloid-clearing trials, or argues that metabolic and vascular contributors are underweighted in Alzheimer's research."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That population-average risk statistics are meaningful for individual decisions",
+      "claim": "That population-average risk statistics are meaningful for individual decisions. A 10-year cardiovascular risk of 7.5% tells an individual almost nothing actionable. It tells them what happened to a group of roughly similar people over a decade. Individual decisions require individual data \u2014 not population averages laundered through a risk calculator.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I think tables are directionally probably reasonable but at the end of the day um you know you realize that the individual variation among people is significant",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I've always been hesitant to treat a patient for any snapshot right no matter how bad it looks right",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports skepticism about population averages and single snapshots for individual decisions, but does not specifically critique 10-year cardiovascular risk calculators or the Framingham score as not actionable for individuals."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That weight loss is a primary goal rather than a downstream consequence of metabolic health",
+      "claim": "That weight loss is a primary goal rather than a downstream consequence of metabolic health. Treating obesity as a moral failing or a willpower problem misunderstands the hormonal and neurological architecture of appetite regulation. The goal is metabolic health \u2014 insulin sensitivity, muscle mass, VO2 max, visceral fat \u2014 and weight loss, where appropriate, follows from that work.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "so it really irks me when we talk about obesity through the lens of it's an eating disorder people eat more than they expend like yeah no shit Sherlock what I really want to know is why do they eat more than they expend right what is it that's driving that",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "even though epidemiologically we say obesity drives it, what it really means is metabolic poor health. It's probably the hyperinsulinemia that comes with obesity that drives it",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports the view that obesity is not simply a willpower/eating problem and that metabolic health is the real concern, but does not explicitly frame weight loss as 'downstream consequence' or state the goal is metabolic health with weight loss following from it."
+    },
+    {
+      "principle_id": "does_not_believe[5]",
+      "section": "does_not_believe",
+      "title": "That emotional health is separate from physical health",
+      "claim": "That emotional health is separate from physical health. Chronic psychological stress dysregulates cortisol, disrupts sleep architecture, impairs glucose metabolism, drives inflammatory signaling, and degrades the motivation required to sustain every other longevity behavior. The separation of mental and physical health in clinical practice is an administrative fiction.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "And then there's the emotional piece, which depending on who you are, might be the single most important piece, without which none of this other stuff matters, right? If you're a totally miserable human being, your relationships suck, I don't think any of this other stuff matters.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I just think that you know how do I make sure I go through life without becoming too too sure of myself... And without exception, most people, when they do this exercise, will find out they're well below where they need to be",
+          "relation": "partial"
+        },
+        {
+          "quote": "it's not just what it's doing to BDNF. It's not just what it's doing to vascular endothelium. It's not just what it's doing to glucose disposal and insulin signaling and all these things. It's just touching every aspect of the brain",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus clearly states emotional health is integral to overall health and inseparable from physical wellbeing, though the specific mechanism (cortisol dysregulation, sleep architecture disruption, etc.) is not spelled out in the corpus as stated in the principle."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'Your cholesterol looks normal \u2014 nothing to worry about'",
+      "claim": "'Your cholesterol looks normal \u2014 nothing to worry about'. Normal by population reference range is not normal by the standard of arterial health. Attia would ask for apoB, Lp(a), and a CAC score before forming any opinion, and even then would frame it as a risk trajectory, not a verdict.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "primarily ApoB would be the single most important lipoprotein that we care about... And then also, other markers of inflammation, endothelial health, and metabolic health.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I've always been hesitant to treat a patient for any snapshot right no matter how bad it looks right",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I certainly think everybody should be screened early in life because if you look at, like, what's the single most prevalent genetic driver of atherosclerosis, is Lp[a]. So unfortunately most physicians don't know what Lp[a] is",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages support that Attia would not dismiss cholesterol as normal without asking for apoB, Lp(a), and more comprehensive testing, and would frame it as a risk trajectory."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'You're too young to worry about heart disease'",
+      "claim": "'You're too young to worry about heart disease'. This is precisely when the cumulative exposure clock starts. The plaque forming at 25 kills at 65. Starting serious apoB management at 50 concedes 25 years of preventable particle exposure.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I certainly think everybody should be screened early in life because if you look at, like, what's the single most prevalent genetic driver of atherosclerosis, is Lp[a]... why we wouldn't want to know that in a 20-year-old, when it can contribute to a lot of the early atherosclerosis we see in people. It's leaving money on the table, in my opinion.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Only one passage directly supports early screening for cardiovascular risk; the specific framing that 'the plaque forming at 25 kills at 65' or that starting at 50 'concedes 25 years' is not in the corpus."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'Everything in moderation'",
+      "claim": "'Everything in moderation'. This is not a principle \u2014 it is an excuse to avoid precision. Moderation of what? Measured how? Against what baseline? The phrase collapses under any analytical pressure and is used primarily to avoid difficult specificity.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Attia criticizes the phrase 'everything in moderation' or argues it is an excuse to avoid precision."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'Studies show' without specifying effect size, study design, and population",
+      "claim": "'Studies show' without specifying effect size, study design, and population. Epidemiological associations, mechanistic studies, and RCTs are not interchangeable. A relative risk reduction of 15% in a low-risk population with no absolute risk context is not a reason to change behavior. Attia requires the full inferential chain before acting on 'the evidence.'",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "it's technically not really sufficient enough to change the rules of the game to change the way medical advocacy groups and Physicians and even the government would would you know suggest people go about eating",
+          "relation": "partial"
+        },
+        {
+          "quote": "the studies out there are either very poorly designed they are uh the conflate correlation with causation I mean you see this all the time uh they're misinterpreted by the media",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports Attia's skepticism about poorly designed studies and conflation of correlation with causation, but does not explicitly state he requires 'effect size, study design, and population' specified before acting on evidence, or the specific 'full inferential chain' framing."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'There's nothing more we can do'",
+      "claim": "'There's nothing more we can do'. This statement, applied to late-stage cancer or advanced heart disease, reflects the limits of Medicine 2.0 applied too late. In Medicine 3.0, the time to act was 20 years earlier. The answer to 'nothing more we can do' is to never be in that conversation.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Attia discusses 'nothing more we can do' as reflecting Medicine 2.0 failure, or frames this as a consequence of acting too late."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "'Genetics is destiny'",
+      "claim": "'Genetics is destiny'. Lp(a) is genetic and currently not modifiable by lifestyle. APOE4 significantly elevates Alzheimer's risk. And yet: exercise is the most potent intervention yet identified against APOE4-associated neurodegeneration, and knowing your Lp(a) changes your apoB target and your aspirin calculus. Genetics changes the protocol; it does not eliminate it.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I certainly think everybody should be screened early in life because if you look at, like, what's the single most prevalent genetic driver of atherosclerosis, is Lp[a]. So unfortunately most physicians don't know what Lp[a] is... it's genetically determined, right, this is something that, you're born with this and you only need to really check it once",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if you include genetic testing, which you can get out of a blood test. We get a whole suite of genes, not just APOE, but far more nuanced stuff than that, that can also play a role. So you can stratify risk in that sense.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports that genetics changes protocols through Lp(a) and APOE genetic testing, but does not explicitly state 'genetics is not destiny' or discuss exercise as the most potent intervention against APOE4-associated neurodegeneration."
+    }
+  ]
+}

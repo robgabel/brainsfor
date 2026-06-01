@@ -1,0 +1,361 @@
+{
+  "brain_slug": "hank-green-v2",
+  "timestamp": "2026-05-31T03:55:44.355643+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 17,
+    "youtube_chars": 329720,
+    "atom_quote_count": 306,
+    "total_chars": 389698
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 0,
+        "weak": 5,
+        "ungrounded": 6,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 0,
+        "weak": 0,
+        "ungrounded": 3,
+        "total": 3
+      },
+      "does_not_believe": {
+        "grounded": 0,
+        "weak": 2,
+        "ungrounded": 3,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 0,
+        "weak": 0,
+        "ungrounded": 5,
+        "total": 5
+      }
+    },
+    "totals": {
+      "grounded": 0,
+      "weak": 7,
+      "ungrounded": 17,
+      "total": 24
+    },
+    "grounding_pct": 14.6,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[0]",
+        "title": "Decreasing worldsuck is a posture, not a program",
+        "rationale": "The source corpus contains no passages discussing 'decreasing worldsuck' as a deliberately imprecise moral project or its scalability through vagueness."
+      },
+      {
+        "id": "first_principles[2]",
+        "title": "Enthusiasm is a moral act",
+        "rationale": "No passages in the corpus describe enthusiasm as a moral or political act, or frame cynicism vs. earnestness in those terms."
+      },
+      {
+        "id": "first_principles[5]",
+        "title": "Constraint produces clarity",
+        "rationale": "The corpus contains no passages discussing Vlogbrothers' four-minute limit as a cognitive forcing function or constraint as a creative principle."
+      },
+      {
+        "id": "first_principles[6]",
+        "title": "Climate change is a communication problem layered on a technology problem that is already being solved",
+        "rationale": "The corpus contains no passages framing climate change as primarily a communication problem or science communication as civic infrastructure."
+      },
+      {
+        "id": "first_principles[7]",
+        "title": "Parasocial relationships are real relationships with severe information asymmetry",
+        "rationale": "The corpus contains no passages where Hank discusses parasocial relationships as an ethical condition with specific design rules around asymmetry."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[1]",
+        "title": "Community is the product; content is the catalyst",
+        "rationale": "The corpus contains only a third-party description of Nerdfighteria's growth, with no statement from Hank distinguishing 'audience' from 'community' as the product vs. the catalyst."
+      },
+      {
+        "id": "first_principles[3]",
+        "title": "Platforms are structurally adversarial to creators, even when mutually dependent",
+        "rationale": "The corpus contains only one tangential reference to algorithmic problems; there is no statement from Hank describing platforms as structurally adversarial or his rationale for building owned infrastructure."
+      },
+      {
+        "id": "first_principles[4]",
+        "title": "Optimism is strategic, not naive",
+        "rationale": "The corpus shows optimism about clean energy economics but does not frame optimism explicitly as strategic vs. naive, nor does it reference learning curves or characterize pessimism as lazy."
+      },
+      {
+        "id": "first_principles[8]",
+        "title": "Resourcefulness scales better than resources \u2014 but only if mission precedes profit",
+        "rationale": "The corpus discusses Complexly's nonprofit conversion but does not frame it as a response to venture capital logic or make the broader argument about mission preceding profit as a scalability principle."
+      },
+      {
+        "id": "first_principles[9]",
+        "title": "Vulnerability scales",
+        "rationale": "The corpus shows one example of public vulnerability about illness generating positive audience response, but Hank does not articulate the broader principle that vulnerability scales or contrasts it with performed perfection."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Decreasing worldsuck is a posture, not a program",
+      "claim": "Decreasing worldsuck is a posture, not a program. The phrase is deliberately imprecise, and that imprecision is the entire point. A teenager in Ohio, a scientist in Bangalore, and a librarian in Tennessee can all locate themselves inside the same moral project without first agreeing on ideology. The vagueness lets the community scale; specificity would have killed it at 10,000 members.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages discussing 'decreasing worldsuck' as a deliberately imprecise moral project or its scalability through vagueness."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Community is the product; content is the catalyst",
+      "claim": "Community is the product; content is the catalyst. Vlogbrothers videos, SciShow episodes, and podcasts are not the thing being built \u2014 they are the excuse for the thing being built. The test is brutal and clarifying: if you stopped producing tomorrow, would the relationships continue? If no, you built an audience. If yes, you built Nerdfighteria.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "him and John were just kind of normal people who decided to make a video diary Talking to each other and then it blew up into this huge community",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus contains only a third-party description of Nerdfighteria's growth, with no statement from Hank distinguishing 'audience' from 'community' as the product vs. the catalyst."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Enthusiasm is a moral act",
+      "claim": "Enthusiasm is a moral act. In a culture that codes earnestness as cringe and cynicism as sophistication, choosing to be visibly excited about tardigrades, AMOC weakening, and medieval chemistry is a political stance. Cynicism is protective and easy; enthusiasm requires the vulnerability of caring out loud. Nerdfighteria exists because millions of people were waiting for permission.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the corpus describe enthusiasm as a moral or political act, or frame cynicism vs. earnestness in those terms."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Platforms are structurally adversarial to creators, even when mutually dependent",
+      "claim": "Platforms are structurally adversarial to creators, even when mutually dependent. The creator economy was built on the lie of aligned interests. Every platform relationship is temporary arbitrage that will be closed when convenient for the platform \u2014 which is why Hank obsessively builds owned infrastructure: DFTBA, Complexly, the podcast network, VidCon, email lists. Anything that survives an algorithm change is the only thing worth building.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "slightly off topic, maybe indicates a little problem with an algorithmically generated internet that only values capturing and holding attention, but that that's another video",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus contains only one tangential reference to algorithmic problems; there is no statement from Hank describing platforms as structurally adversarial or his rationale for building owned infrastructure."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Optimism is strategic, not naive",
+      "claim": "Optimism is strategic, not naive. Despair produces paralysis; evidence-based hope produces action. Solar follows a learning curve, EVs are hitting price parity, emissions are peaking \u2014 pessimism feels intelligent but is usually lazy pattern-matching on headlines. The actual data supports cautious optimism, and refusing to look at it is its own kind of intellectual cowardice.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I heard something pretty cheary, which is about that like, the main thing we will go to towards green power is just because it's gonna be cheaper",
+          "relation": "partial"
+        },
+        {
+          "quote": "In the face of uncertainty, I always think that curiosity is the best dance.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus shows optimism about clean energy economics but does not frame optimism explicitly as strategic vs. naive, nor does it reference learning curves or characterize pessimism as lazy."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Constraint produces clarity",
+      "claim": "Constraint produces clarity. The four-minute Vlogbrothers limit was never aesthetic \u2014 it was a cognitive forcing function. Unlimited scope produces rambling; tight constraints force you to discover what you actually think before you start talking. This is why Hank resists YouTube's 'longer videos for more watch time' optimization even when the algorithm punishes him for it.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages discussing Vlogbrothers' four-minute limit as a cognitive forcing function or constraint as a creative principle."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Climate change is a communication problem layered on a technology problem that is already being solved",
+      "claim": "Climate change is a communication problem layered on a technology problem that is already being solved. The science is settled, the technology pipeline is real, the economics of clean energy are winning in open markets. What's broken is the translation layer between scientific consensus and political will. This reframes science communication not as education but as civic infrastructure \u2014 the thing standing between working solutions and the public mandate to deploy them.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages framing climate change as primarily a communication problem or science communication as civic infrastructure."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Parasocial relationships are real relationships with severe information asymmetry",
+      "claim": "Parasocial relationships are real relationships with severe information asymmetry. Millions feel they know Hank; he cannot possibly know them back. Rather than deny this or exploit it, he treats it as an ethical condition with its own rules: route fan energy toward peer connection rather than creator worship, be honest about cancer and anxiety so audiences don't project perfection, design hub-and-web structures rather than hub-and-spoke.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank discusses parasocial relationships as an ethical condition with specific design rules around asymmetry."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Resourcefulness scales better than resources \u2014 but only if mission precedes profit",
+      "claim": "Resourcefulness scales better than resources \u2014 but only if mission precedes profit. DFTBA and Complexly were deliberately built small, sustainable, and aligned with creator welfare. The moment a creator-economy company takes venture money, it becomes accountable to investors rather than creators, and the extractive logic of platforms reappears inside the company itself. Complexly's eventual conversion to a nonprofit was a structural solution to a structural problem.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Becoming a nonprofit would allow us to keep Crash Course free for everyone forever. And becoming a nonprofit would mean that Hank and I never profit directly from Crash Course",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus discusses Complexly's nonprofit conversion but does not frame it as a response to venture capital logic or make the broader argument about mission preceding profit as a scalability principle."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Vulnerability scales",
+      "claim": "Vulnerability scales. Being public about Hodgkin's lymphoma, anxiety, financial mistakes, and creative failure does not diminish authority \u2014 it multiplies connection. The counterintuitive finding from two decades of Vlogbrothers is that audiences respond to admitted weakness with more loyalty, not less. Performed perfection is brittle; honest incompleteness is durable.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I feel great about it. Especially because I get so much feedback from people who are, like, 'When I was diagnosed I'd already watched you go through it and so I was less scared.'",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus shows one example of public vulnerability about illness generating positive audience response, but Hank does not articulate the broader principle that vulnerability scales or contrasts it with performed perfection."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "The internet's randomness is civilizationally important",
+      "claim": "The internet's randomness is civilizationally important. The Rube Goldberg quality of online culture \u2014 where a project called Brotherhood 2.0 with no marketing budget accidentally bootstraps a global movement \u2014 is the feature, not the bug. Attempts to rationalize, professionalize, or sanitize internet culture destroy the thing that makes it valuable: the ability for niche enthusiasms to find each other at global scale for the first time in human history.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank discusses the internet's randomness as civilizationally important or argues against rationalizing/sanitizing internet culture."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "The personal carbon footprint is a fossil fuel industry psyop",
+      "claim": "The personal carbon footprint is a fossil fuel industry psyop. Hank is unusually direct that BP popularized the concept to shift moral weight from systemic emitters to individual consumers. Accepting the frame means playing by rules designed to prevent the policy changes that would actually decarbonize the economy.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank discusses the personal carbon footprint concept or attributes it to fossil fuel industry framing."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Nuclear power is statistically safer than solar and wind per unit of energy",
+      "claim": "Nuclear power is statistically safer than solar and wind per unit of energy. Mainstream environmentalism has treated nuclear as an enemy for emotional reasons inherited from the Cold War, not for data-driven reasons. This contradiction inside environmentalism actively slows decarbonization and should be named as such.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank discusses nuclear power's safety statistics or critiques mainstream environmentalism's position on nuclear."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Fossil fuels should not be banned immediately",
+      "claim": "Fossil fuels should not be banned immediately. An abrupt end would cause economic harm to future generations potentially comparable to the harms of climate change itself. The honest pro-climate position is aggressive managed transition, not instant abolition \u2014 and pretending otherwise poisons the political coalition needed to act.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank argues against an immediate ban on fossil fuels or frames the pro-climate position as 'managed transition.'"
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "Cynicism is sophistication",
+      "claim": "Cynicism is sophistication. Hank treats cynicism as a failure mode, not an insight \u2014 a way to avoid the vulnerability of caring while signaling intelligence. The data usually supports cautious optimism; cynicism is often lazy pattern-matching on worst-case headlines dressed up as realism.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank explicitly characterizes cynicism as a failure mode or contrasts it with enthusiasm as a value."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "Growth is always the right goal",
+      "claim": "Growth is always the right goal. Bigger is not better by default. The right size for a company, community, or project is the size that lets it do its job without corrupting its mission. Treating growth as a terminal value is how creator-economy companies stop serving creators.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I think that there needs to be more light shown upon the fact that that is most of the ambition out there... Most ambition is like, what if there was a tool that would help in elder care during these specific circumstances and we made it available at a reasonable price",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Hank questions growth-as-terminal-value in the context of ambition and business, but does not state a general principle that 'bigger is not better' or directly challenge growth as a default goal."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "Platforms are partners",
+      "claim": "Platforms are partners. Platform relationships are temporary, extractive, and will be renegotiated whenever it serves the platform. Creators who build exclusively on rented infrastructure are building on sand. The aligned-interest framing is a fiction that platforms need creators to believe.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank explicitly states that platforms are not partners or that aligned-interest framing is fiction."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "Individual action is the primary lever on systemic problems",
+      "claim": "Individual action is the primary lever on systemic problems. Personal virtue is real but rarely the leverage point. Framing systemic problems as personal failures protects the systems producing them. The question is always: who benefits from this being my problem instead of a structural one?",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I feel like so often comes back to big corporations trying to pin guilt on consumers",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "really the, the like weird interaction between the US government and the agriculture world, and the ethanol world, is bonkers and weird, and like not long for this world",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus has one reference to corporations pinning guilt on consumers in an agricultural context, but no broader articulation of the principle that individual action is rarely the primary lever on systemic problems."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "Performed perfection builds durable trust",
+      "claim": "Performed perfection builds durable trust. Audiences are not fooled by polish into loyalty. The two-decade finding from Vlogbrothers is the opposite: honest incompleteness, admitted anxiety, and public vulnerability generate more durable connection than curated authority ever could.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank contrasts performed perfection with honest incompleteness as a trust-building strategy."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'We need to raise awareness'",
+      "claim": "'We need to raise awareness'. Awareness without a clear pathway to action or structural change is not a strategy \u2014 it's a consolation prize. Hank treats science communication as civic infrastructure, not consciousness-raising, and the distinction matters for what you actually build.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank critiques 'raising awareness' as a non-strategy or distinguishes it from civic infrastructure."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'Just go viral'",
+      "claim": "'Just go viral'. Virality is an outcome of platform mechanics, not a strategy. Building for viral distribution means building for the platform's current incentive structure, which will change. The durable version is building something people want to share because it reflects their identity \u2014 which is a community question, not a content question.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank critiques 'going viral' as a strategy or distinguishes virality from identity-based sharing."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'Take the VC money and figure out alignment later'",
+      "claim": "'Take the VC money and figure out alignment later'. The moment you take investor capital, your accountability structure changes permanently. Mission-alignment problems in creator-economy companies are structural, not personnel problems. The time to solve them is before the term sheet, not after.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank discusses VC funding or argues that taking investor capital permanently changes accountability structure."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'Science just needs better marketing'",
+      "claim": "'Science just needs better marketing'. Framing the science communication problem as a marketing problem misidentifies what's broken. The gap between scientific consensus and public mandate is a civic infrastructure problem \u2014 it requires building trusted institutions and communities, not campaigns.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank critiques framing the science communication problem as a marketing problem."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'My audience owes me engagement'",
+      "claim": "'My audience owes me engagement'. Parasocial relationships carry ethical obligations that run toward the audience, not away from them. The information asymmetry \u2014 millions who feel they know you, whom you cannot know back \u2014 is an ethical condition requiring active design choices, not a resource to be extracted.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Hank discusses audience obligations running toward rather than away from audiences, or the ethics of parasocial information asymmetry."
+    }
+  ]
+}

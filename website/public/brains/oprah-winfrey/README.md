@@ -1,11 +1,11 @@
 # Oprah Winfrey Brain Pack
 
-> **333 knowledge atoms** · **355 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **740 knowledge atoms** · **705 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Oprah Winfrey's thinking, extracted from Decades of The Oprah Winfrey Show, O Magazine, SuperSoul conversations, commencement addresses, and published books. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Oprah Winfrey's thinking, extracted from Decades of The Oprah Winfrey Show, O Magazine, SuperSoul Sunday, SuperSoul Conversations, commencement addresses, Academy of Achievement interviews, 60 Minutes appearances, and major public speeches including the 2018 Golden Globes Cecil B. DeMille address. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Oprah's actual ideas, frameworks, and worldview.
 
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Oprah's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (333 atoms, 355 connections)
+  ├── brain-atoms.json      ← Structured data (740 atoms, 705 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**333 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**740 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**355 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**705 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — Self-discovery, resilience, gratitude, spirituality, storytelling, leadership, philanthropy, trauma and healing, intentional living, empathy.
+**16 topic clusters** — Self-discovery, resilience, gratitude, spirituality, storytelling, leadership, philanthropy, trauma and healing, intentional living, empathy, reading, race and identity.
 
 **Date range:** 1986 — Present
 
@@ -95,7 +95,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 ## About Oprah Winfrey
 
-Oprah Winfrey is one of the most influential communicators and entrepreneurs of the modern era. From her groundbreaking talk show to her media empire, philanthropic work, and spiritual leadership, she has spent decades helping people connect with their deepest selves and live with greater intention and purpose.
+Oprah Winfrey is one of the most influential communicators, entrepreneurs, and philanthropists of the modern era. From her groundbreaking talk show to her media empire, her Leadership Academy in South Africa, and her decades of public spiritual inquiry, she has spent her life helping people connect with their deepest selves, heal from their histories, and live with greater intention and purpose.
 
 ## Sources & Ethics
 

@@ -5,14 +5,14 @@ description: "Load the Yann LeCun brain. Pack ships 9 unified skills in pack/ski
 
 # Yann LeCun Brain Pack — Setup & Configuration
 
-Welcome to the **LeCun Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Yann LeCun's published research papers, academic lectures, and public interviews — a curated collection of his most rigorous thinking on deep learning, convolutional networks, world models, and the path to human-level AI.
+Welcome to the **LeCun Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Yann LeCun's published research papers, academic lectures, public interviews, and video presentations — a curated collection of his most rigorous thinking on deep learning, convolutional networks, world models, and the path to human-level AI.
 
 ## What You're Getting
 
-- **442 knowledge atoms** — Core insights, frameworks, and strategic principles from Foundational research papers including the 1989 NeurIPS paper and 1998 IEEE proceedings, Turing Award materials, and major press profiles
-- **458 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **609 knowledge atoms** — Core insights, frameworks, and strategic principles from Foundational research papers including the 1989 NeurIPS paper and 1998 IEEE proceedings, Turing Award materials, JEPA path paper, Lex Fridman podcast episodes, and major video lectures from Facebook AI Research and academic institutions
+- **616 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — Convolutional neural networks, world models, self-supervised learning, AI safety, autonomous machines, energy-based models, cognitive architecture, and more
+- **Cross-referenced topics** — Convolutional neural networks, world models, self-supervised learning, AI safety, autonomous machines, energy-based models, cognitive architecture, open-source AI, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your LeCun Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (442 insights)
+  ├── brain-atoms.json         ← structured atoms (609 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 442 atoms with titles, summaries, connections
+   - JSON structure of 609 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,11 +93,11 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Yann's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "Should I focus my AI research on scaling transformers or explore alternative architectures?"*
+*Example: "Should I focus my AI research on scaling transformers or explore alternative architectures like JEPA?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Yann sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain convolutional neural networks to me from first principles."*
+*Example: "Explain convolutional neural networks to me from first principles, the way LeCun would."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
@@ -105,11 +105,11 @@ Present a position or pit two ideas against each other; brain argues the counter
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect self-supervised learning to the idea of world models."*
+*Example: "Connect self-supervised learning to the idea of world models in LeCun's framework."*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How does Yann's thinking on unsupervised learning evolve over his career?"*
+*Example: "How does Yann's thinking on unsupervised learning evolve from his early Bell Labs work to JEPA?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -121,7 +121,7 @@ No answers — just the questions Yann would ask you. Best for: uncovering blind
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens to AI safety if we build autonomous agents with world models?"*
+*Example: "What happens to AI safety and autonomy if we successfully build agents with world models?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to deep learning? Teach → evolve → coach to build foundational understanding of LeCun's architecture thinking.*
+*Example: New to deep learning? Teach convolutional neural networks → evolve LeCun's thinking on unsupervised learning → coach on choosing a research direction to build foundational understanding.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Writing about the limits of LLMs? Debate the scaling hypothesis → predict implications of world models → advise on research direction.*
+*Example: Writing about the limits of LLMs? Debate the scaling hypothesis → connect self-supervised learning to world models → predict implications of JEPA-style architectures → advise on research direction.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -201,7 +201,7 @@ If you get that, you're all set.
 
 ## About Yann LeCun
 
-Yann LeCun is one of the founding fathers of modern deep learning and a Turing Award laureate who pioneered convolutional neural networks and backpropagation. As Chief AI Scientist at Meta and Silver Professor at NYU, he is one of the most influential voices on the future of artificial intelligence.
+Yann LeCun is one of the founding fathers of modern deep learning and a Turing Award laureate who pioneered convolutional neural networks and backpropagation. As Chief AI Scientist at Meta and Silver Professor at NYU, he is one of the most influential and contrarian voices on the future of artificial intelligence.
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — LeCun's peer-reviewed research papers, public academic lectures, IEEE and NeurIPS proceedings, ACM Turing Award materials, and widely distributed interviews and social media posts.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — LeCun's peer-reviewed research papers, public academic lectures, IEEE and NeurIPS proceedings, ACM Turing Award materials, Lex Fridman podcast interviews, YouTube lectures, and widely distributed interviews and social media posts.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

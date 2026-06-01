@@ -5,14 +5,14 @@ description: "Load the Gokul Rajaram brain. Pack ships 9 unified skills in pack/
 
 # Gokul Rajaram Brain Pack — Setup & Configuration
 
-Welcome to the **Rajaram Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Gokul Rajaram's long-form interviews, conference talks, and essays on product leadership, decision-making (SPADE), ads monetization, founder mode, and AI-era software defensibility — a curated collection of his sharpest thinking on product leadership, ads/monetization, decision-making, angel investing, and how AI is reshaping how products get built.
+Welcome to the **Rajaram Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Gokul Rajaram's long-form interviews, conference talks, and essays on product leadership, decision-making (SPADE), ads monetization, founder mode, AI-era software defensibility, angel investing, and company building — a curated collection of his sharpest thinking on product leadership, ads monetization, decision-making, AI-era defensibility, founder mode, and angel investing across 700+ companies.
 
 ## What You're Getting
 
-- **554 knowledge atoms** — Core insights, frameworks, and strategic principles from Podcast interviews (Invest Like the Best, 20VC, Lenny's Podcast, World of DaaS, Aarthi & Sriram Show), conference talks, Medium essays, and decision-making frameworks like SPADE — spanning product leadership at Google AdSense, Facebook Ads, Square/Caviar, and DoorDash, plus angel investing across 700+ companies.
-- **906 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **889 knowledge atoms** — Core insights, frameworks, and strategic principles from Podcast interviews (Invest Like the Best, 20VC, Lenny's Podcast, World of DaaS, Aarthi & Sriram Show), YouTube interviews (Fish Sauce Podcast, Outlier Academy, AI Hackathon 2026, Startupsunedited), conference talks, Medium essays, and decision-making frameworks like SPADE — spanning product leadership at Google AdSense, Facebook Ads, Square/Caviar, and DoorDash, plus angel investing across 700+ companies.
+- **820 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — Product leadership, decision-making (SPADE), ads & monetization architecture, founder mode, AI-era software defensibility, angel investing, startup strategy, hiring PMs, and more
+- **Cross-referenced topics** — Product leadership, decision-making (SPADE), ads & monetization architecture, founder mode, AI-era software defensibility, angel investing, startup strategy, hiring PMs, growth loops, platform strategy, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Rajaram Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (554 insights)
+  ├── brain-atoms.json         ← structured atoms (889 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 554 atoms with titles, summaries, connections
+   - JSON structure of 889 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,7 +93,7 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Gokul's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "We're debating monetization architecture for a new product line — should we design ads-in from day one, or ship free and add it later?"*
+*Example: "We're building a two-sided marketplace and debating whether to seed supply or demand first — what does Gokul think about sequencing?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Gokul sees it. Best for: understanding unfamiliar ideas, building mental models.
@@ -101,15 +101,15 @@ Get a clear explanation of a concept as Gokul sees it. Best for: understanding u
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Is shipping a feature without a hypothesis ever justified by time pressure?"*
+*Example: "Is founder mode always better than professional management mode, or does it depend on company stage?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect data half-life to startup defensibility — what's the link?"*
+*Example: "Connect data half-life to startup defensibility — what's the structural link Gokul draws?"*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How has Gokul's thinking on AI's impact on software companies evolved across the 20VC, Invest Like the Best, and Aarthi & Sriram interviews?"*
+*Example: "How has Gokul's thinking on AI's impact on software companies evolved from his early Invest Like the Best appearance to the 20VC '8 Moats' interview?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -117,11 +117,11 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions Gokul would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I'm a first-time CEO and my company is at 50 people. I keep getting told to delegate more, but my best products came from staying deep in the details. What should I be asking myself?"*
+*Example: "I'm a first-time PM and I keep shipping features without knowing if they worked. What questions should I be asking myself before every launch?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "If OpenAI ships a real ad platform in 2026, what are the second and third-order effects on Google, Meta, and AI-app pricing models?"*
+*Example: "If AI agents can fully replicate workflow-layer SaaS in 18 months, what are the second and third-order effects on mid-market software valuations and the venture funds that backed them?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to product leadership? Teach (SPADE) → evolve (how Gokul's hiring views have changed) → coach (apply to your team).*
+*Example: New to product leadership? Teach (SPADE framework) → evolve (how Gokul's PM hiring philosophy has changed with AI) → coach (apply to your next product decision).*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Evaluating an AI company? Predict (8 moats applied to the company) → debate (steel-man the bear case) → advise (invest, pass, or wait).*
+*Example: Evaluating an AI software company? Predict (8 moats applied to the company) → debate (steel-man the bear case on data half-life) → advise (invest, pass, or wait for more signal).*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -201,7 +201,7 @@ If you get that, you're all set.
 
 ## About Gokul Rajaram
 
-Gokul Rajaram is one of the most prolific operator-investors in tech — known as the 'Godfather of AdSense' for growing Google's AdSense from zero to $1B+, then leading Ads Product at Facebook, holding product leadership roles at Square and DoorDash, and angel investing in 700+ companies (Airtable, Figma, Groq, Runway, Supabase, Vercel, and more). He now runs Marathon Management Partners. His writing on SPADE decision-making, hiring PMs, and AI's impact on product building has become required reading for tech operators.
+Gokul Rajaram is one of the most prolific operator-investors in tech — known as the 'Godfather of AdSense' for growing Google's AdSense from zero to $1B+, then leading Ads Product at Facebook (scaling from $750M to $6.5B), holding product leadership roles at Square and DoorDash, and angel investing in 700+ companies (Airtable, Figma, Groq, Runway, Supabase, Vercel, and more). He now runs Marathon Management Partners. His writing and interviews on SPADE decision-making, hiring PMs for spikiness, AI's impact on software defensibility, and founder mode have become required reading and listening for tech operators and investors worldwide.
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Gokul Rajaram's publicly available podcast appearances (Invest Like the Best, 20VC, World of DaaS, Aarthi & Sriram Show), First Round Review talks, Medium essays, and his canonical SPADE Coda doc — all original sources where he speaks in his own voice.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Gokul Rajaram's publicly available podcast appearances (Invest Like the Best, 20VC, World of DaaS, Aarthi & Sriram Show, Lenny's Podcast), YouTube interviews, First Round Review talks, Medium essays, and his canonical SPADE Coda doc — all original sources where he speaks in his own voice.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

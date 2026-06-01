@@ -5,14 +5,14 @@ description: "Load the Bill Harris brain. Pack ships 9 unified skills in pack/sk
 
 # Bill Harris Brain Pack — Setup & Configuration
 
-Welcome to the **Harris Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Bill Harris's Books (The Investment Tax Guide), American Banker op-eds, long-form podcast interviews, video interviews, and on-the-record press across his Intuit, PayPal, Personal Capital, and Evergreen Money/Wealth chapters — the consumer fintech operator's playbook — tax-aware investing, fiduciary advice, financial data rights, and why hybrid AI+human beats pure robo every time.
+Welcome to the **Harris Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Bill Harris's Long-form podcast interviews, video lectures, conference keynotes, and published research discussions spanning Dr. Bill Harris's career as the world's leading Omega-3 Index researcher and founder of OmegaQuant Analytics — the omega-3 researcher's playbook — blood biomarkers, cardiovascular risk, brain health, and why most people are chronically deficient in the most important fat you're not eating enough of.
 
 ## What You're Getting
 
-- **564 knowledge atoms** — Core insights, frameworks, and strategic principles from 27 hand-curated sources spanning 1999–2025: 2 books on tax-aware investing, 1 American Banker op-ed, 1 LinkedIn Pulse essay, 4 long-form video interviews (Bloomberg, Fox Business, CNBC, Yahoo Finance), 5 long-form podcast/interview transcripts (Adam Mendler, Jo Ann Barefoot, Financial Sense, Modus, Acast Rethink), and supporting press across his founding chapters
-- **533 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **483 knowledge atoms** — Core insights, frameworks, and strategic principles from 27 hand-curated sources spanning 2015–2025: multiple long-form podcast interviews (The Proof, ZOE Science & Nutrition, Empowered Nutrition), OmegaMatters podcast episodes, YouTube video lectures and conference keynotes (Bulletproof Biohacking Conference, Omega-3 Index explainers), and supporting press and blog coverage across his OmegaQuant and omega-3 research chapters
+- **469 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — Tax-aware investing, fiduciary advice, hybrid AI+human advisory, financial data rights, consumer fintech, payments history, founder resilience, the PayPal era, post-Synapse fintech, and more
+- **Cross-referenced topics** — Omega-3 Index, EPA and DHA, cardiovascular risk biomarkers, brain health, fish oil supplementation, omega-3 deficiency, longevity, fatty acid science, seed oils, Fatty15, dose-response relationships, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Harris Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (564 insights)
+  ├── brain-atoms.json         ← structured atoms (483 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 564 atoms with titles, summaries, connections
+   - JSON structure of 483 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,23 +93,23 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Bill's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "Should I optimize for pre-tax returns or after-tax returns when picking a wealth manager?"*
+*Example: "I'm 45 years old, I eat salmon once a week, and I take a standard 1g fish oil capsule. Is that enough omega-3 for cardiovascular protection?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Bill sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain the fiduciary standard to me — and why most advisors aren't held to it."*
+*Example: "Explain the Omega-3 Index to me — what it measures, why it matters, and what a good score looks like."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Are robo-advisors a viable long-term model, or do they always lose to hybrid AI+human?"*
+*Example: "Is fish oil supplementation actually proven to reduce cardiovascular events, or is the evidence weaker than the marketing suggests?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect financial data rights to fintech innovation — what's the through-line?"*
+*Example: "Connect omega-3 deficiency to brain health decline — what's the biological through-line?"*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How has Bill's thinking on AI in wealth management evolved from Personal Capital to Evergreen Wealth?"*
+*Example: "How has the scientific understanding of omega-3 dosing recommendations changed over the past two decades?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -117,11 +117,11 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions Bill would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I'm deciding whether to launch a consumer fintech. What should I be asking myself?"*
+*Example: "I want to optimize my omega-3 status but I'm overwhelmed by supplement options. What questions should I be asking?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens to retail wealth management if Dodd-Frank §1033 is rolled back?"*
+*Example: "What happens to public health outcomes if omega-3 testing becomes a standard part of routine bloodwork?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to tax-aware investing? Teach → evolve → coach to build a working mental model of after-tax returns.*
+*Example: New to omega-3 science? Teach the Omega-3 Index → evolve the dosing research → coach to build a personal supplementation plan.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Building a fintech in wealth management? Predict the implications of agentic AI → debate hybrid vs robo → advise on positioning.*
+*Example: Evaluating omega-3 supplements? Debate the fish oil evidence base → connect EPA vs DHA to specific health outcomes → advise on testing and optimization.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -161,13 +161,13 @@ Use these skill combinations for better results:
 ```
 /brain bill-harris
 
-/advise "I'm a tech operator thinking about starting a consumer fintech company in the wealth-management space. Should I go pure-robo, hybrid, or something else? What would Bill think?"
+/advise "I want to reduce my cardiovascular risk and I've heard omega-3s matter. How much fish oil should I actually be taking, and how do I know if it's working?"
 ```
 
 Or skip the activation step and use an inline slug for a one-off:
 
 ```
-/advise bill-harris "I'm a tech operator thinking about starting a consumer fintech company in the wealth-management space. Should I go pure-robo, hybrid, or something else? What would Bill think?"
+/advise bill-harris "I want to reduce my cardiovascular risk and I've heard omega-3s matter. How much fish oil should I actually be taking, and how do I know if it's working?"
 ```
 
 You should get a thoughtful response that:
@@ -186,7 +186,7 @@ If you get that, you're all set.
 → Make sure `brain-context.md` is loaded in your session. If using Claude Code, check that the file is in your working directory.
 
 **Q: I want to search the brain for a specific topic.**
-→ Use `/advise` with a keyword: `"What does Bill think about after-tax returns?"` → The brain will pull all relevant atoms.
+→ Use `/advise` with a keyword: `"What does Bill think about Omega-3 Index?"` → The brain will pull all relevant atoms.
 
 **Q: Can I combine skills?**
 → Absolutely. Chain them: `"First /advise on whether to pivot, then /debate the tradeoffs, then /coach me on what I'm missing."`
@@ -201,7 +201,7 @@ If you get that, you're all set.
 
 ## About Bill Harris
 
-Bill Harris is a fintech pioneer who has founded 11 tech and financial companies. He ran TurboTax for ten years, was CEO of Intuit (1999), founding CEO of PayPal/X.com (1999–2000), founder/CEO of Personal Capital (2009–2019, sold to Empower for $1B at $23B AUM), and is now founder/CEO of Evergreen Money (2024) and Evergreen Wealth (2025). He's the rare operator who has built across consumer tax software, payments, and wealth management — and his thinking on fiduciary advice, financial data portability, and after-tax returns has shaped how a generation of fintech founders think about the wealth-management stack.
+Dr. Bill Harris is the world's foremost authority on omega-3 fatty acids and cardiovascular health. He invented the Omega-3 Index — a blood biomarker measuring EPA+DHA levels in red blood cell membranes — and has spent four decades researching how omega-3 status predicts cardiovascular disease risk, cognitive decline, and all-cause mortality. He is the founder and Chief Science Officer of OmegaQuant Analytics, a laboratory he built to make omega-3 testing accessible and standardized. His work has shaped how clinicians, researchers, and informed consumers think about fish oil supplementation, dietary omega-3 sources, and the gap between what we eat and what our cells actually need.
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Publicly available primary sources — Bill's own books and op-eds, recorded interviews where he speaks at length, and substantive press profiles. No private correspondence, internal memos, or paywalled content beyond what's freely accessible.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Publicly available primary sources — Dr. Harris's own recorded interviews, podcast appearances, conference presentations, and on-the-record commentary on omega-3 science. No private correspondence, unpublished research, or paywalled content beyond what is freely accessible.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

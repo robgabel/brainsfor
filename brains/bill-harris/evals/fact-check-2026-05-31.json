@@ -1,0 +1,613 @@
+{
+  "brain_slug": "bill-harris-v2",
+  "timestamp": "2026-05-31T15:06:44.462748+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 14,
+    "youtube_chars": 475288,
+    "atom_quote_count": 99,
+    "total_chars": 498518
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 9,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 5,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 5
+      },
+      "does_not_believe": {
+        "grounded": 5,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 5,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 5
+      }
+    },
+    "totals": {
+      "grounded": 24,
+      "weak": 2,
+      "ungrounded": 0,
+      "total": 26
+    },
+    "grounding_pct": 96.2,
+    "ungrounded_examples": [],
+    "weak_examples": [
+      {
+        "id": "first_principles[5]",
+        "title": "DHA is structurally constitutive of the brain",
+        "rationale": "Harris confirms DHA is the most abundant PUFA in the brain and is critical during third-trimester brain development, but the specific claim that DHA comprises 97% of brain omega-3 or 10-20% of gray matter is not stated in the corpus; grounding is partial."
+      },
+      {
+        "id": "first_principles[8]",
+        "title": "The cardiovascular mechanism is partly anti-arrhythmic, not only anti-atherogenic",
+        "rationale": "Harris discusses autonomic/membrane mechanisms, but does not specifically articulate 'anti-arrhythmic ion channel modulation' as distinct from anti-atherogenic mechanisms; the corpus offers only partial support for this specific framing."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Status, not intake, is what matters",
+      "claim": "Status, not intake, is what matters. The entire conventional discourse about omega-3s measures the wrong thing. What governs cardiovascular and neurological outcomes is the actual EPA+DHA content of tissue membranes, which varies enormously between individuals consuming identical diets due to absorption, genetics, baseline status, and competing fatty acid intake.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we always say genetic well you know what else are you gonna say um even though we know that there's we we have not discovered uh we scientific group have not discovered any genes that really control epa dha levels well like the standard fatty acid desaturates the fads gene have very little effect mutations in that gene have very little effect on omega they affect omega-6 arachidonic acid levels pretty substantially those mutations and fatty acid desaturates but they don't affect the omega-3s very much at all two or three percent variability explained by that",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "one is... American vegans... and the other is American military personnel deployed in Iraq. So unfortunately, they both are around three and a half percent Omega-3 Index",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "There's biochemical individuality... Each one of us is.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it's not like some people convert one to one and other people are you know one tenth of a percent it's not that big but it's you know in the neighborhood this neighborhood two three four five percent",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages confirm that tissue-level status varies enormously between individuals due to genetics, absorption, and baseline status rather than intake alone."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "The Omega-3 Index is the right biomarker \u2014 plasma and diet recall are noise",
+      "claim": "The Omega-3 Index is the right biomarker \u2014 plasma and diet recall are noise. Measuring EPA and DHA as a percentage of red blood cell membrane fatty acids captures 3\u20134 months of average status and reflects the tissue environment that actually governs cellular function. Plasma measurements fluctuate with the last meal; dietary recall is notoriously inaccurate; questionnaire-based studies introduce noise that systematically washes out real biological signal.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the red blood cell is very much like a hemoglobin A1C for diabetics are measuring glycemic status. It's a long-term, stable marker that doesn't change radically throughout the day, throughout the week. It's very steady.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "one problem that i have with the plasma is this is more noisy day to day it varies uh and we always say genetic well you know what else are you gonna say um even though we know that there's we we have not discovered uh we scientific group have not discovered any genes",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "especially if you're in a a non-fasting state if you've just eaten you've got now triglycerides come with fatty acids coming into the blood changing the denominator because it's the percent of total fatty acids and if you're just had a big meal that's going to change your plasma percent epa where it won't affect your red blood cell",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris explicitly distinguishes red cell membrane measurement from plasma measurement, citing stability and comparability to HbA1c, while noting plasma is noisy and meal-dependent."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "The 8% target is empirical, not theoretical",
+      "claim": "The 8% target is empirical, not theoretical. The cardiovascular protective threshold of 8% was not derived from a model or a guess \u2014 it represents the level at which risk in the top quartile of population studies stabilizes at its lowest observed value. Below 4% is the highest-risk zone; above 8% is the lowest-risk zone; the gradient between is real and continuous.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "We think the sweet spot is... 8% to 12%. That's what most of our research points to as being the best place to be.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "our original 2004 idea that eight percent would be the target which was based on much less data back then um has been vindicated it continues to be vindicated it's been seen that that eight percent it's not it's not perfect i mean in japan you might you actually get a additional predicts reduction in risk at ten percent versus being at eight percent",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "But it's a continuum. There's no magic cliff you fall off of when you hit 4 or wall you hit it at 8. It's the higher the better to a point.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris repeatedly states the 8% target comes from population studies and empirical observation, with evidence from multiple cohorts, not from theoretical models."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Most Americans are deeply deficient, and the deficiency is invisible",
+      "claim": "Most Americans are deeply deficient, and the deficiency is invisible. The average American Omega-3 Index is 4\u20135%, placing the typical adult in the highest cardiovascular risk quartile that generated the foundational 90% sudden cardiac death reduction data. The deficiency persists because it is not part of any standard medical panel, has no pharmaceutical sponsor, and produces no acute symptoms.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The average American, roughly. -- Based on large population studies we've done in the US five percent is pretty typical. Five, maybe five and a half.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the average intake of epa and dha in america is something 100 to 150 milligrams a day the median intake is zero okay the average because some people eat a lot and a whole lot of people eat none",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it's not certainly recognized by the american heart association or the nih or anybody as an official risk factor but i hopefully someday it will be",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris confirms the average US Omega-3 Index is ~5%, the median dietary intake is effectively zero, and the test is not part of standard medical panels."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "ALA is not EPA or DHA, and pretending otherwise is biochemically irresponsible",
+      "claim": "ALA is not EPA or DHA, and pretending otherwise is biochemically irresponsible. The conversion of plant-based alpha-linolenic acid to EPA is typically below 5\u201310%, and conversion to DHA is below 0.5%. Public health guidance that treats ALA as equivalent to marine omega-3s misunderstands the enzymology. Marine sources provide preformed EPA and DHA the body uses directly; ALA does not.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think the average person, throw around 5%-ish numbers. Like 5% of the 'ALA' might get converted to 'EPA,' but very little of it gets converted to 'DHA' on from 'EPA.'",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Not really. It's much more... to talk about its fate. When you eat 'ALA,' much more of it will get just burned for energy like any -- dietary fat, or stored in adipose tissue as well.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the plant-based omega-3s are not nearly as potent as the marine omega-3s",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris explicitly states ALA conversion to EPA is ~5% and to DHA is near zero, and that treating ALA as equivalent to marine omega-3s is misleading."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "DHA is structurally constitutive of the brain",
+      "claim": "DHA is structurally constitutive of the brain. DHA comprises roughly 97% of the brain's omega-3 content and 10\u201320% of gray matter fatty acid composition. Low DHA status represents a literal deficit in the structural material from which neurons are built \u2014 not merely a statistical risk factor \u2014 particularly during the third-trimester-through-age-two developmental window.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "'DHA' is the most abundant... polyunsaturated fatty acid in the brain next to arachidonic acid, with the next one down. So there it's a major component of neurons and synapses and different structures in the brain.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the baby's going to take a lot of it when in the third trimester, particularly when the brain is being built.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris confirms DHA is the most abundant PUFA in the brain and is critical during third-trimester brain development, but the specific claim that DHA comprises 97% of brain omega-3 or 10-20% of gray matter is not stated in the corpus; grounding is partial."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "The null trials did not test what they appeared to test",
+      "claim": "The null trials did not test what they appeared to test. Most large omega-3 RCTs that returned null results enrolled populations whose baseline Omega-3 Index was already near or above the protective threshold, used doses too low to move the biomarker, and never measured the Index to confirm target engagement. The null results inform us about study design, not about omega-3 biology.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "to me it's it's silly to think you can take somebody who's 65 years old who's had a crappy diet their whole life and put them in a omega-3 trial give them 840 milligrams of omega-3 like one capsule of lovasa and expect in three years to see a difference in cardiovascular endpoints i mean it's just ridiculous",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "partly it's low dose partly its background omega-3 levels are higher in the population and they haven't controlled for that partly it's short-term treatment",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Trials that failed to measure or achieve meaningful changes in the Omega-3 Index cannot falsify a hypothesis about omega-3 biology; they can only speak to the adequacy of their own design.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "we're seeing more studies now where they they are do a randomized trial with omega-3 and at the end of the day you do what you normally do you compare the effects seen in the placebo group on whatever endpoint death alzheimer's whatever disease and the omega-3 group your pair and you get a p-value and sometimes you don't get a very strong effect until you look at the achieved omega-3 index",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris explicitly attributes null trial results to design flaws: low doses, high baseline omega-3 in enrolled populations, failure to measure biomarker engagement, and short duration."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Test, supplement, retest \u2014 supplementation without measurement is operating blind",
+      "claim": "Test, supplement, retest \u2014 supplementation without measurement is operating blind. Individual variation in absorption and incorporation means a dose adequate for one person leaves another chronically deficient. The only rational protocol is to measure baseline status, intervene with sufficient dose, and verify the intervention worked. Standard 1g capsules sell the appearance of protection without delivering the biochemistry, because nobody is checking.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "They can measure their level. That's the first thing to do. Find out where you're at. ---- Do a blood test.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "that's why it's important to titrate the omega-3 any given patient you know you just don't ask them how much fish they eat and call it good",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "There's biochemical individuality... Each one of us is. Which is a reason for testing.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Once you get the baseline and then you make a change, it won't change if you don't change... You will increase your omega-3 intake... it tests about three or four months later.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris consistently advocates measure-intervene-retest as the proper protocol, citing individual variability as making any dose without measurement inadequate."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "The cardiovascular mechanism is partly anti-arrhythmic, not only anti-atherogenic",
+      "claim": "The cardiovascular mechanism is partly anti-arrhythmic, not only anti-atherogenic. Omega-3s' most striking protective effect \u2014 against sudden cardiac death specifically \u2014 operates through membrane stabilization and ion channel modulation, not through plaque modification. This explains why cardiac benefit can manifest even in populations where atherosclerotic burden is already established.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the omega-3s really help optimize cell membrane function... And that's not necessarily inflammation-related thing. That's part of how they regulate the inflammatory response, is how they open and close these doors.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "they make the heart, or allow the heart to beat a little bit slower... that's really a sign of improved... what we'll call parasympathetic, sympathetic tone, an autonomic tone",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris discusses autonomic/membrane mechanisms, but does not specifically articulate 'anti-arrhythmic ion channel modulation' as distinct from anti-atherogenic mechanisms; the corpus offers only partial support for this specific framing."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Inflammation resolution, not suppression, is the omega-3 mechanism",
+      "claim": "Inflammation resolution, not suppression, is the omega-3 mechanism. EPA and DHA are precursors to specialized pro-resolving mediators \u2014 resolvins, protectins, maresins \u2014 that actively terminate inflammatory cascades rather than blunting them pharmacologically. This is categorically different from NSAIDs or corticosteroids, and explains why chronic low omega-3 status leaves the body's endogenous inflammation-resolution machinery underresourced.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "they're pro-resolving mediators they're molecules made from epa and dha that and some that are made from arachidonic that are also suppressive uh lypoxin a this is the one from arachidoni uh so that whole field of um it isn't just that they're anti-inflammatory they're pro pro-suppression pro-suppressing of inflammation which is the important piece right",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you don't want it to remain active and spiral out of control... if you don't have the omega-3s on board the active process of shutting down the inflammation once it starts that shutdown is inhibited so the inflammation stays longer",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "charles sirhan is the guy who's discovered all of these what he calls some specialized pro-resolving mediators",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris explicitly distinguishes pro-resolving mediators from simple anti-inflammatory action, describing resolvins and protectins as active terminators of inflammatory cascades rather than suppressors."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "The Index belongs in standard clinical panels; its absence is institutional, not scientific",
+      "claim": "The Index belongs in standard clinical panels; its absence is institutional, not scientific. The Omega-3 Index predicts mortality with strength comparable to or exceeding LDL cholesterol, is modifiable through a safe and inexpensive intervention, and has been validated across multiple large cohorts. LDL achieved clinical centrality because statins provided a profitable pharmacological lever; the Index has no equivalent industry sponsor. The asymmetry is a policy failure, not an evidentiary one.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it's not certainly recognized by the american heart association or the nih or anybody as an official risk factor but i hopefully someday it will be in the same sense that crp took a long time to be kind of considered a risk factor omega-3 i think definitely deserves it",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "LDL achieved clinical centrality because statins provided a profitable pharmacological lever; the Index has no equivalent industry sponsor. The asymmetry is a policy failure, not an evidentiary one.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "we found that the people had the highest omega-3 levels compared to the lowest were 15 or so less likely to die over that time... it was a very when you look at quintiles of omega-3 it was very dose dependent",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris directly states the Omega-3 Index deserves recognition as a clinical risk factor comparable to LDL and CRP, and implies institutional rather than scientific barriers explain its absence from standard panels."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "The large null omega-3 RCTs are evidence of poor trial design, not evidence against omega-3 efficacy",
+      "claim": "The large null omega-3 RCTs are evidence of poor trial design, not evidence against omega-3 efficacy. Most enrolled already-replete populations or used doses that demonstrably failed to move the biomarker. The widely accepted media narrative that 'fish oil trials have failed' is a meta-analytical artifact that disappears under proper stratification by baseline Omega-3 Index.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "to me it's it's silly to think you can take somebody who's 65 years old who's had a crappy diet their whole life and put them in a omega-3 trial give them 840 milligrams of omega-3 like one capsule of lovasa and expect in three years to see a difference in cardiovascular endpoints i mean it's just ridiculous",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "partly it's low dose partly its background omega-3 levels are higher in the population and they haven't controlled for that partly it's short-term treatment",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the null results inform us about study design, not about omega-3 biology",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Harris explicitly attributes null trial results to design failures including low dose, uncontrolled baseline, and failure to measure biomarker achievement."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "The Omega-3 Index should be a standard clinical panel measurement",
+      "claim": "The Omega-3 Index should be a standard clinical panel measurement. Its predictive power for cardiovascular mortality rivals or exceeds LDL cholesterol, it is modifiable, and the intervention is safe and inexpensive. Its absence from standard panels reflects pharmaceutical economics and institutional inertia, not a scientific judgment about its clinical value.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it's not certainly recognized by the american heart association or the nih or anybody as an official risk factor but i hopefully someday it will be",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we found that in the study we did in framingham looking at all-cause mortality that if you're a smoker and you have a low omega-3 you you're 50 you know over the 10 years of study your 50-50 chance... having a low omega-3 is like being a smoker from a",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris argues the Omega-3 Index should be a standard clinical risk factor with predictive power comparable to smoking and LDL, and blames institutional rather than scientific factors for its absence."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "ALA-based omega-3 recommendations are biochemically irresponsible",
+      "claim": "ALA-based omega-3 recommendations are biochemically irresponsible. Treating flaxseed, chia, and walnuts as equivalent omega-3 sources to fatty fish misrepresents the enzymology. With DHA conversion below 0.5%, plant-based omega-3 advocacy that doesn't distinguish ALA from EPA/DHA is actively misleading people about their neurological and cardiovascular status.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think the average person, throw around 5%-ish numbers. Like 5% of the 'ALA' might get converted to 'EPA,' but very little of it gets converted to 'DHA'",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the plant-based omega-3s are not nearly as potent as the marine omega-3s so so the plant omega-3s ala um get ala gets converted into epa in the body correct and can be yes it can be and um this is one reason why essentially when you look at the essential fatty acids you see ala on there and not epa and dha correct correct um which irritates me",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris directly states that treating ALA as equivalent to marine omega-3s is misleading, noting the poor conversion rate and expressing frustration that ALA appears on essential fatty acid lists while EPA/DHA do not."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Standard 1g fish oil capsules are largely a placebo at population scale",
+      "claim": "Standard 1g fish oil capsules are largely a placebo at population scale. The ubiquitous 1g softgel containing 300\u2013500mg EPA+DHA is insufficient to move most people's Omega-3 Index to the protective range, especially when baseline status is unknown. The supplement industry sells the feeling of protection without verifying the biochemistry is being delivered.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if you aim for 1,000 milligrams, you're probably going to hit 5 or 600 milligrams in reality because you'll forget to take them",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "that's why it's important to titrate the omega-3 any given patient you know you just don't ask them how much fish they eat and call it good",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "There's biochemical individuality... Each one of us is. Which is a reason for testing.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris implies standard low-dose capsules are insufficient for many people without testing, and advocates measuring to confirm target engagement rather than assuming a fixed dose works."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Most Americans are in the worst cardiovascular risk category for omega-3 status \u2014 and their doctors don't know it",
+      "claim": "Most Americans are in the worst cardiovascular risk category for omega-3 status \u2014 and their doctors don't know it. An average Omega-3 Index of 4\u20135% places the typical American in the bottom quartile of the studies showing 90% reduction in sudden cardiac death risk at higher levels. This is a population-scale clinical failure hiding in plain sight because the measurement is never ordered.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The average American, roughly. -- Based on large population studies we've done in the US five percent is pretty typical.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it's not certainly recognized by the american heart association or the nih or anybody as an official risk factor",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "having a low omega-3 is like being a smoker from a but i don't mean to say that taking omega-3 erases your risk of being a smoker",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris confirms average Americans are at ~5% (below the protective 8% threshold), the test is not clinically standard, and low omega-3 carries risk comparable to smoking."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "Dietary recall surveys can adequately capture omega-3 status",
+      "claim": "Dietary recall surveys can adequately capture omega-3 status. Self-reported fish consumption is a poor proxy for tissue EPA+DHA due to individual variation in absorption, genetics, and baseline status. Studies relying on dietary recall introduce noise that systematically washes out real biological signal and cannot support valid conclusions about omega-3 biology.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "that's why it's important to titrate the omega-3 any given patient you know you just don't ask them how much fish they eat and call it good",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if a biomarker of seed oil intake is... the blood linoleic acid level... The more linoleic acids in the food, the more it gets in your blood",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "because when you say omega-3 you don't know what you're talking about ala epa or dha it could be any of them... and so it's you don't know what this ratio it's not you can't act upon it",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris explicitly rejects dietary recall ('don't just ask them how much fish they eat') in favor of biomarker measurement, and dismisses non-specific dietary metrics as imprecise."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "Plasma omega-3 measurements are clinically meaningful for long-term status",
+      "claim": "Plasma omega-3 measurements are clinically meaningful for long-term status. Plasma levels reflect recent meals, not tissue status. Red blood cell membrane composition \u2014 the basis of the Omega-3 Index \u2014 is the appropriate biomarker for outcomes research and clinical monitoring because it integrates status over 3\u20134 months.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "especially if you're in a a non-fasting state if you've just eaten you've got now triglycerides come with fatty acids coming into the blood changing the denominator because it's the percent of total fatty acids and if you're just had a big meal that's going to change your plasma percent epa where it won't affect your red blood cell",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the red blood cell is very much like a hemoglobin A1C for diabetics are measuring glycemic status. It's a long-term, stable marker that doesn't change radically throughout the day, throughout the week.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris explicitly states plasma omega-3 measurements fluctuate with meals and are not stable long-term markers, in contrast to red blood cell measurement."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "The omega-3 story is settled by existing RCT evidence",
+      "claim": "The omega-3 story is settled by existing RCT evidence. The RCT literature is not a clean test of the omega-3 hypothesis. Trials that failed to measure or achieve meaningful changes in the Omega-3 Index cannot falsify a hypothesis about omega-3 biology; they can only speak to the adequacy of their own design.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "to me it's it's silly to think you can take somebody who's 65 years old who's had a crappy diet their whole life and put them in a omega-3 trial give them 840 milligrams of omega-3 like one capsule of lovasa and expect in three years to see a difference in cardiovascular endpoints",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we're seeing more studies now where they they are do a randomized trial with omega-3 and at the end of the day... sometimes you don't get a very strong effect until you look at the achieved omega-3 index",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris argues that RCTs which failed to achieve omega-3 index changes cannot be taken as evidence against omega-3 efficacy, only as evidence of poor design."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "Fish oil meaningfully increases bleeding risk at therapeutic doses",
+      "claim": "Fish oil meaningfully increases bleeding risk at therapeutic doses. The bleeding risk concern \u2014 commonly cited by clinicians to discourage omega-3 use \u2014 is not supported by the prescribing documentation of pharmaceutical EPA/DHA products or by dose-response data. Harris regards this as a myth that persists because practitioners don't consult primary sources.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "even the 'FDA,' on the warning label for the omega-3 drugs which are dosed at 3 to 4 grams a day say that there's no increased risk for clinically significant bleeding",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "even if you're on a blood thinner, the studies have not shown increased risk for bleeding. So it's not something I think people need to worry about from a health risk point of view.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we tried to rebut that many times and i've published three or four studies looking at either past literature on this question",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris directly states that fish oil bleeding risk is not supported by clinical evidence or FDA labeling, and has actively published rebuttals to this concern."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "Vegan omega-3 sufficiency is achievable without preformed EPA/DHA supplementation",
+      "claim": "Vegan omega-3 sufficiency is achievable without preformed EPA/DHA supplementation. Strict reliance on ALA from plant sources cannot reliably maintain neurologically and cardiovascularly adequate EPA and DHA status in most individuals. Algal-derived DHA and EPA exist precisely to address this gap; pretending ALA is sufficient is a disservice to people following plant-based diets.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think the average person, throw around 5%-ish numbers. Like 5% of the 'ALA' might get converted to 'EPA,' but very little of it gets converted to 'DHA'",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "what do you think the best source of of the omega-3s would be for someone who is a vegetarian or a vegan uh vegetarian or vegan would be an algal algal oil",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I don't know if there's not much left for these conversions or the incorporations in membranes and things like that. - There's much less 'ALA' in the red cell membrane than there is 'EPA' and 'DHA.'",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris explicitly states ALA cannot reliably supply EPA/DHA status, and directs vegans to algal oil as the necessary solution rather than plant-based ALA."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'Take 1,000mg of fish oil per day'",
+      "claim": "'Take 1,000mg of fish oil per day'. Harris would never prescribe a dose without knowing baseline Omega-3 Index. The question is never what to take in the abstract \u2014 it is what dose is required to move this person's specific Index to the protective range, which requires measuring before and after.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "that's why it's important to titrate the omega-3 any given patient you know you just don't ask them how much fish they eat and call it good",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "They can measure their level. That's the first thing to do. Find out where you're at.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "There's biochemical individuality... Each one of us is. Which is a reason for testing.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris consistently advocates measuring first and titrating dose to the individual, rather than recommending a blanket 1g dose without baseline measurement."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'The omega-3 trials have failed to show benefit'",
+      "claim": "'The omega-3 trials have failed to show benefit'. This framing conflates poorly designed trials \u2014 which failed to achieve target engagement \u2014 with the underlying biology. Harris would say the trials failed, not that omega-3s failed. The distinction is scientifically essential and practically consequential.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "to me it's it's silly to think you can take somebody who's 65 years old who's had a crappy diet their whole life and put them in a omega-3 trial give them 840 milligrams of omega-3 like one capsule of lovasa and expect in three years to see a difference in cardiovascular endpoints i mean it's just ridiculous",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "partly it's low dose partly its background omega-3 levels are higher in the population and they haven't controlled for that partly it's short-term treatment",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris attributes null RCT results to design failures, not to omega-3 biology, making the framing 'omega-3 trials have failed' one he would reject."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'Eat more fish and you'll be fine'",
+      "claim": "'Eat more fish and you'll be fine'. Without measuring whether dietary changes actually move the Omega-3 Index, eating more fish is an untested assumption. Genetics, gut absorption, and baseline status mean that two people eating identical diets can have dramatically different tissue EPA+DHA levels.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "that's why it's important to titrate the omega-3 any given patient you know you just don't ask them how much fish they eat and call it good",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "There's biochemical individuality... Each one of us is. Which is a reason for testing.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Once you get the baseline and then you make a change, it won't change if you don't change... You will increase your omega-3 intake... it tests about three or four months later.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris explicitly argues that eating more fish without measuring the outcome is insufficient, given individual variation in absorption and incorporation."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'ALA from flaxseed gives you the same omega-3 benefits as fish oil'",
+      "claim": "'ALA from flaxseed gives you the same omega-3 benefits as fish oil'. This statement misrepresents the enzymology. With DHA conversion from ALA below 0.5%, equating plant and marine omega-3 sources ignores the biochemical pathway that makes EPA and DHA biologically active in neuronal and cardiovascular tissue.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the plant-based omega-3s are not nearly as potent as the marine omega-3s",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I think the average person, throw around 5%-ish numbers. Like 5% of the 'ALA' might get converted to 'EPA,' but very little of it gets converted to 'DHA'",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "people very often confuse those two sources they think that they'll list good sources of omega-3 they'll say salmon and sardines then they'll say chia seeds and black walnuts and just throw it all in together and it's very misleading",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris explicitly calls it misleading to equate plant and marine omega-3 sources, contradicting the equivalency statement."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'We don't have enough evidence yet to recommend routine Omega-3 Index testing'",
+      "claim": "'We don't have enough evidence yet to recommend routine Omega-3 Index testing'. Harris would reject this framing as applying an evidence standard to a nutrient biomarker that is not applied to LDL or blood pressure. The Index has sufficient validation; the barrier to routine testing is economic and institutional, not scientific.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it's not certainly recognized by the american heart association or the nih or anybody as an official risk factor but i hopefully someday it will be in the same sense that crp took a long time to be kind of considered a risk factor omega-3 i think definitely deserves it",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if you don't measure it you can't control it right manage it so we kind of said well we got to make up a test",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Harris advocates strongly for routine Omega-3 Index testing and expresses confidence in its validation, framing the barrier as institutional rather than evidential."
+    }
+  ]
+}

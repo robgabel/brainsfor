@@ -1,11 +1,11 @@
 # Dario Amodei Brain Pack
 
-> **353 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **1000 knowledge atoms** · **807 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Dario Amodei's thinking, extracted from "Machines of Loving Grace" (2024), "The Urgency of Interpretability" (2025), "The Adolescence of Technology" (2025), Dwarkesh Podcast (2 appearances), Lex Fridman Podcast #452, Ezra Klein Show, Logan Bartlett Show, People by WTF with Nikhil Kamath, A Cheeky Pint with John Collison (Stripe), congressional testimony, and Anthropic blog posts. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Dario Amodei's thinking, extracted from "Machines of Loving Grace" (2024), "The Urgency of Interpretability" (2025), "The Adolescence of Technology" (2025), Dwarkesh Podcast (2 appearances), Lex Fridman Podcast #452 and #490, Ezra Klein Show, Logan Bartlett Show EP 82, People by WTF with Nikhil Kamath, A Cheeky Pint with John Collison (Stripe), Interesting Times with Ross Douthat, WSJ interviews, WEF appearances, AI1G debate with Demis Hassabis, JPMorgan event with Jamie Dimon, India AI Impact Summit, Building Anthropic co-founders conversation, NeurIPS 2020 (GPT-3 presentation), AI Risk & Safety Concepts (with Daniel Dewey), congressional testimony, Wired, TIME, NYT, Fortune, and Financial Times profiles. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Dario's actual ideas, frameworks, and worldview.
 
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Dario's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (353 atoms, 1000 connections)
+  ├── brain-atoms.json      ← Structured data (1000 atoms, 807 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**353 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**1000 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**807 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — scaling hypothesis, constitutional AI, mechanistic interpretability, responsible scaling, machines of loving grace, AI governance, biology acceleration, steering the bus, race to the top, existential risk, CBRN, interpretability, alignment.
+**16 topic clusters** — scaling hypothesis, constitutional AI, mechanistic interpretability, responsible scaling, machines of loving grace, AI governance, biology acceleration, steering the bus, race to the top, existential risk, CBRN, interpretability, alignment, adolescence of technology, power concentration.
 
 **Date range:** 2021 — April 2026
 

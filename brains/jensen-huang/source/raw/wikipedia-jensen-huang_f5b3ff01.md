@@ -1,0 +1,60 @@
+# Jensen Huang
+
+Jensen Huang
+
+Taiwanese and American businessman (born 1963)
+
+The native form of this [personal name](https://en.wikipedia.org/wiki/Personal_name "Personal name") is _Huang Jen-Hsun_.This article uses [Western name order](https://en.wikipedia.org/wiki/Personal_name#Western_name_order "Personal name") when mentioning individuals.
+
+| Jensen Huang |
+| --- |
+| 黃仁勳 |
+| [![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Jen-Hsun_Huang_2025.jpg/500px-Jen-Hsun_Huang_2025.jpg)](https://en.wikipedia.org/wiki/File:Jen-Hsun_Huang_2025.jpg)<br>Huang in 2025 |
+| Born | Jen-Hsun Huang[\[a\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-huang-2)<br> (1963-02-17) February 17, 1963 (age63)<br>[Taipei](https://en.wikipedia.org/wiki/Taipei "Taipei"), Taiwan[\[2\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-3) |
+| Citizenship | - Taiwan<br>- United States |
+| Education | - [Oregon State University](https://en.wikipedia.org/wiki/Oregon_State_University "Oregon State University") ( [BS](https://en.wikipedia.org/wiki/Bachelor_of_Engineering "Bachelor of Engineering"))<br>- [Stanford University](https://en.wikipedia.org/wiki/Stanford_University "Stanford University") ( [MS](https://en.wikipedia.org/wiki/Master_of_Science "Master of Science")) |
+| Occupations | - Businessman<br>- electrical engineer |
+| Knownfor | Co-founding [Nvidia](https://en.wikipedia.org/wiki/Nvidia "Nvidia") |
+| Title | President and CEO of Nvidia Corporation (1993–present) |
+| Spouse | Lori Huang<br>​<br>(m.1985)​ |
+| Children | 2 |
+| Relatives | [Lisa Su](https://en.wikipedia.org/wiki/Lisa_Su "Lisa Su") (cousin) |
+| Awards | - [IEEE Founders Medal](https://en.wikipedia.org/wiki/IEEE_Founders_Medal "IEEE Founders Medal") (2020)<br>- [VinFuture Prize](https://en.wikipedia.org/wiki/VinFuture_Prize "VinFuture Prize") (2024)<br>- [Edison Award](https://en.wikipedia.org/wiki/Edison_Awards "Edison Awards") (2024)<br>- [Primetime Engineering Award](https://en.wikipedia.org/wiki/Primetime_Engineering_Emmy_Awards "Primetime Engineering Emmy Awards") (2024)<br>- [Queen Elizabeth Prize for Engineering](https://en.wikipedia.org/wiki/Queen_Elizabeth_Prize_for_Engineering "Queen Elizabeth Prize for Engineering") (2025)<br>- [IEEE Medal of Honor](https://en.wikipedia.org/wiki/IEEE_Medal_of_Honor "IEEE Medal of Honor") (2026) |
+|  |
+|  |
+| Chinese name |
+| [TraditionalChinese](https://en.wikipedia.org/wiki/Traditional_Chinese_characters "Traditional Chinese characters") | 黃仁勳 |
+| [SimplifiedChinese](https://en.wikipedia.org/wiki/Simplified_Chinese_characters "Simplified Chinese characters") | 黄仁勋 |
+| | Transcriptions |
+| --- |
+| [Standard Mandarin](https://en.wikipedia.org/wiki/Standard_Chinese "Standard Chinese") |
+| [Hanyu Pinyin](https://en.wikipedia.org/wiki/Hanyu_Pinyin "Hanyu Pinyin") | Huáng Rénxūn |
+| [Bopomofo](https://en.wikipedia.org/wiki/Bopomofo "Bopomofo") | ㄏㄨㄤˊ ㄖㄣˊㄒㄩㄣ |
+| [Gwoyeu Romatzyh](https://en.wikipedia.org/wiki/Spelling_in_Gwoyeu_Romatzyh "Spelling in Gwoyeu Romatzyh") | Hwang Renshiun |
+| [Wade–Giles](https://en.wikipedia.org/wiki/Wade%E2%80%93Giles "Wade–Giles") | Huang2 Jen2-hsün1 |
+| [IPA](https://en.wikipedia.org/wiki/Help:IPA/Mandarin "Help:IPA/Mandarin") | [\[xwǎŋɻə̌n.ɕýn\]](https://en.wikipedia.org/wiki/Help:IPA/Mandarin "Help:IPA/Mandarin") |
+| [Yue: Cantonese](https://en.wikipedia.org/wiki/Cantonese "Cantonese") |
+| [Jyutping](https://en.wikipedia.org/wiki/Jyutping "Jyutping") | Wong4 Jan4-fan1 |
+| [Southern Min](https://en.wikipedia.org/wiki/Southern_Min "Southern Min") |
+| [Hokkien](https://en.wikipedia.org/wiki/Hokkien "Hokkien") [POJ](https://en.wikipedia.org/wiki/Pe%CC%8Dh-%C5%8De-j%C4%AB "Pe̍h-ōe-jī") | N̂g Jîn-hun |
+| [Tâi-lô](https://en.wikipedia.org/wiki/Taiwanese_Romanization_System "Taiwanese Romanization System") | N̂g Jîn-hun | |
+|  |
+|  |
+| Signature |
+| [![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Jensen_Huang_signature.svg/330px-Jensen_Huang_signature.svg.png)](https://en.wikipedia.org/wiki/File:Jensen_Huang_signature.svg) |
+
+**Jen-Hsun**" **Jensen**" **Huang** ( [Chinese](https://en.wikipedia.org/wiki/Traditional_Chinese_characters "Traditional Chinese characters"):黃仁勳; [Wade–Giles](https://en.wikipedia.org/wiki/Wade%E2%80%93Giles "Wade–Giles"): _Huáng Jén-hsūn_; [Tâi-lô](https://en.wikipedia.org/wiki/T%C3%A2i-u%C3%A2n_L%C3%B4-m%C3%A1-j%C4%AB_Phing-im_Hong-%C3%A0n "Tâi-uân Lô-má-jī Phing-im Hong-àn"): _N̂g Jîn-hun_; born February 17, 1963) is a Taiwanese and American business executive and electrical engineer who is the founder, president, and CEO of [Nvidia](https://en.wikipedia.org/wiki/Nvidia "Nvidia"), the world's [most valuable company](https://en.wikipedia.org/wiki/List_of_public_corporations_by_market_capitalization "List of public corporations by market capitalization"). As of 2026,[\[update\]](https://en.wikipedia.org/w/index.php?title=Jensen_Huang&action=edit) _[Forbes](https://en.wikipedia.org/wiki/Forbes "Forbes")_ estimates his net worth at over US$200 billion, making him the [seventh-wealthiest individual](https://en.wikipedia.org/wiki/The_World's_Billionaires "The World's Billionaires") in the world.[\[3\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-Forbes3-4)
+
+The son of Taiwanese immigrants, Huang spent his childhood in Taiwan and Thailand before moving to the United States, where he was a student in Kentucky and Oregon. After earning a master's degree from [Stanford University](https://en.wikipedia.org/wiki/Stanford_University "Stanford University"), Huang launched Nvidia in 1993 from a [Denny's](https://en.wikipedia.org/wiki/Denny's "Denny's") restaurant in [San Jose, California](https://en.wikipedia.org/wiki/San_Jose,_California "San Jose, California"), at age 30 and has remained its president and CEO ever since. He led the company out of near-bankruptcy during the 1990s and oversaw its expansion into [GPU](https://en.wikipedia.org/wiki/GPU "GPU") production, [high-performance computing](https://en.wikipedia.org/wiki/High-performance_computing "High-performance computing"), and [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence "Artificial intelligence") (AI).
+
+Under Huang, Nvidia experienced rapid growth during the [AI boom](https://en.wikipedia.org/wiki/AI_boom "AI boom"), becoming the first company to reach a [market capitalization](https://en.wikipedia.org/wiki/Market_capitalization "Market capitalization") of over $5 trillion in October 2025.[\[4\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-5) In 2021 and 2024, [_Time_](https://en.wikipedia.org/wiki/Time_(magazine) "Time (magazine)") magazine included Huang in their [list of the most influential people](https://en.wikipedia.org/wiki/Time_100 "Time 100"). In 2025, he was named as one of the "Architects of AI" for _Time_'s [Person of the Year](https://en.wikipedia.org/wiki/Time_Person_of_the_Year "Time Person of the Year").
+
+## Early life and education
+
+Huang was born in [Taipei](https://en.wikipedia.org/wiki/Taipei "Taipei"), Taiwan, on February 17, 1963,[\[5\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-6) and moved to the southern city of [Tainan](https://en.wikipedia.org/wiki/Tainan "Tainan") as a child.[\[6\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-:2-7) He is the younger of two sons of Huang Hsing-tai, a [chemical engineer](https://en.wikipedia.org/wiki/Chemical_engineer "Chemical engineer") at an [oil refinery](https://en.wikipedia.org/wiki/Oil_refinery "Oil refinery"), and Lo Tsai-hsiu, a schoolteacher.[\[7\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-8) They were a middle-class Taiwanese family that relocated often,[\[8\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-FOOTNOTEKim2024a17-9) and were native speakers of [Taiwanese Hokkien](https://en.wikipedia.org/wiki/Taiwanese_Hokkien "Taiwanese Hokkien").[\[9\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-FOOTNOTEWitt20255-10) Each day, Jensen's mother randomly selected 10 words from the dictionary to teach her sons English.[\[10\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-FOOTNOTEKim2024a17%E2%80%9318-11) When he was five years old, Huang's family moved to Thailand to support his father's refinery career and remained there for approximately four years.[\[6\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-:2-7)[\[11\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-Lin-12) He attended [Ruamrudee International School](https://en.wikipedia.org/wiki/Ruamrudee_International_School "Ruamrudee International School") while in Bangkok.[\[12\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-13)
+
+In the late 1960s, Hsing-tai traveled from Taiwan to New York City to train under an [air conditioning](https://en.wikipedia.org/wiki/Air_conditioning "Air conditioning") company and, after returning home, resolved to send his sons to the United States.[\[13\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-14) At age nine, Jensen, despite not yet being able to speak English fluently, was sent by his parents to live in the United States.[\[14\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-15) He and his older brother moved in 1973 to live with an uncle in [Tacoma, Washington](https://en.wikipedia.org/wiki/Tacoma,_Washington "Tacoma, Washington"), escaping widespread [social unrest in Thailand](https://en.wikipedia.org/wiki/1973_Thai_popular_uprising "1973 Thai popular uprising").[\[15\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-:3-16) Both Huang's aunt and uncle were recent immigrants to Washington state; they accidentally enrolled him and his brother in the [Oneida Baptist Institute](https://en.wikipedia.org/wiki/Oneida_Baptist_Institute "Oneida Baptist Institute"), a religious reform academy in Kentucky for troubled youth,[\[15\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-:3-16) mistakenly believing it to be a prestigious boarding school.[\[16\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-Witt-17) In order to afford the academy's tuition, Jensen's parents sold nearly all their possessions.[\[17\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-FOOTNOTEKim2024a18-18)
+
+When he was 10 years old, Huang lived with his older brother in the Oneida boys' dormitory.[\[16\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-Witt-17) Each student was expected to work every day, and his brother was assigned to perform manual labor on a nearby [tobacco farm](https://en.wikipedia.org/wiki/Tobacco_farm "Tobacco farm").[\[17\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-FOOTNOTEKim2024a18-18) Because he was too young to attend classes at the reform academy, Huang was educated at a separate public school—the Oneida Elementary school in [Oneida, Kentucky](https://en.wikipedia.org/wiki/Oneida,_Kentucky "Oneida, Kentucky")—arriving as "an undersized Asian immigrant with long hair and heavily accented English"[\[16\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-Witt-17) and was frequently bullied and beaten.[\[18\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-FOOTNOTEKim2024a18%E2%80%9319-19) In Oneida, Huang cleaned toilets every day, learned to play [table-tennis](https://en.wikipedia.org/wiki/Table_tennis "Table tennis"),[\[b\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-21) joined the swimming team,[\[20\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-22) and appeared in _[Sports Illustrated](https://en.wikipedia.org/wiki/Sports_Illustrated "Sports Illustrated")_ at age 14.[\[21\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-:4-23) He taught his illiterate roommate, a "17-year-old covered in tattoos and knife scars,"[\[21\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-:4-23) how to read in exchange for being taught how to [bench press](https://en.wikipedia.org/wiki/Bench_press "Bench press").[\[16\]](https://en.wikipedia.org/wiki/Jensen_Huang#cite_note-Witt-17) In 2002, Huang
+
+[...truncated]

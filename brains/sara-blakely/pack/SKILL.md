@@ -5,14 +5,14 @@ description: "Load the Sara Blakely brain. Pack ships 9 unified skills in pack/s
 
 # Sara Blakely Brain Pack — Setup & Configuration
 
-Welcome to the **Blakely Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Sara Blakely's interviews, essays, and public talks — a curated collection of her most powerful thinking on entrepreneurship, idea generation, failure reframing, intuition, and building a billion-dollar brand from nothing.
+Welcome to the **Blakely Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Sara Blakely's interviews, profiles, video appearances, and essays — a curated collection of her most powerful thinking on entrepreneurship, failure reframing, intuition, idea generation, female empowerment, and building a billion-dollar brand from $5,000 and a gut feeling.
 
 ## What You're Getting
 
-- **486 knowledge atoms** — Core insights, frameworks, and strategic principles from 15 sources including podcast appearances, video interviews, essays, and profiles spanning her career from Spanx founding to billionaire entrepreneur
-- **528 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **917 knowledge atoms** — Core insights, frameworks, and strategic principles from 49 sources including video interviews, written profiles, podcast appearances, essays, and news features spanning her career from door-to-door fax machine sales to founding Spanx and launching Sneex
+- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — Idea generation, failure reframing, intuition, entrepreneurship, female leadership, brand building, resilience, purpose, and more
+- **Cross-referenced topics** — Idea generation, failure reframing, intuition, entrepreneurship, female leadership, brand building, resilience, sales, purpose, product thinking, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Blakely Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (486 insights)
+  ├── brain-atoms.json         ← structured atoms (917 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 486 atoms with titles, summaries, connections
+   - JSON structure of 917 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,23 +93,23 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Sara's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "I have a product idea but no money and no connections. Where do I start?"*
+*Example: "I have a product idea but I'm afraid to share it with anyone yet. How do I know when it's ready to talk about?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Sara sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain Sara's approach to finding a big idea."*
+*Example: "Explain Sara's approach to reframing failure and why it's the most important entrepreneurial skill."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Is naivety an advantage or a disadvantage for first-time founders?"*
+*Example: "Is bootstrapping a business better than raising venture capital?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect failure reframing to brand building."*
+*Example: "Connect Sara's door-to-door sales experience to her success in building the Spanx brand."*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How does Sara's thinking on purpose and business evolve over time?"*
+*Example: "How does Sara's thinking on purpose and entrepreneurship evolve from founding Spanx to launching Sneex?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -117,11 +117,11 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions Sara would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I'm afraid to quit my job and start my business. What should I be asking myself?"*
+*Example: "I keep second-guessing my business idea. What questions should I be asking myself?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens to consumer brands that ignore the female perspective?"*
+*Example: "What happens to consumer brands that are built by people who have never experienced the problem they're solving?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to Sara's thinking? Teach → evolve → coach to build deep understanding of her entrepreneurial philosophy.*
+*Example: New to Sara's thinking? Teach → evolve → coach to build a deep understanding of her entrepreneurial philosophy and how it developed from fax machines to Spanx to Sneex.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Building a consumer brand? Advise on idea validation → debate the risks → predict the market implications.*
+*Example: Launching a consumer product? Advise on idea validation and early-stage protection → debate the risks of bootstrapping vs. funding → predict the second-order effects of ignoring your core customer.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -201,7 +201,7 @@ If you get that, you're all set.
 
 ## About Sara Blakely
 
-Sara Blakely is the founder of Spanx and one of the most influential self-made entrepreneurs of the modern era. Starting with $5,000 in savings and no business experience, she built a billion-dollar empire by trusting her gut, redefining failure, and relentlessly championing the underdog. Her thinking on idea generation, resilience, and female entrepreneurship has inspired millions worldwide.
+Sara Blakely is the founder of Spanx and one of the most influential self-made entrepreneurs of the modern era. Starting with $5,000 in savings and no business experience, she built a billion-dollar empire by trusting her gut, redefining failure, and relentlessly championing women. Her thinking on idea generation, resilience, intuition, and female leadership has inspired millions worldwide.
 
 This brain pack extracts and structures her core ideas so you can activate her mental models in your own thinking.
 
@@ -211,7 +211,7 @@ This brain pack extracts and structures her core ideas so you can activate her m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Blakely's freely distributed interviews, essays, podcast appearances, public talks, and widely circulated media coverage across CNN, Stanford GSB, Masters of Scale, Inc., and other outlets.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Blakely's freely distributed interviews, video appearances, podcast features, essays, and widely circulated media coverage across CNBC, Forbes, Fortune, Inc., ABC News, New York Magazine, TIME, Masters of Scale, MasterClass, Vital Voices, The Rosie Show, Shark Tank, and YouTube channels spanning her career from Spanx founding to Sneex launch.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

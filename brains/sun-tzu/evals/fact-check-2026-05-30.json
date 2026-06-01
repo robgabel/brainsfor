@@ -1,0 +1,687 @@
+{
+  "brain_slug": "sun-tzu-v2",
+  "timestamp": "2026-05-30T19:16:08.786614+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 18,
+    "youtube_chars": 360736,
+    "atom_quote_count": 403,
+    "total_chars": 430443
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 9,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 6,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 7
+      },
+      "does_not_believe": {
+        "grounded": 4,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 5,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 5
+      }
+    },
+    "totals": {
+      "grounded": 24,
+      "weak": 4,
+      "ungrounded": 0,
+      "total": 28
+    },
+    "grounding_pct": 92.9,
+    "ungrounded_examples": [],
+    "weak_examples": [
+      {
+        "id": "first_principles[4]",
+        "title": "The terrain dictates the strategy",
+        "rationale": "While the corpus supports the general importance of terrain, it does not enumerate six types of terrain or nine varieties of ground with their specific names as the principle claims; only general references to terrain adaptation are present."
+      },
+      {
+        "id": "first_principles[9]",
+        "title": "Foreknowledge must be obtained from men who know",
+        "rationale": "While the corpus references spies and intelligence as important, the specific claim that foreknowledge cannot come from spirits or analogy and the false-economy argument about spending on spies is not directly quoted in the source corpus beyond documentary paraphrase."
+      },
+      {
+        "id": "contrarian_positions[5]",
+        "title": "Kindness to captured enemies is a weapon, not a moral act",
+        "rationale": "The corpus supports not destroying enemies and allowing dignified exits, but the specific claim about treating prisoners well to absorb them and undermine enemy morale is only lightly touched on; one passage mentions using captured chariots but the full strategic argument is not explicitly laid out in multiple passages."
+      },
+      {
+        "id": "does_not_believe[4]",
+        "title": "That intelligence can be derived from omens or inference",
+        "rationale": "The corpus mentions prohibiting omens and superstition once, and references the importance of spies, but the explicit statement that foreknowledge cannot come from spirits or analogy with past events is not directly quoted in multiple passages from the source corpus."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "All warfare is based on deception",
+      "claim": "All warfare is based on deception. The enemy acts not on what is true but on what he believes \u2014 therefore shaping his belief is the primary act of war. Appear unable when capable, inactive when active, far when near. The gap between the opponent's mental map and actual terrain is where every strategic victory is manufactured.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "All warfare is based on deception. Hence when we are able to attack we must seem unable when using our forces we must appear inactive when we are near we must make the enemy believe we are far away when far away we must make him believe we are near",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The whole secret lies in confusing the enemy so that he cannot fathom your real intent.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "When strong, appear weak. When weak, appear strong.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "All men can see the tactics whereby I conquer, but what none can see is the strategy out of which victory is evolved.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple distinct passages directly support deception as the foundation of warfare and the manipulation of the enemy's perception as a primary strategic act."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "The supreme excellence is to subdue the enemy without fighting",
+      "claim": "The supreme excellence is to subdue the enemy without fighting. Destroying what you sought to possess is the confession of a failed strategy \u2014 you pay for the prize twice, once to win it and again to repair it. Taking a state, army, or city whole and intact is always superior to shattering it. Battle is the final and worst of four options, ranked below attacking plans, severing alliances, and engaging armies in the field.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The supreme art of war is to subdue the enemy without fighting.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "To fight and conquer in all your battles is not supreme excellence; supreme excellence consists in breaking the enemy's resistance without fighting.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "In war, better take a state intact than destroy it. Better take an army, a regiment, a detachment, a company intact, than destroy them. Ultimate excellence lies not in winning every battle, but in defeating the enemy without ever fighting. The highest form of warfare is to attack strategy itself. The next, to attack alliances; the next to attack armies. The lowest form of war is to attack cities.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The greatest victory is that which requires no battle.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus contains multiple explicit statements supporting every element of this principle, including the hierarchy of options below outright battle."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Every battle is won or lost before it is fought",
+      "claim": "Every battle is won or lost before it is fought. The general who wins makes many calculations in his temple before the engagement; the general who loses makes few. The moment of contact merely collects what preparation, intelligence, and positioning have already earned or forfeited. Heroism in the moment is the evidence of strategic failure upstream.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "It is said that victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "When your strategy is deep and far-reaching, then what you gain by your calculations is much so you can win before you even fight.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The general who wins a battle makes many calculations in his temple ere the battle is fought.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Thus the good fighter is able to secure himself against defeat but cannot make certain of defeating the enemy.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that victory is determined before battle through preparation and calculation, directly supporting the principle."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Know the enemy and know yourself",
+      "claim": "Know the enemy and know yourself. In a hundred battles you will never be in peril. Self-delusion is the most dangerous enemy because it is invisible, internal, and corrosive. Knowing yourself without knowing the enemy yields mixed results; knowing neither guarantees defeat. The symmetry is exact and unforgiving.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Know yourself and know your enemy and you need not fear the result of a hundred battles.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "To know yourself is to grasp the limits of your strength, the depth of your weaknesses, and the essence of your potential.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus contains multiple verbatim repetitions of the know-yourself-know-enemy principle with its exact asymmetric consequences laid out."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "The terrain dictates the strategy",
+      "claim": "The terrain dictates the strategy. There are six types of terrain, nine varieties of ground, each demanding a different tactical response. Dispersive, frontier, key, open, intersecting, serious, difficult, hemmed-in, desperate \u2014 each ground reorganizes what is possible. Fighting the wrong battle in the wrong place is losing before the first move.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "We are not fit to lead an army on the march unless we are familiar with the face of the country, its mountains and forests, its pitfalls and precipices, its marshes and swamps.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Water shapes its course according to the nature of the ground over which it flows. The soldier works out his victory in relation to the foe whom he is facing.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While the corpus supports the general importance of terrain, it does not enumerate six types of terrain or nine varieties of ground with their specific names as the principle claims; only general references to terrain adaptation are present."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Speed is the essence of war",
+      "claim": "Speed is the essence of war. No nation has ever benefited from a prolonged war. Protracted campaigns drain treasuries, exhaust armies, embolden third parties, and frequently hand victory to whichever power was patient enough to watch the combatants consume each other. If you have not won quickly, your strategy \u2014 not your execution \u2014 is wrong.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "There is no instance of a nation benefiting from prolonged warfare. The skillful soldier does not raise a second levy. Neither are his supply wagons loaded more than twice.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Rapidity is the essence of war. Take advantage of the enemy's unreadiness. Make your way by unexpected routes and attack unguarded spots.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If quick, I survive. If not quick, I am lost. This is death.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that speed is the essence of war and that no nation benefits from prolonged warfare, directly supporting both claims in the principle."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Be like water",
+      "claim": "Be like water. Water has no constant shape; it adapts to the vessel and the terrain, runs from high places, and finds the lowest path. The supreme strategist is formless \u2014 the enemy cannot prepare for what he cannot predict. Tactics that produced yesterday's victory should never be mechanically repeated, because circumstances are always changing.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Therefore, just as water retains no constant shape, so in warfare there are no constant conditions.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Do not repeat the tactics which have gained you one victory, but let your methods be regulated by the infinite variety of circumstances.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Water shapes its course according to the nature of the ground over which it flows.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Be extremely subtle, even to the point of formlessness. Be extremely mysterious, even to the point of soundlessness.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly use the water metaphor and state that tactics must adapt to circumstances rather than be repeated, directly supporting all elements of the principle."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Attack the strategy, not the army",
+      "claim": "Attack the strategy, not the army. The hierarchy is explicit: best is to baulk the enemy's plans; next is to disrupt his alliances; next is to defeat his army in the field; worst is to besiege walled cities. Each step down the hierarchy costs exponentially more and returns exponentially less. Operate from the top and descend only under duress.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The highest form of warfare is to attack strategy itself. The next, to attack alliances; the next to attack armies. The lowest form of war is to attack cities. Siege warfare is the last resort.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The height of strategy is to attack your opponent's strategy.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The rule is not to besiege walled cities if it can possibly be avoided.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus explicitly enumerates the hierarchy of strategic options with attacking plans at the top and sieging cities at the bottom, directly supporting the principle."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "The general's character is a battlefield",
+      "claim": "The general's character is a battlefield. Five fatal faults \u2014 recklessness, cowardice, hot temper, delicacy of honor, over-solicitude for troops \u2014 are not moral failings but tactical levers the enemy will identify and pull. Every virtue, taken to excess, becomes a vulnerability. Self-knowledge of these faults is as critical as intelligence about the opponent.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "There are five dangerous faults which may affect a general. Recklessness, which leads to destruction. Cowardice, which leads to capture. A hasty temper, which can be provoked by insults. A delicacy of honor, which is sensitive to shame. Over-solicitude for his men, which exposes him to worry and trouble.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "There are five pitfalls for a general: recklessness, leading to destruction; cowardice, leading to capture, a hot temper, prone to provocation; a delicacy of honour, tending to shame; a concern for his men, leading to trouble.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly enumerate all five fatal faults of a general as described in the principle, fully grounding it."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Foreknowledge must be obtained from men who know",
+      "claim": "Foreknowledge must be obtained from men who know. Foreknowledge cannot be elicited from spirits, gods, or analogy with past events \u2014 it must come from men who know the enemy's situation. Intelligence is the rarest and most decisive resource, yet rulers who will spend a hundred ounces of silver on armies refuse to spend one on spies. This is the false economy that loses wars.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "The torturous politics of the warring Chinese kingdoms and states in the sixth and fifth centuries BC is reflected in his perennial statements about the necessity of gathering lots of intelligence and maintaining a core of spies to do so.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "Chapter 13 is on the handling of spies.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "While the corpus references spies and intelligence as important, the specific claim that foreknowledge cannot come from spirits or analogy and the false-economy argument about spending on spies is not directly quoted in the source corpus beyond documentary paraphrase."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Manage energy, not just force",
+      "claim": "Manage energy, not just force. The clever combatant imposes his will on the enemy but does not allow the enemy's will to be imposed on him. The skilled general controls the tempo \u2014 when to fight, where to fight, whether to fight \u2014 and uses the enemy's energy against him. Initiative is the master resource from which all others derive.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The clever combatant imposes his will on the enemy, but does not allow the enemy's will to be imposed on him.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Those skilled in war bring the enemy to the field of battle and are not brought there by him.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Thus, the expert in battle moves the enemy and is not moved by him.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "So morning energy is keen. Midday energy slumps. Evening energy recedes. Therefore, those skilled in use of arms avoid the keen energy and strike the slumping and receding. These are those who master energy.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly support controlling tempo, imposing will, and managing energy as the master resource, fully grounding the principle."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Prolonged warfare is always strategic failure, not noble persistence",
+      "claim": "Prolonged warfare is always strategic failure, not noble persistence. Modern instinct says to stay the course when committed. Sun Tzu says no nation has ever benefited from a protracted war. If victory is not coming quickly, the strategy itself is wrong \u2014 not your resolve, not your execution. The longer a war runs, the more likely a third party benefits from your exhaustion.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "There is no instance of a nation benefiting from prolonged warfare.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The skillful soldier does not raise a second levy. Neither are his supply wagons loaded more than twice.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If quick, I survive. If not quick, I am lost. This is death.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that prolonged warfare is always harmful and speed is essential, directly grounding this contrarian position."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "The greatest generals are unknown",
+      "claim": "The greatest generals are unknown. Society celebrates the dramatic comeback, the heroic stand, the brilliant improvisation under fire. Sun Tzu celebrates the opposite \u2014 the victory so complete and so early that it requires no spectacle. The clever fighter wins with ease and is therefore credited with neither wisdom nor courage. Drama in war is the signature of strategic incompetence.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "What the ancients called a clever fighter is one who not only wins but excels in winning with ease. Hence his victories bring him neither reputation for wisdom nor credit for courage.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "He who only sees the obvious wins his battles with difficulty. He who looks below the surface of things wins with ease.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The greatest victory is that which requires no battle.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that the best generals win so easily they gain no fame for it, directly supporting the contrarian position that dramatic battles signal incompetence."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Anger is not passion \u2014 it is incompetence",
+      "claim": "Anger is not passion \u2014 it is incompetence. A sovereign should not put armies in the field out of wrath, and a general should not fight out of resentment. Emotional decision-making in high-stakes situations is the most reliable lever an opponent can pull. A leader whose triggers are known is a leader whose decisions are no longer his own.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "A hasty temper, which can be provoked by insults.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If your opponent is of choleric temper, seek to irritate him. Pretend to be weak that he may grow arrogant.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "It is the unemotional, reserved, calm, detached warrior who wins, not the hothead seeking vengeance and not the ambitious seeker of fortune.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly identify anger as a exploitable fault and praise the unemotional warrior, directly grounding this position."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Numerical superiority is overrated and often dangerous",
+      "claim": "Numerical superiority is overrated and often dangerous. Emperor Fu Chien boasted his troops could dam the Yangtze with their whips, then lost decisively. Large undisciplined forces lose to smaller coordinated ones \u2014 size creates complacency, logistics nightmares, and brittle command. Henry V at Agincourt won precisely because he made his inferior numbers into an advantage.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Fu Chien, the Chinese Emperor marched with a vast force against rival armies in 383 A.D. Despite being warned by advisors not to continue due to having poorly trained soldiers, he said: 'I have the population of eight provinces at my back, they could dam up the Yangtsze River by merely throwing their whips into the stream. What danger have I to fear?' His forces were soon decisively beaten in battle and he was forced to make a hasty retreat.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Great results can be achieved with small forces. Fighting with a large army under your command is no wise different from fighting with a small one. It is merely a question of instituting signs and signals.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "In the Battle of Agincourt, Henry V took on his French opponents, despite having only one quarter of the amount of troops they had. He was victorious in part due to the small, narrow field where the battle took place",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages support the idea that numerical superiority is overrated, with explicit historical examples of large armies losing and small forces winning."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Defense is not waiting \u2014 it is the most active form of war",
+      "claim": "Defense is not waiting \u2014 it is the most active form of war. Invincibility lies in the defense; the possibility of victory lies in the attack. Sun Tzu's defense means making yourself completely unassailable so the enemy must expose himself first. The defender does not react; he sets the terms under which the attacker may approach.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Invincibility lies in the defense, the possibility of victory in the attack.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The art of war teaches us to rely not on the likelihood of the enemy's not coming, but on our own readiness to receive him.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The general who is skilled in defense hides in the most secret recesses of the earth. He who is skilled in attack flashes forth from the topmost heights of heaven.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly describe defense as making oneself invincible while waiting for the enemy's vulnerability, grounding the active nature of defense."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "Kindness to captured enemies is a weapon, not a moral act",
+      "claim": "Kindness to captured enemies is a weapon, not a moral act. Treat prisoners well and use the captured chariots alongside your own. Every well-treated prisoner undermines the enemy's willingness to fight to the death, and every absorbed soldier strengthens your force without cost. Cruelty extends wars; humanity, used strategically, ends them.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Build your opponent a golden bridge to retreat across. Even in victory, allow your adversaries a dignified exit. Forcing others into a corner creates unnecessary enemies and prolongs conflict.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "One need not destroy one's enemy. One need only destroy his willingness to engage.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports not destroying enemies and allowing dignified exits, but the specific claim about treating prisoners well to absorb them and undermine enemy morale is only lightly touched on; one passage mentions using captured chariots but the full strategic argument is not explicitly laid out in multiple passages."
+    },
+    {
+      "principle_id": "contrarian_positions[6]",
+      "section": "contrarian_positions",
+      "title": "Plans must be discarded at first contact",
+      "claim": "Plans must be discarded at first contact. The general who wins responds to the infinite variety of circumstances rather than executing a predetermined plan. Rigidity in the face of a changing battlefield is not discipline \u2014 it is the inability to adapt that the terrain and the enemy will punish without mercy.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Do not repeat the tactics which have gained you one victory, but let your methods be regulated by the infinite variety of circumstances.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "When I have won a victory, I do not repeat my tactics, but respond to circumstances in an infinite variety of ways.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Therefore, just as water retains no constant shape, so in warfare there are no constant conditions.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that tactics should never be mechanically repeated and must adapt to circumstances, directly grounding this position."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That courage alone wins battles",
+      "claim": "That courage alone wins battles. Bravery without calculation is recklessness \u2014 one of the five fatal faults. Sun Tzu has no use for the heroic charge that produces a famous death. Victory belongs to the general who has already won in the temple before troops move, not the one who inspires men to die well.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Recklessness, which leads to destruction.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "It is said that victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "It is the unemotional, reserved, calm, detached warrior who wins, not the hothead seeking vengeance and not the ambitious seeker of fortune.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages identify recklessness (bravery without calculation) as a fatal fault and praise calm calculation over emotional heroism."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That loyalty to a plan is a virtue",
+      "claim": "That loyalty to a plan is a virtue. Inflexibility is fatal. The general who cannot modify his tactics in response to the opponent and the terrain is not disciplined \u2014 he is dangerous. Water has no constant form; neither should strategy.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Do not repeat the tactics which have gained you one victory, but let your methods be regulated by the infinite variety of circumstances.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Therefore, just as water retains no constant shape, so in warfare there are no constant conditions.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "It is unlucky to be stubborn in the face of insurmountable odds.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly reject rigidity and stubbornness in favor of flexibility, directly supporting this belief."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That large armies are inherently stronger",
+      "claim": "That large armies are inherently stronger. A force five times the enemy's can attack; ten times, it can surround. But size without coordination, discipline, and intelligence is a liability. The unwieldy army cannot be commanded as a unit, cannot be fed without exhausting the treasury, and presents more flanks than it can defend.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Great results can be achieved with small forces. Fighting with a large army under your command is no wise different from fighting with a small one. It is merely a question of instituting signs and signals.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Fu Chien, the Chinese Emperor marched with a vast force against rival armies in 383 A.D... His forces were soon decisively beaten in battle and he was forced to make a hasty retreat.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If he sends reinforcements everywhere, he will everywhere be weak.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that large armies are not inherently stronger and that spreading large forces can create weakness."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That the enemy should be destroyed",
+      "claim": "That the enemy should be destroyed. The ideal outcome is capture, not destruction. To slay the enemy is the costliest and least efficient path to the objective. Every city you besiege and every army you annihilate represents a diminished prize, a depleted force, and a lengthened campaign.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "In war, better take a state intact than destroy it. Better take an army, a regiment, a detachment, a company intact, than destroy them.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "One need not destroy one's enemy. One need only destroy his willingness to engage.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Build your opponent a golden bridge to retreat across.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly prefer capture and preservation over destruction, directly grounding this belief."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That intelligence can be derived from omens or inference",
+      "claim": "That intelligence can be derived from omens or inference. Spirits, heaven, and analogies with past events cannot provide foreknowledge. Only human agents with direct access to the enemy's situation can. The refusal to invest in espionage is not economy \u2014 it is the most expensive decision a commander can make.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Chapter 13 is on the handling of spies.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "Prohibit the taking of omens and do away with superstitious doubts. Then, until death itself comes, no calamity need be feared.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus mentions prohibiting omens and superstition once, and references the importance of spies, but the explicit statement that foreknowledge cannot come from spirits or analogy with past events is not directly quoted in multiple passages from the source corpus."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "Stay the course",
+      "claim": "Stay the course. Persistence in a failing strategy is not determination \u2014 it is compounding error. Sun Tzu would abandon or radically restructure any campaign not producing swift results, not redouble commitment to the original plan.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "There is no instance of a nation benefiting from prolonged warfare.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Do not repeat the tactics which have gained you one victory, but let your methods be regulated by the infinite variety of circumstances.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "It is unlucky to be stubborn in the face of insurmountable odds.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly reject persistence in a failing strategy and prolonged warfare, grounding the claim that Sun Tzu would not say 'stay the course.'"
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "Meet them head-on and show no weakness",
+      "claim": "Meet them head-on and show no weakness. Direct confrontation against equal or superior strength is the least efficient use of force. Sun Tzu would feign weakness to draw the enemy out, then strike where he is unprepared. Appearing weak when strong is a weapon, not a confession.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "When strong, appear weak. When weak, appear strong.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "All warfare is based on deception. Hence when we are able to attack we must seem unable when using our forces we must appear inactive when we are near we must make the enemy believe we are far away",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Pretend inferiority and encourage his arrogance.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly advocate feigning weakness and avoiding direct confrontation against equal or superior strength."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "We fight for honor and glory",
+      "claim": "We fight for honor and glory. War fought for emotional or reputational reasons is war fought poorly. Sovereign and general alike must be immune to the pull of honor, resentment, and wrath when deciding whether and how to fight. Objectives are strategic, never emotional.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "It is the unemotional, reserved, calm, detached warrior who wins, not the hothead seeking vengeance and not the ambitious seeker of fortune.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "A hasty temper, which can be provoked by insults. A delicacy of honor, which is sensitive to shame.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The general who advances without coveting fame and retreats without fearing disgrace, whose only thought is to protect his country and do good service for his sovereign is the jewel of the kingdom.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly identify fighting for honor and glory as dangerous faults and praise the general who is indifferent to personal glory."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "Our superior numbers guarantee victory",
+      "claim": "Our superior numbers guarantee victory. Numbers are one input among many, and often the least decisive. Discipline, intelligence, speed, terrain, and the quality of the general's judgment matter more than headcount. Confidence derived from numerical advantage is the enemy of the careful calculation that actually wins.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Great results can be achieved with small forces.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Fu Chien, the Chinese Emperor marched with a vast force against rival armies... His forces were soon decisively beaten in battle and he was forced to make a hasty retreat. Self-belief without self-knowledge is dangerous.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If he sends reinforcements everywhere, he will everywhere be weak.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly warn against confidence from numerical superiority and show historical examples of large armies losing."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "Destroy them completely \u2014 leave no survivors",
+      "claim": "Destroy them completely \u2014 leave no survivors. Total annihilation is strategically wasteful. Captured soldiers can be absorbed, well-treated prisoners demoralize future opponents, and intact cities are more valuable than rubble. Destruction is always the costliest path to the objective.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "In war, better take a state intact than destroy it. Better take an army, a regiment, a detachment, a company intact, than destroy them.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "One need not destroy one's enemy. One need only destroy his willingness to engage.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Harming people when it is not necessary creates enduring hostility.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that destruction is wasteful and that intact capture is always preferable, directly grounding this."
+    }
+  ]
+}

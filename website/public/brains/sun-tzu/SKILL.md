@@ -5,14 +5,14 @@ description: "Load the Sun Tzu brain. Pack ships 9 unified skills in pack/skills
 
 # Sun Tzu Brain Pack — Setup & Configuration
 
-Welcome to the **Tzu Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Sun Tzu's "The Art of War" and attributed historical commentary — a curated collection of his most enduring strategic thinking on warfare, leadership, intelligence, positioning, and the psychology of conflict.
+Welcome to the **Tzu Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Sun Tzu's "The Art of War" and attributed historical commentary — a curated collection of his most enduring strategic thinking on warfare, leadership, intelligence, positioning, deception, and the psychology of conflict.
 
 ## What You're Getting
 
-- **207 knowledge atoms** — Core insights, frameworks, and strategic principles from 13 chapters of The Art of War, plus centuries of military and strategic commentary attributed to Sun Tzu and his school of thought
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **772 knowledge atoms** — Core insights, frameworks, and strategic principles from 13 chapters of The Art of War, Wikipedia profile, Sonshi analysis, multiple documentary and audiobook video sources, and centuries of military and strategic commentary attributed to Sun Tzu and his school of thought
+- **906 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — strategic assessment, deception, terrain, momentum, intelligence, leadership, adaptability, timing, resource management, psychological warfare, and more
+- **Cross-referenced topics** — strategic assessment, deception, terrain, momentum, intelligence, leadership, adaptability, timing, resource management, psychological warfare, victory without battle, offense and defense, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Tzu Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (207 insights)
+  ├── brain-atoms.json         ← structured atoms (772 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 207 atoms with titles, summaries, connections
+   - JSON structure of 772 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,23 +93,23 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Sun's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "Should I compete head-on with a larger rival or find an indirect approach?"*
+*Example: "My competitor just launched a product that undercuts mine on price. Should I match them or differentiate?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Sun sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain the concept of shi (strategic advantage) to me."*
+*Example: "Explain the concept of shi — strategic momentum and potential energy — and how it applies today."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Is it always better to avoid direct confrontation?"*
+*Example: "Is deception ethical in business strategy, or does it undermine long-term trust?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect Sun Tzu's thinking on deception to modern information warfare."*
+*Example: "Connect Sun Tzu's five dangerous faults of a general to modern leadership failures in tech companies."*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How did Sun Tzu's influence evolve from military strategy to business strategy?"*
+*Example: "How did Sun Tzu's ideas migrate from ancient Chinese warfare to modern business and Silicon Valley strategy?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -117,11 +117,11 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions Sun would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I'm deciding whether to launch aggressively or wait for a better moment. What should I be asking myself?"*
+*Example: "I'm unsure whether to attack a competitor directly or wait for a better opening. What should I be asking myself?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens when AI gives every competitor perfect information simultaneously?"*
+*Example: "What happens when every competitor in a market has access to the same AI-powered intelligence simultaneously?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to Sun Tzu? Teach the core concepts → evolve to see modern applications → coach yourself on your own situation.*
+*Example: New to Sun Tzu? Teach the core concepts like shi and the five faults → evolve to see how they apply in modern business → coach yourself on a real decision you're facing.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Facing a strategic decision? Advise on the situation → debate the counterargument → predict the second-order effects.*
+*Example: Navigating a competitive threat? Advise on your specific situation → debate the counterargument (is direct confrontation ever right?) → predict the second and third-order effects of each path.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -201,7 +201,7 @@ If you get that, you're all set.
 
 ## About Sun Tzu
 
-Sun Tzu was a Chinese military strategist and philosopher, traditionally credited as the author of The Art of War, an immensely influential treatise on military strategy written around the 5th century BC. His ideas on strategic planning, deception, intelligence gathering, and adaptive leadership have influenced military commanders, business executives, and political leaders for over 2,500 years.
+Sun Tzu was a Chinese military strategist and philosopher, traditionally credited as the author of The Art of War, an immensely influential treatise on military strategy written around the 5th century BC. His ideas on strategic planning, deception, intelligence gathering, adaptive leadership, and the concept of winning without fighting have influenced military commanders, business executives, political leaders, and technologists for over 2,500 years.
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — The Art of War (public domain, ~500 BC), publicly available translations, and historical commentary spanning 2,500 years. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — The Art of War (public domain, ~500 BC), publicly available translations, Wikipedia (CC BY-SA), and historical commentary spanning 2,500 years. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

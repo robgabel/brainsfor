@@ -1,0 +1,61 @@
+[People & Culture](https://review.firstround.com/articles/people-and-culture/)
+
+# 40 Favorite Interview Questions from Some of the Sharpest Folks We Know
+
+Given the high-stakes nature of every hire, interviewing chops are always in need of sharpening. We’ve spent the past few months reaching out to some of the most thoughtful company builders in our network to pose a simple question: What’s your favorite interview question to ask and why? Here are the
+
+![40 Favorite Interview Questions from Some of the Sharpest Folks We Know](https://review.firstround.com/content/images/size/w30/2056/firstround/dwnausvt9irilqcamxbb_favorite-20interview-20questions.jpg)
+
++
+
+
+Featuring
+
++
+
+
+Featuring
+
+[Share on Twitter](https://twitter.com/share?text=40%20Favorite%20Interview%20Questions%20from%20Some%20of%20the%20Sharpest%20Folks%20We%20Know&url=https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/ "Share on Twitter")[Share on Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/&title=40%20Favorite%20Interview%20Questions%20from%20Some%20of%20the%20Sharpest%20Folks%20We%20Know&summary=40%20Favorite%20Interview%20Questions%20from%20Some%20of%20the%20Sharpest%20Folks%20We%20Know "Share on Linkedin")
+
+Outline
+
+01. [QUESTIONS TO HELP UNPACK PIVOTAL TRANSITIONS:](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#questions-to-help-unpack-pivotal-transitions)
+02. [1\. What do you want to do differently in your next role?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#1-what-do-you-want-to-do-differently-in-your-next-role)
+03. [2\. Imagine yourself in three years. What do you hope will be different about you then compared to now?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#2-imagine-yourself-in-three-years-what-do-you-hope-will-be-different-about-you-then-compared-to-now)
+04. [3\. For the last few companies you've been at, take me through: (i) When you left, why did you leave? (ii) When you joined the next one, why did you choose it?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#3-for-the-last-few-companies-youve-been-at-take-me-through-i-when-you-left-why-did-you-leave-ii-when-you-joined-the-next-one-why-did-you-choose-it)
+05. [QUESTIONS FOR SUSSING OUT MOTIVATIONS:](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#questions-for-sussing-out-motivations)
+06. [4\. Among the people you've worked with, who do you admire and why?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#4-among-the-people-youve-worked-with-who-do-you-admire-and-why)
+07. [5\. Tell me about a time you took unexpected initiative. Follow-up: Can you tell me about another?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#5-tell-me-about-a-time-you-took-unexpected-initiative-follow-up-can-you-tell-me-about-another)
+08. [6\. What’s something great about your current or previous job? Why?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#6-what%E2%80%99s-something-great-about-your-current-or-previous-job-why)
+09. [7\. What motivates you to work?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#7-what-motivates-you-to-work)
+10. [8\. Looking back on the last five years of your career, what’s the highlight?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#8-looking-back-on-the-last-five-years-of-your-career-what%E2%80%99s-the-highlight)
+11. [QUESTIONS ON THEIR FIT FOR THE ROLE:](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#questions-on-their-fit-for-the-role)
+12. [9\. What are you really good at, but never want to do anymore?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#9-what-are-you-really-good-at-but-never-want-to-do-anymore)
+13. [10\. What’s the difference between someone who’s great in your role versus someone who’s outstanding?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#10-what%E2%80%99s-the-difference-between-someone-who%E2%80%99s-great-in-your-role-versus-someone-who%E2%80%99s-outstanding)
+14. [11\. How did you prepare for this interview?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#11-how-did-you-prepare-for-this-interview)
+15. [12\. What do you believe you can achieve with us personally or professionally that you can't anywhere else in the world?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#12-what-do-you-believe-you-can-achieve-with-us-personally-or-professionally-that-you-cant-anywhere-else-in-the-world)
+16. [13\. What are the three most important characteristics of this function? How would you stack rank yourself from strongest to least developed among these traits?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#13-what-are-the-three-most-important-characteristics-of-this-function-how-would-you-stack-rank-yourself-from-strongest-to-least-developed-among-these-traits)
+17. [14\. Tell me about your ideal next role. What characteristics does it have from a responsibility, team, and company culture perspective? What characteristics does it not have?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#14-tell-me-about-your-ideal-next-role-what-characteristics-does-it-have-from-a-responsibility-team-and-company-culture-perspective-what-characteristics-does-it-not-have)
+18. [15\. It's exactly one year from now. What impact on the business have you made in the year since you’ve joined?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#15-its-exactly-one-year-from-now-what-impact-on-the-business-have-you-made-in-the-year-since-you%E2%80%99ve-joined)
+19. [QUESTIONS ON WORKING WITH OTHERS:](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#questions-on-working-with-others)
+20. [16\. Tell me about a time you strongly disagreed with your manager. What did you do to convince him or her that you were right? What ultimately happened?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#16-tell-me-about-a-time-you-strongly-disagreed-with-your-manager-what-did-you-do-to-convince-him-or-her-that-you-were-right-what-ultimately-happened)
+21. [17\. Tell me about the best and worst bosses you’ve ever had, specifically, in your career. What was the difference?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#17-tell-me-about-the-best-and-worst-bosses-you%E2%80%99ve-ever-had-specifically-in-your-career-what-was-the-difference)
+22. [18\. What's one part of your previous company's culture that you hope to bring to your next one? What one part do you hope to not find?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#18-whats-one-part-of-your-previous-companys-culture-that-you-hope-to-bring-to-your-next-one-what-one-part-do-you-hope-to-not-find)
+23. [QUESTIONS ON LEARNING FROM MISTAKES:](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#questions-on-learning-from-mistakes)
+24. [19\. When was the last time you changed your mind about something important?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#19-when-was-the-last-time-you-changed-your-mind-about-something-important)
+25. [20\. What's the most important thing you've learned from a peer and how have you used that lesson in your day-to-day life?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#20-whats-the-most-important-thing-youve-learned-from-a-peer-and-how-have-you-used-that-lesson-in-your-day-to-day-life)
+26. [21\. Tell me about a time you really screwed something up. How did you handle it and how did you address the mistake?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#21-tell-me-about-a-time-you-really-screwed-something-up-how-did-you-handle-it-and-how-did-you-address-the-mistake)
+27. [22\. Tell me about a time you made a mistake or failed at something. What did you learn from this experience? Can you give me two other examples?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#22-tell-me-about-a-time-you-made-a-mistake-or-failed-at-something-what-did-you-learn-from-this-experience-can-you-give-me-two-other-examples)
+28. [23\. When have you felt the lowest in your career? Did you realize how you felt in the moment? How did you respond?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#23-when-have-you-felt-the-lowest-in-your-career-did-you-realize-how-you-felt-in-the-moment-how-did-you-respond)
+29. [QUESTIONS THAT SURFACE SELF-AWARENESS:](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#questions-that-surface-self-awareness)
+30. [24\. What’s one misconception your coworkers have about you?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#24-what%E2%80%99s-one-misconception-your-coworkers-have-about-you)
+31. [25\. What are you better at than most anyone else? What’s your superpower and how will you leverage that to make an impact at this company?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#25-what-are-you-better-at-than-most-anyone-else-what%E2%80%99s-your-superpower-and-how-will-you-leverage-that-to-make-an-impact-at-this-company)
+32. [26\. If I were to go and speak to people who don't think very highly of you, what would they say?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#26-if-i-were-to-go-and-speak-to-people-who-dont-think-very-highly-of-you-what-would-they-say)
+33. [QUESTIONS TO FIND OUT HOW THEY RESPOND TO FEEDBACK:](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#questions-to-find-out-how-they-respond-to-feedback)
+34. [27\. What’s one critical piece of feedback you’ve received that was really difficult to hear? Why was it difficult and what did you do with that information? What did you learn about yourself?](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#27-what%E2%80%99s-one-critical-piece-of-feedback-you%E2%80%99ve-received-that-was-really-difficult-to-hear-why-was-it-difficult-and-what-did-you-do-with-that-information-what-did-you-learn-about-yourself)
+35. [28\. Find a way to give the candidate feedback in the interview.](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#28-find-a-way-to-give-the-candidate-feedback-in-the-interview)
+36. [QUESTIONS THAT PUT PASSION FRONT AND CENTER:](https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know/#questions-that-put-passion-front-and-center)
+37. [29\. What was the last thing you nerded out on?](https://review.firstround.
+
+[...truncated]

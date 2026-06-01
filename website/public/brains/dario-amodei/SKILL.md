@@ -5,14 +5,14 @@ description: "Load the Dario Amodei brain. Pack ships 9 unified skills in pack/s
 
 # Dario Amodei Brain Pack — Setup & Configuration
 
-Welcome to the **Amodei Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Dario Amodei's essays on darioamodei.com, long-form podcast interviews, congressional testimony, and Anthropic company communications (2021-2026) — a curated collection of his thinking on AI safety, the scaling hypothesis, mechanistic interpretability, responsible development, and the transformative potential of AI for science, medicine, and human flourishing.
+Welcome to the **Amodei Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Dario Amodei's essays on darioamodei.com, long-form podcast interviews, congressional testimony, profile journalism from Wired, TIME, NYT, Fortune, FT, and Anthropic company communications (2021-2026) — a curated collection of his thinking on AI safety, the scaling hypothesis, mechanistic interpretability, responsible development, catastrophic risk, and the transformative potential of AI for science, medicine, and human flourishing.
 
 ## What You're Getting
 
-- **353 knowledge atoms** — Core insights, frameworks, and strategic principles from "Machines of Loving Grace" (2024), "The Urgency of Interpretability" (2025), "The Adolescence of Technology" (2025), Dwarkesh Podcast (2 appearances), Lex Fridman Podcast #452, Ezra Klein Show, Logan Bartlett Show, People by WTF with Nikhil Kamath, A Cheeky Pint with John Collison (Stripe), congressional testimony, and Anthropic blog posts
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1000 knowledge atoms** — Core insights, frameworks, and strategic principles from "Machines of Loving Grace" (2024), "The Urgency of Interpretability" (2025), "The Adolescence of Technology" (2025), Dwarkesh Podcast (2 appearances), Lex Fridman Podcast #452 and #490, Ezra Klein Show, Logan Bartlett Show EP 82, People by WTF with Nikhil Kamath, A Cheeky Pint with John Collison (Stripe), Interesting Times with Ross Douthat, WSJ interviews, WEF appearances, AI1G debate with Demis Hassabis, JPMorgan event with Jamie Dimon, India AI Impact Summit, Building Anthropic co-founders conversation, NeurIPS 2020 (GPT-3 presentation), AI Risk & Safety Concepts (with Daniel Dewey), congressional testimony, Wired, TIME, NYT, Fortune, and Financial Times profiles
+- **807 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — scaling hypothesis, constitutional AI, mechanistic interpretability, responsible scaling, machines of loving grace, AI governance, biology acceleration, steering the bus, race to the top, existential risk, CBRN, interpretability, alignment, and more
+- **Cross-referenced topics** — scaling hypothesis, constitutional AI, mechanistic interpretability, responsible scaling, machines of loving grace, AI governance, biology acceleration, steering the bus, race to the top, existential risk, CBRN, interpretability, alignment, adolescence of technology, power concentration, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Amodei Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (353 insights)
+  ├── brain-atoms.json         ← structured atoms (1000 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 353 atoms with titles, summaries, connections
+   - JSON structure of 1000 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -109,7 +109,7 @@ Find unexpected connections between two concepts or synthesize multiple ideas in
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How has Dario's thinking on AI risk evolved from OpenAI to Anthropic?"*
+*Example: "How has Dario's thinking on AI risk evolved from his OpenAI days to leading Anthropic?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to AI safety? Teach the scaling hypothesis → evolve how Dario's thinking changed from OpenAI to Anthropic → coach yourself through what role you could play.*
+*Example: New to AI safety? Teach the scaling hypothesis → evolve how Dario's thinking changed from OpenAI to Anthropic → coach yourself through what role you could play in the ecosystem.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Evaluating AI governance? Predict the cascading effects of responsible scaling policies → debate whether voluntary commitments work → advise on how to position your organization.*
+*Example: Evaluating AI governance options? Predict the cascading effects of responsible scaling policies → debate whether voluntary commitments actually work → advise on how to position your organization in the current landscape.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Dario's freely published essays on his personal website (darioamodei.com), public podcast and interview appearances (Dwarkesh Patel, Lex Fridman, Ezra Klein, John Collison), congressional testimony, and public statements as Anthropic CEO. No proprietary Anthropic internal documents are reproduced; atoms are original distillations of publicly-stated positions.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Dario's freely published essays on his personal website (darioamodei.com), public podcast and interview appearances (Dwarkesh Patel, Lex Fridman, Ezra Klein, John Collison, Nikhil Kamath, Logan Bartlett, Ross Douthat, WSJ, WEF), congressional testimony, public debate appearances (Demis Hassabis at WEF/AI1G), profile journalism from Wired, TIME, NYT, Fortune, and Financial Times, and public statements as Anthropic CEO. No proprietary Anthropic internal documents are reproduced; atoms are original distillations of publicly-stated positions.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

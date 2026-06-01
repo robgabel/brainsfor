@@ -1,0 +1,61 @@
+[Jump to content](https://en.wikipedia.org/wiki/Sara_Blakely#bodyContent)
+
+From Wikipedia, the free encyclopedia
+
+American businesswoman (born 1971)
+
+| Sara Blakely |
+| --- |
+| [![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sara_Blakely.jpg/250px-Sara_Blakely.jpg)](https://en.wikipedia.org/wiki/File:Sara_Blakely.jpg)<br>Blakely in 2014 |
+| Born | Sara Treleaven Blakely<br> (1971-02-27) February 27, 1971 (age 55)<br>[Clearwater, Florida](https://en.wikipedia.org/wiki/Clearwater,_Florida "Clearwater, Florida"), U.S. |
+| Alma mater | [Florida State University](https://en.wikipedia.org/wiki/Florida_State_University "Florida State University") |
+| Occupation | Businesswoman |
+| Known for | Founder and owner of [Spanx](https://en.wikipedia.org/wiki/Spanx "Spanx")<br> Minority owner of the [Atlanta Hawks](https://en.wikipedia.org/wiki/Atlanta_Hawks "Atlanta Hawks") |
+| Spouse | [Jesse Itzler](https://en.wikipedia.org/wiki/Jesse_Itzler "Jesse Itzler")<br>​<br>(m. 2008)​ |
+| Children | 4 |
+
+**Sara Treleaven Blakely**[\[1\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-1) (born February 27, 1971) is an American Billionaire businesswoman and philanthropist. She founded [Spanx](https://en.wikipedia.org/wiki/Spanx "Spanx"), an intimate [apparel](https://en.wikipedia.org/wiki/Clothing "Clothing") company with pants and leggings, in [Atlanta, Georgia](https://en.wikipedia.org/wiki/Atlanta,_Georgia "Atlanta, Georgia").[\[2\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Moss2008-2) In 2024, Blakely created the footwear brand, Sneex.[\[3\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-3)
+
+In 2012, Blakely was named in _[Time](https://en.wikipedia.org/wiki/Time_(magazine) "Time (magazine)")_ magazine's " [Time 100](https://en.wikipedia.org/wiki/Time_100 "Time 100")" annual list of the 100 most influential people in the world.[\[4\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Time2012-4) In 2014, she was listed as the 93rd most powerful woman in the world by _[Forbes](https://en.wikipedia.org/wiki/Forbes "Forbes")_.[\[5\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Forbes14-5)
+
+## Early life and education
+
+\[ [edit](https://en.wikipedia.org/w/index.php?title=Sara_Blakely&action=edit&section=1 "Edit section: Early life and education")\]
+
+Blakely was born on February 27, 1971, in [Clearwater, Florida](https://en.wikipedia.org/wiki/Clearwater,_Florida "Clearwater, Florida"). She is the daughter of Ellen (née Ford), an artist, and personal injury lawyer John Blakely.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6)[\[7\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-BayCity-7) She has a brother, artist Ford Blakely.[\[7\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-BayCity-7) She attended [Clearwater High School](https://en.wikipedia.org/wiki/Clearwater_High_School "Clearwater High School") and graduated from [Florida State University](https://en.wikipedia.org/wiki/Florida_State_University "Florida State University") with a communication degree,[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6) where she was a member of the [Delta Delta Delta](https://en.wikipedia.org/wiki/Delta_Delta_Delta "Delta Delta Delta") sorority.[\[8\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-TallahasseeSanders2007-8)
+
+## Early career
+
+\[ [edit](https://en.wikipedia.org/w/index.php?title=Sara_Blakely&action=edit&section=2 "Edit section: Early career")\]
+
+Although Blakely planned to become an attorney, she reconsidered after scoring very poorly on the [Law School Admission Test](https://en.wikipedia.org/wiki/Law_School_Admission_Test "Law School Admission Test"); she instead accepted a job at [Walt Disney World](https://en.wikipedia.org/wiki/Walt_Disney_World "Walt Disney World") in [Orlando, Florida](https://en.wikipedia.org/wiki/Orlando,_Florida "Orlando, Florida"), where she worked for three months.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6) She also occasionally worked as a [stand-up comedian](https://en.wikipedia.org/wiki/Stand-up_comedian "Stand-up comedian") during this period.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6)
+
+After her short stint at Disney, Blakely accepted a job with office supply company Danka, where she sold [fax machines](https://en.wikipedia.org/wiki/Fax_machine "Fax machine") [door-to-door](https://en.wikipedia.org/wiki/Door-to-door "Door-to-door").[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6)[\[9\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Inc2012-9) She was quite successful in sales and was promoted to national sales trainer at the age of 25.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6) Forced to wear pantyhose in the hot Florida climate for her sales role, Blakely disliked the appearance of the seamed foot while wearing open-toed shoes but liked the way that the control-top model eliminated panty lines and made her body appear firmer.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6) For her attendance at a private party, she experimented by cutting off the feet of her pantyhose while wearing them under a new pair of slacks and found that the pantyhose continuously rolled up her legs, but she also achieved the desired result.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6)[\[10\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Inc-10)
+
+## Spanx
+
+\[ [edit](https://en.wikipedia.org/w/index.php?title=Sara_Blakely&action=edit&section=3 "Edit section: Spanx")\]
+
+At age 27, Blakely relocated to Atlanta, Georgia, and while still working at Danka, spent the next two years and $5,000 savings (equivalent to $9,900 in 2025) researching and developing her [hosiery](https://en.wikipedia.org/wiki/Hosiery "Hosiery") idea.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6)[\[11\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-:0-11)[\[12\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-12)
+
+Blakely then drove to [North Carolina](https://en.wikipedia.org/wiki/North_Carolina "North Carolina"), the location of most of America's hosiery mills, to present her idea. She was turned away by every representative; these companies were used to dealing with established companies, and did not see the value of her idea. Two weeks after arriving home from her North Carolina trip, Blakely received a call from a mill operator based in [Asheboro, North Carolina](https://en.wikipedia.org/wiki/Asheboro,_North_Carolina "Asheboro, North Carolina"), who offered to support Blakely's concept, as he had received strong encouragement from his three daughters. Blakely further explained in 2011 that the experience of developing her idea also revealed to her that the hosiery manufacturing industry was overseen solely by men who were not using the products they were producing.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6)[\[10\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Inc-10)
+
+The creation of the initial product [prototype](https://en.wikipedia.org/wiki/Prototype "Prototype") was completed over the course of a year.\[ _[citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citation_needed "Wikipedia:Citation needed")_\]
+
+Blakely then returned to a patent attorney to finalize her application prior to her submission to the [United States Patent and Trademark Office](https://en.wikipedia.org/wiki/United_States_Patent_and_Trademark_Office "United States Patent and Trademark Office") (USPTO) and he agreed to assist her for a sum of $750.[\[13\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-13) Following the submission of the online application, she then worked on the packaging of her product.
+
+Blakely used her credit card to purchase the "Spanx" [trademark](https://en.wikipedia.org/wiki/Trademark "Trademark") on the [USPTO](https://en.wikipedia.org/wiki/United_States_Patent_and_Trademark_Office "United States Patent and Trademark Office") website for $150.[\[10\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Inc-10)
+
+She managed to arrange a meeting with a representative of the [Neiman Marcus Group](https://en.wikipedia.org/wiki/Neiman_Marcus "Neiman Marcus"), at which she changed into the product in the ladies restroom in the presence of the Neiman Marcus buyer to prove the benefits of her innovation.[\[14\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-14) Blakely's product was sold in seven Neiman Marcus stores as a result of the meeting;[\[10\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Inc-10) [Bloomingdales](https://en.wikipedia.org/wiki/Bloomingdales "Bloomingdales"), [Saks](https://en.wikipedia.org/wiki/Saks_Fifth_Avenue "Saks Fifth Avenue"), and [Bergdorf Goodman](https://en.wikipedia.org/wiki/Bergdorf_Goodman "Bergdorf Goodman") soon followed.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6) Around this time, Blakely sent a basket of products to [Oprah Winfrey](https://en.wikipedia.org/wiki/Oprah_Winfrey "Oprah Winfrey")'s television program, with a gift card that explained what she was attempting to develop.[\[10\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Inc-10)
+
+Blakely initially handled all aspects of the business, including marketing, logistics and product [positioning](https://en.wikipedia.org/wiki/Positioning_(marketing) "Positioning (marketing)"), preferring the location of Spanx alongside shoes in retail outlets, rather than in hosiery sections;[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6) however, her boyfriend at the time, a healthcare consultant, later resigned from his job and joined in the running of the business.[\[10\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Inc-10) Blakely was contacting friends and acquaintances, including those from her past, and asking them to seek out her products at select department stores in exchange for a check that she would send to them by mail as a token of appreciation.[\[10\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Inc-10)
+
+In November 2000, Winfrey named Spanx one of her "Favorite Things," which led to a significant rise in popularity and sales, as well as Blakely's resignation from Danka.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6)[\[11\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-:0-11) Spanx achieved $4 million in sales in its first year and $10 million in sales in its second year.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6) In 2001, Blakely signed a contract with [QVC](https://en.wikipedia.org/wiki/QVC "QVC"), the home shopping channel.[\[6\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-ForbesTurned5000-6)
+
+In 2012, Blakely landed on the cover of _Forbes_ magazine for being the youngest self-made female billionaire in the world.[\[15\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-15)
+
+In October 2013, Blakely explained that her ambition is to design the world's most comfortable high-heel shoe prior to retirement.[\[16\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-16) She was listed as the 93rd most powerful woman in the world by _Forbes_.[\[5\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Forbes14-5)
+
+In 2015, Blakely and her husband [Jesse Itzler](https://en.wikipedia.org/wiki/Jesse_Itzler "Jesse Itzler") were part of a group led by [Tony Ressler](https://en.wikipedia.org/wiki/Tony_Ressler "Tony Ressler") that purchased the [Atlanta Hawks](https://en.wikipedia.org/wiki/Atlanta_Hawks "Atlanta Hawks") for $850 million.[\[17\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-17)[\[18\]](https://en.wikipedia.org/wiki/Sara_Blakely#cite_note-Sale_to_Ressler-18)[\
+
+[...truncated]

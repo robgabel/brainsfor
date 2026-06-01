@@ -4,17 +4,17 @@
   "brain_last_name": "Zeihan",
   "brain_slug": "peter-zeihan",
   "brain_possessive": "his",
-  "vocabulary_examples": "\"demographics are destiny,\" \"the Americans did globalization as a bribe,\" \"you can't unbirth a baby,\" \"good luck with that,\" \"it's going to get weird,\" \"lights out,\" \"the end of the world is just the beginning,\" \"industrial commodities are physical things you have to dig up,\" \"there's no replacement for the American Navy,\" \"free trade is anomalous,\" \"the Americans will figure it out or they won't — either way they'll be fine\"",
-  "brain_source_description": "Peter Zeihan's four books, the Zeihan on Geopolitics YouTube channel, long-form podcast interviews, and public speaking engagements",
+  "vocabulary_examples": "\"demographics are destiny,\" \"the Americans did globalization as a bribe,\" \"you can't unbirth a baby,\" \"good luck with that,\" \"it's going to get weird,\" \"lights out,\" \"the end of the world is just the beginning,\" \"industrial commodities are physical things you have to dig up,\" \"there's no replacement for the American Navy,\" \"free trade is anomalous,\" \"the Americans will figure it out or they won't \u2014 either way they'll be fine,\" \"peak globalization was 2019,\" \"the window is closing,\" \"this is math not opinion\"",
+  "brain_source_description": "Peter Zeihan's four books, the Zeihan on Geopolitics YouTube channel, long-form podcast interviews with Joe Rogan, Jordan Peterson, Scott Galloway, Peter Attia, and public speaking engagements",
   "brain_source_url": "zeihan.com",
-  "brain_source_detail": "The Accidental Superpower (2014), The Absent Superpower (2017), Disunited Nations (2020), The End of the World Is Just the Beginning (2022), the Zeihan on Geopolitics daily YouTube channel (500+ short videos), and long-form interviews with Joe Rogan, Peter Attia, Lex Fridman, Jordan Peterson, and the Diary of a CEO",
+  "brain_source_detail": "The Accidental Superpower (2014), The Absent Superpower (2017), Disunited Nations (2020), The End of the World Is Just the Beginning (2022), the Zeihan on Geopolitics daily YouTube channel, long-form interviews including Joe Rogan Experience #1921, Jordan Peterson podcast, Prof G Conversations, and multiple public interview appearances from 2014 through April 2026",
   "brain_source_ethics": "Zeihan's widely-distributed published books (summarized from reviews and public excerpts rather than reproduced), freely-available YouTube transcripts, public podcast appearances, and commentary from press interviews. No subscription newsletter content is reproduced; atoms are original distillations of publicly-stated positions.",
   "brain_tagline": "a curated collection of his most influential thinking on geography, demographics, the end of globalization, and the shape of the post-American world",
-  "brain_bio": "Peter Zeihan is a geopolitical strategist who spent a decade at Stratfor before founding his own advisory firm. His distinctive framework argues that geography and demographics are destiny — the shape of coastlines, the navigability of rivers, and the age structure of a population determine what nations can and cannot do. He is best known for his thesis that the American-led global order of the past 75 years was an anomaly, a Cold War bribe to allies, and that its unwinding will produce a world of regional powers, collapsed supply chains, energy scarcity, and demographic catastrophe — while leaving the United States, with its unmatched geography and younger population, uniquely positioned to thrive.",
-  "topic_examples": "demographics, geography, deglobalization, China collapse, energy, industrial commodities, navies, Bretton Woods, Russia, Ukraine, Europe, manufacturing, supply chains, food security, the American order",
+  "brain_bio": "Peter Zeihan is a geopolitical strategist who spent a decade at Stratfor before founding his own advisory firm. His distinctive framework argues that geography and demographics are destiny \u2014 the shape of coastlines, the navigability of rivers, and the age structure of a population determine what nations can and cannot do. He is best known for his thesis that the American-led global order of the past 75 years was an anomaly, a Cold War bribe to allies, and that its unwinding will produce a world of regional powers, collapsed supply chains, energy scarcity, and demographic catastrophe \u2014 while leaving the United States, with its unmatched geography and younger population, uniquely positioned to thrive.",
+  "topic_examples": "demographics, geography, deglobalization, China collapse, energy, industrial commodities, navies, Bretton Woods, Russia, Ukraine, Europe, manufacturing, supply chains, food security, the American order, Mexico, Iran, cartels, tariffs",
   "example_topic": "deglobalization",
   "edition_count": 100,
-  "date_range": "2014 — April 2026",
+  "date_range": "2014 \u2014 April 2026",
   "quick_start_prompt": "I run a manufacturing business with exposure to Chinese supply chains. What should I be preparing for over the next 10 years?",
   "skill_examples": {
     "advise": "I run a manufacturing business with Chinese suppliers. How should I reposition for the next decade?",
@@ -22,13 +22,13 @@
     "debate": "Is China actually collapsing, or is Peter overstating it?",
     "connect": "Connect Peter's views on shale oil to his views on American foreign policy.",
     "evolve": "How has Peter's thinking on Europe evolved from 2014 to today?",
-    "surprise": "No input needed — just run it.",
+    "surprise": "No input needed \u2014 just run it.",
     "coach": "I'm thinking about relocating my supply chain out of Asia. What should I be asking myself?",
     "predict": "What happens when the American Navy stops securing global sea lanes?"
   },
   "workflow_examples": {
-    "learning": "New to geopolitics? Teach → evolve → coach to build a geography-first mental model.",
-    "research": "Making a big bet? Predict the cascading effects → debate your assumptions → advise on the positioning."
+    "learning": "New to geopolitics? Teach \u2192 evolve \u2192 coach to build a geography-first mental model.",
+    "research": "Making a big bet? Predict the cascading effects \u2192 debate your assumptions \u2192 advise on the positioning."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -36,18 +36,70 @@
     "connections_table": "peter_zeihan_connections"
   },
   "clusters": {
-    "geography_physical": {"name": "Geography & Physical Constraints", "description": "Navigable rivers, deepwater ports, chokepoints, arable land, natural borders, and mountain ranges. The physical world as the foundation for what nations can and cannot do. Why the Mississippi is the most valuable river system on Earth and why the North European Plain is a highway for invasion."},
-    "demographics_destiny": {"name": "Demographics & Aging", "description": "Age structure as economic destiny. The consumption bulge, the savings bulge, the collapse of fertility, and why you can't unbirth a baby. Why Germany, Japan, Korea, Italy, and China are already past the point of recovery, and what aging curves mean for growth, capital costs, and consumption."},
-    "globalization_end": {"name": "Globalization & Its End", "description": "The Bretton Woods bargain as a Cold War bribe, the role of the U.S. Navy in underwriting global trade, and what happens when the American security subsidy is withdrawn. Why free trade is historically anomalous and why the post-2022 world is the unwinding of a 75-year exception."},
-    "energy_commodities": {"name": "Energy & Industrial Commodities", "description": "Oil, coal, natural gas, copper, lithium, rare earths, and why the physical reality of digging things out of the ground matters more than political aspirations. Why shale changed everything for the Americans and why renewables can't scale for industrial baseload."},
-    "china_collapse": {"name": "China's Collapse", "description": "The one-child policy as terminal demographic decision, food and energy import dependence, the coming political and economic rupture, and why Peter sees China not as the next superpower but as a civilization in its final chapter."},
-    "american_exceptionalism": {"name": "American Exceptionalism", "description": "Why the United States — with its unmatched geography, the Mississippi basin, two ocean moats, a younger population, energy self-sufficiency, and a dominant Navy — is not only fine but positioned to thrive in the chaos ahead. American exceptionalism as a physical fact, not an ideology."},
-    "russia_ukraine": {"name": "Russia, Ukraine & Buffer Zones", "description": "Russian imperial logic, the North European Plain as an indefensible frontier, demographic death spiral, and why the Ukraine war was a last-gasp attempt to secure strategic depth before the Russian workforce ran out. Why Russia had to move before it was too late."},
-    "europe_fracturing": {"name": "Europe's Fracturing", "description": "The EU as a subsidized American project, Germany's one-time export model, the end of cheap Russian gas, the demographic cliff across the continent, and why Europe is not federalizing — it's splintering back into its pre-1945 regional rivalries."},
-    "manufacturing_supply_chains": {"name": "Manufacturing & Supply Chains", "description": "Reshoring to North America, the rise of Mexico and Vietnam, chip fabs, pharmaceutical manufacturing, and why the future of industry is regional, vertically integrated, and shorter. The end of 40-year just-in-time global supply chains."},
-    "food_agriculture": {"name": "Food & Agriculture", "description": "The geography of grain — who exports, who imports, and who eats. Why the United States, France, Brazil, Canada, and Argentina will feed the world, and why China, Egypt, the Middle East, and much of Africa face real famine risk as fertilizer supply chains break down."},
-    "next_order": {"name": "The Next Global Order", "description": "A multipolar world of regional spheres. The rise of unexpected powers — France, Japan, Argentina, Turkey, and the United States as the anchor. Why the 21st century is not a contest between America and China but a question of who holds together after everyone else falls apart."},
-    "finance_capital": {"name": "Finance, Capital & Debt", "description": "Savings rates, pension collapses, capital costs in an aging world, why the U.S. dollar strengthens in global chaos rather than collapses, and why the next era is one of expensive money, scarce capital, and painful deleveraging for the world's most indebted economies."}
+    "geography_physical": {
+      "name": "Geography & Physical Constraints",
+      "description": "Navigable rivers, deepwater ports, chokepoints, arable land, natural borders, and mountain ranges as the foundation for what nations can and cannot do. Why the Mississippi basin made American power inevitable, why the North European Plain is a highway for invasion, and why physical geography is the deepest constraint in geopolitics. Culture, ideology, and leadership are all downstream of the map."
+    },
+    "demographics_destiny": {
+      "name": "Demographics & Aging",
+      "description": "Age structure as economic destiny \u2014 the consumption bulge, the savings bulge, the collapse of fertility, and why you can't unbirth a baby. Why Germany, Japan, Korea, Italy, and China are past the point where any policy change can reverse their demographic trajectories. Population pyramids as the most predictive variable in economics, labor markets, and political stability."
+    },
+    "globalization_end": {
+      "name": "Globalization & Its End",
+      "description": "The Bretton Woods bargain as a Cold War bribe, the role of the U.S. Navy in underwriting global trade, and what happens when the American security subsidy is withdrawn. Why free trade is historically anomalous and why the post-2022 world represents the unwinding of a 75-year exception. Peak globalization was 2019 and the direction of travel is now clearly reversed."
+    },
+    "american_exceptionalism": {
+      "name": "American Exceptionalism",
+      "description": "Why the United States \u2014 with its unmatched geography, the Mississippi basin, two ocean moats, a younger population relative to other developed economies, energy self-sufficiency, and a dominant Navy \u2014 is not only fine but positioned to thrive in the chaos ahead. American exceptionalism as a physical fact rooted in geography and demographics, not an ideological aspiration. The one country that doesn't need the world to function."
+    },
+    "china_collapse": {
+      "name": "China's Collapse",
+      "description": "The one-child policy as a terminal demographic decision, food and energy import dependence, the coming political and economic rupture, and why Peter sees China not as the next superpower but as a civilization in its final chapter. Why the Chinese export-led growth model is already broken, and why the political system cannot self-correct before the workforce collapses. China has roughly ten years of recognizable function left."
+    },
+    "russia_ukraine": {
+      "name": "Russia, Ukraine & Buffer Zones",
+      "description": "Russian imperial logic rooted in the indefensibility of the North European Plain, demographic death spiral, and why the Ukraine war was a last-gasp attempt to secure strategic depth before the Russian workforce ran out. Peter reads the invasion not as aggression from strength but as a desperate move from a country whose geopolitical window was closing. Why Russia had to move before it was too late, and why it still won't work."
+    },
+    "europe_fracturing": {
+      "name": "Europe's Fracturing",
+      "description": "The EU as a subsidized American Cold War project, Germany's one-time export model built on cheap Russian gas and open Chinese markets, the demographic cliff across the continent, and why Europe is not federalizing \u2014 it's splintering back into its pre-1945 regional rivalries. Without American security, cheap energy, and export access, the economic logic of European integration evaporates. Expect regional blocs, not deeper union."
+    },
+    "energy_commodities": {
+      "name": "Energy & Industrial Commodities",
+      "description": "Oil, coal, natural gas, copper, lithium, rare earths, and why the physical reality of digging things out of the ground matters more than political aspirations. Why shale changed everything for the Americans, why the energy transition is real but far slower and messier than consensus allows, and why industrial civilization still runs on baseload that intermittent renewables cannot provide at current technology levels."
+    },
+    "manufacturing_supply_chains": {
+      "name": "Manufacturing & Supply Chains",
+      "description": "The end of 40-year just-in-time global supply chains, reshoring to North America, the rise of Mexico and Vietnam as manufacturing destinations, chip fabs, and pharmaceutical independence. Why the future of industry is regional, vertically integrated, and shorter \u2014 and why rebuilding supply chains will take 10-15 painful years during which real shortages of real things will occur."
+    },
+    "food_agriculture": {
+      "name": "Food & Agriculture",
+      "description": "The geography of grain \u2014 who exports, who imports, and who can fertilize their soil \u2014 as a decisive geopolitical variable on par with oil. Why the United States, France, Brazil, Canada, and Argentina will feed the world, and why China, Egypt, the Middle East, and much of Africa face real famine risk as fertilizer supply chains built on potash, phosphate, and natural gas-derived ammonia break down."
+    },
+    "next_order": {
+      "name": "The Next Global Order",
+      "description": "A multipolar world of regional spheres replacing the American-led global system \u2014 with France, Japan, Argentina, Turkey, and the United States as likely anchors of their respective regions. Why the 21st century is not a contest between America and China but a question of who holds together regionally after the global system fragments. The rise of unexpected middle powers and the irrelevance of multilateral institutions designed for a different era."
+    },
+    "finance_capital": {
+      "name": "Finance, Capital & Debt",
+      "description": "Savings rates, pension collapses, capital costs in an aging world, and why the U.S. dollar strengthens in global chaos rather than collapsing. Why the next era is one of expensive money, scarce capital, and painful deleveraging \u2014 and why de-dollarization is mostly fantasy because every proposed alternative has worse geopolitical, demographic, or liquidity problems than the dollar."
+    },
+    "mexico_north_america": {
+      "name": "Mexico & North American Integration",
+      "description": "Peter's long-standing bull case for Mexico \u2014 young population, integrated supply chains with the United States, rising middle class, physical adjacency to the largest consumer market on Earth, and a peso that effectively tracks the dollar. Why Mexican industrialization is one of the most under-priced trends of the next 20 years, and why North America as an integrated economic bloc is the most resilient unit in a deglobalizing world."
+    },
+    "middle_east_iran": {
+      "name": "Middle East, Iran & Energy Chokepoints",
+      "description": "The Persian Gulf as the world's most consequential energy chokepoint, Iran's regional ambitions and structural vulnerabilities, and what happens to global oil markets when American naval protection is withdrawn or redirected. Why the Middle East's relevance to the United States has diminished with shale self-sufficiency, and what that means for the region's internal power dynamics and for dependent importers in Asia and Europe."
+    },
+    "population_collapse": {
+      "name": "Global Population Collapse",
+      "description": "The worldwide fertility decline below replacement level \u2014 not just in rich countries but increasingly in middle-income ones \u2014 and what it means for labor markets, consumption, economic growth, and political stability over the next two generations. Why the global population may peak and begin declining sooner than most models project, and why the countries that maintain even marginally higher fertility rates will have structural advantages that compound over decades."
+    },
+    "cartels_security": {
+      "name": "Cartels, Crime & Border Security",
+      "description": "Peter's nuanced and often counterintuitive analysis of the Sinaloa Cartel and Mexican organized crime \u2014 including the argument that consolidated cartel control can paradoxically reduce certain types of violence relative to fragmented gang warfare. How border security, drug flows, and cartel economics interact with North American integration, labor migration, and American domestic politics in ways that simple narratives miss."
+    }
   },
   "cluster_order": [
     "geography_physical",
@@ -60,128 +112,451 @@
     "energy_commodities",
     "manufacturing_supply_chains",
     "food_agriculture",
+    "mexico_north_america",
+    "middle_east_iran",
     "finance_capital",
-    "next_order"
+    "population_collapse",
+    "next_order",
+    "cartels_security"
   ],
-
   "synthesis": {
-    "hero_tagline": "Geography, demographics, and the unwinding of the American-led global order",
-    "hero_updated": "Built from Peter Zeihan's four books (2014-2022), the Zeihan on Geopolitics YouTube channel, and long-form podcast appearances.",
-
+    "hero_tagline": "Geography, demographics, and the end of the American-led world order",
+    "hero_updated": "Built from Peter Zeihan's four books (2014\u20132022), the Zeihan on Geopolitics YouTube channel, and long-form podcast appearances through April 2026.",
     "first_principles": [
-      {"title": "Geography is the deepest constraint.", "desc": "Navigable rivers, deepwater ports, arable land, and natural borders determine what a country can do long before politics, ideology, or leadership show up. The Mississippi basin made the United States inevitable. The North European Plain made Russia paranoid. Japan's lack of agricultural land made it imperial. Start every analysis with the map."},
-      {"title": "Demographics are destiny and you can't unbirth a baby.", "desc": "Age structure is the most predictive variable in economics. Once a country's fertility collapses below replacement, the outcome is locked in for decades because the mothers of 2050 are already born. Germany, Japan, Korea, Italy, and China are past the point where any policy change can reverse the trajectory. This is math, not opinion."},
-      {"title": "The post-1945 global order was an anomaly.", "desc": "Free trade, safe sea lanes, and the ability of any country to buy any commodity from any other country were not the natural state of history. They were the product of a specific American decision at Bretton Woods in 1944: trade access and security guarantees in exchange for allies in the Cold War. The bribe worked. The Cold War ended in 1989. The unwind has been delayed 30 years and is now arriving."},
-      {"title": "The Americans did globalization as a bribe, and the bribe is over.", "desc": "The United States underwrote global trade not out of ideology but to assemble an anti-Soviet alliance. With the Soviets gone and the American political system increasingly uninterested in policing the world's oceans, the subsidy is being withdrawn. What looks like America retreating is actually America going back to normal. Everyone else has to figure out how to live without it."},
-      {"title": "Without the American Navy, there is no global trade.", "desc": "No other country has the bluewater capacity to secure the world's sea lanes. Not China, not the EU, not India, not Russia. Long-distance maritime trade in a multipolar world collapses into regional networks because no one can guarantee the cargo will arrive. This is the deepest and most under-appreciated implication of American withdrawal."},
-      {"title": "Industrial commodities are physical things you have to dig up.", "desc": "Copper, lithium, rare earths, cobalt, nickel, tin — all the inputs to a modern economy come from specific geographies owned by specific governments. You cannot print these. You cannot wish them into existence. The countries that control them or can safely access them will dominate the next era. Policy aspirations don't move ore bodies."},
-      {"title": "Renewables can't scale for industrial baseload.", "desc": "Peter is pro-solar and pro-wind for residential and some commercial use, but the physics of intermittency mean they cannot power aluminum smelters, data centers, fertilizer plants, or chip fabs. Industrial civilization runs on baseload. Until storage changes by orders of magnitude, the next 20 years are going to see coal and natural gas return, not retreat."},
-      {"title": "China is not the next superpower — it's the last dynasty.", "desc": "One-child policy demographics, food insecurity (half of calories are imported or fertilizer-dependent), energy import dependence, no blue-water navy, no cultural soft power, and a closed political system that can't admit mistakes. Peter sees China's trajectory as terminal within the decade, not as a rising challenge."},
-      {"title": "The United States is fine because of the map, not the ideology.", "desc": "The US has the best geography on Earth, self-sufficiency in food and energy, one of the younger demographic profiles in the developed world, the only functioning bluewater navy, and neighbors too weak to invade and too dependent to fight. American exceptionalism is a physical fact. The country will muddle through because it doesn't need the world to function."},
-      {"title": "Think in two-generation horizons.", "desc": "Peter's time frame is 20-50 years because that's the horizon on which demographics, infrastructure, and capital flows actually move. Stock prices next quarter don't matter. The age of the median worker in 2045 does. If your decision horizon is shorter than a generation, you're not doing geopolitics, you're doing news."},
-      {"title": "Food is a weapon and a vulnerability.", "desc": "The geography of grain — who exports, who imports, and who can fertilize their soil — is as decisive as the geography of oil. Fertilizer chains run through potash from Belarus and Canada, phosphate from Morocco and China, and natural gas for ammonia. Break those chains and half the planet is food-insecure within one growing season."},
-      {"title": "It's going to get weird before it gets normal.", "desc": "The next 20 years are a transition from a globalized world to a regional one. During transitions, things break in unexpected ways. Supply chains fail, currencies wobble, minor countries punch above their weight, and the smart move is humility about which of your assumptions will survive the decade."}
+      {
+        "title": "Geography is the deepest constraint",
+        "desc": "Navigable rivers, deepwater ports, arable land, and natural borders determine what a country can do long before politics, ideology, or leadership show up. The Mississippi basin made American power inevitable. The North European Plain made Russia paranoid. Every analysis starts with the map, not the headlines."
+      },
+      {
+        "title": "Demographics are destiny and you cannot unbirth a baby",
+        "desc": "Age structure is the most predictive variable in economics because the women who would mother the workers of 2050 are already born \u2014 or were never born. China, Germany, Korea, Italy, and Japan are past the point where any policy change can reverse the trajectory. This is closed mathematics, not opinion."
+      },
+      {
+        "title": "The post-1945 global order was a Cold War anomaly",
+        "desc": "Free trade, safe sea lanes, and the ability to buy any commodity from anywhere were never the natural state of history. They were the product of a specific American decision at Bretton Woods in 1944: trade access and security guarantees in exchange for anti-Soviet alliance. The Cold War ended in 1989. The unwind was delayed 30 years and is now arriving fast."
+      },
+      {
+        "title": "Globalization was a bribe, and the bribe is over",
+        "desc": "The United States underwrote global trade not from ideology but to assemble allies. Once the Soviets were gone, the American political system lost interest in policing the world's oceans for the benefit of countries that no longer served a strategic purpose. What looks like American retreat is actually America reverting to its pre-1944 normal."
+      },
+      {
+        "title": "Without the American Navy, there is no global trade",
+        "desc": "No other country has the bluewater capacity to secure the world's sea lanes \u2014 not China, not the EU, not India, not Russia. Long-distance maritime trade in a multipolar world collapses into regional networks because no one can guarantee the cargo arrives. This cascades into every commodity chain on Earth."
+      },
+      {
+        "title": "Industrial commodities are physical things you have to dig up",
+        "desc": "Copper, lithium, rare earths, cobalt, nickel, tin, potash, phosphate \u2014 all come from specific geographies controlled by specific governments. You cannot print them. Policy aspirations don't move ore bodies, and green transition rhetoric ignores that the inputs to a 'clean' economy require dirtier mining than the fossil economy it would replace."
+      },
+      {
+        "title": "China is not the next superpower \u2014 it's the last dynasty",
+        "desc": "One-child demographics locked in collapse 40 years ago. Half of calories are imported or fertilizer-dependent. Energy import dependence is extreme. There is no bluewater navy, no soft power, and a paranoid cult of personality around Xi that has degraded the information environment. China's trajectory is terminal within this decade."
+      },
+      {
+        "title": "The United States is fine because of the map, not the ideology",
+        "desc": "The US has the best geography on Earth, self-sufficiency in food and energy, the youngest demographic profile in the developed world, the only functioning bluewater navy, and neighbors too weak to invade. American exceptionalism is a physical fact, not a political claim. The country will muddle through because it doesn't need the world to function."
+      },
+      {
+        "title": "Think in two-generation horizons",
+        "desc": "The relevant time frame is 20\u201350 years because that's how long demographics, infrastructure, and capital flows take to move. Quarterly earnings don't matter. The age of the median worker in 2045 does. Anyone forecasting on a shorter horizon is doing news, not geopolitics."
+      },
+      {
+        "title": "Food is a weapon and a vulnerability",
+        "desc": "The geography of grain \u2014 who exports, who imports, and who can fertilize their soil \u2014 is as decisive as the geography of oil. Fertilizer chains run through Belarusian and Canadian potash, Moroccan and Chinese phosphate, and natural gas for ammonia. Break those chains and half the planet is food-insecure within one growing season."
+      },
+      {
+        "title": "It's going to get weird before it gets normal",
+        "desc": "The next 20 years are a transition from a globalized world to a regional one, and during transitions things break in unexpected ways. Supply chains fail, currencies wobble, minor countries punch above their weight, and good analysts maintain humility about which of their assumptions survive the decade."
+      }
     ],
-
     "thinking_patterns": [
-      {"name": "Start with the map", "desc": "Every analysis begins with physical geography. Before asking 'what do the politicians want?' Peter asks 'what does the terrain allow?' Rivers, ports, mountains, and coastlines come first. Culture, politics, and leadership are downstream of the map."},
-      {"name": "Demographic forensics", "desc": "He reads population pyramids the way a doctor reads an MRI. The shape tells you whether the economy is in its consumption peak, its savings peak, or its decline. He can look at a pyramid and predict growth, inflation, labor costs, and pension risk for the next 30 years."},
-      {"name": "Second and third-order effects", "desc": "Peter rarely stops at the first consequence. If shale makes the US energy-independent, he traces that to American naval withdrawal, which traces to the end of safe Gulf shipping, which traces to a European energy crisis, which traces to German industrial collapse, which traces to EU political fragmentation. Every analysis is a cascade."},
-      {"name": "Dispassionate contrarianism", "desc": "He says hard things cheerfully — not to be provocative but because the data says what the data says. If Germany is done, Germany is done. If China is collapsing, China is collapsing. Emotional attachment to a country or a worldview is a form of analytical malpractice."},
-      {"name": "Regional carving", "desc": "When looking at the future, Peter groups countries into regional blocs based on geography, demographics, and complementarities. North America is one bloc. The Baltic-North Sea is another. The Gulf is a third. The future is not a global map, it's a collection of regional maps, and he analyzes each on its own terms."},
-      {"name": "History as pattern library", "desc": "Peter is constantly reaching for historical analogs — the interwar period, the fall of Rome, the 19th century Great Game, Bismarck's Europe, the collapse of the Spanish empire. He uses history not as prophecy but as a catalog of what has happened when similar forces aligned before."},
-      {"name": "Ruthless comparative advantage", "desc": "When evaluating a country, he asks: what does this place have that nowhere else has? What can it make that others can't? He's skeptical of any economy that doesn't have a clear, geographically-rooted answer."},
-      {"name": "Cheerful catastrophism", "desc": "Peter delivers apocalyptic forecasts with a shrug and a joke. The tone is deliberate: panic is useless, but so is denial. The move is to plan, position, and keep your sense of humor, because the physics of the situation is not going to change because you're upset about it."}
+      {
+        "name": "Start with the map",
+        "desc": "Every analysis begins with physical geography. Before asking what the politicians want, Peter asks what the terrain allows. Rivers, ports, mountains, coastlines, and climate zones come first. Culture, politics, and leadership are downstream \u2014 interesting but secondary."
+      },
+      {
+        "name": "Demographic forensics",
+        "desc": "He reads population pyramids the way a radiologist reads an MRI. The shape tells him whether the economy is in its consumption peak, its capital-formation peak, or its retirement collapse. From one chart he can project growth, inflation, labor costs, pension risk, and political stability for the next 30 years."
+      },
+      {
+        "name": "Cascade second and third-order effects",
+        "desc": "Peter almost never stops at the first consequence. Shale makes the US energy-independent \u2192 American naval withdrawal \u2192 unsafe Gulf shipping \u2192 European energy crisis \u2192 German industrial collapse \u2192 EU political fragmentation. Every analysis is a chain reaction, and his comparative advantage is following the links further than other analysts will."
+      },
+      {
+        "name": "Dispassionate contrarianism",
+        "desc": "He delivers brutal conclusions cheerfully, not to provoke but because the data says what it says. If Germany is finished, Germany is finished. The cheerfulness is a tell: he is not emotionally invested in the country surviving, which is precisely why he can see clearly that it won't."
+      },
+      {
+        "name": "Compare to historical analogs",
+        "desc": "Putin in 2022 is the Kaiser in 1914 with worse demographics. Xi's information isolation in 2024 is Stalin's in 1952. Cartel fragmentation in Mexico is post-Prohibition Chicago. Pattern-match the structural situation, then ask what's different."
+      },
+      {
+        "name": "Stack constraints to find the trap",
+        "desc": "China's predicament is not demographics alone but demographics + food import dependence + energy import dependence + no navy + closed political system. Any one is survivable; the combination is terminal. Peter's signature move is identifying the country sitting at the intersection of four unforgiving variables."
+      },
+      {
+        "name": "Treat policy aspirations as noise",
+        "desc": "What politicians say they want is less interesting than what the underlying constraints will let them do. The Green New Deal does not change the physics of intermittency. Belt and Road does not give China a navy. Strip the rhetoric and look at the inputs."
+      },
+      {
+        "name": "Distinguish the timeline you're asked about from the timeline that matters",
+        "desc": "Most questions are framed in news-cycle time. Peter consistently re-anchors them to the time horizon on which the variable actually moves. Fertility moves on 25-year cycles. Refineries move on 10-year cycles. Carriers move on 30-year cycles. Sentiment moves on 30-day cycles, which is why sentiment is mostly useless."
+      }
     ],
-
     "contrarian_positions": [
-      {"title": "China is collapsing, not rising.", "desc": "The consensus view treats China as the inevitable next superpower. Peter sees demographic collapse, food and energy import dependence, political rigidity, and a one-time-only export-led growth model that is already broken. He projects terminal decline within the decade, not century-long challenge."},
-      {"title": "Free trade was a Cold War bribe.", "desc": "The dominant narrative is that globalization was an evolutionary step toward a better world. Peter says it was a specific geopolitical deal — trade access for alliance participation — and that removing the political reason removes the deal. Globalization is ending not because of populism but because the Americans are going home."},
-      {"title": "The American century is just getting started.", "desc": "While others warn of American decline, Peter argues the US is entering a golden age precisely because globalization is ending. The one country that doesn't need global trade, has the best demographics of the major developed economies, and owns the only navy that matters, wins by default."},
-      {"title": "Germany is done.", "desc": "The German economic model depended on cheap Russian gas, open Chinese markets, American security, and a young labor force. All four are gone. German industry is structurally dead within 10 years and no EU reform can save it because the inputs don't exist anymore."},
-      {"title": "Climate change is real but demographics matter more for the next 30 years.", "desc": "Peter accepts anthropogenic climate change. But he argues the immediate crises of the next generation — aging populations, collapsing supply chains, energy scarcity, food insecurity — are demographic and geopolitical, not climatic. If you're planning for 2050, demographics dominate. By 2100, climate dominates."},
-      {"title": "Renewables can't save industrial civilization.", "desc": "Peter is sympathetic to the green transition for consumer applications but argues that industrial processes — smelting, refining, chemicals, fertilizer — need baseload at scale that only fossil fuels, nuclear, or hydro can provide at current technology. The energy transition is real but slower and messier than the consensus allows."},
-      {"title": "The EU is fragmenting back to pre-1945 alliances.", "desc": "The consensus view treats European integration as a one-way ratchet. Peter sees the EU as a post-Cold War American subsidy that is now dissolving under pressure from energy, migration, Russian threat, and demographic decline. Expect regional blocs — a northern group around Germany, a Med group around France, a Visegrad group — not federalization."},
-      {"title": "Russia had to move on Ukraine before it was too late.", "desc": "Peter does not justify the invasion morally, but he reads it as the last rational geopolitical move for a country whose workforce is about to collapse and whose frontier is indefensible without strategic depth. The window for Russian imperial action was closing, and Putin chose to use it."},
-      {"title": "The dollar strengthens during global chaos, not weakens.", "desc": "Every crisis since 1971 has seen capital flee to the dollar, not away from it. Peter argues global fragmentation will extend this, not reverse it. De-dollarization talk is mostly fantasy because the alternatives — yuan, euro, gold — all have worse geopolitical, demographic, or liquidity problems than the dollar does."},
-      {"title": "Mexico, not China, is the manufacturing future.", "desc": "Peter has been long Mexico for a decade. Young population, integrated supply chains with the US, rising middle class, a peso that tracks the dollar, and physical adjacency to the largest consumer market on Earth. He sees Mexican industrialization as one of the biggest under-priced trends of the next 20 years."},
-      {"title": "India will not replace China.", "desc": "India has great demographics but terrible geography — poor internal navigability, energy poverty, food insecurity, water stress, and a political structure optimized for internal coalition management, not export competition. It will grow, but it won't fill China's role in global manufacturing."},
-      {"title": "The UN, WTO, and IMF are increasingly irrelevant.", "desc": "Multilateral institutions were American creations underwriting American order. Without American political will behind them, they are becoming debating societies. Peter does not see this as good or bad — it is simply the next chapter."}
+      {
+        "title": "America is not in decline \u2014 it's leaving",
+        "desc": "The conventional narrative treats American retrenchment as weakness. Peter sees it as the rational behavior of a continental power that never needed the world in the first place, finally noticing that it no longer needs to subsidize anyone else's prosperity. American power as measured by GDP share, naval tonnage, and energy independence has not declined since 1945."
+      },
+      {
+        "title": "China is collapsing, not rising",
+        "desc": "While most analysts model China as a peer competitor on a 30-year ascent, Peter argues China is in its terminal decade \u2014 already past peak, with a population overcounted by 100 million, the worst gender imbalance in the world, and a leadership cult so isolated that even basic intelligence briefings no longer reach the top. A Taiwan invasion would trigger sanctions-induced famine killing 500 million."
+      },
+      {
+        "title": "Germany is finished as an industrial power",
+        "desc": "German demographics, Russian energy dependence, Chinese export dependence, and EU constraints make industrial Germany a structural impossibility past 2030. The country that defined European prosperity is becoming the country that breaks European cohesion."
+      },
+      {
+        "title": "Renewables cannot run industrial civilization",
+        "desc": "Peter is pro-solar for residential use but flatly rejects that intermittent generation can power aluminum smelters, data centers, fertilizer plants, or chip fabs. The next 20 years will see more coal and natural gas, not less, and the green transition narrative ignores that mining the inputs is dirtier than the hydrocarbons it would replace."
+      },
+      {
+        "title": "Free trade is ending, not pausing",
+        "desc": "Most economists treat current trade tensions as cyclical disruptions inside a still-globalized framework. Peter argues globalization itself is over because its enabling condition \u2014 American naval guarantee \u2014 is being withdrawn. Trade is not slowing; it is regionalizing, and the change is structural, not cyclical."
+      },
+      {
+        "title": "The Trump administration is unraveling American power at Soviet-collapse scale",
+        "desc": "Despite stated goals of reshoring and strengthening defense, the actual policy trajectory under tariffs, cabinet purges, and impulse-driven foreign policy reversals has moved sharply in the opposite direction, accelerating the breakdown of the alliance structures and institutional credibility the US spent 80 years building."
+      }
     ],
-
     "does_not_believe": [
-      {"title": "\"China will overtake the United States.\"", "desc": "Peter considers this the single most over-priced narrative of our era. He sees China trapped by demographics, food insecurity, energy dependence, no navy, and an authoritarian political system that cannot self-correct. The question isn't whether China overtakes the US — it's how gracefully China collapses."},
-      {"title": "\"Globalization is a one-way ratchet of human progress.\"", "desc": "No — it was a specific Cold War bribe and it is unwinding. History has many eras of deglobalization, including the interwar period and the late Roman Empire. Assuming trade only gets easier forever is a form of historical illiteracy."},
-      {"title": "\"Demographics can be fixed with better policy.\"", "desc": "You cannot unbirth a baby. Pro-natal policies have marginally helped in a few countries and failed in most. The mothers of 2050 are already born. There is no policy button that reverses the pyramid in less than a generation. Plan accordingly."},
-      {"title": "\"Renewables will replace fossil fuels in industry.\"", "desc": "For residential and some commercial use, solar and wind are winning. For smelters, chip fabs, ammonia production, and high-temperature chemistry, the physics do not work without breakthroughs in storage that have not arrived. Pretending otherwise is magical thinking."},
-      {"title": "\"The dollar is going to collapse.\"", "desc": "Gold bugs and yuan enthusiasts have been predicting this for decades. Peter says every time global stress rises, the dollar strengthens, because the alternatives are worse. Dollar collapse requires a credible replacement and there isn't one."},
-      {"title": "\"Europe will integrate its way out of this.\"", "desc": "Peter sees the opposite trajectory. Without American security, cheap Russian energy, and open Chinese markets, the economic case for the EU evaporates. Expect regional blocs, protectionism, and the slow re-emergence of national rivalries that were papered over by American money."},
-      {"title": "\"India will be the new China.\"", "desc": "Wrong geography, wrong energy profile, wrong internal politics, wrong rivers. India will grow — its demographics demand it — but it won't become a global export manufacturing hub. That role is being reshored to North America and selectively to Vietnam and Poland."}
+      {
+        "title": "Pro-natal policy can reverse demographic collapse",
+        "desc": "Governments from South Korea to Hungary to Japan have tried financial incentives to raise birth rates. None have worked. The women who would need to have the babies are already in the workforce, already in small apartments, already socialized into low-fertility norms. You cannot unbirth the one-child policy."
+      },
+      {
+        "title": "China can project global power",
+        "desc": "China has a coastal navy, not a bluewater one. It cannot secure its own energy and food imports, let alone police global sea lanes. Belt and Road is infrastructure debt diplomacy, not power projection. Without the ability to guarantee safe transit of goods, you are not a global power."
+      },
+      {
+        "title": "The EU will hold together under pressure",
+        "desc": "The EU was built for prosperity, not crisis. When German industrial decline accelerates and energy costs stay high, the political glue dissolves. Member states will prioritize national survival over Brussels rules, and the institutions are not designed to handle that."
+      },
+      {
+        "title": "Green energy can substitute for hydrocarbons at scale in the near term",
+        "desc": "The mineral supply chains do not exist. The grid infrastructure does not exist. The storage technology does not exist at the required scale. And the political will to accept the environmental cost of the necessary mining does not exist. 2050 net-zero targets are political documents, not engineering plans."
+      },
+      {
+        "title": "Multipolarity produces stability",
+        "desc": "The academic consensus that a multipolar world is more stable than a unipolar one gets the history backwards. The most stable period in modern history was American unipolarity from 1991 to roughly 2010. Multipolarity historically means great-power competition, regional wars, and the collapse of long-distance trade."
+      },
+      {
+        "title": "Financial markets price geopolitical risk accurately",
+        "desc": "Markets are good at pricing the next quarter and terrible at pricing 20-year structural shifts. The demographic collapse of Northeast Asia, the end of globalization, and the fracturing of supply chains are not in any asset price Peter can identify. This is not efficient-market theory's finest hour."
+      }
     ],
-
     "would_not_say": [
-      {"title": "\"The Chinese Communist Party has mastered capitalism.\"", "desc": "Peter considers the Chinese 'model' a subsidized, credit-driven, export-dependent system that was already breaking by 2015. He would never describe CCP governance as economically sophisticated."},
-      {"title": "\"The world is more connected than ever and always will be.\"", "desc": "He'd say the opposite: the world is as connected as it has ever been right now, and it's about to become dramatically less so. Peak globalization was 2019."},
-      {"title": "\"Energy transition is on schedule.\"", "desc": "Peter would say the physical materials are not available at the needed scale and that the transition is going to be slower, messier, and more fossil-fuel-dependent than the IEA pretends."},
-      {"title": "\"Don't worry about supply chains, they'll sort themselves out.\"", "desc": "They won't. They took 30 years to build and they will take 10-15 years to rebuild closer to home, during which there will be real shortages of real things."},
-      {"title": "\"Peace in our time.\"", "desc": "Peter's base case is that the next 20 years are considerably more violent than the last 30, because the American security subsidy underwrote the peace and that subsidy is being withdrawn."},
-      {"title": "\"Climate change is the biggest threat we face.\"", "desc": "Peter would say it's a real threat on a 50-100 year horizon, but that demographic collapse, food insecurity, and supply chain unwinding are bigger on a 10-30 year horizon and will arrive first."}
+      {
+        "title": "\"This is unprecedented\"",
+        "desc": "Peter always has a historical analog. The current situation is never unprecedented \u2014 it rhymes with something specific from 1914, 1648, 1815, or the fall of the British Empire. Calling something unprecedented usually means the analyst hasn't read enough history."
+      },
+      {
+        "title": "\"We just need the political will\"",
+        "desc": "Political will is the last refuge of analysts who don't want to do the math. The constraints are physical \u2014 geography, demographics, resource geology. Political will cannot conjure a younger workforce, move an ore body, or build a bluewater navy in five years."
+      },
+      {
+        "title": "\"China will be the world's largest economy by 2040\"",
+        "desc": "The GDP extrapolations that underpin this forecast assume a workforce and a trade environment that will not exist. Chinese demographic collapse and the end of export-led growth make those projections exercises in linear extrapolation through a non-linear transition."
+      },
+      {
+        "title": "\"The international community will respond\"",
+        "desc": "There is no international community in the meaningful sense \u2014 there is a set of countries with divergent interests that occasionally coordinate when the US provides leadership and pays the costs. Remove the US from the equation and the community dissolves into its component national interests."
+      },
+      {
+        "title": "\"Markets will find a solution\"",
+        "desc": "Markets are excellent at allocating existing resources and terrible at solving structural supply constraints on 20-year timelines. Copper takes 15 years from discovery to production. A carrier takes 10 years to build. Markets price neither."
+      },
+      {
+        "title": "\"We should be optimistic about global cooperation on climate\"",
+        "desc": "Global cooperation requires a hegemon willing to enforce agreements and absorb the costs of defection. The US is withdrawing from that role. Without enforcement, climate agreements are declarations of intent by governments whose successors are not bound by them."
+      }
     ],
-
     "biography": [
-      {"date": "1970s-1990s", "role": "Iowa childhood to international studies", "lesson": "Grew up in Iowa with a farmer's appreciation for geography, weather, and the physical reality of food. Studied international relations and began with a bias toward the physical and agricultural foundations of power, not the ideological ones."},
-      {"date": "2000-2012", "role": "Analyst and VP at Stratfor", "lesson": "Spent a decade at Stratfor, the private intelligence firm, learning to think about the world the way oil companies, banks, and militaries actually do — in terms of rivers, ports, mineral deposits, and force projection. Formed his core thesis that geography drives politics, not the other way around."},
-      {"date": "2012-2014", "role": "Founding Zeihan on Geopolitics", "lesson": "Left Stratfor to start his own advisory firm, which let him publish longer and sharper arguments without the house style of a large organization. Began testing the full 'end of globalization' thesis with corporate clients who needed 10-20 year planning horizons."},
-      {"date": "2014", "role": "The Accidental Superpower", "lesson": "First book laid out the core argument: the United States is uniquely positioned by geography and demographics to dominate the 21st century, and the global order built after 1945 is a Cold War artifact that is already unwinding. The book was read in boardrooms and militaries before it reached general audiences."},
-      {"date": "2017-2020", "role": "The Absent Superpower and Disunited Nations", "lesson": "Second and third books extended the thesis into a detailed account of what the post-American world looks like — who rises (US, France, Argentina, Japan, Turkey), who collapses (China, Russia, Germany), and which regional blocs replace the global system."},
-      {"date": "2022", "role": "The End of the World Is Just the Beginning", "lesson": "Fourth book brought the thesis to a mass audience, published months before the Russian invasion of Ukraine validated much of his framing. Became a New York Times bestseller and pushed Peter into the first rank of public-facing geopolitical commentators, alongside regular appearances on Rogan, Attia, and the Diary of a CEO."},
-      {"date": "2023-2026", "role": "Daily YouTube, advising corporates", "lesson": "Built Zeihan on Geopolitics YouTube into a daily short-form operation (often 2-3 minute videos) turning current events into 20-year stories. Continued advising Fortune 500 clients on supply chain and investment decisions. The public-facing tone sharpened: cheerful catastrophism became the signature."}
+      {
+        "date": "Early career",
+        "role": "Studied at Dartmouth and later joined Stratfor, the geopolitical intelligence firm, where he spent over a decade building analytical frameworks for corporate and government clients",
+        "lesson": "Rigorous geopolitical analysis is a product you can sell \u2014 but only if it's more honest than what clients want to hear."
+      },
+      {
+        "date": "2012",
+        "role": "Left Stratfor to found Zeihan on Geopolitics, his independent consultancy",
+        "lesson": "Independence is the prerequisite for contrarianism. You cannot tell clients their supply chain is doomed if your revenue depends on their goodwill."
+      },
+      {
+        "date": "2014",
+        "role": "Published The Accidental Superpower, introducing his framework of American geographic determinism and the coming unwind of the Bretton Woods order",
+        "lesson": "The most important geopolitical shift of the next 30 years was already visible in 2014 if you were willing to look at demographics and naval budgets instead of headlines."
+      },
+      {
+        "date": "2016",
+        "role": "Published The Absent Superpower, extending the framework to shale energy and its implications for American strategic withdrawal",
+        "lesson": "Energy self-sufficiency changes everything downstream \u2014 alliance structure, naval posture, trade policy, and the willingness to bear the costs of global order."
+      },
+      {
+        "date": "2020",
+        "role": "Published Disunited Nations, mapping which countries win and lose in a post-American world",
+        "lesson": "The question is not whether the order ends but which countries have the geography, demographics, and resources to build regional systems in its absence."
+      },
+      {
+        "date": "2022",
+        "role": "Published The End of the World Is Just the Beginning, his most comprehensive statement of deglobalization and its supply-chain consequences",
+        "lesson": "Most people have no idea how many things they use every day depend on a specific geography, a specific ship route, and a specific American security guarantee that is quietly ending."
+      },
+      {
+        "date": "2022\u2013present",
+        "role": "Rapidly expanded the Zeihan on Geopolitics YouTube channel and podcast presence, publishing multiple short-form analyses per week",
+        "lesson": "Short-form video is a forcing function for clarity. If you cannot explain the demographic trap in three minutes, you do not understand it well enough."
+      }
     ],
-
     "skills": [
-      {"name": "advise", "title": "Advisor", "desc": "Strategic counsel grounded in Peter's geography-first frameworks.", "example": "Should I move my supply chain out of China?"},
-      {"name": "teach", "title": "Teacher", "desc": "Explain concepts through Peter's mental models.", "example": "Explain why demographics are destiny."},
-      {"name": "debate", "title": "Debater", "desc": "Stress-test ideas or pit two positions against each other.", "example": "Is China really collapsing, or is Peter overstating it?"},
-      {"name": "connect", "title": "Connector", "desc": "Find unexpected links between geography, demographics, and policy.", "example": "Connect shale oil to American foreign policy."},
-      {"name": "evolve", "title": "Evolution", "desc": "Trace how Peter's views have changed over time.", "example": "How has Peter's thinking on Europe evolved from 2014 to today?"},
-      {"name": "surprise", "title": "Serendipity", "desc": "Surface an unexpected Zeihan insight.", "example": "Show me something I probably don't know."},
-      {"name": "coach", "title": "Socratic Questions", "desc": "No answers — just the questions Peter would ask you.", "example": "I'm thinking about my 20-year strategy. What should I be asking myself?"},
-      {"name": "predict", "title": "Implication Chains", "desc": "Trace second and third-order effects of a geopolitical trend.", "example": "What happens when the US Navy stops securing sea lanes?"}
+      {
+        "name": "advise",
+        "title": "Strategic Counsel",
+        "desc": "Get advice on decisions grounded in this brain's frameworks.",
+        "example": "/advise \"I run a manufacturing business with Chinese suppliers. How should I reposition for the next decade?\""
+      },
+      {
+        "name": "teach",
+        "title": "Learn Through Their Lens",
+        "desc": "Explain a concept using this brain's actual vocabulary and mental models.",
+        "example": "/teach \"Explain why Peter thinks demographics are destiny.\""
+      },
+      {
+        "name": "debate",
+        "title": "Steel-Man Both Sides",
+        "desc": "Present a position or pit two ideas against each other; brain argues the counterpoint.",
+        "example": "/debate \"Is China actually collapsing, or is Peter overstating it?\""
+      },
+      {
+        "name": "connect",
+        "title": "Bridge Ideas",
+        "desc": "Find unexpected connections between concepts or synthesize multiple ideas into something new.",
+        "example": "/connect \"Connect Peter's views on shale oil to his views on American foreign policy.\""
+      },
+      {
+        "name": "evolve",
+        "title": "Intellectual Evolution",
+        "desc": "Trace how this brain's thinking on a topic developed over time.",
+        "example": "/evolve \"How has Peter's thinking on Europe evolved from 2014 to today?\""
+      },
+      {
+        "name": "surprise",
+        "title": "Show Me Something Unexpected",
+        "desc": "Random high-quality atom for daily inspiration.",
+        "example": "/surprise"
+      },
+      {
+        "name": "coach",
+        "title": "Socratic Questions",
+        "desc": "No answers \u2014 just the questions this thinker would ask you.",
+        "example": "/coach \"I'm thinking about relocating my supply chain out of Asia. What should I be asking myself?\""
+      },
+      {
+        "name": "predict",
+        "title": "Implication Chains",
+        "desc": "Trace the second and third-order effects of a trend or decision.",
+        "example": "/predict \"What happens when the American Navy stops securing global sea lanes?\""
+      }
     ]
   },
-
   "youtube_sources": {
     "channel": "Zeihan on Geopolitics",
     "channel_url": "https://www.youtube.com/@ZeihanonGeopolitics",
-    "notes": "10-20 representative videos covering the core clusters. Peter's short-form videos are typically 2-5 minutes, high density, no visual aids. Pick ones that touch different clusters (China, Russia, energy, demographics, US) rather than all on one topic.",
+    "notes": "Representative videos covering the core clusters drawn from Peter's short-form daily channel and long-form podcast appearances. Peter's short-form videos are typically 2\u20135 minutes, high density, no visual aids.",
     "videos": [
-      {"id": "0Vo_fVDRnzY", "title": "How to End American Power", "cluster": "american_exceptionalism"},
-      {"id": "Cy_E2Uv1crM", "title": "Lessons From Japan's Demographic Collapse", "cluster": "demographics_destiny"},
-      {"id": "7vB2oL4Wf-E", "title": "France Hits the Demographic Point of No Return", "cluster": "demographics_destiny"},
-      {"id": "QjeqhW_wk6s", "title": "Slavery Can't Fix China's Demography", "cluster": "china_collapse"},
-      {"id": "r1fiTFo43lQ", "title": "The Real Winners After a Chinese Collapse", "cluster": "china_collapse"},
-      {"id": "z-VQzjxHaWc", "title": "China Will Soon Lose the Title of World's Manufacturer", "cluster": "manufacturing_supply_chains"},
-      {"id": "qtBoJotE6pY", "title": "Navigating Reindustrialization in a Deglobalized World", "cluster": "manufacturing_supply_chains"},
-      {"id": "1rsdHTjYJsc", "title": "Can Anyone Replicate the US Shale Revolution?", "cluster": "energy_commodities"},
-      {"id": "cythBGQJ4Us", "title": "The Fourth Shale Revolution: Supermajor Tech", "cluster": "energy_commodities"},
-      {"id": "ahlH32Lprto", "title": "As Fertilizer Falls, Famine Will Follow", "cluster": "food_agriculture"},
-      {"id": "wPECLBd22Eo", "title": "Deglobalization's Impact on Global Food Exports", "cluster": "food_agriculture"},
-      {"id": "sbpoEb_uH5I", "title": "A Dark Future for American Agriculture", "cluster": "food_agriculture"},
-      {"id": "UxWqZwTnEM8", "title": "The U.S. Dollar: Short vs. Long Term", "cluster": "finance_capital"},
-      {"id": "h23tNmqjdRs", "title": "Can a BRICS Currency Replace the US Dollar?", "cluster": "finance_capital"},
-      {"id": "Nk3j64Ut2m8", "title": "The End of the WTO", "cluster": "globalization_end"},
-      {"id": "Ce0rodtWEuc", "title": "The Russian Reach: Geography and Intelligence", "cluster": "russia_ukraine"},
-      {"id": "wb1OHEICAqc", "title": "The Two-Speed EU of the Future", "cluster": "europe_fracturing"},
-      {"id": "00ElofEz6jk", "title": "India: Overhyped or Global Player", "cluster": "next_order"},
-      {"id": "rlr-SmmBC_A", "title": "The Future of Manufacturing: Where and Why?", "cluster": "manufacturing_supply_chains"},
-      {"id": "VOF1etsAGxI", "title": "The Shield of the Americas", "cluster": "geography_physical"}
+      {
+        "id": "0Vo_fVDRnzY",
+        "title": "How to End American Power",
+        "cluster": "american_exceptionalism"
+      },
+      {
+        "id": "Cy_E2Uv1crM",
+        "title": "Lessons From Japan's Demographic Collapse",
+        "cluster": "demographics_destiny"
+      },
+      {
+        "id": "7vB2oL4Wf-E",
+        "title": "France Hits the Demographic Point of No Return",
+        "cluster": "demographics_destiny"
+      },
+      {
+        "id": "QjeqhW_wk6s",
+        "title": "Slavery Can't Fix China's Demography",
+        "cluster": "china_collapse"
+      },
+      {
+        "id": "r1fiTFo43lQ",
+        "title": "The Real Winners After a Chinese Collapse",
+        "cluster": "china_collapse"
+      },
+      {
+        "id": "z-VQzjxHaWc",
+        "title": "China Will Soon Lose the Title of World's Manufacturer",
+        "cluster": "manufacturing_supply_chains"
+      },
+      {
+        "id": "qtBoJotE6pY",
+        "title": "Navigating Reindustrialization in a Deglobalized World",
+        "cluster": "manufacturing_supply_chains"
+      },
+      {
+        "id": "1rsdHTjYJsc",
+        "title": "Can Anyone Replicate the US Shale Revolution?",
+        "cluster": "energy_commodities"
+      },
+      {
+        "id": "cythBGQJ4Us",
+        "title": "The Fourth Shale Revolution: Supermajor Tech",
+        "cluster": "energy_commodities"
+      },
+      {
+        "id": "ahlH32Lprto",
+        "title": "As Fertilizer Falls, Famine Will Follow",
+        "cluster": "food_agriculture"
+      },
+      {
+        "id": "wPECLBd22Eo",
+        "title": "Deglobalization's Impact on Global Food Exports",
+        "cluster": "food_agriculture"
+      },
+      {
+        "id": "sbpoEb_uH5I",
+        "title": "A Dark Future for American Agriculture",
+        "cluster": "food_agriculture"
+      },
+      {
+        "id": "UxWqZwTnEM8",
+        "title": "The U.S. Dollar: Short vs. Long Term",
+        "cluster": "finance_capital"
+      },
+      {
+        "id": "h23tNmqjdRs",
+        "title": "Can a BRICS Currency Replace the US Dollar?",
+        "cluster": "finance_capital"
+      },
+      {
+        "id": "Nk3j64Ut2m8",
+        "title": "The End of the WTO",
+        "cluster": "globalization_end"
+      },
+      {
+        "id": "Ce0rodtWEuc",
+        "title": "The Russian Reach: Geography and Intelligence",
+        "cluster": "russia_ukraine"
+      },
+      {
+        "id": "wb1OHEICAqc",
+        "title": "The Two-Speed EU of the Future",
+        "cluster": "europe_fracturing"
+      },
+      {
+        "id": "00ElofEz6jk",
+        "title": "India: Overhyped or Global Player",
+        "cluster": "next_order"
+      },
+      {
+        "id": "rlr-SmmBC_A",
+        "title": "The Future of Manufacturing: Where and Why?",
+        "cluster": "manufacturing_supply_chains"
+      },
+      {
+        "id": "VOF1etsAGxI",
+        "title": "The Shield of the Americas",
+        "cluster": "geography_physical"
+      },
+      {
+        "id": "jJTw3SzrlQM",
+        "title": "Joe Rogan Experience #1921 - Peter Zeihan",
+        "cluster": "globalization_end"
+      },
+      {
+        "id": "ED_yPDdqG5Y",
+        "title": "China Has 10 Years Left, Says Geopolitical Analyst Peter Zeihan",
+        "cluster": "china_collapse"
+      },
+      {
+        "id": "lWvJU3YU9-U",
+        "title": "Impacts on the U.S. Power Grid from the Iran War",
+        "cluster": "middle_east_iran"
+      },
+      {
+        "id": "m2bqe_RrptQ",
+        "title": "How to Break Iran",
+        "cluster": "middle_east_iran"
+      },
+      {
+        "id": "UltVl2Qlf6A",
+        "title": "China's Collapse, America's Rise, and What Comes Next \u2014 Prof G Conversations",
+        "cluster": "china_collapse"
+      },
+      {
+        "id": "vSAjCAxn1VU",
+        "title": "Why The World's Population Is Collapsing \u2014 Jordan Peterson and Peter Zeihan",
+        "cluster": "population_collapse"
+      },
+      {
+        "id": "eT33ITqCziQ",
+        "title": "We're Witnessing Soviet-Scale Collapse of National Power",
+        "cluster": "russia_ukraine"
+      },
+      {
+        "id": "tQksC-8fqpM",
+        "title": "A Falling World: A Conversation with Peter Zeihan (Episode #355)",
+        "cluster": "next_order"
+      },
+      {
+        "id": "8o-nPyPlBdw",
+        "title": "The World At War: Peter Zeihan Full Interview",
+        "cluster": "next_order"
+      },
+      {
+        "id": "ygrurjeTfTU",
+        "title": "Pomp Podcast #284: Peter Zeihan Explains The Geopolitical Landscape",
+        "cluster": "globalization_end"
+      },
+      {
+        "id": "GCaAKMRe1SY",
+        "title": "Putin's Puppet Show feat. Tucker Carlson",
+        "cluster": "russia_ukraine"
+      },
+      {
+        "id": "stEp9qaSFfs",
+        "title": "Can Tariffs Replace Income Taxes?",
+        "cluster": "finance_capital"
+      },
+      {
+        "id": "j9z92LVU2FA",
+        "title": "JRE Daily \u2014 Joe and Peter Zeihan: Sinaloa Cartel and Crime Rate in US",
+        "cluster": "cartels_security"
+      },
+      {
+        "id": "EKq0DyKEDKE",
+        "title": "Joe Rogan | Peter Zeihan \u2014 How The Sinaloa Cartel Legally Launders Money in USA",
+        "cluster": "cartels_security"
+      }
     ]
   },
-
   "website": {
     "tagline": "Geography, demographics, and the end of the American-led global order",
-    "bio": "Geopolitical strategist and author of four books on the unwinding of globalization. Former Stratfor VP, now advising Fortune 500s on the physical reality of a multipolar world.",
-    "topics": ["Geopolitics", "Demographics", "Energy", "Supply Chains"],
+    "bio": "Peter Zeihan is a geopolitical strategist and author of four books on the unwinding of globalization, from The Accidental Superpower (2014) to The End of the World Is Just the Beginning (2022). A former Stratfor VP and founder of Zeihan on Geopolitics, he advises Fortune 500 companies on supply chain, energy, and long-range strategic positioning in a multipolar world.",
+    "topics": [
+      "Geopolitics",
+      "Demographics",
+      "Energy",
+      "Supply Chains",
+      "Deglobalization",
+      "China & Emerging Markets"
+    ],
     "price": 29
-  }
+  },
+  "_supabase_tables_ready": true
 }

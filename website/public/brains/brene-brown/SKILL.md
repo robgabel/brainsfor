@@ -9,8 +9,8 @@ Welcome to the **Brown Brain Pack** from [brainsforfree.com](https://brainsforfr
 
 ## What You're Getting
 
-- **283 knowledge atoms** — Core insights, frameworks, and strategic principles from 20+ years of research, 6 bestselling books, and thousands of interviews
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1195 knowledge atoms** — Core insights, frameworks, and strategic principles from 20+ years of research, 6 bestselling books, and thousands of interviews
+- **2513 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Vulnerability, shame resilience, courage, empathy, leadership, boundaries, perfectionism, belonging, and more
 
@@ -28,7 +28,7 @@ Your Brown Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (283 insights)
+  ├── brain-atoms.json         ← structured atoms (1195 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 283 atoms with titles, summaries, connections
+   - JSON structure of 1195 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,23 +93,23 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Brené's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "How do I have a difficult conversation with my team about trust?"*
+*Example: "How do I rebuild trust with my team after a major failure?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Brené sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain the difference between shame and guilt."*
+*Example: "Explain the difference between empathy and sympathy."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Is vulnerability a strength or weakness in leadership?"*
+*Example: "Is radical vulnerability always appropriate in professional settings?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "How do boundaries relate to self-compassion?"*
+*Example: "How does shame resilience relate to creative risk-taking?"*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How has Brené's thinking on empathy evolved over time?"*
+*Example: "How has Brené's thinking on belonging evolved from Daring Greatly to Braving the Wilderness?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -117,11 +117,11 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions Brené would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I'm afraid to be vulnerable in my relationship. What questions should I be asking myself?"*
+*Example: "I keep people-pleasing to avoid conflict. What questions should I be asking myself?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens to organizations that embrace vulnerability?"*
+*Example: "What happens to a culture where leaders refuse to model vulnerability?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to shame resilience? Teach → evolve → coach to build deep understanding of emotional courage.*
+*Example: New to shame resilience? Teach → evolve → coach to build deep understanding of emotional courage and self-worth.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Writing about leadership? Predict the implications → debate vulnerability in power → advise on implementation.*
+*Example: Writing about daring leadership? Predict the organizational implications → debate vulnerability in power structures → advise on practical implementation.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.

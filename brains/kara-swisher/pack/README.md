@@ -1,11 +1,11 @@
 # Kara Swisher Brain Pack
 
-> **566 knowledge atoms** · **556 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **885 knowledge atoms** · **772 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Kara Swisher's thinking, extracted from Pivot and Sway podcast episodes, NYT Opinion columns, and major tech industry interviews spanning 30+ years. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Kara Swisher's thinking, extracted from Pivot and On with Kara Swisher podcast episodes, NYT Opinion columns, Code Conference and DLD keynote interviews, Burn Book memoir, and landmark interviews with Gates, Jobs, Zuckerberg, Bezos, Musk, Cook, Sandberg, and Musk spanning 30+ years. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Kara's actual ideas, frameworks, and worldview.
 
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Kara'
    ```
 3. Then run any thinking skill:
    ```
-   /advise "Should my startup work with government regulators proactively or wait to be called?"
+   /advise "Should my startup engage proactively with government regulators, or wait until they come to us?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Kara's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Kara's perspect
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (566 atoms, 556 connections)
+  ├── brain-atoms.json      ← Structured data (885 atoms, 772 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**566 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**885 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**556 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**772 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — AI accountability, tech regulation, Big Tech power, media disruption, democracy and technology, Silicon Valley culture, journalism ethics.
+**16 topic clusters** — AI accountability, tech regulation, Big Tech power, media disruption, democracy and technology, Silicon Valley culture, journalism ethics, CEO accountability.
 
 **Date range:** 1994 — 2025
 
@@ -95,7 +95,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 ## About Kara Swisher
 
-Kara Swisher is the most influential tech journalist of her generation — a relentless interrogator of Silicon Valley power, a co-host of the Pivot podcast, and a longtime opinion writer for The New York Times. For three decades she has covered, challenged, and occasionally embarrassed the most powerful figures in technology, earning a reputation for fearless questioning and sharp political instincts.
+Kara Swisher is the most influential tech journalist of her generation — a relentless interrogator of Silicon Valley power, co-host of the Pivot podcast, host of On with Kara Swisher, and author of the memoir Burn Book. For three decades she has covered, challenged, and occasionally embarrassed the most powerful figures in technology, earning a reputation for fearless questioning, sharp political instincts, and an unwillingness to trade access for favorable coverage.
 
 ## Sources & Ethics
 

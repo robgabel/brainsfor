@@ -1,290 +1,356 @@
 [
   {
-    "content": "Moore's Law is dead, and accelerated computing is its successor. The era of transistor shrinking as the primary driver of performance is over. The future belongs to domain-specific architectures, parallel processing, and software-hardware co-design that can deliver 1,000x performance improvements per decade through architectural innovation rather than transistor scaling.",
-    "original_quote": "Moore's Law is over. The simple shrinking of transistors is not the future of computing. The future of computing is about accelerated computing, where we're able to deliver 1,000x improvement in performance per decade through architectural innovation.",
-    "implication": "Stop planning around transistor scaling. The next decade of computing performance will come from specialized architectures and parallel processing - invest in capabilities that exploit these new paradigms.",
+    "content": "Moore's Law \u2014 the observation that transistor density doubles every two years \u2014 has effectively ended as the primary engine of computing performance. Jensen argues that the semiconductor industry can no longer rely on process node shrinks alone to deliver meaningful gains, and that the computing world must pivot to architectural innovation, parallelism, and domain-specific design to continue improving performance at the rates the modern world demands.",
+    "implication": "Technology leaders who still build 10-year roadmaps assuming Moore's Law scaling will be blindsided. The new performance curve belongs to those investing in domain-specific hardware and software-hardware co-design \u2014 not those waiting for the next process node.",
     "cluster": "technology_roadmap",
     "topics": [
-      "moore's law",
-      "accelerated computing",
-      "architectural innovation",
-      "performance scaling"
+      "moores_law",
+      "performance_scaling",
+      "semiconductor_industry",
+      "architectural_innovation"
     ],
     "confidence": 0.95,
     "source_type": "video",
-    "source_ref": "GTC March 2025 Keynote",
-    "source_date": "2025-03-17"
-  },
-  {
-    "content": "Jensen's annual roadmap announcements are strategic ecosystem signals. By revealing NVIDIA's next 3-5 years of architecture generations (Hopper, Blackwell, Rubin, Vera), he enables the entire computing ecosystem - from software developers to cloud providers - to plan their own roadmaps around NVIDIA's trajectory.",
-    "original_quote": "We announce our roadmap years in advance because we want the ecosystem to plan with us. When we announce Hopper, Blackwell, Rubin, Vera, we're giving the world a signal about where computing is going so they can innovate on top of our platform.",
-    "implication": "Platform leaders should telegraph their future direction clearly and far in advance. This creates ecosystem lock-in as partners align their own roadmaps to yours.",
-    "cluster": "technology_roadmap",
-    "topics": [
-      "platform strategy",
-      "ecosystem development",
-      "roadmap communication",
-      "strategic signaling"
-    ],
-    "confidence": 0.92,
-    "source_type": "video",
     "source_ref": "Lex Fridman Podcast #494",
     "source_date": "2025-03-23"
   },
   {
-    "content": "Computing architectures must be designed at rack scale, not chip scale. Jensen thinks in terms of complete systems - DGX racks with 8 GPUs connected by NVLink, optimized cooling, networking, and power distribution. The chip is just one component; the architecture is the entire computing environment working as one.",
-    "original_quote": "We don't design chips. We design computing systems. The DGX is not a collection of GPUs - it's a single computer that happens to be rack-sized. Every component is optimized to work together as one unified architecture.",
-    "implication": "Think beyond individual components to complete system architectures. The winners will be those who optimize across traditional boundaries rather than optimizing components in isolation.",
+    "content": "Jensen has articulated a counter-thesis to Moore's Law: accelerated computing can deliver 1,000x performance improvements per decade through architectural innovation \u2014 parallel processing, domain-specific accelerators, and software-hardware co-design \u2014 even as transistor scaling decelerates. This is not a consolation prize for the end of Moore's Law; it is a superior improvement rate for the workloads that actually matter today.",
+    "implication": "The 1,000x-per-decade framing should reshape how infrastructure teams model future compute budgets. The gains are real but require intentional architectural choices \u2014 they don't arrive automatically from the foundry.",
     "cluster": "technology_roadmap",
     "topics": [
-      "system architecture",
-      "rack-scale computing",
-      "holistic design",
-      "datacenter computing"
-    ],
-    "confidence": 0.93,
-    "source_type": "video",
-    "source_ref": "Acquired Podcast \u2014 NVIDIA CEO Jensen Huang",
-    "source_date": "2023-10-15"
-  },
-  {
-    "content": "Parallel processing represents a fundamentally different computational model, not an incremental improvement. CPUs execute instructions sequentially; GPUs process thousands of threads simultaneously. This isn't about making existing computations faster - it's about making previously impossible computations possible.",
-    "original_quote": "The GPU is not a faster CPU. It's a fundamentally different way to compute. We're not accelerating sequential processing - we're enabling massively parallel processing that makes computations possible that were impossible before.",
-    "implication": "Rethink your computational problems from first principles. Problems that seem intractable with sequential processing may become trivial with parallel architectures.",
-    "cluster": "technology_roadmap",
-    "topics": [
-      "parallel processing",
-      "architectural paradigms",
-      "computational models",
-      "gpu computing"
-    ],
-    "confidence": 0.94,
-    "source_type": "video",
-    "source_ref": "Computer History Museum \u2014 Oral History of Jensen Huang",
-    "source_date": "2025-12-01"
-  },
-  {
-    "content": "Software-hardware co-design is the key to post-Moore's Law performance gains. Instead of general-purpose hardware running any software, the future is specialized hardware architectures optimized for specific software workloads - AI training chips, inference chips, graphics chips, scientific computing chips.",
-    "original_quote": "The future is not general purpose computing. It's domain-specific computing where the hardware and software are designed together from the ground up for specific workloads. That's how you get 1,000x improvements.",
-    "implication": "Break down the artificial barriers between hardware and software teams. The biggest performance gains come from co-designing them together for specific use cases.",
-    "cluster": "technology_roadmap",
-    "topics": [
-      "software-hardware co-design",
-      "domain-specific computing",
-      "specialized architectures",
-      "performance optimization"
-    ],
-    "confidence": 0.91,
-    "source_type": "video",
-    "source_ref": "Stanford GSB View From The Top",
-    "source_date": "2024-04-25"
-  },
-  {
-    "content": "Memory hierarchy and bandwidth are now the primary performance bottlenecks, not compute power. NVIDIA's architecture innovations focus on moving data efficiently - HBM memory, NVLink interconnects, and on-chip memory optimization - because the limitation is no longer how fast you can compute but how fast you can feed the computation.",
-    "original_quote": "The bottleneck is not compute anymore. The bottleneck is memory bandwidth. That's why we invest so much in HBM, in NVLink, in memory hierarchy design. You can have infinite compute power, but if you can't feed it data fast enough, it doesn't matter.",
-    "implication": "Focus on data movement and memory architecture, not just processing power. The winners will be those who solve bandwidth and latency problems, not just computational throughput.",
-    "cluster": "technology_roadmap",
-    "topics": [
-      "memory hierarchy",
-      "bandwidth bottlenecks",
-      "data movement",
-      "system optimization"
-    ],
-    "confidence": 0.93,
-    "source_type": "video",
-    "source_ref": "Lex Fridman Podcast #494",
-    "source_date": "2025-03-23"
-  },
-  {
-    "content": "Each architecture generation (Hopper, Blackwell, Rubin, Vera) represents a complete platform redesign, not incremental improvement. Jensen rebuilds the entire stack - chip architecture, memory systems, interconnects, cooling, software libraries - every 2-3 years to maintain exponential performance scaling.",
-    "original_quote": "Every architecture generation is a complete reinvention. Blackwell is not Hopper plus improvements. It's a from-scratch redesign of how we think about computing, memory, networking, cooling - everything.",
-    "implication": "Plan for platform discontinuities every 2-3 years rather than smooth incremental improvements. The companies that thrive will be those that can completely reinvent their approach regularly.",
-    "cluster": "technology_roadmap",
-    "topics": [
-      "platform evolution",
-      "architecture generations",
-      "complete redesign",
-      "discontinuous innovation"
-    ],
-    "confidence": 0.89,
-    "source_type": "video",
-    "source_ref": "GTC March 2025 Keynote",
-    "source_date": "2025-03-17"
-  },
-  {
-    "content": "The physics of computation haven't changed, but the approach must be completely different. Jensen applies his 'did physics change?' test to Moore's Law: gravity didn't change, but the method of exploiting physical laws for computational improvement has fundamentally shifted from transistor scaling to architectural innovation.",
-    "original_quote": "Did physics change? Did the laws of thermodynamics change? No. What changed is the method. We can't rely on transistor shrinking anymore, but we can still get exponential improvement through architecture, through parallelism, through specialization.",
-    "implication": "When fundamental constraints appear in your domain, don't abandon the goal - change the method. The underlying physics may be the same, but the path to improvement often requires complete strategic reinvention.",
-    "cluster": "technology_roadmap",
-    "topics": [
-      "first principles",
-      "constraint navigation",
-      "strategic pivot",
-      "physics-based thinking"
-    ],
-    "confidence": 0.94,
-    "source_type": "video",
-    "source_ref": "Joe Rogan Experience #2422",
-    "source_date": "2025-12-03"
-  },
-  {
-    "content": "Inference scaling will drive the next wave of computational demand. As AI models move from training to deployment, the computational requirements shift from massive parallel training runs to billions of simultaneous inference requests requiring low latency and high efficiency rather than raw training throughput.",
-    "original_quote": "Training was just the beginning. The real computational demand is inference - when you have a billion people using AI simultaneously, each needing millisecond response times. That requires a completely different architecture than training.",
-    "implication": "Don't optimize only for training workloads. The bigger market opportunity is inference at scale, which requires different architectural choices focused on latency and efficiency over raw throughput.",
-    "cluster": "technology_roadmap",
-    "topics": [
-      "inference scaling",
-      "deployment architecture",
-      "latency optimization",
-      "production ai"
-    ],
-    "confidence": 0.91,
-    "source_type": "video",
-    "source_ref": "All-In Podcast \u2014 Jensen Huang: Nvidia's Future, Physical AI, Rise of the Agent",
-    "source_date": "2026-03-01"
-  },
-  {
-    "content": "The computing unit of the future is the campus, not the chip. Jensen envisions connected facilities with thousands of GPUs working as a single computer, linked by high-speed networks, sharing memory and computation across buildings. The individual chip becomes irrelevant; the distributed system is the computer.",
-    "original_quote": "The future data center is not a building full of computers. It's a single computer the size of a building. Or multiple buildings. The entire campus becomes the computing unit.",
-    "implication": "Plan for distributed computing at unprecedented scale. The architectural decisions you make today need to account for systems that span multiple facilities working as unified computers.",
-    "cluster": "technology_roadmap",
-    "topics": [
-      "campus-scale computing",
-      "distributed systems",
-      "mega-scale architecture",
-      "datacenter evolution"
-    ],
-    "confidence": 0.87,
-    "source_type": "video",
-    "source_ref": "Stripe Sessions 2024 \u2014 Jensen Huang x Patrick Collison",
-    "source_date": "2024-05-01"
-  },
-  {
-    "content": "Cooling and power distribution are now primary architectural constraints, not afterthoughts. Advanced computing systems generate so much heat that thermal management drives fundamental design decisions - liquid cooling, chip placement, facility design. Power and cooling architecture is as important as the silicon architecture.",
-    "original_quote": "We don't design chips and then figure out how to cool them. We design the cooling system and then figure out what chips we can build within that thermal envelope. Cooling is architecture now.",
-    "implication": "Make power and thermal constraints primary design inputs, not secondary problems to solve. The companies that master energy and thermal efficiency will have fundamental advantages.",
-    "cluster": "technology_roadmap",
-    "topics": [
-      "thermal architecture",
-      "cooling systems",
-      "power efficiency",
-      "physical constraints"
+      "accelerated_computing",
+      "moores_law",
+      "performance_scaling",
+      "domain_specific_architecture"
     ],
     "confidence": 0.9,
     "source_type": "video",
-    "source_ref": "60 Minutes \u2014 Nvidia CEO Jensen Huang",
-    "source_date": "2024-04-01"
+    "source_ref": "NVIDIA GTC 2026 Keynote with Jensen Huang Highlights",
+    "source_date": "2026-03-18"
   },
   {
-    "content": "Network fabric is becoming as important as the processors themselves. NVLink, InfiniBand, and custom networking architectures that connect thousands of GPUs with microsecond latency are critical infrastructure. The network doesn't just connect computers - it makes them into a single computer.",
-    "original_quote": "The network is not infrastructure anymore. The network is the computer. When thousands of GPUs need to work as one, the interconnect between them becomes more important than the individual chips.",
-    "implication": "Invest as much in networking architecture as in processing power. The performance ceiling is often determined by how efficiently you can connect components, not how fast individual components run.",
+    "content": "Jensen treats each annual architecture generation \u2014 Hopper, Blackwell, Rubin, Vera \u2014 not as a product refresh but as a strategic signal to the entire computing ecosystem. By committing publicly and years in advance to a named architecture roadmap, NVIDIA enables hyperscalers, cloud providers, enterprises, and developers to plan their own multi-year investments around a known trajectory. The roadmap is a coordination mechanism as much as an engineering plan.",
+    "implication": "Platform companies should think about their roadmaps as ecosystem coordination tools, not just internal engineering schedules. Predictability compounds: the more your partners can plan around you, the deeper their investments in your platform become.",
     "cluster": "technology_roadmap",
     "topics": [
-      "network fabric",
-      "interconnect architecture",
-      "distributed computing",
-      "system integration"
+      "architecture_roadmap",
+      "ecosystem_coordination",
+      "platform_strategy",
+      "blackwell",
+      "hopper"
     ],
-    "confidence": 0.92,
+    "confidence": 0.9,
     "source_type": "video",
-    "source_ref": "Dwarkesh Patel \u2014 Jensen Huang on TPU Competition",
-    "source_date": "2026-04-15"
+    "source_ref": "NVIDIA GTC Washington, D.C. Keynote with CEO Jensen Huang",
+    "source_date": "2025-10-28"
   },
   {
-    "content": "Programming paradigms must evolve beyond sequential thinking. The transition from CPU to GPU computing requires developers to think in parallel algorithms, data flow, and massive concurrency. Traditional programming concepts like single-threaded execution become obsolete in the accelerated computing era.",
-    "original_quote": "Programming for GPUs is not just different code - it's a different way of thinking about computation. You have to think in data flows, not instruction sequences. Thousands of threads, not one.",
-    "implication": "Retrain your engineering teams for parallel programming paradigms. The productivity gains from accelerated computing require fundamentally different coding approaches and mental models.",
+    "content": "The cadence of NVIDIA's architecture releases has accelerated from roughly every two years to annual. Jensen has been explicit that the pace of AI advancement demands annual architecture generations, and that slowing down would allow the industry's needs to outrun NVIDIA's supply of capability. Each generation is designed to overlap with the next, ensuring continuity for software investments while delivering step-change performance improvements.",
+    "implication": "For builders deploying AI infrastructure, annual architecture generations mean that procurement cycles must shorten and software stacks must be written to be architecture-agnostic enough to migrate forward without full rewrites.",
     "cluster": "technology_roadmap",
     "topics": [
-      "parallel programming",
-      "developer mindset",
-      "computational thinking",
-      "programming paradigms"
+      "architecture_cadence",
+      "annual_releases",
+      "ai_infrastructure",
+      "roadmap_acceleration"
     ],
     "confidence": 0.88,
     "source_type": "video",
-    "source_ref": "Computer History Museum \u2014 Oral History of Jensen Huang",
-    "source_date": "2025-12-01"
+    "source_ref": "NVIDIA GTC 2026 Keynote with Jensen Huang Highlights",
+    "source_date": "2026-03-18"
   },
   {
-    "content": "Simulation and digital twins will drive massive computational demand as physical AI becomes mainstream. Every robot, autonomous vehicle, and physical system will need accurate physics simulation for training and validation. This creates computational requirements that dwarf current AI training workloads.",
-    "original_quote": "Physical AI requires simulating the entire world. Every robot needs to be trained in simulation before it touches the real world. The computational demand for physics simulation will be enormous - much bigger than language model training.",
-    "implication": "Prepare for simulation-driven computational demand that exceeds current AI training requirements. Physical AI will need continuous real-time world simulation at unprecedented scale and fidelity.",
+    "content": "Jensen frames the end of Moore's Law as a moment that demands a return to computer science fundamentals. Rather than waiting for hardware to get faster on its own, software engineers and computer architects must now actively co-design systems \u2014 rethinking algorithms, data representations, and memory hierarchies \u2014 to extract performance. The implication is that great software engineering now requires deep hardware awareness.",
+    "implication": "The era of hardware-oblivious software engineering is over for anyone building at scale. Developers who understand memory hierarchies, parallelism, and accelerator architectures will have a structural advantage over those who treat hardware as an abstraction.",
     "cluster": "technology_roadmap",
     "topics": [
-      "physics simulation",
-      "digital twins",
-      "physical ai",
-      "computational demand"
+      "software_hardware_codesign",
+      "computer_science_fundamentals",
+      "algorithm_design",
+      "moores_law"
     ],
-    "confidence": 0.89,
+    "confidence": 0.87,
     "source_type": "video",
-    "source_ref": "GTC March 2025 Keynote",
-    "source_date": "2025-03-17"
+    "source_ref": "Nvidia CEO Jensen Huang: AI is going to fundamentally change how we compute everything",
+    "source_date": "2024-01-01"
   },
   {
-    "content": "Energy efficiency per computation is the new performance metric, not raw speed. With power consumption becoming a limiting factor for large-scale deployments, architectures must optimize for performance-per-watt rather than absolute performance. The most efficient architecture wins in the long run.",
-    "original_quote": "Performance per watt is the only metric that matters now. You can build the fastest chip in the world, but if it uses too much power, you can't deploy it at scale. Efficiency is performance.",
-    "implication": "Redesign your performance metrics around energy efficiency. The systems that scale to global deployment will be those that maximize computational output per unit of energy consumed.",
+    "content": "The Blackwell architecture represents a generational leap in which a single rack \u2014 the NVL72 \u2014 functions as a unified computing system, not a collection of discrete GPUs. Jensen has described the NVL72 as effectively one giant GPU connected through NVLink, with 72 GPUs sharing memory and communicating at speeds that eliminate the traditional bottlenecks of inter-GPU bandwidth. The rack, not the chip, is the design unit.",
+    "implication": "Hardware procurement and data center design must shift from thinking about individual GPU counts to thinking about rack-scale systems. Optimizing a single GPU's utilization misses the point when the performance comes from the collective system.",
     "cluster": "technology_roadmap",
     "topics": [
-      "energy efficiency",
-      "performance metrics",
-      "scalability",
-      "sustainability"
+      "blackwell",
+      "nvlink",
+      "rack_scale_computing",
+      "gpu_architecture",
+      "nvl72"
     ],
-    "confidence": 0.91,
+    "confidence": 0.9,
+    "source_type": "video",
+    "source_ref": "NVIDIA GTC Washington, D.C. Keynote with CEO Jensen Huang",
+    "source_date": "2025-10-28"
+  },
+  {
+    "content": "Jensen has consistently argued that memory bandwidth and capacity are often the binding constraint on AI performance \u2014 not raw compute. NVIDIA's roadmap explicitly addresses this through HBM integration, new memory hierarchies, and innovations like the Transformer Engine, which reduce memory movement by computing at lower precision. Solving the memory wall is as important as adding more FLOPs.",
+    "implication": "AI system designers who optimize only for peak FLOP counts will miss the actual performance bottleneck. Memory architecture \u2014 bandwidth, latency, and capacity \u2014 deserves equal investment attention in both hardware selection and model design.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "memory_hierarchy",
+      "hbm",
+      "bandwidth",
+      "transformer_engine",
+      "ai_performance"
+    ],
+    "confidence": 0.87,
+    "source_type": "video",
+    "source_ref": "Meeting The Computing Demand Of AI",
+    "source_date": "2024-01-01"
+  },
+  {
+    "content": "NVIDIA's roadmap is built on the thesis that the workload mix driving computing has fundamentally changed. Traditional computing was dominated by CPU-sequential tasks. Today's dominant workloads \u2014 AI training, inference, scientific simulation, digital twins \u2014 are inherently parallel and benefit from domain-specific acceleration by orders of magnitude. Jensen argues the entire computing stack must be redesigned around this new workload reality, not retrofitted.",
+    "implication": "Organizations still routing AI workloads through CPU-optimized pipelines are paying a massive performance and cost penalty. Redesigning the stack from workload characteristics upward \u2014 rather than patching existing infrastructure \u2014 is the strategically correct path.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "workload_mix",
+      "parallel_computing",
+      "domain_specific_architecture",
+      "stack_redesign"
+    ],
+    "confidence": 0.88,
+    "source_type": "video",
+    "source_ref": "Nvidia CEO Jensen Huang speaks at the World Economic Forum",
+    "source_date": "2025-01-22"
+  },
+  {
+    "content": "Jensen has described NVIDIA's approach to architecture naming and sequencing \u2014 Hopper, Blackwell, Rubin, Vera \u2014 as a deliberate commitment to the ecosystem rather than an internal engineering milestone. Each name represents a multi-year platform, not a product generation, and the public announcement years in advance is intentional: it gives partners, developers, and customers a stable foundation on which to build long-horizon investments.",
+    "implication": "Ecosystem leaders should make their architectural commitments public and far in advance, even before all details are resolved. Certainty about direction is more valuable to partners than completeness of specification.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "architecture_naming",
+      "ecosystem_commitment",
+      "platform_strategy",
+      "rubin",
+      "vera"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "NVIDIA GTC 2026 Keynote with Jensen Huang Highlights",
+    "source_date": "2026-03-18"
+  },
+  {
+    "content": "The Hopper architecture introduced the Transformer Engine, which dynamically switches between FP8 and FP16 precision during training to maximize throughput without sacrificing accuracy. Jensen has pointed to this as an example of hardware and software co-design at the instruction level \u2014 the chip understands the mathematical structure of the workload and optimizes accordingly, something a general-purpose CPU cannot do.",
+    "implication": "The performance frontier in AI hardware is now defined by how deeply the silicon understands the mathematical primitives of the workload. Hardware teams that design around specific algorithms \u2014 rather than general-purpose computation \u2014 will set the pace.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "hopper",
+      "transformer_engine",
+      "fp8_precision",
+      "software_hardware_codesign",
+      "ai_training"
+    ],
+    "confidence": 0.88,
+    "source_type": "video",
+    "source_ref": "NVIDIA GTC Washington, D.C. Keynote with CEO Jensen Huang",
+    "source_date": "2025-10-28"
+  },
+  {
+    "content": "Jensen has drawn a direct line from the deceleration of Moore's Law to the explosion in demand for accelerated computing. As CPU performance improvements flatten, every application that requires continued performance scaling must migrate to the accelerated computing model. This means Moore's Law's end is not a crisis for NVIDIA \u2014 it is the foundational premise of NVIDIA's entire business thesis, and its confirmation is a market expansion event.",
+    "implication": "The slowdown in general-purpose CPU performance is a forcing function that will accelerate the migration of workloads to GPU and accelerator platforms. Organizations that have been deferring this migration will find the gap widening against competitors who moved earlier.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "moores_law",
+      "accelerated_computing",
+      "cpu_limitations",
+      "market_expansion"
+    ],
+    "confidence": 0.9,
     "source_type": "video",
     "source_ref": "Lex Fridman Podcast #494",
     "source_date": "2025-03-23"
   },
   {
-    "content": "Quantum computing and classical accelerated computing will coexist, not compete. Jensen sees quantum as solving specific mathematical problems while classical parallel processing handles the vast majority of computational workloads. They're complementary technologies serving different computational domains.",
-    "original_quote": "Quantum computing is not the successor to classical computing. It's a complement. Quantum will solve certain mathematical problems that are impossible classically, but 99% of computation will still be classical - just massively parallel.",
-    "implication": "Don't bet everything on quantum computing. Focus on mastering parallel classical computation, which will handle the majority of real-world computational needs for decades.",
+    "content": "Networking has become a first-class architectural concern in Jensen's roadmap. The acquisition of Mellanox and the development of NVLink and NVSwitch reflect the view that inter-GPU and inter-node bandwidth is as critical to system performance as compute throughput. When the data center is the computer, the interconnect is the system bus \u2014 and it must be designed with the same rigor as the processor.",
+    "implication": "Data center architects who treat networking as a commodity layer beneath the compute stack will hit a performance ceiling that no number of faster GPUs can overcome. Networking co-design with compute is now a core competency for AI infrastructure teams.",
     "cluster": "technology_roadmap",
     "topics": [
-      "quantum computing",
-      "classical computing",
-      "complementary technologies",
-      "computational domains"
+      "networking",
+      "nvlink",
+      "mellanox",
+      "interconnect",
+      "datacenter_architecture"
     ],
-    "confidence": 0.86,
+    "confidence": 0.9,
     "source_type": "video",
-    "source_ref": "Joe Rogan Experience #2422",
-    "source_date": "2025-12-03"
+    "source_ref": "Jensen Huang \u2013 Will Nvidia's moat persist?",
+    "source_date": "2024-01-01"
   },
   {
-    "content": "The software stack must be co-designed with hardware at every level - from chip architecture to system software to application frameworks. CUDA, cuDNN, TensorRT, and other NVIDIA libraries aren't just software products; they're architectural components that make the hardware useful and create ecosystem lock-in.",
-    "original_quote": "Hardware without software is just expensive silicon. The software stack - CUDA, the libraries, the frameworks - that's what makes the hardware valuable. We design them together because they have to work as one system.",
-    "implication": "Build software platforms alongside your hardware. The companies that create comprehensive software ecosystems around their hardware will capture more value and create stronger competitive moats.",
+    "content": "Jensen has argued that CUDA's role in the roadmap is not just as a developer tool but as the architectural continuity layer that makes hardware transitions possible. Because CUDA code written years ago still runs on current architectures \u2014 often with automatic performance improvements \u2014 developers don't have to rewrite their software every time NVIDIA ships a new chip. This backward compatibility across generations is a deliberate architectural choice, not an accident.",
+    "implication": "Platform architects should treat software compatibility across hardware generations as a first-order design constraint, not a nice-to-have. The compounding value of a developer ecosystem that doesn't have to be rebuilt every cycle is one of the most durable competitive advantages in technology.",
     "cluster": "technology_roadmap",
     "topics": [
-      "software-hardware integration",
-      "platform ecosystem",
-      "developer tools",
-      "vertical integration"
+      "cuda",
+      "backward_compatibility",
+      "developer_ecosystem",
+      "architectural_continuity"
     ],
-    "confidence": 0.93,
+    "confidence": 0.9,
     "source_type": "video",
-    "source_ref": "Acquired Podcast \u2014 NVIDIA CEO Jensen Huang",
-    "source_date": "2023-10-15"
+    "source_ref": "Nvidia's Plan to Dominate AI... and the World",
+    "source_date": "2024-01-01"
   },
   {
-    "content": "Processor architectures must specialize for specific workloads rather than optimize for general-purpose computing. AI inference chips, training accelerators, graphics processors, scientific computing units - each optimized for its domain rather than trying to be good at everything.",
-    "original_quote": "The era of general-purpose computing is over. The future is domain-specific architectures. You want different chips for training versus inference, for graphics versus compute, for different types of AI workloads.",
-    "implication": "Stop building general-purpose solutions. The performance advantages go to specialized architectures optimized for specific use cases, even if it means more complexity in your product portfolio.",
+    "content": "Jensen has described inference \u2014 not just training \u2014 as the dominant and growing computational workload of the AI era. As models are deployed at scale, inference demand grows with every new user, every new query, and every new application. The Blackwell architecture was specifically engineered with inference efficiency as a primary design target, reflecting Jensen's view that the inference explosion is just beginning and will dwarf training demand over time.",
+    "implication": "Organizations planning AI infrastructure should model inference scaling as the primary long-term cost driver, not training. Inference-optimized hardware and deployment architectures will determine the economics of AI at scale far more than training efficiency.",
     "cluster": "technology_roadmap",
     "topics": [
-      "domain-specific computing",
-      "specialized processors",
-      "workload optimization",
-      "architectural specialization"
+      "inference",
+      "inference_explosion",
+      "blackwell",
+      "ai_deployment",
+      "workload_scaling"
     ],
-    "confidence": 0.94,
+    "confidence": 0.9,
     "source_type": "video",
-    "source_ref": "Stanford GSB View From The Top",
-    "source_date": "2024-04-25"
+    "source_ref": "Jensen Huang: Nvidia's Future, Physical AI, Rise of the Agent, Inference Explosion, AI PR Crisis",
+    "source_date": "2025-01-01"
+  },
+  {
+    "content": "Jensen has described AI computing as operating in two distinct phases: the pre-training phase that builds foundational models, and the inference phase that deploys them at scale. He has further refined this by noting that agentic AI \u2014 where models reason through multi-step problems \u2014 creates a new, much more compute-intensive inference workload because each reasoning token requires GPU time. The roadmap must plan for inference becoming 10-100x more demanding per query as agentic models proliferate.",
+    "implication": "The economics of agentic AI are fundamentally different from single-shot inference. Builders deploying reasoning models should expect compute costs per task to be dramatically higher than current inference benchmarks suggest \u2014 and should architect for this in both system design and pricing models.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "agentic_ai",
+      "inference",
+      "reasoning_models",
+      "compute_demand",
+      "scaling"
+    ],
+    "confidence": 0.88,
+    "source_type": "video",
+    "source_ref": "Jensen Huang: Agentic AI is fully accretive for software companies",
+    "source_date": "2025-01-01"
+  },
+  {
+    "content": "The Rubin architecture, announced as the successor to Blackwell, signals NVIDIA's commitment to maintaining annual cadence well into the latter half of the decade. By naming and publicly committing to Rubin while Blackwell is still ramping, Jensen is deliberately managing the ecosystem's long-range planning horizon \u2014 ensuring that hyperscalers do not pause infrastructure investments waiting to see what comes next.",
+    "implication": "The strategic value of a published multi-generation roadmap is that it removes investment hesitation from customers. Leaders building platforms should consider how their public commitments \u2014 not just their products \u2014 function as demand signals for the ecosystem.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "rubin",
+      "roadmap_signaling",
+      "ecosystem_management",
+      "architecture_succession"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "NVIDIA GTC 2026 Keynote with Jensen Huang Highlights",
+    "source_date": "2026-03-18"
+  },
+  {
+    "content": "Jensen has consistently pushed back on the framing that more expensive GPU systems are a cost problem. His argument is that a system delivering 10x the performance per watt at 3x the price delivers dramatically lower cost-per-unit-of-work. He has used the phrase that the more you buy, the more you save \u2014 not as marketing hyperbole, but as a genuine total-cost-of-ownership argument that applies to any workload that is genuinely parallelizable.",
+    "implication": "CFOs and infrastructure leaders who evaluate GPU spend on sticker price rather than total cost per workload unit will systematically under-invest in accelerated hardware. The correct unit of analysis is cost-per-inference or cost-per-training-run, not hardware acquisition cost.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "total_cost_of_ownership",
+      "performance_per_watt",
+      "pricing_strategy",
+      "roi_framework"
+    ],
+    "confidence": 0.88,
+    "source_type": "video",
+    "source_ref": "Nvidia CEO Jensen Huang Interview | Bloomberg Technology Special",
+    "source_date": "2024-01-01"
+  },
+  {
+    "content": "Jensen has articulated that the roadmap must address energy efficiency as a first-class design constraint, not just performance. As data centers scale to gigawatt power consumption, the performance-per-watt ratio becomes as important as absolute performance. Each NVIDIA architecture generation is explicitly designed to improve this ratio \u2014 Blackwell's efficiency gains over Hopper were a central part of its launch narrative.",
+    "implication": "Energy efficiency is no longer a secondary optimization in AI infrastructure \u2014 it is a primary competitive dimension. AI infrastructure teams that ignore power density and efficiency in their architectural choices will face hard physical limits on the scale they can achieve.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "energy_efficiency",
+      "performance_per_watt",
+      "data_center_power",
+      "sustainable_computing"
+    ],
+    "confidence": 0.88,
+    "source_type": "video",
+    "source_ref": "WEF LIVE: NVIDIA CEO Jensen Huang Speaks At World Economic Forum | Davos",
+    "source_date": "2025-01-22"
+  },
+  {
+    "content": "Jensen has described NVIDIA's roadmap philosophy as one of committed investment regardless of the current market cycle. Rather than accelerating R&D during booms and pulling back during downturns, NVIDIA maintains consistent architectural investment because the 3-5 year development horizon of a chip generation means that decisions made during a downturn determine what ships at the next peak. Stopping investment during a trough means arriving at the next wave without a product.",
+    "implication": "Technology leaders who modulate R&D investment with revenue cycles will systematically lose ground to those who invest through cycles. The lag between investment and product availability means counter-cyclical R&D spending is often the highest-return capital allocation available.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "rd_investment",
+      "counter_cyclical_investing",
+      "chip_development",
+      "long_horizon_planning"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Jensen Huang \u2013 Will Nvidia's moat persist?",
+    "source_date": "2024-01-01"
+  },
+  {
+    "content": "Jensen views NVIDIA's five-layer stack \u2014 chips, systems, networking, software libraries, and application frameworks \u2014 as the actual unit of architectural innovation. Each layer must advance in coordination with the others; a faster chip without improved networking or software optimization delivers a fraction of its theoretical benefit. The roadmap is therefore a full-stack roadmap, not a silicon roadmap wearing full-stack clothes.",
+    "implication": "Companies building compute platforms should evaluate their roadmap against every layer of the stack simultaneously. Architectural gaps in any one layer \u2014 especially software or networking \u2014 will prevent the hardware improvements from translating into user-visible performance.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "full_stack",
+      "five_layer_architecture",
+      "system_design",
+      "software_hardware_codesign"
+    ],
+    "confidence": 0.88,
+    "source_type": "video",
+    "source_ref": "Jensen Huang says AI isn't just a model\u2014it's a five-layer cake you have to bake in order.",
+    "source_date": "2024-01-01"
+  },
+  {
+    "content": "Jensen has observed that the biggest performance gains in computing history have come not from incremental improvements within an existing paradigm but from paradigm shifts \u2014 from mainframe to PC, from CPU to GPU, from general-purpose to accelerated computing. The roadmap is designed around the assumption that another such shift \u2014 toward physical AI and embodied intelligence \u2014 is underway, and that the architecture decisions made now will define who owns that platform for the next decade.",
+    "implication": "The current architectural investments in accelerated computing are not just about today's AI workloads \u2014 they are establishing the platform position for the physical AI transition. Organizations that commit deeply to the current paradigm build the infrastructure and expertise needed to ride the next one.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "paradigm_shifts",
+      "physical_ai",
+      "platform_positioning",
+      "computing_history"
+    ],
+    "confidence": 0.87,
+    "source_type": "video",
+    "source_ref": "NVIDIA GTC 2026 Keynote with Jensen Huang Highlights",
+    "source_date": "2026-03-18"
+  },
+  {
+    "content": "Jensen has described the relationship between TSMC and NVIDIA as foundational to the roadmap \u2014 not just a manufacturing contract. NVIDIA's architecture design choices are made years in advance in concert with TSMC's process node roadmap, and the two companies coordinate on packaging innovations like CoWoS that enable HBM integration. The roadmap is only credible because the manufacturing partnership is deep enough to guarantee execution.",
+    "implication": "Hardware roadmaps are only as credible as the manufacturing partnerships that back them. Technology leaders building hardware-dependent platforms must invest in foundry relationships \u2014 not just engineering talent \u2014 as a strategic asset.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "tsmc",
+      "manufacturing_partnership",
+      "process_nodes",
+      "cowos_packaging",
+      "supply_chain"
+    ],
+    "confidence": 0.87,
+    "source_type": "video",
+    "source_ref": "Joe Rogan Experience #2422 - Jensen Huang",
+    "source_date": "2024-11-12"
+  },
+  {
+    "content": "Jensen has argued that the scale of investment required to compete in accelerated computing has itself become a moat. A single architecture generation requires billions of dollars in R&D, years of development, a global supply chain, and a software ecosystem that must be maintained across generations. The capital and organizational intensity of this work means the barrier to meaningful competition is higher with every generation NVIDIA ships.",
+    "implication": "In markets where architectural complexity compounds over time, staying at the frontier is the only defensible strategy \u2014 dropping back a generation to save costs creates a gap that is exponentially expensive to close. The moat is the momentum.",
+    "cluster": "technology_roadmap",
+    "topics": [
+      "competitive_moat",
+      "rd_investment",
+      "architectural_complexity",
+      "barriers_to_entry"
+    ],
+    "confidence": 0.87,
+    "source_type": "video",
+    "source_ref": "Nvidia's Plan to Dominate AI... and the World",
+    "source_date": "2024-01-01"
   }
 ]

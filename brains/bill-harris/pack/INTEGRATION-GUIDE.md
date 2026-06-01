@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (564 atoms, 533 typed connections)
+  brain-atoms.json         ~1MB     Structured data (483 atoms, 469 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | Bill's synthesized worldview, all 564 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | Bill's synthesized worldview, all 483 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 
@@ -51,7 +51,7 @@ Paste `brain-context.md` into your project's `CLAUDE.md`. Every conversation in 
 
 3. Open Claude Code in your project. The brain is now active — every conversation is informed by Bill's frameworks, first principles, and guardrails.
 
-**Verify it works:** Ask your agent a strategy question and check that the response cites specific ideas from Bill, not generic advice. Try `I'm a tech operator thinking about starting a consumer fintech company in the wealth-management space. Should I go pure-robo, hybrid, or something else? What would Bill think?`.
+**Verify it works:** Ask your agent a strategy question and check that the response cites specific ideas from Bill, not generic advice. Try `I want to reduce my cardiovascular risk and I've heard omega-3s matter. How much fish oil should I actually be taking, and how do I know if it's working?`.
 
 **Tradeoff:** ~75K tokens of context loaded on every conversation. For a project where you always want this lens, that's a feature. For occasional use, Path B is lighter.
 
@@ -141,9 +141,9 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 4. Use any thinking skill:
    ```
-   /advise Should I optimize for pre-tax returns or after-tax returns when picking a wealth manager?
-   /debate Are robo-advisors a viable long-term model, or do they always lose to hybrid AI+human?
-   /predict What happens to retail wealth management if Dodd-Frank §1033 is rolled back?
+   /advise I'm 45 years old, I eat salmon once a week, and I take a standard 1g fish oil capsule. Is that enough omega-3 for cardiovascular protection?
+   /debate Is fish oil supplementation actually proven to reduce cardiovascular events, or is the evidence weaker than the marketing suggests?
+   /predict What happens to public health outcomes if omega-3 testing becomes a standard part of routine bloodwork?
    /surprise
    ```
 

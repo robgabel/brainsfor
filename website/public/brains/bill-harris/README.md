@@ -1,11 +1,11 @@
 # Bill Harris Brain Pack
 
-> **564 knowledge atoms** · **533 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **483 knowledge atoms** · **469 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Bill Harris's thinking, extracted from 27 hand-curated sources spanning 1999–2025: 2 books on tax-aware investing, 1 American Banker op-ed, 1 LinkedIn Pulse essay, 4 long-form video interviews (Bloomberg, Fox Business, CNBC, Yahoo Finance), 5 long-form podcast/interview transcripts (Adam Mendler, Jo Ann Barefoot, Financial Sense, Modus, Acast Rethink), and supporting press across his founding chapters. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Bill Harris's thinking, extracted from 27 hand-curated sources spanning 2015–2025: multiple long-form podcast interviews (The Proof, ZOE Science & Nutrition, Empowered Nutrition), OmegaMatters podcast episodes, YouTube video lectures and conference keynotes (Bulletproof Biohacking Conference, Omega-3 Index explainers), and supporting press and blog coverage across his OmegaQuant and omega-3 research chapters. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Bill's actual ideas, frameworks, and worldview.
 
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Bill'
    ```
 3. Then run any thinking skill:
    ```
-   /advise "Should I optimize for pre-tax returns or after-tax returns when picking a wealth manager?"
+   /advise "I'm 45 years old, I eat salmon once a week, and I take a standard 1g fish oil capsule. Is that enough omega-3 for cardiovascular protection?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Bill's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Bill's perspect
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (564 atoms, 533 connections)
+  ├── brain-atoms.json      ← Structured data (483 atoms, 469 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,13 +56,13 @@ This means:
 
 ## The Knowledge Graph
 
-**564 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**483 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**533 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**469 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — Tax-aware investing, fiduciary advice, hybrid AI+human advisory, financial data rights, consumer fintech, payments history, founder resilience, the PayPal era, post-Synapse fintech.
+**16 topic clusters** — Omega-3 Index, EPA and DHA, cardiovascular risk biomarkers, brain health, fish oil supplementation, omega-3 deficiency, longevity, fatty acid science, seed oils, Fatty15, dose-response relationships.
 
-**Date range:** 1999 — 2025
+**Date range:** 2015 — 2025
 
 ## How to Use
 
@@ -95,7 +95,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 ## About Bill Harris
 
-Bill Harris is a fintech pioneer who has founded 11 tech and financial companies. He ran TurboTax for ten years, was CEO of Intuit (1999), founding CEO of PayPal/X.com (1999–2000), founder/CEO of Personal Capital (2009–2019, sold to Empower for $1B at $23B AUM), and is now founder/CEO of Evergreen Money (2024) and Evergreen Wealth (2025). He's the rare operator who has built across consumer tax software, payments, and wealth management — and his thinking on fiduciary advice, financial data portability, and after-tax returns has shaped how a generation of fintech founders think about the wealth-management stack.
+Dr. Bill Harris is the world's foremost authority on omega-3 fatty acids and cardiovascular health. He invented the Omega-3 Index — a blood biomarker measuring EPA+DHA levels in red blood cell membranes — and has spent four decades researching how omega-3 status predicts cardiovascular disease risk, cognitive decline, and all-cause mortality. He is the founder and Chief Science Officer of OmegaQuant Analytics, a laboratory he built to make omega-3 testing accessible and standardized. His work has shaped how clinicians, researchers, and informed consumers think about fish oil supplementation, dietary omega-3 sources, and the gap between what we eat and what our cells actually need.
 
 ## Sources & Ethics
 

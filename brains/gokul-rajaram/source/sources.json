@@ -1,152 +1,281 @@
 {
-  "description": "Curated source material for the Gokul Rajaram brain pack — long-form interviews, decision-making frameworks (SPADE), product leadership essays, and angel investing commentary spanning his career at Google AdSense, Facebook Ads, Square, DoorDash, and Marathon Management Partners.",
-  "brain_slug": "gokul-rajaram",
+  "description": "Source material for the Gokul Rajaram brain pack \u2014 text via Firecrawl, video via yt-dlp.",
+  "brain_slug": "gokul-rajaram-v2",
   "brain_name": "Gokul Rajaram",
-  "curated_at": "2026-05-17",
+  "discovered_at": "2026-05-31T13:00:34.640358+00:00",
   "sources": [
     {
-      "title": "Invest Like the Best EP.456 — Gokul Rajaram: Lessons from Investing in 700 Companies",
-      "type": "interview",
-      "date": "2026-01-29",
-      "priority": "essential",
-      "description": "Patrick O'Shaughnessy interviews Gokul on how product building is changing with AI, why companies like Zendesk and Slack are more exposed than Salesforce or NetSuite, sources of defensibility, and lessons from a 700-company angel portfolio.",
-      "youtube_id": "JUsb1FYOstA",
-      "key_topics": ["ai", "product_leadership", "investing_thesis", "monetization_models", "competitive_dynamics"]
+      "title": "Meta M&A List - Wikipedia",
+      "type": "other",
+      "priority": "low",
+      "url": "https://en.wikipedia.org/wiki/List_of_mergers_and_acquisitions_by_Meta_Platforms"
     },
     {
-      "title": "20VC with Harry Stebbings — Gokul Rajaram on the 8 Moats of Enduring Software Companies & AI Maxing",
-      "type": "interview",
-      "date": "2026-03-16",
-      "priority": "essential",
-      "description": "Deep dive on how to analyse software companies for durability and defensibility in a world of AI, the 8 moats Gokul thinks matter most, why dropouts are 'AI maxing' the world, and why remote early-stage companies are dying.",
-      "youtube_id": "6ctOnY1WmBw",
-      "key_topics": ["competitive_dynamics", "ai", "startup_strategy", "investing_thesis", "platform_strategy"]
+      "title": "Quora Discussion - Facebook Acquisitions",
+      "type": "other",
+      "priority": "low",
+      "url": "https://www.quora.com/What-startups-would-be-good-acquisitions-for-Facebook"
+    },
+    {
+      "title": "Mark Zuckerberg Quora Profile",
+      "type": "other",
+      "priority": "low",
+      "url": "https://www.quora.com/profile/Mark-Zuckerberg"
+    },
+    {
+      "title": "NYT Dealbook - Instagram Acquisition",
+      "type": "other",
+      "priority": "low",
+      "url": "https://dealbook.nytimes.com/2012/04/09/facebook-buys-instagram-for-1-billion/"
+    },
+    {
+      "title": "The Register - Facebook Domain Dispute",
+      "type": "other",
+      "priority": "low",
+      "url": "https://www.theregister.co.uk/2007/10/01/facebook_domain_dispute/"
+    },
+    {
+      "title": "XTimeline Event",
+      "type": "other",
+      "priority": "low",
+      "url": "http://www.xtimeline.com/evt/view.aspx?id=1391"
+    },
+    {
+      "title": "GigaOM - Facebook ParaKey Acquisition",
+      "type": "other",
+      "priority": "low",
+      "url": "http://gigaom.com/2007/07/19/facebook-buys-parakey/"
+    },
+    {
+      "title": "Law.com Article",
+      "type": "other",
+      "priority": "low",
+      "url": "http://www.law.com/jsp/article.jsp?id=1202446331523"
+    },
+    {
+      "title": "TechCrunch - ConnectU Settlement",
+      "type": "other",
+      "priority": "low",
+      "url": "https://techcrunch.com/2009/02/11/the-ap-reveals-details-of-facebookconnectu-settlement-with-best-hack-ever/"
+    },
+    {
+      "title": "TechCrunch - FriendFeed Acquisition",
+      "type": "other",
+      "priority": "low",
+      "url": "https://techcrunch.com/2009/08/10/facebook-acquires-friendfeed/"
+    },
+    {
+      "title": "TechCrunch - Octazen Acquisition",
+      "type": "other",
+      "priority": "low",
+      "url": "https://techcrunch.com/2010/02/19/octazen-what-the-heck-did-facebook-just-buy-exactly-and-why/"
+    },
+    {
+      "title": "TechCrunch - Divvyshot Acquisition",
+      "type": "other",
+      "priority": "low",
+      "url": "https://techcrunch.com/2010/04/02/facebook-buys-up-divvyshot-to-make-facebook-photos-even-better/"
+    },
+    {
+      "title": "GigaOM - Friendster Patents",
+      "type": "other",
+      "priority": "low",
+      "url": "http://gigaom.com/2010/08/04/facebook-buys-friendster-patents-for-40m/"
+    },
+    {
+      "title": "Mashable - ShareGrove Acquisition",
+      "type": "other",
+      "priority": "low",
+      "url": "http://mashable.com/2010/05/26/facebook-acquires-sharegrove/"
+    },
+    {
+      "title": "Gokul Rajaram on the 8 Moats Companies Need & Why Dropouts are \"AI Maxing\" the World",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=6ctOnY1WmBw",
+      "youtube_id": "6ctOnY1WmBw"
     },
     {
       "title": "Gokul Rajaram on Starting a Company in the Age of AI",
-      "type": "keynote",
-      "date": "2025-12-11",
-      "priority": "essential",
-      "description": "Gokul shares principles and patterns based on his experience helping build Google AdSense, Facebook Ads, and scaling DoorDash and Block — applied to starting a new company in the AI era.",
-      "youtube_id": "CHd5hajpmxI",
-      "key_topics": ["ai", "startup_strategy", "product_leadership", "founder_mode"]
-    },
-    {
-      "title": "Summation (World of DaaS) — Gokul Rajaram of Marathon: How AI Will Reinvent Ad Platforms",
-      "type": "interview",
-      "date": "2025-09-09",
-      "priority": "essential",
-      "description": "Gokul on how AI is reinventing ad platforms, the architecture of OpenAI's ad strategy, attention markets, and the future of monetization on AI-native consumer products.",
-      "url": "https://www.worldofdaas.com/p/marathon-gokul-rajaram/",
-      "key_topics": ["monetization_models", "ai", "ai_social", "content_economy", "competitive_dynamics"]
-    },
-    {
-      "title": "The Aarthi and Sriram Show EP 88 — Silicon Valley Legend Gokul Rajaram on Founder Mode",
-      "type": "interview",
-      "date": "2024-10-03",
+      "type": "video",
       "priority": "high",
-      "description": "82-minute conversation on Founder Mode vs Management Mode, Zuck's micromanagement style, lessons from Google's Larry and Sergey, what makes a great CEO, and why Gokul left Google to launch his own startup.",
-      "url": "https://www.aarthiandsriram.com/p/ep-88-silicon-valley-legend-gokul",
-      "key_topics": ["product_leadership", "startup_strategy", "founder_mode", "competitive_dynamics"]
+      "url": "https://www.youtube.com/watch?v=CHd5hajpmxI",
+      "youtube_id": "CHd5hajpmxI"
     },
     {
-      "title": "Outlier Academy / Daniel Scrivner #102 — Gokul Rajaram of Marathon",
-      "type": "interview",
-      "date": "2024-08-15",
+      "title": "Secrets of Tech\u2019s Top CEOs | Gokul Rajaram on Google, Facebook & Square",
+      "type": "video",
       "priority": "high",
-      "description": "The prolific angel investor on speed, small teams, product management craft, and decision making — plus lessons learned at Square, DoorDash, Google, Coinbase, Pinterest, and The Trade Desk.",
-      "url": "https://www.outlieracademy.com/episode/102",
-      "key_topics": ["product_leadership", "startup_strategy", "investing_thesis", "decision_making"]
+      "url": "https://www.youtube.com/watch?v=07p6d7LzcXI",
+      "youtube_id": "07p6d7LzcXI"
     },
     {
-      "title": "Square Defangs Difficult Decisions with this System — Gokul Rajaram on SPADE (First Round Review)",
-      "type": "talk",
-      "date": "2018-07-03",
-      "priority": "essential",
-      "description": "Gokul presents the SPADE decision-making framework (Setting, People, Alternatives, Decide, Explain) developed at Google and Facebook, widely deployed at Square and Caviar. The canonical original explainer for SPADE.",
-      "youtube_id": "Hl_ERo3lKRY",
-      "key_topics": ["product_leadership", "decision_making"]
-    },
-    {
-      "title": "How to Improve Decision-Making Using SPADE — Gokul Rajaram on Make Me A Doc!",
-      "type": "talk",
-      "date": "2019-09-05",
+      "title": "#80: Becoming an IC again is how products leaders will stay relevant in the AI era | Gokul Rajaram",
+      "type": "video",
       "priority": "high",
-      "description": "Gokul walks through SPADE with worked examples, explains who the 'decider' is, how to use approvers vs consulted vs informed, and common decision-making anti-patterns to avoid.",
-      "youtube_id": "gwJ1gcQ5J28",
-      "key_topics": ["decision_making", "product_leadership"]
+      "url": "https://www.youtube.com/watch?v=VPpOtwUesnk",
+      "youtube_id": "VPpOtwUesnk"
     },
     {
-      "title": "Prolific Angel Investor Gokul Rajaram — SPADE for Decision Making",
-      "type": "interview",
-      "date": "2022-05-04",
-      "priority": "medium",
-      "description": "Gokul on applying SPADE in startup contexts, when speed beats deliberation, and the costs of consensus decision-making.",
-      "youtube_id": "uzNy2oqdx7E",
-      "key_topics": ["decision_making", "startup_strategy", "investing_thesis"]
-    },
-    {
-      "title": "Gokul Rajaram — Personal Site & Essay Archive",
-      "type": "essay",
-      "date": "2025-01-01",
-      "priority": "essential",
-      "description": "Gokul's personal site with curated essays on being a founder's most helpful and trusted partner, product-led investing philosophy, and angel investing thesis across 700+ companies.",
-      "url": "https://www.gokulrajaram.com/",
-      "key_topics": ["investing_thesis", "product_leadership", "startup_strategy"]
-    },
-    {
-      "title": "Hiring Your First Product Manager — Gokul Rajaram on Medium",
-      "type": "essay",
-      "date": "2016-03-31",
+      "title": "Why Big Tech Talent Fails in AI Startups with Gokul Rajaram",
+      "type": "video",
       "priority": "high",
-      "description": "The canonical Gokul essay on the biggest mistake CEOs make when looking for their first product manager — what to look for, what to avoid, and how to structure the interview.",
-      "url": "https://medium.com/@gokulrajaram/the-biggest-mistake-ceos-make-when-looking-for-their-first-product-manager-347aaeb15a75",
-      "key_topics": ["product_leadership"]
+      "url": "https://www.youtube.com/watch?v=Z8GsB65WnGE",
+      "youtube_id": "Z8GsB65WnGE"
     },
     {
-      "title": "Gokul's SPADE Toolkit — Canonical Coda Doc",
-      "type": "essay",
-      "date": "2020-02-13",
-      "priority": "essential",
-      "description": "The official SPADE template and rationale — published by Gokul. Includes worked examples, decision quality criteria, and embedded forms for teams to run their own SPADE decisions.",
-      "url": "https://coda.io/@gokulrajaram/gokuls-spade-toolkit",
-      "key_topics": ["decision_making", "product_leadership"]
-    },
-    {
-      "title": "Gokul Rajaram — Medium Author Archive",
-      "type": "essay",
-      "date": "2025-01-01",
+      "title": "He Built The Revenue Engines for Google, Facebook & Square",
+      "type": "video",
       "priority": "high",
-      "description": "Gokul's full Medium archive covering product management, hiring PMs, angel investing lessons, decision-making, founder relationships, and AI's impact on product building.",
-      "url": "https://medium.com/@gokulrajaram",
-      "key_topics": ["product_leadership", "investing_thesis", "startup_strategy", "decision_making"]
+      "url": "https://www.youtube.com/watch?v=JUsb1FYOstA",
+      "youtube_id": "JUsb1FYOstA"
     },
     {
-      "title": "Gokul Rajaram on Product Thinking and the Future of Innovation — McKinsey",
-      "type": "interview",
-      "date": "2023-06-15",
+      "title": "105 Gokul Rajaram: My Favorite Books, Tools, Habits, and More | 20 Minute Playbook",
+      "type": "video",
       "priority": "high",
-      "description": "McKinsey interview on product thinking as a discipline, what separates exceptional PMs from average ones, and how to set product strategy under uncertainty.",
-      "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/gokul-rajaram-on-product-thinking-and-the-future-of-innovation",
-      "key_topics": ["product_leadership", "consumer_behavior"]
+      "url": "https://www.youtube.com/watch?v=l92jboiCZIg",
+      "youtube_id": "l92jboiCZIg"
     },
     {
-      "title": "#FirstPrinciples with Gokul 'Godfather' Rajaram — Gojek Engineering Show Notes",
-      "type": "interview",
-      "date": "2020-05-12",
-      "priority": "medium",
-      "description": "Long-form interview show notes covering first-principles thinking, Gokul's journey from AdSense to Facebook Ads to Square, hiring lessons, and how to build product teams in high-growth companies.",
-      "url": "https://medium.com/gojekengineering/firstprinciples-with-gokul-godfather-rajaram-the-show-notes-bc5bdf07d511",
-      "key_topics": ["product_leadership", "startup_strategy"]
-    },
-    {
-      "title": "Peak XV — Gokul Rajaram on Product, Leadership, and Building Enduring Teams (Surge 09 US Immersion)",
-      "type": "talk",
-      "date": "2024-02-15",
+      "title": "Why Most AI Startups Will Fail ft. Gokul Rajaram",
+      "type": "video",
       "priority": "high",
-      "description": "Talk at Peak XV's Surge 09 US immersion on product-market fit, when to opt for generalists vs specialists, and how to build enduring product teams.",
-      "url": "https://www.peakxv.com/video/gokul-rajaram-on-product-leadership-and-building-enduring-teams/",
-      "key_topics": ["product_leadership", "startup_strategy"]
+      "url": "https://www.youtube.com/watch?v=G84HrP3F0-k",
+      "youtube_id": "G84HrP3F0-k"
+    },
+    {
+      "title": "Gokul Rajaram: The Superpower of Being Helpful",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=lATRWfN5P74",
+      "youtube_id": "lATRWfN5P74"
+    },
+    {
+      "title": "Gokul Rajaram on Product, Leadership, and Building Enduring Teams",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=-P1cYrBAAiQ",
+      "youtube_id": "-P1cYrBAAiQ"
+    },
+    {
+      "title": "Gokul Rajaram on Defensibility, Scaling Companies & Hiring for \u201cSpikiness\"",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=tNw7eAIXf5E",
+      "youtube_id": "tNw7eAIXf5E"
+    },
+    {
+      "title": "Square Defangs Difficult Decisions with this System \u2014 Here\u2019s How",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Hl_ERo3lKRY",
+      "youtube_id": "Hl_ERo3lKRY"
+    },
+    {
+      "title": "Why Gokul Rajaram (DoorDash) Invested in Humantic AI",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=mMx5XObPSU0",
+      "youtube_id": "mMx5XObPSU0"
+    },
+    {
+      "title": "Gokul Rajaram | Lessons from Zuck, Jack Dorsey, Sergey Brin + Defining your ICP and Market",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=8oLyS8WyVQc",
+      "youtube_id": "8oLyS8WyVQc"
+    },
+    {
+      "title": "Speed Wins in the AI Era | Gokul Rajaram | AI Hackathon 2026",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=cKVFSFpr6YA",
+      "youtube_id": "cKVFSFpr6YA"
+    },
+    {
+      "title": "How to improve decision-making using the SPADE method | Make me a doc! With Gokul Rajaram",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=gwJ1gcQ5J28",
+      "youtube_id": "gwJ1gcQ5J28"
+    },
+    {
+      "title": "Prolific Angel Investor Gokul Rajaram \u2013 The Impact of Regular Exercise",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=YmjdvLvdkzs",
+      "youtube_id": "YmjdvLvdkzs"
+    },
+    {
+      "title": "Trailer \u2013 Gokul Rajaram: My Favorite Books, Tools, Habits, and More | 20 Minute Playbook",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=dU809KG46V0",
+      "youtube_id": "dU809KG46V0"
+    },
+    {
+      "title": "What I Learned Working for Coinbase, Pinterest, Facebook, & Google | Gokul Rajaram",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=27vK8nPr_yg",
+      "youtube_id": "27vK8nPr_yg"
+    },
+    {
+      "title": "Trailer \u2013 Replay \u2013 Gokul Rajaram: My Favorite Books, Tools, Habits, and More | 20 Minute Playbook",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=XjE8pDlk92Y",
+      "youtube_id": "XjE8pDlk92Y"
+    },
+    {
+      "title": "#StartupsUnedited: Gokul Rajaram, Internet Innovator and Veteran",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=dYPu84EtcIQ",
+      "youtube_id": "dYPu84EtcIQ"
+    },
+    {
+      "title": "#80 Launch House: Building the Y Combinator of the Future with Hack and Launch Houses | Brett Gol...",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=ziEndkw4zvQ",
+      "youtube_id": "ziEndkw4zvQ"
+    },
+    {
+      "title": "Sequoia's Guide to Surviving the 2022 Bear Market",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=CFqvb6JxaF8",
+      "youtube_id": "CFqvb6JxaF8"
+    },
+    {
+      "title": "Indian Startup News Ep 46: Ola & Uber Commissions Capped & Paytm Denies Ant Group Stake Sale",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=VV5WjhHvOGY",
+      "youtube_id": "VV5WjhHvOGY"
+    },
+    {
+      "title": "Fish Sauce Podcast | Gokul Rajaram - Square",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=umVUvVWtdsE",
+      "youtube_id": "umVUvVWtdsE"
+    },
+    {
+      "title": "The ultimate guide to SEO | Ethan Smith (Graphite)",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=mOY159TlYXM",
+      "youtube_id": "mOY159TlYXM"
+    },
+    {
+      "title": "How to build your product team from scratch, attract top product talent, go multi-product, and more",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=ciBdPH88C4c",
+      "youtube_id": "ciBdPH88C4c"
     }
   ]
 }

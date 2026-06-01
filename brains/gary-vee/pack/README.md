@@ -1,11 +1,11 @@
 # Gary Vaynerchuk Brain Pack
 
-> **246 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **929 knowledge atoms** · **848 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Gary Vaynerchuk's thinking, extracted from Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, The Tea With GaryVee, VaynerMedia keynotes, and millions of pieces of social content. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Gary Vaynerchuk's thinking, extracted from Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, The Tea With GaryVee, Joe Rogan Experience #910, Tim Ferriss collaborations, Marie Forleo interviews, SXSW 2014 and 2016 keynotes, Web Summit 2016 keynote, VaynerMedia keynotes, CNBC interviews, Adweek profiles, and millions of pieces of social content. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Gary's actual ideas, frameworks, and worldview.
 
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Gary's perspect
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (246 atoms, 1000 connections)
+  ├── brain-atoms.json      ← Structured data (929 atoms, 848 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**246 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**929 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**848 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — attention arbitrage, jab jab jab right hook, document don't create, kind candor, sports cards, personal brand, social media strategy, self-awareness.
+**16 topic clusters** — attention arbitrage, jab jab jab right hook, document don't create, kind candor, personal brand, social media strategy, self-awareness, macro patience micro speed.
 
 **Date range:** 2009 — April 2026
 

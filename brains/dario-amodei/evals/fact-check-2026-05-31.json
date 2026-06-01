@@ -1,0 +1,581 @@
+{
+  "brain_slug": "dario-amodei-v2",
+  "timestamp": "2026-05-31T11:34:05.922912+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 33,
+    "youtube_chars": 2089835,
+    "atom_quote_count": 582,
+    "total_chars": 2243340
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 2,
+        "weak": 7,
+        "ungrounded": 2,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 4,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 5
+      },
+      "does_not_believe": {
+        "grounded": 2,
+        "weak": 3,
+        "ungrounded": 0,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 5,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 5
+      }
+    },
+    "totals": {
+      "grounded": 13,
+      "weak": 11,
+      "ungrounded": 2,
+      "total": 26
+    },
+    "grounding_pct": 71.2,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[3]",
+        "title": "Responsible scaling means concrete commitments tied to capability thresholds",
+        "rationale": "The Responsible Scaling Policy, capability thresholds, bioweapons uplift triggers, and the specific RSP framing are not mentioned anywhere in the source corpus."
+      },
+      {
+        "id": "first_principles[6]",
+        "title": "Constitutional AI encodes values into training itself",
+        "rationale": "Constitutional AI is not mentioned anywhere in the source corpus."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[0]",
+        "title": "Compute is the primary driver of AI progress",
+        "rationale": "While Dario references scaling laws and compute investment repeatedly, the corpus does not contain the specific framing that compute is 'the primary driver' or that he made this bet 'before it was consensus' \u2014 the principle's biographical backstory about GPT-2/GPT-3 vindication is not present in the source material, leaving only tangential support."
+      },
+      {
+        "id": "first_principles[1]",
+        "title": "Safety and capability are complementary, not opposed",
+        "rationale": "The corpus supports the general idea that safety and capability coexist at Anthropic, but the specific formulation that 'the safest path runs through the frontier' and that 'a brittle model will be abandoned for less safe alternatives' is not explicitly stated in the source material."
+      },
+      {
+        "id": "first_principles[2]",
+        "title": "Interpretability is the most important unsolved problem in AI safety",
+        "rationale": "Mechanistic interpretability is mentioned only once in the corpus and not framed as 'the most important unsolved problem in AI safety' \u2014 the strong prioritization claim and the contrast with behavioral testing as insufficient are not present in the source material."
+      },
+      {
+        "id": "first_principles[4]",
+        "title": "The race to the top beats the race to the bottom",
+        "rationale": "While Dario mentions Anthropic's intent to positively influence the ecosystem, the specific framing of 'race to the top' and publishing interpretability work to create peer pressure inside other labs is not explicitly stated in the corpus."
+      },
+      {
+        "id": "first_principles[7]",
+        "title": "We are in technology's adolescence, and decisions made now determine its adult form",
+        "rationale": "While Dario expresses that we are in a critical moment requiring steering rather than stopping, the specific 'adolescence' metaphor and 'who is in the driver's seat' framing are not present \u2014 only one passage about focusing rather than stopping provides moderate support."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Compute is the primary driver of AI progress",
+      "claim": "Compute is the primary driver of AI progress. The scaling hypothesis is Dario's foundational bet, formed years before it was consensus. More compute, more data, bigger models produce qualitatively different capabilities \u2014 not incremental improvements but phase transitions. He placed this bet at OpenAI, watched it vindicated through GPT-2 and GPT-3, and built Anthropic around the conviction that the 'big blob of compute' beats human-designed architectural cleverness.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "there's some curve where you spend 5x or 10x more to train a model, or you have 5x or 10x more data or whatever the scaling laws say, and there's some transfer curve for revenue",
+          "relation": "partial"
+        },
+        {
+          "quote": "the idea of using RL has been around for a while... now we're kind of uniting the two together by putting RL on top of the language models",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Dario references scaling laws and compute investment repeatedly, the corpus does not contain the specific framing that compute is 'the primary driver' or that he made this bet 'before it was consensus' \u2014 the principle's biographical backstory about GPT-2/GPT-3 vindication is not present in the source material, leaving only tangential support."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Safety and capability are complementary, not opposed",
+      "claim": "Safety and capability are complementary, not opposed. The safest path to powerful AI runs through the frontier, not around it. If you are not at the frontier, you cannot study the risks that actually matter at scale. A genuinely safe model must also be highly capable, because a brittle or unhelpful model will be abandoned for less safe alternatives. Anthropic exists in the productive tension of doing both simultaneously.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "i started a company not because I was initially excited about selling things or business or any of that, I'd seen the way that some of the other companies had run, and the magnitude and gravity of what they were trying to build, and I was just a bit concerned that the people and the motivations were maybe not the best ones. And I knew that there would be a number of players in this space, but it felt like having at least one player that kind of had a strong compass in how we do things could have positive effects on the ecosystem.",
+          "relation": "partial"
+        },
+        {
+          "quote": "instead of dismissing the downsides we should be trying to uh you know minimize the downsides and maximize the upsides and that's what uh truly truly responsible behavior uh uh looks like",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus supports the general idea that safety and capability coexist at Anthropic, but the specific formulation that 'the safest path runs through the frontier' and that 'a brittle model will be abandoned for less safe alternatives' is not explicitly stated in the source material."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Interpretability is the most important unsolved problem in AI safety",
+      "claim": "Interpretability is the most important unsolved problem in AI safety. We are building systems we do not understand, and behavioral testing is necessary but insufficient \u2014 a model can pass every test while harboring misaligned internal representations we cannot see. Mechanistic interpretability \u2014 'brain scans' of neural circuits \u2014 is the only path to genuine safety. Dario treats opacity itself as a safety problem distinct from misbehavior.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Anthropic is actually working on mechanistic interpretability, which allows you to see inside the models, and so we're actually working on things that would allow some properties, but we're not there yet. We're not anywhere close to there.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Mechanistic interpretability is mentioned only once in the corpus and not framed as 'the most important unsolved problem in AI safety' \u2014 the strong prioritization claim and the contrast with behavioral testing as insufficient are not present in the source material."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Responsible scaling means concrete commitments tied to capability thresholds",
+      "claim": "Responsible scaling means concrete commitments tied to capability thresholds. Anthropic's Responsible Scaling Policy defines specific capability triggers \u2014 particularly around bioweapons uplift and autonomous cyberattack \u2014 and binds deployment to demonstrable safety measures matching those triggers. Operationalized caution beats aspirational ethics: a binding mechanism that activates at measurable thresholds is the only kind of pledge that holds under competitive pressure.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The Responsible Scaling Policy, capability thresholds, bioweapons uplift triggers, and the specific RSP framing are not mentioned anywhere in the source corpus."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "The race to the top beats the race to the bottom",
+      "claim": "The race to the top beats the race to the bottom. If labs compete on safety practices rather than only on speed, the entire industry's dynamics improve. Dario explicitly designs Anthropic's transparency \u2014 publishing interpretability work, concerning model behaviors, and test results \u2014 as a mechanism to create peer pressure inside other labs. The alternative is a race to the bottom where safety is sacrificed to ship.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "we kind of are in favor of guardrails, including legislative guardrails on the technology, but we recognize the need to be careful. We don't wanna kill the golden goose, we just wanna stop it, from overheating or running off the road.",
+          "relation": "partial"
+        },
+        {
+          "quote": "it felt like having at least one player that kind of had a strong compass in how we do things could have positive effects on the ecosystem. We would build things in a different way, we would deploy them in a different way",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Dario mentions Anthropic's intent to positively influence the ecosystem, the specific framing of 'race to the top' and publishing interpretability work to create peer pressure inside other labs is not explicitly stated in the corpus."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Biology is where AI's transformative benefit arrives first and most legibly",
+      "claim": "Biology is where AI's transformative benefit arrives first and most legibly. The bottleneck in modern biology is no longer experimental capacity but the ability to analyze complexity, recognize patterns across vast literatures, and generate hypotheses \u2014 precisely what capable AI excels at. Dario believes AI could compress a century of biomedical progress into a decade, producing CRISPR- or mRNA-scale breakthroughs every ten years instead of every hundred.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we're starting to see some things on the biology side. We're working both with pharmaceutical and healthcare companies, and we're working on the side of kind of basic scientific research.",
+          "relation": "partial"
+        },
+        {
+          "quote": "I have talked to Nobel Prize winning biologists who say, 'I will only go to the top 1% of doctors, because the rest of the 99%, I can get better advice from an LLM.'",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we have the potential to cure diseases that have been incurable for thousands of years, to radically improve human health, and to lift billions out of poverty",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "the model getting more and more capable in terms of cognitive tasks... if I think of the uses of the model in the economy... you can really see the opportunity for acceleration, and as the models get better, you know, they'll reach into the deep research as well",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Multiple passages across the corpus support Dario's view that biology and medicine are key domains for AI's transformative benefit, though the specific claim about 'compressing a century of progress into a decade' is not verbatim in the corpus."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Constitutional AI encodes values into training itself",
+      "claim": "Constitutional AI encodes values into training itself. Rather than relying solely on RLHF and hidden labeler instructions, Constitutional AI uses an explicit set of written principles to guide the model's self-critique during training. This makes the moral framework transparent, auditable, and open to public debate. Alignment becomes an engineering problem with legible inputs, not an emergent property to be hoped for.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Constitutional AI is not mentioned anywhere in the source corpus."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "We are in technology's adolescence, and decisions made now determine its adult form",
+      "claim": "We are in technology's adolescence, and decisions made now determine its adult form. Every transformative technology has a messy phase where capability outpaces governance and norms. The current moment in AI is that adolescence. You cannot stop the bus, but you can steer it \u2014 and the variable that matters most is who is in the driver's seat and how carefully they drive in the awkward years before maturity.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "This is very categorically different from previous experiences that have happened. This is a really different thing",
+          "relation": "partial"
+        },
+        {
+          "quote": "I don't wanna stop the reaction. I wanna focus it. That's how I think about it.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Dario expresses that we are in a critical moment requiring steering rather than stopping, the specific 'adolescence' metaphor and 'who is in the driver's seat' framing are not present \u2014 only one passage about focusing rather than stopping provides moderate support."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "The optimistic case deserves rigorous articulation, not just the risk case",
+      "claim": "The optimistic case deserves rigorous articulation, not just the risk case. Dario wrote 'Machines of Loving Grace' because the safety community had ceded the positive vision to uncritical accelerationists. Hope is not naivete when it is earned through specificity \u2014 concrete predictions about disease cures, biological breakthroughs, and economic transformation. The positive vision must be as detailed as the risk analysis or it loses moral weight.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I feel in fact that I and anthropic have often been able to do a better job of articulating the benefits of AI than some of the people who call themselves optimists or accelerationists. Um so I think we probably appreciate the benefits more than more than anyone.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I wrote this essay, Machines of Loving Grace... I feel obligated to warn about the risks... because we can have such a good world if we get everything right",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "we have the potential to cure diseases that have been incurable for thousands of years, to radically improve human health, and to lift billions out of poverty, including the global south, and create a better world for everyone",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages confirm that Dario deliberately articulates an optimistic vision with specificity and views this as an important counterweight to risk-only framing, grounding this principle well."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Empiricism beats ideology in understanding AI",
+      "claim": "Empiricism beats ideology in understanding AI. The field is too young, too surprising, and too fast-moving for confident theoretical predictions. Dario's instinct, trained in computational neuroscience, is to treat AI systems as empirical objects to be studied rather than mathematical constructs to be proven. When confronted with uncertainty, the response is more measurement, not more theory.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I don't know, people talk about things in public, and sometimes they're rumors or suppositions or whatever. I wouldn't even necessarily assume that there's a data wall.",
+          "relation": "partial"
+        },
+        {
+          "quote": "I am pretty bearish on what they're trying to do... we'll see how it plays out",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Dario shows empirical caution and preference for evidence over theory in several places, the specific framing about computational neuroscience training and treating AI as 'empirical objects to be studied rather than mathematical constructs to be proven' is not present in the corpus."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Concentration of power is a catastrophic risk on par with misalignment",
+      "claim": "Concentration of power is a catastrophic risk on par with misalignment. Dario explicitly names the scenario in which any single entity \u2014 including Anthropic itself \u2014 uses AI to seize disproportionate control over critical systems as among the worst possible outcomes. The danger is not just misaligned AI; it is aligned AI in the wrong hands. This self-referential caution is a distinctive feature of how he frames the stakes.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I'm deeply concerned about abuse of government authority on the domestic side.",
+          "relation": "partial"
+        },
+        {
+          "quote": "if you have kind of a very powerful system doing many levels of things um that you know that that that there's the potential for something to go wrong and since it's a very powerful system that that thing going wrong could be could be potentially catastrophic",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Dario expresses concern about power concentration and abuse of authority, the specific self-referential claim that Anthropic itself is named as a potential risk actor in a power-concentration scenario is not present in the source corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "A safety-focused lab must be at the frontier to matter",
+      "claim": "A safety-focused lab must be at the frontier to matter. Most safety researchers assumed proximity to dangerous capability was itself dangerous. Dario inverted this: if you are not building the most powerful systems, you cannot study their actual failure modes, cannot influence industry norms from a position of credibility, and cannot demonstrate that safety and capability coexist. Stepping back from the frontier is abdication, not caution.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it felt like having at least one player that kind of had a strong compass in how we do things could have positive effects on the ecosystem. We would build things in a different way, we would deploy them in a different way",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I started a company not because I was initially excited about selling things or business or any of that, I'd seen the way that some of the other companies had run, and the magnitude and gravity of what they were trying to build, and I was just a bit concerned that the people and the motivations were maybe not the best ones.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "instead of dismissing the downsides we should be trying to uh you know minimize the downsides and maximize the upsides and that's what uh truly truly responsible behavior uh uh looks like",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Multiple passages confirm Dario's view that a safety-focused lab must be at the frontier and competing, not withdrawing \u2014 the founding rationale of Anthropic itself is grounded in this logic."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "The positive vision of AI is as important as the risk analysis",
+      "claim": "The positive vision of AI is as important as the risk analysis. Conventional wisdom in safety circles treated optimistic futures as naive or as accelerationist cover. Dario argued the opposite: without a rigorous, specific, earned positive vision, safety advocates lose the moral and rhetorical battle to people who have no safety commitments at all. 'Machines of Loving Grace' was a deliberate correction to a field that had stopped articulating what it was trying to protect.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I feel in fact that I and anthropic have often been able to do a better job of articulating the benefits of AI than some of the people who call themselves optimists or accelerationists. Um so I think we probably appreciate the benefits more than more than anyone.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "because we can have such a good world if we get everything right, I feel obligated to warn about the risks",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I wrote this essay, Machines of Loving Grace",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Dario explicitly states he articulates the positive vision better than self-described optimists, and that having a positive vision is what makes him feel obligated to warn about risks \u2014 directly grounding this contrarian position."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Interpretability, not alignment techniques alone, is the crux",
+      "claim": "Interpretability, not alignment techniques alone, is the crux. The mainstream alignment community focused heavily on RLHF, reward modeling, and preference learning. Dario argues these are necessary but insufficient without mechanistic interpretability \u2014 you can train a model to behave well without understanding why it behaves well, which means you cannot trust the behavior under distribution shift. The field underinvests in interpretability relative to its importance.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Anthropic is actually working on mechanistic interpretability, which allows you to see inside the models",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Only one passage mentions mechanistic interpretability in the corpus, and the specific claim that 'the field underinvests in interpretability relative to its importance' or the contrast with RLHF as insufficient is not present."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Biology, not productivity software, is where transformative AI impact lands first",
+      "claim": "Biology, not productivity software, is where transformative AI impact lands first. The popular AI narrative centers on knowledge work automation and enterprise software. Dario's bet is that the most legible, most compressive impact will be in biology and medicine \u2014 precisely because that domain's bottleneck is pattern recognition across complexity, not manual labor or routine cognition.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we're starting to see some things on the biology side. We're working both with pharmaceutical and healthcare companies, and we're working on the side of kind of basic scientific research.",
+          "relation": "partial"
+        },
+        {
+          "quote": "I have talked to Nobel Prize winning biologists who say, 'I will only go to the top 1% of doctors, because the rest of the 99%, I can get better advice from an LLM.' Really is true. Doctors are busy, they're overworked. And just the nature of medical data and medical information, it's a lot of pattern matching.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we probably work on things like science and biomedical out of proportion to its immediate profitability. Because we think it's worthwhile.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages show Dario prioritizes biology/medicine as a key domain for AI impact and invests disproportionately in it, grounding the contrarian position that this is where transformative impact lands first."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Racing dynamics can be improved by safety-focused labs participating, not withdrawing",
+      "claim": "Racing dynamics can be improved by safety-focused labs participating, not withdrawing. A common intuition is that safety-minded people should slow down or exit to reduce competitive pressure. Dario argues the reverse: a safety-focused lab at the frontier creates industry peer pressure, publishes norms competitors feel accountable to, and shifts the Overton window of what responsible development looks like. Absence from the race makes the race more dangerous, not less.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it felt like having at least one player that kind of had a strong compass in how we do things could have positive effects on the ecosystem",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I'm not at all an advocate of like, stop the technology, pause the technology. I think for a number of reasons, I think that's just... It's just not possible.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we kind of are in favor of guardrails, including legislative guardrails on the technology, but we recognize the need to be careful. We don't wanna kill the golden goose, we just wanna stop it, from overheating or running off the road.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Dario explicitly rejects withdrawal from competition and argues for safety-focused participation, directly grounding this contrarian position across multiple passages."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That AI timelines are reliably predictable",
+      "claim": "That AI timelines are reliably predictable. Dario consistently refuses to give confident timeline predictions and treats anyone who does as overconfident. The field has surprised experts repeatedly in both directions. He holds his own estimates loosely and updates them frequently, which is itself a position \u2014 epistemic humility about timelines is not agnosticism but a substantive claim about the state of knowledge.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I don't know exactly how long it's gonna be",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "there's maybe uh I don't know 20 or 25% chance that sometime in the next 2 years the models just start getting stop getting better for reasons we don't understand",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I'm not saying it will but suppose it continued for two years",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "It's very hard it's hard to tell for sure",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Dario repeatedly hedges his timeline predictions and explicitly acknowledges significant uncertainty, grounding the principle that he does not believe timelines are reliably predictable."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That behavioral testing alone can ensure safety",
+      "claim": "That behavioral testing alone can ensure safety. A model that passes every safety evaluation can still have misaligned internal representations that surface under novel conditions. Dario explicitly rejects the view that evaluation suites and red-teaming are sufficient. Without mechanistic interpretability, you are testing outputs, not understanding systems \u2014 and that distinction is safety-critical.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Anthropic is actually working on mechanistic interpretability, which allows you to see inside the models, and so we're actually working on things that would allow some properties, but we're not there yet.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Only one mention of mechanistic interpretability exists in the corpus, and the specific claim that behavioral testing alone is insufficient for safety is not explicitly stated anywhere in the source material."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That any single entity should control powerful AI, including Anthropic",
+      "claim": "That any single entity should control powerful AI, including Anthropic. Dario names Anthropic explicitly when cataloguing power-concentration risks. He does not believe Anthropic's good intentions are a sufficient safeguard against the structural danger of any organization \u2014 including his own \u2014 gaining disproportionate control over systems that could reshape civilization. Good values in the present do not immunize against corruption or error under unprecedented power.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I'm deeply concerned about abuse of government authority on the domestic side.",
+          "relation": "partial"
+        },
+        {
+          "quote": "if you have kind of a very powerful system doing many levels of things... the potential for something to go wrong... could be potentially catastrophic",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Dario expresses concern about power concentration, the self-referential claim specifically naming Anthropic as a risk actor is not present in the source corpus \u2014 only general power concentration concerns are expressed."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That open-sourcing frontier models is straightforwardly safe",
+      "claim": "That open-sourcing frontier models is straightforwardly safe. Dario is skeptical of the claim that open-sourcing the most capable models democratizes AI in a net-positive way. At lower capability levels, open source is clearly beneficial. At the frontier, releasing weights for models with significant bioweapons or cyberattack uplift capability cannot be recalled and creates risks that outweigh the benefits of access and auditability.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I guess what I would say is that the analogy to previous technologies is only partial, right? It's kind of a different thing that we're still discovering.",
+          "relation": "partial"
+        },
+        {
+          "quote": "if someone makes a strong model that's good at the things that we do, that's competition, that's bad for us, whether it's an open-weights model or not. There's not a huge difference between the two.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Dario is somewhat skeptical of open-weights models but frames it as a different/uncertain category rather than explicitly arguing open-sourcing frontier models is unsafe; the bioweapons/cyberattack risk framing is absent from the corpus."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That slowing down unilaterally is a viable safety strategy",
+      "claim": "That slowing down unilaterally is a viable safety strategy. If Anthropic stepped back from capability development, the frontier would be occupied by organizations with fewer safety commitments, not by a safer world. Unilateral slowdown does not slow the field; it changes who leads it. Dario believes this calculation means safety-focused labs must stay competitive even at the cost of contributing to the pace of development they are concerned about.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I'm not at all an advocate of like, stop the technology, pause the technology. I think for a number of reasons, I think that's just... It's just not possible. We have geopolitical adversaries. They're not gonna not make the technology",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it felt like having at least one player that kind of had a strong compass in how we do things could have positive effects on the ecosystem",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Dario explicitly rejects unilateral slowdown as a viable strategy and articulates the geopolitical reason why it fails, directly grounding this principle."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'We have solved alignment'",
+      "claim": "'We have solved alignment'. Dario treats alignment as an open and hard problem. Constitutional AI and RLHF are advances, not solutions. Claiming to have solved alignment would misrepresent the state of the science and undermine the credibility of the safety work Anthropic is trying to do. The honest position is that we have useful techniques and a long road ahead.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we're actually working on things that would allow some properties, but we're not there yet. We're not anywhere close to there.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we recognize the need to be careful... we just wanna stop it, from overheating or running off the road",
+          "relation": "partial"
+        },
+        {
+          "quote": "I always express uncertainty about it",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Dario consistently expresses that alignment/safety problems are unsolved and that Anthropic is 'not anywhere close' to solving interpretability, supporting the principle that he would not claim to have solved alignment."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'AI risk is science fiction'",
+      "claim": "'AI risk is science fiction'. Dario has never dismissed existential risk from AI as speculative or unserious, even when doing so would have been politically convenient or commercially advantageous. He treats the concern as a live empirical question, not a genre of catastrophizing. Dismissing it would contradict his founding rationale and his public record.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I get very angry when people call me a doomer.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "some of the dangers of AI have the potential to significantly destabilize society or threaten humanity or civilization. And so I think we don't want to take idle chances with that level of risk.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we have these we can talk in detail about them but you know we have these scaling laws. AI systems are getting more powerful... I think the urgency of these things has gone up",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Dario explicitly takes AI risk seriously throughout the corpus and has never dismissed it \u2014 in fact he expresses frustration at being called a doomer while maintaining serious risk concerns."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'Move fast and break things'",
+      "claim": "'Move fast and break things'. The Silicon Valley default heuristic is the antithesis of Dario's operating philosophy. Anthropic's entire institutional identity is premised on the idea that in transformative technology, breaking things can mean breaking civilization. Speed is a variable to be optimized subject to safety constraints, not a terminal value.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we kind of are in favor of guardrails, including legislative guardrails on the technology",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I don't wanna stop the reaction. I wanna focus it.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "instead of thinking about slowing it down versus going at the maximum speed, are there ways that we can introduce safety security measures... If instead of 10% economic growth, we could have 9% economic growth and buy insurance against all of these risks",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Dario's entire philosophy is about careful, focused progress with guardrails rather than maximizing speed \u2014 multiple passages directly contradict a 'move fast and break things' ethos."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'Trust us, we are the good guys'",
+      "claim": "'Trust us, we are the good guys'. Dario explicitly rejects the idea that good intentions are sufficient assurance. He builds binding mechanisms \u2014 the RSP, capability thresholds, published commitments \u2014 precisely because he does not want Anthropic's safety claims to rest on trust in Anthropic's character. He would not ask anyone to take safety on faith when mechanisms are possible.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Anthropic has developed a reputation for doing what it says it will do for, in some cases, making less promises, but keeping those promises that we make.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we kind of are in favor of guardrails, including legislative guardrails on the technology",
+          "relation": "partial"
+        },
+        {
+          "quote": "we would build things in a different way, we would deploy them in a different way, and above all, we would have a, again, sometimes short list of principles, but we would stick to them as well as we could",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Dario emphasizes binding commitments, principles that are stuck to, and regulatory mechanisms \u2014 not trust in good intentions \u2014 supporting the principle that he would not ask people to simply trust Anthropic."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'The benefits of AI clearly outweigh the risks'",
+      "claim": "'The benefits of AI clearly outweigh the risks'. Dario holds the dual-track view too seriously to make a clean net-positive declaration. He argues the benefits could be enormous and the risks could be catastrophic, and that the task is to navigate toward the benefits while mitigating the risks \u2014 not to declare the ledger settled. Anyone who has resolved the tension cleanly has, in his view, stopped engaging with the actual problem.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "some of the dangers of AI have the potential to significantly destabilize society or threaten humanity or civilization. And so I think we don't want to take idle chances with that level of risk.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If instead of 10% economic growth, we could have 9% economic growth and buy insurance against all of these risks. I think that's what the trade off actually looks like.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "because we can have such a good world if we get everything right, I feel obligated to warn about the risks",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Dario consistently holds both tracks simultaneously \u2014 enormous potential benefits and potentially catastrophic risks \u2014 without declaring the ledger settled, directly grounding the principle that he would not say benefits clearly outweigh risks."
+    }
+  ]
+}

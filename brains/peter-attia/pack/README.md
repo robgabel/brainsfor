@@ -1,11 +1,11 @@
 # Peter Attia Brain Pack
 
-> **153 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **803 knowledge atoms** · **866 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Peter Attia's thinking, extracted from 400+ episodes of The Drive podcast, reviews of Outlive (2023), and detailed blog posts. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Peter Attia's thinking, extracted from 400+ episodes of The Drive podcast, reviews and interviews about Outlive (2023), TED talk on metabolic health, Joe Rogan Experience episodes #1108 and #1961, Huberman Lab appearances, and detailed blog posts. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Peter's actual ideas, frameworks, and worldview.
 
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Peter
    ```
 3. Then run any thinking skill:
    ```
-   /advise "I'm 55, overweight, and sedentary. What's my first move?"
+   /advise "I'm 52, have elevated LDL, and my doctor says not to worry. What should I actually do?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Peter's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Peter's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (153 atoms, 1000 connections)
+  ├── brain-atoms.json      ← Structured data (803 atoms, 866 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,13 +56,13 @@ This means:
 
 ## The Knowledge Graph
 
-**153 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**803 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**866 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — Zone 2 training, VO2 max, Four Horsemen, metabolic health, cardiovascular prevention, cancer screening, emotional resilience, sleep, pharmacology, muscle.
+**16 topic clusters** — Zone 2 training, VO2 max, Four Horsemen, metabolic health, cardiovascular prevention, cancer screening, emotional resilience, sleep, pharmacology, muscle, apoB, Medicine 3.0.
 
-**Date range:** 2013 — April 2026
+**Date range:** 2012 — April 2026
 
 ## How to Use
 
@@ -95,7 +95,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 ## About Peter Attia
 
-Peter Attia is a physician and longevity expert who has reshaped how high-performers think about health across decades. His "Outlive" book and "The Drive" podcast are the primary source for evidence-based longevity strategy, blending mechanistic biochemistry with practical behavior change.
+Peter Attia is a physician and longevity expert who has reshaped how high-performers think about health across decades. His book 'Outlive' and podcast 'The Drive' are the primary sources for evidence-based longevity strategy, blending mechanistic biochemistry with practical behavior change and a deeply personal reckoning with emotional health.
 
 ## Sources & Ethics
 

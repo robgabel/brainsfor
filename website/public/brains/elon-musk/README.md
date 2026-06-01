@@ -1,11 +1,11 @@
 # Elon Musk Brain Pack
 
-> **247 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **836 knowledge atoms** · **719 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Elon Musk's thinking, extracted from Tweets, interviews, earnings calls, and public presentations. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Elon Musk's thinking, extracted from Joe Rogan Experience episodes, Lex Fridman Podcast episodes, TED talks, SXSW interviews, Code Conference appearances, Wikipedia biography, and major media profiles. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Elon's actual ideas, frameworks, and worldview.
 
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Elon'
    ```
 3. Then run any thinking skill:
    ```
-   /advise "Should I vertically integrate my supply chain or work with partners?"
+   /advise "Should I vertically integrate my supply chain or outsource manufacturing to reduce upfront costs?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Elon's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Elon's perspect
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (247 atoms, 1000 connections)
+  ├── brain-atoms.json      ← Structured data (836 atoms, 719 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**247 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**836 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**719 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — First principles thinking, sustainable energy, space exploration, neural interfaces, manufacturing, AI safety, Mars colonization, electric vehicles.
+**16 topic clusters** — First principles thinking, sustainable energy, space exploration, neural interfaces, manufacturing innovation, AI safety, Mars colonization, electric vehicles, simulation theory, vertical integration.
 
 **Date range:** 2002 — Present
 
@@ -95,7 +95,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 ## About Elon Musk
 
-Elon Musk is a serial entrepreneur and engineer who has fundamentally transformed multiple industries through companies like Tesla, SpaceX, Neuralink, and The Boring Company. His approach combines first principles thinking with ambitious long-term vision for humanity's future.
+Elon Musk is a serial entrepreneur and engineer who has fundamentally transformed multiple industries through companies like Tesla, SpaceX, Neuralink, and The Boring Company. His approach combines first principles thinking with an ambitious long-term vision for humanity's survival and expansion beyond Earth.
 
 ## Sources & Ethics
 

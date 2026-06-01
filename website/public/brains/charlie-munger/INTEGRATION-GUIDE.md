@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (218 atoms, 1000 typed connections)
+  brain-atoms.json         ~1MB     Structured data (1066 atoms, 1045 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | Charlie's synthesized worldview, all 218 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | Charlie's synthesized worldview, all 1066 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 
@@ -141,9 +141,9 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 4. Use any thinking skill:
    ```
-   /advise Should I diversify across 40 stocks or concentrate in my 5 best ideas?
-   /debate Is it better to buy a great business at a fair price or a fair business at a great price?
-   /predict What happens when central banks keep rates artificially low for a decade?
+   /advise I'm thinking about making a large concentrated bet on a single company I've studied deeply. Am I being bold or reckless?
+   /debate Is it better to be a specialist who knows one industry deeply or a generalist with a latticework of mental models?
+   /predict What are the second and third-order effects of AI replacing large categories of knowledge work?
    /surprise
    ```
 

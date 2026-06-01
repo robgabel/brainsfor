@@ -1,11 +1,11 @@
 # Shiva Rajaraman Brain Pack
 
-> **536 knowledge atoms** · **419 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **817 knowledge atoms** · **791 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Shiva Rajaraman's thinking, extracted from Public talks, interviews, and writings across Shiva Rajaraman's career. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Shiva Rajaraman's thinking, extracted from Public talks, interviews, podcast appearances, and writings across Shiva Rajaraman's career from YouTube through OpenAI. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Shiva's actual ideas, frameworks, and worldview.
 
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Shiva
    ```
 3. Then run any thinking skill:
    ```
-   /advise "Should I optimize my app for retention or growth right now?"
+   /advise "My product has decent retention but users never describe it as something they love. How do I diagnose what's missing?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Shiva's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Shiva's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (536 atoms, 419 connections)
+  ├── brain-atoms.json      ← Structured data (817 atoms, 791 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,13 +56,13 @@ This means:
 
 ## The Knowledge Graph
 
-**536 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**817 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**419 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**791 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — Consumer product design, platform strategy, AI products, music and audio, creator economy, organizational design, taste at scale, product culture.
+**16 topic clusters** — Consumer product design, platform strategy, AI products, music and audio, creator economy, web3 and NFTs, organizational design, product-market fit, data-driven product management, commerce and discovery.
 
-**Date range:** 2008 — Present
+**Date range:** 2010 — Present
 
 ## How to Use
 
@@ -95,7 +95,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 ## About Shiva Rajaraman
 
-Shiva Rajaraman is a seasoned product leader who has shaped some of the world's most beloved consumer platforms. As VP of Product at OpenAI, former CPO at WeWork, VP of Product at Spotify, and product leader at YouTube and Facebook, he brings a rare cross-platform perspective on building products that resonate at massive scale.
+Shiva Rajaraman is a veteran product leader who has shaped some of the world's most consequential consumer platforms. Across YouTube, Spotify, WeWork, Facebook, OpenSea, and OpenAI, he has developed a rare cross-platform perspective on what separates forgettable products from ones people genuinely love — and how to build organizations capable of sustained product excellence.
 
 ## Sources & Ethics
 

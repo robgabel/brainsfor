@@ -1,11 +1,11 @@
 # Sun Tzu Brain Pack
 
-> **207 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **772 knowledge atoms** · **906 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Sun Tzu's thinking, extracted from 13 chapters of The Art of War, plus centuries of military and strategic commentary attributed to Sun Tzu and his school of thought. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Sun Tzu's thinking, extracted from 13 chapters of The Art of War, Wikipedia profile, Sonshi analysis, multiple documentary and audiobook video sources, and centuries of military and strategic commentary attributed to Sun Tzu and his school of thought. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Sun's actual ideas, frameworks, and worldview.
 
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Sun's
    ```
 3. Then run any thinking skill:
    ```
-   /advise "Should I compete head-on with a larger rival or find an indirect approach?"
+   /advise "My competitor just launched a product that undercuts mine on price. Should I match them or differentiate?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Sun's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Sun's perspecti
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (207 atoms, 1000 connections)
+  ├── brain-atoms.json      ← Structured data (772 atoms, 906 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**207 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**772 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**906 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — strategic assessment, deception, terrain, momentum, intelligence, leadership, adaptability, timing, resource management, psychological warfare.
+**16 topic clusters** — strategic assessment, deception, terrain, momentum, intelligence, leadership, adaptability, timing, resource management, psychological warfare, victory without battle, offense and defense.
 
 **Date range:** ~500 BC
 
@@ -95,7 +95,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 ## About Sun Tzu
 
-Sun Tzu was a Chinese military strategist and philosopher, traditionally credited as the author of The Art of War, an immensely influential treatise on military strategy written around the 5th century BC. His ideas on strategic planning, deception, intelligence gathering, and adaptive leadership have influenced military commanders, business executives, and political leaders for over 2,500 years.
+Sun Tzu was a Chinese military strategist and philosopher, traditionally credited as the author of The Art of War, an immensely influential treatise on military strategy written around the 5th century BC. His ideas on strategic planning, deception, intelligence gathering, adaptive leadership, and the concept of winning without fighting have influenced military commanders, business executives, political leaders, and technologists for over 2,500 years.
 
 ## Sources & Ethics
 

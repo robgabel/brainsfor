@@ -1,0 +1,547 @@
+{
+  "brain_slug": "brene-brown-v2",
+  "timestamp": "2026-05-31T00:58:02.512186+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 35,
+    "youtube_chars": 1026187,
+    "atom_quote_count": 790,
+    "total_chars": 1200363
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 3,
+        "weak": 8,
+        "ungrounded": 0,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 1,
+        "weak": 1,
+        "ungrounded": 4,
+        "total": 6
+      },
+      "does_not_believe": {
+        "grounded": 2,
+        "weak": 2,
+        "ungrounded": 2,
+        "total": 6
+      },
+      "would_not_say": {
+        "grounded": 1,
+        "weak": 2,
+        "ungrounded": 3,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 7,
+      "weak": 13,
+      "ungrounded": 9,
+      "total": 29
+    },
+    "grounding_pct": 46.6,
+    "ungrounded_examples": [
+      {
+        "id": "contrarian_positions[1]",
+        "title": "Vulnerability on social media is mostly not vulnerability",
+        "rationale": "The corpus contains no passage where Brown distinguishes performative social-media vulnerability from real vulnerability or argues that broadcasting to strangers takes near-zero courage; this specific argument is not present in the source material."
+      },
+      {
+        "id": "contrarian_positions[3]",
+        "title": "'I don't care what people think' is its own form of armor",
+        "rationale": "The corpus does not contain any passage where Brown argues that 'I don't care what people think' is a form of armor or that the goal is to build a deliberate filter for whose opinions earn weight; this specific argument is absent from the source material."
+      },
+      {
+        "id": "contrarian_positions[4]",
+        "title": "Asking for forgiveness in an apology is an offloading of burden",
+        "rationale": "The corpus contains no passage where Brown specifically addresses the structure of apologies, the word 'but,' or requesting forgiveness as burden-offloading; this principle is not present in the source material."
+      },
+      {
+        "id": "contrarian_positions[5]",
+        "title": "Hyper-independence is a wound, not a virtue",
+        "rationale": "The corpus does not contain any passage where Brown frames hyper-independence as a wound or symptom, or distinguishes it from interdependence as a healthier goal; this specific argument is absent."
+      },
+      {
+        "id": "does_not_believe[2]",
+        "title": "That perfectionism is the same as healthy striving",
+        "rationale": "The corpus contains no passage where Brown distinguishes perfectionism from healthy striving or describes perfectionism as a '20-ton shield'; this specific framework is absent from the source material."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[1]",
+        "title": "You cannot selectively numb emotion",
+        "rationale": "The corpus references numbing as a way of avoiding pain and vulnerability, but does not explicitly state the specific claim that numbing is a 'package deal' that simultaneously dampens positive emotions like joy and gratitude \u2014 that precise neurological argument is not articulated in the source material."
+      },
+      {
+        "id": "first_principles[2]",
+        "title": "Shame cannot survive being spoken into empathy",
+        "rationale": "The corpus touches on shame losing its power when spoken and shared with a trusted person, but the specific three-condition framework (secrecy, silence, judgment) and the mechanism of 'shame dies when exposed to empathy' are not explicitly articulated in the source material, making this only weakly grounded."
+      },
+      {
+        "id": "first_principles[3]",
+        "title": "Shame and guilt are categorically different emotions with opposite effects",
+        "rationale": "The corpus does not contain any explicit distinction between shame ('I am bad') and guilt ('I did something bad') as categorically different emotions with opposite effects; this specific framework is not articulated in the source material."
+      },
+      {
+        "id": "first_principles[4]",
+        "title": "Worthiness has no prerequisites",
+        "rationale": "The 'you are already enough' language appears in the second corpus document, but it is unclear this is attributable to Bren\u00e9 Brown's own speech (vs. a produced speech attributed to her); the first corpus from her own speaking does not explicitly articulate the 'worthiness has no prerequisites' framework, making this only weakly grounded in her verified speech."
+      },
+      {
+        "id": "first_principles[7]",
+        "title": "Boundaries are a prerequisite for compassion, not a barrier to it",
+        "rationale": "While boundaries are discussed, the specific claim that 'the most compassionate people are the most boundaried' and that 'giving without boundaries curdles into resentment' is not explicitly stated in the source corpus \u2014 only the general importance of boundaries is grounded."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Vulnerability is the most accurate measure of courage",
+      "claim": "Vulnerability is the most accurate measure of courage. Vulnerability is not weakness \u2014 it is uncertainty, risk, and emotional exposure, and it is the birthplace of love, belonging, joy, creativity, faith, and innovation. The cultural equation of vulnerability with weakness is the single most destructive myth her research dismantles.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "vulnerability is defined as uncertainty risk and emotional exposure can you name one act of courage that you've ever been involved in or that you've ever even witnessed that did not involve uncertainty risk and emotional exposure and it's a loaded question because i know the answer is no",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "vulnerability is courage so only yes i have to ask one question to flip the whole thing it's this vulnerability is defined as uncertainty risk and emotional exposure",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it's actually our inability to be vulnerable yeah that makes us weak",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly equate vulnerability with courage and define vulnerability as uncertainty, risk, and emotional exposure, supporting this principle robustly."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "You cannot selectively numb emotion",
+      "claim": "You cannot selectively numb emotion. When we armor up against grief, fear, shame, and uncertainty, we simultaneously dampen joy, gratitude, creativity, and love. The neural pathways are not separate \u2014 numbing is always a package deal.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "you can numb out and drink and use and and and anesthetize yourself in whatever way you do or you can show up",
+          "relation": "partial"
+        },
+        {
+          "quote": "we're the most medicated addicted in debt and obese americans in history like our tolerance for discomfort is zero",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus references numbing as a way of avoiding pain and vulnerability, but does not explicitly state the specific claim that numbing is a 'package deal' that simultaneously dampens positive emotions like joy and gratitude \u2014 that precise neurological argument is not articulated in the source material."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Shame cannot survive being spoken into empathy",
+      "claim": "Shame cannot survive being spoken into empathy. Shame requires three growing conditions \u2014 secrecy, silence, and judgment \u2014 and dies when exposed to empathy. This is the central clinical finding of her entire research program and the mechanism underlying every intervention she designs.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "i think a lot of us you know i held down the shames for many years on the sexual trauma that i went through as a kid but then other just like little shames you know throughout the years uh i shouldn't have said that or yeah maybe that was a white lie or was i an integrity in this moment holding on to these little shames when we what i've realized is that when we fully own the shame yeah big t little t trauma oh yeah big ass little s shame and we embrace it and we do talk about it whether it doesn't have to be publicly in this format but just with someone yeah trusted um and we we own it and we embrace it and we learn to let it go then we can be fully ourselves",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus touches on shame losing its power when spoken and shared with a trusted person, but the specific three-condition framework (secrecy, silence, judgment) and the mechanism of 'shame dies when exposed to empathy' are not explicitly articulated in the source material, making this only weakly grounded."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Shame and guilt are categorically different emotions with opposite effects",
+      "claim": "Shame and guilt are categorically different emotions with opposite effects. Guilt says 'I did something bad' and is adaptive \u2014 it motivates repair. Shame says 'I am bad' and is corrosive \u2014 it attacks the self that would otherwise be capable of change. Conflating the two is the single most damaging error in parenting, leadership, and self-talk.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "it's a lot a lot of language but i i can i can further that too",
+          "relation": "partial"
+        },
+        {
+          "quote": "i think a lot of us you know i held down the shames for many years on the sexual trauma that i went through as a kid",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus does not contain any explicit distinction between shame ('I am bad') and guilt ('I did something bad') as categorically different emotions with opposite effects; this specific framework is not articulated in the source material."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Worthiness has no prerequisites",
+      "claim": "Worthiness has no prerequisites. The belief that love and belonging must be earned through performance, appearance, or achievement is the engine of hustle culture and the source of most chronic suffering. Wholehearted living begins from 'I am enough' \u2014 not as affirmation but as prior condition that does not require proof.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "in the absence of love and belonging there's always suffering",
+          "relation": "partial"
+        },
+        {
+          "quote": "self-worth is not something that is given to you by others. it is something you own, something that exists within you, regardless of how anyone else perceives you",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "you are not less worthy because someone failed to see your value. you were already enough. you always have been",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The 'you are already enough' language appears in the second corpus document, but it is unclear this is attributable to Bren\u00e9 Brown's own speech (vs. a produced speech attributed to her); the first corpus from her own speaking does not explicitly articulate the 'worthiness has no prerequisites' framework, making this only weakly grounded in her verified speech."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "True belonging requires the willingness to stand alone",
+      "claim": "True belonging requires the willingness to stand alone. Fitting in is assessing a situation and changing yourself to gain acceptance; belonging is being who you are. They are not on a continuum \u2014 they are opposites. Fitting in requires self-betrayal as the price of admission.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the opposite of belonging is fitting in because fitting in is assessing a group of people and thinking who do i need to be what do i need to say what do i need to wear how do i need to act and changing who you are and true belonging never asks us to change who we are it demands that we be who we are",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "belonging is being a part of something bigger than yourself but it's also the courage to stand alone and to belong to yourself above all else",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if we if we belo if we fit in because how we've changed ourselves that's not belonging that's not belonging because you betrayed yourself for other people",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple verbatim passages from Brown's own speech directly articulate that belonging and fitting in are opposites, and that fitting in requires self-betrayal."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Trust is BRAVING \u2014 built in marble-jar moments, not grand gestures",
+      "claim": "Trust is BRAVING \u2014 built in marble-jar moments, not grand gestures. Trust accrues through Boundaries, Reliability, Accountability, Vault, Integrity, Non-judgment, and Generosity of interpretation. It is not a feeling but a stacked set of specific, observable behaviors earned one small moment at a time.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "TRUST IS BUILT IN VERY SMALL MOMENTS. AND WHEN WE STARTED LOOKING AT EXAMPLES OF WHEN PEOPLE TALKED ABOUT TRUST IN THE RESEARCH, THEY SAID THINGS LIKE, 'YEAH, I REALLY TRUST MY BOSS. SHE EVEN ASKED ME HOW MY MOM'S CHEMOTHERAPY WAS GOING.'",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "B-R-A-V-I-N-G. B.R.A.V.I.N.G. BECAUSE WHEN WE TRUST, WE ARE BRAVING CONNECTION WITH SOMEONE. SO WHAT ARE THE PARTS OF TRUST? 'B' -- BOUNDARIES... 'R' -- RELIABILITY... 'A' -- ACCOUNTABILITY... 'V' -- VAULT... 'I' -- INTEGRITY... 'N' -- NON-JUDGMENT... 'G' -- GENEROSITY.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The BRAVING acronym and the marble-jar metaphor for trust built in small moments are both explicitly and verbatim articulated in the Super Soul Sunday corpus."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Boundaries are a prerequisite for compassion, not a barrier to it",
+      "claim": "Boundaries are a prerequisite for compassion, not a barrier to it. The most compassionate people in her research are the most boundaried. Without boundaries, giving curdles into resentment, and resentment is incompatible with empathy. 'Choose discomfort over resentment' is the operating principle of sustainable generosity.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "THERE IS NO TRUST WITHOUT BOUNDARIES.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Boundaries are not walls meant to shut people out... Boundaries are guidelines that define how we allow ourselves to be treated.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "While boundaries are discussed, the specific claim that 'the most compassionate people are the most boundaried' and that 'giving without boundaries curdles into resentment' is not explicitly stated in the source corpus \u2014 only the general importance of boundaries is grounded."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Clear is kind; unclear is unkind",
+      "claim": "Clear is kind; unclear is unkind. Feeding people half-truths to avoid their discomfort \u2014 or our own \u2014 is not kindness but a form of cowardice that treats people as fragile. The discomfort of a direct conversation is always less harmful than the long-term damage of ambiguity.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "choose courage over comfort because you can't have both",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "discomfort is the great enemy of courage",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The 'choose courage over comfort' principle is present, but the specific formulation 'clear is kind; unclear is unkind' does not appear verbatim in the corpus, and the idea that avoiding discomfort through vagueness is a form of cowardice is not explicitly articulated."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Stories are how the brain makes meaning \u2014 and unchecked, they lie",
+      "claim": "Stories are how the brain makes meaning \u2014 and unchecked, they lie. When something painful happens, the brain manufactures a 'shitty first draft' to resolve uncertainty and rewards us chemically for the false certainty. Rising strong requires recognizing the story we're telling ourselves, reality-checking it, and revising \u2014 because the stories we don't interrogate become the truths we live by.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "loneliness occurs i think uh for some people it's because we never let people truly know us either because it doesn't feel safe or we don't truly know ourselves",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The 'shitty first draft' narrative framework and the concept of the brain manufacturing stories to resolve uncertainty are not articulated anywhere in the source corpus; this principle is entirely ungrounded in the provided material."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Language is the currency of emotional accuracy",
+      "claim": "Language is the currency of emotional accuracy. You cannot navigate emotions you cannot name. Most people have working vocabulary for three emotions in a world demanding far higher resolution. Granularity \u2014 disappointment vs. regret, shame vs. humiliation, envy vs. jealousy \u2014 is the prerequisite for regulation, connection, and meaning-making.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "i find it easier to talk about it so that's why i have a healthier relationship with my insecurities because i take away their power by discussing them",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The specific principle about emotional granularity, naming emotions, and the distinction between shame/humiliation or envy/jealousy as prerequisite for regulation is not articulated in the source corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "The opposite of belonging is fitting in, not loneliness",
+      "claim": "The opposite of belonging is fitting in, not loneliness. Conventional wisdom treats fitting in as a milder, acceptable form of belonging. Brown argues it is the active destroyer of belonging, because the cost of admission \u2014 being someone you are not \u2014 forecloses the very experience you sought.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the opposite of belonging is fitting in because fitting in is assessing a group of people and thinking who do i need to be what do i need to say what do i need to wear how do i need to act and changing who you are",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "i was so shocked to learn in the research that the opposite of belonging is fitting in",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Brown explicitly and repeatedly states in her own words that the opposite of belonging is fitting in, directly grounding this contrarian position."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Vulnerability on social media is mostly not vulnerability",
+      "claim": "Vulnerability on social media is mostly not vulnerability. Broadcasting an emotional confession to thousands of strangers takes near-zero courage and produces near-zero connection. Real vulnerability requires the specific risk of a specific person in a specific room. Performative disclosure is the counterfeit of the very thing it claims to enact.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passage where Brown distinguishes performative social-media vulnerability from real vulnerability or argues that broadcasting to strangers takes near-zero courage; this specific argument is not present in the source material."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Directness is the higher compassion",
+      "claim": "Directness is the higher compassion. The social convention that softening, hinting, and protecting people from hard information is kind is wrong. Vagueness wastes their time, denies them agency, and protects the speaker, not the listener. Clear is kind; unclear is unkind.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "choose courage over comfort because you can't have both",
+          "relation": "partial"
+        },
+        {
+          "quote": "discomfort is the great enemy of courage",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Brown advocates for choosing discomfort and courage, the specific formulation 'clear is kind; unclear is unkind' as a directness principle does not appear in the corpus, making this only weakly supported."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "'I don't care what people think' is its own form of armor",
+      "claim": "'I don't care what people think' is its own form of armor. The pose of total indifference to others' opinions is not freedom but a different kind of defense. Humans are hardwired for connection; the goal is not to stop caring but to build a deliberate filter \u2014 the arena \u2014 for whose opinions earn weight.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus does not contain any passage where Brown argues that 'I don't care what people think' is a form of armor or that the goal is to build a deliberate filter for whose opinions earn weight; this specific argument is absent from the source material."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Asking for forgiveness in an apology is an offloading of burden",
+      "claim": "Asking for forgiveness in an apology is an offloading of burden. A real apology does not include the word 'but,' does not request absolution, and does not exist to make the apologizer feel better. Forgiveness is earned through changed behavior over time, not requested as a closing transaction.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passage where Brown specifically addresses the structure of apologies, the word 'but,' or requesting forgiveness as burden-offloading; this principle is not present in the source material."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "Hyper-independence is a wound, not a virtue",
+      "claim": "Hyper-independence is a wound, not a virtue. American culture treats self-sufficiency as the apex of adulthood. Brown reads it as a symptom \u2014 the response of people who learned that depending on others was unsafe. The healthy goal is interdependence: being someone others can depend on, and who can depend on others.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus does not contain any passage where Brown frames hyper-independence as a wound or symptom, or distinguishes it from interdependence as a healthier goal; this specific argument is absent."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That vulnerability is weakness",
+      "claim": "That vulnerability is weakness. Every data point in her research runs the opposite direction. Vulnerability is the precondition for every meaningful human experience \u2014 love, creativity, belonging, faith, innovation. Calling it weakness is a defense mechanism masquerading as toughness.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it's actually our inability to be vulnerable yeah that makes us weak",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "vulnerability is courage so only yes",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "i've never had a single person be able to come up... give me an example of courage even on the field that doesn't involve vulnerability",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Brown explicitly and repeatedly argues that vulnerability is not weakness but rather the precondition for courage, directly grounding this belief."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That shame is a useful motivational tool",
+      "claim": "That shame is a useful motivational tool. Shame does not make people better; it makes people smaller. Research consistently shows shame correlates with addiction, aggression, depression, and disconnection \u2014 not with the changed behavior it is used to produce.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "the greatest shame trigger for men is do not be perceived as weak and in our culture we believe that vulnerability is weakness so you don't have to skip too many steps before you go hey it's shaming to be vulnerable and so men do two things in the face of shame pissed off or shut down",
+          "relation": "partial"
+        },
+        {
+          "quote": "i shamed my son every time he was vulnerable yeah i put him down i made fun of them i hit him every time he was vulnerable and now i look back",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Brown discusses the damaging effects of shame, the specific claim that 'shame does not make people better; it makes people smaller' and correlates with addiction/aggression/depression is not explicitly stated in the provided corpus."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That perfectionism is the same as healthy striving",
+      "claim": "That perfectionism is the same as healthy striving. Perfectionism is not about achievement \u2014 it is a 20-ton shield carried to ward off judgment, blame, and shame. Healthy striving is internally motivated; perfectionism is externally focused and corrosive to the self it claims to improve.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passage where Brown distinguishes perfectionism from healthy striving or describes perfectionism as a '20-ton shield'; this specific framework is absent from the source material."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That we can reliably read emotions on others' faces",
+      "claim": "That we can reliably read emotions on others' faces. Contrary to her earlier position, her updated research concludes we cannot accurately infer what another person feels from facial expression alone \u2014 and the assumption that we can is a significant source of interpersonal misattribution and conflict.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passage where Brown discusses the inability to read emotions on others' faces or mentions updated research on facial expression inference; this principle is entirely absent."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That belonging can be bought through conformity",
+      "claim": "That belonging can be bought through conformity. No amount of self-erasure purchases the experience of being loved for who you actually are. Fitting in produces the feeling of conditional acceptance, which is the opposite of belonging and reinforces the wound it was supposed to heal.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if we fit in because how we've changed ourselves that's not belonging that's not belonging because you betrayed yourself for other people and that's not sustainable",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the minute i become who you want me to be in order to fit in and make sure people like me is the moment i no longer belong anywhere",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Brown explicitly states that conformity-based fitting in forecloses belonging and is ultimately self-defeating, directly grounding this belief."
+    },
+    {
+      "principle_id": "does_not_believe[5]",
+      "section": "does_not_believe",
+      "title": "That numbing strategies are separate problems",
+      "claim": "That numbing strategies are separate problems. Overconsumption, addiction, busyness, and cynicism are not independent pathologies \u2014 they are variations on a single adaptive strategy: the attempt to avoid the discomfort of vulnerability. Treating them as separate misses the mechanism.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "you can numb out and drink and use and and and anesthetize yourself in whatever way you do or you can show up",
+          "relation": "partial"
+        },
+        {
+          "quote": "we're the most medicated addicted in debt and obese americans in history like our tolerance for discomfort is zero",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Brown groups various numbing behaviors together, the specific argument that they are all variations of a single strategy to avoid vulnerability is only partially supported and not explicitly stated as such in the corpus."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'Just be vulnerable' as a standalone instruction",
+      "claim": "'Just be vulnerable' as a standalone instruction. Vulnerability without boundaries and without appropriate context is not courage \u2014 it is flooding. She would distinguish vulnerability (emotional exposure within a relationship of trust) from oversharing (undifferentiated disclosure used to manipulate or manage discomfort).",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Here's the thing that's frustrating to me about the perception of my work. 'Be vulnerable' is the takeaway, but no one reads the the next three sentences, which says, 'Vulnerability minus boundaries is dis- inappropriate disclosure.'",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "be yourself with people who've earned the right to see yourself, you know, to see you, and share your story with people who've earned the right to hear your story. And with people with whom you've built a relationship that can bear the weight of the story.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Brown explicitly rejects the standalone 'just be vulnerable' instruction and articulates the distinction between vulnerability within trust and inappropriate disclosure."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'Fake it till you make it'",
+      "claim": "'Fake it till you make it'. Pretending to an emotion or identity you don't have is the architecture of shame culture, not its cure. Authenticity \u2014 showing up as who you actually are \u2014 is the entire project. Performance is what she is arguing against.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passage where Brown explicitly rejects 'fake it till you make it' or argues against performing emotions one doesn't have; this specific position is absent from the source material."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'Just toughen up'",
+      "claim": "'Just toughen up'. Armor is the enemy of connection, courage, and leadership. Telling someone to toughen up is telling them to shut down the very capacity \u2014 openness to emotional experience \u2014 that produces resilience, not a substitute for it.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "we were taught to outrun vulnerability we were taught to suck it up soldier on get her done",
+          "relation": "partial"
+        },
+        {
+          "quote": "it's actually our inability to be vulnerable yeah that makes us weak",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Brown critiques the 'toughen up' culture she was raised in, she does not explicitly say she 'would not say just toughen up' \u2014 she describes it as the approach she was raised with and critiques it, but the specific rejection as a would-not-say principle needs more explicit grounding."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'I don't have any shame'",
+      "claim": "'I don't have any shame'. The only people without shame are those with no capacity for human empathy. Claiming to have no shame is a signal of armor, not health. The goal is shame resilience \u2014 the ability to recognize shame, move through it, and reconnect \u2014 not shame absence.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passage where Brown states that claiming to have no shame signals armor, or articulates 'shame resilience' as a goal distinct from shame absence; this specific framework is absent."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'That's not my problem'",
+      "claim": "'That's not my problem'. Her entire framework is premised on the radical interdependence of human wellbeing. Disconnection \u2014 from others, from community, from shared humanity \u2014 is the source condition of most suffering. 'Not my problem' is the abdication she names as the opposite of belonging.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passage where Brown explicitly addresses the phrase 'that's not my problem' or frames disconnection as the source condition of most suffering in these terms; this specific principle is absent."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "'The data will speak for itself'",
+      "claim": "'The data will speak for itself'. Data without narrative is inert. Her entire career is built on the premise that story is the form in which humans metabolize truth \u2014 and that researchers who refuse to tell stories abandon the most powerful tool they have for producing change.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "ONE OF MY FAVORITE PARTS OF MY JOB IS THAT I GET TO RESEARCH TOPICS THAT MEAN SOMETHING TO ME... I NORMALLY COME UP WITH FINDINGS THAT KICK ME IN THE BUTT AND MAKE ME CHANGE MY ENTIRE LIFE.",
+          "relation": "partial"
+        },
+        {
+          "quote": "i think i know what trust is from the data",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Brown combines data with personal storytelling throughout her talks, she does not explicitly argue against the phrase 'the data will speak for itself' or articulate that story is required for data to produce change; the specific principle is not grounded in the corpus."
+    }
+  ]
+}

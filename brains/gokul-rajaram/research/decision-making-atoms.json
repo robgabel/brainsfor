@@ -1,396 +1,362 @@
 [
   {
-    "content": "SPADE is a five-step decision-making framework \u2014 Setting, People, Alternatives, Decide, Explain \u2014 designed to make hard decisions explicit, accountable, and transparent. Gokul developed it drawing on his experience at Google and Facebook, then deployed it widely at Square and Caviar. The framework exists precisely for decisions that are difficult, consequential, and where the default organizational behavior is to avoid making a call at all.",
-    "original_quote": "SPADE stands for Setting, People, Alternatives, Decide, and Explain. Use it when you have a decision that's tough, time-sensitive, and important enough that you need a structured process.",
-    "implication": "Any team experiencing decision drag \u2014 where decisions keep getting revisited, deferred, or made by default \u2014 should ask whether they have a shared vocabulary and process for hard decisions. SPADE provides that shared language.",
+    "content": "SPADE is an acronym Gokul developed and deployed at Google, Facebook, and Square to make high-stakes decisions legible and owned. The five components \u2014 Setting, People, Alternatives, Decide, Explain \u2014 force teams to articulate the context of a decision, identify who has voice versus who decides, generate genuinely diverse options, commit to one choice, and then communicate that choice with full reasoning. The framework was designed as a direct counter to the consensus-drift and decision-avoidance patterns that plague fast-growing organizations.",
+    "implication": "Teams that adopt SPADE get two compounding benefits: faster decisions because ambiguity is surfaced upfront, and better decisions because the structure forces option diversity before convergence. Leaders should treat SPADE as a cultural artifact, not just a template \u2014 the act of filling it out publicly changes who participates and how seriously they take ownership.",
     "cluster": "decision_making",
     "topics": [
-      "SPADE",
-      "decision-making frameworks",
+      "SPADE framework",
+      "decision ownership",
       "organizational velocity",
       "Square"
     ],
-    "confidence": 0.95,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
   },
   {
-    "content": "The 'Setting' component of SPADE forces the team to define what decision is actually being made, why it matters now, and what the deadline is. Most decision failures begin before the decision is ever considered \u2014 because teams are not aligned on what question they are answering. Gokul treats framing the question correctly as more than half the work.",
-    "original_quote": "The setting defines what decision needs to be made, why it's important, and when it needs to be made by. If you can't clearly articulate the setting, you're not ready to make the decision.",
-    "implication": "Before convening any decision meeting, require a written one-paragraph Setting statement. If the room can't agree on the Setting, the decision process hasn't started yet \u2014 and running a meeting without it will generate heat but no resolution.",
+    "content": "The 'S' in SPADE \u2014 Setting \u2014 requires the decision author to write down why this decision needs to be made now, what constraints bound the solution space, and what success looks like after the decision is executed. Gokul treats this step as the most commonly skipped, and the skipping of it as the root cause of most bad decisions \u2014 teams jump to options before they agree on what problem they are actually solving. A one-page Setting document, reviewed before options are generated, eliminates an enormous amount of downstream argument.",
+    "implication": "Before any decision meeting, the person who owns the decision should circulate a written Setting document \u2014 even a short one. If the team cannot agree on the Setting, no amount of option analysis will produce a good outcome. The Setting is the contract that makes evaluation criteria explicit.",
     "cluster": "decision_making",
     "topics": [
-      "SPADE",
+      "SPADE framework",
       "problem framing",
-      "decision quality",
-      "meeting design"
+      "decision clarity",
+      "written process"
     ],
-    "confidence": 0.92,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
   },
   {
-    "content": "The 'People' component of SPADE assigns exactly one Decider \u2014 not a committee \u2014 alongside Approvers, Consulted, and Informed. The single most common failure mode Gokul identifies in organizational decision-making is the absence of a named Decider, which converts every difficult decision into a consensus exercise by default. Consensus-by-default is not democratic; it is a form of collective accountability avoidance.",
-    "original_quote": "There must be a single decider. Not a committee. One person who is ultimately responsible for making the call. Everyone else is either an approver, consulted, or informed.",
-    "implication": "Audit every significant open decision in your organization. If there is no named Decider, the decision will either drift to whoever speaks loudest or never get made. Naming a Decider is not a bureaucratic formality \u2014 it is the single most important act of organizational design for high-velocity teams.",
+    "content": "The 'P' in SPADE \u2014 People \u2014 maps each stakeholder to one of four roles: the single Decider, Approvers whose sign-off is required, Consulted parties whose input is sought before the decision, and Informed parties who receive the outcome. Gokul is emphatic that there can only be one Decider, and that person should be the individual most accountable for executing the outcome \u2014 not the most senior person in the room. Conflating seniority with decision ownership is one of the most common failure modes he names.",
+    "implication": "Assigning stakeholder roles in writing before a decision is discussed prevents the two most common failure modes: decisions that die waiting for a senior person's blessing, and decisions that get relitigated after the fact by people who were never consulted. The People map is the accountability contract.",
     "cluster": "decision_making",
     "topics": [
-      "SPADE",
-      "decider",
-      "accountability",
-      "consensus culture"
-    ],
-    "confidence": 0.95,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
-  },
-  {
-    "content": "Gokul distinguishes sharply between Approvers, Consulted, and Informed \u2014 and insists that most organizations collapse these into a single undifferentiated group, which is how decisions slow to a crawl. Approvers must sign off before the decision is final. Consulted must be heard before the decision is made but do not have veto power. Informed must be told after the decision is made but have no role in making it.",
-    "original_quote": "Approvers are those whose sign-off is required. Consulted are those whose input should be sought. Informed are those who need to know the outcome. Mixing these up is one of the most common reasons decisions take forever.",
-    "implication": "Every person listed in a decision process should know which role they are playing. If someone believes they are an Approver but is being treated as Consulted, you have a relationship and expectation problem that will surface \u2014 destructively \u2014 after the decision is announced.",
-    "cluster": "decision_making",
-    "topics": [
-      "SPADE",
+      "SPADE framework",
+      "decision ownership",
       "RACI",
-      "stakeholder management",
-      "decision roles"
+      "accountability"
     ],
-    "confidence": 0.92,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
   },
   {
-    "content": "The 'Alternatives' component of SPADE is where most practitioners underinvest. Gokul insists that alternatives must be genuinely distinct \u2014 not minor parametric variations of a single idea. If all your alternatives are variations of Option A, you have not actually explored the decision space; you have pre-decided and are constructing the appearance of rigor.",
-    "original_quote": "Alternatives need to be meaningfully different from each other. If your alternatives are all minor variations of the same idea, you haven't done the work. True alternatives represent fundamentally different ways of solving the problem.",
-    "implication": "Before finalizing an Alternatives list, apply the 'would a reasonable person call these different decisions?' test. If the answer is no, send the team back to generate at least one alternative that involves a different underlying logic, not just different parameters.",
+    "content": "The 'A' in SPADE \u2014 Alternatives \u2014 is where Gokul believes most teams fail even when they try to use a structured framework. He insists that alternatives must be genuinely structurally different from one another \u2014 not minor parameter variations of the same underlying approach. A set of alternatives that all share the same core assumption is not a real set of alternatives; it is one option dressed in different clothes. Generating truly diverse options requires deliberately introducing approaches you personally dislike or find counterintuitive.",
+    "implication": "When generating alternatives for SPADE, ask whether any two options share the same core mechanism. If they do, collapse them into one and generate a genuinely different third option. The quality of a decision is bounded by the diversity of the option set \u2014 a team that only generates incrementally different alternatives is implicitly deciding by the framing of the first option.",
     "cluster": "decision_making",
     "topics": [
-      "SPADE",
-      "alternatives generation",
-      "decision quality",
-      "fake optionality"
+      "SPADE framework",
+      "alternative generation",
+      "option diversity",
+      "decision quality"
     ],
-    "confidence": 0.92,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
   },
   {
-    "content": "Gokul identifies 'fake optionality' as one of the most corrosive anti-patterns in organizational decision-making. Fake optionality occurs when a decision-maker presents alternatives but has already decided, using the alternatives process as a form of political theater to manufacture buy-in. This is not just inefficient \u2014 it destroys trust in the decision process itself, because people learn that contributing input is meaningless.",
-    "implication": "If the Decider already knows their preferred answer before the SPADE process begins, they should either name it explicitly as the leading option and ask the team to challenge it, or step back and genuinely engage the alternatives. Fake optionality corrodes faster than a bad decision because it corrupts the infrastructure for future decisions.",
+    "content": "The 'D' in SPADE \u2014 Decide \u2014 is the moment where the single named Decider makes a call and commits to it, regardless of whether full consensus has been achieved. Gokul draws a sharp line between consulting stakeholders and polling them for agreement \u2014 consultation is required; consensus is not. If the Decider waits for unanimous agreement before moving, the decision has effectively been handed to the most resistant person in the room, which is the opposite of ownership.",
+    "implication": "Deciders must internalize that their job is to gather input and then make a call, not to synthesize all input into a compromise that nobody objects to. The willingness to make a call that some consulted parties disagree with is the defining behavior of effective decision ownership. Leaders who cannot do this create organizations that slow to the pace of their most skeptical voice.",
+    "cluster": "decision_making",
+    "topics": [
+      "SPADE framework",
+      "consensus trap",
+      "decision ownership",
+      "organizational velocity"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
+  },
+  {
+    "content": "The 'E' in SPADE \u2014 Explain \u2014 requires the Decider to communicate not just the chosen option but the full reasoning: which alternatives were considered, why each was rejected, what the key trade-offs were, and what success metrics will be used to evaluate the outcome. Gokul treats this step as culturally load-bearing \u2014 explained decisions build organizational trust over time, because people can see that their input was processed even when they disagree with the outcome. Unexplained decisions generate the opposite: a belief that consultation was performative.",
+    "implication": "The Explain step is the difference between a decision that lands and one that festers. Teams that are shown the reasoning for decisions they disagreed with are far more likely to execute with full commitment than teams who receive directives without rationale. Explanation is not a courtesy \u2014 it is a precondition for organizational alignment.",
+    "cluster": "decision_making",
+    "topics": [
+      "SPADE framework",
+      "decision transparency",
+      "organizational trust",
+      "communication"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
+  },
+  {
+    "content": "Gokul identifies consensus-by-default as one of the most destructive anti-patterns in fast-growing organizations. When teams default to consensus, no single person bears ownership for the outcome, and the decision gravitates toward the lowest-resistance option rather than the best option. He argues that consensus feels safe \u2014 it distributes blame \u2014 but it systematically selects against bold choices and destroys the individual accountability that makes organizations learn from outcomes.",
+    "implication": "Leaders should audit their most recent important decisions and ask: did one named person own this, or did we arrive at it by committee drift? If the answer is committee drift, the organization has a structural problem that no amount of process will fix unless a single Decider is named first. Consensus is a risk-management reflex that masquerades as collaboration.",
+    "cluster": "decision_making",
+    "topics": [
+      "consensus trap",
+      "decision ownership",
+      "organizational anti-patterns",
+      "accountability"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
+  },
+  {
+    "content": "Gokul names 'fake optionality' as a distinct failure mode inside SPADE processes \u2014 where teams generate alternatives that look diverse on the surface but are actually all variations of the pre-decided answer the Decider already wanted. This pseudo-process is worse than no process because it consumes time while providing false legitimacy to a foregone conclusion. The tell-tale sign is that the alternatives are not evaluated against any shared criteria; they are narrated toward the preferred option.",
+    "implication": "When reviewing alternatives in any decision document, check whether the evaluation criteria were written before or after the options were generated. Criteria written after options are generated are almost always reverse-engineered to justify the favorite. Criteria written first create a forcing function for genuine evaluation \u2014 even of options the Decider personally dislikes.",
     "cluster": "decision_making",
     "topics": [
       "fake optionality",
-      "decision culture",
-      "trust",
-      "anti-patterns"
+      "SPADE framework",
+      "decision quality",
+      "organizational anti-patterns"
     ],
-    "confidence": 0.88,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "How to improve decision-making using the SPADE method | Make me a doc! With Gokul Rajaram",
+    "source_date": "2022"
   },
   {
-    "content": "The 'Decide' step in SPADE is a structured deliberation process, not a vote. Gokul recommends that the Decider solicit written input from all Consulted parties before the meeting, so that the meeting itself is a genuine deliberation rather than a presentation of predetermined positions. The written pre-work requirement raises the quality of input and reduces performative disagreement.",
-    "original_quote": "Have everyone who is consulted share their recommendation in writing before the decision meeting. This ensures you get their real view, not the view shaped by whoever spoke first in the room.",
-    "implication": "Require async written input from all Consulted parties 48 hours before any SPADE decision meeting. This single change eliminates HiPPO bias (Highest Paid Person's Opinion dominates), surfaces minority views that would be socially suppressed in a meeting, and makes the live conversation genuinely additive.",
-    "cluster": "decision_making",
-    "topics": [
-      "SPADE",
-      "async decision-making",
-      "deliberation",
-      "HiPPO bias"
-    ],
-    "confidence": 0.92,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
-  },
-  {
-    "content": "The 'Explain' step closes the SPADE loop and is, Gokul argues, more important than most practitioners realize. Explaining the decision \u2014 what was decided, why, what alternatives were considered, and what would cause the decision to be revisited \u2014 is the mechanism by which decision transparency becomes a cultural flywheel. Teams that skip the Explain step produce decisions that look arbitrary to anyone outside the room.",
-    "original_quote": "Explain is the step that most teams skip, and it's the one that determines whether the decision actually sticks. If people don't understand why you made the call, they'll relitigate it constantly.",
-    "implication": "Every significant decision should produce a written Explain document \u2014 distributed to Informed parties and archived for future reference. Over time, this archive becomes an organizational memory of how decisions were made, which is invaluable for onboarding, strategic continuity, and avoiding repeated debates.",
-    "cluster": "decision_making",
-    "topics": [
-      "SPADE",
-      "decision transparency",
-      "organizational memory",
-      "cultural flywheel"
-    ],
-    "confidence": 0.92,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
-  },
-  {
-    "content": "Decision transparency, systematically practiced, becomes a cultural flywheel that accelerates organizational velocity over time. When teams can read past SPADE documents to understand the reasoning behind existing decisions, they make faster subsequent decisions because they don't have to reconstruct context from scratch. Gokul treats decision documentation not as a compliance exercise but as compounding institutional capital.",
-    "implication": "Build a searchable archive of major decisions with their SPADE rationale from Day 1 of any team or company. The compounding value of this archive grows non-linearly \u2014 each new hire who can self-serve context on past decisions is a multiple on onboarding speed and a reduction in repeated debate.",
-    "cluster": "decision_making",
-    "topics": [
-      "decision transparency",
-      "organizational velocity",
-      "institutional knowledge",
-      "compounding"
-    ],
-    "confidence": 0.88,
-    "source_type": "article",
-    "source_ref": "Gokul's SPADE Toolkit \u2014 Canonical Coda Doc",
-    "source_date": "2020-02-13"
-  },
-  {
-    "content": "Consensus-by-default is Gokul's label for the organizational pattern where, in the absence of a named Decider and structured process, decisions drift toward whatever everyone can agree on \u2014 which is almost always the lowest-common-denominator option. Consensus-by-default is not neutral; it systematically selects against bold, differentiated choices and in favor of incremental, safe ones. It is one of the primary mechanisms by which organizational ambition decays over time.",
-    "original_quote": "Consensus-by-default is how bold companies become average companies. When no one is accountable for the decision, the decision naturally drifts toward whatever no one will object to. That's not a decision \u2014 that's a committee.",
-    "implication": "The antidote to consensus-by-default is not more disagreement \u2014 it is clearer accountability. Name a Decider for every consequential decision. The Decider may make the wrong call, but a clear wrong call that can be reversed is almost always better than a diffuse consensus that can't be traced back to anyone.",
-    "cluster": "decision_making",
-    "topics": [
-      "consensus culture",
-      "decision accountability",
-      "organizational decay",
-      "bold decision-making"
-    ],
-    "confidence": 0.9,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
-  },
-  {
-    "content": "Decision avoidance is the organizational equivalent of technical debt \u2014 it accumulates invisibly, accrues interest in the form of mounting opportunity cost, and eventually forces a crisis-mode reckoning that is far more expensive than the original decision would have been. Gokul treats every deferred decision as a tax on organizational velocity that compounds daily.",
-    "original_quote": "Every day you don't make the decision, you're paying a tax. The tax is the opportunity cost of not moving, the energy wasted on re-discussing, and the signal you send to your team that you don't trust the process.",
-    "implication": "Establish explicit decision deadlines in every SPADE process and enforce them. A decision made on deadline with 80% of the ideal information is almost always more valuable than the theoretically perfect decision made after the window has closed. Decision avoidance masquerades as rigor but is usually fear.",
+    "content": "Decision avoidance is the third major anti-pattern Gokul identifies alongside consensus-by-default and fake optionality. Organizations avoid decisions by perpetually requesting more data, scheduling additional review meetings, or framing the decision as 'too early to call.' He distinguishes between legitimate uncertainty \u2014 where more data genuinely changes the expected value of options \u2014 and avoidance theater, where data requests are proxies for the discomfort of making a call that someone will disagree with.",
+    "implication": "Leaders should set explicit decision deadlines when assigning SPADE ownership, and require that any request to delay a decision include a specific articulation of what new information is being waited for and how that information would change the decision. Without that articulation, a delay request is avoidance \u2014 and avoidance is a decision to maintain the status quo by inaction.",
     "cluster": "decision_making",
     "topics": [
       "decision avoidance",
       "organizational velocity",
-      "decision debt",
-      "opportunity cost"
+      "SPADE framework",
+      "decision discipline"
     ],
-    "confidence": 0.9,
+    "confidence": 0.85,
     "source_type": "video",
-    "source_ref": "How to Improve Decision-Making Using SPADE \u2014 Gokul Rajaram on Make Me A Doc!",
-    "source_date": "2019-09-05"
+    "source_ref": "How to improve decision-making using the SPADE method | Make me a doc! With Gokul Rajaram",
+    "source_date": "2022"
   },
   {
-    "content": "SPADE was originally developed by Gokul at Google and refined at Facebook before being deployed at Square. The fact that a framework built for large-scale engineering decisions at Google also worked for product and operational decisions at a payments company suggests its underlying logic is domain-agnostic. Gokul explicitly designed it to be portable across decision types, team sizes, and industries.",
-    "original_quote": "I developed SPADE at Google, refined it at Facebook, and then deployed it at Square. The framework works across very different contexts because the underlying problem \u2014 how do you make a hard decision well \u2014 is the same everywhere.",
-    "implication": "SPADE is not a tech-company artifact. Any organization facing consequential decisions under uncertainty \u2014 a nonprofit allocating budget, a law firm selecting a strategy, a product team choosing a roadmap \u2014 can apply the framework without modification. The portability is intentional.",
+    "content": "Gokul attributes the intellectual origin of his decision ownership thinking to a principle he absorbed working with Eric Schmidt \u2014 that the person who executes a decision must be the person who makes it. This is not merely an efficiency claim but a learning-system claim: when the decision-maker is insulated from the consequences of the decision, the organization's feedback loop breaks. The Decider in SPADE is always the person most exposed to the outcome, not the most senior person available.",
+    "implication": "Organizations that route important decisions upward to executives who won't live with the consequences are not practicing oversight \u2014 they are corrupting their learning system. Decision authority should flow toward execution proximity, not organizational rank. Executives should reserve sign-off authority for decisions that genuinely require their risk exposure, not decisions that merely feel important.",
     "cluster": "decision_making",
     "topics": [
-      "SPADE",
-      "framework portability",
-      "Google",
-      "Square",
-      "Facebook"
+      "decision ownership",
+      "Eric Schmidt",
+      "execution proximity",
+      "organizational learning"
     ],
-    "confidence": 0.95,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
-  },
-  {
-    "content": "Gokul published a canonical SPADE toolkit as a public Coda document to make the framework operationally usable, not just conceptually understood. The toolkit includes worked examples, decision quality criteria, and embedded forms for teams to run their own SPADE decisions. Making the template public reflects Gokul's view that decision-making frameworks, unlike competitive advantages, gain value through broad adoption.",
-    "implication": "The existence of a public, turnkey SPADE toolkit removes the primary excuse for not adopting structured decision-making. Teams that are still making hard decisions ad hoc in 2024 are not resource-constrained \u2014 they are culture-constrained. The template is free; the constraint is leadership willingness to commit to the process.",
-    "cluster": "decision_making",
-    "topics": [
-      "SPADE",
-      "decision toolkit",
-      "open-source frameworks",
-      "organizational adoption"
-    ],
-    "confidence": 0.92,
-    "source_type": "article",
-    "source_ref": "Gokul's SPADE Toolkit \u2014 Canonical Coda Doc",
-    "source_date": "2020-02-13"
-  },
-  {
-    "content": "Gokul treats the written nature of SPADE as a feature, not a bureaucratic overhead. Forcing teams to write out the Setting, Alternatives, and Explain creates a record that can be audited, shared, and searched. The writing discipline also surfaces poorly reasoned decisions before they are made, because arguments that sound compelling in conversation often fall apart under the discipline of written articulation.",
-    "original_quote": "Writing is thinking. When you force people to write out the SPADE, you force them to actually think through the decision. Decisions that can't survive being written down shouldn't be made.",
-    "implication": "The friction of writing a SPADE document is productive friction. Any decision that a team finds too burdensome to document is either not important enough to require a structured process, or important enough that the documentation is exactly what's needed. The complaint 'this takes too long to write' is often a signal that the decision is underdeveloped.",
-    "cluster": "decision_making",
-    "topics": [
-      "writing as thinking",
-      "decision documentation",
-      "productive friction",
-      "decision quality"
-    ],
-    "confidence": 0.88,
+    "confidence": 0.85,
     "source_type": "video",
-    "source_ref": "How to Improve Decision-Making Using SPADE \u2014 Gokul Rajaram on Make Me A Doc!",
-    "source_date": "2019-09-05"
+    "source_ref": "Secrets of Tech's Top CEOs | Gokul Rajaram on Google, Facebook & Square",
+    "source_date": "2022"
   },
   {
-    "content": "Gokul draws a sharp distinction between decisions that are reversible and decisions that are irreversible, arguing that the two require categorically different processes. SPADE is designed primarily for irreversible or high-cost-to-reverse decisions. Applying the full SPADE process to reversible decisions introduces unnecessary overhead; failing to apply it to irreversible ones is organizational negligence.",
-    "original_quote": "Not every decision needs a SPADE. Save it for the ones that are hard to undo. For everything else, just decide and move on. The failure mode I see most often is teams applying heavyweight process to lightweight decisions and making lightweight decisions about heavyweight ones.",
-    "implication": "Build a two-tier decision taxonomy: reversible decisions get fast, low-process treatment with a named owner; irreversible decisions get the full SPADE. The discipline of categorizing decisions before choosing a process is itself a decision-making skill that separates high-velocity teams from bureaucratic ones.",
+    "content": "Gokul cites Sheryl Sandberg's handling of contested decisions at Facebook as a formative example of how to close decisions that have organizational resistance. Rather than forcing consensus or overriding dissenters by rank, Sheryl would ensure that every dissenting voice was genuinely heard and their reasoning documented, and then the Decider would make a call with that record intact. The dissenter's position would live in the decision record \u2014 not be erased \u2014 which preserved trust even in the face of disagreement.",
+    "implication": "The act of documenting dissent as part of the decision record is a high-leverage cultural practice. It signals that consultation was real, not performative, and it creates a learning asset \u2014 if the decision later proves wrong, the dissenting view is available for retrospective analysis. This practice reduces the political cost of disagreeing with a decision, which in turn increases the quality of input in future decision processes.",
     "cluster": "decision_making",
     "topics": [
-      "reversible vs irreversible decisions",
-      "SPADE",
+      "Sheryl Sandberg",
+      "dissent documentation",
+      "Facebook",
+      "decision culture"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Secrets of Tech's Top CEOs | Gokul Rajaram on Google, Facebook & Square",
+    "source_date": "2022"
+  },
+  {
+    "content": "Gokul is explicit that SPADE is not a tool for every decision \u2014 it is reserved for decisions that are consequential, contested, or novel. Applying it to routine operational choices creates overhead that undermines the framework's credibility for the decisions where it genuinely matters. He suggests teams calibrate which decisions warrant SPADE by asking whether the decision is reversible, what the cost of a wrong call is, and whether reasonable people on the team genuinely disagree about the right path.",
+    "implication": "Before introducing SPADE to a team, leaders should define a decision taxonomy: which decision types require full SPADE documentation, which require only a named Decider and brief Explain note, and which can be made by any individual without process. Without this taxonomy, SPADE becomes bureaucracy rather than a velocity tool.",
+    "cluster": "decision_making",
+    "topics": [
+      "SPADE framework",
       "decision taxonomy",
+      "process calibration",
       "organizational velocity"
     ],
-    "confidence": 0.9,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
-  },
-  {
-    "content": "Gokul connects decision-making quality directly to product velocity, arguing that the companies with the best decision-making processes ship better products faster \u2014 not because they are smarter, but because they spend less organizational energy relitigating past decisions and more energy on new ones. Decision infrastructure is product infrastructure.",
-    "original_quote": "The companies that ship the best products are often the ones with the clearest decision-making culture. It's not a coincidence. When people know how decisions get made and trust the process, they spend their energy on the work, not on the politics.",
-    "implication": "Investing in decision-making process is a direct investment in product velocity. For any team that feels chronically slow despite individual talent, the bottleneck is often the decision-making layer, not the execution layer. Fix the process before blaming the people.",
-    "cluster": "decision_making",
-    "topics": [
-      "decision culture",
-      "product velocity",
-      "organizational design",
-      "decision infrastructure"
-    ],
-    "confidence": 0.88,
-    "source_type": "video",
-    "source_ref": "Outlier Academy / Daniel Scrivner #102 \u2014 Gokul Rajaram of Marathon",
-    "source_date": "2024-08-15"
-  },
-  {
-    "content": "Gokul argues that the Decider role in SPADE carries real accountability \u2014 including the obligation to make a call when input is inconclusive and the data is ambiguous. The most common failure of named Deciders is not making a bad decision but making no decision when the inputs don't converge cleanly. A Decider who waits for consensus has abdicated the role.",
-    "original_quote": "The whole point of naming a decider is that when the inputs don't converge \u2014 when the consulted people disagree and the data is ambiguous \u2014 someone still has to make the call. That's the job. If you wait for consensus, you didn't need a decider.",
-    "implication": "When appointing a Decider, explicitly clarify that the role includes making calls under ambiguity, not just ratifying consensus. If your organization's Deciders consistently wait for unanimous agreement before deciding, you have named a role without empowering it \u2014 which is worse than having no named Decider at all.",
-    "cluster": "decision_making",
-    "topics": [
-      "decider accountability",
-      "ambiguity tolerance",
-      "SPADE",
-      "decision courage"
-    ],
-    "confidence": 0.92,
-    "source_type": "video",
-    "source_ref": "How to Improve Decision-Making Using SPADE \u2014 Gokul Rajaram on Make Me A Doc!",
-    "source_date": "2019-09-05"
-  },
-  {
-    "content": "Gokul emphasizes that SPADE is not a tool for avoiding conflict \u2014 it is a tool for surfacing conflict earlier and resolving it more cleanly. By making alternatives, roles, and reasoning explicit in writing before the decision meeting, SPADE converts implicit disagreements into explicit ones that can actually be addressed. Organizations that avoid SPADE to avoid conflict end up with more conflict, not less, because unresolved tensions surface post-decision.",
-    "implication": "If your team resists SPADE because 'it creates too much conflict,' that is precisely the signal you need it. The conflict was already present; SPADE makes it legible and resolvable. The alternative \u2014 proceeding without the framework \u2014 doesn't eliminate the conflict, it just delays and amplifies it.",
-    "cluster": "decision_making",
-    "topics": [
-      "conflict resolution",
-      "SPADE",
-      "organizational health",
-      "decision process"
-    ],
     "confidence": 0.85,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
-  },
-  {
-    "content": "Gokul connects his SPADE work to a broader view of product management craft \u2014 specifically the view that the best PMs are those who create decision clarity for their teams, not those who make all the decisions themselves. The PM's job in a SPADE process is often to design the process, not to be the Decider. A PM who confuses process ownership with decision authority is misunderstanding the role.",
-    "original_quote": "The best PMs I've worked with are master facilitators of decisions. They make sure the right people are in the room, the right questions are being asked, and the decision gets made cleanly. They don't need to be the one making every call.",
-    "implication": "PMs should be evaluated on decision quality produced by their teams, not on how many decisions they personally make. A PM who facilitates ten clean decisions per quarter is creating more organizational value than one who makes fifty decisions unilaterally \u2014 even if the unilateral decisions are individually correct.",
-    "cluster": "decision_making",
-    "topics": [
-      "product management",
-      "SPADE",
-      "PM craft",
-      "decision facilitation"
-    ],
-    "confidence": 0.88,
     "source_type": "video",
-    "source_ref": "Outlier Academy / Daniel Scrivner #102 \u2014 Gokul Rajaram of Marathon",
-    "source_date": "2024-08-15"
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
   },
   {
-    "content": "Gokul notes that one underappreciated function of SPADE is its role in onboarding new leaders. When an incoming executive can read a library of past SPADE documents, they gain direct access to the organization's decision logic, cultural priorities, and the reasoning behind the current state. This is qualitatively more valuable than any onboarding deck because it shows how the organization actually makes decisions, not how it says it does.",
-    "implication": "Every high-growth company hiring at the leadership level should maintain a curated decision archive as a primary onboarding resource. The gap between 'how we say we decide' (values documents) and 'how we actually decide' (SPADE archive) is one of the most reliable indicators of organizational health \u2014 or dysfunction.",
+    "content": "Gokul frames decision transparency as a cultural flywheel rather than a one-time practice. When decisions are explained publicly \u2014 with full reasoning, alternatives considered, and success criteria stated \u2014 team members learn how to evaluate decisions, not just receive them. Over time, this produces a team that can make better decisions at lower levels of the organization because they have internalized the decision-making logic of leaders, not just the outputs. Opacity in decision-making is therefore not just a trust problem \u2014 it is a capability-development problem.",
+    "implication": "Leaders who share decision reasoning are doing invisible talent development. Every explained decision is a case study for the team in how to evaluate trade-offs. Organizations with a high volume of well-explained decisions produce managers who make better independent decisions faster \u2014 a compounding advantage that is nearly impossible to replicate through training programs alone.",
     "cluster": "decision_making",
     "topics": [
-      "onboarding",
-      "SPADE",
-      "organizational culture",
-      "decision archive"
-    ],
-    "confidence": 0.85,
-    "source_type": "article",
-    "source_ref": "Gokul's SPADE Toolkit \u2014 Canonical Coda Doc",
-    "source_date": "2020-02-13"
-  },
-  {
-    "content": "Gokul frames speed of decision-making as a competitive advantage that compounds \u2014 not just because fast decisions enable faster execution, but because teams that trust their decision process become psychologically freed to take bigger bets. The link between decision process quality and risk appetite is underappreciated: teams with opaque decision-making play it safe because they don't want to own a decision that was made badly.",
-    "original_quote": "When people trust that decisions will be made fairly and transparently, they're willing to advocate for bigger, bolder options. When the process is opaque, they play it safe because they don't want to be exposed.",
-    "implication": "If your team is systematically under-proposing bold ideas, the first hypothesis should not be talent quality \u2014 it should be decision-process safety. People advocate for bold options when they trust that the process will evaluate them fairly, not when they fear being personally blamed for a loss.",
-    "cluster": "decision_making",
-    "topics": [
-      "decision speed",
-      "risk appetite",
-      "psychological safety",
-      "organizational culture"
-    ],
-    "confidence": 0.88,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
-  },
-  {
-    "content": "In his Outlier Academy conversation, Gokul links SPADE directly to the craft of product management at scale, arguing that what separates exceptional PMs from average ones is not creativity or technical skill but the ability to drive decisions to closure with high quality and low friction. Decision velocity is a PM skill, and SPADE is the tool that makes it learnable and teachable rather than a personality-dependent art.",
-    "implication": "Hiring managers evaluating PM candidates should add decision-making process to their assessment rubric alongside the standard product sense and analytical skills. A candidate who can describe a structured decision process they've used and the outcomes it produced is demonstrating a compound skill that separates senior from junior PM performance.",
-    "cluster": "decision_making",
-    "topics": [
-      "PM craft",
-      "decision velocity",
-      "SPADE",
-      "hiring"
+      "decision transparency",
+      "cultural flywheel",
+      "organizational learning",
+      "leadership development"
     ],
     "confidence": 0.85,
     "source_type": "video",
-    "source_ref": "Outlier Academy / Daniel Scrivner #102 \u2014 Gokul Rajaram of Marathon",
-    "source_date": "2024-08-15"
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
   },
   {
-    "content": "Gokul's broader philosophy positions decision-making architecture as a form of organizational infrastructure equivalent in importance to technical infrastructure. Just as a company with poor engineering infrastructure will ship slowly regardless of engineering talent, a company with poor decision-making infrastructure will move slowly regardless of the quality of individual judgment. The infrastructure layer sets the ceiling for individual performance.",
-    "original_quote": "Great people in a bad decision-making culture will still make decisions slowly and badly. The structure is the constraint, not the people. Fix the structure first.",
-    "implication": "When a high-performing team underperforms expectations, conduct a decision audit before conducting a personnel audit. Map the last 10 significant decisions: who made them, how long they took, whether the reasoning was documented, and whether they were relitigated. The pattern will reveal whether the constraint is people or process.",
+    "content": "Gokul argues that writing down a decision \u2014 even a short document \u2014 changes the quality of thinking that goes into it in ways that verbal deliberation cannot replicate. The act of writing forces the author to make implicit assumptions explicit, which surfaces disagreements that would otherwise remain invisible until execution. At Square, requiring written SPADE documents for important decisions consistently revealed that teams thought they agreed on the problem when they actually disagreed on the Setting \u2014 an upstream disagreement that would have derailed execution.",
+    "implication": "If your team is making important decisions verbally in meetings, you are likely incurring hidden alignment debt. A short written Setting statement \u2014 even a single paragraph \u2014 before any decision meeting will surface more disagreement faster than any amount of discussion. The goal is to find the disagreement cheaply, in a document, rather than expensively, in execution.",
     "cluster": "decision_making",
     "topics": [
-      "organizational infrastructure",
-      "decision architecture",
-      "team performance",
-      "systems thinking"
+      "written process",
+      "decision quality",
+      "alignment",
+      "Square"
     ],
-    "confidence": 0.88,
+    "confidence": 0.85,
     "source_type": "video",
-    "source_ref": "Peak XV \u2014 Gokul Rajaram on Product, Leadership, and Building Enduring Teams (Surge 09 US Immersion)",
-    "source_date": "2024-02-15"
+    "source_ref": "How to improve decision-making using the SPADE method | Make me a doc! With Gokul Rajaram",
+    "source_date": "2022"
   },
   {
-    "content": "Gokul observes that the most damaging decision-making anti-pattern he encountered across Google, Facebook, and Square was not bad decisions but decisions that could not be traced back to anyone. Accountability diffusion \u2014 where a decision appears to have been made collectively but no individual owns it \u2014 creates a situation where course-correction is nearly impossible because there is no one empowered to reverse the call.",
-    "original_quote": "The worst decisions I've seen aren't the ones where someone made the wrong call. They're the ones where no one knows who made the call. You can't course-correct a decision that no one owns.",
-    "implication": "Every decision in a SPADE document should have a named Decider who retains accountability post-announcement \u2014 including accountability for monitoring the decision's outcomes and triggering a review if the conditions that led to the decision change materially. Decision ownership does not end at announcement.",
+    "content": "One of Gokul's recurring warnings in the context of SPADE is that the Approver role is frequently misused \u2014 people assign themselves as Approvers when they should be Consulted, or they treat Approver status as a veto rather than a defined sign-off on a specific condition. He distinguishes Approvers \u2014 who have formal authority to block a decision on a narrow, pre-agreed dimension such as legal, finance, or security \u2014 from Consulted parties, whose input should influence but not block. Blurring these roles is how SPADE processes stall.",
+    "implication": "When assigning Approvers in a SPADE document, specify exactly what each Approver is approving \u2014 not the decision in general, but a specific dimension of it. 'Legal approves the contractual structure' is a valid Approver role. 'Legal approves the strategy' is not \u2014 that is Consulted. The narrower and more specific the Approver mandate, the less likely the process is to stall on boundary disputes.",
+    "cluster": "decision_making",
+    "topics": [
+      "SPADE framework",
+      "approver role",
+      "stakeholder management",
+      "decision velocity"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
+  },
+  {
+    "content": "Gokul treats the number of hands raised when asking 'who is accountable for this decision?' as a direct diagnostic of organizational health. When three people claim co-ownership, effective ownership is zero \u2014 because each person assumes the others will catch failures and nobody carries the full weight of the outcome. SPADE's single-Decider rule exists specifically to make this invisible diffusion of accountability visible and correctable before decisions are made, not after they fail.",
+    "implication": "In your next team retrospective on a decision that went wrong, ask who was accountable and see how many people answer. If more than one person answers confidently, you have diagnosed a structural problem that no post-mortem process can fix \u2014 because the same diffusion will happen on the next important decision unless you institute a single-Decider rule before decisions are made.",
     "cluster": "decision_making",
     "topics": [
       "accountability diffusion",
-      "decision ownership",
-      "course correction",
-      "organizational anti-patterns"
+      "single decider",
+      "organizational health",
+      "SPADE framework"
     ],
-    "confidence": 0.9,
-    "source_type": "article",
-    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Gokul Rajaram on SPADE (First Round Review)",
-    "source_date": "2018-07-03"
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram on Product, Leadership, and Building Enduring Teams",
+    "source_date": "2021"
   },
   {
-    "content": "Gokul connects SPADE's Explain step to the concept of founder mode versus management mode, arguing that founders who explain their decision reasoning to the whole organization \u2014 not just to their direct reports \u2014 create a transparency culture that is itself a form of competitive advantage. When a team can see how the founder thinks, they can make better decentralized decisions without needing escalation. The Explain document is a scaling mechanism.",
-    "implication": "Founders who write detailed Explain documents for major decisions are not just being transparent \u2014 they are distributing their decision judgment across the organization. Every team member who internalizes the reasoning behind a decision becomes marginally more capable of making the next decision autonomously. This is how founder-quality thinking scales beyond the founder.",
+    "content": "Gokul notes that SPADE was developed partly in response to a specific organizational failure pattern he observed at Facebook: important decisions that were made informally in hallway conversations between senior leaders and then retroactively socialized as if they had gone through a deliberate process. This informal-decision-formalized-post-hoc pattern destroys psychological safety because team members learn that the formal process is theater and the real decisions happen in access-gated conversations they cannot participate in.",
+    "implication": "Any organization where important decisions are visibly made before the formal process begins has already destroyed the value of whatever decision framework it nominally uses. The solution is not a better framework \u2014 it is a cultural commitment from senior leaders to run consequential decisions through SPADE before they are made, not after. This requires leaders to tolerate the discomfort of making decisions in public rather than in private.",
     "cluster": "decision_making",
     "topics": [
-      "founder mode",
-      "decision transparency",
-      "scaling judgment",
+      "decision culture",
+      "psychological safety",
+      "Facebook",
+      "decision transparency"
+    ],
+    "confidence": 0.75,
+    "source_type": "video",
+    "source_ref": "Secrets of Tech's Top CEOs | Gokul Rajaram on Google, Facebook & Square",
+    "source_date": "2022"
+  },
+  {
+    "content": "Gokul emphasizes that the SPADE framework is particularly valuable for decisions at the boundary between product and business strategy \u2014 pricing changes, market entry decisions, major partnership commitments, and build-versus-buy calls. These decisions are high-stakes, involve multiple functions with legitimately different perspectives, and often stall precisely because no single function has clear ownership. SPADE makes the ownership question unavoidable before the substance is debated.",
+    "implication": "Cross-functional decisions are exactly where SPADE provides the highest return on process investment. If your team can identify the three or four decisions per quarter that cross functional ownership lines, applying SPADE to only those decisions will likely produce more organizational value than applying lighter processes to all decisions.",
+    "cluster": "decision_making",
+    "topics": [
+      "SPADE framework",
+      "cross-functional decisions",
+      "decision ownership",
       "organizational design"
     ],
-    "confidence": 0.82,
+    "confidence": 0.85,
     "source_type": "video",
-    "source_ref": "The Aarthi and Sriram Show EP 88 \u2014 Silicon Valley Legend Gokul Rajaram on Founder Mode",
-    "source_date": "2024-10-03"
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
+  },
+  {
+    "content": "When discussing how SPADE generates genuine alternatives, Gokul specifically highlights the value of including a 'do nothing' or 'maintain status quo' option among the alternatives. This option is frequently excluded because it feels defeatist, but its inclusion forces the team to articulate why action is better than inaction \u2014 a discipline that often reveals that some proposed decisions are solving for activity rather than for impact. If the status quo cannot be beaten by any alternative, the decision should not be made.",
+    "implication": "Including 'do nothing' as a formal alternative in every SPADE document is a lightweight filter that screens out decisions driven by organizational momentum rather than genuine need. Teams that cannot articulate why action beats inaction should not be spending resources on the decision \u2014 the energy should go toward decisions where the case for action is clear.",
+    "cluster": "decision_making",
+    "topics": [
+      "alternative generation",
+      "status quo bias",
+      "SPADE framework",
+      "decision quality"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "How to improve decision-making using the SPADE method | Make me a doc! With Gokul Rajaram",
+    "source_date": "2022"
+  },
+  {
+    "content": "Gokul connects SPADE directly to organizational velocity, arguing that slow organizations are typically not slow because they lack capability \u2014 they are slow because decision ownership is unclear and people are waiting for permission that nobody has formally granted. The SPADE framework eliminates this waiting by making ownership explicit before deliberation begins. Once a team knows who will decide and by when, deliberation becomes a contribution to a defined endpoint rather than a recursive loop with no designated close.",
+    "implication": "If your organization experiences decision latency \u2014 situations where everyone knows what needs to be decided but nothing moves \u2014 the root cause is almost never analytical. It is structural: nobody has been named as the Decider with a deadline. Naming a Decider and a decision date before substantive discussion begins will accelerate most stalled organizational decisions faster than any amount of additional data or analysis.",
+    "cluster": "decision_making",
+    "topics": [
+      "organizational velocity",
+      "decision latency",
+      "SPADE framework",
+      "decision ownership"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram on Product, Leadership, and Building Enduring Teams",
+    "source_date": "2021"
+  },
+  {
+    "content": "Gokul argues that the Explain step in SPADE has an underappreciated secondary function beyond alignment: it creates an institutional memory of decision reasoning that makes post-decision learning possible. Most organizations know what decisions were made but have no record of why, which makes retrospectives and post-mortems much less useful \u2014 teams can debate whether a decision was right but cannot trace the logic that produced it. A corpus of well-explained decisions is a durable organizational learning asset.",
+    "implication": "Teams should store SPADE documents in a searchable repository so that future decision-makers can reference how similar decisions were reasoned through in the past. This practice compounds over time \u2014 each decision adds to an institutional knowledge base that makes future decisions faster and better calibrated. It also enables meaningful retrospectives because the original reasoning is available for comparison to outcomes.",
+    "cluster": "decision_making",
+    "topics": [
+      "decision documentation",
+      "institutional memory",
+      "organizational learning",
+      "SPADE framework"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Square Defangs Difficult Decisions with this System \u2014 Here's How",
+    "source_date": "2019"
+  },
+  {
+    "content": "Gokul observes that the single-Decider discipline in SPADE requires a parallel cultural commitment from senior leaders: they must be willing to name junior or mid-level people as Deciders on consequential decisions, even when senior leaders have strong opinions. If every important decision is claimed by the most senior person available, SPADE degenerates into a chain-of-command formalism. The Decider must be the person closest to execution \u2014 which is often not the most senior person in the room.",
+    "implication": "Senior leaders who adopt SPADE must audibly give up Decider status on decisions where they will not bear execution accountability. This public act of delegation \u2014 naming someone more junior as the Decider in a documented process \u2014 is the behavioral signal that the framework is real rather than nominal. Without this signal, the organization learns that SPADE applies only to decisions senior leaders don't care about.",
+    "cluster": "decision_making",
+    "topics": [
+      "delegation",
+      "single decider",
+      "leadership behavior",
+      "SPADE framework"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram on Product, Leadership, and Building Enduring Teams",
+    "source_date": "2021"
+  },
+  {
+    "content": "Gokul draws a direct line between SPADE adoption and the ability to scale an organization without losing speed. In small teams, decision ownership is implicit \u2014 everyone knows who decides what through daily proximity. As organizations scale past thirty or fifty people, that implicit knowledge breaks down and decision latency compounds exponentially unless ownership is made explicit through a framework like SPADE. He treats SPADE as a scaling infrastructure investment, analogous to engineering infrastructure, that must be put in place before it is urgently needed.",
+    "implication": "Founders should introduce SPADE before they feel the pain of unclear decision ownership \u2014 ideally between fifteen and thirty team members, when the organization is still small enough to internalize a new process without heavy change-management overhead. Introducing a decision framework after the dysfunction has become acute is much harder because established informal patterns are deeply entrenched by then.",
+    "cluster": "decision_making",
+    "topics": [
+      "organizational scaling",
+      "SPADE framework",
+      "startup operations",
+      "decision infrastructure"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Gokul Rajaram on Defensibility, Scaling Companies & Hiring for Spikiness",
+    "source_date": "2023"
+  },
+  {
+    "content": "Gokul notes that one of the most common mistakes he observes when teams first attempt SPADE is conflating the Consulted and Informed roles \u2014 over-consulting people who only need to be informed, which inflates meeting load and dilutes the signal from genuine consultations. He recommends defaulting to Informed for anyone whose work will be affected by the decision but who does not have substantive expertise to offer on the decision itself. Being Informed is a communication commitment, not a lesser form of influence \u2014 and protecting the Consulted group from over-membership is what keeps consultation credible.",
+    "implication": "When building the People map for a SPADE document, apply a simple test to every proposed Consulted party: what specific knowledge or perspective does this person have that nobody else in the Consulted group has? If the answer is 'not much,' move them to Informed. Smaller Consulted lists produce higher-quality input because each voice carries more weight and the signal-to-noise ratio is higher.",
+    "cluster": "decision_making",
+    "topics": [
+      "SPADE framework",
+      "stakeholder management",
+      "consulted versus informed",
+      "decision process"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "How to improve decision-making using the SPADE method | Make me a doc! With Gokul Rajaram",
+    "source_date": "2022"
   }
 ]

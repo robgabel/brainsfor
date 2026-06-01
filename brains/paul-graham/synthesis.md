@@ -1,99 +1,115 @@
 ## How Paul Graham Thinks
 
-*Built from 220+ essays on paulgraham.com (2001-2025), Y Combinator lectures, interviews with Sam Altman, Patrick Collison, Tyler Cowen, and Lex Fridman, plus public talks and tweets.*
+*Built from 220+ essays on paulgraham.com (2001-2025), Y Combinator office hours and Startup School lectures, interviews with Tyler Cowen, Geoff Ralston, Sam Altman, and Patrick Collison, plus public talks, tweets, and Bookmaker readings.*
 
 ### First Principles
 
-**1. Make something people want.** The single most important thing a startup can do. Nearly all startup failure traces back to not making something people actually want. This is Y Combinator's motto and PG's foundational conviction. Everything else — fundraising, hiring, growth — is secondary to this.
+**1. Make something people want.** This is YC's motto and PG's foundational conviction. Nearly all startup failure — fundraising trouble, hiring difficulty, founder conflict — traces back to making something nobody actually wants. Everything else is downstream. Most founders confuse the appearance of progress (raising money, hiring, press) with the only thing that actually matters: a product some specific group of people genuinely uses and loves.
 
-**2. Wealth is created, not divided.** The pie is not fixed. Startups create new wealth through technology and ambition. Understanding this reframes everything about economics, inequality, and motivation. Most political debates fail because they assume a zero-sum world.
+**2. A startup is a company designed to grow fast.** Not a small company. Not a young company. Not a tech company. Growth is the *definition*, not a consequence. This is why startups need venture capital (to choose their growth rate), why acquirers chase them (a fast-growing competitor is dangerous), and why a profitable business that isn't growing isn't a startup at all — it's a small business, which is a fine but different thing.
 
-**3. Do things that don't scale.** The most important advice for early-stage founders. Recruit users one at a time, do manual work, be a personal concierge. Scalability is a problem you want to have later, not a constraint you impose at the start. The unscalable things teach you what to build.
+**3. Wealth is created, not divided.** The pie is not fixed. Startups create new wealth by making things people want — wealth that didn't exist before. Once you internalize this, most political and economic debates look confused, because they assume a zero-sum world that doesn't exist. Inequality produced by creation is fundamentally different from inequality produced by extraction, and conflating them is the central error of modern economic discourse.
 
-**4. Writing is thinking.** You don't write to express ideas you already have — you write to discover what you think. The essay is a tool for exploration, not communication. Clear writing requires clear thinking, which is why most people avoid both.
+**4. Do things that don't scale.** The most counterintuitive advice for early founders, and the most important. Recruit users one at a time. Hand-deliver the product. Be the concierge. Scalability is a problem you want to *have*, not a constraint you *impose* on yourself before you've earned the right. The unscalable work is also where you learn what to build.
 
-**5. Startups = growth.** A startup is a company designed to grow fast. That's the only essential definition. If you're not growing, you don't have a startup — you have a small business. Growth is both the defining metric and the thing that makes everything else work.
+**5. Writing is thinking.** You don't write to transcribe pre-existing thoughts — you write to discover what you actually think. The essay is a tool for exploration. This is why PG's essays meander productively, why he insists clear writing is rare (clear thinking is rare), and why he treats writing as the highest-leverage activity for anyone trying to understand anything complicated.
 
-**6. Work on hard problems that seem fun.** The best work happens at the intersection of difficulty and genuine interest. Curiosity is the most reliable fuel for sustained effort. If you're not interested, you won't endure the hard parts. The trick is finding problems where your curiosity and the world's needs overlap.
+**6. Keep your identity small.** The more labels you attach to yourself — political, religious, professional, tribal — the more topics become impossible to think clearly about. Identity forecloses thought. The best thinkers resist identifying as anything in particular, because that's the only way to follow evidence wherever it leads, including to unpopular conclusions.
 
-**7. Keep your identity small.** The more labels you attach to yourself, the more things become impossible to think clearly about. Identity forecloses thought. The best thinkers resist identifying as anything because it lets them follow evidence wherever it leads.
+**7. The best startup ideas are noticed, not brainstormed.** Don't sit down and try to think of startup ideas — the ones you generate that way will be plausible-sounding but bad. Instead, become the kind of person who notices problems, ideally ones you have yourself, at the leading edge of a fast-changing field. Good ideas look obvious in retrospect because they were hiding in plain sight; the trick is *being the kind of person who could see them.*
 
-**8. Hackers and painters are the same kind of maker.** Programming is a creative act, closer to painting and architecture than to math or engineering. Great programmers are makers who happen to use code as their medium. Treating programming as mere engineering misses what makes it powerful.
+**8. Determination beats intelligence.** Among the smart people who can plausibly start startups, the differentiator is determination, not IQ. After thousands of YC interviews, PG concluded that the qualities that actually predict success are determination, flexibility, imagination, and a certain "naughtiness" — willingness to break rules and ignore conventional wisdom. Raw intelligence is a threshold variable, not a continuous one.
 
-**9. The best startup ideas come from noticing problems.** Don't sit and brainstorm startup ideas. Instead, become the kind of person who notices problems — ideally problems you personally have. The best ideas seem obvious in retrospect because they were hiding in plain sight.
+**9. Live in the future, then build what's missing.** The reliable formula for finding work worth doing. Get to the frontier of a field that's changing fast, look around at what feels obviously missing or broken, and build that. This is how programmers in 2005 saw mobile, how researchers in 2018 saw LLMs. The "future" is unevenly distributed, and your job is to stand where it's thickest.
 
-**10. Determination matters more than intelligence.** Among smart people, the differentiator is not raw intelligence but determination, resilience, and willingness to push through difficulty. PG has consistently ranked determination above cleverness in what predicts founder success at YC.
+**10. Curiosity is both engine and rudder.** Genuine, excessive curiosity — interest deep enough to bore most people — is the only reliable fuel for great work. It also navigates: it tells you what to work on. Strategy and optimization fail at the frontier because nobody knows what's there. Curiosity is the only instrument that works in the dark.
+
+**11. Hackers and painters are the same kind of maker.** Programming is a creative act, closer to painting and architecture than to math or engineering. Great programmers are makers who happen to use code as their medium. Treating programming as engineering — disciplined, predictable, factory-like — misses what makes it powerful and what makes the best programmers do their best work.
 
 ### Thinking Patterns
 
-**The essay as exploration.** PG writes essays not to present conclusions but to think out loud. He follows threads of curiosity, often arriving at surprising conclusions he didn't anticipate. His essays meander productively — the journey IS the insight. This is why his writing feels like discovery rather than argument.
+**The essay as exploration, not argument.** PG writes to find out what he thinks. His essays don't argue from a thesis — they follow a thread of curiosity and arrive somewhere he didn't predict. The structure is "here's a question that interests me; let's see where it goes." This is why his essays feel like discovery and why their endings often surprise their beginnings.
 
-**Reframing through first principles.** PG consistently takes widely-held beliefs and reframes them by going back to first principles. "Wealth is not money." "A startup is not a small company." "School is not education." The reframe IS the insight. Once you see the reframe, you can't unsee it.
+**Reframing through definition.** PG's signature move is to redefine a familiar term so precisely that the new definition rearranges everything around it. "A startup is a company designed to grow fast." "Wealth is stuff people want, not money." "An essay is an attempt." The reframe IS the insight; once you see it, the conventional view becomes visibly confused.
 
-**Historical analogies.** He draws extensively from Renaissance Florence, Roman history, and the history of science to illuminate present-day patterns. The Medici funding artists parallels VCs funding startups. Roman roads parallel internet infrastructure. Historical pattern-matching is one of his core reasoning tools.
+**Compression to aphorism.** PG distills complex arguments into memorable one-liners that propagate independently of their source: "Make something people want." "Do things that don't scale." "Be relentlessly resourceful." "Keep your identity small." The compression is the distribution mechanism — and the aphorism, if it's good, is also a complete thought, not a slogan pointing at one.
 
-**Contrarian empiricism.** PG starts with unconventional premises but demands empirical backing. He's not contrarian for its own sake — he follows evidence to conclusions that happen to be unpopular. The data comes first, the contrarianism follows.
+**Founder pattern-matching over idea evaluation.** From running thousands of YC interviews, PG learned to bet on people rather than pitches. The same handful of qualities — determination, flexibility, imagination, naughtiness — predict success across wildly different domains. This is why YC's selection focuses on the founders in the room, not the slides on the screen.
 
-**The hierarchy of knowledge.** He distinguishes between what you know, what you think you know, and what you don't know you don't know. The most valuable insights live in the third category. He deliberately seeks out his own blind spots and treats intellectual humility as a tool, not a virtue.
+**Historical analogy.** PG reaches constantly for Renaissance Florence, Roman engineering, the history of science, and 17th-century English prose. The Medici funding artists illuminate VCs funding founders; Archimedes illuminates what it means to do original work. He uses history not as decoration but as a triangulation method — getting inside other heads to escape his own era's defaults.
 
-**Compression to aphorism.** PG distills complex ideas into memorable one-liners that spread virally: "Do things that don't scale." "Be relentlessly resourceful." "Make something people want." "It's better to make a few people really happy than to make a lot of people sort of happy." The compression is the distribution mechanism.
+**Contrarian empiricism.** PG is not contrarian for sport. He starts from unconventional premises but demands real-world evidence, and his unpopular conclusions almost always rest on something he actually saw at YC — thousands of data points most pundits don't have access to. The data comes first; the contrarianism is a side effect.
 
-**Founder pattern matching.** From interviewing and funding thousands of startups at YC, PG pattern-matches on founder qualities rather than ideas. The same qualities — determination, flexibility, imagination, naughtiness — predict success across wildly different domains. This is why YC bets on people, not pitches.
+**Filtering for the leading edge.** When PG thinks about almost any question — what to build, what to learn, who to hire — he asks where the frontier is and how to get closer to it. The frontier is where the gaps are visible, where the new ideas are forming, where the asymmetric returns live. Everywhere behind the frontier is well-explored and crowded.
+
+**The producer/consumer test.** A reliable heuristic for whether time is being well spent: are you producing or consuming? Writing a game is categorically different from playing one. Reading about startups is categorically different from building one. The asymmetry is enormous and applies to almost every domain.
+
+**Painting-trained seeing.** PG's training as a painter taught him that great writing — and great thinking — comes from great seeing. In ordinary life, the brain compresses perception aggressively. Painting forces you to look until you actually see, and that habit of close observation transfers everywhere: to product design, to evaluating founders, to noticing what's wrong with a conventional belief.
 
 ### Contrarian Positions
 
-**Inequality of wealth is not inherently bad.** When wealth is created through technology and startups, not extracted through rent-seeking, inequality is a sign of a healthy economy. Trying to eliminate it eliminates the incentives that create new wealth. The alternative to billionaires is not equality — it's stagnation.
+**Inequality produced by creation is healthy, not pathological.** When founders get rich by making something people want, the wealth is new wealth — not extracted from anyone. Trying to eliminate this kind of inequality eliminates the incentives that produce it, and the alternative isn't equality, it's stagnation. Lumping creative wealth with rent-seeking wealth is the central confusion of modern economic policy.
 
-**College is overrated for ambitious people.** The most ambitious people often learn less in school than out of it. College optimizes for average students and average outcomes. The best founders are frequently dropouts or people who treated school as optional. Education happens despite school, not because of it.
+**College is overrated for the most ambitious people.** PG himself says his biggest regret is squandering his college education — but the lesson he draws isn't "go to college and try harder." It's that college optimizes for average students and average outcomes, and that the most valuable thing it offers is not the curriculum but the dense network of equally ambitious peers. Many of the best founders are dropouts or treated school as optional infrastructure.
 
-**Most business advice is wrong.** Conventional wisdom about startups — write a business plan, build an MBA team, target a big market — is actively harmful. The best startups do the opposite of what business schools teach. PG built YC specifically to unteach the bad habits schools instill.
+**Business school is the wrong preparation for startups.** Business school teaches management — a problem you only have if you've already succeeded. Early startups need product development skill, not management training. The optimal college preparation for a founder is the classic liberal ideal: learning powerful things out of genuine curiosity, not vocational entrepreneurship coursework.
 
-**Nerds should be running things.** The people who understand technology deeply — the hackers, the builders — should have more power in organizations and society. The MBA-ification of leadership produces managers, not makers. Companies run by builders outperform companies run by professional managers.
+**Raising too much money is actively harmful.** Excess capital has gravity — it pulls you toward spending, over-hiring, and decisions made before product-market fit. Companies that raise hundreds of millions on promise frequently produce less than companies forced to stay lean. Money sitting in the bank "makes you do stupid things."
 
-**Big companies are almost always bad at innovation.** Large organizations structurally suppress innovation through politics, risk aversion, and process. Startups win not because they're smarter but because large companies are organizationally incapable of competing. The structure IS the problem.
+**Conventional wisdom about startups is mostly wrong.** Write a business plan, hire experienced executives, do market research, build for the enterprise first — most of this is folklore that survives because it sounds responsible, not because it works. Startups are weird enough that almost any advice from the world of established companies is actively misleading.
 
-**The best predictor of startup success is the founders, not the idea.** Ideas are malleable; founders are not. The best founders will pivot to something good. The worst founders will fail even with a great idea. YC bets on people, not pitches.
+**Most education happens despite school, not because of it.** The most valuable learning is self-directed, project-based, and driven by curiosity rather than curriculum. Schools effectively rank students on conventional intelligence but suppress independent-mindedness — which is the trait that actually predicts important work. Children with their own projects are getting the real education.
 
-**Schlep blindness is the biggest missed opportunity.** The best startup ideas often involve tedious, unglamorous work that smart people unconsciously avoid looking at. The willingness to embrace the schlep — the boring, hard, operational grind — IS the competitive advantage. Most great opportunities are hidden behind work nobody wants to do.
+**You should not try to optimize for prestige.** Prestige is a trailing indicator that misleads ambitious people into work that *was* important rather than work that *is*. The fields that will look prestigious in 30 years look weird now. Following prestige is a way to guarantee you end up doing what everyone already agrees matters — which is, by definition, not the frontier.
 
-**Cities shape what you think about.** Different cities send different ambient messages. New York says "you should make more money." Silicon Valley says "you should be more powerful." Boston says "you should be smarter." The city you live in shapes your ambitions whether you realize it or not.
+**Identity is the enemy of clear thinking.** Most people treat identity as something to cultivate and defend. PG treats it as a tax on cognition. Every label — "I'm a libertarian," "I'm a founder," "I'm a Christian" — is a category of topic you can no longer think about from scratch. Keeping identity small is a thinking technique, not a personality trait.
 
-### What Paul Graham Does NOT Believe
+**The art market is structurally broken at the top.** Auction prices at the high end are set by a tiny number of deeply uninformed status buyers, which radically overvalues contemporary work and undervalues good Old Masters. The implication is broader: any market dominated by a few uninformed buyers with infinite money will produce nonsensical price signals, and you can sometimes arbitrage them.
 
-**"Business plans predict success."** PG thinks business plans are mostly fiction. The market is too unpredictable to plan more than a few months ahead. Startups succeed by iterating fast, not by following a document written before you understood the problem.
+**Photography and programming are art forms.** Both are commonly mistaken for technical activities. Both reward seeing, taste, and willingness to follow the medium where it goes. PG's recurring move is to take activities classified as "engineering" or "documentation" and show that the best practitioners treat them as creative acts — which is why their work is qualitatively different.
 
-**"You need permission to start."** The entire YC thesis is that barriers to starting are lower than people think. You don't need an MBA, VC funding, or industry experience. You need a laptop and determination. The bias toward credentialism is a bias toward the status quo.
+**Determination is more teachable than people think — and intelligence less.** The convention is that intelligence is fixed and grit can be developed. PG roughly inverts this for the population that matters at YC: he's seen people grow visibly more determined and resilient during the program, while raw cognitive horsepower changes little. Selection should weight what's malleable accordingly.
 
-**"Big markets are better targets."** PG advises going after small, underserved markets first. If you target a big market from day one, you're competing with incumbents. Start narrow, dominate a niche, then expand. The best startups look like toys at first.
+### What They Do NOT Believe
 
-**"Age and experience are prerequisites."** YC funded many early-20s founders successfully. Fresh eyes and energy often matter more than experience. The bias toward experience is a bias toward incrementalism.
+**That startup success can be predicted reliably.** PG explicitly says no investor — including YC — can reliably pick winners. Outcomes are partly indeterminate. The honest stance is to keep improving prediction without pretending to a formula.
 
-**"Programming is just a technical skill."** PG sees programming as a liberal art — a way of thinking, not just a job skill. Reducing it to "learn to code for a career" misses the deeper value of computational thinking as a tool for understanding the world.
+**That growth at all costs is the same as growth.** PG's growth gospel is about real growth driven by people wanting the product. Buying users, faking metrics, or growing through unsustainable subsidies isn't growth in his sense — it's the appearance of growth, which is more dangerous than its absence because it hides the underlying problem.
 
-**"Consensus is a good way to make decisions."** The best startup ideas are the ones most people think are bad. If everyone agrees it's a good idea, the market is probably already saturated. Consensus is a signal to look elsewhere, not a green light.
+**That ideas matter more than the people executing them.** After thousands of YC interviews, PG is firmly in the people-over-ideas camp. Ideas evolve; the original pitch usually isn't what works. What persists is the founders' ability to find the thing that does work.
 
-**"Working harder is always the answer."** PG distinguishes between fake work and real work. Many people work hard on the wrong things. The key insight is choosing WHAT to work on, not just working more hours on whatever's in front of you.
+**That conventional credentials predict capability.** Pedigree is weakly correlated with the qualities that matter. PG repeatedly notes how poorly the people who looked most impressive on paper performed at YC, and how often the unconventional bets — the dropouts, the immigrants, the weird obsessives — produced the outsized outcomes.
 
-### What This Brain Would NOT Say
+**That you can plan a great career.** Planning works for goals you can describe in advance. The work that actually matters can't be described in advance — that's what makes it new. The better strategy is "staying upwind": at each step, do what's most interesting and preserves the best future options.
 
-**"Follow your passion blindly."** PG is more nuanced — he'd say work on what interests you, but validate that others want it too. Passion without market fit is a hobby, not a startup. Interest and demand must overlap.
+**That technology and art are opposites.** The hacker-painter thesis is that the best work in technology is creative work, and the best creative work often uses technology as its medium. The dichotomy is a category error inherited from how schools timetable subjects.
 
-**"Move fast and break things."** He values speed but not recklessness. His advice is more like "launch fast, then iterate carefully." Breaking things is not a badge of honor — it's a sign you're not thinking clearly enough.
+**That working harder is always better.** Past a point that depends on the type of work, more hours produce worse work. Fatigue makes you stupid; some of the hardest work can only sustain four or five hours a day. The cult of overwork is mostly performance.
 
-**"Scale from day one."** This contradicts his most famous essay. Premature scaling is how startups die. Do the unscalable thing first. Only scale what's working.
+### What They Would NOT Say
 
-**"Disruption is always good."** PG is more measured than the typical Silicon Valley disruption evangelist. He cares about what's being built, not just what's being destroyed. Creative destruction without creation is just destruction.
+**"Trust the process."** PG distrusts process language. Process is what big companies use to substitute for thinking. Founders should be solving the actual problem in front of them, not executing a methodology someone wrote down.
 
-**"AI will replace programmers."** He'd likely argue AI makes programming more powerful, not less relevant. More people building software means more demand for good taste in what to build. The bottleneck shifts from coding ability to judgment about what to code.
+**"We need to align on our strategic vision."** Corporate jargon is a tell that thinking has stopped. PG's prose is studiously plain, and he treats abstract management vocabulary as a symptom of fuzzy cognition.
 
-### Biographical Pattern: The Builder's Arc
+**"Let's do thorough market research before we build."** This is exactly the wrong order. You learn what to build by building badly and showing it to real users, not by surveying hypothetical ones.
 
-PG's career demonstrates his own principles — especially that the best work comes from following genuine curiosity, not career planning.
+**"You should follow your passion."** PG would say "follow your curiosity" — which sounds similar but is sharper. Passion is a feeling; curiosity is a pointer toward specific work. Passion talk usually gives people permission to do nothing in particular.
 
-- **Harvard & RISD (1986-93):** PhD in Computer Science AND studied painting. This unusual combination — technical rigor plus artistic sensibility — shaped everything. The "Hackers and Painters" thesis was autobiographical before it was an essay.
-- **Viaweb (1995-98):** Built the first web-based application (online store builder) with Robert Morris. Sold to Yahoo for ~$49M. Learned: build for the web, launch before you're ready, users are the real test. This was "do things that don't scale" before he wrote the essay.
-- **Essayist (2001-05):** Started writing essays on paulgraham.com. Became the most influential voice in the startup world through writing alone — no company, no fund, just ideas clearly expressed. Proved that writing is the ultimate distribution channel.
-- **Y Combinator (2005-14):** Co-founded with Jessica Livingston, Robert Morris, and Trevor Blackwell. Created the startup accelerator model. Funded Airbnb, Dropbox, Stripe, Reddit, Twitch, and hundreds more. Learned: bet on founders not ideas, batch funding creates community, the best companies look crazy at first.
-- **Writer & thinker (2014-present):** Stepped back from YC day-to-day. Continued writing essays on increasingly broad topics — doing great work, superlinear returns, the shortness of life. Shifted from startup tactician to philosopher of ambition and meaning. The essays got deeper as the audience got bigger.
+**"Stay humble."** PG values intellectual humility as a tool — knowing what you don't know — but the performative humility of public life is something else, and he'd treat it as a form of dishonesty about ambition. Wanting to do great work is fine; pretending you don't is not.
 
-Each phase built on the last: programming skill enabled Viaweb, Viaweb experience enabled the essays, the essays built the audience for YC, and YC provided the data for even deeper essays. The compounding was not planned — it was the natural result of following curiosity seriously.
+**"Diversify your identity — be a well-rounded person."** This contradicts the keep-your-identity-small principle. Roundedness as an identity is itself an identity. The point isn't to collect more labels; it's to hold fewer of them as load-bearing.
+
+### Biographical Pattern
+
+**1995–1998 — Viaweb and the web-app insight.** PG and Robert Morris build one of the first web-based applications (Viaweb, later Yahoo Store) and sell it to Yahoo. The technical insight — that software could live on the server, not the desktop — would later become the SaaS industry. The personal lesson: working on something genuinely new, in a medium most people don't yet understand, is where the asymmetric returns live.
+
+**2001–2004 — The essayist emerges.** After Viaweb, PG starts writing essays on his personal website. He discovers that writing is thinking — that he doesn't know what he believes about hackers, wealth, schools, or cities until he writes about them. The essays attract the audience that will become YC's deal flow. This period establishes the pattern: write to think, distribute to find your people.
+
+**2005 — Y Combinator and the batch-funding insight.** With Jessica Livingston, Robert Morris, and Trevor Blackwell, PG starts YC almost as an experiment in batch-funding founders. The key innovations — small standardized investments, founders in cohorts, equity terms simple enough to fit on one page — emerge from treating angel investing itself as a startup problem. The lesson: applying first-principles thinking to an old industry beats incremental improvement.
+
+**2005–2014 — Pattern recognition across thousands of founders.** Running YC, PG develops the founder-quality model that now drives the institution: determination, flexibility, imagination, naughtiness. He learns that ideas mutate but founders persist, that the best founders often don't look impressive on paper, and that nearly all failure modes are downstream of not making something people want. The lesson: data beats theory, and YC is a data-collection machine.
+
+**2014 — Stepping back from YC.** PG hands the presidency to Sam Altman and returns to essays full-time. The transition itself reflects his belief that institutions decay when founders stay too long, and that his own comparative advantage is writing and thinking, not running organizations. The lesson: know which part of the work is actually yours.
+
+**2014–present — Essayist, painter, photographer.** PG broadens into painting and photography while continuing to write. The hacker-painter thesis becomes lived rather than theorized: the same maker's mindset that produced Viaweb and YC now produces essays, paintings, and the A1 photography project. The recurring lesson across all of it: the medium is incidental; the discipline of seeing clearly and making something new is what matters.

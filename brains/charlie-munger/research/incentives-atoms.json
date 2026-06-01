@@ -1,322 +1,377 @@
 [
   {
-    "content": "Incentives are the most powerful force in human systems, explaining the majority of seemingly irrational behavior. When you see people or institutions acting in ways that seem counterproductive or strange, the first question should always be: what does their compensation structure reward? Most organizational problems are incentive problems in disguise.",
-    "original_quote": "Show me the incentives and I'll show you the outcome. It's the most powerful force in the world.",
-    "implication": "Before trying to change behavior through training or culture, redesign the incentive structure. Align what people get rewarded for with what you actually want them to do.",
+    "content": "Munger treated incentive structures as the single most powerful explanatory variable in all of social science \u2014 more revealing than ideology, stated intention, or official policy. His core principle was simple: if you want to understand why an organization or individual behaves in a puzzling way, start by mapping who benefits from that behavior. The answer resolves most apparent mysteries immediately.",
+    "implication": "Before diagnosing organizational dysfunction, leaders should audit the incentive structures operating beneath the surface. Most 'culture problems' are actually incentive problems in disguise.",
     "cluster": "incentives",
     "topics": [
-      "incentive design",
-      "organizational behavior",
-      "systems thinking",
-      "human nature"
-    ],
-    "confidence": 0.95,
-    "source_type": "speech",
-    "source_ref": "Various Berkshire meetings and USC speeches",
-    "source_date": "2003"
-  },
-  {
-    "content": "Professional fee structures often create perverse incentives that work against client interests. Lawyers get paid more when deals are complicated and take longer. Investment bankers earn fees regardless of whether acquisitions actually create value. The incentive is to maximize activity and complexity, not results.",
-    "original_quote": "A lot of the legal profession is like that. They get paid for doing things, whether the things work or not.",
-    "implication": "When hiring professionals, structure compensation around outcomes you want, not hours worked or transactions completed. Fee-for-service often incentivizes the wrong behavior.",
-    "cluster": "incentives",
-    "topics": [
-      "professional services",
-      "fee structures",
-      "agency problems",
-      "perverse incentives"
+      "incentives",
+      "systems_thinking",
+      "organizational_behavior",
+      "mental_models"
     ],
     "confidence": 0.9,
-    "source_type": "interview",
-    "source_ref": "Outstanding Investor Digest",
-    "source_date": "2000"
-  },
-  {
-    "content": "Academic tenure creates incentives for professors to publish obscure research that advances their careers rather than teaching effectively or solving real-world problems. The system rewards activity that looks scholarly to other academics, not usefulness to students or society.",
-    "original_quote": "The incentive structure of academia is totally screwy. You get ahead by writing papers that only twelve people will read.",
-    "implication": "In any knowledge organization, ensure that advancement criteria align with actual value creation, not just internal status games or publication metrics.",
-    "cluster": "incentives",
-    "topics": [
-      "academia",
-      "tenure system",
-      "misaligned incentives",
-      "knowledge work"
-    ],
-    "confidence": 0.85,
     "source_type": "speech",
-    "source_ref": "Various academic talks",
-    "source_date": "2005"
+    "source_ref": "The Psychology of Human Misjudgement \u2014 Harvard Law School speech",
+    "source_date": "1995"
   },
   {
-    "content": "Sales commission structures that reward volume over profitability inevitably lead to bad business. Salespeople will discount aggressively, promise unrealistic delivery dates, and sell to poor credit risks if they're paid purely on revenue rather than profitable revenue.",
-    "original_quote": "If you have a sales force that's paid on gross sales, they'll sell anything to anybody and eventually ruin your business.",
-    "implication": "Design sales compensation around profit metrics and customer quality, not just top-line revenue. What gets measured and rewarded is what gets optimized for.",
+    "content": "Munger used the example of FedEx's overnight sorting operation to illustrate the power of incentive design. The company struggled for years to get workers to complete overnight sorts on time, trying various managerial interventions that all failed. The moment they switched from hourly pay to shift-completion pay \u2014 letting workers go home as soon as the sort was done \u2014 the problem vanished. The system, not the people, had been broken.",
+    "implication": "When a team consistently underperforms despite talent and effort, the diagnostic question is not 'how do we motivate these people?' but 'what does the current incentive structure actually reward?' Redesigning the system almost always beats exhorting the people.",
     "cluster": "incentives",
     "topics": [
-      "sales compensation",
-      "profit optimization",
-      "business quality",
-      "measurement systems"
+      "incentive_design",
+      "organizational_systems",
+      "management",
+      "case_study"
     ],
-    "confidence": 0.9,
-    "source_type": "annual meeting",
-    "source_ref": "Berkshire Hathaway Annual Meeting",
-    "source_date": "2002"
-  },
-  {
-    "content": "Stock option compensation for executives creates massive incentives for short-term thinking and accounting manipulation. When your personal wealth depends on the stock price over the next few years, you'll sacrifice long-term business health for quarterly earnings beats and temporary stock pumps.",
-    "original_quote": "Stock options are insane. Of all the stupid things that have been done in corporate America, few match stock options.",
-    "implication": "Align executive compensation with long-term business performance through restricted stock with extended vesting periods, not options that reward volatility and short-term price movements.",
-    "cluster": "incentives",
-    "topics": [
-      "executive compensation",
-      "stock options",
-      "short-termism",
-      "corporate governance"
-    ],
-    "confidence": 0.95,
-    "source_type": "annual meeting",
-    "source_ref": "Berkshire Hathaway Annual Meeting",
-    "source_date": "2003"
-  },
-  {
-    "content": "The medical profession's fee-for-service model creates incentives to over-treat patients rather than focus on prevention or the most effective treatments. Doctors get paid more for ordering tests, performing procedures, and scheduling follow-up visits than for keeping patients healthy.",
-    "original_quote": "The doctor gets paid for treating the disease, not for preventing it. So guess what kind of healthcare system you get?",
-    "implication": "In any service business, align payment with the outcomes customers actually want, not the activities that are easiest to measure and bill for.",
-    "cluster": "incentives",
-    "topics": [
-      "healthcare incentives",
-      "service design",
-      "outcome-based pricing",
-      "prevention vs treatment"
-    ],
-    "confidence": 0.85,
+    "confidence": 0.88,
     "source_type": "speech",
-    "source_ref": "University of Southern California commencement",
+    "source_ref": "The Psychology of Human Misjudgement \u2014 Harvard Law School speech",
+    "source_date": "1995"
+  },
+  {
+    "content": "Munger observed that people almost never consciously acknowledge when self-interest is shaping their conclusions \u2014 they genuinely believe their biased reasoning is objective analysis. This makes incentive-distorted thinking extraordinarily difficult to detect and correct from the inside. The antidote is to build systems and institutions that make honest outcomes profitable rather than relying on individuals to override their own self-interest through willpower.",
+    "implication": "Founders and leaders should architect systems assuming that smart, well-intentioned people will still rationalize self-serving decisions. Structural safeguards beat character appeals every time.",
+    "cluster": "incentives",
+    "topics": [
+      "self-interest",
+      "rationalization",
+      "institutional_design",
+      "psychology"
+    ],
+    "confidence": 0.87,
+    "source_type": "speech",
+    "source_ref": "The Psychology of Human Misjudgement \u2014 Harvard Law School speech",
+    "source_date": "1995"
+  },
+  {
+    "content": "Munger was deeply critical of the investment banking fee model, which rewards deal completion rather than deal quality. Because bankers earn their largest fees when transactions close \u2014 regardless of whether they create or destroy value \u2014 they have a structural incentive to advise deals that should never happen. Munger considered this one of the most reliable sources of wealth destruction in modern capitalism.",
+    "implication": "When hiring any adviser whose compensation is tied to a transaction closing, weight their enthusiasm for the deal accordingly. Seek fee structures that align adviser incentives with long-term outcomes rather than immediate completion.",
+    "cluster": "incentives",
+    "topics": [
+      "investment_banking",
+      "fee_structures",
+      "conflicts_of_interest",
+      "capital_allocation"
+    ],
+    "confidence": 0.88,
+    "source_type": "shareholder meeting",
+    "source_ref": "Wesco Financial Annual Meeting",
     "source_date": "2007"
   },
   {
-    "content": "Berkshire's decentralized structure works because subsidiary managers are incentivized like owners, not employees. They keep most of the profits they generate, face minimal corporate bureaucracy, and know their businesses won't be sold as long as they perform well.",
-    "original_quote": "We have the right incentives. Our managers think like owners because they essentially are owners.",
-    "implication": "Decentralization only works when local managers have skin in the game and clear authority. Without proper incentives, autonomy becomes chaos.",
+    "content": "Munger pointed to the legal profession as a system where billable-hour incentives systematically produce outcomes that are bad for clients. When lawyers are paid by the hour, protracted litigation becomes financially rational for the firm even when a faster resolution would serve the client better. The incentive structure does not select for justice or efficiency \u2014 it selects for volume.",
+    "implication": "Any service industry paid by activity rather than outcome will tend to generate excess activity. Builders designing professional services should explore outcome-aligned fee models to reduce this structural drag.",
     "cluster": "incentives",
     "topics": [
-      "decentralization",
-      "management incentives",
-      "ownership thinking",
-      "organizational design"
-    ],
-    "confidence": 0.9,
-    "source_type": "annual report",
-    "source_ref": "Berkshire Hathaway Annual Report",
-    "source_date": "2001"
-  },
-  {
-    "content": "Insurance company incentives are fundamentally misaligned when underwriters are rewarded for writing policies regardless of their ultimate profitability. The feedback loop between writing bad business and suffering losses is too long and indirect for most people to internalize.",
-    "original_quote": "In insurance, the chickens don't come home to roost for years. So you can look like a hero for a long time before you look like a bum.",
-    "implication": "In businesses with long feedback loops, create leading indicators and interim accountability measures that connect current decisions to future outcomes.",
-    "cluster": "incentives",
-    "topics": [
-      "insurance underwriting",
-      "delayed feedback",
-      "accountability systems",
-      "risk management"
-    ],
-    "confidence": 0.9,
-    "source_type": "annual meeting",
-    "source_ref": "Berkshire Hathaway Annual Meeting",
-    "source_date": "1999"
-  },
-  {
-    "content": "Investment management fees based on assets under management rather than performance create incentives to gather assets and take excessive risks rather than generate superior returns. Managers get rich from fees even when their investors lose money.",
-    "original_quote": "The typical money manager gets paid for selling his services, not for the results he delivers. So guess what he focuses on?",
-    "implication": "When selecting investment managers or financial advisors, prioritize those whose compensation is tied to your actual returns, not the size of your account.",
-    "cluster": "incentives",
-    "topics": [
-      "investment management",
-      "asset management fees",
-      "performance incentives",
-      "financial services"
+      "legal_profession",
+      "fee_structures",
+      "perverse_incentives",
+      "service_industries"
     ],
     "confidence": 0.85,
     "source_type": "speech",
-    "source_ref": "Various investment talks",
-    "source_date": "2004"
+    "source_ref": "The Psychology of Human Misjudgement \u2014 Harvard Law School speech",
+    "source_date": "1995"
   },
   {
-    "content": "Accounting firms face an impossible conflict of interest when they audit the same companies they provide consulting services to. The lucrative consulting fees create pressure to be accommodating on accounting issues rather than rigorous in their auditing role.",
-    "original_quote": "How can you be independent when your audit client is paying you millions for consulting work? It's a ridiculous system.",
-    "implication": "Separate advisory and oversight functions in your organization. The same people who provide guidance shouldn't be responsible for evaluating performance.",
+    "content": "Munger argued that the entire management consulting industry carries a version of the same conflict: consultants are incentivized to diagnose problems that require ongoing consulting engagements rather than simple, one-time solutions. This does not require dishonesty \u2014 it operates through unconscious selective attention, where genuinely complex-seeming problems become more visible than genuinely simple ones.",
+    "implication": "Be skeptical of any expert whose business model depends on the problem being complicated. A second opinion from someone with no stake in the complexity is often worth more than the primary diagnosis.",
     "cluster": "incentives",
     "topics": [
-      "audit independence",
-      "conflicts of interest",
-      "accounting",
-      "corporate governance"
+      "consulting",
+      "conflicts_of_interest",
+      "perverse_incentives",
+      "expert_bias"
     ],
-    "confidence": 0.9,
-    "source_type": "interview",
-    "source_ref": "Forbes interview on corporate governance",
+    "confidence": 0.82,
+    "source_type": "speech",
+    "source_ref": "The Psychology of Human Misjudgement \u2014 Harvard Law School speech",
+    "source_date": "1995"
+  },
+  {
+    "content": "Munger studied the Salomon Brothers trading scandal of the early 1990s \u2014 which Buffett was called in to help resolve \u2014 as a case study in what happens when an institution's incentive structure rewards short-term individual gain at the expense of institutional integrity. Traders had every financial reason to push boundaries and almost no personal exposure to the long-term reputational damage they were accumulating. The institution's ruin was the predictable product of its own reward system.",
+    "implication": "When compensation is concentrated at the individual level and consequences are diffused across the institution, expect boundary-pushing behavior to escalate until something breaks. Building in clawback provisions and deferred compensation is not bureaucracy \u2014 it is incentive alignment.",
+    "cluster": "incentives",
+    "topics": [
+      "financial_institutions",
+      "compensation_design",
+      "risk_culture",
+      "institutional_failure"
+    ],
+    "confidence": 0.85,
+    "source_type": "shareholder meeting",
+    "source_ref": "Berkshire Hathaway Annual Meeting",
+    "source_date": "1992"
+  },
+  {
+    "content": "Munger often pointed to the accounting profession as an example of an industry that nominally serves clients but is structurally captured by them. Auditors are hired and paid by the very companies they are supposed to hold to account, creating an incentive to provide comfortable rather than rigorous assessments. This dynamic, Munger argued, made audit failures not just predictable but virtually inevitable in cases where clients pushed hard.",
+    "implication": "Any watchdog that depends financially on the entity it is watching will eventually fail at watching. Founders designing compliance, audit, or governance functions should think carefully about who pays and who benefits from honest reporting.",
+    "cluster": "incentives",
+    "topics": [
+      "auditing",
+      "governance",
+      "regulatory_capture",
+      "accounting"
+    ],
+    "confidence": 0.87,
+    "source_type": "shareholder meeting",
+    "source_ref": "Wesco Financial Annual Meeting",
     "source_date": "2002"
   },
   {
-    "content": "Wall Street's bonus culture incentivizes traders and executives to take massive risks with other people's money while keeping the upside for themselves. When trades work out, they get huge bonuses; when they blow up, shareholders and taxpayers bear the losses.",
-    "original_quote": "Wall Street has this amazing ability to privatize gains and socialize losses. The incentive structure is totally corrupt.",
-    "implication": "In any risk-taking business, ensure that decision-makers have significant personal downside exposure, not just upside potential. Asymmetric incentives lead to reckless behavior.",
+    "content": "Munger viewed most of the 2008 financial crisis as a straightforward \u2014 if catastrophic \u2014 product of incentive structures that rewarded mortgage originators for volume rather than quality. When the person who makes the loan immediately sells it to someone else and collects a fee, they have no remaining stake in whether the borrower can repay. The system was designed to generate loans, not good loans, and it performed exactly as designed.",
+    "implication": "Whenever a value chain allows risk to be created at one point and absorbed at another, the creators of risk will systematically underestimate it. Skin-in-the-game requirements are not optional if you want honest underwriting.",
     "cluster": "incentives",
     "topics": [
-      "Wall Street bonuses",
-      "risk-taking incentives",
-      "moral hazard",
-      "financial crisis"
+      "financial_crisis",
+      "mortgage_origination",
+      "skin_in_the_game",
+      "risk_transfer"
     ],
-    "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Post-financial crisis interviews",
-    "source_date": "2009"
+    "confidence": 0.88,
+    "source_type": "video",
+    "source_ref": "Warren Buffett Explains the 2008 Financial Crisis \u2014 video interview",
+    "source_date": "2010"
   },
   {
-    "content": "Corporate boards often fail in their oversight role because directors are incentivized to be accommodating rather than challenging. Board fees, social relationships, and the desire to avoid conflict override the duty to shareholders and create a culture of rubber-stamping management decisions.",
-    "original_quote": "Most corporate boards are a joke. The directors get paid to be nice to management, not to ask hard questions.",
-    "implication": "Effective governance requires independent directors with significant equity stakes who face real consequences for poor oversight. Social boards lead to poor decisions.",
+    "content": "Munger consistently argued that CEOs pursuing acquisitions are rarely driven primarily by sound capital allocation logic. The incentives pushing toward deals \u2014 investment banker enthusiasm, board excitement, press coverage, and the CEO's own desire to preside over something larger \u2014 are far more immediate and emotionally potent than the long-run spreadsheet math that usually argues against paying a premium. This is why most acquisitions fail to earn their cost of capital, and why that pattern has repeated for decades without correction.",
+    "implication": "Any M&A process should begin by identifying and naming all the non-financial pressures pushing toward a deal. If the team cannot honestly articulate why doing nothing is less attractive than doing the deal, that is a warning sign, not a green light.",
     "cluster": "incentives",
     "topics": [
-      "corporate boards",
-      "director independence",
-      "governance",
-      "oversight failure"
+      "mergers_acquisitions",
+      "CEO_incentives",
+      "capital_allocation",
+      "deal_bias"
+    ],
+    "confidence": 0.88,
+    "source_type": "shareholder meeting",
+    "source_ref": "Wesco Financial Annual Meeting",
+    "source_date": "2007"
+  },
+  {
+    "content": "Munger noted that pharmaceutical companies have strong incentives to market drugs to patient populations far beyond those for whom the drugs were proven effective \u2014 because the same sales force that calls on physicians for legitimate indications can, with modest additional effort, encourage off-label prescriptions. The incentive structure rewards breadth of use regardless of whether that breadth is medically appropriate.",
+    "implication": "In any industry where the cost of overuse falls on a third party (insurers, patients, society) while the revenue from overuse accrues to the seller, expect systematic overselling. Buyers in these markets must compensate with extra skepticism.",
+    "cluster": "incentives",
+    "topics": [
+      "pharmaceuticals",
+      "perverse_incentives",
+      "externalities",
+      "healthcare"
+    ],
+    "confidence": 0.82,
+    "source_type": "shareholder meeting",
+    "source_ref": "Wesco Financial Annual Meeting",
+    "source_date": "2000"
+  },
+  {
+    "content": "Munger argued that the rating agency model \u2014 where Moody's and S&P are paid by the issuers whose securities they rate \u2014 is structurally certain to produce inflated ratings over time. Competition among rating agencies made this worse: if one agency provided honest assessments and another was more generous, issuers would route their business toward the generous one. The market selected for leniency, not accuracy.",
+    "implication": "When customers can shop for the most favorable assessment, the market for assessments degrades toward flattery. Any business or institution relying on third-party certification should ask whether the certifier has any structural reason to be honest.",
+    "cluster": "incentives",
+    "topics": [
+      "rating_agencies",
+      "conflicts_of_interest",
+      "market_structure",
+      "financial_crisis"
+    ],
+    "confidence": 0.87,
+    "source_type": "shareholder meeting",
+    "source_ref": "Berkshire Hathaway Annual Meeting",
+    "source_date": "2008"
+  },
+  {
+    "content": "Munger used the phrase 'incentives are too powerful' to describe situations where even good people in bad incentive structures produce bad outcomes. He stressed that this is not a counsel of despair but a design principle: if you want ethical behavior, build systems where ethical behavior is the path of least resistance and profitable behavior, not the path that requires heroic self-sacrifice.",
+    "implication": "Leaders who rely on hiring 'good people' and then placing them in poorly designed incentive systems will get bad outcomes from good people. The design of the system is a more reliable determinant of behavior than the character of individuals within it.",
+    "cluster": "incentives",
+    "topics": [
+      "institutional_design",
+      "ethics",
+      "systems_thinking",
+      "organizational_behavior"
+    ],
+    "confidence": 0.87,
+    "source_type": "speech",
+    "source_ref": "The Psychology of Human Misjudgement \u2014 Harvard Law School speech",
+    "source_date": "1995"
+  },
+  {
+    "content": "Munger pointed out that one of the most underappreciated incentive problems in large organizations is the tendency of subordinates to filter information upward in ways that please superiors rather than inform them. Messengers who bring bad news get shot, consciously or not, so the system evolves toward delivering optimistic reports regardless of underlying reality. This informational distortion is a predictable consequence of the power hierarchy itself.",
+    "implication": "Leaders who want honest information must actively reward the delivery of bad news. The default informational flow in any hierarchy runs toward flattery and away from accuracy. Structural interventions \u2014 anonymous feedback, third-party audits, skip-level conversations \u2014 are required to counteract this.",
+    "cluster": "incentives",
+    "topics": [
+      "information_distortion",
+      "organizational_hierarchy",
+      "feedback_systems",
+      "leadership"
     ],
     "confidence": 0.85,
     "source_type": "speech",
-    "source_ref": "Corporate governance speeches",
-    "source_date": "2006"
+    "source_ref": "The Psychology of Human Misjudgement \u2014 Harvard Law School speech",
+    "source_date": "1995"
   },
   {
-    "content": "The mutual fund industry's incentive structure encourages asset gathering and frequent trading rather than long-term performance. Fund managers are rewarded for marketing and portfolio turnover, both of which typically hurt investor returns but generate more fees for the management company.",
-    "original_quote": "The mutual fund industry is a giant marketing machine disguised as an investment operation. The incentives are all wrong.",
-    "implication": "Look for investment vehicles with low fees, minimal turnover, and manager compensation tied to long-term performance rather than asset gathering or trading activity.",
+    "content": "Munger observed that stock option compensation \u2014 intended to align executives with shareholders \u2014 often produces the opposite of the intended effect. Options give executives asymmetric payoffs: enormous upside if the stock rises, but no personal downside if it falls beyond the loss of the option's current value. This structure incentivizes risk-taking at shareholder expense and can reward executives handsomely even when they destroy value relative to market benchmarks.",
+    "implication": "Compensation design should mirror the actual risk-sharing relationship you want. If you want executives to think like owners, give them ownership with real downside, not options with artificial upside. Poorly designed equity compensation is not just expensive \u2014 it actively produces misaligned behavior.",
     "cluster": "incentives",
     "topics": [
-      "mutual funds",
-      "asset management",
-      "fee structures",
-      "investment performance"
+      "executive_compensation",
+      "stock_options",
+      "incentive_alignment",
+      "corporate_governance"
+    ],
+    "confidence": 0.87,
+    "source_type": "shareholder meeting",
+    "source_ref": "Wesco Financial Annual Meeting",
+    "source_date": "2001"
+  },
+  {
+    "content": "Munger repeatedly emphasized that regulatory agencies are particularly vulnerable to 'capture' \u2014 a process whereby the industries they regulate gradually install their own people, frameworks, and assumptions inside the regulatory body. Over time, the regulator comes to see the world through the lens of the regulated industry, protecting incumbents rather than the public. This is not a conspiracy \u2014 it is the predictable output of incentive gradients that favor industry insiders over diffuse public interests.",
+    "implication": "When evaluating the protective value of any regulatory regime, ask who staffs the regulator, where they came from, and where they go when they leave. Captured regulators can provide false reassurance while offering no real protection.",
+    "cluster": "incentives",
+    "topics": [
+      "regulatory_capture",
+      "government_institutions",
+      "industry_influence",
+      "public_policy"
     ],
     "confidence": 0.85,
-    "source_type": "annual meeting",
+    "source_type": "shareholder meeting",
+    "source_ref": "Wesco Financial Annual Meeting",
+    "source_date": "2004"
+  },
+  {
+    "content": "Munger taught that one of the greatest competitive advantages any organization can build is an incentive structure so well-designed that it attracts and retains the specific kind of people the organization needs to function at its best. Berkshire's model of acquiring businesses and leaving their managers alone \u2014 with appropriate incentives in place \u2014 was not trust-based generosity but a calculated bet that the right incentive structures would produce the right behavior more reliably than hands-on management.",
+    "implication": "Incentive design is a form of talent strategy. Organizations that design incentives to attract self-motivated, long-term-oriented operators do not need elaborate management oversight. The structure does the work that management would otherwise have to do manually.",
+    "cluster": "incentives",
+    "topics": [
+      "incentive_design",
+      "talent_strategy",
+      "organizational_culture",
+      "berkshire_model"
+    ],
+    "confidence": 0.88,
+    "source_type": "shareholder meeting",
     "source_ref": "Berkshire Hathaway Annual Meeting",
     "source_date": "2005"
   },
   {
-    "content": "Modern CEO compensation packages create incentives for empire-building through acquisitions rather than organic growth or capital returns to shareholders. CEOs get paid more for managing larger companies, regardless of whether the size creates value for shareholders.",
-    "original_quote": "CEO compensation is based on the size of the company, not the performance. So guess what CEOs optimize for?",
-    "implication": "Evaluate management teams based on per-share value creation and capital allocation discipline, not revenue growth or deal activity. Size without profitability is worthless.",
+    "content": "Munger was deeply skeptical of mutual fund industry fee structures, noting that actively managed funds charging 1-2% annually were effectively extracting a large fraction of long-term investor wealth through compounding fee drag. Because fund managers are paid on assets under management rather than net returns to investors, they have every incentive to gather assets and little incentive to be honest about underperformance. The industry's financial success and investors' financial success are structurally in tension.",
+    "implication": "Evaluate any financial product by first asking how the provider is paid and whether that payment structure aligns with your goals. Fee drag compounded over decades can be larger than most investors realize \u2014 and the incentive structures of the industry ensure that fact will not be advertised.",
     "cluster": "incentives",
     "topics": [
-      "CEO compensation",
-      "empire building",
-      "capital allocation",
-      "shareholder value"
+      "mutual_funds",
+      "fee_structures",
+      "asset_management",
+      "investor_interests"
     ],
-    "confidence": 0.9,
-    "source_type": "annual meeting",
-    "source_ref": "Berkshire Hathaway Annual Meeting",
-    "source_date": "2001"
-  },
-  {
-    "content": "Regulatory capture occurs when agencies become incentivized to serve the industries they're supposed to regulate rather than the public interest. Regulators often seek jobs in the private sector and face pressure from politicians who receive industry donations.",
-    "original_quote": "The regulators end up working for the people they're supposed to be regulating. It's a completely perverted system.",
-    "implication": "Understand that regulatory protection can disappear when it's no longer politically convenient. Build businesses that can thrive without regulatory advantages.",
-    "cluster": "incentives",
-    "topics": [
-      "regulatory capture",
-      "government incentives",
-      "industry regulation",
-      "political economy"
-    ],
-    "confidence": 0.8,
-    "source_type": "interview",
-    "source_ref": "Various political economy discussions",
-    "source_date": "2008"
-  },
-  {
-    "content": "University admissions officers face incentives to lower standards and increase enrollment to boost revenue and rankings, rather than maintaining academic quality. The pressure to grow tuition income often conflicts with educational mission.",
-    "original_quote": "Universities have become businesses first and educational institutions second. Follow the money and you'll understand their decisions.",
-    "implication": "When evaluating educational institutions or programs, look at where their revenue comes from and what behaviors their business model rewards. Quality and profit don't always align.",
-    "cluster": "incentives",
-    "topics": [
-      "higher education",
-      "university incentives",
-      "academic standards",
-      "educational quality"
-    ],
-    "confidence": 0.75,
-    "source_type": "speech",
-    "source_ref": "Educational institution talks",
-    "source_date": "2010"
-  },
-  {
-    "content": "The real estate industry's commission structure incentivizes agents to push for quick sales at any price rather than optimal pricing and marketing. Agents get paid the same percentage whether they spend one week or six months marketing a property.",
-    "original_quote": "Real estate agents get almost the same commission whether your house sells for $400,000 or $420,000. Guess how hard they'll fight for that extra $20,000?",
-    "implication": "In any transaction where you're paying percentage-based fees, understand how the fee structure affects your agent's incentives and negotiate accordingly.",
-    "cluster": "incentives",
-    "topics": [
-      "real estate commissions",
-      "agent incentives",
-      "transaction costs",
-      "pricing optimization"
-    ],
-    "confidence": 0.85,
-    "source_type": "interview",
-    "source_ref": "Personal finance discussions",
+    "confidence": 0.87,
+    "source_type": "shareholder meeting",
+    "source_ref": "Wesco Financial Annual Meeting",
     "source_date": "2003"
   },
   {
-    "content": "Newspaper businesses declined not just because of the internet, but because their incentive structures rewarded expanding circulation over reader engagement and advertiser results. They optimized for metrics that became worthless when the business model shifted.",
-    "original_quote": "The newspaper business got addicted to the wrong metrics. They measured circulation, not reader engagement, and ad space sold, not advertiser results.",
-    "implication": "Regularly audit whether your success metrics still align with value creation. What got you here might not get you there, especially during technological transitions.",
+    "content": "Munger argued that academic tenure creates a particular form of incentive failure: once earned, it removes almost all material consequences for being wrong, unproductive, or intellectually captured by fashionable but incorrect ideas. In fields like economics and finance, where fashionable theories with poor predictive power can be held indefinitely without career penalty, this produces a professional culture that optimizes for peer acceptance over accuracy.",
+    "implication": "When evaluating expert opinion, consider whether the expert faces real consequences for being wrong. An academic with tenure and a consultant with guaranteed retainer fees face fundamentally different incentive landscapes than someone with skin in the game. Weight opinions accordingly.",
     "cluster": "incentives",
     "topics": [
-      "media business models",
-      "metric optimization",
-      "technological disruption",
-      "value creation"
+      "academia",
+      "tenure",
+      "expert_incentives",
+      "intellectual_accountability"
     ],
-    "confidence": 0.75,
-    "source_type": "interview",
-    "source_ref": "Media industry discussions",
-    "source_date": "2012"
+    "confidence": 0.83,
+    "source_type": "speech",
+    "source_ref": "USC Gould School of Law commencement address",
+    "source_date": "2007-05-13"
   },
   {
-    "content": "Berkshire avoids businesses where success depends on the personal incentives of many employees, preferring systems where good outcomes emerge from structure rather than individual virtue. Human nature is predictable; trying to change it through culture is usually futile.",
-    "original_quote": "We like businesses where we don't have to depend on the unusual talent or virtue of the people running them. We want good results even with ordinary people and normal human incentives.",
-    "implication": "Design systems that work with normal human motivations rather than against them. Sustainable businesses don't depend on heroes or perfect people.",
+    "content": "Munger pointed out that the way medical systems compensate physicians \u2014 paying more for procedures than for prevention or diagnosis \u2014 systematically biases the entire healthcare system toward intervention over maintenance. This is not because physicians are greedy or uncaring, but because the incentive gradient consistently makes intervention more financially rational than the less remunerative alternatives, and over time the system evolves to optimize around that gradient.",
+    "implication": "Any system that pays more for complex action than for simple prevention will under-invest in prevention. This applies equally to healthcare, software maintenance, organizational risk management, and infrastructure. The intervention-first bias is the predictable child of intervention-first payment.",
     "cluster": "incentives",
     "topics": [
-      "business design",
-      "human nature",
-      "systematic success",
-      "organizational resilience"
+      "healthcare",
+      "perverse_incentives",
+      "prevention",
+      "systemic_bias"
     ],
-    "confidence": 0.9,
-    "source_type": "annual report",
-    "source_ref": "Berkshire Hathaway Annual Report",
-    "source_date": "1999"
+    "confidence": 0.83,
+    "source_type": "shareholder meeting",
+    "source_ref": "Wesco Financial Annual Meeting",
+    "source_date": "2006"
   },
   {
-    "content": "The venture capital industry's incentive structure encourages fund managers to make splashy, high-profile investments rather than boring, profitable ones. Limited partners pay attention to unicorns and IPOs, not steady returns, so VCs optimize for visibility over performance.",
-    "original_quote": "Venture capitalists get rewarded more for being in the headlines than for generating steady returns. The incentives are completely backwards.",
-    "implication": "When evaluating investment managers or advisors, look at their actual track record of value creation rather than their public profile or high-profile deals.",
+    "content": "Munger consistently returned to Ben Franklin's maxim \u2014 roughly, that it is difficult to get a man to understand something when his salary depends on his not understanding it \u2014 as one of the most useful single sentences in all of social science. He believed that motivated non-cognition, the systematic failure to notice inconvenient truths when noticing them would be costly, was one of the most prevalent and underappreciated forces in human affairs.",
+    "implication": "When someone in an organization consistently fails to see an obvious problem, the first diagnostic question should be: what do they personally lose if they see it? Motivated non-cognition is far more common than motivated deception, and it is harder to fix because the person is not lying \u2014 they genuinely do not see.",
     "cluster": "incentives",
     "topics": [
-      "venture capital",
-      "investment incentives",
-      "public relations vs performance",
-      "fund management"
+      "motivated_reasoning",
+      "self-interest",
+      "cognitive_bias",
+      "organizational_blindness"
+    ],
+    "confidence": 0.87,
+    "source_type": "speech",
+    "source_ref": "The Psychology of Human Misjudgement \u2014 Harvard Law School speech",
+    "source_date": "1995"
+  },
+  {
+    "content": "Munger believed that one of the most important things a person can do to maintain clear thinking is to avoid placing themselves in positions where their financial survival depends on reaching a particular conclusion. He practiced this himself at Berkshire by ensuring that neither he nor Buffett was under pressure to deploy capital on any particular timeline, making it structurally easier to say no than most investors ever manage.",
+    "implication": "Personal financial security is not just a lifestyle goal \u2014 it is a prerequisite for intellectual honesty. Investors, analysts, and advisers who are under pressure to produce returns, generate fees, or keep clients happy are structurally compromised in ways that no amount of good character fully overcomes.",
+    "cluster": "incentives",
+    "topics": [
+      "intellectual_independence",
+      "financial_security",
+      "decision_making",
+      "personal_integrity"
+    ],
+    "confidence": 0.85,
+    "source_type": "video",
+    "source_ref": "Charlie Munger: Mental Models for the Rest of Your Life \u2014 video",
+    "source_date": "2017"
+  },
+  {
+    "content": "Munger noted that Wall Street's enthusiasm for financial innovation has a remarkably consistent incentive explanation: new financial products generate outsized fees in the period before buyers fully understand what they are purchasing. Complexity is not accidental \u2014 it is financially rewarding for the seller in the window between product launch and market education. By the time buyers understand the product, the margins have usually compressed and innovation has moved to the next opaque instrument.",
+    "implication": "Treat complexity in financial products as a yellow flag rather than a sign of sophistication. The fee premium for complexity almost always accrues to the seller, not the buyer. Preferring simple, understandable instruments is not intellectual laziness \u2014 it is rational self-protection.",
+    "cluster": "incentives",
+    "topics": [
+      "financial_innovation",
+      "complexity",
+      "fee_extraction",
+      "investor_protection"
+    ],
+    "confidence": 0.86,
+    "source_type": "shareholder meeting",
+    "source_ref": "Wesco Financial Annual Meeting",
+    "source_date": "2003"
+  },
+  {
+    "content": "Munger argued that proxy advisory firms \u2014 which advise institutional shareholders on how to vote on corporate governance matters \u2014 carry their own incentive distortions. Because their business model depends on institutional clients renewing subscriptions, they have an incentive to recommend aggressive governance positions that make institutional clients feel they are earning their keep, even when those positions are not clearly in the long-run interest of shareholders.",
+    "implication": "Governance processes that rely on intermediaries with their own commercial incentives will tend to optimize for the intermediary's interests rather than the stated purpose of the process. Direct owner engagement, while slower, is generally more reliable than delegation through commercially motivated proxies.",
+    "cluster": "incentives",
+    "topics": [
+      "corporate_governance",
+      "proxy_advisors",
+      "institutional_investors",
+      "conflicts_of_interest"
     ],
     "confidence": 0.8,
-    "source_type": "interview",
-    "source_ref": "Investment industry critiques",
-    "source_date": "2015"
+    "source_type": "shareholder meeting",
+    "source_ref": "Daily Journal Annual Meeting",
+    "source_date": "2020-02-12"
+  },
+  {
+    "content": "Munger emphasized that one of Berkshire's enduring structural advantages was a compensation system for subsidiary managers that rewarded genuine long-run performance rather than short-term earnings management. He contrasted this with the typical public company model, where quarterly earnings pressure creates systematic incentives to sacrifice long-run value for short-run reported results \u2014 a form of value destruction that compounds invisibly over many years.",
+    "implication": "The measurement interval used to assess performance directly shapes the decisions that are made. Organizations that measure quarterly will systematically make quarterly-optimal decisions at the expense of decade-optimal ones. Extending measurement horizons is one of the most powerful structural interventions available to leaders who want long-term thinking.",
+    "cluster": "incentives",
+    "topics": [
+      "short-termism",
+      "earnings_management",
+      "berkshire_model",
+      "compensation_design"
+    ],
+    "confidence": 0.87,
+    "source_type": "shareholder meeting",
+    "source_ref": "Berkshire Hathaway Annual Meeting",
+    "source_date": "2004"
   }
 ]

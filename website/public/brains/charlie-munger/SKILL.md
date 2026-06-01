@@ -9,10 +9,10 @@ Welcome to the **Munger Brain Pack** from [brainsforfree.com](https://brainsforf
 
 ## What You're Getting
 
-- **218 knowledge atoms** — Core insights, frameworks, and strategic principles from Poor Charlie's Almanack (his collected speeches and talks), 40+ years of Berkshire Hathaway shareholder Q&A, Wesco and Daily Journal annual meetings, the 1995 'Psychology of Human Misjudgment' speech at Harvard, the 1986 Harvard School commencement address, and the 2007 USC Law commencement address
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1066 knowledge atoms** — Core insights, frameworks, and strategic principles from Poor Charlie's Almanack (his collected speeches and talks), 40+ years of Berkshire Hathaway shareholder Q&A, Wesco and Daily Journal annual meetings, the 1995 'Psychology of Human Misjudgment' speech at Harvard, the 1986 Harvard School commencement address, the 2007 USC Law commencement address, and extensive press interviews from 1962 through 2023
+- **1045 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — mental models, inversion, investing, patience, psychology, incentives, circle of competence, moats, worldly wisdom, temperament, envy, simplicity, and more
+- **Cross-referenced topics** — mental models, inversion, investing, patience, psychology, incentives, circle of competence, moats, worldly wisdom, temperament, envy, simplicity, learning, ethics, decision-making, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Munger Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (218 insights)
+  ├── brain-atoms.json         ← structured atoms (1066 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 218 atoms with titles, summaries, connections
+   - JSON structure of 1066 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,23 +93,23 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Charlie's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "Should I diversify across 40 stocks or concentrate in my 5 best ideas?"*
+*Example: "I'm thinking about making a large concentrated bet on a single company I've studied deeply. Am I being bold or reckless?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Charlie sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain the psychology of human misjudgment using Charlie's frameworks."*
+*Example: "Explain the 25 tendencies of human misjudgment using Charlie's frameworks from the Harvard speech."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Is it better to buy a great business at a fair price or a fair business at a great price?"*
+*Example: "Is it better to be a specialist who knows one industry deeply or a generalist with a latticework of mental models?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect Charlie's ideas about incentives to modern corporate governance."*
+*Example: "Connect Charlie's ideas about incentive distortion to the failures of modern financial institutions."*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How has Charlie's thinking on technology stocks evolved over the decades?"*
+*Example: "How did Charlie's thinking on technology companies evolve from his early skepticism to his later positions?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -117,11 +117,11 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions Charlie would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I'm tempted to sell a winning position because it's become a huge part of my portfolio. What should I be asking myself?"*
+*Example: "I keep second-guessing a long-term position every time the market drops. What questions should I be asking myself?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens when central banks keep rates artificially low for a decade?"*
+*Example: "What are the second and third-order effects of AI replacing large categories of knowledge work?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to value investing? Teach → evolve → coach to build worldly wisdom.*
+*Example: New to Munger's worldview? Start with Teach (latticework of mental models) → then Evolve (how his thinking developed over decades) → then Coach (apply it to your own decisions).*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Making a big decision? Predict the consequences → debate your assumptions → advise on the move.*
+*Example: Facing a major business or investment decision? Invert with Predict (trace consequences of being wrong) → stress-test with Debate (argue both sides) → then Advise (get Charlie's direct counsel on your move).*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Munger's widely published speeches, freely distributed Poor Charlie's Almanack content, public Berkshire/Wesco/Daily Journal shareholder meeting transcripts, and press coverage of his interviews and commentary. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Munger's widely published speeches, freely distributed Poor Charlie's Almanack content, public Berkshire/Wesco/Daily Journal shareholder meeting transcripts, and press coverage of his interviews and commentary across six decades. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

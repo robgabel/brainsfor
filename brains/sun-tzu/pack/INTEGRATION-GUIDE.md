@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (207 atoms, 1000 typed connections)
+  brain-atoms.json         ~1MB     Structured data (772 atoms, 906 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | Sun's synthesized worldview, all 207 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | Sun's synthesized worldview, all 772 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 
@@ -141,9 +141,9 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 4. Use any thinking skill:
    ```
-   /advise Should I compete head-on with a larger rival or find an indirect approach?
-   /debate Is it always better to avoid direct confrontation?
-   /predict What happens when AI gives every competitor perfect information simultaneously?
+   /advise My competitor just launched a product that undercuts mine on price. Should I match them or differentiate?
+   /debate Is deception ethical in business strategy, or does it undermine long-term trust?
+   /predict What happens when every competitor in a market has access to the same AI-powered intelligence simultaneously?
    /surprise
    ```
 

@@ -9,8 +9,8 @@ Welcome to the **Green Brain Pack** from [brainsforfree.com](https://brainsforfr
 
 ## What You're Getting
 
-- **222 knowledge atoms** — Core insights, frameworks, and strategic principles from 600+ SciShow episodes, 18+ years of Vlogbrothers, Crash Course series, Dear Hank & John podcast, TikTok science videos (7M+ followers), TED talks, keynotes, interviews, and two novels (An Absolutely Remarkable Thing, A Beautifully Foolish Endeavor)
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **651 knowledge atoms** — Core insights, frameworks, and strategic principles from 600+ SciShow episodes, 18+ years of Vlogbrothers, Crash Course series, Dear Hank & John podcast, TikTok science videos (7M+ followers), TED talks, keynotes, interviews, Wikipedia profile, NPR interviews, TIME Magazine feature, New York Times coverage, and two novels (An Absolutely Remarkable Thing, A Beautifully Foolish Endeavor)
+- **641 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **Cross-referenced topics** — Science communication, creator economy, attention and algorithms, climate change, community building, healthcare, TikTok, curiosity, internet culture, entrepreneurship, cancer, fame and identity, and more
 
@@ -28,7 +28,7 @@ Your Green Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (222 insights)
+  ├── brain-atoms.json         ← structured atoms (651 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 222 atoms with titles, summaries, connections
+   - JSON structure of 651 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -97,7 +97,7 @@ Ask for advice on decisions grounded in Hank's frameworks. Best for: career move
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Hank sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain how Hank thinks about making complex science accessible."*
+*Example: "Explain how Hank thinks about making complex science accessible to a general audience."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
@@ -109,7 +109,7 @@ Find unexpected connections between two concepts or synthesize multiple ideas in
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How has Hank's thinking on internet platforms changed from YouTube to TikTok?"*
+*Example: "How has Hank's thinking on internet platforms evolved from YouTube's early days to TikTok?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Building a creator business? Advise on strategy → debate the tradeoffs → predict the platform shifts.*
+*Example: Building a creator business? Advise on strategy → debate the tradeoffs → predict the platform shifts ahead.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.

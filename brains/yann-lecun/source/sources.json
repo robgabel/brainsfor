@@ -1,8 +1,8 @@
 {
-  "description": "Source material for the Yann LeCun brain pack \u2014 auto-discovered via web search.",
-  "brain_slug": "yann-lecun",
+  "description": "Source material for the Yann LeCun brain pack \u2014 text via Firecrawl, video via yt-dlp.",
+  "brain_slug": "yann-lecun-v2",
   "brain_name": "Yann LeCun",
-  "discovered_at": "2026-05-24T00:16:00.161113+00:00",
+  "discovered_at": "2026-05-31T06:50:13.018127+00:00",
   "sources": [
     {
       "title": "Wikipedia: Yann LeCun",
@@ -17,7 +17,7 @@
       "url": "https://scholar.google.com/citations?user=WLN3QrAAAAAJ"
     },
     {
-      "title": "French Government Legal Document",
+      "title": "French Government Official Document",
       "type": "other",
       "priority": "low",
       "url": "https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000039726325"
@@ -29,37 +29,37 @@
       "url": "http://yann.lecun.com/ex/fun/"
     },
     {
-      "title": "HAL Science: LeCun Research Paper",
+      "title": "HAL Science Archive - Yann LeCun Research",
       "type": "essay",
       "priority": "high",
       "url": "https://hal.science/hal-04206682"
     },
     {
-      "title": "Washington Post: Turing Award Winner Profile",
+      "title": "Washington Post: Turing Award Winners",
       "type": "profile",
       "priority": "medium",
       "url": "https://www.washingtonpost.com/technology/2019/03/27/artificial-intelligence-pioneers-win-turing-award/?noredirect=on"
     },
     {
-      "title": "New York Times: Turing Award Winner Profile",
+      "title": "New York Times: Turing Award AI Pioneers",
       "type": "profile",
       "priority": "medium",
       "url": "https://www.nytimes.com/2019/03/27/technology/turing-award-ai.html"
     },
     {
-      "title": "Financial Times: Turing Award Profile",
+      "title": "Financial Times: Yann LeCun Profile",
       "type": "profile",
       "priority": "medium",
       "url": "https://www.ft.com/content/e3c4c2f6-4ea7-4adf-b945-e58495f836c2"
     },
     {
-      "title": "IEEE Proceedings: LeCun 1998 Paper",
+      "title": "IEEE Publication: Gradient-Based Learning",
       "type": "essay",
       "priority": "high",
       "url": "https://ui.adsabs.harvard.edu/abs/1998IEEEP..86.2278L"
     },
     {
-      "title": "Yann LeCun: Published Research Paper",
+      "title": "Yann LeCun: Gradient-Based Learning in Deep Networks",
       "type": "essay",
       "priority": "essential",
       "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf"
@@ -67,32 +67,144 @@
     {
       "title": "ACM: Turing Award 2018 Announcement",
       "type": "profile",
-      "priority": "high",
+      "priority": "medium",
       "url": "https://www.acm.org/media-center/2019/march/turing-award-2018"
     },
     {
-      "title": "Telegraph: Turing Award Profile",
+      "title": "Telegraph: Turing Prize Godfathers of AI",
       "type": "profile",
       "priority": "medium",
       "url": "https://www.telegraph.co.uk/technology/2019/03/27/google-awards-1m-turing-prize-godfathers-ai/"
     },
     {
-      "title": "Bloomberg: Turing Award Profile",
+      "title": "Bloomberg: Three Godfathers of Deep Learning",
       "type": "profile",
       "priority": "medium",
       "url": "https://www.bloomberg.com/news/articles/2019-03-27/three-godfathers-of-deep-learning-selected-for-turing-award"
     },
     {
-      "title": "Lib\u00e9ration: Profile (French)",
-      "type": "profile",
-      "priority": "low",
+      "title": "Lib\u00e9ration: Le Temps des Machines",
+      "type": "interview",
+      "priority": "medium",
       "url": "https://www.liberation.fr/futurs/2015/09/07/le-temps-des-machines_1377539/"
     },
     {
-      "title": "NeurIPS 1989: LeCun Research Paper",
+      "title": "NeurIPS 1989: LeCun et al. Seminal Paper",
       "type": "essay",
       "priority": "essential",
       "url": "https://proceedings.neurips.cc/paper/1989/file/6c9882bbac1c7093bd25041881277658-Paper.pdf"
+    },
+    {
+      "title": "Yann Lecun: Meta AI, Open Source, Limits of LLMs, AGI & the Future of AI | Lex Fridman Podcast #416",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=5t1vTLU7s40",
+      "youtube_id": "5t1vTLU7s40"
+    },
+    {
+      "title": "Yann LeCun: Deep Learning, ConvNets, and Self-Supervised Learning | Lex Fridman Podcast #36",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=SGSOCuByo24",
+      "youtube_id": "SGSOCuByo24"
+    },
+    {
+      "title": "Biologically-inspired Neural Networks for Self-Driving Cars",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=8KBOf7NJh4Y",
+      "youtube_id": "8KBOf7NJh4Y"
+    },
+    {
+      "title": "How the QCRI-MIT CSAIL collaboration works",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=lRKGfHvGMQk",
+      "youtube_id": "lRKGfHvGMQk"
+    },
+    {
+      "title": "Predictive Learning, NIPS 2016 | Yann LeCun, Facebook Research",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Ount2Y4qxQo",
+      "youtube_id": "Ount2Y4qxQo"
+    },
+    {
+      "title": "Yann LeCun: Turing Award Lecture \"The Deep Learning Revolution: The Sequel\"",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=psl1wY2V-L0",
+      "youtube_id": "psl1wY2V-L0"
+    },
+    {
+      "title": "Yann LeCun - The Next Step Towards Artificial Intelligence",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=U2mhZ9E8Fk8",
+      "youtube_id": "U2mhZ9E8Fk8"
+    },
+    {
+      "title": "Yann LeCun - Next Step Towards AI",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=5-U_Xh8tvLI",
+      "youtube_id": "5-U_Xh8tvLI"
+    },
+    {
+      "title": "Do LLMs Understand? AI Pioneer Yann LeCun Spars with DeepMind\u2019s Adam Brown.",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=ykfQD1_WPBQ",
+      "youtube_id": "ykfQD1_WPBQ"
+    },
+    {
+      "title": "AGI debate heats up as Demis Hassabis Says Yann LeCun Is Wrong About Human Intelligence",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=JaKvvZp0jGs",
+      "youtube_id": "JaKvvZp0jGs"
+    },
+    {
+      "title": "Conversations in the Wild: Trailer",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=bzG47FuzL3A",
+      "youtube_id": "bzG47FuzL3A"
+    },
+    {
+      "title": "What if AI learned more like humans do? | Kevin Frans",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=67Tt25Cr8Dw",
+      "youtube_id": "67Tt25Cr8Dw"
+    },
+    {
+      "title": "[AI Experts Series by IP Paris] Yann Le Cun, a founding father of deep learning",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Rl1TFl2U89Y",
+      "youtube_id": "Rl1TFl2U89Y"
+    },
+    {
+      "title": "A Day at ICLR 2025: Met Yann LeCun | Posters | Talks | Food | Fun | Networking in Singapore",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=u0BFqDiOoVs",
+      "youtube_id": "u0BFqDiOoVs"
+    },
+    {
+      "title": "Deep Learning God Yann LeCun - Facebook / Meta's Director of Artificial Intelligence & Courant Prof.",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=TaLDeSETq_g",
+      "youtube_id": "TaLDeSETq_g"
+    },
+    {
+      "title": "Learn More About Facebook AI Research",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=l8V0jh62zvE",
+      "youtube_id": "l8V0jh62zvE"
     }
   ]
 }

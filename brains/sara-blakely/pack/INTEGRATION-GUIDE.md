@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (486 atoms, 528 typed connections)
+  brain-atoms.json         ~1MB     Structured data (917 atoms, 1000 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | Sara's synthesized worldview, all 486 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | Sara's synthesized worldview, all 917 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 
@@ -141,9 +141,9 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 4. Use any thinking skill:
    ```
-   /advise I have a product idea but no money and no connections. Where do I start?
-   /debate Is naivety an advantage or a disadvantage for first-time founders?
-   /predict What happens to consumer brands that ignore the female perspective?
+   /advise I have a product idea but I'm afraid to share it with anyone yet. How do I know when it's ready to talk about?
+   /debate Is bootstrapping a business better than raising venture capital?
+   /predict What happens to consumer brands that are built by people who have never experienced the problem they're solving?
    /surprise
    ```
 

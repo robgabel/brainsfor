@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (442 atoms, 458 typed connections)
+  brain-atoms.json         ~1MB     Structured data (609 atoms, 616 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | Yann's synthesized worldview, all 442 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | Yann's synthesized worldview, all 609 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 
@@ -141,9 +141,9 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 4. Use any thinking skill:
    ```
-   /advise Should I focus my AI research on scaling transformers or explore alternative architectures?
+   /advise Should I focus my AI research on scaling transformers or explore alternative architectures like JEPA?
    /debate Is the current path of scaling LLMs sufficient to achieve AGI?
-   /predict What happens to AI safety if we build autonomous agents with world models?
+   /predict What happens to AI safety and autonomy if we successfully build agents with world models?
    /surprise
    ```
 

@@ -1,11 +1,11 @@
 # Charlie Munger Brain Pack
 
-> **218 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **1066 knowledge atoms** · **1045 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of Charlie Munger's thinking, extracted from Poor Charlie's Almanack (his collected speeches and talks), 40+ years of Berkshire Hathaway shareholder Q&A, Wesco and Daily Journal annual meetings, the 1995 'Psychology of Human Misjudgment' speech at Harvard, the 1986 Harvard School commencement address, and the 2007 USC Law commencement address. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of Charlie Munger's thinking, extracted from Poor Charlie's Almanack (his collected speeches and talks), 40+ years of Berkshire Hathaway shareholder Q&A, Wesco and Daily Journal annual meetings, the 1995 'Psychology of Human Misjudgment' speech at Harvard, the 1986 Harvard School commencement address, the 2007 USC Law commencement address, and extensive press interviews from 1962 through 2023. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in Charlie's actual ideas, frameworks, and worldview.
 
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Charl
    ```
 3. Then run any thinking skill:
    ```
-   /advise "Should I diversify across 40 stocks or concentrate in my 5 best ideas?"
+   /advise "I'm thinking about making a large concentrated bet on a single company I've studied deeply. Am I being bold or reckless?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Charlie's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Charlie's persp
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (218 atoms, 1000 connections)
+  ├── brain-atoms.json      ← Structured data (1066 atoms, 1045 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**218 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**1066 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**1045 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — mental models, inversion, investing, patience, psychology, incentives, circle of competence, moats, worldly wisdom, temperament, envy, simplicity.
+**16 topic clusters** — mental models, inversion, investing, patience, psychology, incentives, circle of competence, moats, worldly wisdom, temperament, envy, simplicity, learning, ethics, decision-making.
 
 **Date range:** 1962 — 2023
 

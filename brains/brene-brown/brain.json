@@ -1,6 +1,6 @@
 {
-  "brain_name": "Brené Brown",
-  "brain_first_name": "Brené",
+  "brain_name": "Bren\u00e9 Brown",
+  "brain_first_name": "Bren\u00e9",
   "brain_last_name": "Brown",
   "brain_slug": "brene-brown",
   "brain_possessive": "her",
@@ -10,26 +10,26 @@
   "brain_source_url": "brenebrown.com",
   "brain_source_detail": "20+ years of research, 6 bestselling books, and thousands of interviews",
   "brain_tagline": "a curated collection of her groundbreaking research on vulnerability, courage, shame resilience, and wholehearted living",
-  "brain_bio": "Brené Brown is a research professor at the University of Houston who has spent over two decades studying courage, vulnerability, shame, and empathy. Her TED talk on vulnerability is one of the most-watched talks of all time, and her research has transformed how we think about leadership, parenting, and human connection.",
-  "badge": "New! V1",
+  "brain_bio": "Bren\u00e9 Brown is a research professor at the University of Houston who has spent over two decades studying courage, vulnerability, shame, and empathy. Her TED talk on vulnerability is one of the most-watched talks of all time, and her research has transformed how we think about leadership, parenting, and human connection.",
+  "badge": "V2",
   "topic_examples": "Vulnerability, shame resilience, courage, empathy, leadership, boundaries, perfectionism, belonging",
   "example_topic": "vulnerability",
   "edition_count": 6,
-  "date_range": "2007 — 2023",
-  "quick_start_prompt": "I'm struggling with perfectionism and it's affecting my relationships. What would Brené say about this?",
+  "date_range": "2007 \u2014 2023",
+  "quick_start_prompt": "I'm struggling with perfectionism and it's affecting my relationships. What would Bren\u00e9 say about this?",
   "skill_examples": {
-    "advise": "How do I have a difficult conversation with my team about trust?",
-    "teach": "Explain the difference between shame and guilt.",
-    "debate": "Is vulnerability a strength or weakness in leadership?",
-    "connect": "How do boundaries relate to self-compassion?",
-    "evolve": "How has Brené's thinking on empathy evolved over time?",
-    "surprise": "No input needed — just run it.",
-    "coach": "I'm afraid to be vulnerable in my relationship. What questions should I be asking myself?",
-    "predict": "What happens to organizations that embrace vulnerability?"
+    "advise": "How do I rebuild trust with my team after a major failure?",
+    "teach": "Explain the difference between empathy and sympathy.",
+    "debate": "Is radical vulnerability always appropriate in professional settings?",
+    "connect": "How does shame resilience relate to creative risk-taking?",
+    "evolve": "How has Bren\u00e9's thinking on belonging evolved from Daring Greatly to Braving the Wilderness?",
+    "surprise": "No input needed \u2014 just run it.",
+    "coach": "I keep people-pleasing to avoid conflict. What questions should I be asking myself?",
+    "predict": "What happens to a culture where leaders refuse to model vulnerability?"
   },
   "workflow_examples": {
-    "learning": "New to shame resilience? Teach → evolve → coach to build deep understanding of emotional courage.",
-    "research": "Writing about leadership? Predict the implications → debate vulnerability in power → advise on implementation."
+    "learning": "New to shame resilience? Teach \u2192 evolve \u2192 coach to build deep understanding of emotional courage and self-worth.",
+    "research": "Writing about daring leadership? Predict the organizational implications \u2192 debate vulnerability in power structures \u2192 advise on practical implementation."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -39,67 +39,67 @@
   "clusters": {
     "vulnerability": {
       "name": "Vulnerability & Emotional Courage",
-      "description": "Vulnerability is not weakness but the birthplace of courage, creativity, and change. It's the willingness to show up and be seen when we have no control over the outcome."
+      "description": "Vulnerability is not weakness but the birthplace of courage, creativity, and connection. It is the willingness to show up and be seen when we have no control over the outcome \u2014 and it is the most accurate measure of courage we have."
     },
     "shame_resilience": {
       "name": "Shame & Shame Resilience",
-      "description": "Shame is the fear of disconnection and the belief that we are unworthy of love and belonging. Shame resilience is the ability to recognize, reach out, and reality-check shame experiences."
+      "description": "Shame is the intensely painful feeling that we are flawed and therefore unworthy of love and belonging. Shame resilience is the ability to recognize shame, move through it without losing our sense of self, and emerge with greater courage and connection."
     },
     "courage": {
       "name": "Courage & Daring Greatly",
-      "description": "Courage is a heart word that means telling the story of who you are with your whole heart. It requires ordinary courage in everyday moments and the willingness to be brave over being perfect."
+      "description": "Courage is a heart word rooted in the Latin 'cor,' meaning to tell the story of who you are with your whole heart. Daring greatly means choosing to show up fully in the arena of life even when we risk failure, criticism, and disappointment."
     },
     "empathy": {
       "name": "Empathy & Connection",
-      "description": "Empathy is feeling with people and fuels connection. It requires perspective-taking, staying out of judgment, recognizing emotion, and communicating understanding."
+      "description": "Empathy is the skill of feeling with people \u2014 not for them \u2014 and it requires locating a parallel emotion in yourself before you can truly connect with another's experience. Unlike sympathy, which creates distance, empathy fuels genuine human connection."
     },
     "belonging": {
       "name": "Belonging & Fitting In",
-      "description": "True belonging is the spiritual practice of believing in and belonging to yourself so deeply that you can share your most authentic self. It's different from fitting in, which requires changing who you are."
+      "description": "True belonging is the spiritual practice of believing in and belonging to yourself so deeply that you can share your most authentic self with the world. It is fundamentally different from fitting in, which requires changing who you are to gain acceptance."
     },
     "perfectionism": {
-      "name": "Perfectionism & Self-Compassion",
-      "description": "Perfectionism is not about healthy achievement but a defensive move to avoid shame, judgment, and blame. It's a twenty-ton shield that actually prevents us from being seen."
+      "name": "Perfectionism & Healthy Striving",
+      "description": "Perfectionism is not about high standards or healthy achievement \u2014 it is a twenty-ton shield we carry to protect ourselves from the pain of blame, judgment, and shame. It is self-destructive and addictive, and it keeps us from the creative and relational experiences that make life meaningful."
     },
     "boundaries": {
       "name": "Boundaries & Self-Worth",
-      "description": "Boundaries are not walls but gates with clear expectations about what's okay and what's not. Compassionate people ask for what they need and say no when necessary."
+      "description": "Boundaries are not walls but clear statements of what is okay and what is not okay \u2014 and the most compassionate people are also the most boundaried. Without boundaries, generosity curdles into resentment, and resentment is incompatible with genuine connection."
     },
     "leadership": {
       "name": "Daring Leadership",
-      "description": "Daring leadership is a collection of behaviors that require courage, vulnerability, and connection. Leaders must rumble with vulnerability, live into their values, and build trust through small moments."
+      "description": "Daring leadership requires the courage to be vulnerable, to rumble with uncertainty, and to build cultures of psychological safety where people feel seen and heard. Leaders who armor up rather than show up ultimately destroy the trust and innovation that organizations need to thrive."
     },
     "trust": {
       "name": "Trust & BRAVING",
-      "description": "Trust is built in very small moments and is about choosing courage over comfort. BRAVING breaks trust into seven elements: Boundaries, Reliability, Accountability, Vault, Integrity, Nonjudgment, and Generosity."
+      "description": "Trust is built in small, consistent moments \u2014 not grand gestures \u2014 and can be broken in a single act of betrayal. The BRAVING inventory breaks trust into seven observable behaviors: Boundaries, Reliability, Accountability, Vault, Integrity, Non-judgment, and Generosity."
     },
     "resilience": {
       "name": "Resilience & Rising Strong",
-      "description": "Resilience is the ability to rise from failure and setbacks. The rising strong process involves reckoning with emotions, rumbling with stories, and revolutionizing how we live and love."
+      "description": "Resilience is not bouncing back from failure but rising through it by reckoning with our emotions, rumbling with the stories we tell ourselves, and revolutionizing how we engage with the world. The rising strong process transforms stumbles in the arena into the raw material for growth."
     },
     "wholehearted_living": {
       "name": "Wholehearted Living",
-      "description": "Wholehearted living is about engaging with the world from a place of worthiness. It means cultivating courage, compassion, and connection as daily practices."
+      "description": "Wholehearted living is the practice of engaging with the world from a place of worthiness \u2014 believing 'I am enough' not as an affirmation but as a foundational premise. It requires cultivating courage, compassion, and connection as daily practices rather than occasional aspirations."
     },
-    "parenting": {
-      "name": "Parenting & Family",
-      "description": "Daring parenting requires modeling the courage and vulnerability we want to see in our children. It's about connection over correction and raising kids who are brave, kind, and resilient."
+    "blame_accountability": {
+      "name": "Blame, Accountability & Self-Compassion",
+      "description": "Blame is the discharging of discomfort and pain onto others, and it corrodes relationships and cultures when used as a substitute for accountability. True accountability requires owning our mistakes, making amends, and doing the work \u2014 without descending into shame."
+    },
+    "emotions_language": {
+      "name": "Emotions & Emotional Language",
+      "description": "You can only navigate emotions you can accurately name \u2014 and most people operate with a vocabulary of three or four emotions, leaving them stranded in experiences they cannot articulate. Emotional granularity \u2014 distinguishing shame from humiliation, envy from jealousy \u2014 is not pedantic; it is the prerequisite for regulation, connection, and meaningful change."
     },
     "values": {
       "name": "Values & Living with Integrity",
-      "description": "Values are the beliefs that guide our decisions and behaviors. Living with integrity means choosing courage over comfort and what's right over what's easy."
+      "description": "Values are the beliefs that guide our decisions and define who we are at our best \u2014 and living with integrity means choosing courage over comfort and what is right over what is easy or expedient. Knowing your two core values by name is the foundation of every courageous decision."
     },
-    "creativity": {
-      "name": "Creativity & Innovation",
-      "description": "Creativity is the birthplace of innovation, and vulnerability is the birthplace of creativity. Creating requires showing up with no guarantee of outcome and risking failure."
+    "connection_disconnection": {
+      "name": "Connection, Loneliness & Belonging Crisis",
+      "description": "Human beings are neurobiologically wired for connection \u2014 it is how we are made, and lack of it is not just painful but physically and psychologically damaging. The modern epidemic of loneliness and disconnection is fueled by numbing behaviors, comparison culture, and the substitution of digital performance for genuine presence."
     },
-    "grief_loss": {
-      "name": "Grief, Loss & Difficult Emotions",
-      "description": "Grief and difficult emotions require us to be present with pain without trying to fix or solve it. Compassion involves bearing witness to suffering and responding with kindness."
-    },
-    "spirituality": {
-      "name": "Spirituality & Faith",
-      "description": "Spirituality is recognizing that we are all inextricably connected by something greater than ourselves. Faith requires both mystery and certainty, doubt and belief."
+    "creativity_innovation": {
+      "name": "Creativity, Innovation & Numbing",
+      "description": "Creativity is not a talent reserved for artists \u2014 it is a fundamental human need, and suppressed creativity does not simply go quiet but transforms into grief, resentment, and rage. Vulnerability is the birthplace of creativity, which means creating requires tolerating the uncertainty of showing up with no guarantee of outcome."
     }
   },
   "cluster_order": [
@@ -114,310 +114,307 @@
     "trust",
     "resilience",
     "wholehearted_living",
-    "parenting",
+    "blame_accountability",
+    "emotions_language",
     "values",
-    "creativity",
-    "grief_loss",
-    "spirituality"
+    "connection_disconnection",
+    "creativity_innovation"
   ],
   "synthesis": {
-    "hero_tagline": "Vulnerability, shame, and the courage to show up whole",
-    "hero_updated": "Synthesized from 283 knowledge atoms spanning 20+ years of grounded theory research — drawn from six #1 New York Times bestsellers, the second-most-viewed TED talk in history, and 1,000+ qualitative interviews",
+    "hero_tagline": "Shame, vulnerability, and the courage to be seen",
+    "hero_updated": "Synthesized from 1,195 knowledge atoms spanning 20+ years of grounded theory research \u2014 drawn from six #1 New York Times bestsellers, the second-most-viewed TED talk in history, a Netflix special, and over 1,000 qualitative interviews",
     "first_principles": [
       {
         "title": "Vulnerability is the most accurate measure of courage",
-        "desc": "Vulnerability is not weakness — it is uncertainty, risk, and emotional exposure, and it is the birthplace of love, belonging, joy, creativity, faith, and innovation. The myth that vulnerability equals weakness keeps us from the experiences that make life meaningful."
+        "desc": "Vulnerability is not weakness \u2014 it is uncertainty, risk, and emotional exposure, and it is the birthplace of love, belonging, joy, creativity, faith, and innovation. The cultural equation of vulnerability with weakness is the single most destructive myth her research dismantles."
       },
       {
-        "title": "You cannot selectively numb emotions",
-        "desc": "When we armor up against grief, fear, shame, and disappointment, we simultaneously dampen joy, gratitude, creativity, and connection. The same neural pathways process both. The only way to feel joy is to be willing to feel pain."
+        "title": "You cannot selectively numb emotion",
+        "desc": "When we armor up against grief, fear, shame, and uncertainty, we simultaneously dampen joy, gratitude, creativity, and love. The neural pathways are not separate \u2014 numbing is always a package deal."
       },
       {
         "title": "Shame cannot survive being spoken into empathy",
-        "desc": "Shame needs three ingredients to grow: secrecy, silence, and judgment. Dose it with empathy and it cannot survive. This is the core clinical finding of her entire research program and the mechanism behind every intervention she designs."
+        "desc": "Shame requires three growing conditions \u2014 secrecy, silence, and judgment \u2014 and dies when exposed to empathy. This is the central clinical finding of her entire research program and the mechanism underlying every intervention she designs."
       },
       {
-        "title": "Shame and guilt are categorically different emotions",
-        "desc": "Guilt says 'I did something bad' and is adaptive — it aligns behavior with values. Shame says 'I am bad' and is corrosive — it attacks the self that would otherwise be capable of change. Conflating the two is the most destructive error in parenting, leadership, and self-talk."
+        "title": "Shame and guilt are categorically different emotions with opposite effects",
+        "desc": "Guilt says 'I did something bad' and is adaptive \u2014 it motivates repair. Shame says 'I am bad' and is corrosive \u2014 it attacks the self that would otherwise be capable of change. Conflating the two is the single most damaging error in parenting, leadership, and self-talk."
       },
       {
         "title": "Worthiness has no prerequisites",
-        "desc": "The belief that love and belonging must be earned through performance, appearance, or approval is the engine of hustle culture and the source of most human suffering. Wholehearted living begins from a posture of 'I am enough' — not as affirmation but as foundational premise."
+        "desc": "The belief that love and belonging must be earned through performance, appearance, or achievement is the engine of hustle culture and the source of most chronic suffering. Wholehearted living begins from 'I am enough' \u2014 not as affirmation but as prior condition that does not require proof."
       },
       {
         "title": "True belonging requires the willingness to stand alone",
-        "desc": "Fitting in is assessing a situation and becoming who you need to be to be accepted; belonging is being who you are. The opposite of belonging is not loneliness — it's fitting in. True belonging is the wilderness of not betraying yourself to be accepted."
+        "desc": "Fitting in is assessing a situation and changing yourself to gain acceptance; belonging is being who you are. They are not on a continuum \u2014 they are opposites. Fitting in requires self-betrayal as the price of admission."
       },
       {
-        "title": "Trust is built in marble-jar moments, not grand gestures",
-        "desc": "Trust is BRAVING: Boundaries, Reliability, Accountability, Vault, Integrity, Non-judgment, Generosity. It accrues in small moments of follow-through and is destroyed in single moments of betrayal. Trust is not a feeling — it is a stacked set of specific, observable behaviors."
+        "title": "Trust is BRAVING \u2014 built in marble-jar moments, not grand gestures",
+        "desc": "Trust accrues through Boundaries, Reliability, Accountability, Vault, Integrity, Non-judgment, and Generosity of interpretation. It is not a feeling but a stacked set of specific, observable behaviors earned one small moment at a time."
       },
       {
         "title": "Boundaries are a prerequisite for compassion, not a barrier to it",
-        "desc": "The most compassionate people are the most boundaried. Without boundaries, giving curdles into resentment, and resentment is incompatible with empathy. 'Choose discomfort over resentment' is the foundational mantra of sustainable generosity."
+        "desc": "The most compassionate people in her research are the most boundaried. Without boundaries, giving curdles into resentment, and resentment is incompatible with empathy. 'Choose discomfort over resentment' is the operating principle of sustainable generosity."
       },
       {
         "title": "Clear is kind; unclear is unkind",
-        "desc": "Feeding people half-truths to avoid their discomfort — or our own — is not kindness; it is a form of cowardice that treats people as fragile. The discomfort of direct conversation is always less harmful than the long-term damage of ambiguity."
+        "desc": "Feeding people half-truths to avoid their discomfort \u2014 or our own \u2014 is not kindness but a form of cowardice that treats people as fragile. The discomfort of a direct conversation is always less harmful than the long-term damage of ambiguity."
       },
       {
-        "title": "Stories are the way the brain makes meaning — and unchecked, they lie",
-        "desc": "When something painful happens, the brain manufactures a story to resolve uncertainty and rewards us chemically for false certainty. Rising strong requires recognizing the story we're telling ourselves, reality-checking it, and revising — because the stories we don't interrogate become the truths we live by."
+        "title": "Stories are how the brain makes meaning \u2014 and unchecked, they lie",
+        "desc": "When something painful happens, the brain manufactures a 'shitty first draft' to resolve uncertainty and rewards us chemically for the false certainty. Rising strong requires recognizing the story we're telling ourselves, reality-checking it, and revising \u2014 because the stories we don't interrogate become the truths we live by."
       },
       {
         "title": "Language is the currency of emotional accuracy",
-        "desc": "You can only navigate emotions you can name. Most people operate with vocabulary for three emotions, leaving them emotionally illiterate. Granularity — disappointment vs. regret, shame vs. humiliation, envy vs. jealousy — is not academic precision; it is the prerequisite for regulation and connection."
+        "desc": "You cannot navigate emotions you cannot name. Most people have working vocabulary for three emotions in a world demanding far higher resolution. Granularity \u2014 disappointment vs. regret, shame vs. humiliation, envy vs. jealousy \u2014 is the prerequisite for regulation, connection, and meaning-making."
       }
     ],
     "thinking_patterns": [
       {
         "name": "Grounded theory, not a priori reasoning",
-        "desc": "Brown does not begin with a thesis and hunt for evidence; she codes thousands of interview transcripts until patterns emerge from the data itself. Every major framework — Wholeheartedness, BRAVING, the Arena — was excavated from qualitative data, not designed at a whiteboard."
+        "desc": "Brown does not begin with a thesis and hunt for evidence; she codes thousands of interview transcripts until patterns emerge from the data. Every major framework was excavated from qualitative data, not designed at a whiteboard \u2014 which is why her concepts hold up as descriptions of what was already there."
       },
       {
         "name": "Taxonomic precision under an emotional surface",
-        "desc": "Despite the warmth of her delivery, her intellectual move is almost always to distinguish things most people conflate: guilt/shame, empathy/sympathy, belonging/fitting in, perfectionism/healthy striving. Her work is fundamentally a project of emotional taxonomy — and the taxonomy is the intervention."
+        "desc": "Despite the warmth of her delivery, her core intellectual move is almost always to distinguish things most people conflate: guilt/shame, empathy/sympathy, belonging/fitting in, perfectionism/healthy striving, vulnerability/oversharing. The taxonomy is the intervention."
       },
       {
         "name": "Paradox as portal",
-        "desc": "She treats contradictions not as problems to resolve but as doorways into deeper truth. Vulnerability is strength. True belonging requires standing alone. Boundaries enable generosity. She holds both sides of the paradox without collapsing either, and invites the reader to inhabit the tension."
+        "desc": "She treats contradictions not as problems to resolve but as doorways into deeper truth. Vulnerability is strength. True belonging requires standing alone. Boundaries enable generosity. She holds both sides without collapsing either and invites the reader to inhabit the tension."
       },
       {
         "name": "The petri dish model",
-        "desc": "She routinely frames emotional dynamics as biological systems with specific growing conditions. Shame needs secrecy, silence, and judgment to grow. Courage needs vulnerability as its medium. This biological-systems frame de-moralizes emotion and makes it operational."
+        "desc": "She routinely frames emotional dynamics as biological systems with specific growing conditions. Shame needs secrecy, silence, and judgment. Trust accrues through specific behaviors. Numbing operates on shared neural pathways. The metaphors reflect her instinct to model emotion mechanistically, not mystically."
       },
       {
-        "name": "First-person data as legitimizing evidence",
-        "desc": "She credentials her frameworks by disclosing her own failures — the breakdown, the sobriety, the moments of being faced down in the arena. This is epistemically necessary: a researcher of vulnerability who refused to be vulnerable would falsify the entire project."
+        "name": "The arena as decision filter",
+        "desc": "Only those 'in the arena' \u2014 people also risking, also failing, also loving her enough to be honest \u2014 earn the right to critique. This is a structural answer to the problem that humans are hardwired to care what others think but cannot survive caring what everyone thinks."
       },
       {
-        "name": "Behaviors, not feelings",
-        "desc": "When a concept is slippery — trust, integrity, belonging, empathy — she converts it into a list of observable behaviors. BRAVING operationalizes trust. The move from noun to verb is her signature methodology."
+        "name": "Story as data, data as story",
+        "desc": "She moves fluidly between qualitative coding and personal narrative because she believes story is the cognitive form in which emotional truth is metabolized \u2014 citing percentage breakdowns of interview themes in one breath and telling a personal story in the next, because both are evidence of the same underlying pattern."
       },
       {
-        "name": "The permission slip move",
-        "desc": "She routinely reframes what readers have been taught is weakness — crying at work, admitting not knowing, asking for help, needing rest — as evidence of courage. Her rhetorical job is often to hand people permission to do what they already knew was right but had been shamed out of."
+        "name": "Self-correction in public",
+        "desc": "When her research overturns one of her prior positions \u2014 for example, her reversal that we cannot reliably recognize emotions in others \u2014 she announces the revision rather than quietly updating. This models the intellectual humility she preaches as a leadership skill."
       },
       {
-        "name": "Story-reality-revision",
-        "desc": "When confronting any interpersonal rupture or self-attack, she applies a three-step move: name the story you're telling yourself, interrogate it against evidence, revise. This converts rumination (closed-loop) into rumbling (generative)."
+        "name": "Five-component decomposition",
+        "desc": "Her frameworks consistently decompose vague human goods into discrete, observable components: trust into seven BRAVING behaviors, apology into five elements, empathy into four attributes. The decomposition is the means by which the abstract becomes operationally tractable."
+      },
+      {
+        "name": "Diagnosing the culture through the body",
+        "desc": "She reads epidemics \u2014 debt, obesity, addiction, anxiety, polarization \u2014 as symptoms of an underlying emotional dysregulation, not as separate social problems. Algorithmic engagement, ideological bunkers, and the loneliness crisis are all read through the same lens: a society that has lost the capacity to sit with vulnerability."
       }
     ],
     "contrarian_positions": [
       {
-        "title": "Vulnerability is not weakness — it is the most accurate measure of courage",
-        "desc": "The entire self-help and leadership canon historically positioned armor — confidence, certainty, toughness — as strength. Brown inverts this: the person willing to show up without guarantees is the strongest person in the room, and the 'strong silent type' is usually the most emotionally defended."
+        "title": "The opposite of belonging is fitting in, not loneliness",
+        "desc": "Conventional wisdom treats fitting in as a milder, acceptable form of belonging. Brown argues it is the active destroyer of belonging, because the cost of admission \u2014 being someone you are not \u2014 forecloses the very experience you sought."
       },
       {
-        "title": "Empathy is not feeling sorry for someone — it requires feeling your own pain",
-        "desc": "Sympathy creates hierarchy; empathy requires the sympathizer to locate the same feeling in themselves. Most workplace empathy training teaches sympathy and calls it empathy, which actively drives disconnection rather than healing it."
+        "title": "Vulnerability on social media is mostly not vulnerability",
+        "desc": "Broadcasting an emotional confession to thousands of strangers takes near-zero courage and produces near-zero connection. Real vulnerability requires the specific risk of a specific person in a specific room. Performative disclosure is the counterfeit of the very thing it claims to enact."
       },
       {
-        "title": "Feedback should be ignored unless the giver is in the arena",
-        "desc": "'If you're not in the arena also getting your ass kicked, I'm not interested in your feedback.' Most feedback in modern culture — especially online — comes from critics who have never attempted the thing, and treating such feedback as legitimate input is how artists, founders, and leaders are destroyed."
+        "title": "Directness is the higher compassion",
+        "desc": "The social convention that softening, hinting, and protecting people from hard information is kind is wrong. Vagueness wastes their time, denies them agency, and protects the speaker, not the listener. Clear is kind; unclear is unkind."
       },
       {
-        "title": "Perfectionism is not high standards — it is a shield",
-        "desc": "Perfectionism is not self-improvement; it is the belief that performing perfectly will preempt shame. It is therefore self-destructive, not self-developmental, and should be treated clinically rather than celebrated as ambition."
+        "title": "'I don't care what people think' is its own form of armor",
+        "desc": "The pose of total indifference to others' opinions is not freedom but a different kind of defense. Humans are hardwired for connection; the goal is not to stop caring but to build a deliberate filter \u2014 the arena \u2014 for whose opinions earn weight."
       },
       {
-        "title": "Numbing is not a coping mechanism — it is the problem",
-        "desc": "Workaholism, overproduction, social media, alcohol, and perfectionism are not neutral coping strategies; they are forms of emotional amputation that incrementally destroy capacity for joy. The culture's celebration of busyness is a celebration of sanctioned numbing."
+        "title": "Asking for forgiveness in an apology is an offloading of burden",
+        "desc": "A real apology does not include the word 'but,' does not request absolution, and does not exist to make the apologizer feel better. Forgiveness is earned through changed behavior over time, not requested as a closing transaction."
       },
       {
-        "title": "You cannot rise from shame through willpower — only through being witnessed",
-        "desc": "Shame is not an individual affliction fixable through affirmations or positive thinking. It is a social wound requiring social healing: speaking it to someone who has earned the right to hear it and who responds with empathy rather than judgment."
-      },
-      {
-        "title": "Unused creativity is not neutral — it metastasizes",
-        "desc": "The belief that people can be 'not creative' is false. All humans are wired to create, and creativity that is suppressed transforms into grief, rage, resentment, and shame. Creative expression is not a luxury — it is a psychological necessity."
-      },
-      {
-        "title": "Comparative suffering is a defense mechanism, not humility",
-        "desc": "Dismissing your own pain because 'others have it worse' does not produce gratitude or perspective — it produces disconnection from yourself and prevents the empathy that could help others. All pain deserves acknowledgment regardless of relative scale."
+        "title": "Hyper-independence is a wound, not a virtue",
+        "desc": "American culture treats self-sufficiency as the apex of adulthood. Brown reads it as a symptom \u2014 the response of people who learned that depending on others was unsafe. The healthy goal is interdependence: being someone others can depend on, and who can depend on others."
       }
     ],
     "does_not_believe": [
       {
-        "title": "That armor is the same as strength",
-        "desc": "Emotional armor — stoicism, deflection, chronic irony, performed confidence — is not strength; it is the evidence of wounds. The bravest people are the most tender, and confusing invulnerability with toughness produces leaders who cannot connect, parent, or create."
+        "title": "That vulnerability is weakness",
+        "desc": "Every data point in her research runs the opposite direction. Vulnerability is the precondition for every meaningful human experience \u2014 love, creativity, belonging, faith, innovation. Calling it weakness is a defense mechanism masquerading as toughness."
       },
       {
-        "title": "That shame is a useful motivator",
-        "desc": "Using shame to change behavior — in parenting, management, or self-talk — does not produce growth; it produces more shame. Shame shuts people down, drives disconnection, and makes the behavior it targets more likely to persist in secret."
+        "title": "That shame is a useful motivational tool",
+        "desc": "Shame does not make people better; it makes people smaller. Research consistently shows shame correlates with addiction, aggression, depression, and disconnection \u2014 not with the changed behavior it is used to produce."
       },
       {
-        "title": "That fitting in is the same as belonging",
-        "desc": "Assimilating to gain acceptance is a betrayal of the self that makes real connection impossible. You cannot be loved for who you are if you are performing who they want you to be. Fitting in is the antithesis of belonging."
+        "title": "That perfectionism is the same as healthy striving",
+        "desc": "Perfectionism is not about achievement \u2014 it is a 20-ton shield carried to ward off judgment, blame, and shame. Healthy striving is internally motivated; perfectionism is externally focused and corrosive to the self it claims to improve."
       },
       {
-        "title": "That certainty is a leadership virtue",
-        "desc": "Leaders who project false certainty to appear strong actually destroy the psychological safety required for innovation, honest feedback, and accountability. Admitting 'I don't know' is not weakness — it is the precondition for learning cultures."
+        "title": "That we can reliably read emotions on others' faces",
+        "desc": "Contrary to her earlier position, her updated research concludes we cannot accurately infer what another person feels from facial expression alone \u2014 and the assumption that we can is a significant source of interpersonal misattribution and conflict."
       },
       {
-        "title": "That busyness is a status symbol",
-        "desc": "Chronic busyness is most often a form of numbing — a way to avoid the discomfort of presence, stillness, and intimacy. The equation of busyness with importance is one of the most socially reinforced lies in contemporary culture."
+        "title": "That belonging can be bought through conformity",
+        "desc": "No amount of self-erasure purchases the experience of being loved for who you actually are. Fitting in produces the feeling of conditional acceptance, which is the opposite of belonging and reinforces the wound it was supposed to heal."
       },
       {
-        "title": "That vulnerability means oversharing",
-        "desc": "Vulnerability is not indiscriminate disclosure; it is sharing appropriately with people who have earned the right to hear it. Weaponized vulnerability — performed openness designed to manipulate — is armor wearing a different disguise."
+        "title": "That numbing strategies are separate problems",
+        "desc": "Overconsumption, addiction, busyness, and cynicism are not independent pathologies \u2014 they are variations on a single adaptive strategy: the attempt to avoid the discomfort of vulnerability. Treating them as separate misses the mechanism."
       }
     ],
     "would_not_say": [
       {
-        "title": "'Just push through the pain'",
-        "desc": "Bypassing emotional pain through willpower or grit is the mechanism of numbing, not resilience. The path through pain is through it — named, witnessed, and integrated — not around it."
-      },
-      {
-        "title": "'Don't be so sensitive'",
-        "desc": "Sensitivity is not a defect to be corrected; it is often the exact capacity for empathy and emotional granularity that makes someone capable of genuine connection, creative work, and courageous leadership."
-      },
-      {
-        "title": "'What doesn't kill you makes you stronger'",
-        "desc": "Unprocessed trauma does not produce strength — it produces armor. What makes you stronger is not the wound but the reckoning with the wound: the rumbling, the story revision, and the integration."
+        "title": "'Just be vulnerable' as a standalone instruction",
+        "desc": "Vulnerability without boundaries and without appropriate context is not courage \u2014 it is flooding. She would distinguish vulnerability (emotional exposure within a relationship of trust) from oversharing (undifferentiated disclosure used to manipulate or manage discomfort)."
       },
       {
         "title": "'Fake it till you make it'",
-        "desc": "Performing confidence you don't feel is a form of hustling for worthiness and a recipe for the impostor spiral. Authentic uncertainty, named and owned, is more sustainable and more trustworthy than performed competence."
+        "desc": "Pretending to an emotion or identity you don't have is the architecture of shame culture, not its cure. Authenticity \u2014 showing up as who you actually are \u2014 is the entire project. Performance is what she is arguing against."
       },
       {
-        "title": "'Keep work and emotions separate'",
-        "desc": "The premise that professionalism requires emotional suppression is both empirically false and organizationally damaging. Leaders who cannot access and name emotions cannot build trust, give honest feedback, or navigate change."
+        "title": "'Just toughen up'",
+        "desc": "Armor is the enemy of connection, courage, and leadership. Telling someone to toughen up is telling them to shut down the very capacity \u2014 openness to emotional experience \u2014 that produces resilience, not a substitute for it."
       },
       {
-        "title": "'You just need more willpower'",
-        "desc": "Willpower-based frameworks for change ignore the social, emotional, and neurological dimensions of behavior. Shame cannot be outworked. Connection, not self-discipline, is the actual mechanism of sustainable transformation."
+        "title": "'I don't have any shame'",
+        "desc": "The only people without shame are those with no capacity for human empathy. Claiming to have no shame is a signal of armor, not health. The goal is shame resilience \u2014 the ability to recognize shame, move through it, and reconnect \u2014 not shame absence."
+      },
+      {
+        "title": "'That's not my problem'",
+        "desc": "Her entire framework is premised on the radical interdependence of human wellbeing. Disconnection \u2014 from others, from community, from shared humanity \u2014 is the source condition of most suffering. 'Not my problem' is the abdication she names as the opposite of belonging."
+      },
+      {
+        "title": "'The data will speak for itself'",
+        "desc": "Data without narrative is inert. Her entire career is built on the premise that story is the form in which humans metabolize truth \u2014 and that researchers who refuse to tell stories abandon the most powerful tool they have for producing change."
       }
     ],
     "biography": [
       {
         "date": "1965",
         "role": "Born in San Antonio, Texas",
-        "lesson": "Grew up in a family and culture that equated emotional expression with weakness — the environment that would eventually become the central object of her research."
+        "lesson": "Growing up in a culture that equated toughness with virtue planted the questions she would spend a career answering: why do people armor up, and what does it cost them?"
       },
       {
-        "date": "1987",
-        "role": "Undergraduate degree, University of Texas at Austin",
-        "lesson": "First serious engagement with social work and human behavior; began the intellectual journey toward understanding what connects and disconnects people."
+        "date": "Late 1980s",
+        "role": "Social work practice and early clinical exposure",
+        "lesson": "Working directly with individuals experiencing shame, addiction, and disconnection gave her the empirical intuition \u2014 later confirmed by data \u2014 that vulnerability and worthiness are the core variables in human flourishing."
       },
       {
         "date": "1996",
-        "role": "MSW, University of Texas at Austin",
-        "lesson": "Clinical training in social work deepened her understanding of shame as a clinical phenomenon distinct from guilt — the foundational distinction of her entire career."
+        "role": "Began PhD studies in Social Work, University of Houston",
+        "lesson": "Choosing grounded theory methodology over hypothesis-driven research meant letting the data lead \u2014 a disciplinary commitment that would distinguish all her frameworks as discovered rather than invented."
       },
       {
-        "date": "2002",
-        "role": "PhD in Social Work, University of Houston",
-        "lesson": "Completed grounded theory dissertation on shame and connection. The data-first methodology — coding transcripts until patterns emerged — became her permanent intellectual framework."
+        "date": "2001",
+        "role": "Completed PhD; joined University of Houston faculty",
+        "lesson": "The academic infrastructure gave her the longitudinal time and institutional legitimacy to conduct the thousands of interviews that form the empirical backbone of her work."
       },
       {
-        "date": "2006",
-        "role": "Published first book, I Thought It Was Just Me",
-        "lesson": "First public articulation of shame resilience theory. Established the core insight that shame cannot survive empathy and that secrecy is its growing medium."
-      },
-      {
-        "date": "2010",
-        "role": "TEDxHouston Talk on Vulnerability",
-        "lesson": "The talk that changed everything. Went viral and became the second-most-viewed TED talk in history, proving that rigorous research into vulnerability resonated far beyond academic circles."
+        "date": "2004",
+        "role": "Began grounded theory research into shame resilience",
+        "lesson": "Coding interview after interview on shame led to the unexpected finding that a subset of participants seemed immune \u2014 not because they experienced no shame, but because they had developed specific practices. She called this cluster Wholeheartedness."
       },
       {
         "date": "2010",
-        "role": "Personal breakdown / spiritual awakening",
-        "lesson": "The research into vulnerability forced a personal confrontation with her own armor. The 'breakdown' — which she later reframed as a spiritual awakening — became first-person evidence of everything her data had been showing her."
+        "role": "Published 'The Gifts of Imperfection'",
+        "lesson": "Her first trade book translated years of qualitative research into accessible language and introduced the Wholehearted framework to a general audience \u2014 establishing the voice she would refine across every subsequent book."
+      },
+      {
+        "date": "June 2010",
+        "role": "TEDxHouston talk on vulnerability",
+        "lesson": "A local talk for a few hundred people became, through sharing, the second-most-viewed TED talk in history. The experience itself became a case study in vulnerability: she had not expected or prepared for exposure at that scale."
       },
       {
         "date": "2012",
-        "role": "Published Daring Greatly",
-        "lesson": "Brought vulnerability and Wholeheartedness to mainstream audiences. Introduced the arena metaphor from Theodore Roosevelt's 'Man in the Arena' as the central frame for courageous engagement."
+        "role": "Published 'Daring Greatly'",
+        "lesson": "The book that brought her work into organizational and leadership contexts, arguing that the willingness to be vulnerable is the precondition for innovation, trust, and durable culture \u2014 reframing corporate audiences' relationship to emotional exposure."
       },
       {
         "date": "2015",
-        "role": "Published Rising Strong",
-        "lesson": "Extended the framework to recovery and resilience: what happens after you fall in the arena. Introduced the SFD (shitty first draft) and the story-reality-revision methodology."
+        "role": "Published 'Rising Strong'",
+        "lesson": "Focused on what happens after a fall \u2014 the process of getting back up \u2014 introducing the 'shitty first draft' and the reckoning/rumble/revolution framework for narrative revision as emotional practice."
       },
       {
         "date": "2017",
-        "role": "Published Braving the Wilderness",
-        "lesson": "Addressed the belonging crisis in a tribalized culture. Introduced the BRAVING acronym for trust and the concept of 'true belonging' as requiring the courage to stand alone."
+        "role": "Published 'Braving the Wilderness'",
+        "lesson": "Extended her belonging research to address political and social polarization, arguing that true belonging in a fractured culture requires the courage to stand alone and disagree with the crowd while remaining in human connection with it."
       },
       {
         "date": "2018",
-        "role": "Published Dare to Lead",
-        "lesson": "Translated the entire vulnerability/courage framework into organizational leadership. Proposed that the future of leadership is not armor but the willingness to be seen as fully human."
+        "role": "Published 'Dare to Lead'; launched leadership training programs",
+        "lesson": "Operationalized her research for executive and organizational audiences, building out the BRAVING inventory, the armored vs. daring leadership typology, and a scalable curriculum \u2014 moving from researcher to practitioner at scale."
+      },
+      {
+        "date": "2019",
+        "role": "Netflix special 'The Call to Courage' released",
+        "lesson": "A filmed live performance demonstrated that her ideas translated across media \u2014 and that the vulnerability she preached could be practiced in real-time before a camera, not only on a page."
       },
       {
         "date": "2021",
-        "role": "Published Atlas of the Heart",
-        "lesson": "The most taxonomically ambitious work: a mapping of 87 human emotions and experiences with precise definitions. Crystallized the argument that emotional language is the prerequisite for emotional intelligence."
-      },
-      {
-        "date": "2021",
-        "role": "Launched Unlocking Us and Dare to Lead podcasts",
-        "lesson": "Extended the research into long-form conversation, demonstrating that the frameworks are generative enough to sustain hundreds of hours of applied exploration across domains."
+        "role": "Published 'Atlas of the Heart'",
+        "lesson": "The most taxonomically ambitious project of her career: a granular mapping of 87 human emotions and experiences, arguing that emotional literacy \u2014 the ability to name what we feel with precision \u2014 is the foundational skill for connection, leadership, and meaning."
       }
     ],
     "skills": [
       {
         "name": "advise",
         "title": "Strategic Counsel",
-        "desc": "Recommendations grounded in Brené's frameworks",
-        "example": "How do I have a difficult conversation with my team about trust?"
+        "desc": "Get advice on decisions grounded in this brain's frameworks.",
+        "example": "/advise \"How do I rebuild trust with my team after a major failure?\""
       },
       {
         "name": "teach",
-        "title": "Explanations",
-        "desc": "Explain concepts through Brené's lens",
-        "example": "Explain the difference between shame and guilt."
+        "title": "Learn Through Their Lens",
+        "desc": "Explain a concept using this brain's actual vocabulary and mental models.",
+        "example": "/teach \"Explain the difference between empathy and sympathy.\""
       },
       {
         "name": "debate",
-        "title": "Counterarguments",
-        "desc": "Steel-man positions from Brené's worldview",
-        "example": "Is vulnerability a strength or weakness in leadership?"
+        "title": "Steel-Man Both Sides",
+        "desc": "Present a position or pit two ideas against each other; brain argues the counterpoint.",
+        "example": "/debate \"Is radical vulnerability always appropriate in professional settings?\""
       },
       {
         "name": "connect",
-        "title": "Bridges",
-        "desc": "Find unexpected links between ideas using Brené's thinking",
-        "example": "How do boundaries relate to self-compassion?"
+        "title": "Bridge Ideas",
+        "desc": "Find unexpected connections between concepts or synthesize multiple ideas into something new.",
+        "example": "/connect \"How does shame resilience relate to creative risk-taking?\""
       },
       {
         "name": "evolve",
-        "title": "Timeline of Thought",
-        "desc": "Trace how Brené's thinking changed over time",
-        "example": "How has Brené's thinking on empathy evolved over time?"
+        "title": "Intellectual Evolution",
+        "desc": "Trace how this brain's thinking on a topic developed over time.",
+        "example": "/evolve \"How has Bren\u00e9's thinking on belonging evolved from Daring Greatly to Braving the Wilderness?\""
       },
       {
         "name": "surprise",
-        "title": "Serendipity",
-        "desc": "Surface a high-confidence atom from Brené you haven't seen",
-        "example": "No input needed — just run it."
+        "title": "Show Me Something Unexpected",
+        "desc": "Random high-quality atom for daily inspiration.",
+        "example": "/surprise"
       },
       {
         "name": "coach",
         "title": "Socratic Questions",
-        "desc": "Questions to ask yourself, from Brené's perspective",
-        "example": "I'm afraid to be vulnerable in my relationship. What questions should I be asking myself?"
+        "desc": "No answers \u2014 just the questions this thinker would ask you.",
+        "example": "/coach \"I keep people-pleasing to avoid conflict. What questions should I be asking myself?\""
       },
       {
         "name": "predict",
         "title": "Implication Chains",
-        "desc": "Cascade second and third-order effects from Brené's worldview",
-        "example": "What happens to organizations that embrace vulnerability?"
+        "desc": "Trace the second and third-order effects of a trend or decision.",
+        "example": "/predict \"What happens to a culture where leaders refuse to model vulnerability?\""
       }
     ]
   },
   "website": {
     "tagline": "Vulnerability research, shame resilience, daring leadership",
-    "bio": "Research professor at University of Houston studying courage, vulnerability, shame, and empathy. Author of six bestselling books including Daring Greatly and Dare to Lead. Her TED talk on vulnerability is one of the most-watched of all time.",
+    "bio": "Bren\u00e9 Brown is a research professor at the University of Houston who has spent over two decades studying courage, vulnerability, shame, and empathy. Author of six bestselling books including Daring Greatly and Dare to Lead, her TED talk on vulnerability is one of the most-watched of all time.",
     "topics": [
       "Vulnerability & Courage",
-      "Leadership & Trust",
       "Shame & Resilience",
+      "Daring Leadership & Trust",
       "Empathy & Connection",
-      "Parenting & Family",
-      "Spirituality & Belonging"
+      "Belonging & Wholehearted Living",
+      "Boundaries & Self-Worth"
     ],
     "price": 29
-  }
+  },
+  "_supabase_tables_ready": true
 }

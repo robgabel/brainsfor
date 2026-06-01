@@ -1,11 +1,11 @@
 # John Green Brain Pack
 
-> **205 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **708 knowledge atoms** · **698 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
 
-A structured knowledge graph of John Green's thinking, extracted from 36 episodes of The Anthropocene Reviewed podcast, 44 book essays, 7 novels, 2 nonfiction books, 2 TED talks, multiple commencement addresses, and 18+ years of Vlogbrothers videos (2007–present). Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+A structured knowledge graph of John Green's thinking, extracted from 36 episodes of The Anthropocene Reviewed podcast, 44 book essays, 7 novels, 2 nonfiction books, 2 TED talks, multiple commencement addresses, BookCon panels (2015, 2019), NPR Fresh Air and Wild Card interviews, Freakonomics interview, New Yorker profile (2014), and 18+ years of Vlogbrothers videos (2007–present). Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
 
 This isn't a chatbot or a persona. It's a **thinking partner** grounded in John's actual ideas, frameworks, and worldview.
 
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in John'
    ```
 3. Then run any thinking skill:
    ```
-   /advise "How do I find meaning in work that feels insignificant?"
+   /advise "How do I find meaning in creative work that feels insignificant compared to the scale of the world's problems?"
    ```
 
 You should get a response that cites specific atoms, synthesizes John's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes John's perspect
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (205 atoms, 1000 connections)
+  ├── brain-atoms.json      ← Structured data (708 atoms, 698 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,11 +56,11 @@ This means:
 
 ## The Knowledge Graph
 
-**205 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**708 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**698 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
-**16 topic clusters** — Hope and despair, meaning-making, OCD and mental health, attention, the Anthropocene, storytelling, community, imagining others complexly, the beauty of ordinary things, global health, tuberculosis, education.
+**16 topic clusters** — Hope and despair, meaning-making, OCD and mental health, attention, the Anthropocene, storytelling, community, imagining others complexly, the beauty of ordinary things, global health, tuberculosis, education, book banning, mortality.
 
 **Date range:** 2005 — April 2026
 

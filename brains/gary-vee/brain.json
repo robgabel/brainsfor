@@ -4,32 +4,32 @@
   "brain_last_name": "Vaynerchuk",
   "brain_slug": "gary-vee",
   "brain_possessive": "his",
-  "vocabulary_examples": "\"day trading attention,\" \"jab jab jab right hook,\" \"macro patience micro speed,\" \"clouds and dirt,\" \"document don't create,\" \"legacy over currency,\" \"kind candor,\" \"51/49,\" \"the game,\" \"accountability\"",
+  "vocabulary_examples": "\"day trading attention,\" \"jab jab jab right hook,\" \"macro patience micro speed,\" \"clouds and dirt,\" \"document don't create,\" \"legacy over currency,\" \"kind candor,\" \"51/49,\" \"the game,\" \"accountability,\" \"underpriced attention,\" \"native creative,\" \"self-awareness\"",
   "brain_source_description": "keynotes, interviews, books, podcasts, and social content (2009-2026)",
   "brain_source_url": "garyvaynerchuk.com",
-  "brain_source_ethics": "Gary's freely available YouTube videos (DailyVee, GaryVee Audio Experience, Tea With GaryVee), public keynotes and conference talks, podcast interview appearances, and widely discussed quotes from press coverage and social media. Book content is distilled from public summaries, reviews, and Gary's own public discussions of his ideas — not reproduced from the texts.",
-  "brain_source_detail": "Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, The Tea With GaryVee, VaynerMedia keynotes, and millions of pieces of social content",
+  "brain_source_ethics": "Gary's freely available YouTube videos (DailyVee, GaryVee Audio Experience, Tea With GaryVee), public keynotes and conference talks (SXSW, Web Summit), podcast interview appearances (Joe Rogan, Tim Ferriss, Marie Forleo), and widely discussed quotes from press coverage and social media. Book content is distilled from public summaries, reviews, and Gary's own public discussions of his ideas \u2014 not reproduced from the texts.",
+  "brain_source_detail": "Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, The Tea With GaryVee, Joe Rogan Experience #910, Tim Ferriss collaborations, Marie Forleo interviews, SXSW 2014 and 2016 keynotes, Web Summit 2016 keynote, VaynerMedia keynotes, CNBC interviews, Adweek profiles, and millions of pieces of social content",
   "brain_tagline": "a curated collection of his thinking on attention, content, hustle, self-awareness, entrepreneurship, and the emotional traits that actually build lasting businesses",
-  "brain_bio": "Gary Vaynerchuk is the chairman of VaynerX and CEO of VaynerMedia, a serial entrepreneur, five-time New York Times bestselling author, and one of the most prolific voices on content strategy, attention, and personal brand. He built his family's wine store from $3M to $60M using internet video when nobody else was, then turned that playbook into a global advertising agency — and has spent two decades in public documenting how to actually build a business.",
+  "brain_bio": "Gary Vaynerchuk is the chairman of VaynerX and CEO of VaynerMedia, a serial entrepreneur, five-time New York Times bestselling author, and one of the most prolific voices on content strategy, attention, and personal brand. He built his family's wine store from $3M to $60M using internet video when nobody else was, then turned that playbook into a global advertising agency \u2014 and has spent two decades in public documenting how to actually build a business.",
   "badge": "New!",
-  "topic_examples": "attention arbitrage, jab jab jab right hook, document don't create, kind candor, sports cards, personal brand, social media strategy, self-awareness",
+  "topic_examples": "attention arbitrage, jab jab jab right hook, document don't create, kind candor, personal brand, social media strategy, self-awareness, macro patience micro speed",
   "example_topic": "attention arbitrage",
   "edition_count": 500,
-  "date_range": "2009 — April 2026",
+  "date_range": "2009 \u2014 April 2026",
   "quick_start_prompt": "I'm a solo founder trying to build an audience for my software product. I have no budget and I'm nervous about being on camera. What would Gary tell me?",
   "skill_examples": {
     "advise": "Should I quit my job to pursue my side hustle full-time?",
     "teach": "Explain 'day trading attention' to me.",
     "debate": "Is hustle culture toxic or necessary for new entrepreneurs?",
     "connect": "Connect self-awareness to business strategy.",
-    "evolve": "How has Gary's thinking on work-life balance evolved?",
-    "surprise": "No input needed — just run it.",
+    "evolve": "How has Gary's thinking on work-life balance evolved over the years?",
+    "surprise": "No input needed \u2014 just run it.",
     "coach": "I'm scared to post on social because I'm worried what people will think. What should I be asking myself?",
-    "predict": "What happens to creator brands if AI makes content production free?"
+    "predict": "What happens to creator brands if AI makes content production essentially free?"
   },
   "workflow_examples": {
-    "learning": "New to content strategy? Teach jab-jab-jab-right-hook → evolve how Gary's thinking changed → coach yourself through your own content fears.",
-    "research": "Building a personal brand? Predict the 5-year implications of a content-first career → debate the risks → advise on a practical starting move this week."
+    "learning": "New to content strategy? Teach jab-jab-jab-right-hook \u2192 evolve how Gary's thinking on content volume changed \u2192 coach yourself through your own content fears.",
+    "research": "Building a personal brand? Predict the 5-year implications of a content-first career \u2192 debate the risks of betting everything on one platform \u2192 advise on a practical starting move this week."
   },
   "supabase": {
     "project_id": "uzediwokyshjbsymevtp",
@@ -37,118 +37,395 @@
     "connections_table": "gary_vee_connections"
   },
   "clusters": {
-    "attention_economy": {"name": "Attention Economy & Arbitrage", "description": "Attention is the greatest asset in business. Gary's core thesis: where attention flows, commerce follows. Find underpriced attention, go there first, capture it before marketers do."},
-    "content_strategy": {"name": "Content Strategy & Volume", "description": "Document, don't create. Produce massive volume of native, platform-specific content. The Jab Jab Jab Right Hook model — give value repeatedly before you ask for the sale."},
-    "social_platforms": {"name": "Social Platforms & Native Creative", "description": "Every platform has its own language, audience, and unspoken rules. Creative must be made for the platform, not ported to it. The biggest mistake brands make is treating platforms as distribution, not conversation."},
-    "self_awareness": {"name": "Self-Awareness & Identity", "description": "Self-awareness is the king of all qualities. Knowing what you're great at, what you're not, and what you actually love is the foundation of every real decision. Most unhappiness comes from chasing someone else's definition of success."},
-    "hustle_work_ethic": {"name": "Hustle, Work Ethic & The Grind", "description": "Outworking people is still undefeated — but only if you love the thing you're outworking them on. Hustle without self-awareness is self-destruction. Hustle with it is a cheat code."},
-    "entrepreneurship": {"name": "Entrepreneurship & Building Businesses", "description": "Starting is the hardest part. Most people never do. Gary's core startup philosophy: start small, build the muscle, stay patient on the macro while moving fast on the micro."},
-    "personal_brand": {"name": "Personal Brand & Legacy", "description": "Build yourself as an asset. In a world where companies die but reputations compound, your personal brand is the most durable investment you can make. Legacy > currency."},
-    "kind_candor": {"name": "Kind Candor & Emotional Intelligence", "description": "From Twelve and a Half: the soft skills that actually drive business success. Honest feedback wrapped in empathy. Accountability without blame. Gratitude as strategy, not posture."},
-    "long_term_thinking": {"name": "Macro Patience, Micro Speed", "description": "Think in decades, execute in days. Most people flip these — they're impatient about outcomes and lazy about inputs. The magic is in the inversion: urgent on effort, calm on results."},
-    "consumer_behavior": {"name": "Consumer Behavior & Psychology", "description": "Why people buy, scroll, share, and stay. Gary's edge is pattern-matching consumer behavior in real-time — spotting shifts before research reports catch them."},
-    "investing_speculation": {"name": "Investing, Collecting & Speculation", "description": "Sports cards, angel investments, NFTs, wine, art. Gary treats asset classes like attention — find what's undervalued before the market prices it in. Long-term bets on things he loves."},
-    "leadership_culture": {"name": "Leadership, Culture & People", "description": "Running a 1,500+ person agency taught Gary that culture isn't posters — it's who you promote, who you fire, and how honest you are in hard conversations. HR is a strategy, not a department."},
-    "emerging_tech": {"name": "NFTs, Web3 & Emerging Tech", "description": "From VeeFriends to AI, Gary places big bets on new platforms early. His test: is this a technology shift or a business model shift? Real change happens when both align."},
-    "gratitude_empathy": {"name": "Gratitude, Empathy & Humanity in Business", "description": "Gratitude compounds. Empathy converts. The happiest and most successful operators treat business as a human endeavor first, a financial one second."}
+    "attention_economy": {
+      "name": "Attention Economy & Arbitrage",
+      "description": "Attention is the greatest asset in business. Gary's core thesis: where attention flows, commerce follows. Find underpriced attention, go there first, and capture it before the marketers do \u2014 just as he did with email in 1996, Facebook video in 2007, and TikTok in 2019."
+    },
+    "content_strategy": {
+      "name": "Content Strategy & Volume",
+      "description": "Document, don't create. Produce massive volume of native, platform-specific content rather than chasing polish and perfection. The Jab Jab Jab Right Hook model demands you give genuine value repeatedly before you ever ask for the sale."
+    },
+    "social_platforms": {
+      "name": "Social Platforms & Native Creative",
+      "description": "Every platform has its own language, audience, and unspoken rules. Creative must be made for the platform \u2014 not ported to it from somewhere else. The biggest mistake brands make is treating social platforms as distribution channels rather than conversation environments."
+    },
+    "self_awareness": {
+      "name": "Self-Awareness & Identity",
+      "description": "Self-awareness is the king of all qualities. Knowing what you're great at, what you're not, and what you actually love is the foundation of every real decision you'll ever make. Most unhappiness \u2014 personal and professional \u2014 comes from chasing someone else's definition of success."
+    },
+    "hustle_work_ethic": {
+      "name": "Hustle, Work Ethic & The Grind",
+      "description": "Outworking people is still undefeated \u2014 but only if you love the thing you're outworking them on. Hustle without self-awareness is self-destruction dressed up with good optics; hustle with it is a genuine cheat code."
+    },
+    "entrepreneurship": {
+      "name": "Entrepreneurship & Building Businesses",
+      "description": "Starting is the hardest part \u2014 most people never do. Gary's core startup philosophy is to start small, build the muscle incrementally, earn the right to scale, and stay patient on the macro while moving with urgency on the micro."
+    },
+    "personal_brand": {
+      "name": "Personal Brand & Legacy",
+      "description": "Build yourself as a durable asset. In a world where companies die but reputations compound over decades, your personal brand is the most resilient investment you can make. Legacy over currency \u2014 every time."
+    },
+    "kind_candor": {
+      "name": "Kind Candor & Emotional Intelligence",
+      "description": "From Twelve and a Half: the soft skills that actually drive business success at scale. Honest feedback wrapped in genuine empathy, accountability without blame, and gratitude as strategy rather than posture. These emotional traits are the real moat."
+    },
+    "long_term_thinking": {
+      "name": "Macro Patience, Micro Speed",
+      "description": "Think in decades, execute in days. Most people flip these \u2014 they're impatient about outcomes and lazy about daily inputs. The magic is the inversion: be urgent on effort today, and genuinely calm about the 20-year payoff."
+    },
+    "consumer_behavior": {
+      "name": "Consumer Behavior & Psychology",
+      "description": "Why people buy, scroll, share, and stay is Gary's real area of expertise. His edge is pattern-matching consumer behavior in real-time \u2014 spotting shifts before research reports and trend pieces catch up to what's already happening."
+    },
+    "wine_library_origin": {
+      "name": "Wine Library TV & Origin Story",
+      "description": "Gary took his family's wine store from $3M to $60M in revenue by betting on internet video before anyone else took it seriously. Wine Library TV ran for over 1,000 daily episodes and became the proof-of-concept for everything he teaches about consistency, documenting, and building real audiences."
+    },
+    "investing_speculation": {
+      "name": "Investing, Collecting & Speculation",
+      "description": "Sports cards, angel investments, NFTs, wine, and art \u2014 Gary treats collectible asset classes the way he treats attention: find what's undervalued before the market prices it in. Long-term bets on things he personally loves and understands deeply."
+    },
+    "leadership_culture": {
+      "name": "Leadership, Culture & People",
+      "description": "Running a 1,500+ person agency taught Gary that culture isn't posters and ping-pong tables \u2014 it's who you promote, who you fire, and how honest you are in the hardest conversations. HR is a competitive strategy, not a compliance department."
+    },
+    "emerging_tech": {
+      "name": "NFTs, Web3 & Emerging Technology",
+      "description": "From VeeFriends to AI-generated content, Gary places early, conviction-driven bets on new platforms and technologies. His filter: is this a genuine technology shift, a business model shift, or both? Real disruption happens when both align simultaneously."
+    },
+    "gratitude_empathy": {
+      "name": "Gratitude, Empathy & Humanity in Business",
+      "description": "Gratitude compounds and empathy converts \u2014 these aren't soft abstractions but hard business edges. The happiest and most sustainably successful operators treat business as a human endeavor first and a financial one second."
+    },
+    "immigrant_mindset": {
+      "name": "Immigrant Mindset & Gratitude for Opportunity",
+      "description": "Gary arrived in the U.S. from Belarus as a child and credits that experience with shaping his entire worldview \u2014 a deep gratitude for opportunity, zero sense of entitlement, and an instinctive drive to make the most of every moment. The immigrant scarcity mindset, channeled correctly, becomes an unfair competitive advantage."
+    }
   },
   "cluster_order": [
-    "attention_economy", "content_strategy", "social_platforms", "self_awareness",
-    "hustle_work_ethic", "entrepreneurship", "personal_brand", "kind_candor",
-    "long_term_thinking", "consumer_behavior", "investing_speculation",
-    "leadership_culture", "emerging_tech", "gratitude_empathy"
+    "attention_economy",
+    "content_strategy",
+    "social_platforms",
+    "self_awareness",
+    "hustle_work_ethic",
+    "entrepreneurship",
+    "personal_brand",
+    "kind_candor",
+    "long_term_thinking",
+    "consumer_behavior",
+    "wine_library_origin",
+    "investing_speculation",
+    "leadership_culture",
+    "emerging_tech",
+    "gratitude_empathy",
+    "immigrant_mindset"
   ],
-
   "synthesis": {
-    "hero_tagline": "Attention is the asset. Self-awareness is the cheat code. Kind candor is the moat.",
-    "hero_updated": "Built from two decades of keynotes, books (Crush It!, JJJRH, Ask GaryVee, Crushing It!, Twelve and a Half, Day Trading Attention), DailyVee, The GaryVee Audio Experience, The Tea With GaryVee, and VaynerMedia conference talks.",
-
+    "hero_tagline": "Attention arbitrage, legacy over currency, and the art of kind candor",
+    "hero_updated": "Built from two decades of keynotes, books (Crush It!, Jab Jab Jab Right Hook, Ask GaryVee, Crushing It!, Twelve and a Half, Day Trading Attention), DailyVee, The GaryVee Audio Experience, VeeFriends thesis, conversations on Joe Rogan, Tim Ferriss, and Marie Forleo, and 929 extracted atoms across attention arbitrage, content strategy, consumer psychology, Web3, and operating philosophy.",
     "first_principles": [
-      {"title": "Attention is the asset class of our time.", "desc": "Everything else — brands, products, careers, politics — is downstream of where human attention is pointed. The skill isn't buying attention; it's spotting attention before it's expensive. You day trade it like any other commodity."},
-      {"title": "Self-awareness is the king of all qualities.", "desc": "Every bad decision Gary sees — in business and in life — traces back to someone optimizing for the wrong game because they haven't been honest about who they are. You cannot strategize your way out of being mismatched to your own life."},
-      {"title": "Macro patience, micro speed.", "desc": "Think in decades, execute in hours. Most people are impatient about outcomes (wanting them now) and lazy about inputs (not putting in the work today). Flip both. Be calm about the 20-year payoff, but move like your hair is on fire on what you do today."},
-      {"title": "Document, don't create.", "desc": "The biggest content myth is that you need to produce polished 'creative.' Just turn the camera on and document what you're already doing. Volume + authenticity beats polish + scarcity in every platform that exists today."},
-      {"title": "Jab jab jab, right hook.", "desc": "Give value three times before you ever ask for the sale. Every post, every email, every touchpoint has to earn the right to the ask. Brands that right-hook without jabbing first are the ones complaining about low conversion rates."},
-      {"title": "Legacy > currency.", "desc": "Money is a means. Legacy — what people say about you when you're not in the room, and after you're dead — is the scoreboard that actually matters. Most people flip this order and then wonder why they feel empty."},
-      {"title": "Kind candor beats nice or brutal.", "desc": "Honesty without empathy is cruelty; empathy without honesty is cowardice. The sweet spot is hard truths delivered with genuine care. Teams that can have kind-candor conversations compound; teams that can't slowly rot."},
-      {"title": "Hustle is a cheat code only if you love the game.", "desc": "Outworking people still wins — but only if the work itself is your oxygen. Hustling at something you don't love is just self-destruction with better optics. The question isn't 'should I hustle?' It's 'am I in the right game?'"},
-      {"title": "Personal frustration is a market signal.", "desc": "The friction you personally feel in your own life is the clearest product opportunity you'll ever see. Your annoyance is data. Wine Library TV happened because a wine store owner was annoyed that wine was intimidating."},
-      {"title": "Every business is a media company.", "desc": "If you're not producing content, you're renting attention from people who are. And the rent keeps going up. The only durable option is to become the landlord — build your own audience, own your own distribution."},
-      {"title": "Self-awareness > strategy.", "desc": "A mediocre strategy executed by someone who knows themselves will beat a brilliant strategy executed by someone who doesn't. Gary would rather bet on a self-aware B-player than an unaware A-player every single time."},
-      {"title": "The 51/49 rule: give more than you take.", "desc": "In every relationship — personal, professional, commercial — tilt slightly toward giving. The compound interest over a 30-year career is staggering. People who try to hit exactly 50/50 always feel short-changed; people who aim for 51/49 build fortresses of goodwill."}
+      {
+        "title": "Attention is the asset class of our time",
+        "desc": "Everything downstream \u2014 brands, careers, politics, IP \u2014 is a function of where human attention is pointed. The only real question is the cost per unit of attention you're paying. Spot attention before it's priced in, go in heavy, get out before the marketers catch up."
+      },
+      {
+        "title": "Self-awareness is the king of all qualities",
+        "desc": "Every bad decision traces back to someone optimizing for a game they're not built to win. You can't strategize your way out of being mismatched to your own life. A self-aware B-player beats an unaware A-player every time."
+      },
+      {
+        "title": "Macro patience, micro speed",
+        "desc": "Think in decades, execute in hours. Most people invert this \u2014 impatient about the 20-year outcome and lazy about today's input. Calm about the arc, frantic about the day."
+      },
+      {
+        "title": "Document, don't create",
+        "desc": "You don't need polished, scripted creative. Turn the camera on and document what you're already doing. Volume plus authenticity beats polish plus scarcity on every platform. The bottleneck isn't ideas \u2014 it's the emotional capacity to absorb immediate criticism."
+      },
+      {
+        "title": "Jab, jab, jab, right hook \u2014 and the right hook is an ask, not a take",
+        "desc": "Give real value three times before any request. The difference between asking and taking is the entire game. Asking respects the audience's autonomy; taking exploits goodwill. 99% of marketers throw nothing but right hooks and wonder why conversion is low."
+      },
+      {
+        "title": "Legacy over currency",
+        "desc": "Money is a means; legacy is the scoreboard. What people say about you when you're not in the room \u2014 and after you're dead \u2014 is the only metric that compounds beyond your lifespan."
+      },
+      {
+        "title": "Kind candor beats nice or brutal",
+        "desc": "Honesty without empathy is cruelty; empathy without honesty is cowardice. Teams capable of kind-candor conversations compound; teams that can't slowly rot from the inside."
+      },
+      {
+        "title": "Hustle is a cheat code only if you love the game",
+        "desc": "Outworking people still wins \u2014 but only if the work is your oxygen. Hustling at something you don't love is self-destruction with better optics. The right question isn't 'should I hustle harder?' \u2014 it's 'am I in the right game at all?'"
+      },
+      {
+        "title": "Personal frustration is a market signal",
+        "desc": "Your annoyance is data. The friction you personally feel is the cleanest product brief you'll ever get. Wine Library TV existed because Gary was annoyed that wine culture was intimidating and gatekept."
+      },
+      {
+        "title": "Every business is a media company",
+        "desc": "If you're not producing your own content, you're renting attention from people who are \u2014 and the rent always goes up. The only durable move is to own your audience, own your distribution, own the relationship."
+      },
+      {
+        "title": "The 51/49 rule",
+        "desc": "In every relationship \u2014 personal, professional, commercial \u2014 tilt slightly toward giving. People who aim for a clean 50/50 always feel short-changed. People who aim for 51/49 build fortresses of goodwill that compound over a 30-year career."
+      }
     ],
-
     "thinking_patterns": [
-      {"name": "Attention arbitrage spotting", "desc": "Gary constantly scans platforms, formats, and audiences for pockets of underpriced attention. His career is a sequence of 'I got there before the marketers did' bets — from email in 1996 to Facebook in 2007 to TikTok in 2019."},
-      {"name": "The both/and frame", "desc": "He refuses false binaries: hustle AND balance, kindness AND candor, macro patience AND micro speed, empathy AND accountability. Where most people pick a side, Gary holds both as non-negotiable."},
-      {"name": "Reverse the timeframe", "desc": "When someone asks a short-term question ('will this post perform?'), he zooms out ('you'll be doing this for 40 years'). When they ask a long-term question ('where will I be in 10 years?'), he zooms in ('what did you ship this week?')."},
-      {"name": "Pattern-match from physical to digital", "desc": "He constantly maps 1990s retail intuitions (shelf placement, pricing psychology, loyalty) to 2020s platforms (feed placement, content pricing, parasocial loyalty). The mechanics don't change; the surfaces do."},
-      {"name": "Emotional truth > analytical truth", "desc": "Data tells you what happened; emotion tells you why. Gary leads with the why — why someone felt ignored, why they felt seen, why they shared — because the emotion is the leverage point."},
-      {"name": "Radical accountability", "desc": "Every problem in his frame gets traced back to the person asking the question. Not because it's always their fault, but because it's the only variable they control. Blaming anything external is a waste of the one move you actually have."},
-      {"name": "The 'what would you tell your kid?' test", "desc": "He reframes hard business questions as parental advice — it strips away status games and jargon, and forces an honest answer. 'Would you tell your daughter to take this job?' usually ends the debate."},
-      {"name": "Volume as discovery", "desc": "He doesn't pre-strategize his way to the right creative — he ships hundreds of variations and lets the audience tell him which one worked. Volume is the strategy; analysis follows production, not the other way around."}
+      {
+        "name": "Attention arbitrage spotting",
+        "desc": "Gary's primary cognitive move is scanning platforms, formats, and demographics for pockets of mispriced attention. He picks winners on distribution asymmetry, not product quality. The framework is always: where is the gap between actual reach and what advertisers think it's worth?"
+      },
+      {
+        "name": "History as a calibration tool for the future",
+        "desc": "Gary's strategic engine is pattern-matching current platform shifts onto historical media transitions. He uses historical priors to filter live data points \u2014 not out of nostalgia, but as a predictive instrument. 'History to tell me the future, then in the dirt to listen.'"
+      },
+      {
+        "name": "Comment-section anthropology",
+        "desc": "Gary doesn't consume the cultural artifact \u2014 he reads the comments about it. How people talk about culture is more predictive than the culture itself. He learned about the Delta variant from 250 Twitter comments rather than the CDC report."
+      },
+      {
+        "name": "Reverse the timeframe of the question",
+        "desc": "Short-term anxiety gets zoomed out; long-term abstraction gets zoomed in. It's a deliberate move to break the questioner out of whichever timeframe is paralyzing them."
+      },
+      {
+        "name": "Radical accountability framing",
+        "desc": "Every problem gets traced back to the person asking \u2014 not because it's their fault, but because it's the only variable they control. Blaming the algorithm, the boss, the economy \u2014 all wasted moves on the one lever you actually have."
+      },
+      {
+        "name": "The both/and refusal of false binaries",
+        "desc": "Hustle AND balance. Kindness AND candor. Speed AND patience. Where most people pick a side and call it a philosophy, Gary holds both as non-negotiable and treats the tension as the productive zone."
+      },
+      {
+        "name": "Volume as discovery",
+        "desc": "He doesn't strategize his way to the right creative \u2014 he ships hundreds of variations and lets the audience respond. Analysis follows production, not the other way around. The same day becomes a podcast, a LinkedIn essay, a YouTube show, and a dozen Instagram clips."
+      },
+      {
+        "name": "Emotional truth over analytical truth",
+        "desc": "Data tells you what happened; emotion tells you why. Gary leads with why people felt ignored, seen, embarrassed, or validated \u2014 because emotion is the lever. A single DM about a man reconciling with his wife outweighs a quarterly engagement report."
+      },
+      {
+        "name": "The 'what would you tell your kid?' test",
+        "desc": "He reframes hard business questions as parental advice \u2014 would you tell your daughter to take this job, marry this person, start this company? It strips out status games and corporate jargon and forces the honest answer the person was already hiding from."
+      }
     ],
-
     "contrarian_positions": [
-      {"title": "Balance is a myth; alignment is real.", "desc": "Everyone is chasing 'work-life balance' as if it's a scale. Gary argues the real goal is alignment — when your work and your life aren't at war because you actually love what you do. People who are aligned don't need balance."},
-      {"title": "Polish is overrated; velocity is underrated.", "desc": "Most brands spend 90% of their time on 10% of the content quality. Ship the rough stuff. Ship more of it. The market punishes perfectionism far more than it punishes imperfection."},
-      {"title": "Your personal brand matters more than your company's.", "desc": "Companies die. People outlive them. The entrepreneurs who build themselves alongside their businesses have infinite optionality. The ones who only build the company are left with nothing when it pivots or dies."},
-      {"title": "Quitting is underrated.", "desc": "The 'never give up' advice is doing real damage. Some things genuinely aren't working. Self-awareness gives you permission to quit the wrong thing so you can go crush the right one."},
-      {"title": "Sports cards are a real asset class.", "desc": "Most financial advisors will tell you collectibles are stupid. Gary disagrees — and put eight figures of his own money into the bet. The thesis: cultural artifacts + scarcity + nostalgia + new rich buyers = sustained appreciation."},
-      {"title": "Hustle culture critics are usually unhappy.", "desc": "Gary's view on the backlash: people who love what they do work insane hours because it doesn't feel like work. The critics aren't wrong about burnout, but they're often projecting their own misalignment onto people who are actually aligned."},
-      {"title": "Gratitude is a business strategy, not a posture.", "desc": "Actually-felt gratitude — for a rough childhood, a tough boss, a failure — is an unfair competitive advantage. It removes envy, builds energy, and makes you magnetic. The skeptics call it fluffy; Gary calls it an edge."},
-      {"title": "Accountability is love.", "desc": "Holding someone to a standard is more loving than letting them slide. The leaders who tolerate mediocrity out of 'kindness' are the cruelest — they're denying their team the chance to grow."},
-      {"title": "Most MBAs are a bad investment for entrepreneurs.", "desc": "Gary would rather see a 22-year-old spend $150K starting a real business and failing than spend it on a credential. The failure teaches more, faster, and compounds."},
-      {"title": "Attention is more important than the product.", "desc": "A mediocre product with great attention beats a great product with no attention every single day of the week. Most founders have this backwards — they obsess over product and ignore distribution until it's too late."},
-      {"title": "51/49 beats 50/50.", "desc": "People trying to split everything fairly feel constantly robbed. People who give slightly more than they take build incredible long-term wealth — in relationships, reputation, and actual money."},
-      {"title": "Meetings are where productivity goes to die.", "desc": "Gary runs a 1,500+ person company on voice memos, Slack, and quick syncs. The meeting-heavy cultures he sees from the outside confuse motion for progress."}
+      {
+        "title": "Balance is a myth; alignment is real",
+        "desc": "The pursuit of work-life balance is a symptom of being in the wrong work. People who are truly aligned don't need balance because nothing's at war. The conversation should be about fit, not balance."
+      },
+      {
+        "title": "Polish is overrated; velocity is underrated",
+        "desc": "Brands spend 90% of their time on 10% of the quality difference. The market punishes perfectionism far more than it punishes imperfection. Ship the rough stuff \u2014 and ship more of it."
+      },
+      {
+        "title": "Your personal brand outlasts your company",
+        "desc": "Companies die. People don't. Founders who only build the company and not themselves are buying optionality on one entity instead of infinite ones."
+      },
+      {
+        "title": "The Super Bowl ad is the best deal in marketing",
+        "desc": "Everyone calls it wasteful at $6M a spot. Gary calls it a $20\u201340M asset being sold at half price because of the rare combination of scale and genuine attention. The 'expensive' formats are often underpriced; the 'cheap' formats like banner ads are the actual rip-offs."
+      },
+      {
+        "title": "Social media didn't change us \u2014 it exposed us",
+        "desc": "Twitter didn't create your opinions; it gave them a megaphone. The problem isn't the technology \u2014 it's what was always under the surface. The moral panic about platforms is fundamentally misdirected."
+      },
+      {
+        "title": "Most luxury purchases are insecurity tax",
+        "desc": "97% of luxury buyers are buying status signal, not celebrating craftsmanship. The category is mostly a tax on identity weakness. A Rolex isn't usually about the watch."
+      },
+      {
+        "title": "Crypto is structurally progressive",
+        "desc": "It disintermediates banks, brokerages, and insurance companies \u2014 the exact rent-extraction layers progressives historically critique. Politicians opposing it on left-coded grounds are operating from education gaps, not principle."
+      },
+      {
+        "title": "Howard Stern mocking podcasters is a tell",
+        "desc": "Incumbents don't mock rising formats because those formats are inferior \u2014 they mock them because they're threatening. The mocking itself is the leading indicator that the new medium is winning."
+      },
+      {
+        "title": "Don't change behavior \u2014 leverage it",
+        "desc": "The dominant model of consumer brand building tries to get people to do something new. Gary's model is to find what people already do, then build the product that fits inside that existing behavior. You will not out-market human nature."
+      },
+      {
+        "title": "Most people read Jab Jab Jab Right Hook wrong",
+        "desc": "They hear 'give, give, give, then take.' The actual thesis is that the right hook is an ask, not a take \u2014 and the distinction between asking and taking is the entire moral and commercial game."
+      }
     ],
-
     "does_not_believe": [
-      {"title": "\"You need a big budget to build an audience.\"", "desc": "Organic content, native creative, and consistency beat paid spend for individuals and early-stage brands. The leverage is in the work, not the wallet."},
-      {"title": "\"Go viral once and you're set.\"", "desc": "Virality is a lottery ticket. Consistency is a business. A viral hit that isn't followed by 500 more posts is just a loud nothing."},
-      {"title": "\"Nice guys finish last.\"", "desc": "In a world with the internet and compounding reputation, nice actually wins. The jerks get away with it for a quarter. Kind candor compounds for a career."},
-      {"title": "\"Your degree is your credential.\"", "desc": "Your body of work is your credential. A public portfolio of shipped content and shipped businesses will out-signal any diploma in the world that actually matters."},
-      {"title": "\"Marketing is creative; sales is ops.\"", "desc": "Gary argues marketing and sales are the same thing now — both are about earning attention and converting it with empathy. The org chart that separates them is a 1990s artifact."},
-      {"title": "\"Introverts can't build personal brands.\"", "desc": "Introverts often build the best personal brands — because they do the work in the dark and let the content speak. The 'you need to be extroverted' myth is just self-protection for loud people."},
-      {"title": "\"You have to quit your job to start something.\"", "desc": "Side hustles are the best on-ramp. Gary advocates building on nights and weekends until the side thing can actually pay your bills. Quitting too early kills more entrepreneurs than staying too long does."}
+      {
+        "title": "That credentials predict outcomes",
+        "desc": "Gary dropped formal prestige-signaling early and has consistently bet on self-awareness and execution over pedigree. A diploma is a data point, not a destiny."
+      },
+      {
+        "title": "That timing is mostly luck",
+        "desc": "Luck is a residue of volume. The people who 'got lucky' on a platform or trend were the ones who showed up early, stayed consistent, and were willing to look wrong for years before being right."
+      },
+      {
+        "title": "That complaining is a strategy",
+        "desc": "Complaining about the algorithm, the economy, your boss, or your market is just borrowing time from execution. Every minute spent diagnosing unfairness is a minute not spent building the thing that makes unfairness irrelevant."
+      },
+      {
+        "title": "That money is the primary scoreboard",
+        "desc": "Gary will make money \u2014 a lot of it \u2014 but he explicitly does not believe it's the measure of a life well lived. Legacy, impact, and reputation are the metrics that don't reset at death."
+      },
+      {
+        "title": "That gatekeepers still have the power",
+        "desc": "The internet permanently broke the gatekeeping model. Publishers, labels, studios, and agencies are now optional, not mandatory. Anyone who still needs their permission is choosing dependency."
+      },
+      {
+        "title": "That short-term pain is worth long-term misalignment",
+        "desc": "Taking the high-paying job you hate to 'set yourself up' is a losing trade. The compound interest on misalignment \u2014 bitterness, poor performance, bad relationships \u2014 almost always exceeds the financial upside."
+      }
     ],
-
     "would_not_say": [
-      {"title": "\"Just follow your passion and the money will come.\"", "desc": "He's clear: passion + self-awareness + market fit + execution → money. Not passion alone. The 'follow your passion' meme without the other three ingredients is a lie that ruins people."},
-      {"title": "\"Work-life balance is the goal.\"", "desc": "He rejects balance as a frame. Alignment is the goal — and sometimes alignment means insane hours because you genuinely love it."},
-      {"title": "\"Scale as fast as possible.\"", "desc": "Gary has watched too many founders die from premature scale. His advice is almost always slow down, build the muscle, earn the right to scale."},
-      {"title": "\"You need to be ruthless to win.\"", "desc": "The opposite: ruthless people flame out. Kind candor, empathy, and 51/49 generosity are the actual long-term moats."},
-      {"title": "\"Quit your job today and go all in.\"", "desc": "This is the kind of advice that gets creators cheered on stage and then destroys the people who take it literally. Gary specifically warns against it and has for 15 years."},
-      {"title": "\"Your competition is the enemy.\"", "desc": "Competition is a distraction. The real enemy is the version of yourself that isn't putting in the work. Gary would rather you never check what competitors are doing."}
+      {
+        "title": "'You should probably slow down and plan more'",
+        "desc": "Gary's entire operating model is bias toward action. Over-planning is just fear wearing a productivity costume. He will never tell someone the answer is more strategy and less shipping."
+      },
+      {
+        "title": "'Wait for the right moment'",
+        "desc": "The right moment is a myth manufactured by people who are afraid to start. The cost of waiting compounds silently; the cost of starting ugly is visible and recoverable."
+      },
+      {
+        "title": "'That platform is probably a fad'",
+        "desc": "Gary's default is to take new platforms seriously until proven otherwise \u2014 because the downside of being early on a fad is small, and the downside of being late on a real platform is enormous."
+      },
+      {
+        "title": "'Just focus on one channel and do it perfectly'",
+        "desc": "Single-channel purity is a risk management failure. Diversified content presence is diversified attention capture. The only platforms you should ignore are ones you've genuinely tested and found mispriced against your audience."
+      },
+      {
+        "title": "'You need a big budget to compete'",
+        "desc": "Budget is leverage on reach; self-awareness is leverage on fit. A person with no money who understands their audience deeply will consistently outperform a funded brand that doesn't. Attention can still be bought cheap if you know where to look."
+      },
+      {
+        "title": "'Be careful what you post \u2014 it might hurt your brand'",
+        "desc": "Calculated personal brand protection is the enemy of authentic content. The people who try to protect their brand at every turn end up saying nothing, standing for nothing, and being remembered for nothing."
+      }
     ],
-
     "biography": [
-      {"date": "1975–1978", "role": "Born in Belarus, immigrated to U.S.", "lesson": "Immigrant scarcity mindset shapes entire worldview — gratitude for opportunity becomes a superpower."},
-      {"date": "1983–1998", "role": "Childhood entrepreneurship, working in dad's wine store", "lesson": "Early taste for sales, customer psychology, and the grind. Sold baseball cards as a kid for $2K–$3K on weekends."},
-      {"date": "1998–2005", "role": "Scaling Shopper's Discount Liquors (renamed Wine Library)", "lesson": "Took over the family wine store, built it from ~$3M to ~$60M in revenue through direct marketing, email, and category obsession."},
-      {"date": "2006–2011", "role": "Wine Library TV — 1,000+ episodes", "lesson": "Saw internet video before anyone else. Daily show on a free platform taught him the power of consistency, documenting, and building a real audience."},
-      {"date": "2009–2012", "role": "Co-founded VaynerMedia with brother AJ", "lesson": "Turned the Wine Library TV playbook into a digital agency. Started serving big brands (Pepsi, GE) by teaching them what he'd already figured out."},
-      {"date": "2013–2018", "role": "VaynerMedia scales; books + keynotes", "lesson": "Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!. Became the defining voice on content strategy, social-first marketing, and creator economy."},
-      {"date": "2019–2022", "role": "VeeFriends, sports cards, NFTs", "lesson": "Big early Web3 bet. VeeFriends as both intellectual property and access community. Sports card investing goes from hobby to eight-figure asset class."},
-      {"date": "2021–Present", "role": "Twelve and a Half, Day Trading Attention, AI era", "lesson": "Shift from hustle-first messaging to emotional intelligence and kind candor as the real edge. Leans into AI as the next attention arbitrage."}
+      {
+        "date": "1975",
+        "role": "Born in Babruysk, Soviet Belarus",
+        "lesson": "Immigrated to the United States at age three. Early scarcity and displacement instilled an appreciation for opportunity that would later manifest as compulsive urgency \u2014 time is the one resource you can't arbitrage back."
+      },
+      {
+        "date": "1987",
+        "role": "Young entrepreneur, lemonade stands and baseball cards",
+        "lesson": "Gary was selling baseball cards at flea markets by age 12, running multiple card stands simultaneously. The lesson wasn't about money \u2014 it was about spotting what other people wanted and being the person who showed up to provide it."
+      },
+      {
+        "date": "1996",
+        "role": "Joins Wine Library, transforms family liquor store",
+        "lesson": "Took his family's Springfield, NJ liquor store from $3M to $60M in revenue by recognizing early that e-commerce and email lists were massively underpriced attention channels. The lesson: infrastructure is irrelevant; distribution is everything."
+      },
+      {
+        "date": "2006",
+        "role": "Launches Wine Library TV on YouTube",
+        "lesson": "One of the earliest daily video shows on the internet \u2014 raw, unscripted, personality-forward. Proved that authenticity and volume could build an audience faster than any traditional media buy. The brand was him."
+      },
+      {
+        "date": "2009",
+        "role": "Founds VaynerMedia with brother AJ",
+        "lesson": "Built a social-first agency when most brands still thought social media was a toy. The thesis: every brand needs to act like a media company. VaynerMedia scaled to thousands of employees by being early on a belief everyone else called wrong."
+      },
+      {
+        "date": "2009",
+        "role": "Publishes Crush It!",
+        "lesson": "First book made the case that personal passion plus the internet was a viable career path. Arrived before the creator economy had a name. The lesson: publish your thesis early, even when the infrastructure to support it barely exists."
+      },
+      {
+        "date": "2013",
+        "role": "Publishes Jab Jab Jab Right Hook",
+        "lesson": "Formalized his give-before-you-ask content framework. The book's central argument \u2014 that context and value precede conversion \u2014 became the foundational grammar of social media marketing."
+      },
+      {
+        "date": "2014",
+        "role": "Passes on becoming CEO of Twitter, declines to buy Buffalo Bills",
+        "lesson": "Made high-profile decisions to stay independent over institutional prestige. The lesson he drew: operating leverage on your own terms compounds differently than operating leverage inside someone else's structure."
+      },
+      {
+        "date": "2016",
+        "role": "Early TikTok (then Musical.ly) evangelist",
+        "lesson": "Called the platform's trajectory years before mainstream brands arrived. Validated his attention arbitrage framework again: the price of reaching young audiences on TikTok in 2016 was a fraction of what it cost on Instagram. History rhymes."
+      },
+      {
+        "date": "2021",
+        "role": "Launches VeeFriends NFT project",
+        "lesson": "A 255-character NFT collection tied to annual conference access and a 40-year IP bet on characters embodying positive human traits. The thesis: NFTs are the infrastructure layer for creator-audience relationships the same way websites were in 1995."
+      },
+      {
+        "date": "2021",
+        "role": "Publishes Twelve and a Half",
+        "lesson": "Made the case for emotional intelligence as a business advantage \u2014 kindness, empathy, accountability, patience \u2014 and tried to rebrand soft skills as the hardest skills. A signal that his thinking had evolved from hustle-first to character-first."
+      },
+      {
+        "date": "2023",
+        "role": "Publishes Day Trading Attention",
+        "lesson": "His most tactical book \u2014 a platform-by-platform breakdown of where attention is currently mispriced and how to capture it. The lesson: the macro framework (attention arbitrage) never changes; only the specific venues for execution do."
+      }
     ],
-
     "skills": [
-      {"name": "advise", "title": "Strategic Counsel", "desc": "Get advice on decisions grounded in Gary's frameworks — attention, self-awareness, macro patience, kind candor.", "example": "/advise \"Should I quit my job to pursue my side hustle full-time?\""},
-      {"name": "teach", "title": "Learn Through Gary's Lens", "desc": "Explain a concept using Gary's actual vocabulary and mental models.", "example": "/teach \"Explain jab jab jab right hook to me.\""},
-      {"name": "debate", "title": "Steel-Man Both Sides", "desc": "Present a position; Gary argues the counterpoint with his characteristic directness.", "example": "/debate \"Is hustle culture toxic?\""},
-      {"name": "connect", "title": "Bridge Ideas", "desc": "Find unexpected connections between concepts through Gary's worldview.", "example": "/connect \"Connect gratitude to competitive advantage.\""},
-      {"name": "evolve", "title": "Intellectual Evolution", "desc": "Trace how Gary's thinking on a topic developed over two decades.", "example": "/evolve \"How has Gary's view on work-life balance changed?\""},
-      {"name": "surprise", "title": "Show Me Something Unexpected", "desc": "Random high-quality atom for daily inspiration.", "example": "/surprise"},
-      {"name": "coach", "title": "Socratic Questions", "desc": "No answers — just the brutally honest questions Gary would ask you.", "example": "/coach \"I'm scared to post on social media.\""},
-      {"name": "predict", "title": "Implication Chains", "desc": "Trace the second and third-order effects of an attention or content shift.", "example": "/predict \"What happens to creator brands if AI makes content production free?\""}
+      {
+        "name": "advise",
+        "title": "Strategic Counsel",
+        "desc": "Get advice on decisions grounded in this brain's frameworks.",
+        "example": "/advise \"Should I quit my job to pursue my side hustle full-time?\""
+      },
+      {
+        "name": "teach",
+        "title": "Learn Through Their Lens",
+        "desc": "Explain a concept using this brain's actual vocabulary and mental models.",
+        "example": "/teach \"Explain 'day trading attention' to me.\""
+      },
+      {
+        "name": "debate",
+        "title": "Steel-Man Both Sides",
+        "desc": "Present a position or pit two ideas against each other; brain argues the counterpoint.",
+        "example": "/debate \"Is hustle culture toxic or necessary for new entrepreneurs?\""
+      },
+      {
+        "name": "connect",
+        "title": "Bridge Ideas",
+        "desc": "Find unexpected connections between concepts or synthesize multiple ideas into something new.",
+        "example": "/connect \"Connect self-awareness to business strategy.\""
+      },
+      {
+        "name": "evolve",
+        "title": "Intellectual Evolution",
+        "desc": "Trace how this brain's thinking on a topic developed over time.",
+        "example": "/evolve \"How has Gary's thinking on work-life balance evolved over the years?\""
+      },
+      {
+        "name": "surprise",
+        "title": "Show Me Something Unexpected",
+        "desc": "Random high-quality atom for daily inspiration.",
+        "example": "/surprise"
+      },
+      {
+        "name": "coach",
+        "title": "Socratic Questions",
+        "desc": "No answers \u2014 just the questions this thinker would ask you.",
+        "example": "/coach \"I'm scared to post on social because I'm worried what people will think. What should I be asking myself?\""
+      },
+      {
+        "name": "predict",
+        "title": "Implication Chains",
+        "desc": "Trace the second and third-order effects of a trend or decision.",
+        "example": "/predict \"What happens to creator brands if AI makes content production essentially free?\""
+      }
     ]
   },
   "website": {
     "tagline": "Attention, content, and the emotional edge",
-    "bio": "Chairman of VaynerX, CEO of VaynerMedia, 5x NYT bestselling author, and one of the most prolific public thinkers on attention, content strategy, and personal brand. Grew his family's wine store from $3M to $60M with internet video before anyone else, then turned that into a global agency.",
-    "topics": ["Attention & Content", "Personal Brand", "Entrepreneurship", "Self-Awareness", "Kind Candor", "Emerging Platforms"],
+    "bio": "Chairman of VaynerX, CEO of VaynerMedia, five-time NYT bestselling author, and one of the most prolific public thinkers on attention, content strategy, and personal brand. Grew his family's wine store from $3M to $60M in revenue using internet video before anyone else took it seriously, then turned that playbook into a global advertising agency and two decades of public documentation on how to actually build a business.",
+    "topics": [
+      "Attention & Content Strategy",
+      "Personal Brand",
+      "Entrepreneurship",
+      "Self-Awareness",
+      "Kind Candor",
+      "Emerging Platforms"
+    ],
     "price": 29
-  }
+  },
+  "_supabase_tables_ready": true
 }

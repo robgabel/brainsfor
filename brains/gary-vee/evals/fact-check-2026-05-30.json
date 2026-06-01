@@ -1,0 +1,660 @@
+{
+  "brain_slug": "gary-vee-v2",
+  "timestamp": "2026-05-30T22:22:44.481798+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 21,
+    "youtube_chars": 932860,
+    "atom_quote_count": 495,
+    "total_chars": 1034053
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 5,
+        "weak": 4,
+        "ungrounded": 2,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 3,
+        "weak": 1,
+        "ungrounded": 6,
+        "total": 10
+      },
+      "does_not_believe": {
+        "grounded": 5,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 6
+      },
+      "would_not_say": {
+        "grounded": 5,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 18,
+      "weak": 7,
+      "ungrounded": 8,
+      "total": 33
+    },
+    "grounding_pct": 65.2,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[6]",
+        "title": "Kind candor beats nice or brutal",
+        "rationale": "The source corpus contains no passages where Gary discusses 'kind candor' as a framework or articulates the distinction between honesty without empathy being cruelty and empathy without honesty being cowardice."
+      },
+      {
+        "id": "first_principles[8]",
+        "title": "Personal frustration is a market signal",
+        "rationale": "The corpus does not contain any passage where Gary articulates that personal frustration or annoyance is a market signal or product brief; the Wine Library TV origin story in this framing is not present in the source material."
+      },
+      {
+        "id": "contrarian_positions[2]",
+        "title": "Your personal brand outlasts your company",
+        "rationale": "No passage in the source corpus addresses the idea that personal brands outlast companies or that founders should build themselves alongside their companies as a contrarian investment thesis."
+      },
+      {
+        "id": "contrarian_positions[4]",
+        "title": "Social media didn't change us \u2014 it exposed us",
+        "rationale": "The source corpus does not contain any passage where Gary argues that social media exposed rather than changed us, or addresses the moral panic about platforms being misdirected."
+      },
+      {
+        "id": "contrarian_positions[5]",
+        "title": "Most luxury purchases are insecurity tax",
+        "rationale": "No passage in the source corpus discusses luxury purchases as an 'insecurity tax' or critiques luxury buyers' motivations."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[2]",
+        "title": "Macro patience, micro speed",
+        "rationale": "The corpus shows Gary thinking in long arcs and emphasizing daily execution, but no passage explicitly articulates the 'macro patience, micro speed' framing or the inversion thesis in a clear enough way to count as two distinct supporting passages."
+      },
+      {
+        "id": "first_principles[3]",
+        "title": "Document, don't create",
+        "rationale": "The 'document don't create' principle with the specific framing about volume vs. polish and emotional capacity to absorb criticism is not clearly expressed in the source corpus; only general hustle and content production ideas appear tangentially."
+      },
+      {
+        "id": "first_principles[5]",
+        "title": "Legacy over currency",
+        "rationale": "While Gary discusses values beyond money, no passage in the corpus explicitly frames 'legacy over currency' as a principle or directly states that legacy is the scoreboard that compounds beyond lifespan; the evidence is only tangential."
+      },
+      {
+        "id": "first_principles[10]",
+        "title": "The 51/49 rule",
+        "rationale": "The karma and give-more-than-you-take ethos appears in the corpus but the specific '51/49' numerical framing is not present, making this only weakly supported by paraphrase."
+      },
+      {
+        "id": "contrarian_positions[1]",
+        "title": "Polish is overrated; velocity is underrated",
+        "rationale": "Gary pushes toward action and execution over planning, but the specific framing that 'the market punishes perfectionism' or 'ship the rough stuff' is not clearly articulated in the source corpus."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Attention is the asset class of our time",
+      "claim": "Attention is the asset class of our time. Everything downstream \u2014 brands, careers, politics, IP \u2014 is a function of where human attention is pointed. The only real question is the cost per unit of attention you're paying. Spot attention before it's priced in, go in heavy, get out before the marketers catch up.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "how and when did you realize that the internet was gonna revolutionize let's just say the business of communication October 1994... I saw that people were selling... I'm a weird kid meaning I was a true entrepreneur... I understood that online dating in 2001 was gonna be mainstream that wasn't obvious until 2011",
+          "relation": "partial"
+        },
+        {
+          "quote": "you produce content on the 725 places where people pay attention and you produce it around things you know and you a mass awareness I mean snow how did Nike build a brand they ran commercials they did sponsorship like it's just a pension arbitrage hmm what does that mean for me it means my career",
+          "relation": "partial"
+        },
+        {
+          "quote": "I'm good at other things but I am from this is now me talking about myself but I if you ask me I think I'm remarkable at understanding what humans are actually doing before the masses understand they're doing right",
+          "relation": "partial"
+        },
+        {
+          "quote": "in 2006 I started a wine show on YouTube in February 2006 I was one of the first people to move fast on Twitter I have podcast and linked it like I'm consistently first-rate and that skill has allowed me to be good at real estate right somebody bought up all of Dumbo yeah somebody once bought up most of Malibu like some people see it right I see human behavior",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Multiple passages support the idea that attention arbitrage \u2014 spotting where humans pay attention before the masses do and moving early \u2014 is Gary's core framework, though the exact 'cost per unit' framing is implied rather than verbatim."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Self-awareness is the king of all qualities",
+      "claim": "Self-awareness is the king of all qualities. Every bad decision traces back to someone optimizing for a game they're not built to win. You can't strategize your way out of being mismatched to your own life. A self-aware B-player beats an unaware A-player every time.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I'm not doing this for the [ __ ] Flex or the gram or the money or the house or the jet or the I don't want a single thing I don't want to be part of any exclusive Club I don't need an island I don't need a h I [ __ ] need the game yeah a [ __ ] game",
+          "relation": "partial"
+        },
+        {
+          "quote": "when I say that it leads I'm playing chess it's never a one-size fits all I want to see what the person says next I'm looking for the tell... like I'm like you know well listen don't overstress you got patience your 20s is a good high risk high reward time if it's in you like if you said that to me if Gary said to Gary yo go to Europe go this I'd be like [ __ ] you",
+          "relation": "partial"
+        },
+        {
+          "quote": "I think people have now aspired to be an entrepreneur when they're not and those are the people that are going through depression are suicidal are unhappy because they're in a game that doesn't match them",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Gary repeatedly references identifying whether someone is genuinely built for entrepreneurship versus being mismatched to the game, and uses chess/tell metaphors to describe reading self-awareness in others, supporting this principle from multiple angles."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Macro patience, micro speed",
+      "claim": "Macro patience, micro speed. Think in decades, execute in hours. Most people invert this \u2014 impatient about the 20-year outcome and lazy about today's input. Calm about the arc, frantic about the day.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I'm hungrier y it is true it's become more of a fabric of who I am there's momentum in my life just like you've got momentum people people also underestimate the power of momentum",
+          "relation": "partial"
+        },
+        {
+          "quote": "so many people listening right now are 28 and are way ahead of where I was are 32 and way ahead of where I was so it speaks to what you can do in a decade if you [ __ ] got it",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus shows Gary thinking in long arcs and emphasizing daily execution, but no passage explicitly articulates the 'macro patience, micro speed' framing or the inversion thesis in a clear enough way to count as two distinct supporting passages."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Document, don't create",
+      "claim": "Document, don't create. You don't need polished, scripted creative. Turn the camera on and document what you're already doing. Volume plus authenticity beats polish plus scarcity on every platform. The bottleneck isn't ideas \u2014 it's the emotional capacity to absorb immediate criticism.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I go into this business I build it from A3 to $60 million business no credit line no cash infusion grinding",
+          "relation": "partial"
+        },
+        {
+          "quote": "I just give a fuck. I give lots of fucks and I care when people around me that I see are doing great work, I want to do everything I can to spread their message.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The 'document don't create' principle with the specific framing about volume vs. polish and emotional capacity to absorb criticism is not clearly expressed in the source corpus; only general hustle and content production ideas appear tangentially."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Jab, jab, jab, right hook \u2014 and the right hook is an ask, not a take",
+      "claim": "Jab, jab, jab, right hook \u2014 and the right hook is an ask, not a take. Give real value three times before any request. The difference between asking and taking is the entire game. Asking respects the audience's autonomy; taking exploits goodwill. 99% of marketers throw nothing but right hooks and wonder why conversion is low.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I always think about what I do for a living which is I have this need for some reason to disproportionately overshare what's working for me quickly at scale And I think through the karma points all this 'money I leave on the table' plays out in perpetuity",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "Anybody who actually does what I'm telling them to do wins every time... Everybody who uses it to make them feel like they're doing something... Loses.",
+          "relation": "partial"
+        },
+        {
+          "quote": "the reason I continue to come back to this event... I was obsessed with the notion of paying forward first I will promise you whether it's South by whether it's the growth of your business whether it's the way you live your life as a human being if every person in this room could actually figure out how it actually works which is the leverage of providing Value First always puts you in the right position",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages across transcripts support giving value first before any ask, with Gary explicitly framing provide-value-first as the core commercial and relational strategy."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Legacy over currency",
+      "claim": "Legacy over currency. Money is a means; legacy is the scoreboard. What people say about you when you're not in the room \u2014 and after you're dead \u2014 is the only metric that compounds beyond your lifespan.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I'm willing to give up 95% of my earning I really am yes go to taxes it may be getting close to that in this state I'm willing to I just want to be the one who gives it away",
+          "relation": "partial"
+        },
+        {
+          "quote": "my energy all of it all of it comes from one place gratitude I am so grateful for the fact that I was born in bellarus in the former Soviet Union",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Gary discusses values beyond money, no passage in the corpus explicitly frames 'legacy over currency' as a principle or directly states that legacy is the scoreboard that compounds beyond lifespan; the evidence is only tangential."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Kind candor beats nice or brutal",
+      "claim": "Kind candor beats nice or brutal. Honesty without empathy is cruelty; empathy without honesty is cowardice. Teams capable of kind-candor conversations compound; teams that can't slowly rot from the inside.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages where Gary discusses 'kind candor' as a framework or articulates the distinction between honesty without empathy being cruelty and empathy without honesty being cowardice."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Hustle is a cheat code only if you love the game",
+      "claim": "Hustle is a cheat code only if you love the game. Outworking people still wins \u2014 but only if the work is your oxygen. Hustling at something you don't love is self-destruction with better optics. The right question isn't 'should I hustle harder?' \u2014 it's 'am I in the right game at all?'",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I'm not doing this for the [ __ ] Flex or the gram or the money or the house or the jet or the I don't want a single thing I don't want to be part of any exclusive Club I don't need an island I don't need a h I [ __ ] need the game yeah a [ __ ] game",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I think people have now aspired to be an entrepreneur when they're not and those are the people that are going through depression are suicidal are unhappy because they're in a game that doesn't match them",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "entrepreneurship had given given given it was making you stronger bigger faster and now it was beginning to take away because I didn't care about the product I didn't love what we were doing I wasn't passionate I was just chasing money",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages support that hustle must be fueled by genuine love of the game, and that hustling without passion leads to self-destruction, with Gary and others in the corpus making this point distinctly."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Personal frustration is a market signal",
+      "claim": "Personal frustration is a market signal. Your annoyance is data. The friction you personally feel is the cleanest product brief you'll ever get. Wine Library TV existed because Gary was annoyed that wine culture was intimidating and gatekept.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus does not contain any passage where Gary articulates that personal frustration or annoyance is a market signal or product brief; the Wine Library TV origin story in this framing is not present in the source material."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Every business is a media company",
+      "claim": "Every business is a media company. If you're not producing your own content, you're renting attention from people who are \u2014 and the rent always goes up. The only durable move is to own your audience, own your distribution, own the relationship.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "you produce content on the 725 places where people pay attention and you produce it around things you know and you a mass awareness",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "build the community verse and provide value to an audience that that's the Le the money will come",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I have this need for some reason to disproportionately overshare what's working for me quickly at scale",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Gary consistently frames producing content across all platforms where attention exists and building owned audiences as the core business strategy, supporting the 'every business is a media company' principle."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "The 51/49 rule",
+      "claim": "The 51/49 rule. In every relationship \u2014 personal, professional, commercial \u2014 tilt slightly toward giving. People who aim for a clean 50/50 always feel short-changed. People who aim for 51/49 build fortresses of goodwill that compound over a 30-year career.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I always think about what I do for a living which is I have this need for some reason to disproportionately overshare what's working for me quickly at scale And I think through the karma points all this 'money I leave on the table' plays out in perpetuity",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I believe in karma I believe in just treating people well and I think that by putting that positive energy out there it comes back",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The karma and give-more-than-you-take ethos appears in the corpus but the specific '51/49' numerical framing is not present, making this only weakly supported by paraphrase."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Balance is a myth; alignment is real",
+      "claim": "Balance is a myth; alignment is real. The pursuit of work-life balance is a symptom of being in the wrong work. People who are truly aligned don't need balance because nothing's at war. The conversation should be about fit, not balance.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think people have now aspired to be an entrepreneur when they're not and those are the people that are going through depression are suicidal are unhappy because they're in a game that doesn't match them",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I like that people have balanced lives I think that's great that's just my answer to who 25y old me was",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I'm not doing this for the [ __ ] Flex or the gram or the money or the house... I [ __ ] need the game yeah a [ __ ] game",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Gary repeatedly distinguishes between people who are genuinely aligned with entrepreneurship versus those chasing it for the wrong reasons, implying the balance vs. alignment framing, though 'balance is a myth' is not said verbatim."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Polish is overrated; velocity is underrated",
+      "claim": "Polish is overrated; velocity is underrated. Brands spend 90% of their time on 10% of the quality difference. The market punishes perfectionism far more than it punishes imperfection. Ship the rough stuff \u2014 and ship more of it.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I would argue that there was not enough clapping for that part right there",
+          "relation": "partial"
+        },
+        {
+          "quote": "Four days ago, you see flipping works. You needed to be in a thrift store or garage sale. You better garage sale Saturday. Franklin, you better fucking garage sale tomorrow.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Gary pushes toward action and execution over planning, but the specific framing that 'the market punishes perfectionism' or 'ship the rough stuff' is not clearly articulated in the source corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Your personal brand outlasts your company",
+      "claim": "Your personal brand outlasts your company. Companies die. People don't. Founders who only build the company and not themselves are buying optionality on one entity instead of infinite ones.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus addresses the idea that personal brands outlast companies or that founders should build themselves alongside their companies as a contrarian investment thesis."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "The Super Bowl ad is the best deal in marketing",
+      "claim": "The Super Bowl ad is the best deal in marketing. Everyone calls it wasteful at $6M a spot. Gary calls it a $20\u201340M asset being sold at half price because of the rare combination of scale and genuine attention. The 'expensive' formats are often underpriced; the 'cheap' formats like banner ads are the actual rip-offs.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I believe that TV advertising is grossly overpriced right I also think that the Super Bowl is the number one best buy in marketing so that's a contradiction within the micro of the macro",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I believe that TV advertising is grossly overpriced right I also think that the Super Bowl is the number one best buy in marketing",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Gary explicitly states this contrarian position about the Super Bowl being the best buy in marketing while TV advertising is generally overpriced, directly supporting this principle."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Social media didn't change us \u2014 it exposed us",
+      "claim": "Social media didn't change us \u2014 it exposed us. Twitter didn't create your opinions; it gave them a megaphone. The problem isn't the technology \u2014 it's what was always under the surface. The moral panic about platforms is fundamentally misdirected.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus does not contain any passage where Gary argues that social media exposed rather than changed us, or addresses the moral panic about platforms being misdirected."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "Most luxury purchases are insecurity tax",
+      "claim": "Most luxury purchases are insecurity tax. 97% of luxury buyers are buying status signal, not celebrating craftsmanship. The category is mostly a tax on identity weakness. A Rolex isn't usually about the watch.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passage in the source corpus discusses luxury purchases as an 'insecurity tax' or critiques luxury buyers' motivations."
+    },
+    {
+      "principle_id": "contrarian_positions[6]",
+      "section": "contrarian_positions",
+      "title": "Crypto is structurally progressive",
+      "claim": "Crypto is structurally progressive. It disintermediates banks, brokerages, and insurance companies \u2014 the exact rent-extraction layers progressives historically critique. Politicians opposing it on left-coded grounds are operating from education gaps, not principle.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no discussion of cryptocurrency or Gary's views on its progressive or disintermediating qualities."
+    },
+    {
+      "principle_id": "contrarian_positions[7]",
+      "section": "contrarian_positions",
+      "title": "Howard Stern mocking podcasters is a tell",
+      "claim": "Howard Stern mocking podcasters is a tell. Incumbents don't mock rising formats because those formats are inferior \u2014 they mock them because they're threatening. The mocking itself is the leading indicator that the new medium is winning.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "Howard Stern or any incumbent mocking podcasters is not discussed anywhere in the source corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[8]",
+      "section": "contrarian_positions",
+      "title": "Don't change behavior \u2014 leverage it",
+      "claim": "Don't change behavior \u2014 leverage it. The dominant model of consumer brand building tries to get people to do something new. Gary's model is to find what people already do, then build the product that fits inside that existing behavior. You will not out-market human nature.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "don't change Behavior leverage it so we already know people will eat things they want to eat you can't stop people from eating a chocolate chip cookie so the question was could you make a chocolate chip cookie that was actually good for them",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "our Mantra was you can tell the world to eat less and exercise more and it will work for every single person ever that's ever done it but the reality is the vast majority of the world will not do that",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "The 'don't change behavior, leverage it' principle is explicitly articulated in the corpus in the context of Quest Nutrition's strategy, directly supporting this contrarian position."
+    },
+    {
+      "principle_id": "contrarian_positions[9]",
+      "section": "contrarian_positions",
+      "title": "Most people read Jab Jab Jab Right Hook wrong",
+      "claim": "Most people read Jab Jab Jab Right Hook wrong. They hear 'give, give, give, then take.' The actual thesis is that the right hook is an ask, not a take \u2014 and the distinction between asking and taking is the entire moral and commercial game.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "While Gary references 'jab jab jab right hook' implicitly through give-value-first language, no passage in the corpus explicitly discusses how most people misread the book or articulates the ask-vs-take distinction as the 'entire moral and commercial game'."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That credentials predict outcomes",
+      "claim": "That credentials predict outcomes. Gary dropped formal prestige-signaling early and has consistently bet on self-awareness and execution over pedigree. A diploma is a data point, not a destiny.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I was a dnf student and my mom and then later my dad let me be the entrepreneur that I was let me sell $3,000 worth of baseball cards a weekend even though I was getting FS enabled me to become who I was",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "this gentleman parlayed a 990 SAT score into a multi-billion dollar company",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Gary references his own poor academic performance and celebrates Tom Bilyeu's low SAT score as evidence that credentials don't predict outcomes, but never explicitly states a principle about credentials vs. outcomes."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That timing is mostly luck",
+      "claim": "That timing is mostly luck. Luck is a residue of volume. The people who 'got lucky' on a platform or trend were the ones who showed up early, stayed consistent, and were willing to look wrong for years before being right.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "in 2006 I started a wine show on YouTube in February 2006 I was one of the first people to move fast on Twitter I have podcast and linked it like I'm consistently first-rate and that skill has allowed me to be good at real estate right somebody bought up all of Dumbo yeah somebody once bought up most of Malibu like some people see it right I see human behavior",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I understood that online dating in 2001 was gonna be mainstream that wasn't obvious until 2011 right or 13 or whenever tinder really took hold right and so what I mean by that is I built wine library on the back of email and Google AdWords in 1997 no liquor store in America thought it was a good idea to build up an email newsletter",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Gary consistently frames his early-platform moves as the result of seeing human behavior before others, not luck, across multiple examples (email, AdWords, YouTube, Twitter), supporting the view that timing success comes from volume and pattern recognition."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That complaining is a strategy",
+      "claim": "That complaining is a strategy. Complaining about the algorithm, the economy, your boss, or your market is just borrowing time from execution. Every minute spent diagnosing unfairness is a minute not spent building the thing that makes unfairness irrelevant.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "nobody gives a [ __ ] about your feelings bro no but for real like like and and and the reason I'm coming at you like this is I'm pumped for you you're a kid like don't cry about here's the biggest problem [ __ ] entrepreneurs cry about the way they want it to be instead of reacting to the way it actually is",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "ideology doesn't take over for execution. You have to do less what you're gonna do. Less strategies, more doing.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Gary explicitly calls out complaining about circumstances as the wrong move and contrasts it with reacting to reality, supporting this principle from multiple passages."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That money is the primary scoreboard",
+      "claim": "That money is the primary scoreboard. Gary will make money \u2014 a lot of it \u2014 but he explicitly does not believe it's the measure of a life well lived. Legacy, impact, and reputation are the metrics that don't reset at death.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "entrepreneurship had given given given it was making you stronger bigger faster and now it was beginning to take away because I didn't care about the product I didn't love what we were doing I wasn't passionate I was just chasing money and money just wasn't that interesting",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I'm willing to give up 95% of my earning I really am yes go to taxes it may be getting close to that in this state I'm willing to I just want to be the one who gives it away",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Multiple passages show Gary (and others he features approvingly) explicitly deprioritizing money as the primary scoreboard in favor of impact, passion, and purpose."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That gatekeepers still have the power",
+      "claim": "That gatekeepers still have the power. The internet permanently broke the gatekeeping model. Publishers, labels, studios, and agencies are now optional, not mandatory. Anyone who still needs their permission is choosing dependency.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Amazon Google Facebook Twitter they have a lot of advertising power does that concern you that they've got so much of that pie of course not because CBS ABC and NBC had that whole pie because the New York Times and The Washington Post had all that pie and Yahoo at one point already there's always somebody that controls the pie",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I launched winelibrary.com one of the first e-commerce wine businesses in America and it changed the course of my family's wine business",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Gary's entire narrative arc of building Wine Library TV, going direct to audience on YouTube/Twitter, and building Vayner Media supports the thesis that gatekeepers are no longer mandatory, though not stated as explicitly as the principle suggests."
+    },
+    {
+      "principle_id": "does_not_believe[5]",
+      "section": "does_not_believe",
+      "title": "That short-term pain is worth long-term misalignment",
+      "claim": "That short-term pain is worth long-term misalignment. Taking the high-paying job you hate to 'set yourself up' is a losing trade. The compound interest on misalignment \u2014 bitterness, poor performance, bad relationships \u2014 almost always exceeds the financial upside.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think people have now aspired to be an entrepreneur when they're not and those are the people that are going through depression are suicidal are unhappy because they're in a game that doesn't match them",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "what I don't like is when capitalism gets old a K and alpha gets old and then she or he tries to use their money to change the rules of Merit",
+          "relation": "partial"
+        },
+        {
+          "quote": "entrepreneurship had given given given it was making you stronger bigger faster and now it was beginning to take away because I didn't care about the product I didn't love what we were doing I wasn't passionate I was just chasing money",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Gary and guests consistently frame being misaligned with your work as causing net negative outcomes regardless of financial upside, supporting the principle that short-term pain for long-term misalignment is a bad trade."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'You should probably slow down and plan more'",
+      "claim": "'You should probably slow down and plan more'. Gary's entire operating model is bias toward action. Over-planning is just fear wearing a productivity costume. He will never tell someone the answer is more strategy and less shipping.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Four days ago, you see flipping works. You needed to be in a thrift store or garage sale. You better garage sale Saturday. Franklin, you better fucking garage sale tomorrow.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "ideology doesn't take over for execution. You have to do less what you're gonna do. Less strategies, more doing.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "nobody gives a [ __ ] about your feelings bro no but for real like like and and and the reason I'm coming at you like this is I'm pumped for you you're a kid like don't cry about here's the biggest problem [ __ ] entrepreneurs cry about the way they want it to be instead of reacting to the way it actually is",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Multiple passages show Gary pushing people toward immediate action and dismissing excessive planning or strategizing, confirming he would not tell someone to slow down and plan more."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'Wait for the right moment'",
+      "claim": "'Wait for the right moment'. The right moment is a myth manufactured by people who are afraid to start. The cost of waiting compounds silently; the cost of starting ugly is visible and recoverable.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "October 1994 was the October of my freshman year of college... I went into my friends dorm room and discovered the internet and within 10 minutes I found myself on a baseball card bulletin board on AOL... and literally you know two years later because it took a little bit of time I launched winelibrary.com",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "in 2006 I started a wine show on YouTube in February 2006 I was one of the first people to move fast on Twitter I have podcast and linked it like I'm consistently first-rate",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Gary's consistent pattern of moving immediately on new platforms and opportunities, rather than waiting, supports the principle that he would not advise waiting for the right moment."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'That platform is probably a fad'",
+      "claim": "'That platform is probably a fad'. Gary's default is to take new platforms seriously until proven otherwise \u2014 because the downside of being early on a fad is small, and the downside of being late on a real platform is enormous.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "It's the only platform that has a chance to be the next Instagram. And so I take it seriously. It's got Vine DNA.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "in 2006 I started a wine show on YouTube in February 2006 I was one of the first people to move fast on Twitter I have podcast and linked it like I'm consistently first-rate",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Gary explicitly takes emerging platforms like TikTok seriously rather than dismissing them as fads, and his track record of early adoption confirms he would not call new platforms fads."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'Just focus on one channel and do it perfectly'",
+      "claim": "'Just focus on one channel and do it perfectly'. Single-channel purity is a risk management failure. Diversified content presence is diversified attention capture. The only platforms you should ignore are ones you've genuinely tested and found mispriced against your audience.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "you produce content on the 725 places where people pay attention and you produce it around things you know and you a mass awareness",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I'm pushing it so hard internally. So I want to make sure everyone's -- How are you having fun with it? Are you just everything? Just on it?",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Gary explicitly advocates producing content across all platforms where attention exists ('725 places') rather than focusing on a single channel, confirming he would not say to focus on one channel."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'You need a big budget to compete'",
+      "claim": "'You need a big budget to compete'. Budget is leverage on reach; self-awareness is leverage on fit. A person with no money who understands their audience deeply will consistently outperform a funded brand that doesn't. Attention can still be bought cheap if you know where to look.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I go into this business I build it from A3 to $60 million business no credit line no cash infusion grinding",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I lived in a studio apartment with eight family members on the size of this stage and split toilet paper Okay so there's no excuse that somebody most people that are born with wealth bro they lose cuz they're soft",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Gary repeatedly frames his own success as built without capital infusion and explicitly rejects the premise that wealth or budget is a prerequisite for entrepreneurial success."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "'Be careful what you post \u2014 it might hurt your brand'",
+      "claim": "'Be careful what you post \u2014 it might hurt your brand'. Calculated personal brand protection is the enemy of authentic content. The people who try to protect their brand at every turn end up saying nothing, standing for nothing, and being remembered for nothing.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I have this need for some reason to disproportionately overshare what's working for me quickly at scale",
+          "relation": "partial"
+        },
+        {
+          "quote": "We're gonna be powder. You have to stop giving a fuck what other people think.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Gary's oversharing ethos and telling people not to care what others think tangentially supports this principle, but no passage explicitly addresses the idea of protecting one's brand through calculated content restraint as something he opposes."
+    }
+  ]
+}

@@ -5,14 +5,14 @@ description: "Load the Kara Swisher brain. Pack ships 9 unified skills in pack/s
 
 # Kara Swisher Brain Pack — Setup & Configuration
 
-Welcome to the **Swisher Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Kara Swisher's Pivot and Sway podcasts, NYT Opinion columns, and decades of tech journalism — a curated collection of her most incisive thinking on tech power, accountability, AI risk, media disruption, and the future of democracy.
+Welcome to the **Swisher Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Kara Swisher's Pivot and Sway podcasts, NYT Opinion columns, Burn Book memoir, Code Conference interviews, and three decades of tech journalism — a curated collection of her most incisive thinking on tech power, accountability, AI risk, media disruption, Silicon Valley culture, and the defense of democracy.
 
 ## What You're Getting
 
-- **566 knowledge atoms** — Core insights, frameworks, and strategic principles from Pivot and Sway podcast episodes, NYT Opinion columns, and major tech industry interviews spanning 30+ years
-- **556 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **885 knowledge atoms** — Core insights, frameworks, and strategic principles from Pivot and On with Kara Swisher podcast episodes, NYT Opinion columns, Code Conference and DLD keynote interviews, Burn Book memoir, and landmark interviews with Gates, Jobs, Zuckerberg, Bezos, Musk, Cook, Sandberg, and Musk spanning 30+ years
+- **772 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — AI accountability, tech regulation, Big Tech power, media disruption, democracy and technology, Silicon Valley culture, journalism ethics, and more
+- **Cross-referenced topics** — AI accountability, tech regulation, Big Tech power, media disruption, democracy and technology, Silicon Valley culture, journalism ethics, CEO accountability, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Swisher Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (566 insights)
+  ├── brain-atoms.json         ← structured atoms (885 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 566 atoms with titles, summaries, connections
+   - JSON structure of 885 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,23 +93,23 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Kara's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "Should my startup work with government regulators proactively or wait to be called?"*
+*Example: "Should my startup engage proactively with government regulators, or wait until they come to us?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Kara sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain why Kara thinks AI could be a weapon, not just a tool."*
+*Example: "Explain why Kara thinks the attention economy is a machine optimized for outrage, not truth."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Is Elon Musk good or bad for innovation?"*
+*Example: "Is Elon Musk's ownership of X good or bad for free speech?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect tech consolidation to the decline of local journalism."*
+*Example: "Connect the collapse of local journalism to the rise of political disinformation."*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How has Kara's thinking on Big Tech regulation evolved over 30 years?"*
+*Example: "How has Kara's thinking on Mark Zuckerberg and Facebook evolved over 20 years?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -117,11 +117,11 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions Kara would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I'm deciding whether to go public with a story about a powerful tech CEO. What should I be asking myself?"*
+*Example: "I'm a journalist deciding whether to go public with a story about a powerful tech CEO. What should I be asking myself?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens to democracy if AI is controlled by three companies?"*
+*Example: "What happens to democracy if three companies control the world's AI infrastructure?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to tech accountability? Teach → evolve → coach to understand how Swisher's framework developed.*
+*Example: New to tech accountability? Teach → evolve → coach to understand how Swisher's framework developed and how to apply it yourself.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Writing about AI regulation? Predict the implications → debate the tradeoffs → advise on what policymakers should do.*
+*Example: Writing about AI regulation? Predict the second-order implications → debate the tradeoffs with stakeholders → advise on what policymakers should actually do.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -201,7 +201,7 @@ If you get that, you're all set.
 
 ## About Kara Swisher
 
-Kara Swisher is the most influential tech journalist of her generation — a relentless interrogator of Silicon Valley power, a co-host of the Pivot podcast, and a longtime opinion writer for The New York Times. For three decades she has covered, challenged, and occasionally embarrassed the most powerful figures in technology, earning a reputation for fearless questioning and sharp political instincts.
+Kara Swisher is the most influential tech journalist of her generation — a relentless interrogator of Silicon Valley power, co-host of the Pivot podcast, host of On with Kara Swisher, and author of the memoir Burn Book. For three decades she has covered, challenged, and occasionally embarrassed the most powerful figures in technology, earning a reputation for fearless questioning, sharp political instincts, and an unwillingness to trade access for favorable coverage.
 
 This brain pack extracts and structures her core ideas so you can activate her mental models in your own thinking.
 
@@ -211,7 +211,7 @@ This brain pack extracts and structures her core ideas so you can activate her m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Swisher's publicly available podcast episodes, New York Times Opinion columns, Vox Media interviews, public keynote appearances, and widely circulated journalism across AllThingsD, Re/code, and Recode.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Swisher's publicly available podcast episodes, New York Times Opinion columns, Vox Media interviews, public keynote appearances, widely circulated journalism across AllThingsD, Re/code, and Recode, and her memoir Burn Book published in 2024.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

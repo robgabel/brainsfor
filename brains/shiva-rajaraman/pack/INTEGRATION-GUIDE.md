@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (536 atoms, 419 typed connections)
+  brain-atoms.json         ~1MB     Structured data (817 atoms, 791 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | Shiva's synthesized worldview, all 536 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | Shiva's synthesized worldview, all 817 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 
@@ -51,7 +51,7 @@ Paste `brain-context.md` into your project's `CLAUDE.md`. Every conversation in 
 
 3. Open Claude Code in your project. The brain is now active — every conversation is informed by Shiva's frameworks, first principles, and guardrails.
 
-**Verify it works:** Ask your agent a strategy question and check that the response cites specific ideas from Shiva, not generic advice. Try `I'm building a consumer app and struggling to find product-market fit. What would Shiva think about my approach?`.
+**Verify it works:** Ask your agent a strategy question and check that the response cites specific ideas from Shiva, not generic advice. Try `I'm building a consumer app and struggling to move from a product people tolerate to one they love. What would Shiva think about my approach?`.
 
 **Tradeoff:** ~75K tokens of context loaded on every conversation. For a project where you always want this lens, that's a feature. For occasional use, Path B is lighter.
 
@@ -141,9 +141,9 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 4. Use any thinking skill:
    ```
-   /advise Should I optimize my app for retention or growth right now?
-   /debate Is personalization always better than editorial curation?
-   /predict What happens to consumer apps when AI can fully personalize every experience?
+   /advise My product has decent retention but users never describe it as something they love. How do I diagnose what's missing?
+   /debate Is algorithmic personalization better than human editorial curation for music discovery?
+   /predict What happens to creator economies when AI can generate content indistinguishable from human creators?
    /surprise
    ```
 

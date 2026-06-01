@@ -9,10 +9,10 @@ Welcome to the **Vaynerchuk Brain Pack** from [brainsforfree.com](https://brains
 
 ## What You're Getting
 
-- **246 knowledge atoms** — Core insights, frameworks, and strategic principles from Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, The Tea With GaryVee, VaynerMedia keynotes, and millions of pieces of social content
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **929 knowledge atoms** — Core insights, frameworks, and strategic principles from Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, The Tea With GaryVee, Joe Rogan Experience #910, Tim Ferriss collaborations, Marie Forleo interviews, SXSW 2014 and 2016 keynotes, Web Summit 2016 keynote, VaynerMedia keynotes, CNBC interviews, Adweek profiles, and millions of pieces of social content
+- **848 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — attention arbitrage, jab jab jab right hook, document don't create, kind candor, sports cards, personal brand, social media strategy, self-awareness, and more
+- **Cross-referenced topics** — attention arbitrage, jab jab jab right hook, document don't create, kind candor, personal brand, social media strategy, self-awareness, macro patience micro speed, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Vaynerchuk Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (246 insights)
+  ├── brain-atoms.json         ← structured atoms (929 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 246 atoms with titles, summaries, connections
+   - JSON structure of 929 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -109,7 +109,7 @@ Find unexpected connections between two concepts or synthesize multiple ideas in
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How has Gary's thinking on work-life balance evolved?"*
+*Example: "How has Gary's thinking on work-life balance evolved over the years?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -121,7 +121,7 @@ No answers — just the questions Gary would ask you. Best for: uncovering blind
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens to creator brands if AI makes content production free?"*
+*Example: "What happens to creator brands if AI makes content production essentially free?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to content strategy? Teach jab-jab-jab-right-hook → evolve how Gary's thinking changed → coach yourself through your own content fears.*
+*Example: New to content strategy? Teach jab-jab-jab-right-hook → evolve how Gary's thinking on content volume changed → coach yourself through your own content fears.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Building a personal brand? Predict the 5-year implications of a content-first career → debate the risks → advise on a practical starting move this week.*
+*Example: Building a personal brand? Predict the 5-year implications of a content-first career → debate the risks of betting everything on one platform → advise on a practical starting move this week.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Gary's freely available YouTube videos (DailyVee, GaryVee Audio Experience, Tea With GaryVee), public keynotes and conference talks, podcast interview appearances, and widely discussed quotes from press coverage and social media. Book content is distilled from public summaries, reviews, and Gary's own public discussions of his ideas — not reproduced from the texts.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Gary's freely available YouTube videos (DailyVee, GaryVee Audio Experience, Tea With GaryVee), public keynotes and conference talks (SXSW, Web Summit), podcast interview appearances (Joe Rogan, Tim Ferriss, Marie Forleo), and widely discussed quotes from press coverage and social media. Book content is distilled from public summaries, reviews, and Gary's own public discussions of his ideas — not reproduced from the texts.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

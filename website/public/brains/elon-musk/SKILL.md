@@ -5,14 +5,14 @@ description: "Load the Elon Musk brain. Pack ships 9 unified skills in pack/skil
 
 # Elon Musk Brain Pack — Setup & Configuration
 
-Welcome to the **Musk Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Elon Musk's Public statements, interviews, and company communications — a curated collection of his most strategic thinking on engineering, entrepreneurship, sustainability, and humanity's future.
+Welcome to the **Musk Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Elon Musk's Public statements, interviews, podcasts, TED talks, SXSW appearances, and widely reported media coverage — a curated collection of his most strategic thinking on engineering, entrepreneurship, sustainability, and humanity's existential future.
 
 ## What You're Getting
 
-- **247 knowledge atoms** — Core insights, frameworks, and strategic principles from Tweets, interviews, earnings calls, and public presentations
-- **1000 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **836 knowledge atoms** — Core insights, frameworks, and strategic principles from Joe Rogan Experience episodes, Lex Fridman Podcast episodes, TED talks, SXSW interviews, Code Conference appearances, Wikipedia biography, and major media profiles
+- **719 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
-- **Cross-referenced topics** — First principles thinking, sustainable energy, space exploration, neural interfaces, manufacturing, AI safety, Mars colonization, electric vehicles, and more
+- **Cross-referenced topics** — First principles thinking, sustainable energy, space exploration, neural interfaces, manufacturing innovation, AI safety, Mars colonization, electric vehicles, simulation theory, vertical integration, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
 
@@ -28,7 +28,7 @@ Your Musk Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (247 insights)
+  ├── brain-atoms.json         ← structured atoms (836 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 9 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -61,7 +61,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 247 atoms with titles, summaries, connections
+   - JSON structure of 836 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -93,23 +93,23 @@ Set, show, list, or clear the active brain for the session.
 
 ### 🧠 **1. /advise** — Strategic Counsel
 Ask for advice on decisions grounded in Elon's frameworks. Best for: career moves, company decisions, strategy choices.
-*Example: "Should I vertically integrate my supply chain or work with partners?"*
+*Example: "Should I vertically integrate my supply chain or outsource manufacturing to reduce upfront costs?"*
 
 ### 📚 **2. /teach** — Explain Like I'm Learning
 Get a clear explanation of a concept as Elon sees it. Best for: understanding unfamiliar ideas, building mental models.
-*Example: "Explain first principles thinking to me."*
+*Example: "Explain first principles thinking and how to apply it to a real business problem."*
 
 ### 🔥 **3. /debate** — Steel-Man Both Sides
 Present a position or pit two ideas against each other; brain argues the counterpoint. Best for: understanding tradeoffs, challenging assumptions, resolving strategic tensions.
-*Example: "Is Mars colonization worth the investment versus fixing Earth's problems?"*
+*Example: "Is colonizing Mars worth the investment when we have unsolved problems on Earth?"*
 
 ### 🔗 **4. /connect** — Bridge Ideas
 Find unexpected connections between two concepts or synthesize multiple ideas into something new. Best for: synthesis, innovation, cross-domain thinking.
-*Example: "Connect sustainable energy to space exploration."*
+*Example: "Connect sustainable energy transition to the goal of becoming a multiplanetary species."*
 
 ### 📈 **5. /evolve** — How Ideas Build On Each Other
 Trace how a concept develops and changes across the brain. Best for: historical perspective, maturity models, trajectory thinking.
-*Example: "How does Elon's thinking on AI safety evolve over time?"*
+*Example: "How has Elon's thinking on artificial intelligence and its risks evolved over time?"*
 
 ### 🎨 **6. /surprise** — Unexpected Insights
 Get a random high-quality atom you wouldn't think to ask for. Best for: creative breakthroughs, morning inspiration, breaking tunnel vision.
@@ -117,11 +117,11 @@ Get a random high-quality atom you wouldn't think to ask for. Best for: creative
 
 ### 🪞 **7. /coach** — Socratic Questions
 No answers — just the questions Elon would ask you. Best for: uncovering blind spots, pressure-testing decisions, team discussions.
-*Example: "I'm deciding whether to pivot from software to hardware. What should I be asking myself?"*
+*Example: "I'm deciding whether to leave my job and start a company in a capital-intensive industry. What should I be asking myself?"*
 
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
-*Example: "What happens to the auto industry when full self-driving is solved?"*
+*Example: "What happens to traditional automakers when full self-driving is finally solved?"*
 
 ---
 
@@ -137,7 +137,7 @@ Use these skill combinations for better results:
 ### 📚 Learning Workflow
 → `/teach` (understand) → `/evolve` (see how it develops) → `/coach` (test your understanding)
 
-*Example: New to first principles thinking? Teach → evolve → coach to build deep understanding.*
+*Example: New to first principles thinking? Teach → evolve → coach to build deep understanding and start applying it.*
 
 ### 💡 Creative Workflow
 → `/surprise` (get inspired) → `/connect` (build bridges) → `/predict` (where does this lead?)
@@ -147,7 +147,7 @@ Use these skill combinations for better results:
 ### 🔮 Forecast Workflow
 → `/predict` (trace implications) → `/debate` (challenge the prediction) → `/advise` (act on it)
 
-*Example: Analyzing space industry? Predict the implications → debate the forecast → advise on action.*
+*Example: Analyzing the future of AI? Predict the implications → debate the forecast → advise on what to do about it.*
 
 ### 🌅 Daily Ritual
 → Run `/surprise` each morning for 10 seconds of strategic inspiration.
@@ -201,7 +201,7 @@ If you get that, you're all set.
 
 ## About Elon Musk
 
-Elon Musk is a serial entrepreneur and engineer who has fundamentally transformed multiple industries through companies like Tesla, SpaceX, Neuralink, and The Boring Company. His approach combines first principles thinking with ambitious long-term vision for humanity's future.
+Elon Musk is a serial entrepreneur and engineer who has fundamentally transformed multiple industries through companies like Tesla, SpaceX, Neuralink, and The Boring Company. His approach combines first principles thinking with an ambitious long-term vision for humanity's survival and expansion beyond Earth.
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
@@ -211,7 +211,7 @@ This brain pack extracts and structures his core ideas so you can activate his m
 
 ## Sources & Ethics
 
-This brain was built exclusively from **freely available, public sources** — Musk's public statements on X/Twitter, press interviews, earnings call transcripts (SEC-required public disclosures), public presentations, and widely covered quotes from media. No proprietary Tesla, SpaceX, or xAI internal communications are reproduced.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+This brain was built exclusively from **freely available, public sources** — Musk's public statements from interviews (Joe Rogan, Lex Fridman, TED, SXSW), publicly available YouTube videos, Wikipedia biography, and widely covered quotes from major media outlets including WSJ, NYT, Guardian, and Forbes. No proprietary Tesla, SpaceX, Neuralink, or xAI internal communications are reproduced.. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
 
 Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and widely discussed concepts. Authors typically share their core ideas through extensive public appearances — those public representations are what this brain captures.
 

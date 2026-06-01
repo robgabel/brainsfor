@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (205 atoms, 1000 typed connections)
+  brain-atoms.json         ~1MB     Structured data (708 atoms, 698 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | John's synthesized worldview, all 205 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | John's synthesized worldview, all 708 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 
@@ -141,9 +141,9 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 4. Use any thinking skill:
    ```
-   /advise How do I find meaning in work that feels insignificant?
-   /debate Is it naive to believe the world is getting better?
-   /predict What happens to community and meaning-making as AI replaces more human creative work?
+   /advise How do I find meaning in creative work that feels insignificant compared to the scale of the world's problems?
+   /debate Is it naive or even harmful to argue that the world is getting better when so many people are suffering right now?
+   /predict What happens to community, meaning-making, and storytelling as AI replaces more human creative work?
    /surprise
    ```
 

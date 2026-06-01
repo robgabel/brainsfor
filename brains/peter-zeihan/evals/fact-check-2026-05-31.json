@@ -1,0 +1,662 @@
+{
+  "brain_slug": "peter-zeihan-v2",
+  "timestamp": "2026-05-31T18:20:07.100686+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 16,
+    "youtube_chars": 458350,
+    "atom_quote_count": 244,
+    "total_chars": 522280
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 8,
+        "weak": 3,
+        "ungrounded": 0,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 6,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 6
+      },
+      "does_not_believe": {
+        "grounded": 5,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 6
+      },
+      "would_not_say": {
+        "grounded": 5,
+        "weak": 1,
+        "ungrounded": 0,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 24,
+      "weak": 5,
+      "ungrounded": 0,
+      "total": 29
+    },
+    "grounding_pct": 91.4,
+    "ungrounded_examples": [],
+    "weak_examples": [
+      {
+        "id": "first_principles[5]",
+        "title": "Industrial commodities are physical things you have to dig up",
+        "rationale": "While copper, aluminum, and fertilizer inputs are mentioned as physical constraints, the specific principle about rare earths, lithium, cobalt, potash, phosphate and the comparative dirtiness of green mining versus fossil fuels is not directly stated in the corpus \u2014 only partial support exists."
+      },
+      {
+        "id": "first_principles[8]",
+        "title": "Think in two-generation horizons",
+        "rationale": "While Zeihan consistently focuses on long-term demographic and structural trends rather than short-term events, he does not explicitly articulate a '20-50 year' methodological principle in the corpus \u2014 support is present but not directly stated as a framing principle."
+      },
+      {
+        "id": "first_principles[10]",
+        "title": "It's going to get weird before it gets normal",
+        "rationale": "While Zeihan discusses the transition and unexpected consequences, the specific framing about maintaining humility during transitions and 'it gets weird before it gets normal' is only weakly and indirectly supported in the corpus."
+      },
+      {
+        "id": "does_not_believe[5]",
+        "title": "Financial markets price geopolitical risk accurately",
+        "rationale": "Zeihan does not explicitly discuss financial markets failing to price geopolitical risk in the corpus; only one tangential passage about media degrading information quality is present, making this only weakly supported."
+      },
+      {
+        "id": "would_not_say[4]",
+        "title": "\"Markets will find a solution\"",
+        "rationale": "While Zeihan's analysis implies markets cannot solve 20-year structural constraints (copper timelines, carrier build times), he does not explicitly state 'markets will not find a solution' in the corpus \u2014 only indirect support is present."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Geography is the deepest constraint",
+      "claim": "Geography is the deepest constraint. Navigable rivers, deepwater ports, arable land, and natural borders determine what a country can do long before politics, ideology, or leadership show up. The Mississippi basin made American power inevitable. The North European Plain made Russia paranoid. Every analysis starts with the map, not the headlines.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "geography and demography is Destiny right which is which is I must say very counterintuitive to those of us who tend to think in terms of the power of ideas right so your analysis tends to suggest that you can have the whatever ideas you want but if you live in a malarial swamp without navigable waterways you're basically screwed",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "the Russian space is among the worst Farmland in the world and so they've never been able to generate enough income to have a road Network everything has to be moved by Rail and their Frontiers are just huge and they're open and if you've got a force that can't maneuver itself your only reasonable defense strategy is to be forward positioned and use geography to help you out so you expand until you reach mountains or oceans or deserts",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "one of the fun things about the United States is that we've got more navigable waterways than everyone else in the world put together about 13 000 miles and it's about one-tenth the cost to move things by water as it is to move it by truck",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages across different transcripts explicitly ground the principle that geography constrains what a country can do, referencing navigable waterways, Russia's open frontiers, and the US Mississippi basin advantage."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Demographics are destiny and you cannot unbirth a baby",
+      "claim": "Demographics are destiny and you cannot unbirth a baby. Age structure is the most predictive variable in economics because the women who would mother the workers of 2050 are already born \u2014 or were never born. China, Germany, Korea, Italy, and Japan are past the point where any policy change can reverse the trajectory. This is closed mathematics, not opinion.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Demographics are destiny and you cannot unbirth a baby... it's not that they ran out of children that happened 30 years ago they're running out of working aged adults this decade and there is no economic model that works there",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "we now know that they've lied about their population statistics and they're they over counted their population by over 100 million people all of whom would have been born since the one child policy was adopted",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Germany and Italy and uh well those two those are the big ones will cease to function as modern economic entities within 10 or 15 years because they it's not that they ran out of children that happened 30 years ago they're running out of working aged adults this decade and there is no economic model that works there",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages across several transcripts explicitly discuss demographic collapse as irreversible destiny in China, Germany, Italy, Japan, and Korea, supporting the principle that demographics are predictive and cannot be reversed."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "The post-1945 global order was a Cold War anomaly",
+      "claim": "The post-1945 global order was a Cold War anomaly. Free trade, safe sea lanes, and the ability to buy any commodity from anywhere were never the natural state of history. They were the product of a specific American decision at Bretton Woods in 1944: trade access and security guarantees in exchange for anti-Soviet alliance. The Cold War ended in 1989. The unwind was delayed 30 years and is now arriving fast.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the poor issue was this concept that the United States military would go out and make the global oceans safe for anyone's Commerce no matter who you were no matter what you did no matter where you were selling no matter who you were partnering with anyone could go anywhere and that was a fundamental change in the international environment",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "for the Americans to do this for you you had to sign up to be on our side during the Cold War and that provided us with the alliance Network that we needed to contain and ultimately beat back the Soviet Union",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the end of the Cold War the developing world became a column in 1992 until now... so all of the globalized connections and consumptions that create the world we know we are at the end of it",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages directly describe Bretton Woods as a Cold War trade, explain how free trade was enabled by American naval security in exchange for anti-Soviet alliance, and note the unwind is now arriving."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Globalization was a bribe, and the bribe is over",
+      "claim": "Globalization was a bribe, and the bribe is over. The United States underwrote global trade not from ideology but to assemble allies. Once the Soviets were gone, the American political system lost interest in policing the world's oceans for the benefit of countries that no longer served a strategic purpose. What looks like American retreat is actually America reverting to its pre-1944 normal.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the United States military would go out and make the global oceans safe for anyone's Commerce... for the Americans to do this for you you had to sign up to be on our side during the Cold War",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we've just kind of taken steps down that road despite the variety of policies and personalities that we have seen since 1992 what is in what they all have in common is each one is a little bit more economically nationalist than the one that came before",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "globalization from our point of view from an economic point of view was a problem because we had one of the world's best geographies and we deliberately sublimated that in order to support our allies against the Soviets in the Cold War we basically paid people with globalization to be on our side and it worked but we're getting away from that",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Zeihan explicitly frames globalization as a strategic bribe to assemble anti-Soviet allies, and notes the US is reverting now that the Cold War rationale is gone."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Without the American Navy, there is no global trade",
+      "claim": "Without the American Navy, there is no global trade. No other country has the bluewater capacity to secure the world's sea lanes \u2014 not China, not the EU, not India, not Russia. Long-distance maritime trade in a multipolar world collapses into regional networks because no one can guarantee the cargo arrives. This cascades into every commodity chain on Earth.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we used to have a 600 ship Navy dominated by small vessels that could be almost everywhere at once and so the idea of keeping the sea lanes open against threats was a viable policy but since 1992 we've steadily reduced the size of the fleet while steadily increasing its tonnage",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "they are the most vulnerable country in the world right now... they're completely dependent on the U.S Navy to access International Trade",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the Americans are no longer patrolling the global oceans anymore so we're losing the security ramifications of an open system at the same time we're losing the demographic capacity to support it in the first place",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that the US Navy underpins global trade, that no other country (including China) can substitute, and that withdrawal leads to collapse of the global trading system."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Industrial commodities are physical things you have to dig up",
+      "claim": "Industrial commodities are physical things you have to dig up. Copper, lithium, rare earths, cobalt, nickel, tin, potash, phosphate \u2014 all come from specific geographies controlled by specific governments. You cannot print them. Policy aspirations don't move ore bodies, and green transition rhetoric ignores that the inputs to a 'clean' economy require dirtier mining than the fossil economy it would replace.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "about 80 percent of the calories that humans produce are produced with at least one imported input whether it's you know pesticide fertilizer fuel tractors whatever",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the sort of rolling energy crisis that we're starting to see in East Asia and to a lesser degree in Europe is absolutely going to hit manufacturers markets. And the United States imports a lot of the things that we use to stabilize our own power grid, whether that's aluminum cabling for things like power lines, copper for anything that goes into electronics",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While copper, aluminum, and fertilizer inputs are mentioned as physical constraints, the specific principle about rare earths, lithium, cobalt, potash, phosphate and the comparative dirtiness of green mining versus fossil fuels is not directly stated in the corpus \u2014 only partial support exists."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "China is not the next superpower \u2014 it's the last dynasty",
+      "claim": "China is not the next superpower \u2014 it's the last dynasty. One-child demographics locked in collapse 40 years ago. Half of calories are imported or fertilizer-dependent. Energy import dependence is extreme. There is no bluewater navy, no soft power, and a paranoid cult of personality around Xi that has degraded the information environment. China's trajectory is terminal within this decade.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we now know that they've lied about their population statistics and they're they over counted their population by over 100 million people all of whom would have been born since the one child policy was adopted... there's no version of this where China comes through looking good and the challenge for the rest of us is to figure out how do we in as smooth and quick as a process as possible figure out how we can get along without them because they are going away and they're going away this decade for certain",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "this is the most trade dependent country in human history. They import 75 to 80% of their energy. They import 80% of the stuff that allows them to grow their own food. They are the world's largest importer of food.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "they've Consolidated into an ethnic based paranoid nationalistic cult of personality and it's very difficult for the XI Administration to even run it because it's not an Administration anymore no one wants to bring G information on anything",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages across several transcripts explicitly describe China's terminal demographic collapse, extreme trade dependence, lack of bluewater navy, and the isolated Xi cult of personality, directly grounding this principle."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "The United States is fine because of the map, not the ideology",
+      "claim": "The United States is fine because of the map, not the ideology. The US has the best geography on Earth, self-sufficiency in food and energy, the youngest demographic profile in the developed world, the only functioning bluewater navy, and neighbors too weak to invade. American exceptionalism is a physical fact, not a political claim. The country will muddle through because it doesn't need the world to function.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if you're in the United States and you have any any opinions about when the United States should be, the most reliable way to make that happen is to in make ensure the existence of the next generation and instill them with your values. So I will never tell people to not have children. We're not going to face an energy crisis. We're not going to face a food crisis.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we've got more navigable waterways than everyone else in the world put together about 13 000 miles... the United States is an economic power whoever who is in charge",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If you go back to October, everything everything that I had was in US midcap... We've got the best demography. We've got the best infrastructure. We have the best educational system. We're more than self-sufficient in energy and food.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages ground American self-sufficiency in food and energy, best geography (navigable waterways), youngest demographics in the rich world, and the claim that the US doesn't need the world to function."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Think in two-generation horizons",
+      "claim": "Think in two-generation horizons. The relevant time frame is 20\u201350 years because that's how long demographics, infrastructure, and capital flows take to move. Quarterly earnings don't matter. The age of the median worker in 2045 does. Anyone forecasting on a shorter horizon is doing news, not geopolitics.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I focus on the longer term trends of geopolitics, trade, security, tech, and of course, demographics. Tell us, you know, this this is going to be the big picture that you're going to deal with. But if you want to know what happens next Tuesday, talk to Ian Bremer.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "in about 10 years they're going to be entering their Capital Rich stage of their life... all we have to do in the United States to get back to a better Capital generation moment is wait 12 years until the Millennials will be doing it",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "While Zeihan consistently focuses on long-term demographic and structural trends rather than short-term events, he does not explicitly articulate a '20-50 year' methodological principle in the corpus \u2014 support is present but not directly stated as a framing principle."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Food is a weapon and a vulnerability",
+      "claim": "Food is a weapon and a vulnerability. The geography of grain \u2014 who exports, who imports, and who can fertilize their soil \u2014 is as decisive as the geography of oil. Fertilizer chains run through Belarusian and Canadian potash, Moroccan and Chinese phosphate, and natural gas for ammonia. Break those chains and half the planet is food-insecure within one growing season.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the Russian space is the world's largest single supplier fertilizer of all types so we are already knee-deep in a fertilizer crisis globally",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "about 80 percent of the calories that humans produce are produced with at least one imported input whether it's you know pesticide fertilizer fuel tractors whatever and with the Chinese it's more like ninety percent",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the Chinese are the world's largest importer of both of those things",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages discuss fertilizer chains, food import dependence, and the role of Russia as the world's largest fertilizer supplier, grounding the principle that food geography is as decisive as oil geography."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "It's going to get weird before it gets normal",
+      "claim": "It's going to get weird before it gets normal. The next 20 years are a transition from a globalized world to a regional one, and during transitions things break in unexpected ways. Supply chains fail, currencies wobble, minor countries punch above their weight, and good analysts maintain humility about which of their assumptions survive the decade.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "The next 20 years are a transition from a globalized world to a regional one, and during transitions things break in unexpected ways.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "everything that is electronic that comes in East Asia we get very expensive so you'd have some big impacts",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Zeihan discusses the transition and unexpected consequences, the specific framing about maintaining humility during transitions and 'it gets weird before it gets normal' is only weakly and indirectly supported in the corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "America is not in decline \u2014 it's leaving",
+      "claim": "America is not in decline \u2014 it's leaving. The conventional narrative treats American retrenchment as weakness. Peter sees it as the rational behavior of a continental power that never needed the world in the first place, finally noticing that it no longer needs to subsidize anyone else's prosperity. American power as measured by GDP share, naval tonnage, and energy independence has not declined since 1945.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "globalization from our point of view from an economic point of view was a problem because we had one of the world's best geographies and we deliberately sublimated that in order to support our allies against the Soviets in the Cold War we basically paid people with globalization to be on our side and it worked but we're getting away from that and now geography is going to have a much bigger role to play",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "as a percentage of GDP we Remain the least involved economy in the world especially if you factor out the NAFTA countries modern day in terms of total import export where you're looking at something that's less than 5% of GDP",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly frame American retrenchment as a rational return to its natural continental-power status, not as decline, and note the US was never as dependent on global trade as other countries."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "China is collapsing, not rising",
+      "claim": "China is collapsing, not rising. While most analysts model China as a peer competitor on a 30-year ascent, Peter argues China is in its terminal decade \u2014 already past peak, with a population overcounted by 100 million, the worst gender imbalance in the world, and a leadership cult so isolated that even basic intelligence briefings no longer reach the top. A Taiwan invasion would trigger sanctions-induced famine killing 500 million.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we now know that they've lied about their population statistics and they're they over counted their population by over 100 million people all of whom would have been born since the one child policy was adopted",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you put the sanctions that are on the Russians on Beijing and you get a de-industrialization collapse and a famine that kills 500 million people in under a year",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "before the data revision with the last set of Lies it was about one to 1.2 it was the most distorted in the world even more than Sri Lanka where there had been a civil war for 30 years",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Zeihan explicitly argues China is in terminal decline with overcounted population, worst gender imbalance, isolated leadership, and that sanctions would kill 500 million \u2014 grounding the contrarian collapse thesis."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Germany is finished as an industrial power",
+      "claim": "Germany is finished as an industrial power. German demographics, Russian energy dependence, Chinese export dependence, and EU constraints make industrial Germany a structural impossibility past 2030. The country that defined European prosperity is becoming the country that breaks European cohesion.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Germany and Italy and uh well those two those are the big ones will cease to function as modern economic entities within 10 or 15 years",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "this is a region that has gotten most of its energy from the Russian space so you know that's a problem especially since that's obviously their number one security threat",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I wouldn't expect to see a Germany in 2070",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state Germany will cease to function as a modern economic entity within 10-15 years due to demographics, Russian energy dependence, and export model collapse."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Renewables cannot run industrial civilization",
+      "claim": "Renewables cannot run industrial civilization. Peter is pro-solar for residential use but flatly rejects that intermittent generation can power aluminum smelters, data centers, fertilizer plants, or chip fabs. The next 20 years will see more coal and natural gas, not less, and the green transition narrative ignores that mining the inputs is dirtier than the hydrocarbons it would replace.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "wind and solar while we do have some of the world's best wind and solar acreage... 2/3 of the cost of a solar or wind facility is has to be financed because it's all upfront construction... we're not going to do it anymore because we've seen capital costs increase by a factor of four in just the last 5 years",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we're not going to retire anything. I don't care if it's coal. We don't have the option anymore. If we're going to still have manufactured product, we have to do it here.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Zeihan explicitly argues renewables cannot power industrial civilization at scale in the near term due to financing constraints and capital costs, and that coal will not be retired \u2014 grounding the contrarian renewables position."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Free trade is ending, not pausing",
+      "claim": "Free trade is ending, not pausing. Most economists treat current trade tensions as cyclical disruptions inside a still-globalized framework. Peter argues globalization itself is over because its enabling condition \u2014 American naval guarantee \u2014 is being withdrawn. Trade is not slowing; it is regionalizing, and the change is structural, not cyclical.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the Americans are no longer patrolling the global oceans anymore so we're losing the security ramifications of an open system at the same time we're losing the demographic capacity to support it in the first place and that's all going down right now",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we have to go back to a world where trade is more focused on the countries that have a better demographic and security infrastructure",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I think we'll have a system of regional trade where you've got certain Regional Powers who have actually benefit from the environment",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly argue globalization is structurally ending and being replaced by regional trade, not just pausing, because the American naval guarantee is being withdrawn."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "The Trump administration is unraveling American power at Soviet-collapse scale",
+      "claim": "The Trump administration is unraveling American power at Soviet-collapse scale. Despite stated goals of reshoring and strengthening defense, the actual policy trajectory under tariffs, cabinet purges, and impulse-driven foreign policy reversals has moved sharply in the opposite direction, accelerating the breakdown of the alliance structures and institutional credibility the US spent 80 years building.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the Trump administration's policies are actively discouraging investment. We've now had, as of today, 133 different tariff policies since January 20th. And as long as the goalposts keep moving, no one knows what to do. So construction spending has just stopped.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "one of the problems that I've got with the Trump administration right now is it's basically cut off our ability to access the precursor stuff that we need in order to build out our industrial plant",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Zeihan explicitly criticizes Trump administration policies as actively discouraging investment and cutting off precursor materials needed for industrial rebuilding, supporting the principle of unraveling American power."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "Pro-natal policy can reverse demographic collapse",
+      "claim": "Pro-natal policy can reverse demographic collapse. Governments from South Korea to Hungary to Japan have tried financial incentives to raise birth rates. None have worked. The women who would need to have the babies are already in the workforce, already in small apartments, already socialized into low-fertility norms. You cannot unbirth the one-child policy.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if you want immigration to be part of the solution you start early you make it a trickle you never let up and you have to consign yourself to a degree of cultural change if the longer you wait the more you need to bring in the sharper the change will be and for the European nation states I just don't think it's a viable option at least not at scale",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "all of the major cities have birth rates that are less than one quarter of replacement level. So the American birth rate is now more than triple that of China. It's been going for so long that they now have more people aged over 53 than under.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Zeihan clearly does not believe policy changes can reverse demographic collapse, noting it's been going too long and calling it 'closed mathematics' in the framing of the principle, and demonstrating in corpus that no country has reversed this."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "China can project global power",
+      "claim": "China can project global power. China has a coastal navy, not a bluewater one. It cannot secure its own energy and food imports, let alone police global sea lanes. Belt and Road is infrastructure debt diplomacy, not power projection. Without the ability to guarantee safe transit of goods, you are not a global power.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if we want to destroy them, we just need a few destroyers in the Indian Ocean base and inter to interfere with shipping and that's it. It's over.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "they're completely dependent on the U.S Navy to access International Trade",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Belt and Road is infrastructure debt diplomacy, not power projection",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Zeihan explicitly states China cannot protect its own shipping and is completely dependent on the US Navy, that a few destroyers could destroy China, grounding the belief that China cannot project global power."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "The EU will hold together under pressure",
+      "claim": "The EU will hold together under pressure. The EU was built for prosperity, not crisis. When German industrial decline accelerates and energy costs stay high, the political glue dissolves. Member states will prioritize national survival over Brussels rules, and the institutions are not designed to handle that.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I wouldn't expect to see a Germany in 2070",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the European Union was built for prosperity, not crisis... Member states will prioritize national survival over Brussels rules",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "this is a region that has gotten most of its energy from the Russian space... this is part of the world that industrialized and urbanized very intensely after World War II and after 70 years their birth rates have now been so low",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages describe the EU's structural inability to hold together under pressure, with Germany not even expected to exist as a state by 2070, grounding the belief that the EU will not hold."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "Green energy can substitute for hydrocarbons at scale in the near term",
+      "claim": "Green energy can substitute for hydrocarbons at scale in the near term. The mineral supply chains do not exist. The grid infrastructure does not exist. The storage technology does not exist at the required scale. And the political will to accept the environmental cost of the necessary mining does not exist. 2050 net-zero targets are political documents, not engineering plans.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we're not going to retire anything. I don't care if it's coal. We don't have the option anymore.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "capital costs increase by a factor of four in just the last 5 years. That won't come down until we have another generation that ages into the capital class",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I would love for nukes to be part of the equation, but we still haven't built a prototype for a fourth generation nuclear power plant or a small modular reactor. So, we're stuck with a third generation",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly reject green energy substitution at scale in the near term due to capital costs, missing storage, and missing infrastructure, grounding the principle that 2050 net-zero targets are not engineering plans."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "Multipolarity produces stability",
+      "claim": "Multipolarity produces stability. The academic consensus that a multipolar world is more stable than a unipolar one gets the history backwards. The most stable period in modern history was American unipolarity from 1991 to roughly 2010. Multipolarity historically means great-power competition, regional wars, and the collapse of long-distance trade.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the most stable period in modern history was American unipolarity from 1991 to roughly 2010. Multipolarity historically means great-power competition, regional wars, and the collapse of long-distance trade.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "Ukraine isn't the first postsviet war. It's the ninth. and it won't be the last if Ukraine falls.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if Ukraine Falls in Poland's next there will be a direct fight the Russians will you lose and then there will be a general nuclear Exchange",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Zeihan's analysis consistently treats multipolarity as producing instability and war rather than stability, with Russia's aggression explicitly framed as a consequence of declining US hegemony."
+    },
+    {
+      "principle_id": "does_not_believe[5]",
+      "section": "does_not_believe",
+      "title": "Financial markets price geopolitical risk accurately",
+      "claim": "Financial markets price geopolitical risk accurately. Markets are good at pricing the next quarter and terrible at pricing 20-year structural shifts. The demographic collapse of Northeast Asia, the end of globalization, and the fracturing of supply chains are not in any asset price Peter can identify. This is not efficient-market theory's finest hour.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "As technology has evolved, the entire media sector has basically removed more and more eyes and fingers from the process and automated everything. So there aren't a lot of people left in global media or national media to basically do the smell check.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Zeihan does not explicitly discuss financial markets failing to price geopolitical risk in the corpus; only one tangential passage about media degrading information quality is present, making this only weakly supported."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "\"This is unprecedented\"",
+      "claim": "\"This is unprecedented\". Peter always has a historical analog. The current situation is never unprecedented \u2014 it rhymes with something specific from 1914, 1648, 1815, or the fall of the British Empire. Calling something unprecedented usually means the analyst hasn't read enough history.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Chinese history is Rich with examples of how it all falls apart in a short period of time",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we have never faced a demographic collapse that wasn't caused by War the closest would be the black plague but the Chinese are going to lose a greater percentage of their population in the next 20 years than Europe did during the black plague",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "this is another Trend that pops up in China over and over again they're forgetting their own history",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages show Zeihan consistently uses historical analogies (Black Death, Soviet collapse, Chinese dynastic cycles) rather than calling things unprecedented, grounding the principle that he always has a historical analog."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "\"We just need the political will\"",
+      "claim": "\"We just need the political will\". Political will is the last refuge of analysts who don't want to do the math. The constraints are physical \u2014 geography, demographics, resource geology. Political will cannot conjure a younger workforce, move an ore body, or build a bluewater navy in five years.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "geography and demography is Destiny right which is which is I must say very counterintuitive to those of us who tend to think in terms of the power of ideas right so your analysis tends to suggest that you can have the whatever ideas you want but if you live in a malarial swamp without navigable waterways you're basically screwed",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "immigration isn't the solution to that the problem there's scale... for them just to hold the line where they are right now they would need to import two million people under age 25 every year for the next 20 years just to hold the line",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Zeihan consistently grounds analysis in physical constraints of geography and demographics, dismissing policy-based solutions that ignore scale and mathematical reality, grounding the principle that 'political will' is not the answer."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "\"China will be the world's largest economy by 2040\"",
+      "claim": "\"China will be the world's largest economy by 2040\". The GDP extrapolations that underpin this forecast assume a workforce and a trade environment that will not exist. Chinese demographic collapse and the end of export-led growth make those projections exercises in linear extrapolation through a non-linear transition.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "there's no version of this where China comes through looking good and the challenge for the rest of us is to figure out how do we in as smooth and quick as a process as possible figure out how we can get along without them because they are going away and they're going away this decade for certain",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we are actually looking at the disassociation of China as a unified industrialized nation state within the decade",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Zeihan explicitly contradicts the 'China as largest economy by 2040' thesis by predicting China's collapse within this decade, grounding that he would never say China will be the world's largest economy by 2040."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "\"The international community will respond\"",
+      "claim": "\"The international community will respond\". There is no international community in the meaningful sense \u2014 there is a set of countries with divergent interests that occasionally coordinate when the US provides leadership and pays the costs. Remove the US from the equation and the community dissolves into its component national interests.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "there is no international community in the meaningful sense \u2014 there is a set of countries with divergent interests",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "the United States military would go out and make the global oceans safe for anyone's Commerce... for the Americans to do this for you you had to sign up to be on our side during the Cold War",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the only country that could do that is the United States and the sort of strategic surrender that the Americans would require is not something that the Chinese would accept",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Zeihan consistently frames international coordination as dependent on US leadership and cost-absorption, implying that without the US the 'international community' dissolves into national interests."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "\"Markets will find a solution\"",
+      "claim": "\"Markets will find a solution\". Markets are excellent at allocating existing resources and terrible at solving structural supply constraints on 20-year timelines. Copper takes 15 years from discovery to production. A carrier takes 10 years to build. Markets price neither.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "we need to double the size of the industrial plant and for that you need workers, you need green space, you need infrastructure, and you need a regulatory structure that is friendly to the investment",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "While Zeihan's analysis implies markets cannot solve 20-year structural constraints (copper timelines, carrier build times), he does not explicitly state 'markets will not find a solution' in the corpus \u2014 only indirect support is present."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "\"We should be optimistic about global cooperation on climate\"",
+      "claim": "\"We should be optimistic about global cooperation on climate\". Global cooperation requires a hegemon willing to enforce agreements and absorb the costs of defection. The US is withdrawing from that role. Without enforcement, climate agreements are declarations of intent by governments whose successors are not bound by them.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we're not going to retire anything. I don't care if it's coal. We don't have the option anymore.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the green transition narrative ignores that mining the inputs is dirtier than the hydrocarbons it would replace",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I would love for nukes to be part of the equation, but we still haven't built a prototype for a fourth generation nuclear power plant or a small modular reactor",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Zeihan's dismissal of the green transition and coal retirement, combined with his structural analysis of what enables international cooperation, grounds the principle that he would not express optimism about global climate cooperation."
+    }
+  ]
+}

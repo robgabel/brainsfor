@@ -1,0 +1,407 @@
+{
+  "brain_slug": "gokul-rajaram-v2",
+  "timestamp": "2026-05-31T14:15:10.302164+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 27,
+    "youtube_chars": 1091384,
+    "atom_quote_count": 499,
+    "total_chars": 1233721
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 4,
+        "weak": 1,
+        "ungrounded": 6,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 0,
+        "weak": 1,
+        "ungrounded": 4,
+        "total": 5
+      },
+      "does_not_believe": {
+        "grounded": 3,
+        "weak": 0,
+        "ungrounded": 2,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 1,
+        "weak": 0,
+        "ungrounded": 4,
+        "total": 5
+      }
+    },
+    "totals": {
+      "grounded": 8,
+      "weak": 2,
+      "ungrounded": 16,
+      "total": 26
+    },
+    "grounding_pct": 34.6,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[0]",
+        "title": "Remarkable product beats all distribution",
+        "rationale": "The corpus never articulates a '10\u2013100x better' product threshold or claims that remarkability drives word-of-mouth independently of distribution; the closest material discusses good product design (Square POS usability) but not this specific framing."
+      },
+      {
+        "id": "first_principles[1]",
+        "title": "You cannot be a single-product company",
+        "rationale": "The corpus contains no discussion of a required second product, profit-pool vs. retention product distinctions, or the danger of being a single-product company."
+      },
+      {
+        "id": "first_principles[2]",
+        "title": "Decisions need exactly one owner",
+        "rationale": "While Gokul discusses decision-making frameworks in general terms, the specific principle that decisions need exactly one owner and that consensus is a failure mode for important decisions does not appear in the source corpus."
+      },
+      {
+        "id": "first_principles[5]",
+        "title": "Durability comes from structural moats scored on the Eight Moats framework",
+        "rationale": "The corpus contains no mention of an 'Eight Moats framework,' no enumeration of moat types, and no claim that brand and switching costs are being collapsed by AI; moats are discussed only briefly and generally."
+      },
+      {
+        "id": "first_principles[7]",
+        "title": "Commoditize your complement before someone else does it to you",
+        "rationale": "The corpus contains no discussion of commoditizing complements, profit-pool layer strategy, or incumbent SaaS companies needing to give away an AI layer; this strategic framing does not appear."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[9]",
+        "title": "Speed is a product principle, not an operational virtue",
+        "rationale": "Speed as a principle is illustrated through the AdSense story but the corpus does not explicitly frame speed as a moat or connect it to collapsing the time to 'aha moment'; only one passage clearly supports this and it is anecdotal rather than prescriptive."
+      },
+      {
+        "id": "contrarian_positions[1]",
+        "title": "Brand is no longer a strong software moat",
+        "rationale": "Gokul actually says brand IS the best moat in one passage, which contradicts this principle; there is no statement in the corpus that brand is no longer a strong moat or that AI is collapsing brand value, making this principle ungrounded or contradicted rather than supported."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Remarkable product beats all distribution",
+      "claim": "Remarkable product beats all distribution. If the core product isn't 10\u2013100x better than the alternative, no go-to-market motion will save the company. The remarkability threshold is psychological, not just functional: it has to cross the line where users actively tell other people.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus never articulates a '10\u2013100x better' product threshold or claims that remarkability drives word-of-mouth independently of distribution; the closest material discusses good product design (Square POS usability) but not this specific framing."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "You cannot be a single-product company",
+      "claim": "You cannot be a single-product company. Durability requires a second product that emanates naturally from the first. Some products exist for profit, others for retention, and the team must be explicit about which is which \u2014 confusion between profit-pool and retention products is how teams end up optimized for the wrong outcomes.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of a required second product, profit-pool vs. retention product distinctions, or the danger of being a single-product company."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Decisions need exactly one owner",
+      "claim": "Decisions need exactly one owner. Three hands raised means zero accountability. The person responsible for executing the consequence should be the person who makes the decision. Consensus is not a virtue; it is a failure mode for important decisions because ownership collapses the moment it is distributed.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "While Gokul discusses decision-making frameworks in general terms, the specific principle that decisions need exactly one owner and that consensus is a failure mode for important decisions does not appear in the source corpus."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Outcomes are customer behavior changes, not feature launches",
+      "claim": "Outcomes are customer behavior changes, not feature launches. Every product decision must carry a hypothesis about how a specific customer behavior will measurably change. Features without a behavior-change hypothesis are engineering expenditure without a thesis and shouldn't ship.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Customer outcomes are behavior changes of a customer. But no business outcome happens without customers changing behavior.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If a feature has shipped and no customer behavior has changed, did the feature really shift? It's like the tree in a forest. I don't think so. I think it's a useless feature and we should cut it out if you can't articulate what customer behavior changed.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "every feature as we know is an experiment to prove a hypothesis around a customer behavior. And so if that's the case like you do experiment should always be run on a subset of the population on a control group.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple distinct passages explicitly state that features must be tied to customer behavior-change hypotheses and that features without such hypotheses should not ship."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Founders need authentic, lived missions",
+      "claim": "Founders need authentic, lived missions. Starting a company because you want to start a company is the canonical mistake. The first question to ask every founder is the founding story, because the only thing that survives the near-death moments is a problem the founder personally lived.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "you can absolutely adopt it obviously the the pain ones are the ones you hear about a lot so Mark Zuckerberg built Facebook because he had the pain he didn't know who was who are all the people in his undergraduate class Jack built Square because his friend Jim his co-founder Jim couldn't take a payment",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "ultimately you cannot fake it you still have to be authentic about it",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The corpus supports the idea that authentic, lived missions drive great founders, with examples from Zuckerberg and Dorsey, and the explicit statement that you cannot fake founder authenticity."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Durability comes from structural moats scored on the Eight Moats framework",
+      "claim": "Durability comes from structural moats scored on the Eight Moats framework. Data, workflow, regulatory, distribution, ecosystem, network, physical infrastructure, scale. Any single moat is insufficient. Four or more is 'pretty damn secure.' Brand and switching costs are no longer on the list because AI is collapsing both toward zero.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no mention of an 'Eight Moats framework,' no enumeration of moat types, and no claim that brand and switching costs are being collapsed by AI; moats are discussed only briefly and generally."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "The moment of customer intent is the most precious event in the funnel",
+      "claim": "The moment of customer intent is the most precious event in the funnel. Approval gates, waiting periods, and friction injected at the moment someone shows up wanting to use your product destroy disproportionate demand. Capture motivation, validate later.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "he looked at the screen I was like well the approval queue is something Publishers have to be put in a queue We approv Them why well what do you mean why we were kind of we didn't even know how to answer that why because Publishers could force a reputational risk to Google he was like why why",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Sergey he would drop into the launch meetings... he said what what what is his approval queue... he suggested the same thing that hey why don't y",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The AdSense approval queue story directly illustrates the principle that friction at the moment of customer intent destroys demand, and Sergey's intervention to remove the queue is presented approvingly, though the second passage is truncated."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Commoditize your complement before someone else does it to you",
+      "claim": "Commoditize your complement before someone else does it to you. The strategic question is always: which layer in my stack is the profit pool, and which layer should I be racing to zero? Incumbent SaaS companies that fail to give away the AI layer their core product depends on will get squeezed by the layer that does.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of commoditizing complements, profit-pool layer strategy, or incumbent SaaS companies needing to give away an AI layer; this strategic framing does not appear."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Code is becoming free; judgment is becoming the scarce asset",
+      "claim": "Code is becoming free; judgment is becoming the scarce asset. When AI can produce unlimited code, the bottleneck moves to deciding what to build, evaluating whether the output is correct, and discerning what matters. Judgment \u2014 on the product side, engineering side, and design side \u2014 is the one truly future-proof skill.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "judgment which is always a huge part of the product manager's role which is uh any one of us given a product probably within half an hour could come up with a number like maybe 100 ideas how to make the product better. The judgment is which of those ideas actually moves the company forward",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "judgment and influence are things that you can't easily outsource to machines.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state that judgment cannot be outsourced to machines and is the scarce, valuable skill as AI handles execution."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Speed is a product principle, not an operational virtue",
+      "claim": "Speed is a product principle, not an operational virtue. Intentional speed \u2014 collapsing the time between a user's signup and their first 'aha' moment, between hypothesis and prototype, between idea and ship \u2014 is itself the moat in a world where capabilities arrive every six months.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "AdSense, which is a product I I was known for, which is a product I built at Google. That thing launched in 3 months from zero, three or four, three and a half months, which was the fastest ever for a Google product. And so that really I just focused on cutting through crap and just launching it.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Speed as a principle is illustrated through the AdSense story but the corpus does not explicitly frame speed as a moat or connect it to collapsing the time to 'aha moment'; only one passage clearly supports this and it is anecdotal rather than prescriptive."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "There are exactly three ways to win in advertising",
+      "claim": "There are exactly three ways to win in advertising. Own a coveted user surface with high intent, own a precise identity graph that enables targeting, or own a unique inventory position. Every durable ad business is built on at least one. Google and Facebook won on all three.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no articulation of 'three ways to win in advertising' involving user surface, identity graph, and inventory position; advertising strategy at this level of abstraction is not discussed."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "The public market's blanket SaaS selloff is a 100% overreaction",
+      "claim": "The public market's blanket SaaS selloff is a 100% overreaction. Not all software companies are created equal. Painting every SaaS company with the same 'code is free' brush destroys analytical precision \u2014 the Eight Moats framework exists precisely to separate the durable from the doomed.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of public market SaaS selloffs, stock market reactions, or a defense of SaaS valuations using any framework."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Brand is no longer a strong software moat",
+      "claim": "Brand is no longer a strong software moat. This is a sharp break from conventional B2B SaaS doctrine. Switching costs are trending toward zero as data portability improves and AI enables pixel-perfect cloning. Structural moats \u2014 data, workflow, ecosystem \u2014 will matter far more than brand recognition over the next decade.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Ultimately the best mode is a brand. Right? If you think about I think many of these companies you could argue that Bing at some point did claim that they were very close to Google in terms of uh quality. But Google became such a verb that we just went to Google despite not even despite there being other alternatives.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Gokul actually says brand IS the best moat in one passage, which contradicts this principle; there is no statement in the corpus that brand is no longer a strong moat or that AI is collapsing brand value, making this principle ungrounded or contradicted rather than supported."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Consensus is not a virtue; it is a decision-making failure",
+      "claim": "Consensus is not a virtue; it is a decision-making failure. Most management literature celebrates buy-in. Gokul argues that consensus systematically destroys ownership for important decisions and should be actively avoided in favor of named single decision-makers.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus does not contain Gokul arguing against consensus or stating that consensus is a failure mode; no explicit framework about single decision-makers vs. consensus appears."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Horizontal AI application startups are losing to incumbents who bolt on AI",
+      "claim": "Horizontal AI application startups are losing to incumbents who bolt on AI. Conventional wisdom says startups have the advantage of being AI-native. The contrarian observation from talking to operators is that incumbents with existing data, customers, and distribution are shipping AI products that out-revenue all the horizontal startups combined within a year.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of horizontal AI startups losing to incumbents or incumbents out-competing AI-native startups with bolt-on AI products."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "The infrastructure/middleware layer is the most dangerous place in AI",
+      "claim": "The infrastructure/middleware layer is the most dangerous place in AI. Investors love picks-and-shovels plays, but middleware sits between foundation models that are rapidly commoditizing and application layers with direct customer relationships. The middleware layer risks being squeezed from both sides.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of middleware or infrastructure layers being squeezed between foundation models and application layers; this strategic framing is absent."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "Bolted-on product adjacencies create durable businesses",
+      "claim": "Bolted-on product adjacencies create durable businesses. A second product must emanate naturally from the first \u2014 shared data, shared customer relationship, shared workflow. Acquisitions or pivots that manufacture adjacency without structural connection don't compound; they distract.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of product adjacency strategy, what makes a second product 'natural,' or the danger of manufactured adjacencies through acquisition."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "Friction in onboarding is a quality signal",
+      "claim": "Friction in onboarding is a quality signal. Approval gates and waiting periods at the moment of customer intent are not quality controls \u2014 they are demand destruction. The lesson from Square and AdSense is that capturing motivation at the moment it exists is worth the downstream cost of occasional bad actors.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "he suggested the same thing that hey why don't y [publishers sign up without an approval queue]... the reality is whatever you're doing has lots of holes in it anyway",
+          "relation": "partial"
+        },
+        {
+          "quote": "I always admired about Square the point of sale before I ever joined it. The product point of sale is something a barista has to be trained in for several days before square... square you just download the thing in from the app store and start using it.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "The AdSense approval queue removal story and the Square frictionless onboarding example both illustrate that Gokul does not believe friction is a quality signal; removing barriers at the moment of customer intent is presented as the right approach."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "Market size alone validates a startup",
+      "claim": "Market size alone validates a startup. A large TAM with no structural moat is an invitation for every well-capitalized incumbent to copy you. The structural question \u2014 how many of the eight moats do you have? \u2014 matters more than the addressable market number.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no statement that TAM alone is insufficient without structural moats, and no Eight Moats framework is referenced anywhere."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "The founding motivation can be manufactured retrospectively",
+      "claim": "The founding motivation can be manufactured retrospectively. Authentic founding stories cannot be constructed after the fact. Founders who cannot articulate a lived, personal connection to the problem they are solving will not find reserves of motivation when the company hits its inevitable near-death moments.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "ultimately you cannot fake it you still have to be authentic about it",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you can absolutely adopt it obviously the the pain ones are the ones you hear about a lot so Mark Zuckerberg built Facebook because he had the pain... Jack built Square because his friend Jim his co-founder Jim couldn't take a payment",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Gokul explicitly states founding motivation cannot be faked and must be authentic, supported by multiple examples of founders with lived pain."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "AI removes the need for product judgment",
+      "claim": "AI removes the need for product judgment. Even as code generation becomes free, the hardest and most valuable work \u2014 deciding what to build, evaluating whether AI output is correct, discerning what matters to customers \u2014 remains irreducibly human and is growing more valuable, not less.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "judgment and influence are things that you can't easily outsource to machines.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The judgment is which of those ideas actually moves the company forward moves the product forward solves the customer's pain better than everything else.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages explicitly state judgment cannot be outsourced to AI and remains the critical human skill even as AI handles execution."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'Let's get everyone aligned before we decide'",
+      "claim": "'Let's get everyone aligned before we decide'. Seeking full alignment before naming a decision-maker is the canonical path to diffused accountability. Gokul's framework insists the decision-maker is named first, before alternatives are even generated.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no explicit statement against seeking alignment before decisions, no named single decision-maker framework, and no critique of consensus-seeking behavior."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'Our brand is our moat'",
+      "claim": "'Our brand is our moat'. Brand as a defensibility argument has been invalidated by AI's ability to replicate UX and by improving data portability. Saying 'our brand is our moat' signals that the structural analysis hasn't been done.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "In fact, Gokul says 'Ultimately the best mode is a brand' in the corpus, which directly contradicts this principle; he does not say brand is an invalid moat argument."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'We'll figure out the second product later'",
+      "claim": "'We'll figure out the second product later'. Deferring the second product question until after the first product scales is how single-product companies get stranded. The second product strategy must be thought through early, with explicit clarity about whether it is a profit product or a retention product.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of second product strategy timing or the danger of deferring it; this framing is entirely absent."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'Ship the feature and see if engagement goes up'",
+      "claim": "'Ship the feature and see if engagement goes up'. Engagement without a prior behavior-change hypothesis is noise. Every feature should ship with a specific prediction about which customer behavior will change and by how much \u2014 otherwise there is no basis for learning from the result.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "every feature as we know is an experiment to prove a hypothesis around a customer behavior... here's the experiment you're running... here's what data do you have, this hypothesis is even valid before you start doing the work",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you need to ask your product teams why are you shipping this feature? If they cannot tell you what customer outcome or what this thing is going to change, if they don't have a clear hypothesis, you need to shut it down.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Gokul explicitly says shipping without a prior behavior-change hypothesis is wrong and CEOs should shut down features that lack one, directly contradicting the 'ship and see if engagement goes up' approach."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'We're building the picks and shovels of AI \u2014 that's the safe bet'",
+      "claim": "'We're building the picks and shovels of AI \u2014 that's the safe bet'. Infrastructure and middleware positioning is actively dangerous, not safe. Being caught between commoditizing foundation models and consolidating application layers is the definition of margin compression, not protection.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no discussion of infrastructure or middleware as dangerous positions in AI, no picks-and-shovels critique, and no analysis of margin compression between foundation models and application layers."
+    }
+  ]
+}

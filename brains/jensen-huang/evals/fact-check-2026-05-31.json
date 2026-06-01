@@ -1,0 +1,362 @@
+{
+  "brain_slug": "jensen-huang-v2",
+  "timestamp": "2026-05-31T06:44:35.614683+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 20,
+    "youtube_chars": 1033952,
+    "atom_quote_count": 395,
+    "total_chars": 1134475
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 0,
+        "weak": 1,
+        "ungrounded": 11,
+        "total": 12
+      },
+      "contrarian_positions": {
+        "grounded": 0,
+        "weak": 1,
+        "ungrounded": 5,
+        "total": 6
+      },
+      "does_not_believe": {
+        "grounded": 0,
+        "weak": 0,
+        "ungrounded": 5,
+        "total": 5
+      },
+      "would_not_say": {
+        "grounded": 0,
+        "weak": 0,
+        "ungrounded": 6,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 0,
+      "weak": 2,
+      "ungrounded": 27,
+      "total": 29
+    },
+    "grounding_pct": 3.4,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[0]",
+        "title": "Accelerated computing is a new computing model, not faster general computing",
+        "rationale": "The source corpus contains no passages from Jensen Huang about accelerated computing, CPUs, GPUs, parallel computing, or NVIDIA's founding thesis \u2014 the corpus consists entirely of a Christina Pan executive coaching podcast and a David Senra founders podcast, neither of which includes Jensen Huang's own speech on this topic."
+      },
+      {
+        "id": "first_principles[1]",
+        "title": "Go back to first principles and ask: how would I redo this from scratch?",
+        "rationale": "No passages in the source corpus contain Jensen Huang speaking about first-principles decision-making, rebuilding from scratch, the Direct3D crisis, or CUDA conception; the corpus does not include Jensen Huang's own words on this subject."
+      },
+      {
+        "id": "first_principles[2]",
+        "title": "Create markets \u2014 don't enter them",
+        "rationale": "The source corpus contains no statements from Jensen Huang about creating markets, ecosystem investment, or NVIDIA's strategic moves; Jensen Huang's voice is entirely absent from the corpus."
+      },
+      {
+        "id": "first_principles[3]",
+        "title": "The data center is the computer",
+        "rationale": "No passages in the source corpus address Jensen Huang's views on data centers, NVLink, AI factories, or cost-per-token metrics; the corpus does not contain Jensen Huang's own speech on these topics."
+      },
+      {
+        "id": "first_principles[4]",
+        "title": "Software is the moat; hardware is the vehicle",
+        "rationale": "The source corpus contains no passages from Jensen Huang about CUDA, software moats, developer ecosystems, or platform strategy; Jensen Huang's own words are absent from the corpus."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[7]",
+        "title": "The conditions of your success are the conditions of your suffering",
+        "rationale": "There are two passages touching on Jensen's embrace of pain and suffering, but neither directly articulates the principle that 'the conditions of your success are the conditions of your suffering' or that greatness and pain are inseparable as a deliberate philosophy; these are brief references paraphrased by others rather than Jensen's own sustained argument."
+      },
+      {
+        "id": "contrarian_positions[4]",
+        "title": "Pain and suffering are things to wish upon people you care about",
+        "rationale": "There is only one passage referencing Jensen's view on hardship, and it does not go so far as to articulate the contrarian position that pain and suffering are things to actively wish upon people; the corpus lacks Jensen's own direct statement about wishing suffering on students."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Accelerated computing is a new computing model, not faster general computing",
+      "claim": "Accelerated computing is a new computing model, not faster general computing. CPUs execute instructions sequentially with low latency. GPUs execute thousands of threads in parallel. This is not an incremental improvement \u2014 it is a categorically different way to compute. Jensen bet NVIDIA's existence on this thesis in 1993, and every workload involving large-scale data processing (AI training, molecular dynamics, fluid dynamics, quantum chromodynamics, genomics, graphics) has since migrated to it. The vindication is now civilization-scale.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about accelerated computing, CPUs, GPUs, parallel computing, or NVIDIA's founding thesis \u2014 the corpus consists entirely of a Christina Pan executive coaching podcast and a David Senra founders podcast, neither of which includes Jensen Huang's own speech on this topic."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Go back to first principles and ask: how would I redo this from scratch?",
+      "claim": "Go back to first principles and ask: how would I redo this from scratch?. This is Jensen's core decision framework. Learn how something is currently done, strip away every assumption, then rebuild given today's conditions, tools, and motivations. It is how NVIDIA survived the Direct3D crisis, how CUDA was conceived, and how he pivoted from gaming to AI. The question is never 'how do we improve this?' \u2014 it is 'if we were starting today, would we build it this way at all?'",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus contain Jensen Huang speaking about first-principles decision-making, rebuilding from scratch, the Direct3D crisis, or CUDA conception; the corpus does not include Jensen Huang's own words on this subject."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Create markets \u2014 don't enter them",
+      "claim": "Create markets \u2014 don't enter them. NVIDIA's signature strategic move is to build technology for a market that does not yet exist, then invest in the ecosystem until the market materializes around it. The GPU market, GPGPU computing, deep learning training, inference at scale, sovereign AI, physical AI \u2014 all were zero-billion-dollar markets when Jensen committed. The reward for creating a market is owning it for a decade before competitors understand what happened.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no statements from Jensen Huang about creating markets, ecosystem investment, or NVIDIA's strategic moves; Jensen Huang's voice is entirely absent from the corpus."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "The data center is the computer",
+      "claim": "The data center is the computer. Stop thinking chip by chip. The unit of computing is the rack, the cluster, the campus, and increasingly the multi-datacenter fabric. NVLink 72 makes 72 GPUs behave as one logical GPU; Spectrum-X stitches racks into datacenters; Spectrum-XGS stitches datacenters together. The chip is a component; the AI factory is the product \u2014 and the right metric is cost per token, not cost per chip.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus address Jensen Huang's views on data centers, NVLink, AI factories, or cost-per-token metrics; the corpus does not contain Jensen Huang's own speech on these topics."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Software is the moat; hardware is the vehicle",
+      "claim": "Software is the moat; hardware is the vehicle. CUDA, cuDNN, TensorRT, RAPIDS, Megatron Core, cuLitho, Monai, Omniverse \u2014 350+ domain libraries built on a programming model kept backward-compatible across generations. Four million developers and hundreds of millions of installed GPUs constitute a flywheel no competitor can disrupt by shipping faster silicon. Jensen calls CUDA 'the treasure of the company.' The chip is incidental; the platform is the business.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about CUDA, software moats, developer ecosystems, or platform strategy; Jensen Huang's own words are absent from the corpus."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Only do work that wouldn't happen without you",
+      "claim": "Only do work that wouldn't happen without you. Jensen's project selection criterion: 'If we didn't do it, would it happen anyway?' If someone else can and will, let them. NVIDIA pursues only work where its contribution is unique and irreplaceable \u2014 which is why it builds CUDA libraries for domains years before they generate revenue. This concentrates resources on high-leverage problems and prevents drift into commodity work.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus contain Jensen Huang articulating a project-selection criterion about only doing work others wouldn't do; the corpus does not include Jensen Huang's direct speech on this topic."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Use early indicators of future success, not KPIs",
+      "claim": "Use early indicators of future success, not KPIs. Traditional KPIs measure past performance. Jensen looks for EIOFS \u2014 early indicators of future success \u2014 qualitative signals that you are solving an important problem before the market validates it. A quantum chemist using your GPU. AlexNet using two GTX 580s in 2012. These are not revenue; they are evidence of being right about the future. Jensen explicitly decouples evidence of doing the right thing from financial results.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about early indicators of future success, EIOFS, AlexNet, or decoupling evidence from financial results; Jensen Huang's voice is not present in the corpus on this topic."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "The conditions of your success are the conditions of your suffering",
+      "claim": "The conditions of your success are the conditions of your suffering. Greatness and pain are inseparable. The same traits that make NVIDIA succeed \u2014 obsessive detail, willingness to bet the company, relentless reinvention \u2014 make the journey brutal. Jensen does not sugarcoat this. To Stanford students he said: 'I hope nobody has it easy. I wish upon you ample doses of pain and suffering.'",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Jensen said, \"It's very difficult to invent something new and people don't believe you all the time. You're humiliated often. You're disbelieved most of the time.\"",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "I read this biography of Jensen Wong, which is fascinating cuz it's like right after one of the best quarters in Nvidia history. He said that he starts this meeting and he says, \"I woke up this morning, looked in the mirror and said, why do you suck so much?\"",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "There are two passages touching on Jensen's embrace of pain and suffering, but neither directly articulates the principle that 'the conditions of your success are the conditions of your suffering' or that greatness and pain are inseparable as a deliberate philosophy; these are brief references paraphrased by others rather than Jensen's own sustained argument."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Information transparency creates speed",
+      "claim": "Information transparency creates speed. In Jensen's flat organization (~60 direct reports), information flows to everyone simultaneously rather than being filtered through layers. When the CEO reasons through a problem in front of the whole company, everyone learns how to reason. Speed comes from shared context, not command hierarchy. He calls this 'simultaneous broadcast.'",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about flat organizations, simultaneous broadcast, information transparency, or his ~60 direct reports structure; these topics do not appear in the corpus."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Bet the company when your physics hasn't changed",
+      "claim": "Bet the company when your physics hasn't changed. Jensen has bet NVIDIA's survival multiple times \u2014 on the GPU concept, on CUDA, on deep learning, on data centers, on physical AI. His framework: if your core beliefs haven't changed ('did physics change? did gravity change?'), you don't change course. Conviction without contrary evidence is not stubbornness \u2014 it is discipline.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus contain Jensen Huang discussing betting the company, conviction frameworks, or the 'did physics change' heuristic; Jensen Huang's own words on these strategic decisions are absent."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Every company will become an AI company, and the unit of work shifts from answers to action",
+      "claim": "Every company will become an AI company, and the unit of work shifts from answers to action. AI is not a feature \u2014 it is a new computing paradigm. Generative AI delivered answers; reasoning AI delivered grounded answers; agentic AI delivers work. This is the first time AI has a clear economic model: people pay for work, not information. The TAM is therefore the global economy, not the software industry.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about agentic AI, reasoning AI, the shift from answers to action, or AI as a new computing paradigm replacing software; Jensen Huang's voice is not present on these topics."
+    },
+    {
+      "principle_id": "first_principles[11]",
+      "section": "first_principles",
+      "title": "The next platform is physical AI",
+      "claim": "The next platform is physical AI. Language AI conquered text. Vision AI conquered images. Embodied AI \u2014 machines that perceive, reason, and act in the physical world \u2014 is the next multi-trillion-dollar platform. Omniverse for simulation, Cosmos for world models, Isaac for robotics, Drive for autonomy. Jensen treats this with the same conviction he had for GPGPU in 2006.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus contain Jensen Huang discussing physical AI, Omniverse, Cosmos, Isaac robotics, or embodied AI as the next platform; the corpus does not include Jensen Huang's speech on these topics."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Moore's Law is over, and that is not a problem \u2014 it is the opportunity",
+      "claim": "Moore's Law is over, and that is not a problem \u2014 it is the opportunity. While most of the industry still references Moore's Law as a benchmark, Jensen treats its end as the founding premise of NVIDIA. The slowdown of general-purpose computing is precisely what created the multi-decade opening for accelerated computing.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about Moore's Law being over or accelerated computing as an opportunity arising from its end; Jensen Huang's views on this topic are entirely absent from the corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "The most expensive computer is the cheapest computer",
+      "claim": "The most expensive computer is the cheapest computer. Grace Blackwell NVLink72 is the most expensive system NVIDIA sells, and Jensen argues it produces tokens at the lowest cost in the world. The industry instinct to optimize purchase price misses the economic equation entirely. TCO per token is the only metric that matters.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus contain Jensen Huang arguing that expensive systems are cheaper on a per-token basis or discussing TCO metrics; the corpus does not include Jensen Huang's own speech on this contrarian position."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "ASICs and TPUs do not threaten NVIDIA's position",
+      "claim": "ASICs and TPUs do not threaten NVIDIA's position. Conventional wisdom holds that purpose-built accelerators will erode GPU market share. Jensen argues the opposite: the workload diversity of modern AI \u2014 training, inference, retrieval, simulation, rendering \u2014 requires programmable, general-purpose accelerators. ASICs optimize for yesterday's model architecture; CUDA adapts to tomorrow's.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about ASICs, TPUs, workload diversity, or programmable versus purpose-built accelerators; Jensen Huang's voice is absent on this topic."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Flat organizations with 60 direct reports are more efficient than hierarchies",
+      "claim": "Flat organizations with 60 direct reports are more efficient than hierarchies. Management orthodoxy recommends spans of 5\u20138 direct reports and multiple layers. Jensen runs ~60 direct reports with no one-on-ones. He argues that hierarchy filters and delays information; flatness creates speed through simultaneous broadcast of context.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus contain Jensen Huang arguing for flat organizations, ~60 direct reports, or simultaneous broadcast as more efficient than hierarchy; these topics are not addressed by Jensen Huang in the corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Pain and suffering are things to wish upon people you care about",
+      "claim": "Pain and suffering are things to wish upon people you care about. Conventional wisdom celebrates resilience but tries to minimize hardship. Jensen inverts this: he explicitly wishes suffering on students and employees he believes in, because hardship is the forcing function for the discipline and judgment that produce greatness.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Jensen said, \"It's very difficult to invent something new and people don't believe you all the time. You're humiliated often. You're disbelieved most of the time.\"",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "There is only one passage referencing Jensen's view on hardship, and it does not go so far as to articulate the contrarian position that pain and suffering are things to actively wish upon people; the corpus lacks Jensen's own direct statement about wishing suffering on students."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "Researchers should be forced to defend every assumption, every time",
+      "claim": "Researchers should be forced to defend every assumption, every time. Most organizations protect senior researchers from repeated challenge. Jensen assigns someone to argue against every position in every meeting, including positions he himself has taken. He believes no idea is above scrutiny and that repeated defense strengthens conviction or exposes error.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about assigning adversarial reviewers, forcing researchers to defend assumptions, or any similar organizational practice; Jensen Huang's own words on this topic are absent."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "General-purpose CPU computing has a long-term future as the primary computing paradigm",
+      "claim": "General-purpose CPU computing has a long-term future as the primary computing paradigm. Jensen committed in 1993 that sequential instruction execution would be displaced by parallel computing for the workloads that matter most. Thirty years of evidence have not changed this view. He does not believe CPU-centric architectures can scale to the demands of AI, simulation, or physical AI.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang expressing disbelief in CPU-centric architectures or articulating that parallel computing will displace sequential instruction execution; Jensen Huang's views on this are not present in the corpus."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "Market research predicts breakthrough opportunities",
+      "claim": "Market research predicts breakthrough opportunities. Every major NVIDIA platform was built for a market that did not exist. Market research by definition measures existing demand. Jensen believes breakthrough opportunities are invisible to conventional market analysis and can only be found by reasoning from physics and first principles.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus contain Jensen Huang stating that market research cannot predict breakthrough opportunities or that he reasons from physics and first principles instead; these views are not represented in the corpus."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "Protecting people from hard feedback is kindness",
+      "claim": "Protecting people from hard feedback is kindness. Jensen gives what he calls 'very direct feedback.' He has said the kindest thing a manager can do is tell someone the truth immediately, because letting someone persist in a wrong direction wastes their most valuable resource: time. He does not believe in buffering difficult truths.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about direct feedback, buffering difficult truths, or the kindness of immediate honesty; Jensen Huang's own words on feedback philosophy are absent from the corpus."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "Work-life balance is the right frame for serious ambition",
+      "claim": "Work-life balance is the right frame for serious ambition. Jensen does not use the language of work-life balance. He describes his relationship with NVIDIA as one of complete integration \u2014 he thinks about company problems constantly, draws energy from them, and does not segment life into work and non-work domains.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus contain Jensen Huang discussing work-life balance, integration of work and life, or his relationship with NVIDIA as complete integration; the corpus does not include Jensen Huang's speech on this topic."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "Retreating to a niche is a viable survival strategy",
+      "claim": "Retreating to a niche is a viable survival strategy. When NVIDIA nearly went bankrupt in the late 1990s after the RIVA 128 and Direct3D crisis, advisors suggested retreating to a defensible niche. Jensen rejected this and instead rebuilt the graphics pipeline from first principles, ultimately producing the GeForce 256. He does not believe retreat preserves optionality \u2014 it surrenders it.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about retreating to a niche, the RIVA 128, the Direct3D crisis, or rebuilding from first principles after near-bankruptcy; Jensen Huang's views on this are entirely absent."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "\"Let's wait and see how the market develops before we commit.\"",
+      "claim": "\"Let's wait and see how the market develops before we commit.\". Jensen's entire career has been built on committing years before market validation. Waiting for the market to develop means arriving after incumbents have already defined the architecture. He would view this as a strategy for permanent second place.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang that would support or contradict this would-not-say principle about waiting for market development; Jensen Huang's own speech is not present in the corpus on this topic."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "\"We should protect this team from criticism until they're ready.\"",
+      "claim": "\"We should protect this team from criticism until they're ready.\". Jensen assigns adversarial reviewers to every project and expects every assumption to be defended. The idea of shielding a team from scrutiny until they feel confident would strike him as setting them up for a catastrophic late-stage failure.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus contain Jensen Huang discussing team protection from criticism, adversarial review, or building confidence before scrutiny; the corpus does not include Jensen Huang's voice on this topic."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "\"Our job is to give customers what they ask for.\"",
+      "claim": "\"Our job is to give customers what they ask for.\". NVIDIA's most important products \u2014 CUDA, Tensor Cores, NVLink, Omniverse \u2014 were not requested by customers. They were built based on Jensen's conviction about where computing was going. He believes customers describe present pain, not future architecture.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about customer requests, CUDA development without customer demand, or his belief about customers describing present pain rather than future architecture; Jensen Huang's own words are absent."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "\"Let's add a management layer to handle this complexity.\"",
+      "claim": "\"Let's add a management layer to handle this complexity.\". Jensen's response to complexity is not hierarchy \u2014 it is information transparency and direct reasoning. Adding management layers would, in his framework, slow information flow and filter out the signal he needs to make good decisions.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus contain Jensen Huang expressing opposition to management layers, hierarchy, or complexity-handling through information transparency; the corpus does not include Jensen Huang's speech on organizational design."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "\"That's someone else's problem \u2014 it's outside our core business.\"",
+      "claim": "\"That's someone else's problem \u2014 it's outside our core business.\". NVIDIA has repeatedly moved into adjacent domains \u2014 networking (Mellanox), automotive (Drive), healthcare (Clara), digital biology (BioNemo), quantum simulation \u2014 before those domains were obviously adjacent. Jensen does not believe in tight boundary-setting when a domain intersects with accelerated computing.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The source corpus contains no passages from Jensen Huang about moving into adjacent domains, Mellanox, automotive, healthcare, or rejecting tight boundary-setting; Jensen Huang's own words on this topic are entirely absent from the corpus."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "\"We've had a great run \u2014 let's be more conservative now.\"",
+      "claim": "\"We've had a great run \u2014 let's be more conservative now.\". Jensen has bet the company multiple times from positions of strength, not desperation. The transition from gaming to data centers, from data centers to AI factories, from AI factories to physical AI \u2014 each was initiated while the prior business was still growing. He does not believe success is a reason to reduce ambition.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "No passages in the source corpus contain Jensen Huang discussing conservatism after success, betting from positions of strength, or the transitions from gaming to data centers to AI factories; Jensen Huang's voice is not present in the corpus on these topics."
+    }
+  ]
+}

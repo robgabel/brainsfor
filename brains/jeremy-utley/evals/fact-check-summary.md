@@ -1,21 +1,25 @@
-# Fact-Check — jeremy-utley
+# Fact-Check — jeremy-utley-v2
 
-- Run: 2026-05-20T15:12:24.583785+00:00
+- Run: 2026-05-31T17:21:25.364979+00:00
 - Model: claude-sonnet-4-6
-- Corpus: 9 YouTube transcripts (115,317 chars) + 391 atom quotes
-- **Grounding score: 89.7%** (grounded = 1pt, weak = 0.5pt)
+- Corpus: 24 YouTube transcripts (501,156 chars) + 521 atom quotes
+- **Grounding score: 84.5%** (grounded = 1pt, weak = 0.5pt)
 
 ## By section
 
 | Section | Grounded | Weak | Ungrounded | Total |
 |---|---|---|---|---|
-| first_principles | 8 | 2 | 1 | 11 |
-| contrarian_positions | 10 | 1 | 0 | 11 |
-| does_not_believe | 6 | 0 | 0 | 6 |
-| would_not_say | 4 | 2 | 0 | 6 |
+| first_principles | 8 | 3 | 0 | 11 |
+| contrarian_positions | 5 | 1 | 1 | 7 |
+| does_not_believe | 4 | 1 | 0 | 5 |
+| would_not_say | 5 | 0 | 1 | 6 |
 
 ## Worst-grounded principles (sample)
 
-### first_principles[7] — Most innovation failures are framing failures
+### contrarian_positions[1] — 'AI fatigue' is a status performance, not a real condition
 
-_The corpus does not contain passages about 'framing failures,' 'How Might We' prompts, or reframing from multiple angles as the highest-leverage skill; this principle appears to be an extrapolation not directly stated in the source material._
+_The corpus does not contain any passage where Utley claims 'AI fatigue' is a status performance or that people claiming fatigue are covering for not having started; this appears to be an extrapolation not present in the source material._
+
+### would_not_say[2] — 'We need to protect our brand voice from AI'
+
+_The corpus contains no passage where Utley addresses the specific claim about 'protecting brand voice from AI' as a misframing; this appears to be an extrapolation not present in the source material._

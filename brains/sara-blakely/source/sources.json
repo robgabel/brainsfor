@@ -1,101 +1,336 @@
 {
-  "description": "Source material for the Sara Blakely brain pack \u2014 auto-discovered via web search.",
-  "brain_slug": "sara-blakely",
+  "description": "Source material for the Sara Blakely brain pack \u2014 text via Firecrawl, video via yt-dlp.",
+  "brain_slug": "sara-blakely-v2",
   "brain_name": "Sara Blakely",
-  "discovered_at": "2026-05-01T12:56:38.282896+00:00",
+  "discovered_at": "2026-05-31T11:37:26.484518+00:00",
   "sources": [
     {
-      "title": "5 Steps to Finding Your Next Big Idea",
-      "type": "essay",
-      "priority": "high",
-      "url": "https://reid.medium.com/5-steps-to-finding-your-next-big-idea-from-spanxs-sara-blakely-9bb2b3b7b491"
-    },
-    {
-      "title": "10 Lessons from Sara Blakely",
+      "title": "Wikipedia: Sara Blakely",
       "type": "profile",
-      "priority": "medium",
-      "url": "https://www.forbes.com/sites/kathycaprino/2012/05/23/10-lessons-i-learned-from-sara-blakely-that-you-wont-hear-in-business-school/"
-    },
-    {
-      "title": "Sara Blakely's Daily Habit for Her Best Thinking",
-      "type": "video",
       "priority": "high",
-      "url": "https://www.youtube.com/watch?v=qra2tgw5FKA",
-      "youtube_id": "qra2tgw5FKA"
+      "url": "https://en.wikipedia.org/wiki/Sara_Blakely"
     },
     {
-      "title": "Sara Blakely's Tips for Starting a Business",
-      "type": "essay",
-      "priority": "high",
-      "url": "https://www.masterclass.com/articles/sara-blakelys-tips-for-starting-a-business"
+      "title": "Voter Records",
+      "type": "other",
+      "priority": "low",
+      "url": "https://voterrecords.com/voter/17455434/sara-blakely"
     },
     {
-      "title": "Start Small, Think Big, Scale Fast - Stanford GSB",
+      "title": "CNBC: Spanx Founder on Sneex Launch",
       "type": "interview",
-      "priority": "high",
-      "url": "https://www.gsb.stanford.edu/insights/sara-blakely-start-small-think-big-scale-fast"
-    },
-    {
-      "title": "How to Find Your Higher Purpose",
-      "type": "essay",
-      "priority": "high",
-      "url": "https://www.linkedin.com/pulse/how-find-your-higher-purpose-sara-blakely"
-    },
-    {
-      "title": "Sara Blakely Interview with Susie Moore",
-      "type": "interview",
-      "priority": "medium",
-      "url": "https://susie-moore.com/interview/sara-blakely-interview/"
-    },
-    {
-      "title": "How to Find Your Big Idea - Masters of Scale",
-      "type": "podcast",
       "priority": "essential",
-      "url": "https://mastersofscale.com/episode/sara-blakely-how-to-find-your-big-idea/"
+      "url": "https://www.cnbc.com/video/2024/12/12/spanx-founder-sara-blakely-on-launch-of-sneex-want-to-provide-luxury-comfort-for-women.html"
     },
     {
-      "title": "2 Questions from Sara Blakely - Inc.",
+      "title": "TIME Magazine Profile",
+      "type": "profile",
+      "priority": "high",
+      "url": "http://www.time.com/time/specials/packages/article/0,28804,2111975_2111976_2112100,00.html"
+    },
+    {
+      "title": "Forbes Power Women List",
       "type": "profile",
       "priority": "medium",
-      "url": "https://www.inc.com/jessica-stillman/billionaire-spanx-founder-sara-blakely-these-2-questions-will-help-you-think-lik.html"
+      "url": "https://www.forbes.com/power-women/list/2/#tab:overall"
     },
     {
-      "title": "5 Tips for Building a Billion-Dollar Idea",
-      "type": "essay",
+      "title": "Forbes: Spanx Sara Blakely Billionaires Feature",
+      "type": "profile",
+      "priority": "high",
+      "url": "https://www.forbes.com/global/2012/0326/billionaires-12-feature-united-states-spanx-sara-blakely-american-booty.html"
+    },
+    {
+      "title": "Bay City Magazine Profile",
+      "type": "profile",
+      "priority": "low",
+      "url": "http://www.mybaycity.com/scripts/p3_v2/P3V3-0200.cfm?P3_ArticleID=6852"
+    },
+    {
+      "title": "Tallahassee Magazine: Behind the Seams",
+      "type": "profile",
       "priority": "medium",
-      "url": "https://www.netsuite.com/portal/resource/articles/business-strategy/spanxs-sara-blakely-shares-5-tips-for-building-a-billion-dollar-idea.shtml"
+      "url": "http://www.tallahasseemagazine.com/September-October-2007/Behind-the-Seams/"
     },
     {
-      "title": "Sara Blakely: Betting On Yourself",
+      "title": "Inc: The Spanx Story",
+      "type": "essay",
+      "priority": "high",
+      "url": "http://www.inc.com/sara-blakely/the-spanx-story-how-sara-blakely-turned-footless-pantyhose-into-a-business.html"
+    },
+    {
+      "title": "Inc: How Sara Blakely Started Spanx",
+      "type": "essay",
+      "priority": "high",
+      "url": "http://www.inc.com/sara-blakely/how-sara-blakley-started-spanx.html"
+    },
+    {
+      "title": "Fortune: Spanx Billion-Dollar Idea",
+      "type": "profile",
+      "priority": "high",
+      "url": "https://fortune.com/2024/02/27/sara-blakely-spanx-billion-dollar-idea-oprah-5000-savings-billionaire/"
+    },
+    {
+      "title": "Fortune: Career Advice Interview",
+      "type": "interview",
+      "priority": "high",
+      "url": "https://fortune.com/2025/09/20/sara-blakely-spanx-fax-machines-investors-career-advice/"
+    },
+    {
+      "title": "New York Magazine: Fax Machines to Spanx",
+      "type": "profile",
+      "priority": "high",
+      "url": "https://nymag.com/vindicated/2016/10/how-selling-fax-machines-helped-sara-blakely-invent-spanx.html"
+    },
+    {
+      "title": "ABC News: Build a Billion-Dollar Business",
+      "type": "interview",
+      "priority": "high",
+      "url": "https://abcnews.go.com/Business/build-billion-dollar-business-spanx-inventor-sara-blakely/story?id=17831265#.UYxnRULD86Y"
+    },
+    {
+      "title": "Forbes: Hustling to a Billion-Dollar Business",
+      "type": "interview",
+      "priority": "high",
+      "url": "https://www.forbes.com/sites/clareoconnor/2014/10/21/spanx-inventor-sara-blakely-on-hustling-her-way-to-a-billion-dollar-business/"
+    },
+    {
+      "title": "Sara Blakely Reveals Why Betting On Yourself Is The Ultimate Investment",
       "type": "video",
       "priority": "high",
       "url": "https://www.youtube.com/watch?v=b8ka0qVGipA",
       "youtube_id": "b8ka0qVGipA"
     },
     {
+      "title": "Sara Blakely's First EVER Shark Tank Deal | Shark Tank Firsts | CNBC Prime",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=p72_ZSydgIg",
+      "youtube_id": "p72_ZSydgIg"
+    },
+    {
+      "title": "Sara Blakely Teaches Self-Made Entrepreneurship | Official Trailer | MasterClass",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=DNeYKyUa-7w",
+      "youtube_id": "DNeYKyUa-7w"
+    },
+    {
+      "title": "How Spanx's Sara Blakely made a billion",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=tiWxauqhYh8",
+      "youtube_id": "tiWxauqhYh8"
+    },
+    {
+      "title": "Sara Blakely On The Origin Story Of Spanx: 'I Was Just A Frustrated Consumer'",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=3hCtukSt_e0",
+      "youtube_id": "3hCtukSt_e0"
+    },
+    {
+      "title": "MasterClass Live with Sara Blakely | MasterClass",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=ml35J1s0gCI",
+      "youtube_id": "ml35J1s0gCI"
+    },
+    {
+      "title": "Spanx founder Sara Blakely introduces new line of luxury shoes",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=qhHUB9FUJcI",
+      "youtube_id": "qhHUB9FUJcI"
+    },
+    {
+      "title": "SPANX Founder Sara Blakely on Overcoming Fear of Failure in Business",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=9JrAojUqMvQ",
+      "youtube_id": "9JrAojUqMvQ"
+    },
+    {
+      "title": "Spanx founder Sara Blakely sells majority stake in company to Blackstone",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=uVynwTzsueU",
+      "youtube_id": "uVynwTzsueU"
+    },
+    {
+      "title": "How Sara Blakely Built Spanx and Found Her Next Big Purpose",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=swBy2hmw14c",
+      "youtube_id": "swBy2hmw14c"
+    },
+    {
+      "title": "Spanx CEO Sara Blakely offers advice to redefine failure",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=OZEPbyIA8XI",
+      "youtube_id": "OZEPbyIA8XI"
+    },
+    {
+      "title": "Sara Blakely, Founder and CEO, Spanx",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=TPURpzGPMxQ",
+      "youtube_id": "TPURpzGPMxQ"
+    },
+    {
+      "title": "Sara Blakely on Writing Your Billion Dollar Story with Lewis Howes",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=WSrpZIzAhKU",
+      "youtube_id": "WSrpZIzAhKU"
+    },
+    {
+      "title": "How to ACTUALLY Become a Billionaire from $5,000 | Wayne Dyer & Sara Blakely",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=-UawSuppvYQ",
+      "youtube_id": "-UawSuppvYQ"
+    },
+    {
+      "title": "Meet Sara Blakely | Shark Tank US | Shark Tank Global",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=6EVqSs3r7eI",
+      "youtube_id": "6EVqSs3r7eI"
+    },
+    {
       "title": "Vital Voices Live with Sara Blakely",
       "type": "video",
-      "priority": "essential",
+      "priority": "high",
       "url": "https://www.youtube.com/watch?v=OIc2KRP7A00",
       "youtube_id": "OIc2KRP7A00"
     },
     {
-      "title": "Conversation with Sara Blakely - Blazing Trails",
-      "type": "podcast",
-      "priority": "essential",
-      "url": "https://podcasts.salesforce.com/public/38/Blazing-Trails-561264f7/fcc7252e"
-    },
-    {
-      "title": "School of Hard Knocks Interview with Sara Blakely",
-      "type": "video",
-      "priority": "medium",
-      "url": "https://www.facebook.com/theschoolofhardknockz/videos/she-became-a-billionaire-i-interviewed-sara-blakely-the-founder-of-spanx-and-i-a/1169467741897305/"
-    },
-    {
-      "title": "How This Visionary Gets Her Ideas - CNN",
+      "title": "Ep 9 \u201cConnect The Dots\u201d with Sara Blakely",
       "type": "video",
       "priority": "high",
-      "url": "https://www.cnn.com/2025/05/17/business/video/sara-blakely-spanx-sneex-interview-digvid"
+      "url": "https://www.youtube.com/watch?v=WpHB4bkLRR4",
+      "youtube_id": "WpHB4bkLRR4"
+    },
+    {
+      "title": "Spanx Founder Sara Blakely Shares Secrets To Building A Billion-Dollar Business | #Next1000 Summit",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=0K-TQcV-Xoo",
+      "youtube_id": "0K-TQcV-Xoo"
+    },
+    {
+      "title": "Keys to Business Success with my Wife Sara Blakely",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=uWwvuxLhqpw",
+      "youtube_id": "uWwvuxLhqpw"
+    },
+    {
+      "title": "Spanx Creator Sara Blakely Becomes Billionaire, Makes Forbes Newest List",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=brS5B53gEDc",
+      "youtube_id": "brS5B53gEDc"
+    },
+    {
+      "title": "Become a Conduit for Beauty | Steven Pressfield on The Tim Ferriss Show Podcast",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=0v9tiHOnRCc",
+      "youtube_id": "0v9tiHOnRCc"
+    },
+    {
+      "title": "How did Karlie Kloss get exposed to coding? | The Tim Ferriss Show",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=6-g-6bdmUu4",
+      "youtube_id": "6-g-6bdmUu4"
+    },
+    {
+      "title": "SPANX",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=mX4uEgI2sFQ",
+      "youtube_id": "mX4uEgI2sFQ"
+    },
+    {
+      "title": "Why Sara Blakely Invented Spanx | The Rosie Show | Oprah Winfrey Network",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=jD5fN1HeMZU",
+      "youtube_id": "jD5fN1HeMZU"
+    },
+    {
+      "title": "Spanx founder Sara Blakely on launch of Sneex: Want to provide 'luxury comfort' for women",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=spw-M6eyoyQ",
+      "youtube_id": "spw-M6eyoyQ"
+    },
+    {
+      "title": "Billionaire Sara Blakely Of Spanx Top 5 Biz Tips | CNBC Prime",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=2ZAfS6KyAhc",
+      "youtube_id": "2ZAfS6KyAhc"
+    },
+    {
+      "title": "Getting Flashed And Making Cash",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=ADeBoxZASbM",
+      "youtube_id": "ADeBoxZASbM"
+    },
+    {
+      "title": "Spanx Billionaire Sara Blakely On Giving Her Fortune Away | Forbes",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=gcFx4vllQms",
+      "youtube_id": "gcFx4vllQms"
+    },
+    {
+      "title": "Sara Blakely: The best advice I got... || STEVE HARVEY",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=L0ku-K-Yu4s",
+      "youtube_id": "L0ku-K-Yu4s"
+    },
+    {
+      "title": "How Selling Defined Buffett, Bloomberg & Blakely",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=xikZXXpymak",
+      "youtube_id": "xikZXXpymak"
+    },
+    {
+      "title": "Learn How to INFLUENCE and PERSUADE Anyone! | Zoe Chance | Top 10 Rules",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=iPFx8QUTkxw",
+      "youtube_id": "iPFx8QUTkxw"
+    },
+    {
+      "title": "The Long Reach of the Great Depression | Fireside Chat",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=bWeaa0N7NjM",
+      "youtube_id": "bWeaa0N7NjM"
+    },
+    {
+      "title": "Masters of Scale Book",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=teG3FYY7GFQ",
+      "youtube_id": "teG3FYY7GFQ"
+    },
+    {
+      "title": "Masters of Scale Courses App",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=0CdMd0bpVK8",
+      "youtube_id": "0CdMd0bpVK8"
     }
   ]
 }

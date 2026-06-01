@@ -1,58 +1,336 @@
 {
+  "description": "Source material for the Dario Amodei brain pack \u2014 text via Firecrawl, video via yt-dlp.",
+  "brain_slug": "dario-amodei-v2",
+  "brain_name": "Dario Amodei",
+  "discovered_at": "2026-05-31T09:53:28.221043+00:00",
   "sources": [
     {
-      "title": "Lex Fridman Podcast #452",
-      "type": "video",
-      "youtube_id": "ugvHCXCOmm4",
-      "date": "2024-11-11",
-      "priority": "essential",
-      "description": "5+ hour deep-dive covering scaling laws, AI safety, mechanistic interpretability (with Chris Olah), Claude's character (with Amanda Askell), leaving OpenAI, alignment research, and the future of AI and humanity.",
-      "key_topics": ["scaling_hypothesis", "ai_safety_alignment", "mechanistic_interpretability", "technology_development", "ethics_philosophy"]
+      "title": "Wikipedia: Dario Amodei",
+      "type": "profile",
+      "priority": "medium",
+      "url": "https://en.wikipedia.org/wiki/Dario_Amodei"
     },
     {
-      "title": "Dwarkesh Podcast — $10 Billion Models, OpenAI, Scaling, & AGI",
-      "type": "video",
-      "youtube_id": "Nlkk3glap_U",
-      "date": "2023-08-08",
-      "priority": "essential",
-      "description": "Deep technical dive on scaling hypothesis, $10B training runs, race dynamics with OpenAI and China, bioterrorism risk from AI, cybersecurity, alignment techniques, and mechanistic interpretability research.",
-      "key_topics": ["scaling_hypothesis", "risk_catastrophe", "ai_safety_alignment", "organizational_design"]
-    },
-    {
-      "title": "Dwarkesh Podcast — We are near the end of the exponential",
-      "type": "video",
-      "youtube_id": "n1E9IZfvGMA",
-      "date": "2026-02-13",
-      "priority": "essential",
-      "description": "Discusses scaling hypothesis in the RL regime, whether Anthropic is underinvesting in compute, how AI will diffuse throughout the economy, frontier lab profitability, and the concept of a country of geniuses in a datacenter.",
-      "key_topics": ["scaling_hypothesis", "economic_societal_impact", "ai_governance_policy", "technology_development"]
-    },
-    {
-      "title": "A Cheeky Pint with Anthropic CEO Dario Amodei (Stripe)",
-      "type": "video",
-      "youtube_id": "GcqQ1ebBqkc",
-      "date": "2025-08-06",
+      "title": "Wired: Anthropic and Benevolent AI",
+      "type": "profile",
       "priority": "high",
-      "description": "John Collison interviews Dario on Anthropic's growth to ~$5B ARR, B2B focus, AI talent wars, open-source models, safety regulations, model economics, and building AGI-pilled products.",
-      "key_topics": ["organizational_design", "technology_development", "economic_societal_impact", "optimistic_vision"]
+      "url": "https://www.wired.com/story/anthropic-benevolent-artificial-intelligence/"
     },
     {
-      "title": "People by WTF — The AI Tsunami is Here & Society Isn't Ready (Nikhil Kamath)",
-      "type": "video",
-      "youtube_id": "68ylaeBbdsg",
-      "date": "2026-02",
+      "title": "TIME: Anthropic Profile",
+      "type": "profile",
       "priority": "high",
-      "description": "Covers AI's impact on biotech, consciousness questions, India's AI future, why Anthropic withheld a model before ChatGPT, and whether outsourcing thinking to AI makes humans less capable.",
-      "key_topics": ["economic_societal_impact", "biology_medicine", "optimistic_vision", "ethics_philosophy"]
+      "url": "https://time.com/6980000/anthropic/"
     },
     {
-      "title": "Logan Bartlett Show EP 82 — Dario Amodei's AI Predictions Through 2030",
-      "type": "video",
-      "youtube_id": "gAaCqj6j5sQ",
-      "date": "2023-10-09",
+      "title": "New York Times: Anthropic and Claude",
+      "type": "profile",
       "priority": "high",
-      "description": "Detailed predictions on AI industry for 2024-2030. Discusses leaving OpenAI, starting Anthropic, why he dislikes the term AGI, and what AI developments excite him most.",
-      "key_topics": ["scaling_hypothesis", "technology_development", "optimistic_vision", "organizational_design"]
+      "url": "https://www.nytimes.com/2023/07/11/technology/anthropic-ai-claude-chatbot.html"
+    },
+    {
+      "title": "Fortune: Dario Amodei on AI Risks",
+      "type": "interview",
+      "priority": "high",
+      "url": "https://fortune.com/2023/07/10/anthropic-ceo-dario-amodei-ai-risks-short-medium-long-term/"
+    },
+    {
+      "title": "New York Times Dealbook: Dario Amodei Interview",
+      "type": "interview",
+      "priority": "high",
+      "url": "https://www.nytimes.com/2025/12/07/business/dealbook/dario-amodei-dealbook.html"
+    },
+    {
+      "title": "Machines of Loving Grace - Dario Amodei",
+      "type": "essay",
+      "priority": "essential",
+      "url": "https://darioamodei.com/machines-of-loving-grace"
+    },
+    {
+      "title": "Fast Company: Dario Amodei on AI Future",
+      "type": "essay",
+      "priority": "high",
+      "url": "https://www.fastcompany.com/91211163/anthropic-ceo-dario-amodei-pens-a-smart-look-at-our-ai-future"
+    },
+    {
+      "title": "Financial Times: Dario Amodei Profile",
+      "type": "profile",
+      "priority": "high",
+      "url": "https://www.ft.com/content/e75e3388-4700-413d-ab67-778410c2d977"
+    },
+    {
+      "title": "AI News: Dario and Daniela Amodei Profile",
+      "type": "profile",
+      "priority": "medium",
+      "url": "https://ainews.it/chi-sono-dario-e-daniela-amodei-gli-italoamericani-delletica-tech/"
+    },
+    {
+      "title": "Lowell Alumni Magazine: Dario Amodei",
+      "type": "profile",
+      "priority": "medium",
+      "url": "https://issuu.com/lowell_alumni_association/docs/laa_winter08"
+    },
+    {
+      "title": "AAPT Physics Olympiad 2000: Dario Amodei",
+      "type": "profile",
+      "priority": "low",
+      "url": "https://www.aapt.org/olympiad2000/team2000.html"
+    },
+    {
+      "title": "Princeton: TIME 100 AI Recognition",
+      "type": "profile",
+      "priority": "medium",
+      "url": "https://www.princeton.edu/news/2023/09/12/time-magazines-time100-artificial-intelligence-list-honors-six-princetonians"
+    },
+    {
+      "title": "Princeton Digital Repository: Academic Work",
+      "type": "other",
+      "priority": "low",
+      "url": "https://dataspace.princeton.edu/handle/88435/dsp013f462544k"
+    },
+    {
+      "title": "Hertz Foundation: Dario Amodei Fellowship",
+      "type": "profile",
+      "priority": "medium",
+      "url": "https://www.hertzfoundation.org/person/dario-amodei/"
+    },
+    {
+      "title": "Full interview: Anthropic CEO responds to Trump order, Pentagon clash",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=MPTNHrq_4LU",
+      "youtube_id": "MPTNHrq_4LU"
+    },
+    {
+      "title": "Dario Amodei \u2014 \u201cWe are near the end of the exponential\u201d",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=n1E9IZfvGMA",
+      "youtube_id": "n1E9IZfvGMA"
+    },
+    {
+      "title": "Anthropic CEO on Safety, Job Displacement and Anthropic's $350B Valuation | WSJ",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=VTnGzWlV6X8",
+      "youtube_id": "VTnGzWlV6X8"
+    },
+    {
+      "title": "A Cheeky Pint with Anthropic CEO Dario Amodei",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=GcqQ1ebBqkc",
+      "youtube_id": "GcqQ1ebBqkc"
+    },
+    {
+      "title": "The Co-Founders of Claude AI Tell Oprah About the Impact Artificial Intelligence Has on Your Life",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=w5dJqHilu5s",
+      "youtube_id": "w5dJqHilu5s"
+    },
+    {
+      "title": "A conversation with Dario Amodei & Daniela Amodei",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=7xco5Qd2Oo8",
+      "youtube_id": "7xco5Qd2Oo8"
+    },
+    {
+      "title": "Anthropic's CEO: \u2018We Don\u2019t Know if the Models Are Conscious\u2019 | Interesting Times with Ross Douthat",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=N5JDzS9MQYI",
+      "youtube_id": "N5JDzS9MQYI"
+    },
+    {
+      "title": "Exclusive interview: Anthropic CEO responds to Trump's comments, Pentagon's position",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=C7StaQUWTwc",
+      "youtube_id": "C7StaQUWTwc"
+    },
+    {
+      "title": "Anthropic's Dario Amodei and JPMorgan's Jamie Dimon on AI boom, AI regulation & impact on jobs",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=FG5JsLHPW_I",
+      "youtube_id": "FG5JsLHPW_I"
+    },
+    {
+      "title": "Watch: Anthropic CEO Dario Amodei From World Economic Forum | WSJ",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=K7F6ohcBJus",
+      "youtube_id": "K7F6ohcBJus"
+    },
+    {
+      "title": "Dario Amodei: Anthropic CEO on Claude, AGI & the Future of AI & Humanity | Lex Fridman Podcast #452",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=ugvHCXCOmm4",
+      "youtube_id": "ugvHCXCOmm4"
+    },
+    {
+      "title": "FULL DISCUSSION: Google's Demis Hassabis, Anthropic's Dario Amodei Debate the World After AGI | AI1G",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=02YLwsCKUww",
+      "youtube_id": "02YLwsCKUww"
+    },
+    {
+      "title": "The AI Tsunami is Here & Society Isn't Ready | Dario Amodei x Nikhil Kamath | People by WTF",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=68ylaeBbdsg",
+      "youtube_id": "68ylaeBbdsg"
+    },
+    {
+      "title": "Anthropic: Financial Services [Dario Amodei]",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=R7EUjqqw_D4",
+      "youtube_id": "R7EUjqqw_D4"
+    },
+    {
+      "title": "Building Anthropic | A conversation with our co-founders",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=om2lIWXLLN4",
+      "youtube_id": "om2lIWXLLN4"
+    },
+    {
+      "title": "Anthropic\u2019s Amodei on AI: Power and Risk",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Ckt1cj0xjRM",
+      "youtube_id": "Ckt1cj0xjRM"
+    },
+    {
+      "title": "Dario Amodei & Marc Benioff: Future of AI",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=F3QDC7HDMyg",
+      "youtube_id": "F3QDC7HDMyg"
+    },
+    {
+      "title": "Anthropic CEO warns that without guardrails, AI could be on dangerous path",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=aAPpQC-3EyE",
+      "youtube_id": "aAPpQC-3EyE"
+    },
+    {
+      "title": "FULL: Demis Hassabis, Dario Amodei Debate What Comes After AGI at World Economic Forum | AI1G",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=9Zz2KrBDXUo",
+      "youtube_id": "9Zz2KrBDXUo"
+    },
+    {
+      "title": "Anthropic CEO Dario Amodei: AI's Potential, OpenAI Rivalry, GenAI Business, Doomerism",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=mYDSSRS-B5U",
+      "youtube_id": "mYDSSRS-B5U"
+    },
+    {
+      "title": "Dario Amodei on why he left OpenAI | Lex Fridman Podcast Clips",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=FzkCLR378fE",
+      "youtube_id": "FzkCLR378fE"
+    },
+    {
+      "title": "Dario Amodei (Anthropic CEO) \u2014 The hidden pattern behind every AI breakthrough",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=Nlkk3glap_U",
+      "youtube_id": "Nlkk3glap_U"
+    },
+    {
+      "title": "Interview with Sam Altman two days before he was fired | Ep 58",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=ivdXr1PHFPo",
+      "youtube_id": "ivdXr1PHFPo"
+    },
+    {
+      "title": "State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI | Lex Fridman Podcast #490",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=EV7WhVT270Q",
+      "youtube_id": "EV7WhVT270Q"
+    },
+    {
+      "title": "Jensen Huang: NVIDIA - The $4 Trillion Company & the AI Revolution | Lex Fridman Podcast #494",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=vif8NQcjVf0",
+      "youtube_id": "vif8NQcjVf0"
+    },
+    {
+      "title": "Elon, Google & OpenAI Just Revealed What The Next Decade Looks Like. Here's Where To Build.",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=GcVdhKAavow",
+      "youtube_id": "GcVdhKAavow"
+    },
+    {
+      "title": "AI Tech Giant Anthropic CEO Dario Amodei announces major investments in India at AI impact summit",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=2nzw_myvzQg",
+      "youtube_id": "2nzw_myvzQg"
+    },
+    {
+      "title": "Impact AI Summit: Evolution & diffusion of tech: Anthropic CEO Dario Amodei & Nandan Nilekani",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=LnumKYWMgww",
+      "youtube_id": "LnumKYWMgww"
+    },
+    {
+      "title": "Language Models are Few-Shot Learners. NeurIPS 2020. Dario Amodei",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=7pu6pDOeNTo",
+      "youtube_id": "7pu6pDOeNTo"
+    },
+    {
+      "title": "AI Risk & Safety Concepts with Dario Amodei & Daniel Dewey",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=jSYyPBG05U4",
+      "youtube_id": "jSYyPBG05U4"
+    },
+    {
+      "title": "Can We Really Believe Anything AI Leaders Say?",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=nHuuNON5L04",
+      "youtube_id": "nHuuNON5L04"
+    },
+    {
+      "title": "AGI Is Already Here After All",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=yRxUqwQBOwA",
+      "youtube_id": "yRxUqwQBOwA"
+    },
+    {
+      "title": "Sam Altman Just Admitted What Nobody At OpenAI Has Said Out Loud Before.",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=jHaf8r6SMgc",
+      "youtube_id": "jHaf8r6SMgc"
+    },
+    {
+      "title": "Nat Friedman (Github CEO) \u2014 Reading ancient scrolls, open source, & AI",
+      "type": "video",
+      "priority": "high",
+      "url": "https://www.youtube.com/watch?v=qcvMjoJdck4",
+      "youtube_id": "qcvMjoJdck4"
     }
   ]
 }

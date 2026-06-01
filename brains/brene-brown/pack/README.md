@@ -1,6 +1,6 @@
 # Brené Brown Brain Pack
 
-> **283 knowledge atoms** · **1000 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **1195 knowledge atoms** · **2513 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
@@ -18,7 +18,7 @@ This isn't a chatbot or a persona. It's a **thinking partner** grounded in Bren�
    ```
 3. Then run any thinking skill:
    ```
-   /advise "How do I have a difficult conversation with my team about trust?"
+   /advise "How do I rebuild trust with my team after a major failure?"
    ```
 
 You should get a response that cites specific atoms, synthesizes Brené's perspective, and recommends what to do next.
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Brené's perspe
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (283 atoms, 1000 connections)
+  ├── brain-atoms.json      ← Structured data (1195 atoms, 2513 connections)
   ├── README.md             ← You are here
   └── skills/               ← 9 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -56,9 +56,9 @@ This means:
 
 ## The Knowledge Graph
 
-**283 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**1195 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1000 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**2513 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
 **16 topic clusters** — Vulnerability, shame resilience, courage, empathy, leadership, boundaries, perfectionism, belonging.
 

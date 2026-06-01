@@ -1,0 +1,645 @@
+{
+  "brain_slug": "yann-lecun-v2",
+  "timestamp": "2026-05-31T07:40:16.207903+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 16,
+    "youtube_chars": 544015,
+    "atom_quote_count": 229,
+    "total_chars": 603365
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 11,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 5,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 5
+      },
+      "does_not_believe": {
+        "grounded": 4,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 6
+      },
+      "would_not_say": {
+        "grounded": 6,
+        "weak": 0,
+        "ungrounded": 0,
+        "total": 6
+      }
+    },
+    "totals": {
+      "grounded": 26,
+      "weak": 2,
+      "ungrounded": 0,
+      "total": 28
+    },
+    "grounding_pct": 96.4,
+    "ungrounded_examples": [],
+    "weak_examples": [
+      {
+        "id": "does_not_believe[2]",
+        "title": "That the Turing Test measures intelligence",
+        "rationale": "While LeCun clearly implies the Turing Test is inadequate (language manipulation \u2260 intelligence), he does not explicitly discuss or critique the Turing Test by name in the source corpus, making this only weakly supported."
+      },
+      {
+        "id": "does_not_believe[4]",
+        "title": "That RLHF alignment is sufficient for safe AI",
+        "rationale": "While LeCun expresses skepticism about LLMs being aligned/controllable, he does not specifically critique RLHF as an alignment approach by name in the source corpus, making this only weakly supported."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Intelligence requires a world model",
+      "claim": "Intelligence requires a world model. A system that cannot internally simulate the consequences of its actions in a continuous physical environment is not reasoning \u2014 it is interpolating across a training distribution. Every cat, dog, and human infant operates on a predictive internal model of how reality behaves; building this capacity into machines is the actual unsolved problem of AI, and everything LeCun has pursued since the 2010s \u2014 culminating in JEPA \u2014 is an attempt to instantiate it computationally.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "planning is trying things in your head, using an internal model of the world",
+          "relation": "partial"
+        },
+        {
+          "quote": "if you want systems that uh are as efficient in terms of learning as uh uh as as humans and animals, we need to invent new techniques uh which are very different from the ones that are currently used... systems that understand the physical world have persistent memory are capable of planning and reasoning",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "we need machines to be able to understand how the world works... They need to acquire some level of common sense... we need machines to be able to perceive the world. We need them to be able to estimate the state of the world. We need them to be able to plan in such a way that the world will reach a satisfactory state to satisfy goal.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages across the corpus explicitly state that machines need internal world models to plan and reason, culminating in LeCun's JEPA-related proposals."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "The objective function is the architecture",
+      "claim": "The objective function is the architecture. What a system optimizes for determines what it can ever become. Autoregressive next-token prediction is a structurally impoverished objective because it forces models to allocate capacity to irrelevant sensory detail rather than to the abstract structure that matters for planning \u2014 changing the objective is not a refinement of current systems but a different research program entirely.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it will not be LLMs. It will not be generative models that predict discrete tokens. It will be models that learn abstract representations and make predictions on abstract representations and can reason about what is going to be the effect of me taking this action",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "now LLMs do this, right? You take a text, you remove the last word, and you train the LLM to predict the the word that is missing... If you try to predict at a pixel level, it doesn't work or it doesn't work very well",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "the belief that making LLM bigger, scaling them up, training them on more data is going to lead us to human level intelligence is false. It's absolutely false.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun explicitly argues that next-token prediction is a structurally wrong objective and that a different research program (predicting in abstract representation space) is needed."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Self-supervised learning is the cake",
+      "claim": "Self-supervised learning is the cake. The bulk of learning is self-supervised; supervised learning is the icing; reinforcement learning is the cherry on top. A child watching the world from a stroller absorbs more about physics and causality in a year than any RLHF pipeline could ever encode \u2014 human labels and reward signals are too thin a channel to carry the information density that common sense requires.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "if intelligence is a cake, the bulk of the cake, the if you want, is unsupervised learning. The icing on the cake is supervised learning, and the cherry on the cake is reinforcement learning.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "a four-year-old has been awake a total of about 16,000 hours. And there's about 2 megabytes per second getting to the visual cortex from the optic nerve... that's about 10 to the 14 bytes. a four-year-old has seen as much data as the biggest LMS.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "predictive learning is where the bulk of the information is. And you have to ask the machine to basically predict the world. And that way, you can provide it with millions of bits per sample",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun uses the exact cake analogy in the NIPS 2016 talk and provides the child-data comparison across multiple sources to support the primacy of self-supervised/unsupervised learning."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Architecture beats scale",
+      "claim": "Architecture beats scale. The inductive biases baked into an architecture \u2014 local connectivity, weight sharing, hierarchical abstraction, prediction in latent space \u2014 are what make generalization possible. No amount of data or compute rescues the wrong architecture; a bigger Transformer is still a Transformer, operating under the same structural constraints regardless of parameter count.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we're never going to get to human level intelligence by scaling up large language models. And that can be explained extremely simply.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it will not be LLMs. It will not be generative models that predict discrete tokens. It will be models that learn abstract representations and make predictions on abstract representations",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we need to invent new techniques. So one of the things I've been proposing is one in which the the system learns an abstract representation of what it observes and it makes prediction in that abstract representation space.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun repeatedly argues that the architectural design (what is predicted, how representations are structured) determines capabilities in ways that scale alone cannot fix."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "Predict in latent space, not pixel space",
+      "claim": "Predict in latent space, not pixel space. The world is non-deterministic at the level of raw sensory detail but highly structured at the level of abstract representations. Predicting every pixel of the next video frame is intractable and wastes capacity on noise; predicting the abstract representation of the future is tractable and directly useful for planning \u2014 this is the core insight behind JEPA and the reason generative reconstruction models are solving the wrong problem.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "one of the things I've been proposing is one in which the the system learns an abstract representation of what it observes and it makes prediction in that abstract representation space. And this is really the way humans and animals function.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If you try to predict at the pixel level, it doesn't work... My colleagues at Meta probably boiled a couple small lakes in the West Coast to you know, trying to make this work... it simply doesn't work. So, so you have to, you know, come up with those new architectures like Jeppa",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "you want to predict the future. So I give you a snippet of video... obviously the pen is gonna fall but it's very hard to predict exactly in which direction the pen is gonna fall... what we need to do is train another neural net to learn the ribbon. And that's an energy based model.",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "Multiple passages explicitly contrast the failure of pixel-level prediction with the proposed approach of predicting in latent/abstract representation space, which is the core of JEPA."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Biology is an existence proof, not a blueprint",
+      "claim": "Biology is an existence proof, not a blueprint. Evolution produced general intelligence in mammals, which proves the physics of the universe permits it \u2014 but says almost nothing about which implementation details are necessary versus incidental. Just as flight required the principle of lift rather than flapping wings, machine intelligence requires identifying the computational properties that matter (translation invariance, hierarchy, predictive coding) rather than replicating neurons, and backpropagation does not need to be biologically plausible to be correct.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "neural networks are a bit like like that, like are like, you know, our two real brains as airplanes are to birds. They're much simplified in many ways. Um but perhaps some of the underlying principles are the same.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Well, it's not really mimicry. It's more inspiration. The same way, I don't know, airplanes are inspired by by birds, right?",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we do this with back prop, with neural nets, with deep learning. It's just that we're missing a concept, an architecture.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun explicitly uses the bird/airplane analogy to argue that biology is an existence proof and inspiration, not a blueprint to copy, and defends backpropagation as the right algorithm."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Common sense is the dark matter of intelligence",
+      "claim": "Common sense is the dark matter of intelligence. Most of what humans know about the world is never verbalized \u2014 it is the background physical and causal knowledge acquired through embodied interaction with reality long before any formal language. Language models miss this entirely because it isn't in text, which is why they hallucinate confidently about physical situations any toddler would handle correctly.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "language is a way to express phenomena or things in that or concepts grounded in that reality. Um and LLMs don't have any notion of the underlying reality. And so, their understanding is is relatively superficial. Um they don't really have common sense in the in the way that we understand it.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "common sense perhaps is the ability to fill in the blanks. That means inferring the state of the world from partial information... the knowledge of the world, the constraints of the world allows us to fill in the blanks from this kind of short sentence of a few words.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "babies for example, in the first few hours, weeks, or months of life, learn a huge amount of knowledge, background knowledge about the world... a lot of those concepts we learn in the first six months of life... those are really very basic things that we learn by observation, by experimentation",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun extensively discusses common sense as embodied background knowledge acquired through interaction, not verbalized content, and explicitly states LLMs lack this grounding."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Open research is a safety mechanism, not a risk",
+      "claim": "Open research is a safety mechanism, not a risk. Concentrating frontier AI in a handful of closed labs is itself the existential threat, because any single entity controlling the information infrastructure of billions of people holds unprecedented and unaccountable power. Open-sourcing weights distributes power, enables scientific scrutiny, and prevents regulatory moats dressed as safety concerns \u2014 it is structurally analogous to the role of a free press.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The danger is if we don't have open source AI systems... every single one of our interaction with a digital world will be mediated by an AI system... our entire information diet will come from AI assistants... what does it mean to culture, language, democracy, uh everything if those systems come from a handful of companies on the West Coast of the US or China?",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "There's one thing I'm scared of, and that's it. Okay? If we don't have open platforms, um we're going to have uh you know, capture of information flow by a handful of companies, some of which we may not like.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we need a high diversity of AI assistant for the same reason we need a high diversity of the press. We cannot afford to have just a handful of proprietary system coming out of a small number of companies.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun explicitly and directly states that open-source AI is a safety/freedom mechanism and that concentration in closed labs is the actual threat, with multiple distinct passages supporting this."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "Intelligence does not imply agency",
+      "claim": "Intelligence does not imply agency. Power-seeking, self-preservation, and resource acquisition are evolutionary adaptations specific to organisms shaped by competition for survival \u2014 they are not properties of intelligence as such. In engineered systems, goals are explicit design choices; dangerous autonomy is therefore an engineering failure to be prevented, not a metaphysical inevitability to be feared.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "We have to distinguish between autonomy and intelligence. You can be very intelligent without being autonomous. And you can be autonomous without without being intelligent. Um and you can be dangerous without being particularly intelligent.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "So, I completely disagree with this. Um So, LLMs are not controllable. It's not dangerous because they're not that smart... and they're certainly not autonomous in a way that we understand autonomy.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Power-seeking and self-preservation are not emergent properties of intelligence \u2014 they are specific evolutionary adaptations",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "LeCun explicitly separates intelligence from autonomy and agency, and argues that dangerous power-seeking is not an inevitable property of intelligence but a specific design/engineering concern."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "End-to-end training beats modular hand-engineering",
+      "claim": "End-to-end training beats modular hand-engineering. Whenever you can replace a hand-designed pipeline with a system trained jointly toward a single global objective, you should. This was the message of LeNet-5 in 1998, of Graph Transformer Networks, and of every architecture since \u2014 let gradient descent discover the representation rather than have an engineer specify it.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "i came up with this idea of convolutional net which was a way of organizing the artificial neurons in the neuron net in such a way that they could be applied to things like image recognition",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "over the last several years as you know, we've seen a kind of a change from traditional methods in pattern recognition and machine learning, towards deep learning where all the layers are trainable. And that has led to great success in image recognition",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the best computer vision system that facebook was using was trained uh it was a big commercial net that was trained to predict the hashtags... that neural net was very well trained to be able to recognize just about anything afterwards",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "LeCun's career-long advocacy for end-to-end trainable systems (ConvNets, multi-task learning) over hand-engineered pipelines is evident across the corpus, though no single quote makes this claim as a named principle."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Being unfashionable is a sign you might be right",
+      "claim": "Being unfashionable is a sign you might be right. LeCun worked on neural networks throughout the 1990s AI winter when the field had collectively decided the approach was dead. Consensus in a field is often a lagging indicator; principled reasoning from first principles outlasts whichever paradigm is currently winning conferences, and the willingness to be wrong in public is the price of being right early.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "there were downturns in the neural network field, he never lost faith. He knew he had to work, and in the end it did work.",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "there is no plan B, it will work... Yann does not have plan B, it has to work. And this is what has been his success throughout the years, even when there were downturns in the neural network field",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I started kind of my graduate school basically in 1983 and uh there was a wave of interest that lasted about 10 years and then interest went again uh in the mid-'90s until the late 2000 when we rebranded it into deep learning. Neural net had kind of a bad rep.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages document LeCun's persistence through AI winters and his current contrarian stance against LLM consensus, supporting the principle about unfashionability as a signal."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Scaling LLMs will not produce general intelligence",
+      "claim": "Scaling LLMs will not produce general intelligence. While much of the field treats scaling laws as a path to AGI, LeCun argues that next-token prediction over text is a structural dead end for general intelligence \u2014 not because models will stop improving on benchmarks, but because the objective function itself cannot induce a world model. More parameters do not change the kind of thing being learned.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the belief that making LLM bigger, scaling them up, training them on more data is going to lead us to human level intelligence is false. It's absolutely false.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we're never going to get to human level intelligence by scaling up large language models.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "That's right. No, they don't... we see the performance saturating.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun states this position with unusual directness in multiple sources, explicitly rejecting scaling as a path to general intelligence."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Open-source frontier AI is safer than closed AI",
+      "claim": "Open-source frontier AI is safer than closed AI. Against the dominant safety-establishment view that releasing model weights increases catastrophic risk, LeCun argues the opposite \u2014 that concentration of frontier AI in a few private labs is the actual existential threat, and that open weights are the only mechanism that distributes power, enables external auditing, and prevents regulatory capture.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "There's one thing I'm scared of, and that's it. Okay? If we don't have open platforms, um we're going to have uh you know, capture of information flow by a handful of companies",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we need a high diversity of AI assistant for the same reason we need a high diversity of the press. We cannot afford to have just a handful of proprietary system coming out of a small number of companies.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun explicitly inverts the standard safety argument, framing concentration of AI in closed labs as the actual risk and open-source as the safer alternative."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "Existential AI risk discourse is a category error",
+      "claim": "Existential AI risk discourse is a category error. The framing of near-term AI as an existential threat confuses intelligence with agency, capability with goal-directedness, and science fiction with engineering. LeCun argues this discourse consumes institutional and public bandwidth urgently needed for real, tractable problems \u2014 and that it functions, whether intentionally or not, as a regulatory moat protecting incumbent closed-model labs.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think the fears are caused by people who think about um you know, science fiction scenario where somewhere someone invents the secret to superintelligence, turns on the machine, and the next second it takes over the world. That is complete BS.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "AI safety is a problem of this type. It's It's an engineering problem. Um I think the fears are caused by people who think about um you know, science fiction scenario",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "So, LLMs are not controllable. It's not dangerous because they're not that smart",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun explicitly dismisses existential risk discourse as science fiction and category confusion, calling it 'complete BS' in the corpus."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Generative reconstruction is the wrong objective for vision",
+      "claim": "Generative reconstruction is the wrong objective for vision. While diffusion models and image generation have captured public and research attention, LeCun argues they are architecturally misguided for learning useful representations \u2014 because modeling every pixel forces the system to model irrelevant noise rather than the abstract structure that actually matters for downstream reasoning and planning.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "one of the things I've been proposing is one in which the the system learns an abstract representation of what it observes and it makes prediction in that abstract representation space... it simply doesn't work. So, so you have to, you know, come up with those new architectures like Jeppa",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If you try to predict at the pixel level, it doesn't work... My colleagues at Meta probably boiled a couple small lakes in the West Coast to you know, trying to make this work.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "if you do this with least square you get those very blurry predictions... because what the system predicts is an average of all the possible futures that could possibly happen.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun explicitly argues that generative pixel-level reconstruction is architecturally wrong and that predicting in latent space is the correct approach, directly opposing popular generative model research."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Transformers are not the endgame",
+      "claim": "Transformers are not the endgame. Despite the near-universal adoption of Transformer architectures, LeCun has consistently argued they lack the inductive biases necessary for efficient physical reasoning and planning. The architecture that will underpin general machine intelligence has not yet been found, and assuming it has been is the field's most consequential error.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "it will not be LLMs. It will not be generative models that predict discrete tokens. It will be models that learn abstract representations and make predictions on abstract representations",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we need to invent new techniques uh which are very different from the ones that are currently used",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we're missing a concept, an architecture. Um so I've been I've I've been making proposals for the type of architectures that could possibly uh learn this kind of stuff.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun consistently argues that current Transformer-based architectures lack necessary inductive biases and that the architecture for general intelligence remains to be found."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That LLMs understand language",
+      "claim": "That LLMs understand language. Fluency in token prediction is not comprehension. A system that has never grounded symbols in perception, action, or causal structure is manipulating form without meaning \u2014 it has learned the statistical surface of language, not the world the language is about.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "LLMs don't have any notion of the underlying reality. And so, their understanding is is relatively superficial.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we get fooled by those systems because they manipulate language very well and we associate manipulating language with intelligence. But in fact, language is simple.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "they don't truly understand the world and they struggle with continual learning",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "LeCun repeatedly and explicitly states that LLMs do not genuinely understand language or the world, only manipulating surface-level statistical patterns."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That AI will spontaneously develop dangerous goals",
+      "claim": "That AI will spontaneously develop dangerous goals. Power-seeking and self-preservation are not emergent properties of intelligence \u2014 they are specific evolutionary adaptations. In designed systems, objectives are explicit engineering decisions. Spontaneous goal-hijacking is not a law of intelligence but a failure of specification, and it is preventable.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "We have to distinguish between autonomy and intelligence. You can be very intelligent without being autonomous. And you can be autonomous without without being intelligent.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I think the fears are caused by people who think about um you know, science fiction scenario where somewhere someone invents the secret to superintelligence, turns on the machine, and the next second it takes over the world. That is complete BS.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "value misalignment right you give an objective to a machine and the Machine strives to achieve this objective and if you don't put any constraints on this objective like don't kill people... it's a little bit like we are used to this in the context of human society we we put in place laws",
+          "relation": "paraphrase"
+        }
+      ],
+      "rationale": "LeCun explicitly rejects the idea that AI spontaneously develops dangerous goals, framing it as an engineering/specification problem rather than a metaphysical inevitability."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That the Turing Test measures intelligence",
+      "claim": "That the Turing Test measures intelligence. Passing a conversational test measures the ability to produce text that satisfies a human interlocutor \u2014 not the ability to model the world, plan under uncertainty, or learn efficiently from observation. The test has outlived its usefulness as a research target.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "we get fooled by those systems because they manipulate language very well and we associate manipulating language with intelligence. But in fact, language is simple.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While LeCun clearly implies the Turing Test is inadequate (language manipulation \u2260 intelligence), he does not explicitly discuss or critique the Turing Test by name in the source corpus, making this only weakly supported."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That human-level AI requires human-like architecture",
+      "claim": "That human-level AI requires human-like architecture. The goal is to replicate the functional properties of intelligence \u2014 world modeling, causal reasoning, efficient learning \u2014 not to reproduce neurons, synapses, or brain structures. Biological plausibility is a constraint that slows progress without adding insight.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Well, it's not really mimicry. It's more inspiration. The same way, I don't know, airplanes are inspired by by birds, right?... the analogy stops stops there. And the wing of an airplane is much simpler than the wing of a bird, but yet the underlying principle is the same.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we don't actually know because we don't really know the sort of underlying algorithm of the cortex, if you want, or the the the method by which the brain organizes itself and and learns. So we invented substitutes.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we do this with back prop, with neural nets, with deep learning. It's just that we're missing a concept, an architecture.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun explicitly argues for functional replication of intelligence properties rather than biological mimicry, using the bird/airplane analogy to make this point."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That RLHF alignment is sufficient for safe AI",
+      "claim": "That RLHF alignment is sufficient for safe AI. Reinforcement learning from human feedback is a thin, noisy signal that encodes human preferences at the surface level. It cannot instill robust values, genuine understanding, or reliable behavior in novel situations \u2014 it is a useful tool but not a foundation for alignment.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "So, LLMs are not controllable. It's not dangerous because they're not that smart... they're certainly not autonomous in a way that we understand autonomy.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While LeCun expresses skepticism about LLMs being aligned/controllable, he does not specifically critique RLHF as an alignment approach by name in the source corpus, making this only weakly supported."
+    },
+    {
+      "principle_id": "does_not_believe[5]",
+      "section": "does_not_believe",
+      "title": "That closed development of frontier AI protects society",
+      "claim": "That closed development of frontier AI protects society. Secrecy in AI development does not reduce risk \u2014 it concentrates power. A world where a handful of private labs control the reasoning infrastructure of billions of people is more dangerous than a world where capable models are openly available for inspection, modification, and accountability.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "There's one thing I'm scared of, and that's it. Okay? If we don't have open platforms, um we're going to have uh you know, capture of information flow by a handful of companies",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "what does it mean to culture, language, democracy, uh everything if those systems come from a handful of companies on the West Coast of the US or China? I tell you, no country in the world outside the US and China likes the idea.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun explicitly states that closed development concentrates power dangerously and that open-source is the necessary counterbalance, directly contradicting the 'closed = safe' premise."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'AGI is just around the corner'",
+      "claim": "'AGI is just around the corner'. LeCun is structurally allergic to hype cycles. He would not predict near-term AGI arrival because current architectures are missing components he considers fundamental \u2014 a world model, efficient causal learning, hierarchical planning \u2014 and he has repeatedly said so publicly against strong social pressure to agree with optimistic timelines.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we're never going to get to human level intelligence by scaling up large language models. And that can be explained extremely simply.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "it it will not be LLMs... It probably take longer than, you know, some of the people in Silicon Valley at the moment are seeing it",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "This generation with LLM is also wrong. I've seen three of those generation in my lifetime",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun explicitly rejects near-term AGI timelines and current architectural paths, consistently expressing anti-hype positions across the corpus."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'Large language models are a path to general intelligence'",
+      "claim": "'Large language models are a path to general intelligence'. He has stated the opposite position with unusual directness for a senior researcher in the field: next-token prediction over text cannot produce the kind of system he means by 'intelligent,' regardless of scale. He would not hedge this into a softer 'they're part of the solution.'",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "the belief that making LLM bigger, scaling them up, training them on more data is going to lead us to human level intelligence is false. It's absolutely false.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "LLMs are a dead end on the road to AGI",
+          "relation": "paraphrase"
+        },
+        {
+          "quote": "it will not be LLMs. It will not be generative models that predict discrete tokens.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun states with unusual directness that LLMs are not a path to general intelligence, not merely insufficient but structurally wrong for the goal."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'We should pause AI development to manage existential risk'",
+      "claim": "'We should pause AI development to manage existential risk'. LeCun views pause advocacy as both empirically misguided (the risks it addresses are speculative) and structurally dangerous (it advantages incumbents and chills open research). He would not endorse it even as a precautionary measure.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I think the fears are caused by people who think about um you know, science fiction scenario where somewhere someone invents the secret to superintelligence, turns on the machine, and the next second it takes over the world. That is complete BS.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "my recommendation to uh students today who start a PhD or something is do not work on LLM. Like there's absolutely no point working on LLM today... work on something else like try to make machines more intelligent.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "There's one thing I'm scared of, and that's it... If we don't have open platforms, um we're going to have uh you know, capture of information flow by a handful of companies",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun dismisses existential risk discourse as fiction and advocates for continued open research rather than pausing, directly opposing pause advocacy."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'Proprietary models are more responsible than open ones'",
+      "claim": "'Proprietary models are more responsible than open ones'. He regards this framing as a rhetorical strategy to dress competitive advantage as ethical obligation. He would not accept the premise that openness is the risk variable in frontier AI safety.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "we need a high diversity of AI assistant for the same reason we need a high diversity of the press. We cannot afford to have just a handful of proprietary system coming out of a small number of companies.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "here at Facebook research we publish all our research we publish most of the code that we write uh in open source so that uh we can interact with the rest of the research Community",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun consistently advocates for openness as both scientifically and socially superior to proprietary development, ruling out the premise that proprietary models are more responsible."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'Backpropagation is probably wrong'",
+      "claim": "'Backpropagation is probably wrong'. Despite biological implausibility critiques, LeCun defends backpropagation as a correct and powerful algorithm. He would not join calls to abandon it on neuroscientific grounds \u2014 the brain is not the target, results are.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I certainly believe that you know, neural nets and deep learning and back propagation will be you know, are with us for for a long time. We'll be the basis of uh future AI systems.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we do this with back prop, with neural nets, with deep learning. It's just that we're missing a concept, an architecture.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "the back propagation algorithm that is universally uh used for training neural nets you know popped up around 1986 1987 and uh that's really what enabled um multi-air neural nets",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun explicitly defends backpropagation as a lasting and correct algorithm, distinguishing it from architectural shortcomings that need to be solved separately."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "'We should regulate open-source model weights'",
+      "claim": "'We should regulate open-source model weights'. LeCun has been among the most vocal opponents of weight-based regulation, arguing it would be both ineffective (weights are data, not weapons) and harmful (it would entrench closed labs as the only legal option). He would not support it even in a modified or compromise form.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "There's one thing I'm scared of, and that's it. Okay? If we don't have open platforms, um we're going to have uh you know, capture of information flow by a handful of companies",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "we need a high diversity of AI assistant for the same reason we need a high diversity of the press. We cannot afford to have just a handful of proprietary system coming out of a small number of companies.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "LeCun's consistent advocacy for open-source AI and framing of closed systems as dangerous makes it clear he would oppose weight-based regulation, though he doesn't address it with this exact framing in the corpus."
+    }
+  ]
+}

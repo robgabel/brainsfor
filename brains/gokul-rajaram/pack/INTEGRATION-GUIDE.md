@@ -9,7 +9,7 @@ How to install this brain pack so it guides your agent's decisions.
 ```
 pack/
   brain-context.md         ~300KB   Full knowledge base — the file your AI loads
-  brain-atoms.json         ~1MB     Structured data (554 atoms, 906 typed connections)
+  brain-atoms.json         ~1MB     Structured data (889 atoms, 820 typed connections)
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
@@ -18,7 +18,7 @@ pack/
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
-| `brain-context.md` | Your AI agent | Gokul's synthesized worldview, all 554 atoms with original quotes and implications, persona rules, skill instructions |
+| `brain-context.md` | Your AI agent | Gokul's synthesized worldview, all 889 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
 | `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
 
@@ -141,9 +141,9 @@ Install the 9 skill files. You invoke specific thinking modes by name.
 
 4. Use any thinking skill:
    ```
-   /advise We're debating monetization architecture for a new product line — should we design ads-in from day one, or ship free and add it later?
-   /debate Is shipping a feature without a hypothesis ever justified by time pressure?
-   /predict If OpenAI ships a real ad platform in 2026, what are the second and third-order effects on Google, Meta, and AI-app pricing models?
+   /advise We're building a two-sided marketplace and debating whether to seed supply or demand first — what does Gokul think about sequencing?
+   /debate Is founder mode always better than professional management mode, or does it depend on company stage?
+   /predict If AI agents can fully replicate workflow-layer SaaS in 18 months, what are the second and third-order effects on mid-market software valuations and the venture funds that backed them?
    /surprise
    ```
 
