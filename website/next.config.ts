@@ -40,6 +40,31 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [{ source: "/llms.txt", destination: "/AGENTS.md" }];
   },
+  // The /api/skill and /api/board routes read brain-atoms.json via dynamic fs
+  // paths (path.join(BRAINS_DIR, slug, ...)). Next can't statically resolve the
+  // slug, so it traces the ENTIRE brains/ tree (1979 source files + the 31MB
+  // redundant brain-atoms.js + zips + context.md) into those function bundles,
+  // blowing past Vercel's serverless function size limit ("Deploying outputs"
+  // failure). Exclude everything the routes DON'T read at runtime; keep only
+  // brain-atoms.json (the file they actually load).
+  outputFileTracingExcludes: {
+    "*": [
+      "**/brains/*/research/**",
+      "**/brains/*/source/**",
+      "**/brains/*/data/**",
+      "**/brains/*/evals/**",
+      "**/brains/*/build-progress.json",
+      "**/brains/*/synthesis.md",
+      "**/brains/*/pack/brain-atoms.js",
+      "**/brains/*/pack/brain-context.md",
+      "**/brains/*/pack/skills/**",
+      "**/brains/*/pack/*.zip",
+      "**/brains/*/cross-connections-backup.json",
+      "**/public/brains/*/brain-atoms.js",
+      "**/public/brains/*/brain-context.md",
+      "**/public/brains/*/*.zip",
+    ],
+  },
 };
 
 export default nextConfig;
