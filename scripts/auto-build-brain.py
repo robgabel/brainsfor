@@ -1938,6 +1938,7 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
     parser.add_argument("--min-atoms", type=int, default=MIN_BRAIN_ATOMS, help=f"Hard floor — build halts after Phase 2 if below this (default: {MIN_BRAIN_ATOMS})")
     parser.add_argument("--allow-thin-pack", action="store_true", help="Bypass the min-atoms floor and allow shipping a thin brain")
     parser.add_argument("--force-synthesis", action="store_true", help="Regenerate synthesis.md even if it already exists (backs up existing to .bak)")
+    parser.add_argument("--skip-grounding", action="store_true", help="Skip Phase 3.5 synthesis grounding/sourcing")
     parser.add_argument("--verbose", action="store_true", help="Verbose logging")
     args = parser.parse_args()
 
@@ -2158,6 +2159,43 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                     reference_slug=args.reference, model=args.synthesis_model,
                     force=args.force_synthesis,
                 )
+
+                # --- Phase 3.5: ground/source the synthesis (SPEC-synthesis-grounding.md) ---
+                # Tags every principle grounded|sourced|attributed|dropped, mints sourced
+                # atoms from primary material for real-but-uncaptured principles, and flags
+                # if the corpus is too thin. Non-fatal; merges sourced atoms into the
+                # pipeline so they reach the pack + Supabase + enrichment.
+                if not dry_run and not args.skip_grounding:
+                    step("Phase 3.5: grounding synthesis (discover + verify primary sources)...")
+                    gr = subprocess.run(
+                        ["python3", str(SCRIPT_DIR / "ground-synthesis.py"), "--brain", slug],
+                        cwd=str(ROOT_DIR), capture_output=True, text=True, timeout=2400,
+                    )
+                    for line in gr.stdout.strip().splitlines()[-3:]:
+                        print(f"  {line}")
+                    if gr.returncode != 0:
+                        warn(f"synthesis grounding exited {gr.returncode} (non-fatal): {gr.stderr[-200:]}")
+                    # Merge minted sourced atoms into all-atoms.json so they export + load.
+                    sp = brain_dir / "research" / "sourced-atoms.json"
+                    ap = brain_dir / "research" / "all-atoms.json"
+                    if sp.exists() and ap.exists():
+                        try:
+                            sourced = json.loads(sp.read_text())
+                            allat = json.loads(ap.read_text())
+                            seen = {a.get("id") for a in allat}
+                            new = [a for a in sourced if a.get("id") not in seen]
+                            if new:
+                                allat.extend(new)
+                                ap.write_text(json.dumps(allat, indent=2))
+                                success(f"merged {len(new)} sourced atoms into all-atoms.json")
+                        except Exception as e:
+                            warn(f"could not merge sourced atoms: {e}")
+                    # Reload brain.json — grounding wrote provenance tags into it.
+                    bjp2 = brain_dir / "brain.json"
+                    if bjp2.exists():
+                        with open(bjp2) as f:
+                            brain_json = json.load(f)
+
                 mark_phase(progress, 3, "complete")
 
             elif phase_num == 4:
