@@ -376,7 +376,8 @@ export async function POST(request: NextRequest) {
             type: "_diag",
             atomCount: atoms.length,
             citationCount: citations.length,
-            hasUrl: !!(process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL),
+            urlRef: (process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || "")
+              .replace(/^https:\/\/([a-z0-9]+)\..*$/, "$1"),
             hasKey: !!(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY),
           });
         } catch (e) {
