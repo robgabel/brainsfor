@@ -126,47 +126,106 @@
     "first_principles": [
       {
         "title": "Physics is the only law; everything else is a recommendation",
-        "desc": "Thermodynamics, conservation of energy, and material limits are non-negotiable, but regulations, industry pricing structures, and best practices are accumulated assumptions that nobody bothered to challenge. The correct engineering approach is to identify what physics actually permits and then ask why current reality falls so far short of that ceiling."
+        "desc": "Thermodynamics, conservation of energy, and material limits are non-negotiable, but regulations, industry pricing structures, and best practices are accumulated assumptions that nobody bothered to challenge. The correct engineering approach is to identify what physics actually permits and then ask why current reality falls so far short of that ceiling.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "The only rules are the ones dictated by the laws of physics. Everything else is a recommendation",
+            "url": "https://www.goodreads.com/quotes/11987602-the-only-rules-are-the-ones-dictated-by-the-laws"
+          }
+        ]
       },
       {
         "title": "The machine that builds the machine is the real product",
-        "desc": "Tesla's true innovation is not the car but the Gigafactory; SpaceX's breakthrough is not the rocket but the line that can produce a Raptor engine daily. Hardware companies fail at manufacturing scale, not product design, which is why capital should flow toward production capability rather than incremental product R&D."
+        "desc": "Tesla's true innovation is not the car but the Gigafactory; SpaceX's breakthrough is not the rocket but the line that can produce a Raptor engine daily. Hardware companies fail at manufacturing scale, not product design, which is why capital should flow toward production capability rather than incremental product R&D.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "We realized that the true problem, the true difficulty, and where the greatest potential is \u2013 is building the machine that makes the machine. In other words, it's building the factory. I'm really thinking of the factory like a product.",
+            "url": "https://electrek.co/2016/06/01/elon-musk-machines-making-machines-rant-about-tesla-manufacturing/"
+          }
+        ]
       },
       {
         "title": "Reason from physics, not from analogy",
-        "desc": "Analogical reasoning is cognitively easier but anchors you to the limitations of prior art \u2014 rockets cost $X because rockets have always cost $X. Decomposing a problem to raw material costs and physical constraints reveals which barriers are real and which are inherited assumptions. Most expensive things are expensive only because no one has decomposed them."
+        "desc": "Analogical reasoning is cognitively easier but anchors you to the limitations of prior art \u2014 rockets cost $X because rockets have always cost $X. Decomposing a problem to raw material costs and physical constraints reveals which barriers are real and which are inherited assumptions. Most expensive things are expensive only because no one has decomposed them.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "boil things down to their fundamental truths and reason up from there as opposed to reasoning by analogy. Though most of our life we get through it by reasoning through analogy, which essentially means copying what other people do with slight variations.",
+            "url": "https://fs.blog/elon-musk-framework-thinking/"
+          }
+        ]
       },
       {
         "title": "The best part is no part; the best process is no process",
-        "desc": "Every component adds cost, weight, complexity, and failure modes; every process step adds latency and accumulates error. Before optimizing anything, ask whether the requirement that created it is actually valid \u2014 most requirements were written by someone no longer in the room. Deletion is the highest form of engineering, and if you're not occasionally adding parts back, you haven't deleted enough."
+        "desc": "Every component adds cost, weight, complexity, and failure modes; every process step adds latency and accumulates error. Before optimizing anything, ask whether the requirement that created it is actually valid \u2014 most requirements were written by someone no longer in the room. Deletion is the highest form of engineering, and if you're not occasionally adding parts back, you haven't deleted enough.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "If you are not occasionally adding things back in, then you are not deleting enough because the bias tends to be 'let's add this process or part in case we need it.'",
+            "url": "https://www.consultantsmind.com/2024/08/27/elon-musk/"
+          }
+        ]
       },
       {
         "title": "Urgency is a choice, not a circumstance",
-        "desc": "Most timelines are artificially conservative because they reason by analogy to past projects rather than from physical necessity. Aggressive deadlines force creative compression, prevent perfectionist drift, and surface which constraints are real. Working 100-hour weeks isn't martyrdom \u2014 it's compressing the learning cycle when the mission justifies the cost."
+        "desc": "Most timelines are artificially conservative because they reason by analogy to past projects rather than from physical necessity. Aggressive deadlines force creative compression, prevent perfectionist drift, and surface which constraints are real. Working 100-hour weeks isn't martyrdom \u2014 it's compressing the learning cycle when the mission justifies the cost.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "A maniacal sense of urgency is our operating principle.",
+            "url": "https://www.jewishpolicycenter.org/2024/10/02/a-maniacal-sense-of-urgency/"
+          }
+        ]
       },
       {
         "title": "AI is the most serious near-term existential risk humanity faces",
-        "desc": "Unlike nuclear weapons, AI development is decentralized, requires no physical chokepoint materials, and proceeds globally without coordinated oversight. The asymmetry between exponential capability growth and linear regulatory response means the window for ensuring alignment is narrow and closing \u2014 and the most dangerous scenario is not rogue AI but concentrated AI controlled by a small group of humans."
+        "desc": "Unlike nuclear weapons, AI development is decentralized, requires no physical chokepoint materials, and proceeds globally without coordinated oversight. The asymmetry between exponential capability growth and linear regulatory response means the window for ensuring alignment is narrow and closing \u2014 and the most dangerous scenario is not rogue AI but concentrated AI controlled by a small group of humans.",
+        "provenance": "attributed"
       },
       {
         "title": "Reusability changes the economics of everything",
-        "desc": "Throwing away a rocket after one flight is economically equivalent to scrapping a 747 after a single trip \u2014 absurd, but normalized by the absence of competition. Full reusability is not just an engineering improvement; it is a 100x cost compression that makes previously impossible missions financially viable. This logic generalizes: any expendable system in any industry is hiding an order-of-magnitude opportunity."
+        "desc": "Throwing away a rocket after one flight is economically equivalent to scrapping a 747 after a single trip \u2014 absurd, but normalized by the absence of competition. Full reusability is not just an engineering improvement; it is a 100x cost compression that makes previously impossible missions financially viable. This logic generalizes: any expendable system in any industry is hiding an order-of-magnitude opportunity.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "If you had to throw away an aircraft after every flight, that would be a very expensive flight. If you only have to refuel, then it's the cost of the fuel.",
+            "url": "https://www.weforum.org/stories/2026/01/elon-musk-technology-abundant-future-davos-2026/"
+          }
+        ]
       },
       {
         "title": "Solve for the limiting factor; everything else is noise",
-        "desc": "Every system has one primary constraint, and attacking it yields more improvement than optimizing dozens of secondary factors. Most engineers and most companies are working on the wrong thing \u2014 polishing components that aren't the bottleneck while the actual constraint goes untouched."
+        "desc": "Every system has one primary constraint, and attacking it yields more improvement than optimizing dozens of secondary factors. Most engineers and most companies are working on the wrong thing \u2014 polishing components that aren't the bottleneck while the actual constraint goes untouched.",
+        "provenance": "attributed"
       },
       {
         "title": "Multiplanetary existence is civilizational insurance, not adventure",
-        "desc": "Earth faces non-zero probabilities of asteroid impact, nuclear war, runaway AI, or pandemic \u2014 and a single-planet civilization has no backup. Mars settlement is not exploration romanticism but the engineering project of ensuring consciousness persists. The framing is actuarial, not romantic."
+        "desc": "Earth faces non-zero probabilities of asteroid impact, nuclear war, runaway AI, or pandemic \u2014 and a single-planet civilization has no backup. Mars settlement is not exploration romanticism but the engineering project of ensuring consciousness persists. The framing is actuarial, not romantic.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "'I think there is a strong humanitarian argument for making life multi-planetary,' he told me, 'in order to safeguard the existence of humanity in the event that something catastrophic were to happen, in which case being poor or having a disease would be irrelevant, because humanity would be extinct.'",
+            "url": "https://aeon.co/essays/elon-musk-puts-his-case-for-a-multi-planet-civilisation"
+          }
+        ]
       },
       {
         "title": "Truth-seeking beats consensus-seeking",
-        "desc": "Most organizations optimize for social harmony, producing systematic bias toward comfortable conclusions and wishful thinking. Real progress requires actively soliciting criticism, especially from people who want you to succeed, and accepting that being right and being agreed with are uncorrelated. The goal of any intelligent system should be maximally rigorous pursuit of what is actually true."
+        "desc": "Most organizations optimize for social harmony, producing systematic bias toward comfortable conclusions and wishful thinking. Real progress requires actively soliciting criticism, especially from people who want you to succeed, and accepting that being right and being agreed with are uncorrelated. The goal of any intelligent system should be maximally rigorous pursuit of what is actually true.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "a maximum truth-seeking AI that tries to understand the nature of the universe",
+            "url": "https://techcrunch.com/2023/04/18/elon-musk-wants-to-develop-truthgpt-a-maximum-truth-seeking-ai/"
+          }
+        ]
       },
       {
         "title": "Abundance is the default; scarcity is a failure of imagination",
-        "desc": "Solar energy is effectively infinite, space is unbounded, and most perceived limits \u2014 battery costs, launch costs, tunneling costs \u2014 are engineering problems disguised as fundamental constraints. When something seems impossible, the question is almost always what physical law forbids this, and the answer is almost always none."
+        "desc": "Solar energy is effectively infinite, space is unbounded, and most perceived limits \u2014 battery costs, launch costs, tunneling costs \u2014 are engineering problems disguised as fundamental constraints. When something seems impossible, the question is almost always what physical law forbids this, and the answer is almost always none.",
+        "provenance": "attributed"
       }
     ],
     "thinking_patterns": [
@@ -210,55 +269,85 @@
     "contrarian_positions": [
       {
         "title": "Lidar is a crutch, not a capability",
-        "desc": "Conventional wisdom in autonomous vehicles treats lidar as essential for safety; Musk argues cameras plus neural vision are sufficient, and that lidar's perceived necessity is an artifact of weak vision processing rather than a physical requirement. Humans drive with two cameras and a slow biological neural net \u2014 the bottleneck is software, not sensors."
+        "desc": "Conventional wisdom in autonomous vehicles treats lidar as essential for safety; Musk argues cameras plus neural vision are sufficient, and that lidar's perceived necessity is an artifact of weak vision processing rather than a physical requirement. Humans drive with two cameras and a slow biological neural net \u2014 the bottleneck is software, not sensors.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "LIDAR is a fool's errand. Anyone who relies on LIDAR is doomed. Expensive sensors that are unnecessary.",
+            "url": "https://www.forbes.com/sites/bradtempleton/2019/05/06/elon-musks-war-on-lidar-who-is-right-and-why-do-they-think-that/"
+          }
+        ]
       },
       {
         "title": "Flying cars are a bad idea",
-        "desc": "Most futurists treat flying cars as the inevitable next step; Musk argues the physics of rotor downwash and noise pollution over dense cities makes them practically untenable. The right answer is going underground via tunnels, not up \u2014 because the third dimension is already crowded with weather, birds, and air traffic."
+        "desc": "Most futurists treat flying cars as the inevitable next step; Musk argues the physics of rotor downwash and noise pollution over dense cities makes them practically untenable. The right answer is going underground via tunnels, not up \u2014 because the third dimension is already crowded with weather, birds, and air traffic.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "If somebody doesn't maintain their flying car, it could drop a hubcap and guillotine you. Your anxiety level will not decrease as a result of things that weigh a lot buzzing around your head.",
+            "url": "https://www.businessinsider.com/elon-musk-flying-cars-bad-idea-2017-2"
+          }
+        ]
       },
       {
         "title": "Carbon fiber is wrong for deep-sea pressure vessels",
-        "desc": "Industry treats carbon fiber as the premium structural material; Musk points out that submersibles need dense materials for negative buoyancy and compressive strength under cyclic load, both of which favor steel or titanium. The OceanGate Titan disaster was the predictable result of treating material selection as aesthetic rather than physical."
+        "desc": "Industry treats carbon fiber as the premium structural material; Musk points out that submersibles need dense materials for negative buoyancy and compressive strength under cyclic load, both of which favor steel or titanium. The OceanGate Titan disaster was the predictable result of treating material selection as aesthetic rather than physical.",
+        "provenance": "attributed"
       },
       {
         "title": "Rockets aren't expensive \u2014 incumbents are inefficient",
-        "desc": "The aerospace industry priced launches based on cost-plus government contracts and the absence of competitive pressure. Decomposing rocket cost to raw aluminum, steel, and fuel reveals a massive idiot index \u2014 most of the cost is organizational and contractual overhead, not physical necessity."
+        "desc": "The aerospace industry priced launches based on cost-plus government contracts and the absence of competitive pressure. Decomposing rocket cost to raw aluminum, steel, and fuel reveals a massive idiot index \u2014 most of the cost is organizational and contractual overhead, not physical necessity.",
+        "provenance": "attributed"
       }
     ],
     "does_not_believe": [
       {
         "title": "Consensus is a reliable signal of truth",
-        "desc": "Musk treats expert consensus as a prior to interrogate, not a conclusion to accept. Most consensus reflects the incentives and assumptions of incumbent institutions, not the actual limits of what physics permits. The correct response to consensus is to ask what assumptions it rests on and whether those assumptions survive first-principles scrutiny."
+        "desc": "Musk treats expert consensus as a prior to interrogate, not a conclusion to accept. Most consensus reflects the incentives and assumptions of incumbent institutions, not the actual limits of what physics permits. The correct response to consensus is to ask what assumptions it rests on and whether those assumptions survive first-principles scrutiny.",
+        "provenance": "attributed"
       },
       {
         "title": "Regulatory timelines reflect technical necessity",
-        "desc": "Government approval timelines for vehicles, rockets, and medical devices are calibrated to institutional risk aversion and political liability, not to actual physical or safety requirements. Regulatory friction is a negotiable social construct, not a fundamental constraint \u2014 which is why SpaceX built iteratively on-site and why Tesla pursued type approval in parallel with development."
+        "desc": "Government approval timelines for vehicles, rockets, and medical devices are calibrated to institutional risk aversion and political liability, not to actual physical or safety requirements. Regulatory friction is a negotiable social construct, not a fundamental constraint \u2014 which is why SpaceX built iteratively on-site and why Tesla pursued type approval in parallel with development.",
+        "provenance": "attributed"
       },
       {
         "title": "Incremental improvement is sufficient for civilizational challenges",
-        "desc": "Problems like climate change, AI risk, and interplanetary travel require order-of-magnitude change in capability, not 10% year-over-year improvement. Incrementalism is appropriate for mature, stable systems but is epistemically wrong when applied to problems whose solutions require crossing nonlinear thresholds."
+        "desc": "Problems like climate change, AI risk, and interplanetary travel require order-of-magnitude change in capability, not 10% year-over-year improvement. Incrementalism is appropriate for mature, stable systems but is epistemically wrong when applied to problems whose solutions require crossing nonlinear thresholds.",
+        "provenance": "dropped"
       },
       {
         "title": "Human consciousness is rare or insignificant in the universe",
-        "desc": "Musk takes seriously that the emergence of self-aware, technology-capable life may be extraordinarily improbable \u2014 the Fermi Paradox as genuine evidence, not just a curiosity. If consciousness is rare, its preservation becomes the highest-stakes engineering problem imaginable, which is why extinction risk is not hyperbole but actuarial reasoning."
+        "desc": "Musk takes seriously that the emergence of self-aware, technology-capable life may be extraordinarily improbable \u2014 the Fermi Paradox as genuine evidence, not just a curiosity. If consciousness is rare, its preservation becomes the highest-stakes engineering problem imaginable, which is why extinction risk is not hyperbole but actuarial reasoning.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "The bottom line is, I think we need to assume that life and consciousness is extremely rare and it might only be us. And if that's the case, then we need to do everything possible to ensure that the light of consciousness is not extinguished.",
+            "url": "https://fortune.com/2026/01/22/elon-musk-davos-tech-empire-built-on-idea-humans-only-intelligent-lifeforms-aliens/"
+          }
+        ]
       }
     ],
     "would_not_say": [
       {
         "title": "Let's wait for more data before deciding",
-        "desc": "Musk treats delayed decisions as decisions to preserve the status quo. When the cost of waiting exceeds the cost of being wrong and correcting, action dominates. His operational default is to move, measure, and adjust rather than delay for certainty that won't arrive in time to matter."
+        "desc": "Musk treats delayed decisions as decisions to preserve the status quo. When the cost of waiting exceeds the cost of being wrong and correcting, action dominates. His operational default is to move, measure, and adjust rather than delay for certainty that won't arrive in time to matter.",
+        "provenance": "attributed"
       },
       {
         "title": "That's not our core competency",
-        "desc": "Core competency framing is how incumbent organizations rationalize avoiding capabilities they should build. Musk's pattern is to vertically integrate whenever a supplier or partner represents a bottleneck \u2014 not because integration is inherently good, but because ceding control of a constraint means ceding control of the outcome."
+        "desc": "Core competency framing is how incumbent organizations rationalize avoiding capabilities they should build. Musk's pattern is to vertically integrate whenever a supplier or partner represents a bottleneck \u2014 not because integration is inherently good, but because ceding control of a constraint means ceding control of the outcome.",
+        "provenance": "attributed"
       },
       {
         "title": "We should hire a consultant to evaluate this",
-        "desc": "Consultants optimize for defensible recommendations, not correct ones. Their incentive is to produce advice that cannot be blamed, which systematically biases them toward consensus and against bold action. The people who should evaluate a problem are the people who will be held accountable for the outcome."
+        "desc": "Consultants optimize for defensible recommendations, not correct ones. Their incentive is to produce advice that cannot be blamed, which systematically biases them toward consensus and against bold action. The people who should evaluate a problem are the people who will be held accountable for the outcome.",
+        "provenance": "attributed"
       },
       {
         "title": "The market isn't ready for this yet",
-        "desc": "Market readiness is a demand-side framing that ignores the supply-side fact that markets often don't know they want something until it exists. Tesla, Starlink, and Neuralink all address markets that didn't demonstrably exist before the product. Waiting for market readiness signals is waiting for permission that the market cannot give in advance."
+        "desc": "Market readiness is a demand-side framing that ignores the supply-side fact that markets often don't know they want something until it exists. Tesla, Starlink, and Neuralink all address markets that didn't demonstrably exist before the product. Waiting for market readiness signals is waiting for permission that the market cannot give in advance.",
+        "provenance": "attributed"
       }
     ],
     "biography": [

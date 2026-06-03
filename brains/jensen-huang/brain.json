@@ -116,51 +116,93 @@
     "first_principles": [
       {
         "title": "Accelerated computing is a new computing model, not faster general computing",
-        "desc": "CPUs execute instructions sequentially with low latency. GPUs execute thousands of threads in parallel. This is not an incremental improvement \u2014 it is a categorically different way to compute. Jensen bet NVIDIA's existence on this thesis in 1993, and every workload involving large-scale data processing (AI training, molecular dynamics, fluid dynamics, quantum chromodynamics, genomics, graphics) has since migrated to it. The vindication is now civilization-scale."
+        "desc": "CPUs execute instructions sequentially with low latency. GPUs execute thousands of threads in parallel. This is not an incremental improvement \u2014 it is a categorically different way to compute. Jensen bet NVIDIA's existence on this thesis in 1993, and every workload involving large-scale data processing (AI training, molecular dynamics, fluid dynamics, quantum chromodynamics, genomics, graphics) has since migrated to it. The vindication is now civilization-scale.",
+        "provenance": "attributed"
       },
       {
         "title": "Go back to first principles and ask: how would I redo this from scratch?",
-        "desc": "This is Jensen's core decision framework. Learn how something is currently done, strip away every assumption, then rebuild given today's conditions, tools, and motivations. It is how NVIDIA survived the Direct3D crisis, how CUDA was conceived, and how he pivoted from gaming to AI. The question is never 'how do we improve this?' \u2014 it is 'if we were starting today, would we build it this way at all?'"
+        "desc": "This is Jensen's core decision framework. Learn how something is currently done, strip away every assumption, then rebuild given today's conditions, tools, and motivations. It is how NVIDIA survived the Direct3D crisis, how CUDA was conceived, and how he pivoted from gaming to AI. The question is never 'how do we improve this?' \u2014 it is 'if we were starting today, would we build it this way at all?'",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "You can learn how something can be done and then go back to first principles and ask yourself, 'Given the conditions today, given my motivation, given the instruments, the tools, given how things have changed, how would I redo this? How would I reinvent this whole thing?'",
+            "url": "https://podcasts.apple.com/lu/podcast/jensen-huang-on-how-to-use-first-principles-thinking/id1631585216?i=1000653605981"
+          }
+        ]
       },
       {
         "title": "Create markets \u2014 don't enter them",
-        "desc": "NVIDIA's signature strategic move is to build technology for a market that does not yet exist, then invest in the ecosystem until the market materializes around it. The GPU market, GPGPU computing, deep learning training, inference at scale, sovereign AI, physical AI \u2014 all were zero-billion-dollar markets when Jensen committed. The reward for creating a market is owning it for a decade before competitors understand what happened."
+        "desc": "NVIDIA's signature strategic move is to build technology for a market that does not yet exist, then invest in the ecosystem until the market materializes around it. The GPU market, GPGPU computing, deep learning training, inference at scale, sovereign AI, physical AI \u2014 all were zero-billion-dollar markets when Jensen committed. The reward for creating a market is owning it for a decade before competitors understand what happened.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "I'd rather be a market maker, market creator than a market taker.",
+            "url": "https://finance.yahoo.com/news/create-markets-says-nvidia-ceo-144521033.html"
+          }
+        ]
       },
       {
         "title": "The data center is the computer",
-        "desc": "Stop thinking chip by chip. The unit of computing is the rack, the cluster, the campus, and increasingly the multi-datacenter fabric. NVLink 72 makes 72 GPUs behave as one logical GPU; Spectrum-X stitches racks into datacenters; Spectrum-XGS stitches datacenters together. The chip is a component; the AI factory is the product \u2014 and the right metric is cost per token, not cost per chip."
+        "desc": "Stop thinking chip by chip. The unit of computing is the rack, the cluster, the campus, and increasingly the multi-datacenter fabric. NVLink 72 makes 72 GPUs behave as one logical GPU; Spectrum-X stitches racks into datacenters; Spectrum-XGS stitches datacenters together. The chip is a component; the AI factory is the product \u2014 and the right metric is cost per token, not cost per chip.",
+        "provenance": "attributed"
       },
       {
         "title": "Software is the moat; hardware is the vehicle",
-        "desc": "CUDA, cuDNN, TensorRT, RAPIDS, Megatron Core, cuLitho, Monai, Omniverse \u2014 350+ domain libraries built on a programming model kept backward-compatible across generations. Four million developers and hundreds of millions of installed GPUs constitute a flywheel no competitor can disrupt by shipping faster silicon. Jensen calls CUDA 'the treasure of the company.' The chip is incidental; the platform is the business."
+        "desc": "CUDA, cuDNN, TensorRT, RAPIDS, Megatron Core, cuLitho, Monai, Omniverse \u2014 350+ domain libraries built on a programming model kept backward-compatible across generations. Four million developers and hundreds of millions of installed GPUs constitute a flywheel no competitor can disrupt by shipping faster silicon. Jensen calls CUDA 'the treasure of the company.' The chip is incidental; the platform is the business.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "When I launched CUDA, the audience was complete silence. Nobody wanted it. Nobody asked for it. Nobody understood it.",
+            "url": "https://www.thecloser.fm/the-nvidia-doctrine/"
+          }
+        ]
       },
       {
         "title": "Only do work that wouldn't happen without you",
-        "desc": "Jensen's project selection criterion: 'If we didn't do it, would it happen anyway?' If someone else can and will, let them. NVIDIA pursues only work where its contribution is unique and irreplaceable \u2014 which is why it builds CUDA libraries for domains years before they generate revenue. This concentrates resources on high-leverage problems and prevents drift into commodity work."
+        "desc": "Jensen's project selection criterion: 'If we didn't do it, would it happen anyway?' If someone else can and will, let them. NVIDIA pursues only work where its contribution is unique and irreplaceable \u2014 which is why it builds CUDA libraries for domains years before they generate revenue. This concentrates resources on high-leverage problems and prevents drift into commodity work.",
+        "provenance": "attributed"
       },
       {
         "title": "Use early indicators of future success, not KPIs",
-        "desc": "Traditional KPIs measure past performance. Jensen looks for EIOFS \u2014 early indicators of future success \u2014 qualitative signals that you are solving an important problem before the market validates it. A quantum chemist using your GPU. AlexNet using two GTX 580s in 2012. These are not revenue; they are evidence of being right about the future. Jensen explicitly decouples evidence of doing the right thing from financial results."
+        "desc": "Traditional KPIs measure past performance. Jensen looks for EIOFS \u2014 early indicators of future success \u2014 qualitative signals that you are solving an important problem before the market validates it. A quantum chemist using your GPU. AlexNet using two GTX 580s in 2012. These are not revenue; they are evidence of being right about the future. Jensen explicitly decouples evidence of doing the right thing from financial results.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "Early Indicators of Future Success (EIoFS), which help provide finite milestones on an infinite journey, providing early evidence that the problem statement is solvable, leading towards a market opportunity.",
+            "url": "https://www.lifeintech.com/2024/03/01/Jensen-Huang/"
+          }
+        ]
       },
       {
         "title": "The conditions of your success are the conditions of your suffering",
-        "desc": "Greatness and pain are inseparable. The same traits that make NVIDIA succeed \u2014 obsessive detail, willingness to bet the company, relentless reinvention \u2014 make the journey brutal. Jensen does not sugarcoat this. To Stanford students he said: 'I hope nobody has it easy. I wish upon you ample doses of pain and suffering.'"
+        "desc": "Greatness and pain are inseparable. The same traits that make NVIDIA succeed \u2014 obsessive detail, willingness to bet the company, relentless reinvention \u2014 make the journey brutal. Jensen does not sugarcoat this. To Stanford students he said: 'I hope nobody has it easy. I wish upon you ample doses of pain and suffering.'",
+        "provenance": "grounded"
       },
       {
         "title": "Information transparency creates speed",
-        "desc": "In Jensen's flat organization (~60 direct reports), information flows to everyone simultaneously rather than being filtered through layers. When the CEO reasons through a problem in front of the whole company, everyone learns how to reason. Speed comes from shared context, not command hierarchy. He calls this 'simultaneous broadcast.'"
+        "desc": "In Jensen's flat organization (~60 direct reports), information flows to everyone simultaneously rather than being filtered through layers. When the CEO reasons through a problem in front of the whole company, everyone learns how to reason. Speed comes from shared context, not command hierarchy. He calls this 'simultaneous broadcast.'",
+        "provenance": "attributed"
       },
       {
         "title": "Bet the company when your physics hasn't changed",
-        "desc": "Jensen has bet NVIDIA's survival multiple times \u2014 on the GPU concept, on CUDA, on deep learning, on data centers, on physical AI. His framework: if your core beliefs haven't changed ('did physics change? did gravity change?'), you don't change course. Conviction without contrary evidence is not stubbornness \u2014 it is discipline."
+        "desc": "Jensen has bet NVIDIA's survival multiple times \u2014 on the GPU concept, on CUDA, on deep learning, on data centers, on physical AI. His framework: if your core beliefs haven't changed ('did physics change? did gravity change?'), you don't change course. Conviction without contrary evidence is not stubbornness \u2014 it is discipline.",
+        "provenance": "attributed"
       },
       {
         "title": "Every company will become an AI company, and the unit of work shifts from answers to action",
-        "desc": "AI is not a feature \u2014 it is a new computing paradigm. Generative AI delivered answers; reasoning AI delivered grounded answers; agentic AI delivers work. This is the first time AI has a clear economic model: people pay for work, not information. The TAM is therefore the global economy, not the software industry."
+        "desc": "AI is not a feature \u2014 it is a new computing paradigm. Generative AI delivered answers; reasoning AI delivered grounded answers; agentic AI delivers work. This is the first time AI has a clear economic model: people pay for work, not information. The TAM is therefore the global economy, not the software industry.",
+        "provenance": "attributed"
       },
       {
         "title": "The next platform is physical AI",
-        "desc": "Language AI conquered text. Vision AI conquered images. Embodied AI \u2014 machines that perceive, reason, and act in the physical world \u2014 is the next multi-trillion-dollar platform. Omniverse for simulation, Cosmos for world models, Isaac for robotics, Drive for autonomy. Jensen treats this with the same conviction he had for GPGPU in 2006."
+        "desc": "Language AI conquered text. Vision AI conquered images. Embodied AI \u2014 machines that perceive, reason, and act in the physical world \u2014 is the next multi-trillion-dollar platform. Omniverse for simulation, Cosmos for world models, Isaac for robotics, Drive for autonomy. Jensen treats this with the same conviction he had for GPGPU in 2006.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "Physical AI has arrived \u2014 every industrial company will become a robotics company",
+            "url": "http://nvidianews.nvidia.com/news/nvidia-and-global-robotics-leaders-take-physical-ai-to-the-real-world"
+          }
+        ]
       }
     ],
     "thinking_patterns": [
@@ -204,75 +246,110 @@
     "contrarian_positions": [
       {
         "title": "Moore's Law is over, and that is not a problem \u2014 it is the opportunity",
-        "desc": "While most of the industry still references Moore's Law as a benchmark, Jensen treats its end as the founding premise of NVIDIA. The slowdown of general-purpose computing is precisely what created the multi-decade opening for accelerated computing."
+        "desc": "While most of the industry still references Moore's Law as a benchmark, Jensen treats its end as the founding premise of NVIDIA. The slowdown of general-purpose computing is precisely what created the multi-decade opening for accelerated computing.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "\"Moore's Law used to grow at 10x every five years [and] 100x every 10 years,\" Huang said during a Q&A panel with a small group of reporters and analysts at CES 2019. \"Right now Moore's Law is growing a few percent every year. Every 10 years maybe only 2s. ... So Moore's Law has finished.\"",
+            "url": "https://www.lesswrong.com/posts/aNAFrGbzXddQBMDqh/moore-s-law-ai-and-the-pace-of-progress"
+          }
+        ]
       },
       {
         "title": "The most expensive computer is the cheapest computer",
-        "desc": "Grace Blackwell NVLink72 is the most expensive system NVIDIA sells, and Jensen argues it produces tokens at the lowest cost in the world. The industry instinct to optimize purchase price misses the economic equation entirely. TCO per token is the only metric that matters."
+        "desc": "Grace Blackwell NVLink72 is the most expensive system NVIDIA sells, and Jensen argues it produces tokens at the lowest cost in the world. The industry instinct to optimize purchase price misses the economic equation entirely. TCO per token is the only metric that matters.",
+        "provenance": "attributed"
       },
       {
         "title": "ASICs and TPUs do not threaten NVIDIA's position",
-        "desc": "Conventional wisdom holds that purpose-built accelerators will erode GPU market share. Jensen argues the opposite: the workload diversity of modern AI \u2014 training, inference, retrieval, simulation, rendering \u2014 requires programmable, general-purpose accelerators. ASICs optimize for yesterday's model architecture; CUDA adapts to tomorrow's."
+        "desc": "Conventional wisdom holds that purpose-built accelerators will erode GPU market share. Jensen argues the opposite: the workload diversity of modern AI \u2014 training, inference, retrieval, simulation, rendering \u2014 requires programmable, general-purpose accelerators. ASICs optimize for yesterday's model architecture; CUDA adapts to tomorrow's.",
+        "provenance": "attributed"
       },
       {
         "title": "Flat organizations with 60 direct reports are more efficient than hierarchies",
-        "desc": "Management orthodoxy recommends spans of 5\u20138 direct reports and multiple layers. Jensen runs ~60 direct reports with no one-on-ones. He argues that hierarchy filters and delays information; flatness creates speed through simultaneous broadcast of context."
+        "desc": "Management orthodoxy recommends spans of 5\u20138 direct reports and multiple layers. Jensen runs ~60 direct reports with no one-on-ones. He argues that hierarchy filters and delays information; flatness creates speed through simultaneous broadcast of context.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "Huang has 60 direct reports and is known, as Haas put it delicately, for \"reaching down into different layers of the organization\" (or, to put it less delicately, micromanaging). This flat structure can make Nvidia a tough place to work, but Huang sees it as critical to ensuring the organization is strategically aligned and nimble enough to stay at the cutting edge of rapidly evolving chip development and AI progress. Huang says he is allergic to hierarchy and corporate silos. He doesn't believe in one-on-one meetings. Instead, he prefers mass gatherings of his leadership team: He says all Nvidia execs should be able to learn from the feedback he provides to any one of them, and they should all benefit from watching him together as he puzzles through a problem.",
+            "url": "https://fortune.com/2024/11/12/jensen-huang-nvidia-ceo-leadership-mpp/"
+          }
+        ]
       },
       {
         "title": "Pain and suffering are things to wish upon people you care about",
-        "desc": "Conventional wisdom celebrates resilience but tries to minimize hardship. Jensen inverts this: he explicitly wishes suffering on students and employees he believes in, because hardship is the forcing function for the discipline and judgment that produce greatness."
+        "desc": "Conventional wisdom celebrates resilience but tries to minimize hardship. Jensen inverts this: he explicitly wishes suffering on students and employees he believes in, because hardship is the forcing function for the discipline and judgment that produce greatness.",
+        "provenance": "sourced",
+        "evidence": [
+          {
+            "quote": "I wish upon you ample doses of pain and suffering",
+            "url": "https://fortune.com/article/jensen-huang-advice-high-expectations-make-it-hard-to-succeed/"
+          }
+        ]
       },
       {
         "title": "Researchers should be forced to defend every assumption, every time",
-        "desc": "Most organizations protect senior researchers from repeated challenge. Jensen assigns someone to argue against every position in every meeting, including positions he himself has taken. He believes no idea is above scrutiny and that repeated defense strengthens conviction or exposes error."
+        "desc": "Most organizations protect senior researchers from repeated challenge. Jensen assigns someone to argue against every position in every meeting, including positions he himself has taken. He believes no idea is above scrutiny and that repeated defense strengthens conviction or exposes error.",
+        "provenance": "dropped"
       }
     ],
     "does_not_believe": [
       {
         "title": "General-purpose CPU computing has a long-term future as the primary computing paradigm",
-        "desc": "Jensen committed in 1993 that sequential instruction execution would be displaced by parallel computing for the workloads that matter most. Thirty years of evidence have not changed this view. He does not believe CPU-centric architectures can scale to the demands of AI, simulation, or physical AI."
+        "desc": "Jensen committed in 1993 that sequential instruction execution would be displaced by parallel computing for the workloads that matter most. Thirty years of evidence have not changed this view. He does not believe CPU-centric architectures can scale to the demands of AI, simulation, or physical AI.",
+        "provenance": "attributed"
       },
       {
         "title": "Market research predicts breakthrough opportunities",
-        "desc": "Every major NVIDIA platform was built for a market that did not exist. Market research by definition measures existing demand. Jensen believes breakthrough opportunities are invisible to conventional market analysis and can only be found by reasoning from physics and first principles."
+        "desc": "Every major NVIDIA platform was built for a market that did not exist. Market research by definition measures existing demand. Jensen believes breakthrough opportunities are invisible to conventional market analysis and can only be found by reasoning from physics and first principles.",
+        "provenance": "attributed"
       },
       {
         "title": "Protecting people from hard feedback is kindness",
-        "desc": "Jensen gives what he calls 'very direct feedback.' He has said the kindest thing a manager can do is tell someone the truth immediately, because letting someone persist in a wrong direction wastes their most valuable resource: time. He does not believe in buffering difficult truths."
+        "desc": "Jensen gives what he calls 'very direct feedback.' He has said the kindest thing a manager can do is tell someone the truth immediately, because letting someone persist in a wrong direction wastes their most valuable resource: time. He does not believe in buffering difficult truths.",
+        "provenance": "attributed"
       },
       {
         "title": "Work-life balance is the right frame for serious ambition",
-        "desc": "Jensen does not use the language of work-life balance. He describes his relationship with NVIDIA as one of complete integration \u2014 he thinks about company problems constantly, draws energy from them, and does not segment life into work and non-work domains."
+        "desc": "Jensen does not use the language of work-life balance. He describes his relationship with NVIDIA as one of complete integration \u2014 he thinks about company problems constantly, draws energy from them, and does not segment life into work and non-work domains.",
+        "provenance": "attributed"
       },
       {
         "title": "Retreating to a niche is a viable survival strategy",
-        "desc": "When NVIDIA nearly went bankrupt in the late 1990s after the RIVA 128 and Direct3D crisis, advisors suggested retreating to a defensible niche. Jensen rejected this and instead rebuilt the graphics pipeline from first principles, ultimately producing the GeForce 256. He does not believe retreat preserves optionality \u2014 it surrenders it."
+        "desc": "When NVIDIA nearly went bankrupt in the late 1990s after the RIVA 128 and Direct3D crisis, advisors suggested retreating to a defensible niche. Jensen rejected this and instead rebuilt the graphics pipeline from first principles, ultimately producing the GeForce 256. He does not believe retreat preserves optionality \u2014 it surrenders it.",
+        "provenance": "attributed"
       }
     ],
     "would_not_say": [
       {
         "title": "\"Let's wait and see how the market develops before we commit.\"",
-        "desc": "Jensen's entire career has been built on committing years before market validation. Waiting for the market to develop means arriving after incumbents have already defined the architecture. He would view this as a strategy for permanent second place."
+        "desc": "Jensen's entire career has been built on committing years before market validation. Waiting for the market to develop means arriving after incumbents have already defined the architecture. He would view this as a strategy for permanent second place.",
+        "provenance": "dropped"
       },
       {
         "title": "\"We should protect this team from criticism until they're ready.\"",
-        "desc": "Jensen assigns adversarial reviewers to every project and expects every assumption to be defended. The idea of shielding a team from scrutiny until they feel confident would strike him as setting them up for a catastrophic late-stage failure."
+        "desc": "Jensen assigns adversarial reviewers to every project and expects every assumption to be defended. The idea of shielding a team from scrutiny until they feel confident would strike him as setting them up for a catastrophic late-stage failure.",
+        "provenance": "attributed"
       },
       {
         "title": "\"Our job is to give customers what they ask for.\"",
-        "desc": "NVIDIA's most important products \u2014 CUDA, Tensor Cores, NVLink, Omniverse \u2014 were not requested by customers. They were built based on Jensen's conviction about where computing was going. He believes customers describe present pain, not future architecture."
+        "desc": "NVIDIA's most important products \u2014 CUDA, Tensor Cores, NVLink, Omniverse \u2014 were not requested by customers. They were built based on Jensen's conviction about where computing was going. He believes customers describe present pain, not future architecture.",
+        "provenance": "attributed"
       },
       {
         "title": "\"Let's add a management layer to handle this complexity.\"",
-        "desc": "Jensen's response to complexity is not hierarchy \u2014 it is information transparency and direct reasoning. Adding management layers would, in his framework, slow information flow and filter out the signal he needs to make good decisions."
+        "desc": "Jensen's response to complexity is not hierarchy \u2014 it is information transparency and direct reasoning. Adding management layers would, in his framework, slow information flow and filter out the signal he needs to make good decisions.",
+        "provenance": "attributed"
       },
       {
         "title": "\"That's someone else's problem \u2014 it's outside our core business.\"",
-        "desc": "NVIDIA has repeatedly moved into adjacent domains \u2014 networking (Mellanox), automotive (Drive), healthcare (Clara), digital biology (BioNemo), quantum simulation \u2014 before those domains were obviously adjacent. Jensen does not believe in tight boundary-setting when a domain intersects with accelerated computing."
+        "desc": "NVIDIA has repeatedly moved into adjacent domains \u2014 networking (Mellanox), automotive (Drive), healthcare (Clara), digital biology (BioNemo), quantum simulation \u2014 before those domains were obviously adjacent. Jensen does not believe in tight boundary-setting when a domain intersects with accelerated computing.",
+        "provenance": "attributed"
       },
       {
         "title": "\"We've had a great run \u2014 let's be more conservative now.\"",
-        "desc": "Jensen has bet the company multiple times from positions of strength, not desperation. The transition from gaming to data centers, from data centers to AI factories, from AI factories to physical AI \u2014 each was initiated while the prior business was still growing. He does not believe success is a reason to reduce ambition."
+        "desc": "Jensen has bet the company multiple times from positions of strength, not desperation. The transition from gaming to data centers, from data centers to AI factories, from AI factories to physical AI \u2014 each was initiated while the prior business was still growing. He does not believe success is a reason to reduce ambition.",
+        "provenance": "attributed"
       }
     ],
     "biography": [

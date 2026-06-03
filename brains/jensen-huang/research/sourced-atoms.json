@@ -1,0 +1,98 @@
+[
+  {
+    "id": "c32404de-b505-5f5e-af1e-f702892e3cc6",
+    "content": "Go back to first principles and ask: how would I redo this from scratch?",
+    "original_quote": "You can learn how something can be done and then go back to first principles and ask yourself, 'Given the conditions today, given my motivation, given the instruments, the tools, given how things have changed, how would I redo this? How would I reinvent this whole thing?'",
+    "implication": "This is Jensen's core decision framework. Learn how something is currently done, strip away every assumption, then rebuild given today's conditions, tools, and motivations. It is how NVIDIA survived the Direct3D crisis, how CUDA was conceived, and how he pivoted from gaming to AI. The question is never 'how do we improve this?' \u2014 it is 'if we were starting today, would we build it this way at all?'",
+    "cluster": "synthesis_sourced",
+    "topics": [],
+    "source_ref": "Jensen Huang on How to Use First-Principles Thinking to Drive ...",
+    "source_url": "https://podcasts.apple.com/lu/podcast/jensen-huang-on-how-to-use-first-principles-thinking/id1631585216?i=1000653605981",
+    "confidence": 0.85,
+    "confidence_tier": "high"
+  },
+  {
+    "id": "bbb813c9-b993-5ea4-9ae2-ddfeb159d8a1",
+    "content": "Create markets \u2014 don't enter them",
+    "original_quote": "I'd rather be a market maker, market creator than a market taker.",
+    "implication": "NVIDIA's signature strategic move is to build technology for a market that does not yet exist, then invest in the ecosystem until the market materializes around it. The GPU market, GPGPU computing, deep learning training, inference at scale, sovereign AI, physical AI \u2014 all were zero-billion-dollar markets when Jensen committed. The reward for creating a market is owning it for a decade before competitors understand what happened.",
+    "cluster": "synthesis_sourced",
+    "topics": [],
+    "source_ref": "'We Create Markets,' Says Nvidia CEO Jensen Huang",
+    "source_url": "https://finance.yahoo.com/news/create-markets-says-nvidia-ceo-144521033.html",
+    "confidence": 0.85,
+    "confidence_tier": "high"
+  },
+  {
+    "id": "d805ae73-a9a5-5be3-a77e-388cfdd77e81",
+    "content": "Software is the moat; hardware is the vehicle",
+    "original_quote": "When I launched CUDA, the audience was complete silence. Nobody wanted it. Nobody asked for it. Nobody understood it.",
+    "implication": "CUDA, cuDNN, TensorRT, RAPIDS, Megatron Core, cuLitho, Monai, Omniverse \u2014 350+ domain libraries built on a programming model kept backward-compatible across generations. Four million developers and hundreds of millions of installed GPUs constitute a flywheel no competitor can disrupt by shipping faster silicon. Jensen calls CUDA 'the treasure of the company.' The chip is incidental; the platform is the business.",
+    "cluster": "synthesis_sourced",
+    "topics": [],
+    "source_ref": "The Nvidia Doctrine: How Jensen Huang Built a $5 Trillion Empire",
+    "source_url": "https://www.thecloser.fm/the-nvidia-doctrine/",
+    "confidence": 0.85,
+    "confidence_tier": "high"
+  },
+  {
+    "id": "ef6d21f1-9416-5fab-9cb3-5b407eb9ea20",
+    "content": "Use early indicators of future success, not KPIs",
+    "original_quote": "Early Indicators of Future Success (EIoFS), which help provide finite milestones on an infinite journey, providing early evidence that the problem statement is solvable, leading towards a market opportunity.",
+    "implication": "Traditional KPIs measure past performance. Jensen looks for EIOFS \u2014 early indicators of future success \u2014 qualitative signals that you are solving an important problem before the market validates it. A quantum chemist using your GPU. AlexNet using two GTX 580s in 2012. These are not revenue; they are evidence of being right about the future. Jensen explicitly decouples evidence of doing the right thing from financial results.",
+    "cluster": "synthesis_sourced",
+    "topics": [],
+    "source_ref": "Jensen Huang - LifeinTECH",
+    "source_url": "https://www.lifeintech.com/2024/03/01/Jensen-Huang/",
+    "confidence": 0.85,
+    "confidence_tier": "high"
+  },
+  {
+    "id": "e3d489db-bd43-5998-a0b2-eddfd5c52bb7",
+    "content": "The next platform is physical AI",
+    "original_quote": "Physical AI has arrived \u2014 every industrial company will become a robotics company",
+    "implication": "Language AI conquered text. Vision AI conquered images. Embodied AI \u2014 machines that perceive, reason, and act in the physical world \u2014 is the next multi-trillion-dollar platform. Omniverse for simulation, Cosmos for world models, Isaac for robotics, Drive for autonomy. Jensen treats this with the same conviction he had for GPGPU in 2006.",
+    "cluster": "synthesis_sourced",
+    "topics": [],
+    "source_ref": "NVIDIA and Global Robotics Leaders Take Physical AI to the Real ...",
+    "source_url": "http://nvidianews.nvidia.com/news/nvidia-and-global-robotics-leaders-take-physical-ai-to-the-real-world",
+    "confidence": 0.85,
+    "confidence_tier": "high"
+  },
+  {
+    "id": "24ac0e97-0c1a-5c41-b943-c3a4081b444f",
+    "content": "Moore's Law is over, and that is not a problem \u2014 it is the opportunity",
+    "original_quote": "\"Moore's Law used to grow at 10x every five years [and] 100x every 10 years,\" Huang said during a Q&A panel with a small group of reporters and analysts at CES 2019. \"Right now Moore's Law is growing a few percent every year. Every 10 years maybe only 2s. ... So Moore's Law has finished.\"",
+    "implication": "While most of the industry still references Moore's Law as a benchmark, Jensen treats its end as the founding premise of NVIDIA. The slowdown of general-purpose computing is precisely what created the multi-decade opening for accelerated computing.",
+    "cluster": "synthesis_sourced",
+    "topics": [],
+    "source_ref": "Moore's Law, AI, and the pace of progress - LessWrong",
+    "source_url": "https://www.lesswrong.com/posts/aNAFrGbzXddQBMDqh/moore-s-law-ai-and-the-pace-of-progress",
+    "confidence": 0.85,
+    "confidence_tier": "high"
+  },
+  {
+    "id": "14d40d72-1a84-5adb-b313-ea3c7dd9c181",
+    "content": "Flat organizations with 60 direct reports are more efficient than hierarchies",
+    "original_quote": "Huang has 60 direct reports and is known, as Haas put it delicately, for \"reaching down into different layers of the organization\" (or, to put it less delicately, micromanaging). This flat structure can make Nvidia a tough place to work, but Huang sees it as critical to ensuring the organization is strategically aligned and nimble enough to stay at the cutting edge of rapidly evolving chip development and AI progress. Huang says he is allergic to hierarchy and corporate silos. He doesn't believe in one-on-one meetings. Instead, he prefers mass gatherings of his leadership team: He says all Nvidia execs should be able to learn from the feedback he provides to any one of them, and they should all benefit from watching him together as he puzzles through a problem.",
+    "implication": "Management orthodoxy recommends spans of 5\u20138 direct reports and multiple layers. Jensen runs ~60 direct reports with no one-on-ones. He argues that hierarchy filters and delays information; flatness creates speed through simultaneous broadcast of context.",
+    "cluster": "synthesis_sourced",
+    "topics": [],
+    "source_ref": "60 direct reports, but no 1-on-1 meetings",
+    "source_url": "https://fortune.com/2024/11/12/jensen-huang-nvidia-ceo-leadership-mpp/",
+    "confidence": 0.85,
+    "confidence_tier": "high"
+  },
+  {
+    "id": "730524e1-7144-5794-9951-99fbd4aa17c9",
+    "content": "Pain and suffering are things to wish upon people you care about",
+    "original_quote": "I wish upon you ample doses of pain and suffering",
+    "implication": "Conventional wisdom celebrates resilience but tries to minimize hardship. Jensen inverts this: he explicitly wishes suffering on students and employees he believes in, because hardship is the forcing function for the discipline and judgment that produce greatness.",
+    "cluster": "synthesis_sourced",
+    "topics": [],
+    "source_ref": "Jensen Huang tells Stanford students their high expectations may ...",
+    "source_url": "https://fortune.com/article/jensen-huang-advice-high-expectations-make-it-hard-to-succeed/",
+    "confidence": 0.85,
+    "confidence_tier": "high"
+  }
+]

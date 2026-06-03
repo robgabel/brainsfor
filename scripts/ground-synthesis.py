@@ -64,45 +64,60 @@ SCRAPE_MAX_CHARS = 12000
 # ---------------------------------------------------------------------------
 def firecrawl_search(query: str, limit: int = 4) -> list[dict]:
     """Return candidate {url, title} for a claim. We use ONLY the URLs/titles —
-    never any summarized answer text — so discovery can't launder confabulation."""
+    never any summarized answer text — so discovery can't launder confabulation.
+    Retries on transient failure: a silently-swallowed blip would zero out sourcing
+    for the whole principle (everything falls through to 'attributed')."""
     if not FIRECRAWL_KEY:
         return []
-    try:
-        r = httpx.post(
-            "https://api.firecrawl.dev/v1/search",
-            headers={"Authorization": f"Bearer {FIRECRAWL_KEY}", "Content-Type": "application/json"},
-            json={"query": query, "limit": limit},
-            timeout=45,
-        )
-        if r.status_code != 200:
-            return []
-        data = (r.json() or {}).get("data", [])
-        return [{"url": d.get("url"), "title": d.get("title", "")} for d in data if d.get("url")]
-    except Exception:
-        return []
+    for attempt in range(3):
+        try:
+            r = httpx.post(
+                "https://api.firecrawl.dev/v1/search",
+                headers={"Authorization": f"Bearer {FIRECRAWL_KEY}", "Content-Type": "application/json"},
+                json={"query": query, "limit": limit},
+                timeout=45,
+            )
+            if r.status_code == 429 or r.status_code >= 500:
+                time.sleep(1.5 * (attempt + 1)); continue
+            if r.status_code != 200:
+                return []
+            data = (r.json() or {}).get("data", [])
+            return [{"url": d.get("url"), "title": d.get("title", "")} for d in data if d.get("url")]
+        except Exception:
+            time.sleep(1.0 * (attempt + 1))
+    return []
 
 
 def firecrawl_scrape(url: str) -> str:
     if not FIRECRAWL_KEY:
         return ""
-    try:
-        r = httpx.post(
-            "https://api.firecrawl.dev/v1/scrape",
-            headers={"Authorization": f"Bearer {FIRECRAWL_KEY}", "Content-Type": "application/json"},
-            json={"url": url, "formats": ["markdown"]},
-            timeout=60,
-        )
-        if r.status_code != 200:
-            return ""
-        md = ((r.json() or {}).get("data") or {}).get("markdown", "") or ""
-        return md[:SCRAPE_MAX_CHARS]
-    except Exception:
-        return ""
+    for attempt in range(3):
+        try:
+            r = httpx.post(
+                "https://api.firecrawl.dev/v1/scrape",
+                headers={"Authorization": f"Bearer {FIRECRAWL_KEY}", "Content-Type": "application/json"},
+                json={"url": url, "formats": ["markdown"]},
+                timeout=60,
+            )
+            if r.status_code == 429 or r.status_code >= 500:
+                time.sleep(1.5 * (attempt + 1)); continue
+            if r.status_code != 200:
+                return ""
+            md = ((r.json() or {}).get("data") or {}).get("markdown", "") or ""
+            return md[:SCRAPE_MAX_CHARS]
+        except Exception:
+            time.sleep(1.0 * (attempt + 1))
+    return ""
 
 
-# Prefer the person's own primary material; down-rank third-party summaries.
-PRIMARY_HINTS = ("youtube.com", "youtu.be", "transcript", "interview", "talk", "lecture",
-                 "podcast", "speech", "essay", "blog")
+# Prefer SCRAPEABLE primary text. Firecrawl returns markdown, so down-rank
+# YouTube/video pages: Firecrawl can't extract transcripts from them (returns
+# only page chrome), and the brain's own corpus already holds those transcripts.
+# Discovery here should surface NEW scrapeable text (essays, interviews, articles).
+PRIMARY_HINTS = ("transcript", "interview", "talk", "lecture", "podcast",
+                 "speech", "essay", "blog", "article", "/20")
+UNSCRAPEABLE = ("youtube.com", "youtu.be", "vimeo.com", "tiktok.com",
+                "facebook.com", "instagram.com", "x.com/", "twitter.com")
 THIRD_PARTY = ("wikipedia.org", "reddit.com", "quora.com", "medium.com/@", "pinterest.")
 
 
@@ -111,6 +126,7 @@ def rank_sources(cands: list[dict]) -> list[dict]:
         u = (c.get("url") or "").lower()
         s = 0
         if any(h in u for h in PRIMARY_HINTS): s += 2
+        if any(h in u for h in UNSCRAPEABLE): s -= 3   # Firecrawl can't extract video text
         if any(h in u for h in THIRD_PARTY): s -= 2
         return s
     return sorted(cands, key=score, reverse=True)
@@ -219,9 +235,11 @@ def main():
         pid = f"{p['section']}[{p['index']}]"
         claim = p["claim"]
         query = f"{person} {p['title']}"
-        cands = rank_sources(firecrawl_search(query, limit=4))
+        cands = rank_sources(firecrawl_search(query, limit=6))
         sourced = False
-        for c in cands[:3]:
+        for c in cands[:5]:
+            if any(h in (c["url"] or "").lower() for h in UNSCRAPEABLE):
+                continue  # skip video/social — Firecrawl returns no usable text
             text = firecrawl_scrape(c["url"])
             if len(text) < 200:
                 continue

@@ -368,21 +368,6 @@ export async function POST(request: NextRequest) {
       // emits real source URLs the client can render as clickable chips.
       try {
         const citations = await findCitations(brain, enhancedFullText);
-        // TEMP diag — confirm Supabase atom fetch works in the deployed function.
-        try {
-          const { fetchBrainAtoms } = await import("@/lib/brain-atoms-db");
-          const atoms = await fetchBrainAtoms(brain);
-          emit({
-            type: "_diag",
-            atomCount: atoms.length,
-            citationCount: citations.length,
-            urlRef: (process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || "")
-              .replace(/^https:\/\/([a-z0-9]+)\..*$/, "$1"),
-            hasKey: !!(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY),
-          });
-        } catch (e) {
-          emit({ type: "_diag", err: (e as Error).message });
-        }
         if (citations.length > 0) {
           emit({ type: "citations", citations });
         }
