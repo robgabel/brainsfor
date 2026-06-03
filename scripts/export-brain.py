@@ -61,6 +61,36 @@ def load_brain_config(slug: str) -> dict:
         return json.load(f)
 
 
+def _counts_from_index(slug: str) -> tuple:
+    """Read (atom_count, connection_count) for a brain from brains/index.json.
+
+    Used by --skills-only so docs can be re-rendered with accurate counts
+    without a Supabase fetch. Falls back to the shipped pack/brain-atoms.json
+    lengths, then to 0, if the registry entry is missing a count.
+    """
+    atom_count = connection_count = 0
+    index_path = BRAINS_DIR / "index.json"
+    if index_path.exists():
+        with open(index_path) as f:
+            data = json.load(f)
+        entries = data if isinstance(data, list) else data.get("brains", [])
+        for entry in entries:
+            if isinstance(entry, dict) and entry.get("slug") == slug:
+                atom_count = entry.get("atom_count") or entry.get("atomCount") or 0
+                connection_count = entry.get("connection_count") or entry.get("connectionCount") or 0
+                break
+
+    if not atom_count or not connection_count:
+        atoms_path = BRAINS_DIR / slug / "pack" / "brain-atoms.json"
+        if atoms_path.exists():
+            with open(atoms_path) as f:
+                pack = json.load(f)
+            atom_count = atom_count or len(pack.get("atoms", []))
+            connection_count = connection_count or len(pack.get("connections", []))
+
+    return int(atom_count), int(connection_count)
+
+
 def render_template(template_text: str, config: dict, extra_vars: dict = None) -> str:
     """Replace {{variable}} and {{nested.key}} placeholders with config values."""
     all_vars = flatten_dict(config)
@@ -672,6 +702,11 @@ def main():
     parser.add_argument("--connections-file", help="Path to connections JSON")
     parser.add_argument("--output-dir", help="Override output directory")
     parser.add_argument("--skip-skills", action="store_true", help="Skip rendering skill templates")
+    parser.add_argument("--skills-only", action="store_true",
+                        help="Re-render ONLY skill + doc templates (SKILL.md, README.md, "
+                             "INTEGRATION-GUIDE.md, skills/*) into an existing pack. No Supabase "
+                             "fetch, no brain-atoms.json/brain-context.md rewrite. Counts are read "
+                             "from brains/index.json. Use this to propagate template edits to all packs.")
     parser.add_argument("--no-sync-website", action="store_true",
                         help="Skip mirroring pack artifacts into website/public/brains/{slug}/")
     args = parser.parse_args()
@@ -687,6 +722,18 @@ def main():
     else:
         output_dir = ROOT_DIR / "brains" / slug / "pack"
     output_dir.mkdir(parents=True, exist_ok=True)
+
+    # --skills-only: re-render templates against the existing pack and exit.
+    # No data fetch — counts come from brains/index.json so docs stay accurate.
+    if args.skills_only:
+        atom_count, connection_count = _counts_from_index(slug)
+        print(f"\n--skills-only: re-rendering skill + doc templates "
+              f"({atom_count} atoms, {connection_count} connections from index.json)...")
+        export_skill_files(config, atom_count, connection_count, output_dir)
+        print(f"\nDone! Skill + doc templates re-rendered in: {output_dir}")
+        print("  (brain-atoms.json / brain-context.md left untouched; "
+              "run `node website/scripts/sync-brain-assets.mjs` to rebuild the public zip.)")
+        return
 
     # Load data
     if args.from_files:

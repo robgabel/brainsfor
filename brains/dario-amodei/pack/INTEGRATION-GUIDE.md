@@ -13,14 +13,14 @@ pack/
   SKILL.md                 ~13KB    Setup guide + skill reference
   README.md                ~4KB     Quick start
   INTEGRATION-GUIDE.md              You are here
-  skills/                  9 dirs   1 router + 8 reasoning modes (brain-agnostic)
+  skills/                  10 dirs  1 router + 8 reasoning modes + /board (brain-agnostic)
 ```
 
 | File | Who reads it | What it contains |
 |------|-------------|-----------------|
 | `brain-context.md` | Your AI agent | Dario's synthesized worldview, all 1000 atoms with original quotes and implications, persona rules, skill instructions |
 | `brain-atoms.json` | Code / MCP server | Same atoms as structured JSON — topics, connections, confidence scores, source URLs |
-| `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) |
+| `skills/` | Claude Code / Cowork | 8 thinking modes (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`) + 1 router (`/brain`) + `/board` (multi-brain advisory; needs 2+ brains installed) |
 
 ---
 
@@ -175,7 +175,17 @@ The same question produces genuinely different answers depending on which brain 
 - **Dario Amodei** (compute scaling, responsible AI) → Reframe as "what risks does launching create?" — define your evals, red lines, and rollback plan first.
 - **Oprah Winfrey** (authentic connection, audience empathy) → Ask who this is *for* and whether it makes them feel seen. Polish is irrelevant if it doesn't connect.
 
-This is why installing multiple brains gives you genuinely different perspectives — and why `/board` (multi-brain advisory) and `/debate <brain-a> <brain-b>` (cross-brain) work. Dario Amodei brings a specific worldview to your decisions; pair with other brains for productive tension.
+This is why installing multiple brains gives you genuinely different perspectives — and why the cross-brain skills work. Dario Amodei brings a specific worldview to your decisions; pair with other brains for productive tension.
+
+**The two cross-brain skills (both ship in `pack/skills/`):**
+
+- `/debate <brain-a> <brain-b> <position>` — two thinkers attack the same position from opposite worldviews. Works from the pack files alone; nothing extra to install.
+- `/board <question>` — a **board of advisors**: every installed brain answers the question *independently* (no brain sees another's answer), then a synthesis names the agreements and the splits. This needs:
+  - **2 or more brains installed** under `${BRAINSFOR_HOME:-~/.brainsfor}/brains/` (a board of one is just `/advise`), and
+  - **a host that can run parallel sub-agents** — Claude Code's Agent/Task tool or Cowork. The independence is the point: it's what stops the brains from converging into one averaged answer.
+  - It does **not** require the MCP server — each board member reads its brain's local `brain-context.md` / `brain-atoms.json`. (If MCP is installed, members can use it for selective retrieval instead.)
+
+  > Heads-up: with only **one** brain installed, `/board` will tell you to add another from [brainsforfree.com](https://brainsforfree.com) rather than convene a board of one.
 
 Browse the full catalog at [brainsforfree.com](https://brainsforfree.com).
 

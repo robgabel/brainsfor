@@ -1,6 +1,6 @@
 # Sun Tzu Brain Pack
 
-> **772 knowledge atoms** · **906 typed connections** · **9 unified skills (1 router + 8 reasoning modes)**
+> **772 knowledge atoms** · **906 typed connections** · **10 unified skills (1 router + 8 reasoning modes + a board of advisors)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
@@ -31,7 +31,7 @@ pack/
   ├── brain-context.md      ← Full knowledge base (load this as context)
   ├── brain-atoms.json      ← Structured data (772 atoms, 906 connections)
   ├── README.md             ← You are here
-  └── skills/               ← 9 unified skills (work with any installed brain)
+  └── skills/               ← 10 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
       ├── advise/           ← /advise — strategic counsel
       ├── teach/            ← /teach — explain through the thinker's lens
@@ -40,19 +40,20 @@ pack/
       ├── evolve/           ← /evolve — trace how thinking changed
       ├── surprise/         ← /surprise — serendipity engine
       ├── coach/            ← /coach — Socratic questioning
-      └── predict/          ← /predict — implication chains
+      ├── predict/          ← /predict — implication chains
+      └── board/            ← /board — board of advisors (needs 2+ brains)
 ```
 
 ## Unified Skill Architecture
 
-Every brain pack ships the **same 9 skill files**. They're brain-agnostic — the 8 thinking skills resolve which brain to use by (1) reading `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt`, or (2) taking an inline slug as the first argument.
+Every brain pack ships the **same 10 skill files**. They're brain-agnostic — the 8 thinking skills resolve which brain to use by (1) reading `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt`, or (2) taking an inline slug as the first argument.
 
 This means:
 
 - **Install this brain pack first** → `/brain sun-tzu` activates it, then `/advise` / `/teach` / `/surprise` all work.
-- **Install more brain packs later** → they drop into `${BRAINSFOR_HOME:-~/.brainsfor}/brains/`, auto-registered in `brains/index.json`, and the same 9 skills work for them too. No reinstall, no collisions.
+- **Install more brain packs later** → they drop into `${BRAINSFOR_HOME:-~/.brainsfor}/brains/`, auto-registered in `brains/index.json`, and the same 10 skills work for them too. No reinstall, no collisions.
 - **Override per call** — `/advise paul-graham should I start a company?` uses Paul Graham for that one call regardless of active brain.
-- **Cross-brain mode** — `/debate sun-tzu paul-graham originality` contrasts two thinkers.
+- **Cross-brain mode** — `/debate sun-tzu paul-graham originality` contrasts two thinkers; `/board <question>` convenes every installed brain at once (needs 2+).
 
 ## The Knowledge Graph
 
@@ -90,6 +91,7 @@ Install multiple brain packs and the unified skills auto-discover all of them vi
 
 - `/connect <slug-a> <slug-b> <topic>` — semantic bridges across two thinkers
 - `/debate <slug-a> <slug-b> <position>` — stress-test from two worldviews
+- `/board <question>` — a board of advisors: every installed brain answers **independently**, then a synthesis names where they agree and clash. Needs 2+ brains installed and a host that can run parallel sub-agents (Claude Code's Agent tool or Cowork). No MCP server required — each board member reads its brain's local pack files.
 - `/brain list` — see everything installed
 - `/brain <slug>` — switch active brain without reinstalling anything
 
