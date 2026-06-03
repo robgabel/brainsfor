@@ -1,6 +1,6 @@
 ---
 name: brain-setup
-description: "Load the Elon Musk brain. Pack ships 9 unified skills in pack/skills/ — 1 router (/brain) + 8 reasoning modes (/advise, /teach, /debate, /connect, /evolve, /surprise, /coach, /predict) — that work with this brain and any other installed BrainsFor brain."
+description: "Load the Elon Musk brain. Pack ships 10 unified skills in pack/skills/ — 1 router (/brain) + 8 reasoning modes (/advise, /teach, /debate, /connect, /evolve, /surprise, /coach, /predict) + /board (multi-brain advisory) — that work with this brain and any other installed BrainsFor brain."
 ---
 
 # Elon Musk Brain Pack — Setup & Configuration
@@ -12,6 +12,7 @@ Welcome to the **Musk Brain Pack** from [brainsforfree.com](https://brainsforfre
 - **836 knowledge atoms** — Core insights, frameworks, and strategic principles from Joe Rogan Experience episodes, Lex Fridman Podcast episodes, TED talks, SXSW interviews, Code Conference appearances, Wikipedia biography, and major media profiles
 - **719 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
+- **A `/board` of advisors** — Convene this brain alongside your other installed brains for one question (needs 2+ brains)
 - **Cross-referenced topics** — First principles thinking, sustainable energy, space exploration, neural interfaces, manufacturing innovation, AI safety, Mars colonization, electric vehicles, simulation theory, vertical integration, and more
 
 This brain is designed to augment YOUR thinking — not replace it. Use it for strategic decisions, creative problem-solving, research, and to challenge your assumptions.
@@ -30,7 +31,7 @@ pack/
   ├── brain-context.md         ← full knowledge base + usage guide
   ├── brain-atoms.json         ← structured atoms (836 insights)
   ├── README.md                ← quick reference
-  └── skills/                  ← 9 unified skills (work with any installed brain)
+  └── skills/                  ← 10 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
       ├── advise/              ← /advise — strategic counsel
       ├── teach/               ← /teach — explain through the thinker's lens
@@ -39,10 +40,11 @@ pack/
       ├── evolve/              ← /evolve — trace how thinking changed
       ├── surprise/            ← /surprise — serendipity engine
       ├── coach/               ← /coach — Socratic questioning
-      └── predict/             ← /predict — implication chains
+      ├── predict/             ← /predict — implication chains
+      └── board/               ← /board — board of advisors (needs 2+ brains)
 ```
 
-The `skills/` directory is **brain-agnostic**. Every brain pack ships the same 9 skill files — they resolve which brain to use via the `/brain` router (active brain in `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt`) or via an inline slug override.
+The `skills/` directory is **brain-agnostic**. Every brain pack ships the same 10 skill files — they resolve which brain to use via the `/brain` router (active brain in `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt`) or via an inline slug override.
 
 If any files are missing, reinstall from [brainsforfree.com](https://brainsforfree.com).
 
@@ -122,6 +124,11 @@ No answers — just the questions Elon would ask you. Best for: uncovering blind
 ### 🔮 **8. /predict** — Implication Chains
 Trace the second and third-order effects of a trend or decision. Best for: forecasting, strategic planning, seeing around corners.
 *Example: "What happens to traditional automakers when full self-driving is finally solved?"*
+
+### 🪑 **/board** — Board of Advisors (Multi-Brain)
+Ask one question and hear from several thinkers at once. Each installed brain answers **independently** (no brain sees another's answer), then a synthesis names where they agree and where they clash. Best for: high-stakes decisions where you want genuine disagreement, not one voice.
+*Requires 2+ brains installed, plus a host that can run parallel sub-agents (Claude Code's Agent tool or Cowork). No MCP server needed — each board member reads its brain's local pack. With only Elon Musk installed, `/board` will ask you to add another brain from [brainsforfree.com](https://brainsforfree.com).*
+*Usage: `/board <question>`, `/board set <slug-a> <slug-b> ...`, `/board list`, `/board clear`.*
 
 ---
 

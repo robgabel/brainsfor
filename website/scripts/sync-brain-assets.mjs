@@ -18,7 +18,12 @@ if (!fs.existsSync(indexPath)) {
 const index = JSON.parse(fs.readFileSync(indexPath, "utf-8"));
 
 const ASSETS = ["explore.html", "brain-atoms.json", "brain-atoms.js", "brain-context.md", "SKILL.md", "README.md", "INTEGRATION-GUIDE.md", "intro.md"];
+// Must stay in sync with the docs (SKILL.md / README / INTEGRATION-GUIDE say
+// "1 router + 8 reasoning modes + /board"). Previously this list shipped only
+// the 8 reasoning skills, so the /brain router and /board orchestrator were
+// documented-but-not-bundled. Both are now included.
 const SKILL_NAMES = [
+  "brain", // router: /brain <slug> set/show/list/clear active brain
   "advise",
   "teach",
   "debate",
@@ -27,6 +32,7 @@ const SKILL_NAMES = [
   "surprise",
   "coach",
   "predict",
+  "board", // multi-brain orchestrator (needs 2+ brains installed)
 ];
 
 let synced = 0;
