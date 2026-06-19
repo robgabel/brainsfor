@@ -20,17 +20,22 @@
       "voice_pct": 0.151
     },
     "3": {
-      "status": "failed",
+      "status": "complete",
       "error": "name 'dry_run' is not defined",
-      "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/brainsfor/brainsfor/scripts/auto-build-brain.py\", line 2168, in main\n    if not dry_run and not args.skip_grounding:\n           ^^^^^^^\nNameError: name 'dry_run' is not defined\n"
+      "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/brainsfor/brainsfor/scripts/auto-build-brain.py\", line 2168, in main\n    if not dry_run and not args.skip_grounding:\n           ^^^^^^^\nNameError: name 'dry_run' is not defined\n",
+      "completed_at": "2026-06-19T15:43:23.831961+00:00"
     },
     "4": {
-      "status": "pending"
+      "status": "complete",
+      "completed_at": "2026-06-19T15:46:59.601978+00:00",
+      "connections": 406
     },
     "5": {
-      "status": "pending"
+      "status": "complete",
+      "completed_at": "2026-06-19T15:48:23.029050+00:00",
+      "audit_score": 88
     }
   },
-  "total_cost_usd": 0.6863698,
+  "total_cost_usd": 0.09934799999999999,
   "low_voice_flag": 0.151
 }
