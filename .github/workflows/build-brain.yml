@@ -34,6 +34,10 @@ on:
         required: false
         default: false
         type: boolean
+      resume_from:
+        description: Force re-run from a specific phase number (cascades through phase 5). E.g. 2 to re-ingest new sources.
+        required: false
+        type: string
       confirm_cost:
         description: Must equal "yes-23" to authorize the ~$23 spend
         required: true
@@ -112,6 +116,7 @@ jobs:
           IN_MODEL: ${{ inputs.model }}
           IN_SYNTHESIS_MODEL: ${{ inputs.synthesis_model }}
           IN_RESUME: ${{ inputs.resume }}
+          IN_RESUME_FROM: ${{ inputs.resume_from }}
           OUT_SLUG: ${{ steps.slug.outputs.slug }}
         run: |
           set -eo pipefail
@@ -122,6 +127,7 @@ jobs:
           if [ -n "$IN_MODEL" ]; then ARGS+=(--model "$IN_MODEL"); fi
           if [ -n "$IN_SYNTHESIS_MODEL" ]; then ARGS+=(--synthesis-model "$IN_SYNTHESIS_MODEL"); fi
           if [ "$IN_RESUME" = "true" ]; then ARGS+=(--resume); fi
+          if [ -n "$IN_RESUME_FROM" ]; then ARGS+=(--resume-from "$IN_RESUME_FROM"); fi
           echo "Running: python3 scripts/auto-build-brain.py ${ARGS[*]}"
           python3 scripts/auto-build-brain.py "${ARGS[@]}" 2>&1 | tee "brains/${OUT_SLUG}-build.log"
 
