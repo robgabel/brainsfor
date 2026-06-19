@@ -1,0 +1,36 @@
+{
+  "person": "Jesse Pujji",
+  "slug": "jesse-pujji",
+  "started_at": "2026-06-19T14:05:54.889190+00:00",
+  "phases": {
+    "0": {
+      "status": "complete",
+      "completed_at": "2026-06-19T14:06:13.671455+00:00",
+      "sources_found": 15
+    },
+    "1": {
+      "status": "complete",
+      "completed_at": "2026-06-19T14:08:26.608703+00:00",
+      "clusters": 14
+    },
+    "2": {
+      "status": "complete",
+      "completed_at": "2026-06-19T14:18:04.613805+00:00",
+      "atoms": 424,
+      "voice_pct": 0.151
+    },
+    "3": {
+      "status": "failed",
+      "error": "name 'dry_run' is not defined",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/brainsfor/brainsfor/scripts/auto-build-brain.py\", line 2168, in main\n    if not dry_run and not args.skip_grounding:\n           ^^^^^^^\nNameError: name 'dry_run' is not defined\n"
+    },
+    "4": {
+      "status": "pending"
+    },
+    "5": {
+      "status": "pending"
+    }
+  },
+  "total_cost_usd": 0.6863698,
+  "low_voice_flag": 0.151
+}
