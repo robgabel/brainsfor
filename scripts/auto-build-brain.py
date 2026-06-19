@@ -2165,7 +2165,7 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                 # atoms from primary material for real-but-uncaptured principles, and flags
                 # if the corpus is too thin. Non-fatal; merges sourced atoms into the
                 # pipeline so they reach the pack + Supabase + enrichment.
-                if not dry_run and not args.skip_grounding:
+                if not args.dry_run and not args.skip_grounding:
                     step("Phase 3.5: grounding synthesis (discover + verify primary sources)...")
                     gr = subprocess.run(
                         ["python3", str(SCRIPT_DIR / "ground-synthesis.py"), "--brain", slug],
