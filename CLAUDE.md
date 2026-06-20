@@ -249,6 +249,13 @@ scripts/ingest-youtube.py --brain {slug} --dry-run                    # Preview 
 
 Requires `youtube-transcript-api` (`pip install youtube-transcript-api`). Configure videos in brain.json `youtube_sources.videos`. Output: `brains/{slug}/research/youtube-atoms.json`.
 
+**Lessons (2026-06-20, transcript-provenance audit):**
+- **Raw transcripts are not committed.** `.gitignore` excludes `brains/*/source/transcripts/` (and `source/youtube-transcripts/`) as regenerable scratch. The durable artifact is `research/video-atoms.json` (written by `build-brain.py:stage_youtube`). To answer "how many transcripts actually fetched?" you must re-run ingest — the repo only proves a brain *had* video atoms, not the success/fail count per video.
+- **"Videos used" = sources with a non-null `youtube_id` in `source/sources.json`** (NOT brain.json `youtube_sources.videos`, which the auto-build path doesn't read). As of this audit: 618 videos across 25 brains; full per-brain table is in the transcript-provenance investigation.
+- **Transcripts are NOT diarized.** `fetch_transcript` stores segments as `{text, start, duration}` — no speaker field — and most sources use YouTube's auto-captions (single undifferentiated stream). For multi-speaker sources (Talks at Google Q&A, Kara Swisher / Oprah interviews, the Greens' podcasts, Attia) an interviewer's or other guest's words can be mis-attributed to the subject. The Phase 2.3b / `ground-synthesis.py` verifiers are **speaker-blind** — they check a quote exists *in the corpus*, and the interviewer's words are in that same corpus, so they cannot catch this. Diarization is handled elsewhere in Rob's stack, not in this pipeline.
+- **Fetcher prefers human-authored captions, falls back to auto-generated** (`build-brain.py:fetch_transcript`), with rate-limit retries (30/90/270s) and 60–90s per-call timeouts. Extraction model is Haiku (`FAST_MODEL`).
+- **Doc drift to fix:** the CLI examples above (`--download` / `--extract`) are stale — the real `ingest-youtube.py` takes `--from-sources` / `--firecrawl` / `--decompose` (see the `melinda-french-gates-yt.log` arg error). The auto-build pipeline writes `video-atoms.json`, not the `youtube-atoms.json` named above. `bill-harris` is the outlier worth re-checking: 20 videos but only 38 video atoms (likely caption failures).
+
 ### Enrichment Scripts (generic — all accept `--brain {slug}`)
 
 ```
