@@ -1,0 +1,605 @@
+{
+  "brain_slug": "jesse-pujji",
+  "timestamp": "2026-06-20T21:12:44.006857+00:00",
+  "model": "claude-sonnet-4-6",
+  "corpus": {
+    "n_videos": 0,
+    "youtube_chars": 0,
+    "atom_quote_count": 85,
+    "total_chars": 19080
+  },
+  "scorecard": {
+    "by_section": {
+      "first_principles": {
+        "grounded": 6,
+        "weak": 4,
+        "ungrounded": 1,
+        "total": 11
+      },
+      "contrarian_positions": {
+        "grounded": 4,
+        "weak": 3,
+        "ungrounded": 1,
+        "total": 8
+      },
+      "does_not_believe": {
+        "grounded": 4,
+        "weak": 2,
+        "ungrounded": 0,
+        "total": 6
+      },
+      "would_not_say": {
+        "grounded": 5,
+        "weak": 0,
+        "ungrounded": 2,
+        "total": 7
+      }
+    },
+    "totals": {
+      "grounded": 19,
+      "weak": 9,
+      "ungrounded": 4,
+      "total": 32
+    },
+    "grounding_pct": 73.4,
+    "ungrounded_examples": [
+      {
+        "id": "first_principles[3]",
+        "title": "Growth loops compound; funnels decay",
+        "rationale": "The corpus contains no passages where Pujji discusses growth loops versus funnels, compounding acquisition loops, or defensibility through loop mechanics \u2014 this principle is not found in the source material."
+      },
+      {
+        "id": "contrarian_positions[4]",
+        "title": "Founder-led sales should last years, not months",
+        "rationale": "The corpus does not contain any explicit statement by Pujji that founder-led sales should last years or that hiring a VP of Sales early is a category error."
+      },
+      {
+        "id": "would_not_say[1]",
+        "title": "'Let's hire a VP of Sales so I can focus on product'",
+        "rationale": "The corpus does not contain any explicit statement about delegating sales before the founder has personally closed enough deals; this principle is not grounded in the source material."
+      },
+      {
+        "id": "would_not_say[4]",
+        "title": "'Agencies are lifestyle businesses'",
+        "rationale": "The corpus does not contain explicit statements by Pujji defending agencies or arguing against the lifestyle business dismissal, so this 'would not say' cannot be grounded."
+      }
+    ],
+    "weak_examples": [
+      {
+        "id": "first_principles[4]",
+        "title": "The founder must sell first, and sell for a long time",
+        "rationale": "Only one passage partially supports founder involvement in the narrative/sales layer; there is no explicit corpus statement that founder-led sales is mandatory for a long period or that hiring salespeople early is a mistake."
+      },
+      {
+        "id": "first_principles[6]",
+        "title": "Mentorship is compressed time",
+        "rationale": "The corpus references mentors being valuable and coaching being life-changing, but only one passage explicitly credits mentor input as time-compressing; the broader framing of 'mentorship as compressed time' is not explicitly stated."
+      },
+      {
+        "id": "first_principles[9]",
+        "title": "Acquisition is bootstrapping with a head start",
+        "rationale": "The corpus mentions Gateway X buying existing companies but does not explicitly articulate the principle that acquisition skips the riskiest stage or that the buyer needs a specific identifiable unlock."
+      },
+      {
+        "id": "first_principles[10]",
+        "title": "Productize or die a lifestyle business",
+        "rationale": "While Ampush's scale and value are referenced, the corpus does not contain explicit statements about productizing delivery, building proprietary tooling, or systematizing artisanal operations as the key to agency value."
+      },
+      {
+        "id": "contrarian_positions[1]",
+        "title": "Agencies can be great businesses",
+        "rationale": "Ampush's scale demonstrates agencies can be great businesses, but the corpus lacks explicit statements where Pujji argues against the 'agencies are lifestyle businesses' dismissal."
+      }
+    ]
+  },
+  "results": [
+    {
+      "principle_id": "first_principles[0]",
+      "section": "first_principles",
+      "title": "Cash flow is the only honest scoreboard",
+      "claim": "Cash flow is the only honest scoreboard. A business that generates more cash than it spends never needs anyone's permission to operate. Everything downstream \u2014 independence, decision quality, psychological freedom, the ability to ignore market cycles \u2014 flows from this one condition.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "If you make money, you can do it for a long time, and you give yourself the opportunity to learn and figure things out. If you take money from someone, you either burn through it then you're done, or you can get yourself into weird situations.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "When I was at Goldman, I had been to the Berkshire Hathaway conference, [where] they talk about generating cash flow and investing cash flow. That was exciting. Once you have cash flow, there's a lot you can do with it. That just became the dream.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two distinct passages directly link cash flow generation to independence, opportunity, and freedom \u2014 grounding the core of this principle."
+    },
+    {
+      "principle_id": "first_principles[1]",
+      "section": "first_principles",
+      "title": "Constraint is the curriculum",
+      "claim": "Constraint is the curriculum. Bootstrapping is not a consolation prize \u2014 it is the discipline that forces clarity on unit economics, customer value, and what actually matters. Capital masks bad decisions; constraint exposes and corrects them in real time.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Let's bootstrap this thing. We don't want to raise an angel round and then have a gun on our head and burn money. We want to get something that can make money from early on.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "even if we had more money, we don't have more time. We don't have more bandwidth. It took me four years to hire one good executive in the early days.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Pujji explicitly frames bootstrapping as forcing financial discipline and reveals that more capital would not have solved real bottlenecks, supporting the principle that constraint is instructive."
+    },
+    {
+      "principle_id": "first_principles[2]",
+      "section": "first_principles",
+      "title": "Venture capital is often the riskier path",
+      "claim": "Venture capital is often the riskier path. Raising VC is a one-way door that locks you into a unicorn-or-bust trajectory, eliminating the possibility of a profitable, founder-controlled outcome. Pujji revisited the VC question at Ampush every year and consistently concluded that more money would not solve their actual bottlenecks.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "If you take money from someone, you either burn through it then you're done, or you can get yourself into weird situations.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I think we'd be lying if I didn't say once a year, or maybe every six months, we'd get together and go, are there things we could be doing differently if we had money? Are there things we would change in the business?... even if we had more money, we don't have more time. We don't have more bandwidth.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two passages show Pujji treating VC as introducing risk, and his periodic revisiting of the VC question at Ampush consistently concluding that capital was not the bottleneck."
+    },
+    {
+      "principle_id": "first_principles[3]",
+      "section": "first_principles",
+      "title": "Growth loops compound; funnels decay",
+      "claim": "Growth loops compound; funnels decay. Linear acquisition is a commodity strategy every competitor can replicate, and channel inflation eventually kills the math. Defensibility comes from loops where acquiring a customer makes the next acquisition cheaper or more likely.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus contains no passages where Pujji discusses growth loops versus funnels, compounding acquisition loops, or defensibility through loop mechanics \u2014 this principle is not found in the source material."
+    },
+    {
+      "principle_id": "first_principles[4]",
+      "section": "first_principles",
+      "title": "The founder must sell first, and sell for a long time",
+      "claim": "The founder must sell first, and sell for a long time. Founder-led sales is a mandatory education in what customers actually value, what objections exist, and what the business truly is. Hiring salespeople early to skip this conditioning is one of the most expensive mistakes a founder can make.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "as the founder, you want to be very involved in the what are we saying? Who are we saying that to? Did a lot of people engage in that? Oh, no, not really? Okay. Well, let's try this. Let's try saying this instead.' And really iterating that narrative and that story to make the economics work on a specific channel.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Only one passage partially supports founder involvement in the narrative/sales layer; there is no explicit corpus statement that founder-led sales is mandatory for a long period or that hiring salespeople early is a mistake."
+    },
+    {
+      "principle_id": "first_principles[5]",
+      "section": "first_principles",
+      "title": "Performance marketing is a science before it is an art",
+      "claim": "Performance marketing is a science before it is an art. The edge is treating paid social as a rigorous testing discipline \u2014 granular attribution, structured experimentation, narrative iteration. But the founder owns the narrative layer because that judgment cannot be delegated.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I was spending in bursts trying to figure out which creative would work. And everyone was like, dude, that's not how you do it anymore\u2026 you've been the CEO of a 200-person company for eight years. Like, you don't know what the hell you're doing. And that was like good and humbling.",
+          "relation": "partial"
+        },
+        {
+          "quote": "as the founder, you want to be very involved in the what are we saying? Who are we saying that to? Did a lot of people engage in that? Oh, no, not really? Okay. Well, let's try this. Let's try saying this instead.' And really iterating that narrative and that story to make the economics work on a specific channel.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two passages support both the scientific/iterative testing discipline and the founder's ownership of the narrative layer in performance marketing."
+    },
+    {
+      "principle_id": "first_principles[6]",
+      "section": "first_principles",
+      "title": "Mentorship is compressed time",
+      "claim": "Mentorship is compressed time. One hour with someone an order of magnitude ahead of you can replace years of trial and error. The cultural script of the heroic self-made founder costs people years of avoidable pain.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "We went around and talked to a lot of mentors and friends and they said, oh, you're good with numbers and data. Go look at performance marketing that you'll figure something out there.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus references mentors being valuable and coaching being life-changing, but only one passage explicitly credits mentor input as time-compressing; the broader framing of 'mentorship as compressed time' is not explicitly stated."
+    },
+    {
+      "principle_id": "first_principles[7]",
+      "section": "first_principles",
+      "title": "Entrepreneurship is personal development with financial upside",
+      "claim": "Entrepreneurship is personal development with financial upside. The business is the vehicle; the founder is the product. The inner work \u2014 Conscious Leadership, emotional processing, loving candor \u2014 is not a soft layer on top of operating but the actual operating system.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "He helped me: 1. Understand how much I used fear and external success to motivate myself and why that was not sustainable. 2. Build self-awareness in the moment to know what was driving me and why. 3. Most importantly, to identify and be purposeful about my WHY.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The entrepreneurial process tends to wear people down over time. I want it to wear me up.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Entrepreneurship to Propel Personal Growth... I think just being the best version of yourself... the ability to do that all the time, and then that obviously benefits yourself, but it benefits everyone around you and uplifts others around you.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages show Pujji treating personal development \u2014 coaching, emotional work, identifying WHY \u2014 as central to entrepreneurship, not peripheral."
+    },
+    {
+      "principle_id": "first_principles[8]",
+      "section": "first_principles",
+      "title": "The narrative undervaluation of small profitable businesses is the opportunity",
+      "claim": "The narrative undervaluation of small profitable businesses is the opportunity. A $30M cash-flow-positive business is life-changing for its founder and structurally undervalued by a startup ecosystem that only celebrates unicorns. This mispricing creates real arbitrage in acquisition entrepreneurship, talent recruiting, and attention.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I want to normalize people just going like, no, like those markets, you know, I think you could build a $30 million top-line business here. And I don't think you could build a bigger business than that. And that's great. That's okay. Like anyone, any human who builds a $30 million top line business will, their life will change and they'll get to live the entrepreneurial dream.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "The 'format' of every business is what I call a bootstrapped giant. What that means is: we expect them to get profitable in the first year and grow profitably at a high linear growth rate.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two passages directly support the idea that smaller profitable businesses are undervalued and worth celebrating, and that Gateway X targets profitable bootstrapped companies."
+    },
+    {
+      "principle_id": "first_principles[9]",
+      "section": "first_principles",
+      "title": "Acquisition is bootstrapping with a head start",
+      "claim": "Acquisition is bootstrapping with a head start. Buying a cash-flowing business skips the riskiest stage and lets the operator apply earned skills on a base that already has customers and revenue. The buyer's edge must be a specific, identifiable unlock \u2014 usually a growth channel or operational system the seller did not possess.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Gateway X currently launches new brands and purchases other existing tech companies looking to scale.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus mentions Gateway X buying existing companies but does not explicitly articulate the principle that acquisition skips the riskiest stage or that the buyer needs a specific identifiable unlock."
+    },
+    {
+      "principle_id": "first_principles[10]",
+      "section": "first_principles",
+      "title": "Productize or die a lifestyle business",
+      "claim": "Productize or die a lifestyle business. The dismissal of agencies as low-margin lifestyle work is correct for undifferentiated shops. It collapses the moment you productize delivery, build proprietary tooling, and systematize what most operators leave artisanal \u2014 which is how Ampush became an asset with real enterprise value.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Founder of Ampush, a marketing agency that managed $1B+ in media spend for brands like Dollar Shave Club, Birchbox, Uber, Hulu, and many more.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "While Ampush's scale and value are referenced, the corpus does not contain explicit statements about productizing delivery, building proprietary tooling, or systematizing artisanal operations as the key to agency value."
+    },
+    {
+      "principle_id": "contrarian_positions[0]",
+      "section": "contrarian_positions",
+      "title": "Bootstrapping is the safer path, not the riskier one",
+      "claim": "Bootstrapping is the safer path, not the riskier one. Conventional wisdom treats VC as de-risking; Pujji treats it as introducing existential risk by forcing a unicorn-scale outcome onto a business that may not fit one.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "If you take money from someone, you either burn through it then you're done, or you can get yourself into weird situations.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Let's bootstrap this thing. We don't want to raise an angel round and then have a gun on our head and burn money. We want to get something that can make money from early on.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two passages directly frame VC as introducing existential risk while bootstrapping is positioned as the safer, more sustainable path."
+    },
+    {
+      "principle_id": "contrarian_positions[1]",
+      "section": "contrarian_positions",
+      "title": "Agencies can be great businesses",
+      "claim": "Agencies can be great businesses. The blanket startup-world dismissal of agencies as lifestyle businesses is wrong \u2014 it confuses undifferentiated agencies with the category. A productized, tooled, specialist agency can reach institutional scale and exit to PE.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Founder of Ampush, a marketing agency that managed $1B+ in media spend for brands like Dollar Shave Club, Birchbox, Uber, Hulu, and many more.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Ampush's scale demonstrates agencies can be great businesses, but the corpus lacks explicit statements where Pujji argues against the 'agencies are lifestyle businesses' dismissal."
+    },
+    {
+      "principle_id": "contrarian_positions[2]",
+      "section": "contrarian_positions",
+      "title": "A $30M business is a legitimate, celebrated outcome",
+      "claim": "A $30M business is a legitimate, celebrated outcome. Not a failure mode, not a 'lifestyle business' as a slur \u2014 a life-changing entrepreneurial achievement that the media ecosystem has trained founders to be embarrassed by.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I want to normalize people just going like, no, like those markets, you know, I think you could build a $30 million top-line business here. And I don't think you could build a bigger business than that. And that's great. That's okay. Like anyone, any human who builds a $30 million top line business will, their life will change and they'll get to live the entrepreneurial dream.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I hope Gateway X is regarded as the 'McKinsey of Entrepreneurship' - where young people go to learn to be entrepreneurs and actually start new companies. I hope we re-imagine work and success as not only achieving great things and making money, but also uplifting people and helping them learn and grow along the way.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Pujji explicitly calls for normalizing $30M outcomes as legitimate entrepreneurial achievements, directly supporting this contrarian position."
+    },
+    {
+      "principle_id": "contrarian_positions[3]",
+      "section": "contrarian_positions",
+      "title": "Acquisition entrepreneurship deserves equal standing with building from zero",
+      "claim": "Acquisition entrepreneurship deserves equal standing with building from zero. Most founders default to building because of cultural script, not because it is optimal. For many operators with specific edges like performance marketing, buying is the higher-expected-value path.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "Gateway X currently launches new brands and purchases other existing tech companies looking to scale.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Gateway X buying companies is mentioned but the corpus does not contain explicit argumentation that acquisition deserves equal standing with building from zero or is a higher-expected-value path."
+    },
+    {
+      "principle_id": "contrarian_positions[4]",
+      "section": "contrarian_positions",
+      "title": "Founder-led sales should last years, not months",
+      "claim": "Founder-led sales should last years, not months. The standard advice to hire a VP of Sales early is a category error \u2014 it builds a sales motion on assumptions the founder never personally tested.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus does not contain any explicit statement by Pujji that founder-led sales should last years or that hiring a VP of Sales early is a category error."
+    },
+    {
+      "principle_id": "contrarian_positions[5]",
+      "section": "contrarian_positions",
+      "title": "Most 2015-2021 DTC brands were not brands",
+      "claim": "Most 2015-2021 DTC brands were not brands. They were Facebook arbitrage businesses dressed up as brands. When the ad inventory got expensive, the 'brand equity' evaporated because it was never there.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Buddy Media, Spruce Media \u2013 you may remember some of these names who had raised money. Some of them even had debt. There was a time on Facebook where you were actually arbitraging the CPMs of Facebook. Facebook would charge a dollar, and you could charge two dollars, and you could go to the big agencies and say, 'I'll place m[ore]'",
+          "relation": "partial"
+        },
+        {
+          "quote": "I've always done B2B. And my only B2C orientation has been doing growth marketing for brands who already knew who their customers were\u2026 'Well, who's our customer, Jesse? Do we have a perspective on that?' And I was like, 'Oh, like everyone poops, like, I don't know, tests, like try stuff.'",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Two passages reference DTC brands being driven by Facebook arbitrage rather than true brand building, supporting this contrarian view, though neither states it as crisply as the principle claims."
+    },
+    {
+      "principle_id": "contrarian_positions[6]",
+      "section": "contrarian_positions",
+      "title": "Channel specialists beat marketing generalists, almost always",
+      "claim": "Channel specialists beat marketing generalists, almost always. The common 'one person runs Google, Facebook, and email' early-stage setup is structurally broken \u2014 no single person has the hours or the channel-specific pattern recognition to make it work.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "My rule of thumb is 90 to 120 days on a channel requires over 50% of one founder's time\u2026 doing them concurrently is usually a recipe for disaster because it's literally time in the day that you have to go and build those things.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "A lot of founders who come and talk they go, 'Okay, I've got my marketing strategy, Jesse, I've got Google Ad Words and I've got Facebook and we're gonna do email marketing. And I got one person they're going to do all that stuff.' And I'm like, 'I don't think that's going to work.' One person only has a certain number of hours in the day.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two passages explicitly argue against channel generalism and the one-person-does-all setup, directly grounding this contrarian position."
+    },
+    {
+      "principle_id": "contrarian_positions[7]",
+      "section": "contrarian_positions",
+      "title": "Pride is more expensive than ignorance",
+      "claim": "Pride is more expensive than ignorance. The self-made-founder narrative is one of the most costly cultural artifacts in the startup world; it stops founders from buying compressed time via mentors and advisors.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "I think most people just kind of like roll their eyes at it, at being unrealistic. Um, I think it's one of the most life changing things that I've done for myself.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Only one tangential passage relates to rejecting the self-made narrative; the corpus does not explicitly frame pride as costing years of avoidable pain from avoiding mentors."
+    },
+    {
+      "principle_id": "does_not_believe[0]",
+      "section": "does_not_believe",
+      "title": "That raising VC signals seriousness or ambition",
+      "claim": "That raising VC signals seriousness or ambition. Pujji sees VC as a tool with a very specific use case \u2014 not a badge of legitimacy. Founders who raise because it feels like the mature move are often making the costlier choice.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "If you take money from someone, you either burn through it then you're done, or you can get yourself into weird situations.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Let's bootstrap this thing. We don't want to raise an angel round and then have a gun on our head and burn money.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages show Pujji does not treat VC as a badge of legitimacy but as a tool with risks, grounding this belief."
+    },
+    {
+      "principle_id": "does_not_believe[1]",
+      "section": "does_not_believe",
+      "title": "That growth at all costs is a strategy",
+      "claim": "That growth at all costs is a strategy. Revenue and headcount that outpace unit economics understanding are liabilities dressed as assets. The discipline of bootstrapping forces you to know your numbers before you scale them.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The 'format' of every business is what I call a bootstrapped giant. What that means is: we expect them to get profitable in the first year and grow profitably at a high linear growth rate.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If you make money, you can do it for a long time, and you give yourself the opportunity to learn and figure things out.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Pujji's explicit focus on profitability from year one and sustainable growth directly contradicts a 'growth at all costs' mentality."
+    },
+    {
+      "principle_id": "does_not_believe[2]",
+      "section": "does_not_believe",
+      "title": "That the inner game is separate from the operating game",
+      "claim": "That the inner game is separate from the operating game. Emotional regulation, identity work, and relationship quality are not soft skills \u2014 they are the substrate on which all hard operating decisions rest.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "He helped me: 1. Understand how much I used fear and external success to motivate myself and why that was not sustainable. 2. Build self-awareness in the moment to know what was driving me and why. 3. Most importantly, to identify and be purposeful about my WHY.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "I used to bring a ton of, I'll call it 'me energy,' but it's just like the same thing as fear energy, right? I'm afraid it's not gonna be successful... And if you work for someone and they walk in with that energy, man, it's scary also, right?",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two passages show Pujji treating emotional and inner work as directly affecting operating outcomes, not as separate from the business."
+    },
+    {
+      "principle_id": "does_not_believe[3]",
+      "section": "does_not_believe",
+      "title": "That hiring ahead of need signals strength",
+      "claim": "That hiring ahead of need signals strength. Hiring before the pain is undeniable produces roles that are poorly defined, poorly evaluated, and almost always wrong. Threshold-based hiring is slower and almost always better.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "even if we had more money, we don't have more time. We don't have more bandwidth. It took me four years to hire one good executive in the early days.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "One passage implies patience in hiring but there is no explicit principle stated about not hiring ahead of need or threshold-based hiring."
+    },
+    {
+      "principle_id": "does_not_believe[4]",
+      "section": "does_not_believe",
+      "title": "That a founder can skip founder-led sales",
+      "claim": "That a founder can skip founder-led sales. There is no shortcut through this stage. The market feedback received during founder-led sales is irreplaceable and cannot be secondhand-reported by an early sales hire.",
+      "status": "weak",
+      "evidence": [
+        {
+          "quote": "as the founder, you want to be very involved in the what are we saying? Who are we saying that to? Did a lot of people engage in that? Oh, no, not really? Okay. Well, let's try this.",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "Only one passage partially supports founder involvement in the narrative/sales layer; no explicit statement that a founder cannot skip founder-led sales appears in the corpus."
+    },
+    {
+      "principle_id": "does_not_believe[5]",
+      "section": "does_not_believe",
+      "title": "That DTC brand equity is real if it was built on paid social",
+      "claim": "That DTC brand equity is real if it was built on paid social. If the economics only worked because of cheap Facebook CPMs, what was called a brand was actually an arbitrage window. Real brand is a multiplier on performance, not a substitute for it.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "Buddy Media, Spruce Media \u2013 you may remember some of these names who had raised money... There was a time on Facebook where you were actually arbitraging the CPMs of Facebook.",
+          "relation": "partial"
+        },
+        {
+          "quote": "I'm not betting on TikToK because of some technical thing happening this moment. I'm looking at the broader trends and going, 'Whoa, this is going to be a huge platform.'",
+          "relation": "partial"
+        }
+      ],
+      "rationale": "The corpus references companies that built on Facebook CPM arbitrage as a fragile model, and Pujji's broader platform analysis implies that performance-only 'brands' lack real equity."
+    },
+    {
+      "principle_id": "would_not_say[0]",
+      "section": "would_not_say",
+      "title": "'We just need more capital to solve this'",
+      "claim": "'We just need more capital to solve this'. Pujji's annual zero-based review almost always revealed that the bottleneck was human or strategic, not financial. Reaching for capital before diagnosing the real constraint is a tell he'd flag immediately.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "even if we had more money, we don't have more time. We don't have more bandwidth. It took me four years to hire one good executive in the early days.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "If you take money from someone, you either burn through it then you're done, or you can get yourself into weird situations.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two passages show Pujji consistently diagnosing human and strategic bottlenecks, not financial ones, and framing capital as a risk rather than a solution."
+    },
+    {
+      "principle_id": "would_not_say[1]",
+      "section": "would_not_say",
+      "title": "'Let's hire a VP of Sales so I can focus on product'",
+      "claim": "'Let's hire a VP of Sales so I can focus on product'. Delegating sales before the founder has personally closed enough deals to understand the motion is one of the cardinal errors in his framework.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus does not contain any explicit statement about delegating sales before the founder has personally closed enough deals; this principle is not grounded in the source material."
+    },
+    {
+      "principle_id": "would_not_say[2]",
+      "section": "would_not_say",
+      "title": "'We're too small to worry about cash flow yet'",
+      "claim": "'We're too small to worry about cash flow yet'. Cash flow is the scoreboard from day one. There is no size threshold below which unit economics stop mattering.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "The 'format' of every business is what I call a bootstrapped giant. What that means is: we expect them to get profitable in the first year and grow profitably at a high linear growth rate.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "Let's bootstrap this thing. We don't want to raise an angel round and then have a gun on our head and burn money. We want to get something that can make money from early on.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Pujji's emphasis on profitability from the very start, including year one, makes it clear he would not defer cash flow thinking to a later stage."
+    },
+    {
+      "principle_id": "would_not_say[3]",
+      "section": "would_not_say",
+      "title": "'I built this myself'",
+      "claim": "'I built this myself'. Pujji is unusually explicit about the mentors, frameworks, and luck that shaped his outcomes. The self-made narrative is both factually wrong and strategically counterproductive.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "We went around and talked to a lot of mentors and friends and they said, oh, you're good with numbers and data. Go look at performance marketing that you'll figure something out there.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "He helped me: 1. Understand how much I used fear and external success to motivate myself... 2. Build self-awareness... 3. Most importantly, to identify and be purposeful about my WHY.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Multiple passages attribute key outcomes to mentors and coaches, making the self-made narrative inconsistent with his actual stated experience."
+    },
+    {
+      "principle_id": "would_not_say[4]",
+      "section": "would_not_say",
+      "title": "'Agencies are lifestyle businesses'",
+      "claim": "'Agencies are lifestyle businesses'. This dismissal reveals an undifferentiated mental model. The variable is productization and systematization, not the service label.",
+      "status": "ungrounded",
+      "evidence": [],
+      "rationale": "The corpus does not contain explicit statements by Pujji defending agencies or arguing against the lifestyle business dismissal, so this 'would not say' cannot be grounded."
+    },
+    {
+      "principle_id": "would_not_say[5]",
+      "section": "would_not_say",
+      "title": "'Let's push through and figure out the feelings later'",
+      "claim": "'Let's push through and figure out the feelings later'. Metabolizing emotions is a precondition for strategic clarity in his framework. Deferring the feelings defers the quality of the decision.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "I used to bring a ton of, I'll call it 'me energy,' but it's just like the same thing as fear energy, right? I'm afraid it's not gonna be successful... And if you work for someone and they walk in with that energy, man, it's scary also, right?",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "He helped me: 1. Understand how much I used fear and external success to motivate myself and why that was not sustainable. 2. Build self-awareness in the moment to know what was driving me and why.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two passages show Pujji actively processing emotions and treating inner work as prerequisite to effective leadership, supporting that he would not defer emotional processing."
+    },
+    {
+      "principle_id": "would_not_say[6]",
+      "section": "would_not_say",
+      "title": "'We need to be everywhere \u2014 Google, Facebook, email, TikTok'",
+      "claim": "'We need to be everywhere \u2014 Google, Facebook, email, TikTok'. Channel sprawl managed by generalists is structurally broken. The answer is depth in the right channel with a specialist, not breadth with a coordinator.",
+      "status": "grounded",
+      "evidence": [
+        {
+          "quote": "A lot of founders who come and talk they go, 'Okay, I've got my marketing strategy, Jesse, I've got Google Ad Words and I've got Facebook and we're gonna do email marketing. And I got one person they're going to do all that stuff.' And I'm like, 'I don't think that's going to work.' One person only has a certain number of hours in the day.",
+          "relation": "verbatim"
+        },
+        {
+          "quote": "My rule of thumb is 90 to 120 days on a channel requires over 50% of one founder's time\u2026 doing them concurrently is usually a recipe for disaster because it's literally time in the day that you have to go and build those things.",
+          "relation": "verbatim"
+        }
+      ],
+      "rationale": "Two explicit passages show Pujji directly arguing against channel sprawl, making this a well-grounded 'would not say'."
+    }
+  ]
+}
