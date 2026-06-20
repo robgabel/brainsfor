@@ -1,6 +1,6 @@
 # Jesse Pujji Brain Pack
 
-> **409 knowledge atoms** · **392 typed connections** · **10 unified skills (1 router + 8 reasoning modes + a board of advisors)**
+> **653 knowledge atoms** · **604 typed connections** · **10 unified skills (1 router + 8 reasoning modes + a board of advisors)**
 > From [brainsforfree.com](https://brainsforfree.com)
 
 ## What This Is
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Jesse's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (409 atoms, 392 connections)
+  ├── brain-atoms.json      ← Structured data (653 atoms, 604 connections)
   ├── README.md             ← You are here
   └── skills/               ← 10 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -57,9 +57,9 @@ This means:
 
 ## The Knowledge Graph
 
-**409 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**653 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**392 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**604 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
 **16 topic clusters** — Bootstrapping, performance marketing, DTC brands, capital efficiency, founder psychology, growth loops, Gateway X, mentorship, cash flow, entrepreneurial mindset.
 

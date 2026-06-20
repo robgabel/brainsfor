@@ -9,8 +9,8 @@ Welcome to the **Pujji Brain Pack** from [brainsforfree.com](https://brainsforfr
 
 ## What You're Getting
 
-- **409 knowledge atoms** — Core insights, frameworks, and strategic principles from Bootstrapped Giants newsletter essays, LinkedIn profile and posts, Twitter highlights, Tidemark profile, Mission.org interview, Founder's Field Guide podcast, Founders Journal podcast, Don't Be a Jerk podcast, and 10+ public interviews and profiles
-- **392 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **653 knowledge atoms** — Core insights, frameworks, and strategic principles from Bootstrapped Giants newsletter essays, LinkedIn profile and posts, Twitter highlights, Tidemark profile, Mission.org interview, Founder's Field Guide podcast, Founders Journal podcast, Don't Be a Jerk podcast, and 10+ public interviews and profiles
+- **604 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **A `/board` of advisors** — Convene this brain alongside your other installed brains for one question (needs 2+ brains)
 - **Cross-referenced topics** — Bootstrapping, performance marketing, DTC brands, capital efficiency, founder psychology, growth loops, Gateway X, mentorship, cash flow, entrepreneurial mindset, and more
@@ -29,7 +29,7 @@ Your Pujji Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (409 insights)
+  ├── brain-atoms.json         ← structured atoms (653 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 10 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -63,7 +63,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 409 atoms with titles, summaries, connections
+   - JSON structure of 653 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
