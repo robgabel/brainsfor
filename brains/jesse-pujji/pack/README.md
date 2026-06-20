@@ -1,0 +1,115 @@
+# Jesse Pujji Brain Pack
+
+> **653 knowledge atoms** · **604 typed connections** · **10 unified skills (1 router + 8 reasoning modes + a board of advisors)**
+> From [brainsforfree.com](https://brainsforfree.com)
+
+## What This Is
+
+A structured knowledge graph of Jesse Pujji's thinking, extracted from Bootstrapped Giants newsletter essays, LinkedIn profile and posts, Twitter highlights, Tidemark profile, Mission.org interview, Founder's Field Guide podcast, Founders Journal podcast, Don't Be a Jerk podcast, and 10+ public interviews and profiles. Designed to be loaded as context into any LLM — Claude, ChatGPT, Cursor, or any AI tool that accepts system prompts.
+
+This isn't a chatbot or a persona. It's a **thinking partner** grounded in Jesse's actual ideas, frameworks, and worldview.
+
+## Quick Start
+
+1. Install the brain pack into `${BRAINSFOR_HOME:-~/.brainsfor}/brains/jesse-pujji/`
+2. In your AI tool, activate the brain:
+   ```
+   /brain jesse-pujji
+   ```
+3. Then run any thinking skill:
+   ```
+   /advise "Should I raise venture capital or try to bootstrap my next business?"
+   ```
+
+You should get a response that cites specific atoms, synthesizes Jesse's perspective, and recommends what to do next.
+
+## What's Inside
+
+```
+pack/
+  ├── SKILL.md              ← Setup guide + skill reference (start here)
+  ├── brain-context.md      ← Full knowledge base (load this as context)
+  ├── brain-atoms.json      ← Structured data (653 atoms, 604 connections)
+  ├── README.md             ← You are here
+  └── skills/               ← 10 unified skills (work with any installed brain)
+      ├── brain/            ← /brain router (set/show/list/clear active brain)
+      ├── advise/           ← /advise — strategic counsel
+      ├── teach/            ← /teach — explain through the thinker's lens
+      ├── debate/           ← /debate — steel-man both sides
+      ├── connect/          ← /connect — find unexpected bridges
+      ├── evolve/           ← /evolve — trace how thinking changed
+      ├── surprise/         ← /surprise — serendipity engine
+      ├── coach/            ← /coach — Socratic questioning
+      ├── predict/          ← /predict — implication chains
+      └── board/            ← /board — board of advisors (needs 2+ brains)
+```
+
+## Unified Skill Architecture
+
+Every brain pack ships the **same 10 skill files**. They're brain-agnostic — the 8 thinking skills resolve which brain to use by (1) reading `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt`, or (2) taking an inline slug as the first argument.
+
+This means:
+
+- **Install this brain pack first** → `/brain jesse-pujji` activates it, then `/advise` / `/teach` / `/surprise` all work.
+- **Install more brain packs later** → they drop into `${BRAINSFOR_HOME:-~/.brainsfor}/brains/`, auto-registered in `brains/index.json`, and the same 10 skills work for them too. No reinstall, no collisions.
+- **Override per call** — `/advise paul-graham should I start a company?` uses Paul Graham for that one call regardless of active brain.
+- **Cross-brain mode** — `/debate jesse-pujji paul-graham originality` contrasts two thinkers; `/board <question>` convenes every installed brain at once (needs 2+).
+
+## The Knowledge Graph
+
+**653 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+
+**604 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+
+**16 topic clusters** — Bootstrapping, performance marketing, DTC brands, capital efficiency, founder psychology, growth loops, Gateway X, mentorship, cash flow, entrepreneurial mindset.
+
+**Date range:** 2018 — 2025
+
+## How to Use
+
+**For Claude Code / Cowork:** The skills in `pack/skills/` load automatically once the pack is installed to `${BRAINSFOR_HOME:-~/.brainsfor}/brains/jesse-pujji/`. Run `/brain jesse-pujji` to activate.
+
+**For Cursor:** Add `brain-context.md` to your `.cursor/rules` or project instructions, then use the skill prompts as templates.
+
+**For ChatGPT / Claude.ai:** Paste `brain-context.md` as your first message or system prompt, then describe which skill behavior you want (e.g. "respond as /advise would").
+
+**For any other tool:** Load `brain-context.md` as context at the start of your session.
+
+## Skill Workflows
+
+Chain skills for deeper results (all can be prefixed with a brain slug or rely on the active brain):
+
+- **Decide:** `/advise` → `/debate` → `/coach`
+- **Learn:** `/teach` → `/evolve` → `/coach`
+- **Create:** `/surprise` → `/connect` → `/predict`
+- **Forecast:** `/predict` → `/debate` → `/advise`
+- **Daily ritual:** `/surprise` each morning
+
+## Cross-Brain Features
+
+Install multiple brain packs and the unified skills auto-discover all of them via `${BRAINSFOR_HOME:-~/.brainsfor}/brains/index.json`:
+
+- `/connect <slug-a> <slug-b> <topic>` — semantic bridges across two thinkers
+- `/debate <slug-a> <slug-b> <position>` — stress-test from two worldviews
+- `/board <question>` — a board of advisors: every installed brain answers **independently**, then a synthesis names where they agree and clash. Needs 2+ brains installed and a host that can run parallel sub-agents (Claude Code's Agent tool or Cowork). No MCP server required — each board member reads its brain's local pack files.
+- `/brain list` — see everything installed
+- `/brain <slug>` — switch active brain without reinstalling anything
+
+## About Jesse Pujji
+
+Jesse Pujji is a serial entrepreneur, bootstrapper, and performance marketing pioneer best known for founding Ampush — a Facebook advertising powerhouse he grew to $10M revenue without raising outside capital — and Gateway X, a studio that builds and acquires bootstrapped businesses. A vocal advocate for capital-efficient entrepreneurship, he mentors founders on growth loops, DTC brand building, and the mental rewiring required to build multiple companies. His Bootstrapped Giants platform and LinkedIn essays have made him one of the most influential voices in the bootstrapped founder community.
+
+## Sources & Ethics
+
+This brain pack was built exclusively from **freely available, public sources** — interviews, podcasts, public talks, blog posts, free newsletters, YouTube videos, and publicly shared excerpts. No transcripts from commercial works (e.g., audiobooks, paid courses) or paywalled essays were used to derive this brain.
+
+Where a thinker's book ideas appear in the knowledge graph, they are represented as they exist in the public discourse: book reviews, author interviews, press coverage, conference talks, and LLM-generated summaries of widely discussed concepts. Authors typically share their core ideas through extensive public appearances and media — those public representations are what this brain captures.
+
+## Support
+
+- Full setup guide: `SKILL.md`
+- Website: [brainsforfree.com](https://brainsforfree.com)
+
+---
+
+**Load a genius into your AI.**
