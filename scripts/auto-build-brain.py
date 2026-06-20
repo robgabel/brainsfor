@@ -74,6 +74,10 @@ from auto_build_config import (
 # Import existing scripts via importlib (hyphenated filenames)
 build_brain = importlib.import_module("build-brain")
 
+# Speaker diarization: attribute original_quote ONLY to the brain subject, never
+# the interviewer/host. Shared by the text-source + transcript extraction paths.
+from diarize import to_subject_text
+
 # Optional imports
 try:
     import anthropic
@@ -765,6 +769,35 @@ def extract_atoms_from_text(
     src_type = source.get("type", "article")
     src_title = source.get("title", "")
     src_url = source.get("url", "")
+
+    # Diarization: for interview/podcast sources, keep ONLY the subject's spoken
+    # turns so original_quote can never be attributed to the interviewer. Named
+    # labels are parsed for free; unlabeled interview transcripts are split by a
+    # fast model; audio URLs use STT if ASSEMBLYAI_API_KEY is set. Essays and
+    # single-author sources pass through unchanged (back-compatible).
+    diar = to_subject_text(
+        raw_text=content,
+        audio_url=source.get("audio_url"),
+        subject_name=brain_name,
+        subject_first=first_name,
+        src_type=src_type,
+        client=client,
+        model=FAST_MODEL,
+        assemblyai_key=os.environ.get("ASSEMBLYAI_API_KEY"),
+    )
+    content = diar["text"]
+    diar_note = ""
+    if diar["diarized"]:
+        turn_info = (
+            f" ({diar['subject_turns']} of {diar['subject_turns'] + diar['other_turns']} turns kept)"
+            if diar.get("subject_turns") is not None else ""
+        )
+        diar_note = (
+            f"\nIMPORTANT — SPEAKER ATTRIBUTION: This CONTENT has already been filtered "
+            f"to ONLY {first_name}'s own spoken turns (diarization method: {diar['method']}{turn_info}); "
+            f"the interviewer/host words were removed. Every \"original_quote\" is therefore "
+            f"{first_name} speaking — never attribute the interviewer's questions or commentary to {first_name}.\n"
+        )
     # Source publication date — required for /evolve to work. We accept several
     # shapes (`date`, `published`, `year`) and fall back to null if none exist.
     src_date = (
@@ -793,7 +826,7 @@ URL: {src_url}
 {src_date_line}
 CONTENT:
 {content}
-
+{diar_note}
 YOUR TASK: Extract 8-15 high-quality atoms — discrete units of knowledge — from this source. Each atom should capture a distinct insight, story, framework, or position from {first_name}.
 
 RULES:

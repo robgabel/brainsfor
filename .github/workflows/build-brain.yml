@@ -108,6 +108,7 @@ jobs:
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          ASSEMBLYAI_API_KEY: ${{ secrets.ASSEMBLYAI_API_KEY }}
           SLACK_BUILD_WEBHOOK: ${{ secrets.SLACK_BUILD_WEBHOOK }}
           IN_PERSON: ${{ inputs.person }}
           IN_SLUG: ${{ inputs.slug }}

@@ -52,7 +52,10 @@ TEMPLATES_DIR = ROOT_DIR / "templates"
 
 # Canonical model strings — source of truth is auto_build_config.py
 sys.path.insert(0, str(SCRIPT_DIR))
-from auto_build_config import DEFAULT_MODEL
+from auto_build_config import DEFAULT_MODEL, FAST_MODEL
+# Diarization: keep only the subject's spoken turns so original_quote is never
+# the interviewer. Shared module (see scripts/diarize.py).
+from diarize import to_subject_text
 
 # Optional imports
 try:
@@ -418,6 +421,30 @@ def decompose_transcript(transcript_data: dict, brain_json: dict, model: str) ->
     cluster_list = "\n".join(f"- {k}: {v['name']} — {v['description']}" for k, v in clusters.items())
     brain_name = brain_json["brain_name"]
     first_name = brain_json["brain_first_name"]
+    client = anthropic.Anthropic(api_key=api_key)
+
+    # Diarize: interview/podcast transcripts mix the subject with a host. Keep
+    # only the subject's spoken turns (named labels free; unlabeled via fast
+    # model) so original_quote is never the interviewer. Solo recordings and
+    # unidentifiable transcripts pass through unchanged.
+    full_text = transcript_data.get("full_text", "") or ""
+    diar = to_subject_text(
+        raw_text=full_text,
+        subject_name=brain_name,
+        subject_first=first_name,
+        src_type="transcript",
+        client=client,
+        model=FAST_MODEL,
+        assemblyai_key=os.environ.get("ASSEMBLYAI_API_KEY"),
+    )
+    transcript_text = diar["text"] or full_text
+    diar_note = ""
+    if diar["diarized"]:
+        diar_note = (
+            f"NOTE: The transcript below has been filtered to ONLY {first_name}'s own spoken "
+            f"turns (diarization: {diar['method']}); the interviewer/host was removed. Treat "
+            f"every line as {first_name} speaking.\n\n"
+        )
 
     prompt = f"""You are decomposing a transcript of {brain_name} speaking into discrete "atoms" —
 individual insights, beliefs, frameworks, or principles expressed in this recording.
@@ -454,11 +481,10 @@ OUTPUT FORMAT (JSON array):
 ]
 
 TRANSCRIPT:
-{transcript_data['full_text'][:50000]}
+{diar_note}{transcript_text[:50000]}
 
 Return ONLY the JSON array."""
 
-    client = anthropic.Anthropic(api_key=api_key)
     response = client.messages.create(
         model=model,
         max_tokens=8000,
