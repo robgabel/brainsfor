@@ -12,11 +12,13 @@ May 14, 2024
 
 Megaphone Embeddable Player
 
-![Cover for ](https://playlist.megaphone.fm/?e=MOBI7885084904&light=true&sharing=false)
-
-![Megaphone logo](<Base64-Image-Removed>)
+![Cover for Founder's Journal](https://megaphone.imgix.net/podcasts/026068d2-5cf9-11ec-906e-47531b90b6cd/image/a51ce6cda6830e7202b01af0d29c8f14.png?ixlib=rails-4.3.1&w=400&h=400)
 
 ![Play](https://playlist.megaphone.fm/assets/megaphone-play-EVYWJQ6F.digested.png)
+
+Founder's Journal
+
+# How to Use Entrepreneurship to Propel Personal Growth (Jesse Pujji, Ampush & Gateway X)
 
 00:00:00
 
@@ -26,25 +28,53 @@ Back 15 seconds
 
 00:00:00
 
+[Save to Spotify](https://open.spotify.com/show/7v0bSXLudQ4m58rIcevedx?intent=1 "Save to Spotify")
+
 Description
 
 [![Megaphone wordmark](<Base64-Image-Removed>)](https://megaphone.fm/)
 
-Share
+Share Founder's Journal
 
 Share this episode with your friends
 
-[Share via Facebook](https://playlist.megaphone.fm/?e=MOBI7885084904&light=true&sharing=false "Share via Facebook")[Share via Twitter](https://playlist.megaphone.fm/?e=MOBI7885084904&light=true&sharing=false "Share via Twitter")
+[Share via Facebook](http://www.facebook.com/sharer.php?quote=%27How+to+Use+Entrepreneurship+to+Propel+Personal+Growth+%28Jesse+Pujji%2C+Ampush+%26+Gateway+X%29++%27+by+Founder%27s+Journal&u=https%3A%2F%2Fmegaphone.link%2FMOBI7885084904 "Share via Facebook")[Share via Twitter](https://twitter.com/intent/tweet?text=%27How+to+Use+Entrepreneurship+to+Propel+Personal+Growth+%28Jesse+Pujji%2C+Ampush+%26+Gateway+X%29++%27+by+Founder%27s+Journal&url=https%3A%2F%2Fmegaphone.link%2FMOBI7885084904 "Share via Twitter")
 
-[Download episode](https://playlist.megaphone.fm/?e=MOBI7885084904&light=true&sharing=false)
+[Download episode](https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/chrt.fm/track/C3G4EB/traffic.megaphone.fm/MOBI7885084904.mp3?source=player&updated=1715645512)
 
-Subscribe to
+Subscribe to Founder's Journal
 
 Keep up to date by subscribing to this podcast
 
-[](https://playlist.megaphone.fm/?e=MOBI7885084904&light=true&sharing=false "Subscribe via RSS")
+[](https://feeds.megaphone.fm/founders-journal "Subscribe via RSS") [Subscribe via Apple Podcasts](https://itunes.apple.com/podcast/idid1509276485 "Subscribe via Apple Podcasts") [Subscribe via Spotify](https://open.spotify.com/show/7v0bSXLudQ4m58rIcevedx "Subscribe via Spotify") [Subscribe via iHeart](https://www.iheart.com/podcast/269-founders-journal-84325313 "Subscribe via iHeart")
 
 Description
+
+Episode 133: In today’s episode I chat with Jesse Pujji ( [@jspujji](https://twitter.com/jspujji?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)), co-founder of Ampush and founder of startup studio Gateway X. Jesse has used entrepreneurship as a vehicle for personal and professional growth, and we talk about the tools and tactics he's found valuable including, Zone of Genius, five levels of motivation, and context versus content.
+
+Send us an email and let us know what you think of the idea! [foundersjournal@morningbrew.com](mailto:foundersjournal@morningbrew.com)
+
+#FoundersJournal #Startups #Entrepreneur
+
+Listen to Founder’s Journal here: https://link.chtbl.com/OV4W93\_W
+
+Watch Founder’s Journal here: [https://www.youtube.com/@FoundersJournal/](https://www.youtube.com/@FoundersJournal/)
+
+Subscribe to Morning Brew!
+
+Sign up for free today: https://bit.ly/morningbrewyt
+
+Follow The Brew!
+
+Instagram - https://www.instagram.com/morningbrew/
+
+Twitter - https://twitter.com/MorningBrew
+
+Tik Tok - https://www.tiktok.com/@morningbrew
+
+Follow Alex!
+
+Alex Lieberman (@businessbarista)
 
 [![Apple Podcasts podcast player badge](https://images.podpage.com/tr:w-300,f-auto/https://static.podpage.com/public/images/players-light-v1/badges/applepodcasts-badge.c37f7342edf5.png)](https://podcasts.apple.com/us/podcast/id1509276485?mt=2&ls=1)
 
@@ -99,6 +129,6 @@ Okay, so I texted you saying, what is your one thing, your one superpower that y
 
 **Alex:** Well, I think it's important to juxtapose that to the way that you used to show up when things were going wrong. And I think the story that I've heard you tell is there was some big account that you had at Ampush. Ampush was one of, you know, the largest Facebook paid marketing agencies, one of the earliest. And was it with Uber, where like there was one account that basically you were about to lose?
 
-**Jesse:** Yeah, I've told a story where we were about to lose Uber and they were taking big parts of their business in-house, which is not abnormal in our business. And I came in, I was like, well, why didn't anybody tell me sooner? Why am I just finding out about this? Who's to blame, and what's gonna happen? And I said, okay, we gotta go pitch and win this business. And the team puts together a pitch and we pitch it and you know, we lose it. And I'm like, oh yeah, whatever. I made up an excuse and I moved on with my life and I just wasn't aware of how people were feeling or what they were thinking in that moment. And then fast forward a few years, a different account, which was our biggest account at that time, Starz, they were, they had actually fat fingered an email, or no, sorry, our Facebook rep had fat fingered an email to our team and said it to the client, basically informing us that they were gonna go. And I get the team together, I'm like, okay, let's retain the business, guys. We can win this. And I like asked 'em to do, you know, work on a draft. And I sit back down and then the draft is horrible. And now I've done some work on myself and I'm like, oh wait, I'm like, I'm picking up on it. Oh, everybody's pissed. And in a business like that, a service, you really become tight with the client as a human. And all of a sudden they didn't have the courtesy to call or tell. They didn't, they just like, they were just gonna pull it out from underneath. And that the team personally felt betrayed by that. And so then I was like, oh, okay, well let's feel our feelings around this. Like, everyone go around and just, you can say whatever you want about whoever you want, about what you're feeling. And there was like 45, 60 minutes of just like, I can't believe we've been working so hard. I mean, they were going crazy, right? Yeah. And I was like, okay, cool. And then I just said, let's all go home. And everybody went home. And the next morning I was like, what do you guys wanna do? Do you wanna try to retain the business? Do we want it? Like, what do we wanna do here? And they were like, no, we are still better, you know, we can figure out a way to improve this or whatever. They were fired up
+**Jesse:** Yeah, I've told a story where we were about to lose Uber and they were taking big parts of their business in-house, which is not abnormal in our business. And I came in, I was like
 
 [...truncated]

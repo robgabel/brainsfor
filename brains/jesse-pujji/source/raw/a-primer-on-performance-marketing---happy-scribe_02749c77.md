@@ -1,4 +1,4 @@
-![Invest Like the Best - Jesse Pujji - A Primer on Performance Marketing - [Founder’s Field Guide, EP. 27]](https://media.happyscribe.com/y2kb30lnnxo6ht90h0mqmsp5sysd?response-content-disposition=inline%3B+filename%3D%22Invest_Like_The_Best_Podcast_Cover_1400x1400.jpg%22%3B+filename%2A%3DUTF-8%27%27Invest_Like_The_Best_Podcast_Cover_1400x1400.jpg&response-content-type=image%2Fjpeg&Expires=1782310190&Signature=C8Fp4uhZEndC0R2uVDwoJ19hHWeAVon3aFqOvUIVQBwPkHCorGcLYDsPVxOGbtQRU-XLAO43EpUDFCqKyNYK~oEldeADo4K0t1W435B1ScE0fiG4VOeS4CYnrTQ45Fzj-iqCNpZZQMieMmi9e9HfhxynBUxlhi3Iwl-HHQTOqgIgicvwudILjWvPJlcC6tcm1inEtkY86Gn9xUks95LmB32gz1aPttAKp-JbSU6ivJPUudfFdts5f3oWoF0JlJuFJ-2G6GpT740VpMGmVjYu~aPg4NPgAtTmko-JWdOQWSkr7DqcHYxvelpz0HzH0-HtSvag2~7~r-RFTXRl8mr5YA__&Key-Pair-Id=K2XUQFZL6FJK9N)
+![Invest Like the Best - Jesse Pujji - A Primer on Performance Marketing - [Founder’s Field Guide, EP. 27]](https://media.happyscribe.com/y2kb30lnnxo6ht90h0mqmsp5sysd?response-content-disposition=inline%3B+filename%3D%22Invest_Like_The_Best_Podcast_Cover_1400x1400.jpg%22%3B+filename%2A%3DUTF-8%27%27Invest_Like_The_Best_Podcast_Cover_1400x1400.jpg&response-content-type=image%2Fjpeg&Expires=1782396731&Signature=odJOtrWJYYGfcEiqJV7GuAns7EZ-xl092fZVimS5mThntLJtb5DP~cDX-c2TPVkGhMymcWotFiq-SXdIyZN3QOQDcatRdS4kUTsK2UX4N1BVR9lcxZtaKxStetaaaFFxpZAajPL1yUO5mJZ1~WuE0KgXNhh1Prn4MldA7GeZfiDg-MIylDkp~lL52mSwTD48jL6J21ttqpCpMhTE2OSwYr6FZdidu79pRx4fYb4YW~CrWPrU5Pyj7VFhU~v9YdwGl74Hxaiu4M1nRef2eFgYGcHk2zPklGDvmSYwkU9Rr0AzL3JDhVLyfRBzRmBM3MRRdGOuECXsWIVIcB0Kz9riFg__&Key-Pair-Id=K2XUQFZL6FJK9N)
 
 # Transcript of Jesse Pujji - A Primer on Performance Marketing - \[Founder’s Field Guide, EP. 27\]
 
@@ -7,7 +7,7 @@
 01:34:22
 
 
-3,258 views
+3,260 views
 
 
 Published about 5 years ago

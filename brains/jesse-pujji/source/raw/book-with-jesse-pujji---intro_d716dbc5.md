@@ -66,7 +66,7 @@ Starting at $450
 
 5.0(4)
 
-Next available — 3:40pm on 7/1
+Next available — 4:40pm on 7/6
 
 ![Gift a Session](https://intro.co/giftbox.png)See times
 
