@@ -2153,19 +2153,31 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                             pass
 
                     transcript_fail = (n_videos >= MIN_VIDEOS_EXPECT_TRANSCRIPTS and n_transcripts == 0)
-                    if transcript_fail:
-                        # FATAL-for-this-environment: videos existed but ZERO
-                        # transcripts fetched (IP block / no captions). Continuing
-                        # spends ~$15 of synthesis+enrichment on a quote-less brain.
-                        # Halt as a cost guard — re-run locally / add a proxy.
+                    if transcript_fail and atom_count < MIN_BRAIN_ATOMS and not args.allow_thin_pack:
+                        # TRULY HOLLOW: videos were an expected source AND the text
+                        # corpus is below the atom floor. Continuing would spend ~$15
+                        # of synthesis+enrichment on a quote-less brain. Halt as a cost
+                        # guard — re-run locally / add a proxy, or pass --allow-thin-pack.
                         error(f"Transcript fetch failed: {n_videos} videos discovered, 0 transcripts "
-                              f"fetched (likely IP block — YouTube blocks cloud/CI IPs). The brain "
-                              f"would ship hollow. Build locally / add a proxy and --resume, or pass "
+                              f"fetched (likely IP block — YouTube blocks cloud/CI IPs), and only "
+                              f"{atom_count} text atoms (< floor {MIN_BRAIN_ATOMS}). The brain would "
+                              f"ship hollow. Build locally / add a proxy and --resume, or pass "
                               f"--allow-thin-pack to ship anyway.")
                         mark_phase(progress, 2, "blocked", atoms=atom_count,
-                                   reason=f"transcript fetch failed: 0/{n_videos} transcripts")
+                                   reason=f"transcript fetch failed: 0/{n_videos} transcripts, atoms {atom_count} < floor")
                         save_progress(brain_dir, progress)
                         break
+                    if transcript_fail:
+                        # Transcripts failed (IP block) BUT the text/other sources already
+                        # cleared the atom floor — the brain is NOT hollow. Don't halt: the
+                        # cost-guard rationale only applies to a thin brain. Continue and
+                        # ship HIDDEN + flagged so a human can add the video voice later
+                        # (locally / via proxy). Mirrors the low-voice degrade path below.
+                        warn(f"Transcript fetch failed ({n_transcripts}/{n_videos}) — but {atom_count} "
+                             f"atoms from text sources clear the floor ({MIN_BRAIN_ATOMS}). Continuing; "
+                             f"brain ships HIDDEN + flagged for missing video voice (re-run locally / "
+                             f"add a proxy to enrich the spoken voice).")
+                        progress["transcript_fetch_failed"] = f"{n_transcripts}/{n_videos}"
                     if voice_pct < MIN_VOICE_PCT:
                         # QUALITY, not fatal: real but thin voice. Builds-should-not-fail —
                         # finish the build and ship HIDDEN + flagged (the no-auto-promote
