@@ -238,23 +238,25 @@ brains/{slug}/brain.json (config) + Supabase data
 ### YouTube Transcript Ingestion (generic — `--brain {slug}`)
 
 ```
-scripts/ingest-youtube.py --brain {slug} --download                   # Download transcripts from youtube_sources in brain.json
-scripts/ingest-youtube.py --brain {slug} --extract                    # Extract atoms from transcripts using Claude Haiku
-scripts/ingest-youtube.py --brain {slug} --download --extract         # Both phases
-scripts/ingest-youtube.py --brain {slug} --download --video VIDEO_ID  # Single video
-scripts/ingest-youtube.py --brain {slug} --extract --limit 5          # Limit to N transcripts
-scripts/ingest-youtube.py --brain {slug} --stats                      # Show download/extraction stats
-scripts/ingest-youtube.py --brain {slug} --dry-run                    # Preview without writing
+scripts/ingest-youtube.py --brain {slug} --from-sources                      # Fetch transcripts for every source in sources.json with a youtube_id
+scripts/ingest-youtube.py --brain {slug} --url <url|id> --title "Title"       # Fetch a single video's transcript
+scripts/ingest-youtube.py --brain {slug} --url-file urls.txt                  # Fetch a file of URLs (one per line; optional TAB title TAB date)
+scripts/ingest-youtube.py --brain {slug} --from-sources --firecrawl          # Scrape transcript_url pages via Firecrawl instead of the caption API
+scripts/ingest-youtube.py --brain {slug} --decompose                         # Decompose downloaded transcripts into atoms (Claude Haiku)
+scripts/ingest-youtube.py --brain {slug} --decompose --file path/to/one.json # Decompose a single transcript file
+scripts/ingest-youtube.py --brain {slug}                                     # Status (transcript + atom counts, next steps)
+scripts/ingest-youtube.py --brain {slug} --from-sources --dry-run            # Preview without writing
 ```
 
-Requires `youtube-transcript-api` (`pip install youtube-transcript-api`). Configure videos in brain.json `youtube_sources.videos`. Output: `brains/{slug}/research/youtube-atoms.json`.
+Requires `youtube-transcript-api` (`pip install youtube-transcript-api`). Videos are read from `source/sources.json` (entries with a non-null `youtube_id`). Transcripts download to `brains/{slug}/source/transcripts/*.json` (gitignored scratch); `--decompose` writes atoms to `brains/{slug}/research/video-atoms.json`.
 
 **Lessons (2026-06-20, transcript-provenance audit):**
 - **Raw transcripts are not committed.** `.gitignore` excludes `brains/*/source/transcripts/` (and `source/youtube-transcripts/`) as regenerable scratch. The durable artifact is `research/video-atoms.json` (written by `build-brain.py:stage_youtube`). To answer "how many transcripts actually fetched?" you must re-run ingest — the repo only proves a brain *had* video atoms, not the success/fail count per video.
 - **"Videos used" = sources with a non-null `youtube_id` in `source/sources.json`** (NOT brain.json `youtube_sources.videos`, which the auto-build path doesn't read). As of this audit: 618 videos across 25 brains; full per-brain table is in the transcript-provenance investigation.
 - **Transcripts are NOT diarized.** `fetch_transcript` stores segments as `{text, start, duration}` — no speaker field — and most sources use YouTube's auto-captions (single undifferentiated stream). For multi-speaker sources (Talks at Google Q&A, Kara Swisher / Oprah interviews, the Greens' podcasts, Attia) an interviewer's or other guest's words can be mis-attributed to the subject. The Phase 2.3b / `ground-synthesis.py` verifiers are **speaker-blind** — they check a quote exists *in the corpus*, and the interviewer's words are in that same corpus, so they cannot catch this. Diarization is handled elsewhere in Rob's stack, not in this pipeline.
 - **Fetcher prefers human-authored captions, falls back to auto-generated** (`build-brain.py:fetch_transcript`), with rate-limit retries (30/90/270s) and 60–90s per-call timeouts. Extraction model is Haiku (`FAST_MODEL`).
-- **Doc drift to fix:** the CLI examples above (`--download` / `--extract`) are stale — the real `ingest-youtube.py` takes `--from-sources` / `--firecrawl` / `--decompose` (see the `melinda-french-gates-yt.log` arg error). The auto-build pipeline writes `video-atoms.json`, not the `youtube-atoms.json` named above. `bill-harris` is the outlier worth re-checking: 20 videos but only 38 video atoms (likely caption failures).
+- **`bill-harris` is the volume outlier** worth re-checking: 20 videos but only 38 video atoms (likely caption failures — `--from-sources` skips videos whose transcript fetch errors).
+- *(The CLI examples + output path above were corrected 2026-06-20 from stale `--download`/`--extract`/`youtube-atoms.json` references that never matched `ingest-youtube.py` — cf. the `melinda-french-gates-yt.log` arg error.)*
 
 ### Enrichment Scripts (generic — all accept `--brain {slug}`)
 
