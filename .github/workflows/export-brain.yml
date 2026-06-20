@@ -1,0 +1,102 @@
+name: Export brain pack (from Supabase)
+
+# Regenerate a brain's pack (brain-atoms.json, brain-context.md, explore.html,
+# skills) directly from the atoms + connections already loaded in Supabase, then
+# commit the pack to the brain branch. Use this to land a local build's Supabase
+# data into the pack/PR without the laptop — the local `auto-build` uploads atoms
+# to Supabase but never pushes the pack itself.
+#
+# NOTE: synthesis comes from the branch's brain.json (not Supabase), so the
+# "How They Think" section reflects whatever synthesis is committed; atoms,
+# quotes, and connections are refreshed from Supabase.
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: Brain slug (e.g. jesse-pujji)
+        required: true
+        type: string
+      branch:
+        description: Branch to read brain.json from and push the pack to (default brain/<slug>)
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Resolve branch
+        id: br
+        env:
+          IN_SLUG: ${{ inputs.slug }}
+          IN_BRANCH: ${{ inputs.branch }}
+        run: |
+          BRANCH="$IN_BRANCH"
+          [ -z "$BRANCH" ] && BRANCH="brain/${IN_SLUG}"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          echo "Resolved branch: $BRANCH"
+
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ steps.br.outputs.branch }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Export pack from Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          IN_SLUG: ${{ inputs.slug }}
+        run: |
+          set -eo pipefail
+          python3 scripts/export-brain.py --brain "$IN_SLUG" --no-sync-website
+
+      - name: Refresh index.json counts from the exported pack
+        env:
+          IN_SLUG: ${{ inputs.slug }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          slug = os.environ["IN_SLUG"]
+          pack = json.load(open(f"brains/{slug}/pack/brain-atoms.json"))
+          na, nc = len(pack.get("atoms", [])), len(pack.get("connections", []))
+          idx = json.load(open("brains/index.json"))
+          brains = idx if isinstance(idx, list) else idx.get("brains", [])
+          for b in brains:
+              if b.get("slug") == slug:
+                  b["atom_count"] = na
+                  b["connection_count"] = nc
+          json.dump(idx, open("brains/index.json", "w"), indent=2, ensure_ascii=False)
+          print(f"index.json updated: {slug} atoms={na} connections={nc}")
+          PY
+
+      - name: Commit + push pack to brain branch
+        env:
+          IN_SLUG: ${{ inputs.slug }}
+          BRANCH: ${{ steps.br.outputs.branch }}
+        run: |
+          set -eo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "brains/${IN_SLUG}/" brains/index.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No pack changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(${IN_SLUG}): export pack from Supabase (atoms + connections refresh)"
+          git push origin "HEAD:${BRANCH}"
