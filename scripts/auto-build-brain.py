@@ -2023,11 +2023,14 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
         # subsequent phases so the loop body re-runs them. Re-running Phase 2 with new
         # sources should also re-run Phase 3/4/5 — otherwise synthesis + pack reflect
         # the old (smaller) atom set.
-        if progress:
-            for i in range(start_phase, 6):
-                if str(i) in progress["phases"]:
-                    progress["phases"][str(i)] = {"status": "pending"}
-            save_progress(brain_dir, progress)
+        if not progress:
+            # No build-progress.json (e.g. a fresh checkout, or it was never
+            # committed). Initialize so --resume-from doesn't crash on None.
+            progress = init_progress(args.person, slug)
+        for i in range(start_phase, 6):
+            if str(i) in progress["phases"]:
+                progress["phases"][str(i)] = {"status": "pending"}
+        save_progress(brain_dir, progress)
         step(f"Resuming from Phase {start_phase} (forced re-run, cascades to later phases)")
     elif args.resume and progress:
         # Find first non-complete phase
