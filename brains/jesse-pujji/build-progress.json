@@ -14,26 +14,18 @@
       "clusters": 14
     },
     "2": {
-      "status": "complete",
-      "completed_at": "2026-06-19T14:18:04.613805+00:00",
+      "status": "blocked",
       "atoms": 424,
-      "voice_pct": 0.151
+      "reason": "transcript fetch failed: 0/12 transcripts"
     },
     "3": {
-      "status": "complete",
-      "error": "name 'dry_run' is not defined",
-      "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/brainsfor/brainsfor/scripts/auto-build-brain.py\", line 2168, in main\n    if not dry_run and not args.skip_grounding:\n           ^^^^^^^\nNameError: name 'dry_run' is not defined\n",
-      "completed_at": "2026-06-19T15:43:23.831961+00:00"
+      "status": "pending"
     },
     "4": {
-      "status": "complete",
-      "completed_at": "2026-06-19T15:46:59.601978+00:00",
-      "connections": 406
+      "status": "pending"
     },
     "5": {
-      "status": "complete",
-      "completed_at": "2026-06-19T15:48:23.029050+00:00",
-      "audit_score": 88
+      "status": "pending"
     }
   },
   "total_cost_usd": 0.09934799999999999,
