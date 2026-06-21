@@ -389,6 +389,7 @@ Create a complete brain.json for {person_name}. Requirements:
 - supabase.connections_table: "{connections_table}"
 - synthesis section: create a DRAFT with first_principles (8-11), thinking_patterns (6-9), contrarian_positions (8-12), does_not_believe (5-7), would_not_say (4-6), biography (4-6 entries), skills (copy from exemplar, just update examples)
 - website section: tagline, bio (2-3 sentences), topics (6 items), price (29)
+- emoji: ONE single emoji that best captures THIS specific person and stays legible as a tiny sidebar badge (e.g. 🍎 for an Apple/product figure, ⚔️ for a military strategist, 🩺 for a physician, 🚀 for a rocketry founder, 🃏 for a poker player). Emoji only — no text, no description. It MUST be different from these already used by other brains: {used_emojis}
 
 The synthesis section is a draft — it will be refined later after atom extraction. But make it as good as you can based on what you know about {person_name}.
 
