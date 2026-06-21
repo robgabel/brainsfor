@@ -19,6 +19,7 @@
       --text: #e8e8f0;
       --text-dim: #8888a0;
       --accent: #6366f1;
+      --accent-gold: #d97706;
       --contradicts: #f87171;
       --subtle: rgba(230, 230, 240, 0.05);
     }
@@ -555,7 +556,7 @@
       color: var(--text);
       margin: 48px 0 4px;
       padding-bottom: 10px;
-      border-bottom: 2px solid var(--accent, #6366f1);
+      border-bottom: 2px solid var(--accent);
     }
     .group-title:first-of-type { margin-top: 8px; }
     .subsection-title {
@@ -571,7 +572,7 @@
       background: var(--surface-2);
       border: 1px solid var(--border);
       border-radius: 8px;
-      border-left: 4px solid var(--accent-gold, #d97706);
+      border-left: 4px solid var(--accent-gold);
       margin-bottom: 16px;
     }
     .hard-lesson-title {
@@ -592,8 +593,42 @@
       text-transform: uppercase;
       font-size: 11px;
       letter-spacing: 0.05em;
-      color: var(--accent-gold, #d97706);
+      color: var(--accent-gold);
       margin-right: 6px;
+    }
+    /* Receipts — provenance for a claim (the proof) */
+    .receipts {
+      margin-top: 14px;
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
+    .receipts > summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+    }
+    .receipts > summary::-webkit-details-marker { display: none; }
+    .receipts > summary::before { content: '▸ '; }
+    .receipts[open] > summary::before { content: '▾ '; }
+    .receipt {
+      margin-top: 10px;
+      padding-left: 12px;
+      border-left: 2px solid var(--border);
+    }
+    .receipt-quote {
+      color: var(--text);
+      font-size: 13.5px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .receipt-source {
+      margin-top: 4px;
+      font-size: 12px;
+      color: var(--text-dim);
     }
 
     .belief-card {
@@ -1705,11 +1740,22 @@
         sections.push({ id: 'grp-hard-lessons', label: 'Hard Lessons' });
         html += '<div class="group-title" id="grp-hard-lessons">Hard Lessons</div>';
         s.hard_lessons.forEach(p => {
+          const receipts = (p.receipts && p.receipts.length) ? `
+              <details class="receipts">
+                <summary>Receipts (${p.receipts.length})</summary>
+                ${p.receipts.map(r => `
+                  <div class="receipt">
+                    <div class="receipt-quote">${esc(r.quote)}</div>
+                    ${r.source ? `<div class="receipt-source">${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener" style="color:var(--accent)">${esc(r.source)}</a>` : esc(r.source)}</div>` : ''}
+                  </div>
+                `).join('')}
+              </details>` : '';
           html += `
             <div class="hard-lesson-card">
               <div class="hard-lesson-title">${esc(p.title)}</div>
               ${p.cost ? `<div class="hard-lesson-line"><span class="hl-label">The cost</span>${esc(p.cost)}</div>` : ''}
               ${p.change ? `<div class="hard-lesson-line"><span class="hl-label">What changed</span>${esc(p.change)}</div>` : ''}
+              ${receipts}
             </div>
           `;
         });
