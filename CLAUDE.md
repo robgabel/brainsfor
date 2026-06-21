@@ -69,7 +69,7 @@ brainsfor/
   website/                           ← **LIVE SITE** — brainsforfree.com (Next.js app on Vercel, auto-deploy from main)
     AGENTS.md                        ← ⚠️ "This is NOT the Next.js you know" — check node_modules/next/dist/docs/ before writing code
     app/                             ← app router pages (brains/[slug], pricing, dashboard, auth, api)
-    lib/                             ← brains.ts (reads brains/index.json as source of truth for atomCount/connectionCount)
+    lib/                             ← brains.ts (reads brains/index.json for atomCount/connectionCount + per-brain emoji badge, rendered on cards + detail hero)
     public/brains/                   ← per-brain static assets: brain-atoms.json, brain-context.md, explore.html, SKILL.md, <slug>-brain-pack.zip
     next.config.ts                   ← **X-Frame-Options: SAMEORIGIN** (DENY would break the Brain Explorer iframe)
 
@@ -82,7 +82,7 @@ brainsfor/
   doc-refresh-log.md                 ← audit trail of every /doc-refresh run
 
   brains/
-    index.json                       ← registry: all brains, slugs, status
+    index.json                       ← registry: all brains, slugs, status, emoji (per-brain badge; /brain skill + website both read it, fallback 🧠)
     scott-belsky/                    ← EVERYTHING for this brain
       brain.json                     ← config (clusters, skill examples, Supabase refs)
       synthesis.md                   ← thinking analysis layer
@@ -450,7 +450,7 @@ Both paths run the same 6 phases (source discovery → scaffolding → ingestion
 5. **Ingest atoms:** Load source content into `{slug}_atoms` table
 6. **Run enrichment:** `python scripts/enrich-voice.py --brain {slug}` and `python scripts/enrich-connections.py --brain {slug} --discover --llm`
 7. **Export pack:** `python scripts/export-brain.py --brain {slug} --from-files atoms.json connections.json`
-8. **Register:** Add entry to `brains/index.json`
+8. **Register:** Add entry to `brains/index.json` (include an `emoji` field — the per-brain badge used by the `/brain` skill's session-tagging and the website cards/hero; without it the brain falls back to 🧠)
 9. **Verify:** Open `pack/explore.html` in browser, check all tabs render correctly
 
 ## Design System

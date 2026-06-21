@@ -51,6 +51,9 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
           <div className="mt-6 flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
             <div className="max-w-[640px]">
               <div className="flex items-center gap-3">
+                <span aria-hidden className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-indigo-mist text-3xl leading-none">
+                  {brain.emoji}
+                </span>
                 <h1 className="font-display text-4xl font-light tracking-[-1.2px] text-deep-ink md:text-5xl">
                   {brain.name}
                 </h1>
