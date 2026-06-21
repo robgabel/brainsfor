@@ -49,7 +49,7 @@ ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
 from auto_build_config import (  # noqa: E402
-    BRAINS_DIR, DEFAULT_MODEL, CostTracker, call_claude, step, success, warn, error,
+    BRAINS_DIR, DEFAULT_MODEL, PERSONA_MODEL, CostTracker, call_claude, step, success, warn, error,
 )
 
 try:
@@ -321,7 +321,9 @@ def run_chair(chair_seat, target_name, target_block, field_verdicts, numeric_rep
 def main():
     ap = argparse.ArgumentParser(description="Annie-chaired persona-QA panel for a brain")
     ap.add_argument("--brain", required=True)
-    ap.add_argument("--model", default=DEFAULT_MODEL)
+    ap.add_argument("--model", default=PERSONA_MODEL,
+                    help=f"Judge/chair model (default {PERSONA_MODEL} — Opus for judgment-heavy QA; "
+                         f"pass {DEFAULT_MODEL} to run the panel cheaper on Sonnet)")
     ap.add_argument("--dry-run", action="store_true", help="Resolve panel + show target block size, no API")
     ap.add_argument("--date", default=None, help="Override output date stamp (YYYY-MM-DD)")
     args = ap.parse_args()
