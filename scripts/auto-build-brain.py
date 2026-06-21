@@ -182,6 +182,49 @@ def underscore_slug(slug: str) -> str:
     return slug.replace("-", "_")
 
 
+# ── Per-brain emoji assignment ───────────────────────────────────────────────
+# Every brain carries an `emoji` in index.json — the glanceable badge used by
+# the /brain skill's session-tagging and the brainsforfree.com cards + pickers.
+# New brains get one automatically: the LLM proposes one in brain.json, and
+# registration validates + dedupes it (curated fallback pool, then 🧠).
+_EMOJI_FALLBACK_POOL = [
+    "🧠", "💭", "🔭", "🧩", "🗝️", "🎯", "🪄", "🛠️", "📐", "🔱",
+    "🪶", "🧭", "🌱", "⚙️", "🪐", "🎲", "🧱", "🦉", "🐝", "🪁",
+    "🧬", "📡", "🔆", "🌀", "🧲", "🪞", "🗺️", "🎼",
+]
+
+
+def _looks_like_emoji(s: str) -> bool:
+    """Loose validity check. Accepts short ZWJ/variation sequences (👩‍💻, ⚔️);
+    rejects empty strings and prose like 'the apple 🍎'."""
+    s = (s or "").strip()
+    if not s or len(s) > 8:
+        return False
+    return not any(c.isalnum() or c.isspace() for c in s)
+
+
+def load_used_emojis() -> set:
+    """Emojis already assigned in index.json (so new picks stay collision-free)."""
+    index_path = BRAINS_DIR / "index.json"
+    if not index_path.exists():
+        return set()
+    with open(index_path) as f:
+        index = json.load(f)
+    return {b.get("emoji") for b in index.get("brains", []) if b.get("emoji")}
+
+
+def pick_brain_emoji(brain_json: dict, used_emojis: set) -> str:
+    """Pick a distinct per-brain emoji: the LLM's brain.json proposal when it's
+    a valid, unused single emoji; else the first unused curated emoji; 🧠 last."""
+    proposed = (brain_json.get("emoji") or "").strip()
+    if _looks_like_emoji(proposed) and proposed not in used_emojis:
+        return proposed
+    for e in _EMOJI_FALLBACK_POOL:
+        if e not in used_emojis:
+            return e
+    return "🧠"
+
+
 def get_supabase_client():
     """Create a Supabase client."""
     url = os.environ.get("SUPABASE_URL", "https://uzediwokyshjbsymevtp.supabase.co")
@@ -660,6 +703,7 @@ def phase_1_scaffold(
         sources_summary = "\n".join(sources_lines) if sources_list else "No sources discovered yet."
 
         us = underscore_slug(slug)
+        used_emojis = load_used_emojis()
         prompt = BRAIN_JSON_PROMPT.format(
             person_name=person_name,
             slug=slug,
@@ -667,6 +711,7 @@ def phase_1_scaffold(
             sources_summary=sources_summary,
             atoms_table=f"{us}_atoms",
             connections_table=f"{us}_connections",
+            used_emojis=", ".join(sorted(used_emojis)) or "(none yet)",
         )
 
         result = call_claude(
@@ -727,11 +772,16 @@ def phase_1_scaffold(
         else:
             index = {"brains": []}
 
-        # Check if already registered
-        existing = any(b["slug"] == slug for b in index["brains"])
-        if not existing:
+        # Pick a distinct emoji (LLM proposal in brain.json, deduped against
+        # those already in use; falls back to a curated pool, then 🧠). This is
+        # the per-brain badge read by the /brain skill + the website.
+        used_emojis = {b.get("emoji") for b in index["brains"] if b.get("emoji")}
+        existing_entry = next((b for b in index["brains"] if b["slug"] == slug), None)
+        if existing_entry is None:
+            emoji = pick_brain_emoji(brain_json, used_emojis)
             index["brains"].append({
                 "slug": slug,
+                "emoji": emoji,
                 "name": person_name,
                 "source": brain_json.get("brain_source_detail", brain_json.get("brain_source_description", "")),
                 "atom_count": 0,
@@ -740,10 +790,16 @@ def phase_1_scaffold(
                 "pack_path": f"brains/{slug}/pack/",
             })
             with open(index_path, "w") as f:
-                json.dump(index, f, indent=2)
-            success("Registered in index.json")
+                json.dump(index, f, indent=2, ensure_ascii=False)
+            success(f"Registered in index.json ({emoji})")
+        elif not existing_entry.get("emoji"):
+            # Backfill on a brain registered before emojis existed (or mid-resume).
+            existing_entry["emoji"] = pick_brain_emoji(brain_json, used_emojis)
+            with open(index_path, "w") as f:
+                json.dump(index, f, indent=2, ensure_ascii=False)
+            success(f"Already registered — added emoji ({existing_entry['emoji']})")
         else:
-            success("Already registered in index.json")
+            success(f"Already registered in index.json ({existing_entry['emoji']})")
 
     return brain_json
 

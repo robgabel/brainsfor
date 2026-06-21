@@ -208,7 +208,7 @@ scripts/auto-build-brain.py --person "Jensen Huang" --resume-from 3  # Resume fr
 
 Takes a person's name and produces a complete, shippable brain pack with ZERO manual approval gates. 6 phases:
 - **Phase 0:** Source discovery (web search via Firecrawl → sources.json)
-- **Phase 1:** Scaffolding (dirs, brain.json via LLM, Supabase tables, index.json)
+- **Phase 1:** Scaffolding (dirs, brain.json via LLM, Supabase tables, index.json). The LLM proposes a per-brain `emoji` in brain.json; registration validates + dedupes it against emojis already in use (curated fallback pool, then 🧠) and writes it to the index entry — so new brains get a badge automatically (`pick_brain_emoji` in `scripts/auto-build-brain.py`).
 - **Phase 2:** Content ingestion — three sub-stages run in sequence:
   - **2.1 YouTube transcripts** — fetch transcripts for any source with `youtube_id`, extract atoms via Haiku
   - **2.2 Text source scraping** — Firecrawl-fetch every text URL (essays, profiles, interviews, podcast pages, articles), extract atoms via Sonnet. Skips facebook/twitter/x/instagram/tiktok. Idempotent (writes `research/text-atoms.json`)
