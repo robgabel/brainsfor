@@ -37,6 +37,7 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
     slug: b.slug,
     name: b.name,
     badge: b.badge,
+    emoji: b.emoji,
   }));
   const pinnedBrain = allLiveBrains.filter((b) => b.slug === slug);
   const demos = getAllDemos();

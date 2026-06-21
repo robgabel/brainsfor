@@ -6,6 +6,7 @@ interface BrainOption {
   slug: string;
   name: string;
   badge?: string;
+  emoji?: string;
 }
 
 interface BrainDropdownProps {
@@ -71,6 +72,9 @@ export function BrainDropdown({
         }`}
       >
         <span className="flex items-center gap-2 min-w-0">
+          {activeBrain?.emoji && (
+            <span aria-hidden className="shrink-0 text-base leading-none">{activeBrain.emoji}</span>
+          )}
           <span className="font-display text-[15px] font-semibold text-deep-ink truncate">
             {activeBrain?.name ?? "Pick one"}
           </span>
@@ -117,6 +121,9 @@ export function BrainDropdown({
                 }`}
               >
                 <span className="flex items-center gap-2 min-w-0">
+                  {b.emoji && (
+                    <span aria-hidden className="shrink-0 text-base leading-none">{b.emoji}</span>
+                  )}
                   <span className="font-display text-[14px] font-medium truncate">
                     {b.name}
                   </span>

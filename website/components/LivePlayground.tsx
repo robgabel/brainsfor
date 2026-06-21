@@ -9,6 +9,7 @@ interface BrainOption {
   slug: string;
   name: string;
   badge?: string;
+  emoji?: string;
 }
 
 interface SkillOption {
