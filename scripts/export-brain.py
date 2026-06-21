@@ -368,6 +368,37 @@ def export_context_md(atoms: list, connections: list, config: dict, output_dir: 
     else:
         print(f"  NOTE: No synthesis file found at {synthesis_path} — skipping brain DNA sections")
 
+    # Inject Hard Lessons from the STRUCTURED synthesis key (not synthesis.md) so the
+    # LLM (/advise, /coach, ...) sees them. This is the single source of truth that
+    # explore.html also renders — keeping context + UI in sync without a synthesis.md
+    # rewrite. The mining pass (mine-hard-lessons.py) enforces the cost rubric, so an
+    # empty/absent list correctly produces no section.
+    hard_lessons = (config.get("synthesis", {}) or {}).get("hard_lessons") or []
+    if hard_lessons:
+        poss = config.get("brain_possessive", f"{brain_name}'s")
+        lines.append("## Hard Lessons\n")
+        lines.append(
+            f"Real mistakes {brain_name} made — what they cost and what changed as a result, "
+            f"grounded in {poss} own words. When a question touches one of these, lead with the "
+            f"lesson and the receipt, not a sanitized highlight-reel version.\n"
+        )
+        for hl in hard_lessons:
+            title = (hl.get("title") or "").strip()
+            if not title:
+                continue
+            lines.append(f"**{title}**\n")
+            if hl.get("cost"):
+                lines.append(f"- *The cost:* {hl['cost']}")
+            if hl.get("change"):
+                lines.append(f"- *What changed:* {hl['change']}")
+            for r in (hl.get("receipts") or []):
+                q = (r.get("quote") or "").strip()
+                src = (r.get("source") or "").strip()
+                if q:
+                    lines.append(f"> *\"{q}\"*" + (f" — {src}" if src else ""))
+            lines.append("")  # spacer
+        lines.append("---\n")
+
     for i, cluster_key in enumerate(cluster_order):
         if cluster_key not in clusters_map:
             continue

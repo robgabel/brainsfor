@@ -1,0 +1,230 @@
+{
+  "slug": "jesse-pujji",
+  "target": "Jesse Pujji",
+  "date": "2026-06-21",
+  "persona_qa_score": 61,
+  "raw_chair_score": 61,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 1,
+  "pass": false,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 68,
+    "rigor": 58,
+    "coverage": 52,
+    "calibration": 59
+  },
+  "confidence": "medium",
+  "ship_recommendation": "rework",
+  "summary": "Jesse Pujji would recognize this document the way he'd recognize a well-produced podcast episode of himself \u2014 accurate, coherent, and missing the thing that makes him interesting. The structural skeleton is right: the cash-flow obsession, the VC skepticism, the Ampush sale disappointment with real numbers, the founder-market-fit failure on the digestive health product \u2014 these are genuine receipts that separate this from a Wikipedia summary. But the brain has been refined into the podcast-guest version of Jesse rather than the operating version, which means the judgment it encodes is mostly pre-metabolized insight delivered at a remove from the actual uncertainty. The hard gate issue is real: I cannot recommend shipping a brain pack where the central biographical credibility claim \u2014 the scale of Ampush \u2014 carries a HIGH-severity ungrounded flag, because that claim underwrites the entire performance-marketing authority stack on which roughly half the first principles depend. Beyond the numeric defect, all three field judges converged on the same structural diagnosis from different angles \u2014 Swisher called it sanitized, Munger called it diluted, Brown called it pre-processed \u2014 and when three independent judges with very different priors land in the same neighborhood, I take that convergence seriously rather than averaging it away.",
+  "calibration_note": "I trust these three verdicts more than usual because they converged structurally without seeing each other, which is the independent-elicitation signal I weight most heavily. Swisher's authenticity score of 72 is probably one to three points generous \u2014 she correctly identified the TED-talk abstraction problem but gave credit for the voice samples and hard-lesson receipts without fully penalizing the inversion of how Pujji actually reasons (stories first, principles second). I'm nudging authenticity down to 68. Munger's rigor score of 62 is directionally right; his flags on the ungrounded biographical claim and the imported CLG framework presented without attribution are legitimate demerit items, but he may be slightly over-penalizing the atom sample for 'standard startup advice' \u2014 some of those observations are genuinely proprietary in combination even if the components are familiar. I'm nudging rigor down to 58 to fully price the ungrounded numeric defect, which is a hard gate item, not a style preference. Brown's coverage score of 52 is the one I trust most and would not move \u2014 she identified the single most important structural absence, which is that every failure has already been converted to a lesson with zero residual wound, and the six-month drift period is mentioned and immediately resolved rather than inhabited. The calibration score I'm assigning myself is 59, reflecting that this is a medium-confidence judgment on a brain pack where the core biographical claim is unverified, which creates irreducible uncertainty about how much of the intellectual authority is earned versus asserted.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Verify and source the Ampush revenue and ad-spend figures before any other edit \u2014 confirm whether ~$30M revenue and $50\u2013100M/yr managed spend are accurate, and attach the citation or replace with the defensible number.",
+      "why": "This is the hard gate. The ungrounded HIGH-severity claim underwrites the entire performance-marketing authority stack \u2014 founder-led-sales credibility, bootstrapping-is-safer argument, cash-flow-first gospel. If the scale was materially different, the calibration of every downstream principle shifts. A brain that cannot be trusted on its own biography cannot be trusted on anything."
+    },
+    {
+      "priority": 2,
+      "fix": "Rebuild the constitution entries to lead with the story and arrive at the principle, not the reverse \u2014 the current structure presents abstraction first and story as illustration, which is the opposite of how Pujji actually reasons in every sourced transcript.",
+      "why": "This is the authenticity defect Swisher identified most precisely. Pujji's thinking is inductive, not deductive. The current format makes him sound like a business school framework rather than a founder who burned money on digestive health ads and learned from it. Inverting the structure would close the 3-4 point authenticity gap without changing any substantive content."
+    },
+    {
+      "priority": 3,
+      "fix": "Add at least two unresolved failures \u2014 wounds that have not yet been converted into clean lessons \u2014 including an inhabitable version of the six-month post-Ampush drift period that does not immediately resolve into the Dave Kashen outcome.",
+      "why": "Brown's 52 on coverage is the score I trust most and it is earned. A brain pack that only contains metabolized failures teaches a sanitized decision-making model. The six-month drift is the most honest moment in the document and it is immediately papered over. Real coverage of this human requires showing the doubt before the resolution, not just the resolution."
+    },
+    {
+      "priority": 4,
+      "fix": "Audit the atom sample and tag or remove entries that are not specifically Jesse Pujji's proprietary insight \u2014 'go deep in one channel,' 'big vision plus cheapest wedge,' 'to-do list grows faster than completion rate' could appear in any YC blog post and should either be cut or reanchored to a specific Pujji context that makes them his.",
+      "why": "Munger's rigor penalty for generic startup wisdom presented as proprietary insight is correct. A brain pack's value is in the non-obvious, earned-in-the-field signal. Every generic entry dilutes the signal-to-noise ratio and makes the whole document less trustworthy as a representation of what is actually distinctive about how Jesse Pujji thinks."
+    },
+    {
+      "priority": 5,
+      "fix": "Attribute the Conscious Leadership Group framework explicitly wherever it appears \u2014 'clear agreements,' 'zone of genius,' 'loving candor' \u2014 and add a brief note on how Jesse adapted or extended it versus uses it wholesale.",
+      "why": "Imported frameworks presented without attribution create a false originality signal that sophisticated readers immediately discount. Explicit attribution plus a short delta ('here is where Jesse diverged from the CLG baseline') actually increases credibility rather than reducing it, because it shows the brain can distinguish between what is borrowed and what is earned."
+    },
+    {
+      "priority": 6,
+      "fix": "Add a failure mode for the 'inner game is the operating game' principle \u2014 a specific instance where the emotional processing framework did not save a bad decision, or where Jesse's own inner-work blind spots produced a concrete operating error.",
+      "why": "Brown flagged this correctly: the principle appears in the constitution as aspiration with no corresponding breakdown. A first principle that has no failure mode in the document reads as unfalsifiable, which is the opposite of what a rigorous brain pack should encode. One specific counter-example would turn this from a values statement into a testable belief."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 72,
+      "recognizable": true,
+      "verdict": "This brain is substantially real \u2014 the structural bones are right, the voice samples are genuine, and the hard lessons section has actual receipts with dollar amounts and specifics, which is the test of whether someone is performing humility or actually learned something. But there's a sanitization problem: the constitution reads like a TED talk version of Pujji, organized and polished in a way that strips out the texture of how he actually arrives at these views. The 'Humans are the third world' problem applies here too \u2014 the raw material (his real interviews, his actual confessions) has been refined into something more presentable and less alive.",
+      "strengths": [
+        "The hard lessons section has genuine receipts \u2014 specific dollar gaps (9-figure vs 8-figure expectations), named partnerships (Red Ventures), and the Ampush X failure story with a direct quote about 'weekly meetings with two employees.' This is not performed vulnerability.",
+        "The Zone of Genius admission \u2014 'you're a 30%' \u2014 is exactly the kind of uncomfortable specificity that signals real self-disclosure rather than curated humility. Most brain packs would soften that number.",
+        "The DTC digestive health disaster ($50 revenue per lead vs $1,000 cost per lead) is a genuinely specific failure with real unit economics, not a vague 'we learned a lot from this experience' placeholder.",
+        "The contrarian positions are structurally correct and grounded \u2014 'agencies can be great businesses' is a real and specific counter to startup orthodoxy, not a generic contrarian pose.",
+        "Voice samples in the atom section preserve actual speech patterns \u2014 incomplete sentences, the 'like' cadence, real quantitative examples \u2014 which is harder to fake than polished paraphrase.",
+        "The VC-as-riskier-path argument is genuinely his and correctly framed as a one-way door logic rather than ideology \u2014 the annual review mechanism is a specific behavioral tell that grounds the principle."
+      ],
+      "weaknesses": [
+        "The constitution is organized like a business school framework \u2014 eleven tidy first principles, each with a clean single sentence summary. Pujji doesn't actually talk this way. He arrives at principles through stories and then names them. The brain inverts this, presenting the abstraction first and the story as illustration, which is the opposite of how he reasons.",
+        "The 'entrepreneurship is personal development with financial upside' principle, while correct, is the most genericized entry. It reads like it could be from any conscious-business-meets-startup-culture creator. The specific Conscious Leadership / Dave Kashen lineage is mentioned in the hard lessons but not woven into the first principles with enough texture.",
+        "The 'growth loops compound; funnels decay' atom is the weakest \u2014 it's accurate but it sounds like a marketing newsletter headline rather than something Pujji would say. He'd explain the same concept through a specific business example, not a generalized aphorism.",
+        "The numeric verification flags a HIGH severity defect on the $30M revenue / $50-100M ad spend managed claim with no VC \u2014 this is a meaningful factual load-bearing element of his origin story and the fidelity penalty of 25 points is not addressed or flagged in the constitution itself, leaving the brain with a potentially wrong anchor on his actual scale.",
+        "The brand_building atom cluster feels imported from a pitch deck for one specific product (the stories-circles UI tool) rather than being a genuinely distilled Pujji principle. It reads as product-specific rather than philosophically generalized, and it's unclear why this particular tool discussion belongs in a 'brand building' framework atom.",
+        "The 'would not say' section is the most performative part of the constitution \u2014 each entry reads like a straw man constructed to make the principles look more distinctive. Real 'would not say' markers should be violations that actually tempt the person, not obvious inversions of stated beliefs."
+      ],
+      "flags": [
+        {
+          "issue": "The revenue/ad spend anchor is flagged HIGH severity and ungrounded, but the constitution treats it as settled fact. If Ampush's actual scale was different, it changes the credibility of his cash-flow-first and bootstrapping-is-safer arguments \u2014 those claims rest on having actually executed at meaningful scale.",
+          "evidence": "[high/ungrounded] (biography[4].role) Scaled Ampush to ~$30M revenue (managed $50\u2013100M/yr in ad spend), bootstrapped \u2014 no VC",
+          "fix": "Either verify the Ampush revenue figure against primary sources (his own public statements on exact revenue) or hedge the claim to 'eight-figure revenue' which he has stated directly, and note the ad-spend-managed figure is his characterization not an audited number."
+        },
+        {
+          "issue": "The growth_loops atom about 'content experience on-site' and 'story-level analytics' is clearly about a specific SaaS product in the Gateway X portfolio, but it's filed under a general 'growth loops' principle tag. This misfiling makes it look like a general Pujji belief when it's actually a pitch for one specific company.",
+          "evidence": "'I think there is a little bit of iteration in the first couple weeks you say the first couple of months actually to figure out what content's working and which one they should be featured um but then'",
+          "fix": "Re-tag this atom as [brand_building] or [gateway_x] and remove it from the growth_loops principle cluster, which should contain his general flywheel thinking (the Growth Assistant 2-to-50 people example is the right anchor for that principle)."
+        },
+        {
+          "issue": "The 'does not believe' and 'would not say' sections are almost entirely redundant with each other and with the first principles. They add no behavioral specificity \u2014 they're just negations of the positive principles, which means the brain has no real failure-mode detection from these sections.",
+          "evidence": "'We just need more capital to solve this' \u2014 Pujji's annual zero-based review almost always revealed that the bottleneck was human or strategic, not financial.",
+          "fix": "Replace at least three of the 'would not say' entries with genuine edge cases \u2014 situations where Pujji's framework produces a non-obvious answer. For example: how does he handle a portfolio company that needs a capital injection to seize a time-sensitive opportunity? That tension is where the real constitution lives."
+        },
+        {
+          "issue": "The 'mentorship is compressed time' principle and its associated atoms are correct but thin on the dark side. His advisory board critique ('co-created failure,' equity given prematurely) is real and sharp, but the brain doesn't capture his view on what he actually owes the people who mentored him \u2014 the relational debt side of the equation, which he talks about explicitly.",
+          "evidence": "'Advisory boards are a co-created failure \u2014 founders give away equity prematurely, advisors never develop enough skin in the game to make helping a priority'",
+          "fix": "Add an atom or first-principle corollary that captures his explicit acknowledgment of mentor debt \u2014 the names he credits (the Red Ventures operators, Dave Kashen, specific angels) and his stated obligation to pay it forward, which is not just feel-good but is structurally how Gateway X's deal flow works."
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 62,
+      "recognizable": true,
+      "verdict": "This brain pack captures the real Jesse Pujji in outline \u2014 the bootstrapping-over-VC conviction, the DTC-as-Facebook-arbitrage insight, the founder-led-sales gospel, the Ampush sale failure with actual numbers \u2014 but it dilutes genuine hard-won insight with too much repackaged startup-blog wisdom. The hard lessons section is the strongest part and earns its keep; the constitution and atom sample mix legitimately proprietary thinking with things any Y Combinator blog post would say. The ungrounded revenue claim is a credibility defect that a rigorous brain pack cannot carry.",
+      "strengths": [
+        "The Ampush sale failure is specific and damning \u2014 9-figure expectation vs 8-figure reality, the Red Ventures minority-stake pivot, headcount cut while revenue grew \u2014 this is the kind of receipt-backed lesson that distinguishes real experience from performative humility",
+        "The DTC-brands-as-Facebook-arbitrage position is genuinely contrarian and well-grounded: 'If the economics only worked because of cheap Facebook CPMs, what was called a brand was actually an arbitrage window' is a real insight with a specific causal mechanism, not a slogan",
+        "The Ampush X failure \u2014 new ventures arm going nowhere because Jesse never stopped running day-to-day of the parent \u2014 is a specific organizational mistake with a named cost (two companies effectively shut down) and a named fix (no new company without a dedicated CEO co-founder), not a vague lesson",
+        "The digestive health DTC failure has actual numbers: $10,000 spent, 10 leads, $1,000 CPL against $50 revenue per lead \u2014 this is the kind of quantified humiliation that makes a lesson credible",
+        "The 'venture capital is the riskier path' inversion is a genuine contrarian position with a real mechanism behind it (one-way door to unicorn-or-bust), not just contrarianism for its own sake",
+        "The Zone of Genius operating at 30% diagnosis \u2014 with a named coach (Dave Kashen) and a specific behavioral change (not going to work until 11am for 6 months) \u2014 is honest and specific rather than generic self-improvement language"
+      ],
+      "weaknesses": [
+        "The atom sample is diluted with standard startup advice that anyone could say: 'go deep in one channel at a time,' 'have a big vision but find the cheapest fastest wedge,' 'your to-do list grows faster than your ability to complete it' \u2014 these are MBA-orientation-week observations, not Jesse Pujji's proprietary insight",
+        "The 'clear agreements framework' (who/what/by-when request structure) is Conscious Leadership Group boilerplate \u2014 it is correctly attributed to an external framework he uses, but presenting it as a distinctive brain-atom without flagging it as imported wisdom inflates the apparent originality of the pack",
+        "The growth_loops atom about 'story-level and chapter-level analytics' reads like product marketing copy for a content tool, not a distilled mental model \u2014 it is vague, context-free, and could apply to any content analytics product",
+        "The brand_building atoms about stories UI and borrowed social patterns feel like they belong to a specific portfolio company pitch, not a generalizable principle \u2014 they add noise without revealing how Jesse actually thinks about brand durability",
+        "The 'entrepreneurship is personal development with financial upside' principle is the most generic item in the constitution \u2014 it is said by every executive coach and second-time founder on every podcast, and there is nothing here that makes it specifically Jesse Pujji's version of it",
+        "The numeric verification flags a HIGH-severity ungrounded claim on Ampush revenue ($30M revenue, $50-100M ad spend managed) with a 25-point fidelity penalty \u2014 if the core biographical fact used to establish his credibility as a performance marketing operator cannot be verified, everything downstream that relies on that authority is suspect"
+      ],
+      "flags": [
+        {
+          "issue": "Ungrounded core biographical claim undermines the entire performance-marketing authority stack",
+          "evidence": "biography[4].role: Scaled Ampush to ~30M revenue (managed $50\u2013100M/yr in ad spend), bootstrapped \u2014 no VC",
+          "fix": "Either source a verifiable public citation for Ampush's revenue/spend figures (interview, press release, SEC filing if applicable) or reframe the claim with appropriate epistemic humility \u2014 'reported by Jesse as approximately' \u2014 rather than asserting it as fact. A brain pack that grounds its operator's credibility in an unverifiable number is building on sand."
+        },
+        {
+          "issue": "Generic startup wisdom presented as proprietary insight inflates apparent originality",
+          "evidence": "performance_marketing atom: 'Early-stage companies should go deep in one acquisition channel at a time rather than spreading across many simultaneously. Depth in a single channel produces more learning and efficiency than thin coverage across multiple.'",
+          "fix": "Replace with Jesse's specific channel-sequencing logic from Ampush \u2014 which channel first, why, what the transition trigger was, what he observed in actual client spend data. The generic version is Paul Graham boilerplate; the specific version is Jesse Pujji."
+        },
+        {
+          "issue": "Imported framework presented without attribution deflates authenticity signal",
+          "evidence": "building_teams atom: 'The clear agreements framework \u2014 every commitment is framed as a specific request with a who, what, and by-when...'",
+          "fix": "Explicitly tag this as Conscious Leadership Group methodology that Jesse adopted and apply it \u2014 show where Jesse adapted or extended it, not just where he uses it. The brain pack should capture how he thinks, not just which books he has read."
+        },
+        {
+          "issue": "Atom is product-feature description masquerading as a mental model",
+          "evidence": "growth_loops atom: 'The first few months of running a content experience on-site should be treated as a learning and iteration phase. Story-level and chapter-level analytics reveal which content drives engagement...'",
+          "fix": "Remove or replace with a generalizable principle about content loop architecture. This reads like it was scraped from a specific product demo context and lacks any transferable insight. A brain should generalize; this does not."
+        },
+        {
+          "issue": "Constitution principle is indistinguishable from generic founder-podcast filler",
+          "evidence": "First principles: 'Entrepreneurship is personal development with financial upside \u2014 The business is the vehicle; the founder is the product.'",
+          "fix": "Either cut this principle or make it Jesse-specific by grounding it in his Conscious Leadership work, his 6-month post-Ampush transition, and his specific claim that emotional processing is a *precondition* for strategic clarity \u2014 not just a nice add-on. The generic version adds nothing."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 52,
+      "recognizable": true,
+      "verdict": "This brain pack captures Jesse Pujji's intellectual frameworks with real precision \u2014 the taxonomies are sharp, the contrarian positions are grounded, and the hard lessons have receipts. But it presents a man who has already processed his failures and packaged them neatly into teachable frameworks. What's missing is the shame that lives before the lesson, the doubt that hasn't yet resolved into a principle, the cost that wasn't recovered. This is Jesse Pujji as podcast guest, not Jesse Pujji at 2am questioning whether he's built anything real.",
+      "strengths": [
+        "The hard lessons section actually has receipts \u2014 '9 figures vs 8 figures,' the $1000 CPL against a $50 revenue per lead, the 30% zone-of-genius assessment \u2014 these are specific enough to be painful, which is rare and earns trust",
+        "The 'Would Not Say' section correctly identifies the armor Jesse would never wear \u2014 'I built this myself' and 'We just need more capital' are genuine constitution violations, not generic humility gestures",
+        "The six-months-of-11am-to-4pm detail in the hard lessons is the closest this document gets to real vulnerability \u2014 an unresolved, unpackaged period of existential drift that isn't immediately redeemed by a lesson",
+        "The DTC digestive health failure is told with the specific shame of founder-market mismatch \u2014 'you're not that customer' \u2014 which has the texture of someone telling you something embarrassing rather than instructive"
+      ],
+      "weaknesses": [
+        "Every single failure in the hard lessons section has already been converted into a clean lesson. There is no wound that is still a wound. Real people have failures they haven't finished metabolizing \u2014 the document has zero of those",
+        "The 'entrepreneurship is personal development' first principle is listed but never shown breaking down in practice. Where is the moment Jesse's inner work failed to save a bad decision? Where did the framework not work?",
+        "The atom sample contains zero moments of doubt, fear, or shame in real time \u2014 only retrospective wisdom. Atoms like the zone-of-genius framing read as coaching content, not raw cognitive fingerprint",
+        "The Ampush sale failure is framed almost entirely as a strategic recalibration ('internalized that growth without profitability destroys exit multiples') \u2014 the crestfallen line is there but immediately buried under the Red Ventures pivot. The grief of building something for a decade and not getting the number you needed is not present",
+        "There is no representation of Jesse's relationship to his own ambition as a source of tension \u2014 the document treats his drive as clean and directional, but a man who spent six months not going to work until 11am clearly had a more complicated reckoning with what he'd been chasing",
+        "The numeric verification flags an ungrounded claim about Ampush revenue scale \u2014 this is not a minor fidelity issue, it contaminates the credibility of the specific receipts that make the hard lessons section valuable"
+      ],
+      "flags": [
+        {
+          "issue": "Failure converted to lesson before the wound is shown \u2014 no unresolved shame present",
+          "evidence": "Cost: The team was targeting a 9-figure exit and received only 8-figure offers... Changed: I partnered with Red Ventures as a minority investor, used their expertise to convert a fast-growing but not super-profitable company into one that actually made money",
+          "fix": "Add an atom or hard-lesson beat that captures what it felt like to tell your co-founders, your team, or yourself that the number wasn't there \u2014 before the Red Ventures solution existed. The shame of the gap, not just the strategic response to it."
+        },
+        {
+          "issue": "Zone of genius framework presented as insight, not as the thing Jesse used to avoid looking at something harder",
+          "evidence": "I like learned my zone of genius at Ampush. But I wasn't actually willing to commit to my zone of genius until I started GatewayX.",
+          "fix": "What was the cost of that unwillingness? Who paid it besides Jesse? Was there a specific person, relationship, or moment where operating outside his genius hurt someone else? The framework without the relational cost is self-help content, not a person."
+        },
+        {
+          "issue": "Six-month drift period is mentioned but not inhabited \u2014 the most vulnerable moment in the document is immediately followed by the Dave Kashen resolution",
+          "evidence": "For 6 months, I didn't go into work until 11 am and left at 4 pm. I had no idea what was next and questioned everything... I started working with Dave Kashen, and it has been life-changing.",
+          "fix": "What did Jesse question specifically? His identity? Whether building companies was actually his calling or just his conditioning? The document implies existential doubt but never lets it speak. Add an atom that captures what the questioning actually sounded like from inside."
+        },
+        {
+          "issue": "The 'inner game is the operating game' principle appears in the constitution but has no corresponding failure mode \u2014 it reads as aspiration not battle-tested belief",
+          "evidence": "That the inner game is separate from the operating game \u2014 Emotional regulation, identity work, and relationship quality are not soft skills \u2014 they are the substrate on which all hard operating decisions rest.",
+          "fix": "Show a specific decision Jesse made while emotionally dysregulated that cost him something real \u2014 a hire, a partnership, a product call. The principle only has weight if we see what happened when it was violated."
+        },
+        {
+          "issue": "Ungrounded revenue claim flagged at HIGH severity undermines the credibility of receipts throughout",
+          "evidence": "[high/ungrounded] (biography[4].role) Scaled Ampush to ~$30M revenue (managed $50\u2013100M/yr in ad spend), bootstrapped \u2014 no VC",
+          "fix": "Verify and correct the specific revenue figure with sourced evidence, or qualify it explicitly as an estimate. A brain pack built on the premise that cash flow is the only honest scoreboard cannot afford ungrounded financial claims \u2014 the irony is too damaging."
+        }
+      ]
+    }
+  ],
+  "cost": 0.2035
+}

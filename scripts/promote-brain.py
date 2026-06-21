@@ -59,6 +59,22 @@ def audit_score(slug: str) -> int | None:
         return None
 
 
+def persona_gate(slug: str) -> tuple[bool | None, str]:
+    """Read the latest persona-QA scorecard for a brain. Returns (pass, detail).
+    pass is None if no persona-QA has been run (gate can't be evaluated)."""
+    import glob
+    files = sorted(glob.glob(str(BRAINS / slug / "evals" / "persona-qa-*.json")))
+    if not files:
+        return None, "no persona-qa-*.json (run scripts/brain-qa.py --brain %s)" % slug
+    try:
+        sc = json.loads(Path(files[-1]).read_text())
+        detail = (f"score={sc.get('persona_qa_score')} high-numeric-defects="
+                  f"{sc.get('high_severity_numeric_defects')} ({Path(files[-1]).name})")
+        return bool(sc.get("pass")), detail
+    except Exception as e:
+        return None, f"unreadable persona-qa json: {e}"
+
+
 def supabase_exec(query: str) -> tuple[bool, str]:
     url = os.environ.get("SUPABASE_URL", "https://uzediwokyshjbsymevtp.supabase.co").rstrip("/")
     key = os.environ.get("SUPABASE_SERVICE_KEY", "")
@@ -79,6 +95,9 @@ def main():
     ap.add_argument("--slug", required=True, help="Canonical (live) slug, e.g. steve-jobs")
     ap.add_argument("--staging-slug", help="Staging slug (default: <slug>-v2)")
     ap.add_argument("--force", action="store_true", help="Skip the audit >= live gate")
+    ap.add_argument("--persona-gate", action="store_true",
+                    help="Also require the staging brain to PASS its persona-QA ship-gate "
+                         "(brains/<stage>/evals/persona-qa-*.json pass=true). Off by default.")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--skip-finalize", action="store_true",
                     help="Skip the post-swap finalize-supabase (load pack + embed)")
@@ -109,6 +128,20 @@ def main():
     if not args.force and base_score is not None and stage_score is not None and stage_score < base_score:
         say("ERR", f"{stage} ({stage_score}) scores below live {base} ({base_score}). Use --force to override.")
         sys.exit(1)
+
+    # Optional persona-QA ship-gate: promotion publishes a brain, so honor the same
+    # gate that governs hidden->live. Off by default (existing promotions unaffected);
+    # --force bypasses it like the audit gate.
+    if args.persona_gate and not args.force:
+        ppass, pdetail = persona_gate(stage)
+        say("i", f"persona-gate ({stage}): {pdetail}")
+        if ppass is None:
+            say("ERR", f"--persona-gate set but no persona-QA result for {stage}. "
+                       f"Run: python3 scripts/brain-qa.py --brain {stage}")
+            sys.exit(1)
+        if not ppass:
+            say("ERR", f"{stage} fails its persona-QA ship-gate ({pdetail}). Fix + re-run brain-qa, or --force.")
+            sys.exit(1)
 
     n_atoms = len(json.loads(stage_pack.read_text()).get("atoms", []))
     n_conn = len(json.loads(stage_pack.read_text()).get("connections", []))

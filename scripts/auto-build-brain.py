@@ -1972,6 +1972,7 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
     parser.add_argument("--allow-thin-pack", action="store_true", help="Bypass the min-atoms floor and allow shipping a thin brain")
     parser.add_argument("--force-synthesis", action="store_true", help="Regenerate synthesis.md even if it already exists (backs up existing to .bak)")
     parser.add_argument("--skip-grounding", action="store_true", help="Skip Phase 3.5 synthesis grounding/sourcing")
+    parser.add_argument("--skip-hard-lessons", action="store_true", help="Skip Phase 3.6 hard-lessons + receipts mining")
     parser.add_argument("--verbose", action="store_true", help="Verbose logging")
     args = parser.parse_args()
 
@@ -2242,6 +2243,29 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
                     bjp2 = brain_dir / "brain.json"
                     if bjp2.exists():
                         with open(bjp2) as f:
+                            brain_json = json.load(f)
+
+                # --- Phase 3.6: mine Hard Lessons + receipts from the corpus ---
+                # Auto-generates synthesis.hard_lessons (mistake -> cost -> change with
+                # verbatim receipts) from the brain's OWN diarized atoms, enforcing the
+                # real-cost rubric. An empty result is correct for a sanitized corpus — a
+                # QA signal, not a hole to fill. Runs after grounding so the pool includes
+                # any minted sourced atoms. Non-fatal.
+                if not args.dry_run and not args.skip_hard_lessons:
+                    step("Phase 3.6: mining hard lessons + receipts...")
+                    hl = subprocess.run(
+                        ["python3", str(SCRIPT_DIR / "mine-hard-lessons.py"),
+                         "--brain", slug, "--force"],
+                        cwd=str(ROOT_DIR), capture_output=True, text=True, timeout=900,
+                    )
+                    for line in hl.stdout.strip().splitlines()[-4:]:
+                        print(f"  {line}")
+                    if hl.returncode != 0:
+                        warn(f"hard-lessons mining exited {hl.returncode} (non-fatal): {hl.stderr[-200:]}")
+                    # Reload brain.json — the miner wrote synthesis.hard_lessons into it.
+                    bjp3 = brain_dir / "brain.json"
+                    if bjp3.exists():
+                        with open(bjp3) as f:
                             brain_json = json.load(f)
 
                 mark_phase(progress, 3, "complete")

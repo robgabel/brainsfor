@@ -1,0 +1,31 @@
+{
+  "slug": "jesse-pujji",
+  "person": "Jesse Pujji",
+  "date": "2026-06-21",
+  "total_claims": 7,
+  "counts": {
+    "grounded": 4,
+    "superseded": 0,
+    "ungrounded": 1,
+    "unverifiable": 2
+  },
+  "defect_count": 1,
+  "high_severity_count": 1,
+  "fidelity_penalty": 25,
+  "cost": 0.0746,
+  "defects": [
+    {
+      "where": "biography[4].role",
+      "claim": "Scaled Ampush to ~$30M revenue (managed $50\u2013100M/yr in ad spend), bootstrapped \u2014 no VC",
+      "figures": [
+        "$30M",
+        "$50"
+      ],
+      "status": "ungrounded",
+      "severity": "high",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "The corpus states Ampush managed '$1B+ in media spend' total and reached '$2 million in monthly revenue' by August 2011, but contains no figure of ~$30M revenue or $50\u2013100M/yr in ad spend as specific metrics; the $1B+ managed spend figure materially supersedes the claimed $50\u2013100M/yr range, and no $30M revenue figure appears."
+    }
+  ]
+}
