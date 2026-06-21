@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BrainsFor — Explore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;700&display=swap">
   <style>
     * {
       margin: 0;
@@ -19,6 +22,7 @@
       --text: #e8e8f0;
       --text-dim: #8888a0;
       --accent: #6366f1;
+      --accent-gold: #d97706;
       --contradicts: #f87171;
       --subtle: rgba(230, 230, 240, 0.05);
     }
@@ -26,10 +30,18 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       font-size: 15px;
       line-height: 1.5;
       overflow: hidden;
+    }
+
+    /* Brand display type — Space Grotesk, "whispered authority". Headings only;
+       Inter carries body. Single source: keep all display headings on this list. */
+    .hero-title, .hero-tagline, .group-title, .section-title,
+    .principle-title, .contrarian-title, .belief-title, .hard-lesson-title,
+    .pattern-name, .tab {
+      font-family: 'Space Grotesk', -apple-system, sans-serif;
     }
 
     .container {
@@ -400,15 +412,18 @@
     }
 
     .hero-title {
-      font-size: 48px;
-      font-weight: 700;
+      font-size: 52px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
       margin-bottom: 16px;
-      line-height: 1.2;
+      line-height: 1.05;
     }
 
     .hero-tagline {
-      font-size: 20px;
-      color: var(--text-dim);
+      font-size: 21px;
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      color: var(--accent);
       margin-bottom: 20px;
     }
 
@@ -545,6 +560,89 @@
       color: var(--text-dim);
       font-size: 14px;
       line-height: 1.6;
+    }
+
+    /* Grouped "How They Think" layout (Beliefs / Patterns / Boundaries / Hard Lessons / Arc) */
+    .group-title {
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin: 48px 0 4px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+    }
+    .group-title:first-of-type { margin-top: 8px; }
+    .subsection-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+      margin: 22px 0 12px;
+    }
+    .hard-lesson-card {
+      padding: 20px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      border-left: 4px solid var(--accent-gold);
+      margin-bottom: 16px;
+    }
+    .hard-lesson-title {
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .hard-lesson-line {
+      color: var(--text-dim);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+    .hl-label {
+      display: inline-block;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      color: var(--accent-gold);
+      margin-right: 6px;
+    }
+    /* Receipts — provenance for a claim (the proof) */
+    .receipts {
+      margin-top: 14px;
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
+    .receipts > summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+    }
+    .receipts > summary::-webkit-details-marker { display: none; }
+    .receipts > summary::before { content: '▸ '; }
+    .receipts[open] > summary::before { content: '▾ '; }
+    .receipt {
+      margin-top: 10px;
+      padding-left: 12px;
+      border-left: 2px solid var(--border);
+    }
+    .receipt-quote {
+      color: var(--text);
+      font-size: 13.5px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .receipt-source {
+      margin-top: 4px;
+      font-size: 12px;
+      color: var(--text-dim);
     }
 
     .belief-card {
@@ -1571,32 +1669,47 @@
         </div>
       `;
 
-      // Build section registry for nav
+      // Build section registry for nav — five reading groups
       sections = [];
+      const sub = (label) => '<div class="subsection-title">' + label + '</div>';
 
-      // First Principles
-      if (s.first_principles && s.first_principles.length > 0) {
-        sections.push({ id: 'sec-first-principles', label: 'First Principles' });
-        html += '<div class="section-title" id="sec-first-principles">First Principles</div>';
-        html += '<div class="principles-grid">';
-        s.first_principles.forEach((p, i) => {
-          html += `
-            <div class="principle-card">
-              <div style="display: flex; align-items: baseline;">
-                <div class="principle-num">${i + 1}</div>
-                <div class="principle-title">${esc(p.title)}</div>
+      // ── BELIEFS (first principles + contrarian positions) ──
+      if ((s.first_principles && s.first_principles.length) || (s.contrarian_positions && s.contrarian_positions.length)) {
+        sections.push({ id: 'grp-beliefs', label: 'Beliefs' });
+        html += '<div class="group-title" id="grp-beliefs">Beliefs</div>';
+        if (s.first_principles && s.first_principles.length) {
+          html += sub('First Principles');
+          html += '<div class="principles-grid">';
+          s.first_principles.forEach((p, i) => {
+            html += `
+              <div class="principle-card">
+                <div style="display: flex; align-items: baseline;">
+                  <div class="principle-num">${i + 1}</div>
+                  <div class="principle-title">${esc(p.title)}</div>
+                </div>
+                <div class="principle-desc">${esc(p.desc)}</div>
               </div>
-              <div class="principle-desc">${esc(p.desc)}</div>
-            </div>
-          `;
-        });
-        html += '</div>';
+            `;
+          });
+          html += '</div>';
+        }
+        if (s.contrarian_positions && s.contrarian_positions.length) {
+          html += sub('Contrarian Positions');
+          s.contrarian_positions.forEach(p => {
+            html += `
+              <div class="contrarian-card">
+                <div class="contrarian-title">${esc(p.title)}</div>
+                <div class="contrarian-desc">${esc(p.desc)}</div>
+              </div>
+            `;
+          });
+        }
       }
 
-      // Thinking Patterns
-      if (s.thinking_patterns && s.thinking_patterns.length > 0) {
-        sections.push({ id: 'sec-thinking-patterns', label: 'Thinking Patterns' });
-        html += '<div class="section-title" id="sec-thinking-patterns">Thinking Patterns</div>';
+      // ── PATTERNS ──
+      if (s.thinking_patterns && s.thinking_patterns.length) {
+        sections.push({ id: 'grp-patterns', label: 'Patterns' });
+        html += '<div class="group-title" id="grp-patterns">Patterns</div>';
         s.thinking_patterns.forEach(p => {
           html += `
             <div class="pattern-card">
@@ -1607,52 +1720,65 @@
         });
       }
 
-      // Contrarian Positions
-      if (s.contrarian_positions && s.contrarian_positions.length > 0) {
-        sections.push({ id: 'sec-contrarian', label: 'Contrarian Positions' });
-        html += '<div class="section-title" id="sec-contrarian">Contrarian Positions</div>';
-        s.contrarian_positions.forEach(p => {
+      // ── BOUNDARIES (does not believe + would not say) ──
+      if ((s.does_not_believe && s.does_not_believe.length) || (s.would_not_say && s.would_not_say.length)) {
+        sections.push({ id: 'grp-boundaries', label: 'Boundaries' });
+        html += '<div class="group-title" id="grp-boundaries">Boundaries</div>';
+        const who = (brainMeta.possessive === 'her' ? 'She' : 'He');
+        if (s.does_not_believe && s.does_not_believe.length) {
+          html += sub('What ' + esc(who) + ' Does NOT Believe');
+          s.does_not_believe.forEach(p => {
+            html += `
+              <div class="belief-card">
+                <div class="belief-title">${esc(p.title)}</div>
+                <div class="belief-desc">${esc(p.desc)}</div>
+              </div>
+            `;
+          });
+        }
+        if (s.would_not_say && s.would_not_say.length) {
+          html += sub('What This Brain Would NOT Say');
+          s.would_not_say.forEach(p => {
+            html += `
+              <div class="belief-card">
+                <div class="belief-title">${esc(p.title)}</div>
+                <div class="belief-desc">${esc(p.desc)}</div>
+              </div>
+            `;
+          });
+        }
+      }
+
+      // ── HARD LESSONS (earned the hard way: mistake → cost → what changed) ──
+      if (s.hard_lessons && s.hard_lessons.length) {
+        sections.push({ id: 'grp-hard-lessons', label: 'Hard Lessons' });
+        html += '<div class="group-title" id="grp-hard-lessons">Hard Lessons</div>';
+        s.hard_lessons.forEach(p => {
+          const receipts = (p.receipts && p.receipts.length) ? `
+              <details class="receipts">
+                <summary>Receipts (${p.receipts.length})</summary>
+                ${p.receipts.map(r => `
+                  <div class="receipt">
+                    <div class="receipt-quote">${esc(r.quote)}</div>
+                    ${r.source ? `<div class="receipt-source">${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener" style="color:var(--accent)">${esc(r.source)}</a>` : esc(r.source)}</div>` : ''}
+                  </div>
+                `).join('')}
+              </details>` : '';
           html += `
-            <div class="contrarian-card">
-              <div class="contrarian-title">${esc(p.title)}</div>
-              <div class="contrarian-desc">${esc(p.desc)}</div>
+            <div class="hard-lesson-card">
+              <div class="hard-lesson-title">${esc(p.title)}</div>
+              ${p.cost ? `<div class="hard-lesson-line"><span class="hl-label">The cost</span>${esc(p.cost)}</div>` : ''}
+              ${p.change ? `<div class="hard-lesson-line"><span class="hl-label">What changed</span>${esc(p.change)}</div>` : ''}
+              ${receipts}
             </div>
           `;
         });
       }
 
-      // Does NOT Believe
-      if (s.does_not_believe && s.does_not_believe.length > 0) {
-        sections.push({ id: 'sec-not-believe', label: 'Does NOT Believe' });
-        html += '<div class="section-title" id="sec-not-believe">What ' + esc(brainMeta.possessive === 'her' ? 'She' : 'He') + ' Does NOT Believe</div>';
-        s.does_not_believe.forEach(p => {
-          html += `
-            <div class="belief-card">
-              <div class="belief-title">${esc(p.title)}</div>
-              <div class="belief-desc">${esc(p.desc)}</div>
-            </div>
-          `;
-        });
-      }
-
-      // Would NOT Say
-      if (s.would_not_say && s.would_not_say.length > 0) {
-        sections.push({ id: 'sec-would-not-say', label: 'Would NOT Say' });
-        html += '<div class="section-title" id="sec-would-not-say">What This Brain Would NOT Say</div>';
-        s.would_not_say.forEach(p => {
-          html += `
-            <div class="belief-card">
-              <div class="belief-title">${esc(p.title)}</div>
-              <div class="belief-desc">${esc(p.desc)}</div>
-            </div>
-          `;
-        });
-      }
-
-      // Biography
-      if (s.biography && s.biography.length > 0) {
-        sections.push({ id: 'sec-biography', label: 'Biography' });
-        html += '<div class="section-title" id="sec-biography">Biographical Pattern</div>';
+      // ── ARC (biography) ──
+      if (s.biography && s.biography.length) {
+        sections.push({ id: 'grp-arc', label: 'Arc' });
+        html += '<div class="group-title" id="grp-arc">Arc</div>';
         html += '<div class="timeline">';
         s.biography.forEach(entry => {
           html += `
