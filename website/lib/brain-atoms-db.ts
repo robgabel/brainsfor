@@ -37,7 +37,7 @@ export interface DbAtom {
 function siteOrigin(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
   if (explicit) return explicit.replace(/\/+$/, "");
-  return "https://brainsforfree.com";
+  return "https://brainsforagents.com";
 }
 
 const atomCache = new Map<string, DbAtom[]>();

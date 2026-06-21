@@ -227,7 +227,7 @@ $199/mo API is for the lazy-but-smart company that wants to offer "Ask [Expert]"
 | **Peter Attia** | 153 | 1,220 | The Drive podcast, Outlive book reviews | Longevity science, health optimization frameworks |
 | **TOTAL** | **6,012** | **25,311** | | **+ 17 cross-brain connections** |
 
-**Infrastructure stats:** 18 `brain_metadata` records in Supabase (Oprah Winfrey and Sara Blakely ship as packs but aren't yet ingested into Supabase). 0 `brain_requests` logged to date. Full export pipeline operational (`auto-build-brain.py` → one command, 6 phases, ~$23 per brain). All 20 shippable brain packs have complete pack/ directories with brain-context.md, brain-atoms.json, explore.html, README.md, and 8 skill SKILL.md files. Design system (DESIGN.md) and brand guide (BRAND.md) documented and agent-readable. **brainsforfree.com is live** (Next.js app in `website/`, deployed to Vercel, auto-deploy from `main`). `install-brains.sh` handles local installation with symlinks. `audit-brains.py` validates structure + quality scoring (avg score 99/100 across shippable brains).
+**Infrastructure stats:** 18 `brain_metadata` records in Supabase (Oprah Winfrey and Sara Blakely ship as packs but aren't yet ingested into Supabase). 0 `brain_requests` logged to date. Full export pipeline operational (`auto-build-brain.py` → one command, 6 phases, ~$23 per brain). All 20 shippable brain packs have complete pack/ directories with brain-context.md, brain-atoms.json, explore.html, README.md, and 8 skill SKILL.md files. Design system (DESIGN.md) and brand guide (BRAND.md) documented and agent-readable. **brainsforagents.com is live** (Next.js app in `website/`, deployed to Vercel, auto-deploy from `main`). `install-brains.sh` handles local installation with symlinks. `audit-brains.py` validates structure + quality scoring (avg score 99/100 across shippable brains).
 
 ### Next Wave — High-demand candidates
 
@@ -436,7 +436,7 @@ The consumer business funds operations. The platform licensing business is where
 | OpenAI embeddings | ~$5-10 |
 | Claude API (atom extraction) | ~$10-20 |
 | Stripe fees (2.9% + $0.30) | Variable |
-| Domain (brainsforfree.com) | ~$12/yr |
+| Domain (brainsforagents.com) | ~$12/yr |
 | **Total fixed** | **~$75-95/mo** |
 
 **Margin: 95%+.** This is a digital goods business with near-zero COGS once the brain is built.
@@ -574,7 +574,7 @@ The **brain data** (atoms, connections, embeddings) is what costs money. On firs
 > /advise "Should I raise a Series A?"
 
 🧠 Brain Setup: No Belsky brain data found.
-   → Purchase at brainsforfree.com/belsky ($29)
+   → Purchase at brainsforagents.com/belsky ($29)
    → Enter license key: ________
 ```
 
@@ -620,7 +620,7 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 
 ### What's DONE ✅
 
-- [x] Register brainsforfree.com (owned, on Vercel)
+- [x] Register brainsforagents.com (owned, on Vercel)
 - [x] Build brain pipeline (`auto-build-brain.py` — one command, 6 phases, ~$23 per brain)
 - [x] Build 19 shippable brains: Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Dario Amodei, Elon Musk, Jensen Huang, Brené Brown, Oprah Winfrey, Sara Blakely, Bill Harris, Gokul Rajaram, Jeremy Utley
 - [x] 5,802 atoms + 24,648 connections in Supabase (18 brains; Oprah Winfrey and Sara Blakely pack-only)
@@ -636,7 +636,7 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 ### What's LEFT to ship v1
 
 **Storefront (1 day):**
-- [x] Add missing brains to landing page (17/17 live brains rendered on brainsforfree.com; hidden brains correctly excluded)
+- [x] Add missing brains to landing page (17/17 live brains rendered on brainsforagents.com; hidden brains correctly excluded)
 - [ ] Wire Stripe checkout (3 products: Standard $29, Pro $79, API $199/mo)
 - [ ] Build delivery edge function (Stripe webhook → email download link)
 - [ ] Wire "Request a Brain" form to `brain_requests` table
@@ -743,7 +743,7 @@ The evolution path is: **knowledge pack → interactive advisor → platform** �
 
 **What:** Brainsfor.com — installable AI skill packs built from the world's most interesting minds. `npx skills add brainsfor/belsky` gives you 8 thinking tools powered by a real knowledge graph.
 
-**Current state (May 2026):** 19 shippable brains live (Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Dario Amodei, Elon Musk, Jensen Huang, Brené Brown, Oprah Winfrey, Sara Blakely, Bill Harris, Gokul Rajaram, Jeremy Utley). 6,012 atoms across the catalog (5,802 in Supabase; Oprah Winfrey and Sara Blakely pack-only), 25,311 connections total. Full build pipeline, design system, brand guide, brainsforfree.com live on Vercel with 17 live brains rendered (3 hidden). Storefront and checkout not yet wired.
+**Current state (May 2026):** 19 shippable brains live (Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Dario Amodei, Elon Musk, Jensen Huang, Brené Brown, Oprah Winfrey, Sara Blakely, Bill Harris, Gokul Rajaram, Jeremy Utley). 6,012 atoms across the catalog (5,802 in Supabase; Oprah Winfrey and Sara Blakely pack-only), 25,311 connections total. Full build pipeline, design system, brand guide, brainsforagents.com live on Vercel with 17 live brains rendered (3 hidden). Storefront and checkout not yet wired.
 
 **Who:** Three audiences: (1) Builders/founders who want expert-level context without hand-curating it ($29-79). (2) Professionals prepping for high-stakes interactions — sales teams brain-ing a target customer, founders brain-ing board members, creators studying competitors ($500-2K custom). (3) AI platforms who want premium knowledge content for their users (licensing deals).
 
@@ -832,7 +832,7 @@ From product to marketplace. From flat files to graph infrastructure.
 
 ## Open Questions
 
-- [x] ~~Is brainsforfree.com available?~~ ✅ Owned. Already on Vercel.
+- [x] ~~Is brainsforagents.com available?~~ ✅ Owned. Already on Vercel.
 - [x] ~~Is there a "brain comparison" feature?~~ ✅ Yes — `/debate` (head-to-head) and `/connect` (cross-brain synthesis) skills.
 - [x] ~~How do you handle contradictions within a brain?~~ ✅ `/evolve` skill shows thinking evolution over time.
 - [x] ~~Should brains have a "freshness" dimension?~~ ✅ Brain Score + auto-updates for Pro tier.

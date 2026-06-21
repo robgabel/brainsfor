@@ -2,7 +2,7 @@
 
 817 atomic ideas extracted from Public talks, interviews, podcast appearances, and writings across Shiva Rajaraman's career from YouTube through OpenAI. Shiva Rajaraman is a veteran product leader who has shaped some of the world's most consequential consumer platforms. Across YouTube, Spotify, WeWork, Facebook, OpenSea, and OpenAI, he has developed a rare cross-platform perspective on what separates forgettable products from ones people genuinely love — and how to build organizations capable of sustained product excellence.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

@@ -2,7 +2,7 @@
 
 1066 atomic ideas extracted from Poor Charlie's Almanack (his collected speeches and talks), 40+ years of Berkshire Hathaway shareholder Q&A, Wesco and Daily Journal annual meetings, the 1995 'Psychology of Human Misjudgment' speech at Harvard, the 1986 Harvard School commencement address, the 2007 USC Law commencement address, and extensive press interviews from 1962 through 2023. Charlie Munger (1924-2023) was the Vice Chairman of Berkshire Hathaway and Warren Buffett's intellectual partner for more than sixty years. A lawyer turned investor, he built his fortune through patience, multidisciplinary thinking, and an almost militant insistence on rationality. His 'latticework of mental models' approach to decision-making, his speech on the psychology of human misjudgment, and his lifelong commitment to inversion have made him one of the most influential practical philosophers of the modern era.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

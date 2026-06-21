@@ -14,7 +14,7 @@ BrainsFor is a product: packaged "brain packs" — curated knowledge sets from n
 
 Every brain in `brains/index.json` has a `status` field. Two values are in use today:
 
-| Status | On brainsforfree.com | MCP / local skills | Supabase tables | When to use |
+| Status | On brainsforagents.com | MCP / local skills | Supabase tables | When to use |
 |---|---|---|---|---|
 | `live` | Yes — public `/brains/<slug>` page | Yes | Yes (populated) | Default for shipped brains |
 | `hidden` | **No** — filtered out by `website/lib/brains.ts` | Yes | Yes (populated) | Private brains (Rob-only) or pre-launch packs |
@@ -66,7 +66,7 @@ brainsfor/
       dist/                          ← compiled JS (ready to run)
       package.json
 
-  website/                           ← **LIVE SITE** — brainsforfree.com (Next.js app on Vercel, auto-deploy from main)
+  website/                           ← **LIVE SITE** — brainsforagents.com (Next.js app on Vercel, auto-deploy from main)
     AGENTS.md                        ← ⚠️ "This is NOT the Next.js you know" — check node_modules/next/dist/docs/ before writing code
     app/                             ← app router pages (brains/[slug], pricing, dashboard, auth, api)
     lib/                             ← brains.ts (reads brains/index.json for atomCount/connectionCount + per-brain emoji badge, rendered on cards + detail hero)
@@ -112,7 +112,7 @@ brainsfor/
 
 - **Supabase projects — TWO of them (clarified 2026-06-02):**
   - `uzediwokyshjbsymevtp` (shared PAOS project) — **source of truth for the build pipeline**: `auto-build-brain.py`, enrichment, exports, the knowledge graph, and all atom/connection loading write here. MCP access is scoped to this project.
-  - `jefjvgbawmsloerqsgby` (**dedicated BrainsFor project**) — **what brainsforfree.com's prod runtime points at** (`NEXT_PUBLIC_SUPABASE_URL` powers both auth AND `fetchBrainAtoms`). Migrated 2026-06-02 via `scripts/migrate-proper.py` + `migrate-fix.py` (psycopg, reads OLD via service-key API, writes NEW adding the missing `PRIMARY KEY(id)`, `ON CONFLICT DO NOTHING`). All 25 brains' atoms + connections + `brain_metadata` are loaded. **Embeddings were NOT migrated** (both prod routes — `/api/skill` citations and `/api/board` retrieval — use keyword scoring on `fetchBrainAtoms`, not the vector RPC). `search_brain_atoms` RPC / `exec_sql` do NOT exist here yet — backfill embeddings + create the RPC if semantic search is ever wired into prod. To operate on this project locally: no MCP access; use psycopg with the DB password (documented in `migrate-brains-to-new-project.sh`), service key + anon key live commented-out in `website/.env.local`.
+  - `jefjvgbawmsloerqsgby` (**dedicated BrainsFor project**) — **what brainsforagents.com's prod runtime points at** (`NEXT_PUBLIC_SUPABASE_URL` powers both auth AND `fetchBrainAtoms`). Migrated 2026-06-02 via `scripts/migrate-proper.py` + `migrate-fix.py` (psycopg, reads OLD via service-key API, writes NEW adding the missing `PRIMARY KEY(id)`, `ON CONFLICT DO NOTHING`). All 25 brains' atoms + connections + `brain_metadata` are loaded. **Embeddings were NOT migrated** (both prod routes — `/api/skill` citations and `/api/board` retrieval — use keyword scoring on `fetchBrainAtoms`, not the vector RPC). `search_brain_atoms` RPC / `exec_sql` do NOT exist here yet — backfill embeddings + create the RPC if semantic search is ever wired into prod. To operate on this project locally: no MCP access; use psycopg with the DB password (documented in `migrate-brains-to-new-project.sh`), service key + anon key live commented-out in `website/.env.local`.
   - **Gotcha that bit us:** prod returned `atomCount:0` for weeks because the data lived only in the old project while prod pointed at the new (empty) one. If `/api/skill` citations or `/api/board` retrieval go empty in prod, re-run `migrate-proper.py` to top up the dedicated project — don't assume the old project is what prod reads.
 - **Supabase project (build pipeline / knowledge graph):** `uzediwokyshjbsymevtp` (same as PAOS)
 - **Tables (25 brain packs built, all complete; 25 atom tables + 25 connection tables in Supabase — per-brain schema):**
@@ -124,7 +124,7 @@ brainsfor/
   - `cross_connections` — 0 rows ⚠️ FLAG: previously held 17 Rob↔brain cross-brain links; table is empty. Reseeding needed if cross-brain features are still wanted.
   - `rob_atoms` / `rob_connections` — Rob's personal knowledge graph (237 / 162)
   - `scott_belsky_enrichment_log` — connection enrichment run history (mode, counts, duration, errors). Legacy `belsky_enrichment_log` table still exists from pre-rename but is unused.
-  - **Data integrity (verified 2026-06-02):** Supabase, `brains/index.json`, and shipped `pack/brain-atoms.json` agree across all 25 brains. The earlier export pagination cap (~1,000 connections per pack) is RESOLVED — packs ship full connection sets (e.g. brene-brown ships all 2,513). Audit: 25/25 pass, avg 89.8/100 (top: Annie Duke 94; John Green, Peter Zeihan, Yann LeCun, Reshma Saujani 93). `shiva-rajaraman`, `gokul-rajaram`, `hank-green`, `john-green` are `hidden` (Rob-only / not on brainsforfree.com); their Supabase tables and local packs remain intact.
+  - **Data integrity (verified 2026-06-02):** Supabase, `brains/index.json`, and shipped `pack/brain-atoms.json` agree across all 25 brains. The earlier export pagination cap (~1,000 connections per pack) is RESOLVED — packs ship full connection sets (e.g. brene-brown ships all 2,513). Audit: 25/25 pass, avg 89.8/100 (top: Annie Duke 94; John Green, Peter Zeihan, Yann LeCun, Reshma Saujani 93). `shiva-rajaraman`, `gokul-rajaram`, `hank-green`, `john-green` are `hidden` (Rob-only / not on brainsforagents.com); their Supabase tables and local packs remain intact.
 - **Edge function:** `enrich-connections` — automated connection discovery (topic overlap + temporal + LLM). Runs daily at 11:30pm PT via pg_cron. Modes: `discover` (cron), `discover-llm` (manual), `stats`.
 - **RPC `search_brain_atoms(p_slug, p_embedding, p_k, p_min_similarity)`** — top-K atom retrieval by cosine similarity, used by `website/app/api/board/route.ts` for question-aware atom selection (mode-collapse fix, 2026-05-20). Slug-allowlisted (regex `^[a-z][a-z0-9_-]{1,60}$`), k-capped at 50, SECURITY DEFINER, anon-callable. Atoms are already public via shipped JSON packs so opening RPC read access doesn't expose new data.
 - **Export scripts** require `SUPABASE_SERVICE_KEY` — set in `~/rob-ai/.env`
@@ -313,9 +313,9 @@ Customer deliverable (`brains/<slug>/pack/skills/`) still ships the per-brain sk
 **State:** `~/.claude/state/board.json`
 **Depends on:** `brainsfor` MCP server (selective retrieval) + Claude Code Agent tool (parallel sub-agents).
 
-### Website `/api/board` route (brainsforfree.com demo)
+### Website `/api/board` route (brainsforagents.com demo)
 
-Separate from the local `/board` skill above — this is the public board demo at brainsforfree.com. Source: [`website/app/api/board/route.ts`](website/app/api/board/route.ts). Fans out to up to 5 brains in parallel via the Anthropic SDK (Claude Sonnet 4.6 streaming), then runs a synthesis chair pass at the end. Rate-limited via Upstash (4/24h per IP), owner-bypass header for testing.
+Separate from the local `/board` skill above — this is the public board demo at brainsforagents.com. Source: [`website/app/api/board/route.ts`](website/app/api/board/route.ts). Fans out to up to 5 brains in parallel via the Anthropic SDK (Claude Sonnet 4.6 streaming), then runs a synthesis chair pass at the end. Rate-limited via Upstash (4/24h per IP), owner-bypass header for testing.
 
 **Mode-collapse fix (shipped 2026-05-20).** Pre-fix, every brain led with its canonical mental model regardless of question. Two-layer fix:
 - **Layer 1 — prompt surgery.** ANTI-DEFAULT RULE in BOARD_FORMAT explicitly forbids opening with each brain's headline tagline. `buildSystem()` reorders the system prompt so BOARD_FORMAT + question + retrieved atoms come BEFORE the full brain-context.md — by the time the model reads "Taste is the ultimate human moat", it has already been told not to lead with that.
@@ -420,7 +420,7 @@ python3 scripts/eval-brains.py --all --max-workers 3
 
 **Cost reality (vs. spec estimate):** The spec estimated ~$1 at Haiku rates — that underestimated the runner. Actual ~$0.92 per brain = ~$14 for a full 15-brain run (dominated by Sonnet runner loading ~75K-token brain-context.md; prompt caching keeps repeat prompts cheap but the one-time cache write dominates a 20-prompt pass).
 
-**Phase 2** (public Quality Score on brainsforfree.com + monthly regression): `~/rob-ai/ideas/OPPORTUNITIES.md`.
+**Phase 2** (public Quality Score on brainsforagents.com + monthly regression): `~/rob-ai/ideas/OPPORTUNITIES.md`.
 
 ### Persona QA — Annie-chaired judge panel + ship-gate (`scripts/persona-qa.py`, `verify-claims.py`, `brain-qa.py`)
 

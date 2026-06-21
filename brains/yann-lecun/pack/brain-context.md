@@ -2,7 +2,7 @@
 
 609 atomic ideas extracted from Foundational research papers including the 1989 NeurIPS paper and 1998 IEEE proceedings, Turing Award materials, JEPA path paper, Lex Fridman podcast episodes, and major video lectures from Facebook AI Research and academic institutions. Yann LeCun is one of the founding fathers of modern deep learning and a Turing Award laureate who pioneered convolutional neural networks and backpropagation. As Chief AI Scientist at Meta and Silver Professor at NYU, he is one of the most influential and contrarian voices on the future of artificial intelligence.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

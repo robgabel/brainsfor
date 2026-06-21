@@ -2,7 +2,7 @@
 
 496 atomic ideas extracted from The Moment of Lift book, The Next Day memoir, TED talks on birth control and Coca-Cola distribution, Davos panels, World Economic Forum interviews, Oprah Super Soul Sunday, CNN interviews, BBC profiles, and 30+ video appearances. Melinda French Gates is one of the most consequential philanthropists and advocates for women and girls of her generation. Co-founder of the Bill & Melinda Gates Foundation — once the world's largest private charitable foundation — she spent two decades directing billions of dollars toward global health, poverty reduction, and educational access. Since departing the foundation in 2024, she has launched Pivotal Ventures and committed $1 billion to reproductive rights and women's empowerment. Her books The Moment of Lift and The Next Day are deeply personal manifestos for why lifting women lifts the world.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

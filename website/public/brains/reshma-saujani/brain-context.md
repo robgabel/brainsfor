@@ -2,7 +2,7 @@
 
 687 atomic ideas extracted from 32 sources including TED talks, Google talks, SXSW panels, podcast episodes, commencement addresses, and press profiles. Reshma Saujani is a lawyer, politician, and activist who founded Girls Who Code and launched the Marshall Plan for Moms. She is best known for her TED talk 'Teach Girls Bravery, Not Perfection' and her book Brave, Not Perfect, which challenges women to stop optimizing for approval and start taking bold risks.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

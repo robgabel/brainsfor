@@ -177,7 +177,7 @@ The same question produces genuinely different answers depending on which brain 
 
 This is why installing multiple brains gives you genuinely different perspectives — and why `/board` (multi-brain advisory) and `/debate <brain-a> <brain-b>` (cross-brain) work. Scott Belsky brings a specific worldview to your decisions; pair with other brains for productive tension.
 
-Browse the full catalog at [brainsforfree.com](https://brainsforfree.com).
+Browse the full catalog at [brainsforagents.com](https://brainsforagents.com).
 
 ---
 
@@ -215,4 +215,4 @@ The MCP server (Path B) and skills (Path C) are Claude Code-specific. Path A wor
 
 - This pack's `SKILL.md` has detailed setup and skill reference
 - This pack's `README.md` has a quick-start guide
-- Full brain catalog: [brainsforfree.com](https://brainsforfree.com)
+- Full brain catalog: [brainsforagents.com](https://brainsforagents.com)

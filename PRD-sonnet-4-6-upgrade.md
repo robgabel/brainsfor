@@ -41,7 +41,7 @@ Phase 2 is the bulk of the LLM work per brain: ~200–400 atoms generated across
 
 ### In Scope
 - Re-run Phase 2 (atom generation) with Sonnet 4.6 on selected existing brains
-- Re-export pack files so brainsforfree.com serves the new atoms
+- Re-export pack files so brainsforagents.com serves the new atoms
 - Re-run Phase 4 enrichment (connection typing, voice extraction) since atom IDs change after Phase 2
 - Update audit scores post-rebuild
 
@@ -50,7 +50,7 @@ Phase 2 is the bulk of the LLM work per brain: ~200–400 atoms generated across
 - Changing synthesis model (Opus 4.7 already applied 2026-04-21)
 - Adding new sources to `source/` or `research/` (this is a model upgrade, not a content refresh)
 - Rebuilding brains that score 100/100 with strong audit metrics (no room to improve measurably)
-- Client-side changes to brainsforfree.com (pack format is unchanged)
+- Client-side changes to brainsforagents.com (pack format is unchanged)
 
 ---
 
@@ -215,7 +215,7 @@ For each upgraded brain:
    /teach <a concept they'd explain>
    ```
    Compare output feel vs v1 (save v1 outputs before rebuild).
-5. **brainsforfree.com** — check `website/public/brains/<slug>/` files are in sync (export-brain.py copies them automatically). Visit the live site and confirm the brain page renders.
+5. **brainsforagents.com** — check `website/public/brains/<slug>/` files are in sync (export-brain.py copies them automatically). Visit the live site and confirm the brain page renders.
 
 ---
 

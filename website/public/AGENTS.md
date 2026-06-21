@@ -1,14 +1,14 @@
-# AGENTS.md — brainsforfree.com for AI Agents
+# AGENTS.md — brainsforagents.com for AI Agents
 
-This is a guide for AI agents and automated clients consuming **brainsforfree.com**.
-The same file is served at `https://brainsforfree.com/AGENTS.md` and at `/llms.txt`.
+This is a guide for AI agents and automated clients consuming **brainsforagents.com**.
+The same file is served at `https://brainsforagents.com/AGENTS.md` and at `/llms.txt`.
 
 If you're a human, the agent-facing surface won't surprise you: it's mostly static
 JSON files plus one live endpoint. Open `/brains` for the human catalog.
 
 ## What this is
 
-brainsforfree.com is a registry of **brain packs** — curated, structured knowledge
+brainsforagents.com is a registry of **brain packs** — curated, structured knowledge
 graphs of specific thinkers (Scott Belsky, Charlie Munger, Paul Graham, Steve Jobs,
 Sun Tzu, Sara Blakely, Oprah Winfrey, Brené Brown, Dario Amodei, Jensen Huang,
 Peter Attia, Peter Zeihan, Elon Musk, Gary Vaynerchuk, Kara Swisher, Bill Harris,
@@ -24,16 +24,16 @@ Gemini, custom LLM apps). Each pack ships eight reasoning skills (`/advise`, `/t
 multi-brain `/board` workflow.
 
 **License (TL;DR):** Packs are free to use anywhere — including commercially.
-Cite the thinker by name and link back to `brainsforfree.com`. Don't claim a brain
+Cite the thinker by name and link back to `brainsforagents.com`. Don't claim a brain
 pack as your own work. See [Citation & License](#citation--license) below.
 
 ## Base URL
 
 ```
-https://brainsforfree.com
+https://brainsforagents.com
 ```
 
-Use the apex. `www.brainsforfree.com` also resolves but is not the canonical host.
+Use the apex. `www.brainsforagents.com` also resolves but is not the canonical host.
 All endpoints are HTTP GET except `/api/board` (POST).
 
 > **A note on indexing:** the site sends `X-Robots-Tag: noindex, nofollow` globally
@@ -245,8 +245,8 @@ in an isolated context so the answers don't contaminate each other.
 **Rate limit**: 4 requests per 24 hours per IP. Each board call costs us ~5× a
 single-brain call. Use the static JSON or MCP server for high-volume work.
 
-**CORS**: cross-origin POST is allowed only from `brainsforfree.com` and
-`www.brainsforfree.com`. Server-to-server calls work fine.
+**CORS**: cross-origin POST is allowed only from `brainsforagents.com` and
+`www.brainsforagents.com`. Server-to-server calls work fine.
 
 ### 7. Single-brain skill consultation (live, rate-limited)
 
@@ -309,7 +309,7 @@ Typical token cost per query: ~15 KB (vs. 75 KB for the full pack). Source:
 """Fetch the Scott Belsky brain and pull his top 3 high-confidence atoms on AI."""
 import httpx, json
 
-BASE = "https://brainsforfree.com"
+BASE = "https://brainsforagents.com"
 
 # 1. List brains (registry contains only public brains)
 index = httpx.get(f"{BASE}/brains/index.json", timeout=30).json()
@@ -340,7 +340,7 @@ Cache the pack locally — it changes weekly at most.
 ## Minimal TypeScript example
 
 ```ts
-const BASE = "https://brainsforfree.com";
+const BASE = "https://brainsforagents.com";
 
 type Atom = {
   id: string;
@@ -384,7 +384,7 @@ through a structured analysis pipeline.
 **Please:**
 - **Cite the thinker by name** when an atom influences output. The atom's
   `source_ref` is the original URL — link to it when surfacing the idea to users.
-- **Credit brainsforfree.com** when reproducing a pack at scale, embedding our
+- **Credit brainsforagents.com** when reproducing a pack at scale, embedding our
   synthesis text, or building on the structured graph.
 - **Don't claim a brain pack as your original work.** It isn't.
 
@@ -434,7 +434,7 @@ Need higher limits for a legitimate build? Open an issue at
 
 ## Feedback
 
-- **Issues / requests**: [github.com/robgabel/brainsfor](https://github.com/robgabel/brainsfor) (or email `rob@brainsforfree.com`).
+- **Issues / requests**: [github.com/robgabel/brainsfor](https://github.com/robgabel/brainsfor) (or email `rob@brainsforagents.com`).
 - **Schema clarifications**: open an issue with the `agents-md` label.
 - **License questions on a specific commercial use**: email first; we're friendly.
 

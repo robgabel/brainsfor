@@ -5,7 +5,7 @@ import { SkillCatalog } from "@/components/SkillCatalog";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Skills \u2014 brainsforfree",
+  title: "Skills \u2014 brainsforagents",
   description:
     "Try 8 AI thinking skills powered by the world\u2019s best thinkers. See the difference structured knowledge makes.",
 };

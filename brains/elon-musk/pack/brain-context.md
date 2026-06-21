@@ -2,7 +2,7 @@
 
 836 atomic ideas extracted from Joe Rogan Experience episodes, Lex Fridman Podcast episodes, TED talks, SXSW interviews, Code Conference appearances, Wikipedia biography, and major media profiles. Elon Musk is a serial entrepreneur and engineer who has fundamentally transformed multiple industries through companies like Tesla, SpaceX, Neuralink, and The Boring Company. His approach combines first principles thinking with an ambitious long-term vision for humanity's survival and expansion beyond Earth.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

@@ -2,7 +2,7 @@
 
 889 atomic ideas extracted from Podcast interviews (Invest Like the Best, 20VC, Lenny's Podcast, World of DaaS, Aarthi & Sriram Show), YouTube interviews (Fish Sauce Podcast, Outlier Academy, AI Hackathon 2026, Startupsunedited), conference talks, Medium essays, and decision-making frameworks like SPADE — spanning product leadership at Google AdSense, Facebook Ads, Square/Caviar, and DoorDash, plus angel investing across 700+ companies.. Gokul Rajaram is one of the most prolific operator-investors in tech — known as the 'Godfather of AdSense' for growing Google's AdSense from zero to $1B+, then leading Ads Product at Facebook (scaling from $750M to $6.5B), holding product leadership roles at Square and DoorDash, and angel investing in 700+ companies (Airtable, Figma, Groq, Runway, Supabase, Vercel, and more). He now runs Marathon Management Partners. His writing and interviews on SPADE decision-making, hiring PMs for spikiness, AI's impact on software defensibility, and founder mode have become required reading and listening for tech operators and investors worldwide.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

@@ -25,8 +25,8 @@ function hasOwnerBypass(request: NextRequest): boolean {
 }
 
 const CORS_ALLOWED_ORIGINS = new Set([
-  "https://brainsforfree.com",
-  "https://www.brainsforfree.com",
+  "https://brainsforagents.com",
+  "https://www.brainsforagents.com",
 ]);
 
 function corsHeaders(request: NextRequest): Record<string, string> {

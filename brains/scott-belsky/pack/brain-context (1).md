@@ -2,7 +2,7 @@
 
 1086 atomic ideas extracted from 77 editions of the Implications newsletter, The Messy Middle book, Tim Ferriss Show, Lenny's Podcast, First Round Review, NFX, a16z, Design Better, TEDx talks, SXSW, Web Summit, and 35+ video interviews. Scott Belsky is a legendary entrepreneur, product thinker, and strategic investor who has shaped product and organizational thinking across the tech industry. Founder of Behance, former Chief Product Officer and Chief Strategy Officer at Adobe, early angel investor in Uber, Pinterest, and Perplexity, and now a partner at A24. His 'Implications' newsletter and The Messy Middle are where he shares his latest thinking on originality, organizational design, AI, and the future of creative work.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

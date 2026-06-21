@@ -21,7 +21,7 @@ BRAINS=(
   "brene-brown|Brené Brown"
   "oprah-winfrey|Oprah Winfrey"
   # Hidden (Rob-only) old-factory brains — rebuilt too; promote-brain.py preserves
-  # their hidden status so they stay off brainsforfree.com.
+  # their hidden status so they stay off brainsforagents.com.
   "john-green|John Green"
   "hank-green|Hank Green"
 )

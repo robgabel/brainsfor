@@ -2,7 +2,7 @@
 
 1034 atomic ideas extracted from Three major books (Thinking in Bets, How to Decide, Quit), TED talks, 40+ video interviews and podcast appearances. Annie Duke is a former World Series of Poker champion turned decision-making expert and author. Drawing on a career at the highest levels of professional poker, she has developed a rigorous framework for making better decisions under uncertainty — and knowing when to walk away.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 
