@@ -206,7 +206,7 @@ When using this brain as context, follow these rules:
 
 **Implication:** Founders considering bootstrapping should treat the lack of outside capital as a feature, not a bug — the constraints it imposes accelerate the development of business fundamentals that VC money routinely delays or masks.
 
-**Jesse built Ampush from zero to approximately $10 million in revenue without raising outside capital, treating the constraint as the core discipline that shaped the company. Every hiring decision, product investment, and client commitment had to be funded by existing cash flow, which forced a rigor around unit economics and customer value that wouldn't have existed with a VC runway. The experience became his primary proof of concept for the bootstrapping thesis.** ([source](Bootstrapping My First Company to $10M — essay))
+**Jesse built Ampush from zero to approximately $30 million in revenue without raising outside capital, treating the constraint as the core discipline that shaped the company. Every hiring decision, product investment, and client commitment had to be funded by existing cash flow, which forced a rigor around unit economics and customer value that wouldn't have existed with a VC runway. The experience became his primary proof of concept for the bootstrapping thesis.** ([source](Bootstrapping My First Company to $10M — essay))
 
 **Implication:** A single bootstrapped success story — even a modest one by VC standards — generates frameworks, pattern recognition, and operational discipline that compound into every subsequent venture in ways that funded exits rarely do.
 
@@ -230,7 +230,7 @@ When using this brain as context, follow these rules:
 
 **Implication:** Before any meaningful growth spending, founders should be able to articulate — from memory — the precise unit economics of their business and the conditions under which scaling will generate, not consume, value.
 
-**Jesse argues that agency businesses — widely dismissed as low-margin, low-exit-value lifestyle businesses — can be great businesses if you productize delivery, build proprietary tooling, and solve genuine client problems with repeatable excellence. His experience at Ampush is the evidence: a bootstrapped agency that reached $10 million in revenue with real margins and real enterprise value by systematizing what most agencies leave as artisanal and unpredictable.** ([source](Bootstrapping My First Company to $10M — essay))
+**Jesse argues that agency businesses — widely dismissed as low-margin, low-exit-value lifestyle businesses — can be great businesses if you productize delivery, build proprietary tooling, and solve genuine client problems with repeatable excellence. His experience at Ampush is the evidence: a bootstrapped agency that reached ~$30 million in revenue with real margins and real enterprise value by systematizing what most agencies leave as artisanal and unpredictable.** ([source](Bootstrapping My First Company to $10M — essay))
 
 **Implication:** Founders building service businesses should resist the cultural pressure to pivot to SaaS and instead ask whether systematizing delivery and owning the tooling could create a more defensible and more profitable version of the agency model.
 
@@ -402,7 +402,7 @@ When using this brain as context, follow these rules:
 
 **Implication:** When bootstrapped founders frame their lack of capital as a disadvantage, they misread the situation. The constraint is the training. Founders who raise before developing economic discipline often import bad habits at scale.
 
-**The Ampush story is Jesse's primary proof of concept for the claim that small, profitable businesses deserve the same respect as VC-backed unicorns. Reaching $10M in revenue without outside capital, while maintaining profitability, is an achievement he argues is systematically undervalued by a startup media ecosystem obsessed with hypergrowth narratives. This conviction is the founding thesis of his Bootstrapped Giants platform.** ([source](How I Built These Companies - Bootstrapped Giants — essay))
+**The Ampush story is Jesse's primary proof of concept for the claim that small, profitable businesses deserve the same respect as VC-backed unicorns. Reaching ~$30M in revenue without outside capital, while maintaining profitability, is an achievement he argues is systematically undervalued by a startup media ecosystem obsessed with hypergrowth narratives. This conviction is the founding thesis of his Bootstrapped Giants platform.** ([source](How I Built These Companies - Bootstrapped Giants — essay))
 
 **Implication:** The cultural bias toward VC-backed scale distorts how founders evaluate success and make decisions. Celebrating profitable, capital-efficient businesses — as Jesse does explicitly — recalibrates that distortion and opens up a wider range of legitimate entrepreneurial paths.
 
@@ -414,9 +414,9 @@ When using this brain as context, follow these rules:
 
 **Implication:** Deep channel specialization at an early stage of platform maturity is one of the highest-return bets an agency or performance marketing team can make. The window where expertise translates to premium pricing is finite — early movers who systematize their knowledge build durable advantages.
 
-**Jesse co-founded Ampush as a Facebook advertising agency and grew it to $10 million in revenue without raising any outside capital. The entire journey was bootstrapped, meaning every dollar of growth had to be earned from clients rather than subsidized by investors. This constraint forced an early and rigorous focus on unit economics that shaped Jesse's entire philosophy of company building.** ([source](Bootstrapping My First Company to $10M — essay))
+**Jesse co-founded Ampush as a Facebook advertising agency and grew it to roughly $30 million in revenue — while managing $50–100 million a year in ad spend on behalf of clients — without raising any outside capital. The entire journey was bootstrapped, meaning every dollar of growth had to be earned from clients rather than subsidized by investors. This constraint forced an early and rigorous focus on unit economics that shaped Jesse's entire philosophy of company building.** ([source](Bootstrapping My First Company to $10M — essay))
 
-**Implication:** Bootstrapping from zero to $10M is a proof of concept for the thesis that capital is not a prerequisite for scale — customer value and operational discipline are. Founders who default to fundraising before proving economics are skipping the most important education available.
+**Implication:** Bootstrapping from zero to ~$30M is a proof of concept for the thesis that capital is not a prerequisite for scale — customer value and operational discipline are. Founders who default to fundraising before proving economics are skipping the most important education available.
 
 **Ampush was built at the intersection of a major platform shift — the rise of Facebook as an advertising channel — and an underserved client need. Most brands did not know how to buy Facebook ads effectively in the early days, and Ampush positioned itself as the specialist that did. Timing a company's founding to a platform inflection point is one of the most powerful structural advantages available to early-stage founders.** ([source](A Primer on Performance Marketing - Founder's Field Guide — podcast))
 
@@ -446,7 +446,7 @@ When using this brain as context, follow these rules:
 
 **Implication:** Founders considering agency models should not be deterred by the general reputation of the category. The question is not 'is this an agency?' but 'does this agency have a defensible, repeatable, and measurable capability that clients cannot easily replicate themselves?'
 
-**Jesse has been transparent that the path from zero to $10M at Ampush was not a smooth curve — it involved periods of real struggle, client losses, and moments where the business could have failed. The willingness to share those difficult chapters, rather than presenting a sanitized success narrative, is central to how he teaches bootstrapping and how he builds credibility with other founders.** ([source](Bootstrapping My First Company to $10M — essay))
+**Jesse has been transparent that the path from zero to ~$30M at Ampush was not a smooth curve — it involved periods of real struggle, client losses, and moments where the business could have failed. The willingness to share those difficult chapters, rather than presenting a sanitized success narrative, is central to how he teaches bootstrapping and how he builds credibility with other founders.** ([source](Bootstrapping My First Company to $10M — essay))
 
 **Implication:** Honest accounts of entrepreneurial struggle are more instructive than polished success stories. Founders who learn from sanitized narratives are not prepared for the reality they will encounter. Jesse's willingness to document difficulty is a feature of his teaching, not a liability.
 
@@ -454,7 +454,7 @@ When using this brain as context, follow these rules:
 
 **Implication:** In performance marketing, data and pattern recognition compound. The more campaigns you run with rigor and measurement, the more precisely you can predict what will work. Agencies and operators who systematize their learning from past campaigns build a permanent advantage over those who treat each campaign as a fresh start.
 
-**Jesse has positioned Ampush as a counter-argument to the conventional wisdom that agency businesses cannot generate real enterprise value or significant wealth for their founders. By taking an agency from zero to $10M in revenue on a bootstrapped basis, he demonstrated that the limiting factor for most agencies is not the business model — it is the lack of systematization and proprietary capability building.** ([source](Bootstrapping My First Company to $10M — essay))
+**Jesse has positioned Ampush as a counter-argument to the conventional wisdom that agency businesses cannot generate real enterprise value or significant wealth for their founders. By taking an agency from zero to ~$30M in revenue on a bootstrapped basis, he demonstrated that the limiting factor for most agencies is not the business model — it is the lack of systematization and proprietary capability building.** ([source](Bootstrapping My First Company to $10M — essay))
 
 **Implication:** The ceiling on agency business value is much higher than conventional wisdom suggests, but reaching that ceiling requires treating the agency as a product business: building repeatable systems, proprietary tooling, and measurable client outcomes rather than relying on individual talent and custom delivery.
 
@@ -3296,4 +3296,4 @@ When using this brain as context, follow these rules:
 
 ---
 
-*653 atoms · 14 clusters · 604 connections · Generated 2026-06-20*
+*653 atoms · 14 clusters · 604 connections · Generated 2026-06-21*
