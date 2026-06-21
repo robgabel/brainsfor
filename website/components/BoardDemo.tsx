@@ -6,6 +6,7 @@ interface BrainOption {
   slug: string;
   name: string;
   badge?: string;
+  emoji?: string;
 }
 
 interface BoardDemoProps {
@@ -272,6 +273,9 @@ export function BoardDemo({ brains, defaultBrains }: BoardDemoProps) {
                       : "border-border-default bg-white text-body hover:border-border-indigo hover:text-deep-ink"
                 }`}
               >
+                {b.emoji && (
+                  <span aria-hidden className="text-sm leading-none">{b.emoji}</span>
+                )}
                 {b.name}
                 {b.badge && (
                   <span className="inline-flex items-center rounded-full bg-gradient-to-r from-brain-indigo to-[#8b5cf6] px-1.5 py-0.5 text-[9px] font-bold uppercase leading-none tracking-wider text-white">
@@ -435,6 +439,7 @@ export function BoardDemo({ brains, defaultBrains }: BoardDemoProps) {
               const r = responses[slug];
               const meta = brains.find((b) => b.slug === slug);
               const name = meta?.name ?? slug;
+              const emoji = meta?.emoji;
               const isDeferral = !!r?.deferredTo;
 
               // Deferral card — muted, signals self-awareness rather than failure.
@@ -445,7 +450,8 @@ export function BoardDemo({ brains, defaultBrains }: BoardDemoProps) {
                     className="flex flex-col rounded-xl border border-dashed border-border-default bg-cool-surface/40 p-5"
                   >
                     <div className="mb-3 flex items-center justify-between">
-                      <span className="font-display text-base font-semibold text-muted">
+                      <span className="flex items-center gap-1.5 font-display text-base font-semibold text-muted">
+                        {emoji && <span aria-hidden className="text-sm leading-none">{emoji}</span>}
                         {name}
                       </span>
                       <span
@@ -474,7 +480,8 @@ export function BoardDemo({ brains, defaultBrains }: BoardDemoProps) {
                   className="flex flex-col rounded-xl border border-border-indigo bg-[#0f0b1e] p-5"
                 >
                   <div className="mb-3 flex items-center justify-between">
-                    <span className="font-display text-base font-semibold text-white">
+                    <span className="flex items-center gap-1.5 font-display text-base font-semibold text-white">
+                      {emoji && <span aria-hidden className="text-sm leading-none">{emoji}</span>}
                       {name}
                     </span>
                     <span

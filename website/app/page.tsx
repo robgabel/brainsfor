@@ -12,6 +12,7 @@ export default function Home() {
     slug: b.slug,
     name: b.name,
     badge: b.badge,
+    emoji: b.emoji,
   }));
   const demos = getAllDemos();
   // Default the homepage to Scott Belsky — he's the showcase brain. Falls back

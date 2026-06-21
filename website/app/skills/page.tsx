@@ -15,6 +15,7 @@ export default function SkillsPage() {
     slug: b.slug,
     name: b.name,
     badge: b.badge,
+    emoji: b.emoji,
   }));
   const demos = getAllDemos();
   const defaultDemo = getDefaultDemo();
