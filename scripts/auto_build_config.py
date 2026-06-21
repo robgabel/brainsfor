@@ -20,17 +20,33 @@ TEMPLATES_DIR = ROOT_DIR / "templates"
 DEFAULT_MODEL = "claude-sonnet-4-6"
 SYNTHESIS_MODEL = "claude-opus-4-7"
 FAST_MODEL = "claude-haiku-4-5-20251001"
+# Persona-QA judge panel (persona-qa.py). Opus for the judgment-heavy work: the
+# 4-judge panel + Annie's calibration chair. Empirically (Jesse pilot, 2026-06-21)
+# Opus 4.8 scored every dimension higher AND raised chair confidence medium→high
+# vs Sonnet, surfacing deeper catches (survivorship bias, "man-with-a-hammer"
+# framing) — for ~1.67x the cost (Opus $5/$25 vs Sonnet $3/$15 per MTok), and it
+# runs rarely (per mint / on-demand). The miner + numeric verifier stay on
+# DEFAULT_MODEL (Sonnet): their output is validation-bounded and human-checkable,
+# so Opus buys little there.
+PERSONA_MODEL = "claude-opus-4-8"
 
 # --- Cost per 1K tokens (USD) ---
+# Source: Anthropic model catalog (claude-api skill / models.md), verified 2026-06-21.
+# Opus 4.6/4.7/4.8 are all $5/$25 per MTok ($0.005/$0.025 per 1K) — the old $15/$75
+# Opus pricing is retired. Sonnet 4.6 $3/$15, Haiku 4.5 $1/$5.
 COST_INPUT = {
-    "claude-opus-4-7": 0.015,
+    "claude-opus-4-8": 0.005,
+    "claude-opus-4-7": 0.005,
+    "claude-opus-4-6": 0.005,
     "claude-sonnet-4-6": 0.003,
-    "claude-haiku-4-5-20251001": 0.0008,
+    "claude-haiku-4-5-20251001": 0.001,
 }
 COST_OUTPUT = {
-    "claude-opus-4-7": 0.075,
+    "claude-opus-4-8": 0.025,
+    "claude-opus-4-7": 0.025,
+    "claude-opus-4-6": 0.025,
     "claude-sonnet-4-6": 0.015,
-    "claude-haiku-4-5-20251001": 0.004,
+    "claude-haiku-4-5-20251001": 0.005,
 }
 
 # --- Quality targets ---
@@ -431,3 +447,49 @@ Here is the synthesis.md to extract from:
 {synthesis_md}
 
 Return ONLY valid JSON."""
+
+# Mines grounded "hard lessons" (mistake -> cost -> change, with receipts) from the
+# diarized atom corpus. Lives here (canonical prompt home) and is used by
+# scripts/mine-hard-lessons.py. The honesty rubric is the whole point: an entry that
+# cannot name a real, corpus-grounded COST is cut, and returning [] is the correct
+# answer for a sanitized/thin corpus — empty is a QA signal, not a hole to fill.
+HARD_LESSONS_PROMPT = """You are mining HARD LESSONS for a brain pack about {person_name} — the real mistakes they made, what those mistakes actually cost, and what changed as a result.
+
+A hard lesson is NOT a humblebrag ("I worked too hard", "I cared too much"), a generic maxim, or a lesson someone else learned. It is a specific mistake {person_name} personally made, with a concrete, named cost, grounded in their own words.
+
+You are given a RECEIPT POOL: numbered, verbatim quotes from {person_name}'s own corpus (interviews and writing, attributed to them only). You may ONLY ground a lesson in quotes from this pool.
+
+## THE COST RUBRIC (non-negotiable)
+Every hard lesson MUST name a REAL cost that is grounded in the pool — money left on the table, years lost, a relationship or company damaged, a near-death of the business, a wrong belief that misdirected effort. If you cannot point to a real cost in the pool, DROP the lesson. Do not soften, invent, or infer a cost the corpus doesn't support.
+
+## HONESTY (this is the point of the exercise)
+If the corpus is sanitized, promotional, or simply doesn't contain real failures, return an EMPTY list. An empty hard_lessons array is the CORRECT, valuable output for a thin corpus — it is a QA signal that the sources need failure-heavy material. NEVER fabricate a lesson, a cost, or a quote to fill space. A confident `[]` beats a plausible fiction.
+
+## RECEIPTS
+For each lesson, attach 1-3 receipts. Each receipt cites ONE pool entry by its index and copies its quote VERBATIM (exactly as it appears in the pool — do not paraphrase, trim mid-word, or merge entries). The quote is the proof the cost was real.
+
+## OUTPUT
+Return ONLY valid JSON, no markdown:
+{{
+  "hard_lessons": [
+    {{
+      "title": "the mistake, stated in first person (\\"I ...\\")",
+      "cost": "what it actually cost — concrete and grounded in the receipts",
+      "change": "what {person_first} changed as a result, first person",
+      "receipts": [
+        {{ "pool_index": <int>, "quote": "<verbatim quote copied from that pool entry>", "source": "<short human-readable source label, e.g. 'Lex Fridman interview' or 'My First Million (podcast)'>" }}
+      ]
+    }}
+  ],
+  "notes": "one sentence: how rich/sanitized the failure material was, and why you returned the count you did"
+}}
+
+Aim for {target} well-grounded lessons, but returning fewer — or zero — is correct when the corpus doesn't honestly support more. Quality and groundedness over count.
+
+## RECEIPT POOL ({pool_size} entries)
+{receipt_pool}
+
+## EXISTING SYNTHESIS (context for who {person_name} is — do NOT mine lessons from this, only from the pool)
+{synthesis_context}
+
+Return ONLY the JSON object."""
