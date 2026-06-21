@@ -184,7 +184,7 @@ def underscore_slug(slug: str) -> str:
 
 # ── Per-brain emoji assignment ───────────────────────────────────────────────
 # Every brain carries an `emoji` in index.json — the glanceable badge used by
-# the /brain skill's session-tagging and the brainsforfree.com cards + pickers.
+# the /brain skill's session-tagging and the brainsforagents.com cards + pickers.
 # New brains get one automatically: the LLM proposes one in brain.json, and
 # registration validates + dedupes it (curated fallback pool, then 🧠).
 _EMOJI_FALLBACK_POOL = [
@@ -329,7 +329,7 @@ def seed_from_wikipedia(person_name: str) -> list[dict]:
     Silent failure: any error returns [] so we never block Phase 0 on Wikipedia.
     """
     WIKI_API = "https://en.wikipedia.org/w/api.php"
-    WIKI_HEADERS = {"User-Agent": "BrainsFor/1.0 (https://brainsforfree.com; rob@brainsforfree.com)"}
+    WIKI_HEADERS = {"User-Agent": "BrainsFor/1.0 (https://brainsforagents.com; rob@brainsforagents.com)"}
     candidates: list[dict] = []
 
     try:

@@ -2,7 +2,7 @@
 
 1000 atomic ideas extracted from "Machines of Loving Grace" (2024), "The Urgency of Interpretability" (2025), "The Adolescence of Technology" (2025), Dwarkesh Podcast (2 appearances), Lex Fridman Podcast #452 and #490, Ezra Klein Show, Logan Bartlett Show EP 82, People by WTF with Nikhil Kamath, A Cheeky Pint with John Collison (Stripe), Interesting Times with Ross Douthat, WSJ interviews, WEF appearances, AI1G debate with Demis Hassabis, JPMorgan event with Jamie Dimon, India AI Impact Summit, Building Anthropic co-founders conversation, NeurIPS 2020 (GPT-3 presentation), AI Risk & Safety Concepts (with Daniel Dewey), congressional testimony, Wired, TIME, NYT, Fortune, and Financial Times profiles. Dario Amodei is the CEO and co-founder of Anthropic, one of the leading AI safety companies. A former VP of Research at OpenAI, he left to build a company centered on AI safety research, developing Constitutional AI and pioneering responsible scaling policies. Trained as a computational neuroscientist at Princeton and Stanford, he approaches AI through the lens of both scientific rigor and deep concern for humanity's trajectory — arguing that AI is likely the most transformative technology in human history and that getting it right is both possible and necessary.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

@@ -5,7 +5,7 @@ description: "Load the Yann LeCun brain. Pack ships 10 unified skills in pack/sk
 
 # Yann LeCun Brain Pack — Setup & Configuration
 
-Welcome to the **LeCun Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Yann LeCun's published research papers, academic lectures, public interviews, and video presentations — a curated collection of his most rigorous thinking on deep learning, convolutional networks, world models, and the path to human-level AI.
+Welcome to the **LeCun Brain Pack** from [brainsforagents.com](https://brainsforagents.com). This is a premium knowledge asset extracted from Yann LeCun's published research papers, academic lectures, public interviews, and video presentations — a curated collection of his most rigorous thinking on deep learning, convolutional networks, world models, and the path to human-level AI.
 
 ## What You're Getting
 
@@ -46,7 +46,7 @@ pack/
 
 The `skills/` directory is **brain-agnostic**. Every brain pack ships the same 10 skill files — they resolve which brain to use via the `/brain` router (active brain in `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt`) or via an inline slug override.
 
-If any files are missing, reinstall from [brainsforfree.com](https://brainsforfree.com).
+If any files are missing, reinstall from [brainsforagents.com](https://brainsforagents.com).
 
 ### Step 2: Detect Your AI Environment
 
@@ -127,7 +127,7 @@ Trace the second and third-order effects of a trend or decision. Best for: forec
 
 ### 🪑 **/board** — Board of Advisors (Multi-Brain)
 Ask one question and hear from several thinkers at once. Each installed brain answers **independently** (no brain sees another's answer), then a synthesis names where they agree and where they clash. Best for: high-stakes decisions where you want genuine disagreement, not one voice.
-*Requires 2+ brains installed, plus a host that can run parallel sub-agents (Claude Code's Agent tool or Cowork). No MCP server needed — each board member reads its brain's local pack. With only Yann LeCun installed, `/board` will ask you to add another brain from [brainsforfree.com](https://brainsforfree.com).*
+*Requires 2+ brains installed, plus a host that can run parallel sub-agents (Claude Code's Agent tool or Cowork). No MCP server needed — each board member reads its brain's local pack. With only Yann LeCun installed, `/board` will ask you to add another brain from [brainsforagents.com](https://brainsforagents.com).*
 *Usage: `/board <question>`, `/board set <slug-a> <slug-b> ...`, `/board list`, `/board clear`.*
 
 ---
@@ -212,7 +212,7 @@ Yann LeCun is one of the founding fathers of modern deep learning and a Turing A
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
-**More:** Visit [brainsforfree.com](https://brainsforfree.com) for other brain packs, documentation, and community.
+**More:** Visit [brainsforagents.com](https://brainsforagents.com) for other brain packs, documentation, and community.
 
 ---
 
@@ -229,7 +229,7 @@ If you encounter issues or have feedback:
 1. Check `README.md` for quick answers
 2. Verify all files are present and readable
 3. Try a fresh load of `brain-context.md`
-4. Contact support via [brainsforfree.com](https://brainsforfree.com)
+4. Contact support via [brainsforagents.com](https://brainsforagents.com)
 
 ---
 

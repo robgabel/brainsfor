@@ -1,7 +1,7 @@
 # Peter Zeihan Brain Pack
 
 > **669 knowledge atoms** · **632 typed connections** · **10 unified skills (1 router + 8 reasoning modes + a board of advisors)**
-> From [brainsforfree.com](https://brainsforfree.com)
+> From [brainsforagents.com](https://brainsforagents.com)
 
 ## What This Is
 
@@ -108,7 +108,7 @@ Where a thinker's book ideas appear in the knowledge graph, they are represented
 ## Support
 
 - Full setup guide: `SKILL.md`
-- Website: [brainsforfree.com](https://brainsforfree.com)
+- Website: [brainsforagents.com](https://brainsforagents.com)
 
 ---
 

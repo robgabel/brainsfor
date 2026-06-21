@@ -5,7 +5,7 @@ description: "Load the Bill Harris brain. Pack ships 10 unified skills in pack/s
 
 # Bill Harris Brain Pack — Setup & Configuration
 
-Welcome to the **Harris Brain Pack** from [brainsforfree.com](https://brainsforfree.com). This is a premium knowledge asset extracted from Bill Harris's Long-form podcast interviews, video lectures, conference keynotes, and published research discussions spanning Dr. Bill Harris's career as the world's leading Omega-3 Index researcher and founder of OmegaQuant Analytics — the omega-3 researcher's playbook — blood biomarkers, cardiovascular risk, brain health, and why most people are chronically deficient in the most important fat you're not eating enough of.
+Welcome to the **Harris Brain Pack** from [brainsforagents.com](https://brainsforagents.com). This is a premium knowledge asset extracted from Bill Harris's Long-form podcast interviews, video lectures, conference keynotes, and published research discussions spanning Dr. Bill Harris's career as the world's leading Omega-3 Index researcher and founder of OmegaQuant Analytics — the omega-3 researcher's playbook — blood biomarkers, cardiovascular risk, brain health, and why most people are chronically deficient in the most important fat you're not eating enough of.
 
 ## What You're Getting
 
@@ -46,7 +46,7 @@ pack/
 
 The `skills/` directory is **brain-agnostic**. Every brain pack ships the same 10 skill files — they resolve which brain to use via the `/brain` router (active brain in `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt`) or via an inline slug override.
 
-If any files are missing, reinstall from [brainsforfree.com](https://brainsforfree.com).
+If any files are missing, reinstall from [brainsforagents.com](https://brainsforagents.com).
 
 ### Step 2: Detect Your AI Environment
 
@@ -127,7 +127,7 @@ Trace the second and third-order effects of a trend or decision. Best for: forec
 
 ### 🪑 **/board** — Board of Advisors (Multi-Brain)
 Ask one question and hear from several thinkers at once. Each installed brain answers **independently** (no brain sees another's answer), then a synthesis names where they agree and where they clash. Best for: high-stakes decisions where you want genuine disagreement, not one voice.
-*Requires 2+ brains installed, plus a host that can run parallel sub-agents (Claude Code's Agent tool or Cowork). No MCP server needed — each board member reads its brain's local pack. With only Bill Harris installed, `/board` will ask you to add another brain from [brainsforfree.com](https://brainsforfree.com).*
+*Requires 2+ brains installed, plus a host that can run parallel sub-agents (Claude Code's Agent tool or Cowork). No MCP server needed — each board member reads its brain's local pack. With only Bill Harris installed, `/board` will ask you to add another brain from [brainsforagents.com](https://brainsforagents.com).*
 *Usage: `/board <question>`, `/board set <slug-a> <slug-b> ...`, `/board list`, `/board clear`.*
 
 ---
@@ -212,7 +212,7 @@ Dr. Bill Harris is the world's foremost authority on omega-3 fatty acids and car
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
-**More:** Visit [brainsforfree.com](https://brainsforfree.com) for other brain packs, documentation, and community.
+**More:** Visit [brainsforagents.com](https://brainsforagents.com) for other brain packs, documentation, and community.
 
 ---
 
@@ -229,7 +229,7 @@ If you encounter issues or have feedback:
 1. Check `README.md` for quick answers
 2. Verify all files are present and readable
 3. Try a fresh load of `brain-context.md`
-4. Contact support via [brainsforfree.com](https://brainsforfree.com)
+4. Contact support via [brainsforagents.com](https://brainsforagents.com)
 
 ---
 

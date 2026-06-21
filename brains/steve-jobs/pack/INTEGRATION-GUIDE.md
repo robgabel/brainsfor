@@ -185,9 +185,9 @@ This is why installing multiple brains gives you genuinely different perspective
   - **a host that can run parallel sub-agents** — Claude Code's Agent/Task tool or Cowork. The independence is the point: it's what stops the brains from converging into one averaged answer.
   - It does **not** require the MCP server — each board member reads its brain's local `brain-context.md` / `brain-atoms.json`. (If MCP is installed, members can use it for selective retrieval instead.)
 
-  > Heads-up: with only **one** brain installed, `/board` will tell you to add another from [brainsforfree.com](https://brainsforfree.com) rather than convene a board of one.
+  > Heads-up: with only **one** brain installed, `/board` will tell you to add another from [brainsforagents.com](https://brainsforagents.com) rather than convene a board of one.
 
-Browse the full catalog at [brainsforfree.com](https://brainsforfree.com).
+Browse the full catalog at [brainsforagents.com](https://brainsforagents.com).
 
 ---
 
@@ -225,4 +225,4 @@ The MCP server (Path B) and skills (Path C) are Claude Code-specific. Path A wor
 
 - This pack's `SKILL.md` has detailed setup and skill reference
 - This pack's `README.md` has a quick-start guide
-- Full brain catalog: [brainsforfree.com](https://brainsforfree.com)
+- Full brain catalog: [brainsforagents.com](https://brainsforagents.com)

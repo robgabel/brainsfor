@@ -2,7 +2,7 @@
 
 885 atomic ideas extracted from Pivot and On with Kara Swisher podcast episodes, NYT Opinion columns, Code Conference and DLD keynote interviews, Burn Book memoir, and landmark interviews with Gates, Jobs, Zuckerberg, Bezos, Musk, Cook, Sandberg, and Musk spanning 30+ years. Kara Swisher is the most influential tech journalist of her generation — a relentless interrogator of Silicon Valley power, co-host of the Pivot podcast, host of On with Kara Swisher, and author of the memoir Burn Book. For three decades she has covered, challenged, and occasionally embarrassed the most powerful figures in technology, earning a reputation for fearless questioning, sharp political instincts, and an unwillingness to trade access for favorable coverage.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

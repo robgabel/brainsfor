@@ -2,7 +2,7 @@
 
 929 atomic ideas extracted from Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, The Tea With GaryVee, Joe Rogan Experience #910, Tim Ferriss collaborations, Marie Forleo interviews, SXSW 2014 and 2016 keynotes, Web Summit 2016 keynote, VaynerMedia keynotes, CNBC interviews, Adweek profiles, and millions of pieces of social content. Gary Vaynerchuk is the chairman of VaynerX and CEO of VaynerMedia, a serial entrepreneur, five-time New York Times bestselling author, and one of the most prolific voices on content strategy, attention, and personal brand. He built his family's wine store from $3M to $60M using internet video when nobody else was, then turned that playbook into a global advertising agency — and has spent two decades in public documenting how to actually build a business.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

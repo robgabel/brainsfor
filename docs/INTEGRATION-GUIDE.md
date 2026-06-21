@@ -224,6 +224,6 @@ The MCP server (Path B) and skills (Path C) are Claude Code-specific. Path A wor
 
 ## Support
 
-- Brain pack catalog: [brainsforfree.com](https://brainsforfree.com)
+- Brain pack catalog: [brainsforagents.com](https://brainsforagents.com)
 - Each brain's `SKILL.md` has detailed setup and skill reference
 - Each brain's `README.md` has a quick-start guide

@@ -118,7 +118,7 @@ Automated nightly run, six days after run 7. Two state shifts to record:
 1. **Jensen Huang pack re-exported.** Run 7 flagged the pack as stale at 253/220; today's pack-atoms.json holds 253 atoms / 1,000 connections. Supabase still has 1,622 — the gap is the export-brain.py pagination bug, not stale data. Same fix path remains (paginate, then re-export).
 2. **Brené Brown pack re-exported.** Run 7 flagged the pack as stale at 283/321; today's pack holds 283 atoms / 1,000 connections. Supabase still has 2,035 — same pagination cap as Jensen.
 
-Everything else (Supabase row counts, atom totals, audit scores, brain_metadata=14, brain_requests=0, cross_connections=17, voice enrichment 240/284 = 84.5%, 15/15 shippable brains rendered on brainsforfree.com) is identical to run 7.
+Everything else (Supabase row counts, atom totals, audit scores, brain_metadata=14, brain_requests=0, cross_connections=17, voice enrichment 240/284 = 84.5%, 15/15 shippable brains rendered on brainsforagents.com) is identical to run 7.
 
 ### Changes Applied
 
@@ -192,10 +192,10 @@ Automated nightly run. Two state shifts since run 6:
 - TOTAL row: 3,749 atoms / 18,073 conns → 3,749 atoms / 21,189 conns
 - Infrastructure stats: "13 `brain_metadata` records" → "14"; dropped Brené from the "not yet ingested" caveat (Oprah remains); audit avg 97/100 across 16 brains → 99/100 across 15 shippable
 - Ship Plan DONE list: "Build 13 brains" → "Build 15 shippable brains" with full list including Brené + Oprah; "3,133 atoms + 5,129 connections in Supabase" → "3,416 atoms + 20,834 connections in Supabase (14 brains; Oprah pack-only)"; "Complete pack/ for all 13" → "for all 15"
-- Storefront section: "13/13 brains rendered" → "15/15 shippable brains now rendered on brainsforfree.com"
+- Storefront section: "13/13 brains rendered" → "15/15 shippable brains now rendered on brainsforagents.com"
 - Success Metrics: "13 brains built and packaged" → "15 shippable brains built and packaged"
 - "Why Rob Is Uniquely Positioned" para 2: "thirteen times over. 13 brains live with 3,133 atoms and 5,129 connections" → "fifteen times over. 15 shippable brains live (14 in Supabase with 3,416 atoms + 20,834 connections; Oprah Winfrey ships pack-only)"
-- TL;DR: "13 brains live ... 3,133 atoms, 5,129 connections" → "15 shippable brains live (including Brené Brown, Oprah Winfrey). 3,749 atoms across packs (3,416 in Supabase; Oprah pack-only), 21,189 connections total. ... brainsforfree.com live on Vercel with all 15 brains"
+- TL;DR: "13 brains live ... 3,133 atoms, 5,129 connections" → "15 shippable brains live (including Brené Brown, Oprah Winfrey). 3,749 atoms across packs (3,416 in Supabase; Oprah pack-only), 21,189 connections total. ... brainsforagents.com live on Vercel with all 15 brains"
 
 **brainsfor/CLAUDE.md**:
 - Tables header: "15 brain packs built; 13 live in Supabase" → "15 brain packs built; 14 live in Supabase"
@@ -323,7 +323,7 @@ Automated nightly run. Discovered two large state shifts since run 5:
 ### Flagged for Human Review
 1. **Connection-count jump in customer-facing surfaces.** Per-brain `connection_count` on index.json and business-plan.md jumped 2-6x (e.g. Belsky 430 → 1,515; Gary Vee 505 → 1,850). These reflect live Supabase totals, but the *shipped* pack JSON files are still capped at ~1,000. Customer-visible counts may now overstate what a buyer actually gets until the export bug is fixed and packs are re-exported.
 2. **`export-brain.py` connection pagination bug.** Line 494: `sb.table(connections_table).select("*").execute().data` — no pagination, so Supabase's default row cap truncates everything above ~1,000. Atoms are paginated correctly (lines 477-485); connections are not. Suggested fix: mirror the atoms pagination loop.
-3. **Brené Brown and Oprah Winfrey missing from Supabase.** Packs shipped and live on brainsforfree.com, but `brene_brown_atoms/connections` and `oprah_winfrey_atoms/connections` tables don't exist. `brain_metadata` only has 13 rows. `/board`, cross-brain search, and any Supabase-backed flow will silently skip these two brains.
+3. **Brené Brown and Oprah Winfrey missing from Supabase.** Packs shipped and live on brainsforagents.com, but `brene_brown_atoms/connections` and `oprah_winfrey_atoms/connections` tables don't exist. `brain_metadata` only has 13 rows. `/board`, cross-brain search, and any Supabase-backed flow will silently skip these two brains.
 4. **Jensen Huang Supabase tables still empty** (0/0) — unchanged since run 5. Pack authoritative. Re-ingestion still pending.
 5. **Peter Zeihan atom count reverted** (460 → 362) — run 5 sync was based on a stale pack file; pack has since been re-exported to 362, which matches Supabase. If 460 was the "correct" target, the pack needs to be rebuilt, not the index.
 
@@ -332,7 +332,7 @@ Automated nightly run. Discovered two large state shifts since run 5:
 ## Doc Refresh — 2026-04-17 (run 5)
 
 ### Context
-Follow-up run after a live debugging session: user reported broken "Explore this brain" preview on brainsforfree.com. Diagnosis: `next.config.ts` was sending `X-Frame-Options: DENY` on every URL, which blocked the page at `/brains/<slug>` from iframing `/brains/<slug>/explore.html`. Fixed to `SAMEORIGIN` and pushed. Run 4 log entry noted that Peter Zeihan pack (460 atoms) disagreed with index.json (362) — user noticed the site was showing 362, so we synced index.json + website/public/brains/index.json up to 460 (pack was re-exported, docs had lagged).
+Follow-up run after a live debugging session: user reported broken "Explore this brain" preview on brainsforagents.com. Diagnosis: `next.config.ts` was sending `X-Frame-Options: DENY` on every URL, which blocked the page at `/brains/<slug>` from iframing `/brains/<slug>/explore.html`. Fixed to `SAMEORIGIN` and pushed. Run 4 log entry noted that Peter Zeihan pack (460 atoms) disagreed with index.json (362) — user noticed the site was showing 362, so we synced index.json + website/public/brains/index.json up to 460 (pack was re-exported, docs had lagged).
 
 ### Changes Applied
 
@@ -348,7 +348,7 @@ Follow-up run after a live debugging session: user reported broken "Explore this
 **business-plan.md**:
 - Peter Zeihan inventory row: 362 → 460 atoms
 - TOTAL row: 3,133 → 3,231 atoms (connections unchanged at 5,129)
-- Infrastructure stats: landing page prototype sentence → **"brainsforfree.com is live"** (Next.js app in `website/`, Vercel auto-deploy from `main`)
+- Infrastructure stats: landing page prototype sentence → **"brainsforagents.com is live"** (Next.js app in `website/`, Vercel auto-deploy from `main`)
 
 **brainsfor/CLAUDE.md** (major revision):
 - Tables section rewritten: `belsky_atoms` → `scott_belsky_atoms`, `belsky_connections` → `scott_belsky_connections`, `belsky_enrichment_log` → `scott_belsky_enrichment_log` (legacy `belsky_enrichment_log` still exists, noted). Listed 13 brains with actual DB counts.
@@ -357,7 +357,7 @@ Follow-up run after a live debugging session: user reported broken "Explore this
 - Directory Structure: added `website/` tree (full — app/, lib/, public/brains/, AGENTS.md with warning, next.config.ts SAMEORIGIN note); marked `storefront/` DEPRECATED; added `PRD-site-overhaul.md`, `naming-exploration.md`, `doc-refresh-log.md` to top-level entries
 
 **IMPROVEMENTS.md**:
-- Last-updated footer: run 4 → run 5 entry. Notes catalog at 3,231 atoms, brainsforfree.com live, the SAMEORIGIN prod fix, landing-page-prototype deletion, `/coach` 3-mode uplevel.
+- Last-updated footer: run 4 → run 5 entry. Notes catalog at 3,231 atoms, brainsforagents.com live, the SAMEORIGIN prod fix, landing-page-prototype deletion, `/coach` 3-mode uplevel.
 
 ### No Changes Needed
 - `brains/<slug>/pack/brain-atoms.json` files — all in sync with website/public/brains/
@@ -597,7 +597,7 @@ Same as run 4 — no new brain builds since then. Highlights:
   - Unresolved `{{brain_source_ethics}}` template var in scott-belsky + peter-attia pack/SKILL.md — re-run `export-brain.py`
   - Peter Attia voice enrichment at 0%, orphan rate 36%
   - Belsky voice enrichment still at 7% (no change in 24hrs)
-  - Live site brainsforfree.com renders all 7 brains ✓ — but local `storefront/landing-page-prototype.html` only has 5 (missing John Green + Hank Green). Prototype has drifted from production; either update the prototype or retire it.
+  - Live site brainsforagents.com renders all 7 brains ✓ — but local `storefront/landing-page-prototype.html` only has 5 (missing John Green + Hank Green). Prototype has drifted from production; either update the prototype or retire it.
   - Cowork skills registered for only 2/7 brains (scott-belsky + paul-graham); peter-attia, steve-jobs, john-green, sun-tzu, hank-green not symlinked into `~/rob-ai/skills/`
   - `brain_requests` table still 0 rows (form unwired — matches Ship Plan status)
 

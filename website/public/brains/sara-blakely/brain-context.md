@@ -2,7 +2,7 @@
 
 917 atomic ideas extracted from 49 sources including video interviews, written profiles, podcast appearances, essays, and news features spanning her career from door-to-door fax machine sales to founding Spanx and launching Sneex. Sara Blakely is the founder of Spanx and one of the most influential self-made entrepreneurs of the modern era. Starting with $5,000 in savings and no business experience, she built a billion-dollar empire by trusting her gut, redefining failure, and relentlessly championing women. Her thinking on idea generation, resilience, intuition, and female leadership has inspired millions worldwide.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

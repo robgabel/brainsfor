@@ -13,7 +13,7 @@ This is the multi-brain skill. The other 8 skills speak in one voice; `/board` c
 
 `/board` only earns its keep when it can run each brain **independently**. It needs two things from the host:
 
-1. **2 or more installed brains.** A board of one is just `/advise`. If only one brain is installed under `${BRAINSFOR_HOME:-~/.brainsfor}/brains/`, tell the user to install at least one more from [brainsforfree.com](https://brainsforfree.com) and stop.
+1. **2 or more installed brains.** A board of one is just `/advise`. If only one brain is installed under `${BRAINSFOR_HOME:-~/.brainsfor}/brains/`, tell the user to install at least one more from [brainsforagents.com](https://brainsforagents.com) and stop.
 2. **A parallel sub-agent / Task capability** (Claude Code's Agent tool, Cowork, or any host that can spawn isolated sub-tasks). This is what keeps each brain's answer from being contaminated by the others — see "Why sub-agents" below.
 
 `/board` does **not** require the BrainsFor MCP server. Each board member reads its brain's local pack files directly (`brain-context.md` / `brain-atoms.json`). If the MCP server *is* installed, sub-agents may use it for selective atom retrieval instead of loading the full context file — it's an accelerator, not a dependency.
@@ -38,7 +38,7 @@ State (roster) lives in `${BRAINSFOR_HOME:-~/.brainsfor}/state/board.json`.
 1. If the user pinned a roster (`/board set ...`), use it.
 2. Otherwise use every brain in `${BRAINSFOR_HOME:-~/.brainsfor}/brains/index.json`, **capped at 5** (more than 5 voices is noise, not signal — keep the highest-coverage brains for the question's topics).
 3. Inline slugs override: `/board <slug-a> <slug-b> <question>` runs just those.
-4. Fewer than 2 resolvable brains → tell the user to install more from [brainsforfree.com](https://brainsforfree.com).
+4. Fewer than 2 resolvable brains → tell the user to install more from [brainsforagents.com](https://brainsforagents.com).
 
 ## How It Works
 

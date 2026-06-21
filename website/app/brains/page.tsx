@@ -3,7 +3,7 @@ import { BrainCard } from "@/components/BrainCard";
 import { RequestBrainForm } from "@/components/RequestBrainForm";
 
 export const metadata = {
-  title: "Brains — brainsforfree",
+  title: "Brains — brainsforagents",
   description: "Browse and explore knowledge graphs of the world's best thinkers.",
 };
 

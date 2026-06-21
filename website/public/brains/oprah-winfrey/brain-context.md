@@ -2,7 +2,7 @@
 
 740 atomic ideas extracted from Decades of The Oprah Winfrey Show, O Magazine, SuperSoul Sunday, SuperSoul Conversations, commencement addresses, Academy of Achievement interviews, 60 Minutes appearances, and major public speeches including the 2018 Golden Globes Cecil B. DeMille address. Oprah Winfrey is one of the most influential communicators, entrepreneurs, and philanthropists of the modern era. From her groundbreaking talk show to her media empire, her Leadership Academy in South Africa, and her decades of public spiritual inquiry, she has spent her life helping people connect with their deepest selves, heal from their histories, and live with greater intention and purpose.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

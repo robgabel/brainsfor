@@ -343,7 +343,7 @@ def export_context_md(atoms: list, connections: list, config: dict, output_dir: 
         f"{config.get('brain_bio', '')}\n"
     )
     lines.append(
-        f"Extracted by brainsforfree using a custom knowledge graph pipeline "
+        f"Extracted by brainsforagents using a custom knowledge graph pipeline "
         f"(Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.\n"
     )
     # Shared LLM rules header

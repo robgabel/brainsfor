@@ -2,7 +2,7 @@
 
 1195 atomic ideas extracted from 20+ years of research, 6 bestselling books, and thousands of interviews. Brené Brown is a research professor at the University of Houston who has spent over two decades studying courage, vulnerability, shame, and empathy. Her TED talk on vulnerability is one of the most-watched talks of all time, and her research has transformed how we think about leadership, parenting, and human connection.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 

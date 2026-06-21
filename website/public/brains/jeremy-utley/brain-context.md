@@ -2,7 +2,7 @@
 
 911 atomic ideas extracted from Ideaflow book, Stanford d.school Creativity in Business course, Beyond the Prompt podcast, Paint & Pipette newsletter, Roland Berger interview, Capgemini interview, unSILOed podcast, YouTube lectures, and LinkedIn essays. Jeremy Utley is an adjunct professor at Stanford University's d.school and co-director of Stanford's Executive Education program in creativity and innovation. He is the co-author of Ideaflow: The Only Business Metric That Matters and host of the Beyond the Prompt podcast, where he explores how AI is reshaping creative practice. His work spans executive education at Google, IDEO, and LinkedIn, and his writing on creativity and AI appears in his Paint & Pipette newsletter.
 
-Extracted by brainsforfree using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
+Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
 ## LLM Usage Rules
 
