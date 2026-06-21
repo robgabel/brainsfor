@@ -3,6 +3,7 @@ import path from "path";
 
 export interface Brain {
   slug: string;
+  emoji: string;
   name: string;
   source: string;
   tagline: string;
@@ -23,6 +24,7 @@ export interface Brain {
 
 interface IndexEntry {
   slug: string;
+  emoji?: string;
   name: string;
   source: string;
   atom_count: number;
@@ -75,6 +77,7 @@ function loadBrains(): Brain[] {
 
     return {
       slug: entry.slug,
+      emoji: entry.emoji ?? "🧠",
       name: config.brain_name,
       source: config.brain_source_description,
       tagline: config.website?.tagline ?? config.brain_tagline ?? "",
