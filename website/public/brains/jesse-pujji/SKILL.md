@@ -208,7 +208,7 @@ If you get that, you're all set.
 
 ## About Jesse Pujji
 
-Jesse Pujji is a serial entrepreneur, bootstrapper, and performance marketing pioneer best known for founding Ampush — a Facebook advertising powerhouse he grew to $10M revenue without raising outside capital — and Gateway X, a studio that builds and acquires bootstrapped businesses. A vocal advocate for capital-efficient entrepreneurship, he mentors founders on growth loops, DTC brand building, and the mental rewiring required to build multiple companies. His Bootstrapped Giants platform and LinkedIn essays have made him one of the most influential voices in the bootstrapped founder community.
+Jesse Pujji is a serial entrepreneur, bootstrapper, and performance marketing pioneer best known for founding Ampush — a Facebook advertising powerhouse he bootstrapped to ~$24M in revenue while managing over $1 billion in ad spend for brands like Dollar Shave Club, Uber, and Hulu, all without raising a dollar of outside capital — and Gateway X, a studio that builds and acquires bootstrapped businesses. A vocal advocate for capital-efficient entrepreneurship, he mentors founders on growth loops, DTC brand building, and the mental rewiring required to build multiple companies. His Bootstrapped Giants platform and LinkedIn essays have made him one of the most influential voices in the bootstrapped founder community.
 
 This brain pack extracts and structures his core ideas so you can activate his mental models in your own thinking.
 
