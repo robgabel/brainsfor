@@ -21,13 +21,15 @@ export default function Home() {
     liveBrains.find((b) => b.slug === "scott-belsky")?.slug ??
     liveBrains[0]?.slug ??
     "";
-  // Seed the Board tab with five strong, diverse voices when available.
+  // Seed the Board tab with five strong, diverse voices when available. Elon is
+  // included so the lead demo shows real cross-brain friction on a developer
+  // decision — his "delete the part" against Belsky/Graham's "serve the users."
   const defaultBoardBrains = [
     "scott-belsky",
     "charlie-munger",
     "paul-graham",
     "steve-jobs",
-    "peter-attia",
+    "elon-musk",
   ].filter((s) => liveBrains.some((b) => b.slug === s));
 
   return (
@@ -39,13 +41,21 @@ export default function Home() {
             Load a genius into your AI.
           </h1>
           <p className="mx-auto mt-5 max-w-[640px] text-lg leading-relaxed text-body">
-            The reasoning a prompt can&rsquo;t fake. The taste a model can&rsquo;t learn.
+            Same model. Same prompt. Watch what a brain changes.
+          </p>
+
+          {/* Dogfooded proof — concrete coding value, not a slogan */}
+          <p className="mx-auto mt-4 max-w-[600px] text-[15px] leading-relaxed text-label">
+            Elon refactors your code. Jobs and Belsky add taste. Dario reasons about AI.
+          </p>
+          <p className="mx-auto mt-1.5 max-w-[600px] text-sm italic text-muted">
+            Running three sessions at once? Give each its own brain and keep them straight.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4">
             <InstallCommand />
             <p className="font-mono text-xs text-muted">
-              Works with Claude Code, Hermes, OpenClaw, Cursor and more
+              Works with Claude Code, Cursor, Gemini CLI, and more
             </p>
           </div>
 
@@ -54,7 +64,7 @@ export default function Home() {
               href="#try-it"
               className="rounded-lg bg-brain-indigo px-6 py-3 text-[15px] font-semibold text-white shadow-brain-cta transition-all hover:bg-indigo-hover active:scale-[0.98]"
             >
-              Try it live &darr;
+              Try a brain live &darr;
             </a>
             <Link
               href="/brains"
@@ -66,8 +76,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── Live Playground (3 tabs: voice / evolve / board) ───
+          Promoted directly under the hero so the first felt-value moment lands
+          at the fold — value before the ask. The hero promises "watch what a
+          brain changes"; this section is where they watch it. */}
+      <section id="try-it" className="scroll-mt-20 bg-warm-paper px-6 pb-20 pt-16">
+        <div className="mx-auto mb-10 max-w-[900px] text-center">
+          <h2 className="font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
+            Three things your LLM can&rsquo;t do.
+          </h2>
+          <p className="mx-auto mt-3 max-w-[680px] text-base text-body">
+            Each tab below is a different proof point. None of them are imitations of vanilla
+            Claude with a clever prompt &mdash; they rely on the knowledge graph, the temporal data,
+            or the multi-brain orchestration that ships with every brain pack.
+          </p>
+        </div>
+
+        <LivePlayground
+          brains={liveBrains}
+          skills={SKILLS}
+          demos={demos}
+          defaultBrain={preferredHero}
+          defaultBoardBrains={defaultBoardBrains}
+        />
+      </section>
+
       {/* ─── Brain Catalog Preview ─── */}
-      <section className="bg-warm-paper px-6 py-20">
+      <section className="px-6 py-20">
         <div className="mx-auto max-w-[1140px]">
           <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
             {liveBrains.length} minds, ready to install
@@ -95,33 +130,11 @@ export default function Home() {
         <SkillCatalog />
       </section>
 
-      {/* ─── Live Playground (3 tabs: voice / evolve / board) ─── */}
-      <section id="try-it" className="px-6 pb-20 pt-4 scroll-mt-20">
-        <div className="mx-auto mb-10 max-w-[900px] text-center">
-          <h2 className="font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
-            Three things your LLM can&rsquo;t do.
-          </h2>
-          <p className="mx-auto mt-3 max-w-[680px] text-base text-body">
-            Each tab below is a different proof point. None of them are imitations of vanilla
-            Claude with a clever prompt &mdash; they rely on the knowledge graph, the temporal data,
-            or the multi-brain orchestration that ships with every brain pack.
-          </p>
-        </div>
-
-        <LivePlayground
-          brains={liveBrains}
-          skills={SKILLS}
-          demos={demos}
-          defaultBrain={preferredHero}
-          defaultBoardBrains={defaultBoardBrains}
-        />
-      </section>
-
       {/* ─── How It Works ─── */}
       <section className="bg-warm-paper px-6 py-20">
         <div className="mx-auto max-w-[1140px]">
           <h2 className="text-center font-display text-3xl font-normal tracking-[-0.75px] text-deep-ink md:text-4xl">
-            Three steps to install.
+            Three steps to your first brain.
           </h2>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -133,8 +146,8 @@ export default function Home() {
               },
               {
                 step: "02",
-                title: "Install with one command",
-                desc: "One line in your terminal. Works with Claude Code, Cursor, Gemini CLI, and any AI tool that supports skills.",
+                title: "Load your first brain",
+                desc: "Download the pack and drop it into your project — your agent thinks with it. Works with Claude Code, Cursor, Gemini CLI, and any AI tool that supports skills.",
                 code: "npx skills add brainsfor/scott-belsky",
               },
               {
@@ -153,15 +166,15 @@ export default function Home() {
                       $ {item.code}
                     </div>
                     <p className="mt-2 text-xs text-muted">
-                      Launching next week —{" "}
+                      Works today &mdash;{" "}
                       <a
                         href="/brains/scott-belsky/scott-belsky-brain-pack.zip"
                         download
                         className="font-medium text-brain-indigo hover:underline"
                       >
-                        download the zip
-                      </a>{" "}
-                      in the meantime.
+                        download the pack
+                      </a>
+                      . The one-command install ships soon.
                     </p>
                   </>
                 )}

@@ -104,15 +104,15 @@ export default async function DashboardPage() {
                           $ npx skills add brainsfor/{brain.slug}
                         </div>
                         <p className="mt-1.5 text-[10px] text-muted">
-                          Launching next week —{" "}
+                          Works today —{" "}
                           <a
                             href={`/brains/${brain.slug}/${brain.slug}-brain-pack.zip`}
                             download
                             className="font-medium text-brain-indigo hover:underline"
                           >
-                            download the zip
+                            download the pack
                           </a>{" "}
-                          in the meantime.
+                          right now.
                         </p>
                       </>
                     )}
