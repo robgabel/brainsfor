@@ -433,6 +433,15 @@ python3 scripts/eval-brains.py --all --max-workers 3
 - **Cowork skill `/brain-qa`** (`~/rob-ai/skills/brain-qa/`) wraps `brain-qa.py` — run before flipping any brain `hidden → live`.
 - **Reflexivity caveat:** the judges are models approximating humans, judging a model of a human. Treat the panel as a strong signal, not ground truth — a human spot-check of the chair's top flag is the Tier-4 backstop before shipping.
 
+### Self-Recognition QA — would the human sign the OUTPUT? (`scripts/self-recognition.py`)
+
+**Shipped 2026-06-22.** Tier 3.5 — the inverse of the persona panel. Where persona-qa judges a brain's *ingredients* (constitution + atom sample + hard lessons) via a panel of *other* brains, self-recognition judges the brain's actual *output* via the *subject themselves*.
+
+- Generates 6 identity-revealing responses AS the brain (synthesis + verbatim voice atoms as context, on Sonnet), then shows each to the subject — roleplayed adversarially as themselves ("this was published in your name without asking; would you sign it? flag every line you'd disown") — on Opus. Writes `evals/self-recognition-<date>.{json,md}`.
+- **The headline metric is `would_sign_rate`, not the mean "that's me" score.** The score clusters high (~86) because the brains sound voice-authentic; the would-sign rate discriminates (pilot: munger 83% / jesse 67% / elon 50% — tracks the persona panel where the raw score doesn't). Gate: mean ≥ 70 AND would-sign ≥ 0.67.
+- **Why it exists / what only it catches:** output-level defects invisible to a constitution-grading panel — e.g. Munger's brain claimed Buffett's Dexter-Shoe blunder as its own ("Dexter was Warren's deal, not mine"), and Elon-as-himself would refuse to sign half his output despite it sounding like him. High score + low would-sign = convincing impersonation that misrepresents — the dangerous case.
+- Complements `brain-qa.py` (run per-brain during triage; not yet a `--run` tier in the orchestrator — it adds ~$0.24/brain).
+
 ### Adding a New Brain
 
 **Automated (recommended):** One command, zero babysitting.
