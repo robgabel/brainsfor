@@ -26,12 +26,14 @@ interface BrainResponse {
 }
 
 // Seed questions chosen to surface genuine disagreement across the default
-// board (Belsky, Munger, Graham, Jobs, Attia). Consensus on ship-vs-polish or
-// raise-vs-bootstrap is too easy — these put taste vs evidence, ambition vs
-// longevity, and intuition vs data in direct conflict.
+// board (Belsky, Munger, Graham, Jobs, Elon). The first is a coding decision —
+// the landing page targets developers, so the lead chip should split the board
+// on their turf: Elon's "delete the part" against Graham/Belsky's "serve the
+// users who love it." The rest put ambition vs caution and intuition vs data in
+// direct conflict.
 const SEED_QUESTIONS = [
+  "A rarely-used power feature is bloating our codebase and confusing new users. Cut it for simplicity, or keep it for the power users who love it?",
   "I have a $5M acqui-hire offer for a startup I think could be a $500M company. Take it or hold?",
-  "I'm 40 with a young family. Start a venture-backed company now, or build a profitable lifestyle business instead?",
   "Should I trust the data my users are giving me, or trust my own product taste when they conflict?",
 ];
 

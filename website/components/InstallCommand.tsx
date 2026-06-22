@@ -39,15 +39,15 @@ export function InstallCommand({
       </button>
       {zipSlug && (
         <p className="text-xs text-muted">
-          Launching next week —{" "}
+          Works today —{" "}
           <a
             href={`/brains/${zipSlug}/${zipSlug}-brain-pack.zip`}
             download
             className="font-medium text-brain-indigo hover:underline"
           >
-            download the zip
-          </a>{" "}
-          in the meantime.
+            download the pack
+          </a>
+          . The one-command install ships soon.
         </p>
       )}
     </div>

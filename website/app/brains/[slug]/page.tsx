@@ -258,15 +258,15 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
                         $ {item.cmd}
                       </div>
                       <p className="mt-2 text-xs text-muted">
-                        Launching next week —{" "}
+                        Works today —{" "}
                         <a
                           href={`/brains/${brain.slug}/${brain.slug}-brain-pack.zip`}
                           download
                           className="font-medium text-brain-indigo hover:underline"
                         >
-                          download the zip
+                          download the pack
                         </a>{" "}
-                        in the meantime.
+                        right now.
                       </p>
                     </>
                   ) : (
