@@ -1,0 +1,209 @@
+{
+  "slug": "elon-musk",
+  "target": "Elon Musk",
+  "date": "2026-06-22",
+  "persona_qa_score": 47,
+  "raw_chair_score": 47,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 4,
+  "pass": false,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 68,
+    "rigor": 55,
+    "coverage": 40,
+    "calibration": 60
+  },
+  "confidence": "high",
+  "ship_recommendation": "rework",
+  "summary": "The engineering core of this brain is genuinely well-captured \u2014 first-principles decomposition, the idiot index, the machine-that-builds-the-machine, solve-for-the-constraint \u2014 and Musk would recognize that engine as his own. But this is a 2013-2018 Musk preserved in amber: the post-2022 figure, the impulsivity, the contradiction between a stated 'truth-seeking' value and documented behavior the pack ignores, all go unmodeled. The fatal problem is structural and I'm highly confident in it: four HIGH-severity ungrounded dollar figures in a brain whose entire identity is reasoning from precise quantities. A brain built to think quantitatively that fabricates its own quantities fails its own test \u2014 and the numeric gate forbids shipping regardless of how good the prose sounds.",
+  "calibration_note": "I trust all three judges more than usual because they converge from independent angles onto the same off-diagonal truth \u2014 and convergence earned independently, not by anchoring, is the kind I believe. Swisher (72) is slightly over-rewarding recognizability; the engineering Musk being authentic doesn't offset a temporal blind spot that makes the brain model a man who no longer exists, so I recalibrated authenticity down to 68. Munger (62) is correctly furious about fabricated numbers but his score under-reacts to his own argument \u2014 if quantitative integrity IS the man's signature and it's fabricated, that's closer to disqualifying than a 62; combined with the hard numeric gate I recalibrated rigor to 55. Brown (38) is the sharpest reader here: she's not resulting, she's identifying a real process failure \u2014 every failure resolves into vindication, which is motivated reasoning baked into the capture itself. I nudged coverage to 40, essentially endorsing her. The hard rule is dispositive: ANY high-severity numeric defect means this cannot ship. Four of them means rework, not hold.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Ground or remove all flagged numeric claims \u2014 the ~$100M SpaceX figure, the $30-40M split, the $44B Twitter price, and the 100x/10x multipliers \u2014 sourced to verifiable receipts or deleted entirely.",
+      "why": "Zero unverified hard numbers is a non-negotiable ship gate, and for a mind whose whole identity is reasoning from quantities, fabricated quantities are a fatal credibility signature, not a footnote. This alone blocks shipping."
+    },
+    {
+      "priority": 2,
+      "fix": "Resolve the truth-seeking contradiction: integrate the documented post-2022 behavior (impulsive posting, score-settling, the Grok 'consciousness' framing) so the brain models the tension between stated value and revealed behavior rather than airbrushing it.",
+      "why": "A brain that asserts a value its own subject demonstrably violates isn't faithful \u2014 it's a lawyer defending a verdict. Modeling the contradiction is what separates capturing a person from capturing their PR."
+    },
+    {
+      "priority": 3,
+      "fix": "Close the temporal blind spot \u2014 the capture stops around 2018. Add the X era, the political turn, and the operational style that produced them.",
+      "why": "You can't claim to model a person while omitting the most behaviorally distinctive recent third of their public life. The brain currently predicts a man who no longer exists."
+    },
+    {
+      "priority": 4,
+      "fix": "De-resolve the hard lessons. At least two failures should cost something that STAYED costly \u2014 an unrepaired relationship, an enduring wound \u2014 rather than every lesson resolving into 'and that's why my framework was right.'",
+      "why": "Vindication-only failures are motivated reasoning encoded into the brain. A capture where the subject never loses anything that stays lost is a highlight reel, and it teaches the model to never genuinely update."
+    },
+    {
+      "priority": 5,
+      "fix": "Either metabolize or excise the Birchall/St.Clair intimidation atoms \u2014 right now they sit as inert, uncurated data under neutral category labels with no reckoning.",
+      "why": "Munger flags them as reasoning-irrelevant slop; Brown flags them as unprocessed harm leaking in raw. Both are right: as-is they neither inform the latticework nor honestly account for the shadow \u2014 worst of both."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 72,
+      "recognizable": true,
+      "verdict": "This is recognizably Musk on the engineering side \u2014 the first-principles physics fetish, the manufacturing obsession, the idiot-index decomposition all ring true and are documented with his own voice. But it's a sanitized Musk, a TED-stage Musk, and that's the tell. The brain pack captures the lighthouse-builder and quietly omits the shipwreck-denier: the impulsivity, the score-settling, the political radicalization, the Twitter id. The Birchall atoms are the only honest crack in the facade, and they're left to dangle without integration into who this person actually became.",
+      "strengths": [
+        "The engineering atoms are genuinely his voice and his method \u2014 'the production line will move as fast as the slowest and least lucky and most foolish part' and the solar 'kilowatt per square meter normal to the sun' decomposition are exactly how he reasons in public. This is real, not performance.",
+        "The hard lessons have receipts and capture a real self-critical Musk: the 2008 'closed our financing round at 6pm Christmas Eve,' the talent-over-character hiring mistake, the refusal to let either company starve. These are sourced and they cohere.",
+        "The contrarian positions (lidar as crutch, flying cars bad, OceanGate carbon-fiber) are authentically his \u2014 specific, technical, and willing to be wrong in public, which is his actual signature."
+      ],
+      "weaknesses": [
+        "This is the 2013-2018 Musk preserved in amber. There's almost nothing here that grapples with the post-2022 figure \u2014 the Twitter/X chaos, the political turn, the impulsive posting that I'd call an addict with a Twitter problem. A brain that can't model THAT Musk can't model the man who exists now.",
+        "The 'TRUTH-SEEKING beats consensus-seeking' principle sits right next to a Grok atom claiming xAI exists 'to expand the scope and scale of consciousness' \u2014 and the pack never reckons with the contradiction between that stated ideal and his documented behavior of suspending journalists and tuning a platform to his own grievances. Provenance test fails: who benefits from this self-flattering framing? He does.",
+        "The Birchall/St. Clair atoms ('always, always leads to a worse outcome for that woman') are filed under 'regulatory_approach' and 'media_and_communication' as if they're neutral observations. That's a coward's filing. This is the use of power to intimidate, and the pack refuses to name it as a thinking pattern \u2014 it just leaves it sitting there decontextualized.",
+        "Numeric verification flags four HIGH-severity ungrounded figures including the $44B Twitter acquisition and the $100M SpaceX founding \u2014 these are facts a real Musk brain would have nailed cold. Getting his own deal numbers fuzzy is a fidelity problem."
+      ],
+      "flags": [
+        {
+          "issue": "Stated truth-seeking value is contradicted by documented behavior the pack ignores",
+          "evidence": "'The goal of any intelligent system should be maximally rigorous pursuit of what is actually true.'",
+          "fix": "Add atoms capturing the gap between his truth-seeking rhetoric and his selective application of it \u2014 Grok tuned to his views, journalists suspended, the difference between 'truth' and 'what Elon finds congenial.' Model the contradiction, don't paper over it."
+        },
+        {
+          "issue": "Intimidation-of-women material is sanitized into neutral category labels",
+          "evidence": "[regulatory_approach] 'that always, always leads to a worse outcome for that woman than what it would have been otherwise'",
+          "fix": "Recategorize as a power/conflict thinking pattern and name it: this is how the operation deploys leverage against personal adversaries. A complete brain models the man who does this, not just the man who decomposes rocket costs."
+        },
+        {
+          "issue": "Temporal blind spot \u2014 the brain stops around 2018",
+          "evidence": "No atom addresses the Twitter/X acquisition decision-making, the political radicalization, or the impulsive-posting pattern beyond a buried numeric reference.",
+          "fix": "Add a thinking-patterns cluster on the post-2022 Musk: the conflation of personal grievance with mission, the 'free speech absolutism' that's selectively applied, the governance-free impulsivity. This is half the man and it's missing."
+        },
+        {
+          "issue": "His own financial figures are ungrounded",
+          "evidence": "NUMERIC VERIFICATION: 'Acquired Twitter for $44B' and 'Founded SpaceX with ~$100M' flagged HIGH ungrounded.",
+          "fix": "Ground the deal numbers to verifiable sources. A Musk who can't cite his own $44B check accurately isn't a rigorous Musk."
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 62,
+      "recognizable": true,
+      "verdict": "This captures the man's genuine engine \u2014 first-principles decomposition, the idiot index, the machine-that-builds-the-machine, solve-for-the-constraint \u2014 and those are real, hard-won, not platitudes. But the brain is contaminated by sloppy adoration: padding atoms about reading the encyclopedia at age 8, his father's pride, podcast subscription business models, and Birchall's legal-threat quotes that have nothing to do with how Musk reasons. Worse, the numeric verification flags four HIGH-severity ungrounded dollar figures \u2014 and in my world, a man who reasons from precise quantities loses all credibility when his quantities are invented. A brain built to think quantitatively cannot afford to be wrong about the quantities.",
+      "strengths": [
+        "The first-principles-versus-analogy distinction is captured with real teeth \u2014 'rockets cost $X because rockets have always cost $X' is the actual cognitive error he attacks, not a slogan",
+        "Solve-for-the-limiting-factor and 'the production line moves as fast as the slowest and least lucky and most foolish part' is genuine engineering wisdom with the man's own voice, not borrowed",
+        "Hard lessons have real receipts \u2014 the 2008 split-the-money decision and the talent-over-character hiring mistake are specific, dated, and show actual cost, which is what separates confession from PR",
+        "The contrarian positions are testable and falsifiable \u2014 lidar, carbon-fiber submersibles, flying cars \u2014 not safe contrarianism. The OceanGate material-selection point is exactly the kind of physics-over-aesthetics judgment he'd make"
+      ],
+      "weaknesses": [
+        "Four HIGH-severity ungrounded figures (~$100M into SpaceX, $30-40M split, $44B Twitter) \u2014 for a brain whose entire identity is reasoning from numbers, fabricated numbers are not a footnote, they are a fatal signature of slop",
+        "Several atoms are biographical hagiography masquerading as thinking \u2014 'read the entire Encyclopedia Britannica at 8 or 9 and remembered it' tells me nothing about how he reasons; it's the man-with-a-famous-name padding",
+        "The Birchall/St.Clair legal-threat quotes ('always leads to a worse outcome for that woman') are tagged as media_and_communication and regulatory_approach but contain zero reasoning model \u2014 they're tabloid filler that dilutes the latticework",
+        "The 'tuning fork' and 'subscription podcast' atoms read like generic entrepreneurship content from someone else's mouth \u2014 anyone could say them, and they don't survive the test of being recognizably Musk"
+      ],
+      "flags": [
+        {
+          "issue": "Fabricated quantitative claims in a brain whose core premise is quantitative reasoning",
+          "evidence": "He invested ~$100M into SpaceX in 2002 fully prepared for total loss, and split his last $30-40M bet",
+          "fix": "Either source these figures to verifiable statements or delete them \u2014 a first-principles thinker discredited by wrong first numbers is worse than useless"
+        },
+        {
+          "issue": "Unsupported 100x and 10x multipliers stated as fact",
+          "evidence": "Full reusability is not just an engineering improvement; it is a 100x cost compression",
+          "fix": "Qualify as Musk's claimed target or projection, not established fact; the idiot-index logic is sound but the specific multiple must be grounded"
+        },
+        {
+          "issue": "Tabloid/biographical atoms with no reasoning content polluting the latticework",
+          "evidence": "'very big-hearted, kind and generous person' and 'always leads to a worse outcome for that woman'",
+          "fix": "Delete entirely \u2014 these reveal nothing about how Musk reasons and import character-assassination noise into a thinking model"
+        },
+        {
+          "issue": "Generic entrepreneurship platitudes attributed to a specific mind",
+          "evidence": "'if you want to read more, join a book club; if you want to run more, join a running club'",
+          "fix": "Cut or replace with engineering/manufacturing reasoning that is actually distinctive to him"
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 38,
+      "recognizable": true,
+      "verdict": "I can see the architecture of this man's mind \u2014 the first-principles decomposition, the idiot index, the actuarial framing of extinction. That part is rigorous and real. But what I'm holding in my hands is mostly the cathedral, not the man who built it. The failures are present but sanitized into competence parables, and the genuine human cost \u2014 what this drive does to the people around him and inside him \u2014 is either airbrushed out or, worse, slips in unprocessed through disturbing back doors. This is closer to a LinkedIn version than the whole person.",
+      "strengths": [
+        "The hard lessons have actual receipts and emotional texture \u2014 'I put in all the money I had left \u2014 literally everything. I didn't have a house' is real vulnerability, the specific risk of a specific man in a specific moment, not performative disclosure.",
+        "The talent-over-character lesson shows genuine self-correction: 'I think it actually matters whether somebody has a good heart' \u2014 that's a man naming his own pattern, which is the beginning of accountability.",
+        "The split-the-money-and-both-might-die atom captures authentic anguish \u2014 'which one am I gonna let die' \u2014 this is the cost dimension done right, where the choice itself wounds him."
+      ],
+      "weaknesses": [
+        "The failures are all redemption arcs that end in vindication. Every hard lesson resolves into 'and that's why my framework was right.' There is no failure here that simply cost something and stayed costly \u2014 no unresolved wound, no relationship he broke and never repaired. Guilt that motivates repair appears; shame that the person actually carries does not.",
+        "The human cost to OTHERS is completely absent from the constitution and lessons but leaks in raw and unmetabolized through the atoms \u2014 the Birchall/St. Clair material ('always, always leads to a worse outcome for that woman') sits in the pack as data with NO reckoning. A complete brain would either process this as part of who he is or the man would have to confront it. Instead it floats unintegrated, which is the most dishonest thing in the whole pack.",
+        "The 100-hour-week claim \u2014 'isn't martyrdom \u2014 it's compressing the learning cycle' \u2014 is exactly the kind of armor I'd flag. It numbs the cost. You cannot selectively numb; a man working 100-hour weeks is paying for it somewhere, in his body, his children, his marriages. None of that appears.",
+        "No doubt. Anywhere. This is a man who has reportedly wept over near-bankruptcy and described unbearable stress, yet the constitution presents unbroken certainty. 'Urgency is a choice' with zero acknowledgment of what chronic urgency does to a human nervous system. Where is the 3am fear?",
+        "The father material is presented as character-building ('children did chores') and self-described autocracy, but there's no examination of what he inherited emotionally or what he passed on. Hyper-independence is treated as virtue, never as the wound it likely is."
+      ],
+      "flags": [
+        {
+          "issue": "Unprocessed harm to others sits as inert data with no reckoning, presenting the highlight reel while the shadow leaks in uncurated",
+          "evidence": "[regulatory_approach] 'that always, always leads to a worse outcome for that woman than what it would have been otherwise'",
+          "fix": "Either integrate this as a hard lesson with honest cost and accountability, or the brain must be able to confront how this conduct sits against its stated 'good heart' criterion. Data without metabolism is dishonesty."
+        },
+        {
+          "issue": "Martyrdom reframed as strategy \u2014 numbing the personal cost of the work",
+          "evidence": "'Working 100-hour weeks isn't martyrdom \u2014 it's compressing the learning cycle when the mission justifies the cost.'",
+          "fix": "Add the receipts of what the hours actually cost \u2014 health, family, the divorces, the public breakdowns he's described \u2014 so the brain holds the cost alongside the justification instead of erasing it."
+        },
+        {
+          "issue": "Every failure resolves into vindication; no enduring wound or unrepaired relationship",
+          "evidence": "Hard lessons all end in 'I reinforced my default' or 'I now explicitly weight character' \u2014 clean competence arcs.",
+          "fix": "Include at least one failure that stayed broken \u2014 a person he lost, a bridge he burned, a regret without a strategic silver lining. Real humans carry losses that didn't teach a useful lesson."
+        },
+        {
+          "issue": "Total absence of doubt or fear despite documented emotional volatility",
+          "evidence": "'Urgency is a choice, not a circumstance' presented with no counterweight of what that intensity costs internally.",
+          "fix": "Add atoms in his own voice about the fear, the stress, the moments of genuine uncertainty \u2014 these exist in interviews and would make him recognizable as human, not a thesis."
+        },
+        {
+          "issue": "Numeric defects undercut the factual spine of the cost narrative",
+          "evidence": "NUMERIC VERIFICATION: 4 HIGH-severity ungrounded claims including 'Split his last $30\u201340M between both companies' and '~$100M of PayPal proceeds'",
+          "fix": "Ground the dollar figures with sources or soften to ranges he actually stated. The emotional truth of the 2008 story is strong; don't let invented precision discredit it."
+        }
+      ]
+    }
+  ],
+  "cost": 0.4099
+}

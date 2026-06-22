@@ -1,0 +1,188 @@
+{
+  "slug": "kara-swisher",
+  "target": "Kara Swisher",
+  "date": "2026-06-22",
+  "persona_qa_score": 73,
+  "raw_chair_score": 73,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 0,
+  "pass": true,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 78,
+    "rigor": 76,
+    "coverage": 64,
+    "calibration": 72
+  },
+  "confidence": "high",
+  "ship_recommendation": "hold",
+  "summary": "Kara Swisher would recognize herself in the constitution and the contrarian positions \u2014 the incentive-archaeology spine, the refusal of 'it's complicated,' the named-names accountability ethic are her register, not an impression. The brain is genuinely strong where it matters most (first principles, would-not-say, the doom-debate-as-vanity read) and genuinely thin where all three judges independently converged: the atom sample is bloated with biography and, worse, with her quoting other people as if it were her own thinking. The numeric gate is clean \u2014 zero high-severity defects \u2014 so the ship question turns entirely on whether the evidence layer earns the confident constitution above it. Right now the constitution is writing checks the atoms don't fully cash, and that's a calibration problem, not a voice problem.",
+  "calibration_note": "I trust these three judges more than usual here because they triangulated without coordinating and still landed on the same two defects \u2014 biographical filler crowding out insight, and the sharpest principle (naming names, attributing motive) asserted but not enacted in evidence. That convergence from three different lenses is a strong signal, not suspicious groupthink, because each arrived via a different door. I left authenticity at 78 (well-supported). I nudged rigor down from 78 to 76: Munger correctly flags the copyright 'it's not that difficult' line, but I credit it slightly more than he does \u2014 that confident dismissal IS authentically Kara, so it's a fidelity win even where it's an epistemic risk; the right fix is to label it as a stated bet, not to soften it. I nudged coverage UP from 62 to 64: Brown is right that the hard lessons are sanitized into competence narratives, but resulting is the enemy of learning \u2014 I won't punish the brain too hard for surfacing real wounds (heart surgery, VC ignorance) even if they re-armor; the sin is real but smaller than a full failure of capture. My own calibration score (72) reflects that the brain's confidence is not yet matched by its evidence on its single most distinctive practice.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Replace the ~1/3 of atoms that are biography or other people's quotes (Krawcheck, SpaceX 'pallet of cash,' Musk's 'multi-planet species,' Boom Town/D-conference resume entries) with atoms that carry Kara's OWN distilled judgment.",
+      "why": "All three judges independently flagged this. An atom under her name that is actually her interviewee talking is a fidelity defect that dilutes her best four or five ideas \u2014 the single highest-leverage cleanup."
+    },
+    {
+      "priority": 2,
+      "fix": "Enact the named-names principle in evidence: add atoms where she actually names Sandberg, Hoffman, the Google founders and attributes specific motive from specific incentive, not just asserts the practice in the constitution.",
+      "why": "Her sharpest, most differentiating move is asserted abstractly but never demonstrated. A principle that lives only in the constitution and never in the atoms is good-sounding, not proven \u2014 exactly the gap calibration exists to catch."
+    },
+    {
+      "priority": 3,
+      "fix": "Add at least one hard lesson that is a failure of JUDGMENT, not circumstance \u2014 a call she got wrong, a person she defended who didn't deserve it, a read that aged badly \u2014 and let it keep its sting.",
+      "why": "Brown's strongest point: every current 'lesson' resolves into her winning. A persona that only learns on the diagonal (wins=skill) is missing the off-diagonal cell where real calibration lives, and it makes the whole brain read as a highlight reel."
+    },
+    {
+      "priority": 4,
+      "fix": "Relabel the copyright 'it's not that difficult' position explicitly as a confident bet she is willing to make, noting the counter-incentive on her own side, rather than presenting it as settled fact.",
+      "why": "It's authentically her overconfidence at the edge of competence \u2014 keep the voice, but flag it as a stated probability so the brain models her judgment honestly rather than laundering certainty as truth."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "oprah-winfrey",
+      "recused": true
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "oprah-winfrey",
+      "judge_name": "Oprah Winfrey",
+      "recused": true,
+      "score": 78,
+      "recognizable": true,
+      "verdict": "This is recognizably Kara \u2014 the voice is hers, and the spine is intact. 'It's always the people that are the problem, not the machines,' 'Twitter is like a library with all the books on the floor and then it's covered with toxic ways,' the third-world-extraction analogy, the refusal of 'it's complicated' on copyright \u2014 these are her register, not a sanitized impression. What I know for sure is that the constitution and the hard lessons carry real weight: the ownership thread (NYT exit, IP control, VC ignorance) and the heart-surgery refusal-to-change are exactly the kind of examined wound that turns into wisdom. But the atom sample dilutes her. Too much of it is biographical filler \u2014 Boom Town column descriptions, the D conference roster, 'eyeblink in time' \u2014 and several atoms are not even her thinking but her quoting other people (Krawcheck, the SpaceX 'pallet of cash,' Musk's 'multi-planet species'). That's a sourcing softness that lets her sharpest edge \u2014 naming names, attributing motive \u2014 get underrepresented in the actual evidence.",
+      "strengths": [
+        "The contrarian positions are genuinely hers and risk rejection \u2014 Tim Cook as one of the great CEOs, Musk as 'an addict with a Twitter problem who built real companies,' acqui-hires as 'a talent embargo dressed as M&A.' These are specific, defensible, and not the safe consensus take.",
+        "The 'WOULD NOT SAY' section is the strongest part \u2014 'It's complicated,' 'I don't want to speculate about motives,' 'the founders really do care deeply about the mission.' These functional negatives capture what separates accountability journalism from access journalism, which is her whole thesis.",
+        "Hard lessons have real receipts and real cost \u2014 the heart surgery she worked through, the VC ignorance that nearly kept her inside an institution, the Washington Post internet operation 'on the other side of the river.' These are examined, not performed.",
+        "Voice is consistently caustic and concrete \u2014 'I'm going to show up at City Council meetings and yell at people' is unmistakably her cadence."
+      ],
+      "weaknesses": [
+        "Roughly a third of the atom sample is biography or other people's words, not Kara's distilled thinking \u2014 the Krawcheck quote, the SpaceX booster economics, Musk's multi-planet vision. An atom labeled with HER name should carry HER judgment, not be a transcript of her interviewee.",
+        "Her single sharpest practice \u2014 naming the specific people who chose comfort over candor (Sandberg, Hoffman, the Google founders) \u2014 appears in the constitution but is barely demonstrated in the atoms. The evidence underplays the thing that makes her dangerous.",
+        "The cancel-culture / 20-second-clip atoms read slightly defensive and out of proportion to her body of work \u2014 they risk making her sound like a both-sides moderate when her core posture is power-accountability, not media-fairness handwringing."
+      ],
+      "flags": [
+        {
+          "issue": "Atom attributed to Swisher's thinking is actually her quoting a subject \u2014 creativity-of-the-source problem",
+          "evidence": "[startup_entrepreneurship] voice: 'I tell my team it's like imagine there was a pallet of cash that was falling through the atmosphere...' \u2014 this is Musk's line, not Swisher's idea",
+          "fix": "Reattribute these as 'subject said X; Swisher's read was Y,' or cut them. Her brain should contain her interpretation of the pallet-of-cash claim, not the claim itself."
+        },
+        {
+          "issue": "Biographical filler crowds out thinking atoms",
+          "evidence": "[silicon_valley_culture] 'the Internet's powerful explosion onto the world scene in what has seemed an eyeblink in time' and the Boom Town column description add resume, not cognition",
+          "fix": "Replace with atoms that show her judgment under pressure \u2014 a moment she named a name and drew a conclusion the subject denied."
+        },
+        {
+          "issue": "The named-names principle is asserted but not enacted in evidence",
+          "evidence": "Constitution says 'She will say Zuckerberg did X because Y' and 'names the people \u2014 Sandberg, Hoffman, the Google founders' \u2014 but no atom actually does this",
+          "fix": "Add 2-3 atoms with verbatim Swisher naming a specific executive's specific choice and attributing the specific interest behind it."
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 78,
+      "recognizable": true,
+      "verdict": "This is a real Kara Swisher \u2014 the spine is incentive analysis applied to technology, which happens to be the one model I respect most in the social sciences. 'The business model is the politics' and 'unintended consequences is a legal defense, not a description of reality' are genuine incentive archaeology, not platitudes. It loses points because too many atoms are biographical filler dressed as insight, and a few positions reach conclusions her own framework should make her flag as 'too hard.'",
+      "strengths": [
+        "The core principle 'When a platform optimizes for engagement, and outrage drives engagement better than truth, the resulting harm is not a bug \u2014 it is the algorithm working exactly as intended' is exactly the incentive-tracing I'd do myself: show me the incentives and I'll show you the outcome. That is hard-won, not borrowed.",
+        "The 'WOULD NOT SAY' list is the most rigorous section \u2014 refusing 'it's complicated' and 'I don't want to speculate about motives' is a real discipline that distinguishes her from access-journalism mush. It inverts well: it tells you exactly how she'd be fooled if she abandoned it.",
+        "The contrarian Musk position \u2014 'an addict with a Twitter problem who built real companies... all three are simultaneously true' \u2014 shows multi-model triangulation rather than a man-with-a-hammer single take. Crediting Tim Cook over Jobs charisma is the same independent-mindedness.",
+        "Hard lessons have receipts and actual costs (NYT editorial control, the heart surgery, the WaPo internet operation 'on the other side of the river'). These are signatures of real failures, not invented humility."
+      ],
+      "weaknesses": [
+        "Too many atoms are resume entries, not insight: 'D: All Things Digital conference,' 'Boom Town column every Monday,' 'wanted to work in the CIA as a child.' These pad the file and dilute the three or four best ideas \u2014 the same error as a 40-stock portfolio diluting your best picks.",
+        "The copyright position \u2014 'It's not that difficult... tech people always act like it's difficult, but it's not particularly difficult' \u2014 is precisely the overconfidence at the edge of a circle of competence. The valuation and licensing mechanics genuinely ARE hard; her own 'who benefits from the complexity framing' tool gets weaponized to dismiss real complexity. That's a man-with-a-hammer risk.",
+        "'Humans are the third world of the AI economy' is a vivid analogy but it's asserted as 'exact and intentional' \u2014 an analogy is not a proof, and treating a metaphor as exact is sloppy reasoning she'd catch in a tech CEO.",
+        "Some atoms are thin to the point of emptiness: 'different instruments,' 'always my area of study,' 'in what has seemed an eyeblink in time.' These have a famous name stapled on but carry no testable content."
+      ],
+      "flags": [
+        {
+          "issue": "Conclusion that contradicts her own discipline \u2014 uses complexity-dismissal where complexity is real",
+          "evidence": "'If you take someone's copyrighted material, you should be paying for it. It's not that difficult... tech people always act like it's difficult, but it's not particularly difficult.'",
+          "fix": "Separate the moral claim (creators deserve compensation \u2014 clear) from the mechanism claim (how to price/attribute training data at scale \u2014 genuinely hard). Let her hold the first firmly and put the second in a 'will, not technical ease' frame without pretending the implementation is trivial."
+        },
+        {
+          "issue": "Metaphor asserted as exact identity",
+          "evidence": "'Human beings are sort of like a third world nation whose chemicals and mining and jewels are getting taken... The parallel to resource extraction from poor countries is exact and intentional.'",
+          "fix": "Demote 'exact' to 'illustrative.' An analogy that breaks under one disanalogy (the extracted humans still possess their data) should be held loosely or it becomes the thing she criticizes \u2014 propaganda that launders a position as natural law."
+        },
+        {
+          "issue": "Biographical filler masquerading as distilled insight",
+          "evidence": "'[media_disruption] ...conceptualizes her various journalistic activities... as different instruments in a single orchestra' \u2014 voice: 'different instruments'",
+          "fix": "Cut atoms whose entire payload is a two-word phrase or a CV fact. Replace with the reasoning behind a contested call so the brain reasons rather than recites."
+        },
+        {
+          "issue": "An incentive-driven judgment stated without naming the counter-incentive on her own side",
+          "evidence": "'Access journalism is a trap; proximity is the enemy of truth.'",
+          "fix": "Strong principle, but add the inversion she should run on herself: her own model rewards the provocative clear verdict and punishes 'too hard.' Note where her need to render a sharp judgment could itself be the corrupting incentive \u2014 that self-check would make this airtight."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 62,
+      "recognizable": true,
+      "verdict": "I recognize Kara here \u2014 the structural argument against access journalism, the refusal to say 'it's complicated,' the moral clarity about power without accountability. The taxonomic precision is genuinely strong; she distinguishes things people conflate the way I distinguish guilt from shame. But this is mostly the woman in the arena throwing punches, not the woman who has also been hit. The hard lessons gesture at cost \u2014 the heart surgery, the VC ignorance \u2014 yet they're sanitized into competence narratives. Where is the doubt? Where is the moment her certainty was wrong and somebody paid for it?",
+      "strengths": [
+        "The taxonomy is the intervention \u2014 guilt/shame-level distinctions like 'disruption without that question is just damage with better marketing' and 'unintended consequences is a legal defense, not a description of reality' are exactly the kind of conceptual precision that makes a person real on the page.",
+        "The contrarian positions hold paradox without collapsing it \u2014 'Elon Musk is not a genius villain \u2014 he is an addict with a Twitter problem who built real companies' refuses both worship and dismissal, which is harder and more honest than either.",
+        "The 'WOULD NOT SAY' section is a genuine portrait of a spine. Knowing what she won't say ('The founders really do care deeply about the mission') tells me who she is more than any positive claim could."
+      ],
+      "weaknesses": [
+        "The hard lessons are failures of circumstance, not failures of judgment. 'I didn't understand venture capital' and 'I left the NYT' both resolve into her winning \u2014 owning her IP, gaining control. That's the highlight reel wearing a humility costume. Where is the call she got wrong? The person she defended who didn't deserve it? The scoop she blew?",
+        "Vulnerability \u2014 the actual emotional exposure \u2014 is almost entirely absent. The heart surgery atom is the closest thing to real cost, and even there she armors immediately: 'I'm not going to change my life dramatically.' That's not numbing emotion selectively; that's the brain pack letting her numb. I'd want to know what the surgery scared her about.",
+        "Proximity is named as the enemy of truth, but the pack never shows her own failure of proximity. She built D and ran conferences with Jobs, Bezos, Zuckerberg on the couch. Did she ever get too close? Did she ever soften a question for access? The constitution preaches the danger but the human never confesses falling into it \u2014 which makes the principle a pose rather than a hard-won scar.",
+        "There's no relational cost rendered. Naming Sandberg, Hoffman, the Google founders as complicit has a price \u2014 friendships, invitations, trust. The pack treats her independence as cleanly heroic. What did standing alone actually cost her in the rooms she used to be welcome in?"
+      ],
+      "flags": [
+        {
+          "issue": "Failure framed as triumph \u2014 the lesson has no sting",
+          "evidence": "'I learned enough about the funding landscape to negotiate on my own terms, insisting on maintaining editorial control as a non-negotiable condition.'",
+          "fix": "Add a hard lesson where her certainty actually cost something \u2014 a judgment she rendered plainly and got wrong, a person she misjudged. Clear is kind, but clear-and-wrong is the cost of being clear, and that belongs here."
+        },
+        {
+          "issue": "Health crisis immediately re-armored, denying the reader the vulnerability",
+          "evidence": "'I'm not going to go to bed early now, I'm not going to change my life dr[amatically].'",
+          "fix": "Capture the fear underneath the bravado. The defiance is real, but a whole human shows what the cardiac event made her afraid of losing \u2014 relevance, work, mattering. The armor is interesting only when we can see what it's protecting."
+        },
+        {
+          "issue": "The anti-proximity principle is never tested against her own proximity",
+          "evidence": "'It was, and still is, the country's premier conference on tech and media, with interviewees such as Bill Gates, Steve Jobs, Mark Zuckerberg, Jeff Bezos...'",
+          "fix": "Add an atom or lesson where she interrogates her own access \u2014 a moment she was inside the orbit she warns against, and what she did or failed to do about it. The contradiction is the portal."
+        }
+      ]
+    }
+  ],
+  "cost": 0.3963
+}

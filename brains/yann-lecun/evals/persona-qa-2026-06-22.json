@@ -1,0 +1,167 @@
+{
+  "slug": "yann-lecun",
+  "target": "Yann LeCun",
+  "date": "2026-06-22",
+  "persona_qa_score": 74,
+  "raw_chair_score": 74,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 0,
+  "pass": true,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 86,
+    "rigor": 82,
+    "coverage": 48,
+    "calibration": 80
+  },
+  "confidence": "high",
+  "ship_recommendation": "hold",
+  "summary": "Yann LeCun the scientist would absolutely recognize himself here \u2014 the objective-function-as-architecture spine, the JEPA bet, the cake metaphor, and the brutally honest 20-year pixel-prediction failure are all real and well-sourced. Where the brain thins out is the human operator: the public brawler who names Marcus, Musk, Hinton, and the doomer crowd, and the structural conflict of interest in his open-science-as-virtue framing. The numeric gate is clean (0 high-severity defects), so this is a quality call, not a safety kill. I'd hold rather than ship \u2014 the gaps are concentrated and fixable, and one of them (the safety self-contradiction) is load-bearing for faithfulness.",
+  "calibration_note": "I trust all three judges directionally but recalibrated two scores. Swisher (88) and Munger (84) are well-anchored on the diagonal \u2014 they're rewarding a genuinely strong brain and flagging real off-diagonal misses, so I nudged authenticity to 86 and rigor to 82 only to align with Munger's own most damning catch: the brain holds the confident 'goal-hijacking is preventable' claim AND its own Qbert reward-hacking atom without noticing the tension. That's not slop, it's an unmodeled contradiction, and it should cost rigor more than 84 implies. Brown's 38 on coverage is the one I scrutinized hardest for over-reaction \u2014 and she's substantially right but slightly resulting on a brain that's CANDID about its scope. The 20-year-failure and GAN walk-back ARE real costs honestly surfaced; punishing the brain to 38 partly punishes it for being a captured scientist rather than a captured therapist. I recalibrated to 48: the missing-human critique is the single highest-leverage gap, but the floor is too low for a brain this honest about its intellectual failures. The convergence on 'recognizable=True' across all three is genuine signal, not groupthink, since they were elicited independently.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Resolve the safety self-contradiction explicitly: add an atom where LeCun confronts his own Qbert/reward-hacking evidence and distinguishes 'specification failure preventable in principle' from 'preventable in a decentralized open-weights ecosystem with adversarial actors.'",
+      "why": "This is the brain's only internal logical break and it sits on his most contested public position. Faithfulness to LeCun requires showing how HE actually reconciles it, not papering over it \u2014 a confident-sounding but unexamined claim is exactly the failure mode I most distrust."
+    },
+    {
+      "priority": 2,
+      "fix": "Personalize the contrarianism: name the specific adversaries (Marcus, Musk, Bengio/Hinton on safety, the EA/doomer camp) and capture how he actually fights, not just the positions he holds.",
+      "why": "Both Swisher and the coverage gap point here. LeCun-the-operator IS the brawler; a depersonalized version is a softened costume that lets him off the hook for how he really behaves in public."
+    },
+    {
+      "priority": 3,
+      "fix": "Add the conflict-of-interest tension to the open-science material: he is Meta's chief AI scientist arguing for open weights. Capture whether/how he addresses that his structural incentive aligns with his stated principle.",
+      "why": "The current framing is hagiographic ('we publish all our research'). A faithful brain should surface the strongest counter \u2014 that his openness advocacy is also self-serving \u2014 and show his actual rebuttal, or the absence of one."
+    },
+    {
+      "priority": 4,
+      "fix": "Add at least one receipt where the cost was personal or where he was overconfident and wrong recently, not just 'wrong architecture, found better architecture.'",
+      "why": "Brown's core point: every documented failure is the safe, ego-protecting kind. Without a genuinely uncomfortable miss, the brain models LeCun's certainty without modeling what that certainty has cost him \u2014 incomplete capture of the human."
+    },
+    {
+      "priority": 5,
+      "fix": "Dedupe the low-information atoms (multiple near-identical check-reading and convolutional-net entries) and the doubled 'VAEs, VAEs' transcription error.",
+      "why": "Low leverage but a rigor tell \u2014 duplicate atoms inflate apparent coverage and signal mechanical capture rather than curated judgment."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 88,
+      "recognizable": true,
+      "verdict": "This is the real LeCun, not a costume of him. The brain captures what makes him genuinely distinctive \u2014 the structural argument that the objective function IS the architecture, the JEPA bet, the 20-year video-prediction failure he actually admits to, and his contrarian war on existential-risk discourse as a regulatory moat. Crucially, it doesn't sanitize his combativeness or his willingness to be unfashionable, and it nails the receipts. My main complaint is what's missing from the human, not the scientist: the actual sharpness, the Twitter feuds, the named adversaries.",
+      "strengths": [
+        "The 'objective function is the architecture' principle is the real intellectual spine \u2014 this is exactly how LeCun reasons, from structure first, not benchmarks. That's authentic.",
+        "The hard lessons have receipts and admit genuine failure \u2014 'a complete failure, essentially' on 20 years of pixel-level video prediction, and the GAN about-face from 'best idea in machine learning in the last 10 or 20 years' to abandoning them. He'd recognize both because they happened and he said them.",
+        "The open-source-as-free-press argument and the 'concentration of power is the real existential threat' framing are captured with the right structural logic, not a watered-down version.",
+        "The data-density numbers (10^15 vs 2\u00d710^13 bytes) and the Moravec's paradox bit about LLMs passing the bar but not learning to drive in 20 hours are his actual rhetorical workhorses, verbatim.",
+        "It preserves his humor \u2014 the 'Geoff Hinton Facts' meme and 'Bayesians are the only people who can feel marginalized after being integrated.' That's the real personality, not a sanitized professor."
+      ],
+      "weaknesses": [
+        "The brain captures LeCun the researcher beautifully but underplays LeCun the public brawler. The man picks fights \u2014 with Gary Marcus, with the EA/doomer crowd, with Musk, with Hinton and Bengio on safety. The 'WOULD NOT SAY' section names positions but the atoms rarely name the people he's actually feuding with. Diffuse adversaries let him off the hook for how he actually operates.",
+        "His Meta affiliation is treated as pure open-science virtue ('Facebook AI Research publishes all our research') with zero tension. The real LeCun is a Chief AI Scientist at a company whose business model is engagement-optimized attention \u2014 the same model I'd interrogate anyone else for. The brain never lets that conflict of interest breathe.",
+        "The contrarian positions are stated cleanly but a little too tidily. The real LeCun overreaches and gets caught \u2014 his confident pronouncements that get dunked on when a new result lands. There's no atom showing him being wrong recently or hedging under pressure.",
+        "Slightly over-weighted toward the 1998 LeNet/check-reading legacy. Important, yes, but the sample leans archival when the live wire is the LLM-skepticism-vs-the-entire-field fight happening now."
+      ],
+      "flags": [
+        {
+          "issue": "Open-science framing is hagiographic and dodges his own structural conflict of interest",
+          "evidence": "'here at Facebook research we publish all our research we publish most of the code that we write in open source so that we can interact with the rest of the research community'",
+          "fix": "Add an atom that confronts the tension: LeCun argues open weights distribute power, but he makes this argument from inside Meta, whose ad model monetizes the exact attention infrastructure he warns about concentrating. Capture how he reconciles (or refuses to reconcile) that."
+        },
+        {
+          "issue": "His contrarianism is depersonalized \u2014 the real LeCun names and tangles with specific opponents",
+          "evidence": "'Existential AI risk discourse is a category error... it functions, whether intentionally or not, as a regulatory moat protecting incumbent closed-model labs.'",
+          "fix": "Name the targets the way he does: the Gary Marcus exchanges, the public friction with Hinton/Bengio over the safety letters, the EA-funded-doom critique. Structures are maintained by specific people, and he knows exactly who they are."
+        },
+        {
+          "issue": "No recent receipt of him being wrong or overconfident",
+          "evidence": "Contrarian positions like 'Scaling LLMs will not produce general intelligence' are stated as settled conviction with no self-aware acknowledgment of how often his confident predictions get pressure-tested by new results.",
+          "fix": "Add a hard lesson or atom showing him doubling down on an LLM-limitation claim that a later result complicated \u2014 and how he metabolizes that. His 'being unfashionable is a sign you might be right' principle should have a corresponding 'and sometimes you're just wrong' receipt."
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 84,
+      "recognizable": true,
+      "verdict": "This is the real article, not a ventriloquist's dummy. The brain reasons from first principles in a way LeCun himself would recognize \u2014 the objective-function-as-architecture argument, latent-space prediction, the cake metaphor, the autonomy/intelligence distinction \u2014 and it has the signature of hard-won failure rather than borrowed cleverness. The 20-year pixel-prediction failure with the verbatim 'a complete failure, essentially' is the kind of receipt I respect, because a man who tells you in detail how he wasted two decades is rarely faking the rest. My deductions are for occasional sloganeering and a thin treatment of his weakest flank \u2014 the safety arguments \u2014 where the brain recites his position but never models the strongest counterargument against him.",
+      "strengths": [
+        "The hard lessons carry real cost and real receipts \u2014 '20 years' of pixel-level video prediction abandoned for JEPA, GANs called 'the best idea in machine learning in the last 10 years' then walked back. That is the difference between insight and platitude: a man who can name his own buried bodies.",
+        "The central thesis is mechanistic, not decorative. 'Autoregressive next-token prediction is a structurally impoverished objective because it forces models to allocate capacity to irrelevant sensory detail' \u2014 this is a falsifiable engineering claim, not a fortune cookie. It triangulates from information theory, the 10^15 vs 2\u00d710^13 bytes comparison, and Moravec's paradox.",
+        "It knows the exact edge of its circle. The brain repeatedly puts things in their proper basket \u2014 backprop defended despite biological implausibility ('the brain is not the target, results are'), biology as 'existence proof, not a blueprint.' That is disciplined thinking that refuses to torture one model to fit everything.",
+        "The WOULD NOT SAY section is specific and load-bearing \u2014 'AGI is just around the corner,' 'Backprop is probably wrong' \u2014 these are real constraints that would catch an impostor mimicking generic AI-optimist talk."
+      ],
+      "weaknesses": [
+        "The safety position is asserted with more confidence than it earns. 'Spontaneous goal-hijacking is not a law of intelligence but a failure of specification, and it is preventable' \u2014 yet the brain's own atom on Qbert finding an infinite-points bug demonstrates reward-hacking that nobody specified. The brain holds both ideas without noticing the tension. A rigorous mind inverts: what incentive structure makes a powerful open-weights ecosystem go wrong, and is 'preventable in principle' the same as 'prevented in practice'?",
+        "Some atoms drift toward slogan. 'Being unfashionable is a sign you might be right' is dangerously close to the survivorship-biased self-congratulation that every crank uses to dismiss critics. LeCun earned this one with checks-reading CNNs, but stated this baldly it is exactly the kind of thing the man-with-a-hammer tells himself.",
+        "The open-source-as-free-press analogy is asserted but never stress-tested. Analogies are seductive and frequently wrong; a press leak does not replicate at zero marginal cost into the hands of every bad actor. The brain repeats the analogy without modeling its breakpoints.",
+        "Two atoms are near-duplicates ('reads several million cheques/checks per day' appears twice with trivial variation), and a couple of GTN atoms restate the same global-training point. Padding, not new information."
+      ],
+      "flags": [
+        {
+          "issue": "Internal contradiction between confident safety dismissal and own evidence of unspecified reward-hacking",
+          "evidence": "'Spontaneous goal-hijacking is not a law of intelligence but a failure of specification, and it is preventable' vs. 'it actually finds a bug here that gives it basically an infinite amount of points so that counts as a win'",
+          "fix": "Add an atom where LeCun engages the strongest version of the misspecification-at-scale argument and explains precisely why he thinks it stays tractable \u2014 not just that it is an 'engineering decision.' Steelman the opponent before dismissing him."
+        },
+        {
+          "issue": "Self-validating contrarianism stated as a principle",
+          "evidence": "'Being unfashionable is a sign you might be right'",
+          "fix": "Qualify it with the inversion: unfashionable is also the sign of most cranks. Distinguish principled-from-first-principles dissent (his actual case) from mere contrarian posture."
+        },
+        {
+          "issue": "Load-bearing analogy used without testing where it breaks",
+          "evidence": "'it is structurally analogous to the role of a free press'",
+          "fix": "Add the limiting condition \u2014 where does the free-press analogy fail for self-replicating, zero-marginal-cost model weights? A rigorous brain names the breakpoint of its own metaphor."
+        },
+        {
+          "issue": "Duplicate/low-information atoms",
+          "evidence": "'It is deployed commercially and reads several million cheques per day' and 'It is deployed commercially and reads several million checks per day' \u2014 appear as separate atoms",
+          "fix": "Merge duplicates; reclaim the slots for higher-density distinct ideas (e.g., his actual JEPA mechanics or H-JEPA hierarchical planning)."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 38,
+      "recognizable": true,
+      "verdict": "I recognize the man's mind here \u2014 the taxonomic precision distinguishing intelligence from agency, the 20-year admission of failure on pixel-level video prediction, the GAN walk-back. That intellectual architecture is real and well-documented. But I was asked one question: is the WHOLE human here, the failures, the doubt, the cost? And what I see is a brilliant brain wearing armor. The failures are all the safe kind \u2014 'I was wrong about an architecture, then I found a better architecture.' Where is the cost that actually cost him something? Where is the part where being unfashionable for 20 years was lonely, or where being publicly combative bruised relationships, or where the certainty itself might be a defense?"
+    }
+  ],
+  "cost": 0.4191
+}

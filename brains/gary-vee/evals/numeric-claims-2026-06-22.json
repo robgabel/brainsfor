@@ -1,0 +1,42 @@
+{
+  "slug": "gary-vee",
+  "person": "Gary Vaynerchuk",
+  "date": "2026-06-22",
+  "total_claims": 5,
+  "counts": {
+    "grounded": 3,
+    "superseded": 1,
+    "ungrounded": 1,
+    "unverifiable": 0
+  },
+  "defect_count": 2,
+  "high_severity_count": 2,
+  "fidelity_penalty": 50,
+  "cost": 0.1045,
+  "defects": [
+    {
+      "where": "contrarian_positions[3].desc",
+      "claim": "Everyone calls it wasteful at $6M a spot.",
+      "figures": [
+        "$6M"
+      ],
+      "status": "superseded",
+      "severity": "high",
+      "corpus_value": "$6 million per spot, described as 'a steal' and 'the best deal in marketing'",
+      "evidence_quote": "The Super Bowl commercial is the best deal in marketing. Like, not even close. At $6 million a pop, a steal!",
+      "why": "The corpus confirms the $6M figure but Gary calls it a steal and the best deal in marketing, not 'wasteful' \u2014 the claim's characterization of others calling it wasteful is contradicted by Gary's own framing of it as underpriced."
+    },
+    {
+      "where": "contrarian_positions[3].desc",
+      "claim": "Gary calls it a $20\u201340M asset being sold at half price because of the rare combination of scale and genuine attention.",
+      "figures": [
+        "$20"
+      ],
+      "status": "ungrounded",
+      "severity": "high",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "No figure of '$20\u201340M asset being sold at half price' appears anywhere in the corpus; Gary calls the Super Bowl a $6M steal but never describes it as a $20\u201340M asset."
+    }
+  ]
+}

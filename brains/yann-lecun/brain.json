@@ -373,6 +373,91 @@
         "desc": "Trace the second and third-order effects of a trend or decision.",
         "example": "/predict \"What happens to AI safety and autonomy if we successfully build agents with world models?\""
       }
+    ],
+    "hard_lessons": [
+      {
+        "title": "I spent 20 years trying to make video prediction work at the pixel level, and it completely failed",
+        "cost": "Two decades of effort on generative pixel-level video prediction produced no working system capable of learning useful world representations \u2014 LeCun explicitly calls it 'a complete failure, essentially,' naming GANs, VAEs, VAEs, regularized autoencoders, and straight neural nets as approaches that were all tried and abandoned.",
+        "change": "I shifted to predicting in abstract representation space (JEPA) rather than at the pixel level, abandoning the generative reconstruction objective entirely for video.",
+        "receipts": [
+          {
+            "quote": "You're not going to be able to do this with generative models... We've tried lots of things. We tried just straight neural nets, we tried GANs, we tried VAEs, all kinds of regularized auto encoders, we tried many things... that has been a complete failure, essentially.",
+            "source": "Yann LeCun lecture (youtube:5t1vTLU7s40)",
+            "atom_id": "ad1db782-4f4c-4b85-a6e6-0fae2a190bc5"
+          },
+          {
+            "quote": "Try to translate the same principle. Instead of training a system to predict the next word, feed it with a video and ask it to predict what happened next in the video. And this doesn't work. I've been trying to do this for 20 years. And it really doesn't work if you try to predict at a pixel level.",
+            "source": "Yann LeCun talk (youtube:ykfQD1_WPBQ)",
+            "atom_id": ""
+          },
+          {
+            "quote": "Instead of training a system to predict the next word, feed it with a video and ask it to predict what happened next in the video. And this doesn't work. I've been trying to do this for 20 years. And it really doesn't work if you try to predict at a pixel level. Because the real world is messy. There's a lot of things that may happen, plausible things that may happen.",
+            "source": "Yann LeCun talk (youtube:ykfQD1_WPBQ)",
+            "atom_id": "4d304b2e-e007-4097-995d-932313cb05b5"
+          }
+        ]
+      },
+      {
+        "title": "I failed to anticipate how badly the neural net community's loss of interest in the 1990s would stall the field \u2014 and I still don't fully understand why it happened",
+        "cost": "By the mid-1990s the machine learning community abandoned neural nets entirely despite the commercial success of convolutional nets reading 10\u201320% of all US checks \u2014 a retreat LeCun admits is 'not entirely clear to me,' meaning he had no strategic response ready and watched a working paradigm get discarded for years.",
+        "change": "I rebranded the work as 'deep learning' in the mid-2000s to distance it from neural nets' bad reputation and rebuilt the research community's credibility through demonstrated results in computer vision, speech, and NLP.",
+        "receipts": [
+          {
+            "quote": "By the mid 90s the machine learning community completely lost interest in neural nets for reasons that are not entirely clear at least not entirely clear to me... partly due to the fact that training such a system at the time was very onerous... back in those days open-source was not particularly prevalent and companies were kind of possessive about software.",
+            "source": "Yann LeCun lecture (youtube:Yann_LeCun_Next_Step_AI)",
+            "atom_id": "587e89db-728d-4264-872c-1ac782c046ad"
+          },
+          {
+            "quote": "By the end of the 1990s the system was reading between 10 and 20 percent of all the checks in the US so it's a big success story of the first wave of neural nets in the early 90s.",
+            "source": "Yann LeCun lecture (youtube:Yann_LeCun_Next_Step_AI)",
+            "atom_id": "03367077-c8f1-4cdd-af6c-aa66fc1cfae6"
+          },
+          {
+            "quote": "Neural net had kind of a bad rep. People in computer science and engineering thought neural nets were kind of a bad thing. They had a bad reputation. And so we branded it into deep learning and sort of brought it back to the fore and then the results were there in computer vision, in natural language understanding, speech recognition to really convince people that this was a good thing.",
+            "source": "Yann LeCun talk (youtube:ykfQD1_WPBQ)",
+            "atom_id": ""
+          }
+        ]
+      },
+      {
+        "title": "I got excited about GANs as the solution to unsupervised learning, then had to walk that back when I saw their fundamental flaws",
+        "cost": "LeCun invested significant enthusiasm and research capital in GANs \u2014 calling Ian Goodfellow's idea 'the best idea in machine learning in the last 10 or 20 years' \u2014 before concluding they were fundamentally non-probabilistic and needed to be replaced, costing time and research direction.",
+        "change": "I moved away from GANs toward non-contrastive self-supervised methods and JEPA, which do not require adversarial training or modeling the full output density.",
+        "receipts": [
+          {
+            "quote": "This is a very, very, very cool idea by Ian Goodfellow... I think this is the best idea in machine learning in the last 10 years. Occasionally I would say the last 20 years. I am really a big fan of this idea. And the reason why I'm a big fan, I think is because it's the ticket to solving the main problem of unsupervised learning, which is predicting under certainty.",
+            "source": "NIPS 2016 keynote (youtube:NIPS2016_LeCun)",
+            "atom_id": "0ab8a2cf-fbb2-4f39-abaa-15a2f2eb57df"
+          },
+          {
+            "quote": "I was really excited about them for a while I'm less excited about them now I'm trying to replace them by something more efficient because they have some flaws... GANs are not really probabilistic in many ways they don't model the density of the probability density of the output.",
+            "source": "Yann LeCun lecture (youtube:rebellion_educational_series_lecun)",
+            "atom_id": "221671fa-847a-4c95-96c6-1b9045bf7ede"
+          }
+        ]
+      },
+      {
+        "title": "I did not realize at the time how much commercial impact the convolutional net work at Bell Labs would eventually have",
+        "cost": "LeCun's own admission that 'at that time we didn't realize how much of an impact this could have' means the team was not positioned to capitalize on or protect the paradigm \u2014 contributing to the window in which the community abandoned the approach entirely during the AI winter, ceding the field temporarily.",
+        "change": "I became a deliberate advocate for publishing and open-sourcing research so that promising results could not again be buried by institutional secrecy or community fashion.",
+        "receipts": [
+          {
+            "quote": "at that time we didn't realize how much of an impact this could have",
+            "source": "Facebook AI Research video (youtube:Learn_More_About_Facebook_AI_Research)",
+            "atom_id": "301a023f-b8de-4c86-8469-b28e94aebefd"
+          },
+          {
+            "quote": "by the mid90s you could go to an ATM machine and put the check in the ATM machine and the ATM machine would read the amount on the check automatically that was using a convolutional neural net that we developed at Bell Labs",
+            "source": "Facebook AI Research video (youtube:Learn_More_About_Facebook_AI_Research)",
+            "atom_id": "ce0c6b70-5aa7-4ce9-b040-204877f3863f"
+          },
+          {
+            "quote": "One of the good thing about Facebook AI research is that most of our research \u2014 all of our research is open we publish everything and we distribute most of our code in open source.",
+            "source": "Yann LeCun lecture (youtube:Yann_LeCun_Next_Step_AI)",
+            "atom_id": ""
+          }
+        ]
+      }
     ]
   },
   "website": {

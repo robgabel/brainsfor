@@ -1,0 +1,194 @@
+{
+  "slug": "steve-jobs",
+  "target": "Steve Jobs",
+  "date": "2026-06-22",
+  "persona_qa_score": 68,
+  "raw_chair_score": 68,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 0,
+  "pass": false,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 72,
+    "rigor": 76,
+    "coverage": 62,
+    "calibration": 70
+  },
+  "confidence": "medium",
+  "ship_recommendation": "hold",
+  "summary": "Jobs would recognize the spine of this brain instantly \u2014 integration, focus-as-elimination, products-before-profits, design-is-how-it-works, work-backwards-from-the-customer \u2014 all stated as causal mechanisms with receipts, not slogans. That's the high-confidence part. The low-confidence part is whether this is Jobs or a Jobs keynote: three independent judges converged on the same two failures (sanitized cruelty, biographical filler diluting the corpus), and convergence this clean is itself a signal the diagnosis is real. I'm betting roughly 70% that the philosophy is faithfully captured and 70% that the human is materially incomplete \u2014 those are different bets and the pack ships on the first while failing the second.",
+  "calibration_note": "I trust these three judges more than usual precisely because they were elicited independently and still converged \u2014 Swisher, Munger, and Brown each flagged the Jandali biographical filler and the missing cruelty without seeing each other. That's not anchoring; that's three different lenses landing on the same defect, which raises my confidence the defect is structural rather than taste. I nudged Rigor down 2 (78\u219276): Munger scored the constitution, which is genuinely strong, but the atom sample's third-party-opinion contamination is a bigger drag on a 'thinking corpus' than an 80 implies \u2014 Marfatia-calls-him-a-genius is pure platitude. I held Coverage at 62 \u2014 Brown is right and may even be generous; a brain that names the reality-distortion field but never demonstrates it as a method or its harms is missing the load-bearing wall of how Jobs actually moved people. Numeric gate is clean: 0 high-severity defects, so the hard rule does not block. The reason this is HOLD not SHIP is not the numbers \u2014 it's that the same flaw shows up in all four dimensions, which means it's one fixable problem, not four.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Strip the third-party-opinion and biographical-gossip atoms (Jandali Egypt tour, 'grown-up apartment,' Mueller on patents, Marfatia 'genius who blended') and replace with atoms that model Jobs REASONING \u2014 the reality-distortion field demonstrated as a persuasion method, the cannibalization logic applied to a live decision.",
+      "why": "All three judges independently flagged this exact contamination. It's the single highest-leverage fix because it's one problem inflating across rigor, authenticity, and coverage at once \u2014 the corpus currently teaches an AI to narrate Jobs rather than think as him."
+    },
+    {
+      "priority": 2,
+      "fix": "Add the cruelty and the relational cost as first-class material: 'this is shit' as an operating mode, employees made to cry, the denied paternity of Lisa, friends cut out of options. Frame the reality-distortion field as both inspiration AND self-deception/harm.",
+      "why": "A brain without a shadow is a keynote, not a person. The ruthlessness wasn't incidental to 'A-players only, one B-player is a cancer' \u2014 it was the enforcement mechanism. Omitting it makes the operating principles literally non-functional as a model of how he produced quality."
+    },
+    {
+      "priority": 3,
+      "fix": "Mark a breakpoint on the integration/closed thesis \u2014 at least one atom or hard lesson where 'own the whole widget' or 'closed beats open' demonstrably failed or imposed a real cost.",
+      "why": "Right now the worldview is presented as monotonically validated, which is the motivated-reasoning tell. A brain that only shows its thesis winning can't model the judgment of WHEN the thesis applies \u2014 and that conditional is where the actual skill lives."
+    },
+    {
+      "priority": 4,
+      "fix": "De-truncate the voice quotes (several cut off mid-word) so claims are verifiable and the voice samples are usable.",
+      "why": "Cheap to fix, and truncated quotes weaken both verifiability and the fidelity of the voice model. Low effort, removes a credibility paper-cut Munger explicitly flagged."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 72,
+      "recognizable": true,
+      "verdict": "This is recognizably Jobs on the spine \u2014 integration, focus-as-elimination, products-before-profits, the customer-experience-backwards lesson with real WWDC 1997 receipts. The first principles and hard lessons are rigorous and quotable. But the atom sample is badly diluted by third-party biographical filler and a strange Jandali subplot that has nothing to do with how Jobs thinks, and the whole pack sands off the cruelty, the reality-distortion-field manipulation, and the public viciousness that were inseparable from the man. He'd recognize the philosophy. He'd wince at how clean it is.",
+      "strengths": [
+        "The 'focus is elimination, not prioritization' principle and the 70%-product-cull hard lesson are the real Jobs \u2014 saying no as the operating discipline, with the WWDC 'eighteen different directions / less than the sum of the parts' receipt intact",
+        "'Start with the customer experience and work backwards to the technology' is his single most-cited self-correction, properly anchored to WWDC 1997 with the explicit 'I've made this mistake more than anybody' framing",
+        "The Apple TV hard lesson is unusually honest \u2014 Jobs publicly admitting a wrong mental model and a price cut is exactly the kind of receipt that proves this isn't hagiography",
+        "Contrarian positions on licensing-as-slow-suicide and 'market research is actively harmful' capture genuine heterodoxy, not safe consensus dressed as edge"
+      ],
+      "weaknesses": [
+        "The atom sample is contaminated with passive biographical narration \u2014 the Jandali fake-tour and 'grown-up apartment' atoms tell us nothing about how Jobs reasons; they're documentary B-roll masquerading as cognition",
+        "The pack is sanitized of Jobs's documented cruelty \u2014 no 'this is shit,' no public humiliation of employees, no parking-in-handicapped-spots arrogance. The 'A-players, one B-player is a cancer' principle gestures at ruthlessness but the brutality that made it real is missing",
+        "'Reality distortion' appears as a category but the atoms under it are admiring third-party quotes ('Steve is one of the very few people') rather than Jobs DOING the distortion \u2014 the manipulation engine is described, not enacted",
+        "Several atoms are someone else's voice entirely (Florian Mueller on patents, Commissioner Marfatia) \u2014 these are about Jobs, not Jobs thinking, and they pad the count without adding fidelity"
+      ],
+      "flags": [
+        {
+          "issue": "Off-target biographical filler that doesn't model cognition",
+          "evidence": "voice: \"Very mature. He had me over to dinner and he had a very grown-up apartment and I met his wife or girlfriend at the time.\" (Jandali subplot)",
+          "fix": "Cut the Jandali-tour and biological-father atoms entirely or compress to the one philosophically load-bearing line ('I didn't trust him not to try to blackmail me') as a provenance/judgment example, and replace freed slots with Jobs's own first-person product reasoning"
+        },
+        {
+          "issue": "Third-party assessment substituted for first-person thought",
+          "evidence": "voice: \"Whether Steve Jobs was a great inventor depends on whether one is prepared to define the term extremely broadly.\" \u2014 Florian Mueller",
+          "fix": "Remove atoms whose 'voice' is a commentator describing Jobs; every voice line should be Jobs reasoning or speaking, not a verdict rendered on him"
+        },
+        {
+          "issue": "Sanitized of the documented cruelty integral to how he actually operated",
+          "evidence": "'A-players only; one B-player starts a cancer' is the closest the pack gets, but no atom contains Jobs's actual savage critique behavior",
+          "fix": "Add receipted atoms of his real brutality \u2014 'this is shit' design reviews, firing on the spot, public dressing-downs \u2014 framed as the cost-bearing edge of his quality conviction, so the AI doesn't reason as a polite Jobs who never existed"
+        },
+        {
+          "issue": "The reality-distortion field is named but never demonstrated as a method",
+          "evidence": "voice: \"Do you want to sell sugar water for the rest of your life or do you want to come with me and change the world?\" is the one good instance; the rest are admiring labels",
+          "fix": "Convert 'reality distortion' atoms into examples of Jobs actively bending others' sense of the possible \u2014 deadline-impossible demands, willful denial of constraints \u2014 rather than quotes praising him for having the trait"
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 78,
+      "recognizable": true,
+      "verdict": "This is largely the real Jobs, not a fortune-cookie impostor. The constitution captures the structural insights that actually drove his fortune \u2014 own the whole widget, focus as elimination not ranking, cannibalize yourself, design as how-it-works \u2014 and crucially these are stated as causal mechanisms with incentive logic underneath, not slogans. The hard lessons carry receipts with real costs (ousted from his own company, Apple TV price cut from $299 to $229, 70% of the roadmap killed), which is exactly what separates hard-won insight from platitude. My deductions are for atom-level slop: a cluster of biographical filler about his biological father Jandali and third-party opinion atoms that describe Jobs rather than think like him.",
+      "strengths": [
+        "The first principles are mechanisms, not mottos \u2014 'Focus is elimination, not prioritization... the two are nearly opposite in practice' is a genuine distinction most people botch, and it inverts correctly: the quality of NO decisions as a leading indicator of health is real, falsifiable thinking",
+        "Incentive archaeology is present where it should be \u2014 'Every layer you don't control is a design decision handed to someone whose incentives are price or market share' shows the brain understands WHY integration matters, not just that Jobs liked it",
+        "Hard lessons have teeth and receipts: the Sculley hire ('hired the wrong guy'), the eighteen-directions sprawl with the 70% roadmap cull, and the Apple TV mental-model error with the specific $299\u2192$229 price move. These are failures with signatures, which is how you know the pattern recognition is earned",
+        "The 'WOULD NOT SAY' section is sharp and discriminating \u2014 'Let's see what the data says before we decide' and 'Good enough ships' are precise constitution-breaks that a lazy impostor would never bother to draw"
+      ],
+      "weaknesses": [
+        "A meaningful fraction of the atom sample is biographical trivia about Jandali (the Egypt tour scam, the 'grown-up apartment,' 'I didn't trust him not to try to blackmail me') that teaches the AI nothing about how Jobs REASONS \u2014 this is gossip wearing the costume of insight",
+        "Several atoms are third parties OPINING ABOUT Jobs rather than Jobs thinking \u2014 Florian Mueller on patents, Commissioner Marfatia calling him 'a genius who blended technology and creativity.' That last one is pure platitude; 'blended technology and creativity' is something anyone could say about anyone",
+        "Only 2 figure claims verified \u2014 the brain is thin on the kind of quantified, checkable specifics ($45M free publicity, 8-month iPod cycle are the good ones) that would prove rigor rather than vibe",
+        "The constitution risks man-with-a-hammer syndrome: nearly every principle resolves to 'integration good, focus good, vision over data.' Where is the edge of Jobs's circle of competence? Where did this worldview FAIL him (Lisa, NeXT hardware, the Cube)? The brain celebrates the model without marking its breakpoints"
+      ],
+      "flags": [
+        {
+          "issue": "Third-party platitude masquerading as insight",
+          "evidence": "'Steve Jobs is considered a genius who blended technology and creativity to invent and market a product which dramatically changed many industries.'",
+          "fix": "Cut it. This is a press-release sentence with no operational content. Replace with a Jobs first-person atom on the technology/liberal-arts INTERSECTION as a working method"
+        },
+        {
+          "issue": "Biographical gossip diluting the reasoning corpus",
+          "evidence": "'Very mature. He had me over to dinner and he had a very grown-up apartment and I met his wife or girlfriend at the time.' (the Jandali cluster)",
+          "fix": "Demote these to background; they don't model judgment. A few are fine for character, but four+ Jandali atoms is bloat that teaches the AI to narrate trivia instead of decide"
+        },
+        {
+          "issue": "Worldview presented without breakpoints \u2014 no marked failures of the integration/closed thesis",
+          "evidence": "Constitution states 'Vertical integration is a competitive advantage, not a strategic mistake' and 'open always beats closed' rejected, with no atom acknowledging where closed/integrated cost him",
+          "fix": "Add a hard lesson where the conviction backfired \u2014 the NeXT hardware failure or the price ceiling of refusing to license \u2014 so the AI knows the EDGE of the model, not just its center"
+        },
+        {
+          "issue": "Truncated voice quotes weaken verifiability",
+          "evidence": "'And I've made thi' / 'I've made this mi' \u2014 multiple quotes cut mid-word",
+          "fix": "Restore full verbatim quotes; truncation invites paraphrase drift and makes the receipt unauditable"
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 62,
+      "recognizable": true,
+      "verdict": "The thinking is here \u2014 the focus discipline, the integration conviction, the work-backwards-from-the-customer reversal \u2014 and it's rigorous. But you've given me a man without a shadow, and that's not coverage of the human, that's a keynote. The cruelty is missing. The cost he imposed on other people \u2014 not the cost the market imposed on him \u2014 is almost entirely absent, and without it this is the canonized Jobs, not the real one.",
+      "strengths": [
+        "The hard lessons have genuine receipts and real failure \u2014 the Sculley hire, the eighteen-directions sprawl, the Apple TV miss are owned with cost attached, not laundered into 'learning opportunities'",
+        "The 'public failure' framing of the firing resists the temptation to make it heroic in the moment \u2014 it holds the catastrophe and the education as a paradox, which is honest",
+        "The constitution captures the genuine intellectual edge \u2014 'focus is elimination, not prioritization' and 'one B-player starts a cancer' are not softened into LinkedIn platitudes"
+      ],
+      "weaknesses": [
+        "The shame and the harm to people is sanitized. 'A-players only; one B-player starts a cancer' is presented as pure operating wisdom \u2014 there is no atom acknowledging that this man humiliated people, made employees cry, told them their work was shit. That cruelty IS part of the human and it's been excised",
+        "The hard lessons are all strategic failures (wrong hire, wrong product model). Where is the relational failure? The denied paternity of Lisa. The friends abandoned over options. The reality-distortion field used to manipulate, not inspire. These are the costs he imposed, and they're the truest test of whether the whole human is present",
+        "The 'reality_distortion' atoms treat it as charismatic vision-casting ('do you want to sell sugar water') with no acknowledgment that it was also a tool of denial and steamrolling \u2014 the same trait that let him ignore his cancer diagnosis for nine months. That self-destruction is absent entirely",
+        "Doubt is nearly invisible. Every atom radiates conviction. Where is the man who wept, who feared he was a bad father, who reconciled with Lisa late and knew it was late? Conviction without doubt is the highlight reel"
+      ],
+      "flags": [
+        {
+          "issue": "The cost to other people \u2014 the cruelty, the abandonments \u2014 is entirely missing from hard lessons",
+          "evidence": "All four hard lessons are strategic ('hired the wrong person,' 'eighteen different directions,' 'wrong mental model'). None is relational or moral.",
+          "fix": "Add a hard lesson on the human cost: denying paternity of Lisa, the friends cut out of founder equity, the people he destroyed in meetings \u2014 with the receipt being his own later acknowledgment of regret"
+        },
+        {
+          "issue": "Reality distortion is framed only as inspiration, never as self-deception or harm",
+          "evidence": "'This reframe turned a comp...' (Sculley/sugar water) \u2014 presented as pure persuasive genius",
+          "fix": "Add an atom capturing the dark side: the same field that let him deny his cancer diagnosis and delay treatment, and that let him deny inconvenient realities to himself"
+        },
+        {
+          "issue": "No atom on the personal toll or the doubt that would make him real rather than mythic",
+          "evidence": "The personal_philosophy atoms only cover the biological father refusal \u2014 a clean, justified decision. No mortality reckoning, no parenting regret.",
+          "fix": "Add atoms on his late-life reckoning \u2014 mortality, the daughter he reached too late \u2014 so the brain carries grief and not only conviction"
+        }
+      ]
+    }
+  ],
+  "cost": 0.3862
+}

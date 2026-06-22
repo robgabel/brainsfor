@@ -1,0 +1,30 @@
+{
+  "slug": "melinda-french-gates",
+  "person": "Melinda French Gates",
+  "date": "2026-06-22",
+  "total_claims": 8,
+  "counts": {
+    "grounded": 6,
+    "superseded": 0,
+    "ungrounded": 1,
+    "unverifiable": 1
+  },
+  "defect_count": 1,
+  "high_severity_count": 1,
+  "fidelity_penalty": 25,
+  "cost": 0.0569,
+  "defects": [
+    {
+      "where": "contrarian_positions[3].desc",
+      "claim": "The Gates Foundation only reads proposals at $40M+ not out of arrogance but because the leverage model requires operating at government-moving scale.",
+      "figures": [
+        "$40M"
+      ],
+      "status": "ungrounded",
+      "severity": "high",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "No mention of a $40M+ proposal threshold appears anywhere in the corpus."
+    }
+  ]
+}

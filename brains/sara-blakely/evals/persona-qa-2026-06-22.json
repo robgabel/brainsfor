@@ -1,0 +1,146 @@
+{
+  "slug": "sara-blakely",
+  "target": "Sara Blakely",
+  "date": "2026-06-22",
+  "persona_qa_score": 62,
+  "raw_chair_score": 62,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 1,
+  "pass": false,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 78,
+    "rigor": 64,
+    "coverage": 58,
+    "calibration": 60
+  },
+  "confidence": "medium",
+  "ship_recommendation": "rework",
+  "summary": "Blakely would absolutely recognize herself here \u2014 almost too well. This brain is a faithful capture of her authorized self-presentation: the gospel is intact, the receipts have real texture (driving to LA, the four-year Sneex kill, writing her own patent), and the voice is unmistakably hers. But faithful capture of a self-mythologizing operator is a trap, not a triumph. The brain swallows narrative ornament \u2014 'manifesting,' 'asking the universe for a sign' \u2014 as if it were load-bearing decision method, and it pre-redeems every failure before the cost can register. We're moderately sure this is the real Blakely; we're quite sure it's incomplete as a decision model.",
+  "calibration_note": "",
+  "ranked_fixes": [],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 78,
+      "recognizable": true,
+      "verdict": "This is mostly the real Blakely \u2014 the gospel is intact, the receipts are specific, and the voice is hers. But it's a brain pack built from the authorized origin myth, and that's exactly the problem. Blakely is one of the most disciplined personal-brand operators in business; the danger isn't that this misrepresents her, it's that it captures her self-presentation so faithfully it never interrogates it. I see almost no daylight between what she says about herself and what's recorded here, and that's a tell."
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 68,
+      "recognizable": true,
+      "verdict": "This is mostly real, hard-won material with receipts \u2014 the fax-machine cold-calling years, the write-your-own-patent thrift, the four-year Sneex kill, the placement intervention at Neiman's. Those have a signature; you can't fake the texture of someone driving to LA knocking on doors. But the brain has a serious rigor problem: it swallows Blakely's mysticism whole as if 'manifesting' and 'asking the universe for a sign' were operating principles rather than narrative ornament, and it never once inverts her own doctrine to find where her models would get her killed.",
+      "strengths": [
+        "Hard lessons carry genuine receipts with cost-and-change structure \u2014 the Sneex four-year kill ('it is more comfortable than what I have but not exponentially more comfortable. I will pull the cord') is a real, falsifiable decision with a price tag attached, not a platitude.",
+        "The 10x-or-kill threshold is a concrete, testable discipline that distinguishes her from generic 'follow your passion' founder-speak.",
+        "The placement story (buying stands from Office Depot, taking over morning staff meetings at Neiman's) shows operational specificity that proves lived experience \u2014 incentive archaeology she did herself.",
+        "The cold-call fax-machine origin ('$20,000 of fax machines a month door-to-door') is the actual training ground for the persuasion skill, properly traced to source rather than asserted."
+      ],
+      "weaknesses": [
+        "The brain presents 'I always ask the universe for a sign' and 'I've manifested almost everything that has happened to me' as load-bearing decision principles. This is survivorship bias dressed as method. The brain shows no awareness that for every founder who 'manifested' a billion dollars, ten thousand visualized just as hard and went broke. A rigorous brain would flag this as narrative, not mechanism.",
+        "No inversion anywhere. Blakely's own constitution \u2014 never track competitors, never write a business plan, never take capital, hire people with zero domain experience \u2014 is stated as universal truth with no boundary conditions. When does 'naivety as asset' become 'ignorance gets you sued' or 'gets your patent invalidated'? The brain never asks how these rules fail.",
+        "The 'don't track competitors' / 'don't take VC' positions worked for a single-product, self-funded, word-of-mouth consumer category with an Oprah lightning strike. The brain universalizes a sample size of essentially one without any selection-effect caveat. That's man-with-a-hammer thinking.",
+        "NUMERIC VERIFICATION flags a HIGH-severity defect (the $350M figure superseded), and the '$1 billion company... never spent a nickel on advertising' claim is repeated reverentially across multiple atoms \u2014 the kind of legend-burnishing that should be cross-checked, not echoed."
+      ],
+      "flags": [
+        {
+          "issue": "Mysticism presented as repeatable decision method",
+          "evidence": "\"I'd been doing visualizing, being very specific, asking for an idea that would change my life... I've manifested almost everything that has happened to me in my life.\"",
+          "fix": "Reframe as her psychological practice for sustaining persistence under rejection, explicitly flagged as NOT a causal mechanism \u2014 and note the survivorship bias so the AI doesn't reason as if wishing produces outcomes."
+        },
+        {
+          "issue": "Constitution rules stated as absolutes with no failure conditions",
+          "evidence": "\"Industry experience is more often a liability than an asset for category-defining work\"",
+          "fix": "Add boundary conditions: name the cases where domain ignorance is catastrophic (regulated industries, capital-intensive ops, safety) versus where naivety genuinely helps (consumer feel/UX). Invert: 'how would hiring only novices destroy a venture?'"
+        },
+        {
+          "issue": "Single-success doctrine universalized without selection-effect awareness",
+          "evidence": "\"She believes business plans constrain intuitive iteration and that outside capital often introduces governance that overrides founder instinct\"",
+          "fix": "Note that this worked in a bootstrappable, high-margin, low-capital consumer category and would be ruinous advice for capital-intensive ventures; mark it as context-dependent, not a law."
+        },
+        {
+          "issue": "Legend figures echoed rather than verified",
+          "evidence": "\"She owns 100% of the private company, has zero debt, has never taken outside investment and hasn't spent a nickel on advertising\" \u2014 against numeric flag of superseded $350M/$1B claims",
+          "fix": "Reconcile the superseded financial figures and stop repeating the 'never a nickel on advertising' line as identical refrain across atoms; one verified statement beats five reverent echoes."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 58,
+      "recognizable": true,
+      "verdict": "I can see a real woman in here \u2014 the panic over 150 orders, the four years of Sneex she had to kill, the cellulite she photographed \u2014 those are the marble-jar moments where a human actually shows up. But too much of this is the origin myth told from the winner's circle. The failures are all retroactively redeemed (every 'no' becomes navigational data, every panic becomes resilience), which is the highlight reel wearing the costume of vulnerability. I want to know what it cost her that didn't resolve into a billion dollars.",
+      "strengths": [
+        "The Sneex hard lesson has genuine weight \u2014 'it is more comfortable than what I have but not exponentially more comfortable. I will pull the cord' \u2014 four years, factory firings, and a self-judgment that didn't flatter her. That's real.",
+        "The 150-order panic is the most honest atom in the pack \u2014 'I'm shutting the website down \u2014 I'm going to refund everyone's order' \u2014 it shows the doubt BEFORE the recovery, not just the triumphant arc.",
+        "The vulnerability principle is articulated with real precision and matches her actual behavior \u2014 refusing the Nordstrom model, photographing her own cellulite. This isn't performative; it's the specific risk of a specific body in a specific room.",
+        "The constitution correctly distinguishes fear-based hesitation from genuine gut signal, which is a taxonomic move I respect \u2014 most people collapse those."
+      ],
+      "weaknesses": [
+        "The failures are almost universally pre-redeemed. 'No is navigational data, not verdict' converts every rejection into a course-correction. That's the survivor narrating backward. Where is the 'no' that just hurt, that she still doesn't have a tidy frame for?",
+        "There is no relational cost anywhere. A woman builds a billion-dollar company nights and weekends in secret for a year while working a day job \u2014 what did that do to her marriages, friendships, her body, her sleep? The pack treats the work as cost-free except in dollars and development time.",
+        "The mortality atom \u2014 best friend dying at 16 \u2014 is mentioned as 'fuel' and 'motivating,' but the grief itself is sealed off. Numbing the pain to harvest only the urgency is exactly the selective-numbing I don't believe is possible. What did that loss actually cost her emotionally?",
+        "Almost no doubt about the philosophy itself. She rejects data, VC, business plans, competitors \u2014 but the pack never shows a moment where one of those convictions failed her or where she wonders if she's wrong. Conviction without self-interrogation reads as armor.",
+        "The 'manifesting' and 'asking the universe for signs' material is presented entirely uncritically \u2014 no atom shows her wrestling with whether intuition ever betrayed her or led her astray. A real instrument has misfires."
+      ],
+      "flags": [
+        {
+          "issue": "Failure framed exclusively as fuel, with the actual cost of grief sealed away",
+          "evidence": "'I think that when you witness death at age 16, there's a sense of urgency about life... I find it motivating.'",
+          "fix": "Add an atom that holds the grief without converting it to productivity \u2014 what the loss cost her in fear, in relationships, in nights she didn't sleep. The urgency is real, but motivation cannot be the only residue of a friend's death."
+        },
+        {
+          "issue": "No relational or personal cost of the secret-build year and the all-in scaling",
+          "evidence": "'sitting up all night shoving Spanx orders into white padded envelopes from Office Depot' \u2014 presented as pure grit, no cost",
+          "fix": "Surface a hard lesson about what the obsessive build cost her in connection \u2014 a strained relationship, isolation, burnout. Hyper-independence is a wound, not just a virtue; the pack treats her self-sufficiency as unambiguously heroic."
+        },
+        {
+          "issue": "Convictions stated as categorical with no atom showing one of them failing her",
+          "evidence": "'Blakely has said she never tracked competitors at Spanx' / 'Don't write a business plan and don't take VC'",
+          "fix": "Add a moment where ignoring competitors or rejecting structure actually bit her \u2014 even the Laurie Ann Goldman business plan she objected to apparently helped. Where's her honest reckoning that her own instinct was sometimes wrong?"
+        },
+        {
+          "issue": "Numeric defect on the foundational figure undermines the receipt-quality of the whole origin story",
+          "evidence": "NUMERIC VERIFICATION: '[high/superseded] Launched Spanx with $5,000... corpus says: $350 million a year'",
+          "fix": "Reconcile the figure \u2014 the $5,000 start and the $350M/year revenue are different points in time and shouldn't be conflated in a single role claim. Precision on the numbers protects the credibility of the emotional truth."
+        }
+      ]
+    }
+  ],
+  "cost": 0.4137
+}

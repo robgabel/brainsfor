@@ -1,0 +1,155 @@
+{
+  "slug": "sun-tzu",
+  "target": "Sun Tzu",
+  "date": "2026-06-22",
+  "persona_qa_score": 47,
+  "raw_chair_score": 47,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 0,
+  "pass": false,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 58,
+    "rigor": 56,
+    "coverage": 38,
+    "calibration": 52
+  },
+  "confidence": "medium",
+  "ship_recommendation": "hold",
+  "summary": "Sun Tzu would recognize his doctrine \u2014 the deception, the four-tier hierarchy, the five faults, foreknowledge over omens are all here and correctly ranked. But he'd be looking at a syllabus about himself, not himself: roughly a third of the atoms are 20th-century commentators (Ho Chi Minh, Giap, Truong Chinh, Normandy, Agincourt) reasoning backward through his text. The contamination is the central bet here, and all three field judges independently converged on it, which raises my confidence that it's real and not a single judge's hobbyhorse. I score this a hold, not a ship \u2014 the doctrine is sound but the provenance and the empty failure section mean we're trusting a polished highlight reel.",
+  "calibration_note": "Three independent judges, three different lenses, same two findings (secondhand-commentary contamination + empty HARD LESSONS). That convergence is the strongest signal in the packet \u2014 when judges who didn't confer all land on the same defect, the defect is almost certainly in the brain, not in the judges. The numeric gate is clean (0 figure claims, 0 HIGH defects), so nothing blocks on hard numbers. My recalibration: Swisher and Munger both sit at 58, which I think is slightly generous given they each described 'a third of the brain isn't the man' \u2014 that's not a 58-grade problem, so I nudged rigor to 56. Bren\u00e9's 38 on coverage is the one I trust most precisely because it's the harshest and most specific: the brain outsources Sun Tzu's failures onto a borrowed figure, which is a real structural dodge, not over-reaction. I left coverage at 38. My own calibration score of 52 reflects that the judges are well-calibrated on the diagnosis but the brain itself is a good-decision-looking artifact with a thin actual foundation \u2014 the dangerous off-diagonal cell where confident-sounding output masks shaky sourcing.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Re-source the contaminated atoms: either re-derive them from Sun Tzu's own text or explicitly label them as 'application by later strategist' so commentary is never presented as the Master's own reasoning. Strip or recast the Ho Chi Minh / Giap / Normandy / Agincourt material.",
+      "why": "Three judges independently flagged this as the dominant defect. Provenance contamination is what drags an otherwise-sound doctrine brain from ship to hold \u2014 it's the highest-leverage single change."
+    },
+    {
+      "priority": 2,
+      "fix": "Populate HARD LESSONS with grounded failures \u2014 Sun Tzu's text itself catalogues how generals lose, and the five fatal faults are a ready-made failure taxonomy. An empty section for a self-knowledge-centered strategist is a self-refuting hole.",
+      "why": "All three judges read the empty section as a confession, not a neutral. The brain's own constitution claims self-delusion is the most dangerous enemy; presenting zero failures enacts the exact blindness it warns against."
+    },
+    {
+      "priority": 3,
+      "fix": "Reconcile the live tension between 'subdue without fighting' / win-with-ease and the 'death ground' fanaticism atom. State explicitly when each applies rather than letting them sit unresolved.",
+      "why": "Munger caught an unreconciled internal contradiction. A brain that can't say where its own principles trade off against each other will mislead under pressure \u2014 that's the off-diagonal where bad decisions hide behind good-sounding doctrine."
+    },
+    {
+      "priority": 4,
+      "fix": "Audit the voice quotes so that quotes attributed to Sun Tzu's voice are actually his, not Duiker's or a documentary narrator's.",
+      "why": "Voice fidelity is cheap to fix and central to whether the subject would recognize himself; mislabeled voice quietly undermines trust in every other atom."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 58,
+      "recognizable": true,
+      "verdict": "The doctrine is here and it's real \u2014 deception, winning without fighting, the five faults, intelligence over omens, speed as strategy. Sun Tzu would nod at the principles. But this brain has a provenance problem that would make me wince: at least a third of the atoms aren't Sun Tzu thinking, they're a 20th-century Vietnam War seminar reading Sun Tzu backward through Ho Chi Minh and Giap. That's not the man \u2014 that's a syllabus about the man. And the empty HARD LESSONS section is a tell: a strategist whose entire philosophy rests on 'know yourself' and 'the five fatal faults' is presented as having no failures of his own, which is its own kind of self-delusion the constitution claims to despise.",
+      "strengths": [
+        "The first principles are crisp and load-bearing \u2014 'subdue the enemy without fighting,' 'every battle is won or lost before it is fought,' 'attack the strategy, not the army' \u2014 these are genuinely his and ranked correctly in the hierarchy",
+        "The contrarian positions are sharp and non-generic: 'the greatest generals are unknown,' 'anger is not passion \u2014 it is incompetence,' 'defense is not waiting \u2014 it is the most active form of war.' These cut against modern war-romanticism cleanly",
+        "The WOULD NOT SAY section does real work \u2014 'Stay the course,' 'We fight for honor and glory' as constitution breaks is precisely right and shows someone understood the structure, not just the slogans",
+        "Intelligence-as-epistemology is handled well: foreknowledge from men who know, not spirits or analogy \u2014 and the double-agent atom is textbook and verbatim-grounded"
+      ],
+      "weaknesses": [
+        "Heavy contamination by secondary interpretation \u2014 Ho Chi Minh, Giap, Truong Chinh, Caen/Normandy, the Bocage, Agincourt, Fu Chien. Provenance is my universal test, and a large share of these 'atoms' originate from analysts applying Sun Tzu, not from Sun Tzu. The voice quotes are often Duiker or a documentary narrator, not the Master",
+        "Empty HARD LESSONS. For a man whose core doctrine is self-knowledge and the five fatal faults of a general, presenting zero grounded failures is a coverage defect that undercuts the whole authenticity claim",
+        "Several 'voice' fields are not Sun Tzu's voice at all \u2014 e.g. 'he was always conscious that conditions in China and Vietnam were not always the same' is biography of Ho Chi Minh. That's mislabeled at the structural level",
+        "Some atoms drift into modern editorializing ('blistering speed and brutal efficiency,' 'It is a mind to mind battle') that reads like a TED-talk gloss rather than the spare, aphoristic original"
+      ],
+      "flags": [
+        {
+          "issue": "Atom attributed to Sun Tzu's brain is actually 20th-century strategist biography",
+          "evidence": "voice: 'he was always conscious that conditions in China and Vietnam were not always the same'",
+          "fix": "Move all Ho Chi Minh / Giap / Vietnam-application material into a clearly-labeled 'reception and application' layer, separate from atoms representing how Sun Tzu himself reasons"
+        },
+        {
+          "issue": "Empty HARD LESSONS contradicts the constitution's own emphasis on self-knowledge",
+          "evidence": "'HARD LESSONS (EMPTY \u2014 the corpus surfaced no grounded failures.)'",
+          "fix": "Surface his documented near-failures \u2014 the concubine demonstration's brutality and the king's resistance, the limits of his service under Hel\u00fc \u2014 or explicitly state the corpus is a transmitted treatise with little personal biography, so the gap is honest"
+        },
+        {
+          "issue": "Voice quotes from secondary narrators presented as the person's own voice",
+          "evidence": "voice: 'Leaders in the royal court begin to lose faith in Nang Wa. And allies begin to defect to Sun Tzu's side.'",
+          "fix": "Reserve the 'voice' field for verbatim Art of War text; tag dramatization and analyst commentary as paraphrase or context"
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 58,
+      "recognizable": true,
+      "verdict": "The core doctrine is here and largely sound \u2014 deception, winning without fighting, the four-tier hierarchy of attacking strategy before armies, the five faults, foreknowledge from men not omens. These are real and correctly ranked, not platitudes. But this brain has a serious slop problem: roughly a third of the atoms are not Sun Tzu thinking at all \u2014 they're Ho Chi Minh, Giap, and a Vietnam War documentary stapled onto Sun Tzu's name. That's exactly the man-with-a-hammer error I warn against: a commentator's analogies dressed up as the master's own reasoning. And the HARD LESSONS section is empty, which on my dimension is a confession, not a neutral.",
+      "strengths": [
+        "The hierarchy is stated with precision and correctly ranked \u2014 'attack strategy, then alliances, then armies, siege last' \u2014 and reinforced across multiple atoms rather than asserted once. That's the structure of a real model, not a slogan.",
+        "The five faults are treated the way I'd treat incentives \u2014 as levers the enemy will pull, not moral failings. 'It's dangerous to be easily triggered because it's easy to lure people with a temper into battle' is the inverted, exploit-the-weakness thinking that makes this recognizable.",
+        "Foreknowledge-from-men-not-omens, including the double-agent turning mechanism, is concrete and operational \u2014 the false economy of refusing to spend on spies is precisely the kind of incentive-blindness I respect calling out."
+      ],
+      "weaknesses": [
+        "A large share of atoms are secondhand \u2014 Ho Chi Minh, Giap, Truong Chinh, Bocage, Caen, Agincourt. The brain repeatedly says what a 20th-century commentator THOUGHT Sun Tzu meant rather than reasoning as Sun Tzu. That dilutes the three or four best ideas into mediocrity, the same way forty stocks dilute three good ones.",
+        "HARD LESSONS empty. A doctrine with no failures attached cannot teach pattern-recognition for disaster. Sun Tzu's own text is built on cataloguing how generals lose \u2014 that material exists and isn't here.",
+        "The 'death ground' and 'unconstrained generals' atoms sit uncomfortably next to the 'win without fighting' core without any reconciliation of the obvious tension. A rigorous brain would show where these models conflict and how Sun Tzu prioritizes \u2014 instead they're laid side by side as if all equally true.",
+        "Several atoms are near-duplicates of the same principle (the four-tier hierarchy appears in at least three places), inflating apparent coverage without adding distinct thought."
+      ],
+      "flags": [
+        {
+          "issue": "Commentary-as-doctrine: atom attributed to Sun Tzu's thinking but is actually about Ho Chi Minh / Vietnam War analysis",
+          "evidence": "'in the broad sense Ho's ideas had triumphed, since the communist victory in Vietnam was a consequence of political, diplomatic, and psychological factors more than military ones'",
+          "fix": "Strip the Vietnam case studies down to at most one or two as illustrations, and rewrite the atom bodies to express Sun Tzu's reasoning in the first person, not a historian's retrospective verdict on a 20th-century follower."
+        },
+        {
+          "issue": "Empty HARD LESSONS \u2014 no failures with receipts",
+          "evidence": "'HARD LESSONS (EMPTY \u2014 the corpus surfaced no grounded failures.)'",
+          "fix": "Mine The Art of War's own catalogue of losing generals and the five faults applied to specific historical defeats (Fu Chien at Fei River is already hinted at) into concrete failure atoms showing what stupidity looks like in Sun Tzu's own frame."
+        },
+        {
+          "issue": "Unreconciled tension between 'win without fighting' and 'death ground' fanaticism",
+          "evidence": "'Put the army in the face of death where there is no escape and they will not flee or be afraid. There is nothing they cannot achieve.'",
+          "fix": "Add an atom resolving when desperate-ground tactics apply versus when they signal that upstream strategy already failed \u2014 the conflict between models is where real conviction or real doubt should be shown."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 38,
+      "recognizable": true,
+      "verdict": "This is a competent doctrinal summary of The Art of War, but it is the highlight reel \u2014 the polished aphorisms without the man who paid for them. On my lens, coverage of the mess, it fails: the HARD LESSONS section is empty, and an empty failure section for a general who wrote about war is not a neutral absence, it's a confession that no one excavated the cost. Worse, the corpus repeatedly outsources Sun Tzu's failures onto Ho Chi Minh \u2014 letting a borrowed figure carry the doubt and defeat while Sun Tzu himself stays unblemished and victorious. That's not the whole human; that's armor."
+    }
+  ],
+  "cost": 0.3704
+}

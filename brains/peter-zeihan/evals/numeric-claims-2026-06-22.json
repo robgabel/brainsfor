@@ -1,0 +1,30 @@
+{
+  "slug": "peter-zeihan",
+  "person": "Peter Zeihan",
+  "date": "2026-06-22",
+  "total_claims": 6,
+  "counts": {
+    "grounded": 0,
+    "superseded": 0,
+    "ungrounded": 1,
+    "unverifiable": 5
+  },
+  "defect_count": 1,
+  "high_severity_count": 0,
+  "fidelity_penalty": 8,
+  "cost": 0.0617,
+  "defects": [
+    {
+      "where": "biography[2].lesson",
+      "claim": "The most important geopolitical shift of the next 30 years was already visible in 2014 if you were willing to look at demographics and naval budgets instead of headlines.",
+      "figures": [
+        "2014"
+      ],
+      "status": "ungrounded",
+      "severity": "medium",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "While the corpus references 2014 (Crimea invasion) and demographic/naval themes, it never makes the specific claim that the key geopolitical shift of the 'next 30 years' was visible in 2014 via demographics and naval budgets."
+    }
+  ]
+}
