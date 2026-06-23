@@ -26,13 +26,13 @@ interface BrainResponse {
 }
 
 // Seed questions chosen to surface genuine disagreement across the default
-// board (Belsky, Munger, Graham, Jobs, Elon). The first is a coding decision —
-// the landing page targets developers, so the lead chip should split the board
-// on their turf: Elon's "delete the part" against Graham/Belsky's "serve the
-// users who love it." The rest put ambition vs caution and intuition vs data in
-// direct conflict.
+// board (Belsky, Munger, Graham, Jobs, Elon). The lead is a ship-vs-polish
+// call every builder faces, and it actually splits this board: Graham + Elon
+// ("ship the rough v1, iterate in public") against Jobs + Belsky ("the first
+// impression is everything — wait until it's great"), with Munger the swing.
+// The rest put ambition vs caution and intuition vs data in conflict.
 const SEED_QUESTIONS = [
-  "A rarely-used power feature is bloating our codebase and confusing new users. Cut it for simplicity, or keep it for the power users who love it?",
+  "Ship a rough but working v1 this week and improve it in public, or wait a month to launch something you're proud of?",
   "I have a $5M acqui-hire offer for a startup I think could be a $500M company. Take it or hold?",
   "Should I trust the data my users are giving me, or trust my own product taste when they conflict?",
 ];
