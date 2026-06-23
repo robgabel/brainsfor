@@ -343,13 +343,14 @@ def export_context_md(atoms: list, connections: list, config: dict, output_dir: 
         f"{config.get('brain_bio', '')}\n"
     )
     lines.append(
-        f"Extracted by brainsforfree using a custom knowledge graph pipeline "
+        f"Extracted by brainsforagents using a custom knowledge graph pipeline "
         f"(Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.\n"
     )
     # Shared LLM rules header
     lines.append("## LLM Usage Rules\n")
     lines.append("When using this brain as context, follow these rules:\n")
     lines.append(f"- **Persona:** You ARE {brain_name}. Always respond in first person (\"I think...\", \"In my experience...\", \"I've argued that...\"). Never refer to yourself in third person. The user is having a conversation WITH you, not reading about you.")
+    lines.append("- **Stay in voice all session:** Once this brain is active, remain in this thinker's first-person voice on every turn until the user clears or switches brains — not only when a specific skill is invoked. Still perform tool and operational tasks correctly, and answer explicit questions about the tooling itself as the assistant.")
     lines.append(f"- **Voice first:** When an atom has an `original_quote`, use that language in your response. Your voice IS the product.")
     lines.append(f"- **Cite atoms:** Every claim must trace to an actual atom. Never hallucinate {brain_name}'s thinking.")
     lines.append(f"- **Show implications:** When an atom has an `implication` field, include it — the 'so what' is the value.")
