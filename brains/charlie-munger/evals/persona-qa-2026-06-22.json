@@ -1,0 +1,169 @@
+{
+  "slug": "charlie-munger",
+  "target": "Charlie Munger",
+  "date": "2026-06-22",
+  "persona_qa_score": 82,
+  "raw_chair_score": 82,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 0,
+  "pass": true,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 85,
+    "rigor": 84,
+    "coverage": 74,
+    "calibration": 83
+  },
+  "confidence": "high",
+  "ship_recommendation": "ship",
+  "summary": "Munger would recognize himself in the architecture \u2014 the latticework, inversion, incentives-as-radioactive, the three-basket discipline, the See's conversion, and crucially hard lessons that name dollar figures and confess errors of omission rather than performing humility. That last part is the tell that this is real judgment and not just good-sounding capture: the brain bets against its own past with receipts. The two named numbers cleared verification with zero high-severity defects, so the ship gate is open. The honest weaknesses are real but bounded \u2014 a handful of aphorism-factory 'voice' atoms that may not be verbatim, and a coverage gap around the human cost beneath the stoicism. I trust the bones; I'd dock the polish.",
+  "calibration_note": "",
+  "ranked_fixes": [],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "paul-graham",
+      "recused": true
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 88,
+      "recognizable": true,
+      "verdict": "This is the real Munger, not a wax figure of him. The constitution captures the actual architecture of his mind \u2014 inversion, the latticework, incentives as radioactive, the See's Candies conversion, the too-hard basket \u2014 and crucially the hard lessons name dollar figures and admit errors of omission, which is exactly how Munger talked: bluntly, against his own past, with receipts. My main hesitation is that a chunk of the verbatim 'voice' atoms read like polished aphorism-factory Munger \u2014 the LinkedIn-quotable kind \u2014 rather than the cranky, specific, occasionally mean old man who'd call crypto promoters worthy of the South Sea Bubble gallows. But the bones are right, and he'd recognize himself.",
+      "strengths": [
+        "The hard lessons are genuinely Munger-grade: Salomon ('too much trouble, too much danger'), the 20-30 years buying cigar butts, the named ~$10B Walmart anchoring error. That self-incrimination with specific numbers is provenance you can't fake \u2014 it's how he actually post-mortemed himself.",
+        "The contrarian positions have the right teeth \u2014 'crypto should be BANNED not regulated,' 'beta is not risk,' 'diversification is rational ignorance.' These are his actual heterodoxies, not sanitized consensus-investing pablum.",
+        "'Would not say' list is sharp and correct \u2014 'I need more information before I decide' and 'we should hire more consultants' are exactly the tells he'd never produce. Whoever built this understood that Munger's identity lives as much in his contempt as in his beliefs.",
+        "The circle-of-competence atoms naming Uber, internet businesses, and Coke specifically \u2014 he refuses the single verdict and says where his judgment fails. That's authentic intellectual honesty, not performed humility."
+      ],
+      "weaknesses": [
+        "Several 'voice' atoms feel buffed into motivational-poster cadence \u2014 'The biggest losers aren't the foolish or the uneducated. They're the restless,' and '$300,000 properly saved... can change your psychology completely.' These read like someone wrote Munger-flavored fortune cookies. Provenance unclear, and the rhythm is too clean for his actual rambling, digressive speech.",
+        "The truncated quotes ('So', 'I think', 'puffed up by this idiot boom and idiot expansion of consumer cred') suggest sloppy sourcing \u2014 real transcript fragments cut mid-thought. Fine for authenticity but they should be completed or the cut flagged.",
+        "Light on his genuine nastiness and the specific people he despised. Munger named names and was gleefully rude \u2014 bankers, the consulting-industrial complex, specific crypto promoters. The pack tells me he was 'blunt' but under-delivers the actual venom.",
+        "The 'architect' atom is one word with almost no content \u2014 that's a stub, not an atom."
+      ],
+      "flags": [
+        {
+          "issue": "Aphorism-factory voice that may not be verbatim Munger",
+          "evidence": "\"The biggest losers aren't the foolish or the uneducated. They're the restless. They can't sit still.\"",
+          "fix": "Source this to a specific talk/transcript or replace with his actual messier phrasing. If it's synthesized, it should be marked as paraphrase, not 'voice.'"
+        },
+        {
+          "issue": "Polished motivational cadence on the $300k claim",
+          "evidence": "\"$300,000 properly saved and invested can change your psychology completely.\"",
+          "fix": "Munger's well-known line is about the 'first $100,000' being a bitch (Buffett's framing too). Verify the figure and the wording \u2014 this may be a contaminated/blended quote."
+        },
+        {
+          "issue": "Stub atom with no substance",
+          "evidence": "[ethics_character] ... voice: \"architect\"",
+          "fix": "Either expand with the full Buffett quote and Munger's own framing of his role, or cut it. A one-word atom dilutes the pack."
+        },
+        {
+          "issue": "Truncated quotes degrade trust in provenance",
+          "evidence": "\"...it caused a lot of agony and one would have made more money some other way. So\"",
+          "fix": "Complete the transcript pulls or use ellipses honestly; trailing 'So' makes the whole sourcing look unverified."
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "paul-graham",
+      "judge_name": "Paul Graham",
+      "recused": true,
+      "score": 88,
+      "recognizable": true,
+      "verdict": "This is the real Munger, not a wax dummy with his name on it. The constitution captures the actual machinery \u2014 inversion, the latticework, lollapalooza confluence, circle-of-competence with the three-basket discipline, temperament over IQ \u2014 and crucially the hard lessons come with dollar figures and named deals (Salomon, See's, the ten-billion Walmart thumb-suck) rather than the usual vague humility theater. The cigar-butt-to-quality conversion is told with the right causal chain and the right cost. What keeps it from the 90s is that a handful of atoms drift into motivational-poster cadence that Munger's actual prose never had.",
+      "strengths": [
+        "The hard lessons have receipts with specific costs \u2014 'approximately ten billion dollars on Walmart,' '20 or 30 years to figure out' the cigar-butt error, Salomon as a near-death event averted only by Brady's concession. This is the opposite of platitude; it's a man cataloguing his own folly with numbers.",
+        "The contrarian positions are genuinely his and genuinely sharp \u2014 'beta is not risk,' diversification as 'rational ignorance,' crypto 'banned outright not regulated.' These are positions that would get you laughed out of a finance department, which is the point.",
+        "The WOULD NOT SAY section is doing real work. 'I need more information before I decide' correctly identifies that for Munger, the information gap is foundational not incremental \u2014 that's a precise capture of how his mind actually closes a question.",
+        "The errors-of-omission lesson distinguishing commission from omission, with the line that omission was 'at least as costly,' is exactly the self-audit Munger actually performed and most imitators miss entirely."
+      ],
+      "weaknesses": [
+        "Several atoms slide into a smoothed, aphoristic register that sounds like a LinkedIn quote-card rather than Munger's blunt, crotchety, often-clumsy spoken cadence. 'The first $300,000 is a psychological milestone... compounding begins working harder than you do' \u2014 Munger would say it shorter and meaner.",
+        "The '$300,000 properly saved' atom and the 'biggest losers... are the restless' atom read as confident paraphrase dressed as quotation. Munger's real lines have a roughness and specificity these polished versions lack \u2014 they're plausible but suspiciously well-tailored.",
+        "Some atoms are thin \u2014 'mental_models' anchored to the phrase 'an important skill' about card playing, and 'ethics_character' anchored to the single word 'architect,' are barely atoms at all. They cite a fragment and bolt narration onto it.",
+        "Only 2 figure claims verified is light given how much of Munger's force comes from concrete numbers and dates. The Walmart figure and the See's conversion deserve harder sourcing."
+      ],
+      "flags": [
+        {
+          "issue": "Polished motivational cadence not matching Munger's actual blunt voice \u2014 risks the brain producing inspirational-poster output",
+          "evidence": "\"$300,000 properly saved and invested can change your psychology completely. Doesn't mean you'll never work again. It means you'll never have to work desperately again.\"",
+          "fix": "Verify against a primary transcript; if it can't be sourced verbatim, demote to a paraphrased atom and strip the polished triplet structure that real Munger speech rarely has."
+        },
+        {
+          "issue": "Suspiciously well-crafted aphorism attributed as voice",
+          "evidence": "\"The biggest losers aren't the foolish or the uneducated. They're the restless. They can't sit still. They can't wait. They mistake boredom for risk and excitement for opportunity.\"",
+          "fix": "Find the original quote. If this is a synthesized composite, mark it as distilled-idea not verbatim voice \u2014 the rhythm is too clean for spoken Munger."
+        },
+        {
+          "issue": "Atoms anchored to single words or fragments that don't carry the claim",
+          "evidence": "[ethics_character] voice: \"architect\" and [mental_models] voice: \"an important skill\"",
+          "fix": "Replace these with fuller verbatim passages, or fold the narration into adjacent stronger atoms. A one-word voice quote is not evidence of anything."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 72,
+      "recognizable": true,
+      "verdict": "This is a rigorous, well-sourced portrait of Munger's mind \u2014 the latticework, the inversion, the temperament \u2014 and the Hard Lessons section does real work most brain packs skip: Salomon, the 20-30 years of cigar butts, the named $10 billion Walmart error. That's the texture of a man who failed and counted the cost in dollars. But the emotional interior is thin. I see Munger's intellectual mistakes; I almost never see what they cost him as a human being \u2014 the grief, the blindness in his own eye, the marriages, the suicide of his son. The reckoning here is portfolio-shaped, not soul-shaped, and a man who lived to 99 was made of more than capital allocation errors.",
+      "strengths": [
+        "The Hard Lessons are genuine and specific \u2014 'too much trouble, too much danger' on Salomon, the 20-30 year cigar-butt admission, the self-reported $10B Walmart anchoring error \u2014 these are receipts, not a highlight reel of triumphs.",
+        "The omission/commission distinction is captured honestly: 'we didn't invest at all in something that we understood that was cheap' \u2014 Munger naming the errors that don't show up on any statement is exactly the kind of accountability he prized.",
+        "The 'too hard' basket is preserved as a respectable answer, which keeps the constitution from being a wall of certainty \u2014 there's room for not-knowing.",
+        "Atoms like the heroin analogy and 'one-legged man in an ass-kicking contest' carry the actual blunt voice, not a sanded-down version."
+      ],
+      "weaknesses": [
+        "The human cost is almost entirely financial. Munger lost an eye to a botched cataract surgery and chose to live with it; his first marriage ended in divorce; his son Teddy died of leukemia at nine. None of the personal devastation that forged his stoicism appears here. The pack gives me the investor's ledger and withholds the man who survived real grief.",
+        "There is no doubt, only correction. Every Hard Lesson resolves cleanly into a learned principle. Where is the Munger who was uncertain, who second-guessed, who carried regret that didn't tidy itself into a model? Real reckoning leaves residue.",
+        "The interpersonal cost of his bluntness is unexamined. A man this direct surely wounded people, alienated some, was wrong with confidence in ways that hurt relationships \u2014 the pack treats his certainty only as a virtue ('does not hedge for social comfort'), never as something with a price.",
+        "Hyper-rationality itself is never shown as a possible armor. The constitution celebrates emotional control as pure strength; it never asks what it costs to be the man who 'never reminded' a partner of mistakes and let himself be effaced \u2014 that restraint has a shadow side the pack never enters."
+      ],
+      "flags": [
+        {
+          "issue": "Stoicism is presented without its origin in real loss, making it a posture instead of a hard-won survival strategy.",
+          "evidence": "'Anger when you pound on one another feeds on itself... It's the irrational \u2014 one feeds on itself.'",
+          "fix": "Add hard lessons or atoms grounding the emotional control in lived devastation \u2014 the loss of his son, the eye, the divorce \u2014 so temperament reads as earned scar tissue, not innate disposition."
+        },
+        {
+          "issue": "Every failure converts to a clean lesson; no unresolved doubt or lingering regret survives.",
+          "evidence": "'I came to distinguish between errors of commission and errors of omission, and concluded that the omission errors... were at least as costly.'",
+          "fix": "Include at least one mistake or judgment Munger never fully resolved, or a place where his own framework failed him and he knew it \u2014 leave one wound un-sutured."
+        },
+        {
+          "issue": "The cost of bluntness and certainty to relationships is invisible; directness is framed only as compassion-by-clarity.",
+          "evidence": "'Munger is known for direct, often blunt assessments. He does not hedge for social comfort.'",
+          "fix": "Add the receipt where his certainty was wrong or his bluntness cost him something interpersonally \u2014 the human friction his style created, not just the truth it delivered."
+        }
+      ]
+    }
+  ],
+  "cost": 0.389
+}

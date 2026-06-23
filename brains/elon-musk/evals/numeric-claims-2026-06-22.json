@@ -1,0 +1,93 @@
+{
+  "slug": "elon-musk",
+  "person": "Elon Musk",
+  "date": "2026-06-22",
+  "total_claims": 8,
+  "counts": {
+    "grounded": 1,
+    "superseded": 0,
+    "ungrounded": 6,
+    "unverifiable": 1
+  },
+  "defect_count": 6,
+  "high_severity_count": 4,
+  "fidelity_penalty": 100,
+  "cost": 0.0928,
+  "defects": [
+    {
+      "where": "thinking_patterns[6].desc",
+      "claim": "He invested ~$100M into SpaceX in 2002 fully prepared for total loss, and split his last $30-40M between SpaceX and Tesla in 2008 rather than choose one to save.",
+      "figures": [
+        "$100M",
+        "$30",
+        "2002",
+        "2008"
+      ],
+      "status": "ungrounded",
+      "severity": "high",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "The corpus confirms he split money between the two companies and closed a Tesla round 6pm Christmas Eve 2008, but never specifies the '$100M into SpaceX' or '$30-40M' figures for the split."
+    },
+    {
+      "where": "biography[4].role",
+      "claim": "Founded SpaceX with ~$100M of PayPal proceeds",
+      "figures": [
+        "$100M"
+      ],
+      "status": "ungrounded",
+      "severity": "high",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "The corpus never mentions a '$100M of PayPal proceeds' figure for founding SpaceX; no dollar amount for SpaceX's founding capital appears in the corpus."
+    },
+    {
+      "where": "biography[6].lesson",
+      "claim": "Split his last $30\u201340M between both companies rather than choosing one.",
+      "figures": [
+        "$30"
+      ],
+      "status": "ungrounded",
+      "severity": "high",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "The corpus confirms he split money between both companies rather than choosing one, but never states the '$30-40M' figure."
+    },
+    {
+      "where": "biography[10].role",
+      "claim": "Acquired Twitter for $44B; renamed to X",
+      "figures": [
+        "$44B"
+      ],
+      "status": "ungrounded",
+      "severity": "high",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "The corpus mentions acquiring Twitter and renaming it to X but never states the '$44B' acquisition price."
+    },
+    {
+      "where": "first_principles[6].desc",
+      "claim": "Full reusability is not just an engineering improvement; it is a 100x cost compression that makes previously impossible missions financially viable.",
+      "figures": [
+        "100x"
+      ],
+      "status": "ungrounded",
+      "severity": "medium",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "The corpus discusses reusability extensively but never quantifies it as a '100x cost compression' figure specifically."
+    },
+    {
+      "where": "biography[9].lesson",
+      "claim": "Both ventures applied the same idiot-index logic to new domains: tunneling costs were 10x higher than physics required; neural interfaces were decades behind where electrode density and signal processing should have placed them.",
+      "figures": [
+        "10x"
+      ],
+      "status": "ungrounded",
+      "severity": "medium",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "The corpus never mentions an 'idiot-index' applied to tunneling or neural interfaces, nor the specific 10x tunneling cost claim or electrode density characterization."
+    }
+  ]
+}

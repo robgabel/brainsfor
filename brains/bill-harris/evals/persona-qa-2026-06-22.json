@@ -1,0 +1,154 @@
+{
+  "slug": "bill-harris",
+  "target": "Bill Harris",
+  "date": "2026-06-22",
+  "persona_qa_score": 68,
+  "raw_chair_score": 68,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 0,
+  "pass": false,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 76,
+    "rigor": 72,
+    "coverage": 38,
+    "calibration": 70
+  },
+  "confidence": "medium",
+  "ship_recommendation": "rework",
+  "summary": "Bill Harris would recognize the working scientist here \u2014 the Omega-3 Index as load-bearing concept, the trial-design-vs-biology distinction, the odds-ratio-vs-relative-risk discipline are all genuinely his, with specific effect sizes attached to specific study designs. That's a real bet on a real person, not a wellness-guru cosplay. But three independent judges converged on the same defect \u2014 an empty HARD LESSONS section for a 40-year, 300-paper career \u2014 and convergence this strong on a structural hole is a signal I trust. The brain captures the advocate convincingly and the fallible scientist not at all, which means it reads more confident than the underlying human actually is.",
+  "calibration_note": "I trust the two 78s and the 32 \u2014 but I recalibrated all three slightly because they are partly resulting off the same single observation. Swisher and Brown both scored primarily off the empty HARD LESSONS section; that's not three independent confirmations, it's one defect counted three times, so I nudged authenticity down (78\u219276) since Swisher's prose actually undercuts her own score, and rigor down (78\u219272) because Munger correctly flagged zero self-skepticism, which is a rigor problem he scored too generously given his own 'man with a hammer' warning. Brown's 32 is honest and well-founded but slightly over-reacts: a sanitized brain is a real defect, not a near-failure, so coverage lands at 38. The numeric gate is clean \u2014 zero claims, zero high-severity defects \u2014 so nothing blocks ship on that axis. The reason I still say rework rather than ship is the off-diagonal cell: this looks like a good outcome (coherent, citation-rich) that may be hiding a thin decision underneath, because the corpus surfaced no place where Harris updated. A brain that never shows its owner being wrong is the most dangerous cell \u2014 good-sounding, untested.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Populate HARD LESSONS with documented instances where Harris revised a position, ran a trial that didn't replicate, or was wrong about a mechanism \u2014 the LP(a) finding and any dose recommendations he later walked back are starting points.",
+      "why": "All three judges independently flagged this; it's the difference between capturing an advocate and capturing a scientist who has eaten his own failed hypotheses. Highest leverage by far."
+    },
+    {
+      "priority": 2,
+      "fix": "Surface and label the OmegaQuant commercial position. Atoms reference 'our calculator' and 'our' studies without disclosing Harris's financial stake in the test he says belongs on every clinical panel.",
+      "why": "An undisclosed conflict for the man whose central thesis is 'order this test' is both an authenticity gap and a calibration risk \u2014 it's exactly where motivated reasoning would live, and the brain currently can't see it."
+    },
+    {
+      "priority": 3,
+      "fix": "Add a 'what would change my mind' layer to the central claims \u2014 especially the 8% target and the null-trial reframe. The brain asserts the trials tested the wrong thing but never states what stratified evidence would falsify Harris's own hypothesis.",
+      "why": "Munger's correct critique: one biomarker risks becoming the man with a hammer. Without disconfirmation criteria the brain reasons like a lawyer defending a verdict, not a scientist."
+    },
+    {
+      "priority": 4,
+      "fix": "Calibrate the mercury position to match the evidence-meticulousness shown everywhere else \u2014 it's stated with more certainty than the rest of the brain earns.",
+      "why": "Internal inconsistency in confidence level is a tell that this claim was imported rather than reasoned, and it undermines trust in the genuinely rigorous parts."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 78,
+      "recognizable": true,
+      "verdict": "This reads like the real Bill Harris \u2014 a domain monomaniac with the receipts, not a performance of a wellness guru. The structural signature is authentic: the relentless distinction between trial design and biology, the Omega-3 Index as the load-bearing concept, the refusal to prescribe a dose without measurement. Where it falls short of a top score isn't authenticity of voice \u2014 it's that the HARD LESSONS section is empty, and a man with 300 papers and 40 years in the game has been wrong about things, and that absence makes him look like an advocate rather than a scientist who's eaten his own failed hypotheses.",
+      "strengths": [
+        "The core epistemology is consistent and specific \u2014 'status, not intake,' RBC membrane over plasma, the 3-4 month integration window. This is a real methodological spine, not vibes. I can trace every position back to it.",
+        "The contrarian positions are genuinely contrarian and non-generic. 'The large null omega-3 RCTs are evidence of poor trial design' is exactly the kind of receipts-based, against-the-media-narrative read that a real specialist makes \u2014 and he names the mechanism (baseline already replete, no target engagement) rather than just complaining.",
+        "The 'WOULD NOT SAY' list is sharp and in-character. Refusing to say 'take 1,000mg of fish oil per day' because you can't prescribe without baseline is a real tell \u2014 it follows logically from his first principles rather than being a sanitized disclaimer.",
+        "The voice atoms are appropriately terse and unperformed. The flat 'Yes.' and 'No.' answers (grass-fed beef: 'No.') read like an actual interview transcript of an unshowy scientist, not a polished thought-leader."
+      ],
+      "weaknesses": [
+        "HARD LESSONS is empty. This is the biggest authenticity gap. A scientist who's published since the 1980s and worked on AHA statements has revised positions, run trials that didn't replicate, or been wrong about a mechanism. The LP(a) atom \u2014 'not really a good treatment' \u2014 gestures at intellectual honesty, but there's no documented place where Harris himself got it wrong. Without that, this is the brain of an advocate, not a working scientist.",
+        "There's an unexamined conflict-of-interest blind spot. Harris is associated with OmegaQuant \u2014 the atoms literally cite 'our calculator' and 'we are talking about EPA and DHA.' A man who sells the Omega-3 Index test telling you the Omega-3 Index belongs in every clinical panel is exactly the kind of provenance question I'd ask. The brain never surfaces how Harris reckons with his own commercial incentive, which a complete portrait of his thinking would have to.",
+        "Slight tendency toward total confidence where a scientist hedges. 'The majority of people in Western countries are deficient' answered with a flat 'Yes' without qualification reads slightly more certain than I'd expect from someone who elsewhere is meticulous about evidence stratification."
+      ],
+      "flags": [
+        {
+          "issue": "Empty HARD LESSONS section on a 40-year researcher signals a sanitized, advocacy-shaped portrait",
+          "evidence": "'(EMPTY \u2014 the corpus surfaced no grounded failures.)'",
+          "fix": "Mine the corpus for revised positions: early fish-oil claims that didn't hold, the LP(a) null result framed as a personal hypothesis that failed, or any RCT he expected to confirm his view and didn't. A scientist's failures are his most authenticating material."
+        },
+        {
+          "issue": "No acknowledgment of Harris's OmegaQuant commercial position despite atoms referencing 'our calculator'",
+          "evidence": "'If you're using our calculator, we are talking about EPA and DHA specifically' and 'the OmegaQuant dose calculator is specifically calibrated to EPA and DHA'",
+          "fix": "Add a principle capturing how Harris addresses the obvious follow-the-money objection \u2014 does he disclose it, argue the science precedes the company, point to independent cohorts? The real Harris has surely been asked this; the brain should know his answer."
+        },
+        {
+          "issue": "Mercury position stated with more certainty than the evidence-meticulousness elsewhere",
+          "evidence": "'Public concern about mercury in fish \u2014 particularly tuna \u2014 is largely overstated... benefits outweigh the mercury risk at typical consumption levels'",
+          "fix": "Add the stratification Harris would actually apply \u2014 which populations (pregnant women, high-frequency consumers, specific species) and at what intake the calculus shifts. The flat 'overstated' undersells his usual precision."
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 78,
+      "recognizable": true,
+      "verdict": "This is a genuine specialist who has earned his opinions \u2014 Harris is the man who proposed the Omega-3 Index in 2004, and the brain reflects real biochemistry, real study citations with their specific effect sizes and study designs, and an admirable insistence on distinguishing odds ratios from relative risks. That methodological honesty \u2014 refusing to conflate failed trials with failed biology, and naming which fraction of blood was measured \u2014 is exactly the kind of multi-model discipline I respect. What keeps it from the top tier is the absence of any inversion or self-skepticism: a man with one biomarker is at risk of becoming the man with a hammer, and this brain never once asks how Bill Harris himself might be wrong."
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 32,
+      "recognizable": true,
+      "verdict": "I can see the scientist here clearly \u2014 the taxonomic precision, the refusal to conflate ALA with EPA/DHA, the petri-dish thinking about membranes and mechanisms. But this is the conference-keynote version of Bill Harris, not the whole human. There is no doubt, no failed hypothesis he had to abandon, no cost he paid for being right too early or wrong somewhere. The HARD LESSONS section is empty, and for a man with 300 publications across four decades, that emptiness is not neutral \u2014 it's a hole where the human used to be.",
+      "strengths": [
+        "The constitution shows genuine intellectual integrity \u2014 the distinction between 'the trials failed' and 'omega-3s failed' is a real, hard-won taxonomic line, and the kind of precision that survives scrutiny",
+        "Some honest acknowledgment of limits surfaces in atoms: LP(a) showed 'a small but not substantial change, so it's not really a good treatment' \u2014 that's a man willing to report a null on his own work, which is the closest thing here to vulnerability",
+        "The mechanism humility around bleeding/PRMs ('some of those molecules... may have effects on coagulation. I'm not aware that's the effect') shows he can hold uncertainty"
+      ],
+      "weaknesses": [
+        "The HARD LESSONS section is entirely empty. A 40-year career pioneering fish oil research in the 1980s, shaping AHA statements, watching null RCTs reshape public perception \u2014 and not one documented failure, regret, or hypothesis he got wrong? That is the LinkedIn version. Where is the study he believed in that didn't replicate? The dose he once recommended that he later revised?",
+        "Almost no emotional texture or cost. He has spent decades watching a biomarker he believes rivals LDL get ignored for 'pharmaceutical economics and institutional inertia.' That is a wound \u2014 frustration, even grief at being right and unheard. None of it is here.",
+        "The single-word voice atoms ('Yes.', 'No.') give certainty without interior. We never see him uncertain, never see him change his mind, never see the seams where the confident expert is actually still wrestling",
+        "No relational dimension \u2014 who challenged him, who was in his arena, who he disagreed with and respected. A scientist is built by his sparring partners; they're absent"
+      ],
+      "flags": [
+        {
+          "issue": "Empty hard lessons for a four-decade career is a coverage defect, not a clean record",
+          "evidence": "HARD LESSONS \u2014 (EMPTY \u2014 the corpus surfaced no grounded failures.)",
+          "fix": "Mine interviews and papers for the hypotheses Harris revised, the early fish-oil claims later tempered, the moments his own data surprised him. Even the LP(a) null and the bleeding-myth reversal are seeds \u2014 expand them into real lessons with what he believed before and what changed."
+        },
+        {
+          "issue": "Certainty presented without the doubt that makes a real scientist",
+          "evidence": "[omega3_deficiency] 'This is a straightforward position Harris holds without qualification' / voice: 'Yes.'",
+          "fix": "Capture where Harris qualifies, hedges, or admits the evidence is softer than he'd like \u2014 e.g., his own 'favorable direction but with varying evidentiary strength' on eye conditions shows he CAN do this. Surface more of it."
+        },
+        {
+          "issue": "The cost of being institutionally ignored is named as a 'policy failure' but never felt",
+          "evidence": "'LDL achieved clinical centrality because statins provided a profitable pharmacological lever; the Index has no equivalent industry sponsor. The asymmetry is a policy failure, not an evidentiary one.'",
+          "fix": "Add atoms in his own voice about what it has been like to carry this conviction for decades against institutional inertia \u2014 the frustration, the persistence, what kept him going. That's where the human lives."
+        }
+      ]
+    }
+  ],
+  "cost": 0.4568
+}

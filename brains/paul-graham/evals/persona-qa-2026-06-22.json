@@ -1,0 +1,186 @@
+{
+  "slug": "paul-graham",
+  "target": "Paul Graham",
+  "date": "2026-06-22",
+  "persona_qa_score": 81,
+  "raw_chair_score": 81,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 0,
+  "pass": true,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 85,
+    "rigor": 84,
+    "coverage": 74,
+    "calibration": 83
+  },
+  "confidence": "high",
+  "ship_recommendation": "hold",
+  "summary": "Paul Graham would recognize himself here \u2014 the load-bearing models (growth-as-definition, do-things-that-don't-scale, keep-your-identity-small, hacker-painter) are present and they invert properly, which is the real tell of captured thinking rather than a greatest-hits reel. The hard lessons carry receipts with named costs (Twitter, the Viaweb invented-model error, overstaying at YC, the philosophy regret), and that off-diagonal self-incrimination is exactly what separates a real brain from a flattering one. My main reservation, shared across the panel, is that the most contentious PG \u2014 the economic-inequality argument that actually got him pilloried \u2014 has been laundered into a tidy syllogism, stripping the friction that makes it authentically him. Numeric verification is clean: one low-severity superseded figure ($49M vs ~$50M), zero high-severity defects, so the ship gate is not tripped.",
+  "calibration_note": "I trust all three judges on this brain, but I recalibrated two. Swisher (88) is right that the inequality atom is sanitized, but she's slightly over-rewarding recognizability of the comfortable material \u2014 I nudged authenticity to 85 because the missing friction is a real authenticity cost, not just a coverage one. Munger's rigor read (84) I left intact; his catch on truncated Twitter quotes is the sharpest single observation in the panel \u2014 a receipt that cuts off mid-sentence is a weak bet on a flagship miss, and I weight that. Brown (72) is doing the most honest work, but I bumped coverage to 74 because I want to be careful not to punish PG for being genuinely a person who metabolizes failure into principle \u2014 that IS his cognitive style, not necessarily evasion. The line between 'shame layer sealed off' and 'this guy actually does think in lessons' is exactly where resulting can trick you: don't penalize an honest brain for the founder's real temperament. That said, the convergence across three independent judges on 'every wound has a tidy lesson stapled to it' is suspicious-in-the-good-way \u2014 productive dispersion pointing at one structural gap. I take it seriously.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "De-sanitize the 'inequality from creation' position \u2014 restore the actual contested edges from the Economic Inequality essay, including how he sounds when critics charge him with being tone-deaf about extraction, and where he himself drew the line he later regretted or defended.",
+      "why": "This is the single highest-leverage authenticity fix. A brain that removes the friction from the most controversial thing the person ever wrote is making a bet that 'good-sounding' equals 'faithful' \u2014 it doesn't. The wince is the signal of real capture."
+    },
+    {
+      "priority": 2,
+      "fix": "Repair the truncated quotes on the Twitter miss and any other receipt that cuts off mid-sentence. Either complete them from the corpus or replace with a clean verbatim segment.",
+      "why": "A receipt on a flagship admitted error is the brain's proof-of-work. A truncated quote on the most-cited miss undermines exactly the evidence that distinguishes hard-won insight from platitude. Cheap to fix, disproportionate trust payoff."
+    },
+    {
+      "priority": 3,
+      "fix": "Add at least one founder-selection blind-spot lesson with a real cost \u2014 a case where PG funded the wrong people or applied his determination heuristic and was burned \u2014 distinct from the Twitter false-negative.",
+      "why": "The panel flagged a missing dimension PG has been publicly challenged on. Coverage of where the model FAILS, not just where it succeeds, is where the learning lives and where the brain is currently thin."
+    },
+    {
+      "priority": 4,
+      "fix": "Prune the photography / Fred-Astaire-Ginger-Rogers material from three atoms to one, and reclaim the slots for load-bearing models.",
+      "why": "Munger's man-with-a-hammer-in-reverse catch is correct: decorative mood-atoms repeated three times crowd out falsifiable thinking and inflate apparent coverage without adding judgment."
+    },
+    {
+      "priority": 5,
+      "fix": "Introduce one human-scale cost into the hard lessons \u2014 the relationship or personal toll of nine exhausting years at YC, stated without an immediate redemptive lesson.",
+      "why": "Lower priority because metabolizing failure into principle is genuinely PG's style and I won't punish that. But a single un-resolved cost would test whether the brain can hold mess without sealing it \u2014 and Brown's convergence with the other judges says the gap is real, not imagined."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 88,
+      "recognizable": true,
+      "verdict": "This is the real Paul Graham \u2014 not a sanitized LinkedIn version. The constitution captures the actual texture of his thinking: growth-as-definition, do-things-that-don't-scale, keep-your-identity-small, the hacker-painter equivalence. More importantly, the hard lessons have receipts and the right kind of self-incrimination \u2014 the Twitter miss, the Viaweb model-of-the-world delusion, the philosophy-major regret. He'd recognize himself here. Where it gets soft is the contrarian section, which reads more like his greatest-hits than his actual sharp edges \u2014 and the framing studiously avoids the parts of PG that make people wince.",
+      "strengths": [
+        "The hard lessons are genuinely self-implicating with provenance \u2014 'I invented a model of the world that didn't correspond to reality' and the Twitter rejection ('I had a bad habit of saying yes to ideas I loved... I decided to be disciplined and say no') are the kind of documented before-and-after that proves real capture, not performance.",
+        "The voice atoms ring true \u2014 the Ginger Rogers/Fred Astaire photography riff, the Y Combinator naming explanation, the 10%-weekly-growth math \u2014 these are unmistakably his cadence and his obsessions. Nobody fakes the recursive-function tangent.",
+        "It correctly separates the threshold-vs-continuous claim about intelligence ('determination beats intelligence... Raw intelligence is a threshold variable') which is a real and specific PG position, not a platitude."
+      ],
+      "weaknesses": [
+        "The 'inequality produced by creation is healthy' atom is rendered as clean economic theory and dodges the actual heat. The real PG essay 'Economic Inequality' got him pilloried precisely because he sounded tone-deaf about extraction and rent-seeking in practice \u2014 the brain launders the most contentious thing he's ever written into a tidy syllogism. That's sanitization.",
+        "The contrarian section is too comfortable. These are positions the YC audience already applauds \u2014 college overrated, business school wrong, raise less money. Where's the genuinely unpopular PG? His defenses of founder 'naughtiness,' his skepticism of credentialism that shades into elitism, his fights on Twitter about wokeness and identity politics \u2014 the edges that actually cost him. A brain that only shows the crowd-pleasing contrarianism is a performance of a contrarian.",
+        "Almost nothing about the blind spots in his pattern-matching \u2014 the demographic narrowness of who 'looks like a founder,' the fact that 'noticing problems you have yourself' produces a founder class that all has the same problems. He has been challenged on this and the brain shows no awareness of it."
+      ],
+      "flags": [
+        {
+          "issue": "The most controversial PG position is softened into harmless theory, removing exactly the friction that makes it authentically him",
+          "evidence": "'Inequality produced by creation is healthy, not pathological... Lumping creative wealth with rent-seeking wealth is the central confusion of modern economic policy.'",
+          "fix": "Include the actual receipts and backlash \u2014 the essay that argued you can't end economic inequality without ending startups, and his unflinching dismissal of redistribution arguments. Show where he refused to back down, not just the polished thesis."
+        },
+        {
+          "issue": "Contrarian positions skew toward audience-flattering takes; missing the genuinely costly ones",
+          "evidence": "Contrarian list is entirely: college overrated, B-school wrong, raise less money, conventional wisdom wrong, large markets don't validate \u2014 all comfortable inside Silicon Valley.",
+          "fix": "Add at least one position that actually alienated people: his identity-politics skepticism extending into culture-war territory, or his views on credentialism/meritocracy that critics call elitist. A real contrarian has scars from positions his own tribe hated."
+        },
+        {
+          "issue": "No representation of the founder-selection blind spot he's been publicly challenged on",
+          "evidence": "'Determination, flexibility, imagination, and a certain naughtiness predict success' \u2014 presented as pure insight with no acknowledgment of who that pattern-match systematically excludes.",
+          "fix": "Add a hard lesson or tension atom acknowledging the critique that 'looks like a founder' encoded demographic bias, and how/whether he responded to it."
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 84,
+      "recognizable": true,
+      "verdict": "This is the real Graham, not a knockoff. The thing has a latticework of its own \u2014 growth as definition, do-things-that-don't-scale, keep-your-identity-small, build-what-you-want \u2014 and it inverts properly: it knows the failure modes (raising too much, optimizing for legitimacy, validating with focus groups) as sharply as the success modes. The hard lessons carry receipts with real costs \u2014 Twitter, the Viaweb model-of-the-world error, staying too long at YC, the philosophy major regret \u2014 which is exactly how you tell hard-won insight from platitudes with a name stapled on. My quarrel is that a handful of atoms drift toward the genially obvious, and the photography material, while charming, is intellectual decoration rather than load-bearing thought.",
+      "strengths": [
+        "Inversion is built in \u2014 the DOES NOT BELIEVE and WOULD NOT SAY sections function as Graham's negative path: avoiding the standard stupidities (conflating fundraising with success, hiring a professional CEO, chasing large markets). That is the discipline I respect most.",
+        "Hard lessons have signatures of real failure with costs attached: the Viaweb 'I invented a model of the world that didn't correspond to reality' is precise, dated, and self-incriminating \u2014 not the kind of thing a flatterer writes.",
+        "Incentive thinking is present and correct \u2014 'Raising too much money is actively harmful... Money sitting in the bank makes you do stupid things' is genuine incentive archaeology, the same insight I'd apply to overcapitalized institutions.",
+        "The growth-rate atoms carry actual arithmetic (10% weekly compounds to 1420% annually), which forces the thinking into the concrete rather than the inspirational."
+      ],
+      "weaknesses": [
+        "A few atoms are standard-issue and could be said by any startup-conference speaker: 'make something you yourself want' and 'be curious, try lots of things' approach the genially obvious without Graham's particular edge.",
+        "The photography/Fred-Astaire-Ginger-Rogers material is repeated three times and adds aesthetic flourish but no rigorous, falsifiable thinking \u2014 it's the man-with-a-hammer risk in reverse, padding the latticework with mood.",
+        "The Twitter hard-lesson quotes are truncated mid-sentence ('only one showed up at the \u2014'), which weakens the receipt; a clipped quote is a half-verified quote."
+      ],
+      "flags": [
+        {
+          "issue": "Platitude risk \u2014 advice that sounds wise but is non-falsifiable and widely repeated",
+          "evidence": "'So you need to make yourself a big target for luck, and the way to do that is to be curious. Try lots of things, meet lots of people, read lots of books, ask lots of questions.'",
+          "fix": "Anchor it to a specific mechanism or counterexample \u2014 what kind of curiosity FAILS to produce luck \u2014 so it predicts rather than merely encourages."
+        },
+        {
+          "issue": "Truncated quote undermines the receipt on a flagship admitted miss",
+          "evidence": "'There were two founders in the application, but only one showed up at the' \u2014 sentence cut off",
+          "fix": "Restore the full quote so the Twitter lesson stands as verifiable testimony rather than a fragment."
+        },
+        {
+          "issue": "Decorative atoms crowding out load-bearing models",
+          "evidence": "Three near-identical photography atoms: 'Life is the Fred of stair and you the artists are the Ginger Rogers...'",
+          "fix": "Collapse to one and replace the freed slots with sharper economic or founder-selection models where Graham's thinking is genuinely contrarian and testable."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 72,
+      "recognizable": true,
+      "verdict": "This is a real Paul Graham \u2014 the ideas hold up, the voice is unmistakable, and the hard lessons are genuine misses with receipts (Twitter, Viaweb's invented model, staying too long at YC). But I'm judging the mess, and what I see is failures that have already been metabolized into wisdom. Every wound here has a tidy lesson stapled to it. The doubt is named but never inhabited; the cost is catalogued but never felt. What's missing is the part of Paul Graham that doesn't yet know what the lesson is.",
+      "strengths": [
+        "The Viaweb hard lesson has real texture \u2014 'I invented a model of the world that didn't correspond to reality, and worked from that. I didn't notice my model was wrong until I tried to convince users to pay' is genuine, specific, and exposed. That's a man admitting he built from his own head and was wrong.",
+        "The YC exit lesson admits something costly and unflattering: 'I'm not really an administrator... I was never suited to it' and conceding Altman 'would do a better job.' That's a real concession of personal limitation, not a humblebrag.",
+        "The constitution is honest about uncertainty as an operating condition \u2014 'We can never tell for sure. No investor can.' He builds doubt into the method rather than pretending to certainty."
+      ],
+      "weaknesses": [
+        "The shame layer is entirely absent. Every hard lesson is framed as guilt ('I did something suboptimal, here's the smarter fix') \u2014 never the harder thing: 'I am the kind of person who...' The philosophy-major regret comes closest but is immediately defanged into a learning principle. Where is the founder PG hurt by funding the wrong people? Where is the relationship cost of being exhausted for nine years?",
+        "The failures are all professionally-bounded. There is no personal cost anywhere \u2014 no marriage strain, no friendship damaged by directness, no time he was cruel under the banner of being 'clear is kind.' The human who lives outside the essays is missing.",
+        "Doubt is described but never enacted. The constitution states he values uncertainty, but the atoms never show him actually not knowing \u2014 caught mid-error, defensive, wrong in real time. Everything has been polished into retrospective coherence.",
+        "No reckoning with the contradictions his own positions create. 'Keep your identity small' from a man who built an enormous identity around being Paul Graham, essayist and YC founder \u2014 that tension is unexamined. The inequality position is stated as settled conviction with no trace of the doubt a thoughtful person would carry about it."
+      ],
+      "flags": [
+        {
+          "issue": "Hard lesson resolves too cleanly \u2014 the cost is named but the emotional residue is sealed off",
+          "evidence": "'I had a bad habit of saying yes to ideas I loved, even though the founders were weak, I decided to be disciplined and say no.'",
+          "fix": "Surface the unresolved part: did he ever doubt his founder-reading even after the 'fix'? Did the Twitter miss make him second-guess strong founders he later rejected? Show the lesson still costing him something, not closed."
+        },
+        {
+          "issue": "Philosophy regret is sanitized into a clean intellectual correction with no shame residue",
+          "evidence": "'My biggest regret is I kind of squandered my college education I didn't learn as many things as I could learn or work as hard as I could have and I always you know compare myself to the founders we fund'",
+          "fix": "That comparison to founders is the live nerve \u2014 follow it. Does he still feel less-than next to the people he funded? That's the unhealed thing, and it's mentioned then abandoned. Build it out instead of converting it to advice."
+        },
+        {
+          "issue": "No human-scale cost anywhere \u2014 every failure is a business failure",
+          "evidence": "The entire HARD LESSONS section concerns YC, Viaweb, and academic choices; nothing about people he wronged, relationships strained, or who he was hard to be around.",
+          "fix": "Add at least one lesson with a relational or personal cost \u2014 a time his directness or conviction hurt someone, or the price his family/collaborators paid for nine exhausting years. Without it, this is the highlight reel of a thinker, not a whole man."
+        }
+      ]
+    }
+  ],
+  "cost": 0.3836
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "oprah-winfrey",
+  "person": "Oprah Winfrey",
+  "date": "2026-06-22",
+  "total_claims": 3,
+  "counts": {
+    "grounded": 0,
+    "superseded": 1,
+    "ungrounded": 1,
+    "unverifiable": 1
+  },
+  "defect_count": 2,
+  "high_severity_count": 2,
+  "fidelity_penalty": 50,
+  "cost": 0.072,
+  "defects": [
+    {
+      "where": "first_principles[0].desc",
+      "claim": "After interviewing roughly 30,000 people, Oprah arrived at a single unifying finding: every guest was silently asking the same three-part question \u2014 Was that okay?",
+      "figures": [
+        "30,000 people"
+      ],
+      "status": "superseded",
+      "severity": "high",
+      "corpus_value": "thousands of interviews (not ~30,000), and a two-part question (did you hear me / did what I say matter), not three-part",
+      "evidence_quote": "What I learned in all of those thousands of interviews is that there is a common denominator in all of our human experience. Everybody wants to know, did you hear me, and did what I say matter?",
+      "why": "The corpus states 'thousands of interviews' and a two-part question ('did you hear me' and 'did what I say matter'), not 30,000 interviews and a three-part question as claimed."
+    },
+    {
+      "where": "thinking_patterns[3].desc",
+      "claim": "This is why she ended the show at its peak in 2011 and stepped down from the Weight Watchers board in 2024.",
+      "figures": [
+        "2011",
+        "2024"
+      ],
+      "status": "ungrounded",
+      "severity": "high",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "The corpus contains no mention of the show ending in 2011 or stepping down from the Weight Watchers board in 2024; these hard figures and events are entirely absent from the corpus."
+    }
+  ]
+}

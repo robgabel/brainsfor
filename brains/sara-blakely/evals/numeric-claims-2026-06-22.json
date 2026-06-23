@@ -1,0 +1,30 @@
+{
+  "slug": "sara-blakely",
+  "person": "Sara Blakely",
+  "date": "2026-06-22",
+  "total_claims": 10,
+  "counts": {
+    "grounded": 6,
+    "superseded": 1,
+    "ungrounded": 0,
+    "unverifiable": 3
+  },
+  "defect_count": 1,
+  "high_severity_count": 1,
+  "fidelity_penalty": 25,
+  "cost": 0.1156,
+  "defects": [
+    {
+      "where": "biography[6].role",
+      "claim": "Launched Spanx with $5,000 in savings; landed Neiman Marcus, Saks, Bloomingdale's, Bergdorf Goodman in the first year",
+      "figures": [
+        "$5,000 "
+      ],
+      "status": "superseded",
+      "severity": "high",
+      "corpus_value": "$350 million a year",
+      "evidence_quote": "Turning that $5,000 initial investment into a $350 million a year company.",
+      "why": "The claim states $250M+ revenue, but the corpus cites $350M annual revenue, making the $250M+ figure materially understated."
+    }
+  ]
+}

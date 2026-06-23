@@ -1,0 +1,188 @@
+{
+  "slug": "jeremy-utley",
+  "target": "Jeremy Utley",
+  "date": "2026-06-22",
+  "persona_qa_score": 73,
+  "raw_chair_score": 73,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 0,
+  "pass": true,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 84,
+    "rigor": 68,
+    "coverage": 62,
+    "calibration": 70
+  },
+  "confidence": "medium",
+  "ship_recommendation": "hold",
+  "summary": "Jeremy Utley would absolutely recognize himself here \u2014 the ideaflow thesis, the 'work with not use' framing, the self-literacy-over-prompt-literacy bet, and crucially the hard lessons where he admits his definitive book was obsolesced and his own research disproved his hypothesis. That on-the-record willingness to be wrong is the real signature, and it's the most trustworthy part of the brain. But the pack makes a bet it hasn't hedged: it leans on precision figures (25%/12%/40%/<10%) that carry argumentative weight while the numeric verifier reports 'zero figure claims' \u2014 meaning nobody actually checked the load-bearing numbers. That's not a clean gate-pass; it's a gap the verifier missed, and it's why I can't wave this through.",
+  "calibration_note": "I largely trust all three judges \u2014 their dispersion is productive, not noisy, and they converge on the same fault line from different angles, which is the opposite of suspicious. Swisher (84) is right on recognizability but slightly generous; the self-sealing dismissal of critics ('fatigue is a status performance') is a bigger authenticity tax than 84 implies because it makes the brain unfalsifiable on a key claim. Munger (72) flagged the real problem: precision figures doing heavy lifting with no verification. Here's my recalibration and the thing the panel got wrong \u2014 the numeric report says '0 figure claims, 0 HIGH-severity defects,' but the brain plainly states '25% faster, 12% more productive, 40% better in quality, fewer than 10% derive gains.' Those ARE hard numbers. The verifier didn't clear them; it failed to see them. So I cannot treat this as a passed gate \u2014 it's an UNTESTED gate, which under my rule functions as a hold, not a ship. I nudged rigor 72\u219268 to reflect that the strongest critique (unverified precision) is worse than scored once you realize the verifier whiffed. Brown's 62 is fair and I left it; the 'failure-to-lesson' tidiness she names is real, but some of that is genuinely how Utley operates (obsolescence as forcing function is his actual temperament), so it's partly authentic, not purely armor. Calibration set at 70: this is good judgment honestly captured, but it presents conviction at a confidence the evidence doesn't yet earn.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Run every embedded figure (25% faster, 12% more productive, 40% better quality, <10% derive meaningful gains) through verification against the actual source studies \u2014 and if a source can't be cited, mark the claim as unverified or convert it to a directional statement.",
+      "why": "These numbers are load-bearing for the entire 'realization gap' contrarian position. The verifier reported zero figure claims, which is a false negative \u2014 the gate was never actually tested. Until that's resolved, 'zero unverified hard numbers' is a claim I can't accept, and it blocks ship."
+    },
+    {
+      "priority": 2,
+      "fix": "Stress-test the 'malpractice' and 'AI fatigue is status performance' claims against their strongest counterarguments \u2014 hallucination, provenance, accountability when the AI teammate is wrong, and the legitimate case where someone has genuinely tried and found the cost too high.",
+      "why": "Both Swisher and Munger independently flagged this as a self-sealing, unfalsifiable loop. A brain that dismisses every critic as not-having-started can't be challenged, which makes it good-sounding rather than good-judgment. Adding the line he'd actually draw on ceding judgment makes him more, not less, like the real rigorous thinker."
+    },
+    {
+      "priority": 3,
+      "fix": "Surface the tension between the headline 'ideaflow is the only metric that matters' and the buried atom admitting experimentation capacity \u2014 not ideation \u2014 is the real practical bottleneck. Let it destabilize the edifice rather than sit quietly.",
+      "why": "Right now the brain resolves its own most interesting internal contradiction by burying it. The off-diagonal \u2014 where his own framework cracks \u2014 is exactly where the real learning lives. Promoting it raises authenticity and rigor simultaneously."
+    },
+    {
+      "priority": 4,
+      "fix": "Add at least one genuinely unresolved failure or human/relational cost \u2014 a mistake not yet metabolized into a keynote, or a moment that cost a person rather than an idea.",
+      "why": "Brown is correct that every hard lesson ends in a tidy 'Changed:' that neutralizes the wound before we feel it. A fully captured human has a cost ledger beyond efficiency and optics. Without it, the pack reads as highlight reel and we under-trust its self-awareness."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 84,
+      "recognizable": true,
+      "verdict": "This is recognizably the real Jeremy Utley \u2014 the ideaflow gospel, the quantity-over-quality distribution argument, the 'work with not use' framing, and the AI-as-mirror/self-literacy thesis are all coherent and consistent with the way he actually talks. The voice fragments carry his actual cadence ('recovering MBA,' 'angel in the marble,' 'behind is the only rational response'), and crucially the hard-lessons section has real receipts with real cost \u2014 including the genuinely uncomfortable admission that his own research disproved his premise. It loses points because it's a little too clean: the brain is almost entirely self-confirming, the AI-evangelism sometimes slides from conviction into salesmanship, and the one place his own framework cracks (experimentation, not ideation, is the real bottleneck) is present but underweighted relative to how much it should destabilize the whole ideaflow-is-the-only-metric edifice.",
+      "strengths": [
+        "The hard lessons are the strongest part \u2014 the brainstorming book landing one month before ChatGPT, and the research returning the opposite of his hypothesis ('oh no, oh no'), are real failures with documented cost, not humble-brags. That's where I believe him.",
+        "The self-literacy-not-AI-literacy thesis is genuinely contrarian and operationalized (the 400-word context floor, the 'interview me before answering' prompt). That's a specific, falsifiable claim, not a TED platitude.",
+        "The voice is consistent across atoms \u2014 the seventh-grader's 'doing more than the first thing you think of,' the Astro Teller 'always demand five,' the Zeigarnik 'end without deciding.' These read like a person, not a content marketer."
+      ],
+      "weaknesses": [
+        "The 'malpractice' framing for refusing AI is asserted three times with the same cardiologist analogy but never stress-tested against the obvious counterargument \u2014 provenance, hallucination, the cost of outsourcing judgment. He names 'don't cede judgment' but never wrestles with where the line actually is. That's a gap a serious thinker should fill.",
+        "'AI fatigue is a status performance' is a sharp line, but it conveniently dismisses every critic as not-having-started. That's a closed loop \u2014 it immunizes him from the most credible objections. Who builds the lighthouse here? He's all ship.",
+        "The constitution and atoms are nearly frictionless with each other. A real brain has internal tension. The experimentation_prototyping atom ('the real practical bottleneck isn't generating ideas \u2014 it's the capacity to run experiments') directly undercuts 'Ideaflow is the only metric that matters,' and the pack barely registers the contradiction."
+      ],
+      "flags": [
+        {
+          "issue": "AI-evangelism stated as identity-level moral obligation without engaging the accountability question \u2014 who bears the cost when the AI teammate is wrong?",
+          "evidence": "'Not inviting AI into your work is professional malpractice... If a cardiologist refused a stethoscope in favor of handcrafted artisanal cardiology.'",
+          "fix": "Add an atom where Utley names the failure mode of his own advice \u2014 the conditions under which inviting AI in produces worse, not better, work \u2014 so the conviction reads as earned rather than promotional."
+        },
+        {
+          "issue": "Self-sealing dismissal of critics that prevents the brain from being challenged",
+          "evidence": "'The people loudest about being tired of AI talk are almost never the people doing the most AI work... most claimed fatigue is preemptive cover for not having started.'",
+          "fix": "Introduce a steelman: name the AI critique Utley takes seriously and concedes, so the position isn't unfalsifiable."
+        },
+        {
+          "issue": "Unresolved contradiction between the headline first principle and a buried atom",
+          "evidence": "First principle: 'Ideaflow is the only innovation metric that matters.' Atom: 'the real, practical bottleneck to innovation is the capacity to run experiments... your innovation potential is capped.'",
+          "fix": "Force the brain to reconcile these explicitly \u2014 does ideaflow stay primary, or does experimentation capacity demote it? The honest answer is the interesting one."
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 72,
+      "recognizable": true,
+      "verdict": "This is a real, internally-coherent brain with a genuine signature \u2014 the man has a thesis (quantity precedes quality, self-literacy beats prompt-literacy) and he's willing to be wrong on the record, which is the only kind of expert worth listening to. The hard lessons are the strongest part: a fellow who admits his definitive book was rendered obsolete one month after publication, and who admits his research hypothesis was flat wrong, has the temperament I respect more than IQ. But I dock him for a recurring sin \u2014 incentive-blindness dressed as moral certainty, and overconfident figures that smell of merchandising rather than measurement.",
+      "strengths": [
+        "The hard-lesson on the research reversal is real anti-slop: 'Most people in the study didn't get any more creative because of AI. In fact... far less creative' \u2014 a man who publishes the finding that contradicts his own premise is not selling snake oil.",
+        "The self-literacy thesis is a genuine non-obvious insight with a falsifiable edge: 'The actual blocker is that most knowledge workers have never made their own taste, voice, and non-negotiables explicit.' That's a real model, not a platitude.",
+        "Inversion is baked in \u2014 'The reason you don't have better ideas is you don't have worse ones' is a proper inverted formulation, the kind of thinking I do myself.",
+        "He grounds claims in named sources (Duncker, Dewey, Astro Teller's rule of five, Zeigarnik effect) rather than free-floating assertion \u2014 that's a latticework habit, checking one discipline against another."
+      ],
+      "weaknesses": [
+        "The figures '25% faster, 12% more productive, 40% better in quality \u2014 yet fewer than 10% derive meaningful gains' are stated with a precision the underlying research almost certainly cannot support. Numeric verification found '0 figure claims' \u2014 meaning nobody checked the very numbers that carry the argument. That is a hole.",
+        "'Refusing to use AI in knowledge work is malpractice' \u2014 this is preacher-talk, not analysis. Calling a stylistic refusal 'malpractice' is the kind of moral overreach that ignores incentives. Some people sensibly put new tools in the 'too hard / not yet proven' basket, and that is not malpractice \u2014 it is discipline.",
+        "Incentive-blindness: a man whose income derives from AI-innovation consulting declaring AI-refusal 'malpractice' and AI-fatigue a 'status performance' should examine his own incentive to believe exactly that. Show me the incentives. He never inverts on himself.",
+        "Several atoms drift toward warm-bath aphorism \u2014 'Genuine interest is always the best cover' and 'There's an angel in that marble' are pleasant but anyone could say them; they carry no hard edge."
+      ],
+      "flags": [
+        {
+          "issue": "Unverified precision figures doing argumentative heavy-lifting",
+          "evidence": "'AI demonstrably makes people 25% faster, 12% more productive, and 40% better in quality \u2014 yet fewer than 10% of professionals derive meaningful gains.'",
+          "fix": "Cite the exact study, sample, and methodology for each number, or downgrade to directional language. Numbers stated to the percentage point demand receipts; otherwise they are merchandising."
+        },
+        {
+          "issue": "Moralized absolutism that ignores incentive structure and legitimate 'too hard' refusal",
+          "evidence": "'Not inviting AI into your work is professional malpractice... handcrafted artisanal cardiology.'",
+          "fix": "Distinguish between informed refusal (a defensible competence-boundary judgment) and lazy avoidance. The cardiology analogy assumes the stethoscope's value is settled; AI's is not yet for every domain."
+        },
+        {
+          "issue": "No self-applied inversion on the author's own incentives",
+          "evidence": "''AI fatigue' is a status performance, not a real condition' \u2014 asserted by a man paid to promote AI adoption.",
+          "fix": "Add an atom where Utley names his own incentive to believe AI skepticism is mere posturing, and states what evidence would change his mind. Self-skepticism is the mark of a rigorous mind."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 62,
+      "recognizable": true,
+      "verdict": "There's a real human flickering at the edges here \u2014 the embarrassment of pulling out a phone, the 45 minutes of wasted manual effort, the gut-punch of 'oh no' when the data contradicted his thesis. That's vulnerability, and it's the best material in the pack. But the constitution and atoms are overwhelmingly the highlight reel: a confident evangelist who has metabolized every failure into a clean teaching moment before we ever get to feel its weight. I see the lesson; I rarely see the man still inside the mess.",
+      "strengths": [
+        "The hard lesson about writing 'the world's greatest book on brainstorming' one month before ChatGPT made it obsolete is genuinely vulnerable \u2014 it names a real cost to ego and authority, not just a pivot.",
+        "The phone-in-public embarrassment atom \u2014 'it felt like I'm admitting I don't have all the answers' \u2014 is the closest thing here to real emotional exposure, the specific risk in a specific room that I trust.",
+        "The research-reversal lesson ('my first thought was, oh no, oh no') shows him being wrong about his own central premise \u2014 that he assumed AI would make people MORE creative and the data said the opposite. That's intellectual honesty with receipts."
+      ],
+      "weaknesses": [
+        "The failures are all already-resolved. Every hard lesson ends with a tidy 'Changed:' that converts the wound into curriculum. I never sit in the doubt with him before it gets reframed into a forcing function. Where is the failure he hasn't yet turned into a keynote?",
+        "There is no relational or human cost anywhere. Every mistake is about ideas, efficiency, or professional optics \u2014 none about a person he hurt, a relationship he strained, a team he lost, a moment he was unkind. A whole human has people in it.",
+        "The contrarian positions read as armor. 'AI fatigue is a status performance' and 'refusing to use AI is malpractice' are confident verdicts on OTHER people's weakness \u2014 that's the opposite of vulnerability. It's a man very sure he's on the right side.",
+        "Almost zero ongoing doubt. The closest is 'feeling behind is the only rational response' \u2014 but he immediately reframes even that into a badge of honor ('evidence of paying attention'). I want the fear that DIDN'T resolve.",
+        "The voice is relentlessly evangelistic \u2014 'I cannot imagine a world where AI is not an equal partner.' Where is the part of him that's tired, or grieving the brainstorming work he spent 15 years on, or worried he's wrong about all of this?"
+      ],
+      "flags": [
+        {
+          "issue": "Failure-to-lesson conversion is too clean \u2014 the cost is asserted, then immediately neutralized, so we never feel it.",
+          "evidence": "'Changed: I left my operational responsibilities at Stanford to go all in exploring the implications of AI on innovation \u2014 treating the obsolescence as a forcing function rather than a loss to mourn.'",
+          "fix": "Add an atom where he actually mourns \u2014 what did it feel like to watch 15 years of authority evaporate? Did he resent ChatGPT? Did he doubt the new direction at 2am? Let one failure stay unresolved."
+        },
+        {
+          "issue": "Contrarian positions are framed as confident diagnoses of others' weakness, which is its own form of armor \u2014 the very thing I'd flag in anyone claiming certainty about who's faking.",
+          "evidence": "'The people loudest about being tired of AI talk are almost never the people doing the most AI work... most claimed fatigue is preemptive cover for not having started.'",
+          "fix": "Surface a moment where HE was the one hiding behind a story like that \u2014 where his own avoidance or fatigue was real, not someone else's. Turn the diagnosis on himself."
+        },
+        {
+          "issue": "No human/relational cost anywhere in the pack \u2014 every cost is to ideas, time, or optics.",
+          "evidence": "All four hard lessons are about creative work, efficiency, or professional reputation; none involve a person he affected.",
+          "fix": "Add at least one hard lesson with a human on the other side \u2014 a colleague he steamrolled with evangelism, a team that felt shamed by his 'malpractice' framing, a relationship strained by the all-in pivot."
+        },
+        {
+          "issue": "Doubt is always immediately reframed into a positive, leaving no genuine unresolved uncertainty.",
+          "evidence": "'Behind is the only rational response... If you feel like you can't keep up' \u2014 the discomfort is converted to virtue before it's allowed to land.",
+          "fix": "Include a live fear he hasn't answered \u2014 e.g., the 'fear of replacement' he describes for others, but admitted as his own, unresolved."
+        }
+      ]
+    }
+  ],
+  "cost": 0.401
+}

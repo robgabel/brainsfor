@@ -1,0 +1,193 @@
+{
+  "slug": "gary-vee",
+  "target": "Gary Vaynerchuk",
+  "date": "2026-06-22",
+  "persona_qa_score": 64,
+  "raw_chair_score": 64,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 2,
+  "pass": false,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 82,
+    "rigor": 70,
+    "coverage": 62,
+    "calibration": 68
+  },
+  "confidence": "high",
+  "ship_recommendation": "hold",
+  "summary": "Gary would absolutely recognize himself here \u2014 the voice is dead-on, the hard lessons carry self-incriminating receipts, and the philosophy is captured with real fidelity rather than sanitized into a TED summary. But there is a hard gate I cannot wave through: two HIGH-severity numeric defects sit inside a flagship contrarian position, including a dollar figure ('$20-40M asset sold at half price') the corpus does not support and a framing that inverts what Gary actually said. Zero unverified hard numbers is a ship gate, and this brain fails it. This is a good-decision brain with a bad-luck-looking but actually fixable defect \u2014 high quality process, one unforced error blocking the door.",
+  "calibration_note": "I trust these three judges more than usual because they triangulate rather than converge \u2014 and where they converge, it's on the same Super Bowl numeric defect that verification independently flagged, which raises my confidence that defect is real and not a judge over-reacting. Swisher's 82 is fair but slightly generous on the consultant-voice drift; I left it. Munger's 72 I nudged to 70 \u2014 his single-model critique is correct and underweighted in his own score: a brain that funnels every atom back to 'underpriced attention' without ever marking where the model breaks is a genuine rigor gap, not a stylistic quibble. Brown's 62 is well-calibrated and the most important read here \u2014 she correctly identifies that the doubt is all operational (timing, messaging) and never existential, which is the load-bearing absence. My calibration score of 68 reflects that the judges are honest and the brain surfaces its own mess well, but the numeric gate plus the unchecked monomania mean we should NOT reward the confident surface.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Strip the invented '$20-40M asset being sold at half price' figure and the 'everyone calls it wasteful' framing from the Super Bowl contrarian position. Replace with only what the corpus supports: '$6M a spot, a steal, best deal in marketing.'",
+      "why": "This is the ship gate. Two HIGH-severity numeric defects in a flagship claim mean the brain cannot ship regardless of how good everything else is. Putting numbers in Gary's mouth he never said is the single most trust-eroding error in the pack."
+    },
+    {
+      "priority": 2,
+      "fix": "Add explicit 'where the model breaks' markers \u2014 at least 2-3 atoms where the 'underpriced attention' thesis conflicts with another model or fails (e.g., where legacy/family time trades against attention-capture, or where a cheap channel was correctly ignored).",
+      "why": "Munger's single-hammer critique is correct and high-leverage. A brain that never marks its own central model's failure points teaches monomania, not judgment. This is the difference between capturing how Gary thinks and capturing only what he sells."
+    },
+    {
+      "priority": 3,
+      "fix": "Add the existential layer Brown flags: excavate the fear under the audacity, and name the cost of the 16-hour days against the legacy/family preaching. The hustle/health contradiction should be inhabited as a live tension, not resolved with a trainer-hack bow.",
+      "why": "The pack confesses tactical regret but never worthiness or relational cost. A man whose mission is 'injecting audacity' is armoring against something \u2014 leaving that absent makes the brain a confident surface rather than a whole self."
+    },
+    {
+      "priority": 4,
+      "fix": "Flag the NFT/VeeFriends 'first billion-dollar IP built from NFTs' atom as seller-incentive-biased, and add the counter-case the brain currently lacks.",
+      "why": "Promotion accepted as insight is a rigor leak. Gary is the seller; the brain should mark where his self-interest distorts the claim so a reader can discount appropriately."
+    },
+    {
+      "priority": 5,
+      "fix": "De-sanitize the abstracted desc lines that drift into third-person consultant register ('This distinction matters because...', 'This sourcing strategy was a deliberate...').",
+      "why": "Lower leverage but real: the polished summary voice dilutes authenticity. Gary talks; a brand consultant summarizes. Keep it Gary."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 82,
+      "recognizable": true,
+      "verdict": "This is recognizably Gary \u2014 the voice atoms are dead-on, the 'fucking follow me, right now' and 'stop fucking watching me and go do' land exactly where they should, and the structural read of his philosophy (attention as asset class, document don't create, jab-jab-right-hook) is captured with real fidelity. The hard lessons are the strongest part: they have receipts, they name the cost, and crucially they include the candor/entitlement failure and the hustle-got-hijacked self-critique, which is where most sanitized versions of Gary would chicken out. Where it wobbles is a couple of numeric inventions and a faint over-tidiness in the abstracted desc lines that occasionally read like a brand consultant summarizing Gary rather than Gary talking.",
+      "strengths": [
+        "Verbatim voice is unmistakable \u2014 'Fucking follow me, right now,' 'stop fucking watching me and go do,' 'fix your s---' \u2014 these are not laundered. Gary would not wince at his own profanity being preserved.",
+        "Hard lessons have actual receipts and admit unflattering things: the candor failure that 'created macro entitlement' and pulling 'the rug from underneath you,' and the hustle word getting 'hijacked by people grinding themselves into misery in my name.' That's the real Gary, not the keynote Gary.",
+        "The contrarian positions are genuinely contrarian and specific to him \u2014 '97% of luxury buyers are buying status signal,' 'social media didn't change us, it exposed us,' the deliberate reframing that JJJRH is misread. These are positions he actually defends, not generic hustle-bro filler.",
+        "The health-accountability lesson ('I'm not held accountable to myself but I'm very good at being accountable to others') is exactly the kind of self-aware structural workaround that fits his self-awareness-is-king principle. Provenance checks out across JRE, AskGaryVee, Quest."
+      ],
+      "weaknesses": [
+        "The Super Bowl atom contains a manufactured figure \u2014 '$20\u201340M asset being sold at half price' \u2014 that the corpus does not support and a framing ('everyone calls it wasteful') that inverts what the corpus actually says. Gary's real line is just 'best deal in marketing, at $6M a steal.' Don't put numbers in his mouth he didn't say.",
+        "Some desc lines are abstracted into a polished, third-person consultant register ('This distinction matters because...', 'This sourcing strategy was a deliberate...') that sands off Gary's actual cadence. Gary is messy, repetitive, runs sentences into walls. The verbatim atoms prove it; the summaries occasionally betray it.",
+        "The crypto-is-structurally-progressive position is present but thin \u2014 it's one of his more genuinely contrarian and politically loaded takes, and it deserves more receipts than a single desc to be fully recognizable rather than a talking point."
+      ],
+      "flags": [
+        {
+          "issue": "Invented dollar figure attributed to Gary, flagged HIGH/ungrounded by verification",
+          "evidence": "Gary calls it a $20\u201340M asset being sold at half price because of the rare combination of scale and genuine attention",
+          "fix": "Strip the fabricated $20\u201340M figure. Keep only what's grounded: '$6 million a pop, a steal' and the scale-plus-genuine-attention argument."
+        },
+        {
+          "issue": "Framing inverts the corpus \u2014 flagged HIGH/superseded",
+          "evidence": "Everyone calls it wasteful at $6M a spot.",
+          "fix": "Gary's actual frame is that the Super Bowl IS the steal and the 'cheap' banner ads are the rip-off. Lead with his real claim instead of inventing a strawman consensus he's refuting."
+        },
+        {
+          "issue": "Some abstracted desc lines drift into sanitized third-person summary voice",
+          "evidence": "This distinction matters because... (consumer_behavior, social media exposure atom)",
+          "fix": "Rewrite desc lines closer to Gary's actual broken, punchy cadence, or let the verbatim voice carry more weight rather than the analyst's gloss."
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 72,
+      "recognizable": true,
+      "verdict": "This is mostly real, hard-won material \u2014 not platitudes with a name stapled on. The hard lessons carry receipts with self-incriminating specifics (the AdWords miss costing $190M of foregone revenue, the candor failure that 'created macro entitlement,' the health accountability hack), and the contrarian positions show actual contrarian reasoning rather than fortune-cookie wisdom. But the man under review torments every reality through a single hammer \u2014 'attention is the asset class' \u2014 and the brain doesn't push back on that monomania the way I'd want. And there's a numeric defect sitting right in a flagship contrarian claim, which is exactly the kind of unforced stupidity that erodes trust.",
+      "strengths": [
+        "Hard lessons are genuinely self-incriminating with quantified cost \u2014 the AdWords miss ('should have been $250 million instead of $60 million') is a real falsifiable claim about his own folly, not vague humility theater. This is inversion done right: he studied his own failure.",
+        "The candor lesson shows incentive archaeology applied to himself \u2014 'incredibly candid as garyvee... incredibly not candorous as gary vaynerchuk the executive which created macro entitlement.' He traced a cultural outcome backward to his own behavioral incentive. That's the kind of forensic self-honesty most operators dodge.",
+        "The health-accountability atom ('I'm not held accountable to myself but I'm very good at being accountable to others') is a man who knows the exact edge of his own circle of competence \u2014 including the competence to discipline himself \u2014 and engineers around the weakness rather than pretending it away. I respect that enormously.",
+        "Several positions resist the easy answer: 'Don't change behavior \u2014 leverage it... You will not out-market human nature' is real microeconomic and psychological humility, not slop."
+      ],
+      "weaknesses": [
+        "Single-model risk: nearly every atom funnels back to 'underpriced attention.' Facebook video, Super Bowl ads, AdWords, NFTs \u2014 all the same hammer. A rigorous brain would mark where the attention model FAILS or conflicts with another model. It never does. The man with one model tortures every reality to fit it.",
+        "The NFT/VeeFriends material reads like promotion dressed as insight \u2014 'the first intellectual property that was a billion dollar intellectual property built from nfts the way that star wars was built from film.' That's a salesman's analogy with a near-100% edge for the house, and the brain swallows it without the skepticism it applies elsewhere.",
+        "'Crypto is structurally progressive... disintermediates the exact rent-extraction layers' \u2014 this is a slogan, not an analysis. No mechanism, no counter-case, no acknowledgment that the disintermediation layer is itself a fee-extraction scheme. Where's the inversion?",
+        "A verified numeric defect sits inside a headline contrarian claim \u2014 the kind of avoidable error that signals the brain will repeat fabricated figures with confidence."
+      ],
+      "flags": [
+        {
+          "issue": "Ungrounded/superseded figure in a flagship contrarian position \u2014 the corpus does not support the '$20-40M asset sold at half price' framing, and misstates that 'everyone calls it wasteful'",
+          "evidence": "'Everyone calls it wasteful at $6M a spot. Gary calls it a $20\u201340M asset being sold at half price because of the rare combination of scale'",
+          "fix": "Strip the invented $20-40M valuation. The corpus only supports '$6 million a pop, a steal' and 'best deal in marketing.' Quote what he actually said, not an embellished version."
+        },
+        {
+          "issue": "Promotional NFT analogy accepted uncritically \u2014 no model checks it for incentive bias (he is the seller)",
+          "evidence": "'v friends will have incredible legacy as the first intellectual property that was a billion dollar intellectual property built from nfts the way that star wars was built from film'",
+          "fix": "Tag this as a self-interested forecast and add the counter-model: collectible bubbles, survivorship bias from his own card-dealing days. A rigorous brain notes when the speaker benefits from the prediction."
+        },
+        {
+          "issue": "Slogan masquerading as analysis on crypto, with no mechanism or counter-case",
+          "evidence": "'Crypto is structurally progressive \u2014 It disintermediates banks, brokerages, and insurance companies'",
+          "fix": "Either supply the actual mechanism and the failure modes (new rent layers, fraud, fee extraction) or label it as a rhetorical position rather than a reasoned one."
+        },
+        {
+          "issue": "No atom marks where the central 'underpriced attention' model breaks down \u2014 single-model monomania left unchecked",
+          "evidence": "'Facebook video right now is what Google adwords were in the early 2000s.' \u2014 repeated framing across nearly every attention atom",
+          "fix": "Add at least one hard lesson where chasing underpriced attention LOST money or where attention was correctly priced and going heavy was wrong. Cross-check the model against at least one other discipline."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 62,
+      "recognizable": true,
+      "verdict": "There's a real human flickering through here \u2014 the man who knows he avoids conflict, who can't keep promises to himself but won't let his trainer down, who admits 'hustle' got hijacked and grinds people into misery in his name. That's vulnerability with receipts, and I respect it. But the brain pack confuses confessing tactical regrets with showing the whole self. The doubt is almost always about market timing or messaging precision, rarely about worthiness, fear, or the cost of being a man who works 5 AM to 11 PM while preaching legacy and family. The shame \u2014 the stuff that needs secrecy, silence, and judgment to survive \u2014 is mostly missing, and that's the load-bearing absence.",
+      "strengths": [
+        "The candor hard-lesson is genuinely vulnerable and specific: 'I would hold it to myself but then I would pull the rug from underneath you' \u2014 that's owning a wound that hurt other people, not a humblebrag. That's the kind of disclosure that dies shame.",
+        "The health accountability lesson is the most honest thing in the pack: 'I'm not held accountable to myself but I'm very good at being accountable to others.' Naming a permanent structural weakness you have to engineer around, not heroically conquer, is real. That's interdependence admitted under a hyper-independence brand.",
+        "The hustle reckoning shows him metabolizing the cost of his own imprecision on real people \u2014 'people are using my name' to grind themselves to 2 AM. He owns downstream harm he didn't intend. That's accountability without a 'but.'"
+      ],
+      "weaknesses": [
+        "The doubt is almost entirely operational \u2014 missed AdWords, mispriced messaging \u2014 never existential. Where is the fear underneath the audacity? A man whose entire mission is 'injecting audacity' is almost certainly armoring against his own version of not-enough, and the pack never excavates it.",
+        "The 16-hour days and three-minute meetings are presented as pure virtue with zero cost named. Brown's first principle: you cannot selectively numb. What does this velocity numb? The relational and bodily price of 5 AM-to-11 PM is invisible \u2014 that's the highlight reel, not the mess.",
+        "The 'I only care about people who actually know me' filter is presented cleanly as wisdom, but it sits dangerously close to 'I don't care what people think' \u2014 which I read as its own armor. The pack never tests whether this is a healthy arena-filter or a defense against shame. No tension held there.",
+        "Legacy-over-currency is stated as settled conviction with no doubt attached. Nobody who needs the scoreboard to 'compound beyond your lifespan' is fully free of the fear of being forgotten. The mortality anxiety peeks out in the health lesson ('regret scares me') but is never connected to the legacy obsession \u2014 they're the same wound, uncoded."
+      ],
+      "flags": [
+        {
+          "issue": "Failures are all tactical/market-timing; no failure of the heart, no relational rupture beyond the firing-without-context one. The emotional cost ledger is thin.",
+          "evidence": "Hard lessons cover AdWords, candor, hustle messaging, and health accountability \u2014 four lessons, three of them essentially professional optimization regrets.",
+          "fix": "Add at least one hard lesson about a personal relationship or an internal fear \u2014 where did the work cost him intimacy, presence, or peace? What did he numb to keep going?"
+        },
+        {
+          "issue": "The hustle/health tension is named but never sat in. He works 16 hours AND preaches family/legacy AND can't keep health promises to himself \u2014 that's a contradiction begging to be inhabited, not resolved.",
+          "evidence": "'He launches out of bed at 5 AM, exercises, and then works from 7 AM to 11 PM' presented alongside 'You cannot love other people fully if you just tolerate yourself.'",
+          "fix": "Add an atom where Gary holds the paradox openly \u2014 what does he lose to the schedule, and how does he reconcile the cost with the legacy talk? Let him admit the math doesn't fully close."
+        },
+        {
+          "issue": "The criticism-filter risks reading as indifference-armor rather than a deliberate arena.",
+          "evidence": "'as long as I am good with the people that actually...' and 'Fucking follow me, right now.'",
+          "fix": "Surface a moment where outside judgment actually landed and hurt \u2014 proving the filter is a chosen discipline against caring, not evidence he doesn't care. Real courage isn't immunity."
+        }
+      ]
+    }
+  ],
+  "cost": 0.4004
+}

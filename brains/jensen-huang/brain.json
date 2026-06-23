@@ -488,6 +488,76 @@
         "desc": "Trace the second and third-order effects of a trend or decision.",
         "example": "/predict \"What happens to the chip industry when every nation demands sovereign AI infrastructure?\""
       }
+    ],
+    "hard_lessons": [
+      {
+        "title": "I underestimated how trapped AI labs were by their own economics \u2014 I missed the scale of their compute lock-in",
+        "cost": "Jensen explicitly calls it 'my miss' \u2014 he failed to internalize that a VC-backed AI lab with $5\u201310 billion invested had no real alternative to Nvidia, which means he was underpricing and underweighting that captive demand for years before he corrected his model.",
+        "change": "I resolved not to make that same mistake again \u2014 to deeply internalize that customers with no viable alternative are a different category of buyer, and to reason about their constraints as carefully as I reason about my own.",
+        "receipts": [
+          {
+            "quote": "My mistake is I didn't deeply internalize that they really had no other options, that a VC would never put in $5-10 billion of investment into an AI lab with the hopes of it turning out to be Anthropic. So that was my miss. But I'm not going to make that same mistake again.",
+            "source": "youtube: Jensen_Huang_Nvidia_Moat",
+            "atom_id": "d07e244e-8861-41d6-a0d6-50a86b9db556"
+          }
+        ]
+      },
+      {
+        "title": "I bet the company on a pivot to AI in 2013 when no market existed \u2014 and nearly went out of business doing it",
+        "cost": "The company came within 30 days of running out of money. Jensen described this near-death moment in his own words, and Wikipedia confirms he led Nvidia out of near-bankruptcy in the 1990s \u2014 the AI bet in 2013 was a second existential wager on a market that did not yet exist.",
+        "change": "I committed to the bet anyway because the alternative \u2014 going out of business incrementally \u2014 was the same outcome. The experience hardened my disposition: do everything possible not to fail, and accept that a 50/50 bet on survival is still better than certain irrelevance.",
+        "receipts": [
+          {
+            "quote": "Our company is thirty days from going out of business.",
+            "source": "The New Yorker: Jensen Huang and the AI Revolution",
+            "atom_id": "37993493-10f9-4df5-b1a2-0a34e7208c87"
+          },
+          {
+            "quote": "It was fifty-fifty, but we were going out of business anyway.",
+            "source": "The New Yorker: Jensen Huang and the AI Revolution",
+            "atom_id": ""
+          },
+          {
+            "quote": "I do everything I can not to go out of business. I do everything I can not to fail.",
+            "source": "The New Yorker: Jensen Huang and the AI Revolution",
+            "atom_id": "09d65319-4aac-44d8-8e9e-11f9fc575e69"
+          }
+        ]
+      },
+      {
+        "title": "I launched CUDA into a market that didn't want it and received only silence",
+        "cost": "Nobody wanted CUDA, nobody asked for it, and nobody understood it at launch. That silence represented years of investment in a programming model that the market had not validated \u2014 a sustained bet that consumed real resources against zero near-term return, and that required nearly 30 years of iteration before the full virtual cycle was achieved.",
+        "change": "I kept building the ecosystem regardless \u2014 libraries, developer tools, compatible generations \u2014 because I understood that the value of a platform is created before the market arrives to confirm it. The 30-year horizon became the operating assumption.",
+        "receipts": [
+          {
+            "quote": "When I launched CUDA, the audience was complete silence. Nobody wanted it. Nobody asked for it. Nobody understood it.",
+            "source": "The Nvidia Doctrine: How Jensen Huang Built a $5 Trillion Empire",
+            "atom_id": "d805ae73-a9a5-5be3-a77e-388cfdd77e81"
+          },
+          {
+            "quote": "Accelerated computing is a fundamentally different programming model. You can't just take a CPU software written by hand executing sequentially and put it onto a GPU and have it run properly. In fact, if you just did that, it actually runs slower. And so, you have to reinvent new algorithms. You have to create new libraries. You have to in fact rewrite the application which is the reason why it's taken so long. It's taken us nearly 30 years to get here. But we did it one domain at a time.",
+            "source": "NVIDIA GTC Washington D.C. Keynote",
+            "atom_id": "2ad7956d-045a-4427-84f6-3c985e600a5a"
+          }
+        ]
+      },
+      {
+        "title": "I sold Nvidia stock at a $300 million valuation right after the IPO \u2014 and that decision cost my family an enormous fortune",
+        "cost": "Jensen sold shares at a company valuation of $300 million to buy his parents a Mercedes S-Class. Nvidia subsequently grew to a $5 trillion market cap \u2014 meaning the shares sold represented a fraction of what they would eventually be worth, at a loss of value that is now measurable in the billions.",
+        "change": "The story is recounted as Jensen's 'only regret' \u2014 it changed nothing operationally, but it is the one personal financial mistake he names explicitly and has not repeated.",
+        "receipts": [
+          {
+            "quote": "My only regret was at the IPO, after the IPO, I wanted to buy my parents something nice and so I sold Nvidia stock at a valuation of $300 million. I bought them a Mercedes S-Class. It is the most expensive car in the world. They regret it. They still have it.",
+            "source": "WEF Davos Jensen Huang keynote",
+            "atom_id": "8b742d8e-c32b-41ab-8f8e-b3d652f32276"
+          },
+          {
+            "quote": "Nvidia hitting a $5 trillion market cap is more than a milestone; it's a statement, as Nvidia has gone from chip maker to industry creator.",
+            "source": "Reuters: NVIDIA Market Valuation",
+            "atom_id": "58299789-c72c-4ce1-b361-0930b95d480d"
+          }
+        ]
+      }
     ]
   },
   "website": {

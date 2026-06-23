@@ -1,0 +1,200 @@
+{
+  "slug": "peter-zeihan",
+  "target": "Peter Zeihan",
+  "date": "2026-06-22",
+  "persona_qa_score": 52,
+  "raw_chair_score": 52,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 0,
+  "pass": false,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 74,
+    "rigor": 60,
+    "coverage": 36,
+    "calibration": 45
+  },
+  "confidence": "high",
+  "ship_recommendation": "rework",
+  "summary": "Zeihan would recognize his framework here \u2014 the map-first determinism, the demographic closed-math, the Bretton Woods bribe thesis, the China-terminal-decade certainty are all faithfully rendered. But he would NOT recognize himself, because the single most defining feature of this man is that he makes dated, falsifiable, often-mis-timed forecasts, and this brain has surgically removed every scar. A forecaster's brain with an EMPTY hard-lessons section isn't a neutral gap \u2014 it's the one cell of the decision/outcome matrix where all the learning lives, deleted. I'm highly confident the capture is good-sounding rather than good-judgment, because the brain itself commits the exact error it accuses China-bulls of: linear extrapolation presented as certainty, with no accounting for the prior decade's unfulfilled deadline.",
+  "calibration_note": "All three field judges independently converged on the same defect \u2014 empty HARD LESSONS on a serial forecaster \u2014 and that convergence is itself a strong signal; when three judges who didn't talk to each other land on the identical wound, that's not groupthink, that's the wound being real. Swisher (78) is the one over-reacting on the upside: she correctly names the whitewash but still scores authenticity high, which rewards recognizable-framework over honest-person. Munger (62) and Brown (34) are better calibrated to the severity; Brown's 34 is the most honest number on the board. I'm holding authenticity at 74 (down from 78 \u2014 a sanded-down Zeihan is a less authentic Zeihan, the swagger and the overconfident numeric showmanship are genuinely missing) and accepting Munger's 60 and Brown's 36 essentially as-is. The numeric report shows ZERO high-severity defects, so the hard ship-gate is NOT tripped \u2014 but a fidelity penalty of 8 and one ungrounded medium claim keep this from being clean. My calibration score of 45 reflects that this brain is the product of motivated capture, not honest judgment: it processed Zeihan like a lawyer defending a verdict, not a scientist logging his misses.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Populate HARD LESSONS with the documented mis-timed forecasts: the 2010 'China collapses this coming decade' call that did not arrive on its original timeline, the serially moved goalposts, and the recalibrations. Date each prediction with provenance.",
+      "why": "This is the off-diagonal cell where all the learning lives. Three independent judges flagged it as the cardinal sin. A forecaster with zero documented misses is the single biggest tell that confidence is unearned \u2014 fixing this moves the brain from armor to honesty and raises three dimensions at once."
+    },
+    {
+      "priority": 2,
+      "fix": "Reconcile the self-contradicting China-collapse timeline across atoms \u2014 note where the 2010 deadline lapsed and how/whether the thesis was updated, rather than restating the same prediction for a new decade as if fresh.",
+      "why": "An unreconciled repeated prediction is exactly the linear-extrapolation-through-a-non-linear-transition error Zeihan accuses others of. Surfacing it tests whether the brain can hold his process responsible for a bad-timing outcome."
+    },
+    {
+      "priority": 3,
+      "fix": "Date-stamp every dated prediction with provenance so timeless analysis is distinguishable from time-bound calls, and so a reader can tell what was said when.",
+      "why": "Without dating, falsifiable forecasts get laundered into permanent-sounding framework. Provenance is what makes the brain auditable rather than just confident."
+    },
+    {
+      "priority": 4,
+      "fix": "Ground or remove the ungrounded biography[2] claim ('most important shift visible in 2014') and verify the catastrophic round-number atoms (e.g., '500 million dead') with sourcing.",
+      "why": "Numeric report shows a medium ungrounded claim and a fidelity penalty of 8. No high-severity defect means the ship-gate isn't tripped, but unsourced catastrophic round numbers are the texture of overconfidence \u2014 clean these to close the gap."
+    },
+    {
+      "priority": 5,
+      "fix": "Instantiate the stated 'maintain humility about which assumptions survive the decade' principle with at least one atom where Zeihan actually demonstrates it on his own work, not just preaches it about others.",
+      "why": "Stated modesty that the atoms never demonstrate is hollow. Showing the humility applied to himself is what separates a captured human from a LinkedIn version of one."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 78,
+      "recognizable": true,
+      "verdict": "This is recognizably Zeihan \u2014 the map-first determinism, the demographic fatalism, the 'globalization was a bribe' thesis, and the China-collapse certainty all ring true to the man's actual voice and method. But it's a sanded-down Zeihan: it captures his framework better than his swagger, and it dodges the one thing that would make it honest \u2014 his documented record of confidently wrong timed predictions. An empty HARD LESSONS section on a forecaster whose entire brand is dated, falsifiable calls is not a coverage gap, it's a whitewash.",
+      "strengths": [
+        "Nails the core analytical sequence \u2014 geography, then demographics, then the post-1945 order as Cold War anomaly \u2014 which is genuinely how Zeihan reasons and talks",
+        "The 'WOULD NOT SAY' list is sharp and authentic: 'This is unprecedented,' 'we just need the political will,' 'markets will find a solution' are exactly the tells he mocks in others",
+        "Captures his signature rhetorical moves \u2014 'you cannot unbirth a baby,' water as 'highway, barrier, larder and battery,' 'I put my heart in a safe deposit box' \u2014 in verbatim voice that sounds like the actual man",
+        "Correctly preserves his contrarian-but-internally-consistent stance: pro-solar-residential while anti-renewables-at-scale, America-leaving-not-declining, the internationalist who forecasts the opposite of what he wants"
+      ],
+      "weaknesses": [
+        "HARD LESSONS is EMPTY for a man whose entire public record is a graveyard of confidently mis-timed predictions \u2014 he said in 2010 China would collapse 'in this coming decade,' he's serially moved the goalposts, and none of that accountability is here. That's the single biggest authenticity hole.",
+        "The framework reads cleaner and more falsifiable-proof than Zeihan actually is. The real Zeihan makes wildly specific numeric claims ('500 million dead in a Taiwan-invasion famine') with a showman's overconfidence \u2014 the pack lists the claims but launders out the recklessness",
+        "Several atoms are stale predictions presented as standing analysis (Turkey 'emerging as dominant regional power,' Japan forced to import Korean/Chinese labor triggering conflict) without flagging that these were dated calls that haven't aged well \u2014 that's the sanitizing",
+        "Missing his actual personality texture: the stand-up-comedian delivery, the 'I'm a numbers guy and everyone else is an idiot' contempt, the relentless self-marketing. This is the lecture-hall Zeihan, not the full animal"
+      ],
+      "flags": [
+        {
+          "issue": "Empty hard-lessons section on a serial forecaster \u2014 this is the cardinal sin for someone whose product is dated predictions",
+          "evidence": "'HARD LESSONS (EMPTY \u2014 the corpus surfaced no grounded failures.)'",
+          "fix": "Populate with his actual receipts: the 2010 China-collapse 'this decade' call and its repeated extensions, demographic-timing misses, and the gap between forecast dates and what actually happened. Zeihan's credibility argument LIVES on his track record \u2014 pretending he has no misses makes the brain a publicist, not a portrait"
+        },
+        {
+          "issue": "Dated predictions presented as timeless analysis without provenance dating",
+          "evidence": "[china_collapse] 'we expect the economic collapse of China in this coming decade' \u2014 stated as if current, but this is a 2010-era call he's been repeating for 15 years",
+          "fix": "Date-stamp prediction atoms and note where the original timeline has lapsed. Provenance is the whole game \u2014 when a 2010 call is presented as live, the reader can't judge the forecaster"
+        },
+        {
+          "issue": "Overconfidence laundered into measured framework language",
+          "evidence": "Contrarian section: 'A Taiwan invasion would trigger sanctions-induced famine killing 500 million' \u2014 listed flatly with no acknowledgment of how extreme and contested this specific number is",
+          "fix": "Preserve the recklessness as a feature, not bury it. The real Zeihan throws out catastrophic precise numbers as a rhetorical weapon; flag these as characteristic over-claims rather than presenting them as settled analysis"
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 62,
+      "recognizable": true,
+      "verdict": "This is recognizably Zeihan \u2014 the geography-demographics-naval triad is captured with real specificity, and the man's signature moves are here: closed-system demographic math, the Bretton Woods bribe, the 'too hard' tech sectors he avoids, and the discipline of separating his green-globalist heart from his cold analysis. But a brain claiming to forecast 20-50 years that contains an EMPTY hard-lessons section is, by my standards, a brain that has not yet earned its confidence. Zeihan has been spectacularly wrong on timing \u2014 he called China's economic collapse 'within a decade' in 2010, and here he is still saying it in the terminal decade. A rigorous capture would have that scar on the table, not airbrushed out.",
+      "strengths": [
+        "Genuine cross-disciplinary structure \u2014 geography, demography, energy geology, naval logistics interlock the way Zeihan actually reasons; this is not a one-model hammer",
+        "Specific, falsifiable, dated claims with real numbers (Mexican labor one-third Chinese cost and twice as skilled, 20% of global LNG through Hormuz, $5-6B annual US investment in China) \u2014 that's the opposite of platitude",
+        "Captures his physical-constraint discipline well: the 'would not say' list ('we just need political will,' 'markets will find a solution') correctly inverts the analyst's standard escape hatches into forbidden territory",
+        "The 'put my heart in a safe deposit box' atom shows the brain understands the distinction between his values and his analysis \u2014 that's a non-obvious, hard-won feature"
+      ],
+      "weaknesses": [
+        "EMPTY hard-lessons section is a fatal coverage defect for a forecaster. A man who predicts 20-50 years out lives or dies by his misses, and there are no receipts here for the timing errors that are his most documented vulnerability",
+        "The brain repeats 'China collapses this decade' across multiple atoms (predicted in 2010 'within a decade,' restated for the 2020s) without ever flagging that the original decade-deadline already passed unfulfilled \u2014 this is linear extrapolation through a non-linear transition, the exact sin he accuses others of",
+        "Several claims are stated with cult-of-certainty precision that no honest forecaster should carry \u2014 'A Taiwan invasion would trigger sanctions-induced famine killing 500 million' is a sensational round number presented as mechanism, the kind of figure that should be quarantined in a 'too hard' basket",
+        "The 'Trump unraveling American power at Soviet-collapse scale' position is presented as analysis but reads like topical commentary that violates his own two-generation-horizon principle \u2014 that's news, not geopolitics, by his own definition"
+      ],
+      "flags": [
+        {
+          "issue": "Forecasting brain with zero documented failures \u2014 the single biggest tell that confidence is unearned",
+          "evidence": "'### HARD LESSONS (EMPTY \u2014 the corpus surfaced no grounded failures.)'",
+          "fix": "Populate with his actual timing misses: the 2010 'China collapse within a decade' call that didn't land, the repeatedly-slipping globalization-end timeline. Frame each as a lesson about confusing inevitability with timing."
+        },
+        {
+          "issue": "Self-contradicting China-collapse timeline never reconciled",
+          "evidence": "'As early as 2010, Zeihan predicted China's economic collapse within a decade' alongside 'we expect the economic collapse of China in this coming decade'",
+          "fix": "Add an explicit atom acknowledging the prior decade-deadline lapsed, distinguishing structural direction (high confidence) from timing (low confidence) \u2014 the discipline he claims but doesn't apply to himself."
+        },
+        {
+          "issue": "Unsourced catastrophic round-number presented as fact",
+          "evidence": "'A Taiwan invasion would trigger sanctions-induced famine killing 500 million'",
+          "fix": "Either show the calorie/fertilizer-import arithmetic that produces the figure, or mark it as a worst-case scenario rather than a forecast. A number that big with no chain of reasoning is showmanship."
+        },
+        {
+          "issue": "Short-horizon political commentary violates his own stated time-frame principle",
+          "evidence": "'The Trump administration is unraveling American power at Soviet-collapse scale'",
+          "fix": "Recast in two-generation terms \u2014 what structural alliance/credibility damage persists past any single administration \u2014 or label it as explicitly non-core topical opinion."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 34,
+      "recognizable": true,
+      "verdict": "I can see the man's mind here \u2014 the map, the demographic math, the confident two-generation horizon. What I cannot see is the human carrying it. This is a brain built almost entirely from the highlight reel: a thinker who is never wrong on the record, never grieving a blown forecast, never wrestling with the cost of being the guy who tells half the planet it's structurally doomed. The HARD LESSONS section is empty, and for a man who has made hundreds of dated, falsifiable predictions, that emptiness is not neutral \u2014 it is the absence of the very thing that would make him real instead of a LinkedIn version of himself.",
+      "strengths": [
+        "The constitution captures a genuine intellectual integrity move \u2014 'I personally am an internationalist, a globalist and a green... so I put my heart in a safe deposit box when I start doing my work.' That is a real human admission of the tension between who he wants the world to be and what his analysis tells him. It's the closest thing to vulnerability in the whole pack.",
+        "The 'WOULD NOT SAY' section is precise taxonomy \u2014 distinguishing 'political will' (the refuge of people who won't do the math) from physical constraint. That's a person with a real epistemic spine, not a generic forecaster.",
+        "The finance_capital atoms \u2014 'you have to spend money on something stupid that you regret' and the minimalist who bought the maximalist house \u2014 are the only atoms where a fallible, self-contradicting human peeks through. More of these would have saved the pack."
+      ],
+      "weaknesses": [
+        "The HARD LESSONS section is EMPTY. This is a man whose 2010 prediction was 'we expect the economic collapse of China in this coming decade' \u2014 a 15-year-old dated forecast that has not arrived on his original timeline. Where is the reckoning? Where is the recalibration? A brain that cannot locate its own missed calls is a brain wearing armor, not a brain being seen.",
+        "The pack treats his own 'It's going to get weird before it gets normal... good analysts maintain humility about which of their assumptions survive the decade' as a principle, but never instantiates it. Stated humility with zero documented instance of having been humbled is not humility \u2014 it's a pose. It's the analytical equivalent of 'I don't care what people think.'",
+        "There is no cost anywhere. What does it do to a person to forecast famine for 500 million, the hollowing of cities, a world 'more chaotic and poorer'? Is there grief? Defensiveness? A track record of being attacked and how he metabolizes it? The pack gives me the prophet and withholds the man who has to live inside the prophecy.",
+        "The contrarian positions are all framed as confirmed-correct ('America is not in decline \u2014 it's leaving'). There is no atom where Zeihan says 'I got the timing wrong on X and here's what it taught me about my model.' Without that, the confidence reads as untested rather than earned in the arena.",
+        "The single numeric-verification flag \u2014 an 'ungrounded' lesson about 2014 \u2014 is the only gesture toward a biography, and it's a self-flattering one ('was already visible in 2014 if you were watching'). Even the near-failure is rewritten as foresight."
+      ],
+      "flags": [
+        {
+          "issue": "Empty HARD LESSONS for a man with a long, dated, falsifiable public forecasting record \u2014 the single largest coverage defect.",
+          "evidence": "## ### HARD LESSONS (EMPTY \u2014 the corpus surfaced no grounded failures.)",
+          "fix": "Mine his China-collapse timeline slippage, any Russia/Ukraine miscalls, and the gap between 'collapse this decade' (said in 2010) and reality. Document at least 3-5 failures with dates, what he predicted, what happened, and how (or whether) he revised. A man this confident MUST have a graveyard of timing errors \u2014 find them."
+        },
+        {
+          "issue": "Stated humility never instantiated \u2014 the constitution claims epistemic modesty the atoms never demonstrate.",
+          "evidence": "'good analysts maintain humility about which of their assumptions survive the decade'",
+          "fix": "Add atoms where Zeihan actually exercises this humility on himself \u2014 a specific assumption he held that didn't survive, in his own voice. Otherwise cut the claim, because unearned humility is just another form of armor."
+        },
+        {
+          "issue": "No emotional or human cost of being the bearer of catastrophic forecasts.",
+          "evidence": "Atoms like 'a world both more chaotic and poorer' and 'sanctions-induced famine killing 500 million' are delivered with zero interior weight.",
+          "fix": "Capture how he carries this \u2014 does he get accused of doom-mongering? How does he respond to being wrong-footed publicly? Does he ever express the burden of the work, or the loneliness of his contrarian positions? That's where the human lives."
+        },
+        {
+          "issue": "Contrarian positions are uniformly self-validating; the one near-miss is rewritten as foresight.",
+          "evidence": "(biography[2].lesson) 'The most important geopolitical shift of the next 30 years was already visible in 2014 if you were watching'",
+          "fix": "Replace at least one triumphant biography note with an honest one \u2014 a moment he didn't see coming, or read backwards. A real track record has texture; this one is sanded smooth."
+        }
+      ]
+    }
+  ],
+  "cost": 0.3889
+}
