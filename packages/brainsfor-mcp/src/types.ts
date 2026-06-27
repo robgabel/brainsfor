@@ -30,6 +30,12 @@ export interface Atom {
   confidence_tier: "high" | "medium" | "low";
   original_quote: string | null;
   implication: string | null;
+  // Epistemic status (universal). Optional: packs exported before 2026-06-27 omit these;
+  // consumers default to opinion / unverified (the safe pre-classification state).
+  claim_type?: "fact" | "opinion" | "prediction";
+  verification?: "unverified" | "verified" | "false" | "contested";
+  proof_ref?: string | null;
+  verified_at?: string | null;
   connections: AtomConnection[];
 }
 

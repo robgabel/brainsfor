@@ -19,6 +19,16 @@ CREATE TABLE IF NOT EXISTS {{SLUG}}_atoms (
   source_date TIMESTAMPTZ,
   confidence FLOAT DEFAULT 0.8,
   confidence_tier TEXT DEFAULT 'medium' CHECK (confidence_tier IN ('high', 'medium', 'low')),
+  -- Epistemic status (universal, 2026-06-27). Defaults make this additive + zero-regression:
+  -- every existing atom reads as a non-asserted opinion until classified/verified.
+  --   claim_type   = is the content truth-apt? fact (checkable) | opinion (a stance) | prediction (undecided)
+  --   verification = for fact-claims only: unverified (default) | verified (+proof) | false | contested
+  --   proof_ref    = external authority / URL backing a verified|false|contested verdict
+  --   verified_at  = when the verdict was last established (doubles as fact-staleness clock)
+  claim_type TEXT NOT NULL DEFAULT 'opinion' CHECK (claim_type IN ('fact', 'opinion', 'prediction')),
+  verification TEXT NOT NULL DEFAULT 'unverified' CHECK (verification IN ('unverified', 'verified', 'false', 'contested')),
+  proof_ref TEXT,
+  verified_at TIMESTAMPTZ,
   embedding VECTOR(1536),
   created_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW()

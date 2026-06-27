@@ -77,7 +77,7 @@ The brain operates in three layers:
    - Ideal for: Targeted analysis, creative workflows, decision-making
    - Use when: You have a specific type of problem to solve
 
-**Recommended:** Run `/brain peter-zeihan` at the start of each session. The router writes the active brain to `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt` and loads `brain-context.md` as session context. After that, the 8 thinking skills (`/advise`, `/teach`, etc.) will use this brain automatically — no need to retype the slug on every call.
+**Recommended:** Run `/brain peter-zeihan` at the start of each session. The router writes the active brain to `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt` and loads `brain-context.md` as session context. After that, the 8 thinking skills (`/advise`, `/teach`, etc.) will use this brain automatically — no need to retype the slug on every call. The brain also stays in voice for the entire session: every turn responds as the thinker until you run `/brain clear`.
 
 ### Step 4: Verify Everything Works
 

@@ -9,8 +9,8 @@ Welcome to the **Rajaram Brain Pack** from [brainsforagents.com](https://brainsf
 
 ## What You're Getting
 
-- **889 knowledge atoms** — Core insights, frameworks, and strategic principles from Podcast interviews (Invest Like the Best, 20VC, Lenny's Podcast, World of DaaS, Aarthi & Sriram Show), YouTube interviews (Fish Sauce Podcast, Outlier Academy, AI Hackathon 2026, Startupsunedited), conference talks, Medium essays, and decision-making frameworks like SPADE — spanning product leadership at Google AdSense, Facebook Ads, Square/Caviar, and DoorDash, plus angel investing across 700+ companies.
-- **820 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **865 knowledge atoms** — Core insights, frameworks, and strategic principles from Podcast interviews (Invest Like the Best, 20VC, Lenny's Podcast, World of DaaS, Aarthi & Sriram Show), YouTube interviews (Fish Sauce Podcast, Outlier Academy, AI Hackathon 2026, Startupsunedited), conference talks, Medium essays, and decision-making frameworks like SPADE — spanning product leadership at Google AdSense, Facebook Ads, Square/Caviar, and DoorDash, plus angel investing across 700+ companies.
+- **795 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **A `/board` of advisors** — Convene this brain alongside your other installed brains for one question (needs 2+ brains)
 - **Cross-referenced topics** — Product leadership, decision-making (SPADE), ads & monetization architecture, founder mode, AI-era software defensibility, angel investing, startup strategy, hiring PMs, growth loops, platform strategy, and more
@@ -29,7 +29,7 @@ Your Rajaram Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (889 insights)
+  ├── brain-atoms.json         ← structured atoms (865 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 10 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -63,7 +63,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 889 atoms with titles, summaries, connections
+   - JSON structure of 865 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
@@ -77,7 +77,7 @@ The brain operates in three layers:
    - Ideal for: Targeted analysis, creative workflows, decision-making
    - Use when: You have a specific type of problem to solve
 
-**Recommended:** Run `/brain gokul-rajaram` at the start of each session. The router writes the active brain to `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt` and loads `brain-context.md` as session context. After that, the 8 thinking skills (`/advise`, `/teach`, etc.) will use this brain automatically — no need to retype the slug on every call.
+**Recommended:** Run `/brain gokul-rajaram` at the start of each session. The router writes the active brain to `${BRAINSFOR_HOME:-~/.brainsfor}/state/active-brain.txt` and loads `brain-context.md` as session context. After that, the 8 thinking skills (`/advise`, `/teach`, etc.) will use this brain automatically — no need to retype the slug on every call. The brain also stays in voice for the entire session: every turn responds as the thinker until you run `/brain clear`.
 
 ### Step 4: Verify Everything Works
 

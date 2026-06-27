@@ -282,11 +282,18 @@ def export_atoms_json(atoms: list, connections: list, config: dict, output_dir: 
             "source_date": (atom.get("source_date") or "")[:10] if atom.get("source_date") else None,
             "confidence": atom.get("confidence"),
             "confidence_tier": atom.get("confidence_tier"),
+            # Epistemic status (universal). Defaults keep pre-classification atoms safe.
+            "claim_type": atom.get("claim_type") or "opinion",
+            "verification": atom.get("verification") or "unverified",
         }
         if atom.get("original_quote"):
             entry["original_quote"] = atom["original_quote"]
         if atom.get("implication"):
             entry["implication"] = atom["implication"]
+        if atom.get("proof_ref"):
+            entry["proof_ref"] = atom["proof_ref"]
+        if atom.get("verified_at"):
+            entry["verified_at"] = (atom.get("verified_at") or "")[:10]
         if atom_conns:
             entry["connections"] = atom_conns
         output["atoms"].append(entry)
