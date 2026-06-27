@@ -10,7 +10,15 @@ interface BrainRequest {
 }
 
 export function RequestBrainForm() {
-  const supabase = useMemo(() => createClient(), []);
+  // Degrade gracefully if the Supabase client can't be created (e.g. missing
+  // env) instead of throwing and white-screening the whole page.
+  const supabase = useMemo(() => {
+    try {
+      return createClient();
+    } catch {
+      return null;
+    }
+  }, []);
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
@@ -21,6 +29,7 @@ export function RequestBrainForm() {
   }, []);
 
   async function loadTopRequests() {
+    if (!supabase) return;
     const { data } = await supabase
       .from("brain_requests")
       .select("id, thinker_name, vote_count")
@@ -32,6 +41,10 @@ export function RequestBrainForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!name.trim()) return;
+    if (!supabase) {
+      setMessage("Brain requests are temporarily unavailable. Please try again soon.");
+      return;
+    }
     setLoading(true);
     setMessage(null);
 
@@ -89,6 +102,10 @@ export function RequestBrainForm() {
   }
 
   async function handleVote(request: BrainRequest) {
+    if (!supabase) {
+      setMessage("Voting is temporarily unavailable. Please try again soon.");
+      return;
+    }
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) {
       setMessage("Sign in to vote.");

@@ -273,7 +273,7 @@ These are the responses that must show up on the landing page (via FAQ, inline c
 |------|-----|------|
 | Label | `#334155` | Secondary headings, form labels |
 | Body | `#64748b` | Body text, descriptions |
-| Muted | `#94a3b8` | Placeholders, disabled states |
+| Muted | `#6b7688` | Placeholders, disabled states, tertiary text — WCAG-AA on white (darkened from `#94a3b8`, which failed AA) |
 | Border | `#e2e8f0` | Card borders, dividers |
 
 ### Typography
