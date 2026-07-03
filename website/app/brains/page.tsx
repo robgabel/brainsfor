@@ -60,7 +60,7 @@ export default function BrainsPage() {
       )}
 
       {/* Request section */}
-      <section className="px-6 py-16">
+      <section id="request" className="scroll-mt-20 px-6 py-16">
         <div className="mx-auto max-w-[640px] text-center">
           <h2 className="font-display text-2xl font-normal tracking-[-0.5px] text-deep-ink">
             Don&apos;t see your thinker?
