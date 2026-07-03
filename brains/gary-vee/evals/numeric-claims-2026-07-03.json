@@ -1,0 +1,32 @@
+{
+  "slug": "gary-vee",
+  "person": "Gary Vaynerchuk",
+  "date": "2026-07-03",
+  "total_claims": 4,
+  "counts": {
+    "grounded": 3,
+    "superseded": 0,
+    "ungrounded": 1,
+    "unverifiable": 0
+  },
+  "defect_count": 1,
+  "high_severity_count": 0,
+  "fidelity_penalty": 8,
+  "cost": 0.1027,
+  "defects": [
+    {
+      "where": "hard_lessons[0].title",
+      "claim": "I didn't spend all my money on Google AdWords in 2001\u20132003, and it cost me hundreds of millions of dollars in revenue",
+      "figures": [
+        "2001",
+        "2003",
+        "millions of dollars"
+      ],
+      "status": "ungrounded",
+      "severity": "medium",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "The corpus says he regrets not spending more on Google AdWords but frames it as the store should have reached $250M, not as 'hundreds of millions of dollars in revenue' lost \u2014 the specific 'hundreds of millions' framing for the regret is not stated in the corpus."
+    }
+  ]
+}
