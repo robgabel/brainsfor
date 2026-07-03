@@ -416,4 +416,3 @@ brainsfor/
 ### Shared tables
 
 - `brain_metadata` — one row per brain (slug, name, tables, status, config)
-- `cross_connections` — cross-brain relationships (future)

@@ -15,11 +15,9 @@ script swaps the staging brain into the canonical slug once it's validated:
   8. Drop the orphaned <slug>_v2 Supabase tables.
 
 NOT done automatically (needs a human decision):
-  - Reloading <slug>_atoms in Supabase with the new atoms. cross_connections
-    FK-references existing atom ids (Rob's curated cross-brain links); replacing
-    them needs care. /board reads packs (Path B), so the live promotion is complete
-    without it. Use --reload-supabase to attempt it (truncates with CASCADE — will
-    drop dependent cross_connections rows; refuses unless --yes-drop-cross-connections).
+  - Reloading <slug>_atoms in Supabase with the new atoms. /board reads packs
+    (Path B), so the live promotion is complete without it.
+    (cross_connections FK caveat removed 2026-07-03 — table dropped.)
 
 Usage:
   python3 scripts/promote-brain.py --slug steve-jobs
@@ -95,9 +93,13 @@ def main():
     ap.add_argument("--slug", required=True, help="Canonical (live) slug, e.g. steve-jobs")
     ap.add_argument("--staging-slug", help="Staging slug (default: <slug>-v2)")
     ap.add_argument("--force", action="store_true", help="Skip the audit >= live gate")
-    ap.add_argument("--persona-gate", action="store_true",
-                    help="Also require the staging brain to PASS its persona-QA ship-gate "
-                         "(brains/<stage>/evals/persona-qa-*.json pass=true). Off by default.")
+    ap.add_argument("--persona-gate", dest="persona_gate", action="store_true", default=True,
+                    help="Require the staging brain to PASS its persona-QA ship-gate "
+                         "(brains/<stage>/evals/persona-qa-*.json pass=true). ON by default "
+                         "since 2026-07-03 — promotion publishes a brain, so it honors the "
+                         "same gate as hidden->live.")
+    ap.add_argument("--no-persona-gate", dest="persona_gate", action="store_false",
+                    help="Skip the persona-QA ship-gate (old default).")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--skip-finalize", action="store_true",
                     help="Skip the post-swap finalize-supabase (load pack + embed)")
@@ -129,8 +131,8 @@ def main():
         say("ERR", f"{stage} ({stage_score}) scores below live {base} ({base_score}). Use --force to override.")
         sys.exit(1)
 
-    # Optional persona-QA ship-gate: promotion publishes a brain, so honor the same
-    # gate that governs hidden->live. Off by default (existing promotions unaffected);
+    # Persona-QA ship-gate: promotion publishes a brain, so honor the same gate
+    # that governs hidden->live. ON by default (2026-07-03); --no-persona-gate or
     # --force bypasses it like the audit gate.
     if args.persona_gate and not args.force:
         ppass, pdetail = persona_gate(stage)
@@ -227,8 +229,7 @@ def main():
     # --- 9. Finalize base Supabase: load pack + embed + parity ------------
     # Makes the promoted brain an exact, embedded DB mirror of its pack so it
     # isn't left with stale atoms (the deferred-finalize bug). finalize-supabase
-    # is idempotent and robust (loop-until-count); for brains that cross_connections
-    # FK-references (scott-belsky) it clears the stale links first.
+    # is idempotent and robust (loop-until-count).
     if not args.skip_finalize:
         say("i", "finalizing base Supabase (load pack + embed)...")
         r = subprocess.run(["python3", str(ROOT / "scripts" / "finalize-supabase.py"),
