@@ -2436,24 +2436,8 @@ Cost: ~$23-25 per brain | Time: ~45-90 minutes
         ":white_check_mark:",
     )
 
-    # --- Sync ~/rob-ai/CLAUDE.md from brains/index.json so new brains never drift ---
-    if not build_incomplete:
-        try:
-            sync_script = SCRIPT_DIR / "sync-claude-md-brains.py"
-            if sync_script.exists():
-                result = subprocess.run(
-                    [sys.executable, str(sync_script)],
-                    capture_output=True, text=True, timeout=30,
-                )
-                if result.returncode == 0:
-                    print(f"  CLAUDE.md: {result.stdout.strip()}")
-                else:
-                    warn(f"sync-claude-md-brains.py failed (rc={result.returncode}): "
-                         f"{result.stderr.strip() or result.stdout.strip()}")
-            else:
-                warn(f"sync-claude-md-brains.py not found at {sync_script}")
-        except Exception as e:
-            warn(f"CLAUDE.md sync raised: {e}")
+    # (CLAUDE.md table sync removed 2026-07-03 — brains/index.json is the single
+    # registry; docs link to it instead of restating it.)
 
 
 if __name__ == "__main__":

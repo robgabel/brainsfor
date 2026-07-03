@@ -9,13 +9,8 @@ Fixes the two issues behind the "pack and Supabase are different brains" bug:
      secrets) in a loop until every atom has a 1536-dim embedding, so semantic
      search / search_brain_atoms / board Layer-2 work.
 
-cross_connections (Rob<->thinker links) FK-references scott_belsky_atoms only.
-A scott-belsky reload first clears the stale cross_connections rows (they point at
-atom ids that die in the rebuild); regenerate those links separately afterward.
-
 Usage:
   python3 scripts/finalize-supabase.py --brain reshma-saujani
-  python3 scripts/finalize-supabase.py --brain scott-belsky        # handles cross_connections
   python3 scripts/finalize-supabase.py --brain reshma-saujani --embed-only
   python3 scripts/finalize-supabase.py --brain reshma-saujani --dry-run
 
@@ -182,12 +177,8 @@ def main():
         else:
             if stale:
                 # Stale/wrong data (old build) — truncate, then reload from pack.
+                # (cross_connections special-casing removed 2026-07-03 — table dropped.)
                 say("i", f"reloading ({len(stale)} stale rows not in pack) — truncating")
-                if us == "scott_belsky":
-                    ok, msg = exec_sql(url, headers,
-                        "DELETE FROM cross_connections WHERE belsky_atom_id IN "
-                        "(SELECT id FROM scott_belsky_atoms)")
-                    say("OK" if ok else "WARN", f"cleared stale Belsky cross_connections: {msg}")
                 ok, msg = exec_sql(url, headers,
                     f"TRUNCATE TABLE {us}_connections, {us}_atoms CASCADE")
                 say("OK" if ok else "WARN", f"truncate {us}_*: {msg}")

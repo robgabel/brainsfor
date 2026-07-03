@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """
-build-brain.py — One-command brain pack builder for BrainsFor.
+build-brain.py — LEGACY input-driven builder, now used as a LIBRARY.
+
+⚠️  Do not invoke this directly for new brains. The canonical entry point is
+scripts/auto-build-brain.py (person name in, brain pack out), which imports
+functions from this module (fetch_transcript, decompose_transcript, stage
+helpers). This file is kept because auto-build depends on it — treat it as
+lib code, not a CLI.
 
 Takes a brain.json config and produces a complete, shippable brain pack.
 Chains all pipeline stages: atom generation, merging, synthesis, YouTube
