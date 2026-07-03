@@ -1,0 +1,30 @@
+{
+  "slug": "jesse-pujji",
+  "person": "Jesse Pujji",
+  "date": "2026-07-03",
+  "total_claims": 7,
+  "counts": {
+    "grounded": 4,
+    "superseded": 0,
+    "ungrounded": 1,
+    "unverifiable": 2
+  },
+  "defect_count": 1,
+  "high_severity_count": 0,
+  "fidelity_penalty": 8,
+  "cost": 0.0772,
+  "defects": [
+    {
+      "where": "hard_lessons[0].cost",
+      "claim": "Turned down a $60\u201375M offer because I was sure it was worth more \u2014 then drifted for years, carrying the regret that came with holding on too long.",
+      "figures": [
+        "$60"
+      ],
+      "status": "ungrounded",
+      "severity": "medium",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "[demoted: The first verbatim receipt explicitly states 'Jesse's refusal to sell Ampush at a $60\u201375M offer because he believed the ] The corpus mentions Ampush's sale process resulted in 8-figure numbers (below 9-figure expectations) and a minority stake sale to Red Ventures, but never mentions a specific $60-75M offer being turned down or years of drift from holding on too long \u2014 this specific figure and narrative appears to be invented or distorted."
+    }
+  ]
+}
