@@ -59,7 +59,7 @@ export const HERO_LANES: HeroLane[] = [
           "45952272-8a95-48ae-a751-f904a31ed98e",
         ],
         confidence: "0.93",
-        source: "SXSW interview, 2013",
+        source: "Lex Fridman #438",
       },
       {
         brain: "elon-musk",
