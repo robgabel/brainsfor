@@ -42,3 +42,9 @@ public/brains/**/*-brain-pack.zip
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Brain pack assets are BUILD ARTIFACTS: scripts/sync-brain-assets.mjs (npm prebuild)
+# regenerates all of public/brains/ from ../brains/*/pack on every build, locally and
+# on Vercel ("Include files outside the root directory" is enabled on the project).
+# The packs under brains/ are the single tracked copy.
+/public/brains/
