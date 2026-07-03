@@ -323,6 +323,39 @@ def check_brain_json_schema(brain_dir: Path, audit: BrainAudit):
     audit.scores["schema"] = (passed_checks / total_checks) if total_checks > 0 else 0.0
 
 
+# --- Quote language check -------------------------------------------------
+# All brain subjects speak English; a non-English original_quote means a wrong
+# caption track leaked through ingestion (2026-07-03: TED talks shipped
+# Albanian/Spanish quotes in 4 brains — human-authored foreign caption tracks
+# beat the English auto-track in transcript selection). Deterministic two-sided
+# stopword test: flag when foreign function-word share beats English share.
+_EN_STOPWORDS = set("""the a an and or but if is are was were be been being to of in on at by
+for with as from into that this these those it its i you your we our they their
+he she his her have has had do does did will would could should may might can
+not no so than then there here what which who when where how why all any some
+more most such about also just only very too much even still my me am""".split())
+_FOREIGN_STOPWORDS = set("""dhe të qe që në nje një është eshte për per nga me jemi jeni janë jane kur
+si ka nuk do ju ne ajo ai kjo ky tona jetës turpi
+que de la el en los las lo un una es y no si mi sus por como para del más mas
+esto esta ese esa hacer pero cuando vida muy
+le les des du et est dans ce cette pour pas vous nous sont avec qui sur
+der die das und ist nicht ein eine mit für auf sich
+di il che per non con sono della anche più
+o os as um uma não com são para""".split())
+_QUOTE_WORD_RE = re.compile(r"[a-zA-ZëçáéíóúàèùâêîôûäöüñßÀ-ÿ'’-]+")
+
+
+def quote_looks_non_english(quote: str) -> bool:
+    """True when a quote's foreign function-word share beats its English share.
+    Needs >=8 words to judge; English quotes containing a foreign idiom pass."""
+    words = [w.lower().strip("'’") for w in _QUOTE_WORD_RE.findall(quote or "")]
+    if len(words) < 8:
+        return False
+    en = sum(1 for w in words if w in _EN_STOPWORDS) / len(words)
+    foreign = sum(1 for w in words if w in _FOREIGN_STOPWORDS) / len(words)
+    return foreign > en and foreign > 0.10
+
+
 def check_pack_data(brain_dir: Path, audit: BrainAudit):
     """Validate brain-atoms.json structure and data quality."""
     atoms_path = brain_dir / "pack" / "brain-atoms.json"
@@ -392,7 +425,20 @@ def check_pack_data(brain_dir: Path, audit: BrainAudit):
                                   f"python3 scripts/enrich-connections.py --brain {audit.slug} --discover --llm --auto-apply"))
 
     # --- Voice Score ---
-    with_quote = sum(1 for a in atoms if a.get("original_quote"))
+    # Non-English quotes are a defect, not voice coverage: exclude them from the
+    # quote count AND raise an error so the leak can't ship silently again.
+    non_english = [a for a in atoms if a.get("original_quote")
+                   and quote_looks_non_english(a["original_quote"])]
+    audit.stats["non_english_quotes"] = len(non_english)
+    if non_english:
+        sample = (non_english[0].get("original_quote") or "")[:60].replace("\n", " ")
+        audit.issues.append(Issue("error", "quality",
+                                  f"{len(non_english)} original_quotes look non-English "
+                                  f"(wrong caption track ingested; e.g. \"{sample}…\")",
+                                  "Null the quotes in Supabase, re-export the pack, and re-ingest the "
+                                  "source with the English-only transcript fetch (build-brain.py)"))
+
+    with_quote = sum(1 for a in atoms if a.get("original_quote")) - len(non_english)
     with_implication = sum(1 for a in atoms if a.get("implication"))
     quote_pct = with_quote / atom_count if atom_count else 0
     impl_pct = with_implication / atom_count if atom_count else 0
