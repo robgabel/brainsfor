@@ -49,7 +49,7 @@ What distinguishes BrainsFor's visual language is the **indigo-tinted shadow sys
 - **Heading** (`#0f172a`): Primary headings, nav text, strong labels.
 - **Label** (`#334155`): Form labels, secondary headings, card titles.
 - **Body** (`#64748b`): Secondary text, descriptions, atom metadata.
-- **Muted** (`#94a3b8`): Placeholder text, disabled states, tertiary labels.
+- **Muted** (`#6b7688`): Tertiary labels, placeholder text, disabled states. WCAG-AA on white (4.6:1) — darkened from `#94a3b8`, which failed AA at 2.6:1.
 - **Success** (`#059669`): Active status, completeness, "brain loaded" states.
 - **Caution** (`#d97706`): Warnings, incomplete states (also serves as Knowledge Gold).
 
@@ -219,7 +219,7 @@ What distinguishes BrainsFor's visual language is the **indigo-tinted shadow sys
 - Focus: `2px solid #6366f1`, shadow `rgba(99, 102, 241, 0.15) 0px 0px 0px 3px`
 - Label: `#334155`, 14px Inter weight 500
 - Text: `#0f172a`
-- Placeholder: `#94a3b8`
+- Placeholder: `#6b7688`
 
 ### Navigation
 - Clean horizontal nav on white, sticky with `backdrop-filter: blur(12px)` and `rgba(255, 255, 255, 0.85)` background
@@ -375,7 +375,7 @@ What distinguishes BrainsFor's visual language is the **indigo-tinted shadow sys
 - Heading text: Deep Ink (`#0f172a`)
 - Label text: Slate (`#334155`)
 - Body text: Cool Gray (`#64748b`)
-- Muted text: Silver (`#94a3b8`)
+- Muted text: Slate (`#6b7688`)
 - Border: Soft (`#e2e8f0`)
 - Link: Brain Indigo (`#6366f1`)
 - Dark section: Brand Night (`#1e1b4b`)

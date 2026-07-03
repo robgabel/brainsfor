@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="px-6 pb-12 pt-20 md:pt-28">
+      <section className="px-6 pb-12 pt-14 md:pt-20">
         <div className="mx-auto max-w-[900px] text-center">
           <h1 className="font-display text-4xl font-light leading-[1.05] tracking-[-1.5px] text-deep-ink md:text-[56px]">
             Load a genius into your AI.
@@ -47,9 +47,6 @@ export default function Home() {
           {/* Dogfooded proof — concrete coding value, not a slogan */}
           <p className="mx-auto mt-4 max-w-[600px] text-[15px] leading-relaxed text-label">
             Elon refactors your code. Jobs and Belsky add taste. Dario reasons about AI.
-          </p>
-          <p className="mx-auto mt-1.5 max-w-[600px] text-sm italic text-muted">
-            Running three sessions at once? Give each its own brain and keep them straight.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4">

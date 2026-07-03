@@ -25,15 +25,20 @@ export function InstallCommand({
   const slugMatch = command.match(/brainsfor\/([a-z0-9-]+)/);
   const zipSlug = slugMatch?.[1];
 
+  const isSm = size === "sm";
+
   return (
-    <div className="inline-flex flex-col items-center gap-2">
+    <div className={`flex flex-col gap-2 ${isSm ? "w-full" : "inline-flex items-center"}`}>
       <button
         onClick={handleCopy}
-        className={`group relative inline-flex items-center gap-3 rounded-xl bg-deep-ink ${padding} font-mono ${textSize} text-[#e2e8f0] transition-all hover:shadow-brain-elevated`}
+        className={`group relative rounded-xl bg-deep-ink ${padding} font-mono ${textSize} text-[#e2e8f0] transition-all hover:shadow-brain-elevated ${isSm ? "flex w-full flex-col items-start gap-2" : "inline-flex items-center gap-3"}`}
       >
-        <span className="text-success">$</span>
-        <span>{command}</span>
-        <span className="ml-2 rounded-md bg-white/10 px-2 py-1 text-xs text-white/60 transition-colors group-hover:text-white/90">
+        {/* Command scrolls horizontally on narrow cards so the slug never breaks mid-word */}
+        <span className={`flex items-center gap-3 ${isSm ? "w-full overflow-x-auto" : ""}`}>
+          <span className="shrink-0 text-success">$</span>
+          <span className="whitespace-nowrap">{command}</span>
+        </span>
+        <span className={`shrink-0 rounded-md bg-white/10 px-2 py-1 text-xs text-white/60 transition-colors group-hover:text-white/90 ${isSm ? "self-end" : "ml-2"}`}>
           {copied ? "Copied!" : "Copy"}
         </span>
       </button>
