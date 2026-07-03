@@ -16,6 +16,10 @@ function formatAtom(atom: Atom) {
     topics: atom.topics,
     source_ref: atom.source_ref,
     source_date: atom.source_date,
+    claim_type: atom.claim_type ?? "opinion",
+    verification: atom.verification ?? "unverified",
+    proof_ref: atom.proof_ref ?? null,
+    verified_at: atom.verified_at ?? null,
   };
 }
 
@@ -40,6 +44,14 @@ export function registerQueryAtoms(server: McpServer, brainsDir: string) {
             .max(1)
             .optional()
             .describe("Minimum confidence score (0-1)"),
+          claim_type: z
+            .enum(["fact", "opinion", "prediction"])
+            .optional()
+            .describe("Filter to atoms of this epistemic type (fact/opinion/prediction)"),
+          verification: z
+            .enum(["unverified", "verified", "false", "contested"])
+            .optional()
+            .describe("Filter fact-claims by verification status"),
           limit: z
             .number()
             .int()
@@ -56,7 +68,7 @@ export function registerQueryAtoms(server: McpServer, brainsDir: string) {
         openWorldHint: false,
       },
     },
-    async ({ brain_slug, topics, cluster, confidence_min, limit }) => {
+    async ({ brain_slug, topics, cluster, confidence_min, claim_type, verification, limit }) => {
       const entry = findBrain(brainsDir, brain_slug);
       if (!entry) {
         return {
@@ -100,6 +112,14 @@ export function registerQueryAtoms(server: McpServer, brainsDir: string) {
         // Filter by confidence
         if (confidence_min !== undefined) {
           candidates = candidates.filter((a) => a.confidence >= confidence_min);
+        }
+
+        // Filter by epistemic status (defaults treat pre-classification atoms as opinion/unverified)
+        if (claim_type) {
+          candidates = candidates.filter((a) => (a.claim_type ?? "opinion") === claim_type);
+        }
+        if (verification) {
+          candidates = candidates.filter((a) => (a.verification ?? "unverified") === verification);
         }
 
         // Sort by confidence descending, take limit

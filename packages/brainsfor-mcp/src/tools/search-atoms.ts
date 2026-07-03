@@ -89,6 +89,10 @@ export function registerSearchAtoms(server: McpServer, brainsDir: string) {
           topics: atom.topics,
           source_ref: atom.source_ref,
           source_date: atom.source_date,
+          claim_type: atom.claim_type ?? "opinion",
+          verification: atom.verification ?? "unverified",
+          proof_ref: atom.proof_ref ?? null,
+          verified_at: atom.verified_at ?? null,
           relevance_score: Math.round(score * 100) / 100,
         }));
 

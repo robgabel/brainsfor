@@ -30,6 +30,12 @@ export interface DbAtom {
   source_ref: string | null;
   source_url: string | null;
   source_date: string | null;
+  // Epistemic status (universal). Packs exported before 2026-06-27 omit these; the
+  // mapper below defaults them to opinion / unverified (the safe pre-classification state).
+  claim_type: "fact" | "opinion" | "prediction";
+  verification: "unverified" | "verified" | "false" | "contested";
+  proof_ref: string | null;
+  verified_at: string | null;
 }
 
 /** Public origin that serves /brains/<slug>/brain-atoms.json from the CDN.
@@ -76,6 +82,10 @@ export async function fetchBrainAtoms(slug: string): Promise<DbAtom[]> {
       source_ref: (a.source_ref as string) ?? null,
       source_url: (a.source_url as string) ?? null,
       source_date: (a.source_date as string) ?? null,
+      claim_type: (a.claim_type as DbAtom["claim_type"]) ?? "opinion",
+      verification: (a.verification as DbAtom["verification"]) ?? "unverified",
+      proof_ref: (a.proof_ref as string) ?? null,
+      verified_at: (a.verified_at as string) ?? null,
     }));
     atomCache.set(slug, atoms);
     return atoms;

@@ -28,6 +28,10 @@ export interface Atom {
     confidence_tier: "high" | "medium" | "low";
     original_quote: string | null;
     implication: string | null;
+    claim_type?: "fact" | "opinion" | "prediction";
+    verification?: "unverified" | "verified" | "false" | "contested";
+    proof_ref?: string | null;
+    verified_at?: string | null;
     connections: AtomConnection[];
 }
 export interface TopLevelConnection {
