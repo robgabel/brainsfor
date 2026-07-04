@@ -511,6 +511,7 @@ Both paths run the same 6 phases (source discovery → scaffolding → ingestion
 
 ## Key Documents
 
+- **`PLAN-brain-depth.md`** — Elon showcase depth fix (63→75+: mess sources, anti-vindication hard-lessons re-mine, blown-timeline self-inversion atoms, contested-claim reclassification, voice) + tiered fleet improvement plan (voice-blocked → coverage-blocked → floor; cross-cutting transcript/temporal/epistemic passes). Grounded in the 2026-07-04 canonical scorecard.
 - **`LAUNCH.md`** — **THE canonical launch/marketing plan** (2026-07-04): P0/P1/P2 checklist + PRD-1..7 (legal pages, dashboard fix, install-path honesty, SEO metadata, go-public runbook, beta recruitment, launch-week content). Goal: 10 beta users. `PRD-site-overhaul.md` was deleted as superseded; GTM sections in `business-plan.md`/`IMPROVEMENTS.md` now point here.
 - **`docs/INFRA-AUDIT-2026-07-01.md`** — Infrastructure audit (Musk five-step algorithm pass): parts-count scorecard, delete list (2nd Supabase project, tracked pack duplication, dead scripts), runtime COGS fix (full brain-context.md sent uncached per API call → synthesis+atoms), pack-registry + multi-tenant sister-site architecture, top-10 ranked moves.
 - **`BACKLOG.md`** — **Brain candidate backlog.** 8 women thinkers queued for future brain packs, with source richness ratings, rationale, cross-brain potential, and build priority. **Start here when deciding what brain to build next.**
