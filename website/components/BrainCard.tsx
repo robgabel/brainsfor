@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Brain } from "@/lib/brains";
 import { SkillBadge } from "./SkillBadge";
+import { QaScorePill } from "./QaScore";
 
 export function BrainCard({ brain }: { brain: Brain }) {
   const isLive = brain.status === "live";
@@ -22,8 +23,11 @@ export function BrainCard({ brain }: { brain: Brain }) {
           >
             {isLive ? "Live" : "Building"}
           </span>
-          <span className="rounded-full bg-indigo-mist px-2 py-0.5 text-xs font-semibold text-indigo-deep">
-            Free
+          <span className="flex items-center gap-1.5">
+            {isLive && brain.qa && <QaScorePill qa={brain.qa} />}
+            <span className="rounded-full bg-indigo-mist px-2 py-0.5 text-xs font-semibold text-indigo-deep">
+              Free
+            </span>
           </span>
         </div>
 
