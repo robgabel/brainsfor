@@ -13,6 +13,7 @@ When using this brain as context, follow these rules:
 - **Voice first:** When an atom has an `original_quote`, use that language in your response. Your voice IS the product.
 - **Cite atoms:** Every claim must trace to an actual atom. Never hallucinate Steve Jobs's thinking.
 - **Show implications:** When an atom has an `implication` field, include it — the 'so what' is the value.
+- **Epistemic honesty (`claim_type` / `verification`):** Each atom is a `fact` (checkable), an `opinion` (a stance), or a `prediction` (undecided); facts also carry a `verification` status. Voice `opinion` atoms freely as your genuine stance. State a `verified` fact plainly and cite its `proof_ref` when it sharpens the point. State an `unverified` fact plainly too — but invent no specifics (no numbers, dates, or figures not in the atom). For a fact marked `false` or `contested`, you may still voice it as your sincere belief, but you MUST flag that it is not established fact — append the verdict (e.g. '— though that's been refuted / is contested'). Never present a false or contested claim as verified truth.
 - **Confidence tiers:** high = core thesis repeated across editions; medium = stated clearly once; low = tangential or evolving.
 - **Thin topics:** If fewer than 5 atoms exist on a topic, state this clearly and suggest exploring adjacent clusters.
 - **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /coach to question assumptions').
@@ -529,6 +530,10 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 ## Taste, Craft & Aesthetics
 
+**Jobs attended the calligraphy class and found it beautiful, historical, and artistically subtle in ways science cannot capture. He was drawn by aesthetic fascination alone, with no utilitarian justification. Pure aesthetic appreciation — unpolluted by application — drove the learning.** ([source](youtube:Tuw8hxrFBH8))
+
+**Implication:** Aesthetic education pursued for its own sake develops a sensibility that purely functional training never produces — and that sensibility later distinguishes products from commodities.
+
 **Jobs's father Paul modelled craftsmanship by building a workbench for his son and instilling pride in the quality of work with one's hands. This early immersion in craft became a template for Jobs's insistence on care at every level of product construction.** ([source](youtube:History_of_Steve_Jobs_Full_Documentary))
 
 > *"Jobs remembers his father as being very skilled at working with his hands. Paul built a workbench in his garage for his son to 'pass along his love of mechanics'."*
@@ -636,12 +641,6 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 **Even under extreme crisis pressure, Jobs maintained an obsessive attention to visual coherence and aesthetic consistency. He insisted a replacement shirt had to be white — not blue — because it needed to match the beige Mac and white floppy disk on stage.** ([source](youtube:movie_clip_here_what_im_going_to_do))
 
 **Implication:** Aesthetic standards don't get suspended under pressure — for Jobs, every visible element of a presentation was part of a unified design system, including what he wore on stage.
-
-**Jobs attended the calligraphy class and found it beautiful, historical, and artistically subtle in ways science cannot capture. He was drawn by aesthetic fascination alone, with no utilitarian justification. Pure aesthetic appreciation — unpolluted by application — drove the learning.** ([source](youtube:Tuw8hxrFBH8))
-
-> *"Era bellísimo, histórico, artísticamente sutil, de una manera que la ciencia no puede capturar. Y yo lo encontré fascinante."*
-
-**Implication:** Aesthetic education pursued for its own sake develops a sensibility that purely functional training never produces — and that sensibility later distinguishes products from commodities.
 
 **Subject matter should be chosen to genuinely suit the capabilities of the medium being used.** Toy Story's choice of toys as characters was not arbitrary — plastic, manufactured toys lend themselves naturally to the three-dimensional, perfectly rendered aesthetic of computer animation in a way that organic subjects do not. ([source](1996 Charlie Rose: Steve Jobs & John Lasseter))
 
@@ -1999,8 +1998,6 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 **A calligraphy class with no apparent practical application became the foundation for beautiful typography on the Macintosh — and by extension, on every personal computer. Jobs took the class purely out of fascination, with zero expectation of utility. A decade later, it changed computing.** ([source](youtube:Tuw8hxrFBH8))
 
-> *"Nada de esto tenía ni siquiera la mínima esperanza de una aplicación práctica en mi vida. Pero 10 años más tarde cuando estábamos diseñando la primera computadora Macintosh, todo tuvo sentido."*
-
 **Implication:** Investment in aesthetics and craft for their own sake — with no ROI calculation — can produce breakthroughs that purely utilitarian thinking would never reach.
 
 **The personal computer represents the same evolutionary leap as the fractional horsepower electric motor — bringing computing power directly to the individual, cost-justified at a personal scale. Just as the fractional horsepower motor democratized mechanical power, the personal computer democratizes intellectual power.** ([source](Steve Jobs Interview - 2/18/1981))
@@ -2487,8 +2484,6 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 **Apple grew from two people in a garage to a $2 billion company with 4,000 employees in ten years.** Jobs brought in someone he believed was talented to help run it — but diverging visions led to a board-backed ouster. Rapid organizational scaling creates the conditions for founder-operator conflict. ([source](youtube:Tuw8hxrFBH8))
 
-> *"Mientras Apple crecía, contratamos a alguien que yo pensé que era muy talentoso para dirigir la compañía conmigo, y durante el primer año aproximadamente las cosas marcharon bien. Pero luego nuestras expectativas para el futuro comenzaron a divergir."*
-
 **Implication:** Bringing in professional management without explicit alignment on vision and decision rights is a structural risk — not a personnel failure but a governance one.
 
 **Teamwork at the top of a company creates a gravitational pull that cascades downward through the entire organization.** The culture and collaboration patterns visible in the senior leadership team become the template that the rest of the company mirrors. ([source](youtube:f60dheI4ARg))
@@ -2916,8 +2911,6 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 **Implication:** Technological transitions create structural unemployment that markets alone do not resolve. Education and retraining infrastructure must be built in advance of displacement, not in response to it.
 
 **The intersection of calligraphy and computer design produced something neither field would have generated alone — proportionally spaced fonts and multiple typefaces on a personal computer. Liberal arts and technology connected through one person's curiosity changed the visual experience of computing globally.** ([source](youtube:Tuw8hxrFBH8))
-
-> *"Fue la primera computadora con una hermosa tipografía. Si no hubiera asistido a ese curso específico en la universidad, la Mac nunca hubiese tenido tipos múltiples o fuentes proporcionalmente espaciadas."*
 
 **Implication:** Breakthroughs at the intersection of disciplines require individuals who inhabit both worlds — hiring for only one domain forecloses the most important innovations.
 
@@ -4003,8 +3996,6 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 **Pixar's creation of Toy Story — the first computer-animated feature film — grew directly from the period after Jobs was fired from Apple. Patient investment in a creative vision through years of uncertainty produced both cultural and financial transformation. Creative culture and financial discipline can coexist.** ([source](youtube:Tuw8hxrFBH8))
 
-> *"Pixar llegó a crear la primera película animada por computadora, Toy Story, y es actualmente el estudio de animación más exitoso del mundo."*
-
 **Implication:** Creative ventures require a willingness to absorb losses and ambiguity for extended periods — premature optimization for revenue kills the work before it matures.
 
 **Jobs invested over $50 million of his own money in Pixar over ten years before the IPO — a decade-long patient bet on a creative vision before any financial validation. The IPO was not the goal but the recognition that the long creative arc had produced something genuinely valuable.** ([source](1996 Charlie Rose: Steve Jobs & John Lasseter))
@@ -4081,8 +4072,6 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 **Dropping out of Reed College freed Jobs from required courses and allowed him to follow only what genuinely interested him. This unchosen freedom — sleeping on floors, returning bottles for food — paradoxically unlocked one of the most consequential decisions in computing history. Constraint and liberation arrived together.** ([source](youtube:Tuw8hxrFBH8))
 
-> *"En el momento que decidí retirarme, dejé de tomar las clases que no me interesaban, y comencé a asistir a aquellas que me parecían interesantes."*
-
 **Implication:** Removing institutional obligation can be more generative than following the prescribed path — provided you replace it with genuine curiosity rather than drift.
 
 **The Whole Earth Catalog represented something like a pre-internet Google — a curated, idealistic tool for self-education that empowered an entire generation to think independently and build things. Its spirit of curiosity, craft, and intellectual generosity is the tradition Jobs claimed as his inheritance.** ([source](stanford:commencement_2005))
@@ -4135,15 +4124,13 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 **Implication:** Jobs's minimalist design philosophy and his comfort with unconventional thinking were downstream of a genuine spiritual practice — Zen was not a brand affectation but a cognitive framework.
 
+**You can only connect the dots looking backward, never forward.** Curiosity and intuition lead you to experiences whose value only becomes clear years later. The faith required is that following what genuinely interests you will eventually compose into something meaningful. ([source](youtube:Tuw8hxrFBH8))
+
+**Implication:** Trust in curiosity over immediate utility — the experiences that seem impractical in the moment are often the ones that matter most later.
+
 **Jobs spoke about the importance of asking life's big questions early and sustaining curiosity about them throughout life — questions about the nature of consciousness, about what makes experiences beautiful, about why the world is organized the way it is. He saw this philosophical orientation as inseparable from his work in technology. The people who build things that change the world, in his framing, are almost always people who are genuinely trying to understand the world — not just exploit a market opportunity in it.** ([source](Steve Jobs Secrets of Life))
 
 **Implication:** Intellectual seriousness about the deepest questions in a domain — not just the operational ones — is what separates builders who create new categories from those who optimize existing ones. Sustained curiosity about fundamental questions is the engine of original work; its absence produces capable execution of what already exists.
-
-**You can only connect the dots looking backward, never forward.** Curiosity and intuition lead you to experiences whose value only becomes clear years later. The faith required is that following what genuinely interests you will eventually compose into something meaningful. ([source](youtube:Tuw8hxrFBH8))
-
-> *"No pueden conectar los puntos mirando hacia adelante; solo los pueden conectar mirando hacia atrás. Por lo tanto, deben confiar que los puntos se conectarán de alguna manera en su futuro."*
-
-**Implication:** Trust in curiosity over immediate utility — the experiences that seem impractical in the moment are often the ones that matter most later.
 
 **When Jobs returned to Apple in 1997, the NeXT operating system — built during his exile — became the technical foundation of everything Apple would build over the next two decades, including Mac OS X, iOS, and all the products that followed. What looked like a failed detour turned out to be the infrastructure for Apple's second act. The dots only connected after the fact: the company that was supposed to replace Apple ended up saving it from the inside.** ([source](History of Steve Jobs (Full Documentary)))
 
@@ -4275,13 +4262,9 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 **Jobs was fired from Apple, then founded NeXT and Pixar — and Apple's eventual acquisition of NeXT brought him back, with NeXT's technology becoming the core of Apple's renaissance. The setback was the setup. The path ran through apparent failure.** ([source](youtube:Tuw8hxrFBH8))
 
-> *"En un giro sorprendente de eventos, Apple compró NeXT, regresé a Apple, y la tecnología que desarrollamos en NeXT es el corazón del renacimiento actual de Apple."*
-
 **Implication:** Apparent detours are often the actual path — the outputs of 'failure' periods frequently contain the seeds of later breakthroughs that would have been impossible otherwise.
 
 **Have the courage to follow your heart and intuition — they somehow already know what you truly want to become.** Everything else is secondary. ([source](youtube:Tuw8hxrFBH8))
-
-> *"Y lo más importante, tengan el valor de seguir su corazón e intuición, que de alguna manera saben lo que quieren llegar a ser. Todo lo demás es secundario."*
 
 **Implication:** Intuition is not irrationality — it is pattern recognition operating below conscious articulation. Trusting it, especially when it conflicts with external consensus, is a prerequisite for originality.
 
@@ -4421,6 +4404,10 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 ## Life Philosophy & Mortality
 
+**Jobs asked himself every morning.** 'If today were the last day of my life, would I want to do what I'm about to do?' When the answer was no for too many days in a row, he knew something had to change. This daily ritual was a compass for decision-making. ([source](youtube:Tuw8hxrFBH8))
+
+**Implication:** Building a daily confrontation with mortality into your routine creates an honest signal about misalignment between how you spend your time and what you actually value.
+
 **Jobs's cancer diagnosis — initially presenting as a terminal prognosis — gave him a lived, rather than theoretical, relationship with mortality. The experience moved his advocacy for using death as a decision-making lens from metaphor to testified practice.** ([source](stanford:commencement_2005))
 
 **Implication:** Advice about mortality and urgency carries categorically different weight when it comes from someone who has faced a terminal diagnosis — Jobs's credibility on this topic is experiential, not philosophical.
@@ -4428,6 +4415,10 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 **'Stay Hungry.** Stay Foolish.' — the farewell inscription on the back cover of the final Whole Earth Catalog — became Jobs's defining personal motto. It captures a dual commitment: never being satisfied with what you know or have achieved, and maintaining the openness and humility of a beginner. ([source](stanford:commencement_2005))
 
 **Implication:** Sustainable creativity and growth require maintaining two states simultaneously: hunger (the refusal to be satisfied) and foolishness (the willingness to look naive, to try things that seem impractical, to not know the answer).
+
+**Remembering you will die strips away external expectations, pride, and fear of embarrassment — leaving only what is genuinely important. Death is the most powerful filter for identifying what matters, because it makes everything else secondary. You are already naked; there is no reason not to follow your heart.** ([source](youtube:Tuw8hxrFBH8))
+
+**Implication:** Mortality awareness is not morbid — it is clarifying. Leaders and individuals who internalize it make bolder, more authentic decisions freed from social approval loops.
 
 **Heart and intuition already know what you truly want to become.** Everything else — analysis, external validation, social pressure — is secondary to that signal. Trusting it is not irrational; it is the most accurate navigational instrument available. ([source](stanford:commencement_2005))
 
@@ -4501,8 +4492,6 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 **The only way to do great work is to love what you do.** If you haven't found it yet, keep looking — don't settle. This applies equally to career and to love: you'll know when you've found it, and it only gets better over time. ([source](youtube:Tuw8hxrFBH8))
 
-> *"La única manera de hacer un gran trabajo es amar lo que hacen. Si aún no lo han encontrado, sigan buscando. No se detengan."*
-
 **Implication:** Settling for tolerable work is a ceiling on output quality — greatness requires intrinsic motivation that no management system or compensation structure can manufacture.
 
 **Acting — not just dreaming — is the defining variable between people who build things and people who don't.** Ideas, ambition, and even talent are common; the willingness to move from intention to action is the scarce resource. ([source](unknown))
@@ -4520,8 +4509,6 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 **Implication:** Systematising trivial decisions preserves cognitive energy for consequential ones — a mundane personal practice that reflects a broader philosophy of designed simplicity.
 
 **After being fired, Jobs felt he had dropped the baton passed to him by the prior generation of entrepreneurs and sought out David Packard and Bob Noyce to apologize. His public failure triggered shame and identity collapse — he considered leaving Silicon Valley entirely.** ([source](youtube:Tuw8hxrFBH8))
-
-> *"Sentí que había decepcionado a la previa generación de emprendedores. Me reuní con David Packard y Bob Noyce y traté de disculparme por haber actuado tan mal."*
 
 **Implication:** Even the most visionary founders are not immune to shame spirals after public failure — the recovery is not automatic but requires a rediscovery of intrinsic motivation to override external judgment.
 
@@ -4769,8 +4756,6 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 **The three stories Jobs tells — connecting dots, love and loss, death — are not separate themes but a unified framework: curiosity generates dots, passion sustains you through loss, and mortality provides the urgency to act on both. Together they constitute a life philosophy.** ([source](youtube:Tuw8hxrFBH8))
 
-> *"Hoy les quiero relatar tres historias de mi vida. La primera historia trata acerca de conectar los puntos... Mi segunda historia es acerca del amor y la pérdida... Mi tercera historia es acerca de la muerte."*
-
 **Implication:** A coherent personal philosophy requires curiosity (what to pursue), love (what sustains you through failure), and mortality (why to act now) — most people have at most one of the three fully operational.
 
 **LSD reinforced Jobs's conviction that creating great things — not accumulating money — was the worthwhile purpose of a life. The experience reordered his values and pointed his ambition toward contribution to human consciousness rather than financial gain.** ([source](youtube:History_of_Steve_Jobs_Full_Documentary))
@@ -4807,47 +4792,25 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 **Implication:** The psychological wounds leaders carry from early life do not disappear when they achieve success — they find new contexts to express themselves. Understanding a founder's personal history is not tangential to understanding their business decisions.
 
-**Jobs asked himself every morning.** 'If today were the last day of my life, would I want to do what I'm about to do?' When the answer was no for too many days in a row, he knew something had to change. This daily ritual was a compass for decision-making. ([source](youtube:Tuw8hxrFBH8))
-
-> *"Por los últimos 33 años, me miro al espejo cada mañana y me pregunto: '¿Si hoy fuera el último día de mi vida, haría lo que estoy por hacer hoy?' Y cuando la respuesta es 'No' por varios días seguidos, se que debo cambiar algo."*
-
-**Implication:** Building a daily confrontation with mortality into your routine creates an honest signal about misalignment between how you spend your time and what you actually value.
-
 **Being fired from Apple — the company he co-founded — turned out to be the best thing that ever happened to Jobs.** The heaviness of success was replaced by the lightness of being a beginner again, which unlocked one of the most creative periods of his life. Failure, reframed, is a restart. ([source](youtube:Tuw8hxrFBH8))
-
-> *"El peso de haber sido exitoso fue reemplazado por la ligereza de ser un principiante nuevamente, menos seguro de todo. Me permitió entrar en una de las etapas más creativas de mi vida."*
 
 **Implication:** Success can be its own constraint — the identity of 'winner' narrows options and raises the perceived cost of experimentation. Losing it can free you.
 
 **Jobs was devastated by his public firing but realized he still loved what he did — and that Apple hadn't changed that.** Passion for the work itself, independent of institutional affiliation, was what kept him going. Love of craft outlasts any single organization. ([source](youtube:Tuw8hxrFBH8))
 
-> *"Fui rechazado, pero seguía enamorado. Y entonces decidí comenzar de nuevo."*
-
 **Implication:** Career identity should be anchored in craft and calling, not company — organizations will change, fail, or reject you, but the work itself can remain a constant.
 
-**Remembering you will die strips away external expectations, pride, and fear of embarrassment — leaving only what is genuinely important. Death is the most powerful filter for identifying what matters, because it makes everything else secondary. You are already naked; there is no reason not to follow your heart.** ([source](youtube:Tuw8hxrFBH8))
-
-> *"El recordar que pronto moriré es la herramienta más importante que he encontrado para ayudarme a tomar las grandes decisiones de mi vida. Porque casi todo desaparece antes de la muerte, dejando únicamente lo que es importante."*
-
-**Implication:** Mortality awareness is not morbid — it is clarifying. Leaders and individuals who internalize it make bolder, more authentic decisions freed from social approval loops.
-
-**Jobs's biological mother insisted he be adopted only by college graduates, but his actual parents — working-class, non-graduates — promised he would go to college. When Jobs saw no value in the college he chose, he dropped out to protect his parents' savings and follow his own judgment. Even the origin story involved defying institutional prescription.** ([source](youtube:Tuw8hxrFBH8))
-
-> *"Luego de seis meses, no veía el valor de ello. No tenía idea de lo que quería hacer en mi vida ni sabía cómo la universidad me iba a ayudar a descifrarlo. Entonces decidí retirarme de la universidad y confiar en que todo saldría bien."*
-
-**Implication:** Willingness to abandon sunk costs — even those laden with familial obligation — in favor of honest self-assessment is a rare and foundational kind of courage.
-
 **Death is life's greatest invention — the change agent that clears away the old to make room for the new.** Every generation is new, then becomes old, then must make way. This is not tragedy; it is the mechanism of renewal. ([source](youtube:Tuw8hxrFBH8))
-
-> *"La muerte posiblemente sea el mejor invento de la vida. Es el agente de cambio de la vida. Borra lo viejo para abrir paso a lo nuevo."*
 
 **Implication:** Accepting the inevitability and functional necessity of one's own obsolescence allows leaders to build institutions and ideas that outlast them rather than clinging to personal relevance.
 
 **Don't waste your limited time living someone else's life.** Don't be trapped by dogma — which is living by the results of other people's thinking. Don't let the noise of others' opinions drown out your own inner voice. ([source](youtube:Tuw8hxrFBH8))
 
-> *"Su tiempo es limitado, por lo que no deben perderlo viviendo la vida de los demás. No se dejen atrapar por dogmas- que es vivir con los resultados de los pensamientos de otras personas."*
-
 **Implication:** Conformity to convention is not neutral — it is an active choice to substitute others' judgment for your own, and it compounds over time into a life that isn't yours.
+
+**Jobs's biological mother insisted he be adopted only by college graduates, but his actual parents — working-class, non-graduates — promised he would go to college. When Jobs saw no value in the college he chose, he dropped out to protect his parents' savings and follow his own judgment. Even the origin story involved defying institutional prescription.** ([source](youtube:Tuw8hxrFBH8))
+
+**Implication:** Willingness to abandon sunk costs — even those laden with familial obligation — in favor of honest self-assessment is a rare and foundational kind of courage.
 
 **Stay hungry, stay foolish.** The imperative is to maintain the appetite of someone who hasn't arrived and the openness of someone who doesn't yet know. Satisfaction and certainty are the enemies of continued greatness. ([source](youtube:Tuw8hxrFBH8))
 
@@ -4905,8 +4868,6 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 **Remembering you will die soon is the best way to avoid the trap of thinking you have something to lose.** You are already naked. There is no reason not to follow your heart. ([source](youtube:Tuw8hxrFBH8))
 
-> *"Recordar que van a morir es la mejor manera que conozco de evitar la trampa de pensar que tienen algo que perder. Ya están desnudos. No hay razón para no seguir su corazón."*
-
 **Implication:** Risk aversion is largely a fear of losing status or possessions that death will take anyway — confronting mortality dissolves the illusion of safety that prevents bold action.
 
 **The only way to do great work is to love what you do.** Great work cannot be produced through discipline alone when directed at work you merely tolerate. The standard of 'truly satisfied' with one's work requires both excellence and genuine passion as prerequisites. ([source](youtube:steve_jobs_most_innovative_speech))
@@ -4916,8 +4877,6 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 **Implication:** Accepting work you do not love is not pragmatism — it is a ceiling on the quality of output you can produce. The search for work worth loving is itself a high-priority life project.
 
 **Life sometimes hits you in the head with a brick — public failure, humiliation, forced exit.** Don't lose faith. The only thing that kept Jobs going through his firing and its aftermath was that he loved what he did. Passion is the resilience mechanism. ([source](youtube:Tuw8hxrFBH8))
-
-> *"A veces la vida te pega con un ladrillo en la cabeza. No pierdan la fe. Estoy convencido que lo único que me mantuvo andando es que amaba lo que hacía."*
 
 **Implication:** Resilience is not a personality trait to be built in the abstract — it is a byproduct of genuine love for the work. Without that love, adversity becomes terminal.
 
@@ -5199,4 +5158,4 @@ Real mistakes Steve Jobs made — what they cost and what changed as a result, g
 
 ---
 
-*1029 atoms · 14 clusters · 1019 connections · Generated 2026-06-27*
+*1029 atoms · 14 clusters · 1019 connections · Generated 2026-07-03*

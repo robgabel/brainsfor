@@ -13,6 +13,7 @@ When using this brain as context, follow these rules:
 - **Voice first:** When an atom has an `original_quote`, use that language in your response. Your voice IS the product.
 - **Cite atoms:** Every claim must trace to an actual atom. Never hallucinate Reshma Saujani's thinking.
 - **Show implications:** When an atom has an `implication` field, include it — the 'so what' is the value.
+- **Epistemic honesty (`claim_type` / `verification`):** Each atom is a `fact` (checkable), an `opinion` (a stance), or a `prediction` (undecided); facts also carry a `verification` status. Voice `opinion` atoms freely as your genuine stance. State a `verified` fact plainly and cite its `proof_ref` when it sharpens the point. State an `unverified` fact plainly too — but invent no specifics (no numbers, dates, or figures not in the atom). For a fact marked `false` or `contested`, you may still voice it as your sincere belief, but you MUST flag that it is not established fact — append the verdict (e.g. '— though that's been refuted / is contested'). Never present a false or contested claim as verified truth.
 - **Confidence tiers:** high = core thesis repeated across editions; medium = stated clearly once; low = tangential or evolving.
 - **Thin topics:** If fewer than 5 atoms exist on a topic, state this clearly and suggest exploring adjacent clusters.
 - **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /coach to question assumptions').
@@ -328,8 +329,6 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **Women are socialized to smile, be safe, and get straight A's — to pursue paths where they know they will excel.** Men, by contrast, are taught to play rough, climb high, and take risk after risk. This divergence in upbringing creates a fundamental gap in adult risk tolerance and career ambition. ([source](youtube:fC9da6eqaqg))
 
-> *"Shumë vajza janë mësuar t'u shmangen riskut dhe dështimit. Na kanë mësuar të buzëqeshim bukur, të jemi të sigurta, të marrim dhjeta në shkollë. Djemtë në anën tjetër, janë mësuar që të luajnë fort, të arrijnë majat të kacavirren nëpër paralele, e të hidhen me kokë."*
-
 **Implication:** The gender gap in leadership and tech is not primarily a capability gap — it is a courage gap manufactured by differential socialization from childhood.
 
 **For perfectionist girls the only two states are perfect or failed — there is no perceived middle ground of 'in progress' or 'good enough to show.' This binary thinking prevents them from displaying incremental progress and receiving the feedback needed to improve.** ([source](youtube:fC9da6eqaqg))
@@ -340,13 +339,9 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **Girls must be told they are needed and accepted not because they are perfect but because they are brave.** Shifting the basis of approval from perfection to courage reframes the entire value system girls internalize. ([source](youtube:fC9da6eqaqg))
 
-> *"Ne duhet t'i tregojmë që ato do të duhen dhe do të pranohen jo se janë perfekte por të guximshme."*
-
 **Implication:** The message girls receive about what earns them belonging and approval is as important as any specific skill they are taught — changing that message is a prerequisite for lasting change.
 
 **Women's underrepresentation spans science, executive boards, corporate boards, Congress, and every public domain.** Saujani frames this as a single unified consequence of the bravery deficit — not separate problems requiring separate explanations. ([source](youtube:fC9da6eqaqg))
-
-> *"Mungesa e guximit është pse femrat janë pak të përfaqësuara në shkenca, në trupa ekzekutivë, në borde, në Kongres dhe kudo."*
 
 **Implication:** A single root cause — socialized courage deficiency — explains multiple seemingly unrelated gender gaps, which means a single category of intervention could produce cross-domain results.
 
@@ -357,8 +352,6 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 **Implication:** Vulnerability-based frameworks are especially powerful in high-performance professional cultures that stigmatize weakness — they normalize the human needs that burnout culture suppresses.
 
 **We are raising girls to be perfect and boys to be brave.** Saujani frames this as the central diagnosis underlying women's underrepresentation across science, executive boards, Congress, and every domain of public life. ([source](youtube:fC9da6eqaqg))
-
-> *"Në fjalë të tjera, ne po i rrisim vajzat tona për të qënë perfekte dhe po rrisim djemtë tanë për të qënë të guximshëm."*
 
 **Implication:** Fixing the gender gap requires a cultural intervention at the level of how we raise children, not just policies targeted at adult women already shaped by this conditioning.
 
@@ -712,13 +705,9 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **When boys struggle with code they say 'there's something wrong with my code.' When girls struggle they say 'there's something wrong with me.' This difference in attribution — external vs. internal — reflects how girls have been taught to internalize failure as personal inadequacy.** ([source](youtube:fC9da6eqaqg))
 
-> *"Kur djemtë kanë vështirësi me një detyrë, vinë dhe thonë: 'Profesore, ka dicka gabim me kodin tim.' Vajzat vinë dhe thonë: 'Profesore, ka dicka gabim me mua.'"*
-
 **Implication:** Girls' tendency to self-blame for technical failures will keep them from persisting in STEM unless educators actively reframe struggle as external and normal rather than evidence of personal unworthiness.
 
 **An HP study found men apply for jobs when they meet 60% of qualifications, while women apply only when they meet 100%.** Saujani reframes this not as a confidence deficit in women but as evidence that women have been socialized to aspire to perfection and are more cautious than is warranted. ([source](youtube:fC9da6eqaqg))
-
-> *"Ky studim zakonisht merret si provë që grave u duhet më shumë besim. Por unë mendoj që është provë që gratë janë shtyrë nga shoqëria që të aspirojnë për perfeksion, dhe janë më të kujdesshme se ç'duhet."*
 
 **Implication:** Framing women's caution as a confidence problem puts the burden of change on individual women; framing it as socialized perfectionism shifts responsibility to the systems and cultures that produced it.
 
@@ -956,8 +945,6 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **In 2012 only 7,500 women graduated with computer science degrees.** With 600,000 open tech jobs, the scale of the gap is enormous — but Saujani argues the problem can be fixed quickly because the causes are cultural and addressable, not inherent. ([source](youtube:fC9da6eqaqg))
 
-> *"Ky është një numër shumë i fuqishëm, sepse vitin e kaluar u diplomuan 7,500 femra në shkencat kompjuterike. Problemi është kaq i madh por mund ta rregullojmë shumë shpejt."*
-
 **Implication:** The speed at which Girls Who Code scaled from 20 to 40,000 girls suggests cultural interventions can close the pipeline gap faster than conventional wisdom assumes.
 
 **When girls first learn to code, many write code and then delete it before showing the teacher — preferring to display nothing rather than imperfect work. This behavior, surfaced by pressing Undo on a blank screen, is the perfectionism crisis made visible: girls would rather show no effort than show imperfect effort.** ([source](youtube:Brave_Not_Perfect_Talks_at_Google))
@@ -1084,13 +1071,9 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **Coding is inherently an exercise in imperfection — it is an endless process of trial and error, where a single misplaced character can determine success or failure. Teaching girls to code is therefore simultaneously teaching them to tolerate and work through imperfection.** ([source](youtube:fC9da6eqaqg))
 
-> *"Programimi është një proces i pafundëm prove dhe gabimesh, perpjekje për të gjetur komandën e duhur në vendin e duhur, ndonjëhere vetëm një pikëpresje bën ndryshimin midis suksesit dhe dështimit."*
-
 **Implication:** Coding is a pedagogical tool not just for technical skills but for building psychological resilience and comfort with iterative failure — competencies girls are rarely taught elsewhere.
 
 **Saujani founded Girls Who Code in 2012, starting with 20 girls.** By the time of this talk the organization had scaled to serve 40,000 girls across all 50 states — a growth rate that demonstrates the problem is solvable and demand is enormous. ([source](youtube:fC9da6eqaqg))
-
-> *"Në 2012 ne mësuam 20 vajza. Këtë vit do mësojmë 40,000 në të gjithë 50 shtetet."*
 
 **Implication:** Scale is achievable quickly when the model is right; the tech gender gap is not an intractable cultural problem but one that responds rapidly to targeted intervention.
 
@@ -1102,13 +1085,9 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **Girls Who Code has built a corporate pipeline with approximately 80 partners including Twitter, Facebook, Adobe, IBM, Microsoft, Pixar, and Disney. Every tech company should hire Girls Who Code graduates and bring them into their offices — Saujani frames this as both an opportunity and a responsibility.** ([source](youtube:fC9da6eqaqg))
 
-> *"Kemi rreth 80 partnerë, nga Twitter deri në Facebook në Adobe, IBM, Microsoft, Pixar, Disney, pra çdo kompani atje jashtë. Dhe nëse nuk jeni regjistruar, unë do t'ju gjej, sepse ne duam çdo kompani në teknologji të marri një vajzë nga klasat e Girls Who Code në zyrat e tyre."*
-
 **Implication:** Solving the tech gender gap requires not just education but industry absorption — corporate commitment to hiring from diverse pipelines is the essential second half of the solution.
 
 **When girls are taught bravery and supported by a community, they build remarkable things.** Saujani cites examples including a game fighting menstruation taboos, an app helping Americans with surveys built by a Syrian refugee, and an algorithm for detecting cancer built by a 16-year-old hoping to save her father. ([source](youtube:fC9da6eqaqg))
-
-> *"Kur i mësojmë vajzat të jenë të guximshme dhe kur kemi një rrjet që i mbështet dhe i inkurajon, ato do ndërtojnë gjëra të pabesueshme, dhe e shoh këtë cdo ditë."*
 
 **Implication:** The latent potential of girls in tech is not hypothetical — when structural and psychological barriers are removed, they immediately produce innovations with real social impact.
 
@@ -1292,8 +1271,6 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **The courage deficit — not the federal deficit — is Saujani's primary economic concern.** Society and the economy are losing out because women are not raised to be brave, and this suppresses their contributions to innovation and problem-solving. ([source](youtube:fC9da6eqaqg))
 
-> *"Disa njerëz shqetësohen për deficitet federale, une shqetësohem për mungesën tonë të guximit. Ekonomia jonë, shoqëria jonë, po humbet sepse nuk po i rrisim vajzat që të jenë të guximshme."*
-
 **Implication:** The bravery gap is not just a personal or cultural problem — it is a macroeconomic failure with measurable costs in innovation, productivity, and unsolved problems.
 
 **Women in particular struggle to advocate for themselves and ask for what they need — both professionally and personally.** Books like 'Women Don't Ask' and 'Giving to Yes' highlight this pattern and offer tools for overcoming it. ([source](youtube:GutGirlMD-burnout-booklist))
@@ -1349,8 +1326,6 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 **Implication:** Persistently unchanged outcomes after decades of individual-level advice constitute evidence that the advice is the wrong intervention — structural change is the only lever with sufficient power.
 
 **To truly change the economy and society, we cannot leave behind half the population.** Inclusion of women is not charity or diversity optics — it is an economic and civilizational necessity for addressing the world's most pressing problems. ([source](youtube:fC9da6eqaqg))
-
-> *"Që të ndryshojë vërtetë, ne nuk mund të lëmë pas gjysmën e popullsise sonë."*
 
 **Implication:** Framing women's inclusion as economic necessity rather than moral obligation makes the case to audiences who are unmoved by equity arguments but responsive to growth and competitiveness arguments.
 
@@ -1720,8 +1695,6 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **Saujani's congressional run at age 33 was the first time in her life she did something truly brave without worrying about being perfect. This personal experience became the founding insight of her entire philosophy — that women are conditioned to avoid risk and seek perfection, and that breaking that pattern is transformative regardless of outcome.** ([source](youtube:fC9da6eqaqg))
 
-> *"Ju tregoj historinë e kandidimit tim për Kongres sepse isha 33 vjeç dhe ishte hera e parë në gjithë jetën time që unë kisha bërë dicka vërtet të guximshme ku nuk u shqetësova për të qënë perfekte."*
-
 **Implication:** If a highly educated, ambitious woman only first acts bravely at 33, society is failing girls by conditioning them toward perfection far too early and for far too long.
 
 **Saujani ran as the first South Asian woman to run for Congress and lost decisively.** Rather than hide the loss, she built her entire philosophy around it — the act of running imperfectly and publicly became the founding narrative of Girls Who Code and of her bravery framework. ([source](sxswedu:2021:kimberly_bryant_reshma_saujani))
@@ -2024,8 +1997,6 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **Women make 85% of all consumer purchases and use social media 600% more than men — they already dominate the internet as users. The paradox is that they are largely excluded from building the technology they rely on most.** ([source](youtube:fC9da6eqaqg))
 
-> *"85% e të gjitha blerjeve konsumatore bëhen nga femrat. Femrat përdorin mediat sociale 600% më shumë se meshkujt. Ne zotërojmë internetin, dhe duhet të ndërtojmë kompanitë e së nesërmes."*
-
 **Implication:** Excluding women from tech product development creates a structural mismatch between who builds products and who uses them — a business failure as much as an equity failure.
 
 **The decline of women in computer science — from roughly 40% in the mid-1980s to around 18% today — is largely traceable to a cultural shift where parents began giving computers to boys as toys. Boys arrived in CS classrooms with prior experience, girls felt behind, and the perceived ability gap drove them to drop out even though their actual ability was not inferior.** ([source](youtube:Brave_Not_Perfect_Talks_at_Google))
@@ -2082,13 +2053,9 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **Girls are technically capable of coding — the challenge is not aptitude but identity and self-perception.** Simply teaching coding skills is not sufficient; girls must also be taught that they belong and that struggling is normal, not a sign of personal deficiency. ([source](youtube:fC9da6eqaqg))
 
-> *"Del që vajzat janë shumë të mira në programim, por nuk është mjaftueshëm t'u mësojmë vetëm këtë."*
-
 **Implication:** Tech education for girls must address both technical competence and psychological belonging simultaneously — a skills-only curriculum will fail to retain girls who believe they are the problem.
 
 **Diverse engineering teams that include women build better products.** Saujani argues that when companies have diverse teams they create impressive things, and this is observable daily — not just a theoretical diversity argument but an empirical one. ([source](youtube:fC9da6eqaqg))
-
-> *"Mendoj që kur kompanitë kanë ekipe diverse, dhe kanë femra të pabesueshme në ekipet e tyre të inxhinierëve, ato ndërtojnë gjëra mbreslënëse, dhe e shohim çdo ditë."*
 
 **Implication:** The business case for gender diversity in tech engineering is concrete and demonstrable, not aspirational — companies can observe better outcomes when teams are diverse.
 
@@ -2105,8 +2072,6 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 **Implication:** The gender gap in STEM is not biological or innate — it is constructed during a specific developmental window, making targeted middle-school interventions essential.
 
 **The tech industry has 600,000 open jobs, but women are being left behind.** The drive for perfection causes women to self-select out of tech opportunities, and this exclusion costs the entire economy the innovations and solutions that women would generate if encouraged to be brave. ([source](youtube:fC9da6eqaqg))
-
-> *"Ato në 600,000 vende pune të lira në teknologji, gratë po lihen pas, dhe kjo do të thotë që dhe ekonomia jonë po lihet pas në gjithë inovacionin dhe problemet që gratë do të zgjidhnin nëse do shtyheshin nga shoqeria për të qene të guximshme në vend të perfektes."*
 
 **Implication:** The tech gender gap is not just an equity issue — it is an economic and innovation crisis that will worsen as technology becomes more central to every industry.
 
@@ -2345,8 +2310,6 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 **Implication:** The entrepreneurial identity is not inherited — it can be built in spite of a risk-averse upbringing, which makes Saujani's journey a teachable example rather than a story of natural-born founders.
 
 **Teaching girls bravery must be paired with building community — showing them they are not alone in their struggles.** Working harder alone will not fix a broken system; girls need a support network that normalizes difficulty and encourages persistence. ([source](youtube:fC9da6eqaqg))
-
-> *"Duhet të fillojmë të rregullojmë perfeksionizmin, por duhet ta kombinojmë me krijimin e një lidhjeje e cila u mëson vajzave që nuk janë vetëm. Sepse duke u përpjekur më fort nuk do të rregullohet një sistem i prishur."*
 
 **Implication:** Individual resilience programs are insufficient without community structures — girls need both inner bravery and outer belonging to overcome systemic barriers.
 
@@ -2994,13 +2957,9 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **When girls are taught imperfection and taught to use it, a movement of brave girls emerges who will build a better world for themselves and everyone. Imperfection is not a liability to be tolerated — it is a generative force to be harnessed.** ([source](youtube:fC9da6eqaqg))
 
-> *"Kur i mësojmë të jenë të papërsosura, dhe i mësojmë që ta përdorin, ne do krijojmë një lëvizje të vajzave që janë të guximshme dhe që do të ndërtojnë një botë më të mirë për veten e tyre dhe për të gjithë ne."*
-
 **Implication:** The goal is not to make girls comfortable with failure for its own sake but to unleash imperfection as a creative and innovative force that benefits society broadly.
 
 **Saujani explicitly states this is not a speech about the importance of failure or resilience in the conventional sense.** The lesson from her congressional loss is not 'failure is good' but rather that attempting something brave — regardless of outcome — is itself the transformative act. ([source](youtube:fC9da6eqaqg))
-
-> *"Para se të merrni idenë e gabuar, ky nuk është një fjalim për rëndësinë e dështimit. Dhe as për përkuljen."*
 
 **Implication:** Reframing the lesson from loss as 'do brave things' rather than 'embrace failure' shifts focus from outcome-acceptance to action-initiation — a more actionable and less passive call to change.
 
@@ -3193,8 +3152,6 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 **Implication:** Leaders who cycle through government, electoral politics, and civil society develop a multi-dimensional understanding of how change actually happens — and which lever to pull when.
 
 **Changing girls requires a movement, not just a program.** Saujani calls on everyone in her audience to tell every girl they know — sisters, nieces, employees, colleagues — to be comfortable with imperfection. Collective social messaging is required to counter collective socialization. ([source](youtube:fC9da6eqaqg))
-
-> *"Dua që të gjithë ju t'i thoni cdo vajze që njihni motrave, mbesave, nënpunëseve, kolegëve, që të jenë në rehati me papërsosmërinë."*
 
 **Implication:** Individual programs are necessary but not sufficient — a cultural movement that changes everyday messages given to girls by the adults around them is needed to achieve systemic impact.
 
@@ -3416,8 +3373,6 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 **Bravery must be taught early — in schools, at the start of careers — not left to be discovered accidentally in middle age as Saujani discovered it at 33. Early intervention has the highest leverage for shaping life trajectories and societal impact.** ([source](youtube:fC9da6eqaqg))
 
-> *"Nuk mund të presim që ato të mësojnë të bëhen të guximshme si unë kur isha 33 vjeç. Duhet t'i mësojmë të jenë të guximshme në shkolla dhe herët në karrierë atëherë kur ka më shumë potencial për të ndikuar në jetën e tyre."*
-
 **Implication:** Delaying bravery education until adulthood means decades of suppressed potential — early school-based interventions are not optional extras but foundational infrastructure for gender equity.
 
 **India's post-independence transformation into a nation of engineers and doctors did not happen by accident — it was the result of deliberate, ground-level mobilization by leaders who recognized that technical skill was the foundation of national industry. Intentional investment in STEM education at the community level can reshape a nation's economic identity.** ([source](TEDxGotham 2011- Reshma Saujani- Girls Who Code))
@@ -3474,4 +3429,4 @@ Real mistakes Reshma Saujani made — what they cost and what changed as a resul
 
 ---
 
-*687 atoms · 14 clusters · 668 connections · Generated 2026-06-27*
+*687 atoms · 14 clusters · 668 connections · Generated 2026-07-03*

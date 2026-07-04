@@ -13,12 +13,97 @@
       "inspired_by": 30,
       "extends": 76
     },
-    "last_updated": "2026-06-27",
+    "last_updated": "2026-07-03",
     "coverage": "400+ episodes of The Drive podcast, reviews and interviews about Outlive (2023), TED talk on metabolic health, Joe Rogan Experience episodes #1108 and #1961, Huberman Lab appearances, and detailed blog posts",
     "bio": "Peter Attia is a physician and longevity expert who has reshaped how high-performers think about health across decades. His book 'Outlive' and podcast 'The Drive' are the primary sources for evidence-based longevity strategy, blending mechanistic biochemistry with practical behavior change and a deeply personal reckoning with emotional health.",
     "possessive": "his"
   },
   "atoms": [
+    {
+      "id": "2e792cf7-64e4-4e03-9e15-d033e6bcbf81",
+      "content": "Despite exercising 3-4 hours per day and following conventional dietary guidelines precisely, Attia himself developed metabolic syndrome and insulin resistance. This personal experience shattered his confidence in standard nutritional advice and forced him to question the dominant causal framework around obesity and metabolic disease.",
+      "cluster": "metabolic_health",
+      "topics": [
+        "insulin_resistance",
+        "metabolic_syndrome",
+        "dietary_guidelines",
+        "personal_experience"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "unverified",
+      "implication": "Adherence to conventional diet-and-exercise recommendations is not sufficient protection against insulin resistance, suggesting the underlying causal model is flawed or incomplete.",
+      "connections": [
+        {
+          "target_id": "92d25f45-897e-4397-9489-6bab56736049",
+          "relationship": "related",
+          "confidence": 0.39
+        },
+        {
+          "target_id": "fe791d80-73fd-445c-9fc5-6a3af681d160",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
+      "id": "0ef802ea-0030-4cb4-bc68-96a474591dec",
+      "content": "Processed grains are known to rapidly elevate blood glucose in the short term, and there is evidence that sugar may directly induce insulin resistance. Attia hypothesizes that the obesity and diabetes epidemic is driven primarily through this mechanism \u2014 refined grain and sugar consumption causing insulin resistance \u2014 rather than through simple overeating or sedentary behavior.",
+      "cluster": "nutrition_biochemistry",
+      "topics": [
+        "refined_carbohydrates",
+        "sugar",
+        "insulin_resistance",
+        "blood_glucose",
+        "dietary_policy"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Public health messaging focused on 'eat less, move more' may be attacking the wrong variable; policies targeting refined grain and added sugar consumption specifically may have larger metabolic impact than broad calorie reduction campaigns.",
+      "connections": [
+        {
+          "target_id": "0998c84a-4a00-4fdd-8a04-4cc1b5bb0241",
+          "relationship": "related",
+          "confidence": 0.73
+        }
+      ]
+    },
+    {
+      "id": "96ee588d-029e-4378-8b01-b45bfb20b8f1",
+      "content": "The diabetic patient needed a physician willing to consider that she existed outside the standard causal framework \u2014 that the system itself, including its dietary guidelines and assumptions about personal responsibility, may have failed her rather than she having failed the system.",
+      "cluster": "medicine_3_0",
+      "topics": [
+        "medical_system",
+        "patient_advocacy",
+        "paradigm_shift",
+        "insulin_resistance",
+        "physician_responsibility"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "When a patient fails to improve despite following medical guidance, the default interpretation should not be patient non-compliance \u2014 it should be a rigorous re-examination of whether the guidance itself is correct.",
+      "connections": [
+        {
+          "target_id": "ac089a38-5913-4f54-b983-388cb891e0e3",
+          "relationship": "related",
+          "confidence": 0.35
+        }
+      ]
+    },
     {
       "id": "e5493531-f9ce-45cb-a67e-5ce8aec50d95",
       "content": "Dietary patterns affect cardiovascular risk primarily through their downstream effects on apoB, triglycerides, insulin sensitivity, and blood pressure \u2014 not through any direct magic of specific foods. The debate between low-fat and low-carbohydrate diets for cardiovascular health is largely a proxy debate about which pattern most reliably improves these underlying mechanistic drivers in a given individual. Attia is agnostic about dietary labels and focuses instead on the biomarker response each individual shows on a given eating pattern.",
@@ -170,6 +255,137 @@
       ]
     },
     {
+      "id": "0ebf3b5a-289a-47fd-bd44-64a9aa429fc0",
+      "content": "Attia describes a personal clinical moment where he judged a diabetic patient harshly \u2014 assuming her condition was the result of personal failure \u2014 while showing deep empathy toward a cancer patient he deemed 'blameless.' This double standard revealed an unconscious bias: that type 2 diabetes is a moral failing caused by overeating and inactivity, while cancer is random misfortune.",
+      "cluster": "metabolic_health",
+      "topics": [
+        "insulin_resistance",
+        "medical_bias",
+        "type2_diabetes",
+        "patient_empathy"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Medical culture's moralization of metabolic disease leads to inferior care and unjust blame of patients who may not be responsible for their condition in the way clinicians assume.",
+      "connections": [
+        {
+          "target_id": "653ce341-e95a-43bd-928b-9211280dbedd",
+          "relationship": "related",
+          "confidence": 0.63
+        },
+        {
+          "target_id": "5c39f1d5-4583-4c10-a85f-e7c29a2ec001",
+          "relationship": "related",
+          "confidence": 0.39
+        }
+      ]
+    },
+    {
+      "id": "fe791d80-73fd-445c-9fc5-6a3af681d160",
+      "content": "Attia insists that dietary recommendations must await rigorous science rather than being issued prematurely. The temptation to provide immediate actionable guidance \u2014 eat this, not that \u2014 should be resisted until the underlying mechanisms are identified with sufficient precision to ensure recommendations are actually correct.",
+      "cluster": "nutrition_biochemistry",
+      "topics": [
+        "dietary_guidelines",
+        "scientific_rigor",
+        "public_health_policy",
+        "premature_recommendations"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Premature dietary guidelines \u2014 issued before mechanisms are understood \u2014 may cause population-scale harm if the underlying causal model is wrong, as Attia argues has happened with the dominant obesity and diabetes narrative.",
+      "connections": [
+        {
+          "target_id": "2e792cf7-64e4-4e03-9e15-d033e6bcbf81",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
+      "id": "9999d4cc-677f-4e9b-bd62-aae4b2e026a4",
+      "content": "If obesity is merely the visible camouflage of underlying metabolic dysfunction rather than the disease itself, then punishing or stigmatizing those who are obese is both scientifically unjustified and medically counterproductive \u2014 it directs moral energy at a symptom rather than a cause.",
+      "cluster": "metabolic_health",
+      "topics": [
+        "obesity_stigma",
+        "insulin_resistance",
+        "patient_blame",
+        "medical_ethics",
+        "metabolic_disease"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Medical stigma around obesity, if built on a flawed causal model, actively harms patients by diverting attention from insulin resistance \u2014 the treatable upstream condition \u2014 and replacing therapeutic care with moral condemnation.",
+      "connections": [
+        {
+          "target_id": "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
+          "relationship": "related",
+          "confidence": 0.73
+        }
+      ]
+    },
+    {
+      "id": "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
+      "content": "Attia explicitly frames the fight against obesity as potentially the wrong war, arguing that insulin resistance \u2014 not obesity \u2014 is the true enemy. Blaming obese patients may mean blaming victims of a deeper metabolic disorder they did not create and cannot easily reverse through the conventional advice they have been given.",
+      "cluster": "metabolic_health",
+      "topics": [
+        "insulin_resistance",
+        "obesity",
+        "patient_blame",
+        "paradigm_shift",
+        "medical_ethics"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "A paradigm shift from obesity-as-cause to insulin-resistance-as-cause would reorient clinical intervention, reduce stigma, and open new therapeutic targets that conventional diet-and-exercise prescriptions have failed to address.",
+      "connections": [
+        {
+          "target_id": "ac089a38-5913-4f54-b983-388cb891e0e3",
+          "relationship": "related",
+          "confidence": 0.73
+        },
+        {
+          "target_id": "9999d4cc-677f-4e9b-bd62-aae4b2e026a4",
+          "relationship": "related",
+          "confidence": 0.73
+        },
+        {
+          "target_id": "a81e6143-1aa0-4765-a030-e6f0db02d8e7",
+          "relationship": "related",
+          "confidence": 0.7
+        },
+        {
+          "target_id": "7caa1555-25ba-4538-8ef3-120e25d7e382",
+          "relationship": "related",
+          "confidence": 0.35
+        },
+        {
+          "target_id": "a7cf94e9-fa26-47d5-b651-34e35867525d",
+          "relationship": "related",
+          "confidence": 0.21
+        }
+      ]
+    },
+    {
       "id": "b1cd7db1-6c44-459d-92bd-cf8fe36a47b7",
       "content": "Ezetimibe is a well-tolerated, low-cost, non-statin cholesterol-lowering agent that reduces cardiovascular events in high-risk patients and is dramatically underused relative to its risk-benefit profile. The IMPROVE-IT trial demonstrated additive benefit when combined with statin therapy. Attia considers the low prescription rate of ezetimibe \u2014 relative to statins alone \u2014 to be another example of clinical inertia: an effective, cheap tool sitting largely unused while patients remain at elevated risk.",
       "cluster": "cardiovascular_health",
@@ -250,6 +466,112 @@
       "connections": [
         {
           "target_id": "5d8c4ae9-c3da-439c-9300-ff47615049d6",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
+      "id": "cab268fb-fdba-4b86-af67-c1192736a789",
+      "content": "Knowing what to do and consistently doing it are entirely separate problems. Attia argues that behavior change must be studied scientifically and that environmental and structural interventions \u2014 designing situations that make the right behavior easy \u2014 are necessary alongside nutritional knowledge.",
+      "cluster": "medicine_3_0",
+      "topics": [
+        "behavior_change",
+        "public_health",
+        "behavioral_architecture",
+        "knowledge_action_gap"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Effective public health intervention requires behavioral architecture \u2014 shaping the default environment \u2014 not just information campaigns, because knowledge alone is insufficient to produce sustained metabolic behavior change.",
+      "connections": [
+        {
+          "target_id": "a888adf8-fe76-4983-a45a-9320cf235eab",
+          "relationship": "related",
+          "confidence": 0.43
+        }
+      ]
+    },
+    {
+      "id": "cb2191dd-a2ca-471b-8273-4393fa3fa898",
+      "content": "Attia uses the analogy of a bruised knee to illustrate medicine's potential confusion of symptom and cause: if we treated the bruise (obesity) rather than the mechanism causing it (walking into coffee tables / insulin resistance), we would build an entire treatment culture around cosmetic and symptomatic relief while ignoring the actual injury.",
+      "cluster": "medicine_3_0",
+      "topics": [
+        "symptom_vs_cause",
+        "metabolic_disease",
+        "medical_paradigm",
+        "obesity",
+        "insulin_resistance"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "When medicine targets the visible symptom rather than the underlying cause, pharmaceutical industries profit while patient outcomes stagnate \u2014 the analogy demands examining whether obesity medicine has made this exact mistake.",
+      "connections": [
+        {
+          "target_id": "ac089a38-5913-4f54-b983-388cb891e0e3",
+          "relationship": "related",
+          "confidence": 0.53
+        }
+      ]
+    },
+    {
+      "id": "0998c84a-4a00-4fdd-8a04-4cc1b5bb0241",
+      "content": "Attia's working hypothesis is that cells develop insulin resistance as a defense against excess glucose \u2014 specifically blood glucose spikes driven by refined grains and sugar \u2014 rather than as a response to excess calories or dietary fat per se. The cellular threat being resisted is glucose toxicity, not caloric surplus.",
+      "cluster": "nutrition_biochemistry",
+      "topics": [
+        "glucose_toxicity",
+        "insulin_resistance",
+        "refined_carbohydrates",
+        "dietary_hypothesis",
+        "blood_glucose"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "If glucose toxicity rather than caloric surplus is the proximate trigger of insulin resistance, dietary interventions should specifically target glycemic load and refined carbohydrate consumption rather than total calories or dietary fat.",
+      "connections": [
+        {
+          "target_id": "0ef802ea-0030-4cb4-bc68-96a474591dec",
+          "relationship": "related",
+          "confidence": 0.73
+        }
+      ]
+    },
+    {
+      "id": "ea9c6b9b-5bb7-4c2f-9d70-7a9926ff1cab",
+      "content": "When cells become insulin resistant, they refuse to burn additional energy as instructed by insulin and instead store excess energy as fat. Fat cells, lacking the complex cellular machinery of other tissues, become the default storage depot. This means weight gain may be a metabolic defense response, not simply a result of caloric excess.",
+      "cluster": "metabolic_health",
+      "topics": [
+        "fat_storage",
+        "insulin_resistance",
+        "energy_metabolism",
+        "obesity_mechanism"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Obesity may represent a cellular protective mechanism in response to metabolic stress rather than a simple equation of excess intake over expenditure, which fundamentally challenges the 'calories in, calories out' paradigm.",
+      "connections": [
+        {
+          "target_id": "c44f293b-cf49-4922-96c8-be9224b5c58c",
           "relationship": "related",
           "confidence": 0.24
         }
@@ -6117,6 +6439,33 @@
       ]
     },
     {
+      "id": "7caa1555-25ba-4538-8ef3-120e25d7e382",
+      "content": "Scientific truth is not a fixed endpoint but a continuously evolving process. Attia argues that intellectual fidelity to this principle \u2014 remaining open to overturning yesterday's ideas when they fail \u2014 is both the ethical obligation of the physician and the foundational methodology of science.",
+      "cluster": "medicine_3_0",
+      "topics": [
+        "scientific_epistemology",
+        "intellectual_humility",
+        "medical_ethics",
+        "paradigm_shift",
+        "evidence_based_medicine"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Physicians and researchers who treat current scientific consensus as settled truth \u2014 rather than the best current approximation \u2014 risk causing harm at scale when the consensus is wrong, as Attia argues it has been around metabolic disease.",
+      "connections": [
+        {
+          "target_id": "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
+          "relationship": "related",
+          "confidence": 0.35
+        }
+      ]
+    },
+    {
       "id": "dd1fbca2-09dd-4ba3-8315-e960b5f4f46f",
       "content": "Acute intense exercise causes significant and measurable worsening of multiple inflammatory and lipid biomarkers on paper \u2014 including CRP, LDL cholesterol, and LDL particle number. Attia's self-experimentation with nine blood draws over three days surrounding hard workouts confirmed that standard clinical markers fluctuate dramatically with exercise state, raising questions about whether medication is being prescribed based on transiently abnormal values.",
       "cluster": "biomarkers_testing",
@@ -6170,34 +6519,6 @@
         },
         {
           "target_id": "67fb5ee2-bd97-4faa-8e51-aa736e4f63d3",
-          "relationship": "related",
-          "confidence": 0.35
-        }
-      ]
-    },
-    {
-      "id": "7caa1555-25ba-4538-8ef3-120e25d7e382",
-      "content": "Scientific truth is not a fixed endpoint but a continuously evolving process. Attia argues that intellectual fidelity to this principle \u2014 remaining open to overturning yesterday's ideas when they fail \u2014 is both the ethical obligation of the physician and the foundational methodology of science.",
-      "cluster": "medicine_3_0",
-      "topics": [
-        "scientific_epistemology",
-        "intellectual_humility",
-        "medical_ethics",
-        "paradigm_shift",
-        "evidence_based_medicine"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Te kuptuarit qe e verteta shkencore nuk eshte fjala e fundit, por ne evolim i vazhdueshem. Ti qendrosh besnik asaj rruge do jete me mire per pacientet tane dhe me mire per shkencen.",
-      "implication": "Physicians and researchers who treat current scientific consensus as settled truth \u2014 rather than the best current approximation \u2014 risk causing harm at scale when the consensus is wrong, as Attia argues it has been around metabolic disease.",
-      "connections": [
-        {
-          "target_id": "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
           "relationship": "related",
           "confidence": 0.35
         }
@@ -8365,7 +8686,6 @@
       "confidence_tier": "high",
       "claim_type": "fact",
       "verification": "unverified",
-      "original_quote": "E dime qe 30 milion amerikane obeze ne USA nuk vuajne nga rezistenca e insulines... Nderkohe, dime qe 6 milione njerez te dobet ne USA jane rezistent ndaj insulines, dhe... ata mendohet te jene ne rrezik me te madh per ato semundje metabolike.",
       "implication": "Disease risk in metabolic illness should be stratified by insulin resistance status rather than body weight or BMI \u2014 a lean person with insulin resistance is at greater risk than an obese person without it.",
       "connections": [
         {
@@ -8493,6 +8813,33 @@
       ]
     },
     {
+      "id": "13656881-7bea-4b9b-afb1-7ed16eabd252",
+      "content": "Attia's research program was structured around three core questions: how different foods affect metabolism, hormones, and enzymes at a molecular level; whether people can make evidence-based dietary changes safely and practically; and how to translate knowledge into sustained behavioral change at population scale.",
+      "cluster": "nutrition_biochemistry",
+      "topics": [
+        "research_framework",
+        "nutrition_science",
+        "metabolic_mechanisms",
+        "behavior_change",
+        "dietary_intervention"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "unverified",
+      "implication": "Nutritional science must bridge mechanistic biochemistry, clinical applicability, and behavioral implementation \u2014 answering only one of the three questions is insufficient to translate science into improved public health.",
+      "connections": [
+        {
+          "target_id": "cd7e4308-fe68-4465-a747-27c6c980f204",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
       "id": "25012316-79a8-4de4-adf7-d163c1d088e9",
       "content": "The brain is more plastic than most high achievers assume. Attia believed his pattern of self-destructive internal criticism was terminal and irreversible \u2014 something he had lived with since childhood \u2014 yet a structured behavioral intervention resolved it within months, demonstrating that even deeply ingrained psychological patterns can be changed with the right protocol.",
       "cluster": "emotional_health",
@@ -8517,34 +8864,6 @@
           "target_id": "6558273e-8cbb-49e8-8788-67109c8126ae",
           "relationship": "related",
           "confidence": 0.35
-        }
-      ]
-    },
-    {
-      "id": "13656881-7bea-4b9b-afb1-7ed16eabd252",
-      "content": "Attia's research program was structured around three core questions: how different foods affect metabolism, hormones, and enzymes at a molecular level; whether people can make evidence-based dietary changes safely and practically; and how to translate knowledge into sustained behavioral change at population scale.",
-      "cluster": "nutrition_biochemistry",
-      "topics": [
-        "research_framework",
-        "nutrition_science",
-        "metabolic_mechanisms",
-        "behavior_change",
-        "dietary_intervention"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "Se pari, si ndikojne ushqimet e ndryshme qe konsumojme ne metabolizem, hormone dhe enzima... Se dyti, duke u bazuar ne keto te dhena, a munden njerezit te bejne ndryshimet e nevojshme ne dieten e tyre... Si perfundim, kur e identifikojme se cfare jane ndryshimet e sigurta dhe praktike... si mund ta drejtojme sjelljen e tyre.",
-      "implication": "Nutritional science must bridge mechanistic biochemistry, clinical applicability, and behavioral implementation \u2014 answering only one of the three questions is insufficient to translate science into improved public health.",
-      "connections": [
-        {
-          "target_id": "cd7e4308-fe68-4465-a747-27c6c980f204",
-          "relationship": "related",
-          "confidence": 0.24
         }
       ]
     },
@@ -8761,6 +9080,33 @@
       ]
     },
     {
+      "id": "d4be7395-e39d-4e37-8fb3-9a5b456b3c9e",
+      "content": "Attia assembled a multidisciplinary team of rival scientists \u2014 each with competing hypotheses about the root cause of the metabolic epidemic \u2014 deliberately structured to avoid groupthink. Despite disagreeing on mechanisms, all agreed that the problem is too important to ignore based on assumed knowledge, and that rigorous challenge of current assumptions is required.",
+      "cluster": "medicine_3_0",
+      "topics": [
+        "research_methodology",
+        "scientific_collaboration",
+        "competing_hypotheses",
+        "metabolic_disease",
+        "epistemic_humility"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "unverified",
+      "implication": "Structuring research teams around competing hypotheses rather than consensus frameworks is a methodological safeguard against confirmation bias in high-stakes scientific questions with major public health consequences.",
+      "connections": [
+        {
+          "target_id": "395eacf6-62dc-435b-a559-af9d6d965d44",
+          "relationship": "related",
+          "confidence": 0.23
+        }
+      ]
+    },
+    {
       "id": "7f7b20e4-bee1-4c22-ad36-06d1c5e273c9",
       "content": "Attia was named in Time magazine's 2024 list of influential people in health, and appeared on CBS's 60 Minutes in October 2025, where he discussed structured exercise and preventative health strategies for extending health span. These mainstream media milestones reflect his transition from niche longevity practitioner to one of the most recognized health communicators in the world.",
       "cluster": "lifespan_healthspan",
@@ -8783,34 +9129,6 @@
           "target_id": "95a8ab81-b599-415b-be5c-0d3a581ad874",
           "relationship": "related",
           "confidence": 0.24
-        }
-      ]
-    },
-    {
-      "id": "d4be7395-e39d-4e37-8fb3-9a5b456b3c9e",
-      "content": "Attia assembled a multidisciplinary team of rival scientists \u2014 each with competing hypotheses about the root cause of the metabolic epidemic \u2014 deliberately structured to avoid groupthink. Despite disagreeing on mechanisms, all agreed that the problem is too important to ignore based on assumed knowledge, and that rigorous challenge of current assumptions is required.",
-      "cluster": "medicine_3_0",
-      "topics": [
-        "research_methodology",
-        "scientific_collaboration",
-        "competing_hypotheses",
-        "metabolic_disease",
-        "epistemic_humility"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "Kemi rekrutuar nje grup pune me shkencetare rival, me te miret dhe me te ndriturit por qe te gjithe kane hipotezat e veta rreth asaj cka mund te jete ne zemer te epidemise... jane dakort ne dy gjera. E para, ky problem eshte shume i rendesishem per te vazhduar ta injorojme.",
-      "implication": "Structuring research teams around competing hypotheses rather than consensus frameworks is a methodological safeguard against confirmation bias in high-stakes scientific questions with major public health consequences.",
-      "connections": [
-        {
-          "target_id": "395eacf6-62dc-435b-a559-af9d6d965d44",
-          "relationship": "related",
-          "confidence": 0.23
         }
       ]
     },
@@ -8858,7 +9176,6 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Mund ta mendoni insulinen si ky hormon i gjithepushtetshem qe kontrollon se cfare ben trupi yne me ushqimet qe hame, nese i ruajme ose i djegim. Ne gjuhen mjekesore kjo quhet 'ndarje e energjise'.",
       "implication": "Understanding insulin as an energy partitioning hormone \u2014 not merely a blood sugar regulator \u2014 reframes the entire metabolic disease conversation around energy allocation rather than caloric quantity alone.",
       "connections": [
         {
@@ -8886,7 +9203,6 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Po sikur obeziteti te mos jete shkaku i rezistences ndaj insulines? Ne fakt, po sikur te jete sintoma e nje problemi shume me te madh, maja e nje ajsbergu?",
       "implication": "If obesity is a downstream symptom of insulin resistance rather than its cause, then targeting obesity directly \u2014 through calorie restriction or exercise alone \u2014 may systematically miss the actual disease and leave insulin resistance untreated.",
       "connections": [
         {
@@ -8929,6 +9245,33 @@
       "connections": [
         {
           "target_id": "d6999359-702c-41f4-994e-ccacf68ba413",
+          "relationship": "related",
+          "confidence": 0.23
+        }
+      ]
+    },
+    {
+      "id": "004e83e2-2482-4264-af9c-99191a23276f",
+      "content": "Attia lost 20 kg by dramatically changing his diet \u2014 restricting refined grains and sugar \u2014 while simultaneously reducing his exercise volume. This personal experiment provided him with anecdotal but strong evidence that macronutrient composition rather than caloric restriction or exercise volume was the primary driver of his weight loss and insulin sensitivity restoration.",
+      "cluster": "nutrition_biochemistry",
+      "topics": [
+        "dietary_intervention",
+        "carbohydrate_restriction",
+        "weight_loss",
+        "insulin_resistance",
+        "self_experimentation"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "unverified",
+      "implication": "Personal biological self-experimentation \u2014 while subject to confirmation bias \u2014 can generate falsifiable hypotheses worth testing rigorously, and Attia's case represents a direct challenge to the exercise-volume-centric model of weight management.",
+      "connections": [
+        {
+          "target_id": "c44f293b-cf49-4922-96c8-be9224b5c58c",
           "relationship": "related",
           "confidence": 0.23
         }
@@ -8995,34 +9338,6 @@
           "target_id": "a674c722-482a-4991-9c19-6db9a0f4e1d6",
           "relationship": "related",
           "confidence": 0.39
-        }
-      ]
-    },
-    {
-      "id": "004e83e2-2482-4264-af9c-99191a23276f",
-      "content": "Attia lost 20 kg by dramatically changing his diet \u2014 restricting refined grains and sugar \u2014 while simultaneously reducing his exercise volume. This personal experiment provided him with anecdotal but strong evidence that macronutrient composition rather than caloric restriction or exercise volume was the primary driver of his weight loss and insulin sensitivity restoration.",
-      "cluster": "nutrition_biochemistry",
-      "topics": [
-        "dietary_intervention",
-        "carbohydrate_restriction",
-        "weight_loss",
-        "insulin_resistance",
-        "self_experimentation"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "Kur humba 20 kg disa vite me pare, e bera thjesht duke kufizuar keto gjera, cka sugjeron qe kam nje anesi bazuar ne eksperiencen time personale. Por kjo nuk do te thote qe anesia ime eshte e gabuar.",
-      "implication": "Personal biological self-experimentation \u2014 while subject to confirmation bias \u2014 can generate falsifiable hypotheses worth testing rigorously, and Attia's case represents a direct challenge to the exercise-volume-centric model of weight management.",
-      "connections": [
-        {
-          "target_id": "c44f293b-cf49-4922-96c8-be9224b5c58c",
-          "relationship": "related",
-          "confidence": 0.23
         }
       ]
     },
@@ -11743,38 +12058,6 @@
           "target_id": "3a1e1b28-45dd-4861-adfa-889823a6ddef",
           "relationship": "related",
           "confidence": 0.73
-        }
-      ]
-    },
-    {
-      "id": "2e792cf7-64e4-4e03-9e15-d033e6bcbf81",
-      "content": "Despite exercising 3-4 hours per day and following conventional dietary guidelines precisely, Attia himself developed metabolic syndrome and insulin resistance. This personal experience shattered his confidence in standard nutritional advice and forced him to question the dominant causal framework around obesity and metabolic disease.",
-      "cluster": "metabolic_health",
-      "topics": [
-        "insulin_resistance",
-        "metabolic_syndrome",
-        "dietary_guidelines",
-        "personal_experience"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "Edhe pse beja ushtrime fizike 3-4 ore ne dite, dhe zbatimin i piramides ushqimore me perpikmeri, kisha shtuar shume ne peshe dhe kisha zhvilluar dicka te ashtuquajtur sindroma e metabolizmit.",
-      "implication": "Adherence to conventional diet-and-exercise recommendations is not sufficient protection against insulin resistance, suggesting the underlying causal model is flawed or incomplete.",
-      "connections": [
-        {
-          "target_id": "92d25f45-897e-4397-9489-6bab56736049",
-          "relationship": "related",
-          "confidence": 0.39
-        },
-        {
-          "target_id": "fe791d80-73fd-445c-9fc5-6a3af681d160",
-          "relationship": "related",
-          "confidence": 0.24
         }
       ]
     },
@@ -21726,62 +22009,6 @@
       ]
     },
     {
-      "id": "0ef802ea-0030-4cb4-bc68-96a474591dec",
-      "content": "Processed grains are known to rapidly elevate blood glucose in the short term, and there is evidence that sugar may directly induce insulin resistance. Attia hypothesizes that the obesity and diabetes epidemic is driven primarily through this mechanism \u2014 refined grain and sugar consumption causing insulin resistance \u2014 rather than through simple overeating or sedentary behavior.",
-      "cluster": "nutrition_biochemistry",
-      "topics": [
-        "refined_carbohydrates",
-        "sugar",
-        "insulin_resistance",
-        "blood_glucose",
-        "dietary_policy"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "E dime qe dritherat e perpunuara e ngrene nivelin e sheqerit ne gjak ne nje kohe afatshkurter, dhe ka edhe arsye per te besuar se sheqeri mund te coje direkt ne rezistence ndaj insulines.",
-      "implication": "Public health messaging focused on 'eat less, move more' may be attacking the wrong variable; policies targeting refined grain and added sugar consumption specifically may have larger metabolic impact than broad calorie reduction campaigns.",
-      "connections": [
-        {
-          "target_id": "0998c84a-4a00-4fdd-8a04-4cc1b5bb0241",
-          "relationship": "related",
-          "confidence": 0.73
-        }
-      ]
-    },
-    {
-      "id": "96ee588d-029e-4378-8b01-b45bfb20b8f1",
-      "content": "The diabetic patient needed a physician willing to consider that she existed outside the standard causal framework \u2014 that the system itself, including its dietary guidelines and assumptions about personal responsibility, may have failed her rather than she having failed the system.",
-      "cluster": "medicine_3_0",
-      "topics": [
-        "medical_system",
-        "patient_advocacy",
-        "paradigm_shift",
-        "insulin_resistance",
-        "physician_responsibility"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Mbi te gjitha kishe nevoje per nje mjek i cili te ishte i gatshem te konsideronte faktin qe ti mund te ishe jashte kornizave te sistemit. Ndoshta sistemi, pjese e se cilit isha dhe une, nuk ju ndihmoi.",
-      "implication": "When a patient fails to improve despite following medical guidance, the default interpretation should not be patient non-compliance \u2014 it should be a rigorous re-examination of whether the guidance itself is correct.",
-      "connections": [
-        {
-          "target_id": "ac089a38-5913-4f54-b983-388cb891e0e3",
-          "relationship": "related",
-          "confidence": 0.35
-        }
-      ]
-    },
-    {
       "id": "e434affd-e5cc-49a3-98e7-ed621881a57b",
       "content": "What appears to be a single habit is often a collection of distinct habit loops, each with its own cue, craving, response, and reward. Smoking, for example, may actually be 12 separate habits tied to different times of day, social contexts, and environmental cues \u2014 and each requires its own targeted intervention.",
       "cluster": "emotional_health",
@@ -21865,65 +22092,6 @@
       ]
     },
     {
-      "id": "0ebf3b5a-289a-47fd-bd44-64a9aa429fc0",
-      "content": "Attia describes a personal clinical moment where he judged a diabetic patient harshly \u2014 assuming her condition was the result of personal failure \u2014 while showing deep empathy toward a cancer patient he deemed 'blameless.' This double standard revealed an unconscious bias: that type 2 diabetes is a moral failing caused by overeating and inactivity, while cancer is random misfortune.",
-      "cluster": "metabolic_health",
-      "topics": [
-        "insulin_resistance",
-        "medical_bias",
-        "type2_diabetes",
-        "patient_empathy"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Dallimi eshte qe ne ndryshim me gruan e nje nate me pare, kjo grua vuante nga diabeti i tipit 2. Ajo ishte e shendoshe. Dhe te gjithe e dime qe kjo vjen si rezultat i te ngrenit shume dhe mungeses se aktivitetit fizik, apo jo?",
-      "implication": "Medical culture's moralization of metabolic disease leads to inferior care and unjust blame of patients who may not be responsible for their condition in the way clinicians assume.",
-      "connections": [
-        {
-          "target_id": "653ce341-e95a-43bd-928b-9211280dbedd",
-          "relationship": "related",
-          "confidence": 0.63
-        },
-        {
-          "target_id": "5c39f1d5-4583-4c10-a85f-e7c29a2ec001",
-          "relationship": "related",
-          "confidence": 0.39
-        }
-      ]
-    },
-    {
-      "id": "fe791d80-73fd-445c-9fc5-6a3af681d160",
-      "content": "Attia insists that dietary recommendations must await rigorous science rather than being issued prematurely. The temptation to provide immediate actionable guidance \u2014 eat this, not that \u2014 should be resisted until the underlying mechanisms are identified with sufficient precision to ensure recommendations are actually correct.",
-      "cluster": "nutrition_biochemistry",
-      "topics": [
-        "dietary_guidelines",
-        "scientific_rigor",
-        "public_health_policy",
-        "premature_recommendations"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "E di qe eshte mjaft joshese te dashurit te mesosh pergjigjen qe tani, politikat dhe masat, rekomandimet dietike-- ha kete, jo ate-- por nese duam ta identifikojme ekzaktesisht, na duhet te bejme nje shkence mjaft rigoroze para se te nisim te japim rekomandime.",
-      "implication": "Premature dietary guidelines \u2014 issued before mechanisms are understood \u2014 may cause population-scale harm if the underlying causal model is wrong, as Attia argues has happened with the dominant obesity and diabetes narrative.",
-      "connections": [
-        {
-          "target_id": "2e792cf7-64e4-4e03-9e15-d033e6bcbf81",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
       "id": "c861228e-79c0-4d83-8f09-9c5cd5a7c51c",
       "content": "Attia emphasizes that Zone 2 training is not just for already-healthy individuals \u2014 it is particularly critical for people with metabolic dysfunction, type 2 diabetes, or insulin resistance, for whom it is simultaneously the safest and most effective exercise prescription. Because Zone 2 relies primarily on fat oxidation and does not produce significant lactate stress, it can be sustained by individuals with low fitness floors, and the mitochondrial adaptations it drives directly address the root pathology of metabolic disease.",
       "cluster": "zone_2_training",
@@ -21946,6 +22114,33 @@
           "target_id": "bebf92fb-46ec-4f97-9095-ff4bb26ef702",
           "relationship": "related",
           "confidence": 0.24
+        }
+      ]
+    },
+    {
+      "id": "a7cf94e9-fa26-47d5-b651-34e35867525d",
+      "content": "Attia expresses deep regret for his judgmental treatment of the diabetic patient, distinguishing between adequate clinical care and full human care. He acknowledges he provided the best available clinical service but failed her as a human being by withholding empathy and imposing moral judgment.",
+      "cluster": "emotional_health",
+      "topics": [
+        "physician_empathy",
+        "medical_ethics",
+        "patient_care",
+        "moral_judgment",
+        "compassion"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Clinical competence and human compassion are not interchangeable \u2014 a physician can be technically excellent while still causing harm through dehumanizing judgment, particularly when that judgment is built on a flawed causal model.",
+      "connections": [
+        {
+          "target_id": "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
+          "relationship": "related",
+          "confidence": 0.21
         }
       ]
     },
@@ -22039,34 +22234,6 @@
       ]
     },
     {
-      "id": "a7cf94e9-fa26-47d5-b651-34e35867525d",
-      "content": "Attia expresses deep regret for his judgmental treatment of the diabetic patient, distinguishing between adequate clinical care and full human care. He acknowledges he provided the best available clinical service but failed her as a human being by withholding empathy and imposing moral judgment.",
-      "cluster": "emotional_health",
-      "topics": [
-        "physician_empathy",
-        "medical_ethics",
-        "patient_care",
-        "moral_judgment",
-        "compassion"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Do ti thoja qe si mjeke, i dhashe sherbimin me te mire klinik qe munda, por si qenie njerezore, nuk e trajtova si duhej. Nuk kishe nevoje per gjykimin tim. Ti kishe nevoje per simpatine dhe keqardhjen time.",
-      "implication": "Clinical competence and human compassion are not interchangeable \u2014 a physician can be technically excellent while still causing harm through dehumanizing judgment, particularly when that judgment is built on a flawed causal model.",
-      "connections": [
-        {
-          "target_id": "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
-          "relationship": "related",
-          "confidence": 0.21
-        }
-      ]
-    },
-    {
       "id": "270314ac-dc6a-4edf-a3d2-c16f2e6178dd",
       "content": "Many people inadvertently punish the exact behaviors they want to encourage by responding to rare positive actions with sarcasm, indifference, or belated criticism. This inverts the reinforcement schedule and suppresses the fragile emerging behavior.",
       "cluster": "emotional_health",
@@ -22143,6 +22310,60 @@
       ]
     },
     {
+      "id": "b373a8f1-d224-453b-bebf-45a53b4dbf1a",
+      "content": "Attia applied rigorous scientific skepticism to his cancer immunotherapy research \u2014 questioning everything and demanding the highest standards of evidence \u2014 while simultaneously accepting the conventional causal chain around diabetes and obesity without question. He identifies this inconsistency as a form of intellectual negligence, made worse by the fact that diabetes kills eight times more Americans than melanoma.",
+      "cluster": "medicine_3_0",
+      "topics": [
+        "scientific_rigor",
+        "medical_bias",
+        "diabetes",
+        "epistemology",
+        "intellectual_consistency"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Scientific rigor must be applied uniformly across disease areas regardless of cultural assumptions about who is 'to blame' for a condition \u2014 metabolic disease deserves the same epistemological scrutiny as rare cancers.",
+      "connections": [
+        {
+          "target_id": "7c070b3f-a175-410a-8f67-1b05dd41f0c6",
+          "relationship": "related",
+          "confidence": 0.23
+        }
+      ]
+    },
+    {
+      "id": "36d7cfbe-49fd-4267-a45e-eb96e22d974c",
+      "content": "Insulin resistance is an upstream driver connecting metabolic dysfunction to cardiovascular disease, cancer, and Alzheimer's disease. When cells become insulin resistant, a cascade of pathological consequences follows that extends far beyond blood sugar dysregulation.",
+      "cluster": "four_horsemen",
+      "topics": [
+        "insulin_resistance",
+        "cardiovascular_disease",
+        "cancer",
+        "alzheimers",
+        "metabolic_dysfunction"
+      ],
+      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Insulin resistance should be understood as a systemic, multi-disease upstream driver \u2014 not merely a precursor to diabetes \u2014 demanding early detection and intervention across all chronic disease prevention efforts.",
+      "connections": [
+        {
+          "target_id": "d72a9eb3-f3b4-4aea-b7b6-2939982ce22b",
+          "relationship": "related",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
       "id": "21ec4ecd-0483-4d8f-bea5-c0098add9e77",
       "content": "Attia chose to study both mechanical engineering and applied mathematics simultaneously because each discipline alone felt incomplete \u2014 engineering without theory felt unfulfilling, and pure math without application felt equally hollow. The combination gave him a rare alignment of theory and practice.",
       "cluster": "emotional_health",
@@ -22196,62 +22417,6 @@
       ]
     },
     {
-      "id": "b373a8f1-d224-453b-bebf-45a53b4dbf1a",
-      "content": "Attia applied rigorous scientific skepticism to his cancer immunotherapy research \u2014 questioning everything and demanding the highest standards of evidence \u2014 while simultaneously accepting the conventional causal chain around diabetes and obesity without question. He identifies this inconsistency as a form of intellectual negligence, made worse by the fact that diabetes kills eight times more Americans than melanoma.",
-      "cluster": "medicine_3_0",
-      "topics": [
-        "scientific_rigor",
-        "medical_bias",
-        "diabetes",
-        "epistemology",
-        "intellectual_consistency"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Cuditerisht, ne ate kohe, po hulumtoja rreth kancerit... nga kisha mesuar se duhej te kisha dyshime per gjithcka... Nderkohe, kur vjen fjala tek diabeti i cili vret 8 here me shume amerikane se melanoma, nuk e vura kurre ne prove dijen e deri atehershme.",
-      "implication": "Scientific rigor must be applied uniformly across disease areas regardless of cultural assumptions about who is 'to blame' for a condition \u2014 metabolic disease deserves the same epistemological scrutiny as rare cancers.",
-      "connections": [
-        {
-          "target_id": "7c070b3f-a175-410a-8f67-1b05dd41f0c6",
-          "relationship": "related",
-          "confidence": 0.23
-        }
-      ]
-    },
-    {
-      "id": "36d7cfbe-49fd-4267-a45e-eb96e22d974c",
-      "content": "Insulin resistance is an upstream driver connecting metabolic dysfunction to cardiovascular disease, cancer, and Alzheimer's disease. When cells become insulin resistant, a cascade of pathological consequences follows that extends far beyond blood sugar dysregulation.",
-      "cluster": "four_horsemen",
-      "topics": [
-        "insulin_resistance",
-        "cardiovascular_disease",
-        "cancer",
-        "alzheimers",
-        "metabolic_dysfunction"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Fins ngritja e sasise se sheqerit ne gjak, dhe nje ujvare problemesh patologjike dalin jashte kontrolli, c'ka mund te cojne ne probleme me zemren, kancer, ose edhe Alzaimer, dhe amputim.",
-      "implication": "Insulin resistance should be understood as a systemic, multi-disease upstream driver \u2014 not merely a precursor to diabetes \u2014 demanding early detection and intervention across all chronic disease prevention efforts.",
-      "connections": [
-        {
-          "target_id": "d72a9eb3-f3b4-4aea-b7b6-2939982ce22b",
-          "relationship": "related",
-          "confidence": 0.87
-        }
-      ]
-    },
-    {
       "id": "da1cb049-863c-4378-8090-843a3c9afd15",
       "content": "Time-restricted eating ultimately works through the principle of calories in versus calories out \u2014 the compressed eating window limits total caloric intake, especially when combined with eating whole foods rather than processed foods.",
       "cluster": "nutrition_biochemistry",
@@ -22275,34 +22440,6 @@
           "target_id": "929cdb4f-9b7c-425f-8ba8-d309bcb03466",
           "relationship": "related",
           "confidence": 0.63
-        }
-      ]
-    },
-    {
-      "id": "9999d4cc-677f-4e9b-bd62-aae4b2e026a4",
-      "content": "If obesity is merely the visible camouflage of underlying metabolic dysfunction rather than the disease itself, then punishing or stigmatizing those who are obese is both scientifically unjustified and medically counterproductive \u2014 it directs moral energy at a symptom rather than a cause.",
-      "cluster": "metabolic_health",
-      "topics": [
-        "obesity_stigma",
-        "insulin_resistance",
-        "patient_blame",
-        "medical_ethics",
-        "metabolic_disease"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Nese obeziteti nuk eshte gje tjeter vec kamuflazhi i semundjeve te metabolizmit, c'e mire na vjen duke i ndeshkuar ato qe vuajne prej saj?",
-      "implication": "Medical stigma around obesity, if built on a flawed causal model, actively harms patients by diverting attention from insulin resistance \u2014 the treatable upstream condition \u2014 and replacing therapeutic care with moral condemnation.",
-      "connections": [
-        {
-          "target_id": "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
-          "relationship": "related",
-          "confidence": 0.73
         }
       ]
     },
@@ -22335,54 +22472,6 @@
           "target_id": "4a379f7a-0892-4869-a908-a754af1aa3db",
           "relationship": "related",
           "confidence": 0.39
-        }
-      ]
-    },
-    {
-      "id": "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
-      "content": "Attia explicitly frames the fight against obesity as potentially the wrong war, arguing that insulin resistance \u2014 not obesity \u2014 is the true enemy. Blaming obese patients may mean blaming victims of a deeper metabolic disorder they did not create and cannot easily reverse through the conventional advice they have been given.",
-      "cluster": "metabolic_health",
-      "topics": [
-        "insulin_resistance",
-        "obesity",
-        "patient_blame",
-        "paradigm_shift",
-        "medical_ethics"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Pra, po sikur te jemi duke luftuar nje lufte te gabuar, te luftojme obezitetin ne vend te rezistences ndaj insulines? Edhe me keq, po sikur fajesimi i obezeve do te thote qe po fajesojme viktimat?",
-      "implication": "A paradigm shift from obesity-as-cause to insulin-resistance-as-cause would reorient clinical intervention, reduce stigma, and open new therapeutic targets that conventional diet-and-exercise prescriptions have failed to address.",
-      "connections": [
-        {
-          "target_id": "ac089a38-5913-4f54-b983-388cb891e0e3",
-          "relationship": "related",
-          "confidence": 0.73
-        },
-        {
-          "target_id": "9999d4cc-677f-4e9b-bd62-aae4b2e026a4",
-          "relationship": "related",
-          "confidence": 0.73
-        },
-        {
-          "target_id": "a81e6143-1aa0-4765-a030-e6f0db02d8e7",
-          "relationship": "related",
-          "confidence": 0.7
-        },
-        {
-          "target_id": "7caa1555-25ba-4538-8ef3-120e25d7e382",
-          "relationship": "related",
-          "confidence": 0.35
-        },
-        {
-          "target_id": "a7cf94e9-fa26-47d5-b651-34e35867525d",
-          "relationship": "related",
-          "confidence": 0.21
         }
       ]
     },
@@ -22441,33 +22530,6 @@
           "target_id": "59dc2225-87a0-497d-aecd-4ca6f7274335",
           "relationship": "inspired_by",
           "confidence": 0.8
-        }
-      ]
-    },
-    {
-      "id": "cab268fb-fdba-4b86-af67-c1192736a789",
-      "content": "Knowing what to do and consistently doing it are entirely separate problems. Attia argues that behavior change must be studied scientifically and that environmental and structural interventions \u2014 designing situations that make the right behavior easy \u2014 are necessary alongside nutritional knowledge.",
-      "cluster": "medicine_3_0",
-      "topics": [
-        "behavior_change",
-        "public_health",
-        "behavioral_architecture",
-        "knowledge_action_gap"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Te diturit se cfare duhet te besh nuk do te thote qe ti gjithomone do ta besh ate. Ndonjehere eshte e nevojshme te vendosim te dhena rreth njerezve per ta bere me te lehte, dhe besojeni ose jo, kjo gje mund te studjohet shkencerisht.",
-      "implication": "Effective public health intervention requires behavioral architecture \u2014 shaping the default environment \u2014 not just information campaigns, because knowledge alone is insufficient to produce sustained metabolic behavior change.",
-      "connections": [
-        {
-          "target_id": "a888adf8-fe76-4983-a45a-9320cf235eab",
-          "relationship": "related",
-          "confidence": 0.43
         }
       ]
     },
@@ -22537,34 +22599,6 @@
       ]
     },
     {
-      "id": "cb2191dd-a2ca-471b-8273-4393fa3fa898",
-      "content": "Attia uses the analogy of a bruised knee to illustrate medicine's potential confusion of symptom and cause: if we treated the bruise (obesity) rather than the mechanism causing it (walking into coffee tables / insulin resistance), we would build an entire treatment culture around cosmetic and symptomatic relief while ignoring the actual injury.",
-      "cluster": "medicine_3_0",
-      "topics": [
-        "symptom_vs_cause",
-        "metabolic_disease",
-        "medical_paradigm",
-        "obesity",
-        "insulin_resistance"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Imagjinoni sikur ne te mendonim se plaga eshte faktikisht problemi, dhe zhvillojme cdo kerkim dhe kulture mjeksore rreth trajtimit te plageve... duke injoruar teresisht faktin qe njerezit jane ende duke perplasur kercirin ne tavolina kafeje.",
-      "implication": "When medicine targets the visible symptom rather than the underlying cause, pharmaceutical industries profit while patient outcomes stagnate \u2014 the analogy demands examining whether obesity medicine has made this exact mistake.",
-      "connections": [
-        {
-          "target_id": "ac089a38-5913-4f54-b983-388cb891e0e3",
-          "relationship": "related",
-          "confidence": 0.53
-        }
-      ]
-    },
-    {
       "id": "de338359-dce6-4d7b-ba7b-d43377ca4507",
       "content": "VO2 max is measured in milliliters of oxygen consumed per kilogram of bodyweight per minute, and it quantifies the ceiling on the aerobic energy system. The higher the ceiling, the greater the body's capacity to sustain aerobic work and the more metabolic reserve exists during illness, surgery, or acute physiological stress. Attia emphasizes that this reserve is not just a performance asset in youth \u2014 it is the buffer that determines whether a serious illness at 75 is survivable or fatal.",
       "cluster": "vo2_max",
@@ -22585,61 +22619,6 @@
       "connections": [
         {
           "target_id": "7c301758-9682-4abd-b696-4d47c13fa4ea",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
-      "id": "0998c84a-4a00-4fdd-8a04-4cc1b5bb0241",
-      "content": "Attia's working hypothesis is that cells develop insulin resistance as a defense against excess glucose \u2014 specifically blood glucose spikes driven by refined grains and sugar \u2014 rather than as a response to excess calories or dietary fat per se. The cellular threat being resisted is glucose toxicity, not caloric surplus.",
-      "cluster": "nutrition_biochemistry",
-      "topics": [
-        "glucose_toxicity",
-        "insulin_resistance",
-        "refined_carbohydrates",
-        "dietary_hypothesis",
-        "blood_glucose"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Nese e pyesni veten, se nga se perpiqet te mbrohet qeliza kur behet rezistente ndaj insulines, pergjigja ndoshta nuk eshte, teprice ushqimore. Por me gjase, teprice glukoze: sheqeri ne gjak.",
-      "implication": "If glucose toxicity rather than caloric surplus is the proximate trigger of insulin resistance, dietary interventions should specifically target glycemic load and refined carbohydrate consumption rather than total calories or dietary fat.",
-      "connections": [
-        {
-          "target_id": "0ef802ea-0030-4cb4-bc68-96a474591dec",
-          "relationship": "related",
-          "confidence": 0.73
-        }
-      ]
-    },
-    {
-      "id": "ea9c6b9b-5bb7-4c2f-9d70-7a9926ff1cab",
-      "content": "When cells become insulin resistant, they refuse to burn additional energy as instructed by insulin and instead store excess energy as fat. Fat cells, lacking the complex cellular machinery of other tissues, become the default storage depot. This means weight gain may be a metabolic defense response, not simply a result of caloric excess.",
-      "cluster": "metabolic_health",
-      "topics": [
-        "fat_storage",
-        "insulin_resistance",
-        "energy_metabolism",
-        "obesity_mechanism"
-      ],
-      "source_ref": "ted_talk:peter_attia_what_if_we_are_wrong_about_diabetes",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Kur insulina i thote qelizes, dua te djegesh me shume energji sesa qeliza e konsideron te sigurt, ne te vertete ajo pergjigjet, 'Jo faleminderit, do ta ruaj kete energji.' Dhe duke qene se ne qelizat e dhjamit nuk i gjen ato makineri komplekse qelizore... eshte vendi me i mire per ti ruajtur.",
-      "implication": "Obesity may represent a cellular protective mechanism in response to metabolic stress rather than a simple equation of excess intake over expenditure, which fundamentally challenges the 'calories in, calories out' paradigm.",
-      "connections": [
-        {
-          "target_id": "c44f293b-cf49-4922-96c8-be9224b5c58c",
           "relationship": "related",
           "confidence": 0.24
         }
@@ -32976,6 +32955,7 @@
       "25012316-79a8-4de4-adf7-d163c1d088e9"
     ],
     "behavior_change": [
+      "cab268fb-fdba-4b86-af67-c1192736a789",
       "5e22ef85-bc30-4bab-a949-1b7c5ab6e956",
       "01905d0a-e0c3-4677-ae0c-4e8387e9d1a8",
       "7c2c0b54-e7c0-432a-ae1d-171df4cc093a",
@@ -33002,7 +32982,6 @@
       "e0f08b4f-d4b3-4062-bba1-ca6db4756e8c",
       "da3c51f4-1a82-4a15-8a62-0266dafff4c9",
       "270314ac-dc6a-4edf-a3d2-c16f2e6178dd",
-      "cab268fb-fdba-4b86-af67-c1192736a789",
       "a888adf8-fe76-4983-a45a-9320cf235eab",
       "5b431b24-ceba-4be1-89d8-154f4133e6d2"
     ],
@@ -33144,9 +33123,9 @@
       "dd1fbca2-09dd-4ba3-8315-e960b5f4f46f"
     ],
     "blood_glucose": [
-      "f8b05707-5701-4857-b219-7619287c506e",
       "0ef802ea-0030-4cb4-bc68-96a474591dec",
-      "0998c84a-4a00-4fdd-8a04-4cc1b5bb0241"
+      "0998c84a-4a00-4fdd-8a04-4cc1b5bb0241",
+      "f8b05707-5701-4857-b219-7619287c506e"
     ],
     "blood_loss": [
       "6cb4af05-2333-49e9-8a51-c65a7a3a0479"
@@ -35687,7 +35666,16 @@
       "8106cdb3-ad5c-4879-9cb7-5c6bac8d9334"
     ],
     "insulin_resistance": [
+      "2e792cf7-64e4-4e03-9e15-d033e6bcbf81",
+      "0ef802ea-0030-4cb4-bc68-96a474591dec",
+      "96ee588d-029e-4378-8b01-b45bfb20b8f1",
       "65bbc146-2cdb-467f-b29a-6eebaf376729",
+      "0ebf3b5a-289a-47fd-bd44-64a9aa429fc0",
+      "9999d4cc-677f-4e9b-bd62-aae4b2e026a4",
+      "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
+      "cb2191dd-a2ca-471b-8273-4393fa3fa898",
+      "0998c84a-4a00-4fdd-8a04-4cc1b5bb0241",
+      "ea9c6b9b-5bb7-4c2f-9d70-7a9926ff1cab",
       "452673f7-b323-469b-a019-1378fa6d13bc",
       "59624dba-5d4a-48ad-9d3b-20ec9f54fa02",
       "773c73fa-139b-4ab6-b26b-7d12b6120a4b",
@@ -35712,7 +35700,6 @@
       "004e83e2-2482-4264-af9c-99191a23276f",
       "7a7dfbf4-e96f-401f-bcac-abc6be6f60fa",
       "f8b05707-5701-4857-b219-7619287c506e",
-      "2e792cf7-64e4-4e03-9e15-d033e6bcbf81",
       "e86eaa8f-91d4-408d-bcc1-6c7296576492",
       "0f465454-01f7-4537-abc2-80a966359ce4",
       "395eacf6-62dc-435b-a559-af9d6d965d44",
@@ -35730,15 +35717,7 @@
       "a1a9faa9-7c43-4f1f-a013-a3b089008407",
       "5c39f1d5-4583-4c10-a85f-e7c29a2ec001",
       "57a33d70-3ed7-4e10-b942-e86f80b29b51",
-      "0ef802ea-0030-4cb4-bc68-96a474591dec",
-      "96ee588d-029e-4378-8b01-b45bfb20b8f1",
-      "0ebf3b5a-289a-47fd-bd44-64a9aa429fc0",
       "36d7cfbe-49fd-4267-a45e-eb96e22d974c",
-      "9999d4cc-677f-4e9b-bd62-aae4b2e026a4",
-      "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
-      "cb2191dd-a2ca-471b-8273-4393fa3fa898",
-      "0998c84a-4a00-4fdd-8a04-4cc1b5bb0241",
-      "ea9c6b9b-5bb7-4c2f-9d70-7a9926ff1cab",
       "77b3dd51-606a-4e53-aba7-080852d07e54",
       "81432fda-974f-42fa-bc6e-e514c6dbb7a6",
       "4d60a57f-e3a1-4761-91ab-1fad1f54f943",
@@ -36438,10 +36417,10 @@
       "b373a8f1-d224-453b-bebf-45a53b4dbf1a"
     ],
     "medical_ethics": [
-      "7caa1555-25ba-4538-8ef3-120e25d7e382",
-      "a7cf94e9-fa26-47d5-b651-34e35867525d",
       "9999d4cc-677f-4e9b-bd62-aae4b2e026a4",
-      "caf9565a-aae6-4c6c-a35e-6c0810e8de33"
+      "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
+      "7caa1555-25ba-4538-8ef3-120e25d7e382",
+      "a7cf94e9-fa26-47d5-b651-34e35867525d"
     ],
     "medical_influencers": [
       "2cec9ead-d341-4154-b5f1-9d882d2689e1",
@@ -36465,8 +36444,8 @@
       "cf7086c2-4904-416f-a1d5-7efcc8453158"
     ],
     "medical_system": [
-      "f2064cfe-d745-454b-b9e2-cc02c82001fb",
-      "96ee588d-029e-4378-8b01-b45bfb20b8f1"
+      "96ee588d-029e-4378-8b01-b45bfb20b8f1",
+      "f2064cfe-d745-454b-b9e2-cc02c82001fb"
     ],
     "medical_testing": [
       "8a3a15c3-bbc9-44e5-bc30-86b845c38fab"
@@ -36624,15 +36603,15 @@
       "11ebbe28-4a72-4494-b48b-554631a509db"
     ],
     "metabolic_disease": [
+      "9999d4cc-677f-4e9b-bd62-aae4b2e026a4",
+      "cb2191dd-a2ca-471b-8273-4393fa3fa898",
       "17e83669-d581-49e6-8ac7-dc3dad020ccc",
       "c90a4a08-c552-4e77-ae60-d05eab1438cd",
       "d4be7395-e39d-4e37-8fb3-9a5b456b3c9e",
       "ac089a38-5913-4f54-b983-388cb891e0e3",
       "395eacf6-62dc-435b-a559-af9d6d965d44",
       "530a1381-4570-4108-8f13-cc3df08a5ee1",
-      "c861228e-79c0-4d83-8f09-9c5cd5a7c51c",
-      "9999d4cc-677f-4e9b-bd62-aae4b2e026a4",
-      "cb2191dd-a2ca-471b-8273-4393fa3fa898"
+      "c861228e-79c0-4d83-8f09-9c5cd5a7c51c"
     ],
     "metabolic_dysfunction": [
       "1985294b-5426-4c78-98dc-586830f1a2f1",
@@ -36725,8 +36704,8 @@
       "10a49285-ea46-4082-98b8-ad57a9f7827b"
     ],
     "metabolic_syndrome": [
-      "92d25f45-897e-4397-9489-6bab56736049",
       "2e792cf7-64e4-4e03-9e15-d033e6bcbf81",
+      "92d25f45-897e-4397-9489-6bab56736049",
       "8ba4a92c-c068-4b4f-b4ad-1eddd671d852",
       "458f5b4a-04ac-4c28-9da7-8ecc05c785e1"
     ],
@@ -37101,6 +37080,8 @@
       "2964b7db-912c-4838-be9c-fbaecdbe9514"
     ],
     "obesity": [
+      "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
+      "cb2191dd-a2ca-471b-8273-4393fa3fa898",
       "1aa54b78-456b-4388-9225-7a7f45c7e85b",
       "25b6ebc8-6c3b-4ea0-932c-7a251dcc7917",
       "f992cf2a-f7de-4859-ac5a-ebfe0744c0ed",
@@ -37114,8 +37095,6 @@
       "94e41c26-1882-4c0c-8833-6373d3e1a420",
       "eef5e9df-e5e0-4943-afe5-30716408751d",
       "8ae23e8f-e020-46fd-aa13-0d6de30d5be8",
-      "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
-      "cb2191dd-a2ca-471b-8273-4393fa3fa898",
       "9ba58f46-b4d6-420e-b319-9bae8e861a98",
       "a81e6143-1aa0-4765-a030-e6f0db02d8e7",
       "f8f6fb83-4bb9-49c5-98fb-4cf8d4c55063",
@@ -37286,11 +37265,11 @@
       "4e94bfda-215f-43ec-b931-758be7342090"
     ],
     "paradigm_shift": [
+      "96ee588d-029e-4378-8b01-b45bfb20b8f1",
+      "caf9565a-aae6-4c6c-a35e-6c0810e8de33",
       "a1d4db7f-916b-4245-8655-f5dd8142ffd4",
       "7caa1555-25ba-4538-8ef3-120e25d7e382",
-      "ac089a38-5913-4f54-b983-388cb891e0e3",
-      "96ee588d-029e-4378-8b01-b45bfb20b8f1",
-      "caf9565a-aae6-4c6c-a35e-6c0810e8de33"
+      "ac089a38-5913-4f54-b983-388cb891e0e3"
     ],
     "parallels_to_physical_fitness": [
       "486fcbeb-293f-4184-abc4-b9f137e08f89"
@@ -37945,10 +37924,10 @@
       "602a571e-b078-4bf8-80e4-4e925e6e1900"
     ],
     "public_health": [
+      "cab268fb-fdba-4b86-af67-c1192736a789",
       "c869cccc-fe49-4c28-bbf2-a9127902e032",
       "04ac25a1-5362-4023-b935-3b074ad6b9bb",
       "0e60547e-f2f2-4957-b671-185e18ff6650",
-      "cab268fb-fdba-4b86-af67-c1192736a789",
       "a888adf8-fe76-4983-a45a-9320cf235eab"
     ],
     "public_health_policy": [
@@ -38021,9 +38000,9 @@
       "39209051-c3a8-4c00-8a75-a3c582c04f13"
     ],
     "refined_carbohydrates": [
-      "4074dfe6-26f1-415e-8fa4-626b92fe71c9",
       "0ef802ea-0030-4cb4-bc68-96a474591dec",
-      "0998c84a-4a00-4fdd-8a04-4cc1b5bb0241"
+      "0998c84a-4a00-4fdd-8a04-4cc1b5bb0241",
+      "4074dfe6-26f1-415e-8fa4-626b92fe71c9"
     ],
     "reframing": [
       "e950d232-2248-4a97-9441-a7b893846604"
@@ -39030,9 +39009,9 @@
       "a5b6a39f-b566-4ee4-b624-8e74a3f2c6a6"
     ],
     "type2_diabetes": [
+      "0ebf3b5a-289a-47fd-bd44-64a9aa429fc0",
       "653ce341-e95a-43bd-928b-9211280dbedd",
       "5c39f1d5-4583-4c10-a85f-e7c29a2ec001",
-      "0ebf3b5a-289a-47fd-bd44-64a9aa429fc0",
       "c5fb13c5-6965-4533-8c39-3b7f997dd7fd"
     ],
     "type3_diabetes": [

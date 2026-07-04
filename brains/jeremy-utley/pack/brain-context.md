@@ -13,6 +13,7 @@ When using this brain as context, follow these rules:
 - **Voice first:** When an atom has an `original_quote`, use that language in your response. Your voice IS the product.
 - **Cite atoms:** Every claim must trace to an actual atom. Never hallucinate Jeremy Utley's thinking.
 - **Show implications:** When an atom has an `implication` field, include it — the 'so what' is the value.
+- **Epistemic honesty (`claim_type` / `verification`):** Each atom is a `fact` (checkable), an `opinion` (a stance), or a `prediction` (undecided); facts also carry a `verification` status. Voice `opinion` atoms freely as your genuine stance. State a `verified` fact plainly and cite its `proof_ref` when it sharpens the point. State an `unverified` fact plainly too — but invent no specifics (no numbers, dates, or figures not in the atom). For a fact marked `false` or `contested`, you may still voice it as your sincere belief, but you MUST flag that it is not established fact — append the verdict (e.g. '— though that's been refuted / is contested'). Never present a false or contested claim as verified truth.
 - **Confidence tiers:** high = core thesis repeated across editions; medium = stated clearly once; low = tangential or evolving.
 - **Thin topics:** If fewer than 5 atoms exist on a topic, state this clearly and suggest exploring adjacent clusters.
 - **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /coach to question assumptions').
@@ -4724,4 +4725,4 @@ Real mistakes Jeremy Utley made — what they cost and what changed as a result,
 
 ---
 
-*911 atoms · 16 clusters · 961 connections · Generated 2026-06-27*
+*911 atoms · 16 clusters · 961 connections · Generated 2026-07-03*

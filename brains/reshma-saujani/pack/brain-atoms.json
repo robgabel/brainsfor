@@ -13,7 +13,7 @@
       "inspired_by": 26,
       "contradicts": 20
     },
-    "last_updated": "2026-06-27",
+    "last_updated": "2026-07-03",
     "coverage": "32 sources including TED talks, Google talks, SXSW panels, podcast episodes, commencement addresses, and press profiles",
     "bio": "Reshma Saujani is a lawyer, politician, and activist who founded Girls Who Code and launched the Marshall Plan for Moms. She is best known for her TED talk 'Teach Girls Bravery, Not Perfection' and her book Brave, Not Perfect, which challenges women to stop optimizing for approval and start taking bold risks.",
     "possessive": "her"
@@ -587,33 +587,6 @@
       ]
     },
     {
-      "id": "c995e9c3-70e9-4736-b9b3-d32a53990680",
-      "content": "Women make 85% of all consumer purchases and use social media 600% more than men \u2014 they already dominate the internet as users. The paradox is that they are largely excluded from building the technology they rely on most.",
-      "cluster": "gender_equity_in_tech",
-      "topics": [
-        "consumer_power",
-        "product_design",
-        "women_in_tech",
-        "business_case"
-      ],
-      "source_ref": "youtube:fC9da6eqaqg",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "85% e t\u00eb gjitha blerjeve konsumatore b\u00ebhen nga femrat. Femrat p\u00ebrdorin mediat sociale 600% m\u00eb shum\u00eb se meshkujt. Ne zot\u00ebrojm\u00eb internetin, dhe duhet t\u00eb nd\u00ebrtojm\u00eb kompanit\u00eb e s\u00eb nes\u00ebrmes.",
-      "implication": "Excluding women from tech product development creates a structural mismatch between who builds products and who uses them \u2014 a business failure as much as an equity failure.",
-      "connections": [
-        {
-          "target_id": "9d08ee5a-8e93-4dfd-ae31-1088b0bf754c",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
       "id": "9925fad5-8724-45b7-8dd3-1cca3184214f",
       "content": "Saujani frames perfectionism not as a personal character flaw but as a rational adaptation to a cultural environment that punishes girls for mistakes and rewards them for flawlessness. Because girls learn early that their social and academic standing depends on getting things right, avoiding error becomes a survival strategy \u2014 one that later becomes deeply limiting when they enter spaces where risk-taking and iteration are required for leadership.",
       "cluster": "bravery_vs_perfection",
@@ -665,6 +638,32 @@
       ]
     },
     {
+      "id": "c995e9c3-70e9-4736-b9b3-d32a53990680",
+      "content": "Women make 85% of all consumer purchases and use social media 600% more than men \u2014 they already dominate the internet as users. The paradox is that they are largely excluded from building the technology they rely on most.",
+      "cluster": "gender_equity_in_tech",
+      "topics": [
+        "consumer_power",
+        "product_design",
+        "women_in_tech",
+        "business_case"
+      ],
+      "source_ref": "youtube:fC9da6eqaqg",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "unverified",
+      "implication": "Excluding women from tech product development creates a structural mismatch between who builds products and who uses them \u2014 a business failure as much as an equity failure.",
+      "connections": [
+        {
+          "target_id": "9d08ee5a-8e93-4dfd-ae31-1088b0bf754c",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
       "id": "0ad2c46a-29c3-4b4b-bd63-c40b23d41f0e",
       "content": "In 2012 only 7,500 women graduated with computer science degrees. With 600,000 open tech jobs, the scale of the gap is enormous \u2014 but Saujani argues the problem can be fixed quickly because the causes are cultural and addressable, not inherent.",
       "cluster": "girls_who_code",
@@ -681,7 +680,6 @@
       "confidence_tier": "high",
       "claim_type": "fact",
       "verification": "unverified",
-      "original_quote": "Ky \u00ebsht\u00eb nj\u00eb num\u00ebr shum\u00eb i fuqish\u00ebm, sepse vitin e kaluar u diplomuan 7,500 femra n\u00eb shkencat kompjuterike. Problemi \u00ebsht\u00eb kaq i madh por mund ta rregullojm\u00eb shum\u00eb shpejt.",
       "implication": "The speed at which Girls Who Code scaled from 20 to 40,000 girls suggests cultural interventions can close the pipeline gap faster than conventional wisdom assumes.",
       "connections": [
         {
@@ -11090,7 +11088,6 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Shum\u00eb vajza jan\u00eb m\u00ebsuar t'u shmangen riskut dhe d\u00ebshtimit. Na kan\u00eb m\u00ebsuar t\u00eb buz\u00ebqeshim bukur, t\u00eb jemi t\u00eb sigurta, t\u00eb marrim dhjeta n\u00eb shkoll\u00eb. Djemt\u00eb n\u00eb an\u00ebn tjet\u00ebr, jan\u00eb m\u00ebsuar q\u00eb t\u00eb luajn\u00eb fort, t\u00eb arrijn\u00eb majat t\u00eb kacavirren n\u00ebp\u00ebr paralele, e t\u00eb hidhen me kok\u00eb.",
       "implication": "The gender gap in leadership and tech is not primarily a capability gap \u2014 it is a courage gap manufactured by differential socialization from childhood.",
       "connections": [
         {
@@ -11153,6 +11150,32 @@
       ]
     },
     {
+      "id": "ee30f459-9302-4ae5-bfb1-b925d060b3f0",
+      "content": "The courage deficit \u2014 not the federal deficit \u2014 is Saujani's primary economic concern. Society and the economy are losing out because women are not raised to be brave, and this suppresses their contributions to innovation and problem-solving.",
+      "cluster": "feminist_economic_agenda",
+      "topics": [
+        "courage_deficit",
+        "economic_cost",
+        "innovation",
+        "gender_gap"
+      ],
+      "source_ref": "youtube:fC9da6eqaqg",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "The bravery gap is not just a personal or cultural problem \u2014 it is a macroeconomic failure with measurable costs in innovation, productivity, and unsolved problems.",
+      "connections": [
+        {
+          "target_id": "8ec0ecc9-2217-4c62-bcde-79480dbdc9f0",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
       "id": "f83dbc57-e537-45a5-8d1e-0e6c270c0770",
       "content": "Saujani regularly pointed out that progress toward gender parity in computing has actually reversed over time. Women represented a larger share of computer science graduates in the 1980s than they do today. The trajectory is not a slow march toward parity \u2014 it is a documented regression. This historical data point disrupts the assumption that progress is inevitable and underscores that cultural interventions have to be deliberate, not passive.",
       "cluster": "girls_who_code",
@@ -11179,14 +11202,14 @@
       ]
     },
     {
-      "id": "ee30f459-9302-4ae5-bfb1-b925d060b3f0",
-      "content": "The courage deficit \u2014 not the federal deficit \u2014 is Saujani's primary economic concern. Society and the economy are losing out because women are not raised to be brave, and this suppresses their contributions to innovation and problem-solving.",
-      "cluster": "feminist_economic_agenda",
+      "id": "6dbf1698-57f2-4885-9a85-e0eb3ed845e5",
+      "content": "Coding is inherently an exercise in imperfection \u2014 it is an endless process of trial and error, where a single misplaced character can determine success or failure. Teaching girls to code is therefore simultaneously teaching them to tolerate and work through imperfection.",
+      "cluster": "girls_who_code",
       "topics": [
-        "courage_deficit",
-        "economic_cost",
-        "innovation",
-        "gender_gap"
+        "coding",
+        "trial_and_error",
+        "imperfection",
+        "pedagogy"
       ],
       "source_ref": "youtube:fC9da6eqaqg",
       "source_url": null,
@@ -11195,11 +11218,10 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Disa njer\u00ebz shqet\u00ebsohen p\u00ebr deficitet federale, une shqet\u00ebsohem p\u00ebr munges\u00ebn ton\u00eb t\u00eb guximit. Ekonomia jon\u00eb, shoq\u00ebria jon\u00eb, po humbet sepse nuk po i rrisim vajzat q\u00eb t\u00eb jen\u00eb t\u00eb guximshme.",
-      "implication": "The bravery gap is not just a personal or cultural problem \u2014 it is a macroeconomic failure with measurable costs in innovation, productivity, and unsolved problems.",
+      "implication": "Coding is a pedagogical tool not just for technical skills but for building psychological resilience and comfort with iterative failure \u2014 competencies girls are rarely taught elsewhere.",
       "connections": [
         {
-          "target_id": "8ec0ecc9-2217-4c62-bcde-79480dbdc9f0",
+          "target_id": "92d6277d-0408-4480-8dcb-69d03bdd4978",
           "relationship": "related",
           "confidence": 0.24
         }
@@ -11269,33 +11291,6 @@
       ]
     },
     {
-      "id": "6dbf1698-57f2-4885-9a85-e0eb3ed845e5",
-      "content": "Coding is inherently an exercise in imperfection \u2014 it is an endless process of trial and error, where a single misplaced character can determine success or failure. Teaching girls to code is therefore simultaneously teaching them to tolerate and work through imperfection.",
-      "cluster": "girls_who_code",
-      "topics": [
-        "coding",
-        "trial_and_error",
-        "imperfection",
-        "pedagogy"
-      ],
-      "source_ref": "youtube:fC9da6eqaqg",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Programimi \u00ebsht\u00eb nj\u00eb proces i pafund\u00ebm prove dhe gabimesh, perpjekje p\u00ebr t\u00eb gjetur komand\u00ebn e duhur n\u00eb vendin e duhur, ndonj\u00ebhere vet\u00ebm nj\u00eb pik\u00ebpresje b\u00ebn ndryshimin midis suksesit dhe d\u00ebshtimit.",
-      "implication": "Coding is a pedagogical tool not just for technical skills but for building psychological resilience and comfort with iterative failure \u2014 competencies girls are rarely taught elsewhere.",
-      "connections": [
-        {
-          "target_id": "92d6277d-0408-4480-8dcb-69d03bdd4978",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
       "id": "1ac5d194-f88c-4f37-8624-83aa8e8b96af",
       "content": "Saujani launched the Marshall Plan for Moms in January 2021 as a direct response to the mass exodus of women \u2014 particularly mothers \u2014 from the workforce during the COVID-19 pandemic. The plan calls on the federal government to treat mothers as economic actors worthy of direct investment, including pay, childcare infrastructure, and formal recognition of caregiving as labor. The name deliberately invokes the scale of the post-WWII Marshall Plan, arguing that rebuilding the American economy after the pandemic requires the same level of governmental commitment to mothers that the original Marshall Plan directed toward rebuilding Europe.",
       "cluster": "marshall_plan_for_moms",
@@ -11332,6 +11327,32 @@
       ]
     },
     {
+      "id": "c09b92fb-ff57-4672-a957-5f54408d0f09",
+      "content": "Girls are technically capable of coding \u2014 the challenge is not aptitude but identity and self-perception. Simply teaching coding skills is not sufficient; girls must also be taught that they belong and that struggling is normal, not a sign of personal deficiency.",
+      "cluster": "gender_equity_in_tech",
+      "topics": [
+        "tech_education",
+        "belonging",
+        "identity",
+        "girls_in_STEM"
+      ],
+      "source_ref": "youtube:fC9da6eqaqg",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Tech education for girls must address both technical competence and psychological belonging simultaneously \u2014 a skills-only curriculum will fail to retain girls who believe they are the problem.",
+      "connections": [
+        {
+          "target_id": "71f8bc96-9e79-43b2-a748-dea709a48ad5",
+          "relationship": "related",
+          "confidence": 0.43
+        }
+      ]
+    },
+    {
       "id": "85146f12-c0d2-496d-bfd8-bd832833aa5d",
       "content": "For perfectionist girls the only two states are perfect or failed \u2014 there is no perceived middle ground of 'in progress' or 'good enough to show.' This binary thinking prevents them from displaying incremental progress and receiving the feedback needed to improve.",
       "cluster": "bravery_vs_perfection",
@@ -11359,33 +11380,6 @@
       ]
     },
     {
-      "id": "c09b92fb-ff57-4672-a957-5f54408d0f09",
-      "content": "Girls are technically capable of coding \u2014 the challenge is not aptitude but identity and self-perception. Simply teaching coding skills is not sufficient; girls must also be taught that they belong and that struggling is normal, not a sign of personal deficiency.",
-      "cluster": "gender_equity_in_tech",
-      "topics": [
-        "tech_education",
-        "belonging",
-        "identity",
-        "girls_in_STEM"
-      ],
-      "source_ref": "youtube:fC9da6eqaqg",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Del q\u00eb vajzat jan\u00eb shum\u00eb t\u00eb mira n\u00eb programim, por nuk \u00ebsht\u00eb mjaftuesh\u00ebm t'u m\u00ebsojm\u00eb vet\u00ebm k\u00ebt\u00eb.",
-      "implication": "Tech education for girls must address both technical competence and psychological belonging simultaneously \u2014 a skills-only curriculum will fail to retain girls who believe they are the problem.",
-      "connections": [
-        {
-          "target_id": "71f8bc96-9e79-43b2-a748-dea709a48ad5",
-          "relationship": "related",
-          "confidence": 0.43
-        }
-      ]
-    },
-    {
       "id": "7fa5b11e-47b2-436f-b6c4-bbc28d666a2a",
       "content": "Teaching girls bravery must be paired with building community \u2014 showing them they are not alone in their struggles. Working harder alone will not fix a broken system; girls need a support network that normalizes difficulty and encourages persistence.",
       "cluster": "identity_and_belonging",
@@ -11402,7 +11396,6 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Duhet t\u00eb fillojm\u00eb t\u00eb rregullojm\u00eb perfeksionizmin, por duhet ta kombinojm\u00eb me krijimin e nj\u00eb lidhjeje e cila u m\u00ebson vajzave q\u00eb nuk jan\u00eb vet\u00ebm. Sepse duke u p\u00ebrpjekur m\u00eb fort nuk do t\u00eb rregullohet nj\u00eb sistem i prishur.",
       "implication": "Individual resilience programs are insufficient without community structures \u2014 girls need both inner bravery and outer belonging to overcome systemic barriers.",
       "connections": [
         {
@@ -11414,33 +11407,6 @@
           "target_id": "627d06df-56eb-4d97-80b7-f3ac837e1d34",
           "relationship": "related",
           "confidence": 0.24
-        }
-      ]
-    },
-    {
-      "id": "071faa7c-e328-43b6-afc0-760ed320dbc6",
-      "content": "Bravery must be taught early \u2014 in schools, at the start of careers \u2014 not left to be discovered accidentally in middle age as Saujani discovered it at 33. Early intervention has the highest leverage for shaping life trajectories and societal impact.",
-      "cluster": "education_reform",
-      "topics": [
-        "early_intervention",
-        "schools",
-        "bravery_education",
-        "career_trajectories"
-      ],
-      "source_ref": "youtube:fC9da6eqaqg",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Nuk mund t\u00eb presim q\u00eb ato t\u00eb m\u00ebsojn\u00eb t\u00eb b\u00ebhen t\u00eb guximshme si un\u00eb kur isha 33 vje\u00e7. Duhet t'i m\u00ebsojm\u00eb t\u00eb jen\u00eb t\u00eb guximshme n\u00eb shkolla dhe her\u00ebt n\u00eb karrier\u00eb at\u00ebher\u00eb kur ka m\u00eb shum\u00eb potencial p\u00ebr t\u00eb ndikuar n\u00eb jet\u00ebn e tyre.",
-      "implication": "Delaying bravery education until adulthood means decades of suppressed potential \u2014 early school-based interventions are not optional extras but foundational infrastructure for gender equity.",
-      "connections": [
-        {
-          "target_id": "981b8c64-64f2-46fb-a46a-84e1e9e3fee7",
-          "relationship": "related",
-          "confidence": 0.23
         }
       ]
     },
@@ -11486,14 +11452,14 @@
       ]
     },
     {
-      "id": "4f7e85f4-e538-4d45-9800-b8e2b2691627",
-      "content": "Girls must be told they are needed and accepted not because they are perfect but because they are brave. Shifting the basis of approval from perfection to courage reframes the entire value system girls internalize.",
-      "cluster": "bravery_vs_perfection",
+      "id": "071faa7c-e328-43b6-afc0-760ed320dbc6",
+      "content": "Bravery must be taught early \u2014 in schools, at the start of careers \u2014 not left to be discovered accidentally in middle age as Saujani discovered it at 33. Early intervention has the highest leverage for shaping life trajectories and societal impact.",
+      "cluster": "education_reform",
       "topics": [
-        "approval",
-        "belonging",
-        "courage",
-        "value_systems"
+        "early_intervention",
+        "schools",
+        "bravery_education",
+        "career_trajectories"
       ],
       "source_ref": "youtube:fC9da6eqaqg",
       "source_url": null,
@@ -11502,13 +11468,12 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Ne duhet t'i tregojm\u00eb q\u00eb ato do t\u00eb duhen dhe do t\u00eb pranohen jo se jan\u00eb perfekte por t\u00eb guximshme.",
-      "implication": "The message girls receive about what earns them belonging and approval is as important as any specific skill they are taught \u2014 changing that message is a prerequisite for lasting change.",
+      "implication": "Delaying bravery education until adulthood means decades of suppressed potential \u2014 early school-based interventions are not optional extras but foundational infrastructure for gender equity.",
       "connections": [
         {
-          "target_id": "3edc57cb-eff8-495d-9bab-5d73a266986a",
+          "target_id": "981b8c64-64f2-46fb-a46a-84e1e9e3fee7",
           "relationship": "related",
-          "confidence": 0.24
+          "confidence": 0.23
         }
       ]
     },
@@ -11540,6 +11505,32 @@
       ]
     },
     {
+      "id": "4f7e85f4-e538-4d45-9800-b8e2b2691627",
+      "content": "Girls must be told they are needed and accepted not because they are perfect but because they are brave. Shifting the basis of approval from perfection to courage reframes the entire value system girls internalize.",
+      "cluster": "bravery_vs_perfection",
+      "topics": [
+        "approval",
+        "belonging",
+        "courage",
+        "value_systems"
+      ],
+      "source_ref": "youtube:fC9da6eqaqg",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "The message girls receive about what earns them belonging and approval is as important as any specific skill they are taught \u2014 changing that message is a prerequisite for lasting change.",
+      "connections": [
+        {
+          "target_id": "3edc57cb-eff8-495d-9bab-5d73a266986a",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
       "id": "059feb9c-7553-4831-8cec-9c397fbf2be9",
       "content": "When girls are taught imperfection and taught to use it, a movement of brave girls emerges who will build a better world for themselves and everyone. Imperfection is not a liability to be tolerated \u2014 it is a generative force to be harnessed.",
       "cluster": "courage_and_failure",
@@ -11556,7 +11547,6 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Kur i m\u00ebsojm\u00eb t\u00eb jen\u00eb t\u00eb pap\u00ebrsosura, dhe i m\u00ebsojm\u00eb q\u00eb ta p\u00ebrdorin, ne do krijojm\u00eb nj\u00eb l\u00ebvizje t\u00eb vajzave q\u00eb jan\u00eb t\u00eb guximshme dhe q\u00eb do t\u00eb nd\u00ebrtojn\u00eb nj\u00eb bot\u00eb m\u00eb t\u00eb mir\u00eb p\u00ebr veten e tyre dhe p\u00ebr t\u00eb gjith\u00eb ne.",
       "implication": "The goal is not to make girls comfortable with failure for its own sake but to unleash imperfection as a creative and innovative force that benefits society broadly.",
       "connections": [
         {
@@ -11583,7 +11573,6 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Mendoj q\u00eb kur kompanit\u00eb kan\u00eb ekipe diverse, dhe kan\u00eb femra t\u00eb pabesueshme n\u00eb ekipet e tyre t\u00eb inxhinier\u00ebve, ato nd\u00ebrtojn\u00eb gj\u00ebra mbresl\u00ebn\u00ebse, dhe e shohim \u00e7do dit\u00eb.",
       "implication": "The business case for gender diversity in tech engineering is concrete and demonstrable, not aspirational \u2014 companies can observe better outcomes when teams are diverse.",
       "connections": [
         {
@@ -11610,7 +11599,6 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Para se t\u00eb merrni iden\u00eb e gabuar, ky nuk \u00ebsht\u00eb nj\u00eb fjalim p\u00ebr r\u00ebnd\u00ebsin\u00eb e d\u00ebshtimit. Dhe as p\u00ebr p\u00ebrkuljen.",
       "implication": "Reframing the lesson from loss as 'do brave things' rather than 'embrace failure' shifts focus from outcome-acceptance to action-initiation \u2014 a more actionable and less passive call to change.",
       "connections": [
         {
@@ -11805,38 +11793,6 @@
       ]
     },
     {
-      "id": "8186e56e-7c59-4f76-8918-3661fb33d3e4",
-      "content": "Saujani founded Girls Who Code in 2012, starting with 20 girls. By the time of this talk the organization had scaled to serve 40,000 girls across all 50 states \u2014 a growth rate that demonstrates the problem is solvable and demand is enormous.",
-      "cluster": "girls_who_code",
-      "topics": [
-        "Girls_Who_Code",
-        "scale",
-        "growth",
-        "tech_education"
-      ],
-      "source_ref": "youtube:fC9da6eqaqg",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "N\u00eb 2012 ne m\u00ebsuam 20 vajza. K\u00ebt\u00eb vit do m\u00ebsojm\u00eb 40,000 n\u00eb t\u00eb gjith\u00eb 50 shtetet.",
-      "implication": "Scale is achievable quickly when the model is right; the tech gender gap is not an intractable cultural problem but one that responds rapidly to targeted intervention.",
-      "connections": [
-        {
-          "target_id": "7e247e90-f738-4b61-bbd1-48cdefd26872",
-          "relationship": "related",
-          "confidence": 0.39
-        },
-        {
-          "target_id": "02b6d700-5c39-4a26-a12c-4b6fbc0f148a",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
       "id": "ebb77f6e-b04d-46ff-b4fd-635429d2fe2d",
       "content": "When Saujani founded Girls Who Code in 2012, she was not only building a coding curriculum \u2014 she was constructing a visible community of girls who looked like they belonged in technology. The organization's deliberate emphasis on celebrating diverse founders, instructors, and alumni meant that the role model infrastructure was built into the program design itself, not retrofitted after the fact.",
       "cluster": "role_models_and_representation",
@@ -11883,6 +11839,37 @@
       ]
     },
     {
+      "id": "8186e56e-7c59-4f76-8918-3661fb33d3e4",
+      "content": "Saujani founded Girls Who Code in 2012, starting with 20 girls. By the time of this talk the organization had scaled to serve 40,000 girls across all 50 states \u2014 a growth rate that demonstrates the problem is solvable and demand is enormous.",
+      "cluster": "girls_who_code",
+      "topics": [
+        "Girls_Who_Code",
+        "scale",
+        "growth",
+        "tech_education"
+      ],
+      "source_ref": "youtube:fC9da6eqaqg",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "unverified",
+      "implication": "Scale is achievable quickly when the model is right; the tech gender gap is not an intractable cultural problem but one that responds rapidly to targeted intervention.",
+      "connections": [
+        {
+          "target_id": "7e247e90-f738-4b61-bbd1-48cdefd26872",
+          "relationship": "related",
+          "confidence": 0.39
+        },
+        {
+          "target_id": "02b6d700-5c39-4a26-a12c-4b6fbc0f148a",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
       "id": "851b9f8c-985d-482d-9202-0325e05f828a",
       "content": "Women's underrepresentation spans science, executive boards, corporate boards, Congress, and every public domain. Saujani frames this as a single unified consequence of the bravery deficit \u2014 not separate problems requiring separate explanations.",
       "cluster": "bravery_vs_perfection",
@@ -11899,7 +11886,6 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Mungesa e guximit \u00ebsht\u00eb pse femrat jan\u00eb pak t\u00eb p\u00ebrfaq\u00ebsuara n\u00eb shkenca, n\u00eb trupa ekzekutiv\u00eb, n\u00eb borde, n\u00eb Kongres dhe kudo.",
       "implication": "A single root cause \u2014 socialized courage deficiency \u2014 explains multiple seemingly unrelated gender gaps, which means a single category of intervention could produce cross-domain results."
     },
     {
@@ -12057,6 +12043,32 @@
       ]
     },
     {
+      "id": "0320e004-a5f9-4b1a-ba68-4aff0bdc5944",
+      "content": "When boys struggle with code they say 'there's something wrong with my code.' When girls struggle they say 'there's something wrong with me.' This difference in attribution \u2014 external vs. internal \u2014 reflects how girls have been taught to internalize failure as personal inadequacy.",
+      "cluster": "imposter_syndrome",
+      "topics": [
+        "self_attribution",
+        "failure_framing",
+        "imposter_syndrome",
+        "STEM_retention"
+      ],
+      "source_ref": "youtube:fC9da6eqaqg",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Girls' tendency to self-blame for technical failures will keep them from persisting in STEM unless educators actively reframe struggle as external and normal rather than evidence of personal unworthiness.",
+      "connections": [
+        {
+          "target_id": "dfb5d4c0-eb61-41e5-b21a-45abc0a12522",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
       "id": "24cd4f54-aab5-4842-bc42-8bf43b6a522e",
       "content": "Saujani has spoken about the way Girls Who Code chapters and clubs became, for many of their participants, the first spaces where they did not have to manage their identity as an addition to their work \u2014 where being a girl, or a girl of color, was not an anomaly to be explained or a liability to be overcome, but simply a given. This experience of normative belonging \u2014 where the institution is built around you rather than despite you \u2014 is, she argues, transformative in ways that brief diversity initiatives never are, because it changes what girls believe is the natural state of things.",
       "cluster": "identity_and_belonging",
@@ -12133,33 +12145,6 @@
       ]
     },
     {
-      "id": "0320e004-a5f9-4b1a-ba68-4aff0bdc5944",
-      "content": "When boys struggle with code they say 'there's something wrong with my code.' When girls struggle they say 'there's something wrong with me.' This difference in attribution \u2014 external vs. internal \u2014 reflects how girls have been taught to internalize failure as personal inadequacy.",
-      "cluster": "imposter_syndrome",
-      "topics": [
-        "self_attribution",
-        "failure_framing",
-        "imposter_syndrome",
-        "STEM_retention"
-      ],
-      "source_ref": "youtube:fC9da6eqaqg",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Kur djemt\u00eb kan\u00eb v\u00ebshtir\u00ebsi me nj\u00eb detyr\u00eb, vin\u00eb dhe thon\u00eb: 'Profesore, ka dicka gabim me kodin tim.' Vajzat vin\u00eb dhe thon\u00eb: 'Profesore, ka dicka gabim me mua.'",
-      "implication": "Girls' tendency to self-blame for technical failures will keep them from persisting in STEM unless educators actively reframe struggle as external and normal rather than evidence of personal unworthiness.",
-      "connections": [
-        {
-          "target_id": "dfb5d4c0-eb61-41e5-b21a-45abc0a12522",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
       "id": "0ae3fad5-14db-455f-bbc9-d2c0f33152f5",
       "content": "Girls Who Code built an Alumni Program \u2014 a free online community offering networking, continuing education, and job and internship opportunities to graduates of its Summer Immersion and Clubs programs. This signals a long-term community-building strategy that extends beyond initial skill acquisition.",
       "cluster": "gender_equity_in_tech",
@@ -12203,7 +12188,6 @@
       "confidence_tier": "high",
       "claim_type": "fact",
       "verification": "unverified",
-      "original_quote": "Kemi rreth 80 partner\u00eb, nga Twitter deri n\u00eb Facebook n\u00eb Adobe, IBM, Microsoft, Pixar, Disney, pra \u00e7do kompani atje jasht\u00eb. Dhe n\u00ebse nuk jeni regjistruar, un\u00eb do t'ju gjej, sepse ne duam \u00e7do kompani n\u00eb teknologji t\u00eb marri nj\u00eb vajz\u00eb nga klasat e Girls Who Code n\u00eb zyrat e tyre.",
       "implication": "Solving the tech gender gap requires not just education but industry absorption \u2014 corporate commitment to hiring from diverse pipelines is the essential second half of the solution.",
       "connections": [
         {
@@ -12463,33 +12447,6 @@
       "implication": "Economic productivity is not a sufficient condition for social inclusion or political protection. For leaders designing institutions or policies, this history is a reminder that belonging must be actively constructed through civic and legal frameworks \u2014 not assumed to follow from contribution."
     },
     {
-      "id": "af20a2e1-9e74-4d31-8e7b-c9a0200db5fd",
-      "content": "An HP study found men apply for jobs when they meet 60% of qualifications, while women apply only when they meet 100%. Saujani reframes this not as a confidence deficit in women but as evidence that women have been socialized to aspire to perfection and are more cautious than is warranted.",
-      "cluster": "imposter_syndrome",
-      "topics": [
-        "job_applications",
-        "confidence",
-        "perfectionism",
-        "systemic_framing"
-      ],
-      "source_ref": "youtube:fC9da6eqaqg",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "Ky studim zakonisht merret si prov\u00eb q\u00eb grave u duhet m\u00eb shum\u00eb besim. Por un\u00eb mendoj q\u00eb \u00ebsht\u00eb prov\u00eb q\u00eb grat\u00eb jan\u00eb shtyr\u00eb nga shoq\u00ebria q\u00eb t\u00eb aspirojn\u00eb p\u00ebr perfeksion, dhe jan\u00eb m\u00eb t\u00eb kujdesshme se \u00e7'duhet.",
-      "implication": "Framing women's caution as a confidence problem puts the burden of change on individual women; framing it as socialized perfectionism shifts responsibility to the systems and cultures that produced it.",
-      "connections": [
-        {
-          "target_id": "92d6277d-0408-4480-8dcb-69d03bdd4978",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
       "id": "4ec2b75c-cb27-4dc2-8475-19212e2d4949",
       "content": "Saujani has noted that the Girls Who Code classroom was often the first time many of her students had ever been in a room where a woman \u2014 specifically a woman of color \u2014 was presented as a technology authority. The instructor's presence, before a single line of code was written, was the first lesson. Representation inside the learning environment shapes what students believe about the field before content delivery begins.",
       "cluster": "role_models_and_representation",
@@ -12532,7 +12489,6 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "N\u00eb fjal\u00eb t\u00eb tjera, ne po i rrisim vajzat tona p\u00ebr t\u00eb q\u00ebn\u00eb perfekte dhe po rrisim djemt\u00eb tan\u00eb p\u00ebr t\u00eb q\u00ebn\u00eb t\u00eb guximsh\u00ebm.",
       "implication": "Fixing the gender gap requires a cultural intervention at the level of how we raise children, not just policies targeted at adult women already shaped by this conditioning.",
       "connections": [
         {
@@ -12549,6 +12505,32 @@
           "target_id": "d2beac9b-246b-4c3b-a87b-a58901407f18",
           "relationship": "related",
           "confidence": 0.43
+        }
+      ]
+    },
+    {
+      "id": "af20a2e1-9e74-4d31-8e7b-c9a0200db5fd",
+      "content": "An HP study found men apply for jobs when they meet 60% of qualifications, while women apply only when they meet 100%. Saujani reframes this not as a confidence deficit in women but as evidence that women have been socialized to aspire to perfection and are more cautious than is warranted.",
+      "cluster": "imposter_syndrome",
+      "topics": [
+        "job_applications",
+        "confidence",
+        "perfectionism",
+        "systemic_framing"
+      ],
+      "source_ref": "youtube:fC9da6eqaqg",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "unverified",
+      "implication": "Framing women's caution as a confidence problem puts the burden of change on individual women; framing it as socialized perfectionism shifts responsibility to the systems and cultures that produced it.",
+      "connections": [
+        {
+          "target_id": "92d6277d-0408-4480-8dcb-69d03bdd4978",
+          "relationship": "related",
+          "confidence": 0.24
         }
       ]
     },
@@ -12705,60 +12687,6 @@
       ]
     },
     {
-      "id": "a33bd7df-5bec-4e05-bd48-cfc0fa31b3ad",
-      "content": "Saujani's congressional run at age 33 was the first time in her life she did something truly brave without worrying about being perfect. This personal experience became the founding insight of her entire philosophy \u2014 that women are conditioned to avoid risk and seek perfection, and that breaking that pattern is transformative regardless of outcome.",
-      "cluster": "political_courage",
-      "topics": [
-        "bravery",
-        "perfection",
-        "congressional_run",
-        "personal_transformation"
-      ],
-      "source_ref": "youtube:fC9da6eqaqg",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "Ju tregoj historin\u00eb e kandidimit tim p\u00ebr Kongres sepse isha 33 vje\u00e7 dhe ishte hera e par\u00eb n\u00eb gjith\u00eb jet\u00ebn time q\u00eb un\u00eb kisha b\u00ebr\u00eb dicka v\u00ebrtet t\u00eb guximshme ku nuk u shqet\u00ebsova p\u00ebr t\u00eb q\u00ebn\u00eb perfekte.",
-      "implication": "If a highly educated, ambitious woman only first acts bravely at 33, society is failing girls by conditioning them toward perfection far too early and for far too long.",
-      "connections": [
-        {
-          "target_id": "8b7aad3c-40c1-4c20-b0f5-17ba895cc0a7",
-          "relationship": "related",
-          "confidence": 0.63
-        }
-      ]
-    },
-    {
-      "id": "af84c30f-f9a6-4958-9ad7-bd881c3a6202",
-      "content": "When girls are taught bravery and supported by a community, they build remarkable things. Saujani cites examples including a game fighting menstruation taboos, an app helping Americans with surveys built by a Syrian refugee, and an algorithm for detecting cancer built by a 16-year-old hoping to save her father.",
-      "cluster": "girls_who_code",
-      "topics": [
-        "student_achievements",
-        "innovation",
-        "impact",
-        "brave_building"
-      ],
-      "source_ref": "youtube:fC9da6eqaqg",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "Kur i m\u00ebsojm\u00eb vajzat t\u00eb jen\u00eb t\u00eb guximshme dhe kur kemi nj\u00eb rrjet q\u00eb i mb\u00ebshtet dhe i inkurajon, ato do nd\u00ebrtojn\u00eb gj\u00ebra t\u00eb pabesueshme, dhe e shoh k\u00ebt\u00eb cdo dit\u00eb.",
-      "implication": "The latent potential of girls in tech is not hypothetical \u2014 when structural and psychological barriers are removed, they immediately produce innovations with real social impact.",
-      "connections": [
-        {
-          "target_id": "8ec0ecc9-2217-4c62-bcde-79480dbdc9f0",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
       "id": "3159ffc8-9e1e-4d9b-b2d4-5f4453b582bd",
       "content": "Reshma Saujani's 'Brave Not Perfect' and related books about releasing perfectionism are essential reading for women in high-performance fields. These frameworks invite women to let go of the relentless pursuit of flawlessness and embrace imperfection as a sustainable mode of operating.",
       "cluster": "bravery_vs_perfection",
@@ -12788,6 +12716,32 @@
           "target_id": "6af53255-f6ee-4d17-a6e5-c0dee4e3ae0e",
           "relationship": "related",
           "confidence": 0.39
+        }
+      ]
+    },
+    {
+      "id": "a33bd7df-5bec-4e05-bd48-cfc0fa31b3ad",
+      "content": "Saujani's congressional run at age 33 was the first time in her life she did something truly brave without worrying about being perfect. This personal experience became the founding insight of her entire philosophy \u2014 that women are conditioned to avoid risk and seek perfection, and that breaking that pattern is transformative regardless of outcome.",
+      "cluster": "political_courage",
+      "topics": [
+        "bravery",
+        "perfection",
+        "congressional_run",
+        "personal_transformation"
+      ],
+      "source_ref": "youtube:fC9da6eqaqg",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "unverified",
+      "implication": "If a highly educated, ambitious woman only first acts bravely at 33, society is failing girls by conditioning them toward perfection far too early and for far too long.",
+      "connections": [
+        {
+          "target_id": "8b7aad3c-40c1-4c20-b0f5-17ba895cc0a7",
+          "relationship": "related",
+          "confidence": 0.63
         }
       ]
     },
@@ -12855,6 +12809,32 @@
       ]
     },
     {
+      "id": "af84c30f-f9a6-4958-9ad7-bd881c3a6202",
+      "content": "When girls are taught bravery and supported by a community, they build remarkable things. Saujani cites examples including a game fighting menstruation taboos, an app helping Americans with surveys built by a Syrian refugee, and an algorithm for detecting cancer built by a 16-year-old hoping to save her father.",
+      "cluster": "girls_who_code",
+      "topics": [
+        "student_achievements",
+        "innovation",
+        "impact",
+        "brave_building"
+      ],
+      "source_ref": "youtube:fC9da6eqaqg",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "unverified",
+      "implication": "The latent potential of girls in tech is not hypothetical \u2014 when structural and psychological barriers are removed, they immediately produce innovations with real social impact.",
+      "connections": [
+        {
+          "target_id": "8ec0ecc9-2217-4c62-bcde-79480dbdc9f0",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
       "id": "43dc9d95-39f4-4e24-8bcd-e6aee725e02e",
       "content": "Carol Dweck's research on fifth-grade students found that bright girls gave up quickly when faced with hard problems, while bright boys were energized by the same challenge and more likely to double their efforts. Crucially, girls outperformed boys in every subject at that grade level, confirming the gap is not about ability.",
       "cluster": "bravery_vs_perfection",
@@ -12898,7 +12878,6 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Ato n\u00eb 600,000 vende pune t\u00eb lira n\u00eb teknologji, grat\u00eb po lihen pas, dhe kjo do t\u00eb thot\u00eb q\u00eb dhe ekonomia jon\u00eb po lihet pas n\u00eb gjith\u00eb inovacionin dhe problemet q\u00eb grat\u00eb do t\u00eb zgjidhnin n\u00ebse do shtyheshin nga shoqeria p\u00ebr t\u00eb qene t\u00eb guximshme n\u00eb vend t\u00eb perfektes.",
       "implication": "The tech gender gap is not just an equity issue \u2014 it is an economic and innovation crisis that will worsen as technology becomes more central to every industry.",
       "connections": [
         {
@@ -13035,7 +13014,6 @@
       "confidence_tier": "high",
       "claim_type": "opinion",
       "verification": "unverified",
-      "original_quote": "Dua q\u00eb t\u00eb gjith\u00eb ju t'i thoni cdo vajze q\u00eb njihni motrave, mbesave, n\u00ebnpun\u00ebseve, koleg\u00ebve, q\u00eb t\u00eb jen\u00eb n\u00eb rehati me pap\u00ebrsosm\u00ebrin\u00eb.",
       "implication": "Individual programs are necessary but not sufficient \u2014 a cultural movement that changes everyday messages given to girls by the adults around them is needed to achieve systemic impact.",
       "connections": [
         {
@@ -19154,33 +19132,6 @@
       ]
     },
     {
-      "id": "793c3b57-89ef-4c57-9d1c-647324152f35",
-      "content": "To truly change the economy and society, we cannot leave behind half the population. Inclusion of women is not charity or diversity optics \u2014 it is an economic and civilizational necessity for addressing the world's most pressing problems.",
-      "cluster": "feminist_economic_agenda",
-      "topics": [
-        "economic_necessity",
-        "inclusion",
-        "half_the_population",
-        "societal_change"
-      ],
-      "source_ref": "youtube:fC9da6eqaqg",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "original_quote": "Q\u00eb t\u00eb ndryshoj\u00eb v\u00ebrtet\u00eb, ne nuk mund t\u00eb l\u00ebm\u00eb pas gjysm\u00ebn e popullsise son\u00eb.",
-      "implication": "Framing women's inclusion as economic necessity rather than moral obligation makes the case to audiences who are unmoved by equity arguments but responsive to growth and competitiveness arguments.",
-      "connections": [
-        {
-          "target_id": "168b775e-7fb5-4a34-8527-54bc32fda1e6",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
       "id": "3ce9ad01-40c1-4c35-b780-42cdebde9b1b",
       "content": "One of the most powerful practices for building bravery is regularly doing things you are not good at but enjoy \u2014 what Saujani calls operating in mediocrity by choice. Men do this naturally through hobbies like golf and fantasy sports. Women rarely allow themselves to participate in activities at which they are not already competent.",
       "cluster": "bravery_vs_perfection",
@@ -19236,6 +19187,32 @@
           "target_id": "85146f12-c0d2-496d-bfd8-bd832833aa5d",
           "relationship": "related",
           "confidence": 0.43
+        }
+      ]
+    },
+    {
+      "id": "793c3b57-89ef-4c57-9d1c-647324152f35",
+      "content": "To truly change the economy and society, we cannot leave behind half the population. Inclusion of women is not charity or diversity optics \u2014 it is an economic and civilizational necessity for addressing the world's most pressing problems.",
+      "cluster": "feminist_economic_agenda",
+      "topics": [
+        "economic_necessity",
+        "inclusion",
+        "half_the_population",
+        "societal_change"
+      ],
+      "source_ref": "youtube:fC9da6eqaqg",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Framing women's inclusion as economic necessity rather than moral obligation makes the case to audiences who are unmoved by equity arguments but responsive to growth and competitiveness arguments.",
+      "connections": [
+        {
+          "target_id": "168b775e-7fb5-4a34-8527-54bc32fda1e6",
+          "relationship": "related",
+          "confidence": 0.24
         }
       ]
     },
@@ -26745,8 +26722,8 @@
       "d570d7ae-0ff6-42fa-9017-b8e67385d934",
       "f65eb5c0-3207-4324-a739-e3c60ac473b1",
       "ea4a398d-0434-4eeb-a5c9-af5f1e403874",
-      "a33bd7df-5bec-4e05-bd48-cfc0fa31b3ad",
       "3159ffc8-9e1e-4d9b-b2d4-5f4453b582bd",
+      "a33bd7df-5bec-4e05-bd48-cfc0fa31b3ad",
       "20f21c95-6e22-4a0e-bf4b-ba9cacaae2d4",
       "012b7c04-78c8-40f9-b320-a276cf1e9a26",
       "03be49f0-dcc8-4654-9413-8cd6dcccc797",

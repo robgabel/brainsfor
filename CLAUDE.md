@@ -193,9 +193,22 @@ This data is exported into brain-atoms.json's `synthesis` key and rendered by ex
 | confidence_tier | text | high / medium / low |
 | cluster | text | One of 16 topic clusters |
 | topics | text[] | Topic tags for cross-cluster search |
+| claim_type | text | **Epistemic type** — `fact` (checkable) / `opinion` (a stance) / `prediction` (undecided). Default `opinion`. |
+| verification | text | For fact-claims — `unverified` (default) / `verified` / `false` / `contested`. |
+| proof_ref | text | External authority / URL backing a `verified`/`false`/`contested` verdict. |
+| verified_at | timestamp | When the verdict was established (doubles as fact-staleness clock). |
 | embedding | vector(1536) | For semantic search |
 | source_ref | text | URL to original newsletter edition |
 | source_date | timestamp | Publication date |
+
+### Epistemic Atoms — `claim_type` / `verification` (shipped 2026-06-27)
+
+Every atom carries two epistemic axes, fixing a brain-wide bug where a verifiable fact and an asserted falsehood were stored identically and both voiced as first-person truth (`confidence` = repetition, not truth; QA checked voice fidelity, not factual accuracy). The two axes: **`claim_type`** (`fact`|`opinion`|`prediction` — is the content truth-apt?) and **`verification`** (`unverified`|`verified`|`false`|`contested` — for facts only), plus `proof_ref` + `verified_at`. Defaults (`opinion`/`unverified`) make the migration additive and zero-regression.
+
+- **`scripts/classify-claims.py`** — the cheap, safe half. Haiku pass tagging each atom's `claim_type` with a deliberately NARROW fact rule (reserve `fact` for discrete, record-checkable claims; a broad thesis the person argues is `opinion`) so thinker-brains don't over-hedge. Leaves `verification='unverified'`. Idempotent. ~$0.17/brain. Writes to the build project's `<slug>_atoms`; a subsequent `export-brain.py` carries it into the pack. Fleet distributions track corpus type (Sun Tzu 91% opinion / 0% prediction; Zeihan leads predictions at 8.2%; biographical brains carry fact mass).
+- **`scripts/verify-facts.py`** — the expensive world-truth half. Runs ONLY on `claim_type='fact'` atoms; assigns `verification` + `proof_ref` + `verified_at`, conservative by design (defaults to `unverified` when not confident — the safe failure mode is silence). Lazy/opt-in: point it at high-risk public brains, not the whole fleet.
+  - **⚠️ HARD LESSON — `verify-facts.py` is a human-gated TRIAGE PROPOSER, never an auto-publisher.** On the Elon pilot the `false` bucket had a ~1/3 false-positive rate: verdicts that contradicted their own reasoning, plus a confident refutation of the (real) $1T 2025 pay package from stale model knowledge. The conservative `unverified`/`verified` buckets held; the *consequential* `false` bucket did not. **A human must review every `false`/`contested` proposal before it reaches a pack** (the pipeline reverts unreviewed verdicts to `unverified`). Shipping a wrong `false` flag about a real person on the live site is worse than no verifier. v2 fixes: live web evidence (not parametric), and de-compound multi-claim atoms before verifying.
+- **Speaking rule (faithful-but-flagged)** lives in `skills/brain-foundation/SKILL.md` (vendored into this repo) AND is inlined into each pack's `brain-context.md` (`export-brain.py` "LLM Usage Rules") AND surfaced per-atom in the website prompt (`website/lib/brain-atom-retrieval.ts` `formatAtomsBlock`). Rule: voice `opinion` freely; state `verified` facts plainly with `proof_ref`; state `unverified` facts plainly but **invent no specifics**; a `false`/`contested` fact may be voiced as sincere belief but MUST be flagged as not-established. (The `fact + unverified` arm was softened from a hard hedge — hedging a person's own biography reads as amnesia, not honesty.)
 
 ### Fully Automated Pipeline (NEW — April 2026)
 
