@@ -128,6 +128,18 @@ function LoginForm() {
       <p className="text-center text-xs text-muted">
         No password needed. We&apos;ll email you a sign-in link.
       </p>
+
+      <p className="text-center text-xs text-muted">
+        By signing in you agree to the{" "}
+        <Link href="/terms" className="text-brain-indigo hover:underline">
+          Terms
+        </Link>{" "}
+        and{" "}
+        <Link href="/privacy" className="text-brain-indigo hover:underline">
+          Privacy Policy
+        </Link>
+        .
+      </p>
     </>
   );
 }

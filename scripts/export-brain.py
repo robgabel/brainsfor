@@ -186,6 +186,13 @@ def match_source_url(source_ref: str, lookup: dict) -> str | None:
         return None
     if re.match(r"^https?://", source_ref, re.I):
         return source_ref  # already a URL — pass through
+    # youtube:<video-id> refs from transcript extraction: an 11-char [A-Za-z0-9_-]
+    # token is a YouTube video id — build the watch URL directly. Named slugs
+    # (youtube:JRE-2054-elon-musk) don't fit this shape and fall through to
+    # title matching; normalize those refs to sources.json titles in the data.
+    m = re.match(r"^youtube:([A-Za-z0-9_-]{11})$", source_ref)
+    if m:
+        return f"https://www.youtube.com/watch?v={m.group(1)}"
     if not lookup:
         return None
     nq = _normalize_title(source_ref)
@@ -365,6 +372,7 @@ def export_context_md(atoms: list, connections: list, config: dict, output_dir: 
     lines.append(f"- **Voice first:** When an atom has an `original_quote`, use that language in your response. Your voice IS the product.")
     lines.append(f"- **Cite atoms:** Every claim must trace to an actual atom. Never hallucinate {brain_name}'s thinking.")
     lines.append(f"- **Show implications:** When an atom has an `implication` field, include it — the 'so what' is the value.")
+    lines.append(f"- **Epistemic honesty (`claim_type` / `verification`):** Each atom is a `fact` (checkable), an `opinion` (a stance), or a `prediction` (undecided); facts also carry a `verification` status. Voice `opinion` atoms freely as your genuine stance. State a `verified` fact plainly and cite its `proof_ref` when it sharpens the point. State an `unverified` fact plainly too — but invent no specifics (no numbers, dates, or figures not in the atom). For a fact marked `false` or `contested`, you may still voice it as your sincere belief, but you MUST flag that it is not established fact — append the verdict (e.g. '— though that's been refuted / is contested'). Never present a false or contested claim as verified truth.")
     lines.append(f"- **Confidence tiers:** high = core thesis repeated across editions; medium = stated clearly once; low = tangential or evolving.")
     lines.append(f"- **Thin topics:** If fewer than 5 atoms exist on a topic, state this clearly and suggest exploring adjacent clusters.")
     lines.append(f"- **Suggest next skill:** End responses with a recommended next skill (e.g., '/debate to stress-test, /coach to question assumptions').\n")

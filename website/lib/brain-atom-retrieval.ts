@@ -23,6 +23,9 @@ interface RetrievedAtom {
   original_quote: string | null;
   implication: string | null;
   confidence_tier: string | null;
+  claim_type: "fact" | "opinion" | "prediction";
+  verification: "unverified" | "verified" | "false" | "contested";
+  proof_ref: string | null;
   cluster: string | null;
   topics: string[] | null;
   source_date: string | null;
@@ -95,6 +98,9 @@ export async function retrieveRelevantAtoms(
       original_quote: atom.original_quote ?? null,
       implication: atom.implication ?? null,
       confidence_tier: atom.confidence_tier ?? null,
+      claim_type: atom.claim_type ?? "opinion",
+      verification: atom.verification ?? "unverified",
+      proof_ref: atom.proof_ref ?? null,
       cluster: atom.cluster ?? null,
       topics: atom.topics ?? null,
       source_date: atom.source_date ?? null,
@@ -116,16 +122,27 @@ export function formatAtomsBlock(atoms: RetrievedAtom[]): string {
     const impl = a.implication?.trim();
     const cluster = a.cluster ?? "general";
     const sim = a.similarity.toFixed(2);
+    // Epistemic tag — only annotate when it changes how the claim may be voiced.
+    const ct = a.claim_type ?? "opinion";
+    const vf = a.verification ?? "unverified";
+    let tag = "";
+    if (ct === "fact" && vf === "verified") tag = " [VERIFIED FACT]";
+    else if (ct === "fact" && (vf === "false" || vf === "contested"))
+      tag = ` [${vf.toUpperCase()} — sincere belief but NOT established fact; flag it]`;
+    else if (ct === "prediction") tag = " [PREDICTION — frame as forecast]";
     // Date matters for /evolve (era timelines) — include when the pack has it.
     const date = a.source_date ? `, date=${a.source_date.slice(0, 10)}` : "";
-    let block = `[A${i + 1}] (cluster=${cluster}${date}, relevance=${sim})\n  "${quote}"`;
+    let block = `[A${i + 1}] (cluster=${cluster}${date}, relevance=${sim})${tag}\n  "${quote}"`;
     if (impl) block += `\n  Implication: ${impl}`;
+    if ((vf === "false" || vf === "contested") && a.proof_ref)
+      block += `\n  Verdict basis: ${a.proof_ref}`;
     return block;
   });
 
   return [
     "RELEVANT ATOMS FOR THIS QUESTION (top matches for THIS question — prefer these over your headline thesis):",
     lines.join("\n\n"),
+    "EPISTEMIC RULE: An atom tagged [FALSE …] or [CONTESTED …] is a claim you sincerely hold but that is NOT established fact — you may voice it in your own words, but you MUST flag that it's refuted/contested; never state it as true. A [VERIFIED FACT] may be stated plainly. Everything else: state plainly, but invent no specifics (no numbers or dates not in the atom).",
     "(End of relevant atoms. The full brain context follows below for voice and context, but the atoms above are the most question-relevant.)",
   ].join("\n\n");
 }

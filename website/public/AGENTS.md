@@ -10,13 +10,14 @@ JSON files plus one live endpoint. Open `/brains` for the human catalog.
 
 brainsforagents.com is a registry of **brain packs** — curated, structured knowledge
 graphs of specific thinkers (Scott Belsky, Charlie Munger, Paul Graham, Steve Jobs,
-Sun Tzu, Sara Blakely, Oprah Winfrey, Brené Brown, Dario Amodei, Jensen Huang,
-Peter Attia, Peter Zeihan, Elon Musk, Gary Vaynerchuk, Kara Swisher, Bill Harris,
-and more). Each brain ships:
+Annie Duke, Sun Tzu, Sara Blakely, Oprah Winfrey, Brené Brown, Dario Amodei,
+Jensen Huang, Peter Attia, Peter Zeihan, Elon Musk, Gary Vaynerchuk, Kara Swisher,
+Jeremy Utley, Yann LeCun, Reshma Saujani, Melinda French Gates, and more —
+22 live brains today; `index.json` below is the canonical list). Each brain ships:
 
-- **~200–760 atoms** — atomic ideas with original quotes, implications, topics, and source citations
-- **~500–2,300 typed connections** — `supports`, `extends`, `contradicts`, `related`, `inspired_by`
-- **A synthesis layer** — first principles, contrarian positions, what the thinker does *not* believe, biography, thinking patterns
+- **483–1,195 atoms** — atomic ideas with original quotes, implications, topics, and source citations
+- **469–2,513 typed connections** — `supports`, `extends`, `contradicts`, `related`, `inspired_by`
+- **A synthesis layer** — first principles, contrarian positions, what the thinker does *not* believe, hard lessons with receipts, biography, thinking patterns
 
 Brain packs are designed to be loaded into AI agents (Claude Code, Cursor, ChatGPT,
 Gemini, custom LLM apps). Each pack ships eight reasoning skills (`/advise`, `/teach`,
@@ -36,10 +37,11 @@ https://brainsforagents.com
 Use the apex. `www.brainsforagents.com` also resolves but is not the canonical host.
 All endpoints are HTTP GET except `/api/board` (POST).
 
-> **A note on indexing:** the site sends `X-Robots-Tag: noindex, nofollow` globally
-> while we're in early access. That blocks search-engine indexing but does **not**
-> block direct fetches. Agents pointed at a URL will get the content; agents
-> relying on Googlebot/Bingbot to discover us won't. Bookmark this file's URL.
+> **A note on indexing:** the agent surface — this file, `/llms.txt`, everything
+> under `/brains/`, and the live API endpoints — is publicly fetchable and
+> indexable. `robots.txt` and `sitemap.xml` are at the standard paths. During
+> early access some human-facing pages may sit behind a password gate; that gate
+> never applies to any endpoint documented here.
 
 ## Endpoints
 
@@ -59,24 +61,28 @@ the other endpoints below.
   "brains": [
     {
       "slug": "scott-belsky",
+      "emoji": "🎨",
       "name": "Scott Belsky",
-      "source": "\"Implications\" newsletter",
-      "atom_count": 284,
-      "connection_count": 1515,
+      "source": "77 editions of the Implications newsletter, The Messy Middle book, …",
+      "atom_count": 1086,
+      "connection_count": 1174,
       "status": "live",
       "pack_path": "brains/scott-belsky/pack/",
-      "supports_evolve": true,
-      "temporal_density": { "coverage": 1.0, "year_span": 13, "year_min": 2014, "year_max": 2026 }
+      "supports_evolve": false,
+      "temporal_density": { "coverage": 0.32, "year_span": 16, "year_min": 2010, "year_max": 2026 }
     }
   ]
 }
 ```
 
-> **Schema note:** `connection_count` in `index.json` reflects the count in the
-> source-of-truth database. The shipped JSON pack (next endpoint) caps connections
-> at 1,000 today due to a known pagination limit in the export script. If you need
-> the full graph for a brain with more than 1,000 connections, use the MCP server
-> (which paginates correctly) or open an issue.
+Registry field notes:
+
+- `emoji` — per-brain badge shown on cards and detail pages. Fall back to 🧠 if absent.
+- `supports_evolve` — true when the brain has enough dated atoms across enough
+  years for temporal (`/evolve`-style) queries to produce a real timeline.
+  `temporal_density` carries the underlying stats.
+- `atom_count` / `connection_count` match the shipped pack exactly — the JSON at
+  the next endpoint contains the full graph, not a sample.
 
 ### 2. Fetch a brain pack (full graph + synthesis)
 
@@ -85,7 +91,7 @@ GET /brains/{slug}/brain-atoms.json
 ```
 
 Returns the complete pack: atoms, connections, topic index, synthesis, and metadata.
-Typical size: 0.5–3 MB. Cache-friendly — these files change at most weekly.
+Typical size: 1–3 MB. Cache-friendly — these files change at most weekly.
 
 Top-level shape:
 
@@ -113,6 +119,8 @@ Top-level shape:
   "source_date": "2024-09-15",
   "confidence": 0.95,
   "confidence_tier": "high",
+  "claim_type": "opinion",
+  "verification": "unverified",
   "connections": [
     { "target_id": "184bc0df-…", "relationship": "extends",     "confidence": 0.85 },
     { "target_id": "d81878d8-…", "relationship": "contradicts", "confidence": 0.80 }
@@ -132,9 +140,18 @@ Field guide:
 | `topics` | string[] | Cross-cluster tags. Use for topic search. |
 | `source_ref` / `source_url` | URL | Primary source. Always cite this when an atom influences output. |
 | `source_date` | YYYY-MM-DD | Publication date. Use for temporal filtering (`/evolve`-style queries). |
-| `confidence` | float 0–1 | LLM-assessed confidence. |
+| `confidence` | float 0–1 | LLM-assessed confidence. Measures how consistently the thinker holds the position — repetition, not truth. |
 | `confidence_tier` | `"high"` \| `"medium"` \| `"low"` | Convenience bucketing. Filter on `"high"` for the strongest claims. |
+| `claim_type` | `"fact"` \| `"opinion"` \| `"prediction"` | Epistemic type: is the content truth-apt? `fact` = discrete, record-checkable claim; `opinion` = a stance (including broad theses the thinker argues); `prediction` = not yet decided. |
+| `verification` | `"unverified"` \| `"verified"` \| `"false"` \| `"contested"` | World-truth status, meaningful for `fact` atoms only. Most facts are `unverified` (unchecked, not doubted). A `proof_ref` URL and `verified_at` timestamp accompany checked verdicts when present. |
 | `connections` | array | **Denormalized** view of edges starting at this atom. The top-level `connections` array is canonical. |
+
+**Voicing atoms (faithful-but-flagged):** if you speak *as* the thinker, voice
+`opinion` and `prediction` atoms freely — they're stances. State `verified` facts
+plainly and cite the `proof_ref`. State `unverified` facts plainly too, but
+**invent no specifics beyond what the atom says**. A `false` or `contested` fact
+may be presented as the thinker's sincere belief, but you must flag that it isn't
+established.
 
 #### Connection schema
 
@@ -163,6 +180,7 @@ as the source). Traverse breadth-first to discover argument structure.
   "contrarian_positions": [ { "title": "...", "desc": "..." } ],
   "does_not_believe":     [ { "title": "...", "desc": "..." } ],
   "would_not_say":        [ { "title": "...", "desc": "..." } ],
+  "hard_lessons":         [ { "title": "...", "cost": "...", "change": "...", "receipts": [ { "quote": "...", "source": "...", "atom_id": "…" } ] } ],
   "biography":            [ { "date":  "...", "role": "...", "lesson": "..." } ],
   "skills":               [ { "name":  "advise", "title": "...", "desc": "...", "example": "..." } ]
 }
@@ -171,6 +189,11 @@ as the source). Traverse breadth-first to discover argument structure.
 The synthesis layer is the **thinker's intellectual operating system** in
 structured form. If you're building a persona, load this before the raw atoms —
 it tells you what the brain would and would not say.
+
+`hard_lessons` are mistakes with real cost, mined from the thinker's own words:
+what went wrong, what it cost, what changed, with verbatim receipts linked back
+to atoms. An empty array means the source corpus was too sanitized to yield any —
+it is not an error.
 
 ### 3. Fetch a brain as flat Markdown (LLM context window)
 
@@ -271,20 +294,24 @@ but with `type: "chunk"` events labeled `"generic"` or `"enhanced"`.
 ## MCP server (selective retrieval)
 
 If you want question-aware retrieval rather than loading 75K-token packs, use
-the official MCP server:
+the official MCP server. It is not yet published to npm (`@brainsfor/mcp` on the
+public registry will 404 today) — install from source:
 
 ```bash
-npm install -g @brainsfor/mcp
+git clone https://github.com/robgabel/brainsfor
+cd brainsfor/packages/brainsfor-mcp
+npm install && npm run build
 ```
 
-Or via npx in an MCP config:
+Then register it in your MCP config. `BRAINSFOR_HOME` must point at a directory
+containing a `brains/` folder of packs — the cloned repo root works as-is:
 
 ```json
 {
   "brainsfor": {
-    "command": "npx",
-    "args": ["-y", "@brainsfor/mcp"],
-    "env": { "BRAINSFOR_HOME": "/path/to/local/brain/cache" }
+    "command": "node",
+    "args": ["/path/to/brainsfor/packages/brainsfor-mcp/dist/index.js"],
+    "env": { "BRAINSFOR_HOME": "/path/to/brainsfor" }
   }
 }
 ```
@@ -438,4 +465,4 @@ Need higher limits for a legitimate build? Open an issue at
 - **Schema clarifications**: open an issue with the `agents-md` label.
 - **License questions on a specific commercial use**: email first; we're friendly.
 
-— Last reviewed: 2026-05-23
+— Last reviewed: 2026-07-04
