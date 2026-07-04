@@ -186,6 +186,13 @@ def match_source_url(source_ref: str, lookup: dict) -> str | None:
         return None
     if re.match(r"^https?://", source_ref, re.I):
         return source_ref  # already a URL — pass through
+    # youtube:<video-id> refs from transcript extraction: an 11-char [A-Za-z0-9_-]
+    # token is a YouTube video id — build the watch URL directly. Named slugs
+    # (youtube:JRE-2054-elon-musk) don't fit this shape and fall through to
+    # title matching; normalize those refs to sources.json titles in the data.
+    m = re.match(r"^youtube:([A-Za-z0-9_-]{11})$", source_ref)
+    if m:
+        return f"https://www.youtube.com/watch?v={m.group(1)}"
     if not lookup:
         return None
     nq = _normalize_title(source_ref)
