@@ -24,8 +24,12 @@ from pathlib import Path
 
 try:
     from dotenv import load_dotenv
-    load_dotenv(Path(__file__).resolve().parent.parent / "website" / ".env.local", override=True)
-    load_dotenv(Path(__file__).resolve().parents[2] / ".env", override=True)
+    # Fill gaps only (override=False): real shell env wins, then website/.env.local,
+    # then ~/rob-ai/.env. Mirrors the export-brain.py fix — the old override=True let
+    # website/.env.local's NEXT_PUBLIC_SUPABASE_URL (the paused auth-only project)
+    # clobber the factory project and enrichment dialed a dead host.
+    load_dotenv(Path(__file__).resolve().parent.parent / "website" / ".env.local", override=False)
+    load_dotenv(Path(__file__).resolve().parents[2] / ".env", override=False)
 except ImportError:
     pass
 
@@ -75,7 +79,7 @@ You will receive:
 
 Your job:
 
-**original_quote**: Find the passage in the source that this atom was extracted from. Capture {name}'s ACTUAL language — their provocative framing, specific metaphors, stories, examples, and emotional weight. This should be 1-3 sentences that preserve their voice. If you can find an exact quote, use it. If the idea spans multiple paragraphs, synthesize into their voice (not a neutral restatement). The quote should sound like {name}, not like a textbook.
+**original_quote**: Find the passage in the source that this atom was extracted from and quote it VERBATIM — 1-3 contiguous sentences copied exactly from the source text (their provocative framing, specific metaphors, stories, emotional weight). Do NOT paraphrase, do NOT stitch fragments from different passages, and do NOT compose words {name} did not say — a synthesized "quote" is a fabrication and will be rejected by provenance QA. If no contiguous passage in the source expresses this atom, return null.
 
 **implication**: What is the "so what"? What does this insight MEAN for someone making decisions? Write 1-2 sentences in {name}'s style about what this means for builders, leaders, or practitioners. If {name} explicitly states the implication, use their words. If not, write one faithful to their voice and thinking patterns.
 
