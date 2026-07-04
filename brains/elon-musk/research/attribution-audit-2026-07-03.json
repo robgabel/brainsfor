@@ -1,0 +1,1158 @@
+{
+  "audit": "elon-musk source-attribution audit",
+  "date": "2026-07-03",
+  "context": "Follow-up to PR #47 (five-step algorithm misattribution). Phase 2.3 deep-research atoms carried LLM-guessed source_refs; both TED corpus transcripts were Arabic caption tracks (English fetched 2026-07-03); video-extraction atoms used unmappable youtube:<slug> refs; per-source dates were fragmented.",
+  "method": "Every suspect atom scored against all 32 corpus docs (20 transcripts + 12 raw text sources) via 5/3-gram shingle containment; 104 atoms hand-adjudicated with transcript passages; reattribution only where the corpus contains the claim language (hard rule); dates set only from verified public records.",
+  "canonical_sources": {
+    "Elon Musk: The future we're building -- and boring | TED": {
+      "date": "2017-04-28",
+      "evidence": "TED2017 conference Apr 24-28 2017, Musk session Apr 28 (contemporaneous coverage); English human captions fetched 2026-07-03"
+    },
+    "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk": {
+      "date": "2013-03-19",
+      "evidence": "recorded TED2013 (Feb 25-Mar 1 2013); exact session day unverified, using TED.com publish date 2013-03-19; English human captions fetched 2026-07-03"
+    },
+    "Elon Musk Answers Your Questions! | SXSW 2018": {
+      "date": "2018-03-11",
+      "evidence": "Musk SXSW 2018 Q&A session Mar 11 2018"
+    },
+    "Elon Musk | SXSW Live 2013 | SXSW ON": {
+      "date": "2013-03-09",
+      "evidence": "Musk SXSW keynote Mar 9 2013"
+    },
+    "Elon Musk | Full interview | Code Conference 2016": {
+      "date": "2016-06-01",
+      "evidence": "Code Conference session Jun 1 2016 (shitelonsays transcript dated 2016-06-01)"
+    },
+    "Is life a video game? | Elon Musk | Code Conference 2016": {
+      "date": "2016-06-01",
+      "evidence": "clip of the same Jun 1 2016 session"
+    },
+    "Elon Musk: War, AI, Aliens, Politics, Physics, Video Games, and Humanity | Lex Fridman Podcast #400": {
+      "date": "2023-11-09",
+      "evidence": "Lex #400 release Nov 9 2023"
+    },
+    "Elon Musk: Neuralink and the Future of Humanity | Lex Fridman Podcast #438": {
+      "date": "2024-08-02",
+      "evidence": "verified in PR #47"
+    },
+    "Joe Rogan Experience #2054 - Elon Musk": {
+      "date": "2023-10-31",
+      "evidence": "JRE #2054 release Oct 31 2023"
+    },
+    "Joe Rogan Experience #2404 - Elon Musk": {
+      "date": "2025-10-31",
+      "evidence": "JRE #2404 release Oct 31 2025 (prior 2024-10-31 was a guess exactly one year off)"
+    },
+    "Elon Musk: Twitter's bot problem, SpaceX's grand plan, Tesla stories & more": {
+      "date": "2022-05-16",
+      "evidence": "All-In Summit 2022 remote interview, published May 16 2022"
+    },
+    "Elon Musk on DOGE, Optimus, Starlink Smartphones, Evolving with AI, Why the West is Imploding": {
+      "date": "2025-09-10",
+      "evidence": "All-In Summit 2025, published Sep 10 2025 (prior 2024-01 dates impossible: DOGE is post-Nov-2024)"
+    },
+    "Elon Musk Reveals His Knowledge on Aliens, Challenges Putin to UFC, and Predicts WW3": {
+      "date": "2022-08-04",
+      "evidence": "Full Send Podcast ep 53, Aug 4 2022"
+    },
+    "David Senra \u2014 How Extreme Winners Think and Win: Lessons from 400+ of History\u2019s Greatest Founders": {
+      "date": "2025-09-24",
+      "evidence": "Tim Ferriss Show #828, Sep 24 2025 (prior 2023 dates were guesses)"
+    },
+    "New Yorker: Plugged In": {
+      "date": "2009-08-24",
+      "evidence": "issue date Aug 24 2009"
+    },
+    "Forbes: At Home with Elon Musk": {
+      "date": "2012-03-26",
+      "evidence": "URL date"
+    },
+    "Mercury News: Rocket Man Profile": {
+      "date": "2014-04-10",
+      "evidence": "URL date"
+    },
+    "Guardian: Elon Musk, Peter Thiel, and Apartheid South Africa": {
+      "date": "2025-01-26",
+      "evidence": "URL date"
+    },
+    "Guardian: Meet the Musk Family": {
+      "date": "2018-02-21",
+      "evidence": "URL date"
+    },
+    "Triangulation Interview with Elon Musk": {
+      "date": "2015-06-08",
+      "evidence": "TWiT Triangulation 203 page date. WARNING: this episode is Leo Laporte interviewing ASHLEE VANCE (Musk biographer), NOT Elon Musk \u2014 source title in sources.json is wrong; the 9 atoms citing it are secondary-source residue"
+    },
+    "Shane Parrish clips / 100 Hour Week / What Legacy": {
+      "date": null,
+      "evidence": "clip-channel upload dates unverifiable; guessed dates (2023-01-01 etc.) nulled"
+    }
+  },
+  "adjudications": [
+    {
+      "id": "111fab71-dbe4-4ef9-ba71-8a9e6fb1bfb6",
+      "decision": "KEEP-normalize",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+      "new_date": "2013-03-19",
+      "evidence": "TED13: 'first principles reasoning\u2026boil things down to fundamental truths\u2026as opposed to reasoning by analogy'",
+      "content_head": "Musk has explained that reasoning by analogy \u2014 doing something because it resembles what worked before or what competitors are doing \u2014 is me"
+    },
+    {
+      "id": "12a967cd-3f9f-4380-9431-f897771c1684",
+      "decision": "KEEP-normalize",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+      "new_date": "2013-03-19",
+      "evidence": "TED13: 'rockets\u2026all expendable\u2026every mode of transport is reusable but not rockets. We must solve this'",
+      "content_head": "Musk identified rocket reusability as the single most important leverage point in reducing the cost of space access. He argued that treating"
+    },
+    {
+      "id": "16355b27-ffd9-4c1d-bd50-df07d0d22ae4",
+      "decision": "KEEP-normalize",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity... | Elon Musk | TED",
+      "old_date": "2013-02-01",
+      "new_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+      "new_date": "2013-03-19",
+      "evidence": "TED13: 'good framework for thinking. It is physics\u2026'",
+      "content_head": "Musk argues that physics is the only true law \u2014 thermodynamics, conservation of energy, and material limits are non-negotiable \u2014 but human c"
+    },
+    {
+      "id": "80265594-baab-4448-9a9c-cbfe979790e9",
+      "decision": "KEEP-normalize",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+      "new_date": "2013-03-19",
+      "evidence": "TED13: 'goal of SpaceX\u2026vital for humanity to become a space-faring civilization'",
+      "content_head": "Musk founded SpaceX in 2002 with the explicit goal of making humanity a multiplanetary species, driven by the conviction that a single-plane"
+    },
+    {
+      "id": "8b9c6c3d-8394-4fb8-bb0b-4e7607589d10",
+      "decision": "KEEP-normalize",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+      "new_date": "2013-03-19",
+      "evidence": "TED13 physics-framework passage",
+      "content_head": "Musk has described physics as the only genuine law \u2014 thermodynamics, conservation of energy, and the speed of light are immutable. Everythin"
+    },
+    {
+      "id": "931df053-8e88-4210-a86d-1d3e83f8c565",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:CnxzrX9tNoc",
+      "old_date": null,
+      "new_ref": "Elon Musk: Twitter's bot problem, SpaceX's grand plan, Tesla stories & more",
+      "new_date": "2022-05-16",
+      "evidence": "verbatim in All-In (panelist recounting Musk's own Gigafactory slide: 'machine that makes machines')",
+      "content_head": "The factory itself is a machine \u2014 and designing it with the same rigor as a microchip layout, optimizing for flow and throughput, is as impo"
+    },
+    {
+      "id": "ad347efa-0cde-408f-b937-9296d30c0468",
+      "decision": "KEEP-normalize",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+      "new_date": "2013-03-19",
+      "evidence": "TED13 same first-principles passage (also SXSW13)",
+      "content_head": "First principles thinking means boiling a problem down to its most fundamental truths and reasoning upward from there, rather than reasoning"
+    },
+    {
+      "id": "b29abe64-862c-41e2-ad9d-d1c63227dceb",
+      "decision": "KEEP-normalize",
+      "old_ref": "Elon Musk: The future we're building -- and boring \u2014 TED Talk",
+      "old_date": "2017-04-28",
+      "new_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "new_date": "2017-04-28",
+      "evidence": "TED17: 'sustainable energy will happen no matter what\u2026value of Tesla is degree to which it accelerates'",
+      "content_head": "Musk has described the transition to electric vehicles as inevitable on physical and economic grounds, but argued that the speed of the tran"
+    },
+    {
+      "id": "b6fe628f-abfa-4ff5-a10d-289828b85c8f",
+      "decision": "KEEP-normalize",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+      "new_date": "2013-03-19",
+      "evidence": "TED13 same expendability/reusability passage",
+      "content_head": "Musk has consistently framed reusability as the single architectural decision that collapses the economics of rocketry. The aerospace indust"
+    },
+    {
+      "id": "c6efb0ea-1fa9-4b6f-9af9-cba9e1473bbe",
+      "decision": "KEEP-normalize",
+      "old_ref": "Elon Musk: The future we're building -- and boring \u2014 TED Talk",
+      "old_date": "2017-04-28",
+      "new_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "new_date": "2017-04-28",
+      "evidence": "TED17: 'some, amazingly, are still pursuing fuel cells, but I think that won't last much longer' (position verified; reasoning elaborated)",
+      "content_head": "Musk has repeatedly identified hydrogen fuel cells as a thermodynamically inferior solution for passenger vehicles compared to direct batter"
+    },
+    {
+      "id": "d1afc5bf-e294-4311-bd1c-4c01d4fe73b6",
+      "decision": "KEEP-normalize",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity... | Elon Musk | TED",
+      "old_date": "2013-02-01",
+      "new_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+      "new_date": "2013-03-19",
+      "evidence": "TED13 same first-principles passage",
+      "content_head": "Musk has described reasoning from first principles as decomposing any problem to its most fundamental physical truths and rebuilding solutio"
+    },
+    {
+      "id": "01874c2c-5672-4dd7-ab37-304f3bf5196c",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED interview with Chris Anderson",
+      "old_date": "2013-02-01",
+      "new_ref": "Elon Musk Answers Your Questions! | SXSW 2018",
+      "new_date": "2018-03-11",
+      "evidence": "SXSW18: 'first three launches failed\u2026barely able to scrape together enough parts and money to do the fourth launch'",
+      "content_head": "Musk has noted that when SpaceX's third Falcon 1 rocket failed in 2008, the company had only enough resources for one final attempt. He made"
+    },
+    {
+      "id": "082c23e5-4e73-4ff2-b2f6-a64f5f85ea77",
+      "decision": "REATTR",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": "Elon Musk: Twitter's bot problem, SpaceX's grand plan, Tesla stories & more",
+      "new_date": "2022-05-16",
+      "evidence": "ALLIN22: Musk quoted verbatim (reported): 'we're not actually building a factory, we're building a machine that makes machines\u2026layout like a chip'",
+      "content_head": "Musk has described the Gigafactory not as a place where Tesla builds cars but as a machine that builds machines \u2014 the actual product of Tesl"
+    },
+    {
+      "id": "0af15253-278b-4814-b4f1-a05886ad30ba",
+      "decision": "REATTR",
+      "old_ref": "Elon Musk: The future we're building -- and boring \u2014 TED Talk",
+      "old_date": "2017-04-28",
+      "new_ref": "Elon Musk: Twitter's bot problem, SpaceX's grand plan, Tesla stories & more",
+      "new_date": "2022-05-16",
+      "evidence": "ALLIN22: same machine-that-makes-machines passage",
+      "content_head": "Musk has described Tesla's Gigafactory as the most important product Tesla has ever built \u2014 not the Model S, Model 3, or any individual vehi"
+    },
+    {
+      "id": "13f41c02-4f80-48fc-a5d6-8c6a56df24de",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity... | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "Elon Musk Answers Your Questions! | SXSW 2018",
+      "new_date": "2018-03-11",
+      "evidence": "SXSW18: same raw-materials decomposition passage",
+      "content_head": "Musk has consistently argued that the cost of rocket launch was artificially inflated by the lack of competition and the absence of reusabil"
+    },
+    {
+      "id": "141328e0-7153-4ada-bb0d-bdddc3323b1b",
+      "decision": "REATTR",
+      "old_ref": "U.S. Senate AI Insight Forum, referenced in multiple interviews including Lex Fridman Podcast #400",
+      "old_date": "2023-11-01",
+      "new_ref": "Elon Musk Answers Your Questions! | SXSW 2018",
+      "new_date": "2018-03-11",
+      "evidence": "SXSW18: 'not normally an advocate of regulation\u2026serious danger to the public\u2026why do we have no regulatory oversight, this is insane'",
+      "content_head": "Musk has consistently argued that an AI regulatory framework is urgently needed \u2014 but that the window to build sensible regulation is narrow"
+    },
+    {
+      "id": "1a0a8391-6823-436e-8093-b5ea1b7e253e",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "Elon Musk Answers Your Questions! | SXSW 2018",
+      "new_date": "2018-03-11",
+      "evidence": "SXSW18: 2008 near-collapse story (both companies, all capital in)",
+      "content_head": "Musk has framed his willingness to take on enormous personal financial risk \u2014 including nearly bankrupting himself simultaneously across Spa"
+    },
+    {
+      "id": "1c620576-e80a-46f8-9c28-06615dbac07b",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "Elon Musk Answers Your Questions! | SXSW 2018",
+      "new_date": "2018-03-11",
+      "evidence": "SXSW18: 'cost of raw materials of a rocket vs price of the rocket \u2014 gigantic difference\u2026something wrong going from constituent atoms to final shape'",
+      "content_head": "When SpaceX was founded, the price of rockets was treated as a fixed market reality. Musk instead decomposed a rocket into its raw material "
+    },
+    {
+      "id": "2042e0ee-6dbc-4ff0-b2f0-cbad07990d46",
+      "decision": "REATTR",
+      "old_ref": "Tesla AI Day 2022",
+      "old_date": null,
+      "new_ref": "Elon Musk on DOGE, Optimus, Starlink Smartphones, Evolving with AI, Why the West is Imploding",
+      "new_date": "2025-09-10",
+      "evidence": "ALLIN25 verbatim: 'no supply chain that exists for humanoid robots\u2026a lot of vertical integration. None of the actuators in Optimus are available\u2026could not buy the actuators for any amount'",
+      "content_head": "Optimus, Tesla's humanoid robot program, is being developed with the same vertical integration philosophy: in-house actuators, in-house AI t"
+    },
+    {
+      "id": "27212d92-23a4-4da2-9a93-5f0d47185957",
+      "decision": "REATTR",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": "Elon Musk: Neuralink and the Future of Humanity | Lex Fridman Podcast #438",
+      "new_date": "2024-08-02",
+      "evidence": "LEX438 five-step passage: 'no matter how smart the person is who gave you those requirements, they're still dumb'",
+      "content_head": "Every requirement that survives inside an organization carries an implicit author \u2014 a person who had a specific concern at a specific moment"
+    },
+    {
+      "id": "3f28366f-9308-4e81-b0a3-b4b45653e404",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Elon Musk Reveals His Knowledge on Aliens, Challenges Putin to UFC, and Predicts WW3",
+      "new_date": "2022-08-04",
+      "evidence": "FULLSEND (was youtube:unknown): quote verbatim in transcript",
+      "content_head": "When a social situation becomes chaotic or overcrowded, the simplest and most effective solution is direct, honest communication rather than"
+    },
+    {
+      "id": "3fdaa59b-2dea-455f-8565-646090faca8b",
+      "decision": "REATTR",
+      "old_ref": "Tesla Battery Day presentation",
+      "old_date": null,
+      "new_ref": "Elon Musk: Twitter's bot problem, SpaceX's grand plan, Tesla stories & more",
+      "new_date": "2022-05-16",
+      "evidence": "ALLIN22: 'major innovation which is to cast the entire front third and rear third of the car as a single piece\u2026idea from toys'",
+      "content_head": "Tesla's Gigapress \u2014 the giant die-casting machines that produce the rear underbody of the Model Y as a single piece instead of 70 separate p"
+    },
+    {
+      "id": "592a49a7-767d-46e9-9fdf-5bed356dde36",
+      "decision": "REATTR",
+      "old_ref": "Tesla Solar Roof Launch Event",
+      "old_date": "2016-10-28",
+      "new_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "new_date": "2017-04-28",
+      "evidence": "TED17 verbatim: 'cost of the roof plus cost of electricity\u2026less than the cost of a normal roof plus electricity'; 'Solar Roof Launch Event' is not in corpus",
+      "content_head": "Musk has argued that solar roofs should be economically superior to conventional roofing even before accounting for electricity generation \u2014"
+    },
+    {
+      "id": "5b565eef-de55-4d86-ab1e-4b62bbb9c537",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Interview",
+      "old_date": "2013-02-01",
+      "new_ref": "Elon Musk Reveals His Knowledge on Aliens, Challenges Putin to UFC, and Predicts WW3",
+      "new_date": "2022-08-04",
+      "evidence": "FULLSEND: same factory-is-the-hard-product passage",
+      "content_head": "The factory itself is the real product, not the vehicle or rocket it produces. Musk has consistently argued that designing the manufacturing"
+    },
+    {
+      "id": "5cf3ceca-77be-4083-a4ea-a637b8fd3053",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED interview with Chris Anderson",
+      "old_date": "2013-02-01",
+      "new_ref": "Elon Musk Answers Your Questions! | SXSW 2018",
+      "new_date": "2018-03-11",
+      "evidence": "SXSW18: 2008 story \u2014 '$30-40M left\u2026put it all into one company or split it between the two\u2026I split the money'",
+      "content_head": "Musk has described the early years of SpaceX and Tesla as the closest he has ever come to personal and professional collapse. Both companies"
+    },
+    {
+      "id": "605d2ba1-fe21-4170-b023-b6850b90c120",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity... | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "Elon Musk Answers Your Questions! | SXSW 2018",
+      "new_date": "2018-03-11",
+      "evidence": "SXSW18: same 2008 split-the-money story incl. borrowing for rent",
+      "content_head": "In 2008, Musk simultaneously faced the potential collapse of both SpaceX and Tesla during the global financial crisis. Rather than choosing "
+    },
+    {
+      "id": "642127c7-e248-48b8-a995-bc52e3c633c6",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity \u2014 TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "Joe Rogan Experience #2054 - Elon Musk",
+      "new_date": "2023-10-31",
+      "evidence": "JRE2054: 'you could actually power the entire United States with 100 miles by 100 miles of solar'",
+      "content_head": "Musk has argued that the Earth receives more than enough solar energy to power all of human civilization many times over, and that the limit"
+    },
+    {
+      "id": "71234035-afcc-4e3a-917f-0a3768df609e",
+      "decision": "REATTR",
+      "old_ref": "Elon Musk | Full interview | Code Conference 2016",
+      "old_date": "2016-06-01",
+      "new_ref": "Elon Musk Reveals His Knowledge on Aliens, Challenges Putin to UFC, and Predicts WW3",
+      "new_date": "2022-08-04",
+      "evidence": "FULLSEND: 'hard problem is not the prototype\u2026making the factory\u2026100x maybe 1000x harder\u2026prototypes are easy production is hard'",
+      "content_head": "Musk treats the factory as the primary product, not the vehicle or rocket it produces. Tesla's competitive advantage is not any particular c"
+    },
+    {
+      "id": "736191b3-0704-4a5d-b327-cd31661360d8",
+      "decision": "REATTR",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": "Elon Musk Reveals His Knowledge on Aliens, Challenges Putin to UFC, and Predicts WW3",
+      "new_date": "2022-08-04",
+      "evidence": "FULLSEND: same passage ('getting the product right is the easy part')",
+      "content_head": "Musk has described the true product of Tesla not as the electric vehicle but as the factory that produces it \u2014 the Gigafactory system. Simil"
+    },
+    {
+      "id": "871c1e8c-89ca-4238-a9b7-82c7d1f9fca7",
+      "decision": "REATTR",
+      "old_ref": "Tesla AI Day 2022",
+      "old_date": "2022-09-30",
+      "new_ref": "Elon Musk: Twitter's bot problem, SpaceX's grand plan, Tesla stories & more",
+      "new_date": "2022-05-16",
+      "evidence": "ALLIN22: 'we were designing a dojo supercomputer to process all the video\u2026billions of miles of data'",
+      "content_head": "Tesla's Dojo supercomputer \u2014 built in-house to train neural networks for Full Self-Driving \u2014 represents Musk's extension of vertical integra"
+    },
+    {
+      "id": "8a35a221-cd34-4ebe-8ade-9a0d7ddc176b",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Elon Musk Reveals His Knowledge on Aliens, Challenges Putin to UFC, and Predicts WW3",
+      "new_date": "2022-08-04",
+      "evidence": "FULLSEND (was youtube:unknown): quote verbatim in transcript",
+      "content_head": "Musk maintains close coordination with family members, including his brother Kimball, who serve as trusted partners in both business and per"
+    },
+    {
+      "id": "8e57572a-ad4e-4b81-8a36-5769647dddf6",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "Joe Rogan Experience #2054 - Elon Musk",
+      "new_date": "2023-10-31",
+      "evidence": "JRE2054: 'I thought our probability of success was less than 10%'",
+      "content_head": "Musk has applied probabilistic scenario mapping to major decisions by evaluating the full distribution of outcomes rather than anchoring on "
+    },
+    {
+      "id": "948f799a-cf7d-4d89-9e4e-cdcb71cd00c0",
+      "decision": "REATTR",
+      "old_ref": "Tesla Autonomy Day",
+      "old_date": "2019-04-22",
+      "new_ref": "Elon Musk: Twitter's bot problem, SpaceX's grand plan, Tesla stories & more",
+      "new_date": "2022-05-16",
+      "evidence": "ALLIN22: '[Nvidia] very expensive\u2026massive power and cooling\u2026tesla designed full self-driving computer\u2026chip team from scratch\u2026best in the world'",
+      "content_head": "Tesla designs its own custom semiconductor chips \u2014 including the Full Self-Driving computer and the D1 chip powering Dojo \u2014 rather than rely"
+    },
+    {
+      "id": "a04917f7-b57c-45c3-8ea2-19e3d83613f1",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Elon Musk Reveals His Knowledge on Aliens, Challenges Putin to UFC, and Predicts WW3",
+      "new_date": "2022-08-04",
+      "evidence": "FULLSEND (was youtube:unknown): quote verbatim in transcript",
+      "content_head": "When faced with a logistical problem, Musk's instinct is to immediately resolve it through decisive action and leveraging his personal netwo"
+    },
+    {
+      "id": "aa393cdf-7881-427b-a7f4-7c1b2b7eaadc",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "Joe Rogan Experience #2054 - Elon Musk",
+      "new_date": "2023-10-31",
+      "evidence": "JRE2054: <10% probability + proceeded anyway (founding-motivation passage)",
+      "content_head": "Musk has consistently argued that the reason SpaceX was founded was not because space exploration was a good business but because the altern"
+    },
+    {
+      "id": "b5b420c2-fd3f-49c5-9c46-5dd02bfe634b",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": "Elon Musk | Full interview | Code Conference 2016",
+      "new_date": "2016-06-01",
+      "evidence": "CODE16: 'multi-planet species, that's really where we want to be\u2026not still being a single-planet species\u2026life as we know it extend beyond Earth'",
+      "content_head": "Musk frames humanity's expansion to Mars not as exploration for its own sake but as civilizational insurance against extinction-level events"
+    },
+    {
+      "id": "b699af9b-978c-4ac0-a7c7-2b5266d9cf6d",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED interview with Chris Anderson",
+      "old_date": "2013-02-01",
+      "new_ref": "Joe Rogan Experience #2054 - Elon Musk",
+      "new_date": "2023-10-31",
+      "evidence": "JRE2054: same <10% probability passage",
+      "content_head": "When Musk founded SpaceX in 2002, he calculated the probability of success at roughly 10% and proceeded anyway. His reasoning was that even "
+    },
+    {
+      "id": "e39f3dac-345c-4278-9fe6-3884cbfcc681",
+      "decision": "REATTR",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": "Elon Musk: Neuralink and the Future of Humanity | Lex Fridman Podcast #438",
+      "new_date": "2024-08-02",
+      "evidence": "LEX438: same requirements doctrine, verbatim",
+      "content_head": "Musk has described a deliberate process of questioning every requirement before treating it as binding, particularly requirements originatin"
+    },
+    {
+      "id": "eb4f5730-b426-4cd2-af92-7a524ead8c04",
+      "decision": "REATTR",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED interview with Chris Anderson",
+      "old_date": "2013-02-01",
+      "new_ref": "Elon Musk Answers Your Questions! | SXSW 2018",
+      "new_date": "2018-03-11",
+      "evidence": "SXSW18: 'putting all the money in and borrowing money for rent from friends'",
+      "content_head": "After selling Zip2 and PayPal, Musk chose to invest essentially all of his personal liquidity into SpaceX, Tesla, and SolarCity simultaneous"
+    },
+    {
+      "id": "031372d7-8935-480b-b7bc-960886dccf0e",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: War, AI, Aliens, Politics, Physics, Video Games, and Humanity | Lex Fridman Podcast #400",
+      "old_date": "2023-09-08",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has argued that the best part is no part and the best process is no process. Every component added to a design carries hidden costs: we"
+    },
+    {
+      "id": "04e070cd-0dbf-455f-a814-4f8be09225c1",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED",
+      "old_date": "2013-02-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has consistently returned to the importance of making the case for his missions in explicitly humanistic, civilizational terms rather t"
+    },
+    {
+      "id": "05706509-aa88-4500-bd61-17a1797f756d",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity \u2014 TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described his original motivation for getting involved in sustainable energy as stemming from a broader concern for the long-term f"
+    },
+    {
+      "id": "073111c5-6275-4231-a2a5-5ecca0b0468e",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has articulated his belief that the biggest constraint on what humanity can achieve is not capital or technology but the availability o"
+    },
+    {
+      "id": "0bee60ee-d783-4000-b4e2-3fe7ce651a58",
+      "decision": "STRIP",
+      "old_ref": "Lex Fridman Podcast #400 \u2014 Elon Musk",
+      "old_date": "2023-09-08",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk introduced the concept of the 'idiot index' as a diagnostic tool for manufacturing inefficiency: the ratio of a finished component's co"
+    },
+    {
+      "id": "0cc586b1-5242-4894-86db-0ef1d22fad46",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED interview with Chris Anderson",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has explained that he chose to pursue multiple simultaneous large bets \u2014 SpaceX, Tesla, and SolarCity \u2014 because each addressed a differ"
+    },
+    {
+      "id": "0df6d3be-fc02-419f-a7dd-61e2c30d4380",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has argued that private companies can execute space development faster and at far lower cost than government agencies operating under l"
+    },
+    {
+      "id": "0fa96daf-58cc-48ee-9239-9c2567b0cb45",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has drawn a direct connection between the advancement of solar power and battery storage on Earth and the eventual capability to build "
+    },
+    {
+      "id": "13be1dc5-7cc0-48a3-be82-74bbd2941c32",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "In multiple long-form interviews, Musk has demonstrated the practice of using public thought experiments \u2014 what would it take to colonize Ma"
+    },
+    {
+      "id": "13c891b9-e1b7-41ff-a7ee-4d2ad5291621",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has argued that legacy thinking and excessive respect for prior conventions is the primary enemy of transformative progress. Most indus"
+    },
+    {
+      "id": "14d82bc6-ec5f-41b3-bb32-e42bbe7ef9c7",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED interview with Chris Anderson",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has spoken about entering the automotive industry fully aware that every major American car startup since the early twentieth century h"
+    },
+    {
+      "id": "164d20b7-fe87-4857-bc4b-bff0177f347f",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described mission as the most powerful recruitment and retention engine available to any company. People who are drawn to SpaceX an"
+    },
+    {
+      "id": "19044924-5492-4b2e-a2be-374fd5f31e0b",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk | TED",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has spoken about the nature of reality in the context of what makes human existence meaningful, arguing that the drive to explore, crea"
+    },
+    {
+      "id": "1ba6baf4-03a0-41c0-83c6-c01e1a52f30f",
+      "decision": "STRIP",
+      "old_ref": "Tesla Powerwall Launch Event",
+      "old_date": "2015-04-30",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has framed energy storage at the utility scale \u2014 the Megapack product \u2014 as the missing infrastructure layer that allows renewable gener"
+    },
+    {
+      "id": "1dd30b87-5691-48e8-abf8-0146f2a6a0ba",
+      "decision": "STRIP",
+      "old_ref": "TED Talk: The future we're building -- and boring",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk treats aggressive, often unrealistic deadlines not as managerial pressure tactics but as a forcing function for creative problem-solvin"
+    },
+    {
+      "id": "1e0918b4-6391-4819-af72-0e35783634f2",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described the feedback loop compression principle as central to SpaceX's competitive approach against established aerospace firms. "
+    },
+    {
+      "id": "220ef62e-0b38-4c04-8f70-8b70c1e572e9",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has consistently framed SpaceX's mission in terms of the survival of human consciousness as a species, not as a commercial venture. He "
+    },
+    {
+      "id": "2a0c02d5-d06b-4fcd-8fef-79d751219247",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has repeatedly expressed the view that most people dramatically underestimate what is physically achievable because they reason by anal"
+    },
+    {
+      "id": "2adaa8ce-6588-4567-8dfe-5d853f27d727",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has noted that in the early SpaceX years, the company's willingness to iterate faster than any government aerospace program was itself "
+    },
+    {
+      "id": "2b4e22b7-1761-4350-b17f-abb6ae151c84",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has argued that volume production fundamentally changes the design possibilities available to an engineering team. Parts that are too e"
+    },
+    {
+      "id": "2fa7f17c-f2e3-490d-9ce6-7ddc880098ab",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: War, AI, Aliens, Politics, Physics, Video Games, and Humanity | Lex Fridman Podcast #400",
+      "old_date": "2023-09-08",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk introduced the concept of the 'idiot index' as a practical manufacturing diagnostic tool: divide the cost of a finished component by th"
+    },
+    {
+      "id": "31e6e48b-ca80-484f-a7bb-4c6d3a0bc91e",
+      "decision": "STRIP",
+      "old_ref": "MIT AeroAstro Centennial Symposium",
+      "old_date": "2014-10-24",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has used the metaphor of summoning a demon to describe the act of building artificial general intelligence without adequate safety prot"
+    },
+    {
+      "id": "37ad3269-c618-45af-a6b8-390da4690cf0",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has articulated a deliberate cross-subsidy logic across his companies: SpaceX's growing commercial launch revenue funds the long-durati"
+    },
+    {
+      "id": "400a92c6-3acd-4d54-be16-495efe2763c4",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described the development of the Raptor engine \u2014 the most complex and high-performance rocket engine ever built \u2014 as requiring a fi"
+    },
+    {
+      "id": "406333f9-65a5-4082-b81c-197622f56713",
+      "decision": "STRIP",
+      "old_ref": "Tesla Powerwall Launch Event",
+      "old_date": "2015-04-30",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described the Powerwall and Powerpack battery products as addressing the single most critical bottleneck in renewable energy deploy"
+    },
+    {
+      "id": "46b39a2d-02c0-4840-b3dc-ac888f9b8efd",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: War, AI, Aliens, Politics, Physics, Video Games, and Humanity | Lex Fridman Podcast #400",
+      "old_date": "2023-03-14",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk uses what he calls the idiot index to expose manufacturing inefficiency: divide the cost of a finished part by the cost of its raw mate"
+    },
+    {
+      "id": "47ad34a0-b437-4128-9af1-75b0df724b7f",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has argued that the transition to abundant clean energy is not simply an environmental project but a prerequisite for continued economi"
+    },
+    {
+      "id": "4efb0820-8379-4df2-b105-4cc6d67a53ac",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has used live-streamed rocket launches, factory tours, and product unveilings as direct communication tools, allowing global audiences "
+    },
+    {
+      "id": "598f7e24-16b2-4f8c-85d4-2248f9da8aa3",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk | TED",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk connects simulation theory to his sense of mission urgency: if the continuation of conscious experience depends on civilizational conti"
+    },
+    {
+      "id": "5a086e9a-df0f-4acb-871e-06bd5a96d1f9",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described the Gigafactory concept as a response to a specific constraint analysis: the bottleneck to electric vehicle adoption was "
+    },
+    {
+      "id": "5beb8f2e-c2ed-4db4-9d8d-256c2c55ebe8",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described his approach to product announcements \u2014 particularly SpaceX Starship and Tesla product reveals \u2014 as deliberate theatrical"
+    },
+    {
+      "id": "67ed87ae-d6f2-487f-8d9b-bf0962f0a3d7",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED",
+      "old_date": "2013-02-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has been explicit that Tesla spends essentially nothing on traditional advertising, relying instead on word-of-mouth, media coverage dr"
+    },
+    {
+      "id": "6b44aaa4-2e00-40bf-b6ec-c679a758775e",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has consistently argued that the single most important decision a founder makes is who they hire, particularly in the early days when e"
+    },
+    {
+      "id": "6efec4c1-1e06-4c16-bed9-b9ffd8cbd5ad",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has noted in multiple interviews that the mission statements of his companies \u2014 making humanity multiplanetary, accelerating sustainabl"
+    },
+    {
+      "id": "6f0b05f1-854f-40f5-894a-48ac6d96d425",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity... | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk's approach to capital allocation across his ventures is structured around what he identifies as the primary civilizational constraint a"
+    },
+    {
+      "id": "79ddf2ca-f567-4edb-a56c-35ee9930b2a0",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has repeatedly emphasized that the best part is no part and the best process is no process. Every component added to a system introduce"
+    },
+    {
+      "id": "828fef9c-0ed6-49d9-b849-79b0a3e25331",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Interview",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described Tesla's approach to battery pack manufacturing as an exercise in treating energy density and production cost as equally p"
+    },
+    {
+      "id": "87cc228b-1cfe-407e-82a2-b177801a4d24",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Interview",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has argued that vertical integration \u2014 building in-house what competitors outsource \u2014 is not inefficiency but competitive architecture."
+    },
+    {
+      "id": "887d6c56-a5c5-47fa-82ba-e6f698eef86c",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity... | Elon Musk | TED",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has consistently argued that every system has a single primary limiting factor, and identifying and attacking that bottleneck yields mo"
+    },
+    {
+      "id": "8a811902-01ec-4acc-99b1-376792a3fa64",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity \u2014 TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described the transition away from fossil fuels as one of the few problems that satisfies all his criteria for working on something"
+    },
+    {
+      "id": "9393a464-5151-4a75-88d7-46e3500532c9",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "When SpaceX began, the assumption throughout the aerospace industry and among government agencies was that serious launch capability require"
+    },
+    {
+      "id": "9ea71dfd-282e-4507-b403-99658ec496d6",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring \u2014 TED Talk",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has noted that the global fleet of vehicles turns over approximately every fifteen to twenty years, which means that the combustion veh"
+    },
+    {
+      "id": "a7542095-bab2-445d-9cfb-4024984ab56c",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED",
+      "old_date": null,
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has argued that SpaceX was able to reduce the cost per kilogram to orbit by an order of magnitude compared to legacy government contrac"
+    },
+    {
+      "id": "adf0db00-d740-46e1-83c5-b4d66e2687ee",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity \u2014 TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has argued that sustainable energy systems \u2014 solar generation, battery storage, and electric vehicles \u2014 form a coherent triangle that m"
+    },
+    {
+      "id": "ae39ebed-7a03-430a-a51b-9834718b0941",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Outsourcing critical components to suppliers is not a cost-saving strategy \u2014 it is a competitive liability. When a company depends on outsid"
+    },
+    {
+      "id": "b275afb8-fc20-41a6-830e-3fef639fa30a",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has noted that the regulatory environment for tunneling and underground infrastructure in the United States added enormous cost and tim"
+    },
+    {
+      "id": "b66f53a1-70f4-4974-ae74-4311c6a4319a",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Regulatory timelines in many industries are not calibrated to the pace of technological change, creating dangerous mismatches between what i"
+    },
+    {
+      "id": "bad08433-8c80-4a1c-b545-7427240d2984",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has consistently argued that the best part is no part and the best process is no process. Each component added to a system carries cost"
+    },
+    {
+      "id": "bba03023-d1d4-4f10-8bcd-c500fe10d787",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has argued that the critical inflection point in the early life of a hard-tech company is getting to the first working prototype fast e"
+    },
+    {
+      "id": "c17851f2-8288-4636-97d7-78a9d5895215",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described his experience seeking early investment and operating licenses for SpaceX as involving a pervasive assumption among gover"
+    },
+    {
+      "id": "c2e78736-eb91-40a6-a85b-1a035479750b",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described the mission itself as the most powerful recruitment and retention tool available to any organization. Exceptional people "
+    },
+    {
+      "id": "c605fcff-a704-4f55-b84b-5bd06bcfe5c8",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has consistently positioned sustainable energy not as environmentalist ideology but as a straightforward engineering and economic neces"
+    },
+    {
+      "id": "c65cfc4c-2fe1-4ab4-adc5-b2dfaa40b4a0",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity... | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described the decision to co-found SolarCity \u2014 funded initially with personal capital and backed by his cousins \u2014 as an extension o"
+    },
+    {
+      "id": "c6a39183-ab95-4ffb-83b8-4aeca7738b22",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED interview with Chris Anderson",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has pointed out that the aerospace industry told him definitively that building a cost-competitive rocket was impossible \u2014 not merely d"
+    },
+    {
+      "id": "ce5fe396-1eb8-4745-a566-6a9e4c092235",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has argued that the conventional venture capital model is poorly matched to the financial requirements of hardware and infrastructure v"
+    },
+    {
+      "id": "d10e2730-9839-4bf9-a3e8-3aa3ff459ed2",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has described every complex system as having a single primary constraint that limits overall performance more than any other factor. Id"
+    },
+    {
+      "id": "d477f2cf-5c8e-4348-9402-c44175f1120b",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity... | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "When founding SpaceX in 2002, Musk invested approximately $100 million of his own money from the Zip2 and PayPal exits into a venture most a"
+    },
+    {
+      "id": "dc02b745-1b30-4a9d-b1fa-5eab6f610fd8",
+      "decision": "STRIP",
+      "old_ref": "Elon Musk: The future we're building -- and boring | TED",
+      "old_date": "2017-04-28",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has consistently framed his ventures around problems that matter at a civilizational scale \u2014 sustainable energy, multiplanetary life, A"
+    },
+    {
+      "id": "dcddf907-686d-4d96-90f5-31be34891a50",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has argued that the permitting and regulatory environment for new energy infrastructure in the United States \u2014 including solar, battery"
+    },
+    {
+      "id": "edcaa5ed-c312-47dc-9a74-a16c9761d569",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "At SpaceX, Musk deliberately chose to test hardware early and often rather than spending years perfecting simulations before attempting a la"
+    },
+    {
+      "id": "f42759ab-dd86-4d44-8b56-2ce8469dd2be",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity \u2014 TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has consistently framed the transition to sustainable energy not as an environmental preference but as a civilizational necessity. Foss"
+    },
+    {
+      "id": "fa55d321-3c43-4d2e-a4c2-fcb32f817fca",
+      "decision": "STRIP",
+      "old_ref": "Tesla Battery Day presentation",
+      "old_date": "2020-09-22",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Tesla's decision to develop its own battery cells \u2014 and eventually its own cell manufacturing through the 4680 program \u2014 reflects Musk's vie"
+    },
+    {
+      "id": "fdf65ac4-4174-4e23-bdf6-55c0908095b9",
+      "decision": "STRIP",
+      "old_ref": "The mind behind Tesla, SpaceX, SolarCity | TED Talk",
+      "old_date": "2013-02-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "no corpus doc states the claim",
+      "content_head": "Musk has expressed that the purpose of accumulating resources and influence is not personal enrichment but the ability to fund and execute m"
+    }
+  ],
+  "mechanical_fixes": {
+    "slug_to_title": "318 video-extraction atoms: youtube:<slug> refs mapped to sources.json titles (mapping validated empirically \u2014 hi-scoring quotes matched the mapped transcript for every group)",
+    "variant_to_canonical": "82 atoms: 20+ spelling variants of source titles collapsed to sources.json canonical titles",
+    "date_normalization": "172 atoms: per-source dates set to the verified canonical date (or null where unverifiable)"
+  },
+  "residue_not_fixed": {
+    "unverified_deep_research_attributions": "Post-fix, these per-source counts of ATTRIBUTED atoms have no verbatim quote support (mostly quote-less Phase 2.3 deep-research atoms whose citation is plausible but unverified; also low-caption-quality video atoms). They keep their refs; treat as unverified-plausible, not verbatim-sourced.",
+    "per_source_unverified_counts": {
+      "Elon Musk Answers Your Questions! | SXSW 2018": 56,
+      "Elon Musk: War, AI, Aliens, Politics, Physics, Video Games, and Humanity | Lex Fridman Podcast #400": 53,
+      "Elon Musk | SXSW Live 2013 | SXSW ON": 52,
+      "Elon Musk: Twitter's bot problem, SpaceX's grand plan, Tesla stories & more": 44,
+      "Joe Rogan Experience #2054 - Elon Musk": 38,
+      "Elon Musk: Neuralink and the Future of Humanity | Lex Fridman Podcast #438": 37,
+      "Elon Musk on DOGE, Optimus, Starlink Smartphones, Evolving with AI, Why the West is Imploding": 32,
+      "Elon Musk | Full interview | Code Conference 2016": 31,
+      "Joe Rogan Experience #2404 - Elon Musk": 30,
+      "Elon Musk: The future we're building -- and boring | TED": 30,
+      "Elon Musk Reveals His Knowledge on Aliens, Challenges Putin to UFC, and Predicts WW3": 17,
+      "New Yorker: Plugged In": 16,
+      "Wikipedia: Elon Musk": 13,
+      "Is life a video game? | Elon Musk | Code Conference 2016": 11,
+      "Mercury News: Rocket Man Profile": 10,
+      "David Senra \u2014 How Extreme Winners Think and Win: Lessons from 400+ of History\u2019s Greatest Founders": 10,
+      "Guardian: Elon Musk, Peter Thiel, and Apartheid South Africa": 10,
+      "Guardian: Meet the Musk Family": 10,
+      "Independent: Elon Musk Birthday Profile": 10,
+      "Buffalo News: Otherworldly Ambitions": 9,
+      "Triangulation Interview with Elon Musk": 9,
+      "Forbes: At Home with Elon Musk": 9,
+      "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk": 8,
+      "WSJ: Elon Musk Children and Relationships": 6,
+      "STOP Playing Life on HARD MODE! | Shane Parrish": 6,
+      "CIC News: Elon Musk Canadian Citizenship": 6,
+      "Elon Musk 100 Hour Week vs Tim Ferris 4 Hour Week (WHO WON?)": 4,
+      "Balancing Work and Life | Shane Parrish": 2,
+      "What Legacy Will You Leave Behind": 1
+    },
+    "triangulation_source_mislabel": "sources.json title says \"Triangulation Interview with Elon Musk\" but TWiT 203 is an interview with Ashlee Vance about Musk; 9 atoms cite it",
+    "ted2017_video_atoms_quote_fidelity": "25 atoms extracted from the Arabic caption track of zIwLWfaAg-8: attribution is certain (pipeline), but original_quote fields are double-translation paraphrases, not verbatim Musk. English transcript now in corpus; re-extraction would fix quotes.",
+    "fullsend_diarization": "3 recovered youtube:unknown atoms have quotes that are host (John Shahidi) narration about Musk \u2014 pre-diarization extraction residue",
+    "jre2404_caption_quality": "youtube:JoeRoganExperience2404 group: only ~22% of quotes verbatim-match the auto-caption transcript (attribution certain, caption quality low)",
+    "junk_source": "sources.json still lists \"Fundamentals of Computer | computer science class 9 sindh board\" (0 atoms cite it) \u2014 discovery-phase noise, transcript exists in corpus"
+  }
+}
