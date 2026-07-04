@@ -17,6 +17,12 @@ specific complaints, each of which maps to a concrete fix below:
 - Marketing claims reprinted as engineering truths ("X restored free speech", "hallucination-free
   Grok", "AI5 40x") — **an epistemic-classification failure, now fixable with claim_type/verification**.
 
+### A0. Source cleanup FIRST (found 2026-07-04)
+`source/sources.json` contains Phase-0 discovery pollution — e.g. source [20/20] is
+"Fundamentals of Computer | computer science class 9 sindh board" (a Pakistani school lesson).
+Audit all 35 entries, delete junk, before adding anything. Also: transcript fetches were
+throttled after heavy same-day use — space `ingest-youtube.py` runs or expect blank ERRORs.
+
 ### A. Source expansion — the mess, in his own words (~$6, diarized ingest)
 The corpus is 35 sources (20 videos, 10 profiles, 4 essays, 1 interview) — the highlight reel.
 Add the crisis/conflict corpus where Musk himself narrates cost. Candidates (all long-form, his voice,
