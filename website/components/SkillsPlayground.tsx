@@ -36,6 +36,10 @@ interface SkillsPlaygroundProps {
   lockedSkill?: string;
   /** Quick-fill chips rendered above the question textarea. */
   seedQueries?: string[];
+  /** Per-skill seed chips — when provided, the chips shown follow the selected
+   *  skill (a /debate seed makes no sense under /evolve). Falls back to
+   *  seedQueries for skills without an entry. */
+  seedsBySkill?: Record<string, string[]>;
   /** Short labels for each seedQueries entry. When omitted, the full query text
    *  is used as the chip label (truncated). Aligned by index with seedQueries. */
   seedQueryLabels?: string[];
@@ -116,6 +120,7 @@ export function SkillsPlayground({
   defaultSkill,
   lockedSkill,
   seedQueries,
+  seedsBySkill,
   seedQueryLabels,
   inputPlaceholder,
 }: SkillsPlaygroundProps) {
@@ -370,9 +375,11 @@ export function SkillsPlayground({
         <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted">
           Ask a question
         </label>
-        {seedQueries && seedQueries.length > 0 && (
+        {(() => {
+          const effectiveSeeds = seedsBySkill?.[selectedSkill] ?? seedQueries;
+          return effectiveSeeds && effectiveSeeds.length > 0 ? (
           <div className="mb-3 flex flex-wrap gap-2">
-            {seedQueries.map((q, i) => {
+            {effectiveSeeds.map((q, i) => {
               const label = seedQueryLabels?.[i] ?? (q.length > 60 ? q.slice(0, 57) + "…" : q);
               return (
                 <button
@@ -391,7 +398,8 @@ export function SkillsPlayground({
               );
             })}
           </div>
-        )}
+          ) : null;
+        })()}
         <textarea
           value={query}
           onChange={(e) => setQuery(e.target.value)}
