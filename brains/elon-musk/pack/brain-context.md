@@ -1,6 +1,6 @@
 # Elon Musk's "Public statements, interviews, podcasts, TED talks, SXSW appearances, and widely reported media coverage" — Extracted Insights
 
-836 atomic ideas extracted from Joe Rogan Experience episodes, Lex Fridman Podcast episodes, TED talks, SXSW interviews, Code Conference appearances, Wikipedia biography, and major media profiles. Elon Musk is a serial entrepreneur and engineer who has fundamentally transformed multiple industries through companies like Tesla, SpaceX, Neuralink, and The Boring Company. His approach combines first principles thinking with an ambitious long-term vision for humanity's survival and expansion beyond Earth.
+845 atomic ideas extracted from Joe Rogan Experience episodes, Lex Fridman Podcast episodes, TED talks, SXSW interviews, Code Conference appearances, Wikipedia biography, and major media profiles. Elon Musk is a serial entrepreneur and engineer who has fundamentally transformed multiple industries through companies like Tesla, SpaceX, Neuralink, and The Boring Company. His approach combines first principles thinking with an ambitious long-term vision for humanity's survival and expansion beyond Earth.
 
 Extracted by brainsforagents using a custom knowledge graph pipeline (Firecrawl + Supabase + pgvector). Each insight is self-contained and searchable.
 
@@ -782,6 +782,18 @@ Real mistakes Elon Musk made — what they cost and what changed as a result, gr
 
 **Implication:** Invest in inline sensing and real-time production data infrastructure before investing in end-of-line quality systems. Catching defects earlier in the production flow is not just cheaper — it accelerates the organizational learning cycle that ultimately determines how fast quality improves.
 
+**The Cybertruck was unveiled in November 2019 with production announced for late 2021.** First customer deliveries came in November 2023 — about two years late. ([source](Public record: Cybertruck unveil November 21, 2019; first deliveries November 30, 2023))
+
+**Implication:** A two-year slip on a headline consumer product is his normal error bar, not a crisis. Calibrate any 'shipping next year' claim in his voice against this distribution.
+
+**The second-generation Tesla Roadster was unveiled in November 2017 with production stated for 2020 and $50,000 reservations taken. As of 2026 it has not shipped — six-plus years past the announced date.** ([source](Public record: Tesla Semi/Roadster unveil event, November 16, 2017))
+
+**Implication:** Product announcements with paid reservations are still schedule-optimistic in his system. The pattern: announcement dates serve recruiting, morale, and capital — delivery dates are downstream of engineering reality he does not pretend to fully control.
+
+**In mid-2017 Musk targeted Model 3 production of 5,000 cars per week by the end of 2017.** Tesla did not reach that rate until roughly July 2018 — more than six months late, through a period Musk himself called 'production hell' and 'the most difficult and painful year of my career.' ([source](Public record: Tesla Q2 2017 guidance; Q2 2018 production report))
+
+**Implication:** Even his manufacturing-ramp promises — the domain where he is strongest — run materially late under first-of-kind complexity. His own description of the cost ('sleeping on the factory floor') is the honest counterweight to the schedule bravado.
+
 **Transitioning the entire world's energy supply to sustainable sources requires approximately 100 Gigafactory-scale battery manufacturing plants — a large but finite and achievable number that can be reasoned about from first principles.** ([source](Elon Musk: The future we're building -- and boring | TED))
 
 **Implication:** Framing a civilization-scale energy transition as a concrete, countable manufacturing problem transforms it from an abstract aspiration into an executable engineering roadmap.
@@ -914,6 +926,10 @@ Real mistakes Elon Musk made — what they cost and what changed as a result, gr
 
 **Implication:** Iteration through failure is inevitable at the frontier of hardware development; the competitive advantage lies in learning faster from failures than rivals, not in avoiding them.
 
+**At Tesla Autonomy Day in April 2019, Musk predicted 'over a million robotaxis on the road' by the end of 2020, telling investors he felt 'very confident' about the timeline. No Tesla robotaxi operated commercially in 2020; a limited supervised robotaxi pilot did not launch until 2025.** ([source](Public record: Tesla Autonomy Day, April 22, 2019))
+
+**Implication:** His most confident public timelines have been the least reliable — confidence level is not a calibration signal in his forecasts. Weight his 'physics says it's possible' arguments separately from his 'when' claims; the first has a far better record than the second.
+
 **Musk has framed the willingness to attempt things with a low probability of success as a rational response to the expected value calculation, not as recklessness. If the potential outcome is sufficiently transformative, a ten percent chance of success can have higher expected value than a near-certain path to a modest result. Speed and aggressive timelines are how you attempt enough low-probability bets to find the ones that pay.** ([source](Elon Musk Answers Your Questions! | SXSW 2018))
 
 **Implication:** When evaluating high-risk, high-reward opportunities, calculate expected value across the full probability distribution rather than anchoring on the most likely outcome. Organizations that only pursue near-certain bets systematically underinvest in transformative possibilities.
@@ -937,6 +953,10 @@ Real mistakes Elon Musk made — what they cost and what changed as a result, gr
 **Beauty and inspiration are systematically undervalued as design objectives in technology and infrastructure.** Products that are genuinely beautiful and emotionally compelling achieve faster adoption and greater cultural impact than technically superior but aesthetically indifferent alternatives. ([source](Elon Musk: The future we're building -- and boring | TED))
 
 **Implication:** Engineering and design should be treated as inseparable disciplines — investing in aesthetic excellence is not cosmetic but strategic, and directly affects the speed of technology adoption.
+
+**In October 2016, Musk announced that a Tesla would drive itself coast-to-coast — Los Angeles to New York — 'by the end of next year' (2017) with no human intervention. The demonstration never took place, in 2017 or any year since.** ([source](Public record: Tesla Autopilot 2.0 announcement, October 19, 2016))
+
+**Implication:** Musk's urgency doctrine produces real velocity and real schedule misses from the same mechanism. When applying his 'deadlines are targets to compress' pattern, budget for the documented gap between his announced timelines and delivery.
 
 **The iterative improvement model that enabled smartphones to become accessible supercomputers — multiple design generations combined with massive production scale — is the same model required to bring advanced battery technology to mass market affordability. Cost reduction in complex manufactured goods requires both engineering iteration and volume scale simultaneously.** ([source](Elon Musk | Full interview | Code Conference 2016))
 
@@ -965,6 +985,10 @@ Real mistakes Elon Musk made — what they cost and what changed as a result, gr
 **Musk has argued that most people and organizations dramatically underestimate what is physically possible because they confuse social conventions for physical constraints. The accumulated weight of prior failures, regulations, and conventional wisdom creates a cognitive ceiling far below what physics actually permits. Recognizing this gap is the first step to operating at a fundamentally different speed than peers.** ([source](Triangulation Interview with Elon Musk))
 
 **Implication:** Before accepting that something cannot be done faster or cheaper, rigorously distinguish between physical impossibility and social convention. Most speed limits are posted by habit, not by thermodynamics.
+
+**Musk publicly predicted full self-driving would arrive roughly 'next year' nearly every year from 2014 through 2022 — including 'full autonomy in about two years' (2015), 'feature complete this year' (2019), and 'I'm extremely confident of achieving full autonomy… this year' (2021, 2022). Unsupervised full self-driving was not achieved in any of those years.** ([source](Public record: compiled FSD timeline statements, 2014-2022))
+
+**Implication:** This is the single most repeated timeline miss in his public record — a decade of one-year-out predictions for the same milestone. Any reasoning in his voice about imminent technology breakthroughs should carry this base rate.
 
 **When a spacecraft anomaly occurred in orbit, SpaceX rapidly improvised.** they negotiated Air Force dish access, rewrote communication software on the fly, and developed a novel pressure-slam maneuver to fix stuck valves. Real-world problem solving at the frontier requires creative resource acquisition and rapid software iteration, not just pre-planned procedures. ([source](Elon Musk | SXSW Live 2013 | SXSW ON))
 
@@ -1616,6 +1640,10 @@ Real mistakes Elon Musk made — what they cost and what changed as a result, gr
 
 **Implication:** The benchmark for SpaceX's reusability program should be airplane-like turnaround, not just technical re-flight capability — this sets a much higher operational bar that determines whether Mars colonization economics actually work.
 
+**At the 2016 IAC in Guadalajara, Musk presented a Mars architecture with cargo flights beginning in 2022 and crewed flights in 2024. Neither occurred; no Starship has flown to Mars as of 2026.** ([source](Public record: IAC Guadalajara presentation, September 27, 2016))
+
+**Implication:** His Mars timelines compress physics-limited and organization-limited work into the same optimistic schedule. The vision has held for two decades — the dates have never held. Cite the mission, hedge the calendar.
+
 **SpaceX plans to establish a reliable, recurring cargo transport system to Mars launching at every 26-month Earth-Mars orbital window from 2018 onward. This cadence-based approach treats Mars missions like a scheduled shipping service rather than one-off expeditions, building the infrastructure reliability needed before crewed missions.** ([source](Elon Musk | Full interview | Code Conference 2016))
 
 **Implication:** Treating Mars transport as a recurring logistics operation rather than a prestige mission fundamentally changes how the infrastructure gets built and de-risked. Reliability and cadence matter more than any single spectacular mission.
@@ -1705,6 +1733,10 @@ Real mistakes Elon Musk made — what they cost and what changed as a result, gr
 > *"He points out a portrait of Wernher von Braun, the ex-Nazi who advocated for NASA's Apollo program, and draws me over to a huge photo of Mars, a place he dreams of colonizing, and navigates me to the Valles Marineris trench."*
 
 **Implication:** Making long-term goals physically visible and specific — not just stated in a mission deck — shapes organizational culture and keeps teams oriented toward the ultimate destination. Concrete artifacts of ambition can be more motivating than abstract statements.
+
+**In 2011, Musk said he expected to put a human on Mars within 10 to 15 years — i.e., by roughly 2021-2026.** As of 2026 no human has traveled to Mars, and no crewed Mars mission has launched. ([source](Public record: Wall Street Journal interview, April 2011))
+
+**Implication:** His longest-horizon predictions miss by the widest margins, yet they are also the ones that recruited the teams and capital that made the underlying capability real. The productive reading: his dates are instruments of mobilization, not forecasts — treat them accordingly.
 
 **SpaceX's Falcon 1 became the first privately funded liquid-fuelled rocket to achieve orbit — but only after three failed launches. One failed launch carried the ashes of James Doohan (Star Trek's Scotty). Musk's response to that failure was characteristically technical and dry: the ashes did reach space, they just didn't stay there. Failure was treated as a data point, not a moral verdict.** ([source](New Yorker: Plugged In))
 
@@ -3858,6 +3890,10 @@ Real mistakes Elon Musk made — what they cost and what changed as a result, gr
 
 **Implication:** The design principles of a social platform are not merely product decisions — they have democratic and civilizational consequences that justify treating platform governance as a public interest matter.
 
+**At TED in April 2022, pressed by Chris Anderson on years of missed full-self-driving predictions, Musk acknowledged the pattern himself: 'I'm the boy who cried FSD' — while maintaining the goal was still achievable.** ([source](Public record: TED 2022 interview with Chris Anderson, April 14, 2022))
+
+**Implication:** He is aware of his own timeline miscalibration and jokes about it without changing the behavior — the optimism is a chosen operating stance, not an information gap. A faithful model of his reasoning must carry both: the self-awareness and the refusal to recalibrate.
+
 **Public demonstrations of what is possible — like the Falcon Heavy launch — are essential for inspiring both individuals and institutions to believe that ambitious space goals are achievable. Proof-of-concept achievements change what governments and companies think is worth attempting.** ([source](Elon Musk Answers Your Questions! | SXSW 2018))
 
 **Implication:** Demonstrating the impossible is itself a strategic act — it reshapes the competitive and political landscape by expanding what stakeholders believe is worth funding and building.
@@ -3988,4 +4024,4 @@ Real mistakes Elon Musk made — what they cost and what changed as a result, gr
 
 ---
 
-*836 atoms · 16 clusters · 719 connections · Generated 2026-07-04*
+*845 atoms · 16 clusters · 719 connections · Generated 2026-07-04*

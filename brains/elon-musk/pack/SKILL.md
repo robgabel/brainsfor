@@ -9,7 +9,7 @@ Welcome to the **Musk Brain Pack** from [brainsforagents.com](https://brainsfora
 
 ## What You're Getting
 
-- **836 knowledge atoms** — Core insights, frameworks, and strategic principles from Joe Rogan Experience episodes, Lex Fridman Podcast episodes, TED talks, SXSW interviews, Code Conference appearances, Wikipedia biography, and major media profiles
+- **845 knowledge atoms** — Core insights, frameworks, and strategic principles from Joe Rogan Experience episodes, Lex Fridman Podcast episodes, TED talks, SXSW interviews, Code Conference appearances, Wikipedia biography, and major media profiles
 - **719 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **A `/board` of advisors** — Convene this brain alongside your other installed brains for one question (needs 2+ brains)
@@ -29,7 +29,7 @@ Your Musk Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (836 insights)
+  ├── brain-atoms.json         ← structured atoms (845 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 10 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -63,7 +63,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 836 atoms with titles, summaries, connections
+   - JSON structure of 845 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 

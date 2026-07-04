@@ -3,10 +3,10 @@
     "name": "Elon Musk",
     "slug": "elon-musk",
     "source": "Public statements, interviews, podcasts, TED talks, SXSW appearances, and widely reported media coverage (twitter.com/elonmusk)",
-    "atom_count": 836,
+    "atom_count": 845,
     "connection_count": 719,
     "cluster_count": 16,
-    "topic_count": 2156,
+    "topic_count": 2167,
     "connection_types": {
       "related": 591,
       "contradicts": 21,
@@ -19,6 +19,28 @@
     "possessive": "his"
   },
   "atoms": [
+    {
+      "id": "33bb52f1-ce0f-4b99-87ab-6bf8d3fe7369",
+      "content": "In October 2016, Musk announced that a Tesla would drive itself coast-to-coast \u2014 Los Angeles to New York \u2014 'by the end of next year' (2017) with no human intervention. The demonstration never took place, in 2017 or any year since.",
+      "cluster": "innovation_speed",
+      "topics": [
+        "autonomy",
+        "timelines",
+        "calibration",
+        "self_inversion",
+        "fsd"
+      ],
+      "source_ref": "Public record: Tesla Autopilot 2.0 announcement, October 19, 2016",
+      "source_url": null,
+      "source_date": "2016-10-19",
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "verified",
+      "implication": "Musk's urgency doctrine produces real velocity and real schedule misses from the same mechanism. When applying his 'deadlines are targets to compress' pattern, budget for the documented gap between his announced timelines and delivery.",
+      "proof_ref": "Oct 2016 Tesla HW2 press call ('by the end of next year\u2026 from a parking lot in California to a parking lot in New York'); no such demo has occurred",
+      "verified_at": "2026-07-04"
+    },
     {
       "id": "8f2f5831-4c49-4bc9-bff7-f9e96c2c85a5",
       "content": "The National Space Society recognized Musk with its prestigious Robert A. Heinlein Memorial Award, citing his work creating commercially successful and reusable rocket boosters and spacecraft \u2014 a task described as one 'no one else in the world has been willing and able to tackle.'",
@@ -73,6 +95,94 @@
       ]
     },
     {
+      "id": "54035eda-aeb8-4455-9238-17f1211f56aa",
+      "content": "At Tesla Autonomy Day in April 2019, Musk predicted 'over a million robotaxis on the road' by the end of 2020, telling investors he felt 'very confident' about the timeline. No Tesla robotaxi operated commercially in 2020; a limited supervised robotaxi pilot did not launch until 2025.",
+      "cluster": "innovation_speed",
+      "topics": [
+        "robotaxi",
+        "timelines",
+        "calibration",
+        "self_inversion",
+        "autonomy"
+      ],
+      "source_ref": "Public record: Tesla Autonomy Day, April 22, 2019",
+      "source_url": null,
+      "source_date": "2019-04-22",
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "verified",
+      "implication": "His most confident public timelines have been the least reliable \u2014 confidence level is not a calibration signal in his forecasts. Weight his 'physics says it's possible' arguments separately from his 'when' claims; the first has a far better record than the second.",
+      "proof_ref": "Autonomy Day webcast, Apr 2019 ('a million robotaxis on the road' by end of 2020); Austin supervised pilot began June 2025",
+      "verified_at": "2026-07-04"
+    },
+    {
+      "id": "6d19d63f-0d97-41c1-a02e-5b42b925e5d5",
+      "content": "Musk publicly predicted full self-driving would arrive roughly 'next year' nearly every year from 2014 through 2022 \u2014 including 'full autonomy in about two years' (2015), 'feature complete this year' (2019), and 'I'm extremely confident of achieving full autonomy\u2026 this year' (2021, 2022). Unsupervised full self-driving was not achieved in any of those years.",
+      "cluster": "innovation_speed",
+      "topics": [
+        "fsd",
+        "timelines",
+        "calibration",
+        "self_inversion",
+        "autonomy"
+      ],
+      "source_ref": "Public record: compiled FSD timeline statements, 2014-2022",
+      "source_url": null,
+      "source_date": "2014-10-02",
+      "confidence": 0.92,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "verified",
+      "implication": "This is the single most repeated timeline miss in his public record \u2014 a decade of one-year-out predictions for the same milestone. Any reasoning in his voice about imminent technology breakthroughs should carry this base rate.",
+      "proof_ref": "Documented yearly statements: 2015 Fortune interview; 2016 'two years' (Recode); 2019 Autonomy Day 'feature complete'; 2021/2022 earnings calls",
+      "verified_at": "2026-07-04"
+    },
+    {
+      "id": "43d5ae36-de3f-459a-b585-79acc6a85d00",
+      "content": "At the 2016 IAC in Guadalajara, Musk presented a Mars architecture with cargo flights beginning in 2022 and crewed flights in 2024. Neither occurred; no Starship has flown to Mars as of 2026.",
+      "cluster": "space_exploration",
+      "topics": [
+        "mars",
+        "timelines",
+        "calibration",
+        "self_inversion",
+        "starship"
+      ],
+      "source_ref": "Public record: IAC Guadalajara presentation, September 27, 2016",
+      "source_url": null,
+      "source_date": "2016-09-27",
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "verified",
+      "implication": "His Mars timelines compress physics-limited and organization-limited work into the same optimistic schedule. The vision has held for two decades \u2014 the dates have never held. Cite the mission, hedge the calendar.",
+      "proof_ref": "IAC 2016 'Making Humans a Multiplanetary Species' (cargo 2022, crew 2024); SpaceX launch record through 2026",
+      "verified_at": "2026-07-04"
+    },
+    {
+      "id": "ad28e359-b6e8-4716-882a-5549dedd98f1",
+      "content": "The second-generation Tesla Roadster was unveiled in November 2017 with production stated for 2020 and $50,000 reservations taken. As of 2026 it has not shipped \u2014 six-plus years past the announced date.",
+      "cluster": "manufacturing",
+      "topics": [
+        "roadster",
+        "timelines",
+        "calibration",
+        "self_inversion",
+        "product_launches"
+      ],
+      "source_ref": "Public record: Tesla Semi/Roadster unveil event, November 16, 2017",
+      "source_url": null,
+      "source_date": "2017-11-16",
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "verified",
+      "implication": "Product announcements with paid reservations are still schedule-optimistic in his system. The pattern: announcement dates serve recruiting, morale, and capital \u2014 delivery dates are downstream of engineering reality he does not pretend to fully control.",
+      "proof_ref": "Nov 2017 unveil (production '2020'); no customer deliveries as of 2026",
+      "verified_at": "2026-07-04"
+    },
+    {
       "id": "8e57572a-ad4e-4b81-8a36-5769647dddf6",
       "content": "Musk has applied probabilistic scenario mapping to major decisions by evaluating the full distribution of outcomes rather than anchoring on the most likely scenario. When he estimated SpaceX's probability of success at roughly ten percent before the first launch, he still chose to proceed because the expected value of attempting the mission outweighed the expected value of not attempting it. This framework separates the question of whether something will work from the question of whether attempting it is rational.",
       "cluster": "entrepreneurship",
@@ -98,6 +208,28 @@
           "confidence": 0.63
         }
       ]
+    },
+    {
+      "id": "473a7540-eb91-4776-b44d-a50503d601b6",
+      "content": "In mid-2017 Musk targeted Model 3 production of 5,000 cars per week by the end of 2017. Tesla did not reach that rate until roughly July 2018 \u2014 more than six months late, through a period Musk himself called 'production hell' and 'the most difficult and painful year of my career.'",
+      "cluster": "manufacturing",
+      "topics": [
+        "model_3",
+        "production_hell",
+        "timelines",
+        "calibration",
+        "self_inversion"
+      ],
+      "source_ref": "Public record: Tesla Q2 2017 guidance; Q2 2018 production report",
+      "source_url": null,
+      "source_date": "2017-07-01",
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "verified",
+      "implication": "Even his manufacturing-ramp promises \u2014 the domain where he is strongest \u2014 run materially late under first-of-kind complexity. His own description of the cost ('sleeping on the factory floor') is the honest counterweight to the schedule bravado.",
+      "proof_ref": "Tesla 2017 guidance (5k/week by end 2017) vs. ~5,031/week first achieved week ending July 1, 2018; 'production hell' \u2014 Musk, multiple 2017-18 statements",
+      "verified_at": "2026-07-04"
     },
     {
       "id": "57cbab95-7432-4d48-a708-6e704aa810a5",
@@ -209,6 +341,71 @@
           "confidence": 0.8
         }
       ]
+    },
+    {
+      "id": "2ff31a13-6aae-4bff-bd48-f1fee23b761c",
+      "content": "The Cybertruck was unveiled in November 2019 with production announced for late 2021. First customer deliveries came in November 2023 \u2014 about two years late.",
+      "cluster": "manufacturing",
+      "topics": [
+        "cybertruck",
+        "timelines",
+        "calibration",
+        "self_inversion",
+        "product_launches"
+      ],
+      "source_ref": "Public record: Cybertruck unveil November 21, 2019; first deliveries November 30, 2023",
+      "source_url": null,
+      "source_date": "2019-11-21",
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "verified",
+      "implication": "A two-year slip on a headline consumer product is his normal error bar, not a crisis. Calibrate any 'shipping next year' claim in his voice against this distribution.",
+      "proof_ref": "Unveil event (production 'late 2021') vs. delivery event Nov 30, 2023",
+      "verified_at": "2026-07-04"
+    },
+    {
+      "id": "2b4f07ff-0a6c-4648-9690-b16aea6118e1",
+      "content": "At TED in April 2022, pressed by Chris Anderson on years of missed full-self-driving predictions, Musk acknowledged the pattern himself: 'I'm the boy who cried FSD' \u2014 while maintaining the goal was still achievable.",
+      "cluster": "media_and_communication",
+      "topics": [
+        "fsd",
+        "self_awareness",
+        "calibration",
+        "self_inversion",
+        "timelines"
+      ],
+      "source_ref": "Public record: TED 2022 interview with Chris Anderson, April 14, 2022",
+      "source_url": null,
+      "source_date": "2022-04-14",
+      "confidence": 0.9,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "verified",
+      "implication": "He is aware of his own timeline miscalibration and jokes about it without changing the behavior \u2014 the optimism is a chosen operating stance, not an information gap. A faithful model of his reasoning must carry both: the self-awareness and the refusal to recalibrate.",
+      "proof_ref": "TED 2022 (Vancouver) interview, on the record",
+      "verified_at": "2026-07-04"
+    },
+    {
+      "id": "5b14de0d-38b8-4d0f-bcdf-b3541ba86f7f",
+      "content": "In 2011, Musk said he expected to put a human on Mars within 10 to 15 years \u2014 i.e., by roughly 2021-2026. As of 2026 no human has traveled to Mars, and no crewed Mars mission has launched.",
+      "cluster": "space_exploration",
+      "topics": [
+        "mars",
+        "timelines",
+        "calibration",
+        "self_inversion"
+      ],
+      "source_ref": "Public record: Wall Street Journal interview, April 2011",
+      "source_url": null,
+      "source_date": "2011-04-22",
+      "confidence": 0.9,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "verified",
+      "implication": "His longest-horizon predictions miss by the widest margins, yet they are also the ones that recruited the teams and capital that made the underlying capability real. The productive reading: his dates are instruments of mobilization, not forecasts \u2014 treat them accordingly.",
+      "proof_ref": "WSJ 'The Wall Street Journal Report' Apr 2011 ('I'm confident\u2026 10 years, maybe 15'); no crewed Mars mission as of 2026",
+      "verified_at": "2026-07-04"
     },
     {
       "id": "6d73c02f-0e57-413f-afa5-872b34b17fa6",
@@ -31235,6 +31432,11 @@
       "3088d91b-e30f-49fb-a19f-8a3999a5fdd9",
       "ea426cbc-6367-45cd-badc-1f87ff1a6fc7"
     ],
+    "autonomy": [
+      "33bb52f1-ce0f-4b99-87ab-6bf8d3fe7369",
+      "54035eda-aeb8-4455-9238-17f1211f56aa",
+      "6d19d63f-0d97-41c1-a02e-5b42b925e5d5"
+    ],
     "axioms": [
       "a2baecfb-f28b-4986-92c8-ade88242f411"
     ],
@@ -31448,6 +31650,17 @@
     ],
     "calendar management": [
       "ac1256b2-3512-4fe3-8f99-dcd3cc7c2a09"
+    ],
+    "calibration": [
+      "33bb52f1-ce0f-4b99-87ab-6bf8d3fe7369",
+      "54035eda-aeb8-4455-9238-17f1211f56aa",
+      "6d19d63f-0d97-41c1-a02e-5b42b925e5d5",
+      "43d5ae36-de3f-459a-b585-79acc6a85d00",
+      "ad28e359-b6e8-4716-882a-5549dedd98f1",
+      "473a7540-eb91-4776-b44d-a50503d601b6",
+      "2ff31a13-6aae-4bff-bd48-f1fee23b761c",
+      "2b4f07ff-0a6c-4648-9690-b16aea6118e1",
+      "5b14de0d-38b8-4d0f-bcdf-b3541ba86f7f"
     ],
     "capability acceleration": [
       "4c7f7300-8156-44b2-b276-77f9bb3eaa33"
@@ -32370,6 +32583,9 @@
     ],
     "customer experience": [
       "7846edaa-bbc7-4b54-9000-a186b61f7d14"
+    ],
+    "cybertruck": [
+      "2ff31a13-6aae-4bff-bd48-f1fee23b761c"
     ],
     "cycle time": [
       "3f3da43c-dcde-4522-b818-5f53f595474d"
@@ -33438,6 +33654,11 @@
     ],
     "frontier mindset": [
       "ee06b9dc-9c22-4698-b6d6-06fe0e734bd4"
+    ],
+    "fsd": [
+      "33bb52f1-ce0f-4b99-87ab-6bf8d3fe7369",
+      "6d19d63f-0d97-41c1-a02e-5b42b925e5d5",
+      "2b4f07ff-0a6c-4648-9690-b16aea6118e1"
     ],
     "full self-driving": [
       "209e7d6b-963d-4c27-b71b-6a469e56d68e"
@@ -34691,6 +34912,8 @@
       "67ed87ae-d6f2-487f-8d9b-bf0962f0a3d7"
     ],
     "mars": [
+      "43d5ae36-de3f-459a-b585-79acc6a85d00",
+      "5b14de0d-38b8-4d0f-bcdf-b3541ba86f7f",
       "dce7b691-84ae-4076-ba42-652ec06fd131",
       "e50e8904-f5ea-4015-9ff3-affce2eb2478",
       "0b8ab25d-47ca-424a-a6fb-b473f4d8b9a3",
@@ -34985,6 +35208,9 @@
     ],
     "model limitations": [
       "278873f4-0914-44ad-bb1b-edf36a940ad9"
+    ],
+    "model_3": [
+      "473a7540-eb91-4776-b44d-a50503d601b6"
     ],
     "model_quality": [
       "89e5a894-25ff-4333-992f-fc39910a4ec8"
@@ -36001,6 +36227,10 @@
     "product-led growth": [
       "67ed87ae-d6f2-487f-8d9b-bf0962f0a3d7"
     ],
+    "product_launches": [
+      "ad28e359-b6e8-4716-882a-5549dedd98f1",
+      "2ff31a13-6aae-4bff-bd48-f1fee23b761c"
+    ],
     "product_market_fit": [
       "097919eb-aaf9-4c02-ab96-cc885f9c37af"
     ],
@@ -36064,6 +36294,9 @@
     "production systems": [
       "931df053-8e88-4210-a86d-1d3e83f8c565",
       "5b565eef-de55-4d86-ab1e-4b62bbb9c537"
+    ],
+    "production_hell": [
+      "473a7540-eb91-4776-b44d-a50503d601b6"
     ],
     "production_scale": [
       "9462bd29-a6d0-49eb-a34f-e857733e5c43",
@@ -36641,7 +36874,11 @@
       "f5fe45ff-d011-4aa2-8305-1fc9e351d922",
       "e6b4df08-96eb-4b75-9169-0498d8b437be"
     ],
+    "roadster": [
+      "ad28e359-b6e8-4716-882a-5549dedd98f1"
+    ],
     "robotaxi": [
+      "54035eda-aeb8-4455-9238-17f1211f56aa",
       "ee999232-3fad-437a-8943-d201041e0ce2"
     ],
     "robotics": [
@@ -36865,6 +37102,9 @@
     "self-sustaining civilization": [
       "d5a751aa-64fe-4904-bf1c-c56c024e32ec"
     ],
+    "self_awareness": [
+      "2b4f07ff-0a6c-4648-9690-b16aea6118e1"
+    ],
     "self_education": [
       "9eca0035-68e0-405c-b306-64b4fb482ecd",
       "e0ffa627-1e5e-409b-8a9b-c85fd627a0f5"
@@ -36872,6 +37112,17 @@
     "self_improvement": [
       "0e0cf43c-ae2b-49d3-bc73-bc72e773b338",
       "32f2fb53-4aa8-4da7-9275-905fb5275683"
+    ],
+    "self_inversion": [
+      "33bb52f1-ce0f-4b99-87ab-6bf8d3fe7369",
+      "54035eda-aeb8-4455-9238-17f1211f56aa",
+      "6d19d63f-0d97-41c1-a02e-5b42b925e5d5",
+      "43d5ae36-de3f-459a-b585-79acc6a85d00",
+      "ad28e359-b6e8-4716-882a-5549dedd98f1",
+      "473a7540-eb91-4776-b44d-a50503d601b6",
+      "2ff31a13-6aae-4bff-bd48-f1fee23b761c",
+      "2b4f07ff-0a6c-4648-9690-b16aea6118e1",
+      "5b14de0d-38b8-4d0f-bcdf-b3541ba86f7f"
     ],
     "self_paced": [
       "8eda81f3-ecf2-4a32-a7fd-8c463158b1da"
@@ -37157,6 +37408,7 @@
       "18f3a96e-c17f-4c4f-a4dd-037a2e93cdfc"
     ],
     "starship": [
+      "43d5ae36-de3f-459a-b585-79acc6a85d00",
       "0aad2737-484f-447b-84c9-985741c9f23f",
       "c913c551-613c-4ec2-b4be-2fb495473e2a",
       "73f6d004-7cb9-41da-bb2d-c00b227b1dc1"
@@ -37523,6 +37775,17 @@
     "timeline_compression": [
       "93352e01-3a8e-447e-8b30-dfdfc9fdf636",
       "ab267d6e-734a-4e8e-baed-4d7a6786b862"
+    ],
+    "timelines": [
+      "33bb52f1-ce0f-4b99-87ab-6bf8d3fe7369",
+      "54035eda-aeb8-4455-9238-17f1211f56aa",
+      "6d19d63f-0d97-41c1-a02e-5b42b925e5d5",
+      "43d5ae36-de3f-459a-b585-79acc6a85d00",
+      "ad28e359-b6e8-4716-882a-5549dedd98f1",
+      "473a7540-eb91-4776-b44d-a50503d601b6",
+      "2ff31a13-6aae-4bff-bd48-f1fee23b761c",
+      "2b4f07ff-0a6c-4648-9690-b16aea6118e1",
+      "5b14de0d-38b8-4d0f-bcdf-b3541ba86f7f"
     ],
     "tokamak": [
       "b740fed2-8826-45cc-a2a9-4888151b2956"
