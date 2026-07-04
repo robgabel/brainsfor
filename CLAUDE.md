@@ -81,7 +81,7 @@ brainsfor/
 
   .mcp.json                          ← MCP server registration (auto-loaded by Claude Code)
   HANDOFF-MCP-BOARD.md               ← handoff doc for MCP server + /board skill build
-  PRD-site-overhaul.md               ← PRD for website overhaul work
+  LAUNCH.md                          ← **CANONICAL launch plan** — checklist + PRDs, 10-beta-user goal. Supersedes all other GTM/launch docs
   naming-exploration.md              ← brand naming exploration
   doc-refresh-log.md                 ← audit trail of every /doc-refresh run
 
@@ -510,6 +510,7 @@ Both paths run the same 6 phases (source discovery → scaffolding → ingestion
 
 ## Key Documents
 
+- **`LAUNCH.md`** — **THE canonical launch/marketing plan** (2026-07-04): P0/P1/P2 checklist + PRD-1..7 (legal pages, dashboard fix, install-path honesty, SEO metadata, go-public runbook, beta recruitment, launch-week content). Goal: 10 beta users. `PRD-site-overhaul.md` was deleted as superseded; GTM sections in `business-plan.md`/`IMPROVEMENTS.md` now point here.
 - **`docs/INFRA-AUDIT-2026-07-01.md`** — Infrastructure audit (Musk five-step algorithm pass): parts-count scorecard, delete list (2nd Supabase project, tracked pack duplication, dead scripts), runtime COGS fix (full brain-context.md sent uncached per API call → synthesis+atoms), pack-registry + multi-tenant sister-site architecture, top-10 ranked moves.
 - **`BACKLOG.md`** — **Brain candidate backlog.** 8 women thinkers queued for future brain packs, with source richness ratings, rationale, cross-brain potential, and build priority. **Start here when deciding what brain to build next.**
 - `personas.md` — 7 customer personas with JTBD, objections, channels, WTP, killer features. Stack-ranked by priority.

@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${brain.name} Brain — brainsforagents`,
     description: brain.tagline,
+    alternates: { canonical: `/brains/${slug}` },
   };
 }
 
