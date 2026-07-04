@@ -1,6 +1,8 @@
 # Brainsfor.com — 0-Person Business Plan
 
-*Written in the style of Greg Isenberg. April 4, 2026.*
+*Written in the style of Greg Isenberg. April 4, 2026. Refreshed July 4, 2026 — inventory, ship plan, and metrics updated to current reality.*
+
+> **Launch execution lives in [`LAUNCH.md`](LAUNCH.md)** — the canonical launch checklist + PRDs. This doc is strategy: what we're building, for whom, and how it makes money. If they disagree on launch specifics, LAUNCH.md wins.
 
 ---
 
@@ -190,6 +192,8 @@ This is the Greg Isenberg play: **don't build a marketplace — plug into an exi
 | **Pro** | Everything in Standard + embeddings + API access + auto-updates when new content is ingested | $79/brain |
 | **API** | Programmatic access to any brain. For companies building products. | $199/mo (all brains) |
 
+> **Beta reality (July 2026): everything is free.** The tiers above are the post-beta plan. Do not wire Stripe until the 10-user beta (`LAUNCH.md`) confirms real usage — pricing an unvalidated product adds friction to the only thing that matters right now: completed feedback loops.
+
 ### Why these prices
 
 $29 is an impulse buy for a founder who's about to spend 4 hours trying to manually summarize Scott Belsky's newsletter. That's the value prop: **your time is worth more than $29**.
@@ -200,34 +204,15 @@ $199/mo API is for the lazy-but-smart company that wants to offer "Ask [Expert]"
 
 ---
 
-## The Brains (Current Inventory — April 2026)
+## The Brains (Current Inventory — July 2026)
 
-### Live — 17 live brain packs (plus 3 hidden), 20 packs total, 18 live in Supabase
+**`brains/index.json` is the source of truth — this section is a summary, not a ledger.**
 
-| Brain | Atoms | Connections | Content Sources | Why Buyers Want This |
-|-------|-------|-------------|-----------------|---------------------|
-| **Jeremy Utley** | 759 | 2,272 | Ideaflow book, Stanford d.school Creativity in Business course, podcast interviews, and public lectures | Creativity research, idea generation, design-thinking applied to business |
-| **Bill Harris** | 564 | 533 | 2 books on tax-aware investing, American Banker op-ed, LinkedIn Pulse essay, long-form video interviews (Bloomberg, Fox Business, CNBC, Yahoo Finance), 5 long-form podcast/interview transcripts (Adam Mendler, Jo Ann Barefoot, Financial Sense, Modus, Acast Rethink), plus founding-chapter press | Tax-aware investing, fintech founder lens, wealth-management strategy |
-| **Sara Blakely** | 486 | 528 | 15 sources — podcast appearances, video interviews, essays, and profiles spanning her career from Spanx founding to billionaire entrepreneur | Entrepreneurship, brand building, founder grit, D2C playbook |
-| **Gokul Rajaram** | 454 | 789 | Podcast interviews (Invest Like the Best, 20VC, World of DaaS, Aarthi & Sriram Show), conference talks, Medium essays, SPADE decision framework — product leadership at Google AdSense, Facebook Ads, Square/Caviar, DoorDash, plus angel investing across 700+ companies | Product leadership, angel investing frameworks, decision-making under uncertainty |
-| **Dario Amodei** | 353 | 1,842 | darioamodei.com essays (Machines of Loving Grace, The Urgency of Interpretability), Dwarkesh, Lex Fridman #452, Ezra Klein, Logan Bartlett, Anthropic communications | AI safety thesis, interpretability, mechanistic thinking |
-| **Peter Zeihan** | 362 | 1,503 | The Accidental Superpower, The Absent Superpower, Disunited Nations, The End of the World Is Just the Beginning, Zeihan on Geopolitics YouTube, long-form interviews | Geopolitics, demographics, energy, supply chains, deglobalization |
-| **Oprah Winfrey** | 333 | 355 | Decades of The Oprah Winfrey Show, O Magazine, SuperSoul conversations, commencement addresses, and published books | Influence, interview craft, personal transformation, cultural reach |
-| **Scott Belsky** | 284 | 1,515 | All 77 Implications newsletter editions, books, talks | Product intuition, creative leadership, Adobe/VC lens |
-| **Brené Brown** | 283 | 2,035 | 20+ years of research, 6 bestselling books, TED talks, Dare to Lead podcast | Leadership, vulnerability research, organizational culture |
-| **Jensen Huang** | 253 | 1,622 | Lex Fridman #494, Acquired Podcast NVIDIA, Joe Rogan #2422, Computer History Museum, Stanford GSB, GTC 2024/2025 keynotes, 60 Minutes, Stripe Sessions, All-In, Dwarkesh, Hoover Institution | Compute, strategy, long-horizon product vision |
-| **Elon Musk** | 247 | 1,563 | Tweets, interviews, earnings calls, and public presentations | First-principles engineering, manufacturing scale, risk tolerance |
-| **Gary Vaynerchuk** | 246 | 1,850 | Crush It!, Jab Jab Jab Right Hook, Ask Gary Vee, Crushing It!, Twelve and a Half, Day Trading Attention, DailyVee, GaryVee Audio Experience, keynotes | Content strategy, personal branding, entrepreneurial hustle |
-| **Hank Green** | 222 | 1,245 | 600+ SciShow episodes, 18yr Vlogbrothers, Crash Course, Dear Hank & John, TikTok (7M+), TED talks, 2 novels | Science communication, creator business, internet culture |
-| **Charlie Munger** | 218 | 1,262 | Poor Charlie's Almanack, Berkshire/Wesco/Daily Journal meetings | Mental models, investment thinking, multidisciplinary wisdom |
-| **Paul Graham** | 213 | 975 | 220+ paulgraham.com essays | Startup wisdom, essay-form thinking, YC founder lens |
-| **Sun Tzu** | 207 | 1,283 | 13 chapters of The Art of War + centuries of attributed commentary | Strategy, competition, decision-making under uncertainty |
-| **John Green** | 205 | 1,301 | Anthropocene Reviewed (podcast + book), Everything is Tuberculosis, Vlogbrothers, TED talks | Humanist perspective, storytelling, reviewing the world |
-| **Steve Jobs** | 170 | 1,618 | Speeches, interviews, keynotes & public appearances (1976–2011) | Product taste, reality distortion field, design philosophy |
-| **Peter Attia** | 153 | 1,220 | The Drive podcast, Outlive book reviews | Longevity science, health optimization frameworks |
-| **TOTAL** | **6,012** | **25,311** | | **+ 17 cross-brain connections** |
-
-**Infrastructure stats:** 18 `brain_metadata` records in Supabase (Oprah Winfrey and Sara Blakely ship as packs but aren't yet ingested into Supabase). 0 `brain_requests` logged to date. Full export pipeline operational (`auto-build-brain.py` → one command, 6 phases, ~$23 per brain). All 20 shippable brain packs have complete pack/ directories with brain-context.md, brain-atoms.json, explore.html, README.md, and 8 skill SKILL.md files. Design system (DESIGN.md) and brand guide (BRAND.md) documented and agent-readable. **brainsforagents.com is live** (Next.js app in `website/`, deployed to Vercel, auto-deploy from `main`). `install-brains.sh` handles local installation with symlinks. `audit-brains.py` validates structure + quality scoring (avg score 99/100 across shippable brains).
+- **22 live brains** on brainsforagents.com (+ 4 hidden/Rob-only = 26 built): Scott Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Jensen Huang, Dario Amodei, Elon Musk, Brené Brown, Oprah Winfrey, Sara Blakely, Bill Harris, Jeremy Utley, Kara Swisher, Yann LeCun, Annie Duke, Reshma Saujani, Melinda French Gates, Jesse Pujji. Hidden: Hank Green, John Green, Gokul Rajaram, Shiva Rajaraman.
+- **~21,800 atoms + ~22,800 typed connections**, verified consistent across Supabase / registry / shipped packs (2026-06-02 data-integrity audit).
+- **Quality regime (all shipped since April):** structural audit (25/25 pass, avg 89.8/100), behavioral eval harness, Annie-chaired persona-QA panel with a hidden-to-live ship-gate, self-recognition QA, epistemic claim tagging (`claim_type`/`verification`), speaker diarization in the extraction pipeline.
+- **Pipeline:** `auto-build-brain.py` — a person's name in, shippable pack out. ~$23, 60-90 min, runs locally or as a GitHub Action.
+- **Site:** brainsforagents.com live on Vercel — auto-playing side-by-side hero demo, live `/api/skill` + `/api/board` demos (rate-limited, fail-closed), Supabase auth, free zip downloads, Vercel Analytics funnel events. Behind a `SITE_PASSWORD` gate until public launch (see `LAUNCH.md`).
 
 ### Next Wave — High-demand candidates
 
@@ -266,6 +251,8 @@ Users can request any public figure. We track requests. When a brain hits 50+ re
 ## Distribution (How We Get Customers)
 
 This is the part most people skip. The product doesn't matter if nobody finds it.
+
+> **Execution note (July 2026):** the channels below are the long-term playbook. For the beta launch the ordered plan is `LAUNCH.md` PRD-6 — warm DMs → LinkedIn → r/ClaudeAI + Claude Developers Discord, with Show HN / Product Hunt deliberately held in reserve for the paid launch.
 
 ### Channel 1: Twitter/X launch (Week 1)
 
@@ -616,49 +603,13 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 
 ---
 
-## Ship Plan (Updated April 2026 — What's Left)
+## Ship Plan (July 2026)
 
-### What's DONE ✅
+**The canonical launch checklist + PRDs live in [`LAUNCH.md`](LAUNCH.md).** Do not maintain a parallel list here — earlier versions of this section drifted badly out of date (it still called for Stripe wiring while the site had already pivoted to free-during-beta).
 
-- [x] Register brainsforagents.com (owned, on Vercel)
-- [x] Build brain pipeline (`auto-build-brain.py` — one command, 6 phases, ~$23 per brain)
-- [x] Build 19 shippable brains: Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Dario Amodei, Elon Musk, Jensen Huang, Brené Brown, Oprah Winfrey, Sara Blakely, Bill Harris, Gokul Rajaram, Jeremy Utley
-- [x] 5,802 atoms + 24,648 connections in Supabase (18 brains; Oprah Winfrey and Sara Blakely pack-only)
-- [x] Complete pack/ for all 20 (brain-context.md, brain-atoms.json, explore.html, 8 skills each — including hidden Shiva Rajaraman brain)
-- [x] Design system (DESIGN.md) + brand guide (BRAND.md)
-- [x] Landing page prototype (13/13 brains rendered)
-- [x] `install-brains.sh` for local distribution
-- [x] `audit-brains.py` for quality validation
-- [x] Supabase tables: `brain_metadata`, `brain_requests`, `brain_request_votes`, `brain_access`
-- [x] `@brainsfor/mcp` server (6 tools, registered via `.mcp.json`, 19x context reduction vs. full brain-context.md)
-- [x] `/board` skill — multi-brain sub-agent orchestrator (Board of Advisors)
+Where we are in one paragraph: the catalog (22 live brains), build pipeline, QA regime, MCP server, and website (demos, auth, analytics, free downloads) are **done**. Monetization is deliberately **not** wired — every brain is free during beta. What stands between today and public: legal pages, a handful of site fixes, the go-public runbook, and recruiting 10 beta users. That work is specced as PRD-1 through PRD-7 in `LAUNCH.md`.
 
-### What's LEFT to ship v1
-
-**Storefront (1 day):**
-- [x] Add missing brains to landing page (17/17 live brains rendered on brainsforagents.com; hidden brains correctly excluded)
-- [ ] Wire Stripe checkout (3 products: Standard $29, Pro $79, API $199/mo)
-- [ ] Build delivery edge function (Stripe webhook → email download link)
-- [ ] Wire "Request a Brain" form to `brain_requests` table
-
-**Distribution (half day):**
-- [ ] Wire `npx skills add brainsfor/{slug}` to registry (install-brains.sh is the local fallback)
-- [ ] Register brain packs in skills ecosystem
-
-**Quality (1 day):**
-- [ ] Voice enrichment: currently 85% (240/284 Belsky atoms have original_quote). Target: 100% across all brains.
-- [ ] Reclassify Belsky's "Other & Miscellaneous" cluster (110/284 atoms = 39% in catch-all)
-- [ ] Fix atom count references in skill files (some still say "104 atoms" — actual is 284 for Belsky)
-
-**Go-to-market (1 day):**
-- [ ] Get 5 beta users (currently: ZERO — critical gap)
-- [ ] Write launch tweet thread
-- [ ] Write HN "Show HN" post
-- [ ] Draft LinkedIn post (use linkedin-post skill)
-- [ ] Set up analytics (Plausible or Vercel Analytics)
-- [ ] Launch on Twitter/X + AI builder communities
-
-**Total remaining: ~3.5 days of focused work.**
+The gate to everything below in this doc (Stripe, the `npx skills` registry, claim-your-brain outreach, platform licensing): **10 beta users with completed feedback loops confirming real usage.**
 
 ---
 
@@ -676,16 +627,19 @@ When new content is ingested (e.g., Belsky publishes a new Implications edition 
 
 **Bottom line:** Ship it. The legal risk is low for v1 (public content, clear disclaimers). The claiming mechanism in v2 eliminates most concerns.
 
+**The gap this section originally missed — our OWN site's compliance.** The analysis above covers the brain *subjects*; it says nothing about the data brainsforagents.com itself collects (emails via magic link, GitHub OAuth identity, auth cookies, analytics). Going public with zero privacy policy or terms is the actual near-term exposure — GDPR/CCPA for email collection, and OAuth providers expect a linked privacy policy. Fixed by `LAUNCH.md` PRD-1 (`/privacy` + `/terms` + footer links, with the takedown promise formalized in the terms).
+
 ---
 
 ## Success Metrics
 
-### Week 1 (launch week)
-- [x] 19 shippable brains built and packaged ✅ (done pre-launch)
-- [ ] Storefront live with checkout
-- [ ] 100+ site visitors
-- [ ] 10+ purchases (any tier)
-- [ ] 5 beta users providing feedback
+### Beta (now — the only milestone that matters)
+- [x] 22 live brains built, packaged, QA ship-gated ✅
+- [ ] Site public: `SITE_PASSWORD` removed, `/privacy` + `/terms` live (LAUNCH.md P0)
+- [ ] 10 beta users installed a brain and emailed one concrete "my agent did better" story
+- [ ] Download → reply rate ≥ 25% (below that, fix the install path before recruiting more)
+
+*(The Month 1/3/6 clocks below start at public launch and assume the beta gate cleared — real usage validated before any checkout is wired.)*
 
 ### Month 1
 - [ ] 10+ brains in catalog (add 3 from Next Wave list)
@@ -717,7 +671,7 @@ This isn't a random idea. Rob has **unfair advantages** that make this a 4-5 on 
 
 1. **The pipeline already exists.** `build-brain.py` is a one-command, 7-stage pipeline (generate → merge → synthesize → YouTube → connections → export → validate). `export-brain.py`, `enrich-connections.py`, `enrich-voice.py`, `ingest-youtube.py`, `audit-brains.py` — all operational. Most people would need 3 months just to build the infrastructure.
 
-2. **Proof of concept is done — nineteen times over.** 19 shippable brains live (18 in Supabase with 5,802 atoms + 24,648 connections; Oprah Winfrey and Sara Blakely ship pack-only). Each has a complete pack (brain-context.md, brain-atoms.json, explore.html, 8 skills). That's not a concept — that's a catalog.
+2. **Proof of concept is done — twenty-six times over.** 26 brains built, 22 live on the site, ~21,800 atoms + ~22,800 connections verified consistent across Supabase / registry / packs. Each has a complete pack (brain-context.md, brain-atoms.json, explore.html, 8 skills) and passed the QA ship-gate. That's not a concept — that's a catalog.
 
 3. **Creator economy expertise.** Rob understands the creator-as-business model from Tubular, TubeBuddy, and Spotter. The "claim your brain" rev-share model is natural for someone who's spent a decade in creator monetization.
 
@@ -743,11 +697,11 @@ The evolution path is: **knowledge pack → interactive advisor → platform** �
 
 **What:** Brainsfor.com — installable AI skill packs built from the world's most interesting minds. `npx skills add brainsfor/belsky` gives you 8 thinking tools powered by a real knowledge graph.
 
-**Current state (May 2026):** 19 shippable brains live (Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, John Green, Hank Green, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Dario Amodei, Elon Musk, Jensen Huang, Brené Brown, Oprah Winfrey, Sara Blakely, Bill Harris, Gokul Rajaram, Jeremy Utley). 6,012 atoms across the catalog (5,802 in Supabase; Oprah Winfrey and Sara Blakely pack-only), 25,311 connections total. Full build pipeline, design system, brand guide, brainsforagents.com live on Vercel with 17 live brains rendered (3 hidden). Storefront and checkout not yet wired.
+**Current state (July 2026):** 26 brains built, 22 live on brainsforagents.com. ~21,800 atoms + ~22,800 typed connections, verified consistent across Supabase / registry / shipped packs. Full pipeline + QA regime (structural audit, behavioral evals, persona-QA ship-gate, self-recognition). Site is feature-complete for beta — side-by-side hero demo, live skill/board demos, auth, free zip downloads, analytics — and sits behind a password gate until launch. Everything is free during beta; checkout intentionally not wired. Launch checklist: `LAUNCH.md`.
 
 **Who:** Three audiences: (1) Builders/founders who want expert-level context without hand-curating it ($29-79). (2) Professionals prepping for high-stakes interactions — sales teams brain-ing a target customer, founders brain-ing board members, creators studying competitors ($500-2K custom). (3) AI platforms who want premium knowledge content for their users (licensing deals).
 
-**How much:** $29 (standard) / $79 (pro) / $199/mo (API) / $500-2K (custom builds) / $5K-50K/yr (platform licensing per brain).
+**How much (post-beta plan — everything free during beta):** $29 (standard) / $79 (pro) / $199/mo (API) / $500-2K (custom builds) / $5K-50K/yr (platform licensing per brain).
 
 **Product:** Not a chatbot. Not a PDF. An 8-skill thinking partner: `/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`. Skills chain into workflows. Works with Claude Code, Cursor, Cowork, Gemini CLI, Codex CLI.
 
@@ -757,7 +711,7 @@ The evolution path is: **knowledge pack → interactive advisor → platform** �
 
 **Why Rob:** Pipeline is built. Seven brains are done. Creator economy DNA. Distribution ready. Zero employees needed.
 
-**Next step:** Wire the storefront + checkout. Get 5 beta users. Launch. Start claiming conversations with brain subjects. Begin platform licensing outreach once consumer demand is proven.
+**Next step:** Execute `LAUNCH.md` — ship legal pages + the P1 site fixes, open the gate, recruit 10 beta users. Stripe, claiming conversations, and platform licensing all wait behind that gate.
 
 ---
 

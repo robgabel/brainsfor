@@ -93,11 +93,9 @@ These are the items that define the offering for BrainsFor's first paying custom
 
 ## Go-to-Market
 
-- [ ] **Get 5 beta users this week** — Zero users, zero feedback. Critical. (Calacanis: "Show me someone who isn't you using /advise and getting value.")
-- [ ] **Jason Calacanis outreach** — First claimer. 100% rev share offer. Buy a case study and megaphone, not a customer.
-- [ ] **Build storefront** — Static site on Vercel + Stripe checkout. Not built yet.
-- [ ] **"This Week in Brains" newsletter** — Auto-generated weekly from atoms. Zero marginal cost content flywheel.
-- [ ] **Context window future-proofing** (Amodei) — In 12-18 months, 2M+ token windows are standard. "Why wouldn't I just paste the full newsletter archive?" Answer: connections, evolution tracking, cross-brain, and skills. Make sure THAT is the value prop, not "pre-chunked knowledge."
+**Moved (2026-07-04): all launch/GTM execution lives in [`LAUNCH.md`](LAUNCH.md) — the canonical launch plan (checklist + PRDs, 10-beta-user goal). Do not add GTM items here.** The old entries in this section (beta users, storefront/Stripe, newsletter, Calacanis outreach) are superseded by LAUNCH.md's checklist and its post-beta gate.
+
+- [ ] **Context window future-proofing** (Amodei) — In 12-18 months, 2M+ token windows are standard. "Why wouldn't I just paste the full newsletter archive?" Answer: connections, evolution tracking, cross-brain, and skills. Make sure THAT is the value prop, not "pre-chunked knowledge." *(Kept here — product positioning, not launch execution.)*
 
 ## Ethics & Legal
 
