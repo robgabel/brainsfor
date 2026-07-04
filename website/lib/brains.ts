@@ -1,6 +1,22 @@
 import fs from "fs";
 import path from "path";
 
+// QA scorecard published by scripts/publish-qa-scores.py (persona-QA panel +
+// audit voice + numeric-claims verifier). Absent for brains not yet QA'd.
+export interface BrainQA {
+  score: number; // 0-100 overall (Annie-chaired persona panel)
+  dimensions: {
+    authenticity?: number;
+    rigor?: number;
+    coverage?: number;
+    calibration?: number;
+  };
+  confidence?: string;
+  as_of?: string; // YYYY-MM-DD of the panel run
+  voice?: number; // 0-1 normalized voice-enrichment score
+  numeric_defects?: number; // high-severity factual-number defects
+}
+
 export interface Brain {
   slug: string;
   emoji: string;
@@ -20,6 +36,7 @@ export interface Brain {
   // True when the brain has enough dated atoms across enough years to make
   // /evolve produce a real timeline. Set by scripts/compute-evolve-flags.py.
   supportsEvolve: boolean;
+  qa?: BrainQA;
 }
 
 interface IndexEntry {
@@ -32,6 +49,7 @@ interface IndexEntry {
   status: string;
   pack_path: string;
   supports_evolve?: boolean;
+  qa?: BrainQA;
 }
 
 interface BrainConfig {
@@ -94,6 +112,7 @@ function loadBrains(): Brain[] {
       // The data still lives in brain.json — we just don't render it.
       badge: undefined,
       supportsEvolve: entry.supports_evolve === true,
+      qa: entry.qa,
     };
   });
 }

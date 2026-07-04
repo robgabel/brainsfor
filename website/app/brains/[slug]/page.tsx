@@ -6,6 +6,7 @@ import { GetBrainButton } from "@/components/GetBrainButton";
 import { SkillBadge } from "@/components/SkillBadge";
 import { SkillsPlayground } from "@/components/SkillsPlayground";
 import { SkillCatalog } from "@/components/SkillCatalog";
+import { QaScoreCard, QaScorePill } from "@/components/QaScore";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -68,6 +69,7 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
                 >
                   {isLive ? "Live" : "Building"}
                 </span>
+                {isLive && brain.qa && <QaScorePill qa={brain.qa} />}
                 {brain.badge && isLive && (
                   <span className="inline-flex items-center rounded-full bg-gradient-to-r from-brain-indigo to-[#8b5cf6] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">
                     {brain.badge}
@@ -148,6 +150,21 @@ export default async function BrainDetailPage({ params }: { params: Promise<{ sl
           </div>
         </div>
       </section>
+
+      {/* ─── Quality score ─── */}
+      {isLive && brain.qa && (
+        <section className="px-6 pb-4 pt-2">
+          <div className="mx-auto max-w-[1140px]">
+            <h2 className="mb-2 font-display text-2xl font-normal tracking-[-0.5px] text-deep-ink">
+              Quality score
+            </h2>
+            <p className="mb-6 text-sm text-body">
+              Independently judged, published as-is. This is how faithful the brain is to the real {brain.name}.
+            </p>
+            <QaScoreCard qa={brain.qa} brainName={brain.name} />
+          </div>
+        </section>
+      )}
 
       {/* ─── Brain Explorer (iframe) ─── */}
       {isLive && (
