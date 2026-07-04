@@ -4013,4 +4013,4 @@ Real mistakes Peter Attia made — what they cost and what changed as a result, 
 
 ---
 
-*803 atoms · 16 clusters · 866 connections · Generated 2026-07-03*
+*803 atoms · 16 clusters · 866 connections · Generated 2026-07-04*
