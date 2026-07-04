@@ -125,15 +125,17 @@ VERIFY_SYS = """You are a numeric fact-checker for a knowledge "brain pack" abou
 
 You are given (a) a CORPUS of the person's own words (verbatim interview/essay quotes) and (b) NUMERIC CLAIMS the brain asserts about them — each containing a hard figure (money, user/customer counts, multiples, percentages, an exit/raise size, or a life-event year).
 
-For EACH claim, decide its status against the CORPUS:
+The goal is to catch figures the brain gets WRONG or INVENTS — not to punish true facts that happen to be absent from the scraped corpus. A defect means the brain misrepresents reality; corpus silence about a well-documented fact is NOT a defect.
+
+For EACH claim, decide its status:
 - "grounded": the corpus supports this figure (same metric, same or equivalent value).
-- "superseded": the corpus contains a LARGER or MORE RECENT value for the SAME metric/entity. THIS IS THE IMPORTANT ONE — e.g. claim says "$10M revenue" but the corpus says "$30M". Return the corpus value and a verbatim quote.
-- "ungrounded": no figure for this metric appears anywhere in the corpus (possible fabrication).
-- "unverifiable": the corpus is silent and the figure is plausible/common-knowledge (e.g. a founding year); not a defect, just unconfirmed.
+- "superseded": the corpus contains a materially different (larger/newer) value for the SAME METRIC of the SAME ENTITY. THIS IS THE IMPORTANT ONE — e.g. claim says "$10M revenue" but the corpus says "$30M revenue". STRICT same-metric rule: "$5,000 startup capital" is NOT superseded by "$350M annual revenue" — capital and revenue are different metrics. "$30M revenue" is NOT superseded by "$50M ad spend managed". When in doubt whether two figures measure the same thing, they don't — do not call it superseded. Return the corpus value and a verbatim quote.
+- "ungrounded": the figure is absent from the corpus AND you have no knowledge supporting it — a likely fabrication or distortion (e.g. an invented deal size, a made-up percentage presented as the person's own claim).
+- "unverifiable": the corpus is silent BUT the figure matches widely documented public reality per your own knowledge (famous acquisition prices, well-known founding capital, iconic company milestones, founding years). Examples of this class: a famous founder's well-known "$5,000 in savings" origin story, a headline-news "$44B" acquisition price, a "$100M" founding investment covered in every biography. These are NOT defects — the brain is right even though the scraped interviews never said the number.
 
-Match on METRIC, not just number: "$30M revenue" and "$30M ad spend" are different metrics — don't cross them. A bigger number for a DIFFERENT metric is NOT superseded.
+Decision order for a figure not in the corpus: FIRST ask "is this consistent with well-documented public knowledge about this person?" If yes -> "unverifiable" (severity "low"). Only if it is neither in the corpus NOR documented reality -> "ungrounded".
 
-severity: "high" = a materially wrong figure (superseded by a much larger/newer value, or an ungrounded hard money/exit/user figure presented as fact). "medium" = ungrounded but minor, or a date that conflicts. "low" = rounding, approximation, or unverifiable-but-plausible.
+severity: "high" = the brain materially misrepresents a figure (true superseded same-metric conflict, or an ungrounded hard money/exit/user figure that contradicts or invents reality). "medium" = ungrounded but minor, or a date that conflicts. "low" = rounding, approximation, or unverifiable-but-documented.
 
 Quote evidence VERBATIM from the corpus. If you can't quote it, you can't call it grounded or superseded.
 
@@ -204,6 +206,50 @@ def main():
                 "why": r.get("why", ""),
             })
 
+    # --- Adversarial confirmation pass on HIGH flags (kills single-judge noise) ---
+    # A high-severity defect is a ship-gate blocker, so it must survive a skeptic
+    # trying to refute it. Catches the observed noise classes: misparsing contrarian
+    # framing ("everyone calls it wasteful; Gary calls it a steal" read as Gary's own
+    # view), missing receipt evidence inside hard_lessons, and forgetting the
+    # public-knowledge rule for less-famous subjects. Demote to medium if refuted.
+    high = [d for d in defects if d["severity"] == "high"]
+    if high:
+        hl_receipts = []
+        for h in (brain.get("synthesis", {}).get("hard_lessons") or []):
+            for rcpt in (h.get("receipts") or []):
+                if rcpt.get("quote"):
+                    hl_receipts.append(f"- \"{rcpt['quote'][:250]}\" — {rcpt.get('source','')}")
+        receipts_block = "\n".join(hl_receipts) or "(none)"
+        for d in high:
+            confirm_user = (
+                f"PERSON: {person}\n\n"
+                f"A fact-checker flagged this claim from a knowledge pack about {person} as a "
+                f"HIGH-SEVERITY numeric defect ({d['status']}):\n\n"
+                f"CLAIM ({d['where']}): {d['claim']}\n"
+                f"CHECKER'S REASON: {d['why']}\n"
+                f"CHECKER'S CORPUS VALUE: {d['corpus_value'] or '(none)'}\n\n"
+                f"VERBATIM RECEIPTS attached to the pack's hard lessons (these COUNT as corpus evidence):\n"
+                f"{receipts_block}\n\n"
+                f"Try to REFUTE the flag. It is a FALSE POSITIVE if any of these hold:\n"
+                f"1. The claim attributes the figure/position to critics/consensus, not to {person} "
+                f"(contrarian framing: 'everyone says X at $N; {person} disagrees'), and the checker misread it.\n"
+                f"2. A receipt above (or well-documented public reality about {person}) supports the figure — "
+                f"note an 8-figure offer is consistent with any $10-99M amount.\n"
+                f"3. The 'superseding' corpus value measures a DIFFERENT metric or entity than the claim.\n"
+                f"Only uphold if the claim genuinely misstates {person}'s position or invents/contradicts a figure.\n\n"
+                f'Return ONLY JSON: {{"upheld": true|false, "why": "<one sentence>"}}'
+            )
+            try:
+                cres = call_claude(client, args.model,
+                                   messages=[{"role": "user", "content": confirm_user}],
+                                   max_tokens=400, parse_json=True,
+                                   cost_tracker=tracker, label=f"verify-confirm:{slug}")
+                cv = cres.get("parsed", {}) or {}
+                if cv.get("upheld") is False:
+                    d["severity"] = "medium"
+                    d["why"] = f"[demoted: {cv.get('why','refuted on confirmation')[:120]}] " + d["why"]
+            except Exception:
+                pass  # confirmation failure leaves the flag as-is (conservative)
     high = [d for d in defects if d["severity"] == "high"]
     defects.sort(key=lambda d: {"high": 0, "medium": 1, "low": 2}.get(d["severity"], 3))
 

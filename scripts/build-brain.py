@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """
-build-brain.py — One-command brain pack builder for BrainsFor.
+build-brain.py — LEGACY input-driven builder, now used as a LIBRARY.
+
+⚠️  Do not invoke this directly for new brains. The canonical entry point is
+scripts/auto-build-brain.py (person name in, brain pack out), which imports
+functions from this module (fetch_transcript, decompose_transcript, stage
+helpers). This file is kept because auto-build depends on it — treat it as
+lib code, not a CLI.
 
 Takes a brain.json config and produces a complete, shippable brain pack.
 Chains all pipeline stages: atom generation, merging, synthesis, YouTube
@@ -368,18 +374,36 @@ def fetch_transcript(video_id: str, max_retries: int = 3) -> dict:
             ytt = YouTubeTranscriptApi()
             transcript_list = _call_with_timeout(lambda: ytt.list(video_id), 60, f"list({video_id})")
 
+            # ENGLISH ONLY. TED-style videos carry human-authored caption tracks
+            # in many languages, and the old "first non-generated track" pick
+            # ingested whatever language the API listed first — this shipped
+            # Albanian/Spanish original_quotes in 4 brains (caught 2026-07-03).
+            # Order: human-authored English → auto-generated English → an
+            # auto-translation to English → skip the video.
+            def _is_en(t):
+                return (getattr(t, "language_code", "") or "").lower().startswith("en")
+
             transcript = None
             for t in transcript_list:
-                if not t.is_generated:
+                if not t.is_generated and _is_en(t):
                     transcript = t
                     break
             if transcript is None:
                 for t in transcript_list:
-                    transcript = t
-                    break
+                    if _is_en(t):
+                        transcript = t
+                        break
+            if transcript is None:
+                for t in transcript_list:
+                    try:
+                        if getattr(t, "is_translatable", False):
+                            transcript = t.translate("en")
+                            break
+                    except Exception:
+                        continue
 
             if transcript is None:
-                return {"error": f"No transcripts available for {video_id}"}
+                return {"error": f"No English transcript for {video_id} — refusing to ingest non-English captions"}
 
             fetched = _call_with_timeout(lambda: transcript.fetch(), 90, f"fetch({video_id})")
             segments = [{"text": s.text, "start": s.start, "duration": s.duration} for s in fetched]

@@ -102,20 +102,35 @@ def fetch_transcript(video_id: str) -> dict:
         ytt = YouTubeTranscriptApi()
         transcript_list = _call_with_timeout(lambda: ytt.list(video_id), 60, f"list({video_id})")
 
-        # Prefer manual captions over auto-generated
+        # ENGLISH ONLY, manual over auto-generated. The old "first non-generated
+        # track" pick ingested whatever language the API listed first (TED talks
+        # carry human captions in dozens of languages) — this shipped Albanian/
+        # Spanish quotes in 4 brains (caught 2026-07-03). Order: human-authored
+        # English → auto-generated English → auto-translation → skip.
+        def _is_en(t):
+            return (getattr(t, "language_code", "") or "").lower().startswith("en")
+
         transcript = None
         for t in transcript_list:
-            if not t.is_generated:
+            if not t.is_generated and _is_en(t):
                 transcript = t
                 break
         if transcript is None:
-            # Fall back to auto-generated
             for t in transcript_list:
-                transcript = t
-                break
+                if _is_en(t):
+                    transcript = t
+                    break
+        if transcript is None:
+            for t in transcript_list:
+                try:
+                    if getattr(t, "is_translatable", False):
+                        transcript = t.translate("en")
+                        break
+                except Exception:
+                    continue
 
         if transcript is None:
-            return {"error": f"No transcripts available for {video_id}"}
+            return {"error": f"No English transcript for {video_id} — refusing to ingest non-English captions"}
 
         fetched = _call_with_timeout(lambda: transcript.fetch(), 90, f"fetch({video_id})")
         segments = []

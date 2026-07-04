@@ -1,0 +1,30 @@
+{
+  "slug": "elon-musk",
+  "person": "Elon Musk",
+  "date": "2026-07-03",
+  "total_claims": 6,
+  "counts": {
+    "grounded": 2,
+    "superseded": 0,
+    "ungrounded": 1,
+    "unverifiable": 3
+  },
+  "defect_count": 1,
+  "high_severity_count": 0,
+  "fidelity_penalty": 8,
+  "cost": 0.0936,
+  "defects": [
+    {
+      "where": "biography[11].lesson",
+      "claim": "Having departed OpenAI's board in 2018, Musk concluded that the organization had drifted from its safety mission toward capability deployment under competitive pressure. xAI was founded on the premise that a truth-maximizing AI \u2014 one that pursues understanding the universe rather than optimizing for human approval \u2014 is inherently safer than one trained to please.",
+      "figures": [
+        "2018"
+      ],
+      "status": "ungrounded",
+      "severity": "medium",
+      "corpus_value": "",
+      "evidence_quote": "",
+      "why": "The specific claim that Musk departed OpenAI's board in 2018 is not stated in the corpus, and the characterization of his reasoning for founding xAI is an interpretive narrative not directly supported by any corpus quote, making the 2018 date and the causal chain unverifiable fabrications relative to the corpus."
+    }
+  ]
+}

@@ -136,6 +136,7 @@ export const TIERS = [
     name: "Standard",
     price: 29,
     period: "per brain",
+    comingSoon: false,
     features: [
       "Full skill pack (8 AI skills)",
       "Knowledge atoms (JSON)",
@@ -151,6 +152,7 @@ export const TIERS = [
     name: "Pro",
     price: 79,
     period: "per brain",
+    comingSoon: true,
     features: [
       "Everything in Standard",
       "Pre-computed embeddings (1536-dim)",
@@ -158,13 +160,14 @@ export const TIERS = [
       "Auto-updates on new content",
       "Priority support",
     ],
-    cta: "Go Pro",
+    cta: "Coming after beta",
     highlighted: false,
   },
   {
     name: "API",
     price: 199,
     period: "per month",
+    comingSoon: true,
     features: [
       "Programmatic access to all brains",
       "Semantic search endpoint",
@@ -172,7 +175,7 @@ export const TIERS = [
       "Usage analytics",
       "Webhook notifications",
     ],
-    cta: "Get API access",
+    cta: "Coming after beta",
     highlighted: false,
   },
 ];

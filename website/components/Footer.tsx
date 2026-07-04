@@ -21,6 +21,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               <li><Link href="/brains" className="text-sm text-body hover:text-deep-ink transition-colors">Brains</Link></li>
               <li><Link href="/skills" className="text-sm text-body hover:text-deep-ink transition-colors">Skills</Link></li>
+              <li><Link href="/brains#request" className="text-sm text-body hover:text-deep-ink transition-colors">Request a brain</Link></li>
             </ul>
           </div>
 

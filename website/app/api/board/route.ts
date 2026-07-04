@@ -3,12 +3,13 @@ import { timingSafeEqual } from "node:crypto";
 import Anthropic from "@anthropic-ai/sdk";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
-import { loadBrainContext, loadSkillPrompt } from "@/lib/brain-context";
+import { loadBrainContextLite, loadSkillPrompt } from "@/lib/brain-context";
 import { getBrain } from "@/lib/brains";
 import {
   retrieveRelevantAtoms,
   formatAtomsBlock,
 } from "@/lib/brain-atom-retrieval";
+import { fallbackRateLimit } from "@/lib/fallback-limiter";
 
 export const runtime = "nodejs";
 
@@ -83,9 +84,13 @@ async function checkRateLimit(
     const { success, remaining } = await rl.limit(ip);
     return { allowed: success, remaining };
   } catch (err) {
-    // Upstash unreachable — fail open. See /api/skill for the rationale.
-    console.error("[api/board] rate-limit check failed, failing open:", err);
-    return { allowed: true, remaining: LIMIT };
+    // Upstash unreachable — degrade to a per-instance in-memory limiter
+    // instead of failing open. See /api/skill for the rationale.
+    console.error(
+      "[api/board] rate-limit check failed, using in-memory fallback:",
+      err,
+    );
+    return fallbackRateLimit(`board:${ip}`, LIMIT);
   }
 }
 
@@ -248,15 +253,18 @@ export async function POST(request: NextRequest) {
       // stream so the client can render five voices without contamination.
       const pumpBrain = async ({ slug, name }: { slug: string; name: string }) => {
         try {
-          const brainContext = loadBrainContext(slug);
+          // Synthesis-only context (no atom dump) — the atom dump cost
+          // 150-220K input tokens PER BRAIN per board run and is exactly the
+          // content the ANTI-DEFAULT rule fights. Question-relevant atoms
+          // arrive via retrieval below.
+          const brainContext = loadBrainContextLite(slug);
           // /advise is the closest existing skill to "give your opinion on this
           // decision." We reuse it rather than authoring a new board-only skill.
           const skillPrompt = loadSkillPrompt(slug, "advise");
 
-          // Layer 2: pull the 15 atoms most semantically relevant to THIS
-          // question. Degrades gracefully — returns [] if OpenAI key missing,
-          // Supabase unreachable, or RPC errors. In that case we still ship
-          // the static brain context and rely on Layer 1 prompt surgery alone.
+          // Layer 2: pull the 15 atoms most relevant to THIS question.
+          // Degrades gracefully — on pack-fetch failure we still ship the
+          // synthesis context and rely on Layer 1 prompt surgery alone.
           const relevantAtoms = await retrieveRelevantAtoms(slug, query, 15);
           const relevantAtomsBlock = formatAtomsBlock(relevantAtoms);
 
@@ -268,15 +276,17 @@ export async function POST(request: NextRequest) {
           );
 
           const messageStream = client.messages.stream({
-            model: "claude-sonnet-4-6",
+            model: "claude-sonnet-5",
             // No scratchpad anymore — reasoning streams visibly, then verdict
             // lands at the end. ~500 tokens is comfortable for reasoning +
             // verdict + GROUNDED ON without budget pressure.
             max_tokens: 550,
-            // Boosted temperature pushes each brain off the consensus mean.
-            // The board's value is divergence, not safety — five thinkers
-            // giving the same answer is a failed board.
-            temperature: 1,
+            // Sonnet 5 defaults to adaptive thinking when the field is
+            // omitted — disable so the 550-token budget stays output-only
+            // and streaming starts immediately. (temperature was removed:
+            // Sonnet 5 rejects non-default sampling params; divergence is
+            // carried by the ANTI-DEFAULT prompt rules.)
+            thinking: { type: "disabled" },
             system: systemPrompt,
             messages: [
               {
@@ -349,8 +359,9 @@ export async function POST(request: NextRequest) {
 
         if (responseLines.length > 0 || deferringBrains.length > 0) {
           const synthesisStream = client.messages.stream({
-            model: "claude-sonnet-4-6",
+            model: "claude-sonnet-5",
             max_tokens: 320,
+            thinking: { type: "disabled" },
             system: `You are a neutral chair summarizing a board meeting and giving the asker a single integrated recommendation.
 
 HARD CONSTRAINTS — output EXACTLY this structure, in plain text, no markdown, no headers, no bullets:

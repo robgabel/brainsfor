@@ -6,14 +6,13 @@
 // relevant to the user's question shifts what the model attends to from "the
 // canonical thesis" to "atoms that match THIS question."
 //
-// Retrieval source: the brain's <slug>_atoms table in Supabase (via lib/brain-atoms-db),
-// scored by lexical overlap (content + verbatim quote + implication + topics +
-// cluster) against the question. Previously this read the multi-MB pack JSON off
-// the filesystem, which made Next trace the whole brains/ tree into the function
-// bundle and broke deploys. Supabase keeps the bundle flat.
+// Retrieval source: the brain's shipped pack JSON via lib/brain-atoms-db
+// (static CDN asset, cached per instance — no DB), scored by lexical overlap
+// (content + verbatim quote + implication + topics + cluster) against the
+// question.
 //
-// Failure mode is graceful: if Supabase is unreachable, the caller gets an empty
-// block and the route falls back to the static brain-context.md alone (still
+// Failure mode is graceful: if the pack fetch fails, the caller gets an empty
+// block and the route falls back to the brain synthesis context alone (still
 // benefits from Layer 1 prompt surgery).
 
 import { fetchBrainAtoms } from "./brain-atoms-db";
@@ -29,6 +28,7 @@ interface RetrievedAtom {
   proof_ref: string | null;
   cluster: string | null;
   topics: string[] | null;
+  source_date: string | null;
   similarity: number; // lexical relevance score in [0,1] (kept name for caller compat)
 }
 
@@ -103,6 +103,7 @@ export async function retrieveRelevantAtoms(
       proof_ref: atom.proof_ref ?? null,
       cluster: atom.cluster ?? null,
       topics: atom.topics ?? null,
+      source_date: atom.source_date ?? null,
       similarity: Math.min(1, similarity),
     }));
 }
@@ -129,7 +130,9 @@ export function formatAtomsBlock(atoms: RetrievedAtom[]): string {
     else if (ct === "fact" && (vf === "false" || vf === "contested"))
       tag = ` [${vf.toUpperCase()} — sincere belief but NOT established fact; flag it]`;
     else if (ct === "prediction") tag = " [PREDICTION — frame as forecast]";
-    let block = `[A${i + 1}] (cluster=${cluster}, relevance=${sim})${tag}\n  "${quote}"`;
+    // Date matters for /evolve (era timelines) — include when the pack has it.
+    const date = a.source_date ? `, date=${a.source_date.slice(0, 10)}` : "";
+    let block = `[A${i + 1}] (cluster=${cluster}${date}, relevance=${sim})${tag}\n  "${quote}"`;
     if (impl) block += `\n  Implication: ${impl}`;
     if ((vf === "false" || vf === "contested") && a.proof_ref)
       block += `\n  Verdict basis: ${a.proof_ref}`;

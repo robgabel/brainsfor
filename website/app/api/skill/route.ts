@@ -3,13 +3,14 @@ import { timingSafeEqual } from "node:crypto";
 import Anthropic from "@anthropic-ai/sdk";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
-import { loadBrainContext, loadSkillPrompt } from "@/lib/brain-context";
+import { loadBrainContextLite, loadSkillPrompt } from "@/lib/brain-context";
 import { findCitations } from "@/lib/brain-citations";
 import { SKILLS, getBrain } from "@/lib/brains";
 import {
   retrieveRelevantAtoms,
   formatAtomsBlock,
 } from "@/lib/brain-atom-retrieval";
+import { fallbackRateLimit } from "@/lib/fallback-limiter";
 
 export const runtime = "nodejs";
 
@@ -94,10 +95,14 @@ async function checkRateLimit(
     return { allowed: success, remaining };
   } catch (err) {
     // Upstash unreachable (DNS, network, or DB deleted on the free tier).
-    // Fail open so a transient infra outage doesn't black out the demo —
-    // the Anthropic budget is the real abuse ceiling.
-    console.error("[api/skill] rate-limit check failed, failing open:", err);
-    return { allowed: true, remaining: LIMIT };
+    // Degrade to a per-instance in-memory limiter instead of failing open —
+    // weaker than Redis, but a transient infra outage no longer means
+    // unlimited Anthropic spend.
+    console.error(
+      "[api/skill] rate-limit check failed, using in-memory fallback:",
+      err,
+    );
+    return fallbackRateLimit(`skill:${ip}`, LIMIT);
   }
 }
 
@@ -271,11 +276,14 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // Load brain context + skill prompt
+  // Load the brain's synthesis context (usage rules + how-they-think, WITHOUT
+  // the full atom dump — question-relevant atoms are retrieved separately
+  // below) + the skill prompt. This is the runtime-cost fix: the full
+  // brain-context.md runs 150-220K tokens per call; the lite slice is ~2-5K.
   let brainContext: string;
   let skillPrompt: string;
   try {
-    brainContext = loadBrainContext(brain);
+    brainContext = loadBrainContextLite(brain);
     skillPrompt = loadSkillPrompt(brain, skill);
   } catch {
     return Response.json(
@@ -317,8 +325,12 @@ export async function POST(request: NextRequest) {
               : `You are ${brainName}, ${skill} me: ${query}`;
           const messageStream = client.messages.stream({
             // Canonical Python-side source of truth: scripts/auto_build_config.py
-            model: "claude-sonnet-4-6",
+            model: "claude-sonnet-5",
             max_tokens: 700,
+            // Sonnet 5 runs adaptive thinking by default when `thinking` is
+            // omitted — that would eat the 700-token budget and add latency
+            // on a demo with a strict <90-word format. Disable explicitly.
+            thinking: { type: "disabled" },
             system: systemPrompt,
             messages: [{ role: "user", content: userMessage }],
           });
@@ -342,12 +354,17 @@ export async function POST(request: NextRequest) {
         }
       };
 
-      // Layer 2 of the mode-collapse fix: pull the 15 atoms most semantically
-      // relevant to THIS question (same helper the board route uses). Degrades
-      // gracefully — returns [] if OPENAI_API_KEY is missing, Supabase is
-      // unreachable, or the RPC errors. formatAtomsBlock then emits a labeled
+      // Layer 2 of the mode-collapse fix: pull the atoms most relevant to THIS
+      // question (same helper the board route uses). With the lite context,
+      // these atoms are ALSO the model's only atom-level knowledge — /evolve
+      // gets a bigger, dated set since it builds an era timeline. Degrades
+      // gracefully: on pack-fetch failure formatAtomsBlock emits a labeled
       // "(retrieval unavailable)" block and we rely on Layer 1 alone.
-      const relevantAtoms = await retrieveRelevantAtoms(brain, query, 15);
+      const relevantAtoms = await retrieveRelevantAtoms(
+        brain,
+        query,
+        skill === "evolve" ? 25 : 15,
+      );
       const relevantAtomsBlock = formatAtomsBlock(relevantAtoms);
 
       const enhancedSystem = buildEnhancedSystem(

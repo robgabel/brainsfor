@@ -28,8 +28,12 @@ from pathlib import Path
 
 try:
     from dotenv import load_dotenv
-    load_dotenv(Path(__file__).resolve().parent.parent / "website" / ".env.local", override=True)
-    load_dotenv(Path(__file__).resolve().parents[2] / ".env", override=True)
+    # Fill gaps only (override=False): real shell env wins, then website/.env.local,
+    # then ~/rob-ai/.env. The old override=True let website/.env.local's
+    # NEXT_PUBLIC_SUPABASE_URL (the paused auth-only project) clobber the factory
+    # project and exports dialed a dead host.
+    load_dotenv(Path(__file__).resolve().parent.parent / "website" / ".env.local", override=False)
+    load_dotenv(Path(__file__).resolve().parents[2] / ".env", override=False)
 except ImportError:
     pass
 
@@ -623,7 +627,10 @@ def fetch_from_supabase(config: dict) -> tuple:
         print("       Or use --from-files to load from local JSON dumps.")
         sys.exit(1)
 
-    url = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL")
+    # Factory project (SUPABASE_URL, uzedi) first — it is the build source of
+    # truth. NEXT_PUBLIC_SUPABASE_URL is the website's auth-only project and is
+    # only a last-resort fallback.
+    url = os.environ.get("SUPABASE_URL") or os.environ.get("NEXT_PUBLIC_SUPABASE_URL")
     _svc = os.environ.get("SUPABASE_SERVICE_KEY", "")
     _anon = os.environ.get("NEXT_PUBLIC_SUPABASE_ANON_KEY", "")
     key = _svc if _svc.count(".") == 2 else _anon

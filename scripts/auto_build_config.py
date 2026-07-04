@@ -17,8 +17,16 @@ BRAINS_DIR = ROOT_DIR / "brains"
 TEMPLATES_DIR = ROOT_DIR / "templates"
 
 # --- Models (canonical — all BrainsFor scripts import from here) ---
-DEFAULT_MODEL = "claude-sonnet-4-6"
-SYNTHESIS_MODEL = "claude-opus-4-7"
+# Upgraded 2026-07-03 (Claude 5 family): Sonnet 4.6 → Sonnet 5 (near-Opus coding/
+# agentic quality at Sonnet price; NOTE new tokenizer counts ~30% more tokens for
+# the same text — per-token price unchanged, so cost estimates on token-heavy
+# phases run ~30% higher for equivalent corpus text), Opus 4.7 → Opus 4.8 for
+# synthesis. Sonnet 5 rejects non-default sampling params (none used here) and
+# runs adaptive thinking by default when `thinking` is omitted.
+# Watch the first build on these models — Sonnet 5 follows extraction prompts
+# more literally than 4.6 (see shared/model-migration.md, Sonnet 5 section).
+DEFAULT_MODEL = "claude-sonnet-5"
+SYNTHESIS_MODEL = "claude-opus-4-8"
 FAST_MODEL = "claude-haiku-4-5-20251001"
 # Persona-QA judge panel (persona-qa.py). Opus for the judgment-heavy work: the
 # 4-judge panel + Annie's calibration chair. Empirically (Jesse pilot, 2026-06-21)
@@ -31,13 +39,16 @@ FAST_MODEL = "claude-haiku-4-5-20251001"
 PERSONA_MODEL = "claude-opus-4-8"
 
 # --- Cost per 1K tokens (USD) ---
-# Source: Anthropic model catalog (claude-api skill / models.md), verified 2026-06-21.
+# Source: Anthropic model catalog (claude-api skill / models.md), verified 2026-07-03.
 # Opus 4.6/4.7/4.8 are all $5/$25 per MTok ($0.005/$0.025 per 1K) — the old $15/$75
-# Opus pricing is retired. Sonnet 4.6 $3/$15, Haiku 4.5 $1/$5.
+# Opus pricing is retired. Sonnet 5 lists $3/$15 (intro $2/$10 per MTok through
+# 2026-08-31 — we book the standard rate so estimates stay conservative).
+# Sonnet 4.6 $3/$15, Haiku 4.5 $1/$5.
 COST_INPUT = {
     "claude-opus-4-8": 0.005,
     "claude-opus-4-7": 0.005,
     "claude-opus-4-6": 0.005,
+    "claude-sonnet-5": 0.003,
     "claude-sonnet-4-6": 0.003,
     "claude-haiku-4-5-20251001": 0.001,
 }
@@ -45,6 +56,7 @@ COST_OUTPUT = {
     "claude-opus-4-8": 0.025,
     "claude-opus-4-7": 0.025,
     "claude-opus-4-6": 0.025,
+    "claude-sonnet-5": 0.015,
     "claude-sonnet-4-6": 0.015,
     "claude-haiku-4-5-20251001": 0.005,
 }

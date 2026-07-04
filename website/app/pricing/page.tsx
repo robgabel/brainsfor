@@ -37,7 +37,9 @@ export default function PricingPage() {
               <h3 className="font-display text-xl font-normal tracking-tight text-deep-ink">{tier.name}</h3>
 
               <div className="mt-4">
-                <span className="text-2xl font-display font-light text-deep-ink">Free</span>
+                <span className="text-2xl font-display font-light text-deep-ink">
+                  {tier.comingSoon ? "Coming soon" : "Free during beta"}
+                </span>
               </div>
 
               <ul className="mt-6 space-y-3">
@@ -51,16 +53,22 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <Link
-                href="/brains"
-                className={`mt-8 block rounded-lg py-3 text-center text-[15px] font-semibold transition-all ${
-                  tier.highlighted
-                    ? "bg-brain-indigo text-white shadow-brain-cta hover:bg-indigo-hover active:scale-[0.98]"
-                    : "border border-border-default text-label hover:border-border-indigo hover:text-deep-ink"
-                }`}
-              >
-                {tier.cta}
-              </Link>
+              {tier.comingSoon ? (
+                <span className="mt-8 block cursor-default rounded-lg border border-border-default py-3 text-center text-[15px] font-semibold text-muted">
+                  {tier.cta}
+                </span>
+              ) : (
+                <Link
+                  href="/brains"
+                  className={`mt-8 block rounded-lg py-3 text-center text-[15px] font-semibold transition-all ${
+                    tier.highlighted
+                      ? "bg-brain-indigo text-white shadow-brain-cta hover:bg-indigo-hover active:scale-[0.98]"
+                      : "border border-border-default text-label hover:border-border-indigo hover:text-deep-ink"
+                  }`}
+                >
+                  {tier.cta}
+                </Link>
+              )}
             </div>
           ))}
         </div>
@@ -97,7 +105,7 @@ export default function PricingPage() {
               },
               {
                 q: "I can build this myself.",
-                a: "You can — but will you? And will it be as good? The curation, connection typing, confidence scoring, voice extraction, and skill design are months of work. We've already done it. Your time is worth more than $29.",
+                a: "You can — but will you? And will it be as good? The curation, connection typing, confidence scoring, voice extraction, and skill design are months of work. We've already done it, and during the beta it costs you nothing.",
               },
               {
                 q: "Context windows are getting huge. Why not just paste the raw content?",
@@ -109,7 +117,7 @@ export default function PricingPage() {
               },
               {
                 q: "Can I use this commercially?",
-                a: "Standard and Pro tiers include personal and commercial use. API tier is for building products on top of the brain data. All brains use fair use of public content with full attribution.",
+                a: "Yes — beta brain packs include personal and commercial use. All brains use fair use of public content with full attribution.",
               },
             ].map((item) => (
               <div key={item.q} className="border-b border-border-default pb-6">
