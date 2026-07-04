@@ -263,6 +263,13 @@ Requires `youtube-transcript-api` (`pip install youtube-transcript-api`). Videos
 - **`bill-harris` is the volume outlier** worth re-checking: 20 videos but only 38 video atoms (likely caption failures — `--from-sources` skips videos whose transcript fetch errors).
 - *(The CLI examples + output path above were corrected 2026-06-20 from stale `--download`/`--extract`/`youtube-atoms.json` references that never matched `ingest-youtube.py` — cf. the `melinda-french-gates-yt.log` arg error.)*
 
+**Lessons (2026-07-03, elon-musk attribution audit — follow-up to PR #47):**
+- **Phase 2.3 deep-research atoms carry LLM-guessed `source_ref`s** (the phase generates from synthesis + source *titles*, never source content). In elon-musk, 104 suspect atoms were adjudicated against the corpus: 63 had no corpus support anywhere → `source_ref`/`source_date` nulled + `proof_ref` audit note; 28 reattributed to the transcript that verifiably contains the claim; 13 verified as cited. Full ledger + per-source residue counts: `brains/elon-musk/research/attribution-audit-2026-07-03.json`. Other brains' deep-research atoms have the same disease — audit before trusting any deep-research citation.
+- **`youtube:<slug>` refs are now normalized to sources.json titles** in elon-musk (318 atoms) so `match_source_url` resolves them; `export-brain.py` also maps bare `youtube:<11-char-id>` refs to watch URLs generically (helps other brains). Elon source-URL resolution: 51% → 92% (the remaining 8% are the deliberately unattributed atoms).
+- **Per-source dates must come from public record, not LLM guesses.** Elon's canonical dates (verified): Lex #400 2023-11-09, JRE #2054 2023-10-31, JRE #2404 2025-10-31 (guess was exactly a year off), All-In summit talks 2022-05-16 / 2025-09-10, Full Send 2022-08-04, Senra (Tim Ferriss #828) 2025-09-24, Code Conf 2016-06-01, TED13 2013-03-19 (publish date; session day unverifiable), TED17 2017-04-28. Unverifiable clip-channel dates were nulled, not guessed.
+- **Both elon TED transcripts were Arabic caption tracks** until 2026-07-03; English human captions are now fetched (canonical checkout `source/transcripts/`). The 25 TED-2017 video atoms keep certain attribution but their `original_quote`s are double-translation paraphrases — re-extraction from the EN transcript would fix voice fidelity.
+- **`sources.json` titles can themselves be wrong:** elon's "Triangulation Interview with Elon Musk" (TWiT 203, 2015-06-08) is actually Leo Laporte interviewing **Ashlee Vance** (the biographer), not Musk — its 9 citing atoms are secondary-source residue.
+
 ### Enrichment Scripts (generic — all accept `--brain {slug}`)
 
 ```
