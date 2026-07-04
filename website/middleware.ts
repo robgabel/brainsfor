@@ -10,7 +10,9 @@ export const config = {
     // opengraph-image stays public: social crawlers (X, Slack, Discord) can't
     // do Basic auth, and the share card is marketing surface with no secrets —
     // without this exemption every link unfurl breaks while the gate is up.
-    "/((?!_next/|favicon\\.ico|api/skill|api/board|AGENTS\\.md|llms\\.txt|brains/|opengraph-image).*)",
+    // robots.txt and sitemap.xml stay public too: crawlers can't do Basic
+    // auth, and a 401 on robots.txt reads as "don't crawl anything".
+    "/((?!_next/|favicon\\.ico|api/skill|api/board|AGENTS\\.md|llms\\.txt|robots\\.txt|sitemap\\.xml|brains/|opengraph-image).*)",
   ],
 };
 
