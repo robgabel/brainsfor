@@ -23,6 +23,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  // Absolute base for OG/twitter image URLs — without it Next resolves
+  // against VERCEL_URL/localhost and share cards break on the custom domain.
+  metadataBase: new URL("https://brainsforagents.com"),
   title: "brainsforagents — Load a genius into your AI",
   description:
     "Knowledge graphs of the world's best thinkers, packaged as 8 AI skills you actually use. Think better in seconds.",
@@ -31,6 +34,14 @@ export const metadata: Metadata = {
     description:
       "Knowledge graphs of the world's best thinkers, packaged as 8 AI skills you actually use.",
     siteName: "brainsforagents",
+    url: "https://brainsforagents.com",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "brainsforagents — Load a genius into your AI",
+    description:
+      "Knowledge graphs of the world's best thinkers, packaged as 8 AI skills you actually use.",
   },
   other: {
     "theme-color": "#ffffff",

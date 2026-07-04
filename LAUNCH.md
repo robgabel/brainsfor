@@ -21,15 +21,15 @@
 Work top to bottom. **P0 = blocks going public. P1 = do before recruiting strangers. P2 = same week, after launch.**
 
 ### P0 — Blockers
-- [ ] **Legal pages** — ship `/privacy` + `/terms`, link in footer → [PRD-1](#prd-1--legal-pages-privacy--terms)
+- [x] **Legal pages** — ship `/privacy` + `/terms`, link in footer → [PRD-1](#prd-1--legal-pages-privacy--terms) *(code on branch 2026-07-04 — Rob: review the copy, esp. governing law = California, before merge)*
 - [ ] **Verify Vercel prod env** — `ANTHROPIC_API_KEY`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`, `OPENAI_API_KEY`, Supabase keys → [PRD-5](#prd-5--go-public-runbook)
 - [ ] **Verify download pipeline** — Vercel root = monorepo root; zips generate at build; spot-check one `-brain-pack.zip` in prod → [PRD-5](#prd-5--go-public-runbook)
 - [ ] **Remove `SITE_PASSWORD` from Vercel prod + redeploy** — the entire site 401s while it's set → [PRD-5](#prd-5--go-public-runbook)
 
 ### P1 — Before recruiting strangers
-- [ ] **Fix dashboard dead-end** — nothing writes `brain_access`; every signed-in user sees an empty "My Brains" forever → [PRD-2](#prd-2--dashboard-dead-end)
-- [ ] **Install-path honesty** — demote the non-working `npx skills add` command; lead with the zip → [PRD-3](#prd-3--install-path-honesty)
-- [ ] **Share/SEO metadata** — `metadataBase`, twitter card, missing meta descriptions, canonicals → [PRD-4](#prd-4--seo--share-metadata)
+- [x] **Fix dashboard dead-end** — nothing writes `brain_access`; every signed-in user sees an empty "My Brains" forever → [PRD-2](#prd-2--dashboard-dead-end) *(code on branch 2026-07-04 — requires the RLS policy in PRD-2 before it records claims)*
+- [x] **Install-path honesty** — demote the non-working `npx skills add` command; lead with the zip → [PRD-3](#prd-3--install-path-honesty) *(code on branch 2026-07-04)*
+- [x] **Share/SEO metadata** — `metadataBase`, twitter card, canonicals → [PRD-4](#prd-4--seo--share-metadata) *(code on branch 2026-07-04 — validate unfurls after deploy)*
 - [ ] **Recruit the 10** — warm DMs → LinkedIn → r/ClaudeAI + Claude Discord → [PRD-6](#prd-6--beta-recruitment-the-10-users)
 
 ### P2 — Launch week, after going public
@@ -73,7 +73,17 @@ Stripe/checkout, delivery edge function, `npx skills` registry publish, Pro/API 
 
 **Acceptance.** Sign in → download a brain from anywhere in the app → it appears under My Brains. Anonymous download flow unchanged.
 
-**Est:** 2-3 hours. **Files:** `components/GetBrainButton.tsx`, `app/dashboard/page.tsx`, possibly a small `app/api/claim/route.ts` or client-side Supabase insert (RLS: user can insert own rows only — verify policy exists).
+**Shipped 2026-07-04 (client-side insert in `GetBrainButton`, best-effort — never blocks the download).** Remaining ops dependency: `brain_access` needs RLS policies in the auth Supabase project (`jefjvgbawmsloerqsgby`) or inserts silently fail:
+
+```sql
+alter table brain_access enable row level security;
+create policy "users insert own access" on brain_access
+  for insert with check (auth.uid() = user_id);
+create policy "users read own access" on brain_access
+  for select using (auth.uid() = user_id);
+```
+
+**Est:** 2-3 hours. **Files:** `components/GetBrainButton.tsx`, `app/dashboard/page.tsx`.
 
 ---
 
@@ -98,7 +108,7 @@ Stripe/checkout, delivery edge function, `npx skills` registry publish, Pro/API 
 
 **Scope.**
 - `app/layout.tsx`: `metadataBase: new URL("https://brainsforagents.com")`; add `twitter: { card: "summary_large_image" }` (+ title/description mirroring OG); add `url` to the openGraph block.
-- `app/brains/page.tsx`, `app/skills/page.tsx`: add meta `description`.
+- ~~`app/brains/page.tsx`, `app/skills/page.tsx`: add meta `description`~~ — already present (audit over-flagged).
 - `app/brains/[slug]/page.tsx` `generateMetadata`: add `alternates: { canonical: … }`.
 - Verify with an X card validator + a LinkedIn post inspector after deploy.
 
@@ -114,12 +124,13 @@ Stripe/checkout, delivery edge function, `npx skills` registry publish, Pro/API 
 
 **Runbook (in order):**
 1. **Vercel env audit (prod):** confirm `ANTHROPIC_API_KEY`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` (demos fail closed → 429 without them), `OPENAI_API_KEY` (Layer-2 board retrieval — flagged missing in IMPROVEMENTS.md), `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, optional `OWNER_BYPASS_TOKEN`.
-2. **Build-context check:** Vercel project Root Directory must be the monorepo root (NOT `website/`) — `prebuild`/`sync-brain-assets.mjs` needs `../brains` or every download link 404s and `lib/brains.ts` breaks the build. Nothing in the repo pins this; it's dashboard config.
-3. **Ship P0/P1 code** (PRDs 1-4) to `main` → auto-deploy.
-4. **Open the gate:** `vercel env rm SITE_PASSWORD production` → redeploy.
-5. **Smoke test (prod, logged out, no bypass header):** homepage renders; hero demo autoplays; one `/api/skill` ask streams; download one `-brain-pack.zip` and unzip it; `/privacy`, `/terms`, `robots.txt`, `sitemap.xml`, `llms.txt` all 200; a `/brains/[slug]` unfurls correctly on X.
-6. **Search Console:** add property, submit sitemap, request indexing of `/` and `/brains`.
-7. **Supabase SMTP (P2):** configure a real sender (Resend/Postmark/SES) for magic links; send a test magic link to a non-Gmail address.
+2. **Supabase check:** apply the `brain_access` RLS policies from PRD-2 in the auth project; verify a signed-in download creates a row.
+3. **Build-context check:** Vercel project Root Directory must be the monorepo root (NOT `website/`) — `prebuild`/`sync-brain-assets.mjs` needs `../brains` or every download link 404s and `lib/brains.ts` breaks the build. Nothing in the repo pins this; it's dashboard config.
+4. **Ship P0/P1 code** (PRDs 1-4) to `main` → auto-deploy. *(Code complete on branch `claude/brainsforsale-launch-prep-gg0l9s`, 2026-07-04.)*
+5. **Open the gate:** `vercel env rm SITE_PASSWORD production` → redeploy.
+6. **Smoke test (prod, logged out, no bypass header):** homepage renders; hero demo autoplays; one `/api/skill` ask streams; download one `-brain-pack.zip` and unzip it; `/privacy`, `/terms`, `robots.txt`, `sitemap.xml`, `llms.txt` all 200; a `/brains/[slug]` unfurls correctly on X.
+7. **Search Console:** add property, submit sitemap, request indexing of `/` and `/brains`.
+8. **Supabase SMTP (P2):** configure a real sender (Resend/Postmark/SES) for magic links; send a test magic link to a non-Gmail address.
 
 **Acceptance.** All smoke tests pass logged-out from a clean network. Checklist boxes above get checked with date + initials.
 

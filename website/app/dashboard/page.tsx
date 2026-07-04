@@ -65,7 +65,7 @@ export default async function DashboardPage() {
 
           {ownedBrains.length === 0 ? (
             <div className="rounded-xl border border-border-default bg-cool-surface p-8 text-center">
-              <p className="text-sm text-body">You haven&apos;t claimed any brains yet.</p>
+              <p className="text-sm text-body">Download any brain and it will show up here.</p>
               <Link
                 href="/brains"
                 className="mt-4 inline-block rounded-lg bg-brain-indigo px-5 py-2.5 text-sm font-semibold text-white shadow-brain-cta transition-all hover:bg-indigo-hover"
@@ -100,19 +100,15 @@ export default async function DashboardPage() {
                     )}
                     {brain.status === "live" && (
                       <>
-                        <div className="mt-3 rounded-lg bg-deep-ink px-3 py-2 font-mono text-xs text-success">
-                          $ npx skills add brainsfor/{brain.slug}
-                        </div>
-                        <p className="mt-1.5 text-[10px] text-muted">
-                          Works today —{" "}
-                          <a
-                            href={`/brains/${brain.slug}/${brain.slug}-brain-pack.zip`}
-                            download
-                            className="font-medium text-brain-indigo hover:underline"
-                          >
-                            download the pack
-                          </a>{" "}
-                          right now.
+                        <a
+                          href={`/brains/${brain.slug}/${brain.slug}-brain-pack.zip`}
+                          download
+                          className="mt-3 block rounded-lg bg-brain-indigo py-2 text-center text-xs font-semibold text-white shadow-brain-cta transition-all hover:bg-indigo-hover"
+                        >
+                          Download the pack
+                        </a>
+                        <p className="mt-1.5 font-mono text-[10px] text-muted">
+                          npx skills add brainsfor/{brain.slug} — coming soon
                         </p>
                       </>
                     )}

@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="border-t border-[var(--border-default)] bg-white">
       <div className="mx-auto max-w-[1140px] px-6 py-16">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <p className="font-display text-xl font-semibold tracking-tight text-deep-ink">
@@ -35,6 +35,23 @@ export function Footer() {
                   className="text-sm text-body hover:text-deep-ink transition-colors"
                 >
                   For AI agents
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-muted">Legal</h4>
+            <ul className="mt-4 space-y-3">
+              <li><Link href="/privacy" className="text-sm text-body hover:text-deep-ink transition-colors">Privacy</Link></li>
+              <li><Link href="/terms" className="text-sm text-body hover:text-deep-ink transition-colors">Terms</Link></li>
+              <li>
+                <a
+                  href="mailto:robgabel@gmail.com"
+                  className="text-sm text-body hover:text-deep-ink transition-colors"
+                >
+                  Contact
                 </a>
               </li>
             </ul>
