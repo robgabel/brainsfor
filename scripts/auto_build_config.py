@@ -253,7 +253,12 @@ def call_claude(
     for attempt in range(max_retries):
         try:
             response = client.messages.create(**kwargs)
-            content = response.content[0].text
+            # Sonnet 5 has adaptive thinking ON by default, so content[0] can be a
+            # ThinkingBlock (no .text). Select text blocks only, skipping thinking.
+            content = "".join(
+                getattr(b, "text", "") for b in response.content
+                if getattr(b, "type", None) == "text"
+            )
             input_tokens = response.usage.input_tokens
             output_tokens = response.usage.output_tokens
 
