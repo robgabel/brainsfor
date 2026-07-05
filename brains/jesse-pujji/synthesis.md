@@ -8,7 +8,7 @@
 
 **2. Constraint is the curriculum.** Bootstrapping is not a consolation prize for founders who couldn't raise; it is the discipline that forces clarity on unit economics, customer value, and what actually matters. Capital masks bad decisions; constraint exposes and corrects them in real time. The resourcefulness built in lean years compounds into a structural capability that well-funded competitors literally cannot develop because they never had to.
 
-**3. Venture capital is often the riskier path.** Pujji inverts the standard framing: raising VC is not the safe, mature move — it is a one-way door that locks you into a unicorn-or-bust trajectory, eliminating the possibility of a profitable, founder-controlled outcome. He revisited the VC question at Ampush *every year* and consistently concluded that more money would not solve their actual bottlenecks (time, bandwidth, and the four-year hunt for one good executive).
+**3. Venture capital is often the riskier path — but not always.** Pujji inverts the standard framing: raising VC is not the safe, mature move — it is a one-way door that locks you into a unicorn-or-bust trajectory, eliminating the possibility of a profitable, founder-controlled outcome. He revisited the VC question at Ampush *every year* and consistently concluded that more money would not solve their actual bottlenecks (time, bandwidth, and the four-year hunt for one good executive). Crucially, this is calibrated, not universal. He concedes VC is genuinely correct for true winner-take-all markets — consumer social, network-effect enterprise software — where capital is the moat and winning the entire market is the only defensible outcome. His anti-VC conviction is scoped to the businesses he actually operates (unit-economics-legible, non-monopoly). Applying it to a network-effects land-grab would be the exact man-with-a-hammer error he'd warn others against: the call is a question of market structure, not identity.
 
 **4. Growth loops compound; funnels decay.** Linear acquisition — spend money, get customers, repeat — is a commodity strategy that every competitor can replicate, and channel inflation eventually kills the math. Defensibility comes from loops where acquiring a customer makes the next acquisition cheaper or more likely. Bootstrapped businesses are forced to find loops because they cannot afford the perpetual cash drain of a pure funnel.
 
@@ -58,7 +58,7 @@
 
 **6. Most 2015-2021 DTC brands were not brands.** They were Facebook arbitrage businesses dressed up as brands. When the inventory got expensive, the "brand equity" evaporated because it was never there.
 
-**7. Channel specialists beat marketing generalists, almost always.** The common "one person runs Google, Facebook, and email" early-stage setup is structurally broken — no single person has the hours or the channel-specific pattern recognition to make it work.
+**7. Depth per channel, adaptability per person.** Two rules that sound contradictory are one model once you separate them. Cracking a paid channel demands specialist-level depth — over 50% of one person's time for 90–120 days — which is why the common "one person runs Google, Facebook, and email at once" setup is structurally broken. But the person you put on that depth should be a "marketing athlete" who understands the business problem and can flex to whichever channel matters next as the media mix shifts, not a channel-locked hire who becomes a liability when that channel fades. Concentrate time per channel; hire for range per person. The enemy is neither specialists nor generalists — it's one person half-running many channels, and the specialist who can only ever run the one.
 
 **8. Pride is more expensive than ignorance.** The self-made-founder narrative is one of the most costly cultural artifacts in the startup world; it stops founders from buying compressed time via mentors.
 
@@ -76,7 +76,7 @@
 
 **2. They do not believe that hypergrowth is inherently better than profitable linear growth.** The Bootstrapped Giants format — profitability in year one, high linear profitable growth thereafter — is not a fallback. It is the goal.
 
-**3. They do not believe that a single generalist marketer can effectively run multiple channels.** This is one of his most consistent operational positions: it does not work, and founders who try it waste 12-18 months learning that.
+**3. They do not believe that a single person can effectively run multiple channels *at once*.** This is one of his most consistent operational positions: cracking a channel takes concentrated, specialist-level time, so running several concurrently does not work, and founders who try it waste 12-18 months learning that. (The complement — see Contrarian #7 — is that the person doing that concentrated work should still be an adaptable "athlete," not a channel-locked specialist.)
 
 **4. They do not believe that brand and performance are in opposition.** Brand is the multiplier on performance — without it, you pay full price for attention forever.
 
@@ -100,6 +100,16 @@
 
 **6. "We'll figure out unit economics at scale."** Scaling without unit economics is accelerating a destruction of capital, not building a business.
 
+### Live Uncertainties (open bets, held below 100%)
+
+These are not resolved lessons — they are bets Pujji is currently inside and does not yet know the answer to. A brain that only shows metabolized failures teaches *resulting*; the real decision-quality signal is in the open bets and their kill criteria.
+
+**Does the Gateway X studio model actually compound — or spread him too thin?** The genuine uncertainty is whether running many capital-light companies at once lets him give any one the founder-level focus that made Ampush work. His kill criteria are concrete: no clear path to profitability inside 12 months, or a business he can't give real operating attention, gets restructured or shut down, not subsidized. Kahani is the receipt — he shut it down when it wasn't working. The unanswered question is whether the "unfair advantage" test is disciplined enough to survive his own optimism deal by deal.
+
+**Is acquisition-over-building really higher-EV for most operators, or just for him?** His acquisition edge is downstream of a rare performance-marketing and systematization unlock. For a buyer with no identifiable channel or operational advantage, buying is just paying a multiple for someone else's job. He hasn't fully separated "true for me" from "true for most," and the honest version of the advice carries a precondition he doesn't always foreground: name your specific unfair advantage before you buy, or the math doesn't hold.
+
+**The valuation lesson is managed, not cured — and he wasn't the only one who paid.** "The market is never wrong about valuation" is a discipline he has to re-run, not a wound that closed; he assumes he could over-value something out of attachment again. And the cost of holding Ampush too long was not only his own regret — the post-2017 drift years were years his co-founders, team, and family lived through too. "I metabolized it" is not the same as "no one else paid for it."
+
 ### Biographical Pattern
 
 **Goldman Sachs → Berkshire Hathaway conference (pre-2009).** The exposure to Buffett and Munger's model of generating and reinvesting cash flow becomes the philosophical foundation for everything after. He leaves finance not to escape rigor but to apply it to operating businesses.
@@ -108,7 +118,7 @@
 
 **Riding the Facebook ads inflection (2010-2014).** Earns Most Favored Nation status from Facebook and ends up with Uber, Peloton, Blue Apron, Dollar Shave Club, and Clash of Clans as early clients before they were household names. Lesson: platform inflections create asymmetric access for specialist operators who arrive early and master the mechanics.
 
-**Scaling Ampush to ~$10M revenue / $500M+ managed spend / 200 employees, fully bootstrapped (through ~2019).** Productizes the agency, builds proprietary tooling, and proves that an agency can be a real asset, not a lifestyle business. Confirms the bootstrapping thesis at institutional scale.
+**Scaling Ampush from $100K to $2M in monthly revenue in 14 months, managing $1B+ in ad spend over its life, fully bootstrapped (through ~2019).** Productizes the agency, builds proprietary tooling, and proves that an agency can be a real asset, not a lifestyle business. Confirms the bootstrapping thesis at institutional scale.
 
 **Stepping back from CEO, eventually selling to PE.** Demonstrates a non-VC liquidity path and crystallizes the realization that the founder-to-CEO transition is one of the hardest psychological shifts in business — identity moves from doing to enabling.
 

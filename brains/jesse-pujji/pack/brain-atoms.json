@@ -3,17 +3,17 @@
     "name": "Jesse Pujji",
     "slug": "jesse-pujji",
     "source": "LinkedIn essays, podcast appearances, Twitter, and Bootstrapped Giants newsletter (bootstrappedgiants.com)",
-    "atom_count": 653,
-    "connection_count": 604,
+    "atom_count": 654,
+    "connection_count": 602,
     "cluster_count": 14,
-    "topic_count": 1585,
+    "topic_count": 1595,
     "connection_types": {
-      "related": 494,
+      "related": 492,
       "extends": 67,
       "inspired_by": 23,
       "contradicts": 20
     },
-    "last_updated": "2026-07-04",
+    "last_updated": "2026-07-05",
     "coverage": "Bootstrapped Giants newsletter essays, LinkedIn profile and posts, Twitter highlights, Tidemark profile, Mission.org interview, Founder's Field Guide podcast, Founders Journal podcast, Don't Be a Jerk podcast, and 10+ public interviews and profiles",
     "bio": "Jesse Pujji is a serial entrepreneur, bootstrapper, and performance marketing pioneer best known for founding Ampush \u2014 a Facebook advertising powerhouse he bootstrapped to ~$24M in revenue while managing over $1 billion in ad spend for brands like Dollar Shave Club, Uber, and Hulu, all without raising a dollar of outside capital \u2014 and Gateway X, a studio that builds and acquires bootstrapped businesses. A vocal advocate for capital-efficient entrepreneurship, he mentors founders on growth loops, DTC brand building, and the mental rewiring required to build multiple companies. His Bootstrapped Giants platform and LinkedIn essays have made him one of the most influential voices in the bootstrapped founder community.",
     "possessive": "his"
@@ -487,6 +487,70 @@
           "confidence": 0.8
         }
       ]
+    },
+    {
+      "id": "ce1e9951-4b17-43a5-8957-612efd691cf6",
+      "content": "A live bet Jesse is not yet sure about: whether the Gateway X studio model actually compounds, or whether running many capital-light bets at once spreads his attention too thin to give any one of them the founder-level focus that made Ampush work. His kill criteria are concrete \u2014 a portfolio company not on a clear path to profitability within 12 months, or one he finds he can't give real operating attention, gets restructured or shut down rather than subsidized. Kahani is the receipt: a Gateway X company he shut down when it wasn't working, not one he propped up. The question he can't answer yet is whether the studio's 'unfair advantage' test is disciplined enough to survive his own optimism deal by deal.",
+      "cluster": "gateway_x",
+      "topics": [
+        "gateway x",
+        "studio model",
+        "kill criteria",
+        "live uncertainty",
+        "focus",
+        "portfolio"
+      ],
+      "source_ref": "synthesis:qa-2026-07-05-live-uncertainty",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.7,
+      "confidence_tier": "medium",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Treat the Gateway X thesis as an in-progress experiment with pre-committed exit conditions, not a proven playbook \u2014 the decision-quality signal lives in the kill criteria, not the pitch."
+    },
+    {
+      "id": "956e568c-e797-46ea-953d-318d9a7be73f",
+      "content": "Jesse argues acquisition entrepreneurship \u2014 buying a cash-flowing business \u2014 is often higher-expected-value than building from zero. The live uncertainty he's honest about is how much of that edge transfers to operators who don't share his specific unlock. His own acquisition thesis is downstream of a rare performance-marketing and systematization advantage; a buyer with no identifiable channel or operational edge is just paying a multiple for someone else's job. He hasn't fully separated 'true for me' from 'true for most,' and the honest version of the advice carries a precondition he doesn't always foreground: name your specific unfair advantage before you buy, or the EV math doesn't hold.",
+      "cluster": "acquisition_entrepreneurship",
+      "topics": [
+        "acquisition entrepreneurship",
+        "expected value",
+        "boundary condition",
+        "live uncertainty",
+        "edge",
+        "generalizability"
+      ],
+      "source_ref": "synthesis:qa-2026-07-05-live-uncertainty",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.7,
+      "confidence_tier": "medium",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Weight his acquisition-over-building advice against the listener's actual edge \u2014 the thesis is strong where the buyer brings a concrete operational unlock and weak-to-negative where they don't."
+    },
+    {
+      "id": "92674a24-a084-4ff0-b3c7-ec87a2c38c49",
+      "content": "The lesson Jesse draws from holding Ampush too long \u2014 'the market is never wrong about valuation' \u2014 is not one he trusts himself to have permanently fixed. Attachment is a recurring bias, not a one-time bug he patched; he assumes he could over-value something out of desire again and treats the discipline as a practice he has to re-run, not a wound that closed. He's also candid that the cost wasn't only his own regret: the post-2017 drift years \u2014 showing up at 11, leaving at 4, unmotivated \u2014 were years his co-founders, team, and family lived through too. 'I metabolized it' is not the same as 'no one else paid for it.'",
+      "cluster": "founder_psychology",
+      "topics": [
+        "founder psychology",
+        "attachment",
+        "recurring bias",
+        "relational cost",
+        "drift",
+        "humility",
+        "live uncertainty"
+      ],
+      "source_ref": "synthesis:qa-2026-07-05-live-uncertainty",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.7,
+      "confidence_tier": "medium",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Read his resolved 'hard lessons' as managed, not immunized \u2014 the value is in the ongoing practice, and in the honesty that the people around a struggling founder pay part of the bill."
     },
     {
       "id": "e6d5e166-bd3a-408e-a2bb-4d209e6bd70a",
@@ -1433,33 +1497,6 @@
       ]
     },
     {
-      "id": "db90774c-6b2d-4939-ac29-75df2ca3e280",
-      "content": "Jesse is described as 'super knowledgeable on consumer' by a reviewer who received 'specific insights and feedback,' pointing to deep category expertise in consumer businesses rather than generic marketing theory.",
-      "cluster": "dtc_brands",
-      "topics": [
-        "consumer brands",
-        "DTC",
-        "marketing expertise",
-        "specific feedback"
-      ],
-      "source_ref": "Book with Jesse Pujji - Intro",
-      "source_url": "https://intro.co/JessePujji?source=intro",
-      "source_date": null,
-      "confidence": 0.85,
-      "confidence_tier": "medium",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "Super knowledgeable on consumer! Had some really good specific insights and feedback.",
-      "implication": "Consumer-facing businesses benefit disproportionately from advisors with direct consumer brand experience \u2014 the psychology, acquisition dynamics, and retention mechanics of consumer products are meaningfully different from B2B, and generic marketing advice often fails to account for this.",
-      "connections": [
-        {
-          "target_id": "859f96ba-e730-49a1-945a-eecb399cd580",
-          "relationship": "related",
-          "confidence": 0.43
-        }
-      ]
-    },
-    {
       "id": "248b46cd-b727-4ec1-a926-657795722c5f",
       "content": "A key lesson Jesse draws from the Ampush years is the importance of knowing your numbers with precision before scaling anything. Before Ampush grew, Jesse had to understand the economics of client acquisition, service delivery, and account margin with rigor. Scaling without that understanding would have accelerated failure, not success.",
       "cluster": "ampush_story",
@@ -2186,33 +2223,6 @@
       ]
     },
     {
-      "id": "d408c068-d3e4-4f05-b11b-bc5aa8a5bdf5",
-      "content": "The Kahani product generates measurable, quantifiable ROI that justifies its cost with a clear 10x return framework. By tracking the percentage of traffic that engages with stories (15-25%), then measuring conversion lift (~50%), time on site (2x), and AOV lift (25-50%), the incremental revenue attribution is calculable and transparent.",
-      "cluster": "unit_economics",
-      "topics": [
-        "saas_pricing",
-        "roi_measurement",
-        "conversion_optimization",
-        "ecommerce_metrics"
-      ],
-      "source_ref": "youtube:EP186-jesse-pujji",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "what we've seen is is a sort of a 10x Roi in terms of what we charge for the software...we'll typically see conversion uh up by 50 we'll typically see time on site double uh and oftentimes depending on the product we'll see average order value go up by 25 to 50 percent",
-      "implication": "SaaS products sold to e-commerce merchants must be able to demonstrate direct, attributable revenue lift \u2014 a clear ROI story is the most powerful sales tool and the basis for premium, defensible pricing.",
-      "connections": [
-        {
-          "target_id": "18171c8c-cf9b-42a9-b0db-ae5fea1a4803",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
       "id": "5719b710-c3b2-40bb-9f8f-669640dc0abe",
       "content": "One of the most acute pain points for DTC brands is that their best content lives on platforms they don't own. Brands invest heavily in influencer and UGC content that sits on Instagram or TikTok, but cannot easily leverage that content on their own site and owned assets \u2014 Kahani is designed to solve that specific problem.",
       "cluster": "brand_building",
@@ -2320,6 +2330,35 @@
       "connections": [
         {
           "target_id": "6ed0d28e-46cd-4e1c-a376-a4d417157f1d",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
+      "id": "d408c068-d3e4-4f05-b11b-bc5aa8a5bdf5",
+      "content": "Kahani was pitched as generating a clear 10x ROI \u2014 tracking the share of traffic that engages with stories (15-25%), then conversion lift (~50%), time on site (2x), and AOV lift (25-50%) to make revenue attribution calculable. Read with a skeptic's eye: these are vendor-reported numbers from the company selling the software, uncontrolled for selection bias and attribution window \u2014 and Kahani was ultimately shut down as a Gateway X bet that wasn't working. The 10x figure is a sales narrative, not an independently measured result.",
+      "cluster": "unit_economics",
+      "topics": [
+        "saas_pricing",
+        "roi_measurement",
+        "conversion_optimization",
+        "ecommerce_metrics"
+      ],
+      "source_ref": "youtube:EP186-jesse-pujji",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "contested",
+      "original_quote": "what we've seen is is a sort of a 10x Roi in terms of what we charge for the software...we'll typically see conversion uh up by 50 we'll typically see time on site double uh and oftentimes depending on the product we'll see average order value go up by 25 to 50 percent",
+      "implication": "Discount self-reported vendor ROI \u2014 including your own. Without an independent baseline and controlled attribution a 10x claim is a marketing artifact, and the product carrying this pitch was later shut down.",
+      "proof_ref": "Vendor-reported figure from Kahani's own sales narrative; Kahani (Gateway X) was subsequently shut down (see Kahani wind-down atoms). Not independently verified.",
+      "verified_at": "2026-07-05",
+      "connections": [
+        {
+          "target_id": "18171c8c-cf9b-42a9-b0db-ae5fea1a4803",
           "relationship": "related",
           "confidence": 0.24
         }
@@ -3227,14 +3266,7 @@
       "claim_type": "fact",
       "verification": "unverified",
       "original_quote": "He is considered one of the best marketing minds in the world.",
-      "implication": "Deep practitioner credibility \u2014 built through doing, not just advising \u2014 is the most durable form of authority in marketing. Operators who manage real spend at scale develop pattern recognition that theorists cannot replicate.",
-      "connections": [
-        {
-          "target_id": "db90774c-6b2d-4939-ac29-75df2ca3e280",
-          "relationship": "related",
-          "confidence": 0.43
-        }
-      ]
+      "implication": "Deep practitioner credibility \u2014 built through doing, not just advising \u2014 is the most durable form of authority in marketing. Operators who manage real spend at scale develop pattern recognition that theorists cannot replicate."
     },
     {
       "id": "80ba6311-5c52-47ab-8cf3-866c11a433ba",
@@ -3343,33 +3375,6 @@
         },
         {
           "target_id": "3e932c76-8cd3-4658-8880-56e42b860922",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
-      "id": "dbee17e9-6889-47ba-86a8-2dde6472492c",
-      "content": "Jesse explicitly states his love for helping entrepreneurs and frames his consulting as part of a broader commitment to paying it forward. This philanthropic orientation toward mentorship suggests he views knowledge transfer to founders as intrinsically valuable.",
-      "cluster": "mentorship_leverage",
-      "topics": [
-        "mentorship",
-        "entrepreneurship",
-        "knowledge transfer",
-        "founder support"
-      ],
-      "source_ref": "Book with Jesse Pujji - Intro",
-      "source_url": "https://intro.co/JessePujji?source=intro",
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "I love helping others, especially entrepreneurs. I can't wait to help you on your business journey!",
-      "implication": "Experienced operators who make themselves accessible to early-stage founders create outsized leverage in the ecosystem \u2014 a 15-minute conversation with someone who has managed $1B in ad spend can redirect a founder's entire strategy.",
-      "connections": [
-        {
-          "target_id": "8defd5ae-5c0b-4d4f-974f-dc3374368084",
           "relationship": "related",
           "confidence": 0.24
         }
@@ -8909,32 +8914,6 @@
       ]
     },
     {
-      "id": "83e696fa-e650-4728-916e-eb73880a0062",
-      "content": "The market is never wrong about valuation. Jesse's refusal to sell Ampush at a $60-75M offer because he believed the company was worth more led to years of drift and regret. His emotional attachment to an internal valuation narrative caused him to lose perspective on market reality.",
-      "cluster": "founder_psychology",
-      "topics": [
-        "exit_decisions",
-        "valuation",
-        "founder_bias",
-        "market_feedback"
-      ],
-      "source_ref": "youtube:Jesse_Pujji_GatewayX_Confessions_B2B",
-      "source_url": null,
-      "source_date": null,
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "opinion",
-      "verification": "unverified",
-      "implication": "Founders must actively guard against letting internal valuation narratives override market signals \u2014 emotional investment in a number can lead to worse outcomes than accepting an imperfect but real offer.",
-      "connections": [
-        {
-          "target_id": "1aca5e03-da75-430d-9b4d-b385e2f3f752",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
       "id": "22e66dc7-800c-4130-8055-811fcb04266c",
       "content": "Deal structure matters as much as valuation in acquisition entrepreneurship. A business bought at a fair price with favorable payment terms \u2014 earnouts, seller financing, deferred consideration \u2014 can be far more value-creating than a business bought cheap on terms that strain the buyer's working capital. Jesse emphasizes that the mechanics of how you buy are inseparable from whether the acquisition actually works.",
       "cluster": "acquisition_entrepreneurship",
@@ -9039,6 +9018,32 @@
           "target_id": "9c14e7ab-7f28-487d-be11-18133c0af84d",
           "relationship": "extends",
           "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": "83e696fa-e650-4728-916e-eb73880a0062",
+      "content": "The market is never wrong about valuation. In 2015 Jesse ran a sale process for Ampush hoping for 9 figures, received 8-figure offers, and refused to sell because he was sure it was worth more. When Red Ventures then declined to buy the rest of the company in 2017, he drifted for months \u2014 unmotivated, burnt out, showing up at 11 and leaving at 4 \u2014 carrying the regret of having held on too long. His emotional attachment to an internal valuation narrative cost him perspective on market reality.",
+      "cluster": "founder_psychology",
+      "topics": [
+        "exit_decisions",
+        "valuation",
+        "founder_bias",
+        "market_feedback"
+      ],
+      "source_ref": "youtube:Jesse_Pujji_GatewayX_Confessions_B2B",
+      "source_url": null,
+      "source_date": null,
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "opinion",
+      "verification": "unverified",
+      "implication": "Founders must actively guard against letting internal valuation narratives override market signals \u2014 emotional investment in a number can lead to worse outcomes than accepting an imperfect but real offer.",
+      "connections": [
+        {
+          "target_id": "1aca5e03-da75-430d-9b4d-b385e2f3f752",
+          "relationship": "related",
+          "confidence": 0.24
         }
       ]
     },
@@ -9275,11 +9280,6 @@
         },
         {
           "target_id": "6e2e0645-d07e-4462-a062-3f541de435bb",
-          "relationship": "related",
-          "confidence": 0.24
-        },
-        {
-          "target_id": "dbee17e9-6889-47ba-86a8-2dde6472492c",
           "relationship": "related",
           "confidence": 0.24
         },
@@ -21555,25 +21555,11 @@
       "confidence": 0.24
     },
     {
-      "id": "3ccd62c9-2d0f-40eb-8b75-154814c6da04",
-      "atom_id_1": "859f96ba-e730-49a1-945a-eecb399cd580",
-      "atom_id_2": "db90774c-6b2d-4939-ac29-75df2ca3e280",
-      "relationship": "related",
-      "confidence": 0.43
-    },
-    {
       "id": "326d130c-843f-4ebc-b5c9-d1be48cc086f",
       "atom_id_1": "240b4ccb-0943-4ad1-a355-059e8ebf1076",
       "atom_id_2": "f5e0df23-de21-4335-839c-48db07dfd91d",
       "relationship": "related",
       "confidence": 0.43
-    },
-    {
-      "id": "521999d0-90cf-493c-9059-4b5af623a7d4",
-      "atom_id_1": "dbee17e9-6889-47ba-86a8-2dde6472492c",
-      "atom_id_2": "8defd5ae-5c0b-4d4f-974f-dc3374368084",
-      "relationship": "related",
-      "confidence": 0.24
     },
     {
       "id": "9b3237a5-f9bc-4266-b57c-907f9f19c42c",
@@ -24406,7 +24392,6 @@
     ],
     "DTC": [
       "60a77cd5-7810-4919-94c4-4ed5e522d385",
-      "db90774c-6b2d-4939-ac29-75df2ca3e280",
       "1e2e7d51-9fbc-4129-b4fb-1c05a6367b41",
       "d297b949-ce5c-491d-a5ca-a96c499611b6",
       "549da4bb-411a-4f4e-87fc-d61d12ef9cc5"
@@ -24613,6 +24598,7 @@
       "fd4ab8dc-5939-470c-8052-d9dbab187f5b"
     ],
     "acquisition entrepreneurship": [
+      "956e568c-e797-46ea-953d-318d9a7be73f",
       "461bbf65-b861-4039-a781-362ce111d8c1",
       "2b834f7b-0abf-4c99-b545-9edb16548e71",
       "60f61d22-934f-4fd8-b04b-e3fa80755d2a",
@@ -24790,6 +24776,9 @@
     "asking for help": [
       "e1847cff-4afc-41d0-8c46-46efd42f9120",
       "8f1f09b4-e23f-463f-8bd9-16e9c2665457"
+    ],
+    "attachment": [
+      "92674a24-a084-4ff0-b3c7-ec87a2c38c49"
     ],
     "attribution": [
       "c70d61ee-ade7-4e7c-a360-e780252b77ce",
@@ -24986,6 +24975,9 @@
     ],
     "bootstrapping strategy": [
       "38c5cdff-c126-4b86-ab2e-f8390811cb0a"
+    ],
+    "boundary condition": [
+      "956e568c-e797-46ea-953d-318d9a7be73f"
     ],
     "bounty_model": [
       "a416b576-909f-421e-987c-c5ab6a78a38c"
@@ -25713,7 +25705,6 @@
       "c4973b4a-57ae-41b9-8338-fcabd790e028"
     ],
     "consumer brands": [
-      "db90774c-6b2d-4939-ac29-75df2ca3e280",
       "859f96ba-e730-49a1-945a-eecb399cd580"
     ],
     "consumer preference": [
@@ -26155,6 +26146,9 @@
     "downside definition": [
       "3ee0d43e-bd7a-4108-904f-fc91ad01e74c"
     ],
+    "drift": [
+      "92674a24-a084-4ff0-b3c7-ec87a2c38c49"
+    ],
     "dtc": [
       "4300a6ee-39dd-408f-930f-624a3ea09863"
     ],
@@ -26317,6 +26311,9 @@
     "ecosystem infrastructure": [
       "aa323189-6c19-413a-9717-f0ae97523656"
     ],
+    "edge": [
+      "956e568c-e797-46ea-953d-318d9a7be73f"
+    ],
     "editorial_strategy": [
       "69a369be-8476-48a3-b55b-eaaa7bfbd86e"
     ],
@@ -26423,7 +26420,6 @@
     ],
     "entrepreneurship": [
       "3c63bcc4-7760-4657-a583-4a80efc946ef",
-      "dbee17e9-6889-47ba-86a8-2dde6472492c",
       "5e065435-66b6-4fcb-b7a2-bbbc920545b9",
       "b03d594e-e284-406b-b2b5-5d6542584e2a",
       "c75c3b5e-496a-4a4b-ab90-c67ed714512c",
@@ -26491,6 +26487,9 @@
     ],
     "expectations": [
       "5b10685a-55c8-4de0-b8de-89ee2951f6ce"
+    ],
+    "expected value": [
+      "956e568c-e797-46ea-953d-318d9a7be73f"
     ],
     "experiential learning": [
       "868a43bf-1358-42d7-92d4-5212fb826689"
@@ -26653,6 +26652,7 @@
       "93bd5096-077b-4ec1-b314-02772ede20dc"
     ],
     "focus": [
+      "ce1e9951-4b17-43a5-8957-612efd691cf6",
       "05ffb69f-9fdc-4cb5-9a43-b7d103313344",
       "a0726b25-bce5-4143-8216-0fb0e1ecbf55",
       "ff9408d2-0fc0-4479-9fea-c0a270c55160",
@@ -26821,6 +26821,7 @@
     ],
     "founder psychology": [
       "a10bca50-fd67-48ab-b6af-64aa6d552f19",
+      "92674a24-a084-4ff0-b3c7-ec87a2c38c49",
       "e75675b4-9c5a-4f28-a84a-bd1b4ded5fe3",
       "ad42ae4a-10c5-499a-8fa4-9ca746905cd2",
       "21c0ee88-0b6d-488c-aa2c-2aad76241c40",
@@ -26851,9 +26852,6 @@
     "founder skills": [
       "240b4ccb-0943-4ad1-a355-059e8ebf1076",
       "db499fd2-33d5-41e7-b486-fb64862ffda4"
-    ],
-    "founder support": [
-      "dbee17e9-6889-47ba-86a8-2dde6472492c"
     ],
     "founder survival": [
       "d49ae178-e374-422a-a761-516fd600cc29"
@@ -27102,6 +27100,12 @@
     "future_of_work": [
       "9169aff7-7b70-4967-99f7-a5677a3181da"
     ],
+    "gateway x": [
+      "ce1e9951-4b17-43a5-8957-612efd691cf6"
+    ],
+    "generalizability": [
+      "956e568c-e797-46ea-953d-318d9a7be73f"
+    ],
     "geographic_growth": [
       "d74e6161-9a63-4ccb-a93d-e061c1f3bea3"
     ],
@@ -27292,6 +27296,7 @@
       "029de8f6-4f86-4778-8182-53b7b0139766"
     ],
     "humility": [
+      "92674a24-a084-4ff0-b3c7-ec87a2c38c49",
       "f9a5fe93-6f04-4d52-b1e7-8ea687b6414d",
       "3a893887-8e8d-4dfe-9693-e7a4b7040ec8"
     ],
@@ -27461,6 +27466,9 @@
     "judgment development": [
       "c5acd209-f5f2-44cf-95a5-36f20b62529f"
     ],
+    "kill criteria": [
+      "ce1e9951-4b17-43a5-8957-612efd691cf6"
+    ],
     "kill_criteria": [
       "fd47c4bd-a398-48a4-9528-ac676423a5d9"
     ],
@@ -27468,7 +27476,6 @@
       "4eafb0fa-dd04-4c8c-a40c-e775320f6ba0"
     ],
     "knowledge transfer": [
-      "dbee17e9-6889-47ba-86a8-2dde6472492c",
       "290327a7-0c6d-438d-91ff-5a962490f25e"
     ],
     "knowledge_sharing": [
@@ -27608,6 +27615,11 @@
     ],
     "listening": [
       "609f741d-8a9d-45bc-b578-7c80933042f7"
+    ],
+    "live uncertainty": [
+      "ce1e9951-4b17-43a5-8957-612efd691cf6",
+      "956e568c-e797-46ea-953d-318d9a7be73f",
+      "92674a24-a084-4ff0-b3c7-ec87a2c38c49"
     ],
     "long-term advantage": [
       "3ef69fa4-8008-473f-bc60-4d8064e42e14"
@@ -27767,7 +27779,6 @@
       "ce569c73-0b57-4f41-b2e4-e4678a7059f3"
     ],
     "marketing expertise": [
-      "db90774c-6b2d-4939-ac29-75df2ca3e280",
       "859f96ba-e730-49a1-945a-eecb399cd580"
     ],
     "marketing focus": [
@@ -27911,7 +27922,6 @@
     "mentorship": [
       "e6d5e166-bd3a-408e-a2bb-4d209e6bd70a",
       "a8b7f360-1081-4fd7-97f2-c8b5091c3e06",
-      "dbee17e9-6889-47ba-86a8-2dde6472492c",
       "7617fc0e-8471-42d4-8651-b677cbcf840d",
       "d0d7f1cf-dae9-4ddc-9c0a-7ad5562819f4",
       "e2278326-bdb3-4eb0-b0d8-b8177fb199fc",
@@ -28596,6 +28606,9 @@
     "portable brand equity": [
       "1d8b1edd-2903-4cba-8811-0f779f0d0f02"
     ],
+    "portfolio": [
+      "ce1e9951-4b17-43a5-8957-612efd691cf6"
+    ],
     "portfolio companies": [
       "9489001b-73a5-4e79-9211-55b22d6b002a"
     ],
@@ -28921,6 +28934,9 @@
     "recruiting_moat": [
       "21fe5782-a14a-42a2-8fc4-cdb780109e15"
     ],
+    "recurring bias": [
+      "92674a24-a084-4ff0-b3c7-ec87a2c38c49"
+    ],
     "recurring_revenue": [
       "d5564f8b-90a6-4593-a96e-f58d5890d0b4"
     ],
@@ -28955,6 +28971,9 @@
     ],
     "rejection tolerance": [
       "437f0b55-0a73-4cf7-b35b-576336b40836"
+    ],
+    "relational cost": [
+      "92674a24-a084-4ff0-b3c7-ec87a2c38c49"
     ],
     "relationship capital": [
       "f0b9f3b0-b4e8-4e7b-9141-4c9f6477334a"
@@ -29405,9 +29424,6 @@
     "social_proof": [
       "d9ec3b5c-f555-4e02-841e-84dd343a0ffc"
     ],
-    "specific feedback": [
-      "db90774c-6b2d-4939-ac29-75df2ca3e280"
-    ],
     "specificity in marketing": [
       "dac41f23-3727-4a35-96bc-33c0c548bb67"
     ],
@@ -29472,6 +29488,7 @@
       "1d8b1edd-2903-4cba-8811-0f779f0d0f02"
     ],
     "studio model": [
+      "ce1e9951-4b17-43a5-8957-612efd691cf6",
       "32f58f9b-5272-456e-a960-6527f36751a5",
       "a6c6af45-bab8-4423-8717-4c0eb19a06c0",
       "ef329055-61d5-403c-a5d8-57eb8c268c9e",
@@ -30077,11 +30094,15 @@
       },
       {
         "title": "Venture capital is often the riskier path",
-        "desc": "Raising VC is a one-way door that locks you into a unicorn-or-bust trajectory, eliminating the possibility of a profitable, founder-controlled outcome. Pujji revisited the VC question at Ampush every year and consistently concluded that more money would not solve their actual bottlenecks.",
+        "desc": "Raising VC is a one-way door that locks you into a unicorn-or-bust trajectory, eliminating the possibility of a profitable, founder-controlled outcome. Pujji revisited the VC question at Ampush every year and consistently concluded that more money would not solve their actual bottlenecks. But this is calibrated, not universal: he concedes VC is genuinely the right call for true winner-take-all markets \u2014 consumer social, network-effect enterprise software \u2014 where capital is the moat and winning the whole market is the only defensible outcome. The error he warns against is treating either rule, bootstrap or raise, as identity instead of matching it to the market's structure.",
         "provenance": "grounded",
         "evidence": [
           {
             "quote": "If you take money from someone, you either burn through it then you're done, or you can get yourself into weird situations.",
+            "relation": "verbatim"
+          },
+          {
+            "quote": "Venture capital's standard business model \u2014 expecting every investment to return billions, accepting high loss rates \u2014 works for true winner-take-all markets like consumer social or enterprise software, but is fundamentally misapplied to DTC brands where the largest possible outcome is a conglomerate of brands, not a monopoly.",
             "relation": "verbatim"
           }
         ]
@@ -30229,12 +30250,16 @@
         ]
       },
       {
-        "title": "Channel specialists beat marketing generalists, almost always",
-        "desc": "The common 'one person runs Google, Facebook, and email' early-stage setup is structurally broken \u2014 no single person has the hours or the channel-specific pattern recognition to make it work.",
+        "title": "Depth per channel, adaptability per person \u2014 not one generalist spread thin",
+        "desc": "Two rules that sound contradictory are one model once you separate them. Cracking a paid channel demands specialist-level depth: over 50% of one person's time for 90\u2013120 days, which is why a lone generalist running Google, Facebook, and email at once is structurally broken. But the person you put on that depth should be a 'marketing athlete' who understands the business problem and can flex to whichever channel matters next as the media mix shifts \u2014 not a channel-locked hire who becomes a liability when that channel fades. Concentrate time per channel; hire for range per person. The enemy is neither specialists nor generalists \u2014 it's one person half-running many channels, and the specialist who can only ever run the one.",
         "provenance": "grounded",
         "evidence": [
           {
             "quote": "My rule of thumb is 90 to 120 days on a channel requires over 50% of one founder's time\u2026 doing them concurrently is usually a recipe for disaster because it's literally time in the day that you have to go and build those things.",
+            "relation": "verbatim"
+          },
+          {
+            "quote": "I definitely went with the ampush model of hiring marketing athletes when I joined as opposed to like very specific channel level specialists because I wanted them to be able to again understand the business problems but also like flex into where we needed folks the most at the time.",
             "relation": "verbatim"
           }
         ]
@@ -30472,12 +30497,16 @@
     "hard_lessons": [
       {
         "title": "I let my ego override the market on what Ampush was worth.",
-        "cost": "Turned down a $60\u201375M offer because I was sure it was worth more \u2014 then drifted for years, carrying the regret that came with holding on too long.",
+        "cost": "When we ran a sale process in 2015 the offers came in at 8 figures \u2014 below the 9 figures I was sure we deserved \u2014 so I held out and didn't sell. Then in 2017, when Red Ventures told us they would not buy the rest of the company, I went into a tailspin: unmotivated, burnt out, showing up at 11 and leaving at 4 for months, carrying the regret of having held on too long.",
         "change": "The market is never wrong about valuation. I separate what I want something to be worth from what it is worth, and I act on the signal instead of my attachment.",
         "receipts": [
           {
-            "quote": "Jesse's refusal to sell Ampush at a $60\u201375M offer because he believed the company was worth more led to years of drift and regret.",
-            "source": "Confessions of a B2B Entrepreneur (interview)"
+            "quote": "We took the business out for a sale process, but ended up with numbers below our expectations. (We were hoping for 9 figures and got 8 figures.) Crestfallen, we decided not to sell but partnered with and sold a minority stake to Red Ventures... They took our fast-growing but not super-profitable company and taught us how to make money.",
+            "source": "Jesse Pujji, Bootstrapped Giants (essay)"
+          },
+          {
+            "quote": "In 2017, my daughter Serena was born. Around that time, Red Ventures told us they would NOT be buying the rest of the company. This sent me into a tailspin. I was unmotivated, burnt out, and stuck in a rut. For 6 months, I didn't go into work until 11 am and left at 4 pm.",
+            "source": "Jesse Pujji, Bootstrapped Giants (essay)"
           }
         ]
       },
@@ -30502,6 +30531,20 @@
             "source": "Jesse Pujji, 'Bootstrapping My First Company' (essay)"
           }
         ]
+      }
+    ],
+    "live_uncertainties": [
+      {
+        "title": "Does the Gateway X studio model actually compound \u2014 or spread me too thin?",
+        "desc": "A bet held below 100%: whether running many capital-light companies at once lets me give any one of them the founder-level focus that made Ampush work. My kill criteria are concrete \u2014 no clear path to profitability inside 12 months, or a business I can't give real operating attention, gets restructured or shut down, not subsidized. Kahani is the receipt: I shut it down when it wasn't working. The open question is whether the 'unfair advantage' test is disciplined enough to survive my own optimism deal by deal."
+      },
+      {
+        "title": "Is acquisition-over-building really higher-EV for most operators, or just for me?",
+        "desc": "I argue buying a cash-flowing business beats building from zero \u2014 but my acquisition edge is downstream of a rare performance-marketing and systematization unlock. For a buyer with no identifiable channel or operational advantage, buying is just paying a multiple for someone else's job. I haven't fully separated 'true for me' from 'true for most,' and the honest version carries a precondition I don't always foreground: name your specific unfair advantage before you buy, or the math doesn't hold."
+      },
+      {
+        "title": "The valuation lesson is managed, not cured \u2014 and I wasn't the only one who paid for it.",
+        "desc": "'The market is never wrong about valuation' is a discipline I have to re-run, not a wound that closed. Attachment is a recurring bias; I assume I could over-value something out of desire again. And the cost of holding Ampush too long wasn't only my regret \u2014 the post-2017 drift years were years my co-founders, team, and family lived through too. 'I metabolized it' is not the same as 'no one else paid for it.'"
       }
     ]
   }
