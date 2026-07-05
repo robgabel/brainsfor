@@ -31,13 +31,24 @@ INDEX = ROOT / "brains" / "index.json"
 
 
 def latest(slug: str, pattern: str) -> dict | None:
+    """Newest eval for a brain, SKIPPING any marked interim/hold.
+
+    An eval can set "interim": true (or "publish": false) to declare itself a
+    mid-renovation measurement that must NOT reach the public QA pill — e.g. a
+    showcase brain re-paneled partway through a depth fix, where the score dips
+    before the improvement lands. The publisher falls back to the newest stable
+    eval, so index.json keeps the last real number instead of showing the dip.
+    """
     files = sorted(glob.glob(str(ROOT / "brains" / slug / "evals" / pattern)))
-    if not files:
-        return None
-    try:
-        return json.loads(Path(files[-1]).read_text())
-    except Exception:
-        return None
+    for fp in reversed(files):  # newest-first
+        try:
+            data = json.loads(Path(fp).read_text())
+        except Exception:
+            continue
+        if data.get("interim") is True or data.get("publish") is False:
+            continue  # not for publication — keep looking for the last stable one
+        return data
+    return None
 
 
 def audit_voice() -> dict[str, float]:
