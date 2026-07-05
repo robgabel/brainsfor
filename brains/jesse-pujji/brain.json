@@ -138,11 +138,15 @@
       },
       {
         "title": "Venture capital is often the riskier path",
-        "desc": "Raising VC is a one-way door that locks you into a unicorn-or-bust trajectory, eliminating the possibility of a profitable, founder-controlled outcome. Pujji revisited the VC question at Ampush every year and consistently concluded that more money would not solve their actual bottlenecks.",
+        "desc": "Raising VC is a one-way door that locks you into a unicorn-or-bust trajectory, eliminating the possibility of a profitable, founder-controlled outcome. Pujji revisited the VC question at Ampush every year and consistently concluded that more money would not solve their actual bottlenecks. But this is calibrated, not universal: he concedes VC is genuinely the right call for true winner-take-all markets — consumer social, network-effect enterprise software — where capital is the moat and winning the whole market is the only defensible outcome. The error he warns against is treating either rule, bootstrap or raise, as identity instead of matching it to the market's structure.",
         "provenance": "grounded",
         "evidence": [
           {
             "quote": "If you take money from someone, you either burn through it then you're done, or you can get yourself into weird situations.",
+            "relation": "verbatim"
+          },
+          {
+            "quote": "Venture capital's standard business model — expecting every investment to return billions, accepting high loss rates — works for true winner-take-all markets like consumer social or enterprise software, but is fundamentally misapplied to DTC brands where the largest possible outcome is a conglomerate of brands, not a monopoly.",
             "relation": "verbatim"
           }
         ]
@@ -290,12 +294,16 @@
         ]
       },
       {
-        "title": "Channel specialists beat marketing generalists, almost always",
-        "desc": "The common 'one person runs Google, Facebook, and email' early-stage setup is structurally broken — no single person has the hours or the channel-specific pattern recognition to make it work.",
+        "title": "Depth per channel, adaptability per person — not one generalist spread thin",
+        "desc": "Two rules that sound contradictory are one model once you separate them. Cracking a paid channel demands specialist-level depth: over 50% of one person's time for 90–120 days, which is why a lone generalist running Google, Facebook, and email at once is structurally broken. But the person you put on that depth should be a 'marketing athlete' who understands the business problem and can flex to whichever channel matters next as the media mix shifts — not a channel-locked hire who becomes a liability when that channel fades. Concentrate time per channel; hire for range per person. The enemy is neither specialists nor generalists — it's one person half-running many channels, and the specialist who can only ever run the one.",
         "provenance": "grounded",
         "evidence": [
           {
             "quote": "My rule of thumb is 90 to 120 days on a channel requires over 50% of one founder's time… doing them concurrently is usually a recipe for disaster because it's literally time in the day that you have to go and build those things.",
+            "relation": "verbatim"
+          },
+          {
+            "quote": "I definitely went with the ampush model of hiring marketing athletes when I joined as opposed to like very specific channel level specialists because I wanted them to be able to again understand the business problems but also like flex into where we needed folks the most at the time.",
             "relation": "verbatim"
           }
         ]
@@ -533,12 +541,16 @@
     "hard_lessons": [
       {
         "title": "I let my ego override the market on what Ampush was worth.",
-        "cost": "Turned down a $60–75M offer because I was sure it was worth more — then drifted for years, carrying the regret that came with holding on too long.",
+        "cost": "When we ran a sale process in 2015 the offers came in at 8 figures — below the 9 figures I was sure we deserved — so I held out and didn't sell. Then in 2017, when Red Ventures told us they would not buy the rest of the company, I went into a tailspin: unmotivated, burnt out, showing up at 11 and leaving at 4 for months, carrying the regret of having held on too long.",
         "change": "The market is never wrong about valuation. I separate what I want something to be worth from what it is worth, and I act on the signal instead of my attachment.",
         "receipts": [
           {
-            "quote": "Jesse's refusal to sell Ampush at a $60–75M offer because he believed the company was worth more led to years of drift and regret.",
-            "source": "Confessions of a B2B Entrepreneur (interview)"
+            "quote": "We took the business out for a sale process, but ended up with numbers below our expectations. (We were hoping for 9 figures and got 8 figures.) Crestfallen, we decided not to sell but partnered with and sold a minority stake to Red Ventures... They took our fast-growing but not super-profitable company and taught us how to make money.",
+            "source": "Jesse Pujji, Bootstrapped Giants (essay)"
+          },
+          {
+            "quote": "In 2017, my daughter Serena was born. Around that time, Red Ventures told us they would NOT be buying the rest of the company. This sent me into a tailspin. I was unmotivated, burnt out, and stuck in a rut. For 6 months, I didn't go into work until 11 am and left at 4 pm.",
+            "source": "Jesse Pujji, Bootstrapped Giants (essay)"
           }
         ]
       },
@@ -563,6 +575,20 @@
             "source": "Jesse Pujji, 'Bootstrapping My First Company' (essay)"
           }
         ]
+      }
+    ],
+    "live_uncertainties": [
+      {
+        "title": "Does the Gateway X studio model actually compound — or spread me too thin?",
+        "desc": "A bet held below 100%: whether running many capital-light companies at once lets me give any one of them the founder-level focus that made Ampush work. My kill criteria are concrete — no clear path to profitability inside 12 months, or a business I can't give real operating attention, gets restructured or shut down, not subsidized. Kahani is the receipt: I shut it down when it wasn't working. The open question is whether the 'unfair advantage' test is disciplined enough to survive my own optimism deal by deal."
+      },
+      {
+        "title": "Is acquisition-over-building really higher-EV for most operators, or just for me?",
+        "desc": "I argue buying a cash-flowing business beats building from zero — but my acquisition edge is downstream of a rare performance-marketing and systematization unlock. For a buyer with no identifiable channel or operational advantage, buying is just paying a multiple for someone else's job. I haven't fully separated 'true for me' from 'true for most,' and the honest version carries a precondition I don't always foreground: name your specific unfair advantage before you buy, or the math doesn't hold."
+      },
+      {
+        "title": "The valuation lesson is managed, not cured — and I wasn't the only one who paid for it.",
+        "desc": "'The market is never wrong about valuation' is a discipline I have to re-run, not a wound that closed. Attachment is a recurring bias; I assume I could over-value something out of desire again. And the cost of holding Ampush too long wasn't only my regret — the post-2017 drift years were years my co-founders, team, and family lived through too. 'I metabolized it' is not the same as 'no one else paid for it.'"
       }
     ]
   },
