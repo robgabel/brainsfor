@@ -9,8 +9,8 @@ Welcome to the **Jobs Brain Pack** from [brainsforagents.com](https://brainsfora
 
 ## What You're Getting
 
-- **1029 knowledge atoms** — Core insights, frameworks, and strategic principles from 50+ years of speeches, interviews, keynotes, and documented conversations (1976–2011)
-- **1019 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **1076 knowledge atoms** — Core insights, frameworks, and strategic principles from 50+ years of speeches, interviews, keynotes, and documented conversations (1976–2011)
+- **1016 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **A `/board` of advisors** — Convene this brain alongside your other installed brains for one question (needs 2+ brains)
 - **Cross-referenced topics** — Simplicity, taste, product design, marketing, innovation, team building, focus, craftsmanship, the intersection of technology and liberal arts, and more
@@ -29,7 +29,7 @@ Your Jobs Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (1029 insights)
+  ├── brain-atoms.json         ← structured atoms (1076 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 10 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -63,7 +63,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 1029 atoms with titles, summaries, connections
+   - JSON structure of 1076 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 
