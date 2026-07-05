@@ -4,6 +4,10 @@
   "description": "MCP server for BrainsFor brain packs — selective atom retrieval for AI agents",
   "type": "module",
   "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./scoring": "./dist/scoring.js"
+  },
   "bin": {
     "brainsfor-mcp": "dist/index.js"
   },

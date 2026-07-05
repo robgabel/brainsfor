@@ -2,29 +2,7 @@ import { z } from "zod";
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { getBrainIndex } from "../loaders/brain-loader.js";
 import { findBrain } from "../loaders/index-loader.js";
-import type { Atom } from "../types.js";
-
-function scoreAtom(atom: Atom, terms: string[]): number {
-  let score = 0;
-  const fields = [atom.content, atom.original_quote || "", atom.implication || ""];
-  const combined = fields.join(" ").toLowerCase();
-
-  for (const term of terms) {
-    const lower = term.toLowerCase();
-    // Exact match in content gets highest weight
-    if (atom.content.toLowerCase().includes(lower)) score += 3;
-    // Match in original_quote
-    if (atom.original_quote?.toLowerCase().includes(lower)) score += 2;
-    // Match in implication
-    if (atom.implication?.toLowerCase().includes(lower)) score += 1;
-    // Match in topics
-    if (atom.topics.some((t) => t.toLowerCase().includes(lower))) score += 1;
-  }
-
-  // Boost by confidence
-  score *= atom.confidence;
-  return score;
-}
+import { scoreAtomsForQuery } from "../scoring.js";
 
 export function registerSearchAtoms(server: McpServer, brainsDir: string) {
   server.registerTool(
@@ -64,22 +42,15 @@ export function registerSearchAtoms(server: McpServer, brainsDir: string) {
 
       try {
         const index = getBrainIndex(brainsDir, brain_slug);
-        const terms = query
-          .split(/\s+/)
-          .filter((t) => t.length >= 2);
+        // Canonical shared scorer (src/scoring.ts) — same algorithm the
+        // website's /api/skill and /api/board retrieval uses.
+        const scored = scoreAtomsForQuery(
+          [...index.atomsById.values()],
+          query,
+          limit,
+        );
 
-        const scored: Array<{ atom: Atom; score: number }> = [];
-
-        for (const atom of index.atomsById.values()) {
-          const score = scoreAtom(atom, terms);
-          if (score > 0) {
-            scored.push({ atom, score });
-          }
-        }
-
-        scored.sort((a, b) => b.score - a.score);
-
-        const results = scored.slice(0, limit).map(({ atom, score }) => ({
+        const results = scored.map(({ atom, similarity }) => ({
           id: atom.id,
           content: atom.content,
           original_quote: atom.original_quote,
@@ -93,7 +64,7 @@ export function registerSearchAtoms(server: McpServer, brainsDir: string) {
           verification: atom.verification ?? "unverified",
           proof_ref: atom.proof_ref ?? null,
           verified_at: atom.verified_at ?? null,
-          relevance_score: Math.round(score * 100) / 100,
+          relevance_score: Math.round(similarity * 100) / 100,
         }));
 
         return {

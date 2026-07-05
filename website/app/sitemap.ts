@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getLiveBrains } from "@/lib/brains";
+import { SITE } from "@/lib/site-config";
 
-const BASE = "https://brainsforagents.com";
+const BASE = SITE.origin;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages: MetadataRoute.Sitemap = [

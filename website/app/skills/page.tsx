@@ -2,9 +2,10 @@ import { getLiveBrains, SKILLS } from "@/lib/brains";
 import { getAllDemos } from "@/lib/skill-demos";
 import { SkillJobs } from "@/components/SkillJobs";
 import Link from "next/link";
+import { SITE } from "@/lib/site-config";
 
 export const metadata = {
-  title: "Skills — brainsforagents",
+  title: `Skills — ${SITE.name}`,
   description:
     "Eight thinking skills organized by the job: decide, create, learn — plus /board to convene five minds. Try them live.",
 };

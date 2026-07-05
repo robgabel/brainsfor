@@ -16,6 +16,8 @@
 //
 // The pack JSON's atoms already carry every DbAtom field, so this is a 1:1 read.
 
+import { SITE } from "./site-config";
+
 const SLUG_RE = /^[a-z][a-z0-9-]{1,60}$/;
 
 export interface DbAtom {
@@ -43,7 +45,7 @@ export interface DbAtom {
 function siteOrigin(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
   if (explicit) return explicit.replace(/\/+$/, "");
-  return "https://brainsforagents.com";
+  return SITE.origin;
 }
 
 const atomCache = new Map<string, DbAtom[]>();
