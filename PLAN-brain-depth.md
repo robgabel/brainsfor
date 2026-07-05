@@ -69,6 +69,15 @@ Total: **~$10, one session.** The showcase brain stops being a press kit.
 
 ## Part 2 — Fleet plan (tiered by actual blocker, not by score)
 
+> **Coordination (2026-07-05, cross-session):** owner-of-the-apply runs the re-panel.
+> jesse-pujji apply is live (epistemic session) — its re-panel belongs to that thread.
+> **steve-jobs voice is CLAIMED by the launch-lineup session** (magical-hermann-e5e500).
+> gary-vee/sara-blakely/oprah applies+panels belong to whoever lands them post-throttle
+> (nothing applied yet; pre-resolver yields discarded). Gate chain is mandatory:
+> enrich-voice → verify-enrichment.py → apply the *verified* JSON only.
+> NOTE: this machine's IP gets YouTube-throttled under heavy transcript fetching —
+> space ingest runs; self-probing retry pipeline: /tmp/throttle_retry.sh.
+
 ### Tier 0 — voice-blocked, IN FLIGHT (gary-vee 80, sara-blakely 79, oprah 76, jesse-pujji 74)
 Pass persona ≥70 already; blocked ONLY by voice < 0.60. Voice pass running now (verbatim-only
 extraction + corpus-verified apply). Then re-panel the four. **Expected: 6/22 → 10/22 ship.** (~$5)
