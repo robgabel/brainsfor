@@ -1,9 +1,10 @@
 import { BRAINS } from "@/lib/brains";
 import { BrainCard } from "@/components/BrainCard";
 import { RequestBrainForm } from "@/components/RequestBrainForm";
+import { SITE } from "@/lib/site-config";
 
 export const metadata = {
-  title: "Brains — brainsforagents",
+  title: `Brains — ${SITE.name}`,
   description: "Browse and explore knowledge graphs of the world's best thinkers.",
 };
 

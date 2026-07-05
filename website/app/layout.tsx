@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { SITE } from "@/lib/site-config";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -25,21 +26,21 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   // Absolute base for OG/twitter image URLs — without it Next resolves
   // against VERCEL_URL/localhost and share cards break on the custom domain.
-  metadataBase: new URL("https://brainsforagents.com"),
-  title: "brainsforagents — Load a genius into your AI",
-  description:
-    "Knowledge graphs of the world's best thinkers, packaged as 8 AI skills you actually use. Think better in seconds.",
+  // Brand strings come from lib/site-config (build-time multi-tenant seam).
+  metadataBase: new URL(SITE.origin),
+  title: `${SITE.name} — ${SITE.tagline}`,
+  description: SITE.description,
   openGraph: {
-    title: "brainsforagents — Load a genius into your AI",
+    title: `${SITE.name} — ${SITE.tagline}`,
     description:
       "Knowledge graphs of the world's best thinkers, packaged as 8 AI skills you actually use.",
-    siteName: "brainsforagents",
-    url: "https://brainsforagents.com",
+    siteName: SITE.name,
+    url: SITE.origin,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "brainsforagents — Load a genius into your AI",
+    title: `${SITE.name} — ${SITE.tagline}`,
     description:
       "Knowledge graphs of the world's best thinkers, packaged as 8 AI skills you actually use.",
   },

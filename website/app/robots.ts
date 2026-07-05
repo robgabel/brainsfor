@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { SITE } from "@/lib/site-config";
 
 // Crawl policy for the public site. The agent surface (/AGENTS.md, /llms.txt,
 // /brains/* static packs) is intentionally crawlable — being discoverable by
@@ -11,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/dashboard", "/auth/", "/login"],
     },
-    sitemap: "https://brainsforagents.com/sitemap.xml",
+    sitemap: `${SITE.origin}/sitemap.xml`,
   };
 }

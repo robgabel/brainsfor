@@ -3,9 +3,10 @@ import { BRAINS } from "@/lib/brains";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { SignOutButton } from "@/components/SignOutButton";
+import { SITE } from "@/lib/site-config";
 
 export const metadata = {
-  title: "Dashboard — brainsforagents",
+  title: `Dashboard — ${SITE.name}`,
 };
 
 export default async function DashboardPage() {
