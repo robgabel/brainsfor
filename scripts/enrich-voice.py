@@ -81,6 +81,8 @@ Your job:
 
 **original_quote**: Find the passage in the source that this atom was extracted from and quote it VERBATIM — 1-3 contiguous sentences copied exactly from the source text (their provocative framing, specific metaphors, stories, emotional weight). Do NOT paraphrase, do NOT stitch fragments from different passages, and do NOT compose words {name} did not say — a synthesized "quote" is a fabrication and will be rejected by provenance QA. If no contiguous passage in the source expresses this atom, return null.
 
+**SPEAKER ATTRIBUTION — CRITICAL.** The source is often an interview, podcast, or panel transcript with MULTIPLE speakers (host, interviewer, other guests). The quote you return MUST be {name} speaking — their own words, not a question posed to them, not an interviewer's framing, not another guest. {name} is frequently the interviewer or host in their own sources (they ask the questions), so a passage appearing in "their" transcript is NOT automatically theirs. Use speaker labels if present ("Name:"), and otherwise the conversational structure — questions directed AT someone, second-person address ("you did X"), or a distinct voice — to tell whose words these are. If you are not confident the passage is {name}'s own speech, return null. A misattributed quote (someone else's words presented as {name}'s) is a worse failure than no quote at all — when in doubt, null.
+
 **implication**: What is the "so what"? What does this insight MEAN for someone making decisions? Write 1-2 sentences in {name}'s style about what this means for builders, leaders, or practitioners. If {name} explicitly states the implication, use their words. If not, write one faithful to their voice and thinking patterns.
 
 Return ONLY valid JSON:
