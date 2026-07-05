@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { SITE } from "@/lib/site-config";
 
 // The share card IS the side-by-side — beta users arrive from X/HN/Discord
 // links, so the delta has to be visible before the click. Statically
@@ -35,7 +36,7 @@ export default function Image() {
           }}
         >
           <div style={{ display: "flex", fontSize: 30, fontWeight: 600, color: "#ffffff" }}>
-            brainsforagents
+            {SITE.name}
           </div>
           <div style={{ display: "flex", fontSize: 24, color: INDIGO_SOFT }}>
             Load a genius into your AI.
@@ -134,7 +135,7 @@ export default function Image() {
             Free in beta — drop a zip into Claude Code, Cursor, or any agent.
           </div>
           <div style={{ display: "flex", color: INDIGO_SOFT }}>
-            brainsforagents.com
+            {SITE.origin.replace('https://', '')}
           </div>
         </div>
       </div>

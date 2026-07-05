@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { SITE } from "@/lib/site-config";
 
 export function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -11,7 +12,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-[1140px] items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link href="/" className="font-display text-xl font-semibold tracking-tight text-deep-ink">
-          brainsforagents
+          {SITE.name}
         </Link>
 
         {/* Desktop links — "For Agents" sits at equal weight with Brains/Skills.

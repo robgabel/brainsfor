@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { SITE } from "./site-config";
 
 // QA scorecard published by scripts/publish-qa-scores.py (persona-QA panel +
 // audit voice + numeric-claims verifier). Absent for brains not yet QA'd.
@@ -78,7 +79,12 @@ function loadBrains(): Brain[] {
     fs.readFileSync(indexPath, "utf-8"),
   );
 
-  return index.brains.filter((entry) => entry.status !== "hidden").map((entry) => {
+  return index.brains
+    .filter((entry) => entry.status !== "hidden")
+    // Sister-surface catalog subset (lib/site-config). null = full catalog —
+    // the flagship build is unaffected.
+    .filter((entry) => SITE.brainSlugs === null || SITE.brainSlugs.includes(entry.slug))
+    .map((entry) => {
     const configPath = fs.existsSync(path.join(BRAINS_DIR, entry.slug, "brain.json"))
       ? path.join(BRAINS_DIR, entry.slug, "brain.json")
       : path.join(process.cwd(), "public", "brains", entry.slug, "brain.json");

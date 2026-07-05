@@ -1623,9 +1623,16 @@ def phase_4_enrich(
     phase_header(4)
 
     # --- 4.1 Connection discovery (local, then LLM) ---
+    # FAST_MODEL, not `model`: the LLM pass here is per-cluster relationship
+    # tagging (contradicts/extends) — the same validation-bounded job
+    # enrich-connections.py and enrich-voice.py already run on Haiku
+    # (LLM_MODEL = FAST_MODEL). This was the last enrichment call-site still
+    # paying Sonnet rates. (Audit follow-up 2026-07-04: the "$15 Phase 4"
+    # estimate was stale — actual LLM cost here is ~20 cluster calls; the real
+    # per-brain cost drivers are Phase 2 extraction and Phase 3 synthesis.)
     step("Discovering connections...")
     if not dry_run:
-        conn_result = build_brain.stage_connections(brain_json, brain_dir, model, dry_run=dry_run)
+        conn_result = build_brain.stage_connections(brain_json, brain_dir, FAST_MODEL, dry_run=dry_run)
         if conn_result:
             success("Connections discovered")
         else:
