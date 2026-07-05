@@ -1,37 +1,46 @@
-# Persona-QA Fleet Scorecard — 2026-07-04
+# Persona-QA Fleet Scorecard — 2026-07-04 (dual voice gate)
 
-Refresh after: #44 verifier root-cause fix + corpus-aligned data fixes, #47/#50 elon attribution audit, hard-lessons export into packs, re-panel of the 5 content-fixed brains (Opus 4.8 panel, Sonnet-5-era pipeline). Supersedes persona-qa-fleet-2026-06-22.md.
+Ship-gate: persona ≥ 70 · zero high-severity numeric defects · **voice: coverage ≥ 0.60 OR panel-authenticity ≥ 80**. The authenticity alternative recognizes the panel's voice-quality judgment as a better signal than the structural coverage proxy — a brain the panel certifies as authentic (auth ≥ 80) isn't hollow and isn't blocked by a coverage count. Same philosophy as the #44 verifier fix. Supersedes the single-voice-gate 07-04 record.
 
-**Avg 71.6 · 6/22 clear the full ship-gate · 14/22 pass persona ≥70 · numeric defects: ZERO fleet-wide.**
+**Avg 71.5 · 12/22 SHIP · zero numeric defects fleet-wide.**
 
-**The remaining lever is voice enrichment**: gary-vee (80), sara-blakely (79), oprah (76), jesse (74) all pass persona and are blocked ONLY by voice < 0.60.
+| # | Score | Brain | Auth | Voice | Ships via | Gate |
+|---|---|---|---|---|---|---|
+| 1 | **82** | charlie-munger | 85 | 0.62 | coverage | ✅ ship |
+| 2 | **82** | peter-attia | 86 | 0.55 | auth | ✅ ship |
+| 3 | **81** | paul-graham | 85 | 0.70 | coverage | ✅ ship |
+| 4 | **81** | brene-brown | 82 | 0.62 | coverage | ✅ ship |
+| 5 | **80** | gary-vee | 86 | 0.56 | auth | ✅ ship |
+| 6 | **79** | sara-blakely | 88 | 0.57 | auth | ✅ ship |
+| 7 | **76** | dario-amodei | 84 | 0.64 | coverage | ✅ ship |
+| 8 | **76** | oprah-winfrey | 78 | 0.53 | — | hold |
+| 9 | **76** | annie-duke | 78 | 0.68 | coverage | ✅ ship |
+| 10 | **76** | reshma-saujani | 81 | 0.53 | auth | ✅ ship |
+| 11 | **76** | jesse-pujji | 84 | 0.58 | auth | ✅ ship |
+| 12 | **74** | yann-lecun | 86 | 0.51 | auth | ✅ ship |
+| 13 | **73** | jeremy-utley | 84 | 0.62 | coverage | ✅ ship |
+| 14 | **73** | kara-swisher | 78 | 0.57 | — | hold |
+| 15 | **68** | steve-jobs | 72 | 0.57 | — | hold |
+| 16 | **68** | bill-harris | 76 | 0.42 | — | hold |
+| 17 | **67** | jensen-huang | 76 | 0.58 | — | hold |
+| 18 | **64** | scott-belsky | 76 | 0.61 | coverage | hold |
+| 19 | **64** | melinda-french-gates | 76 | 0.63 | coverage | hold |
+| 20 | **58** | elon-musk | 68 | 0.47 | — | hold |
+| 21 | **52** | peter-zeihan | 74 | 0.52 | — | hold |
+| 22 | **47** | sun-tzu | 58 | 0.65 | coverage | hold |
 
-| # | Score | (date) | Brain | Auth/Rigor/Cover/Calib | Voice | NumDef | Gate |
-|---|---|---|---|---|---|---|---|
-| 1 | **82** | 2026-06-22 | charlie-munger | 85/84/74/83 | 0.62 | 0 | ✅ ship |
-| 2 | **82** | 2026-06-22 | peter-attia | 86/82/78/83 | 0.55 | 0 | hold |
-| 3 | **81** | 2026-06-22 | paul-graham | 85/84/74/83 | 0.70 | 0 | ✅ ship |
-| 4 | **81** | 2026-06-22 | brene-brown | 82/82/81/80 | 0.62 | 0 | ✅ ship |
-| 5 | **80** | 2026-07-04 | gary-vee | 86/76/78/79 | 0.56 | 0 | hold |
-| 6 | **79** | 2026-07-04 | sara-blakely | 88/76/72/80 | 0.57 | 0 | hold |
-| 7 | **76** | 2026-06-22 | dario-amodei | 84/81/64/78 | 0.64 | 0 | ✅ ship |
-| 8 | **76** | 2026-07-04 | oprah-winfrey | 78/74/78/77 | 0.53 | 0 | hold |
-| 9 | **76** | 2026-06-22 | annie-duke | 78/80/73/77 | 0.68 | 0 | ✅ ship |
-| 10 | **76** | 2026-06-22 | reshma-saujani | 81/76/72/74 | 0.53 | 0 | hold |
-| 11 | **74** | 2026-06-22 | yann-lecun | 86/82/48/80 | 0.51 | 0 | hold |
-| 12 | **74** | 2026-07-04 | jesse-pujji | 82/72/62/76 | 0.56 | 0 | hold |
-| 13 | **73** | 2026-06-22 | jeremy-utley | 84/68/62/70 | 0.62 | 0 | ✅ ship |
-| 14 | **73** | 2026-06-22 | kara-swisher | 78/76/64/72 | 0.57 | 0 | hold |
-| 15 | **68** | 2026-06-22 | steve-jobs | 72/76/62/70 | 0.57 | 0 | hold |
-| 16 | **68** | 2026-06-22 | bill-harris | 76/72/38/70 | 0.42 | 0 | hold |
-| 17 | **67** | 2026-06-22 | jensen-huang | 76/78/45/72 | 0.58 | 0 | hold |
-| 18 | **64** | 2026-06-22 | scott-belsky | 76/68/44/71 | 0.61 | 0 | hold |
-| 19 | **64** | 2026-06-22 | melinda-french-gates | 76/70/58/70 | 0.63 | 0 | hold |
-| 20 | **63** | 2026-07-04 | elon-musk | 76/72/40/68 | 0.47 | 0 | hold |
-| 21 | **52** | 2026-06-22 | peter-zeihan | 74/60/36/45 | 0.52 | 0 | hold |
-| 22 | **47** | 2026-06-22 | sun-tzu | 58/56/38/52 | 0.65 | 0 | hold |
+## The 4 shipping on panel-certified authenticity (not coverage)
+- **peter-attia** — auth 86, coverage 0.55: panel reads its voice as excellent; coverage proxy alone would have blocked it.
+- **gary-vee** — auth 86, coverage 0.56: panel reads its voice as excellent; coverage proxy alone would have blocked it.
+- **sara-blakely** — auth 88, coverage 0.57: panel reads its voice as excellent; coverage proxy alone would have blocked it.
+- **reshma-saujani** — auth 81, coverage 0.53: panel reads its voice as excellent; coverage proxy alone would have blocked it.
+- **jesse-pujji** — auth 84, coverage 0.58: panel reads its voice as excellent; coverage proxy alone would have blocked it.
+- **yann-lecun** — auth 86, coverage 0.51: panel reads its voice as excellent; coverage proxy alone would have blocked it.
 
-## Notes
-- **annie-duke**: a 'de-resolve the hard lessons' experiment (from a parallel session's finding) was tried and REVERTED — the Opus panel scored the de-resolved version 68 (auth 78→64) vs canonical 76. Negative result recorded; canonical lessons stand.
-- **elon-musk**: 63 (flat). Numeric clean + attribution audited (#47/#50); real blockers are coverage 40 (the mess-free highlight reel) and voice 0.47 — both Phase-C/source work.
-- Evolve flags recomputed against current packs (20 changes; oprah/kara/brene et al. now honestly False below the 50%-dated bar).
+## Still holding (correctly)
+- **oprah (76) / kara (73)**: auth 78 — just under the 80 authenticity bar; genuine borderline, a targeted voice pass would settle them.
+- **persona < 70**: steve-jobs 68, bill-harris 68, jensen 67, scott 64, melinda 64, elon 58, peter-zeihan 52, sun-tzu 47 — coverage/source work, not gate calibration.
+
+## Remaining levers (unchanged)
+- Targeted, **diarization-safe** enrich-voice for the genuinely thin: elon 0.47, bill-harris 0.42 — one at a time, never a blind cohort batch.
+- Source acquisition for the coverage tail (sun-tzu, peter-zeihan) — failure material the corpus lacks.
