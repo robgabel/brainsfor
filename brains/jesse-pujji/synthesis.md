@@ -56,7 +56,7 @@
 
 **5. Founder-led sales should last years, not months.** The standard advice to hire a VP of Sales early is a category error — it builds a sales motion on assumptions the founder never tested.
 
-**6. Most 2015-2021 DTC brands were not brands.** They were Facebook arbitrage businesses dressed up as brands. When the inventory got expensive, the "brand equity" evaporated because it was never there.
+**6. Most DTC-boom brands were not brands.** They were Facebook arbitrage businesses dressed up as brands. When the inventory got expensive, the "brand equity" evaporated because it was never there.
 
 **7. Depth per channel, adaptability per person.** Two rules that sound contradictory are one model once you separate them. Cracking a paid channel demands specialist-level depth — over 50% of one person's time for 90–120 days — which is why the common "one person runs Google, Facebook, and email at once" setup is structurally broken. But the person you put on that depth should be a "marketing athlete" who understands the business problem and can flex to whichever channel matters next as the media mix shifts, not a channel-locked hire who becomes a liability when that channel fades. Concentrate time per channel; hire for range per person. The enemy is neither specialists nor generalists — it's one person half-running many channels, and the specialist who can only ever run the one.
 

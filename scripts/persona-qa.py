@@ -154,6 +154,20 @@ def render_constitution(syn: dict) -> str:
             d = it.get("desc") or it.get("description") or ""
             lines.append(f"- {t}" + (f" — {d}" if d else ""))
         parts.append(f"### {label}\n" + "\n".join(lines))
+    # Optional section: only rendered when present, so brains without it are not
+    # flagged empty. Live uncertainties are unresolved-by-design open bets — judges
+    # must see them or they cannot assess whether the brain holds real doubt.
+    lu = syn.get("live_uncertainties") or []
+    if lu:
+        lu_lines = []
+        for it in lu:
+            t = it.get("title") or it.get("name") or ""
+            d = it.get("desc") or it.get("description") or ""
+            lu_lines.append(f"- {t}" + (f" — {d}" if d else ""))
+        parts.append(
+            "### LIVE UNCERTAINTIES (open bets held below 100% — unresolved by design)\n"
+            + "\n".join(lu_lines)
+        )
     return "\n\n".join(parts)
 
 
