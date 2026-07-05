@@ -13,7 +13,7 @@
       "inspired_by": 30,
       "extends": 77
     },
-    "last_updated": "2026-07-04",
+    "last_updated": "2026-07-05",
     "coverage": "Joe Rogan Experience episodes, Lex Fridman Podcast episodes, TED talks, SXSW interviews, Code Conference appearances, Wikipedia biography, and major media profiles",
     "bio": "Elon Musk is a serial entrepreneur and engineer who has fundamentally transformed multiple industries through companies like Tesla, SpaceX, Neuralink, and The Boring Company. His approach combines first principles thinking with an ambitious long-term vision for humanity's survival and expansion beyond Earth.",
     "possessive": "his"
@@ -1674,6 +1674,36 @@
       ]
     },
     {
+      "id": "cdeaa4cb-3445-4cb9-8cdc-4415ee148cdf",
+      "content": "The restoration of free speech on X created competitive pressure across all major social media platforms, forcing policy changes at Facebook and YouTube that would not have occurred otherwise. A single sufficiently large free-speech platform raises the baseline standard for the entire ecosystem.",
+      "cluster": "media_and_communication",
+      "topics": [
+        "platform competition",
+        "free speech",
+        "Facebook",
+        "YouTube",
+        "policy reform"
+      ],
+      "source_ref": "Joe Rogan Experience #2404 - Elon Musk",
+      "source_url": "https://www.youtube.com/watch?v=O4wBUysNe2k",
+      "source_date": "2025-10-31",
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "contested",
+      "original_quote": "It also changed the benchmark for all the other platforms. You can't just openly censor people when X is available. So Facebook announced they were changing, YouTube announced they were changing their policies and they're kind of forced to.",
+      "implication": "Platform competition on speech norms \u2014 not just features or monetization \u2014 is a real market dynamic; one large platform committing to openness creates systemic pressure that benefits users across the entire ecosystem.",
+      "proof_ref": "Characterization and outcomes disputed: platform-policy researchers and reporting contest both the 'restoration of free speech' framing and the claimed industry-wide effect",
+      "verified_at": "2026-07-04",
+      "connections": [
+        {
+          "target_id": "b302ae3b-14c4-452c-abfb-21708664b7bb",
+          "relationship": "related",
+          "confidence": 0.23
+        }
+      ]
+    },
+    {
       "id": "b5ecc9d5-1a39-4f45-b809-22508f9663b2",
       "content": "Musk has pointed out that the rate of improvement \u2014 the second derivative \u2014 matters more than current performance level when evaluating a team or technology. A team that is improving at ten percent per month will eventually surpass a team that is twice as capable but flat. This rate-of-rate thinking means that the correct investment is in systems that accelerate learning, not just in systems that perform well today.",
       "cluster": "first_principles",
@@ -1769,34 +1799,6 @@
       "claim_type": "opinion",
       "verification": "unverified",
       "implication": "Companies that intentionally evolve product aesthetics \u2014 rather than iterating conservatively on proven forms \u2014 can capture cultural relevance and signal genuine technological progress to consumers."
-    },
-    {
-      "id": "cdeaa4cb-3445-4cb9-8cdc-4415ee148cdf",
-      "content": "The restoration of free speech on X created competitive pressure across all major social media platforms, forcing policy changes at Facebook and YouTube that would not have occurred otherwise. A single sufficiently large free-speech platform raises the baseline standard for the entire ecosystem.",
-      "cluster": "media_and_communication",
-      "topics": [
-        "platform competition",
-        "free speech",
-        "Facebook",
-        "YouTube",
-        "policy reform"
-      ],
-      "source_ref": "Joe Rogan Experience #2404 - Elon Musk",
-      "source_url": "https://www.youtube.com/watch?v=O4wBUysNe2k",
-      "source_date": "2025-10-31",
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "It also changed the benchmark for all the other platforms. You can't just openly censor people when X is available. So Facebook announced they were changing, YouTube announced they were changing their policies and they're kind of forced to.",
-      "implication": "Platform competition on speech norms \u2014 not just features or monetization \u2014 is a real market dynamic; one large platform committing to openness creates systemic pressure that benefits users across the entire ecosystem.",
-      "connections": [
-        {
-          "target_id": "b302ae3b-14c4-452c-abfb-21708664b7bb",
-          "relationship": "related",
-          "confidence": 0.23
-        }
-      ]
     },
     {
       "id": "406333f9-65a5-4082-b81c-197622f56713",
@@ -2110,8 +2112,10 @@
       "confidence": 0.95,
       "confidence_tier": "high",
       "claim_type": "fact",
-      "verification": "unverified",
+      "verification": "contested",
       "implication": "Bypassing communications gatekeepers enables authentic engagement but creates legal and reputational risks that can have real consequences for public companies and their shareholders.",
+      "proof_ref": "'Never shared access / no approval process' contradicted by documented staff assistance with the account; the broader unfiltered-communication claim is accurate",
+      "verified_at": "2026-07-04",
       "connections": [
         {
           "target_id": "817c2698-c4b9-46c8-88fd-4e50b56a4fde",
@@ -3850,33 +3854,6 @@
       ]
     },
     {
-      "id": "2cce9505-a1bd-4e89-946a-59ff0eb53401",
-      "content": "Tesla's AI5 chip represents a 40x improvement over AI4 for key workloads, achieved by co-designing hardware and software simultaneously at a very fine-grained level. The 8x raw compute improvement is multiplied by 5x optimization gains from addressing specific silicon-level bottlenecks.",
-      "cluster": "vertical_integration",
-      "topics": [
-        "AI_hardware",
-        "chip_design",
-        "tesla",
-        "co-design"
-      ],
-      "source_ref": "Elon Musk on DOGE, Optimus, Starlink Smartphones, Evolving with AI, Why the West is Imploding",
-      "source_url": "https://www.youtube.com/watch?v=qeZqZBRA-6Q",
-      "source_date": "2025-09-10",
-      "confidence": 0.95,
-      "confidence_tier": "high",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "original_quote": "By some metrics the improvement in AI5 will be 40 times better than AI4. This is because we work so closely at a very fine grade level on the AI software and the AI hardware. So we know exactly where the limiting factors are and the AI hardware and software teams are co-designing the chip.",
-      "implication": "Hardware-software co-design at the silicon level unlocks multiplicative \u2014 not merely additive \u2014 performance gains that cannot be achieved by using off-the-shelf chips.",
-      "connections": [
-        {
-          "target_id": "2be87476-ecb7-4ce2-9196-ccb2a7fe168e",
-          "relationship": "related",
-          "confidence": 0.24
-        }
-      ]
-    },
-    {
       "id": "e5ce0cff-f524-470c-a292-d63922ac84c0",
       "content": "The introduction of shared autonomous vehicles will paradoxically increase traffic congestion, not reduce it, because the per-mile cost will drop below bus fares, dramatically increasing the total number of vehicle trips. This means infrastructure solutions like tunnels are still necessary even in a fully autonomous world.",
       "cluster": "sustainable_energy",
@@ -3928,6 +3905,35 @@
       "connections": [
         {
           "target_id": "e5ce0cff-f524-470c-a292-d63922ac84c0",
+          "relationship": "related",
+          "confidence": 0.24
+        }
+      ]
+    },
+    {
+      "id": "2cce9505-a1bd-4e89-946a-59ff0eb53401",
+      "content": "Tesla's AI5 chip represents a 40x improvement over AI4 for key workloads, achieved by co-designing hardware and software simultaneously at a very fine-grained level. The 8x raw compute improvement is multiplied by 5x optimization gains from addressing specific silicon-level bottlenecks.",
+      "cluster": "vertical_integration",
+      "topics": [
+        "AI_hardware",
+        "chip_design",
+        "tesla",
+        "co-design"
+      ],
+      "source_ref": "Elon Musk on DOGE, Optimus, Starlink Smartphones, Evolving with AI, Why the West is Imploding",
+      "source_url": "https://www.youtube.com/watch?v=qeZqZBRA-6Q",
+      "source_date": "2025-09-10",
+      "confidence": 0.95,
+      "confidence_tier": "high",
+      "claim_type": "fact",
+      "verification": "contested",
+      "original_quote": "By some metrics the improvement in AI5 will be 40 times better than AI4. This is because we work so closely at a very fine grade level on the AI software and the AI hardware. So we know exactly where the limiting factors are and the AI hardware and software teams are co-designing the chip.",
+      "implication": "Hardware-software co-design at the silicon level unlocks multiplicative \u2014 not merely additive \u2014 performance gains that cannot be achieved by using off-the-shelf chips.",
+      "proof_ref": "Manufacturer's claim (Tesla) \u2014 no independent benchmark of the AI5 '40x over AI4' figure",
+      "verified_at": "2026-07-04",
+      "connections": [
+        {
+          "target_id": "2be87476-ecb7-4ce2-9196-ccb2a7fe168e",
           "relationship": "related",
           "confidence": 0.24
         }
@@ -10578,33 +10584,6 @@
       ]
     },
     {
-      "id": "22faa633-8517-4af8-b866-dfb53c87f57f",
-      "content": "Musk co-founded PayPal, then extended his ambitions into Tesla (electric vehicles), SpaceX (space colonization), tunneling via The Boring Company, and battery/energy storage ventures. This trajectory illustrates a pattern of using capital and credibility from one success to fund increasingly audacious bets.",
-      "cluster": "entrepreneurship",
-      "topics": [
-        "serial_entrepreneurship",
-        "PayPal",
-        "Tesla",
-        "SpaceX",
-        "capital_recycling"
-      ],
-      "source_ref": "Guardian: Meet the Musk Family",
-      "source_url": "https://www.theguardian.com/technology/shortcuts/2018/feb/21/meet-elon-musk-family",
-      "source_date": "2018-02-21",
-      "confidence": 0.85,
-      "confidence_tier": "medium",
-      "claim_type": "fact",
-      "verification": "unverified",
-      "implication": "Successful entrepreneurs can use exits from earlier ventures as launching pads for civilization-scale projects \u2014 the key is deliberately reinvesting proceeds into higher-stakes missions rather than retiring on success.",
-      "connections": [
-        {
-          "target_id": "97316d4d-2d1e-4726-8b9b-373c0c4489d5",
-          "relationship": "related",
-          "confidence": 0.39
-        }
-      ]
-    },
-    {
       "id": "05706509-aa88-4500-bd61-17a1797f756d",
       "content": "Musk has described his original motivation for getting involved in sustainable energy as stemming from a broader concern for the long-term future of human civilization. He concluded in the late 1990s that two of the most important problems facing humanity were the risk of single-planet extinction and the unsustainability of fossil fuel dependence \u2014 and that these two concerns together drove him toward SpaceX and Tesla respectively. The businesses were not primary goals; they were chosen as the most effective vehicles for addressing the underlying civilizational risks he had identified.",
       "cluster": "sustainable_energy",
@@ -10628,6 +10607,35 @@
           "target_id": "34058a27-70c4-4bf3-ab98-ff815b9011f9",
           "relationship": "related",
           "confidence": 0.24
+        }
+      ]
+    },
+    {
+      "id": "22faa633-8517-4af8-b866-dfb53c87f57f",
+      "content": "Musk co-founded PayPal, then extended his ambitions into Tesla (electric vehicles), SpaceX (space colonization), tunneling via The Boring Company, and battery/energy storage ventures. This trajectory illustrates a pattern of using capital and credibility from one success to fund increasingly audacious bets.",
+      "cluster": "entrepreneurship",
+      "topics": [
+        "serial_entrepreneurship",
+        "PayPal",
+        "Tesla",
+        "SpaceX",
+        "capital_recycling"
+      ],
+      "source_ref": "Guardian: Meet the Musk Family",
+      "source_url": "https://www.theguardian.com/technology/shortcuts/2018/feb/21/meet-elon-musk-family",
+      "source_date": "2018-02-21",
+      "confidence": 0.85,
+      "confidence_tier": "medium",
+      "claim_type": "fact",
+      "verification": "contested",
+      "implication": "Successful entrepreneurs can use exits from earlier ventures as launching pads for civilization-scale projects \u2014 the key is deliberately reinvesting proceeds into higher-stakes missions rather than retiring on success.",
+      "proof_ref": "Disputed title: Musk co-founded X.com, which merged with Confinity (the original PayPal); 'PayPal co-founder' is contested \u2014 automated verification returned opposite verdicts on identical claims",
+      "verified_at": "2026-07-04",
+      "connections": [
+        {
+          "target_id": "97316d4d-2d1e-4726-8b9b-373c0c4489d5",
+          "relationship": "related",
+          "confidence": 0.39
         }
       ]
     },
@@ -12274,8 +12282,10 @@
       "confidence": 0.85,
       "confidence_tier": "medium",
       "claim_type": "fact",
-      "verification": "unverified",
+      "verification": "contested",
       "implication": "Strategic sequencing of ventures matters: building and exiting a high-margin software business can generate the capital needed to enter hardware and infrastructure industries where the barriers to entry are financial as much as intellectual.",
+      "proof_ref": "Disputed title: Musk co-founded X.com, which merged with Confinity (the original PayPal); 'PayPal co-founder' is contested \u2014 automated verification returned opposite verdicts on identical claims",
+      "verified_at": "2026-07-04",
       "connections": [
         {
           "target_id": "63b1af3e-28f3-4831-aa62-0fa52deeea5d",
