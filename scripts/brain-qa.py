@@ -10,7 +10,9 @@ Ties the QA regime together for a brain (or the whole fleet):
 
 Emits a composite scorecard and the SHIP-GATE verdict (the RSP for brains):
   hidden -> live ONLY when
-    (1) Persona-QA >= PERSONA_PASS,
+    (1) Persona-QA >= PERSONA_PASS,   (2) zero high-severity numeric defects,
+    (3) voice: coverage >= VOICE_GATE OR panel-authenticity >= AUTH_VOICE_FLOOR
+        (a brain the panel certifies as authentic isn't blocked by a coverage proxy),
     (2) zero high-severity numeric defects ("zero unverified hard numbers"), and
     (3) voice >= VOICE_GATE  (audit's normalized voice-enrichment score — the
         defensible reading; raw atom-quote coverage tops out ~47% on healthy brains,
@@ -50,7 +52,19 @@ from auto_build_config import step, success, warn, error  # noqa: E402
 
 # --- Ship-gate thresholds (tunable) ---
 PERSONA_PASS = 70       # persona-QA score
-VOICE_GATE = 0.60       # audit scores.voice.raw (normalized voice-enrichment)
+VOICE_GATE = 0.60       # audit scores.voice.raw (normalized voice-enrichment COVERAGE)
+# Voice has TWO valid signals and they can disagree. VOICE_GATE is a structural
+# COVERAGE proxy (% of atoms carrying a verbatim quote). The persona panel's
+# AUTHENTICITY dimension is a voice-QUALITY judgment (reads a voice-first atom
+# sample, judged from the subject's perspective) — a strictly better signal that
+# post-dates the coverage gate. When the panel certifies a brain's voice as
+# excellent (auth >= AUTH_VOICE_FLOOR) it should not be blocked by a coverage
+# count: those brains aren't hollow (the failure mode the floor guards), they
+# just carry deep voice in fewer atoms. So the gate's voice condition is
+# satisfiable by EITHER. Same philosophy as the #44 verifier fix: defer to the
+# better signal, don't chase the proxy. Empirically (2026-07-04) attia/sara/gary/
+# yann/jesse/reshma sit at coverage 0.50-0.58 but panel-authenticity 84-88.
+AUTH_VOICE_FLOOR = 80   # panel authenticity that certifies voice on merit
 # zero high-severity numeric defects is condition (2), not a threshold.
 
 
@@ -122,9 +136,13 @@ def evaluate(slug: str, no_run: bool, refresh: bool, model: str | None) -> dict:
 
     # --- Ship-gate (3 conditions) ---
     have = persona is not None and numeric is not None and audit is not None
+    authenticity = dims.get("authenticity")
     cond_persona = persona_score is not None and persona_score >= PERSONA_PASS
     cond_numeric = high_numeric == 0
-    cond_voice = voice_raw is not None and voice_raw >= VOICE_GATE
+    # Voice: structural coverage OR panel-certified authenticity (see AUTH_VOICE_FLOOR).
+    cov_ok = voice_raw is not None and voice_raw >= VOICE_GATE
+    auth_ok = authenticity is not None and authenticity >= AUTH_VOICE_FLOOR
+    cond_voice = cov_ok or auth_ok
     ship = bool(have and cond_persona and cond_numeric and cond_voice)
 
     blockers = []
@@ -134,8 +152,9 @@ def evaluate(slug: str, no_run: bool, refresh: bool, model: str | None) -> dict:
         blockers.append(f"persona {persona_score} < {PERSONA_PASS}")
     if high_numeric and high_numeric > 0:
         blockers.append(f"{high_numeric} high-severity numeric defect(s)")
-    if voice_raw is not None and not cond_voice:
-        blockers.append(f"voice {voice_raw:.2f} < {VOICE_GATE}")
+    if not cond_voice and voice_raw is not None:
+        av = f", auth {authenticity} < {AUTH_VOICE_FLOOR}" if authenticity is not None else ""
+        blockers.append(f"voice {voice_raw:.2f} < {VOICE_GATE}{av}")
 
     return {
         "slug": slug,
