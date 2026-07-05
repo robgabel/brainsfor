@@ -1,0 +1,44 @@
+{
+  "slug": "jesse-pujji",
+  "person": "Jesse Pujji",
+  "date": "2026-07-05",
+  "total_claims": 7,
+  "counts": {
+    "grounded": 5,
+    "superseded": 0,
+    "ungrounded": 2,
+    "unverifiable": 0
+  },
+  "defect_count": 2,
+  "high_severity_count": 0,
+  "fidelity_penalty": 16,
+  "cost": 0.1221,
+  "defects": [
+    {
+      "where": "hard_lessons[0].cost",
+      "claim": "When we ran a sale process in 2015 the offers came in at 8 figures \u2014 below the 9 figures I was sure we deserved \u2014 so I held out and didn't sell.",
+      "figures": [
+        "2015",
+        "8 figures",
+        "9 figures"
+      ],
+      "status": "ungrounded",
+      "severity": "medium",
+      "corpus_value": "8 figures / 9 figures (no year given)",
+      "evidence_quote": "We took the business out for a sale process, but ended up with numbers below our expectations. (We were hoping for 9 figures and got 8 figures.)",
+      "why": "The 8/9 figure amounts are grounded, but the specific year 2015 is not stated anywhere in the corpus and is not verifiable public knowledge."
+    },
+    {
+      "where": "hard_lessons[0].cost",
+      "claim": "Then in 2017, when Red Ventures told us they would not buy the rest of the company, I went into a tailspin: unmotivated, burnt out, showing up at 11 and leaving at 4 for months, carrying the regret of having held on too long.",
+      "figures": [
+        "2017"
+      ],
+      "status": "ungrounded",
+      "severity": "medium",
+      "corpus_value": "no year given for Red Ventures decision",
+      "evidence_quote": "For 6 months, I didn't go into work until 11 am and left at 4 pm. I had no idea what was next and questioned everything...",
+      "why": "The emotional/behavioral description matches, but the specific year 2017 and the claim that Red Ventures 'told us they would not buy the rest of the company' are not supported by any dated quote in the corpus."
+    }
+  ]
+}
