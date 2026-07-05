@@ -1,0 +1,170 @@
+{
+  "slug": "jesse-pujji",
+  "target": "Jesse Pujji",
+  "date": "2026-07-05",
+  "persona_qa_score": 76,
+  "raw_chair_score": 76,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 0,
+  "pass": true,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 84,
+    "rigor": 76,
+    "coverage": 64,
+    "calibration": 78
+  },
+  "confidence": "high",
+  "ship_recommendation": "hold",
+  "summary": "Jesse Pujji would recognize himself in this brain \u2014 the cash-flow-as-scoreboard spine, the bootstrapping-as-discipline conviction, and the self-implicating $60-75M ego confession all ring true, warts-and-all voice included. But recognizing yourself and being fully captured are two different bets. This is a well-reasoned, coherent brain that is also suspiciously tidy: every failure resolves into wisdom, one dominant model (bootstrapping/unit economics) carries nearly every conclusion, and the boundary conditions where his own theses break go unmapped. My confidence in the diagnosis is high; my recommendation is hold, not ship, because the fixes are concrete and the numeric gate is technically passed but leaning on one ungrounded medium claim.",
+  "calibration_note": "The three judges are well-calibrated and their dispersion is informative, not noisy \u2014 I trust all three. Swisher (84) and Munger (78) independently converged on the SAME weakness from different angles: the brain is self-flattering / man-with-a-hammer. When two judges reach the same conclusion via different routes, that's a strong signal, not redundancy \u2014 I'm treating it as high-conviction. Brown's 62 is the honest outlier and the most valuable input: she's flagging that resolved-failure is not the same as live-exposure, which is a genuine coverage gap, not her over-reacting to emotional absence. I nudged rigor down 78->76 because Munger himself flagged four discrete defects (testimonial fluff, unreconciled specialist/generalist contradiction, unchecked vendor ROI, single-model dominance) that his own score arguably under-penalized. I nudged coverage 62->64, a hair up, because Brown may be slightly over-indexing on 'man in the arena still bleeding' \u2014 some operators genuinely metabolize fast, and punishing an honest brain for surfacing resolved rather than raw wounds risks resulting. Numeric gate: 0 HIGH defects, so the hard rule does not block ship \u2014 but one medium ungrounded claim on the signature $60-75M lesson is load-bearing enough that it should be grounded before shipping.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Map the break-case for the dominant model: add explicit atoms where bootstrapping is WRONG and VC is genuinely correct (winner-take-all network markets, capital-as-moat businesses). Force Pujji to name the boundary of his own thesis.",
+      "why": "Both Munger and Swisher independently flagged single-model dominance. A latticework that never shows its own edges reads as ideology, not judgment \u2014 this is the single highest-leverage fix for making the brain trustworthy under adversarial questioning."
+    },
+    {
+      "priority": 2,
+      "fix": "Ground the $60-75M offer figure with a datable source, and add at least one LIVE, unresolved bet \u2014 a current Gateway X decision where Pujji does not yet know if he's right and can articulate his kill criteria.",
+      "why": "Fixes the one medium numeric defect on a load-bearing lesson AND directly addresses Brown's core critique. A brain that only shows metabolized failures teaches resulting; showing an open bet with pre-committed exit conditions is where the real decision-quality signal lives."
+    },
+    {
+      "priority": 3,
+      "fix": "Resolve the specialist-vs-generalist contradiction: the constitution says 'channel specialists beat generalists almost always' while an atom praises hiring 'marketing athletes' generalists. State the discriminating variable (stage? channel maturity?).",
+      "why": "Munger caught an unreconciled contradiction \u2014 an unresolved internal conflict makes the brain unreliable at exactly the tactical questions it should be strongest on."
+    },
+    {
+      "priority": 4,
+      "fix": "Strip or reclassify the testimonial-fluff atoms ('Super knowledgeable on consumer!', 'I love helping others') \u2014 these are marketing copy, not distilled thinking, and dilute the signal density.",
+      "why": "Cheap to fix, and each fluff atom that survives lowers the trust ceiling on every genuine atom next to it."
+    },
+    {
+      "priority": 5,
+      "fix": "Add a skeptic's check on self-reported vendor ROI (the Kahani '10x ROI' claim) \u2014 note who measured it and against what baseline.",
+      "why": "Accepting a portfolio company's own ROI number uncritically is exactly the motivated-reasoning tell Pujji himself would flag in others; the brain should hold him to his own standard."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 84,
+      "recognizable": true,
+      "verdict": "This is the real Pujji, not a cardboard cutout of him. The brain has a coherent spine \u2014 cash flow as scoreboard, bootstrapping as discipline, founder-led sales as mandatory education \u2014 and it's backed by receipts with actual numbers and self-implicating admissions (turning down the $60-75M offer, the post-exit motivational collapse). The verbatim voice, transcription warts and all, reads like an actual person talking, not a sanitized LinkedIn thought-leader. My main reservation is that the constitution is almost suspiciously self-flattering: every 'hard lesson' resolves into wisdom, and the contrarian positions are all positions that make him look like the smart adult in the room. Where's the take that would make his own LPs or portfolio CEOs wince?"
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 78,
+      "recognizable": true,
+      "verdict": "This is real, hard-won operating wisdom, not platitudes \u2014 the man has receipts, specific dollar figures, and a coherent latticework built around one dominant model: cash flow as the honest scoreboard, with inversion baked in through his 'optimize for what you want, not against failure' lesson. My chief complaint is that the whole edifice leans on a single mental model until it becomes man-with-a-hammer territory; nearly everything routes back to bootstrapping and unit economics, and I want to see where those models break. But he owns his ego-driven $60M blunder with a signature I recognize as genuine, and that alone separates this from the vast sea of LinkedIn wisdom-merchants.",
+      "strengths": [
+        "The hard lessons carry actual receipts and dollar figures \u2014 turning down $60-75M for Ampush and 'drifting for years' is a specific, costly, ego-driven mistake with a real signature, exactly the kind of folly I collect. It inverts properly: he learned 'the market is never wrong about valuation.'",
+        "Incentive archaeology is present and sharp: the ATT/Apple-vs-Meta read ('make no mistake apple is being strategic they're trying to take this ad market') and 'sell to price-insensitive PE buyers because a single decision on a $500M deal dwarfs your fee' show he traces behavior back to who-benefits.",
+        "The DTC-brands position is genuinely contrarian and correct \u2014 'most 2015-2021 DTC brands were Facebook arbitrage dressed up as brands, and when CPMs rose the brand equity evaporated because it was never there.' That is homework, not consensus.",
+        "Clear edge-of-competence discipline: performance marketing, bootstrapping, agency productization are his circle, and he stays inside it. The 'unfair advantage as starting point ahead of market size' principle is real circle-of-competence thinking."
+      ],
+      "weaknesses": [
+        "Man-with-a-hammer risk: bootstrapping and cash-flow are load-bearing for nearly every conclusion. A true latticework would show him stress-testing WHEN VC actually IS correct \u2014 winner-take-all network markets \u2014 rather than treating it as almost always the riskier path. He gestures at this but doesn't map the boundary rigorously.",
+        "Some atoms are marketing puffery, not insight \u2014 'Super knowledgeable on consumer! Had some really good specific insights' and 'I love helping others, especially entrepreneurs. I can't wait to help you on your business journey!' are testimonial slop with no reasoning content. These pollute an otherwise rigorous set.",
+        "The internal contradiction on generalists-vs-specialists is unresolved: the constitution insists 'channel specialists beat marketing generalists almost always,' yet the building_teams atom says he hired 'marketing athletes... as opposed to very specific channel level specialists.' A rigorous brain reconciles this; here it just sits as a live contradiction.",
+        "The Kahani/Gateway X 10x-ROI claims read like a sales deck ('a 10x ROI in terms of what we charge... conversion up by 50%'). Self-reported vendor ROI with no independent check is exactly the kind of number I discount heavily."
+      ],
+      "flags": [
+        {
+          "issue": "Testimonial fluff masquerading as distilled thinking",
+          "evidence": "'I love helping others, especially entrepreneurs. I can't wait to help you on your business journey!'",
+          "fix": "Strip promotional testimonials and self-marketing atoms entirely; they contain zero reasoning and dilute the genuine insight density."
+        },
+        {
+          "issue": "Unreconciled contradiction on specialists vs generalists",
+          "evidence": "Constitution: 'Channel specialists beat marketing generalists, almost always' vs atom: 'I definitely went with the ampush model of hiring marketing athletes... as opposed to very specific channel level specialists.'",
+          "fix": "Add an atom resolving the tension \u2014 presumably early depth-in-one-channel via specialists, then flex-athletes at scale \u2014 and state the threshold that switches the answer."
+        },
+        {
+          "issue": "Self-reported vendor ROI accepted without a skeptic's check",
+          "evidence": "'a sort of a 10x ROI in terms of what we charge for the software... conversion up by 50%'",
+          "fix": "Flag these as vendor-supplied figures; note what independent measurement would confirm them, since a man selling the software has every incentive to inflate the number."
+        },
+        {
+          "issue": "Single-model dominance without a break-case",
+          "evidence": "'Venture capital is often the riskier path' stated as near-universal, while conceding VC 'works for true winner-take-all markets like consumer social or enterprise software.'",
+          "fix": "Add explicit criteria for when the bootstrapping model should be abandoned, so the brain can invert its own dominant thesis rather than torturing every business to fit it."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 62,
+      "recognizable": true,
+      "verdict": "There's a real human breathing underneath this, and I want to name that first \u2014 the hard lessons about turning down the $60-75M offer, the post-exit motivational collapse, and optimizing against failure instead of toward a chosen life are genuine acts of self-exposure with cost attached. But the pack is heavily weighted toward the operator's highlight reel, and the emotional exposure that IS present is almost entirely retrospective and safely metabolized. I'm seeing the man who has already made meaning of his failures, not the man in the arena still shaking from them.",
+      "strengths": [
+        "The post-exit collapse atom is the most honest thing here \u2014 'you got it, it wasn't as good as you thought it was going to be, and now you're...' names the shame of building your identity on an achievement that hollowed out. That's real vulnerability, not performative disclosure.",
+        "The $60-75M ego-over-market lesson has a genuine cost attached ('years of drift and regret') and a specific behavioral change \u2014 this is guilt-work ('I did something') rather than shame-collapse, which is exactly the adaptive kind of accountability I look for.",
+        "'Zero-to-$30M was never the clean line' and his stated commitment to 'teach the struggle, not the sanitized arc' shows he understands the difference between story-as-data and highlight reel. He knows the reel deletes things."
+      ],
+      "weaknesses": [
+        "The failures are all safely past-tense and already-resolved. Every hard lesson resolves into a tidy 'Changed:' with a clean principle. Where is the doubt he hasn't metabolized yet? The fear he still carries into Gateway X? Real people are still bleeding somewhere \u2014 this brain has bandaged every wound.",
+        "The inner-work language ('Conscious Leadership,' 'metabolizing emotions,' 'in-the-moment self-awareness') is claimed as the operating system, but it's described as a capability he ACHIEVED, not a struggle he's still inside. Coaching 'transformed' his presence \u2014 past tense, victory lap. I want the session where the coach named something he didn't want to hear.",
+        "No relational cost anywhere. Three co-founders bought a domain in college \u2014 what happened to those friendships through the drift, the near-death moments, the failed sale? Business failure is almost always also a story of strained marriages, betrayed partners, disappointed teams. That entire dimension is absent.",
+        "The 'client losses and moments the business could have died' are gestured at in aggregate but never made specific. One named client loss, one named 3am fear, would make this real. Aggregate struggle is the counterfeit of confessed struggle."
+      ],
+      "flags": [
+        {
+          "issue": "Emotional highlight reel \u2014 inner work presented as completed achievement rather than ongoing exposure",
+          "evidence": "'I don't know what you've done, but when I meet with you...' \u2014 the coaching payoff is delivered as external validation of a transformation, with no counterweight of what remained hard or unfinished",
+          "fix": "Add at least one atom where the coaching or self-awareness work surfaced something he's still working on or failed to change \u2014 a recurring pattern that self-awareness named but didn't fix"
+        },
+        {
+          "issue": "The cost of failures is aggregated, not specific \u2014 'struggle' as category, not as scene",
+          "evidence": "'Client losses, real personal strain, and moments the business genuinely could have died \u2014 the parts the highlight reel quietly deletes.'",
+          "fix": "Replace with one named episode: which client, what month, what he felt walking into the office the next day, who he had to tell"
+        },
+        {
+          "issue": "Zero relational or personal-life cost \u2014 the 'financial upside' of 'personal development' is present but the human relationships that pay for a decade of bootstrapping are invisible",
+          "evidence": "'Entrepreneurship is personal development with financial upside \u2014 the business is the vehicle; the founder is the product.'",
+          "fix": "Add a hard lesson about what the drift years cost him relationally \u2014 a co-founder, a spouse, a friendship, a team's trust \u2014 with the same receipts standard applied to the business failures"
+        },
+        {
+          "issue": "Doubt is fully resolved into principle everywhere; no live uncertainty about current bets",
+          "evidence": "Gateway X is described only in confident model terms ('we expect them to get profitable in the first year') with no atom expressing what keeps him up about it now",
+          "fix": "Add an atom where he admits a current fear or unproven assumption in the Gateway X thesis \u2014 the thing he's not sure will work"
+        }
+      ]
+    }
+  ],
+  "cost": 0.3903
+}
