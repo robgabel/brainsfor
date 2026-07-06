@@ -92,6 +92,32 @@ def _call_with_timeout(fn, seconds, what):
             raise TimeoutError(f"{what} timed out after {seconds}s")
 
 
+def _build_ytt() -> "YouTubeTranscriptApi":
+    """Construct a YouTubeTranscriptApi, routing through a residential proxy when
+    configured. YouTube hard-blocks datacenter/cloud IPs (AWS/GCP/Azure and CI),
+    so a direct fetch fails from anywhere but a residential connection. Two opt-in
+    proxy paths (env-gated, no-op when unset):
+      - Webshare rotating residential: WEBSHARE_PROXY_USERNAME + WEBSHARE_PROXY_PASSWORD
+      - Any generic proxy: YT_PROXY_HTTP / YT_PROXY_HTTPS (or HTTP(S)_PROXY)
+    """
+    ws_user = os.environ.get("WEBSHARE_PROXY_USERNAME")
+    ws_pass = os.environ.get("WEBSHARE_PROXY_PASSWORD")
+    http_p = os.environ.get("YT_PROXY_HTTP") or os.environ.get("HTTP_PROXY")
+    https_p = os.environ.get("YT_PROXY_HTTPS") or os.environ.get("HTTPS_PROXY")
+    try:
+        if ws_user and ws_pass:
+            from youtube_transcript_api.proxies import WebshareProxyConfig
+            print(f"    (routing via Webshare residential proxy)")
+            return YouTubeTranscriptApi(proxy_config=WebshareProxyConfig(proxy_username=ws_user, proxy_password=ws_pass))
+        if http_p or https_p:
+            from youtube_transcript_api.proxies import GenericProxyConfig
+            print(f"    (routing via generic proxy)")
+            return YouTubeTranscriptApi(proxy_config=GenericProxyConfig(http_url=http_p, https_url=https_p))
+    except Exception as e:
+        print(f"    WARN: proxy config failed ({e}) — falling back to direct")
+    return YouTubeTranscriptApi()
+
+
 def fetch_transcript(video_id: str) -> dict:
     """Fetch transcript for a YouTube video. Returns transcript data."""
     if not HAS_YT_TRANSCRIPT:
@@ -99,7 +125,7 @@ def fetch_transcript(video_id: str) -> dict:
         sys.exit(1)
 
     try:
-        ytt = YouTubeTranscriptApi()
+        ytt = _build_ytt()
         transcript_list = _call_with_timeout(lambda: ytt.list(video_id), 60, f"list({video_id})")
 
         # ENGLISH ONLY, manual over auto-generated. The old "first non-generated
