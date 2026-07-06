@@ -1,6 +1,6 @@
 # Oprah Winfrey Brain Pack
 
-> **740 knowledge atoms** · **705 typed connections** · **10 unified skills (1 router + 8 reasoning modes + a board of advisors)**
+> **684 knowledge atoms** · **637 typed connections** · **10 unified skills (1 router + 8 reasoning modes + a board of advisors)**
 > From [brainsforagents.com](https://brainsforagents.com)
 
 ## What This Is
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Oprah's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (740 atoms, 705 connections)
+  ├── brain-atoms.json      ← Structured data (684 atoms, 637 connections)
   ├── README.md             ← You are here
   └── skills/               ← 10 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -57,9 +57,9 @@ This means:
 
 ## The Knowledge Graph
 
-**740 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**684 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**705 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**637 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
 **16 topic clusters** — Self-discovery, resilience, gratitude, spirituality, storytelling, leadership, philanthropy, trauma and healing, intentional living, empathy, reading, race and identity.
 
