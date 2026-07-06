@@ -9,8 +9,8 @@ Welcome to the **Winfrey Brain Pack** from [brainsforagents.com](https://brainsf
 
 ## What You're Getting
 
-- **740 knowledge atoms** — Core insights, frameworks, and strategic principles from Decades of The Oprah Winfrey Show, O Magazine, SuperSoul Sunday, SuperSoul Conversations, commencement addresses, Academy of Achievement interviews, 60 Minutes appearances, and major public speeches including the 2018 Golden Globes Cecil B. DeMille address
-- **705 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
+- **684 knowledge atoms** — Core insights, frameworks, and strategic principles from Decades of The Oprah Winfrey Show, O Magazine, SuperSoul Sunday, SuperSoul Conversations, commencement addresses, Academy of Achievement interviews, 60 Minutes appearances, and major public speeches including the 2018 Golden Globes Cecil B. DeMille address
+- **637 typed connections** — Relationships between ideas (supports, contradicts, extends, related, inspired_by)
 - **8 specialized thinking skills** — Each a distinct reasoning mode with a unique output type
 - **A `/board` of advisors** — Convene this brain alongside your other installed brains for one question (needs 2+ brains)
 - **Cross-referenced topics** — Self-discovery, resilience, gratitude, spirituality, storytelling, leadership, philanthropy, trauma and healing, intentional living, empathy, reading, race and identity, and more
@@ -29,7 +29,7 @@ Your Winfrey Brain Pack folder should contain:
 pack/
   ├── SKILL.md                 ← you are here (brain-setup)
   ├── brain-context.md         ← full knowledge base + usage guide
-  ├── brain-atoms.json         ← structured atoms (740 insights)
+  ├── brain-atoms.json         ← structured atoms (684 insights)
   ├── README.md                ← quick reference
   └── skills/                  ← 10 unified skills (work with any installed brain)
       ├── brain/               ← /brain router (set/show/list/clear active brain)
@@ -63,7 +63,7 @@ This brain works across multiple AI tools. Identify which one you're using:
 The brain operates in three layers:
 
 1. **Layer 1 — Quick Reference** (brain-atoms.json)
-   - JSON structure of 740 atoms with titles, summaries, connections
+   - JSON structure of 684 atoms with titles, summaries, connections
    - Ideal for: Rapid lookups, programmatic access, integrations
    - Use when: You need structured data for routing or filtering
 

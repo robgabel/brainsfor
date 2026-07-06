@@ -1,6 +1,6 @@
 # Steve Jobs Brain Pack
 
-> **1029 knowledge atoms** · **1019 typed connections** · **10 unified skills (1 router + 8 reasoning modes + a board of advisors)**
+> **1076 knowledge atoms** · **1016 typed connections** · **10 unified skills (1 router + 8 reasoning modes + a board of advisors)**
 > From [brainsforagents.com](https://brainsforagents.com)
 
 ## What This Is
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Steve's perspec
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (1029 atoms, 1019 connections)
+  ├── brain-atoms.json      ← Structured data (1076 atoms, 1016 connections)
   ├── README.md             ← You are here
   └── skills/               ← 10 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -57,9 +57,9 @@ This means:
 
 ## The Knowledge Graph
 
-**1029 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**1076 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
-**1019 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
+**1016 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 
 **16 topic clusters** — Simplicity, taste, product design, marketing, innovation, team building, focus, craftsmanship, the intersection of technology and liberal arts.
 
