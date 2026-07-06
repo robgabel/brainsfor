@@ -210,7 +210,8 @@ $199/mo API is for the lazy-but-smart company that wants to offer "Ask [Expert]"
 
 - **22 live brains** on brainsforagents.com (+ 4 hidden/Rob-only = 26 built): Scott Belsky, Paul Graham, Steve Jobs, Peter Attia, Sun Tzu, Charlie Munger, Gary Vaynerchuk, Peter Zeihan, Jensen Huang, Dario Amodei, Elon Musk, Brené Brown, Oprah Winfrey, Sara Blakely, Bill Harris, Jeremy Utley, Kara Swisher, Yann LeCun, Annie Duke, Reshma Saujani, Melinda French Gates, Jesse Pujji. Hidden: Hank Green, John Green, Gokul Rajaram, Shiva Rajaraman.
 - **~21,800 atoms + ~22,800 typed connections**, verified consistent across Supabase / registry / shipped packs (2026-06-02 data-integrity audit).
-- **Quality regime (all shipped since April):** structural audit (25/25 pass, avg 89.8/100), behavioral eval harness, Annie-chaired persona-QA panel with a hidden-to-live ship-gate, self-recognition QA, epistemic claim tagging (`claim_type`/`verification`), speaker diarization in the extraction pipeline.
+- **Quality regime (all shipped since April):** structural audit (25/25 pass, avg 89.8/100), behavioral eval harness, Annie-chaired persona-QA panel, self-recognition QA, epistemic claim tagging (`claim_type`/`verification`), speaker diarization in the extraction pipeline.
+- **QA scores are PUBLIC (2026-07-04):** every catalog card carries a QA pill and every detail page a full dimension breakdown, published raw including failing scores (`publish-qa-scores.py`) — the original "Brain Score" idea, shipped in stronger form. Ship-gate: persona ≥ 70 · zero numeric defects · voice coverage ≥ 0.60 OR panel-authenticity ≥ 80. Fleet as of 07-06: **14/22 live brains pass**; scorecard at `brains/eval-runs/persona-qa-fleet-2026-07-04.md`, improvement plan at `PLAN-brain-depth.md`. Launch-lineup implications: `LAUNCH.md` PRD-8.
 - **Pipeline:** `auto-build-brain.py` — a person's name in, shippable pack out. ~$23, 60-90 min, runs locally or as a GitHub Action.
 - **Site:** brainsforagents.com live on Vercel — auto-playing side-by-side hero demo, live `/api/skill` + `/api/board` demos (rate-limited, fail-closed), Supabase auth, free zip downloads, Vercel Analytics funnel events. Behind a `SITE_PASSWORD` gate until public launch (see `LAUNCH.md`).
 
@@ -689,6 +690,8 @@ The honest answer: v1 might be novelty-driven. "Oh cool, I can download Peter Th
 
 **How to mitigate:** Track usage, not just purchases. Do buyers load the context files? Do API users make repeat calls? If usage is low, the product needs to be more actionable — not just "here are 200 atoms" but "here's how to use Peter Attia's decision framework for your specific health question."
 
+**The quality half of the same risk is now instrumented (July 2026).** An adversarial persona panel grades every brain on authenticity, rigor, coverage, and calibration; a ship-gate blocks weak packs; and every score is published raw on the catalog — including the failing ones. A knowledge product that grades itself in public is the counter-position to AI-slop, and the coverage dimension tells us where a purchase would be a novelty before a customer finds out.
+
 The evolution path is: **knowledge pack → interactive advisor → platform** — but only if step 1 validates real utility, not just curiosity.
 
 ---
@@ -697,7 +700,7 @@ The evolution path is: **knowledge pack → interactive advisor → platform** �
 
 **What:** Brainsfor.com — installable AI skill packs built from the world's most interesting minds. `npx skills add brainsfor/belsky` gives you 8 thinking tools powered by a real knowledge graph.
 
-**Current state (July 2026):** 26 brains built, 22 live on brainsforagents.com. ~21,800 atoms + ~22,800 typed connections, verified consistent across Supabase / registry / shipped packs. Full pipeline + QA regime (structural audit, behavioral evals, persona-QA ship-gate, self-recognition). Site is feature-complete for beta — side-by-side hero demo, live skill/board demos, auth, free zip downloads, analytics — and sits behind a password gate until launch. Everything is free during beta; checkout intentionally not wired. Launch checklist: `LAUNCH.md`.
+**Current state (July 2026):** 26 brains built, 22 live on brainsforagents.com. ~21,800 atoms + ~22,800 typed connections, verified consistent across Supabase / registry / shipped packs. Full pipeline + QA regime (structural audit, behavioral evals, persona-QA ship-gate, self-recognition), with QA scores published raw on the site — 14/22 live brains pass the ship-gate as of 07-06. Site is feature-complete for beta — side-by-side hero demo, live skill/board demos, auth, free zip downloads, analytics — and sits behind a password gate until launch. Everything is free during beta; checkout intentionally not wired. Launch checklist: `LAUNCH.md`.
 
 **Who:** Three audiences: (1) Builders/founders who want expert-level context without hand-curating it ($29-79). (2) Professionals prepping for high-stakes interactions — sales teams brain-ing a target customer, founders brain-ing board members, creators studying competitors ($500-2K custom). (3) AI platforms who want premium knowledge content for their users (licensing deals).
 

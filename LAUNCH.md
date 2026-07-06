@@ -4,6 +4,8 @@
 
 *Created 2026-07-04 from the launch-readiness audit (personas + business plan + full website sweep). Supersedes the GTM sections previously scattered across `business-plan.md`, `IMPROVEMENTS.md`, and `PRD-site-overhaul.md` (deleted).*
 
+*Updated 2026-07-06: integrated the public QA-score system (`publish-qa-scores.py` → QA pills on every catalog card), the dual voice ship-gate and fleet scorecard (`brains/eval-runs/persona-qa-fleet-2026-07-04.md`), and the quality workstream (`PLAN-brain-depth.md`). Added PRD-8 — the launch-lineup / QA-transparency decision. PRD-1..4 are merged to `main` and deployed behind the gate.*
+
 ---
 
 ## The Goal
@@ -21,15 +23,17 @@
 Work top to bottom. **P0 = blocks going public. P1 = do before recruiting strangers. P2 = same week, after launch.**
 
 ### P0 — Blockers
-- [x] **Legal pages** — ship `/privacy` + `/terms`, link in footer → [PRD-1](#prd-1--legal-pages-privacy--terms) *(code on branch 2026-07-04 — Rob: review the copy, esp. governing law = California, before merge)*
+- [ ] **DECIDE the launch lineup (Rob)** — QA scores are now public pills on every card; 14/22 live brains pass the ship-gate, 8 don't — and the homepage hero autoplay defaults to elon-musk (QA 63). Ship all 22, trim to gate-passers, or hybrid → [PRD-8](#prd-8--launch-lineup--qa-transparency)
+- [x] **Legal pages** — ship `/privacy` + `/terms`, link in footer → [PRD-1](#prd-1--legal-pages-privacy--terms) *(merged + deployed behind the gate 2026-07-04 — Rob: review the LIVE copy, esp. governing law = California)*
 - [ ] **Verify Vercel prod env** — `ANTHROPIC_API_KEY`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`, `OPENAI_API_KEY`, Supabase keys → [PRD-5](#prd-5--go-public-runbook)
 - [ ] **Verify download pipeline** — Vercel root = monorepo root; zips generate at build; spot-check one `-brain-pack.zip` in prod → [PRD-5](#prd-5--go-public-runbook)
 - [ ] **Remove `SITE_PASSWORD` from Vercel prod + redeploy** — the entire site 401s while it's set → [PRD-5](#prd-5--go-public-runbook)
 
 ### P1 — Before recruiting strangers
-- [x] **Fix dashboard dead-end** — nothing writes `brain_access`; every signed-in user sees an empty "My Brains" forever → [PRD-2](#prd-2--dashboard-dead-end) *(code on branch 2026-07-04 — requires the RLS policy in PRD-2 before it records claims)*
-- [x] **Install-path honesty** — demote the non-working `npx skills add` command; lead with the zip → [PRD-3](#prd-3--install-path-honesty) *(code on branch 2026-07-04)*
-- [x] **Share/SEO metadata** — `metadataBase`, twitter card, canonicals → [PRD-4](#prd-4--seo--share-metadata) *(code on branch 2026-07-04 — validate unfurls after deploy)*
+- [x] **Fix dashboard dead-end** — nothing writes `brain_access`; every signed-in user sees an empty "My Brains" forever → [PRD-2](#prd-2--dashboard-dead-end) *(merged 2026-07-04 — still requires the RLS policy in PRD-2 before it records claims)*
+- [x] **Install-path honesty** — demote the non-working `npx skills add` command; lead with the zip → [PRD-3](#prd-3--install-path-honesty) *(merged 2026-07-04)*
+- [x] **Share/SEO metadata** — `metadataBase`, twitter card, canonicals → [PRD-4](#prd-4--seo--share-metadata) *(merged 2026-07-04 — validate unfurls once public)*
+- [ ] **Execute the lineup decision** — status flips / hero-default swap / remaining gate work per PRD-8; re-run `publish-qa-scores.py` + redeploy → [PRD-8](#prd-8--launch-lineup--qa-transparency)
 - [ ] **Recruit the 10** — warm DMs → LinkedIn → r/ClaudeAI + Claude Discord → [PRD-6](#prd-6--beta-recruitment-the-10-users)
 
 ### P2 — Launch week, after going public
@@ -40,6 +44,8 @@ Work top to bottom. **P0 = blocks going public. P1 = do before recruiting strang
 
 ### Explicitly NOT in scope for this launch
 Stripe/checkout, delivery edge function, `npx skills` registry publish, Pro/API tiers, claim-your-brain outreach, HN/Product Hunt, `brain_events` usage-tracking table. All of it waits until 10 beta users have validated real usage. (Calacanis: *"Show me someone who isn't you using /advise and getting value."*)
+
+**Parallel quality workstream:** `PLAN-brain-depth.md` (Elon Part 1 mess-corpus fix → tiered fleet passes) runs on its own sequencing and is actively raising the gate count (12/22 on 07-04 → 14/22 on 07-06 after steve-jobs and oprah cleared). This file does not duplicate that plan — it only pins which pieces are launch-gating, via the PRD-8 decision.
 
 ---
 
@@ -125,7 +131,7 @@ create policy "users read own access" on brain_access
 **Runbook (in order):**
 1. **Vercel env audit (prod):** confirm `ANTHROPIC_API_KEY`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` (demos fail closed → 429 without them), `OPENAI_API_KEY` (Layer-2 board retrieval — flagged missing in IMPROVEMENTS.md), `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, optional `OWNER_BYPASS_TOKEN`.
 2. **Supabase check:** apply the `brain_access` RLS policies from PRD-2 in the auth project; verify a signed-in download creates a row.
-3. **Build-context check:** Vercel project Root Directory must be the monorepo root (NOT `website/`) — `prebuild`/`sync-brain-assets.mjs` needs `../brains` or every download link 404s and `lib/brains.ts` breaks the build. Nothing in the repo pins this; it's dashboard config.
+3. **Build-context check:** Vercel project Root Directory must be the monorepo root (NOT `website/`) — `prebuild`/`sync-brain-assets.mjs` needs `../brains` or every download link 404s and `lib/brains.ts` breaks the build. Nothing in the repo pins this; it's dashboard config. **Stakes went up 2026-07-05:** `website/public/brains/` is now fully un-tracked (#48) — the entire brain asset surface (packs, atoms JSON, explore.html, zips) is generated at build time by `prebuild`, so a mis-rooted build 404s every brain asset, not just the zips.
 4. **Ship P0/P1 code** (PRDs 1-4) to `main` → auto-deploy. *(Code complete on branch `claude/brainsforsale-launch-prep-gg0l9s`, 2026-07-04.)*
 5. **Open the gate:** `vercel env rm SITE_PASSWORD production` → redeploy.
 6. **Smoke test (prod, logged out, no bypass header):** homepage renders; hero demo autoplays; one `/api/skill` ask streams; download one `-brain-pack.zip` and unzip it; `/privacy`, `/terms`, `robots.txt`, `sitemap.xml`, `llms.txt` all 200; a `/brains/[slug]` unfurls correctly on X.
@@ -175,11 +181,37 @@ create policy "users read own access" on brain_access
 **Scope (deliberately tiny):**
 - **1 atom post/week** — one strong `original_quote` atom, one screenshot, CTA = free brain + beta ask. LinkedIn + X.
 - **1 Brain Fight/week** — two brains, one topic, pulled via `/debate` or the board demo; don't tag the subjects yet (that's the paid-launch play).
-- Both end with the beta CTA, not a purchase CTA.
+- **The report-card story** — we grade our own brains with an adversarial persona panel (Kara/Munger/Brené judges, Annie chairing) and publish every score raw on the catalog, including the failing ones. One post explaining the QA system + linking the scorecard is launch-week content no competitor can copy quickly, and it pre-answers the "isn't this AI slop?" objection.
+- All of it ends with the beta CTA, not a purchase CTA.
 
 **Acceptance.** 4 weeks × 2 posts, each traceable to `download_click` upticks in Vercel Analytics.
 
 **Est:** ~30 min/week using existing packs + `/surprise`.
+
+---
+
+## PRD-8 — Launch lineup & QA transparency
+
+**Context (new since 07-04).** The persona-QA system now publishes scores publicly: every catalog card carries a color-tiered "QA" pill and every detail page a full dimension breakdown (`publish-qa-scores.py`; policy: publish ALL scores raw — transparency is the brand). The dual voice ship-gate (persona ≥ 70 · zero numeric defects · voice coverage ≥ 0.60 OR panel-authenticity ≥ 80) gives a fleet scorecard: **14/22 live brains pass, 8 don't** — belsky 64, sun-tzu 47, zeihan 52, jensen 67, **elon 63 (the homepage hero autoplay default — 2 of its 9 hero-demo entries)**, bill-harris 68, kara 73, melinda 64. The launch-lineup work is in flight (`PLAN-brain-depth.md` + the cross-session coordination note in it): steve-jobs and oprah cleared the gate on 07-05/06; Elon's fix (Part 1, ~$10) is specced and throttle-blocked.
+
+**The decision (Rob's, before the gate opens):**
+
+| Option | What ships | Trade-off |
+|---|---|---|
+| **A. Full transparency** | All 22 live, amber pills visible | Abundant catalog and maximal honesty, but a first-time evaluator's catalog scan includes QA 47/52, and the hero brain is a 63 |
+| **B. Gate-passers only** | Flip the 8 sub-gate brains to `hidden` | Every visible brain defensible; catalog drops to 14 and hides belsky, the origin-story brain |
+| **C. Hybrid (recommended)** | Keep all 22 visible with pills; swap the hero default to a gate-passer (munger 82 / graham 81 / attia 82) until Elon Part 1 lands; keep clearing the lineup per `PLAN-brain-depth.md` | Transparency intact, first mile fronts the best; costs a hero-demos re-point now and Elon Part 1 (~$10 + 30 min of Rob's contested-claims review) soon |
+
+**Recommendation: C.** The beta goal is 10 evaluators completing feedback loops; the first object they meet should be a gate-passer. An amber pill on sun-tzu deep in the catalog is the honesty claim made visible — a sub-gate brain as the autoplay hero is just a weak first impression. Decision:
+- [ ] Option A — ship as-is
+- [ ] Option B — trim to gate-passers
+- [ ] Option C — hybrid (hero swap now, Elon Part 1 next, keep pills on everything)
+
+**Execution notes (any option):**
+- Status flips are one-line `status` changes in `brains/index.json` + `publish-qa-scores.py` + redeploy; hidden brains keep working locally/MCP (see CLAUDE.md status rules).
+- Hero default: `website/lib/hero-demos.ts` — lanes reference elon-musk (×2), scott-belsky, dario-amodei (×2), yann-lecun, charlie-munger, annie-duke (×2). Re-point the elon + belsky entries at gate-passers, or reorder so a passer autoplays first.
+- Gate work follows `PLAN-brain-depth.md` and its coordination rules (owner-of-the-apply runs the re-panel; enrich-voice → verify-enrichment → apply verified JSON only; space YouTube ingest runs — throttle).
+- PRD-6 messaging should link the QA methodology whichever option ships — evaluators trust a system that grades itself in public.
 
 ---
 
