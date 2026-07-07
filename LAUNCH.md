@@ -23,7 +23,7 @@
 Work top to bottom. **P0 = blocks going public. P1 = do before recruiting strangers. P2 = same week, after launch.**
 
 ### P0 — Blockers
-- [ ] **DECIDE the launch lineup (Rob)** — QA scores are now public pills on every card; 14/22 live brains pass the ship-gate, 8 don't — and the homepage hero autoplay defaults to elon-musk (QA 63). Ship all 22, trim to gate-passers, or hybrid → [PRD-8](#prd-8--launch-lineup--qa-transparency)
+- [x] **DECIDE the launch lineup (Rob)** — **Option C chosen 2026-07-06**: all 22 stay visible with QA pills; hero default swapped to gate-passers → [PRD-8](#prd-8--launch-lineup--qa-transparency)
 - [x] **Legal pages** — ship `/privacy` + `/terms`, link in footer → [PRD-1](#prd-1--legal-pages-privacy--terms) *(merged + deployed behind the gate 2026-07-04 — Rob: review the LIVE copy, esp. governing law = California)*
 - [ ] **Verify Vercel prod env** — `ANTHROPIC_API_KEY`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`, `OPENAI_API_KEY`, Supabase keys → [PRD-5](#prd-5--go-public-runbook)
 - [ ] **Verify download pipeline** — Vercel root = monorepo root; zips generate at build; spot-check one `-brain-pack.zip` in prod → [PRD-5](#prd-5--go-public-runbook)
@@ -33,7 +33,7 @@ Work top to bottom. **P0 = blocks going public. P1 = do before recruiting strang
 - [x] **Fix dashboard dead-end** — nothing writes `brain_access`; every signed-in user sees an empty "My Brains" forever → [PRD-2](#prd-2--dashboard-dead-end) *(merged 2026-07-04 — still requires the RLS policy in PRD-2 before it records claims)*
 - [x] **Install-path honesty** — demote the non-working `npx skills add` command; lead with the zip → [PRD-3](#prd-3--install-path-honesty) *(merged 2026-07-04)*
 - [x] **Share/SEO metadata** — `metadataBase`, twitter card, canonicals → [PRD-4](#prd-4--seo--share-metadata) *(merged 2026-07-04 — validate unfurls once public)*
-- [ ] **Execute the lineup decision** — status flips / hero-default swap / remaining gate work per PRD-8; re-run `publish-qa-scores.py` + redeploy → [PRD-8](#prd-8--launch-lineup--qa-transparency)
+- [x] **Execute the lineup decision** — hero lanes reordered (ai → bets → code, so dario-76 autoplays; elon/belsky lane stays selectable but last) + OG share card re-pointed to the Dario demo, 2026-07-06. Remaining piece rides `PLAN-brain-depth.md`: Elon Part 1, then re-front the code lane → [PRD-8](#prd-8--launch-lineup--qa-transparency)
 - [ ] **Recruit the 10** — warm DMs → LinkedIn → r/ClaudeAI + Claude Discord → [PRD-6](#prd-6--beta-recruitment-the-10-users)
 
 ### P2 — Launch week, after going public
@@ -205,7 +205,9 @@ create policy "users read own access" on brain_access
 **Recommendation: C.** The beta goal is 10 evaluators completing feedback loops; the first object they meet should be a gate-passer. An amber pill on sun-tzu deep in the catalog is the honesty claim made visible — a sub-gate brain as the autoplay hero is just a weak first impression. Decision:
 - [ ] Option A — ship as-is
 - [ ] Option B — trim to gate-passers
-- [ ] Option C — hybrid (hero swap now, Elon Part 1 next, keep pills on everything)
+- [x] **Option C — CHOSEN (Rob, 2026-07-06)** — hybrid: hero swap now, Elon Part 1 next, keep pills on everything
+
+**Executed 2026-07-06:** `HERO_LANES` reordered in `website/lib/hero-demos.ts` (ai → bets → code — the autoplay default is now the Dario demo, QA 76; the elon/belsky "Shipping code" lane remains selectable, last, with a code comment saying to re-front it when elon clears the gate). `app/opengraph-image.tsx` re-pointed to the same Dario demo so link unfurls match the hero. No status flips — all 22 stay live with pills. Elon Part 1 continues under `PLAN-brain-depth.md`.
 
 **Execution notes (any option):**
 - Status flips are one-line `status` changes in `brains/index.json` + `publish-qa-scores.py` + redeploy; hidden brains keep working locally/MCP (see CLAUDE.md status rules).

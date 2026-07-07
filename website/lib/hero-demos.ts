@@ -34,77 +34,13 @@ export interface HeroLane {
   entries: HeroDemoEntry[];
 }
 
+// Lane order sets the autoplay default (HeroDemo uses lanes[0]). Per
+// LAUNCH.md PRD-8 (Option C, 2026-07-06): the first brain a visitor meets
+// must pass the QA ship-gate, so the fully-passing lanes lead — ai
+// (dario 76 · lecun 74), bets (munger 82 · annie 76) — and code
+// (elon 63 · belsky 64) stays available but last until PLAN-brain-depth
+// Part 1 lifts it. Re-front code when elon clears the gate.
 export const HERO_LANES: HeroLane[] = [
-  {
-    id: "code",
-    label: "Shipping code",
-    brainsLabel: "Elon · Belsky",
-    entries: [
-      {
-        brain: "elon-musk",
-        question: "Should I rewrite this module from scratch or keep patching it?",
-        chipLabel: "Rewrite or keep patching?",
-        generic:
-          "It depends on several factors. A rewrite gives you cleaner architecture but carries significant risk and hidden costs, while incremental patching preserves stability but can accumulate technical debt. Consider the module's test coverage, your team's bandwidth, and business deadlines, then weigh the trade-offs before committing to either approach.",
-        enhanced:
-          "Speed of learning is the whole game. The plan matters less than how fast reality tells you it's wrong — and a rewrite is months of polishing a simulation with zero contact with production.\n\nFirst make the requirements less dumb; half of them came from someone who isn't asking anymore. Then try deleting the module outright. If it survives deletion, patch it in a way that ships today and instruments the pain. Rewrite only when the patches stop teaching you anything.",
-        atoms: [
-          "Shorten the feedback loop",
-          "Make requirements less dumb, then delete",
-          "Inline sensing beats end-of-line inspection",
-        ],
-        atomIds: [
-          "783797fb-b04c-4c69-8eb0-16cd473b2f45",
-          "7c5da953-8968-4d7d-aed7-f071fa04dadd",
-          "45952272-8a95-48ae-a751-f904a31ed98e",
-        ],
-        confidence: "0.93",
-        source: "Lex Fridman #438",
-      },
-      {
-        brain: "elon-musk",
-        question: "How do I get my team to ship faster?",
-        chipLabel: "Ship faster",
-        generic:
-          "Improving velocity usually involves a mix of clearer priorities, smaller batches of work, better tooling, and fewer meetings. Look at where work stalls in your process, talk to the team about blockers, and consider more automation where appropriate. Sustainable pace matters too — pushing harder can backfire.",
-        enhanced:
-          "Shipping speed is a physics problem: it's the length of your feedback loop, not the effort of your people. The prototype was the easy part — making it flow repeatably is somewhere between 100 and 1,000 times harder.\n\nCollapse the distance between a decision and the moment reality grades it. Test in production-like conditions daily, not quarterly. And own your whole pipeline — when you control every step, a bottleneck is an afternoon's fix instead of a vendor negotiation.",
-        atoms: [
-          "Manufacturing is 100–1,000x harder than the prototype",
-          "Shorten the feedback loop",
-          "Vertical integration compresses iteration",
-        ],
-        atomIds: [
-          "34bfeece-9c41-4cd2-b7c8-b50cfe96995c",
-          "783797fb-b04c-4c69-8eb0-16cd473b2f45",
-          "ea4caa34-64af-4ce5-98d6-991d1e69dea2",
-        ],
-        confidence: "0.91",
-        source: "Joe Rogan Experience #2054",
-      },
-      {
-        brain: "scott-belsky",
-        question: "Ship the rough v1 this week, or polish for another month?",
-        chipLabel: "Rough v1 or polish?",
-        generic:
-          "There are good arguments on both sides. Shipping early gets you real user feedback and momentum, while polishing longer protects your first impression. Many teams aim for a middle ground: release a limited beta to a small audience, gather feedback, and iterate before a wider launch.",
-        enhanced:
-          "Split your product in two: the thing that makes you different, and everything else. Never MVP the thing that defines you — cutting corners on your differentiator signals your own conviction is weak, and the market forms its opinion from what it sees first.\n\nShip the rough v1 this week, but only if the core differentiator is at full craft. Users in their first 30 seconds are lazy, vain, and selfish — they'll forgive missing settings. They will never forgive a mediocre core.",
-        atoms: [
-          "Never MVP the thing that defines you",
-          "Lazy, vain, selfish: the first 30 seconds",
-          "First mover with an imperfect idea still wins",
-        ],
-        atomIds: [
-          "6b77fc47-85b9-4051-8d49-5bb0c39d0212",
-          "85ec06e7-d539-45e8-bade-ad59384f17a4",
-          "4244796f-5244-4eeb-b132-953390131ddb",
-        ],
-        confidence: "0.90",
-        source: "Lenny's Podcast, 2023",
-      },
-    ],
-  },
   {
     id: "ai",
     label: "Thinking about AI",
@@ -242,6 +178,76 @@ export const HERO_LANES: HeroLane[] = [
         ],
         confidence: "0.93",
         source: "Quit, 2022",
+      },
+    ],
+  },
+  {
+    id: "code",
+    label: "Shipping code",
+    brainsLabel: "Elon · Belsky",
+    entries: [
+      {
+        brain: "elon-musk",
+        question: "Should I rewrite this module from scratch or keep patching it?",
+        chipLabel: "Rewrite or keep patching?",
+        generic:
+          "It depends on several factors. A rewrite gives you cleaner architecture but carries significant risk and hidden costs, while incremental patching preserves stability but can accumulate technical debt. Consider the module's test coverage, your team's bandwidth, and business deadlines, then weigh the trade-offs before committing to either approach.",
+        enhanced:
+          "Speed of learning is the whole game. The plan matters less than how fast reality tells you it's wrong — and a rewrite is months of polishing a simulation with zero contact with production.\n\nFirst make the requirements less dumb; half of them came from someone who isn't asking anymore. Then try deleting the module outright. If it survives deletion, patch it in a way that ships today and instruments the pain. Rewrite only when the patches stop teaching you anything.",
+        atoms: [
+          "Shorten the feedback loop",
+          "Make requirements less dumb, then delete",
+          "Inline sensing beats end-of-line inspection",
+        ],
+        atomIds: [
+          "783797fb-b04c-4c69-8eb0-16cd473b2f45",
+          "7c5da953-8968-4d7d-aed7-f071fa04dadd",
+          "45952272-8a95-48ae-a751-f904a31ed98e",
+        ],
+        confidence: "0.93",
+        source: "Lex Fridman #438",
+      },
+      {
+        brain: "elon-musk",
+        question: "How do I get my team to ship faster?",
+        chipLabel: "Ship faster",
+        generic:
+          "Improving velocity usually involves a mix of clearer priorities, smaller batches of work, better tooling, and fewer meetings. Look at where work stalls in your process, talk to the team about blockers, and consider more automation where appropriate. Sustainable pace matters too — pushing harder can backfire.",
+        enhanced:
+          "Shipping speed is a physics problem: it's the length of your feedback loop, not the effort of your people. The prototype was the easy part — making it flow repeatably is somewhere between 100 and 1,000 times harder.\n\nCollapse the distance between a decision and the moment reality grades it. Test in production-like conditions daily, not quarterly. And own your whole pipeline — when you control every step, a bottleneck is an afternoon's fix instead of a vendor negotiation.",
+        atoms: [
+          "Manufacturing is 100–1,000x harder than the prototype",
+          "Shorten the feedback loop",
+          "Vertical integration compresses iteration",
+        ],
+        atomIds: [
+          "34bfeece-9c41-4cd2-b7c8-b50cfe96995c",
+          "783797fb-b04c-4c69-8eb0-16cd473b2f45",
+          "ea4caa34-64af-4ce5-98d6-991d1e69dea2",
+        ],
+        confidence: "0.91",
+        source: "Joe Rogan Experience #2054",
+      },
+      {
+        brain: "scott-belsky",
+        question: "Ship the rough v1 this week, or polish for another month?",
+        chipLabel: "Rough v1 or polish?",
+        generic:
+          "There are good arguments on both sides. Shipping early gets you real user feedback and momentum, while polishing longer protects your first impression. Many teams aim for a middle ground: release a limited beta to a small audience, gather feedback, and iterate before a wider launch.",
+        enhanced:
+          "Split your product in two: the thing that makes you different, and everything else. Never MVP the thing that defines you — cutting corners on your differentiator signals your own conviction is weak, and the market forms its opinion from what it sees first.\n\nShip the rough v1 this week, but only if the core differentiator is at full craft. Users in their first 30 seconds are lazy, vain, and selfish — they'll forgive missing settings. They will never forgive a mediocre core.",
+        atoms: [
+          "Never MVP the thing that defines you",
+          "Lazy, vain, selfish: the first 30 seconds",
+          "First mover with an imperfect idea still wins",
+        ],
+        atomIds: [
+          "6b77fc47-85b9-4051-8d49-5bb0c39d0212",
+          "85ec06e7-d539-45e8-bade-ad59384f17a4",
+          "4244796f-5244-4eeb-b132-953390131ddb",
+        ],
+        confidence: "0.90",
+        source: "Lenny's Podcast, 2023",
       },
     ],
   },
