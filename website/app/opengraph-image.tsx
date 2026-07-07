@@ -5,8 +5,10 @@ import { SITE } from "@/lib/site-config";
 // links, so the delta has to be visible before the click. Statically
 // generated at build time (no request-time APIs used).
 
+// Card content mirrors the hero's autoplay default (HERO_LANES[0].entries[0]
+// in lib/hero-demos.ts) — keep the two in sync when the default lane changes.
 export const alt =
-  "Same prompt, two answers: Claude alone hedges; Claude with Elon Musk's brain loaded answers in his frameworks, with cited sources.";
+  "Same prompt, two answers: Claude alone hedges; Claude with Dario Amodei's brain loaded answers in his frameworks, with cited sources.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -51,7 +53,7 @@ export default function Image() {
             color: "#e2e8f0",
           }}
         >
-          &gt; Should I rewrite this module from scratch or keep patching it?
+          &gt; Will AI agents replace me as a developer?
         </div>
 
         <div style={{ display: "flex", gap: 24, marginTop: 28, flexGrow: 1 }}>
@@ -77,9 +79,9 @@ export default function Image() {
                 color: "#64748b",
               }}
             >
-              It depends on several factors. Rewrites carry risk but reduce
-              debt; patching is faster short-term. Consider weighing the
-              trade-offs with your team&hellip;
+              AI will automate some coding tasks, but full replacement is
+              unlikely in the near term. Roles will evolve toward
+              architecture and review. Staying current will help&hellip;
             </div>
           </div>
 
@@ -95,7 +97,7 @@ export default function Image() {
             }}
           >
             <div style={{ display: "flex", fontSize: 20, color: "#34d399" }}>
-              Claude + 🚀 Elon Musk&rsquo;s brain
+              Claude + 🧪 Dario Amodei&rsquo;s brain
             </div>
             <div
               style={{
@@ -106,9 +108,9 @@ export default function Image() {
                 color: INDIGO_SOFT,
               }}
             >
-              First make the requirements less dumb. Then try deleting the
-              module outright. Rewrite only when the patches stop teaching you
-              anything.
+              Engineers inside Anthropic tell me they don&rsquo;t write code
+              anymore — the model writes it, they direct and edit. Replaced,
+              no. Transformed, faster than you&rsquo;re planning for.
             </div>
             <div
               style={{
@@ -118,7 +120,7 @@ export default function Image() {
                 color: "#818cf8",
               }}
             >
-              836 atoms · cited · SXSW 2013
+              1,000 atoms · cited · Lex Fridman #490
             </div>
           </div>
         </div>

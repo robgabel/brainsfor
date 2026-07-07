@@ -1,6 +1,16 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
+  // @brainsfor/mcp is file-linked from ../packages/brainsfor-mcp (no npm
+  // workspaces here), and Turbopack refuses to resolve modules outside the
+  // inferred project root (website/, via its package-lock.json). Point the
+  // root at the monorepo top — the parent of both website/ and packages/ —
+  // per the Turbopack docs' linked-dependency guidance. Without this,
+  // `import "@brainsfor/mcp/scoring"` fails the production build.
+  turbopack: {
+    root: path.join(__dirname, ".."),
+  },
   // Global security headers. CORS for /api/skill is handled inside the
   // route handler so we can do exact-origin matching without wrestling
   // path-to-regexp over colons in scheme.
