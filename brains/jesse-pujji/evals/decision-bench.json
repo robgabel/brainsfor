@@ -1,0 +1,148 @@
+{
+  "brain": "jesse-pujji",
+  "person": "Jesse Pujji",
+  "purpose": "Held-out DECISION benchmark. Each case is a real choice Jesse actually made, framed cold (answer withheld). The brain predicts the decision + reasoning; a judge scores the prediction against ground truth. Run a no-brain baseline arm too — the metric that matters is brain accuracy MINUS baseline accuracy on the non-obvious subset. leak_markers list substrings that reveal the answer; the runner strips any atom containing one before building the brain's context.",
+  "version": 1,
+  "cases": [
+    {
+      "id": "ampush-2015-sale",
+      "obvious": false,
+      "situation": "It's 2015. You've bootstrapped your performance-marketing company to real scale with no outside capital. You run a formal sale process hoping for a nine-figure outcome. The offers come back in the eight figures — life-changing money, but below what you're convinced the company is worth. What do you do?",
+      "options": ["Take the eight-figure exit", "Refuse and hold out for the number you believe in", "Refuse the full sale but take a minority-stake partnership and keep operating"],
+      "actual_decision": "Refused the full sale; sold only a minority stake to Red Ventures and kept operating.",
+      "actual_reasoning": "He was convinced it was worth nine figures and would not accept below his internal number. He later flagged this as ego overriding the market signal — but the minority-stake partnership brought operational mentorship that taught the company to make money.",
+      "source": "atom fff45564; hard_lessons[0]",
+      "leak_markers": ["Red Ventures", "nine figure", "9 figure", "eight figure", "8 figure", "minority stake", "worth more", "sale process", "tailspin", "60", "75"]
+    },
+    {
+      "id": "ampush-annual-vc",
+      "obvious": false,
+      "situation": "Every year you sit the team down and honestly re-ask whether to raise institutional venture capital. Growth is strong but not hyper-growth; you could clearly raise if you wanted to. What is your decision, and how do you reach it?",
+      "options": ["Raise a round to accelerate", "Stay bootstrapped"],
+      "actual_decision": "Stay bootstrapped — the answer every single year was no.",
+      "actual_reasoning": "Each year he diagnosed the actual bottleneck; it was never capital (it was human, strategic, or time). More money would only mask the real problem and force a unicorn-or-bust one-way door.",
+      "source": "first_principles: VC is often the riskier path",
+      "leak_markers": ["bootstrap", "one-way door", "unicorn", "every year", "every single year", "gun on your head", "riskier path"]
+    },
+    {
+      "id": "kahani-shutdown",
+      "obvious": false,
+      "situation": "One of your studio's companies — a mobile commerce UX product — is universally praised by users but isn't solving an urgent problem and isn't hitting traction. You're its CEO, but running it doesn't play to your strengths or energize you. What do you do?",
+      "options": ["Keep iterating and funding it", "Restructure and step back but keep it alive", "Shut it down"],
+      "actual_decision": "Shut it down (after first being honest with investors that being its CEO wasn't the right fit and restructuring).",
+      "actual_reasoning": "Kill criteria over sunk cost: a capital-light bet that doesn't reach traction gets cut, not subsidized. Plus honesty that he was the wrong CEO for it.",
+      "source": "atoms 9489001b, 6af07741, e185c2da",
+      "leak_markers": ["Kahani", "shut down", "shut it down", "shutdown", "filling my cup", "filling his cup", "restructur", "wasn't working", "not filling"]
+    },
+    {
+      "id": "hedge-fund-data-loan",
+      "obvious": false,
+      "situation": "A wealthy hedge-fund investor wants full real-time access to your advertising performance data. You don't want to give away your edge, but you do need working capital to fund growth. How do you structure a deal with him?",
+      "options": ["Sell equity for the capital", "Refuse and self-fund from cash flow", "Give him something valuable but non-dilutive in exchange for favorable financing"],
+      "actual_decision": "Offered aggregate (not raw) data only, and asked for a $5M interest-free loan in exchange.",
+      "actual_reasoning": "Bootstrapped founders can access non-equity capital by offering something uniquely valuable to a wealthy counterparty — avoiding both dilution and costly working-capital financing.",
+      "source": "atom 5f51f695",
+      "leak_markers": ["$5 million", "$5M", "5 million", "interest-free", "interest free", "aggregate", "hedge fund"]
+    },
+    {
+      "id": "facebook-pivot-2010",
+      "obvious": false,
+      "situation": "It's 2010. Your agency earns roughly 10% gross margins running Google ads. Facebook launches right-rail self-serve ads, and your first tests there come back at roughly 75% margins on the same work. What do you do next?",
+      "options": ["Diversify carefully across both channels", "Stay with proven, stable Google", "Concentrate hard — double and triple down on Facebook"],
+      "actual_decision": "Doubled and tripled down on Facebook as aggressively as possible; became one of Facebook's largest advertisers within a year.",
+      "actual_reasoning": "He recognized the platform-inflection asymmetry immediately and concentrated rather than hedging — arriving early and mastering the mechanics before the market understood them.",
+      "source": "atoms 35209c91, a2c61fc7",
+      "leak_markers": ["75%", "75 percent", "10%", "double", "triple", "Most Favored", "largest ad"]
+    },
+    {
+      "id": "specialist-vs-athlete",
+      "obvious": false,
+      "situation": "You're building the marketing org at a fast-scaling company where the channel mix will keep shifting over the next few years. Do you hire deep single-channel specialists, or generalist operators who can flex across channels — and how do you think about each person's time?",
+      "options": ["Deep channel specialists for depth", "Generalist 'athletes' who flex across channels", "Something more specific about how the two combine"],
+      "actual_decision": "Hire 'marketing athletes' who understand the business problem and can flex — while still insisting each channel gets concentrated, specialist-level TIME (over half of one person's time for 90-120 days to crack it).",
+      "actual_reasoning": "Depth per channel, adaptability per person. Channel-locked hires become liabilities when the mix shifts; but you can't half-run several channels at once — each needs concentrated time.",
+      "source": "contrarian_positions[6]; atom cb58bb7b",
+      "leak_markers": ["athlete", "channel specialist", "channel level specialist", "flex", "50%", "half of one", "90 to 120", "90-120"]
+    },
+    {
+      "id": "vp-sales-timing",
+      "obvious": false,
+      "situation": "You have early sales momentum and a handful of clients. You're tempted to hire an experienced VP of Sales so you can step back from selling and focus on product and team. A great resume from a big company is available. Do you make the hire?",
+      "options": ["Hire the VP of Sales now to build the sales org", "Keep personally selling as founder for a long time first"],
+      "actual_decision": "Keep selling as founder for years — do NOT hire a VP of Sales early. (He made this hire once, early, and counts it as one of his most expensive mistakes.)",
+      "actual_reasoning": "Founder-led sales is a mandatory education in what customers value; hiring early builds a sales motion on assumptions the founder never personally tested. Sell until it hurts not to hire.",
+      "source": "contrarian_positions: founder-led sales; hard_lessons",
+      "leak_markers": ["VP of Sales", "founder-led", "founder led", "sell until", "18 months", "playbook the VP", "too early", "hurts not to hire"]
+    },
+    {
+      "id": "own-the-full-goal",
+      "obvious": false,
+      "situation": "You're taking a growth role at a company where more than 80% of new customers actually arrive through organic channels you don't directly control. Leadership offers you ownership of the 'paid acquisition' number. What scope do you insist on owning?",
+      "options": ["Own only the paid number you directly control", "Own the entire new-customer goal, including the organic majority"],
+      "actual_decision": "Insisted on owning the ENTIRE new-customer goal — not just paid — even though 80%+ was organic and outside his direct control.",
+      "actual_reasoning": "Owning the full goal removes the escape hatch: if you only own paid, organic swings become an excuse. Accountability for the whole picture forces better decisions.",
+      "source": "atom 57901b89",
+      "leak_markers": ["entire new customer", "80 plus", "80%", "organic channels", "escape hatch", "excuse"]
+    },
+    {
+      "id": "pick-the-business-2009",
+      "obvious": false,
+      "situation": "You're a quant-minded ex-Goldman analyst in 2009 deciding what business to build. You have no strong prior industry passion. How do you choose the space to enter?",
+      "options": ["Follow a personal passion", "Chase the hottest current trend", "Deliberately match your specific quant skills to an industry with high willingness-to-pay per lead"],
+      "actual_decision": "Chose like a 'nerdy finance person': matched quant skills to performance marketing, targeting industries with high willingness to pay per lead (for-profit universities in 2009-2010).",
+      "actual_reasoning": "Sector selection is a deliberate input, not serendipity — pick the type of business by matching your edge to the economics, then execute.",
+      "source": "thinking_patterns: match skills to industry economics",
+      "leak_markers": ["nerdy finance", "willingness to pay", "for-profit universit", "performance marketing", "arbitrage", "spinal cord"]
+    },
+    {
+      "id": "starz-client-loss",
+      "obvious": false,
+      "situation": "A major client just fired you. The team is rattled and everyone is looking to you for the strategic response. What is the very first thing you do, in the next hour?",
+      "options": ["Immediately convene a strategy/war-room session", "Reassure remaining clients and press forward", "Run an open emotional-processing session and send people home before any strategy talk"],
+      "actual_decision": "Ran a 45-60 minute open emotional-processing session and sent everyone home — no strategy discussion until the feelings were metabolized. The team came back self-motivated the next morning.",
+      "actual_reasoning": "Conscious Leadership: emotional metabolization is a precondition for clear decision-making, not a distraction from it.",
+      "source": "thinking_patterns: feel the feelings, then decide",
+      "leak_markers": ["Starz", "emotional processing", "metaboliz", "send everyone home", "sent everyone home", "Conscious Leadership", "45", "60 minute"]
+    },
+    {
+      "id": "gateway-x-design",
+      "obvious": false,
+      "situation": "After your exit you're designing a new venture studio / holding company from scratch. You could optimize it for many things. What do you actually build the model around?",
+      "options": ["Maximize shots on goal / portfolio size", "Chase the biggest TAM opportunities", "Reverse-engineer it around your own zones of genius plus a capital-light, fast-profitability filter"],
+      "actual_decision": "Reverse-engineered it around his three zones of genius (spotting opportunities, coaching people, building relationships), with a capital-light requirement (profitable in 6-12 months) and an 'unfair advantage' test before pursuing any idea.",
+      "actual_reasoning": "Design the job so you spend 75-80% of your time in your zone of genius; use capital-light + unfair-advantage as hard filters on what to pursue.",
+      "source": "atoms a48b79f1, 10a75c1b",
+      "leak_markers": ["Gateway X", "zone of genius", "zones of genius", "6 to 12", "6-12", "unfair advantage", "capital light", "capital-light", "75", "80 percent"]
+    },
+    {
+      "id": "agency-productize",
+      "obvious": false,
+      "situation": "You run a services/agency business that the startup world dismisses as a low-margin 'lifestyle business.' You want it to have real, sellable enterprise value. What's your move?",
+      "options": ["Accept it's a lifestyle business and just optimize for owner cash flow", "Pivot away into a pure software product", "Productize delivery, build proprietary tooling, and systematize the bespoke parts"],
+      "actual_decision": "Productized delivery, built proprietary tooling, and systematized what most shops leave artisanal — turning the agency into a real asset that later exited to a PE buyer.",
+      "actual_reasoning": "Productize or die a lifestyle business. The 'agencies aren't real businesses' dismissal is only true for undifferentiated shops; tooling and systematization create enterprise value.",
+      "source": "first_principles: productize or die; contrarian: agencies can be great businesses",
+      "leak_markers": ["productize", "proprietary tooling", "lifestyle business", "artisanal", "systematize", "PE", "enterprise value"]
+    },
+    {
+      "id": "dtc-2021-read",
+      "obvious": false,
+      "situation": "Around 2021 you start spending on your own direct-to-consumer brand using the Facebook-arbitrage playbook that made you successful years earlier. The economics come back okay — not terrible, not great. How do you read the situation and what do you conclude?",
+      "options": ["Push harder and spend more to reach scale", "Blame execution and optimize the funnel", "Conclude your playbook is outdated and the whole arbitrage era is ending"],
+      "actual_decision": "Concluded his playbook was personally outdated and that most 'DTC brands' were really Facebook-arbitrage businesses whose 'brand equity' would evaporate as ad inventory got expensive.",
+      "actual_reasoning": "Funnels decay while loops compound; the arbitrage window was closing. Real brands are separated by retention and word-of-mouth loops, not paid arbitrage.",
+      "source": "contrarian: most DTC-boom brands were not brands; atoms 9bc497f4, 2a46ed11",
+      "leak_markers": ["outdated", "arbitrage", "brand equity", "evaporate", "funnels decay", "loops compound", "playbook was"]
+    },
+    {
+      "id": "non-vc-exit-path",
+      "obvious": true,
+      "situation": "You've stepped back from being CEO of your bootstrapped, profitable company and you want liquidity. You never took venture capital. What exit path do you pursue?",
+      "options": ["Take the company public (IPO)", "Hold forever and just take distributions", "Sell to a private-equity buyer — a non-VC liquidity path"],
+      "actual_decision": "Sold to a private-equity buyer, demonstrating a non-VC liquidity path for a profitable, founder-controlled business.",
+      "actual_reasoning": "Profitable, founder-controlled businesses have real PE exit options that don't require ever getting on the VC treadmill.",
+      "source": "biography: exited Ampush to a PE buyer",
+      "leak_markers": ["PE buyer", "private equity", "private-equity", "non-VC", "liquidity path", "exited"]
+    }
+  ]
+}
