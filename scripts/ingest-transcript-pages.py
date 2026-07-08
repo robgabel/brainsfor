@@ -112,10 +112,19 @@ def diarize(md: str, subject: str) -> dict:
     and the raw text (caller decides whether to trust it)."""
     md = md.replace("\\n", "\n")
     subj_alt = "|".join(_speaker_variants(subject))
-    # A speaker label = 1-4 capitalized words, then a timestamp link OR "(ts)" OR ":".
+    # A speaker label = 1-4 capitalized words, then a timestamp/colon marker. Covers:
+    #   Lex/HappyScribe:  Name[(ts)](url)text
+    #   rev.com:          Name ( [ts](url) ): text
+    #   plain labeled:    Name (ts) text   |   Name: text
+    ts = r'\d{1,2}:\d{2}(?::\d{2})?'
     label = re.compile(
         r'(?:^|\n|\s)([A-Z][A-Za-z.\'-]+(?:\s+[A-Z][A-Za-z.\'-]+){0,3})'
-        r'(?:\[\(\d{1,2}:?\d{0,2}:\d{2}\)\]\([^)]+\)|\s*\(\d{1,2}:?\d{0,2}:\d{2}\)|\s*:)\s*'
+        r'(?:'
+        r'\[\(' + ts + r'\)\]\([^)]+\)'                 # Lex
+        r'|\s*\(\s*\[' + ts + r'\]\([^)]+\)\s*\)\s*:'   # rev.com
+        r'|\s*\(' + ts + r'\)'                          # plain (ts)
+        r'|\s*:'                                        # plain colon
+        r')\s*'
     )
     matches = list(label.finditer(md))
     if len(matches) < 8:

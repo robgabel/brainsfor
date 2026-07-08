@@ -1,6 +1,6 @@
 # Elon Musk Brain Pack
 
-> **845 knowledge atoms** · **719 typed connections** · **10 unified skills (1 router + 8 reasoning modes + a board of advisors)**
+> **874 knowledge atoms** · **719 typed connections** · **10 unified skills (1 router + 8 reasoning modes + a board of advisors)**
 > From [brainsforagents.com](https://brainsforagents.com)
 
 ## What This Is
@@ -29,7 +29,7 @@ You should get a response that cites specific atoms, synthesizes Elon's perspect
 pack/
   ├── SKILL.md              ← Setup guide + skill reference (start here)
   ├── brain-context.md      ← Full knowledge base (load this as context)
-  ├── brain-atoms.json      ← Structured data (845 atoms, 719 connections)
+  ├── brain-atoms.json      ← Structured data (874 atoms, 719 connections)
   ├── README.md             ← You are here
   └── skills/               ← 10 unified skills (work with any installed brain)
       ├── brain/            ← /brain router (set/show/list/clear active brain)
@@ -57,7 +57,7 @@ This means:
 
 ## The Knowledge Graph
 
-**845 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
+**874 atoms** — Each atom is a self-contained insight with topic tags, source date, confidence score, and source URL.
 
 **719 connections** — Typed relationships between atoms: supports, contradicts, extends, related, inspired_by. These let skills trace reasoning chains and surface productive tensions.
 

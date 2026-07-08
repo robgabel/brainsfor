@@ -266,7 +266,7 @@ def main():
           f"({100*len(results)//max(1,len(targets))}% of quote-less atoms)")
     if cost:
         try:
-            print(f"Cost: ${cost.total_cost():.2f}" if hasattr(cost, "total_cost") else "")
+            print(f"Cost: ${cost.total_cost:.2f}" if hasattr(cost, "total_cost") else "")
         except Exception:
             pass
 

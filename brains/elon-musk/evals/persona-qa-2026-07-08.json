@@ -1,0 +1,195 @@
+{
+  "slug": "elon-musk",
+  "target": "Elon Musk",
+  "date": "2026-07-08",
+  "persona_qa_score": 62,
+  "raw_chair_score": 62,
+  "numeric_capped": false,
+  "high_severity_numeric_defects": 0,
+  "pass": false,
+  "pass_threshold": 70,
+  "dimension_scores": {
+    "authenticity": 70,
+    "rigor": 74,
+    "coverage": 40,
+    "calibration": 63
+  },
+  "confidence": "medium",
+  "ship_recommendation": "rework",
+  "summary": "Elon Musk would recognize the engineer in this brain instantly \u2014 the first-principles decomposition, the idiot index, the machine that builds the machine, the specific quantified physics claims. He would not wince at anything, and that's the tell. This is a high-quality capture of the half of Musk that flatters Musk, and a thin, sanitized capture of the half that involves power, impulsivity, and human cost. The reasoning engine is real; the self-interrogation is largely absent \u2014 the brain narrates his method rather than betting against it.",
+  "calibration_note": "I trust these three judges asymmetrically and I recalibrated accordingly. Swisher (72) and Munger (78) are converging on the SAME finding from different angles \u2014 self-serving PR laundered as principle, no interrogation of the incentive the optimism serves. Convergence between two independent judges on the identical flaw is a strong signal, not noise; I nudged authenticity down to 70 and rigor down to 74 because both scores are generous relative to the severity of the flaw they each independently named. Brown (34) is the outlier, and outliers are where the learning lives \u2014 but I read her low score as partly a dimension-fit artifact: she is scoring 'interior human' on a subject whose actual character genuinely is more machine than confessional, so some absence is faithful, not a defect. I recalibrated coverage UP to 40: the missing divorce/relational-cost material is a real hole, but demanding a Bren\u00e9-Brown interior from Musk risks resulting against an honest capture of a genuinely low-affect operator. On my own dimension: the brain is NOT thin \u2014 Munger is right it's a genuine article \u2014 but it fails the disconfirmation test. A well-calibrated brain models its own dominant failure mode; the single most documented pattern in Musk's career is chronic timeline over-optimism, and it appears nowhere as a bias, only as a virtue ('urgency is a choice'). That's the diagnostic gap. Numeric gate: 0 HIGH-severity defects, so the hard gate is passed \u2014 the OpenAI-departure item is medium/ungrounded, which holds but does not block.",
+  "ranked_fixes": [
+    {
+      "priority": 1,
+      "fix": "Add the method's own failure mode as an explicit bias: Musk's first-principles reasoning correctly finds the material floor but systematically underestimates organizational/timeline reality (FSD 'next year' for a decade, Starship dates, production hell). Model this as a known bias he fights, not just as virtue.",
+      "why": "This is the disconfirmation test the brain fails. A brain that only narrates its strengths teaches resulting \u2014 it can't distinguish Musk's genius from his most expensive recurring error. Highest-leverage single fix for both rigor and authenticity, and both field judges named it independently."
+    },
+    {
+      "priority": 2,
+      "fix": "Interrogate the X/free-speech material for incentive. Present 'restoration of free speech' alongside the advertiser exodus, self-amplification, and reinstatements \u2014 as a contested bet with a cost ledger, not a stated fact.",
+      "why": "Two independent judges flagged this as pure PR laundered as principle. Leaving it unchallenged means the brain will confidently reproduce Musk's self-story as neutral truth \u2014 a confident-sounding thin spot."
+    },
+    {
+      "priority": 3,
+      "fix": "Restore weight to human cost. The divorce is a one-line list item; the 'pedo guy' episode, impulsive posting, and relational damage from 100-hour weeks are absent. Add hard lessons where the cost lands on a person or the self, not only the balance sheet.",
+      "why": "Coverage is the panel's clear low. A brain where 'nobody is ever wounded by him' is not a faithful Musk \u2014 it's a defensible one. This closes the biggest completeness gap without forcing false introspection."
+    },
+    {
+      "priority": 4,
+      "fix": "Ground or cut the OpenAI-departure lesson (biography[11]), currently flagged medium/ungrounded.",
+      "why": "Numeric gate is passed, but an ungrounded biographical claim is a cheap defect to eliminate and it sits in the 'hard lessons with receipts' section where credibility is load-bearing."
+    }
+  ],
+  "panel": [
+    {
+      "seat": "authenticity",
+      "judge": "kara-swisher",
+      "recused": false
+    },
+    {
+      "seat": "rigor",
+      "judge": "charlie-munger",
+      "recused": false
+    },
+    {
+      "seat": "coverage",
+      "judge": "brene-brown",
+      "recused": false
+    },
+    {
+      "seat": "chair",
+      "judge": "annie-duke",
+      "recused": false
+    }
+  ],
+  "field_verdicts": [
+    {
+      "seat": "authenticity",
+      "lens": "Authenticity / recognizability",
+      "judge": "kara-swisher",
+      "judge_name": "Kara Swisher",
+      "recused": false,
+      "score": 72,
+      "recognizable": true,
+      "verdict": "This is a real Musk on the engineering axis \u2014 the first-principles decomposition, the idiot index, 'the best part is no part,' the machine that builds the machine. Those are load-bearing, verifiable, and unmistakably him. But the pack is sanitized on exactly the dimension I care about most: power and accountability. It captures the shipbuilder and buries the shipwreck. The Musk who tweets impaired, runs a feckless board, weaponizes X, and calls content moderation 'censorship' shows up only in his own flattering framing, never interrogated. He'd recognize the flattering half and wince at nothing \u2014 which is precisely the problem.",
+      "strengths": [
+        "The engineering core is authentic and rigorous \u2014 'reason from physics not analogy,' the idiot index on rockets, reusability economics, 'solve for the limiting factor.' This is genuinely how he thinks and talks.",
+        "The hard-lessons section has real receipts with real cost \u2014 the 2008 split between SpaceX and Tesla, Christmas Eve financing at 6pm, the talent-over-character hiring admission. These are documented and he'd own them.",
+        "Contrarian positions are specific and falsifiable \u2014 lidar-as-crutch, tunnels over flying cars, the OceanGate carbon-fiber critique. That's the real contrarian instinct, not generic edginess."
+      ],
+      "weaknesses": [
+        "The X/free-speech material is pure Musk PR laundered as principle. 'The restoration of free speech on X... you can't just openly censor people when X is available' is stated as fact with zero tension \u2014 no advertiser exodus, no amplification of his own posts, no reinstating banned accounts. This is a performance of the flattering self-story.",
+        "No behavioral shadow side. The man who posts at 3am, who called a rescue diver a 'pedo guy,' who moved his companies out of spite, who has a documented impulse-control pattern \u2014 none of it. A brain pack that captures Musk with the impulsivity surgically removed is not Musk; it's the keynote version.",
+        "The AI-safety material is internally contradictory in a way the pack doesn't notice: he founded OpenAI, left, then built xAI/Grok to compete \u2014 the 'existential risk' framing coexists with aggressively shipping frontier AI. The pack presents the alarm without the commercial hypocrisy, which is the actual tell.",
+        "Governance is entirely absent. No board dynamics, no compensation-package fights, no SEC 'funding secured,' no Delaware ruling. The structural context in which this person actually operates has been scrubbed."
+      ],
+      "flags": [
+        {
+          "issue": "Self-serving political claim presented as neutral principle",
+          "evidence": "'It also changed the benchmark for all the other platforms. You can't just openly censor people when X is available. So Facebook announced they were changing, YouTube announced they were changing.'",
+          "fix": "Keep it as his voice, but flag it as contested self-narrative \u2014 pair with the advertiser revenue collapse and his own account-boosting so the AI reasons about the gap between claim and behavior."
+        },
+        {
+          "issue": "AI-risk position lacks the commercial contradiction that defines it",
+          "evidence": "'AI is the most serious near-term existential risk humanity faces' alongside Grok atoms with no acknowledgment he is racing to build frontier AI himself.",
+          "fix": "Add the tension explicitly: he treats concentrated AI as the danger while building his own \u2014 the 'regulate everyone but me' pattern. That contradiction IS the authentic Musk."
+        },
+        {
+          "issue": "Impulsivity and reputational self-harm entirely missing",
+          "evidence": "No atom anywhere covers the posting behavior, the personal attacks, or the pattern of decisions made in anger.",
+          "fix": "Add hard lessons or atoms on the 'pedo guy' tweet, 'funding secured,' or the Twitter-poll governance-by-impulse \u2014 with cost. Without these the pack fails authenticity on the whole-person test."
+        },
+        {
+          "issue": "OpenAI departure flagged as ungrounded and left thin",
+          "evidence": "NUMERIC VERIFICATION: 'Having departed OpenAI's board in 2018, Musk concluded that the organization had drifted from its saf...' [medium/ungrounded]",
+          "fix": "Ground it with the actual dispute \u2014 the failed takeover bid, the for-profit conversion grievance, the lawsuit \u2014 which reveals his real motives, not just stated ones."
+        }
+      ]
+    },
+    {
+      "seat": "rigor",
+      "lens": "Rigor / anti-slop",
+      "judge": "charlie-munger",
+      "judge_name": "Charlie Munger",
+      "recused": false,
+      "score": 78,
+      "recognizable": true,
+      "verdict": "This is a genuine article, not a name stapled onto platitudes. The first-principles physics reasoning, the idiot-index decomposition of rocket cost, the specific quantified claims \u2014 kilowatt per square meter, 17,000 mph orbital velocity, $50-100 million marginal launch cost \u2014 these are things Musk actually thinks and says, and they carry the signature of a man who reasons from material constraints rather than analogy. The hard lessons have receipts with dollar figures and dates. Where it thins out is in the too-comfortable universality of the doctrine: the brain is more a hagiography of Musk's stated method than an honest ledger of where that method has cost him.",
+      "strengths": [
+        "Physics-grounded atoms with verifiable numbers \u2014 'a kilowatt per square meter normal to the sun... 250 watts per square meter' and '17,000 miles an hour' orbital velocity \u2014 this is decomposition to raw constraints, the actual method, not slogans",
+        "The idiot-index / first-principles reasoning is captured with genuine teeth: 'Decomposing rocket cost to raw aluminum, steel, and fuel reveals a massive idiot index \u2014 most of the cost is organizational and contractual overhead' \u2014 that is a real edge, not a platitude",
+        "Hard lessons carry receipts: the 2008 split-the-last-dollars decision, the Christmas Eve 6pm financing close, the talent-over-character hiring admission repeated 'several times' \u2014 these are confessions with cost attached, which is what separates a real brain from a puff piece",
+        "The OceanGate carbon-fiber prediction is a legitimate falsifiable contrarian call rooted in material physics (compressive strength, cyclic load), the kind of thing that separates a model-builder from a poser"
+      ],
+      "weaknesses": [
+        "The constitution reads like Musk's self-flattering narration of himself \u2014 'Urgency is a choice, not a circumstance' and 'Abundance is the default; scarcity is a failure of imagination' are the kind of thing a man says at a conference, not a hard-won constraint he wrestles with. Where is the incentive that this optimism serves?",
+        "No accounting for the systematic failure mode of the method: reasoning from physics correctly identifies the material floor but chronically underestimates the ORGANIZATIONAL and human time-cost. 'Full Self-Driving next year' has been said for a decade. A rigorous brain would model its own predictable over-optimism as a first-class bias, not omit it",
+        "Several atoms drift outside the circle of competence into pure PR \u2014 'The restoration of free speech on X... forcing policy changes at Facebook and YouTube' is self-congratulation dressed as insight, not physics. This is the man-with-a-hammer applying his engineering confidence to a domain where he has no measurable edge",
+        "The Mars direct-democracy atom and simulation-hypothesis musings are dorm-room philosophy, not rigorous thought \u2014 they dilute the genuine engineering rigor with speculation that any bright undergraduate could produce"
+      ],
+      "flags": [
+        {
+          "issue": "Self-serving PR presented as analytical insight \u2014 no incentive interrogation",
+          "evidence": "'The restoration of free speech on X created competitive pressure across all major social media platforms, forcing policy changes at Facebook and YouTube that would not have occurred otherwise.'",
+          "fix": "Either cut it or force the atom to survive the same first-principles scrutiny applied to rockets: what is the falsifiable claim, and what does the incentive structure of the person making it reveal?"
+        },
+        {
+          "issue": "The method's own dominant failure \u2014 chronic timeline over-optimism \u2014 is nowhere modeled as a bias, despite being the most documented pattern in the subject's career",
+          "evidence": "'Urgency is a choice, not a circumstance \u2014 Most timelines are artificially conservative...'",
+          "fix": "Add a hard lesson with receipts: FSD, Robotaxi, and Mars timelines repeatedly missed by years. A rigorous brain inverts on itself and asks how aggressive-deadline reasoning systematically fools the reasoner."
+        },
+        {
+          "issue": "Speculative philosophy diluting the engineering core",
+          "evidence": "'Most likely the form of government on Mars would be somewhat of a direct democracy where people vote directly on issues...'",
+          "fix": "Move to a clearly-labeled 'speculative' basket, or delete. It carries none of the material-constraint rigor that makes the rest recognizable and lowers the average density of hard-won insight."
+        }
+      ]
+    },
+    {
+      "seat": "coverage",
+      "lens": "Coverage of the human / the mess",
+      "judge": "brene-brown",
+      "judge_name": "Bren\u00e9 Brown",
+      "recused": false,
+      "score": 34,
+      "recognizable": false,
+      "verdict": "This is a brilliant engine of a mind rendered with almost no interior. I see the cognition \u2014 first principles, the idiot index, the machine that builds the machine \u2014 but I do not see the human who broke and rebuilt himself around any of it. The hard lessons are real and welcome, but they're all business lessons metabolized into cleaner operating principles; the cost is always to the company, almost never to a person, a relationship, or the self. What's here is the arena as a physics problem, not the man in the arena bleeding.",
+      "strengths": [
+        "The 2008 near-death lessons carry genuine receipts and real stakes \u2014 'I put in all the money I had left \u2014 literally everything. I didn't have a house' is the closest thing here to vulnerability with a face.",
+        "The talent-vs-character hiring lesson gestures at something interior \u2014 'I think it actually matters whether somebody has a good heart' \u2014 and admits repetition of the same mistake, which is honest.",
+        "The split-your-last-dollars atom names an actual agonizing choice ('which one am I gonna let die') rather than a triumphant strategy."
+      ],
+      "weaknesses": [
+        "Every failure is a business failure that resolves into a sharper principle. Nobody in this brain is ever wounded by him. Where is the human cost \u2014 the divorce mentioned in passing as one line item in a list ('a personal divorce'), the estranged relationships, the people damaged by the 100-hour weeks he calls 'not martyrdom'?",
+        "The doubt is missing. 'Urgency is a choice, not a circumstance' and 'Working 100-hour weeks... it's compressing the learning cycle' are stated with zero acknowledgment of what that costs a body, a family, a mind. That's the LinkedIn version \u2014 armor, not the man.",
+        "Shame appears nowhere. A person this publicly embattled, this often wrong in public, this scrutinized \u2014 and the brain has no atom about being humiliated, about being seen at his worst. That's not coverage of the human; that's the highlight reel of the intellect.",
+        "The most human, unguarded atoms in the sample \u2014 'just go be honest with elon so i went and let elon know i was like yo bro sorry' and the weed comment \u2014 are the ONLY glimpses of a person with texture, and they read as accidental, not curated as meaningful.",
+        "'I don't care what people think' is his own form of armor, and this brain wears it uncritically: 'The restoration of free speech on X' and the truth-vs-consensus stance are presented as pure conviction with no interior friction, no fear of being disliked underneath the pose of indifference.",
+        "No apology anywhere. A whole life of public conflict and the brain contains not one genuine reckoning where he says 'I hurt someone' without a 'but' \u2014 only 'I mis-weighted a hiring variable.'"
+      ],
+      "flags": [
+        {
+          "issue": "A major life rupture is flattened into a throwaway list item, denying it any emotional weight",
+          "evidence": "'2008 we had the third consecutive failure of the Falcon rocket... Tesla almost went bankrupt... and a personal divorce \u2014 yet both companies'",
+          "fix": "Give the divorce its own atom. What did the mission cost the marriage? What did he learn about the price other people pay for his urgency? That's the human, and right now it's a footnote to a rocket."
+        },
+        {
+          "issue": "100-hour weeks framed as pure virtue with no acknowledged cost \u2014 this is numbing dressed as principle",
+          "evidence": "'Working 100-hour weeks isn't martyrdom \u2014 it's compressing the learning cycle when the mission justifies the cost.'",
+          "fix": "Add the counterweight in his own voice \u2014 the sleep-on-the-factory-floor breakdowns, the public admissions of pain. You cannot selectively numb; a brain that only shows the drive and never the depletion is not the whole man."
+        },
+        {
+          "issue": "Contrarian conviction presented as frictionless, hiding the interior fear underneath",
+          "evidence": "'Truth-seeking beats consensus-seeking... being right and being agreed with are uncorrelated.'",
+          "fix": "Show where caring what people think broke through anyway \u2014 the moments the criticism landed, the tweets he regretted. The performance of not-caring is itself data about a man hardwired for connection."
+        },
+        {
+          "issue": "Zero atoms on shame, humiliation, or being seen at his worst",
+          "evidence": "No atom in the sample addresses public failure emotionally; all failure is instrumentalized into 'Changed: I reinforced my default.'",
+          "fix": "Excavate at least one moment where he was exposed and it hurt \u2014 not a strategic loss, a personal one. Shame that's never spoken is the largest missing organ in this brain."
+        }
+      ]
+    }
+  ],
+  "cost": 0.4042
+}
