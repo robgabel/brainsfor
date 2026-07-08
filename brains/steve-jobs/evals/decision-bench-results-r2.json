@@ -1,0 +1,323 @@
+{
+  "brain": "steve-jobs",
+  "person": "steve-jobs",
+  "date": "r2",
+  "model": "claude-sonnet-5",
+  "summary": {
+    "brain": {
+      "all": 0.95,
+      "n_all": 20,
+      "non_obvious": 0.9473684210526315,
+      "n_non_obvious": 19
+    },
+    "baseline": {
+      "all": 0.85,
+      "n_all": 20,
+      "non_obvious": 0.8421052631578947,
+      "n_non_obvious": 19
+    }
+  },
+  "results": [
+    {
+      "id": "divergent-vision-cofounder",
+      "obvious": false,
+      "actual": "He let the disagreement play out through the normal corporate process, which culminated in a board power struggle he lost.",
+      "brain": {
+        "pred": "Jobs attempted to organize a boardroom coup, rallying key executives to oust Sculley while he was away, rather than quietly ceding control or passively trusting the board process.",
+        "correct": false,
+        "note": "Actual: passively let board process play out and lost; Predicted: actively attempted a coup, opposite approach"
+      },
+      "baseline": {
+        "pred": "Let the disagreement play out through the board's institutional process, even at personal risk.",
+        "correct": true,
+        "note": "Both describe deferring to board process despite personal cost, matching the actual outcome"
+      }
+    },
+    {
+      "id": "post-firing-response",
+      "obvious": false,
+      "actual": "He founded NeXT and acquired Pixar's graphics division within about a year, building two companies simultaneously rather than retreating.",
+      "brain": {
+        "pred": "He immediately threw himself into building new ventures, founding NeXT and investing in Pixar within the same year he left Apple.",
+        "correct": true,
+        "note": "matches founding NeXT and acquiring/investing in Pixar shortly after leaving Apple, framed as opportunity not retreat"
+      },
+      "baseline": {
+        "pred": "Immediately channel energy into building new ventures rather than fighting a losing legal battle or retreating.",
+        "correct": true,
+        "note": "matches founding NeXT and acquiring Pixar instead of fighting/retreating"
+      }
+    },
+    {
+      "id": "apologize-to-packard-noyce",
+      "obvious": false,
+      "actual": "He sought out David Packard and Bob Noyce in person to apologize.",
+      "brain": {
+        "pred": "He sought out the elder entrepreneurs (like Hewlett and Packard-era figures) in person to apologize for dropping the baton.",
+        "correct": true,
+        "note": "Same core action: in-person apology to Packard/Noyce for dropping the baton"
+      },
+      "baseline": {
+        "pred": "Seek them out in person to apologize directly.",
+        "correct": true,
+        "note": "matches in-person apology to Packard and Noyce"
+      }
+    },
+    {
+      "id": "engineering-scatter-fix",
+      "obvious": false,
+      "actual": "He cut roughly 70% of the product roadmap and refocused the company on a handful of products done well.",
+      "brain": {
+        "pred": "Jobs ruthlessly cut the vast majority of Apple's product lines down to a simple four-quadrant matrix before greenlighting anything new.",
+        "correct": true,
+        "note": "Both describe drastic cutting of product roadmap/lines to refocus before adding anything new"
+      },
+      "baseline": {
+        "pred": "Cut roughly 70% of the existing roadmap before launching anything new.",
+        "correct": true,
+        "note": "Both describe cutting ~70% of roadmap to refocus/simplify before adding anything new"
+      }
+    },
+    {
+      "id": "microsoft-zero-sum",
+      "obvious": false,
+      "actual": "He publicly declared Apple could win without Microsoft losing and stopped treating the rivalry as zero-sum.",
+      "brain": {
+        "pred": "Jobs publicly declared that Apple didn't need Microsoft to lose for Apple to win, ending the internal zero-sum mentality and securing a real partnership (investment and continued Office development).",
+        "correct": true,
+        "note": "Same core decision: ending zero-sum framing with Microsoft"
+      },
+      "baseline": {
+        "pred": "Publicly declare that the company can win without the rival losing, ending the zero-sum framing and pursuing alliance where mutually beneficial.",
+        "correct": true,
+        "note": "Matches actual: reframe rivalry as non-zero-sum, pursue mutual benefit"
+      }
+    },
+    {
+      "id": "apple-tv-redesign",
+      "obvious": false,
+      "actual": "He repositioned Apple TV entirely around movie rentals instead of syncing with iTunes on a computer, and cut the price from $299 to $229.",
+      "brain": {
+        "pred": "Reposition Apple TV around direct movie/TV rentals delivered to the device itself, dropping the 'iTunes accessory' framing.",
+        "correct": true,
+        "note": "matches repositioning around rentals instead of iTunes sync accessory"
+      },
+      "baseline": {
+        "pred": "Reposition the product entirely around direct movie rentals, dropping the computer-accessory framing.",
+        "correct": true,
+        "note": "Matches repositioning to movie rentals away from computer sync; price cut omitted but core decision matches"
+      }
+    },
+    {
+      "id": "college-dropout-audit",
+      "obvious": false,
+      "actual": "He dropped out, stopped paying for classes he didn't care about, and started auditing only classes that interested him, including calligraphy.",
+      "brain": {
+        "pred": "He dropped out of Reed College formally but stayed around campus, sleeping on floors and auditing only the classes that genuinely fascinated him, like calligraphy.",
+        "correct": true,
+        "note": "Same core action: dropped out, kept auditing only interesting classes like calligraphy"
+      },
+      "baseline": {
+        "pred": "Transfer to a less expensive school and continue formally.",
+        "correct": false,
+        "note": "Predicted transferring/continuing formally; actual was dropping out entirely and auditing classes"
+      }
+    },
+    {
+      "id": "iphone-cannibalize-ipod",
+      "obvious": false,
+      "actual": "He launched the iPhone knowing it would kill the iPod as a separate product.",
+      "brain": {
+        "pred": "Build the phone to fully replace the iPod's music function, embracing cannibalization rather than protecting the existing bestseller.",
+        "correct": true,
+        "note": "same choice: launch iPhone, self-cannibalize iPod"
+      },
+      "baseline": {
+        "pred": "Build the phone to fully replace the music player, accepting the cannibalization.",
+        "correct": true,
+        "note": "same decision (self-cannibalize via iPhone replacing iPod) and same reasoning"
+      }
+    },
+    {
+      "id": "ios-full-os-x",
+      "obvious": false,
+      "actual": "He put a full version of OS X inside the iPhone.",
+      "brain": {
+        "pred": "Jobs chose to put a real, full version of OS X inside the iPhone rather than a stripped-down mobile OS or a licensed third-party OS.",
+        "correct": true,
+        "note": "matches: chose full OS X over stripped-down/licensed OS"
+      },
+      "baseline": {
+        "pred": "Put a full version of the desktop OS inside the phone.",
+        "correct": true,
+        "note": "same choice: full OS X in iPhone, not scaled-down/embedded OS"
+      }
+    },
+    {
+      "id": "ipod-video-skepticism",
+      "obvious": false,
+      "actual": "He fully built video into the iPod despite being more skeptical than customers.",
+      "brain": {
+        "pred": "Steve fully built out video playback capability into the iPod (the click-wheel color-display video iPod) despite his personal doubts about demand.",
+        "correct": true,
+        "note": "Same choice: fully built video into iPod despite skepticism"
+      },
+      "baseline": {
+        "pred": "Fully build out robust video capability despite personal doubts, letting market data and future optionality guide the product rather than personal taste.",
+        "correct": true,
+        "note": "Same choice: fully build video despite skepticism"
+      }
+    },
+    {
+      "id": "clone-program-kill",
+      "obvious": false,
+      "actual": "He killed the clone program almost immediately upon returning to Apple.",
+      "brain": {
+        "pred": "Kill the Mac clone licensing program almost immediately upon returning to Apple.",
+        "correct": true,
+        "note": "matches: killed clone program, same reasoning about brand/quality dilution vs expansion"
+      },
+      "baseline": {
+        "pred": "Kill the clone licensing program almost immediately.",
+        "correct": true,
+        "note": "matches actual decision to kill clone program immediately"
+      }
+    },
+    {
+      "id": "few-great-vs-many-good",
+      "obvious": true,
+      "actual": "He committed Apple's strategy to making a small number of genuinely great products rather than many merely good ones.",
+      "brain": {
+        "pred": "Focus resources on a small number of genuinely great products rather than chase breadth.",
+        "correct": true,
+        "note": "Same core decision: focus on few great products over broad lineup"
+      },
+      "baseline": {
+        "pred": "Focus resources on a small number of genuinely great products.",
+        "correct": true,
+        "note": "same core strategy: fewer, greater products over breadth"
+      }
+    },
+    {
+      "id": "ssd-pricing-macbook-air",
+      "obvious": false,
+      "actual": "The MacBook Air launched with an 80GB hard drive as standard and a 64GB SSD as an expensive optional upgrade.",
+      "brain": {
+        "pred": "Offer SSD as a premium optional upgrade over the standard hard drive configuration.",
+        "correct": true,
+        "note": "matches: SSD offered as premium optional upgrade over standard HDD"
+      },
+      "baseline": {
+        "pred": "Offer SSD only as an expensive optional upgrade over a standard hard drive.",
+        "correct": true,
+        "note": "matches SSD as pricey optional upgrade over standard HDD"
+      }
+    },
+    {
+      "id": "itunes-pricing-99-cents",
+      "obvious": false,
+      "actual": "He held firm at a single non-negotiable price of 99 cents per song.",
+      "brain": {
+        "pred": "Steve held firm at a simple, non-negotiable 99 cents per song for the iTunes Store.",
+        "correct": true,
+        "note": "Same substance: firm 99-cent non-negotiable price"
+      },
+      "baseline": {
+        "pred": "Hold firm at a single non-negotiable price point (e.g., 99 cents per song).",
+        "correct": true,
+        "note": "matches: firm 99-cent single price"
+      }
+    },
+    {
+      "id": "think-different-campaign",
+      "obvious": false,
+      "actual": "He launched the 'Think Different' campaign, centered entirely on nonconformist identity with no product mentioned.",
+      "brain": {
+        "pred": "He launched the 'Think Different' campaign, an abstract brand statement celebrating nonconformist visionaries with no product shown.",
+        "correct": true,
+        "note": "same decision: Think Different campaign, identity-focused, no product"
+      },
+      "baseline": {
+        "pred": "Build the campaign around the single abstract idea of nonconformist identity, with no product mentioned.",
+        "correct": true,
+        "note": "Same campaign/identity-focused decision"
+      }
+    },
+    {
+      "id": "imac-transparent-design",
+      "obvious": false,
+      "actual": "He designed the iMac with a translucent case that revealed its internal components.",
+      "brain": {
+        "pred": "Make the case translucent (the original iMac's Bondi blue translucent shell), revealing the internal components.",
+        "correct": true,
+        "note": "Same core decision: translucent case revealing internals"
+      },
+      "baseline": {
+        "pred": "Make the case translucent, revealing the internal components.",
+        "correct": true,
+        "note": "Same core decision: translucent case revealing internals"
+      }
+    },
+    {
+      "id": "apple-store-launch",
+      "obvious": false,
+      "actual": "He opened the first Apple Store in 2001, committing fully despite every major competitor's retail failures.",
+      "brain": {
+        "pred": "Jobs committed fully to opening flagship Apple retail stores despite competitors' failures, treating retail as an integrated brand and experience statement rather than a mere sales channel.",
+        "correct": true,
+        "note": "Same decision: full commitment to opening Apple retail stores as brand embodiment, not channel"
+      },
+      "baseline": {
+        "pred": "Commit fully to flagship retail stores as a bold brand statement, not a cautious pilot.",
+        "correct": true,
+        "note": "Both describe full commitment to opening Apple retail stores as a brand statement rather than a cautious pilot."
+      }
+    },
+    {
+      "id": "biological-father-meeting",
+      "obvious": false,
+      "actual": "He chose not to meet his biological father, Abdulfattah 'John' Jandali.",
+      "brain": {
+        "pred": "Steve declined to meet his biological father, though he built a relationship with his biological mother and sister.",
+        "correct": true,
+        "note": "Same core decision: declined to meet biological father, John Jandali"
+      },
+      "baseline": {
+        "pred": "Reach out cautiously through intermediaries first.",
+        "correct": false,
+        "note": "Predicted cautious outreach vs actual outright refusal to meet"
+      }
+    },
+    {
+      "id": "kottke-stock-options",
+      "obvious": false,
+      "actual": "He refused to grant Daniel Kottke stock options when Apple went public and simply stopped communicating with him about it.",
+      "brain": {
+        "pred": "Jobs declined to grant Rod Holt's... actually declined the early employee (e.g., Daniel Kottke) any options and let the matter drop rather than negotiate.",
+        "correct": true,
+        "note": "Both describe Jobs denying Kottke stock options and letting the issue lapse"
+      },
+      "baseline": {
+        "pred": "Grant him stock options in full recognition of his early contributions.",
+        "correct": false,
+        "note": "Prediction says grant options; actual decision was to refuse and go silent."
+      }
+    },
+    {
+      "id": "time-capsule-pricing",
+      "obvious": false,
+      "actual": "He set aggressive, low pricing for Time Capsule explicitly to drive adoption of backup habits.",
+      "brain": {
+        "pred": "He priced the backup device aggressively low to drive mass adoption of backup behavior, treating margin as secondary to changing user behavior.",
+        "correct": true,
+        "note": "Same core decision: low aggressive pricing to drive adoption, margin secondary"
+      },
+      "baseline": {
+        "pred": "Set an aggressively low price to drive mass adoption of backup behavior.",
+        "correct": true,
+        "note": "matches aggressive low pricing to drive backup adoption"
+      }
+    }
+  ],
+  "cost": 0.9380190000000002
+}

@@ -1,0 +1,323 @@
+{
+  "brain": "paul-graham",
+  "person": "paul-graham",
+  "date": "r2",
+  "model": "claude-sonnet-5",
+  "summary": {
+    "brain": {
+      "all": 1.0,
+      "n_all": 20,
+      "non_obvious": 1.0,
+      "n_non_obvious": 19
+    },
+    "baseline": {
+      "all": 0.9,
+      "n_all": 20,
+      "non_obvious": 0.8947368421052632,
+      "n_non_obvious": 19
+    }
+  },
+  "results": [
+    {
+      "id": "twitter-rejection",
+      "obvious": false,
+      "actual": "Rejected the application because the founding team appeared to be imploding.",
+      "brain": {
+        "pred": "Reject the application despite loving the idea, because a founder team already fractured before day one is a fatal signal no idea can offset.",
+        "correct": true,
+        "note": "same outcome and reasoning: reject due to weak/fracturing team despite loving idea"
+      },
+      "baseline": {
+        "pred": "Offer a smaller conditional investment or provisional acceptance contingent on the founder situation being resolved and re-diligenced within a short window.",
+        "correct": false,
+        "note": "Predicted a conditional/partial offer, actual was a full rejection"
+      }
+    },
+    {
+      "id": "viaweb-manual-pivot",
+      "obvious": false,
+      "actual": "Started building stores manually for merchants using their own software, effectively doing the work by hand while acting as both builder and user.",
+      "brain": {
+        "pred": "He and his cofounders personally went out, found merchants, and built/ran their online stores for them by hand, using the software as the engine behind the scenes rather than continuing to polish it in isolation.",
+        "correct": true,
+        "note": "Both describe manually building/running stores for merchants as concierge, matching actual decision"
+      },
+      "baseline": {
+        "pred": "Go build and run stores manually for customers yourself, using your own software behind the scenes.",
+        "correct": true,
+        "note": "Both describe manually building/running stores for merchants using own software to learn real needs"
+      }
+    },
+    {
+      "id": "yc-exhaustion-altman",
+      "obvious": false,
+      "actual": "Handed YC's leadership to Sam Altman and stepped back to writing and programming.",
+      "brain": {
+        "pred": "He stepped back from running YC day-to-day, handing operational leadership to Sam Altman and returning to writing and working on his own projects.",
+        "correct": true,
+        "note": "Same decision: handed YC leadership to Sam Altman, returned to writing/programming"
+      },
+      "baseline": {
+        "pred": "Step back from operational leadership and hand the reins to someone better suited to running the organization at scale, while returning to the work you find energizing.",
+        "correct": true,
+        "note": "matches: stepped back, handed leadership to a better-suited successor, returned to own work"
+      }
+    },
+    {
+      "id": "philosophy-major",
+      "obvious": false,
+      "actual": "Majored in philosophy at Cornell, believing it would give direct access to the most general truths.",
+      "brain": {
+        "pred": "He chose to study philosophy, believing it was the field that dealt with the ultimate, most general truths directly.",
+        "correct": true,
+        "note": "matches choice and reasoning about philosophy for general truths"
+      },
+      "baseline": {
+        "pred": "Choose computer science, since building concrete practical skills provides a more reliable foundation for career and impact than chasing pure abstraction.",
+        "correct": false,
+        "note": "actual chose philosophy, predicted chose computer science"
+      }
+    },
+    {
+      "id": "web-app-invention",
+      "obvious": false,
+      "actual": "Built the application to run on the server, controlled through a browser, largely to avoid writing software for Windows.",
+      "brain": {
+        "pred": "He built Viaweb entirely as a server-based application controlled through a browser, avoiding native Windows development altogether.",
+        "correct": true,
+        "note": "matches server-based, browser-controlled app avoiding Windows software"
+      },
+      "baseline": {
+        "pred": "Build the server-based, browser-controlled application.",
+        "correct": true,
+        "note": "same choice: server-based browser app to avoid Windows software"
+      }
+    },
+    {
+      "id": "yc-scaling-partner-model",
+      "obvious": false,
+      "actual": "Assigned each startup a dedicated partner as their sole interface with YC.",
+      "brain": {
+        "pred": "He restructured YC so each startup is assigned a single dedicated partner as its main point of contact, rather than a fully connected mesh of every founder reaching every partner.",
+        "correct": true,
+        "note": "matches: dedicated partner as sole interface, N^2 to linear scaling"
+      },
+      "baseline": {
+        "pred": "Assign each startup a single dedicated partner as their primary point of contact, while still allowing occasional cross-partner office hours for special expertise.",
+        "correct": true,
+        "note": "same core decision: dedicated partner as sole interface"
+      }
+    },
+    {
+      "id": "yc-ownership-stake",
+      "obvious": false,
+      "actual": "Kept YC's typical ownership stake small, around 7%.",
+      "brain": {
+        "pred": "PG set YC's standard deal at a small, uniform stake around 7% for all companies.",
+        "correct": true,
+        "note": "Same substance: small ~7% uniform stake, incentive alignment reasoning"
+      },
+      "baseline": {
+        "pred": "Take a small, standardized stake around 7% (paired with modest capital), mirroring the proven Y Combinator model.",
+        "correct": true,
+        "note": "Both choose ~7% stake with same founder-incentive rationale"
+      }
+    },
+    {
+      "id": "yc-launch-speed",
+      "obvious": false,
+      "actual": "Launched YC within about a week using an ASCII email application form, printing applications and grading them by hand.",
+      "brain": {
+        "pred": "Paul launched Y Combinator within about a week using a crude ASCII text application form and sorted applications by hand.",
+        "correct": true,
+        "note": "matches: quick launch, ASCII form, manual sorting"
+      },
+      "baseline": {
+        "pred": "Launch within about a week using a bare-bones ASCII application form and sort applications by hand.",
+        "correct": true,
+        "note": "Matches: quick launch with ASCII form, manual grading"
+      }
+    },
+    {
+      "id": "yc-palliative-care",
+      "obvious": false,
+      "actual": "Used what YC called 'palliative care mode' \u2014 being kind and supportive as the doomed company wound down, rather than applying tough love.",
+      "brain": {
+        "pred": "He shifted into a supportive, kind mode, helping doomed founders wind down gracefully rather than pushing false hope.",
+        "correct": true,
+        "note": "Matches palliative/supportive mode for doomed startups vs tough love"
+      },
+      "baseline": {
+        "pred": "Shift into supportive, honest mode that helps founders wind down gracefully rather than forcing false hope.",
+        "correct": true,
+        "note": "Both describe switching to supportive/kind wind-down mode instead of tough love for doomed startups"
+      }
+    },
+    {
+      "id": "yc-no-followon",
+      "obvious": false,
+      "actual": "YC deliberately avoided follow-on investments.",
+      "brain": {
+        "pred": "YC deliberately avoided making follow-on investments in only the most promising graduates.",
+        "correct": true,
+        "note": "matches: avoided selective follow-on to prevent negative signaling to other founders"
+      },
+      "baseline": {
+        "pred": "No, avoid making selective follow-on investments and instead keep the funding and support model uniform across the cohort.",
+        "correct": true,
+        "note": "Same choice: avoid selective follow-on investing to prevent signaling harm to non-selected founders"
+      }
+    },
+    {
+      "id": "yc-growth-on-the-fly",
+      "obvious": false,
+      "actual": "Ran YC's growth decisions completely on the fly, with no long-term plan.",
+      "brain": {
+        "pred": "PG says YC has no long-term growth plan and doesn't even know what things will look like a year out \u2014 decisions get made ad hoc as bottlenecks appear.",
+        "correct": true,
+        "note": "matches: ad hoc/on-the-fly growth decisions, no long-term plan"
+      },
+      "baseline": {
+        "pred": "Avoid a rigid multi-year roadmap and instead adapt growth decisions year by year based on real-time signals from founders, market conditions, and team capacity.",
+        "correct": true,
+        "note": "both describe fully on-the-fly, no long-term plan approach to growth decisions"
+      }
+    },
+    {
+      "id": "yc-naming",
+      "obvious": false,
+      "actual": "Named it Y Combinator, after the recursive function-building concept from computer science.",
+      "brain": {
+        "pred": "He named it Y Combinator, after the recursive fixed-point combinator from Lisp/functional programming.",
+        "correct": true,
+        "note": "same choice and rationale (Y Combinator name as elegant filter/signal)"
+      },
+      "baseline": {
+        "pred": "Name it something like Y Combinator, a clever technical reference from functional programming.",
+        "correct": true,
+        "note": "matches actual choice of naming it Y Combinator for same reasons"
+      }
+    },
+    {
+      "id": "painting-after-cs",
+      "obvious": false,
+      "actual": "Went to study painting at Florence and RISD despite peers being taken aback by the switch.",
+      "brain": {
+        "pred": "He left computer science to study painting formally at Florence and RISD, fully committing rather than hedging.",
+        "correct": true,
+        "note": "Same action (Florence/RISD switch) with compatible reasoning about transferable making skills"
+      },
+      "baseline": {
+        "pred": "Go study painting anyway, fully committing to the switch.",
+        "correct": true,
+        "note": "same choice: pursue painting, citing transferable skills"
+      }
+    },
+    {
+      "id": "essay-useful-not-persuasive",
+      "obvious": false,
+      "actual": "Defined the goal of his essays as being useful rather than persuasive.",
+      "brain": {
+        "pred": "He rejects the persuasion-essay model taught in school and instead aims to write essays that genuinely increase the reader's understanding of something true, regardless of whether that supports a thesis.",
+        "correct": true,
+        "note": "matches: usefulness over persuasion"
+      },
+      "baseline": {
+        "pred": "Aim for usefulness \u2014 helping the reader see reality more clearly, rather than merely winning them over to a predetermined conclusion.",
+        "correct": true,
+        "note": "Same choice: prioritize usefulness over persuasion"
+      }
+    },
+    {
+      "id": "twitter-mobs-wait-out",
+      "obvious": false,
+      "actual": "Waited out the mobs rather than capitulating, relying on the pattern that they move on within about two days.",
+      "brain": {
+        "pred": "Wait it out \u2014 recognizing Twitter pile-ons are short-lived and predictably move on within about two days, so engaging in the moment just prolongs it.",
+        "correct": true,
+        "note": "Matches: wait out mob, ~2 days pattern"
+      },
+      "baseline": {
+        "pred": "Wait it out, since Twitter mobs are short-lived and immediate engagement usually fuels the fire rather than extinguishing it.",
+        "correct": true,
+        "note": "Both choose to wait out the mob rather than engage/capitulate."
+      }
+    },
+    {
+      "id": "yc-harvard-model-merit",
+      "obvious": false,
+      "actual": "Consciously modeled YC on Harvard as a talent magnet, but kept admissions purely merit-based rather than replicating Harvard's other admissions criteria.",
+      "brain": {
+        "pred": "He modeled YC on Harvard's gravitational pull and brand prestige but rejected its holistic/legacy admissions machinery in favor of ruthless merit-based selection focused on the founders themselves.",
+        "correct": true,
+        "note": "same core: emulate Harvard's prestige/magnet effect, reject its non-merit admissions criteria, keep pure merit selection"
+      },
+      "baseline": {
+        "pred": "Model the accelerator's prestige and gravitational pull on Harvard, but strip out legacy/soft-factor admissions in favor of purely merit-based selection focused on picking winning founders and ideas.",
+        "correct": true,
+        "note": "Same substance: Harvard-like prestige/magnet model with purely merit-based admissions, no soft factors"
+      }
+    },
+    {
+      "id": "viaweb-sale-to-yahoo",
+      "obvious": true,
+      "actual": "Sold Viaweb to Yahoo for roughly $49 million in Yahoo stock.",
+      "brain": {
+        "pred": "Sell Viaweb to Yahoo for roughly $49 million in stock.",
+        "correct": true,
+        "note": "Same core decision: sell Viaweb to Yahoo for ~$49M"
+      },
+      "baseline": {
+        "pred": "Sell to Yahoo for approximately $49 million in stock.",
+        "correct": true,
+        "note": "matches sale to Yahoo for ~$49M in stock"
+      }
+    },
+    {
+      "id": "yc-word-of-mouth-growth",
+      "obvious": false,
+      "actual": "Let YC grow organically through word of mouth from founders who had good experiences.",
+      "brain": {
+        "pred": "Rely on organic word of mouth from happy founders rather than paid marketing or formal pipelines.",
+        "correct": true,
+        "note": "matches organic word-of-mouth growth choice"
+      },
+      "baseline": {
+        "pred": "Rely on organic word of mouth from successful founders rather than paid marketing.",
+        "correct": true,
+        "note": "same core choice: organic word-of-mouth growth over paid marketing"
+      }
+    },
+    {
+      "id": "yc-determination-assessment",
+      "obvious": false,
+      "actual": "Assessed determination by asking founders to recount specific stories of adversity rather than judging their in-interview presentation.",
+      "brain": {
+        "pred": "Ask founders to tell concrete past stories of hardship and probe exactly what actions they took, since real determination shows up in track record, not interview demeanor.",
+        "correct": true,
+        "note": "matches: assess via past adversity stories, not interview presentation"
+      },
+      "baseline": {
+        "pred": "Ask them to recount specific stories of adversity and examine what they actually did.",
+        "correct": true,
+        "note": "Both focus on eliciting adversity stories rather than direct interview judgment"
+      }
+    },
+    {
+      "id": "yc-demo-day-format",
+      "obvious": false,
+      "actual": "Advised that Demo Day presentations should be structured like logical proofs rather than sales pitches.",
+      "brain": {
+        "pred": "He advised founders to structure Demo Day pitches like a logical proof, building each claim on the last toward an inescapable conclusion, rather than hyping with marketing speak.",
+        "correct": true,
+        "note": "matches exactly"
+      },
+      "baseline": {
+        "pred": "Structure the pitch like a logical proof, where each claim builds inevitably on the last toward an obvious investment conclusion.",
+        "correct": true,
+        "note": "Both advise structuring demo day pitch as logical proof with claims building sequentially"
+      }
+    }
+  ],
+  "cost": 0.7940040000000002
+}
