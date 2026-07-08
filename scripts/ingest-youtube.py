@@ -107,11 +107,11 @@ def _build_ytt() -> "YouTubeTranscriptApi":
     try:
         if ws_user and ws_pass:
             from youtube_transcript_api.proxies import WebshareProxyConfig
-            print(f"    (routing via Webshare residential proxy)")
+            print("    (routing via Webshare residential proxy)")
             return YouTubeTranscriptApi(proxy_config=WebshareProxyConfig(proxy_username=ws_user, proxy_password=ws_pass))
         if http_p or https_p:
             from youtube_transcript_api.proxies import GenericProxyConfig
-            print(f"    (routing via generic proxy)")
+            print("    (routing via generic proxy)")
             return YouTubeTranscriptApi(proxy_config=GenericProxyConfig(http_url=http_p, https_url=https_p))
     except Exception as e:
         print(f"    WARN: proxy config failed ({e}) — falling back to direct")
