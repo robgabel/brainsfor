@@ -74,24 +74,29 @@ def main():
         r = json.loads(res_path.read_text())
         s = r["summary"]
         b = s.get("brain", {}); x = s.get("baseline", {})
-        lift = None
+        lift, headroom = None, None
         if b.get("non_obvious") is not None and x.get("non_obvious") is not None:
             lift = (b["non_obvious"] - x["non_obvious"]) * 100
+            ceil = 1 - x["non_obvious"]
+            headroom = (b["non_obvious"] - x["non_obvious"]) / ceil * 100 if ceil > 1e-6 else None
         rows.append({"slug": slug, "brain": b.get("non_obvious"), "baseline": x.get("non_obvious"),
-                     "n": b.get("n_non_obvious"), "lift": lift})
+                     "n": b.get("n_non_obvious"), "lift": lift, "headroom_captured": headroom})
 
-    rows.sort(key=lambda r: (r["lift"] is not None, r["lift"] or -999), reverse=True)
-    print("\n" + "=" * 66)
+    # rank by headroom captured (ceiling-normalized) — fairer than raw lift
+    rows.sort(key=lambda r: (r["headroom_captured"] is not None, r["headroom_captured"] or -999), reverse=True)
+    print("\n" + "=" * 74)
     print("  FLEET DECISION-ACCURACY LEADERBOARD (non-obvious subset)")
-    print("=" * 66)
-    print(f"  {'brain':18s} {'predicts':>9s} {'baseline':>9s} {'lift':>8s}  n")
+    print("=" * 74)
+    print(f"  {'brain':18s} {'predicts':>9s} {'baseline':>9s} {'lift':>7s} {'headroom':>9s}  n")
     for r in rows:
         bp = f"{r['brain']*100:.0f}%" if r["brain"] is not None else "-"
         bl = f"{r['baseline']*100:.0f}%" if r["baseline"] is not None else "-"
         lf = f"{r['lift']:+.0f}" if r["lift"] is not None else "-"
-        print(f"  {r['slug']:18s} {bp:>9s} {bl:>9s} {lf:>8s}  {r['n']}")
-    print("\n  lift > 0  → the capture predicts the person better than a generic operator.")
-    print("  lift <= 0 → coherent voice, but not yet a decision model.")
+        hr = f"{r['headroom_captured']:+.0f}%" if r["headroom_captured"] is not None else "-"
+        print(f"  {r['slug']:18s} {bp:>9s} {bl:>9s} {lf:>7s} {hr:>9s}  {r['n']}")
+    print("\n  headroom = lift / (1 - baseline): share of the ACHIEVABLE gap the brain captured.")
+    print("  It neutralizes benches with high baselines (little room) vs low (lots of room).")
+    print("  >0 → a decision model.  <=0 → coherent voice, not yet a model.")
 
     out = ROOT / "brains" / f"decision-bench-fleet-{args.date}.json"
     out.write_text(json.dumps({"date": args.date, "leaderboard": rows}, indent=2))
