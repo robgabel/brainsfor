@@ -1,0 +1,459 @@
+{
+  "brain": "paul-graham",
+  "person": "paul-graham",
+  "purpose": "Auto-generated held-out decision benchmark (decision-bench-gen.py). Grounded in the brain's own corpus; spot-check before trusting fleet numbers.",
+  "version": 1,
+  "generated": true,
+  "cases": [
+    {
+      "id": "twitter-rejection",
+      "obvious": false,
+      "situation": "A startup applies to your accelerator with an idea you've been searching for for years \u2014 exactly the kind of company you'd love to fund. But of the two co-founders listed on the application, only one shows up to the interview; you learn they've had a falling out. You have a known personal tendency to say yes to ideas you love even when the founding team looks shaky. What do you do?",
+      "options": [
+        "Fund the company anyway, betting the surviving founder can rebuild the team",
+        "Reject the application, prioritizing team stability over the strength of the idea",
+        "Offer a smaller conditional investment pending resolution of the founder conflict"
+      ],
+      "actual_decision": "Rejected the application because the founding team appeared to be imploding.",
+      "actual_reasoning": "I had a bad habit of saying yes to ideas I loved even when founders were weak, so I decided to be disciplined and said no \u2014 even though the idea was exactly what I'd been looking for.",
+      "leak_markers": [
+        "Twitter",
+        "imploding",
+        "falling out",
+        "two founders",
+        "disciplined",
+        "bad habit",
+        "only one showed up"
+      ],
+      "source": "YC rejected Twitter \u2014 falling out interview quote"
+    },
+    {
+      "id": "viaweb-manual-pivot",
+      "obvious": false,
+      "situation": "Your e-commerce software startup has built what you believe is a solid product based on your own model of what an online store should be, but you can't get any users to actually pay for it. What do you do?",
+      "options": [
+        "Keep refining the software based on your own vision until it's polished enough to sell",
+        "Go build and run stores manually for customers yourself, using your own software behind the scenes",
+        "Pivot away from e-commerce entirely to a different market"
+      ],
+      "actual_decision": "Started building stores manually for merchants using their own software, effectively doing the work by hand while acting as both builder and user.",
+      "actual_reasoning": "I'd invented a model of the world that didn't correspond to reality; going manual let us learn what customers actually needed by directly encountering the friction ourselves.",
+      "leak_markers": [
+        "Viaweb",
+        "manual",
+        "online store",
+        "use our software for you",
+        "paying customers",
+        "model of the world",
+        "builder and user"
+      ],
+      "source": "Viaweb manual store-building for customers"
+    },
+    {
+      "id": "yc-exhaustion-altman",
+      "obvious": false,
+      "situation": "After running your startup accelerator for nine years, funding over 600 companies, and realizing that founders only see a fraction of the administrative work you actually do, you feel exhausted and recognize you're not naturally suited to managing something this large. What do you do?",
+      "options": [
+        "Push through and continue running the organization since you co-founded it",
+        "Hire more staff to absorb the administrative burden while you stay at the helm",
+        "Hand over operational leadership to someone else and step back to your original work"
+      ],
+      "actual_decision": "Handed YC's leadership to Sam Altman and stepped back to writing and programming.",
+      "actual_reasoning": "I'm not really an administrator, and YC had gotten kind of big; I was never suited to running something that size, and I thought Sam would do a better job.",
+      "leak_markers": [
+        "Sam Altman",
+        "nine years",
+        "600 startups",
+        "not an administrator",
+        "back to normal",
+        "writing and programming"
+      ],
+      "source": "PG on stepping back from YC to Altman"
+    },
+    {
+      "id": "philosophy-major",
+      "obvious": false,
+      "situation": "As a college student deciding on a field of study, you're drawn to the idea that one subject could let you skip the specifics and go straight to learning the most general, abstract truths about everything. What field do you choose?",
+      "options": [
+        "Computer science, to build practical technical skills",
+        "Philosophy, to pursue the most general and abstract truths directly",
+        "English or literature, to develop as a writer"
+      ],
+      "actual_decision": "Majored in philosophy at Cornell, believing it would give direct access to the most general truths.",
+      "actual_reasoning": "It sounds great to a high school student \u2014 why learn all the specific stuff when you can just learn the most general truths \u2014 but I mistakenly thought that, and it's one of those things that's too good to be true.",
+      "leak_markers": [
+        "philosophy",
+        "Cornell",
+        "most general truths",
+        "too good to be true",
+        "mistakenly thought",
+        "abstract"
+      ],
+      "source": "PG regrets majoring in philosophy"
+    },
+    {
+      "id": "web-app-invention",
+      "obvious": false,
+      "situation": "You're building the first web-based commerce application in the mid-1990s. You need to decide whether to write software that runs on the user's Windows machine (the industry standard) or to build something that runs entirely on your own server and is controlled through a browser. What drives your decision?",
+      "options": [
+        "Write native Windows software because that's what businesses expect",
+        "Build a server-based application controlled via browser, mainly to avoid having to write and support Windows software",
+        "Build a cross-platform desktop app to hedge on both fronts"
+      ],
+      "actual_decision": "Built the application to run on the server, controlled through a browser, largely to avoid writing software for Windows.",
+      "actual_reasoning": "We were highly motivated to figure out how to write software without having to write software for Windows \u2014 I sat up in bed when I thought of running it on the server instead.",
+      "leak_markers": [
+        "Windows",
+        "server",
+        "browser",
+        "sat up in bed",
+        "Viaweb",
+        "web app",
+        "avoid learning"
+      ],
+      "source": "Viaweb web app born from avoiding Windows"
+    },
+    {
+      "id": "yc-scaling-partner-model",
+      "obvious": false,
+      "situation": "Your accelerator has grown to the point where any startup can request office hours with any partner, and the coordination overhead between all these relationships is becoming unmanageable \u2014 a fully connected graph of founders and partners. How do you fix the scaling problem?",
+      "options": [
+        "Keep the open model but hire more partners to absorb demand",
+        "Assign each startup a single dedicated partner as their primary point of contact",
+        "Move to a purely self-service model with recorded content instead of live partner time"
+      ],
+      "actual_decision": "Assigned each startup a dedicated partner as their sole interface with YC.",
+      "actual_reasoning": "The biggest change was that now each startup picks a partner who is their interface, which scales much better \u2014 it changes the complexity from N-squared to linear.",
+      "leak_markers": [
+        "dedicated partner",
+        "N squared",
+        "hub-and-spoke",
+        "interface",
+        "scales",
+        "office hours"
+      ],
+      "source": "YC partner scaling fix"
+    },
+    {
+      "id": "yc-ownership-stake",
+      "obvious": false,
+      "situation": "As you design the terms for your startup accelerator's investment in each batch of companies, you must decide how much equity to take in exchange for the funding and program. What stake do you settle on?",
+      "options": [
+        "A large stake (20-30%) to ensure meaningful upside given the risk",
+        "A small stake (around 7%) so founders retain most of their company",
+        "Variable stakes negotiated individually per company"
+      ],
+      "actual_decision": "Kept YC's typical ownership stake small, around 7%.",
+      "actual_reasoning": "Graham believed incentive alignment was better when founders retained the large majority of their company rather than the accelerator taking an outsized cut.",
+      "leak_markers": [
+        "7%",
+        "ownership stake",
+        "incentive alignment",
+        "founders retained",
+        "equity"
+      ],
+      "source": "YC's small ownership stake principle"
+    },
+    {
+      "id": "yc-launch-speed",
+      "obvious": false,
+      "situation": "You've just come up with the idea for a new kind of startup accelerator. Before you have any real software, application system, or polished process, do you launch immediately or spend time building proper infrastructure first?",
+      "options": [
+        "Wait months to build a proper application system and vetting process before launching",
+        "Launch within about a week using a bare-bones ASCII text application form, and sort applications by hand",
+        "Do a small private beta with handpicked founders before any public launch"
+      ],
+      "actual_decision": "Launched YC within about a week using an ASCII email application form, printing applications and grading them by hand.",
+      "actual_reasoning": "Launching it was merely posting a website \u2014 we didn't have any software in the beginning, people just filled out an ASCII form and we sorted the pile by hand.",
+      "leak_markers": [
+        "ASCII",
+        "less than a week",
+        "printed out applications",
+        "graded",
+        "sorted the pile by hand"
+      ],
+      "source": "YC launched within a week, ASCII form"
+    },
+    {
+      "id": "yc-palliative-care",
+      "obvious": false,
+      "situation": "Some of the startups in your accelerator's batch clearly aren't going to make it \u2014 the situation looks doomed, and everyone privately knows it. How do you treat these founders in their final weeks in the program: with tough love pushing them to find a miracle, or some other approach?",
+      "options": [
+        "Apply tough love, pushing them hard to pivot or find a last-minute save",
+        "Shift into a supportive, kind mode \u2014 essentially help them wind down gently rather than push them further",
+        "Cut off support and let them figure out the ending on their own"
+      ],
+      "actual_decision": "Used what YC called 'palliative care mode' \u2014 being kind and supportive as the doomed company wound down, rather than applying tough love.",
+      "actual_reasoning": "If it seemed like they were doomed and would be better off just getting jobs, we would just be kind and supportive rather than pushing tough love, which was reserved for startups where there was genuine hope.",
+      "leak_markers": [
+        "palliative care mode",
+        "doomed",
+        "kind and supportive",
+        "tough love",
+        "wind down"
+      ],
+      "source": "YC's palliative care mode for doomed startups"
+    },
+    {
+      "id": "yc-no-followon",
+      "obvious": false,
+      "situation": "Your accelerator has funded thousands of startups and could selectively pour more money into the ones that look most promising after they graduate. Should you make these follow-on investments?",
+      "options": [
+        "Yes, double down on the most promising companies to maximize returns",
+        "No, deliberately avoid follow-on investments to prevent signaling which companies are 'the best' to the market",
+        "Make follow-on investments but keep the selections confidential"
+      ],
+      "actual_decision": "YC deliberately avoided follow-on investments.",
+      "actual_reasoning": "If we chose which companies to double down on, we'd be telling other investors who we believe are the best, which would hurt the founders we didn't select.",
+      "leak_markers": [
+        "follow-on Investments",
+        "signaling",
+        "hurt the founders",
+        "double down"
+      ],
+      "source": "YC avoids follow-on investments to prevent signaling"
+    },
+    {
+      "id": "yc-growth-on-the-fly",
+      "obvious": false,
+      "situation": "As your accelerator scales, people ask about your long-term plan for how fast to grow and what YC will look like in the coming years. Do you have a defined multi-year growth strategy?",
+      "options": [
+        "Yes, a detailed multi-year roadmap for headcount and batch size",
+        "No long-term plan \u2014 decisions about growth are made on the fly, with no clear picture even a year out",
+        "A rough five-year plan revisited annually"
+      ],
+      "actual_decision": "Ran YC's growth decisions completely on the fly, with no long-term plan.",
+      "actual_reasoning": "Things like how fast to grow are totally decided on the fly \u2014 I have no idea what YC will look like even one year from now, and that's fine.",
+      "leak_markers": [
+        "on the fly",
+        "no idea what YC will look like",
+        "one year from now",
+        "totally decided"
+      ],
+      "source": "YC growth decided on the fly"
+    },
+    {
+      "id": "yc-naming",
+      "obvious": false,
+      "situation": "You're choosing a name for your new startup accelerator. You could pick something descriptive and safe, or something that signals a specific intellectual sensibility to the exact kind of people you want to attract. What do you name it?",
+      "options": [
+        "Something plain and descriptive, like 'Startup Fund' or 'Founders Camp'",
+        "Y Combinator, referencing an elegant but obscure concept from functional programming",
+        "A geographic or place-based name tied to Silicon Valley"
+      ],
+      "actual_decision": "Named it Y Combinator, after the recursive function-building concept from computer science.",
+      "actual_reasoning": "We named it partly for its coolness and partly because the Y Combinator, which builds recursive functions without them needing names, is the kind of elegant idea that signals to a specific type of person.",
+      "leak_markers": [
+        "Y Combinator",
+        "recursive functions",
+        "without names",
+        "coolness",
+        "functional programming",
+        "miraculous"
+      ],
+      "source": "YC name chosen for the Y combinator function"
+    },
+    {
+      "id": "painting-after-cs",
+      "obvious": false,
+      "situation": "You've spent years building a career and deep expertise in computer science. You then decide to go study painting formally \u2014 at Florence and RISD \u2014 a move your peers see as an abrupt and illogical switch between two totally unrelated kinds of work. Do you make the switch anyway?",
+      "options": [
+        "Stay in computer science since you've already built expertise and credibility there",
+        "Go study painting anyway, believing the underlying skills and sensibilities of making transfer across domains",
+        "Try to do both simultaneously part-time rather than fully committing to painting"
+      ],
+      "actual_decision": "Went to study painting at Florence and RISD despite peers being taken aback by the switch.",
+      "actual_reasoning": "Graham rejected the assumption that computer science and painting were fundamentally different kinds of work \u2014 the skills and sensibilities of making transfer across domains.",
+      "leak_markers": [
+        "painting",
+        "Florence",
+        "RISD",
+        "peers were shocked",
+        "taken aback",
+        "making transfer"
+      ],
+      "source": "PG's peers shocked by his switch to painting"
+    },
+    {
+      "id": "essay-useful-not-persuasive",
+      "obvious": false,
+      "situation": "You're defining, for yourself, what an essay should aim to accomplish for the reader. The conventional teaching is that essays should persuade the reader of a position. Do you adopt that standard or set a different bar?",
+      "options": [
+        "Aim for persuasion \u2014 the classic rhetorical goal taught in school",
+        "Aim for usefulness \u2014 genuinely improving the reader's understanding of reality, even if it doesn't argue for a position",
+        "Aim purely for entertainment and engagement"
+      ],
+      "actual_decision": "Defined the goal of his essays as being useful rather than persuasive.",
+      "actual_reasoning": "Many people would say essays should be persuasive \u2014 that's what we were taught \u2014 but I think we can aim for something more ambitious: usefulness, which genuinely improves the reader's understanding of reality.",
+      "leak_markers": [
+        "persuasive",
+        "useful",
+        "more ambitious",
+        "understanding of reality",
+        "essay"
+      ],
+      "source": "PG defines essays as useful rather than persuasive"
+    },
+    {
+      "id": "twitter-mobs-wait-out",
+      "obvious": false,
+      "situation": "You've become a repeated target of intense online pile-ons \u2014 Twitter mobs reacting to something you've written or said. Each time, do you respond and try to correct the record immediately, or do something else?",
+      "options": [
+        "Respond immediately and vigorously to correct misrepresentations",
+        "Wait it out, since the mob predictably moves on to another target within about two days",
+        "Delete the offending content and issue a public apology to end it quickly"
+      ],
+      "actual_decision": "Waited out the mobs rather than capitulating, relying on the pattern that they move on within about two days.",
+      "actual_reasoning": "Once you've had it happen twenty times, once you stop being able to count how many Twitter mobs you've had after you, you know that in about two days it will move on to someone else.",
+      "leak_markers": [
+        "Twitter mobs",
+        "two days",
+        "20 times",
+        "move on",
+        "wait out",
+        "capitulate"
+      ],
+      "source": "PG's approach to surviving Twitter mobs"
+    },
+    {
+      "id": "yc-harvard-model-merit",
+      "obvious": false,
+      "situation": "You're designing your accelerator's admissions philosophy and positioning. You want it to have the prestige and gravitational pull of a major institution like Harvard, but you must decide whether to copy Harvard's admissions approach (legacy, holistic factors, brand-building) or design something different. What do you do?",
+      "options": [
+        "Copy Harvard's holistic admissions approach, weighing many soft factors and legacy considerations",
+        "Model YC on Harvard as a talent magnet but make admissions purely merit-based, focused only on picking winners",
+        "Avoid any Harvard comparison entirely and build a completely novel brand identity"
+      ],
+      "actual_decision": "Consciously modeled YC on Harvard as a talent magnet, but kept admissions purely merit-based rather than replicating Harvard's other admissions criteria.",
+      "actual_reasoning": "We've consciously tried to make YC the Harvard of startups \u2014 Harvard's very screwed up in certain ways, but YC's admissions are purely about picking winners, not building a class.",
+      "leak_markers": [
+        "Harvard of startups",
+        "merit-based",
+        "picking winners",
+        "screwed up",
+        "talent magnet"
+      ],
+      "source": "YC modeled on Harvard, merit-based admissions"
+    },
+    {
+      "id": "viaweb-sale-to-yahoo",
+      "obvious": true,
+      "situation": "Your startup, which pioneered web-based e-commerce software, has grown into a real business and now Yahoo is offering to acquire it. You could keep running it independently and try to build it into something much bigger, or take the acquisition. What do you do?",
+      "options": [
+        "Turn down the offer and continue building the company independently",
+        "Sell to Yahoo for approximately $49 million in stock",
+        "Seek a competing bid to negotiate a higher price before deciding"
+      ],
+      "actual_decision": "Sold Viaweb to Yahoo for roughly $49 million in Yahoo stock.",
+      "actual_reasoning": "The sale provided financial independence and credibility, freeing him to later pursue writing, angel investing, and eventually founding YC without commercial pressure.",
+      "leak_markers": [
+        "Yahoo",
+        "$49 million",
+        "455,000 shares",
+        "Viaweb",
+        "sold",
+        "1998"
+      ],
+      "source": "Viaweb sold to Yahoo 1998"
+    },
+    {
+      "id": "yc-word-of-mouth-growth",
+      "obvious": false,
+      "situation": "Your accelerator has helped its first cohorts of founders succeed. You're deciding how to grow awareness and attract future applicants \u2014 do you invest in marketing and advertising, or rely on something else?",
+      "options": [
+        "Invest heavily in marketing and advertising to build the brand quickly",
+        "Let growth happen organically through word of mouth from satisfied founders telling their friends",
+        "Partner with universities to build a formal recruitment pipeline"
+      ],
+      "actual_decision": "Let YC grow organically through word of mouth from founders who had good experiences.",
+      "actual_reasoning": "I think we actually helped the startups a lot, so they told one another \u2014 like when a restaurant is good, your friends tell their friends.",
+      "leak_markers": [
+        "word of mouth",
+        "tell one another",
+        "restaurant",
+        "friends go",
+        "helped the startups a lot"
+      ],
+      "source": "YC grew via word of mouth"
+    },
+    {
+      "id": "yc-determination-assessment",
+      "obvious": false,
+      "situation": "You're interviewing founders to decide who to fund, and you need to assess how determined they really are. Determination matters more than almost any other trait, but everyone tries to look tough in an interview. How do you actually measure it?",
+      "options": [
+        "Rely on how confidently and toughly they present themselves in the interview",
+        "Ask them to recount specific stories of adversity and examine what they actually did",
+        "Have them complete a stress-test task under time pressure during the interview"
+      ],
+      "actual_decision": "Assessed determination by asking founders to recount specific stories of adversity rather than judging their in-interview presentation.",
+      "actual_reasoning": "The way you tell determination is not so much from talking to them directly as from asking them stories about things that have happened to them \u2014 that's where you can see it.",
+      "leak_markers": [
+        "stories about things that have happened",
+        "determination",
+        "interview",
+        "tough",
+        "adversity"
+      ],
+      "source": "YC assesses determination via founder stories"
+    },
+    {
+      "id": "yc-demo-day-format",
+      "obvious": false,
+      "situation": "You're advising founders on how to structure their Demo Day pitch to investors. Should they use fast-talking marketing language to hype the company, or take a different approach?",
+      "options": [
+        "Use energetic, fast-talking marketing language to create excitement",
+        "Structure the pitch like a logical proof, where each claim follows from the last toward an inescapable conclusion",
+        "Focus mainly on an emotional founder origin story to build connection"
+      ],
+      "actual_decision": "Advised that Demo Day presentations should be structured like logical proofs rather than sales pitches.",
+      "actual_reasoning": "Demo day presentations shouldn't be fast-talking marketing speak \u2014 they should be almost like logical proofs of why this company is good to invest in, each claim following from the last.",
+      "leak_markers": [
+        "Demo Day",
+        "logical proofs",
+        "fast-talking",
+        "marketing speak",
+        "follow from the last"
+      ],
+      "source": "PG on Demo Day as logical proof"
+    },
+    {
+      "id": "product-design-selfish-user",
+      "obvious": false,
+      "situation": "You're designing a product and deciding what mental model to use for how users will behave. Do you assume users will act in their own rational long-term best interest, or assume something more pessimistic?",
+      "options": [
+        "Assume users are rational and will act in their considered best interest if educated properly",
+        "Assume users are selfish, greedy, and lazy, and engineer good outcomes despite that",
+        "Assume users are altruistic and will act for the collective good of the platform"
+      ],
+      "actual_decision": "Adopted the assumption that users are selfish, greedy, and lazy, and designed to produce good outcomes despite those traits.",
+      "actual_reasoning": "It's better to assume the user is selfish, greedy, and lazy, and make something that causes good things to happen despite that, rather than relying on users acting against their self-interest.",
+      "leak_markers": [
+        "selfish",
+        "greedy",
+        "lazy",
+        "good things to happen despite",
+        "assume"
+      ],
+      "source": "PG's user design assumption: selfish greedy lazy"
+    },
+    {
+      "id": "walking-for-conversation",
+      "obvious": false,
+      "situation": "You take walks regularly and have noticed brain activity increases while walking. You're deciding whether walking is more valuable for generating your own original ideas or for absorbing ideas from a walking companion. Which do you find it's actually best for?",
+      "options": [
+        "Walking alone is best for generating my own original ideas",
+        "Walking with someone else is best for learning from what they know, not for generating my own ideas",
+        "Walking is equally useful for both generating and absorbing ideas"
+      ],
+      "actual_decision": "Found walking most valuable for learning from what a conversation partner knows, not for generating his own original ideas.",
+      "actual_reasoning": "I find it best for learning from what the other person knows, not so good for my own ideas \u2014 though walking makes all kinds of thinking better.",
+      "leak_markers": [
+        "walking",
+        "learning from what the other person knows",
+        "not so good for my own ideas",
+        "brain activity"
+      ],
+      "source": "PG on walking best for learning from others"
+    }
+  ]
+}

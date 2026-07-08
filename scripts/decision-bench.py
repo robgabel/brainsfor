@@ -143,6 +143,7 @@ def main():
     ap.add_argument("--brain", required=True)
     ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--arm", choices=["brain", "baseline", "both"], default="both")
+    ap.add_argument("--limit", type=int, default=0, help="run only the first N cases (0 = all)")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--date", default="unknown")
     args = ap.parse_args()
@@ -154,6 +155,8 @@ def main():
     atoms = json.loads((bdir / "pack" / "brain-atoms.json").read_text()).get("atoms", [])
     bench = json.loads((bdir / "evals" / "decision-bench.json").read_text())
     cases = bench["cases"]
+    if args.limit:
+        cases = cases[:args.limit]
 
     step(f"Decision bench — {name}: {len(cases)} cases, arm={args.arm}")
 
