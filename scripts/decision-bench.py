@@ -68,6 +68,21 @@ def render_synthesis(syn: dict, markers: list[str]) -> str:
             lines.append(f"- {t}" + (f": {d}" if d else ""))
         if lines:
             parts.append(f"### {label}\n" + "\n".join(lines))
+    # decision_rules layer (world-model structure) — leak-filtered per case like everything else
+    rules = syn.get("decision_rules") or []
+    rlines = []
+    for r in rules:
+        blob = " ".join(str(r.get(k, "")) for k in ("when", "then", "because", "unless", "tradeoff"))
+        if contains_leak(blob, markers):
+            continue
+        s = f"- WHEN {r.get('when','')}, he {r.get('then','')} (because {r.get('because','')})"
+        if r.get("unless"):
+            s += f" — UNLESS {r['unless']}"
+        if r.get("tradeoff"):
+            s += f" [trades off: {r['tradeoff']}]"
+        rlines.append(s)
+    if rlines:
+        parts.append("### DECISION RULES (how he decides — conditional, with boundaries)\n" + "\n".join(rlines))
     return "\n\n".join(parts)
 
 
