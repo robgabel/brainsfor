@@ -13,7 +13,7 @@
       "inspired_by": 23,
       "contradicts": 20
     },
-    "last_updated": "2026-07-05",
+    "last_updated": "2026-07-12",
     "coverage": "Bootstrapped Giants newsletter essays, LinkedIn profile and posts, Twitter highlights, Tidemark profile, Mission.org interview, Founder's Field Guide podcast, Founders Journal podcast, Don't Be a Jerk podcast, and 10+ public interviews and profiles",
     "bio": "Jesse Pujji is a serial entrepreneur, bootstrapper, and performance marketing pioneer best known for founding Ampush \u2014 a Facebook advertising powerhouse he bootstrapped to ~$24M in revenue while managing over $1 billion in ad spend for brands like Dollar Shave Club, Uber, and Hulu, all without raising a dollar of outside capital \u2014 and Gateway X, a studio that builds and acquires bootstrapped businesses. A vocal advocate for capital-efficient entrepreneurship, he mentors founders on growth loops, DTC brand building, and the mental rewiring required to build multiple companies. His Bootstrapped Giants platform and LinkedIn essays have made him one of the most influential voices in the bootstrapped founder community.",
     "possessive": "his"
@@ -30560,6 +30560,183 @@
       {
         "title": "The valuation lesson is managed, not cured \u2014 and I wasn't the only one who paid for it.",
         "desc": "'The market is never wrong about valuation' is a discipline I have to re-run, not a wound that closed. Attachment is a recurring bias; I assume I could over-value something out of desire again. And the cost of holding Ampush too long wasn't only my regret \u2014 the post-2017 drift years were years my co-founders, team, and family lived through too. 'I metabolized it' is not the same as 'no one else paid for it.'"
+      }
+    ],
+    "decision_rules": [
+      {
+        "id": "capital-raise-decision",
+        "when": "Considering whether to raise outside capital for a business",
+        "then": "Default to bootstrapping and treat VC as a specific tool, not a milestone or a signal of seriousness",
+        "because": "Capital masks bad decisions and locks you into a unicorn-or-bust trajectory, eliminating the profitable founder-controlled outcome",
+        "unless": "The market is genuinely winner-take-all (network effects, consumer social) where capital itself is the moat and only full market capture is defensible",
+        "tradeoff": "Speed and market-capture in true winner-take-all categories vs. control and optionality in most other categories"
+      },
+      {
+        "id": "annual-capital-review",
+        "when": "Feeling like the business is stuck or under-resourced",
+        "then": "Run a zero-based review asking 'if we had unlimited money right now, what would actually change'",
+        "because": "The real bottleneck is almost always human or strategic, not financial, and capital is reached for reflexively before diagnosis",
+        "unless": "The honest answer is a specific, named unlock (e.g., a proven channel to scale) that only capital can buy \u2014 then raise for that reason alone",
+        "tradeoff": "Bias toward frugality vs. missing a genuine capital-solvable opportunity"
+      },
+      {
+        "id": "founder-led-sales",
+        "when": "The business has product-market signal but no repeatable sales motion yet",
+        "then": "The founder personally sells for years, not months, before hiring sales help",
+        "because": "Founder-led sales is the only way to learn real objections, value props, and what the business actually is; secondhand reports can't substitute",
+        "unless": "The founder has personally closed enough deals that the motion is documented, repeatable, and teachable \u2014 pain of not delegating is now undeniable",
+        "tradeoff": "Founder's time/focus on other priorities vs. depth of market truth gained"
+      },
+      {
+        "id": "threshold-hiring",
+        "when": "Deciding whether to make a new hire, especially a senior/strategic one",
+        "then": "Wait until the pain of not having the role is undeniable before hiring",
+        "because": "Hiring ahead of need produces poorly defined, poorly evaluated roles because the founder hasn't done the work to know what to evaluate for",
+        "unless": "A specific, already-proven system or motion exists that just needs an operator to scale it \u2014 then hire to execute, not to figure out",
+        "tradeoff": "Slower scaling and possible bottleneck on founder time vs. avoiding expensive early mis-hires"
+      },
+      {
+        "id": "channel-depth-vs-breadth",
+        "when": "Choosing how to allocate marketing/growth attention across channels and people",
+        "then": "Concentrate one person's focus (50%+ of time, 90-120 days) on a single channel to crack it, but choose people with cross-channel range, not channel-locked specialists",
+        "because": "Cracking a channel requires specialist-level depth; but media mix shifts, and channel-locked hires become liabilities when their channel fades",
+        "unless": "The channel is structurally stable and unlikely to fade (rare) \u2014 then a narrower specialist can be retained longer",
+        "tradeoff": "Depth-per-channel discipline vs. flexibility-per-person; a lone generalist spread across channels is the failure mode either rule is meant to prevent"
+      },
+      {
+        "id": "narrative-ownership",
+        "when": "Running paid acquisition or brand messaging at scale",
+        "then": "Delegate channel execution/optimization to specialists, but the founder retains ownership of the narrative loop (what we say, to whom, did it resonate)",
+        "because": "Narrative judgment is not a mechanical skill that can be delegated; it requires founder-level context on the business",
+        "unless": "The business has scaled to the point of hiring a CMO-caliber narrative owner who has been steeped in founder-level context long enough to inherit it",
+        "tradeoff": "Founder bandwidth constraints vs. quality/consistency of brand voice"
+      },
+      {
+        "id": "acquisition-vs-build",
+        "when": "Deciding whether to build a business from zero or acquire an existing cash-flowing one",
+        "then": "Favor acquisition when you hold a specific, identifiable unlock (a growth channel or operational system) the seller lacks",
+        "because": "Acquisition skips the riskiest early stage and lets a proven edge compound on already-validated unit economics",
+        "unless": "You cannot name a specific unfair advantage over the current owner \u2014 then buying is just overpaying a multiple for someone else's job",
+        "tradeoff": "Speed/de-risking of buying vs. the possibility that building unlocks a bigger, more differentiated outcome"
+      },
+      {
+        "id": "agency-lifestyle-verdict",
+        "when": "Evaluating whether a services/agency business is a legitimate venture-scale opportunity",
+        "then": "Judge it by whether delivery has been productized, tooled, and systematized, not by the 'agency' label",
+        "because": "Undifferentiated agencies are lifestyle businesses, but productized ones can reach institutional scale and exit to PE",
+        "unless": "The work remains fully bespoke per client with no repeatable IP \u2014 then the lifestyle-business critique holds"
+      },
+      {
+        "id": "small-outcome-legitimacy",
+        "when": "Evaluating or advising on a profitable but modest-scale business (e.g., ~$30M)",
+        "then": "Treat it as a legitimate, celebrated outcome worth pursuing on its own terms",
+        "because": "The startup ecosystem's unicorn-only lens structurally undervalues life-changing cash-flow-positive outcomes, creating real arbitrage",
+        "unless": "The founder's actual goal requires market-defining scale that this size structurally cannot reach \u2014 then it's a stepping stone, not the destination"
+      },
+      {
+        "id": "dtc-brand-skepticism",
+        "when": "Assessing a DTC or consumer brand's claimed 'brand equity'",
+        "then": "Discount brand-equity claims that were built primarily on cheap paid-social arbitrage",
+        "because": "When ad costs normalize, arbitrage-based 'brand' evaporates because it was never a real multiplier, just suppressed CAC",
+        "unless": "The brand shows retention, repeat purchase, and organic demand that persist independent of paid channel cost changes \u2014 real brand as a multiplier on performance"
+      },
+      {
+        "id": "growth-loop-vs-funnel",
+        "when": "Designing a customer acquisition strategy",
+        "then": "Prioritize building loops where acquiring a customer makes the next acquisition cheaper or more likely, over linear funnel scaling",
+        "because": "Funnels are commodity strategies any competitor can copy and decay as channel costs inflate; loops compound and defend",
+        "unless": "Early-stage validation requires a fast, simple linear funnel just to prove the offer works before loop mechanics can be engineered"
+      },
+      {
+        "id": "mentorship-default",
+        "when": "Facing a problem or decision that feels novel or high-stakes",
+        "then": "Seek out someone an order of magnitude ahead and compress the learning via their experience rather than solving from scratch",
+        "because": "The self-made founder narrative is a costly myth; borrowed compressed time avoids years of avoidable pain",
+        "unless": "The situation is genuinely novel with no precedent anyone has navigated \u2014 then original iteration is unavoidable"
+      },
+      {
+        "id": "emotional-processing-before-strategy",
+        "when": "A significant setback or emotionally charged event hits the team (e.g., losing a major client)",
+        "then": "Run a dedicated session to fully process the emotion before any strategic discussion or decision-making",
+        "because": "Suppressed emotion creates 'emotional debt' that degrades decision quality later; metabolizing it first is a precondition for clarity",
+        "unless": "There's a time-critical operational emergency requiring immediate action \u2014 then triage the emergency and process emotions as soon as the acute window passes"
+      },
+      {
+        "id": "success-vision-first",
+        "when": "Starting a new venture or setting long-term direction",
+        "then": "First define what success actually looks like, not just what failure to avoid",
+        "because": "Optimizing purely against failure produces fear-driven motivation that collapses once the failure risk is removed and leaves no direction",
+        "unless": "Early survival risk is so acute that avoiding failure is the only viable near-term objective \u2014 then revisit the success-vision question once stability is reached"
+      },
+      {
+        "id": "valuation-discipline",
+        "when": "Deciding whether to sell, hold, or price a business/asset the founder is personally attached to",
+        "then": "Defer to what the market signals the asset is worth over what the founder wants it to be worth",
+        "because": "Attachment is a recurring bias, not a one-time bug; the market is never wrong about valuation",
+        "unless": "Never \u2014 this is treated as a discipline to be actively re-run each time, not a rule with a clean exception; the vigilance itself is the safeguard"
+      },
+      {
+        "id": "studio-attention-allocation",
+        "when": "Running multiple capital-light ventures/bets simultaneously",
+        "then": "Apply strict kill criteria \u2014 no path to profitability within ~12 months, or inability to give the venture real operating attention, triggers restructure or shutdown",
+        "because": "Spreading founder-level focus too thin across too many bets undermines the concentrated attention that made prior wins work",
+        "unless": "A venture has a committed, capable CEO/co-founder in place who can supply the founder-level focus the studio model itself can't provide centrally"
+      },
+      {
+        "id": "ceo-in-seat-requirement",
+        "when": "Launching a new venture inside a studio/portfolio model",
+        "then": "Do not consider the company truly started until a committed CEO/co-founder owns it",
+        "because": "Companies retained under the studio founder's own ownership without a committed operator consistently fail to get real validation and direction",
+        "unless": "The idea is still in early 'blastocyst' exploration stage, pre-commitment, where light validation by the founder is appropriate before handoff"
+      },
+      {
+        "id": "pricing-as-lever",
+        "when": "Setting or reviewing pricing for a business",
+        "then": "Set price based on what unit economics require to hit target margins, not competitive benchmarking or gut feel",
+        "because": "Pricing is one of the most under-leveraged levers and most founders default to copying competitors instead of solving backward from economics",
+        "unless": "Market/competitive dynamics impose a hard price ceiling that unit-economics-derived pricing would exceed \u2014 then the business model itself needs rethinking, not just the price"
+      },
+      {
+        "id": "zone-of-genius-time-allocation",
+        "when": "A founder or leader is spending most of their time on tasks they're competent at but not energized by",
+        "then": "Actively restructure role/time toward the intersection of skill and energy (target 75-80% in zone of genius)",
+        "because": "Operating mostly in zone of excellence rather than zone of genius produces a double penalty \u2014 lower effectiveness and faster burnout",
+        "unless": "A temporary operational crisis requires the founder to personally handle out-of-zone work until the fire is out"
+      },
+      {
+        "id": "platform-inflection-timing",
+        "when": "A new platform or channel's capability outpaces the market's understanding of how to use it",
+        "then": "Move aggressively to specialize in that channel/platform before the broader market catches up",
+        "because": "This gap is where specialist agencies and operators capture outsized, temporary margin advantages",
+        "unless": "The platform's capability gap is well understood and already crowded with sophisticated competitors \u2014 then the arbitrage window has closed"
+      },
+      {
+        "id": "productize-what-works",
+        "when": "A bespoke service or one-off solution proves repeatedly successful with clients/customers",
+        "then": "Systematize it into tooling, playbooks, or repeatable process rather than continuing to deliver it as custom work",
+        "because": "Productization is what converts a service into an asset with real enterprise value instead of a capped lifestyle business",
+        "unless": "Each engagement is genuinely unique enough that forcing a template would degrade the value delivered \u2014 true bespoke-only work"
+      },
+      {
+        "id": "inner-work-as-operating-system",
+        "when": "Facing a persistent operating or leadership problem (team conflict, poor decisions, burnout)",
+        "then": "Treat emotional regulation, identity work, and relationship quality as the actual lever to pull, not just process/strategy fixes",
+        "because": "The founder is the product; unresolved inner patterns directly degrade operating decisions",
+        "unless": "The problem is a clean, mechanical/operational gap (e.g., a missing system or skill) unrelated to founder psychology \u2014 then fix the mechanical gap directly"
+      },
+      {
+        "id": "first-move-over-big-plan",
+        "when": "Facing a large, ambitious vision with an unclear path",
+        "then": "Find the cheapest, fastest, easiest wedge to take action now rather than fully planning the path first",
+        "because": "Execution compounds \u2014 each move reveals the next move in ways planning alone cannot",
+        "unless": "The wedge action would create irreversible damage or foreclose the real opportunity if wrong \u2014 then a bit more upfront validation is warranted before committing"
+      },
+      {
+        "id": "listening-over-pitching",
+        "when": "In an early sales or customer-discovery conversation",
+        "then": "Lead with listening and reflection rather than a fixed pitch pushed through objections",
+        "because": "Most venting/objections are about being heard first; genuine listening reveals what customers actually value and surfaces real objections",
+        "unless": "The customer has explicitly signaled they want a direct answer/recommendation now \u2014 then move to solution-mode without over-processing"
       }
     ]
   }

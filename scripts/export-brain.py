@@ -419,6 +419,33 @@ def export_context_md(atoms: list, connections: list, config: dict, output_dir: 
             lines.append("")  # spacer
         lines.append("---\n")
 
+    # Decision Rules — the world-model layer: conditional if-then rules with boundary
+    # conditions. Rendered before the atom clusters so it stays inside the synthesis
+    # slice that the runtime ships to the model (see SYNTHESIS_HEADING_RE).
+    decision_rules = (config.get("synthesis", {}) or {}).get("decision_rules") or []
+    if decision_rules:
+        lines.append("## Decision Rules\n")
+        lines.append(
+            f"How {brain_name} actually DECIDES — conditional rules, each with the boundary "
+            f"where it flips. When a question is a real decision, reason from these: find the rule "
+            f"whose WHEN matches, apply it, and check the UNLESS before committing. This is judgment, "
+            f"not a quote lookup.\n"
+        )
+        for r in decision_rules:
+            when = (r.get("when") or "").strip()
+            then = (r.get("then") or "").strip()
+            if not (when and then):
+                continue
+            s = f"- **When** {when}, **I** {then}"
+            if r.get("because"):
+                s += f" *(because {r['because'].strip()})*"
+            if r.get("unless"):
+                s += f" — **unless** {r['unless'].strip()}"
+            if r.get("tradeoff"):
+                s += f" [trades off against: {r['tradeoff'].strip()}]"
+            lines.append(s)
+        lines.append("\n---\n")
+
     for i, cluster_key in enumerate(cluster_order):
         if cluster_key not in clusters_map:
             continue
