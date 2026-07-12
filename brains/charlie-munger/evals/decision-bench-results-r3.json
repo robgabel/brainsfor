@@ -1,0 +1,323 @@
+{
+  "brain": "charlie-munger",
+  "person": "charlie-munger",
+  "date": "r3",
+  "model": "claude-sonnet-5",
+  "summary": {
+    "brain": {
+      "all": 0.9,
+      "n_all": 20,
+      "non_obvious": 0.8947368421052632,
+      "n_non_obvious": 19
+    },
+    "baseline": {
+      "all": 0.55,
+      "n_all": 20,
+      "non_obvious": 0.5263157894736842,
+      "n_non_obvious": 19
+    }
+  },
+  "results": [
+    {
+      "id": "salomon-brothers-investment",
+      "obvious": false,
+      "actual": "Proceeded with the investment (Salomon Brothers) despite recognizing upfront that it was too dangerous and too much trouble.",
+      "brain": {
+        "pred": "Proceed with the investment because the price is attractive enough \u2014 this is the Salomon/Wells Fargo/Bank of America pattern of buying a complicated, dangerous financial institution when the price and quality justify the trouble.",
+        "correct": true,
+        "note": "Both land on proceeding with the dangerous Salomon investment"
+      },
+      "baseline": {
+        "pred": "Walk away entirely rather than proceed into a complex, dangerous financial institution regardless of cheap headline valuation.",
+        "correct": false,
+        "note": "Actual proceeded with Salomon investment; predicted says walked away"
+      }
+    },
+    {
+      "id": "cigar-butt-strategy-shift",
+      "obvious": false,
+      "actual": "Abandoned the cigar-butt strategy entirely in favor of buying wonderful businesses at fair prices.",
+      "brain": {
+        "pred": "He abandoned the cigar-butt approach entirely and shifted toward buying wonderful businesses at fair prices, a shift crystallized by Charlie Munger's influence and cemented by See's Candies.",
+        "correct": true,
+        "note": "Same core decision: abandon cigar-butts for wonderful businesses via Munger/See's"
+      },
+      "baseline": {
+        "pred": "Shift decisively to buying wonderful businesses at fair prices, as Buffett himself concluded after Munger's influence and the See's Candies experience.",
+        "correct": true,
+        "note": "matches shift from cigar-butts to wonderful businesses at fair prices"
+      }
+    },
+    {
+      "id": "walmart-thumb-sucking",
+      "obvious": false,
+      "actual": "Waited for the stock to come back down instead of paying the slightly higher price, and never completed the intended position.",
+      "brain": {
+        "pred": "Munger continued buying aggressively even as the price ticked up, completing the full 100-million-share position.",
+        "correct": false,
+        "note": "Predicted continued buying; actual was hesitation/waiting that led to missing the position"
+      },
+      "baseline": {
+        "pred": "Continue buying at the slightly higher price to complete the intended 100-million-share position.",
+        "correct": false,
+        "note": "Predicted continuing to buy, but actual decision was to wait and never complete the position"
+      }
+    },
+    {
+      "id": "sees-candies-premium-price",
+      "obvious": false,
+      "actual": "Pushed Buffett to pay a real premium for See's Candies, a genuinely great business.",
+      "brain": {
+        "pred": "Munger pushed hard for Buffett to pay up for See's Candies despite it violating strict Graham cigar-butt pricing discipline.",
+        "correct": true,
+        "note": "Same core decision: Munger pushed to pay premium for See's quality business"
+      },
+      "baseline": {
+        "pred": "Push Buffett to pay the premium price because See's Candies' quality, pricing power, and durable brand justify a real premium over cigar-butt bargains.",
+        "correct": true,
+        "note": "Same choice: push Buffett to pay premium for See's as quality compounder"
+      }
+    },
+    {
+      "id": "caltech-real-estate-coinvest",
+      "obvious": false,
+      "actual": "Crossed the line from advisor to principal, putting his own money in and owning half of the operation.",
+      "brain": {
+        "pred": "Munger crossed the line and put his own capital into the deal as a co-investor alongside his client rather than remaining purely as legal counsel.",
+        "correct": true,
+        "note": "same substance: Munger co-invested his own capital instead of just advising"
+      },
+      "baseline": {
+        "pred": "Remain purely as legal advisor and collect the standard fee, avoiding any conflict of interest.",
+        "correct": false,
+        "note": "Predicted staying as advisor only; actual was becoming principal/co-investor"
+      }
+    },
+    {
+      "id": "multiple-leadership-roles",
+      "obvious": false,
+      "actual": "Took on all the additional roles simultaneously \u2014 Vice Chairman of Berkshire Hathaway, Chairman of Wesco Financial, Chairman of Daily Journal Corporation, and Director of Costco.",
+      "brain": {
+        "pred": "Munger took on all the additional roles simultaneously alongside his primary position.",
+        "correct": true,
+        "note": "matches all roles taken simultaneously"
+      },
+      "baseline": {
+        "pred": "Accept only one additional role that offers strategic synergy, declining the rest to preserve focus and effectiveness.",
+        "correct": false,
+        "note": "Predicted accepting only one role; actual took on all roles simultaneously"
+      }
+    },
+    {
+      "id": "continued-board-service-late-90s",
+      "obvious": false,
+      "actual": "Continued serving actively on multiple boards \u2014 Berkshire Hathaway, Daily Journal, and Costco \u2014 well into his late 90s.",
+      "brain": {
+        "pred": "Charlie continued actively serving on multiple corporate boards (Berkshire, Daily Journal, Costco) well into his late 90s.",
+        "correct": true,
+        "note": "Same substance: continued active board service into late 90s"
+      },
+      "baseline": {
+        "pred": "Retire from active board service to prioritize personal well-being, family, and legacy while capacity and energy allow enjoying it.",
+        "correct": false,
+        "note": "Prediction chose retirement; actual was continued active board service."
+      }
+    },
+    {
+      "id": "abandon-cigar-butt-advice-1965",
+      "obvious": false,
+      "actual": "Advised abandoning the cigar-butt approach entirely and instead adding wonderful businesses purchased at fair prices.",
+      "brain": {
+        "pred": "He advised his friend to abandon the cigar-butt Graham approach and instead pay fair prices for wonderful businesses as capital grew.",
+        "correct": true,
+        "note": "Same core shift: abandon cigar-butts, buy wonderful businesses at fair prices"
+      },
+      "baseline": {
+        "pred": "Advise him to move away from cigar-butt investing toward acquiring high-quality businesses at fair prices as his capital base grows.",
+        "correct": true,
+        "note": "matches core shift from cigar-butt to wonderful businesses at fair prices"
+      }
+    },
+    {
+      "id": "left-law-for-investing",
+      "obvious": false,
+      "actual": "Left active law practice after only three years at the firm he co-founded, pivoting entirely to investing with Warren Buffett.",
+      "brain": {
+        "pred": "Charlie left active law practice early to pivot fully into investing, phasing out of the firm he co-founded once his investment returns clearly outpaced legal fees.",
+        "correct": true,
+        "note": "Both describe leaving law practice to fully pivot to investing"
+      },
+      "baseline": {
+        "pred": "Leave active law practice early to pivot fully into investing with the talented partner.",
+        "correct": true,
+        "note": "matches: left law practice early to fully pivot to investing with Buffett"
+      }
+    },
+    {
+      "id": "philanthropy-concentration-stanford",
+      "obvious": false,
+      "actual": "Concentrated giving heavily on institutions he understood and cared about deeply, particularly universities and legal education \u2014 including a $43.5 million gift to Stanford Law School's dormitories.",
+      "brain": {
+        "pred": "Concentrate giving heavily on a small number of institutions he understands deeply and cares about, like Stanford Law School and University of Michigan.",
+        "correct": true,
+        "note": "Same core decision: concentrated giving to well-understood institutions like Stanford Law"
+      },
+      "baseline": {
+        "pred": "Concentrate giving on a small number of institutions you deeply understand and care about.",
+        "correct": true,
+        "note": "matches core choice: concentrated giving to well-understood institutions"
+      }
+    },
+    {
+      "id": "wealth-to-descendants-vs-foundations",
+      "obvious": false,
+      "actual": "Distributed more than half of his wealth to his descendants rather than to public foundations.",
+      "brain": {
+        "pred": "Munger directed the large majority of his fortune to his own descendants rather than following Buffett's foundation-giving model.",
+        "correct": true,
+        "note": "same substance: majority to descendants, not foundations, distinct from Buffett"
+      },
+      "baseline": {
+        "pred": "Direct the large majority of wealth to public foundations, providing descendants a comfortable but not distorting inheritance.",
+        "correct": false,
+        "note": "Predicted opposite allocation (mostly to foundations) vs actual (majority to descendants)"
+      }
+    },
+    {
+      "id": "russell-stover-attack-response",
+      "obvious": false,
+      "actual": "Responded immediately and aggressively with legal force against the copycat 'Mrs. Stover's' stores.",
+      "brain": {
+        "pred": "He moved immediately and aggressively with legal action to shut down the copycat stores trading on the See's brand.",
+        "correct": true,
+        "note": "same action: immediate aggressive legal response to copycat"
+      },
+      "baseline": {
+        "pred": "Wait and monitor the situation while quickly consulting legal counsel to assess the severity of the trademark/trade dress confusion before committing to costly litigation.",
+        "correct": false,
+        "note": "Predicted delay/monitor vs actual immediate aggressive legal action"
+      }
+    },
+    {
+      "id": "bezos-national-enquirer-confrontation",
+      "obvious": true,
+      "actual": "Viewed the public confrontation as exemplary behavior, admiring the willingness to confront the problem head-on.",
+      "brain": {
+        "pred": "Munger publicly praised Bezos for standing up to the tabloid rather than caving to extortion.",
+        "correct": true,
+        "note": "both endorse Bezos's public confrontation approach"
+      },
+      "baseline": {
+        "pred": "View the public confrontation as admirable and wise, since exposing extortion rather than capitulating protects both personal integrity and broader societal norms against blackmail.",
+        "correct": true,
+        "note": "Both view the public confrontation approach as admirable/correct"
+      }
+    },
+    {
+      "id": "coca-cola-aggressive-buying",
+      "obvious": false,
+      "actual": "Bought as aggressively as possible, representing roughly one-third of total daily trading volume every day for months.",
+      "brain": {
+        "pred": "Buy Coca-Cola stock as aggressively as possible, absorbing roughly a third of daily trading volume for months until the full position was built.",
+        "correct": true,
+        "note": "matches aggressive buying representing ~1/3 daily volume for months"
+      },
+      "baseline": {
+        "pred": "Accumulate the position slowly and discreetly over time.",
+        "correct": false,
+        "note": "Predicted slow/discreet accumulation, but actual was aggressive buying at ~1/3 daily volume"
+      }
+    },
+    {
+      "id": "hire-managers-by-reading-habits",
+      "obvious": false,
+      "actual": "Selected the two managers specifically because they read as voraciously as Buffett and Munger did.",
+      "brain": {
+        "pred": "Select managers specifically because they read as voraciously as you and your partner do.",
+        "correct": true,
+        "note": "Same core choice: pick managers based on voracious reading habit like Buffett/Munger"
+      },
+      "baseline": {
+        "pred": "Prioritize track record and credentials, while using evidence of broad intellectual curiosity (including reading habits) as a meaningful but secondary signal in the evaluation.",
+        "correct": false,
+        "note": "Actual chose based primarily on reading habit as defining trait, not track record/credentials as primary"
+      }
+    },
+    {
+      "id": "let-cash-build-up",
+      "obvious": false,
+      "actual": "Let the cash build up rather than deploying it into suboptimal opportunities.",
+      "brain": {
+        "pred": "Let the cash pile up and refuse to force mediocre deals just to look busy.",
+        "correct": true,
+        "note": "Same choice: hold cash, avoid forcing mediocre deals"
+      },
+      "baseline": {
+        "pred": "Hold the cash and wait rather than force mediocre deals, while continuously reassessing whether returning capital becomes the better option.",
+        "correct": true,
+        "note": "both choose patient cash-holding over forcing suboptimal deployment"
+      }
+    },
+    {
+      "id": "omaha-over-new-york",
+      "obvious": false,
+      "actual": "Deliberately chose Omaha rather than New York or Los Angeles.",
+      "brain": {
+        "pred": "Base the operation in Omaha, far from Wall Street's noise and social pressure.",
+        "correct": true,
+        "note": "same choice (Omaha) and same rationale (avoiding social pressure)"
+      },
+      "baseline": {
+        "pred": "Base the operation in a quiet Midwestern city, deliberately away from Wall Street's noise and herd mentality.",
+        "correct": true,
+        "note": "matches Omaha choice and rationale of avoiding financial-center social pressure"
+      }
+    },
+    {
+      "id": "sell-good-products-vs-tricks",
+      "obvious": false,
+      "actual": "Favored selling things that are genuinely good for people, even at the cost of making less money.",
+      "brain": {
+        "pred": "He favors building businesses around genuinely good products and fair dealing, even if it caps the profit ceiling.",
+        "correct": true,
+        "note": "same substance: prioritizing genuinely good products/fair dealing over max profit"
+      },
+      "baseline": {
+        "pred": "Build the business around genuinely beneficial products even if it caps some profit tactics.",
+        "correct": true,
+        "note": "Same core choice: prioritize genuinely beneficial products over profit-maximizing exploitation"
+      }
+    },
+    {
+      "id": "haven-healthcare-venture-view",
+      "obvious": false,
+      "actual": "Credited the venture as valuable, calling its leaders 'constructive disruptors' despite the failure.",
+      "brain": {
+        "pred": "Munger credited Haven as a constructive disruptor that surfaced real problems and pressured the industry, even though it failed to hit its ambitious goals.",
+        "correct": true,
+        "note": "matches: credits failed venture as constructive disruptor"
+      },
+      "baseline": {
+        "pred": "Credit the venture as a valuable 'constructive disruptor' despite its ultimate failure.",
+        "correct": true,
+        "note": "Same substance: credits venture as valuable constructive disruptor despite failure"
+      }
+    },
+    {
+      "id": "twenty-five-percent-position-cap",
+      "obvious": false,
+      "actual": "Capped any single investment at a maximum of 25% of net worth, regardless of certainty level.",
+      "brain": {
+        "pred": "Munger lets a truly high-conviction position grow well beyond conventional caps, even to a majority of net worth, rather than artificially capping it.",
+        "correct": false,
+        "note": "Predicted no cap/majority concentration contradicts actual fixed 25% cap regardless of conviction"
+      },
+      "baseline": {
+        "pred": "Cap any single investment at a fixed maximum, such as 25% of net worth, regardless of conviction.",
+        "correct": true,
+        "note": "same 25% cap decision and same rationale"
+      }
+    }
+  ],
+  "cost": 0.7083149999999998
+}

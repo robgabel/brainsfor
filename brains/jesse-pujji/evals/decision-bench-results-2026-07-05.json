@@ -1,0 +1,323 @@
+{
+  "brain": "jesse-pujji",
+  "person": "jesse-pujji",
+  "date": "2026-07-05",
+  "model": "claude-sonnet-5",
+  "summary": {
+    "brain": {
+      "all": 0.85,
+      "n_all": 20,
+      "non_obvious": 0.8421052631578947,
+      "n_non_obvious": 19
+    },
+    "baseline": {
+      "all": 0.9,
+      "n_all": 20,
+      "non_obvious": 0.8947368421052632,
+      "n_non_obvious": 19
+    }
+  },
+  "results": [
+    {
+      "id": "ampush-2015-sale",
+      "obvious": false,
+      "actual": "Refused the full sale; sold only a minority stake to Red Ventures and kept operating.",
+      "brain": {
+        "pred": "He refused the eight-figure offers and held out, believing the company was worth nine figures, choosing to keep operating and grow into the valuation he was convinced was right.",
+        "correct": false,
+        "note": "Predicted a full refusal to sell, but actual outcome involved selling a minority stake to Red Ventures."
+      },
+      "baseline": {
+        "pred": "Take a minority-stake partnership/recapitalization instead of a full sale or holding out.",
+        "correct": true,
+        "note": "Both land on minority-stake deal instead of full sale"
+      }
+    },
+    {
+      "id": "ampush-annual-vc",
+      "obvious": false,
+      "actual": "Stay bootstrapped \u2014 the answer every single year was no.",
+      "brain": {
+        "pred": "Stay bootstrapped after the annual zero-based review concludes the real constraints are human and strategic, not capital.",
+        "correct": true,
+        "note": "matches: stays bootstrapped, bottleneck is human/strategic not capital"
+      },
+      "baseline": {
+        "pred": "Stay bootstrapped and continue growing at the current sustainable pace rather than raising.",
+        "correct": true,
+        "note": "Both choose to stay bootstrapped each year, rejecting VC funding"
+      }
+    },
+    {
+      "id": "kahani-shutdown",
+      "obvious": false,
+      "actual": "Shut it down (after first being honest with investors that being its CEO wasn't the right fit and restructuring).",
+      "brain": {
+        "pred": "He shuts it down rather than keep pouring capital or energy into a product people like but don't need urgently.",
+        "correct": true,
+        "note": "Both shut down the venture citing lack of traction/fit"
+      },
+      "baseline": {
+        "pred": "Restructure and step back but keep it alive by installing a capable operator/CEO who is energized by the problem, while I move to a role that fits my strengths.",
+        "correct": false,
+        "note": "actual decision was to shut down the company, not keep it alive with new leadership"
+      }
+    },
+    {
+      "id": "hedge-fund-data-loan",
+      "obvious": false,
+      "actual": "Offered aggregate (not raw) data only, and asked for a $5M interest-free loan in exchange.",
+      "brain": {
+        "pred": "He structured a non-dilutive financing deal, offering the hedge-fund investor something valuable (like structured performance data or a preferred lending arrangement) short of equity or the actual proprietary edge, in exchange for favorable working capital terms.",
+        "correct": true,
+        "note": "matches non-dilutive aggregate-data-for-favorable-financing structure"
+      },
+      "baseline": {
+        "pred": "Offer favorable debt or a revenue-based financing structure with limited, delayed, or aggregated performance reporting instead of full real-time raw data access.",
+        "correct": true,
+        "note": "aggregated/limited data offered in exchange for non-dilutive financing matches actual"
+      }
+    },
+    {
+      "id": "facebook-pivot-2010",
+      "obvious": false,
+      "actual": "Doubled and tripled down on Facebook as aggressively as possible; became one of Facebook's largest advertisers within a year.",
+      "brain": {
+        "pred": "Pujji went all-in on Facebook, redirecting Ampush's resources and focus to concentrate on the new channel rather than hedge with Google.",
+        "correct": true,
+        "note": "Both describe concentrating aggressively on Facebook early rather than hedging"
+      },
+      "baseline": {
+        "pred": "Aggressively pivot the agency's resources, talent, and client pitches toward Facebook ads while the margin gap is wide open.",
+        "correct": true,
+        "note": "both choose aggressive concentration into Facebook ads over hedging"
+      }
+    },
+    {
+      "id": "specialist-vs-athlete",
+      "obvious": false,
+      "actual": "Hire 'marketing athletes' who understand the business problem and can flex \u2014 while still insisting each channel gets concentrated, specialist-level TIME (over half of one person's time for 90-120 days to crack it).",
+      "brain": {
+        "pred": "He argued for specialists who go deep on each channel's mechanics, but organized around a flexible operating system (like his weekly commitment/priority rituals) so people's time reallocates as the channel mix shifts, with the founder/leader owning the narrative layer across channels rather than any single specialist or generalist owning strategy.",
+        "correct": true,
+        "note": "Both favor specialist depth per channel with flexible reallocation, matching in substance"
+      },
+      "baseline": {
+        "pred": "Build a small core of generalist 'growth athletes' who can flex across channels, and layer in deep specialists or agencies for specific high-leverage channels once they prove durable enough to warrant dedicated depth.",
+        "correct": true,
+        "note": "Both favor flexible generalist-type hires who devote concentrated/specialist depth per channel, matching core substance"
+      }
+    },
+    {
+      "id": "vp-sales-timing",
+      "obvious": false,
+      "actual": "Keep selling as founder for years \u2014 do NOT hire a VP of Sales early. (He made this hire once, early, and counts it as one of his most expensive mistakes.)",
+      "brain": {
+        "pred": "Jesse keeps personally selling and delays the VP of Sales hire, using founder-led sales and his own network to close early clients until the pain of not having a sales hire is undeniable.",
+        "correct": true,
+        "note": "matches: delay VP sales, founder-led selling until pain forces hire"
+      },
+      "baseline": {
+        "pred": "Keep selling personally until the sales process is repeatable and well-understood before hiring a VP of Sales.",
+        "correct": true,
+        "note": "Both choose founder-led sales, delaying VP of Sales hire until process is proven"
+      }
+    },
+    {
+      "id": "own-the-full-goal",
+      "obvious": false,
+      "actual": "Insisted on owning the ENTIRE new-customer goal \u2014 not just paid \u2014 even though 80%+ was organic and outside his direct control.",
+      "brain": {
+        "pred": "He insists on owning the full new-customer number, not just the paid slice, since a narrow paid KPI would be a vanity metric disconnected from what actually drives the business.",
+        "correct": true,
+        "note": "Both: owns full new-customer goal, not just paid slice"
+      },
+      "baseline": {
+        "pred": "Insist on owning the full new-customer acquisition number, not just the paid slice, so incentives align with actual business outcomes.",
+        "correct": true,
+        "note": "same choice: own full acquisition number, not just paid"
+      }
+    },
+    {
+      "id": "pick-the-business-2009",
+      "obvious": false,
+      "actual": "Chose like a 'nerdy finance person': matched quant skills to performance marketing, targeting industries with high willingness to pay per lead (for-profit universities in 2009-2010).",
+      "brain": {
+        "pred": "He chose to deliberately match his quant/data-analysis background to a market with high willingness-to-pay per lead (which became Ampush's performance marketing origin).",
+        "correct": true,
+        "note": "same core choice: quant skills matched to high-WTP performance marketing lead-gen"
+      },
+      "baseline": {
+        "pred": "Deliberately match specific quant skills to an industry with high willingness-to-pay per lead.",
+        "correct": true,
+        "note": "matches quant skills to high WTP-per-lead industry, same core decision"
+      }
+    },
+    {
+      "id": "starz-client-loss",
+      "obvious": false,
+      "actual": "Ran a 45-60 minute open emotional-processing session and sent everyone home \u2014 no strategy discussion until the feelings were metabolized. The team came back self-motivated the next morning.",
+      "brain": {
+        "pred": "He first runs an open session to process the emotional hit with the team and lets people go home before touching strategy.",
+        "correct": true,
+        "note": "Both describe running an emotional-processing session first, deferring strategy until after"
+      },
+      "baseline": {
+        "pred": "Convene a brief, calm war-room session with the core team to understand exactly what happened and stabilize the situation.",
+        "correct": false,
+        "note": "predicted chose facts/strategy-first war room, actual chose pure emotional processing before any strategy"
+      }
+    },
+    {
+      "id": "gateway-x-design",
+      "obvious": false,
+      "actual": "Reverse-engineered it around his three zones of genius (spotting opportunities, coaching people, building relationships), with a capital-light requirement (profitable in 6-12 months) and an 'unfair advantage' test before pursuing any idea.",
+      "brain": {
+        "pred": "He built the studio model reverse-engineered around his own zones of genius (getting the first 12 months going, founder-led sales, performance marketing/growth) combined with a strict capital-light, fast-path-to-profitability filter for every company.",
+        "correct": false,
+        "note": "predicted zones of genius differ from actual (opportunity-spotting/coaching/relationships vs founder-led sales/growth), missing unfair-advantage filter"
+      },
+      "baseline": {
+        "pred": "Build the studio around a filter that combines your unique zones of genius with a capital-light, fast-profitability screen for every new venture.",
+        "correct": true,
+        "note": "matches zones of genius + capital-light/profitability filter"
+      }
+    },
+    {
+      "id": "agency-productize",
+      "obvious": false,
+      "actual": "Productized delivery, built proprietary tooling, and systematized what most shops leave artisanal \u2014 turning the agency into a real asset that later exited to a PE buyer.",
+      "brain": {
+        "pred": "Systematize and productize the agency's delivery so bespoke work becomes repeatable IP, building enterprise value without abandoning the profitable services core.",
+        "correct": true,
+        "note": "same core choice: productize/systematize agency into asset via proprietary tooling"
+      },
+      "baseline": {
+        "pred": "Productize delivery, build proprietary tooling, and systematize the bespoke parts.",
+        "correct": true,
+        "note": "same core choice: productize/systematize agency via proprietary tooling"
+      }
+    },
+    {
+      "id": "dtc-2021-read",
+      "obvious": false,
+      "actual": "Concluded his playbook was personally outdated and that most 'DTC brands' were really Facebook-arbitrage businesses whose 'brand equity' would evaporate as ad inventory got expensive.",
+      "brain": {
+        "pred": "Jesse concluded the Facebook-arbitrage playbook had run its course and the broader era of cheap arbitrage economics was ending, rather than doubling down or blaming execution.",
+        "correct": true,
+        "note": "same core conclusion: playbook/arbitrage era ended, shift to retention/brand over paid channels"
+      },
+      "baseline": {
+        "pred": "Recognize that mediocre economics signal a structural market shift, not a fixable execution problem, and conclude the old Facebook-arbitrage playbook no longer works.",
+        "correct": true,
+        "note": "both conclude the FB-arbitrage playbook is structurally dead"
+      }
+    },
+    {
+      "id": "non-vc-exit-path",
+      "obvious": true,
+      "actual": "Sold to a private-equity buyer, demonstrating a non-VC liquidity path for a profitable, founder-controlled business.",
+      "brain": {
+        "pred": "Sell to a private-equity buyer for liquidity, consistent with how Ampush took a minority-stake/PE-style path with Red Ventures rather than chasing a VC-style exit.",
+        "correct": true,
+        "note": "Both choose PE sale as non-VC liquidity path"
+      },
+      "baseline": {
+        "pred": "Sell to a private-equity buyer for full or majority liquidity.",
+        "correct": true,
+        "note": "Both choose PE sale as non-VC liquidity path"
+      }
+    },
+    {
+      "id": "ampush-2015-sale-process",
+      "obvious": false,
+      "actual": "Rejected the 8-figure offers and instead sold a minority stake to Red Ventures rather than doing a full sale.",
+      "brain": {
+        "pred": "He rejected the 8-figure offers and held out solo for the 9-figure number he and his co-founders believed the growth trajectory justified.",
+        "correct": false,
+        "note": "actual involved selling minority stake to Red Ventures, not holding out solo"
+      },
+      "baseline": {
+        "pred": "Sell a minority stake to a strategic partner while retaining majority control.",
+        "correct": true,
+        "note": "matches minority stake sale to strategic partner (Red Ventures)"
+      }
+    },
+    {
+      "id": "red-ventures-decline-burnout",
+      "obvious": false,
+      "actual": "Worked with executive coach Dave Kashen to understand the psychological patterns driving the burnout.",
+      "brain": {
+        "pred": "He hired an executive coach to process the underlying emotional patterns rather than grinding through silently or fire-selling the business.",
+        "correct": true,
+        "note": "both indicate hiring an executive coach to address underlying psychological/emotional patterns"
+      },
+      "baseline": {
+        "pred": "Hire an executive coach to work through the underlying patterns driving your burnout.",
+        "correct": true,
+        "note": "Both choose hiring an executive coach to address underlying burnout patterns"
+      }
+    },
+    {
+      "id": "bootstrap-vs-angel-round",
+      "obvious": false,
+      "actual": "Chose to bootstrap rather than raise an angel round.",
+      "brain": {
+        "pred": "Bootstrap entirely, funding the agency purely from early client revenue rather than raising angel money or debt.",
+        "correct": true,
+        "note": "both choose bootstrapping via client revenue over external funding"
+      },
+      "baseline": {
+        "pred": "Bootstrap entirely, funding growth from client revenue from day one.",
+        "correct": true,
+        "note": "both choose bootstrapping over outside capital for control/freedom reasons"
+      }
+    },
+    {
+      "id": "ampush-ceo-exit-structure",
+      "obvious": false,
+      "actual": "Took a full clean break from the CEO role rather than staying on with a GM under him.",
+      "brain": {
+        "pred": "He took a full, clean exit from the CEO role rather than keeping the title while a GM ran things.",
+        "correct": true,
+        "note": "same substance: clean CEO exit over hybrid GM arrangement"
+      },
+      "baseline": {
+        "pred": "Take a full, clean exit from the CEO role entirely, formally installing a new CEO rather than hiding behind a titular role.",
+        "correct": true,
+        "note": "Both choose full clean exit from CEO role over hybrid GM arrangement"
+      }
+    },
+    {
+      "id": "kahani-ceo-honesty",
+      "obvious": false,
+      "actual": "Was honest with investors that the CEO role wasn't filling his cup and initiated a restructuring.",
+      "brain": {
+        "pred": "Jesse chose to be transparent with investors about the misalignment and initiate a restructuring of his role rather than grind through inauthentically or engineer a quiet exit.",
+        "correct": true,
+        "note": "matches: honest with investors + restructuring role"
+      },
+      "baseline": {
+        "pred": "Be transparent with investors and proactively restructure the role to align leadership with both company needs and personal fit.",
+        "correct": true,
+        "note": "matches: honest disclosure to investors + restructuring role"
+      }
+    },
+    {
+      "id": "facebook-selfserve-margin-shift",
+      "obvious": false,
+      "actual": "Aggressively doubled down on Facebook advertising, moving from ~10% margins on Google to ~75% margins.",
+      "brain": {
+        "pred": "Jesse aggressively shifted Ampush's resources into Facebook ads, riding the platform inflection before the market understood it.",
+        "correct": true,
+        "note": "same substance: aggressive pivot to Facebook ads exploiting margin/inflection advantage"
+      },
+      "baseline": {
+        "pred": "Aggressively pivot toward Facebook ads while maintaining just enough Google work to fund operations during the transition.",
+        "correct": true,
+        "note": "both choose aggressive shift to Facebook due to margin advantage"
+      }
+    }
+  ],
+  "cost": 1.013433
+}

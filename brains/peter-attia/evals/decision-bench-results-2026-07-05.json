@@ -1,0 +1,293 @@
+{
+  "brain": "peter-attia",
+  "person": "peter-attia",
+  "date": "2026-07-05",
+  "model": "claude-sonnet-5",
+  "summary": {
+    "brain": {
+      "all": 1.0,
+      "n_all": 18,
+      "non_obvious": 1.0,
+      "n_non_obvious": 16
+    },
+    "baseline": {
+      "all": 0.8333333333333334,
+      "n_all": 18,
+      "non_obvious": 0.875,
+      "n_non_obvious": 16
+    }
+  },
+  "results": [
+    {
+      "id": "compulsive-exercise-costs",
+      "obvious": false,
+      "actual": "Entered residential therapeutic care \u2014 five weeks across two stays \u2014 to address the root belief system driving the perfectionism",
+      "brain": {
+        "pred": "He entered intensive residential psychiatric/therapeutic treatment to address the underlying belief system driving the compulsive perfectionism, rather than tweaking the surface behavior.",
+        "correct": true,
+        "note": "Both describe entering residential therapy to address root belief system behind perfectionism."
+      },
+      "baseline": {
+        "pred": "Enter residential therapeutic care to address the root belief system driving the compulsion.",
+        "correct": true,
+        "note": "Same core decision: residential therapeutic care targeting root belief system"
+      }
+    },
+    {
+      "id": "metabolic-syndrome-despite-compliance",
+      "obvious": false,
+      "actual": "Abandoned the conventional dietary framework, investigated the carbohydrate-insulin model, and co-founded NuSI to fund rigorous nutrition science",
+      "brain": {
+        "pred": "He abandoned the standard food-pyramid/calorie framework and pursued the carbohydrate-insulin hypothesis, testing nutritional ketosis and macronutrient-driven hormonal mechanisms on himself.",
+        "correct": true,
+        "note": "matches core decision: abandoned standard model, pursued carb-insulin hypothesis (NuSI omission minor)"
+      },
+      "baseline": {
+        "pred": "Seek medical workup and consider re-examining the carbohydrate/insulin model given clear failure of standard advice despite excellent adherence.",
+        "correct": true,
+        "note": "both reject conventional diet framework and pursue carb-insulin model investigation"
+      }
+    },
+    {
+      "id": "diabetic-patient-contempt",
+      "obvious": true,
+      "actual": "Publicly apologized to the patient in a TED Talk and restructured his framework around whether obesity is a cause or symptom of metabolic disease",
+      "brain": {
+        "pred": "He publicly recounted the story and apology in his TED Talk, using it to reframe obesity/diabetes as a downstream symptom of insulin resistance rather than a moral failing of willpower.",
+        "correct": true,
+        "note": "matches TED Talk apology and reframing obesity/diabetes as symptom of insulin resistance"
+      },
+      "baseline": {
+        "pred": "Publicly share the story and reframe obesity as often a symptom rather than a moral failing, using it to teach humility and update clinical practice.",
+        "correct": true,
+        "note": "matches public apology/reframe of obesity as symptom"
+      }
+    },
+    {
+      "id": "outlive-first-draft-rejected",
+      "obvious": false,
+      "actual": "Rewrote the book twice more (three total versions over six years), making it shorter and more narrative-driven",
+      "brain": {
+        "pred": "He rewrote the book (multiple further drafts) to shift toward a narrative, reader-focused structure rather than defending the purely technical version.",
+        "correct": true,
+        "note": "Matches: multiple rewrites toward shorter, narrative-driven version"
+      },
+      "baseline": {
+        "pred": "Rewrite the book twice more, shifting toward narrative and reader-focused structure while preserving the technical substance underneath.",
+        "correct": true,
+        "note": "Both describe rewriting the book two more times toward a shorter, narrative-driven form."
+      }
+    },
+    {
+      "id": "pharmacology-appendix-cut",
+      "obvious": false,
+      "actual": "Materially reduced the appendix content to satisfy publisher constraints on total book length",
+      "brain": {
+        "pred": "He cut the appendix down for the book itself but published the full detailed pharmacology material separately (as an extensive online/companion resource) rather than forcing the publisher to accept 200 extra pages.",
+        "correct": true,
+        "note": "core action (cut appendix for length) matches; extra detail about separate publication is plausible elaboration, not contradictory"
+      },
+      "baseline": {
+        "pred": "Trim the appendix down for the print book and publish the full, detailed version separately as a free or low-cost companion resource online.",
+        "correct": true,
+        "note": "core action (trim appendix for publisher length limit) matches; extra detail about online companion is plausible elaboration, not contradictory"
+      }
+    },
+    {
+      "id": "hemsworth-apoe4-framing",
+      "obvious": false,
+      "actual": "Framed it as a motivational gift, telling Hemsworth that with every possible preventive step, his risk could be reduced to that of anyone else",
+      "brain": {
+        "pred": "He framed the APOE4 result as an actionable call to arms, emphasizing that aggressive early management of cardiovascular risk factors, exercise, sleep, and metabolic health can substantially mitigate the elevated genetic risk.",
+        "correct": true,
+        "note": "Both frame APOE4 as actionable motivation to reduce risk rather than fatalistic diagnosis"
+      },
+      "baseline": {
+        "pred": "Refer him to a certified genetic counselor for in-depth interpretation and support rather than framing the result himself.",
+        "correct": false,
+        "note": "Actual: personally reframed as motivating gift; predicted: referred to genetic counselor instead"
+      }
+    },
+    {
+      "id": "twenty-mile-swim-goal",
+      "obvious": false,
+      "actual": "Swam two miles in open water first as a proof-of-concept milestone before scaling toward the 20-25 mile goal",
+      "brain": {
+        "pred": "He started by swimming a manageable two-mile proof-of-concept distance to prove the scaling problem was tractable before committing to the full 20-25 mile goal.",
+        "correct": true,
+        "note": "Same core action: 2-mile proof-of-concept swim before scaling to 20-25 miles"
+      },
+      "baseline": {
+        "pred": "Start with a manageable proof-of-concept swim (like two miles) to build confidence and establish a scalable training framework before committing to the full distance.",
+        "correct": true,
+        "note": "same core action: two-mile proof-of-concept swim as scalable stepping stone"
+      }
+    },
+    {
+      "id": "self-experiment-diet-exercise",
+      "obvious": false,
+      "actual": "Dramatically restricted refined grains and sugar while reducing exercise volume, losing 20 kg",
+      "brain": {
+        "pred": "He overhauled his diet to cut refined carbohydrates/sugar and simultaneously scaled back his punishing exercise volume, isolating macronutrient composition as the variable to test.",
+        "correct": true,
+        "note": "matches diet restriction + reduced exercise, testing macronutrient hypothesis"
+      },
+      "baseline": {
+        "pred": "Test the macronutrient hypothesis directly by cutting refined carbs/sugar while dialing back exercise volume, since the current calorie/exercise-focused approach isn't working.",
+        "correct": true,
+        "note": "Same action: cut refined carbs/sugar, reduce exercise, matches actual"
+      }
+    },
+    {
+      "id": "dental-abscess-lipid-swings",
+      "obvious": false,
+      "actual": "Concluded that inflammation dramatically alters lipoprotein markers and that standard lipid measurements must account for inflammatory state",
+      "brain": {
+        "pred": "He concluded that acute inflammation (from the dental abscess) had transiently altered his lipid values, and that inflammation must be accounted for whenever interpreting a lipid panel rather than treating the number in isolation.",
+        "correct": true,
+        "note": "same conclusion: inflammation confounds lipid panels, must be accounted for"
+      },
+      "baseline": {
+        "pred": "Recognize that active inflammation/infection can independently drive large lipid panel swings, so inflammation status must be checked and controlled for when interpreting results.",
+        "correct": true,
+        "note": "Same conclusion: inflammation confounds lipid panels, must control for it"
+      }
+    },
+    {
+      "id": "career-departure-from-academic-surgery",
+      "obvious": false,
+      "actual": "Left academic surgery to build a private practice/clinic (Early Medical) organized around prevention-first, proactive longevity medicine",
+      "brain": {
+        "pred": "He left academic surgical oncology entirely to build an independent longevity-focused practice centered on early, individualized prevention.",
+        "correct": true,
+        "note": "same core choice: left academic surgery for independent prevention-focused longevity practice"
+      },
+      "baseline": {
+        "pred": "Leave academic surgery to build an independent practice focused on early, preventive intervention.",
+        "correct": true,
+        "note": "Same core choice: leaving academic surgery for independent prevention-focused practice"
+      }
+    },
+    {
+      "id": "podcast-long-form-teaching",
+      "obvious": false,
+      "actual": "Launched The Drive podcast in 2018, using long-form audio conversations with researchers and clinicians",
+      "brain": {
+        "pred": "He launched The Drive, a long-form podcast (often 2-3+ hours) featuring deep, unedited conversations with researchers and clinicians that walks through the full mechanistic and evidentiary reasoning rather than handing down conclusions.",
+        "correct": true,
+        "note": "same action: launching The Drive as long-form audio for full reasoning transparency"
+      },
+      "baseline": {
+        "pred": "Launch a long-form podcast with in-depth researcher conversations that models reasoning in real time.",
+        "correct": true,
+        "note": "Same decision: launch long-form podcast with researchers to model reasoning"
+      }
+    },
+    {
+      "id": "self-criticism-voice-memo",
+      "obvious": false,
+      "actual": "Recorded a voice memo narrating the situation aloud as if it happened to a friend, at the edge of destructive self-criticism",
+      "brain": {
+        "pred": "He records a voice memo in the moment, narrating the mistake as if describing it happened to a friend, to create cognitive distance from the self-critical spiral.",
+        "correct": true,
+        "note": "same core action: real-time voice memo narrating as if to a friend to interrupt self-critical spiral"
+      },
+      "baseline": {
+        "pred": "Use the voice-memo reframe technique to interrupt the self-critical spiral in real time.",
+        "correct": true,
+        "note": "same core action: voice memo narrating as if to a friend to interrupt self-criticism"
+      }
+    },
+    {
+      "id": "habit-building-vs-breaking",
+      "obvious": false,
+      "actual": "Focused on building good behaviors, which necessarily displace old bad ones",
+      "brain": {
+        "pred": "He focused on deliberately building new, positive habits (like structured protein-forward meals, scheduled training sessions, sleep routines) rather than waging a direct war on eliminating bad behaviors one by one.",
+        "correct": true,
+        "note": "Matches: build good habits that displace bad ones, not direct suppression"
+      },
+      "baseline": {
+        "pred": "Focus on building new good habits, trusting they will naturally displace the old ones.",
+        "correct": true,
+        "note": "Both choose building good habits to displace bad ones rather than direct suppression"
+      }
+    },
+    {
+      "id": "reading-app-home-screen",
+      "obvious": true,
+      "actual": "Moved Audible to the home screen and relocated other apps to the second screen",
+      "brain": {
+        "pred": "He moved the audiobook/reading app to the home screen and pushed distracting apps off to a secondary screen, making the desired behavior the path of least resistance rather than relying on willpower.",
+        "correct": true,
+        "note": "same action: Audible to home screen, others moved to second screen"
+      },
+      "baseline": {
+        "pred": "Leave the phone in another room and keep a physical book within reach instead.",
+        "correct": false,
+        "note": "Predicted removes phone entirely; actual rearranged home screen to prioritize Audible on phone"
+      }
+    },
+    {
+      "id": "college-textbook-preparation",
+      "obvious": false,
+      "actual": "Bought all the freshman textbooks for math and physics and worked through them independently over the summer",
+      "brain": {
+        "pred": "He bought the freshman-year math and physics textbooks that summer and worked through them independently before classes started.",
+        "correct": true,
+        "note": "same action: bought and pre-studied freshman math/physics textbooks over summer"
+      },
+      "baseline": {
+        "pred": "Relax, rest, and mentally prepare rather than front-loading coursework.",
+        "correct": false,
+        "note": "Predicted resting instead of pre-studying; actual chose to buy and work through textbooks over summer"
+      }
+    },
+    {
+      "id": "cold-exposure-adrenaline-framing",
+      "obvious": false,
+      "actual": "Framed the experience as going through successive waves/walls of adrenaline rather than enduring a time duration",
+      "brain": {
+        "pred": "Peter frames cold immersion as passing through successive waves/walls of adrenaline rather than counting down a fixed clock.",
+        "correct": true,
+        "note": "matches core reframe: adrenaline waves vs fixed time"
+      },
+      "baseline": {
+        "pred": "Reframe the immersion as passing through successive adrenaline 'waves' or 'walls' rather than clock-watching a fixed duration.",
+        "correct": true,
+        "note": "Same core reframe: adrenaline waves/walls instead of fixed time duration"
+      }
+    },
+    {
+      "id": "meditation-lowering-bar",
+      "obvious": false,
+      "actual": "Lowered the bar for success progressively, treating consistency over perfection as the goal",
+      "brain": {
+        "pred": "He lowered the bar for meditation success progressively until he could actually sustain adherence, then rebuilt intensity gradually rather than treating imperfect execution as failure.",
+        "correct": true,
+        "note": "same core choice: progressively lower bar, prioritize consistency over perfection"
+      },
+      "baseline": {
+        "pred": "Lower the bar to something trivially achievable and rebuild consistency before raising the difficulty again.",
+        "correct": true,
+        "note": "same substance: lower bar, prioritize consistency over perfection, raise later"
+      }
+    },
+    {
+      "id": "second-2020-crisis-response",
+      "obvious": false,
+      "actual": "Returned to residential intensive therapy for a second stay (three weeks in 2020, following two weeks in 2017)",
+      "brain": {
+        "pred": "He returned to intensive residential therapeutic treatment again, framing the 2020 recurrence as another iteration of an ongoing process rather than a failure of the prior work.",
+        "correct": true,
+        "note": "Both match: returned to residential intensive therapy again, viewing setback as part of process not failure"
+      },
+      "baseline": {
+        "pred": "Return to residential intensive therapy, treating the recurrence as an expected part of an ongoing healing process rather than proof of failure.",
+        "correct": true,
+        "note": "matches decision to return to residential intensive therapy"
+      }
+    }
+  ],
+  "cost": 0.9099359999999999
+}

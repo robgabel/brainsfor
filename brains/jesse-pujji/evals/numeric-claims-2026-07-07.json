@@ -1,0 +1,30 @@
+{
+  "slug": "jesse-pujji",
+  "person": "Jesse Pujji",
+  "date": "2026-07-07",
+  "total_claims": 7,
+  "counts": {
+    "grounded": 6,
+    "superseded": 0,
+    "ungrounded": 1,
+    "unverifiable": 0
+  },
+  "defect_count": 1,
+  "high_severity_count": 0,
+  "fidelity_penalty": 8,
+  "cost": 0.1382,
+  "defects": [
+    {
+      "where": "hard_lessons[0].cost",
+      "claim": "Then in 2017, when Red Ventures told us they would not buy the rest of the company, I went into a tailspin: unmotivated, burnt out, showing up at 11 and leaving at 4 for months, carrying the regret of having held on too long.",
+      "figures": [
+        "2017"
+      ],
+      "status": "ungrounded",
+      "severity": "medium",
+      "corpus_value": "",
+      "evidence_quote": "For 6 months, I didn't go into work until 11 am and left at 4 pm. I had no idea what was next and questioned everything...",
+      "why": "The 11am-4pm/months detail matches corpus, but the specific year 2017 and the causal link to Red Ventures declining to buy the rest of the company are not supported by the corpus or known public record."
+    }
+  ]
+}

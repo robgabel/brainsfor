@@ -38,7 +38,7 @@ export function loadBrainContext(slug: string): string {
 // dump. Everything from the first heading NOT in this set onward is the
 // per-cluster atom dump (the bulk of the file).
 const SYNTHESIS_HEADING_RE =
-  /^## (LLM Usage Rules|How .+ Thinks|First Principles|Thinking Patterns|Contrarian Positions|What .+ Does NOT Believe|What .+ Would NOT Say|Biographical Pattern|Hard Lessons)/;
+  /^## (LLM Usage Rules|How .+ Thinks|First Principles|Thinking Patterns|Contrarian Positions|What .+ Does NOT Believe|What .+ Would NOT Say|Biographical Pattern|Hard Lessons|Decision Rules)/;
 
 // The synthesis slice of brain-context.md: usage rules + how-they-think
 // (first principles, patterns, contrarian positions, guardrails, biography)
