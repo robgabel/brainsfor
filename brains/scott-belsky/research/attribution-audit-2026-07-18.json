@@ -1,0 +1,1609 @@
+{
+  "date": "2026-07-18",
+  "brain": "scott-belsky",
+  "context": "Attribution audit of the scott-belsky brain pack (1,086 atoms) for misattribution variant 2 (LLM-guessed source_refs), following the elon-musk index case of 2026-07-03 and the jesse-pujji audit of 2026-07-18. Phase 2.3 deep-research atoms carry citations invented from source titles rather than source content, and pre-diarization single-stream captions let interviewer or third-party speech be extracted as the subject's. The scan flagged 139 suspect atoms — compound or non-canonical refs, 'youtube:unknown', and refs resolving to videos Scott Belsky does not appear in (the Launch House / 'Infinite Games' episode, where Brett Goldstein speaks throughout, and a third-party YouTuber's riff video) — and every suspect was adjudicated against the local transcript corpus. A further 28 representative slug/variant refs (covering ~463 atoms in groups sharing the exact old_ref) were mechanically normalized to canonical sources.json titles so match_source_url resolves them.",
+  "method": "Mechanical scan of all 1,086 atoms for suspect source_refs (slug-style refs, title variants, compound refs, youtube:unknown, refs absent from sources.json) → xhigh-effort per-atom adjudication against the local transcript + raw-source corpus: a claim is only reattributed when a verbatim or near-verbatim passage exists in a canonical source AND the speaker is establishably Belsky (first-person biography, host handoffs, solo talks); wrong-person and speaker-ambiguous atoms were held as residue for human excision rather than re-cited → adversarial refuter pass that re-attacked every STRIP and REATTR verdict (three strips were overturned to REATTR on refuter-located corpus evidence) → per-source canonical dates taken from public record only via the date_corrections map (15 sources verified; unverifiable dates left null, never guessed).",
+  "canonical_sources": [
+    "Wikipedia: Scott Belsky",
+    "Wired UK: Making Ideas Happen",
+    "TechCrunch: Benchmark Appoints Scott Belsky",
+    "Wall Street Journal Profile",
+    "The Messy Middle - Book",
+    "The Verge: Scott Belsky Joining A24",
+    "Deadline: Scott Belsky at A24",
+    "Variety: Scott Belsky at A24",
+    "Co-op Careers Profile",
+    "Fast Company: Most Creative People 2010",
+    "Software Insider: Adobe Acquires Behance",
+    "TechCrunch: Adobe Acquires Behance",
+    "TechCrunch: Behance Acquisition Details",
+    "Adobe Blog: Enriching the Creative Experience",
+    "Fast Co. Design: CreativeSync Feature",
+    "Building Adobe & the Future of Design with Scott Belsky",
+    "2026 Predictions with Scott Belsky",
+    "Scott Belsky — How to Conquer the Messy Middle | The Tim Ferriss Show (Podcast)",
+    "The Danger of Indecision - Scott Belsky",
+    "Navigating the Messy Middle - Scott Belsky",
+    "TEDxPugetSound - Scott Belsky - Making Ideas Happen",
+    "Where Scott Belsky Got His Good Taste",
+    "Scott Belsky: Lessons from the Messy Middle of a Startup’s Journey",
+    "Scott Belsky on AI and the Return of a Hyper-Personalized World",
+    "Scott Belsky & Steve Jang: From AI Chatbots to Copilots",
+    "Scott Belsky: How To Avoid The Idea Generation Trap",
+    "Scott Belsky: What Are You Willing to Be Bad At?",
+    "The Founder List: Scott Belsky (Founder of Behance) on \"Creativity is The New Productivity\"",
+    "#11: Behance Founder, Scott Belsky, on maximizing creative output and the role constraints play",
+    "Scott Belsky on Starting Behance, Perseverance in Business, & the “Messy Middle” | #AskGaryVee 290",
+    "Lessons on product sense, AI, the first mile experience, and the messy middle | Scott Belsky (Adobe)",
+    "EP 12 Scott Belsky",
+    "TEDxGotham 2011- Scott Belsky- Making a Creative Meritocracy",
+    "How To Do More With Less People - Scott Belsky",
+    "Make Business Better: Quartz CEO Zach Seward and Adobe's Scott Belsky",
+    "Got a great idea? Scott Belsky best advice for idea people",
+    "Adobe's Scott Belsky: Art & design in the age of AI | Rapid Response",
+    "Reid Hoffman: Build A World-Changing Business | Chase Jarvis LIVE",
+    "Launch House: Building the Y Combinator of the Future with Hack and Launch Houses | Brett Goldste...",
+    "#80 Launch House: Building the Y Combinator of the Future with Hack and Launch Houses | Brett Gol...",
+    "Pushing Ideas Forward: Scott Belsky at TEDxHarlem",
+    "Scott Belsky at Web Summit 2013 Interviewed by YMCA Cork TechSpace",
+    "YMCA TechSpace interview Scott Belsky at Web Summit 2013",
+    "Scott Belsky - Connecting & Empowering the Creative World | Interactive 2013 | SXSW",
+    "A Conversation with Scott Belsky and Team SHAE @ SXSW 2011",
+    "Greycroft: Investing Along the Frontier of Cloud Platforms and Enterprise Software | Mark Terbeek...",
+    "#29 Greycroft: Investing Along the Frontier of Cloud Platforms and Enterprise Software | Mark Ter...",
+    "How Behance Helps The Creative Community With Scott Belsky - Adobe Create Now Online | Adobe UK",
+    "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity"
+  ],
+  "adjudications": [
+    {
+      "id": "50767d03-ab52-47ba-9cdd-a9291d440c3d",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:highresolution_ep11",
+      "old_date": null,
+      "new_ref": "#11: Behance Founder, Scott Belsky, on maximizing creative output and the role constraints play",
+      "new_date": null,
+      "evidence": "High Resolution ep 11 = this canonical video; applies to all 28 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "1ae3c0ff-535e-4a48-bc7d-b9d1b1f9291d",
+      "decision": "KEEP-normalize",
+      "old_ref": "The Messy Middle — Scott Belsky",
+      "old_date": null,
+      "new_ref": "The Messy Middle - Book",
+      "new_date": null,
+      "evidence": "formatting variant of canonical book title; applies to all 27 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "4f6d2a4b-bafb-43b7-9a6d-20676a619bba",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:adobe-scott-belsky-rapid-response",
+      "old_date": null,
+      "new_ref": "Adobe's Scott Belsky: Art & design in the age of AI | Rapid Response",
+      "new_date": null,
+      "evidence": "slug unambiguously names the Rapid Response canonical video; 26 atoms",
+      "content_head": null
+    },
+    {
+      "id": "413054d3-56d0-406d-854f-63f371a23ef5",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:SXSW_Interactive_2013_Belsky",
+      "old_date": null,
+      "new_ref": "Scott Belsky - Connecting & Empowering the Creative World | Interactive 2013 | SXSW",
+      "new_date": null,
+      "evidence": "slug unambiguously names the SXSW Interactive 2013 canonical video; 26 atoms",
+      "content_head": null
+    },
+    {
+      "id": "2af9f530-b4b6-4a70-8d39-9118e3197d78",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:generative-now-steve-jang-scott-belsky",
+      "old_date": null,
+      "new_ref": "Scott Belsky & Steve Jang: From AI Chatbots to Copilots",
+      "new_date": null,
+      "evidence": "Generative Now Steve Jang episode = this canonical video; 25 atoms",
+      "content_head": null
+    },
+    {
+      "id": "24bf5c90-f239-449b-8d66-5e3db2fb07d1",
+      "decision": "KEEP-normalize",
+      "old_ref": "tim_ferriss_show:scott_belsky_messy_middle",
+      "old_date": null,
+      "new_ref": "Scott Belsky — How to Conquer the Messy Middle | The Tim Ferriss Show (Podcast)",
+      "new_date": "2018-11-05",
+      "evidence": "slug unambiguously names the canonical Tim Ferriss episode; 25 atoms",
+      "content_head": null
+    },
+    {
+      "id": "ea7ec4dd-2d2a-42c3-8e15-0815bd95c3cf",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:AskGaryVee290",
+      "old_date": null,
+      "new_ref": "Scott Belsky on Starting Behance, Perseverance in Business, & the “Messy Middle” | #AskGaryVee 290",
+      "new_date": null,
+      "evidence": "slug unambiguously names canonical #AskGaryVee 290; 25 atoms",
+      "content_head": null
+    },
+    {
+      "id": "566dabb3-d6b2-4372-a0b9-f4ec2524f077",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:LionTree-podcast-Scott-Belsky-2026-predictions",
+      "old_date": null,
+      "new_ref": "2026 Predictions with Scott Belsky",
+      "new_date": null,
+      "evidence": "slug unambiguously names the canonical 2026 Predictions (LionTree) video; 24 atoms",
+      "content_head": null
+    },
+    {
+      "id": "58fe92f8-f7ec-41c9-b958-b4fc3b31431b",
+      "decision": "KEEP-normalize",
+      "old_ref": "greycroft_mark_terbeek_outliers",
+      "old_date": null,
+      "new_ref": "#29 Greycroft: Investing Along the Frontier of Cloud Platforms and Enterprise Software | Mark Ter...",
+      "new_date": null,
+      "evidence": "Greycroft + Mark Terbeek both match the canonical #29 episode; 24 atoms",
+      "content_head": null
+    },
+    {
+      "id": "9d5f1a3e-5827-4b56-8390-cbc0ca7ec353",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:TEDxHarlem-ScottBelsky",
+      "old_date": null,
+      "new_ref": "Pushing Ideas Forward: Scott Belsky at TEDxHarlem",
+      "new_date": "2012-07-27",
+      "evidence": "slug unambiguously names the canonical TEDxHarlem talk; 24 atoms",
+      "content_head": null
+    },
+    {
+      "id": "31ea9174-1fb5-4a84-9292-b01e2508203c",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:TEDxPugetSound_ScottBelsky",
+      "old_date": null,
+      "new_ref": "TEDxPugetSound - Scott Belsky - Making Ideas Happen",
+      "new_date": "2011-02-26",
+      "evidence": "slug unambiguously names the canonical TEDxPugetSound talk; 23 atoms",
+      "content_head": null
+    },
+    {
+      "id": "d6d8e06c-d228-4ddd-86e6-d62a99f5aa24",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:launch-house-80",
+      "old_date": null,
+      "new_ref": "#80 Launch House: Building the Y Combinator of the Future with Hack and Launch Houses | Brett Gol...",
+      "new_date": "2024-01-11",
+      "evidence": "slug unambiguously names canonical Launch House #80; 23 atoms",
+      "content_head": null
+    },
+    {
+      "id": "7b5c8fdb-139f-438c-8c86-45fda86ff648",
+      "decision": "KEEP-normalize",
+      "old_ref": "nfx_founder_list:scott_belsky_creativity_productivity",
+      "old_date": null,
+      "new_ref": "The Founder List: Scott Belsky (Founder of Behance) on \"Creativity is The New Productivity\"",
+      "new_date": null,
+      "evidence": "slug unambiguously names the canonical Founder List video; 23 atoms",
+      "content_head": null
+    },
+    {
+      "id": "7dbba4b8-89ec-4aed-ae33-c87eb60d1c93",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:chase-jarvis-live-reid-hoffman",
+      "old_date": null,
+      "new_ref": "Reid Hoffman: Build A World-Changing Business | Chase Jarvis LIVE",
+      "new_date": null,
+      "evidence": "slug exactly matches this canonical video (note: a Reid Hoffman interview — odd for a Belsky brain but it IS in sources.json); 23 atoms",
+      "content_head": null
+    },
+    {
+      "id": "7a42e8eb-22fe-4ccb-a30c-2ccbed5c8a22",
+      "decision": "KEEP-normalize",
+      "old_ref": "linkedin:make-business-better-quartz-adobe",
+      "old_date": null,
+      "new_ref": "Make Business Better: Quartz CEO Zach Seward and Adobe's Scott Belsky",
+      "new_date": null,
+      "evidence": "slug unambiguously names the canonical Make Business Better video; 18 atoms",
+      "content_head": null
+    },
+    {
+      "id": "a1f73572-9638-48c7-a934-e7b04849635d",
+      "decision": "KEEP-normalize",
+      "old_ref": "TEDxGotham:2011:ScottBelsky",
+      "old_date": null,
+      "new_ref": "TEDxGotham 2011- Scott Belsky- Making a Creative Meritocracy",
+      "new_date": null,
+      "evidence": "slug unambiguously names the canonical TEDxGotham 2011 talk; 15 atoms",
+      "content_head": null
+    },
+    {
+      "id": "f14604fb-cc1b-4698-8ea3-6a63b40f62a3",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:YMCA_TechSpace_WebSummit2013",
+      "old_date": null,
+      "new_ref": "YMCA TechSpace interview Scott Belsky at Web Summit 2013",
+      "new_date": null,
+      "evidence": "slug unambiguously names the canonical YMCA TechSpace video; 15 atoms",
+      "content_head": null
+    },
+    {
+      "id": "ae65784d-0bb0-4c8c-9679-d888fc6ab982",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:adobe_create_now_uk_behance",
+      "old_date": null,
+      "new_ref": "How Behance Helps The Creative Community With Scott Belsky - Adobe Create Now Online | Adobe UK",
+      "new_date": null,
+      "evidence": "slug unambiguously names the canonical Adobe Create Now UK video; 13 atoms",
+      "content_head": null
+    },
+    {
+      "id": "64104f44-bec9-411e-a590-6dc3000b10e2",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:Web_Summit_2013_Belsky_YMCA_Cork",
+      "old_date": null,
+      "new_ref": "Scott Belsky at Web Summit 2013 Interviewed by YMCA Cork TechSpace",
+      "new_date": null,
+      "evidence": "slug unambiguously names the canonical Web Summit 2013 YMCA Cork video; 12 atoms",
+      "content_head": null
+    },
+    {
+      "id": "23682d3a-1ecc-46d5-a7bf-82b30248a9ae",
+      "decision": "KEEP-normalize",
+      "old_ref": "The Messy Middle (book) by Scott Belsky",
+      "old_date": null,
+      "new_ref": "The Messy Middle - Book",
+      "new_date": null,
+      "evidence": "formatting variant of canonical book title; 11 atoms",
+      "content_head": null
+    },
+    {
+      "id": "99a12e56-7e25-4c70-9bc1-ba383e1eab55",
+      "decision": "KEEP-normalize",
+      "old_ref": "sxsw:2011:scott-belsky-team-shae",
+      "old_date": null,
+      "new_ref": "A Conversation with Scott Belsky and Team SHAE @ SXSW 2011",
+      "new_date": null,
+      "evidence": "slug unambiguously names the canonical SXSW 2011 Team SHAE video; 10 atoms",
+      "content_head": null
+    },
+    {
+      "id": "86132fc4-26d8-4846-861d-0ab6446c0b3b",
+      "decision": "KEEP-normalize",
+      "old_ref": "The Messy Middle - Scott Belsky",
+      "old_date": null,
+      "new_ref": "The Messy Middle - Book",
+      "new_date": null,
+      "evidence": "formatting variant of canonical book title; 9 atoms",
+      "content_head": null
+    },
+    {
+      "id": "89af1cb1-12a6-4ee8-9469-b36c962b83cd",
+      "decision": "KEEP-normalize",
+      "old_ref": "The Messy Middle",
+      "old_date": null,
+      "new_ref": "The Messy Middle - Book",
+      "new_date": null,
+      "evidence": "bare book title, unambiguous; 5 atoms",
+      "content_head": null
+    },
+    {
+      "id": "301c9e7c-9693-47a8-928f-0d964cdc0100",
+      "decision": "KEEP-normalize",
+      "old_ref": "Where Scott Belsky Got His Good Taste — interview/video",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "canonical title plus descriptive suffix; 4 atoms",
+      "content_head": null
+    },
+    {
+      "id": "a09481b7-0ee3-4500-a667-e3b73b4a533b",
+      "decision": "KEEP-normalize",
+      "old_ref": "Building Adobe & the Future of Design with Scott Belsky — video",
+      "old_date": null,
+      "new_ref": "Building Adobe & the Future of Design with Scott Belsky",
+      "new_date": "2025-01-15",
+      "evidence": "canonical title plus ' — video' suffix; 2 atoms",
+      "content_head": null
+    },
+    {
+      "id": "3379771c-0594-44e7-a232-d4d8454b6fd9",
+      "decision": "KEEP-normalize",
+      "old_ref": "2026 Predictions with Scott Belsky — video",
+      "old_date": null,
+      "new_ref": "2026 Predictions with Scott Belsky",
+      "new_date": null,
+      "evidence": "canonical title plus ' — video' suffix; 1 atom",
+      "content_head": null
+    },
+    {
+      "id": "03c7fa92-7c54-4413-bdad-89e32d5a9ca9",
+      "decision": "KEEP-normalize",
+      "old_ref": "Adobe Blog: Enriching the Creative Experience — essay",
+      "old_date": null,
+      "new_ref": "Adobe Blog: Enriching the Creative Experience",
+      "new_date": null,
+      "evidence": "canonical title plus ' — essay' suffix; 1 atom",
+      "content_head": null
+    },
+    {
+      "id": "9f508d6b-2c51-4e0c-b5cf-04fa8d9e8370",
+      "decision": "KEEP-normalize",
+      "old_ref": "Adobe Blog: Enriching the Creative Experience — Scott Belsky",
+      "old_date": null,
+      "new_ref": "Adobe Blog: Enriching the Creative Experience",
+      "new_date": null,
+      "evidence": "canonical title plus attribution suffix; 1 atom",
+      "content_head": null
+    },
+    {
+      "id": "8e34a7d0-0bbf-447c-bab3-36e5a42b57f1",
+      "decision": "REATTR",
+      "old_ref": "First Round Review: 'How to Shape Remarkable Products in the Messy Middle of Building Startups'",
+      "old_date": null,
+      "new_ref": "Lessons on product sense, AI, the first mile experience, and the messy middle | Scott Belsky (Adobe)",
+      "new_date": "2023-05-18",
+      "evidence": "lessons-on-product-sense-ai-the-first-mile-experience-and-the-messy-middle-scott.json: 'to me it's all about psychology. It's about understanding the natural human tendencies that people have' — Central claim (product decisions grounded in durable convictions about human behavior) matches Belsky's own framing in this transcript; the explicit 'rather than feature requests or competitive analysis' contrast is inferential, hence medium confidence. Belsky is the speaker (his answer on product craft).",
+      "content_head": "Belsky observes that the best product teams ground their decisions in simple, durable convictions about human behavior rather than in featur"
+    },
+    {
+      "id": "9f88bb1d-ac7f-4656-9544-d24f5faf8f10",
+      "decision": "REATTR",
+      "old_ref": "First Round Review: 'How to Shape Remarkable Products in the Messy Middle of Building Startups'",
+      "old_date": null,
+      "new_ref": "Building Adobe & the Future of Design with Scott Belsky",
+      "new_date": "2025-01-15",
+      "evidence": "building-adobe-the-future-of-design-with-scott-belsky.json: 'what do you do you add complexity you add more Choice points you add more inerts more process' — Full lifecycle arc present in one Belsky passage at [21:23]: 'the whole silicon alley Valley life cycle' — simple products attract users fleeing complex incumbents ('refreshed by the Simplicity'), then 'your product grows and it starts to uh listen more to power users than to new users', then complexity accumulates. Belsky speaking ('goes back to your question').",
+      "content_head": "The product lifecycle follows a predictable and self-destructive arc: simplicity attracts early users, success incentivizes adding features,"
+    },
+    {
+      "id": "36e54c18-068f-46f9-92aa-533b55a92569",
+      "decision": "REATTR",
+      "old_ref": "The Messy Middle (book) / First Round Review: 'How to Shape Remarkable Products in the Messy Middle of Building Startups'",
+      "old_date": null,
+      "new_ref": "Building Adobe & the Future of Design with Scott Belsky",
+      "new_date": "2025-01-15",
+      "evidence": "building-adobe-the-future-of-design-with-scott-belsky.json: 'there needs to be some quick hit of feeling successful in that first Mile in order for them to engage further' — Vanity dimension also verbatim in same passage ('they want to look good to their boss they want to look good to their friends'). The Messy Middle raw file is only a Penguin Random House marketing page (no book text), so the book half of the compound ref cannot supply corpus support; First Round Review absent from corpus.",
+      "content_head": "Belsky contends that most products fail not because they lack features but because they fail to make users feel capable and successful immed"
+    },
+    {
+      "id": "981a4432-881f-4c67-90ab-cfeb8f06fd53",
+      "decision": "REATTR",
+      "old_ref": "The Messy Middle (book) / Lessons on product sense, AI, the first mile experience, and the messy middle | Scott Belsky (Adobe)",
+      "old_date": null,
+      "new_ref": "Lessons on product sense, AI, the first mile experience, and the messy middle | Scott Belsky (Adobe)",
+      "new_date": "2023-05-18",
+      "evidence": "lessons-on-product-sense-ai-the-first-mile-experience-and-the-messy-middle-scott.json: 'You want to feel successful very quickly by engaging in this product. You don't want to have to watch a tour, read anything' — Resolves the compound ref to its supported half — the named Lenny episode itself contains the immediate-personal-return-before-investment claim (Belsky speaking). The Messy Middle raw file is a marketing page with no first-mile text. Tim Ferriss transcript corroborates the selfish dimension ('I have so little capacity and I want to... achieve a lot very quickly', Stripe two-lines-of-code example).",
+      "content_head": "The selfishness dimension of new user behavior — the expectation of immediate personal return before any investment — means that onboarding "
+    },
+    {
+      "id": "f636030e-615e-4afa-bd21-88f352944039",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'creativity that has emotion behind it you know is what is what makes it effective' — Transcript also contains 'will confuse content production with creativity' (caption-garbled as 'some NC will confuse'). Belsky answering — response-opener 'yeah well you know I think' after host prompt.",
+      "content_head": "Content production should not be confused with creativity. Volume of output and mechanical execution of instructions — even from sophisticat"
+    },
+    {
+      "id": "314db030-7e06-4001-b1ee-d8a2a1d044b0",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'used to be this very daunting scary kind of math intensive world that most people feel felt they couldn't play in' — Belsky speaking — host asks 'what's adobe's approach on that' and the answer opens 'the 3D and immersive space is one of the most exciting spaces... in our company right now' (our company = Adobe = Belsky). Atom's quote near-verbatim (caption has 'feel felt').",
+      "content_head": "3D design tools are becoming approachable for non-specialists, democratizing a previously math-intensive domain. This lowers barriers in the"
+    },
+    {
+      "id": "7d20a1e6-1867-475e-a293-622c081418b3",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'it will allow us to personalize content for more people more quickly and I see it being a real accelerant' — Belsky speaking — immediately followed by host turn 'you've mentioned that in an interview previously'.",
+      "content_head": "Generative AI will enable unprecedented personalization of content at scale — producing variants tailored for different audiences far faster"
+    },
+    {
+      "id": "d2612fd9-efea-4199-a286-7eeec10df24e",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'generative AI is going to make professionals more powerful yeah it's going to allow them to Explore More Design space of possibility' — Belsky speaking — followed by host turn 'you're talking about empowerment right now and... creative confidence is something that we're seeing come up'. Mid-line 'yeah' is host backchannel in single-stream captions.",
+      "content_head": "Generative AI empowers creative professionals to explore a wider design space more quickly, rather than replacing them. It acts as a force m"
+    },
+    {
+      "id": "3a4440ee-7c2c-42db-b328-6e2b25fdd2ea",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'this is the photographer named Noah Kalina and suddenly he became kind of fascinated with it' — Belsky's first-person anecdote ('I saw... one social feed from an artist who was at first very skeptical'); atom quote matches transcript near-verbatim including 'his process of play'.",
+      "content_head": "Playful, skeptic-to-believer journeys with new technology are valuable signals. When initially resistant users begin experimenting and find "
+    },
+    {
+      "id": "bc051186-2556-4bb9-bab0-075082df2bed",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'with the emergence of new devices like The Vision Pro that Apple just released yeah we're going to want to create three-dimensional assets and experiences' — Continuation of Belsky's contiguous 3D answer (10:14-11:15) that opens 'one of the most exciting spaces... in our company right now'; 'I encourage all creators to start to use this technology' also verbatim in same run.",
+      "content_head": "New spatial computing devices like Apple Vision Pro will create demand for 3D creative assets and experiences, making 3D literacy an importa"
+    },
+    {
+      "id": "bc803549-04c7-4960-9018-8920085223f7",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'our team took a very creator-centric approach in bringing some of these capabilities into Photoshop' — Definitively Belsky ('our team' = Adobe product org); 'the reception has certainly exceeded our possible our imagination' also verbatim in same answer, matching the atom's Generative Fill claim.",
+      "content_head": "Adobe's approach to generative AI is creator-centric — building capabilities that amplify what creative professionals can do rather than byp"
+    },
+    {
+      "id": "18f4fa5c-c337-4025-9c2a-c8108e215557",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'we're in a new era where productivity is being achieved through compute' — Belsky's signature thesis in his own answer — same passage continues 'that's why I like to say creativity is the new productivity' (the video's own title).",
+      "content_head": "In the age of AI-driven productivity, standing out requires creativity rather than efficiency. The competitive differentiator has shifted fr"
+    },
+    {
+      "id": "3167d2c0-e89d-449d-9e2a-e2984e4a3972",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'I believe that the creative confidence of humanity is going to go up over time as a result of this new technology' — Both halves supported in one Belsky answer to host question about creative confidence: 'the humans are most confident creatively [02:05] when they're five years old... you realize that there are critics out there... your creative confidence goes down', then the GenAI-reversal line quoted as evidence.",
+      "content_head": "Human creative confidence peaks at age five and declines as social comparison and criticism take hold. Generative AI has the potential to re"
+    },
+    {
+      "id": "77ff80a4-5dec-48ae-a282-8d57a568b500",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'everyone wants to be a stakeholder of creativity and that's a little scary for us creative Pros that don't want people over our shoulders' — Belsky answering host prompt 'tell us a little bit more about your vision of collaboration as well for Adobe'; answer opens 'creativity used to be a real solo sport', matching the atom's solo-to-collaborative shift claim.",
+      "content_head": "Creativity is shifting from a solo endeavor to a collaborative, stakeholder-driven process. As creativity becomes the primary competitive ad"
+    },
+    {
+      "id": "61ba5c54-f30d-409a-a269-af222c750112",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'it doesn't replace taste um and it doesn't give you ideas but it lets you explore ideas more quickly' — The guessed ref names a real event: this transcript IS the Adobe Live MAX London stream (host: 'we'll have tons of guests coming up as well at Max London'). Line is mid Scott's answer, not host speech.",
+      "content_head": "Generative AI does not replace taste or originate ideas — it accelerates the exploration of ideas a human already has. The human's role shif"
+    },
+    {
+      "id": "0bcc957e-98bf-4231-ab08-d524b4feeab8",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'the first you mentioned is play you know make sure that you play with it oftentimes novelty precedes utility' — All four Ps verified verbatim in Scott's answer: play (+ 'novelty precedes utility'), 'the second thing is to protect the ability to incubate some ideas', 'the third thing is to find an opportunity to Pilot this new technology', 'the fourth one is being is about provoking'.",
+      "content_head": "When adopting transformative new technology, Belsky recommends a four-stage framework beginning with Play, then Protect (incubating ideas), "
+    },
+    {
+      "id": "54847566-a144-4f0d-9049-e89489a8c2f6",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'I think that websites will greet Us by name' — Same Scott answer also contains 'an application will sort of meet us where we are' and 'we don't have to kind of search anymore for something but rather we can just ask or get suggestions' — all three clauses of the atom supported.",
+      "content_head": "The future of digital experience is hyper-personalized — websites that greet users by name, applications that meet users where they are rath"
+    },
+    {
+      "id": "e00f5b6f-9768-4e9b-8656-363558388f3a",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'there needs to be a lot of transparency around how this content was made and around how it knows who we are' — The atom's original_quote matches this passage nearly verbatim; Scott speaking within his personalization answer.",
+      "content_head": "Personalization powered by AI must be paired with transparency — users need to understand how content is personalized and where their data c"
+    },
+    {
+      "id": "306a5563-40dc-4681-87b5-9659b087f6c0",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'in Casey neistat in New York City um you know he does these famous blogs and he did this experiment that all of you can see on YouTube' — Full story present in Scott's answer including ChatGPT script ('he had chat GPT make a whole script with scene directions and lines') and the punchline 'the reason it's soda was so bad is because it lacked soul' (caption garble of 'it sort of was').",
+      "content_head": "AI-generated content that lacks human soul and emotional authenticity fails to move audiences, even when technically proficient. The Casey N"
+    },
+    {
+      "id": "3da0e728-58f4-47d4-a8f4-a560a5737e3d",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'the counter-intuitive nature of humanity the um the emotion The Edge the things that move us the mistakes of the eye that a creative has' — Continues '...or the emotional background the experiences that makes them come up with something new that can't be done and it will never be done by machines' — every enumerated human element in the atom is in this Scott passage.",
+      "content_head": "The uniquely human elements of creativity — emotional background, lived experience, counter-intuitive impulses, idiosyncratic perspective — "
+    },
+    {
+      "id": "d021c643-bf0f-400a-8cd6-3e436e5aa8f3",
+      "decision": "REATTR",
+      "old_ref": "adobe_live:max_london_belsky_interview",
+      "old_date": null,
+      "new_ref": "Interview with Scott Belsky: GenAI - Creativity as the Now Productivity",
+      "new_date": "2023-06-15",
+      "evidence": "interview-with-scott-belsky-genai-creativity-as-the-now-productivity.json: 'the premium of human creativity that I think will become even more important in this age where everyone's sort of flooding The Zone with content generation' — Scott speaking, same answer as the Casey Neistat / soul passage.",
+      "content_head": "As AI enables mass content generation, the market will be flooded with undifferentiated, soulless output. Human creativity with genuine emot"
+    },
+    {
+      "id": "4111949f-fc4e-409a-887e-7cefa0139f7d",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'an Evernote file filled with about eight hundred and twenty or so of these' — The guessed ref names a real show: this transcript IS the OnTrade Leadership podcast ('this is on trade leadership now here's your host Ken Coleman'). Scott's answer also contains 'a 2:00 a.m. phone call with someone' and 'my observations in boardrooms working with a number of other high velocity startup companies' — matching the atom's original_quote.",
+      "content_head": "Capturing insights in real time — from late-night crisis calls, boardroom observations, and personal entrepreneurial experience — creates a "
+    },
+    {
+      "id": "6bcfbebc-3237-449c-a609-82e21ec7e3b4",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'at these lows we tend to make decisions out of fear we tend to get lost you know and then at those highs we tend to falsely attribute the things that we did' — Appears both in the cold-open pull-quote and, decisively, inside Scott's in-context answer defining the messy middle. Matches the atom's original_quote.",
+      "content_head": "At emotional lows, leaders make decisions out of fear, while at emotional highs they falsely attribute outcomes to their own actions. Both s"
+    },
+    {
+      "id": "f5721bf9-43cc-43bf-8b93-43ed06fc3543",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'the only the only source of continuity and like growth as a company or an organization as a team is discontinuity you have to move people around' — Scott's answer continues 'the greatest leaders get uncomfortable when everyone else is just comfortable' — covers the atom's status-quo clause.",
+      "content_head": "The only source of continuity and growth in an organization is discontinuity. Leaders must deliberately move people around, raise the challe"
+    },
+    {
+      "id": "510f6ea9-ba8a-47e3-bcba-5ba94bc39b63",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'initiative is infectious it's contagious everyone sort of gets it from one another but expertise is not the same way like that sort of stays silo'd' — Scott also says verbatim 'I would say passion over proficiency that's how I would say it' and ties initiative-optimized teams to 'a resiliency in the team' — all three clauses of the atom supported.",
+      "content_head": "Passion outperforms proficiency in early-stage hiring. Initiative and passion are infectious within a team and drive resilience, whereas exp"
+    },
+    {
+      "id": "e2810bc0-6124-42ab-810e-cb9b3019fedf",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'as soon as you start becoming more successful you get the luxury of being a resume snob you suddenly start to want to hire the people with the right companies' — Atom's original_quote is a near-verbatim match to this Scott passage, which continues '...may have tons of skills but aren't those who you know have the infectious initiative'.",
+      "content_head": "As organizations become more successful, they gain the 'luxury' of resume snobbery — hiring for credentials rather than initiative. This is "
+    },
+    {
+      "id": "605bc8f4-d167-43d6-b235-3ac3f9e6ad5d",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'it is volatile there are tons of ambiguity uncertainty anxiety anonymity that you're working through and those are the low points' — Scott's messy-middle definition answer also covers the 'least-discussed' clause ('the lack of air time spent on discussing the volatility in-between the start in the end') and the highs/false-attribution clause.",
+      "content_head": "The messy middle is the volatile, ambiguous space between starting and finishing a bold project. It is characterized by lows (fear, anxiety,"
+    },
+    {
+      "id": "93903f48-88aa-455b-afc1-1c8f48e593fd",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'one of our team members typed in Behance it came up as a legitimate search result and that was like one of those again like short term rewards' — Multi-claim atom. The central Google-milestone-as-short-term-reward claim (incl. the 'do you mean enhance' setup) is fully in Scott's answer here. The 'frustration with the disorganized creative world' clause is NOT in this transcript (its frustration line is about starts/finishes); loosely corroborated elsewhere (tedxpugetsound: 'Disorganized and isolated networks').",
+      "content_head": "Behance was built from personal frustration with the disorganized creative world, and its early growth milestones — including the moment Goo"
+    },
+    {
+      "id": "833e33c6-2c0a-42e1-a45a-df085badefcf",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'there's a big insight around the research that demonstrates that progress begets progress it's a chicken in the egg scenario' — Atom's original_quote matches this Scott passage nearly verbatim, including the narrate-small-wins clause ('we have to narrate and actually identify things we can feel we're making progress around').",
+      "content_head": "Progress begets progress. Narrating and celebrating small wins creates a psychological momentum loop that enables teams to pursue more meani"
+    },
+    {
+      "id": "d30eb1f8-88dd-4cf6-9f5d-db136930906b",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'resources is like carbs you know it just kind of goes away but resourcefulness is muscle' — 'ontrade leadership' is a caption garbling of the EntreLeadership podcast (transcript opens 'this is on trade leadership now here's your host Ken Coleman') — that episode IS this corpus file. Belsky speaking: 'I've always firmly believed that resourcefulness is a greater trait than resources'. Same line independently in the Tim Ferriss and Lessons-from-the-Messy-Middle transcripts.",
+      "content_head": "Resourcefulness is more valuable than resources. Resources are like carbohydrates — they get consumed and disappear. Resourcefulness is like"
+    },
+    {
+      "id": "912f712e-0589-49f6-a3f2-042eed76ab6d",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "How To Do More With Less People - Scott Belsky",
+      "new_date": "2019-04-24",
+      "evidence": "how-to-do-more-with-less-people-scott-belsky.json: 'when your team is telling you we need more resources we need more people we I think the answer is oftentimes to refactor before you hire' — This video is a clip of the same EntreLeadership episode the garbled 'ontrade' ref points at. Belsky is the speaker (answering the host's book-quote prompt). Independent support in the Tim Ferriss transcript: 'this mantra refactor refactor than hire'.",
+      "content_head": "When a team says it needs more resources, the right response is often to refactor before hiring. Leaders should exhaust optimization of exis"
+    },
+    {
+      "id": "ac14fb10-4e3f-4711-842f-bf7b4e2249c5",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Scott Belsky: Lessons from the Messy Middle of a Startup’s Journey",
+      "new_date": "2018-07-18",
+      "evidence": "scott-belsky-lessons-from-the-messy-middle-of-a-startups-journey.json: 'the final mile of a big project, or bold venture, or new company is an entirely different sport' — Reattributed to the solo Belsky talk where he states it himself ('In the book I talk about...'). The theme also appears in the EntreLeadership episode, but there the 'different sport' line is spoken by the host quoting the book — the solo talk is the speaker-safe citation.",
+      "content_head": "The final mile of a project is a fundamentally different sport than everything that came before it. The skills, people, and playbook that go"
+    },
+    {
+      "id": "bb868ea6-9f43-4a98-8ce4-8cb723276b9c",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Scott Belsky — How to Conquer the Messy Middle | The Tim Ferriss Show (Podcast)",
+      "new_date": "2018-11-05",
+      "evidence": "scott-belsky-how-to-conquer-the-messy-middle-the-tim-ferriss-show-podcast.json: 'you deserve something or when there's other sorts of parts of you that are not comfortable with like what's happening you can subconsciously sabotage yourself' — Belsky telling his own story (his wife the psychologist diagnosing an employee's self-sabotage before an acquisition payday; 'I pulled him into the corner of a conference room... I was like you deserved this'). Final-mile self-sabotage also appears in his EntreLeadership answer.",
+      "content_head": "Self-sabotage is a common pattern in the final mile. In extreme cases, leaders and teams who don't believe they deserve success will unconsc"
+    },
+    {
+      "id": "799ff12a-0126-4b5f-abcc-05cefa323f0e",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'go radio silent and there's no debrief there's no post-mortem there's no closure' — Belsky answering ('as a person who advises many entrepreneurs through their journeys I say some of the worst ends are people who refuse to face the fact that it's ending'). Garbled 'ontrade' = EntreLeadership = this exact corpus file.",
+      "content_head": "The most common leadership failure at a project's end is refusing to face it. Leaders who go radio silent, skip post-mortems, and provide no"
+    },
+    {
+      "id": "76c24097-d789-4d3f-a28f-b45d99b10969",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'every ending is a new beginning because it changes your reputation it changes your network' — Belsky's answer (immediately followed by the host's next question 'that begs a question - I love the title the book'). Passage continues 'you can either leverage all of what you just went through the people and the lessons or you cannot' — matches the graceful-endings half of the atom.",
+      "content_head": "Every ending is a new beginning because it resets your reputation and network. Leaders who end gracefully — extracting value from relationsh"
+    },
+    {
+      "id": "e5b31358-4301-4377-9aa1-e98aac076f89",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "The Danger of Indecision - Scott Belsky",
+      "new_date": "2019-04-22",
+      "evidence": "the-danger-of-indecision-scott-belsky.json: 'is to ask the Annoying questions when you have them despite the fact that they may come across as annoying' — Clip of the same EntreLeadership episode. Belsky is the speaker (coiner voice: 'what I like to call organizational debt'). The concrete-next-steps half is also present: 'are you the type of person that says well who who said that and can we get a meeting with them on the calendar right now'.",
+      "content_head": "Fighting organizational debt requires asking annoying questions persistently — challenging blocked decisions by demanding concrete next step"
+    },
+    {
+      "id": "bf287c55-89bb-445c-b146-47f024a177af",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "How To Do More With Less People - Scott Belsky",
+      "new_date": "2019-04-24",
+      "evidence": "how-to-do-more-with-less-people-scott-belsky.json: 'when you bring kind of new perspectives and people with fresh energy and and modern practices' — Belsky speaking about Adobe ('I oversee some products that have been in the market for 25 or 30 years'); passage continues 'as long as there is a sense of respect for one another and a really strong sense of alignment... I do believe it's infectious' — the mutual-respect condition in the atom.",
+      "content_head": "Injecting new talent with fresh energy and modern practices into legacy teams can shift culture — but only when there is mutual respect and "
+    },
+    {
+      "id": "acb8904f-d8cc-4d6e-b52f-6138cb4f48d8",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "TEDxPugetSound - Scott Belsky - Making Ideas Happen",
+      "new_date": "2011-02-26",
+      "evidence": "tedxpugetsound-scott-belsky-making-ideas-happen.json: 'The doers, those doers that we discussed, those are the immune system' — Solo TEDx talk — zero interviewer risk. Passage continues 'They have to kill off everything that's new, especially during execution phase... when you're in the brainstorm phase, that's when you're empowering the dreamers'. Same framework verbatim in TEDxHarlem and the #11 Behance podcast.",
+      "content_head": "High-performing teams need a strong immune system — dreamers who generate ideas and doers who filter them. The doers act as the default oper"
+    },
+    {
+      "id": "c068dd13-28c1-4120-925f-e9577fdead23",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'I think it starts by realizing that we are all governed by short-term rewards' — Belsky answering in the EntreLeadership episode (continues 'from the moment of birth we want our parents love and affection'). The wired-for-immediate-feedback claim also verbatim elsewhere: 'the truth is is that we are all hardwired for short-term rewards' (#11 Behance podcast) and the fooling-ourselves-with-long-term-vision half in the Lessons talk.",
+      "content_head": "Short-term rewards are essential to sustaining long-term motivation. Humans are neurologically wired to seek immediate feedback, and pretend"
+    },
+    {
+      "id": "23a4481a-43ec-4731-b030-185124d78974",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "Scott Belsky: Lessons from the Messy Middle of a Startup’s Journey",
+      "new_date": "2018-07-18",
+      "evidence": "scott-belsky-lessons-from-the-messy-middle-of-a-startups-journey.json: 'We will A/B test to the wazoo the product that we have in the world, but we won't A/B test the way we work' — Solo Belsky talk; continues with the exact mechanism in the atom ('hey for the next two weeks, let's no longer meet Tuesday morning just because it's Tuesday. And then let's determine whether that was more productive or less productive'). Same idea in the Quartz/Zach Seward conversation.",
+      "content_head": "A/B testing logic — make a change, measure the result, revert or adopt — applies not just to product development but to team processes and m"
+    },
+    {
+      "id": "8658b8e9-421e-454f-8bad-59664c8edb87",
+      "decision": "REATTR",
+      "old_ref": "podcast:ontrade_leadership_scott_belsky",
+      "old_date": null,
+      "new_ref": "The Danger of Indecision - Scott Belsky",
+      "new_date": "2019-04-22",
+      "evidence": "the-danger-of-indecision-scott-belsky.json: 'what I like to call organizational debt which is the accumulation of decisions that should have been made' — Belsky's coinage in his own voice (caption renders 'but worked' for 'but weren't'). The technical-debt comparison is adjacent in the same file: 'term technical debt which essentially grows over time and makes developers slower'. Clip of the same EntreLeadership episode as the garbled 'ontrade' ref.",
+      "content_head": "Organizational debt is the accumulation of decisions that should have been made but weren't. Like technical debt in software, it compounds o"
+    },
+    {
+      "id": "d987dff9-4711-49cb-9134-dc8f10acf0f4",
+      "decision": "REATTR",
+      "old_ref": "youtube:launch-house-infinite-games",
+      "old_date": null,
+      "new_ref": "#80 Launch House: Building the Y Combinator of the Future with Hack and Launch Houses | Brett Gol...",
+      "new_date": "2024-01-11",
+      "evidence": "brains/scott-belsky/source/transcripts/80-launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-hou.json: when you have somebody who's well respected place a bet on you and say give you their endorsement it really changes everything — strip overturned by refuter",
+      "content_head": "Having a high-profile, respected early investor changes the fundraising dynamic entirely — it provides social proof that allows subsequent i"
+    },
+    {
+      "id": "b058ff7e-9c4a-428c-90ca-396d1626a922",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'someone like Stephan sagmeister who says hey it's just me or it's just me and one partner um I'm going to obviously have much higher prices' (solo Belsky talk; surrounding passage covers studio size, price, and availability trade-offs)",
+      "content_head": "Designer Stefan Sagmeister built his competitive advantage by choosing to be bad at studio size, low pricing, and availability — deliberatel"
+    },
+    {
+      "id": "63f30839-a2f6-466c-aeef-d7defc049a7c",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'as Apple proliferates the market with their new products they're starting to have to rethink some of these decisions' (solo Belsky talk; passage details Apple competing on design/high price/restricted authorized-reseller distribution, then having to shift its competitive advantage)",
+      "content_head": "Apple's competitive shift illustrates how market success forces strategic recalibration. Apple originally competed on design exclusivity and"
+    },
+    {
+      "id": "f24c295f-acdd-418b-8dcd-573889a10923",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'I stumbled upon this design and environmental analysis major' + 'classes that awakened me to just the relevance and uh importance of design across like every aspect of life' (Scott answering a question about his Cornell degree, first person)",
+      "content_head": "Studying design and environmental analysis awakened Belsky to design's relevance across every aspect of life — not just aesthetics but the o"
+    },
+    {
+      "id": "85a43e0c-5b94-49cb-ac6a-da1678578aa3",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'I'm really interested in how an organization is run and managed and how leaders are are selected, like succession planning' (Scott's first-person account of joining the Goldman Sachs executive-office org-design team under a chief learning officer)",
+      "content_head": "Belsky joined Goldman Sachs's leadership and organizational design team because he was genuinely fascinated by how organizations are run, ho"
+    },
+    {
+      "id": "7448ec8e-48d8-4aae-9d5e-f08d84c8e405",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'Because I was using Illustrator and people were like, \"Why don't you just use Excel, dude?\"' (Scott, first person, on his Goldman years; he answers 'what were you using Illustrator for?' with 'To to tell a story')",
+      "content_head": "Belsky used design tools like Illustrator at Goldman Sachs when everyone else used Excel — because he understood that visual storytelling co"
+    },
+    {
+      "id": "21f93e45-69e6-478b-9294-913905acbf70",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'I think it was also part envy. like all these people that had talent. I didn't have motion graphics artists and video editors' (Scott answering why he had such empathy for creatives; preceding line: 'I was motivated by the problem as a consumer of everything creative')",
+      "content_head": "Belsky's empathy for creatives was partly consumer-driven and partly envy — he was in awe of motion graphics artists, video editors, and sou"
+    },
+    {
+      "id": "cf9e948c-328c-4c65-9c56-e66b8b5142a0",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'we were determined to have enough linkbacks, enough blog posts and enough portfolios published where Google would no longer consider us a mistake' (Scott, first person; same 'do you mean enhance?' story he also tells in 4 other corpus transcripts incl. solo talks)",
+      "content_head": "An early signal of Behance's legitimacy was when Google stopped autocorrecting 'Behance' to 'enhance.' The team deliberately built enough li"
+    },
+    {
+      "id": "4e79174d-b599-4311-9585-78674d23f8b6",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'if you didn't use real film, you were not considered a legitimate real photographer' (Scott, answering 'What's an example?'; corroborated in adobes-scott-belsky-art-design-in-the-age-of-ai-rapid-response.json: 'digital photographers weren't even allowed admission to many of the American photography associations')",
+      "content_head": "Photography associations in early digital photography refused to admit digital photographers — if you didn't use real film, you weren't cons"
+    },
+    {
+      "id": "daa93d88-11e6-45e4-96ae-0a0cfae0d47e",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'the most disorganized community on the planet. And yet these were the people that were also the most responsible for making life interesting' (Scott's first-person founding story — 'I met my uh soon to be co-founder at the time Matias'; same framing appears in his SXSW 2013 solo talk)",
+      "content_head": "Behance was founded from the observation that creatives — the people most responsible for making life interesting — were also the most disor"
+    },
+    {
+      "id": "d13946ac-a9d7-4748-be93-f0115b761596",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky on AI and the Return of a Hyper-Personalized World",
+      "new_date": "2026-03-09",
+      "evidence": "scott-belsky-on-ai-and-the-return-of-a-hyper-personalized-world.json: 'One of my cardinal beliefs in all of technology and all my investing is that we as humans are longing for the way things once were but with more scale' (opening line, Belsky first person; continues with the 300,000-years/villages framing; same thesis in 2026-predictions transcript)",
+      "content_head": "Belsky's cardinal investment thesis is that technology succeeds when it restores something ancient at greater scale and efficiency. The best"
+    },
+    {
+      "id": "0b12cd34-b83a-4199-9962-204c7b716876",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'when you focus on everything you're really not going to be focused on anything' — Solo Scott talk (opens 'I'm going to talk today about a competitive advantage'). Limited-resources framing also present: 'we have limited amount of resources we can only prioritize so many things every day'.",
+      "content_head": "When you focus on everything, you're effectively focused on nothing. Because resources are always limited, attempting to be good at every di"
+    },
+    {
+      "id": "635b85c1-a06d-460e-b1dd-1debaea048e0",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'this conference works this format Works let's do it every year oh wait there needs to be some more interactive stuff' — Scott on 99U pop-up school disrupting the successful conference format; preceded by 'even 99u doing the pop-up school is an example of well'. Same solo talk.",
+      "content_head": "Formats and structures that once worked — including successful events and conferences — must be periodically disrupted and reimagined. Even "
+    },
+    {
+      "id": "12fb47d1-9d68-4d0b-854f-fa40f2b5d6d0",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'feedback is probably the the best form of compensation not only from our colleagues but also from our customers' — Solo Scott talk; adjacent lines cover becoming 'blind to your shortcomings', matching the atom's knowing-what-you're-doing-wrong framing.",
+      "content_head": "Feedback — particularly knowledge of what you're doing wrong — is among the most valuable forms of compensation. Understanding your shortcom"
+    },
+    {
+      "id": "c802ce6b-663e-42fb-80f4-219e81443cb3",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'initiative is infectious it's contagious everyone sort of gets it from one another but expertise is not the same way' — Scott's own answer monologue (continues 'I've learned over the years that I try to optimize on the initiative side'). Same passage also in How To Do More With Less People (FMbJNCk4Txo).",
+      "content_head": "Initiative is contagious within a team — it spreads from person to person, elevating the energy and performance of those around it. Expertis"
+    },
+    {
+      "id": "d327564e-943c-4872-ac1f-da9ad148d467",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'when you bring kind of new perspectives and people with fresh energy and and modern practices you know into a team' — Scott first-person: 'I've seen a lot of culture change my current role as chief product officer at Adobe... people who've been with the company for decades'. Matches long-tenured-teams claim.",
+      "content_head": "Bringing people with fresh energy and modern practices into established teams — even those with long-tenured employees — can catalyze cultur"
+    },
+    {
+      "id": "ed71e476-662f-4ff3-b81a-4390adccd9dd",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'I think the answer is oftentimes to refactor before you hire' — Full passage: 'as a leader when your team is telling you we need more resources we need more people... find a new way to make your process more efficient... before we choose to just throw more people or more resources at the problem'. Corroborated in Tim Ferriss ('refactor refactor than hire') and Lenny's podcast transcripts.",
+      "content_head": "When a team demands more resources, the first leadership response should be to refactor — find a more efficient process — before defaulting "
+    },
+    {
+      "id": "bc11bc17-9a18-4923-839a-26855507e3bd",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: Lessons from the Messy Middle of a Startup’s Journey",
+      "new_date": "2018-07-18",
+      "evidence": "scott-belsky-lessons-from-the-messy-middle-of-a-startups-journey.json: 'We will A/B test to the wazoo the product that we have in the world, but we won't A/B test the way we work.' — Solo keynote by Scott; continues with the meetings specifics: 'let's no longer meet Tuesday morning just because it's Tuesday... determine whether that was more productive or less productive'. Same idea also voiced in Navigating the Messy Middle and the Quartz talk.",
+      "content_head": "A/B testing — a technique typically used in product development — can and should be applied to team operations. Rather than holding meetings"
+    },
+    {
+      "id": "42264527-92d0-45f1-bd12-09728f0378e2",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'being very forthright with folks about you know here's here's what I'm seeing and here's what I would have expected to see' — Scott's answer (follows his 'I also think it's important...'); continues 'let's discuss the Delta'. Also present in How To Do More With Less People.",
+      "content_head": "Leaders must be forthright with team members about the gap between what they see and what they expected — naming the delta directly and crea"
+    },
+    {
+      "id": "4244796f-5244-4eeb-b132-953390131ddb",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Got a great idea? Scott Belsky best advice for idea people",
+      "new_date": "2017-11-16",
+      "evidence": "brains/scott-belsky/source/transcripts/got-a-great-idea-scott-belsky-best-advice-for-idea-people.json: their idea it may not be the best one but because they're the ones that put it out there they make all the money — strip overturned by refuter",
+      "content_head": "Being first to market with an imperfect idea still captures the reward. Competitors may build a better version later, but the original execu"
+    },
+    {
+      "id": "d54a7206-4b4d-4f96-ae4c-54c0015fe812",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'business school is a great thing to do when you're like not sure what you want to do next. It's like a bridge to a question mark.' — Scott's answer to the interviewer's HBS question; continues into his own Goldman-to-Behance story, confirming speaker.",
+      "content_head": "Business school is most valuable as a bridge to a question mark — a structured pause when you don't know what's next. It's a tool for option"
+    },
+    {
+      "id": "4da996d0-965b-4e2a-9e72-fc1a581bf662",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'sticking together long enough to figure it out is probably one of the greatest competitive advantages of the startup world that is seldom discussed' — Near-verbatim match including 'seldom discussed'; continues 'smart smart people with initiative to figure it out'. Scott speaking (his Behance/Adobe comparison answer). Echoed in Building Adobe transcript.",
+      "content_head": "The greatest competitive advantage in the startup world — one that is seldom discussed — is keeping smart, initiative-driven people together"
+    },
+    {
+      "id": "2af8a156-e568-4306-a280-7ce7db2067d5",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'And it's really hard to do that. That's where the storytelling I think kicks in.' — Directly follows 'If you can just keep people together long enough' — Scott ties storytelling to keeping teams together (his messy-middle sticking-together framing). Central claim supported; the 'glue' metaphor itself is paraphrase, not verbatim.",
+      "content_head": "Storytelling is what makes it possible to keep teams together through the messy middle — it is the glue that sustains collective belief when"
+    },
+    {
+      "id": "59aa8d23-05f4-4ed0-a9f7-af95982b3906",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'unnatural things, which are the only things that you can do to get unnatural outcomes' — Scott first-person: 'those are the things that I was most proud of doing at Adobe... when I tried to push for, you know, unnatural things'. Matches the atom's pride-in-unnatural-moves claim.",
+      "content_head": "Inside large organizations, the things worth being proud of are the 'unnatural things' — the moves that go against institutional grain. Only"
+    },
+    {
+      "id": "a4bea8b0-3cec-4230-8cac-b3520bc7b3fa",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'the story has to have more story, more meaning, like more extravagant and amazing ways of interpreting the human experience' — Scott's content-commoditization monologue: 'content in in itself is becoming somewhat commoditized' and 'it's up to us as storytellers to raise the bar and give someone something that has more meaning'. Near-verbatim to the atom.",
+      "content_head": "As content commoditizes, storytellers must raise the bar — offering more meaning, more extravagant interpretations of the human experience. "
+    },
+    {
+      "id": "d96024a9-19ae-4eb9-8836-d51e27b1e011",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky on AI and the Return of a Hyper-Personalized World",
+      "new_date": "2026-03-09",
+      "evidence": "scott-belsky-on-ai-and-the-return-of-a-hyper-personalized-world.json: 'in the advent of the industrial revolution, technology, everything else, we all became anonymous. Everything became generalized.' — First-person solo Scott clip ('One of my cardinal beliefs...'); includes the generic-segmentation specifics ('When I go to Nike, it says, \"What gender are you?\"'). Same argument recurs in Building Adobe, Rapid Response, and 2026 Predictions transcripts.",
+      "content_head": "The Industrial Revolution created mass anonymity as a byproduct of scale. Generic onboarding flows, demographic segmentation, and one-size-f"
+    },
+    {
+      "id": "ec9f2900-76e4-4a6e-ac70-2bfae147c649",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'let's really compete on price let's have lower prices than everyone else but let's not care at all about food' — Solo talk by Scott (opens 'I'm going to talk today about a competitive advantage'). Full Southwest example: few routes, no food investment, price+service focus.",
+      "content_head": "Southwest Airlines built a successful business by deliberately choosing to be bad at food and route breadth while investing in price competi"
+    },
+    {
+      "id": "26fc5280-f060-4ad1-a8ad-bdcaabe6106a",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'you actually stop worrying about uh the the competitors and stop chasing them and emulating them' — Solo talk; the Matrix/Neo framing preceding this matches the atom's claim of tuning into something unique instead of emulating competitors.",
+      "content_head": "When you truly know what you're best at and what you're focused on, you stop worrying about competitors and stop emulating them. Instead of "
+    },
+    {
+      "id": "3dca6b33-a848-4fd6-9d9f-0f690c66ebba",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'we're going to have bad prices and meaning that we're going to charge a lot for our computers we're going to be extremely high on design right on speed' — Solo talk; also 'we're going to have very very little Variety' immediately precedes — full Apple bad-at-variety/price, great-at-design/speed example.",
+      "content_head": "Apple's early competitive strategy was built on deliberately being bad at variety and price while excelling at design and speed. This consci"
+    },
+    {
+      "id": "28adc635-df67-4fd9-8b0b-d4a90b081797",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'as soon as you have it and it's working for you everyone else will start to emulate that the market will shift towards you' — Solo talk; preceded by 'when you find it you then need to shift it because' — exact match for the atom's shift-your-advantage claim.",
+      "content_head": "Once you find your competitive advantage, you have to be prepared to shift it — because success attracts imitation and the market moves towa"
+    },
+    {
+      "id": "7403e669-26ed-4d0d-9a6c-de1ea863cb45",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'stories are these capsules for hard truths right the stories that we consume are the things that open our mind I mean sci-fi is a prototype for' — Clearly Scott: the reply opens 'I feel like the constant theme of my career has been... Adobe you know now A24' — first-person biography only Scott can voice. Continues 'It helps us dream and imagine the future. It helps us fear the future. It also helps us anticipate it and make it.'",
+      "content_head": "Stories are capsules for hard truths. Science fiction in particular functions as a prototype for the future — it helps us dream, fear, antic"
+    },
+    {
+      "id": "b32048e6-b2bb-48e6-83f1-61d146821a72",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'you have to say no 99% of the time to just stay focused and yet alone preserve the integrity of your brand' — Speaker is Scott: passage flows from his Behance brand-stewardship story ('that is something Behance would do') into 'in my career including somebody [at A]24 that I've gotten to know'. Preceding line 'any brand that grows and has permission to do more things is constantly getting an influx of opportunities to extend and leverage their brand' matches atom head.",
+      "content_head": "Any brand that grows must constantly say no to 99% of opportunities to extend or leverage itself — not just to stay focused, but to preserve"
+    },
+    {
+      "id": "83922541-9db6-4f28-ab9a-7baa35c6869f",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'the only the only source of continuity and like growth as a company or an organization as a team is discontinuity you have to move people around' — Confirmed Scott: the host reacts immediately after ('that right there's a great statement folks go back rewind play that'). Same passage also appears in the clip 'How To Do More With Less People - Scott Belsky' (FMbJNCk4Txo).",
+      "content_head": "The only true source of continuity and growth in an organization is discontinuity. Keeping everyone comfortable in static roles signals orga"
+    },
+    {
+      "id": "8087d19b-bbc8-4409-b657-7a7edbd256f6",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky — How to Conquer the Messy Middle | The Tim Ferriss Show (Podcast)",
+      "new_date": "2018-11-05",
+      "evidence": "scott-belsky-how-to-conquer-the-messy-middle-the-tim-ferriss-show-podcast.json: 'when you don't have the resources you actually have to hire for something else because you can't afford to hire those people' — Passage is Scott's initiative-over-experience segment ('I've observed in many instances is initiative being more important than experience... you tend to become a resume snob'); same podcast also has his constraint-as-advantage riff ('if you're constrained it's this form of creativity... resources are like carbs resourcefulness is like muscle'), which matches his solo-talk versions verbatim. Medium only because the podcast is un-diarized back-and-forth.",
+      "content_head": "Constraint — particularly financial and resource constraint — is a hidden advantage for early-stage organizations. The inability to hire top"
+    },
+    {
+      "id": "0f85fd2f-288a-42ad-ad66-ac5fdb736557",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'has like a steep learning curve in a whole field of expertise that is new to me and that was like really exciting for me' — First-person Scott on his A24 decision: 'do I go and run a software company which is sort of down the fairway of the skill set that I've always had... That's the obvious answer' vs. the steep-learning-curve industry — exactly the atom's claim.",
+      "content_head": "Deliberately choosing a steep learning curve in a new industry — rather than defaulting to the obvious next role in your domain — is one way"
+    },
+    {
+      "id": "7ba5b35f-e5d1-4647-9533-16b8483f45dd",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'trauma, hardship, travel, lessons learned the hard way, breakthroughs, artistic endeavors, the failures and successes' — Speaker says 'And I don't have a good answer other than to say that life experience, trauma...' — the substantive answer to 'Where does taste come from?', which lands on the guest (Scott) under either plausible caption segmentation; continues 'these seem to be the breeding grounds of taste', matching the atom.",
+      "content_head": "Taste cannot be easily taught or hacked — it emerges from life experience: trauma, hardship, travel, lessons learned the hard way, breakthro"
+    },
+    {
+      "id": "fd8a2f19-871f-4470-b03a-bbff4dca6be8",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'at Adobe as a chief product officer, my organization was probably 7,000 people' — First-person and uniquely Scott's biography; continues 'you have to kind of become a different type of leader and let a lot of things go' — exact match for the atom's claim.",
+      "content_head": "Leading at massive scale as CPO of a 7,000-person organization requires becoming a different type of leader — one who lets go of most things"
+    },
+    {
+      "id": "c6fe59ec-f260-4c10-9c69-cea40ec9c284",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'success becomes extremely dangerous when you're fooled into thinking that you know what you're doing' — Solo talk; continues 'and when you're fooled into thinking that you know what's next' — matches the atom's false-sense-of-knowing claim verbatim.",
+      "content_head": "Success is dangerous because it creates a false sense of knowing what you're doing and what comes next. Successful people and organizations "
+    },
+    {
+      "id": "7b7d80c1-4db3-4a25-ad19-e99cedc66acf",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'the market has kind of now come a little bit closer to Apple on the design side of things' — Solo talk; also 'are we gradually going to just look like the computer industry is it all going to kind of merge' and 'when you're successful you actually the market starts to shift towards you' — the market-converging-on-leaders claim.",
+      "content_head": "As industries evolve, competitors converge toward the leaders they once lagged. When the whole market moves toward your differentiation, you"
+    },
+    {
+      "id": "6380ab6c-1da1-4edf-9ae7-d5e47c90789b",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "How To Do More With Less People - Scott Belsky",
+      "new_date": "2019-04-24",
+      "evidence": "how-to-do-more-with-less-people-scott-belsky.json: 'as soon as you start becoming more successful you become you you get the luxury of being a resume snob' — Scott answering interviewer's hiring question; same passage also in Navigating the Messy Middle and Tim Ferriss transcripts.",
+      "content_head": "As organizations become more successful, they develop the luxury of becoming 'resume snobs' — gravitating toward candidates with prestigious"
+    },
+    {
+      "id": "8640837a-f222-4b06-8344-88cdab1e3cd9",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'in the world of technology there's this term technical debt which essentially grows over time and makes developers slower' — Adjacent verbatim: 'organizational debt which is the accumulation of decisions that should have been made but weren't' — Scott's own coinage ('what I like to call'). Same passage in The Danger of Indecision.",
+      "content_head": "Organizational debt is the leadership equivalent of technical debt. Just as unresolved technical shortcuts make codebases harder to improve "
+    },
+    {
+      "id": "a11f5bc8-304d-4e22-8f57-e41e63bb41e4",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "The Danger of Indecision - Scott Belsky",
+      "new_date": "2019-04-22",
+      "evidence": "brains/scott-belsky/source/transcripts/the-danger-of-indecision-scott-belsky.json: when I actually though dive into it and put the effort to get into it it's not as crazy scary you're crazy messy as I thought it was — strip overturned by refuter",
+      "content_head": "Problems that feel overwhelming from a distance often turn out to be far less catastrophic when actually engaged with. The discomfort of avo"
+    },
+    {
+      "id": "38f28746-d341-469a-b36f-3f130872b724",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'the fact that that failed before like why does that mean we can't try it again let's dissect that' — Scott's 'ask the annoying questions' passage; duplicated in The Danger of Indecision.",
+      "content_head": "Past failure is not a sufficient reason to abandon a direction. Asking 'why did that fail before, and why does that mean we can't try again?"
+    },
+    {
+      "id": "fd310317-ccd8-4cc7-af0c-867d29de477f",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "navigating-the-messy-middle-scott-belsky.json: 'I like to think of that frigid ocean that's just afraid about to freeze over and that big ship that if it stops for any more than a moment of time it's stuck' — Exact freezing-ocean ship metaphor; also present in The Danger of Indecision.",
+      "content_head": "Organizational momentum is fragile and must be actively maintained. Belsky uses the metaphor of a ship in a freezing ocean — if it stops mov"
+    },
+    {
+      "id": "26cf56fa-134d-4e37-9b4a-795205f566df",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "The Danger of Indecision - Scott Belsky",
+      "new_date": "2019-04-22",
+      "evidence": "the-danger-of-indecision-scott-belsky.json: 'in an organization you can always get to a great end it's just a matter of keeping motion' — Same line also in Navigating the Messy Middle; directly matches 'you can eventually reach a good outcome — the real threat is losing momentum'.",
+      "content_head": "In any organization, you can eventually reach a good outcome — the path is rarely the obstacle. The real threat is losing momentum entirely."
+    },
+    {
+      "id": "8e7500e1-7207-4fc3-8c03-a88bfa2f0f5b",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'it is irresponsible to not train yourself on the modern tools of your trade' — Scott answering 'do you still believe in that today?'; continues verbatim into the analog-to-digital-photography step-function examples the atom cites.",
+      "content_head": "It is irresponsible for creators not to train themselves on the modern tools of their trade. Every major technology step-function — from ana"
+    },
+    {
+      "id": "07d5c29c-13be-4604-8bee-438420f38527",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'So my compass is to be at the service of the creator' — Scott continues: 'if no creator wants to have new technology to revisualize... then we shouldn't use new technology for them' — matches the atom's conditional.",
+      "content_head": "The right compass for deploying new technology in creative work is to be at the service of the creator. If creators want a technology to exp"
+    },
+    {
+      "id": "4fc4dbea-b943-47ed-b726-57e796ee9a3d",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'It is a company that only makes commodities, shoes, like clothing, liquor, like handbags, you know, they're holding companies out, you know, hand creams' — Preceded by 'look at LVMH'. Atom's exact commodity list (incl. hand creams) matches this transcript; Scott speaking ('I'm having the top shelf stuff. But... I think').",
+      "content_head": "LVMH is the canonical example of commodities — shoes, clothing, handbags, liquor, hand creams — elevated to luxury through story, meaning, a"
+    },
+    {
+      "id": "e07a6e89-32e5-4a47-9967-efbed9a44068",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Pushing Ideas Forward: Scott Belsky at TEDxHarlem",
+      "new_date": "2012-07-27",
+      "evidence": "pushing-ideas-forward-scott-belsky-at-tedxharlem.json: 'the sad truth that most ideas never happen even the greatest ideas suffer horrible odds' — Solo TEDx talk — no interviewer-speech risk; core making-ideas-happen thesis.",
+      "content_head": "The gap between having an idea and making it happen is the central challenge. Most people who could change the world never do — not because "
+    },
+    {
+      "id": "c1870219-7d25-46f0-8da4-11c0c539f424",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Building Adobe & the Future of Design with Scott Belsky",
+      "new_date": "2025-01-15",
+      "evidence": "building-adobe-the-future-of-design-with-scott-belsky.json: 'I think that taste is going to become more important than skill' — Unambiguously Scott (later: 'they hear someone like me say that taste is going to be more important'). Full context includes 'skill is being offloaded to compute... commoditized'. The 'anyone can make any website' variant also appears in Where Scott Belsky Got His Good Taste.",
+      "content_head": "Taste is becoming the dominant competitive advantage as skill becomes commoditized by AI. When anyone can build a website or create any arti"
+    },
+    {
+      "id": "6325ca67-fd51-4ec6-b7da-a9091b940f36",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "where-scott-belsky-got-his-good-taste.json: 'a six sense for what's right and wrong. I do think you start to like look and be like that's not something Behance would do' — Transcript continues 'And I think that's kind of brand stewardship'. Atom preserves the transcript's 'six sense' [sic] typo — strong provenance signal. Scott speaking (Behance reference).",
+      "content_head": "Brand stewardship means having a six sense for what is and isn't right for your brand — being able to look at an opportunity and say 'that's"
+    },
+    {
+      "id": "3c37d742-e860-4414-abce-9edffa64fabb",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Make Business Better: Quartz CEO Zach Seward and Adobe's Scott Belsky",
+      "new_date": null,
+      "evidence": "make-business-better-quartz-ceo-zach-seward-and-adobes-scott-belsky.json: 'my principle of always being optimistic about the future but somewhat pessimistic and pragmatic about the present' — Scott calls it 'my principle' — first-person disposition claim; near-identical line also in the Lenny's Podcast transcript.",
+      "content_head": "Belsky's natural disposition is to be optimistic about the future but pragmatic and somewhat pessimistic about the present — a combination o"
+    },
+    {
+      "id": "ef852fb1-2738-461e-ae00-e9adc108808f",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky on AI and the Return of a Hyper-Personalized World",
+      "new_date": "2026-03-09",
+      "evidence": "scott-belsky-on-ai-and-the-return-of-a-hyper-personalized-world.json: 'for the other 300,000 years of humanity that we're hardwired for. We lived in small towns and villages. We were known by people.' — Solo clip opening 'One of my cardinal beliefs' — Scott speaking; 'hardwired' + 300,000 years + known-by-name all present.",
+      "content_head": "Humans are hardwired for hyper-personalization — for 300,000 years we lived in small communities where we were known by name, by preference,"
+    },
+    {
+      "id": "21aa2b89-e030-4e79-b9a6-0671311785a3",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky on AI and the Return of a Hyper-Personalized World",
+      "new_date": "2026-03-09",
+      "evidence": "scott-belsky-on-ai-and-the-return-of-a-hyper-personalized-world.json: 'I do believe that we all want to be known and we want to feel special, right, in our workplace and in our life and in our towns' — Same solo clip as ef852fb1; matches the atom's 'manifests in the workplace' continuation.",
+      "content_head": "The desire to be known and feel special is a fundamental human longing — not a luxury preference. This drive manifests in the workplace, in "
+    },
+    {
+      "id": "4e9285b1-2906-4e01-adc6-5028a7ba76be",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky on AI and the Return of a Hyper-Personalized World",
+      "new_date": "2026-03-09",
+      "evidence": "scott-belsky-on-ai-and-the-return-of-a-hyper-personalized-world.json: 'for us to be known on our own terms. For us to define our preferences, to share and sync the data that we want to be shared with the AI' — Solo monologue clip, Scott speaking. Same thesis in his own voice in building-adobe transcript ('we wanted to be on our own terms').",
+      "content_head": "AI enables a new paradigm: being known on your own terms. Rather than surrendering identity to platforms, users can define their own prefere"
+    },
+    {
+      "id": "bc46f627-58c9-4d89-b304-65d18fd53fea",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'we seldom think about the question of what are you willing to be bad at' — Solo 99u talk, no interviewer-speech risk. Preceded by 'what do you want to be best at and that's kind of the obvious logical one'.",
+      "content_head": "The most powerful competitive advantage comes from knowing not just what you want to be great at, but what you are deliberately willing to b"
+    },
+    {
+      "id": "2ed8193e-c8f9-48e0-a9a5-a7396d7f9d8d",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'think about the distinguishing attributes and services of you or your product or your team in the market around you and that's kind of this x access' — Continues 'and then on the Y AIS here you have what do you purposely want to be good at' — the two-axis mapping framework, plotted for Southwest/Apple/Sagmeister.",
+      "content_head": "A practical framework for finding competitive advantage involves mapping the key attributes of your market on one axis and plotting where th"
+    },
+    {
+      "id": "c7905a48-979f-4272-b1b0-c0e2043c7777",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'fall in the overlap of these three things the skills that you have or could easily possess' — Transcript continues with 'the Gen interest that you have' and 'the opportunity that presents itself' — all three factors of the atom's intersection present.",
+      "content_head": "Competitive advantage is only sustainable when it sits at the intersection of three factors: skills you have or could easily develop, genuin"
+    },
+    {
+      "id": "ed9d9270-c9d2-4837-b755-cc158565a382",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'self-awareness as an individual but also as a business and and a product it was probably the only sustainable competitive Advantage you can find' — Solo talk; matches both the individual-and-organizational scope and the only-sustainable-advantage claim.",
+      "content_head": "Self-awareness — both individual and organizational — is the only truly sustainable competitive advantage, because it is the only capability"
+    },
+    {
+      "id": "a5f3fe4f-af07-4efc-b9e2-4f9aff4368d1",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'ask the people that you work with your colleagues your clients um on a consistent basis what should I start stop and continue doing' — Exact colleagues-and-clients + start/stop/continue practice from the atom.",
+      "content_head": "A simple but powerful feedback practice is to regularly ask colleagues and clients three questions: What should I start doing, stop doing, a"
+    },
+    {
+      "id": "429ca365-28fd-4f4e-89e2-e6cebe04d8d6",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'help you determine the types of people you want to hire the things you want to communicate when you're marketing' — Directly maps to the atom's strategy-informs-hiring-and-marketing claim.",
+      "content_head": "Knowing your competitive advantage informs not just strategy but execution — the types of people you hire, what you emphasize in marketing, "
+    },
+    {
+      "id": "3dd9e4bd-e16f-40f1-9fa9-85eda15c6deb",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Scott Belsky: What Are You Willing to Be Bad At?",
+      "new_date": "2015-09-22",
+      "evidence": "scott-belsky-what-are-you-willing-to-be-bad-at.json: 'Market that we're in as a freelancer designer Market that we're in as a company building a product' — Talk explicitly frames the framework 'from the mindset of a company or a business or a product but also an individual' and applies it to Stefan Sagmeister as an individual case.",
+      "content_head": "The same competitive advantage framework that applies to companies applies equally to individual careers. Freelancers, designers, and knowle"
+    },
+    {
+      "id": "0b9a92e4-686d-4a54-9231-e74a93992993",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "How To Do More With Less People - Scott Belsky",
+      "new_date": "2019-04-24",
+      "evidence": "how-to-do-more-with-less-people-scott-belsky.json: 'the answer is oftentimes to refactor before you hire' — The host reads the book quote first, but this line is Scott's own answer ('as a leader when your team is telling you we need more resources... refactor before you hire').",
+      "content_head": "The default response to scaling pressure is hiring, but the best leaders know that adding people is not always the answer. Before hiring, te"
+    },
+    {
+      "id": "1916d019-98d9-4579-af72-e4a723635e03",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "How To Do More With Less People - Scott Belsky",
+      "new_date": "2019-04-24",
+      "evidence": "how-to-do-more-with-less-people-scott-belsky.json: 'I've always firmly believed that resourcefulness is a greater trait than resources' — Scott speaking; continues 'resources is like carbs... resourcefulness is muscle it kind of stays with you'. Corroborated in his solo talk (lessons-from-the-messy-middle: 'if resourcefulness is like muscle, resources is carbs').",
+      "content_head": "Resourcefulness is a more durable organizational asset than resources. Resources are consumed and depleted, but resourcefulness — the muscle"
+    },
+    {
+      "id": "39f4a911-1ae3-4870-8048-896c17d05742",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "How To Do More With Less People - Scott Belsky",
+      "new_date": "2019-04-24",
+      "evidence": "how-to-do-more-with-less-people-scott-belsky.json: 'uncomfortable when everyone else is just comfortable because they recognize that maybe we're not' — Scott's line ('I think the greatest leaders get [04:06] uncomfortable...'); the host then repeats it back to him ('that's really really good Scott'), confirming attribution.",
+      "content_head": "Great leaders get uncomfortable when everyone around them is comfortable. Universal comfort is a signal that the team is not being pushed to"
+    },
+    {
+      "id": "79039ea0-47ce-4959-b747-edf3493334e2",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "How To Do More With Less People - Scott Belsky",
+      "new_date": "2019-04-24",
+      "evidence": "how-to-do-more-with-less-people-scott-belsky.json: 'I've learned over the years that I try to optimize on the initiative side' — Scott's own answer also covers the resource-constrained arm: 'when my adventure was started we didn't have the luxury of hiring the most experienced people because they were too expensive'.",
+      "content_head": "Hiring for initiative over experience is a superior strategy, particularly for early-stage or resource-constrained organizations. People wit"
+    },
+    {
+      "id": "dec503e3-7a62-4b0d-a6e0-c234efd51431",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "The Danger of Indecision - Scott Belsky",
+      "new_date": "2019-04-22",
+      "evidence": "the-danger-of-indecision-scott-belsky.json: 'the easiest decision to make is to not make a decision yet' — Scott's answer to the host's question; continues 'what I like to call organizational debt which is the accumulation of decisions that should have been made'. Attribution to Scott confirmed by his solo talk (lessons-from-the-messy-middle) using the same coined term: 'what I like to call, organizational debt'.",
+      "content_head": "The easiest decision in any organization is to make no decision at all. This avoidance accumulates into what Belsky calls 'organizational de"
+    },
+    {
+      "id": "7d4157c6-6b41-4d42-bacc-0f65046f1f2c",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "transcripts/where-scott-belsky-got-his-good-taste.json: 'if a fantastic film costs 50 100red million or more um the the the risk is too high to do anything but a sequel' — Scott speaking (context: why he joined A24). Corroborated in ep-12-scott-belsky.json: 'no studio wants to take the risk of you know investing $100 million in VFX'.",
+      "content_head": "Hollywood faces a structural innovation trap: the economics of blockbuster budgets force studios toward sequels because the risk of original"
+    },
+    {
+      "id": "d43fabe3-24c9-4ea9-b88e-a08c76a9ca47",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Navigating the Messy Middle - Scott Belsky",
+      "new_date": "2019-04-23",
+      "evidence": "transcripts/navigating-the-messy-middle-scott-belsky.json: 'preventing organizational debt is to ask the Annoying questions when you have them' — Solo Belsky keynote — no interviewer-speech risk. Same passage also appears verbatim in the-danger-of-indecision-scott-belsky.json.",
+      "content_head": "One of the most powerful antidotes to organizational debt is asking the 'annoying question' — the persistent, probing follow-up that refuses"
+    },
+    {
+      "id": "9b2c45be-84d3-4652-a2cf-45e264fdc30d",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "transcripts/where-scott-belsky-got-his-good-taste.json: 'when clothes and cars and liquor and other things become commoditized two things happen. They become readily available to more' — Scott speaking — host interjects 'if you want another drink, Scott' mid-passage and Scott continues with the LVMH shoes/clothing/liquor scarcity argument.",
+      "content_head": "When content becomes commoditized — just like shoes, clothing, or liquor — two things happen simultaneously: it becomes more accessible to m"
+    },
+    {
+      "id": "8e92aa68-9800-4d7d-9a63-54644a771a78",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Where Scott Belsky Got His Good Taste",
+      "new_date": "2025-08-12",
+      "evidence": "transcripts/where-scott-belsky-got-his-good-taste.json: 'I'm not worried about like AGI taking us over. What I am worried about is just' — Scott answering a question directed at him by name; continues 'what I call the displacement speed of technology'. His coinage corroborated in building-adobe-the-future-of-design transcript ('law of displacement speed').",
+      "content_head": "The thing to worry about with AI is not AGI takeover but 'displacement speed' — the velocity at which everything we think is true about the "
+    }
+  ],
+  "residue_not_fixed": [
+    {
+      "id": "728efe00-64ff-4c77-8e04-e58a0e3e1e5e",
+      "reason": "evidence: lessons-on-product-sense-ai-the-first-mile-experience-and-the-messy-middle-scott.json: 'in the first 30 seconds of using a new product, you are lazy, vain, and selfish' — Split multi-claim support. The first-mile/first-30-seconds lazy-vain-selfish framework (including trait definitions) is verbatim-supported by Belsky in three transcripts (Lenny, Tim Ferriss, Building Adobe). But the hard figure 'more than 30% of total product energy should be allocated to this window' appears NOWHERE in the corpus (searched 30%, thirty percent, a third of, percent of time/energy). Reattributing as-is would launder an unsupported number under a real citation; stripping would delete a genuinely supported framework. Human call: either reattribute after removing/softening the 30% figure, or keep unattributed.",
+      "content_head": "The first mile of a product — particularly the first 30 seconds — determines whether users continue or abandon. In this window, users behave"
+    },
+    {
+      "id": "95d6f767-83fd-4e53-9e72-85565a1c1d86",
+      "reason": "evidence: launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'countries and Nations will be born at the same rate as in the future as currencies are born today' — NOT Belsky's content. The ref resolves to the 'Infinite Games' podcast Launch House episode (Q3INittosjg/ziEndkw4zvQ): host Daniel Scrier interviewing Brett Goldstein — 'scott'/'belsky' appear nowhere in either transcript. The claim is explicitly Balaji Srinivasan's thesis quoted by Goldstein ('our first investor was bology and his whole thesis... is that countries and Nations will be born...'). No other corpus source supports it as Belsky's. Recommend deleting the atom itself (non-subject content), not just the citation — elon-musk Ashlee Vance precedent.",
+      "content_head": "Nations and cities will proliferate in the future at the rate that currencies do today — and the institutions that seed talent and community"
+    },
+    {
+      "id": "dc470832-451e-4ef0-8694-fa2cd9ecc8c4",
+      "reason": "evidence: launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'the two most important things in life are basically like building stuff to make the world better and building real relationships' — NOT Belsky's content. Verbatim in the Launch House / Infinite Games transcript, but the episode is Daniel Scrier interviewing Brett Goldstein; Belsky does not appear in it. Speaker is Goldstein pitching co-living ('and living near people helps both of those why would we not go after this'). No other corpus source supports this as Belsky's. Recommend deleting the atom as non-subject content, not merely re-citing.",
+      "content_head": "The two most important things in life — building things that improve the world and forming deep authentic relationships — are both accelerat"
+    },
+    {
+      "id": "b2c674f9-069f-4e60-8784-fdae708bdba2",
+      "reason": "evidence: launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'you need to be assuming that you don't need an m&a deal to get an m&a deal' — NOT Belsky's content. The M&A discussion in the Launch House / Infinite Games episode is between Brett Goldstein (ex-Google M&A: 'I joined the m&a team') and host Daniel Scrier; Belsky is not in the episode. Belsky's own corpus acquisition material (Behance/Adobe, Ferriss, Quartz) contains no most-M&A-deals-fail / don't-plan-for-acquisition framing after multi-phrasing search. Recommend deleting the atom as non-subject content.",
+      "content_head": "Most M&A deals fail, and founders should not build their strategy around an acquisition as an expected outcome. The best negotiating positio"
+    },
+    {
+      "id": "9306e7e8-c833-484f-840d-796f5e3b0643",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'you needed people that were non-consensus to basically make a bet on a totally new model' — Claim is verbatim in the Launch House 'Infinite Games' transcript the slug resolves to (video Q3INittosjg; dup ziEndkw4zvQ), but Scott Belsky never appears in that video (0 hits for belsky/scott/behance/adobe) — speakers are Brett Goldstein (Launch House co-founder) and host Daniel Scrier; the non-consensus line is plausibly the host. No genuine Belsky corpus source supports the claim (only 'contrarian' hits elsewhere, different context). Wrong-person atom — needs excision from the brain, not re-citation.",
+      "content_head": "First-principles thinking is the cognitive foundation that enables non-consensus investment decisions. Investors and founders who reason fro"
+    },
+    {
+      "id": "c6294bb5-6708-490f-80c4-4cc795eddf4f",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'sometimes it time for ideas to percolate in your brain' — Verbatim in the Launch House 'Infinite Games' transcript, but the speaker is Brett Goldstein describing the Launch House founding — Scott Belsky is not in the video at all. Closest genuine-Belsky hit ('crystallizing' in the Lenny transcript) is about writing as a forcing function, not ideas percolating into a founding thesis — not the same claim. Wrong-person atom — excise from brain.",
+      "content_head": "Ideas often need time to percolate before they crystallize into a coherent thesis. The founding insight behind a company may be verbalized e"
+    },
+    {
+      "id": "ea26f14f-72b2-49a2-abe1-583114e5d483",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'one of the most important thing is collisions it's like creating opportunities for people to kind of have Serendipity serendipitous encounters' — Verbatim in the Launch House 'Infinite Games' transcript (Brett Goldstein on collisions/unstructured time, citing Tony Hsieh/HP/IBM). Scott Belsky never appears in the video. The only 'serendipity' hits in genuine Belsky sources are Gary Vee (interviewer) speech in the #AskGaryVee transcript. Wrong-person atom — excise from brain.",
+      "content_head": "Innovation happens through serendipitous collisions — unstructured, open-ended time with diverse people in physical proximity. The best comp"
+    },
+    {
+      "id": "268a3fd3-7538-40ef-821e-a8f86278d409",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'the problem with zoom is that it's structured' — Verbatim in the Launch House 'Infinite Games' transcript (Goldstein: Zoom is structured/time-locked, not built for collisions). Scott Belsky is not in the video. Genuine-Belsky 'zoom' hits are LegalZoom ad reads in the Tim Ferriss transcript — no Belsky support. Wrong-person atom — excise from brain.",
+      "content_head": "Zoom and digital communication tools are structurally incapable of replicating the innovation-generating conditions of physical co-location."
+    },
+    {
+      "id": "bf635a2a-66d5-465e-8410-954e872be600",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'for launch house Community is the moat' + 'when you have a community it's very sticky it's a shed identity ... it's a shared identity right' — Supported verbatim in the Launch House 'Infinite Games' transcript — and the 'Community is the moat' framing is spoken by the HOST (Daniel Scrier) in his question; the shared-identity/Christianity riff is Goldstein. Scott Belsky is not in the video. Belsky's own moat talk in genuine sources is hardware-vs-data (2026 Predictions) and memory-as-moat (Steve Jang) — different claims. Wrong-person atom — excise from brain.",
+      "content_head": "Community is the most durable competitive moat because it creates shared identity, not just shared utility. Unlike a product feature that ca"
+    },
+    {
+      "id": "5f867a39-2553-4f5e-87db-623f393f2236",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'the natural progression of technology is to go towards these synchronous three-dimensional environments' — Verbatim in the Launch House 'Infinite Games' transcript (Goldstein: text→photos→video→synchronous 3D as simulating life). Scott Belsky is not in the video; no 'synchronous'/'simulating physical' hits anywhere in genuine Belsky sources. Wrong-person atom — excise from brain.",
+      "content_head": "The long-term arc of communications technology is toward simulating physical reality — from text to photos to video to synchronous 3D enviro"
+    },
+    {
+      "id": "5a9784bb-b42c-4097-9f15-627d40010f8b",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'an IRL co-living experience is actually it's not inclusive there are certain people that cannot participate' — Verbatim in the Launch House 'Infinite Games' transcript (Goldstein on families/mortgages/chronic illnesses/women preferring digital programs). Scott Belsky is not in the video and has no co-living content anywhere in his genuine corpus. Wrong-person atom — excise from brain.",
+      "content_head": "Co-living programs are not universally accessible — women, parents, people with chronic illnesses, and those with financial obligations are "
+    },
+    {
+      "id": "25a005a2-6eff-4b4f-9066-c13bc0b53c5e",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'biggest learning is is about persuasion and deeply understanding what other people need in their lives not even for their jobs' — Verbatim in the Launch House 'Infinite Games' transcript — but this is Brett Goldstein recounting HIS lesson as a PM at Google, not Belsky. Scott Belsky is not in the video; no cross-functional-persuasion support in genuine Belsky sources. Wrong-person atom (a biographical claim about Goldstein) — excise from brain.",
+      "content_head": "Effective cross-functional persuasion requires understanding not just what people need professionally but what they want from their lives — "
+    },
+    {
+      "id": "c897821b-446f-4a44-a589-6d3f55dbc383",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'we blasted out a tweet that said hey super excited to announce launch house it's a reality show where 18 entrepreneurs' — Verbatim in the Launch House 'Infinite Games' transcript — Goldstein's first-person founding story (Tulum Airbnb, cheeky tweet, semi-viral). Scott Belsky is not in the video and has no connection to this story in the corpus. Clearest wrong-person atom of the set — excise from brain.",
+      "content_head": "A viral tweet treated as a joke can become a company's founding moment. Launch House's origin — a cheeky tweet framing a Tulum vacation as a"
+    },
+    {
+      "id": "f1f6b45f-54cc-41b9-90ff-d9a5a4eae5a8",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'we don't mean Zoom calls we mean that because we're going to be using this product called gather town' + 'it's meant to be a place that you hang out' — Supported verbatim in the Launch House 'Infinite Games' transcript (Goldstein on the Gather Town metaverse house — VR 'not there yet', value is just being there during the day). Scott Belsky is not in the video; his only genuine 'ambient' content is 'ambient listening and summarization' (2026 Predictions) — different claim. Wrong-person atom — excise from brain.",
+      "content_head": "The metaverse's near-term value is not photorealistic immersion but ambient presence — tools that let people simply 'be somewhere' together "
+    },
+    {
+      "id": "ba7e272e-e81a-4523-82d4-6cdf10a15a6a",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'Vibes of the moat is basically a way to build a community' — 'Vibes as the moat' is verbatim in the Launch House 'Infinite Games' transcript — the phrase is introduced by the HOST's question ('you frame that up in a great way by calling it Vibes of the moat') and elaborated by Goldstein. Scott Belsky is not in the video; his lone genuine 'vibes' hit (Tim Ferriss) is unrelated. Wrong-person atom — excise from brain.",
+      "content_head": "Vibes are a strategic moat — especially in markets with undifferentiated products. Brand, aesthetic, voice, and the emotional atmosphere of "
+    },
+    {
+      "id": "681e6722-91cc-4163-938e-9e4cdec6d097",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'the price of textbooks and a college degree has skyrocketed absolutely skyrocketed' + 'that's basically a sign of a bubble' — Verbatim in the Launch House 'Infinite Games' transcript (Goldstein: information is free/everywhere, degree cost skyrocketing = bubble). Scott Belsky is not in the video; his genuine 'college' mentions elsewhere are biographical, not a higher-ed-bubble thesis. Wrong-person atom — excise from brain.",
+      "content_head": "Higher education is in a structural bubble — the cost of a degree is skyrocketing while the value of the information it delivers has collaps"
+    },
+    {
+      "id": "cf058079-9fd5-49c0-8a6b-cbbe4cebea50",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'every generation basically redefines the Silicon Valley' — Verbatim in the Launch House 'Infinite Games' transcript (Goldstein on the new Silicon Valley needing new institutions). Scott Belsky is not in the video; no equivalent claim in genuine Belsky sources. Wrong-person atom — excise from brain.",
+      "content_head": "Every generation redefines what 'Silicon Valley' means — in terms of geography, demographics, and what gets built. Gen Z and young Millennia"
+    },
+    {
+      "id": "3fd23473-cfa7-41f6-9c4a-a2e549c57583",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'the capital markets have changed as well so when YC started it was the beginning of like the basically the application layer' — Verbatim in the Launch House 'Infinite Games' transcript (Goldstein: YC built for the application-layer/B2B-SaaS era, Airbnb/Coinbase breakouts, Lindy-effect Harvard analogy). Scott Belsky is not in the video; no YC-era analysis in genuine Belsky sources. Wrong-person atom — excise from brain.",
+      "content_head": "YC's model was built for a specific era of capital markets and product types — the application layer, B2B SaaS, and an era of scarce capital"
+    },
+    {
+      "id": "d4fe8849-740a-494d-948d-09015e1c4e45",
+      "reason": "evidence: transcripts/launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json: 'we're building like institutions and cities' + 'we're playing this YC like role in this ecosystem' — Verbatim in the Launch House 'Infinite Games' transcript (Goldstein on city-building, Balaji as first investor, other cities/nations catching on). Scott Belsky is not in the video; no ecosystem/accelerator-city thesis in genuine Belsky sources. Wrong-person atom — excise from brain.",
+      "content_head": "Cities and technology ecosystems are built by institutions that feed them talent and capital. Accelerators and co-living programs for founde"
+    },
+    {
+      "id": "34daa703-db75-4bd0-810e-2bc9dc902c88",
+      "reason": "Slug resolves: the Launch House video IS the 'Infinite Games' podcast. Content matches launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json verbatim ('what makes a great product manager... zoom in and out... understand the Frameworks the macro Trends the micro Trends') — but the speaker is Brett Goldstein (ex-Google PM, Launch House co-founder) answering host Daniel Scrier. Scott Belsky appears nowhere in the transcript (0 hits for belsky/behance/adobe). No other corpus source supports the claim. Reattributing would credit Goldstein's speech to Belsky; atom is misattributed non-subject content.",
+      "content_head": "Being a great product manager requires the ability to simultaneously hold the macro and micro — understanding market trends, talent dynamics"
+    },
+    {
+      "id": "0c06d6f9-ffc3-4a3a-8ac5-4f8bdea72f2f",
+      "reason": "Content matches launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json verbatim ('everything IRL has product Market fit when you put people together it has product Market fit') — but the speaker is Brett Goldstein recounting a friend's advice about Launch House. Scott Belsky appears nowhere in the transcript (Infinite Games podcast, host Daniel Scrier). No other corpus source supports the claim. Misattributed non-subject content.",
+      "content_head": "Product-market fit for human connection is nearly automatic — bringing people together IRL almost always works. The real entrepreneurial ins"
+    },
+    {
+      "id": "652c2173-dffa-45f0-bc3b-60021d9db512",
+      "reason": "Content matches launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json verbatim ('in the tech industry we like to say everything is solved by technology it's like the hubris of the Tech Industries' + the IRL/physical-collocation point) — but the speaker is Brett Goldstein. Scott Belsky appears nowhere in the transcript. 'hubris' appears in no other corpus file. Misattributed non-subject content.",
+      "content_head": "The tech industry's hubris is believing that every human problem can be solved with technology — including the human need for physical prese"
+    },
+    {
+      "id": "b27ba4b0-501e-451c-9970-b13964a4ec3c",
+      "reason": "Content matches launch-house-building-the-y-combinator-of-the-future-with-hack-and-launch-houses.json verbatim ('go to market distribution is the most important thing that a Founder can have' / 'you have a lot of VCS just investing straight on distribution not even thinking about product') — but the speaker is Brett Goldstein. Scott Belsky appears nowhere in the transcript. No other corpus source supports distribution-over-product. Misattributed non-subject content.",
+      "content_head": "In a world saturated with information, tools, and startup programs, distribution is more important than product. Investors are increasingly "
+    },
+    {
+      "id": "7a7a42b9-99be-4c3c-a378-44be31e7131f",
+      "reason": "Verbatim match exists in where-scott-belsky-got-his-good-taste.json ('I feel like there are breadcrumbs in one's like actual traditional education but they're no more than breadcrumbs') but the passage sits at a host/guest turn boundary in un-diarized captions: it directly follows host banter ('Are we referring to the Cornell undergraduate experience of Scott?' / 'What was the degree?') and a '>>' marker separates it from Scott's unambiguous first-person answer ('As an undergrad, I always had an interest...'). Plausibly host musing; the later 'analyze the breadcrumbs' callback is equally ambiguous. Needs diarized re-check before crediting.",
+      "content_head": "Traditional education provides breadcrumbs at best for where people actually end up in their careers. The real development happens through e"
+    },
+    {
+      "id": "80d4964e-eca3-4632-b855-4933f3669773",
+      "reason": "The only verbatim corpus match ('they're some of the small percentage people that actually make their ideas become a reality') is in got-a-great-idea-scott-belsky-best-advice-for-idea-people.json (qrXaJ0YNZIY) — and that entire video is a third-party motivational YouTuber ('James', who closes with 'subscribe to my youtube channel at um James') riffing on Belsky's motto; it is NOT Scott speaking. Genuine Scott sources carry the adjacent execution-over-ideas thesis (TEDxGotham 2011: 'ideas don't happen because they're great or by accident'; TEDxPugetSound: 'most ideas never happen') but never the talent/luck vs small-percentage-who-follow-through framing. Recommend human review: likely a third-party-content atom that should be stripped or rewritten, not merely re-cited.",
+      "content_head": "Success is less about being uniquely talented or lucky and more about being among the small percentage of people who actually follow through"
+    },
+    {
+      "id": "031818c0-2996-4ab2-99d3-48369af1412b",
+      "reason": "evidence: got-a-great-idea-scott-belsky-best-advice-for-idea-people.json: 'there's people right now that could have cures for diseases with what's in their head' — Only corpus match is 'Got a great idea? Scott Belsky best advice for idea people' — but that entire video is a third-party YouTuber (signs off as 'James', plugs his own channel) riffing on Belsky's book-title quote; Belsky never speaks. Belsky's own 'lazy' mentions elsewhere are the unrelated lazy/vain/selfish first-mile framework. Content exists in corpus but is not Belsky's speech — do not credit; strip candidate pending human review.",
+      "content_head": "Laziness is the primary killer of world-changing ideas. There are people alive right now whose thinking could produce cures for diseases or "
+    },
+    {
+      "id": "8cb35b10-43bb-45eb-a9f3-c5af4fcfddb2",
+      "reason": "evidence: navigating-the-messy-middle-scott-belsky.json: 'it's hard for us as humans to want to walk into a situation that's not working broken messy' — Interviewer-speech: the matching passage (also in the-danger-of-indecision clip) is the HOST's monologue — he tells his own three-kids story and addresses Scott by name. Scott's reply covers indecision/organizational debt, not the humans-avoid-messy-situations framing; his solo talk has only adjacent material ('I would struggle or shy away from' difficult decisions). Cannot credit to Belsky on this corpus.",
+      "content_head": "Humans naturally avoid uncomfortable, broken, or messy situations — even when engaging with them would lead to faster resolution. This avoid"
+    }
+  ],
+  "mechanical_fixes": {
+    "refs_normalized": 28,
+    "dates_corrected": 117
+  },
+  "audit": {
+    "suspects_scanned": 139,
+    "verified": 0,
+    "reattr": 112,
+    "strip": 0,
+    "normalize": 28,
+    "residue": 27
+  },
+  "review": " Date gate: source_date applied only when web-verified (proof_url) or registry-consistent; 0 unproven date assignment(s) dropped from SQL."
+}
