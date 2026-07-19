@@ -1,0 +1,758 @@
+{
+  "date": "2026-07-18",
+  "brain": "jesse-pujji",
+  "context": "Attribution audit of the jesse-pujji brain pack (654 atoms), the second full brain audited for misattribution variant 2 (LLM-guessed source_refs) after the elon-musk index case of 2026-07-03. The scan flagged 64 suspect atoms whose source_ref was either a non-canonical slug/variant string, 'youtube:unknown', a synthesis-QA placeholder, or a profile-scrape ref carrying an LLM-guessed date; the dominant risk surface was the pre-diarization Jesse Pujji & Andy Wells (DoorDash) webinar, where single-stream captions let the guest's DoorDash-specific speech be extracted as Jesse's. The audit adjudicates every suspect against the local corpus so the pack ships no citation the corpus cannot back.",
+  "method": "Mechanical scan of all 654 atoms for suspect source_refs (slug refs, type-suffix variants, youtube:unknown, synthesis placeholders, guessed dates) → xhigh-effort per-atom adjudication against the local transcript + raw-source corpus (verbatim quote location plus speaker-attribution analysis on pre-diarization captions) → adversarial refuter pass that re-attacked every STRIP and REATTR verdict (one strip was overturned to REATTR by its refuter) → per-source canonical dates taken from public record only (14 sources verified; unverifiable dates left null, never guessed). Unambiguous slug and title-variant refs were normalized to canonical sources.json titles as KEEP-normalize batches covering every atom sharing the exact old_ref.",
+  "canonical_sources": [
+    "Jesse Pujji Twitter Profile",
+    "Bootstrapped Legends: Jesse Pujji - Tidemark",
+    "How I Built These Companies - Bootstrapped Giants",
+    "Bootstrapping My First Company to $10M",
+    "How DTC Brands Boom and Bust - Mission.org",
+    "Jesse Pujji Instagram Profile",
+    "How Jesse Pujji Rewired His Mind - Don't Be a Jerk Podcast",
+    "Entrepreneurship to Propel Personal Growth - Founders Journal Podcast",
+    "Book with Jesse Pujji - Intro",
+    "A Primer on Performance Marketing - Founder's Field Guide",
+    "A Primer on Performance Marketing - Happy Scribe",
+    "A Primer on Performance Marketing - Spotify",
+    "My Mentor is the Founder of a $10B Company",
+    "Jesse Pujji Twitter Highlights",
+    "Jesse Pujji LinkedIn Profile",
+    "Jesse Pujji on Bootstrapping a +$1B Business + Selling To The Ultra Rich",
+    "Jesse Pujji Reveals How He's Building His HoldCo (Gateway X) — Confessions of a B2B Entrepreneur",
+    "Interview w/ Jesse Pujji, Co-founder at Ampush",
+    "An interview with Jesse Pujji, founder & CEO of Gateway X",
+    "How Jesse Pujji Rewired His Mind (and Built Multiple 8-Figure Businesses)",
+    "Venture Studios & Conscious Leadership w/ Jesse Pujji",
+    "Mobile Commerce and Storytelling — EP186 Jesse Pujji",
+    "Multipreneurship 101 and Why It Matters — Jesse Pujji",
+    "Building a 'Bootstrapped Giant' in DTC & Productized Services — Jesse Pujji",
+    "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+    "How Founders Should Be Integrating AI — Alex Lieberman & Jesse Pujji",
+    "Jesse Pujji & Andy Wells (DoorDash) on Marketing, Growth, and Global Talent",
+    "What Happened to Our Partnership? — Mixergy (Andrew Warner × Jesse Pujji)"
+  ],
+  "adjudications": [
+    {
+      "id": "8b8ca8ab-b9d8-408b-b5f4-cba31d6b1f46",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:How-Founders-Should-Be-Integrating-AI",
+      "old_date": null,
+      "new_ref": "How Founders Should Be Integrating AI — Alex Lieberman & Jesse Pujji",
+      "new_date": "2023-05-16",
+      "evidence": "slug ref unambiguously identifying canonical youtube source (A66p-7erHGs); applies to all 26 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "2ed4b234-bd39-4f1f-b827-0e13f32b6272",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:Jesse_Pujji_bootstrapping_1B",
+      "old_date": null,
+      "new_ref": "Jesse Pujji on Bootstrapping a +$1B Business + Selling To The Ultra Rich",
+      "new_date": "2024-08-26",
+      "evidence": "slug ref unambiguously identifying canonical youtube source (qWQZpgnjlLA); applies to all 30 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "ed1dfc7a-b48f-4afd-a6a0-3bd862824cc4",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:Jesse_Pujji_GatewayX_Confessions_B2B",
+      "old_date": null,
+      "new_ref": "Jesse Pujji Reveals How He's Building His HoldCo (Gateway X) — Confessions of a B2B Entrepreneur",
+      "new_date": "2024-08-07",
+      "evidence": "slug ref unambiguously identifying canonical youtube source (J8pjAZYu6HI); applies to all 28 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "e4b0cb7a-f21b-4402-8763-fa1d9ee8f8fb",
+      "decision": "KEEP-normalize",
+      "old_ref": "youtube:EP186-jesse-pujji",
+      "old_date": null,
+      "new_ref": "Mobile Commerce and Storytelling — EP186 Jesse Pujji",
+      "new_date": "2023-05-16",
+      "evidence": "slug ref unambiguously identifying canonical youtube source (d44LLVw2Tjw); applies to all 20 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "2893c298-b535-4223-8a1e-592c26a59a33",
+      "decision": "KEEP-normalize",
+      "old_ref": "interview_jesse_pujji_ampush",
+      "old_date": null,
+      "new_ref": "Interview w/ Jesse Pujji, Co-founder at Ampush",
+      "new_date": "2021-11-12",
+      "evidence": "slug ref unambiguously identifying canonical youtube source (s4D4c9QvH7g); applies to all 29 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "659cd1e4-96fe-4ad4-b1bb-619a64cc5a8c",
+      "decision": "KEEP-normalize",
+      "old_ref": "Bootstrapping My First Company to $10M — essay",
+      "old_date": null,
+      "new_ref": "Bootstrapping My First Company to $10M",
+      "new_date": null,
+      "evidence": "canonical title + type-suffix variant; applies to all 36 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "c5251560-d2fd-45bb-a27c-523d07dfc61d",
+      "decision": "KEEP-normalize",
+      "old_ref": "Bootstrapping My First Company to $10M - essay",
+      "old_date": null,
+      "new_ref": "Bootstrapping My First Company to $10M",
+      "new_date": null,
+      "evidence": "canonical title + type-suffix variant; applies to all 7 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "826a3296-c8f4-42f3-88c0-81e33b261803",
+      "decision": "KEEP-normalize",
+      "old_ref": "Bootstrapping My First Company to $10M essay",
+      "old_date": null,
+      "new_ref": "Bootstrapping My First Company to $10M",
+      "new_date": null,
+      "evidence": "canonical title + type-suffix variant; applies to all 6 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "4d0c8dbe-5a44-4bdf-93b8-6fd29cdb8f58",
+      "decision": "KEEP-normalize",
+      "old_ref": "How I Built These Companies - Bootstrapped Giants — essay",
+      "old_date": null,
+      "new_ref": "How I Built These Companies - Bootstrapped Giants",
+      "new_date": "2025-09-28",
+      "evidence": "canonical title + type-suffix variant; applies to all 27 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "89208aca-a772-4918-8a74-27284a90b713",
+      "decision": "KEEP-normalize",
+      "old_ref": "How I Built These Companies - Bootstrapped Giants essay",
+      "old_date": null,
+      "new_ref": "How I Built These Companies - Bootstrapped Giants",
+      "new_date": "2025-09-28",
+      "evidence": "canonical title + type-suffix variant; applies to all 36 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "79ec9427-fff7-4954-8b90-be06e952fc43",
+      "decision": "KEEP-normalize",
+      "old_ref": "How I Built These Companies - Bootstrapped Giants - essay",
+      "old_date": null,
+      "new_ref": "How I Built These Companies - Bootstrapped Giants",
+      "new_date": "2025-09-28",
+      "evidence": "canonical title + type-suffix variant; applies to all 4 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "81d82a23-8d92-4a85-9311-fb5af4136310",
+      "decision": "KEEP-normalize",
+      "old_ref": "A Primer on Performance Marketing - Founder's Field Guide — podcast",
+      "old_date": null,
+      "new_ref": "A Primer on Performance Marketing - Founder's Field Guide",
+      "new_date": "2021-04-01",
+      "evidence": "canonical title + type-suffix variant; applies to all 18 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "8bfb918f-ab43-4e41-823e-05de745e5c08",
+      "decision": "KEEP-normalize",
+      "old_ref": "A Primer on Performance Marketing - Founder's Field Guide podcast",
+      "old_date": null,
+      "new_ref": "A Primer on Performance Marketing - Founder's Field Guide",
+      "new_date": "2021-04-01",
+      "evidence": "canonical title + type-suffix variant; applies to all 27 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "3a730341-e36f-4b92-9bc0-e9a9216ede79",
+      "decision": "KEEP-normalize",
+      "old_ref": "A Primer on Performance Marketing - Happy Scribe / Spotify podcast",
+      "old_date": null,
+      "new_ref": "A Primer on Performance Marketing - Happy Scribe",
+      "new_date": "2021-04-01",
+      "evidence": "same episode; Happy Scribe and Spotify are both canonical entries for it — normalized to the first-listed Happy Scribe title; applies to all 2 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "f94ea074-f89b-4f1d-b1d9-f407984de445",
+      "decision": "KEEP-normalize",
+      "old_ref": "How DTC Brands Boom and Bust - Mission.org interview",
+      "old_date": null,
+      "new_ref": "How DTC Brands Boom and Bust - Mission.org",
+      "new_date": "2021-12-16",
+      "evidence": "canonical title + type-suffix variant; applies to all 14 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "904e3125-c2e9-4e9e-9389-4e153fbd3967",
+      "decision": "KEEP-normalize",
+      "old_ref": "How DTC Brands Boom and Bust - Mission.org — interview",
+      "old_date": null,
+      "new_ref": "How DTC Brands Boom and Bust - Mission.org",
+      "new_date": "2021-12-16",
+      "evidence": "canonical title + type-suffix variant; applies to all 4 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "f5e0df23-de21-4335-839c-48db07dfd91d",
+      "decision": "KEEP-normalize",
+      "old_ref": "Entrepreneurship to Propel Personal Growth - Founders Journal Podcast — podcast",
+      "old_date": null,
+      "new_ref": "Entrepreneurship to Propel Personal Growth - Founders Journal Podcast",
+      "new_date": "2024-05-14",
+      "evidence": "canonical title + type-suffix variant; applies to all 4 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "a10bca50-fd67-48ab-b6af-64aa6d552f19",
+      "decision": "KEEP-normalize",
+      "old_ref": "How Jesse Pujji Rewired His Mind - Don't Be a Jerk Podcast — podcast",
+      "old_date": null,
+      "new_ref": "How Jesse Pujji Rewired His Mind - Don't Be a Jerk Podcast",
+      "new_date": "2025-12-02",
+      "evidence": "canonical title + type-suffix variant; applies to all 3 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "e6d5e166-bd3a-408e-a2bb-4d209e6bd70a",
+      "decision": "KEEP-normalize",
+      "old_ref": "My Mentor is the Founder of a $10B Company — essay",
+      "old_date": null,
+      "new_ref": "My Mentor is the Founder of a $10B Company",
+      "new_date": null,
+      "evidence": "canonical title + type-suffix variant; applies to all 20 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "2f68b025-fdcc-4754-ac84-818751b77ed9",
+      "decision": "KEEP-normalize",
+      "old_ref": "My Mentor is the Founder of a $10B Company - essay",
+      "old_date": null,
+      "new_ref": "My Mentor is the Founder of a $10B Company",
+      "new_date": null,
+      "evidence": "canonical title + type-suffix variant; applies to all 2 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "8defd5ae-5c0b-4d4f-974f-dc3374368084",
+      "decision": "KEEP-normalize",
+      "old_ref": "My Mentor is the Founder of a $10B Company essay",
+      "old_date": null,
+      "new_ref": "My Mentor is the Founder of a $10B Company",
+      "new_date": null,
+      "evidence": "canonical title + type-suffix variant; applies to the 1 atom with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "45489d3e-4a69-4024-9c64-607939094d6a",
+      "decision": "KEEP-normalize",
+      "old_ref": "Jesse Pujji Twitter Highlights — other",
+      "old_date": null,
+      "new_ref": "Jesse Pujji Twitter Highlights",
+      "new_date": null,
+      "evidence": "canonical title + type-suffix variant; applies to all 7 atoms with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "3c5700c3-64db-4bae-a3c0-689853da35b5",
+      "decision": "KEEP-normalize",
+      "old_ref": "Jesse Pujji LinkedIn Profile — profile",
+      "old_date": null,
+      "new_ref": "Jesse Pujji LinkedIn Profile",
+      "new_date": null,
+      "evidence": "canonical title + type-suffix variant; applies to the 1 atom with this exact old_ref",
+      "content_head": null
+    },
+    {
+      "id": "cfcdb5da-22fa-483f-8617-726408fe547e",
+      "decision": "REATTR",
+      "old_ref": "Jesse Pujji Twitter Highlights — other; Jesse Pujji LinkedIn Profile — profile",
+      "old_date": "2022-01-01",
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "brains/jesse-pujji/source/transcripts/massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: you're all on Twitter and LinkedIn and you know I like storytelling and I like writing and I like being helpful to people and I like to coach and teach — strip overturned by refuter",
+      "content_head": "Jesse has used his public platforms — Bootstrapped Giants, Twitter, LinkedIn — to actively democratize the mentorship frameworks he has deve"
+    },
+    {
+      "id": "1b5a1d67-61c7-4395-89db-c604437d8205",
+      "decision": "REATTR",
+      "old_ref": "Jesse Pujji Twitter Highlights and LinkedIn Profile",
+      "old_date": "2020-01-01",
+      "new_ref": "An interview with Jesse Pujji, founder & CEO of Gateway X",
+      "new_date": "2023-10-09",
+      "evidence": "an-interview-with-jesse-pujji-founder-ceo-of-gateway-x.json: 'there's times where I myself have almost betrayed my audience or hollowed it out trying to scale' — Jesse first-person on audience-as-trust-asset: ghostwriting failed and 'hollowed out' the audience, reader-for-a-year-then-commenter progression, CFO-of-Facebook trust anecdote, Bootstrapped Giants newsletter as 'the owned audience'. Supports the compounding-asset-not-promo-channel core; the 'every new venture' distribution sub-claim is only partially covered.",
+      "content_head": "Jesse treats his own Twitter and LinkedIn presence as a brand-building asset that compounds over time rather than a promotional channel for "
+    },
+    {
+      "id": "4c149726-1ab1-498d-8c1a-4985ec948d98",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'let our customers be our investors. That's what we used to say at amush' — Jesse speaking (Ampush founder; continues 'you're using your own money to grow the company with the profits that you're you're generating'). Atom quote matches transcript nearly verbatim.",
+      "content_head": "The single most important operating principle Jesse applies across all Gateway X companies is treating customers as investors — using early "
+    },
+    {
+      "id": "7203aaad-c38e-4295-918d-e23b15253d94",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'maybe there's another one we can add that's three strikes, you know, of level of iteration' — Speaker confirmed as Jesse: host immediately responds 'Yeah, that's great advice. Thank you, Jesse.' Full graduated framework present (smaller adjustment, then bigger, then 'scrap this whole thing').",
+      "content_head": "Jesse applies a three-strikes iteration framework before fully killing an idea: first, a small adjustment; second, a major pivot or rebrand;"
+    },
+    {
+      "id": "d46881e7-1c2c-4b5c-ba41-2f60b5dce014",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'we sometimes describe ourselves like we're just really good translators' — Jesse first-person Ox origin story: PE friends' diligence calls ('one of the top five items is spend on Google and Facebook ads'), 'the Mackenzie Baines and BCGs are very expensive, but they don't know this stuff in that way. And then the agencies, they just don't know how to talk to a private equity audience.' All three atom components supported; atom quote is near-verbatim from this transcript.",
+      "content_head": "Ox was created to serve private equity firms that couldn't evaluate digital advertising spend during deal diligence. Jesse identified a gap:"
+    },
+    {
+      "id": "2cd1d903-74dc-452d-a6fa-0af509b286bc",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'And and the math was like I think it was two to two to four thousand' — Jesse recounting his own tally ('hours. Wow. And it's, you know, it's been seven years' ... bachelor's-degree equivalence). The atom's ceiling quote is also verbatim in this transcript ('you are the ceiling for your company'), Jesse addressing host Sarah.",
+      "content_head": "Jesse quantified his investment in conscious leadership and personal development at 2,000–4,000 hours over seven years — the equivalent of a"
+    },
+    {
+      "id": "f6f282b1-e1bb-4a41-b7bb-bd2f9e04c96e",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'I'm a part-time sea level executive across four companies. Like I'm like a fractional co-founder' — Jesse speaking ('I told someone today...' / 'I'm not sure if I want to be that'); energy tension supported in same passage ('when I'm tired I'm like way worse at my job' / 'in the weeks when I'm in my zone of genius every day I'm energized'). Host responds in second person immediately after.",
+      "content_head": "Being a fractional co-founder across four companies simultaneously creates a tension between depth of involvement and sustainable energy. Je"
+    },
+    {
+      "id": "d328e8b2-eb48-4140-96ed-15456de62f06",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'There's like the idea farm and the people farm' — Jesse answering host Sarah's question ('It's a great question. Yeah, I I think I've described it as like almost two farms'), including the list-of-10-ideas and people-network matching mechanics the atom describes.",
+      "content_head": "The Gateway X studio model works by matching a curated list of ideas with a curated list of people — an 'idea farm' and a 'people farm' — ra"
+    },
+    {
+      "id": "7746393b-fecf-493c-ba51-49bf8f196276",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'once you've made money in the company, it's it's very rare for a company to go from profitable to unprofitable' — Speaker is Jesse (guest, first-person answer on his operating principles; adjacent principle: 'once you see great talent...it's hard to settle for anything less'). Primary clause (profitability almost never reversed) is verbatim; the 'funds the talent' tail is only adjacently supported — talent is a separate principle in the same answer, not stated as funded by profits.",
+      "content_head": "Profitable companies enjoy a compounding structural advantage: profitability is almost never reversed once achieved, and it funds the talent"
+    },
+    {
+      "id": "fd47c4bd-a398-48a4-9528-ac676423a5d9",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'the time box has been my most valuable one. My the riffs on that sometimes are money box or metric box' — Jesse answering the host's 'how do you have the guts to say I'm killing this' — describes time box / money box / metric box as his mind hacks against emotional persistence, and endorses deciding ahead of time ('let's write this down...put a calendar invite'). The 'decisions ahead of time' framing sentence may be the host's, but Jesse voices the boxes and the pre-commitment practice himself.",
+      "content_head": "Pre-committing to objective kill criteria — time boxes, money boxes, and metric boxes — is the only reliable way to overcome the emotional b"
+    },
+    {
+      "id": "ea3b904b-bc16-4042-ab0a-495fadee8b90",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'We said, \"Hey, Google ads were huge.\" And there was a huge ecosystem built around them. What if we build something like that around Facebook ads?' — Jesse telling his own Ampush origin story in first person ('we made a bet'), including that this was right when Facebook launched the first version of its ad platform.",
+      "content_head": "Ampush's origin was a pattern-recognition bet: Google Ads had spawned a massive ecosystem of agencies and tools, and if Facebook's ad platfo"
+    },
+    {
+      "id": "c85616f5-18c6-4318-a1b0-3fad2c7ab95e",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'we try to be someone we're not and the best strengths come in when we know who we are really well and we lean into the things we're great at' — Jesse speaking (first-person context: 'I spent 10 years plus as a founder CEO', 'people ask me about social content all the time because oh Jesse you're all on Twitter'). Same theme also voiced by Jesse in the Mixergy raw source ('it starts with knowing what your zone of genius is').",
+      "content_head": "Strengths compound when founders operate authentically in their areas of genuine skill rather than trying to emulate someone else's model. J"
+    },
+    {
+      "id": "3239aa4c-8005-48ce-a702-4d005e0fc298",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Jesse Pujji & Andy Wells (DoorDash) on Marketing, Growth, and Global Talent",
+      "new_date": "2024-05-21",
+      "evidence": "jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'you had to design the customer experience post click against the channel you were using' — The principle is voiced by JESSE himself as host ('it's a great example by the way for everyone listening I think of of Channel specific full funnel Market marketing like you you...') — 'for everyone listening' is Jesse's recurring host phrase in this episode and 'you had to' addresses Andy. Caveat: the atom's illustrative example (Google Shopping ad for a grocery item) is Andy Wells's story, not Jesse's experience; the flagged principle sentence is Jesse's.",
+      "content_head": "The post-click customer experience must be designed specifically for each channel's intent and context. A Google Shopping ad for a grocery i"
+    },
+    {
+      "id": "a8dda089-1b76-407d-be87-905675e89bfb",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'I think most founders underfocus on sales and distribution generally' ... 'when revenue is coming in the door, you can resolve a lot of other issues' — Speaker is clearly Jesse (guest): 'our CEOs can do a lot with the business because I'm just out there selling and marketing ringing the bell all the time for them.' Atom quote matches near-verbatim. sources.json has no date for this video (W8bTEbxZI8I).",
+      "content_head": "First-time founders systematically underfocus on sales and distribution, fixating instead on product perfection. Jesse argues that revenue f"
+    },
+    {
+      "id": "5a5ae2cb-0ab5-4e6b-ac15-bc8a26324c70",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'I have a chart that says Jesse's zone of genius, Jesse's zone of excellence, Jesse's own zone of incompetence, and competence' — Jesse speaking about his written agreements with Gateway X CEOs ('I have extremely intentional and clear agreements with the CEOs'). Atom quote matches near-verbatim. Zones framework also corroborated as Jesse's in building-a-bootstrapped-giant transcript (15 Commitments / Big Leap reference). No date in sources.json.",
+      "content_head": "Jesse uses an explicit 'zones' framework — zone of genius, excellence, competence, and incompetence — to define his contribution to each por"
+    },
+    {
+      "id": "d0fbd08d-8142-412f-a93b-c42c0ebd8057",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'we say they have to have an unfair advantage which is about distribution' ... 'the e-commerce business hasn't done that well. We shut down the SAS business' — Jesse speaking ('when we first started Gateway X, we started every kind of company'). This transcript supports the full atom including the e-commerce/SaaS underperformance clause; also corroborated by Jesse in the bootstrapping-$1B transcript ('we have to have a unique insight and an unfair Advantage'). No date in sources.json.",
+      "content_head": "Successful businesses within Gateway X share two common traits: an unfair advantage in distribution and a unique insight tied to Jesse's exi"
+    },
+    {
+      "id": "0245fa76-90cd-4283-84ff-925d07816bf6",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'just calling it out like I'm feeling a little tired. I'm feeling a little sad. I'm feeling a little nervous' ... 'everyone let's just take like two or three deep breaths' — Jesse (guest) answering the host's 'Do you have any hacks that you use?' — all three atom components present: naming emotions aloud, noticing breath, group grounding at meeting start; framed as trainable ('tactical things you can do to improve in the moment'). Corroborated by Jesse in the Ampush interview transcript ('stopping for 20 or 30 seconds before a meeting and like taking a few deep breaths'). No date in sources.json.",
+      "content_head": "Jesse's approach to presence and emotional regulation under the cognitive load of running multiple companies includes simple physical interv"
+    },
+    {
+      "id": "88a0a037-f42b-4c1f-8075-0be20611e870",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'the best thing that working at those firms did for me was I didn't know better' — Jesse answering interviewer's question about what he learned at McKinsey/GS; full quote incl. 'everybody's smart' and 'recruiting and talent is insane' present.",
+      "content_head": "Early career experiences at elite firms like McKinsey instill hiring standards that become a lasting competitive advantage. Jesse absorbed M"
+    },
+    {
+      "id": "07913831-08bb-4a85-bced-44bfdeeefccf",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'that was kind of the inspiration for growth assistant' — Full passage present: 'it takes me a day to pull reporting every day, Jesse... how come there's no business that does this like high quality global marketing talent'. Jesse first-person ('my employees at Amush').",
+      "content_head": "Growth Assistant was born from Jesse's observation that DTC marketing teams were drowning in rote, repeatable work — reporting, creative ite"
+    },
+    {
+      "id": "168b531b-2940-4a8e-9b21-b2a8debcc1d6",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'One's called VGI which stands for visual graphics India. The other one is called RNI' — Both halves supported: VGI/RNI at McKinsey, and 'that one person became over 50 people by the time we sold the company'. Jesse first-person ('When I started Amush').",
+      "content_head": "Jesse's instinct toward operational leverage — using offshore global teams to handle repeatable work — began at McKinsey where he discovered"
+    },
+    {
+      "id": "60c2ee23-f741-4009-a0a3-ad5ab5520759",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'we're running at our own pace so we don't have to hit some arbitrary' — Continues verbatim with 'if it takes us seven years to build it fine if it takes us 10 years'; Jesse listing his own operating principles.",
+      "content_head": "Bootstrapped companies should run at their own pace rather than against externally imposed fundraising milestones. Milestone-driven companie"
+    },
+    {
+      "id": "cf1f5688-1cbe-4998-b476-bcf4fc083f7b",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'they always have a backup person for every person' — Jesse recounts his Rocket Internet friend's answer, then generalizes: 'Wall Street is very similar to that. Uh McKenzie is very similar to that'. Same speaker as the preceding 'my classic questions for CEOs' monologue = Jesse.",
+      "content_head": "High-performance organizations — McKinsey, Wall Street, Rocket Internet — systematically build talent redundancy, always maintaining a backu"
+    },
+    {
+      "id": "202e403b-8241-4e37-b5cd-97c848ff28d6",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'every problem is effectively a people problem right' — Full atom quote present incl. 'one of my classic questions for CEOs' and 'they would have told me about it a month ago' — Jesse (the Gateway X CEO-coach) speaking.",
+      "content_head": "Almost every operational problem in a company is ultimately a people problem. When a function is underperforming, the diagnostic question is"
+    },
+    {
+      "id": "74d29588-3dfd-4493-be28-cad33042afdf",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'the actual cost difference between someone you pay 130 grand and 170 grand' — Continues 'it's four grand a month... they're typically three times better'. Jesse speaking ('I tell this to Adrian a lot' — Adriane, his GrowthAssistant co-founder). Atom's 175-vs-130 framing matches the passage's 125-vs-175/130-vs-170 math.",
+      "content_head": "The cost difference between a mediocre hire and an exceptional one is small in dollar terms but enormous in output. Jesse calculates that a "
+    },
+    {
+      "id": "4b071503-2bf4-4caf-a195-cea336167dfd",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'once you're aware of it, you can't unsee it' — Full quote present incl. 'hard to go back once you've seen someone who's proactive'; speaker says 'showing them what I learned at McKenzie' about exposing his CEOs to elite talent = Jesse.",
+      "content_head": "Once a founder has experienced genuinely exceptional talent, they cannot settle for mediocrity again — the awareness itself raises the floor"
+    },
+    {
+      "id": "72e99fed-0add-423a-bfa7-3eed01ddc245",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'it's really important for me to yield to those cultures' — Full passage: 'the cultures are not my cultures... the cultures are the CEO's cultures' — Jesse first-person ('when I was a CEO of Ambush... I don't do that in these companies').",
+      "content_head": "As a studio co-founder across multiple companies, Jesse learned that cultures belong to the operating CEO, not the studio parent. His role i"
+    },
+    {
+      "id": "4d91e90e-7d22-4856-a6bc-42d6ee3676ca",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'I find myself losing a lot of energy and not not enjoying it' — Full quote present: 'in the weeks when I'm in my zone of genius every day I'm energized... I can do this forever'. Jesse — the referenced chart is 'Jesse's zone of genius'.",
+      "content_head": "Jesse identifies a reliable personal energy signal: weeks spent in his zone of genius leave him energized and capable of working indefinitel"
+    },
+    {
+      "id": "db29cc43-cc71-4ed4-bab9-e050dab26e44",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'I like storytelling and I like writing and I like being helpful to people and I like to coach and teach' — Jesse: 'people ask me about social content all the time because oh Jesse you're all on Twitter and LinkedIn'; the leads-alone-would-fail claim also present verbatim.",
+      "content_head": "Social content creation works for Jesse because it is authentically aligned with his genuine enjoyment of storytelling, coaching, and being "
+    },
+    {
+      "id": "5e64a4ad-4697-4ce6-9b56-8099a6c037a5",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'two things in my life have driven the most personal development. One is being a parent and the second is being an entrepreneur' — Direct answer to host's question 'you've had some work with one of your coaches Dave Cashion... I would love to learn what your experience has been' — the answerer is Jesse.",
+      "content_head": "Entrepreneurship and parenting are the two experiences Jesse credits with the most personal development — both impose unavoidable reality ch"
+    },
+    {
+      "id": "46d6fc86-f191-490b-b545-e56f643af2aa",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Massive Revenue Growth & Operational Excellence — Jesse Pujji's Journey from Ampush to Gateway X",
+      "new_date": "2025-06-29",
+      "evidence": "massive-revenue-growth-operational-excellence-jesse-pujjis-journey-from-ampush-t.json: 'in our case we just say we're not going to keep working on that' — Full passage present: 'we've had a lot of companies that... have just never gotten off the ground... when you're starting at zero it's no big deal'. Jesse on Gateway X portfolio.",
+      "content_head": "The willingness to shut down ventures that aren't working — even when ego and sunk cost bias resist it — is a core operational discipline at"
+    },
+    {
+      "id": "f8b4113d-e98d-4da5-8cfb-bc5c92748a35",
+      "decision": "REATTR",
+      "old_ref": "youtube:unknown",
+      "old_date": null,
+      "new_ref": "Jesse Pujji & Andy Wells (DoorDash) on Marketing, Growth, and Global Talent",
+      "new_date": "2024-05-21",
+      "evidence": "jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'Andy knows this because I said it to him for many many years but like leadership is the most important skill' — Speaker refers to Andy in third person as his longtime mentee and then steers the interview ('describe... for us') — this is Jesse, not Andy Wells.",
+      "content_head": "Leadership is the most important skill for growth marketers to develop, even above channel or technical expertise. Managing people, aligning"
+    }
+  ],
+  "residue_not_fixed": [
+    {
+      "id": "ce1e9951-4b17-43a5-8957-612efd691cf6",
+      "reason": "Composite synthesis atom; ingredients verified individually but scattered: Kahani shutdown (how-i-built-these-companies---bootstrapped-giants_02f4deb1.md: 'We have shut down Kahani.'), unfair-advantage test (massive-revenue-growth...json: 'we say they have to have an unfair advantage'), 6-12mo profitability filter (venture-studios...json: 'they should be able to kind of stand on their own two feet within six to 12 months of launching'), EV self-doubt (multipreneurship-101...json: 'I don't know if this is the highest expected value thing I could spend my time on'). No single source carries the synthesized 'live bet' claim, and the 12-month KILL criterion is an inference from a founding filter. Cannot mechanically resolve to one canonical ref.",
+      "content_head": "A live bet Jesse is not yet sure about: whether the Gateway X studio model actually compounds, or whether running many capital-light bets at"
+    },
+    {
+      "id": "92674a24-a084-4ff0-b3c7-ec87a2c38c49",
+      "reason": "Core lesson IS verbatim, Jesse speaking (jesse-pujji-reveals-how-hes-building-his-holdco...json: 'we probably should have sold the business at that point at the best offer we had' ... 'the Market's never wrong instead we sold'); drift years supported (venture-studios...json: 'show up to the office at 11 o'clock leave at 3 30'). But the atom's central meta-claims — he doesn't trust the fix is permanent; ''I metabolized it' is not the same as 'no one else paid for it'' — are synthesis inferences with no corpus support. Split multi-claim support across two sources; not resolvable to one ref without laundering the unsupported half.",
+      "content_head": "The lesson Jesse draws from holding Ampush too long — 'the market is never wrong about valuation' — is not one he trusts himself to have per"
+    },
+    {
+      "id": "eca63557-6a92-4ec1-ba9a-af9a0e424b3e",
+      "reason": "Partial thematic support only, in an-interview-with-jesse-pujji-founder-ceo-of-gateway-x.json: 'getting a lot of DMS being like thank you for writing this' and 'probably means you're not saying anything that interesting or valuable' (usefulness to a specific audience). But the doctrinal claim — most powerful brand building is sustained usefulness; trust slow to build, fast to lose, un-manufacturable by campaigns — is nowhere stated. Searched: genuinely useful, being useful, add/provide value, trust build/earn, long game, consistency, compound. Partial match, not enough to reattribute.",
+      "content_head": "Jesse has observed that the most powerful form of brand building is simply being genuinely useful to a specific audience over an extended pe"
+    },
+    {
+      "id": "cb58bb7b-519e-4333-bbf1-48fc4df4e283",
+      "reason": "Sole corpus occurrence is jesse-pujji-andy-wells-doordash...json: 'I definitely went with the ampush model of hiring marketing athletes when I joined' — speaker is Andy Wells (he joined DoorDash; Jesse is the host asking questions). The passage credits the model to Ampush secondhand, but the atom's original_quote is verbatim Andy's speech, not Jesse's. Pre-diarization misattribution risk; do not credit to a Jesse source.",
+      "content_head": "Hiring 'marketing athletes' — generalists who understand business problems and can flex across channels — over narrow channel specialists al"
+    },
+    {
+      "id": "eb06b951-1c54-4f08-8656-ef5b87b6a5ac",
+      "reason": "Found in jesse-pujji-andy-wells-doordash...json: 'you need to be getting all three sides of the the marketplace working in equilibrium' — but the three-sided-marketplace exposition (minimum selection, Dasher supply, consumer demand) is Andy Wells answering Jesse's explicit prompt ('describe to the three-side marketplace ... go through it for us'). The quoted line at best is Jesse's one-line recap before his next question; the atom's substantive content is Andy's DoorDash knowledge, not Jesse's. Do not credit to a Jesse source.",
+      "content_head": "In a three-sided marketplace, all three sides must reach equilibrium simultaneously for the business to function. You need minimum viable se"
+    },
+    {
+      "id": "0d107369-0b2d-4aea-b2d3-cf3648057b4d",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'it's actually three-sided which makes it like much more complicated because we look at the merchants the Dashers and the and the consumers' — Claim IS in the corpus, but the speaker is Andy Wells (DoorDash guest) answering Jesse's question 'describe to the three-side marketplace' — DoorDash 'we', not Jesse. Attributing this to a Jesse Pujji brain misattributes the guest's speech; do not launder via REATTR.",
+      "content_head": "DoorDash operates as a three-sided marketplace — merchants, Dashers, and consumers — not just a two-sided one. This added complexity makes i"
+    },
+    {
+      "id": "ba8cf334-6aaa-4463-81b8-70446538598e",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'that's actually probably worse than not acquiring them at all' — Verbatim in corpus ('if we're acquiring a Dasher in a market where we're already overs supplied and we have a weight list going that's that's actually probably worse than not acquiring them at all') but spoken by Andy Wells describing DoorDash Dasher acquisition, in his answer opening 'I'll talk a bit about the Dasher side'. Not Jesse's speech.",
+      "content_head": "Acquiring Dashers in an already over-supplied market is worse than not acquiring them at all — wasted spend plus a poor experience for the n"
+    },
+    {
+      "id": "46e12eef-dfae-4cad-af08-a2a49c9fb64f",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'increasing pay for Dashers during those those hours to get more on the road' — In corpus: short-term demand events handled via 'our short-term channels...increasing pay for Dashers', persistent gaps via the acquisition playbook ('in St Louis...based on our consumer forecasts we're going to need more Dashers'). Speaker is Andy Wells describing DoorDash operations, not Jesse.",
+      "content_head": "Short-term supply gaps (e.g., a big event) should be addressed with short-term incentive levers like pay boosts to existing Dashers, while p"
+    },
+    {
+      "id": "99986be8-5c0a-4510-a265-efccad335d80",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'one of the best awareness d drivers for us when people are unfamiliar that door Dash does more than restaurants' — In corpus: Andy Wells's Google Shopping story ('once we started to to offer new verticals and new categories that's where it became really important'). DoorDash first-person 'us' — Andy Wells speaking, not Jesse.",
+      "content_head": "Google Shopping Ads became one of DoorDash's best awareness channels for new verticals like grocery and convenience, reaching people who did"
+    },
+    {
+      "id": "f3d11bea-a554-4e47-a087-9812dcbbf9ca",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'you're saving a day of potentially wasted money which turns into like 100,000 bucks a week' — In corpus, and the speaker is unambiguous: Jesse asks 'the unlock how do you manage that Andy' and Andy answers with the forecast-to-channel automation ('if you can just send those budget levels directly to the channels...'). Andy Wells's speech about DoorDash, not Jesse's.",
+      "content_head": "Automating budget allocation from forecasts directly to channel systems — removing the human lag between forecast and execution — saved Door"
+    },
+    {
+      "id": "57901b89-27b7-4c26-9730-b0f8956693c0",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'I was owning the entire new customer goal for the business' — In corpus, but it is Andy Wells's career advice about his own DoorDash role ('I wasn't owning just the paid customer acquisition goal...80 plus perc of that was organic channels right that wasn't an excuse'), given in answer to Jesse's question. Not Jesse's speech.",
+      "content_head": "Owning the entire new customer goal — not just a paid acquisition sub-metric — forces accountability for the full picture. If organic channe"
+    },
+    {
+      "id": "933c6a4f-a78e-410f-af44-f8a65e8a6d05",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'we loved waterfall charts so we had to have that that chart that showed us getting to 105% of the goal' — In corpus, but the speaker is Andy Wells — the passage continues into his DoorDash-specific weatherman/weather-dashboard detail ('the biggest factor to our business like growing organically was whether it was like snowing or raining') and follows his 'owning the entire new customer goal' answer. Not Jesse's speech.",
+      "content_head": "Building in a 105% waterfall plan — identifying enough growth initiatives to cover the goal plus a buffer — is essential because headwinds a"
+    },
+    {
+      "id": "d4774f41-33db-4ebb-a6ec-02b07de4e9d7",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'it wasn't always like making its way to the entire growth marketing team so now we have like a monthly knowledge share' — Split support. The atom's phrasing ('specialists present insights from their channel or audience to the entire team') tracks Andy Wells's DoorDash monthly knowledge share almost word-for-word ('we had Specialists Within in each audience...come and present on a Insight or a learning'). Jesse voices only an adjacent Ampush practice in the same exchange ('20 minute sessions where different leaders would come in present their games plans...learned from Red Ventures'). Core claim as written is Andy's speech.",
+      "content_head": "Cross-functional knowledge sharing within a marketing org — where specialists present insights from their channel or audience to the entire "
+    },
+    {
+      "id": "090a8ec2-8649-4e06-8774-587bb08e7bc8",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'I would not use paid marketing to try to solve problems with the product' — In corpus ('if you have a great product right people are going to shout from the rooftops about it and you're you can amplify that via VIA paid marketing') but the speaker self-identifies as Andy Wells ('I expected social to be so much more of a a driver of growth for door Dash'); Jesse then asks 'do you agree...'. No Jesse-voiced equivalent found elsewhere in the corpus.",
+      "content_head": "Paid marketing should amplify product-market fit, not substitute for it. Using paid channels to paper over retention or engagement problems "
+    },
+    {
+      "id": "11e8f461-804c-4386-bb42-ca3025627506",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'take our growth marketing engine system and start to provide it as a service for driving growth for those Merchants' — In corpus ('how do we co-market or partner with Merchants...local SNB restaurants where like they don't have a marketing team most likely') but this is Andy Wells describing a DoorDash merchant program during Q&A. Not Jesse's speech.",
+      "content_head": "Turning the growth marketing engine into a service for merchants — co-marketing and helping local restaurant partners who lack marketing tea"
+    },
+    {
+      "id": "d74e6161-9a63-4ccb-a93d-e061c1f3bea3",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'we went and launched a bunch of markets that our competitors didn't care about specifically suburbs' — Verbatim match in the Andy Wells (DoorDash) webinar transcript, but the speaker is Andy Wells, not Jesse — the passage opens 'it came from door Dash as a business... how we scaled out our reach' (DoorDash 'we'). Jesse is the host. Reattributing would credit Jesse with Andy's account of DoorDash strategy.",
+      "content_head": "DoorDash grew market share by launching in suburban and secondary markets that competitors ignored while fighting over New York and LA. By g"
+    },
+    {
+      "id": "78054e3c-3504-4854-ad05-9d3970e1fe47",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'I always tell early stage Founders to do one channel at a one new channel at a time do you agree with that' — Split support in the Andy Wells video: Jesse himself asserts the core principle in his question ('I always tell early stage Founders to do one new channel at a time'), but the atom's original_quote ('spreading yourself too thin across multiple channels...') is Andy Wells's answer, not Jesse's speech. Needs human call: reattribute to this video only if the quote is swapped to Jesse's line.",
+      "content_head": "Early-stage companies should go deep in one acquisition channel at a time rather than spreading across many simultaneously. Depth in a singl"
+    },
+    {
+      "id": "fabd5bf1-a0f5-4ba6-852c-b02bb58253cb",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'this consumer orders typically from this type of restaurant but they dropped off for three or six months' — Claim (restaurant-category + lapse-period targeting, avoid blast messages, first-party data) matches the Andy Wells transcript, but the speaker is Andy Wells describing DoorDash's own channels ('within our own channels... using the data that we have'). Not Jesse's speech.",
+      "content_head": "First-party data should drive personalized lifecycle marketing rather than broad blast messaging. Using behavioral signals — like a customer"
+    },
+    {
+      "id": "661a3d4a-94f2-4d55-afcf-fb6d66fdb48e",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'I have found that if you get too far towards the channel specialization' — Verbatim quote match, but the speaker is Andy Wells describing DoorDash's growth-marketing org ('within those teams we have subpods that are focused on the three audiences... consumer Dasher and Merchant'). This is Andy's org-design lesson, not Jesse's speech.",
+      "content_head": "Team structure should be organized around audience problems and business goals rather than pure channel specialization. Channel expertise na"
+    },
+    {
+      "id": "af9af04a-3a36-40f2-8a8f-adedff5efcf7",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'this incremental CPA of Dasher that could be massive in range' — Verbatim quote match, but the speaker is unmistakably Andy Wells (DoorDash internals: 'we don't have enough Dashers on the road'), and Jesse immediately responds 'how do you manage that Andy'. Not Jesse's speech.",
+      "content_head": "The incremental CPA for acquiring a Dasher can range from effectively negative value to over a thousand dollars depending on local market su"
+    },
+    {
+      "id": "e30c26ec-be73-4106-8908-0c7389e6901d",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'three different types of attribution or understanding of like marketing incrementality' — Verbatim quote match, but the speaker is Andy Wells answering an audience question about DoorDash consumer-side attribution ('we have a mobile measurement partner we have like web tracking'). Not Jesse's speech.",
+      "content_head": "Modern attribution requires three complementary layers: direct click-based attribution from MMP and web tracking, regular incrementality tes"
+    },
+    {
+      "id": "f4327b4f-8c42-4d70-9e25-e27338d4f7cf",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'I try to at least pick one or two projects that I'm still going to be like super close to' — Verbatim quote match in a single-stream caption segment about Andy Wells's new DoorDash leadership role. The 'I' is most plausibly Andy (segment continues into 'did you ever go to Red Ventures business reviews... I did' — Andy's history), though a Jesse interjection ('you're somebody like me who loves getting in the weeds') makes speaker genuinely ambiguous. Cannot credit to Jesse.",
+      "content_head": "Even as a senior leader responsible for broad strategic decisions, staying personally close to one or two specific tactical projects prevent"
+    },
+    {
+      "id": "f4ad4551-b59b-4f1b-b643-581bcd9ebd2c",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'now I'm not delegating tasks I'm delegating like business goals' — Verbatim quote match, but the speaker is Andy Wells describing 'the most challenging aspect of the new role' after Jesse asks how he manages DoorDash's marketing org ('how the hell do you manage that effectively'). Andy's IC-to-leading-leaders transition, not Jesse's speech.",
+      "content_head": "The transition from leading individual contributors to leading leaders requires a fundamental shift — from delegating tasks to delegating bu"
+    },
+    {
+      "id": "88b8eac2-3fed-4ebe-9cab-2e08687ead95",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'optimize better than Google or Facebook can' — Verbatim quote match, but the speaker is Andy Wells answering Jesse's Q&A-triage question 'any practical AI stuff that you're using' — 'we have relied on what Publishers have rolled out' is DoorDash's practice. Not Jesse's speech.",
+      "content_head": "Broadening audience targeting and passing clean optimization signals to platforms — rather than trying to out-optimize Google or Meta's algo"
+    },
+    {
+      "id": "3e932c76-8cd3-4658-8880-56e42b860922",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'growth assistant is like what was a great opportunity for us to say okay we'll offshore some of this work' — Verbatim quote match, but the speaker is Andy Wells describing DoorDash as a GrowthAssistant customer ('we had to go through a layoff at the end of 2021'); Jesse sets it up with 'you guys are a big customer of growth assistant'. The 2-3x-vs-US-contractor figure is Andy's, not Jesse's speech.",
+      "content_head": "Offloading rote, manual marketing operations work to global talent allows in-house team members to focus on higher-leverage strategic work —"
+    },
+    {
+      "id": "5bc3007d-e813-41c8-b86f-166a1177b251",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'his co-founders were actually like focused on solving Merchant problems first' — Claim fully matches the Andy Wells transcript (Tony Xu founding story, merchants turning down orders), but the speaker is Andy Wells ('we look at the merchants the Dashers and the and the consumers' — DoorDash 'we') answering Jesse's question about the three-sided marketplace. Not Jesse's speech.",
+      "content_head": "DoorDash succeeded by solving merchant problems first, not consumer problems. The founding team identified that small businesses were turnin"
+    },
+    {
+      "id": "264fe2ec-7802-4014-b1c4-d260a334677e",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'I expected social to be so much more of a a driver of growth for door Dash' — Verbatim support exists ('don't have like preconceived notions about which channels should work for your business... be open to being proven wrong') but the first-person DoorDash experience is almost certainly Andy Wells (DoorDash growth lead), not Jesse — Jesse responds afterward with 'do you agree I always tell early stage Founders...'. Pre-diarization captions; do not credit to Jesse.",
+      "content_head": "Don't have preconceived notions about which channels should work for your business. DoorDash expected social to be the dominant growth drive"
+    },
+    {
+      "id": "3ba0e13c-0d7c-4861-a300-f71f606dafd9",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'you also need a strong dose of like common sense and pragmatism' — Support exists only in the Andy Wells video (pXHHBPQI5Zs), but it spans two speaker turns in a pre-diarization single-stream caption. The maxim ('I always say I don't know if you agree with this but then you also need a strong dose of like common sense and pragmatism') is plausibly Jesse as host; the atom's anomalous-CPA example maps to the responding turn ('we're getting like five five dollar whatever CPAs... it's because they're click spamming people'), plausibly Andy Wells. Split multi-claim support across speakers — cannot cleanly credit the full atom to Jesse without diarization.",
+      "content_head": "Common sense and pragmatism are essential complements to attribution data. When measurement outputs seem anomalous — like implausibly low CP"
+    },
+    {
+      "id": "d749ea14-ea29-4436-b07c-a5817bdcf44a",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'it's really important to have a membership like dash pass that keeps folks within the ecosystem' — Corpus support found in the Andy Wells video (pXHHBPQI5Zs), but the passage is near-certainly the GUEST Andy Wells (DoorDash) speaking, not Jesse: Jesse asks 'what are the top two or three retention learnings you've had' and the DashPass answer uses first-person DoorDash framing ('a space like we're in', 'us and our competitors have hit selection parity'). Attributing this to Jesse would launder guest speech — do not credit; recommend strip-or-reattribute-to-Andy in a human pass.",
+      "content_head": "A subscription membership program is one of the most powerful retention tools in a competitive, commoditized marketplace. DashPass retains c"
+    },
+    {
+      "id": "c88e09db-321b-460f-949c-da4fe8424150",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'the US teams the retention goes up on the US team because they don't have to do that shitty work anymore when they have a growth assistant' — Split-speaker support in the Andy Wells video (pXHHBPQI5Zs). The rote-work/win-win core is very likely Jesse ('one of the things we've seen very often is that the US teams the retention goes up... when they have a growth assistant... that's how we always view it' — the GrowthAssistant vendor's perspective), but the atom's distinctive 'career growth opportunities for existing team members' element matches Andy's DoorDash anecdote ('she's been able to step up and like do what was interesting to her... awesome to see her growth'). Closest of the four to a REATTR to 'Jesse Pujji & Andy Wells (DoorDash) on Marketing, Growth, and Global Talent' (no date in sources.json) if a human confirms the Jesse-voiced turn suffices; solo-Jesse transcripts contain the GrowthAssistant origin/rote-work story but NOT the career-growth framing.",
+      "content_head": "Offloading manual work to global talent creates career growth opportunities for existing team members by freeing them from rote tasks to pur"
+    },
+    {
+      "id": "78f99b63-9c8a-457a-a5a9-61e21fb9e67e",
+      "reason": "evidence: jesse-pujji-andy-wells-doordash-on-marketing-growth-and-global-talent.json: 'one of our values is customer obsessed not competitor focused' — Only corpus match is the Andy Wells video (pXHHBPQI5Zs), and it is near-certainly the GUEST speaking: Jesse asks how DoorDash won share from 'competitors like uber and GrubHub' and Andy answers 'one of our values is customer obsessed not competitor focused... somewhat borrowed from like a [Bezos] value' — a DoorDash company value. No Jesse-voiced statement of this stance anywhere else in transcripts or raw essays ('obsess' hits elsewhere are about bootstrapping/cash-flow, and the Spotify primer hit is unrelated show-notes text). Do not credit to Jesse; recommend strip-or-reattribute-to-Andy in a human pass.",
+      "content_head": "Being customer-obsessed rather than competitor-focused is a strategic orientation that directs energy toward solving customer problems rathe"
+    },
+    {
+      "id": "956e568c-e797-46ea-953d-318d9a7be73f",
+      "reason": "Demoted from STRIP on review: 'synthesis:qa-2026-07-05-live-uncertainty' is an internal provenance marker from the voice-verified handoff (2026-07-05), deliberately set — not an LLM-guessed citation. Ref convention decision belongs to the QA owner.",
+      "content_head": "Jesse argues acquisition entrepreneurship — buying a cash-flowing business — is often higher-expected-value than building from zero. The liv"
+    },
+    {
+      "id": "3bbdfba7-e90c-42c2-8f8a-a278ef1f006e",
+      "reason": "Demoted from STRIP on review: the claim's true source (Jesse's Twitter/LinkedIn writing) is structurally outside the corpus — the pipeline never scrapes x.com/linkedin. Corpus absence is expected; nulling the ref would mislabel a platform limitation as fabrication.",
+      "content_head": "Jesse frames content creation — whether essays, podcasts, or social posts — not as marketing but as thinking in public. The discipline of ar"
+    }
+  ],
+  "mechanical_fixes": {
+    "refs_normalized": 352,
+    "dates_corrected": 46
+  },
+  "audit": {
+    "suspects_scanned": 64,
+    "verified": 0,
+    "reattr": 31,
+    "strip": 0,
+    "normalize": 23,
+    "residue": 33
+  },
+  "review": "2 STRIP verdicts demoted to residue on human-proxy review (internal marker / unscrapeable platform). 31 REATTR + 23 normalize stand, all evidence verbatim-verified. Date gate: source_date applied only when web-verified (proof_url) or registry-consistent; 0 unproven date assignment(s) dropped from SQL."
+}
