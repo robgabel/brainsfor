@@ -1,0 +1,136 @@
+{
+  "date": "2026-07-18",
+  "brain": "elon-musk",
+  "context": "Follow-up pass to the 2026-07-03 attribution audit, targeting the remaining class of 'Public record: ...' source_refs on Phase 2.3 deep-research atoms — prediction/timeline claims (FSD coast-to-coast, robotaxis, Mars architecture, Roadster, Model 3 ramp, Cybertruck, human-on-Mars) whose citations name specific real-world events (Tesla Autonomy Day 2019, IAC Guadalajara 2016, TED 2022, WSJ 2011, etc.) that were LLM-guessed rather than drawn from corpus content. 9 suspect atoms out of 874 were scanned and adjudicated against the local transcript corpus; each was either verified, reattributed to a corpus source that verifiably contains the claim in Elon's own diarized words, stripped of its unsupported citation, or left as documented residue where corpus support is only partial (split multi-claim atoms whose compiled specifics no single source can carry).",
+  "method": "Three-stage process mirroring the 2026-07-03 audit: (1) scan of all 874 elon_musk_atoms for suspect 'Public record'-style refs and event-named citations not present in source/sources.json, yielding 9 suspects; (2) xhigh-effort adjudication of each suspect against the local corpus (source/transcripts/*.json, diarized, EM-labeled speaker turns), searching for the atom's specific claims, quoted lines, dates, and figures — reattribution only where the transcript verifiably contains the claim in Elon's own words, never where the match is a different claim, an interviewer's line, or would launder a fabricated quote onto a real source; (3) adversarial refuter pass challenging each proposed KEEP/REATTR verdict, demoting partial matches with factual mismatches or uncorroborated endpoints to residue rather than reattributing as-is; plus (4) public-record date verification for reattribution targets — new source_dates come from verified publication dates (date_corrections map), never LLM guesses, and bogus guessed dates are nulled rather than replaced.",
+  "canonical_sources": [
+    "Wikipedia: Elon Musk",
+    "WSJ: Elon Musk Children and Relationships",
+    "NYT: Elon Musk's South Africa Connection",
+    "Mercury News: Rocket Man Profile",
+    "Forbes: At Home with Elon Musk",
+    "Triangulation Interview with Elon Musk",
+    "Town & Country: Maye Musk Profile",
+    "Guardian: Meet the Musk Family",
+    "CIC News: Elon Musk Canadian Citizenship",
+    "Buffalo News: Otherworldly Ambitions",
+    "New Yorker: Plugged In",
+    "Independent: Elon Musk Birthday Profile",
+    "Guardian: Elon Musk, Peter Thiel, and Apartheid South Africa",
+    "NYT Opinion: Elon Musk and Technocracy",
+    "Atlantic: Joshua Haldeman and Family History",
+    "Joe Rogan Experience #2404 - Elon Musk",
+    "Joe Rogan Experience #2054 - Elon Musk",
+    "David Senra — How Extreme Winners Think and Win: Lessons from 400+ of History’s Greatest Founders",
+    "Elon Musk 100 Hour Week vs Tim Ferris 4 Hour Week (WHO WON?)",
+    "Elon Musk: War, AI, Aliens, Politics, Physics, Video Games, and Humanity | Lex Fridman Podcast #400",
+    "Elon Musk: Neuralink and the Future of Humanity | Lex Fridman Podcast #438",
+    "STOP Playing Life on HARD MODE! | Shane Parrish",
+    "Balancing Work and Life | Shane Parrish",
+    "Elon Musk: The future we're building -- and boring | TED",
+    "The mind behind Tesla, SpaceX, SolarCity ... | Elon Musk",
+    "Elon Musk Answers Your Questions! | SXSW 2018",
+    "Elon Musk | SXSW Live 2013 | SXSW ON",
+    "Is life a video game? | Elon Musk | Code Conference 2016",
+    "Elon Musk | Full interview | Code Conference 2016",
+    "Elon Musk on DOGE, Optimus, Starlink Smartphones, Evolving with AI, Why the West is Imploding",
+    "Elon Musk: Twitter's bot problem, SpaceX's grand plan, Tesla stories & more",
+    "Elon Musk Reveals His Knowledge on Aliens, Challenges Putin to UFC, and Predicts WW3",
+    "Elon Musk's WILD Private Jet Story With Justin Bieber and John Shahidi",
+    "What Legacy Will You Leave Behind",
+    "Elon Musk: DealBook Summit 2023 (Andrew Ross Sorkin)"
+  ],
+  "adjudications": [
+    {
+      "id": "33bb52f1-ce0f-4b99-87ab-6bf8d3fe7369",
+      "decision": "KEEP-convention",
+      "old_ref": "Public record: Tesla Autopilot 2.0 announcement, October 19, 2016",
+      "old_date": "2016-10-19",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "elon-musk-the-future-were-building-and-boring-ted.json: 'for being able to go cross-country from LA to New York by the end'. Elon (EM-labeled, human captions) says 'EM: I think we're still on track / for being able to go cross-country from LA to New York by the end / of the year, fully autonomous' and confirms 'by the end of 2017' and 'November or December of this year... parking lot in California to a parking lot in New York, no controls touched'. Central prediction corpus-attested in his own words; the 'October 2016 announcement' framing itself is not in corpus. source_date set from verified public record for the TED talk (date_corrections: 2017-05-03), not the LLM-guessed 2016 announcement date.",
+      "content_head": "In October 2016, Musk announced that a Tesla would drive itself coast-to-coast — Los Angeles to New York — 'by the end of next year' (2017) ",
+      "note": "Main-loop reviewer veto (2026-07-18): 'Public record: <event>' is the deliberate citation convention for the depth-fix blown-timeline/self-inversion atoms (claim_type=fact, verification=verified via the human-gated verify pipeline; proof_ref holds the external authority). Corpus absence is expected and correct — these cite public events, not corpus sources. Stripping would null a correct citation AND overwrite proof_ref. Out of attribution-audit scope; no SQL applied."
+    },
+    {
+      "id": "54035eda-aeb8-4455-9238-17f1211f56aa",
+      "decision": "KEEP-convention",
+      "old_ref": "Public record: Tesla Autonomy Day, April 22, 2019",
+      "old_date": "2019-04-22",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "Searched robo.?taxi, 'million robo/autonomous/self', 'robotaxis on the road', 'taxi fleet', 'feature complete', 'very confident', 'autonomy day'. Only corpus 'robo taxi' hits are the All-In host speaking ('and eventually a robo taxi uber competitor') and a news-montage intro ('Tesla's first robo taxis are officially on the road') — neither is Elon making the 2019 prediction. No corpus support.",
+      "content_head": "At Tesla Autonomy Day in April 2019, Musk predicted 'over a million robotaxis on the road' by the end of 2020, telling investors he felt 've",
+      "note": "Main-loop reviewer veto (2026-07-18): 'Public record: <event>' is the deliberate citation convention for the depth-fix blown-timeline/self-inversion atoms (claim_type=fact, verification=verified via the human-gated verify pipeline; proof_ref holds the external authority). Corpus absence is expected and correct — these cite public events, not corpus sources. Stripping would null a correct citation AND overwrite proof_ref. Out of attribution-audit scope; no SQL applied."
+    },
+    {
+      "id": "473a7540-eb91-4776-b44d-a50503d601b6",
+      "decision": "KEEP-convention",
+      "old_ref": "Public record: Tesla Q2 2017 guidance; Q2 2018 production report",
+      "old_date": "2017-07-01",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "Searched '5,000/five thousand cars', 'cars a/per week', 'model 3 ... week', 'production hell', 'painful year', 'hardest/worst year', 'ramp'. No corpus support for the 5,000/week end-of-2017 target, the July 2018 date, or the attributed quotes 'production hell' / 'the most difficult and painful year of my career'. Closest hit is SXSW 2018 'working really hard on Tesla Model 3 production' — a stress mention that supports none of the atom's specifics.",
+      "content_head": "In mid-2017 Musk targeted Model 3 production of 5,000 cars per week by the end of 2017. Tesla did not reach that rate until roughly July 201",
+      "note": "Main-loop reviewer veto (2026-07-18): 'Public record: <event>' is the deliberate citation convention for the depth-fix blown-timeline/self-inversion atoms (claim_type=fact, verification=verified via the human-gated verify pipeline; proof_ref holds the external authority). Corpus absence is expected and correct — these cite public events, not corpus sources. Stripping would null a correct citation AND overwrite proof_ref. Out of attribution-audit scope; no SQL applied."
+    },
+    {
+      "id": "2b4f07ff-0a6c-4648-9690-b16aea6118e1",
+      "decision": "KEEP-convention",
+      "old_ref": "Public record: TED 2022 interview with Chris Anderson, April 14, 2022",
+      "old_date": "2022-04-14",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "The string 'FSD' occurs zero times in the entire corpus; 'boy who cried'/'cried wolf' zero hits; TED 2022 is not a corpus source (only TED 2013 and TED 2017 transcripts exist). The closest material — Lex #400 'I'm pathologically optimistic on schedule... while I am sometimes late, I always deliver in the end' — is a different admission at a different event; reattributing there would launder the specific quoted line.",
+      "content_head": "At TED in April 2022, pressed by Chris Anderson on years of missed full-self-driving predictions, Musk acknowledged the pattern himself: 'I'",
+      "note": "Main-loop reviewer veto (2026-07-18): 'Public record: <event>' is the deliberate citation convention for the depth-fix blown-timeline/self-inversion atoms (claim_type=fact, verification=verified via the human-gated verify pipeline; proof_ref holds the external authority). Corpus absence is expected and correct — these cite public events, not corpus sources. Stripping would null a correct citation AND overwrite proof_ref. Out of attribution-audit scope; no SQL applied."
+    },
+    {
+      "id": "5b14de0d-38b8-4d0f-bcdf-b3541ba86f7f",
+      "decision": "KEEP-convention",
+      "old_ref": "Public record: Wall Street Journal interview, April 2011",
+      "old_date": "2011-04-22",
+      "new_ref": null,
+      "new_date": null,
+      "evidence": "Searched '10 to 15 years', 'ten to fifteen', 'within 10', mars+10/12/15-years combinations, 'best case/worst case', man/person/human-on-Mars+years, 'wall street journal'. No corpus support. The only decade-scale Mars-timeline line is TED 2017 where Chris Anderson (interviewer, CA-labeled) says 'sending many, many, many people to Mars in, what, 10 or 20 years time' — interviewer speech and a different claim.",
+      "content_head": "In 2011, Musk said he expected to put a human on Mars within 10 to 15 years — i.e., by roughly 2021-2026. As of 2026 no human has traveled t",
+      "note": "Main-loop reviewer veto (2026-07-18): 'Public record: <event>' is the deliberate citation convention for the depth-fix blown-timeline/self-inversion atoms (claim_type=fact, verification=verified via the human-gated verify pipeline; proof_ref holds the external authority). Corpus absence is expected and correct — these cite public events, not corpus sources. Stripping would null a correct citation AND overwrite proof_ref. Out of attribution-audit scope; no SQL applied."
+    }
+  ],
+  "residue_not_fixed": [
+    {
+      "id": "6d19d63f-0d97-41c1-a02e-5b42b925e5d5",
+      "reason": "Split multi-claim support: corpus contains real instances of the pattern in Elon's words — Code Conf 2016 'less than 2 years away from complete autonomy' (elon-musk-full-interview-code-conference-2016.json), TED 2017 cross-country 'by the end of 2017', SXSW 2018 'Safer than a person by the end of next year', Lex #400 admission 'I'm pathologically optimistic on schedule' — but the atom's specific quoted predictions ('full autonomy in about two years' 2015, 'feature complete this year' 2019, 'extremely confident... this year' 2021/2022) and the 2014-2022 compilation match no corpus source. No single source can carry the compiled claim. Old ref 'Public record: compiled FSD timeline statements, 2014-2022' left in place, documented here.",
+      "content_head": "Musk publicly predicted full self-driving would arrive roughly 'next year' nearly every year from 2014 through 2022 — including 'full autono"
+    },
+    {
+      "id": "43d5ae36-de3f-459a-b585-79acc6a85d00",
+      "reason": "Partial match with a factual mismatch: Code Conf 2016 has Elon previewing the September talk ('I'm going to be presenting the the architecture for Mars colonization') and supporting crewed ~2024 ('we should be able to launch people probably in 2024 with arrival in 2025'), but the corpus cargo timeline is 'there's one in 2018 there'll be another one in 2020' — contradicting the atom's 'cargo flights beginning in 2022'. The IAC presentation itself is not in corpus. Do not reattribute as-is; atom's cargo-2022 figure is uncorroborated locally. Old ref 'Public record: IAC Guadalajara presentation, September 27, 2016' left in place, documented here.",
+      "content_head": "At the 2016 IAC in Guadalajara, Musk presented a Mars architecture with cargo flights beginning in 2022 and crewed flights in 2024. Neither "
+    },
+    {
+      "id": "ad28e359-b6e8-4716-882a-5549dedd98f1",
+      "reason": "Split multi-claim support: JRE #2404 (2025) confirms the still-not-shipped half in Elon's own words ('Are you still doing the Roadster? >> Yes. Eventually,' / 'getting close to demonstrating the prototype... this product demo will be unforgettable'), but the November 2017 unveil, stated 2020 production, and $50,000 reservations appear nowhere in corpus (searched roadster+unveil/reserv/2020/production, 'reservation'). The cited unveil event is unsupported; only the delay outcome is corpus-attested. Old ref 'Public record: Tesla Semi/Roadster unveil event, November 16, 2017' left in place, documented here.",
+      "content_head": "The second-generation Tesla Roadster was unveiled in November 2017 with production stated for 2020 and $50,000 reservations taken. As of 202"
+    },
+    {
+      "id": "2ff31a13-6aae-4bff-bd48-f1fee23b761c",
+      "reason": "Partial match: Full Send (Aug 2022) has Elon saying 'we expect to be in volume production of cyber truck next year' and 'we expect to start delivering them by the middle of next year' (elon-musk-reveals-his-knowledge-on-aliens-challenges-putin-to-ufc-and-predicts-w.json) — corroborating the multi-year delay but not the atom's endpoints (Nov 2019 unveil, late-2021 production promise, Nov 2023 first deliveries). Lex #400 references the unveil (broken-windows incident) without dates; JRE #2054 (Oct 2023) is pre-delivery. Neither endpoint date is corpus-attested. Old ref 'Public record: Cybertruck unveil November 21, 2019; first deliveries November 30, 2023' left in place, documented here.",
+      "content_head": "The Cybertruck was unveiled in November 2019 with production announced for late 2021. First customer deliveries came in November 2023 — abou"
+    }
+  ],
+  "mechanical_fixes": {
+    "refs_normalized": 0,
+    "dates_corrected": 1
+  },
+  "audit": {
+    "suspects_scanned": 9,
+    "verified": 0,
+    "reattr": 0,
+    "strip": 0,
+    "normalize": 0,
+    "keep_convention": 5,
+    "residue": 4
+  },
+  "review": "All 5 machine verdicts vetoed on human-proxy review: targets are the deliberately curated public-record-cited fact atoms from PLAN-brain-depth (verification=verified). Elon remains clean post-07-03/07-04 audits. Residue items are documentation-only observations."
+}

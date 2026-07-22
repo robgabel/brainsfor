@@ -1,0 +1,3 @@
+-- attribution-audit 2026-07-18 (elon-musk): NO CHANGES.
+-- All 5 machine-proposed updates vetoed on review: targets are the deliberate 'Public record:' cited,
+-- verify-pipeline-verified fact atoms from the depth-fix work. See attribution-audit-2026-07-18.json.
