@@ -114,7 +114,7 @@ A wrong `false` flag about a real person is worse than no verifier. Machine verd
 
 - `CLAUDE.md:213`: "`verify-facts.py` is a human-gated TRIAGE PROPOSER, never an auto-publisher... A human must review every `false`/`contested` proposal before it reaches a pack."
 - commit `3dfcdde`: "Per the human-gate rule, ALL of their machine verdicts were reverted to unverified... Only elon-musk's 3 human-confirmed false flags ship."
-- commit `4868b12` (#63): "all 5 machine verdicts vetoed (deliberate public-record refs), zero data changes."
+- commit `4868b12` (#63): "all 5 machine verdicts vetoed (deliberate public-record refs), zero data changes." Correction (2026-11-06, third pass): the ledger `brains/elon-musk/research/attribution-audit-2026-07-18.json` says "vetoed on human-proxy review", a second Claude pass, not Rob. This receipt is DOC, not ROB; A7 keeps HIGH on `84175bb` and `3dfcdde` alone, with the caveat that neither names the reviewer.
 - commit `84175bb`: "5 marketing/title claims reclassified fact+contested (Rob-approved)."
 - `PLAN-brain-depth.md:113`: "Never auto-publish a false/contested flag."
 - `scripts/build-brain.py:1078`: new brains land as `hidden`, "human must promote."
