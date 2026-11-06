@@ -10,6 +10,8 @@ Do NOT create or save files to a standalone `Brainsfor` Cowork mount, `~/.claude
 
 BrainsFor is a product: packaged "brain packs" — curated knowledge sets from notable thinkers (starting with Scott Belsky) that users install into AI assistants. Each brain ships with 8 thinking skills (`/advise`, `/teach`, `/debate`, `/connect`, `/evolve`, `/surprise`, `/coach`, `/predict`).
 
+This file holds the rules and the incidents (the dated "Lessons" blocks below). The beliefs the rules came from are in [PRINCIPLES.md](PRINCIPLES.md): the 34 core principles vendored from rob-ai under a hash, then the BrainsFor layer. When a decision has no standing rule here, derive it from a principle and cite the number; if none fits, that is a question for Rob, not a reason to improvise. Other agents boot on [AGENTS.md](AGENTS.md), which points here. PR review of record: `.claude/skills/pr-qa/SKILL.md`.
+
 ## Brain Status Values
 
 Every brain in `brains/index.json` has a `status` field. Two values are in use today:
@@ -512,6 +514,18 @@ Both paths run the same 6 phases (source discovery → scaffolding → ingestion
 **How to use:** Drop `DESIGN.md` into any project folder or paste into an AI agent context, then say "build me a page that looks like this." All 9 sections (theme, colors, typography, components, layout, depth, do's/don'ts, responsive, agent prompts) give agents everything they need for pixel-perfect output.
 
 **Cluster colors** (for atom cards and topic visualization): Product/Design `#6366f1`, AI/Tech `#0ea5e9`, Leadership `#d97706`, Creativity `#ec4899`, Business `#059669`, Culture `#8b5cf6`.
+
+## Living Docs
+
+Each living doc names its update trigger and what catches drift. A doc with no trigger and no consumer becomes a record or is deleted.
+
+| Doc | Update trigger | Drift catcher |
+|---|---|---|
+| [PRINCIPLES.md](PRINCIPLES.md) (core 1 to 34 vendored from rob-ai, BrainsFor layer from 35) | a call Rob makes that no principle predicted, or a tension in its Part 6 he settles: a core principle changes in rob-ai and is re-vendored with `node scripts/vendor-principles-core.ts --source <path to rob-ai/system/PRINCIPLES.md>`; a BrainsFor one changes here; cite the PR and strike the old wording | `scripts/test/principles-core-vendored.test.ts` (the vendored block's hash, so the copy is never edited in place; run `node --test scripts/test/principles-core-vendored.test.ts`); session boot reads it; PR QA cites a principle number when a diff works against one |
+| CLAUDE.md (this file) | a pipeline phase, script, table, env var, workflow, status rule or a dated lesson | `audit-brains.py` reads the registry it describes; `publish-qa-scores.py --dry-run` |
+| `brains/index.json` | any brain build, export, status flip or QA refresh | `audit-brains.py` (counts vs packs); `publish-qa-scores.py` (qa block vs evals) |
+| [LAUNCH.md](LAUNCH.md) | a launch decision or a checked box | the "Updated" line at its top |
+| [docs/synthetic-rob/](docs/synthetic-rob/) | a QA round or new verbatim Rob evidence | the QA-REPORT it ships with |
 
 ## Key Documents
 
