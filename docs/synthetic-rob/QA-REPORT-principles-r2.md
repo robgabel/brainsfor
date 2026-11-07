@@ -1,0 +1,48 @@
+# QA report: PRINCIPLES.md BrainsFor layer, round 2
+
+**Date:** 2026-11-06. **Reviewer:** independent agent, no research context. **Scope:** the eleven round-1 findings (F1 to F11) and the five proposed misses, as applied to the header (lines 1 to 12) and the BrainsFor layer (lines 363 to 553). Nothing else was re-reviewed. The document was not edited.
+
+Method: every number re-run on `origin/main` (267 first-parent commits); every relocated or new quote read at its cited file and line; the one knowledge-graph atom re-queried via `brain_search`; the vendored-core test run.
+
+## 1. Findings F1 to F11
+
+| # | Grade | Where | Evidence |
+|---|---|---|---|
+| F1 | FIXED | `PRINCIPLES.md:533-535` | By parent count: 49 squash, 15 merge, 203 direct. Direct by author: Rob 172 (82 "Rob Gabel" + 90 "robgabel"), Claude 29, github-actions[bot] 2. Merge by author: Rob 9, Claude 6. The table now reads 49 / 15 / 203, Rob 172, Claude 29, bot 2, Rob 9, Claude 6, and labels the merge column "two parents". All match. |
+| F2 | FIXED | `PRINCIPLES.md:504` | Tension 3 now says 29 direct and 6 merge commits are authored Claude with no PR, "including the merges that landed LAUNCH.md and PRD-8 (`9164a41`, `bb1287a`)". Both hashes are among the six Claude two-parent merges; none of the six has a "Merge pull request" subject. Consistent with Part 8. |
+| F3 | FIXED | `PRINCIPLES.md:479`, `:505`, `:547` | `grep -n "—" website/app/page.tsx website/components/BetaBand.tsx`: page.tsx:111 (one hit), BetaBand.tsx:5, :10, :20 (three). `page.tsx:85-115` confirms line 111 is the `<p>` under the brain-pill row in "Beat 5c: the other minds", after `<BetaBand />` at line 86. The doc now calls it "the homepage catalog row", tension 4 lists "3 in `website/components/BetaBand.tsx`", and the Part 8 row reads 25 + 1 + 4 + 3 = 33 across four files. Counts re-run: hero-demos.ts 25, page.tsx 1, pricing/page.tsx 4, BetaBand.tsx 3. |
+| F4 | FIXED | `PRINCIPLES.md:465`, `:470` | `brain_search` returns the 2026-07-10 slack atom verbatim with `people: []`, and its sibling of the same date says the two-gate loop "was proposed for the Writers' Room". 44 now reads "one bot-recorded Rob instruction (number-first, rb 2026-05-29) and one proposed writers'-room test (the name swap, rb 2026-07-10, no speaker attached)", and the receipt says "its sibling atom of the same date says the test 'was proposed'". No Rob attribution remains on the name-swap half. |
+| F5 | FIXED | `PRINCIPLES.md:9` | The ROB definition now includes "or a dated record that he chose, approved or vetoed, written by an agent; in this repo only the second form exists, and each such receipt says so." 37's tag reads "`ROB` (Option C, an agent's dated record)". See finding 2 below for the one receipt that does not literally say so. |
+| F6 | FIXED | `PRINCIPLES.md:447` | Now "The build, the classifier, the panel and the eval harness each carry a dollar figure in the rules file." `grep -n '\$[0-9]' CLAUDE.md`: build ~$23 (lines 44, 221, 493), classifier ~$0.17 (213), panel ~$0.46 and ~$10 (460), eval harness ~$14 (438, 450). The Phase 0 to 5 list carries none, and the sentence no longer says it does. |
+| F7 | FIXED | lines 364 to 553 | `awk 'NR>363' PRINCIPLES.md | grep -n ", not "` returns 20 lines; 17 are inside double-quoted source text or the QA record's quoted term ", not Y". In the builder's own prose: 370 ("Sell ownership, not access"), 486 ("platform, not instance", the core's own label), 512 ("it is coordination, not a belief of Rob's"). Three, down from 17. Header: one (line 7, "a question for Rob, not a reason to improvise"), down from three. |
+| F8 | FIXED | `PRINCIPLES.md:11` | The Rob-attributed decisions are now "about seven (the four infra cuts, the Option C lineup, the Elon contested-claim approvals, the Oprah guest purge)". "The standing human gate" is gone. Each of the four named items has a dated agent record cited in Part 5 (`INFRA-AUDIT:3`, `LAUNCH.md:208`, commit `84175bb`, PR #58). |
+| F9 | FIXED | `PRINCIPLES.md:506` | `ls brains/elon-musk/evals/persona-qa-*.json`: 06-22, 07-04, 07-05, 07-08. `grep -l '"interim": true'` matches only `persona-qa-2026-07-05.json`. Scores: 07-04 = 63, 07-05 = 58, 07-08 = 62; `index.json` holds 63 as of 07-04. Tension 5 now says the 07-05 panel (58) carries `interim: true` and "the 07-08 panel (62, unflagged) is unpublished only because `publish-qa-scores.py` was never re-run after it". Commit `7f7a7be` body line 28 reads "public QA pill left at 63 per the interim-renovation guard"; commit `11b899d` (2026-07-05) added the guard. Both quoted correctly. |
+| F10 | FIXED | `PRINCIPLES.md:429`, `:503`, `:379`, `:504` | `sed -n '4,7p' scripts/auto-build-brain.py`: line 4 blank, lines 5 to 6 carry "produces a complete, shippable brain pack end-to-end / with ZERO manual approval gates"; both citations now read `:5-6`. `IMPROVEMENTS.md:30` reads "paywall-enforceable at the protocol level (free/paid tiers ship files — unenforceable)"; the doc now quotes it with the prefix. `git log --first-parent -S'"status": "live"' -- brains/index.json`: the six hashes named (`b79a281`, `31ec85b`, `5307f9e`, `b79e68d`, `25d1c23`, `47abd1d`) are all single-parent, non-`(#N)` commits; twelve direct commits in that list ship a brain live (Jesse Pujji, Reshma Saujani, Annie Duke, Jeremy Utley, Sara Blakely, Oprah Winfrey, Elon Musk, Jensen Huang, Charlie Munger, Hank Green, John Green, Paul Graham), so "more than ten" holds. |
+| F11 | FIXED | 463, 436-438, 425-427, 455-457, 512, 519 | 44's heading is "Write for a builder who came to evaluate. Show the machinery ... treat the agent as a first-class reader; and apply the author-side test, the name swap"; the number and demo clauses are gone and the gloss points to core 30 and 36; the agent-as-reader receipts (commit `7c1125a`, `middleware.ts:3-6`) moved in from 35 and both quotes verify. 41's heading drops the pilot clause; the gloss reads "Pilots and null results are core 26." 40 holds no session-claim sentence; tension 11 now carries it with `fa73048`, `4754093` and `PLAN-brain-depth.md:72-75`. 43 holds no pricing clause ("Pricing beliefs are stated in the plan and untested; they sit in Part 7"); Part 7 carries "your time is worth more than $29" (`business-plan.md:199`, verified) and "Pricing should incentivize the second brain purchase" (`personas.md:260`, verified), parked per `business-plan.md:195` (verified). |
+
+## 2. Misses from round 1, section 7
+
+| Item | Landed in | Receipt check |
+|---|---|---|
+| Registry is the only seam | 35 heading and `:377` | `INFRA-AUDIT:27` "Factory (private) → **Pack Registry** (the single interface: `brains/index.json` + `pack/` artifacts) → N thin surfaces ... that all derive from the registry and hold no state of their own": verbatim. `:83` "Make the Pack Registry the single seam": verbatim (the source line is headed "**S1.**"). |
+| Panel is a signal; human spot-checks the chair's top flag | 37 heading and `:400` | `HANDOFF-brain-qa.md:84` "Tier-4 human calibration is mandatory, not optional": verbatim. `CLAUDE.md:464` "Treat the panel as a strong signal, not ground truth — a human spot-check of the chair's top flag is the Tier-4 backstop before shipping": verbatim. |
+| A judge seat must reward being interesting | 37 heading and `:401` | `HANDOFF-brain-qa.md:88`: verbatim, with straight quotes in the doc where the source uses curly ones around "not fooled" and "interesting/useful". |
+| A model's answer is never a source; only its citations are | 38 heading and `:412` | `SPEC-synthesis-grounding.md:48-51`: "launders one model's confabulation into another's" is line 48; "Rule: use only Perplexity's *citations* (the source URLs), never its answer text." is line 51. The opening words "Grounding a principle on Perplexity's" are on line 47. See finding 1. |
+| A beta user is a completed feedback loop | tension 1, `:502` | `LAUNCH.md:13` "10 beta users ... who install a brain, use it in a real session, and email back one thing their agent did better" and `:151` "That email = a completed beta slot.": both verbatim. |
+
+## 3. Checks
+
+- `node --test scripts/test/principles-core-vendored.test.ts`: 3 tests, 3 pass, 0 fail.
+- `awk 'NR>363' PRINCIPLES.md | grep -n "—"`: 20 hits on 19 lines (374, 379, 387, 395 twice, 396, 398, 400, 408, 419, 421, 429, 430, 431, 451, 459, 460, 461, 479, 512). Each sits inside a double-quoted source quotation (a BRAND.md, LAUNCH.md, CLAUDE.md, HANDOFF, SKILL.md, script, PRD, personas, business-plan, page.tsx or commit-body quote). None in the builder's prose. The header (lines 1 to 12) has none.
+- ", not " constructions in the builder's own prose after line 363: 3 (lines 370, 486, 512). Round 1 found 17. Header: 1 (line 7), from 3.
+
+## 4. Verdict
+
+`VERDICT: FINDINGS`
+
+Nothing from round 1 remains open. Two minor items came in with the fixes.
+
+1. **(minor, line drift)** `PRINCIPLES.md:412` cites `SPEC-synthesis-grounding.md:48-51` for a quote that begins "Grounding a principle on Perplexity's prose just **launders ...**". Line 47 holds "Grounding a principle on Perplexity's"; line 48 begins "prose just **launders one model's confabulation into another's**". Cite `:47-51`.
+2. **(minor, header claim versus one tag)** `PRINCIPLES.md:9` says every ROB receipt of the agent-record form "says so". 37 (`:393`) and 40 (`:427`) do; 39 (`:416`) reads "with one `ROB` authorization on record (the Oprah purge)" and only the receipt at `:420` reveals the source is PR #58's body. Add "(an agent's record, PR #58)" to the tag at line 416, or soften line 9 to "the receipt names the record".
+
+No blocker, no major. Every relocated quote, recount and new receipt verifies at its cited location.
