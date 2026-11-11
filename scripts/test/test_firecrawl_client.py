@@ -6,10 +6,22 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from firecrawl_client import SCRAPE_URL, SEARCH_URL, search_web_results
+from firecrawl_client import SCRAPE_URL, SEARCH_URL, scrape_body, search_web_results
 
 
 class TestFirecrawlV2(unittest.TestCase):
+    def test_scrape_body_is_fresh(self):
+        body = scrape_body("https://example.com")
+        self.assertEqual(body["url"], "https://example.com")
+        self.assertEqual(body["formats"], ["markdown"])
+        self.assertEqual(body["maxAge"], 0)
+
+    def test_scrape_body_keeps_caller_fields(self):
+        body = scrape_body("https://example.com", onlyMainContent=True, timeout=120000)
+        self.assertEqual(body["maxAge"], 0)
+        self.assertIs(body["onlyMainContent"], True)
+        self.assertEqual(body["timeout"], 120000)
+
     def test_urls_are_v2(self):
         self.assertEqual(SCRAPE_URL, "https://api.firecrawl.dev/v2/scrape")
         self.assertEqual(SEARCH_URL, "https://api.firecrawl.dev/v2/search")

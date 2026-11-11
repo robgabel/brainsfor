@@ -41,7 +41,7 @@ _spec = importlib.util.spec_from_file_location(
 _abb = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_abb)
 
-from firecrawl_client import SCRAPE_URL
+from firecrawl_client import SCRAPE_URL, scrape_body
 
 raw_source_filename = _abb.raw_source_filename
 persist_raw_text = _abb.persist_raw_text
@@ -121,7 +121,7 @@ def backfill_brain(brain_dir: Path, force: bool, dry_run: bool, firecrawl_key: s
                     "Authorization": f"Bearer {firecrawl_key}",
                     "Content-Type": "application/json",
                 },
-                json={"url": url, "formats": ["markdown"]},
+                json=scrape_body(url),
                 timeout=SCRAPE_TIMEOUT_SEC,
             )
             if resp.status_code != 200:

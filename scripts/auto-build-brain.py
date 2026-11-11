@@ -77,7 +77,7 @@ build_brain = importlib.import_module("build-brain")
 # Speaker diarization: attribute original_quote ONLY to the brain subject, never
 # the interviewer/host. Shared by the text-source + transcript extraction paths.
 from diarize import to_subject_text
-from firecrawl_client import SCRAPE_URL, SEARCH_URL, search_web_results
+from firecrawl_client import SCRAPE_URL, SEARCH_URL, scrape_body, search_web_results
 
 # Optional imports
 try:
@@ -1047,7 +1047,7 @@ def scrape_text_sources(
                     "Authorization": f"Bearer {firecrawl_key}",
                     "Content-Type": "application/json",
                 },
-                json={"url": url, "formats": ["markdown"]},
+                json=scrape_body(url),
                 timeout=SCRAPE_TIMEOUT_SEC,
             )
             if resp.status_code != 200:

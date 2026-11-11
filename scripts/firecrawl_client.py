@@ -9,7 +9,27 @@ Search is the shape change: v2 groups hits by source. Web results are
 ``data.news`` and ``data.images`` appear only when those sources are
 requested. v1 returned a flat list at ``data``. The default search limit
 also moved from 5 to 10; every caller in this repo passes ``limit``
-explicitly, so request bodies stay the same.
+explicitly, so request bodies stay the same. Search calls do not send
+``scrapeOptions`` (v1 search did not scrape result pages either). If a
+caller adds ``scrapeOptions``, it must include ``maxAge: 0``.
+
+v2 scrape defaults that differ from the v1 calls this repo made, and how
+they are kept:
+
+- ``maxAge`` is 2 days on v2. These calls never passed it; v1 treated that
+  as a fresh scrape. ``scrape_body`` always sends ``maxAge: 0``.
+- Server ``timeout`` defaults to 60s on v2. v1's schema defaulted to 30s
+  and then raised it to 120s because proxy resolves to ``auto`` when no
+  country is set. Callers whose HTTP client already stops at 60s match the
+  v2 default. The transcript-page client waits 120s, so that body sets
+  ``timeout: 120000``.
+- ``onlyMainContent``, ``blockAds``, and ``removeBase64Images`` default to
+  true on both. ``skipTlsVerification`` defaults to false on both.
+  ``storeInCache`` defaults to true on both. ``proxy`` is ``auto`` on both
+  when ``location.country`` is unset (the v2 change to ``auto`` applies
+  only when a country is set; these calls never set one).
+- ``parsePDF`` stayed on by default; v2's extra image parser only applies
+  to image URLs, which this pipeline does not scrape.
 
 Callers keep their own HTTP client, timeout, retry, and error handling.
 """
@@ -19,6 +39,25 @@ from __future__ import annotations
 FIRECRAWL_API = "https://api.firecrawl.dev/v2"
 SCRAPE_URL = f"{FIRECRAWL_API}/scrape"
 SEARCH_URL = f"{FIRECRAWL_API}/search"
+
+# v2's default is 172800000 (2 days). 0 disables the cache read.
+SCRAPE_MAX_AGE_MS = 0
+
+
+def scrape_body(url: str, **extra) -> dict:
+    """JSON body for POST /v2/scrape. Always fresh (``maxAge`` 0).
+
+    ``extra`` is merged after the defaults, so a caller can set
+    ``onlyMainContent`` or the server ``timeout`` (milliseconds). Passing
+    ``maxAge`` overrides the fresh default; don't.
+    """
+    body = {
+        "url": url,
+        "formats": ["markdown"],
+        "maxAge": SCRAPE_MAX_AGE_MS,
+    }
+    body.update(extra)
+    return body
 
 
 def search_web_results(payload) -> list:

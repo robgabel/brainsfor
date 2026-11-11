@@ -40,7 +40,7 @@ from pathlib import Path
 # Canonical model strings — source of truth is auto_build_config.py
 sys.path.insert(0, str(Path(__file__).parent))
 from auto_build_config import DEFAULT_MODEL
-from firecrawl_client import SCRAPE_URL
+from firecrawl_client import SCRAPE_URL, scrape_body
 
 # Optional imports (graceful degradation)
 try:
@@ -214,7 +214,7 @@ def fetch_via_firecrawl(url: str, firecrawl_key: str = None, supabase_url: str =
             resp = httpx.post(
                 SCRAPE_URL,
                 headers={"Authorization": f"Bearer {firecrawl_key}"},
-                json={"url": url, "formats": ["markdown"]},
+                json=scrape_body(url),
                 timeout=60,
             )
             resp.raise_for_status()

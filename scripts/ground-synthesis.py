@@ -47,7 +47,7 @@ fc = importlib.util.module_from_spec(_fc)
 _fc.loader.exec_module(fc)
 
 from auto_build_config import DEFAULT_MODEL, CostTracker, call_claude, step, success, warn, error  # noqa: E402
-from firecrawl_client import SCRAPE_URL, SEARCH_URL, search_web_results  # noqa: E402
+from firecrawl_client import SCRAPE_URL, SEARCH_URL, scrape_body, search_web_results  # noqa: E402
 
 try:
     from anthropic import Anthropic
@@ -97,7 +97,7 @@ def firecrawl_scrape(url: str) -> str:
             r = httpx.post(
                 SCRAPE_URL,
                 headers={"Authorization": f"Bearer {FIRECRAWL_KEY}", "Content-Type": "application/json"},
-                json={"url": url, "formats": ["markdown"]},
+                json=scrape_body(url),
                 timeout=60,
             )
             if r.status_code == 429 or r.status_code >= 500:
