@@ -37,8 +37,10 @@ import time
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from firecrawl_client import SCRAPE_URL, scrape_body
+
 ROOT = Path(__file__).resolve().parent.parent
-FIRECRAWL_API = "https://api.firecrawl.dev/v2/scrape"
 
 
 def brain_dir(slug: str) -> Path:
@@ -67,9 +69,13 @@ def firecrawl_scrape(url: str) -> str:
     key = os.environ.get("FIRECRAWL_API_KEY")
     if not key:
         sys.exit("ERROR: FIRECRAWL_API_KEY not set (needed to scrape transcript pages)")
-    body = json.dumps({"url": url, "formats": ["markdown"], "onlyMainContent": True}).encode()
+    # onlyMainContent was already explicit. timeout is the server budget in ms:
+    # v2 defaults that to 60s, and v1 raised it to 120s. The client waits 120s.
+    body = json.dumps(
+        scrape_body(url, onlyMainContent=True, timeout=120_000)
+    ).encode()
     req = urllib.request.Request(
-        FIRECRAWL_API, data=body,
+        SCRAPE_URL, data=body,
         headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
     )
     for attempt in range(3):

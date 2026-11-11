@@ -77,6 +77,7 @@ build_brain = importlib.import_module("build-brain")
 # Speaker diarization: attribute original_quote ONLY to the brain subject, never
 # the interviewer/host. Shared by the text-source + transcript extraction paths.
 from diarize import to_subject_text
+from firecrawl_client import SCRAPE_URL, SEARCH_URL, scrape_body, search_web_results
 
 # Optional imports
 try:
@@ -545,14 +546,13 @@ def phase_0_discover_sources(
             step(f"Searching: {query}")
             try:
                 resp = httpx.post(
-                    "https://api.firecrawl.dev/v1/search",
+                    SEARCH_URL,
                     headers={"Authorization": f"Bearer {firecrawl_key}", "Content-Type": "application/json"},
                     json={"query": query, "limit": 10},
                     timeout=30,
                 )
                 if resp.status_code == 200:
-                    data = resp.json()
-                    results = data.get("data", [])
+                    results = search_web_results(resp.json())
                     for r in results:
                         url = r.get("url", "")
                         # Skip YouTube URLs — those come from yt-dlp, not Firecrawl
@@ -1042,12 +1042,12 @@ def scrape_text_sources(
 
         try:
             resp = httpx.post(
-                "https://api.firecrawl.dev/v1/scrape",
+                SCRAPE_URL,
                 headers={
                     "Authorization": f"Bearer {firecrawl_key}",
                     "Content-Type": "application/json",
                 },
-                json={"url": url, "formats": ["markdown"]},
+                json=scrape_body(url),
                 timeout=SCRAPE_TIMEOUT_SEC,
             )
             if resp.status_code != 200:

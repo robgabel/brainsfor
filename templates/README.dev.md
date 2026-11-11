@@ -35,7 +35,8 @@ export ANTHROPIC_API_KEY=sk-ant-...
 export SUPABASE_SERVICE_KEY=eyJ...
 export SUPABASE_URL=https://uzediwokyshjbsymevtp.supabase.co
 
-# Optional — for YouTube transcript ingestion via web scraping fallback
+# Optional — Firecrawl v2 (/v2/scrape, /v2/search) for text-source scraping
+# and the YouTube transcript-page fallback. v1 returns HTTP 410 after 2026-12-10.
 export FIRECRAWL_API_KEY=fc-...
 ```
 

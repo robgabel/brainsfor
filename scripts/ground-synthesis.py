@@ -47,6 +47,7 @@ fc = importlib.util.module_from_spec(_fc)
 _fc.loader.exec_module(fc)
 
 from auto_build_config import DEFAULT_MODEL, CostTracker, call_claude, step, success, warn, error  # noqa: E402
+from firecrawl_client import SCRAPE_URL, SEARCH_URL, scrape_body, search_web_results  # noqa: E402
 
 try:
     from anthropic import Anthropic
@@ -72,7 +73,7 @@ def firecrawl_search(query: str, limit: int = 4) -> list[dict]:
     for attempt in range(3):
         try:
             r = httpx.post(
-                "https://api.firecrawl.dev/v1/search",
+                SEARCH_URL,
                 headers={"Authorization": f"Bearer {FIRECRAWL_KEY}", "Content-Type": "application/json"},
                 json={"query": query, "limit": limit},
                 timeout=45,
@@ -81,7 +82,7 @@ def firecrawl_search(query: str, limit: int = 4) -> list[dict]:
                 time.sleep(1.5 * (attempt + 1)); continue
             if r.status_code != 200:
                 return []
-            data = (r.json() or {}).get("data", [])
+            data = search_web_results(r.json())
             return [{"url": d.get("url"), "title": d.get("title", "")} for d in data if d.get("url")]
         except Exception:
             time.sleep(1.0 * (attempt + 1))
@@ -94,9 +95,9 @@ def firecrawl_scrape(url: str) -> str:
     for attempt in range(3):
         try:
             r = httpx.post(
-                "https://api.firecrawl.dev/v1/scrape",
+                SCRAPE_URL,
                 headers={"Authorization": f"Bearer {FIRECRAWL_KEY}", "Content-Type": "application/json"},
-                json={"url": url, "formats": ["markdown"]},
+                json=scrape_body(url),
                 timeout=60,
             )
             if r.status_code == 429 or r.status_code >= 500:

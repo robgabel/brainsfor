@@ -95,7 +95,7 @@ MIN_VOICE_PCT = 0.30
 # case) — halt rather than ship a quote-less brain.
 MIN_VIDEOS_EXPECT_TRANSCRIPTS = 5
 
-# Firecrawl scrape settings
+# Firecrawl v2 scrape settings. Endpoints live in scripts/firecrawl_client.py.
 SCRAPE_MAX_CHARS = 12000
 SCRAPE_MIN_CHARS = 500
 SCRAPE_TIMEOUT_SEC = 60
