@@ -10,15 +10,21 @@ from firecrawl_client import SCRAPE_URL, SEARCH_URL, scrape_body, search_web_res
 
 
 class TestFirecrawlV2(unittest.TestCase):
-    def test_scrape_body_is_fresh(self):
-        body = scrape_body("https://example.com")
-        self.assertEqual(body["url"], "https://example.com")
-        self.assertEqual(body["formats"], ["markdown"])
-        self.assertEqual(body["maxAge"], 0)
+    def test_scrape_body_locks_v1_options(self):
+        self.assertEqual(
+            scrape_body("https://example.com"),
+            {
+                "url": "https://example.com",
+                "formats": ["markdown"],
+                "maxAge": 0,
+                "proxy": "basic",
+            },
+        )
 
     def test_scrape_body_keeps_caller_fields(self):
         body = scrape_body("https://example.com", onlyMainContent=True, timeout=120000)
         self.assertEqual(body["maxAge"], 0)
+        self.assertEqual(body["proxy"], "basic")
         self.assertIs(body["onlyMainContent"], True)
         self.assertEqual(body["timeout"], 120000)
 

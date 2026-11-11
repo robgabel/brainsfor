@@ -11,23 +11,22 @@ requested. v1 returned a flat list at ``data``. The default search limit
 also moved from 5 to 10; every caller in this repo passes ``limit``
 explicitly, so request bodies stay the same. Search calls do not send
 ``scrapeOptions`` (v1 search did not scrape result pages either). If a
-caller adds ``scrapeOptions``, it must include ``maxAge: 0``.
+caller adds ``scrapeOptions``, it must include ``maxAge: 0`` and
+``proxy: "basic"``.
 
 v2 scrape defaults that differ from the v1 calls this repo made, and how
 they are kept:
 
 - ``maxAge`` is 2 days on v2. These calls never passed it; v1 treated that
   as a fresh scrape. ``scrape_body`` always sends ``maxAge: 0``.
-- Server ``timeout`` defaults to 60s on v2. v1's schema defaulted to 30s
-  and then raised it to 120s because proxy resolves to ``auto`` when no
-  country is set. Callers whose HTTP client already stops at 60s match the
-  v2 default. The transcript-page client waits 120s, so that body sets
-  ``timeout: 120000``.
+- ``proxy`` defaults to ``auto`` on v2, which retries on an enhanced proxy.
+  v1 used ``basic``. ``scrape_body`` always sends ``proxy: "basic"``.
+- Server ``timeout`` defaults to 60s on v2. Callers whose HTTP client
+  already stops at 60s match that. The transcript-page client waits 120s,
+  so that body sets ``timeout: 120000``.
 - ``onlyMainContent``, ``blockAds``, and ``removeBase64Images`` default to
   true on both. ``skipTlsVerification`` defaults to false on both.
-  ``storeInCache`` defaults to true on both. ``proxy`` is ``auto`` on both
-  when ``location.country`` is unset (the v2 change to ``auto`` applies
-  only when a country is set; these calls never set one).
+  ``storeInCache`` defaults to true on both.
 - ``parsePDF`` stayed on by default; v2's extra image parser only applies
   to image URLs, which this pipeline does not scrape.
 
@@ -45,16 +44,18 @@ SCRAPE_MAX_AGE_MS = 0
 
 
 def scrape_body(url: str, **extra) -> dict:
-    """JSON body for POST /v2/scrape. Always fresh (``maxAge`` 0).
+    """JSON body for POST /v2/scrape. Fresh (``maxAge`` 0) and ``proxy`` basic.
 
-    ``extra`` is merged after the defaults, so a caller can set
-    ``onlyMainContent`` or the server ``timeout`` (milliseconds). Passing
-    ``maxAge`` overrides the fresh default; don't.
+    v2's default proxy is ``auto``, which retries on an enhanced proxy.
+    v1 used ``basic``. ``extra`` is merged after the defaults, so a caller
+    can set ``onlyMainContent`` or the server ``timeout`` (milliseconds).
+    Passing ``maxAge`` or ``proxy`` overrides these pins; don't.
     """
     body = {
         "url": url,
         "formats": ["markdown"],
         "maxAge": SCRAPE_MAX_AGE_MS,
+        "proxy": "basic",
     }
     body.update(extra)
     return body
