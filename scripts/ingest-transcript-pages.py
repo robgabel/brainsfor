@@ -37,8 +37,10 @@ import time
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from firecrawl_client import SCRAPE_URL
+
 ROOT = Path(__file__).resolve().parent.parent
-FIRECRAWL_API = "https://api.firecrawl.dev/v2/scrape"
 
 
 def brain_dir(slug: str) -> Path:
@@ -69,7 +71,7 @@ def firecrawl_scrape(url: str) -> str:
         sys.exit("ERROR: FIRECRAWL_API_KEY not set (needed to scrape transcript pages)")
     body = json.dumps({"url": url, "formats": ["markdown"], "onlyMainContent": True}).encode()
     req = urllib.request.Request(
-        FIRECRAWL_API, data=body,
+        SCRAPE_URL, data=body,
         headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
     )
     for attempt in range(3):

@@ -41,6 +41,8 @@ _spec = importlib.util.spec_from_file_location(
 _abb = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_abb)
 
+from firecrawl_client import SCRAPE_URL
+
 raw_source_filename = _abb.raw_source_filename
 persist_raw_text = _abb.persist_raw_text
 SCRAPE_MIN_CHARS = _abb.SCRAPE_MIN_CHARS
@@ -114,7 +116,7 @@ def backfill_brain(brain_dir: Path, force: bool, dry_run: bool, firecrawl_key: s
 
         try:
             resp = httpx.post(
-                "https://api.firecrawl.dev/v1/scrape",
+                SCRAPE_URL,
                 headers={
                     "Authorization": f"Bearer {firecrawl_key}",
                     "Content-Type": "application/json",
